@@ -34,50 +34,9 @@ estratégias pedagógicas alternativas:
   - Edição 2017/2 - Turma A
   - Segundas e Quartas, 10:30 – 12:10
 
-** Aulas e Videoaulas
+** Aulas, Videoaulas, Material de apoio, Exercícios
 
-[[aulas/index.org][Acesse o material das aulas e videoaulas]]
-
-A lista abaixo apresenta uma visão geral com detalhes dos assuntos
-abordados ao longo do semestre. Os tópicos abordados, respeitando o
-plano de ensino da disciplina, podem variar em abrangência e
-profundidade.
-
-- Aula Inaugural
-  - Apresentação da disciplina; visão geral de um compilador
-- Análise Léxica
-  - Introdução; expressões regulares; autômatos finitos
-  - Algoritmo de subconjuntos; *flex*
-- Análise Sintática
-  - Introdução; gramáticas livres de contexto
-  - Descendente
-    - Descendente recursiva com retrocesso; conjuntos primeiro e sequência
-    - Descendente preditiva tabular; *bison*
-  - Ascendente
-    - Introdução (relembrando o algoritmo de subconjuntos)
-    - LR(0) e SLR(1)
-    - LR(1) e LALR(1)
-- Análise Semântica
-  - Análise sensível ao contexto
-  - Ordem e avaliação de atributos
-  - Esquemas S e L-atribuídos
-- Geração de Código
-  - Taxonomia e geração de código para expressões
-  - Declarações, escopo e atribuição (endereçamento de variáveis)
-  - Cálculo recursivo de endereço de arranjos multidimensionais
-  - Avaliação de expressões booleanas + remendos
-  - Controle de fluxo
-- Suporte de Execução
-  - Implementando chamadas de função, retorno
-  - Alocação de registradores
-- Otimização
-  - Introdução, janela e grafos de fluxo
-  - Local e Global
-- Fechamento
-
-** Material de apoio
-
-** Exercícios
+[[conteudo/aulas/index.org][Acesse o conteúdo da disciplina.]]
 
 ** Projeto de Compilador
 
