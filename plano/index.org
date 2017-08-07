@@ -1,0 +1,193 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+* Plano da Disciplina de Compiladores
+
+O objetivo da disciplina é que os alunos entendam como funciona um
+compilador, tanto em nível teórico (algoritmos e estruturas de dados
+envolvidos no projeto de um Compilador) como em nível prático. Devem
+saber projetar e implementar um pequeno compilador para uma linguagem
+de programação simples, tipicamente um sub-conjunto de uma linguagem
+imperativa de tipo Pascal ou C.
+
+Este documento descreve a metodologia, as experiências de
+aprendizagem, os critérios de avaliação, as atividades de recuperação,
+o cronograma e as referências bibliográficas (básicas e
+complementares) a serem utilizados nesta disciplina.
+
+** Conteúdo Programático
+
+ O conteúdo programático desta disciplina pode ser encontrado no site
+ no portal desta universidade, na seção de ``planos de disciplina''
+ (procure pela atividade cujo nome é compiladores). Para a distribuição
+ do conteúdo ao longo deste semestre veja o cronograma da disciplina,
+ disponível no moodle.
+
+
+** Metodologia
+
+ As 60 horas previstas para atividades teóricas e práticas indicadas
+ neste Plano de Ensino incluem 30 encontros de 100 minutos de duração
+ (2 períodos de 50 minutos por encontro, 2 encontros por semana,
+ durante 15 semanas), num total de 3.000 minutos, e mais 10 horas (600
+ minutos) de atividades autônomas, realizadas sem contato direto com o
+ professor, correspondentes a exercícios e trabalhos extraclasse,
+ conforme Resolução 11/2013 do CEPE/UFRGS, Artigos 36 a 38. O Professor
+ poderá se valer de aulas presenciais ou à distância (utilização de
+ recursos da EAD), assim como do apoio de Professores Assistentes
+ (Alunos de Pós-Graduação) em Atividades Didáticas.
+
+ Em cada encontro, os alunos poderão fazer perguntas, interagir e
+ consultar o material disponibilizado on-line pelo professor, além de
+ consultar as referências bibliográficas disponíveis na
+ biblioteca. Trabalhos e provas serão aplicados para verificar o
+ entendimento dos conceitos e métodos vistos durante a disciplina.
+
+ O material apresentado em sala de aula será disponibilizado aos alunos
+ para consulta (Moodle, Github). Caso o ambiente Moodle seja utilizado,
+ ele poderá ser acessado por todos os alunos matriculados na
+ disciplina, bastando para tal utilizar o seu login/senha do Instituto
+ de Informática. Caso outro método seja utilizado, o professor
+ fornecerá as informações necessárias para o acesso ao material.
+
+ Sugere-se ao aluno que utilize e verifique constantemente o material
+ disponível no ambiente utilizado pelo professor, antes e após as
+ aulas. Nele serão disponibilizados exercícios e atividades
+ extraclasse, notas, especificações de trabalho e demais materiais que
+ sejam necessários. Toda comunicação do professor com os alunos será
+ feita através do sistema adotado pelo professor.
+
+** Experiências de Aprendizagem
+
+ A disciplina é apresentada em aulas teórico-práticas, em que se
+ combina a apresentação dos conceitos e técnicas com o desenvolvimento
+ de aplicações pelos alunos. Espera-se que os alunos tenham uma
+ participação ativa nas aulas, realizando anotações, procurando
+ compreender os conteúdos e discutí-los com o professor e
+ colegas. Serão disponibilizados exercícios (teóricos e práticos) e
+ fóruns de discussão como atividades complementares. A participação
+ ativa nessas atividades também é importante para a formação do aluno e
+ serão consideradas pelo professor durante o processo de avaliação.
+ Opcionalmente, os alunos podem:
+
+ - Programar um analisador lexical, por exemplo com a ferramenta
+   tradicional Lex, ou pela implementação de qualquer outro algoritmo
+   que possa ser utilizado como analisador léxico
+ - Programar um analisador sintático, por exemplo com a ferramenta
+   tradicional Yacc, ou pela implementação de qualquer outro algoritmo
+   que possa ser utilizado como um analisador sintático
+ - Programar ações semânticas para gerar código, simplificado ou não
+ - Implementar um conversor código abstrato -- assembly
+ 
+
+** Critérios de Avaliação
+
+    Será realizada pelo menos uma prova teórica P, num dia previamente
+    informado, envolvendo todo o conteúdo das aulas anteriores à
+    prova. O formato da prova inclui perguntas e respostas escritas e
+    opcionalmente exercícios com o uso do computador. Não será aceito
+    aluno na prova a partir de 15 minutos após o início da mesma. Na
+    eventual aplicação de mais de uma prova ao longo do semestre, as
+    datas e os pesos de cada uma devem ser divulgadas anteriormente
+    pelo professor juntamente com o cronograma. Independente da
+    quantidade de provas aplicadas ao longo do semestre, elas têm peso
+    1 sobre o total da nota da disciplina.
+
+    Os trabalhos deverão ser realizados no horário das aulas e fora
+    delas e entregues na forma eletrônica através do método
+    estabelecido pelo professor, nas datas indicadas. Haverá encontros
+    com um tutor (professor, monitor, ou aluno de pós-graduação em
+    atividade didática) para apresentação de cada um dos trabalhos. A
+    soma T das notas dos trabalhos tem peso 1 sobre o total da nota da
+    disciplina.
+
+ O seguintes pesos dos critérios de avaliação serão utilizados nesta
+ disciplina:
+
+ - Provas (PS) correspondendo a 50% da nota final
+ - Série de trabalhos práticos (TP) correspondendo a 50% da nota final
+
+ As avaliações parciais PS e TP receberão um nota no intervalo
+ [0.0, 10.0].
+
+ A média final (MF), por sua vez, será calculada através da seguinte
+ equação:
+
+ MF = (PS \times 0.50) + (TP \times 0.50)
+
+ onde PS corresponde ao conjunto de provas e TP corresponde a série de
+ trabalhos práticos.
+
+ A média ponderada das provas e trabalhos, obtida através da equação
+ acima, será convertida em conceito através do mapeamento abaixo,
+ levando-se também em conta nesse conceito a participação em aula,
+ interesse, assiduidade e outros critérios subjetivos.
+
+ - 9.0 >= \MF <= 10.0 |  A (aprovado)
+ - 7.5 >= \MF < 9.0   | B (aprovado)
+ - 6.0 >= \MF < 7.5   | C (aprovado)
+ - 0.0 >= \MF < 6.0   | Recuperação (veja **Recuperação** abaixo)
+
+ As notas das provas e trabalhos serão disponibilizadas em até duas
+ semanas depois de sua realização. Pedidos de revisão de notas só serão
+ considerados se o aluno obtiver pelo menos 75% de presenças no momento
+ do pedido. Somente serão calculadas as médias finais daqueles alunos
+ que tiverem, ao longo do semestre, obtido um índice de frequência às
+ aulas igual ou superior a 75% das aulas previstas. Aos que não
+ satisfizerem esse requisito, será atribuído o conceito FF (Falta de
+ Frequência).
+
+ Ressalta-se que qualquer tentativa de copiar partes dos programas a
+ serem entregues, ou de obtê-las através de práticas contrárias às
+ regras do código disciplinar discente, resultará imediatamente na nota
+ zero na disciplina.  Cita-se aqui o artigo 9 do Código Disciplinar
+ Discente (Resolução No 07/2004 do CEPE): "Art. 9o – São infrações
+ disciplinares discentes graves: X – apresentar, em nome próprio,
+ trabalho que não seja de sua autoria;"
+
+** Atividades de Recuperação
+
+ Uma prova teórica poderá ser recuperada numa data única, combinada com
+ o professor no fim do semestre, APENAS no caso de o aluno ter obtido
+ pelo menos a nota 6 nos trabalhos TP >= 6
+
+ Cada nota parcial compondo a nota TP poderá ser recuperada até o valor
+ máximo de 80% do valor original, pela entrega de uma nova versão do
+ trabalho corrigindo os eventuais defeitos, num prazo estipulado pelo
+ professor.
+
+ *Recuperação por falta justificada*
+
+    No caso de falta justificada por motivo de saúde à prova teórica ou
+    a um encontro de apresentação dos trabalhos, o aluno poderá
+    recuperá-la em data, horário e local a serem marcados pelo
+    professor.
+
+
+ "A recuperação das provas ou atividades individuais será realizada
+ somente para os casos previstos na legislação: saúde, parto, serviço
+ militar, convocação judicial, luto, etc., devidamente comprovados,
+ através de processo aberto na Junta Médica da UFRGS ou no orgão
+ competente, conforme o caso. Tendo o direito a recuperação, o
+ professor estipulará a data, horário e local de sua realização."
+
+** Referências
+
+*** Básica e Essencial
+
+  - Aho, Alfred V.; Sethi, Ravi; Ullman, Jeffrey D.  Compiladores:
+    princípios, técnicas e ferramentas Editora LTC (ISBN: 8521610572)
+
+ - Cooper, Keith; Torczon, Linda. Engineering a Compiler. Editora
+   Morgan Kaufmann
+
+ - Grune, Dick. Projeto moderno de compiladores :implementação e
+   aplicações. Editora Campus (ISBN: 8535208763)
+
+ - Levine, John R.; Mason, Tony; Brown, D.  Lex & Yacc. Editora
+   O’Reilly
+
+*** Complementar
+
+- B. W. Kernigham e D. M. Ritchie. The C Programming Language. Editora
+  Prentice Hall (ISBN: 0131103628)

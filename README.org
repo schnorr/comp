@@ -1,0 +1,94 @@
+* Compiladores (INF01147)
+
+Seja bemvinda(o) a disciplina de compiladores, passagem obrigatória
+para os alunos de CIC (Ciência da Computação) e ECP (Engenharia da
+Computação) do INF (Instituto de Informática) da UFRGS (Universidade
+Federal do Rio Grande do Sul). Grande parte do material da disciplina
+está em português brasileiro [pt-br]. Disponibilizamos aqui os slides
+utilizados pelo professor, material de apoio, exercícios, assim como a
+especificação do projeto de compilador.
+
+** Estratégia Pedagógica
+
+As aulas são majoritariamente expositivas; com exercícios em aula com
+acompanhamento do professor e resolução ao final do encontro. Aulas
+práticas pontuais são utilizadas para averiguar o bom andamento do
+projeto de compilador. Experimentalmente, são empregados métodos
+alternativos de ensino com o objetivo de melhorar o aprendizado
+da disciplina. Os dois documentos abaixo fornecem um apanhado dessas
+estratégias pedagógicas alternativas:
+
+- [Compilando Interações (Projeto de inovação didática - PAAP/UFRGS)](download/compiladores-projeto-inovacao.pdf)
+- [Aprendizado invertido em compiladores (TCC de Lucas Jones)](http://www.lume.ufrgs.br/handle/10183/147664)
+
+** Plano e Cronograma
+
+- [**Plano da disciplina**](plano/) (permanente), com detalhamento dos seguintes itens
+  - Conteúdo programático
+  - Metodologia
+  - Experiências de aprendizagem
+  - Critérios de avaliação
+  - Atividades de recuperação
+  - Bibliografia
+- [**Cronograma**](cronograma/)
+  - Edição 2017/2 - Turma A
+  - Segundas e Quartas, 10:30 – 12:10
+
+** Aulas e Videoaulas
+
+A lista abaixo apresenta uma visão geral com detalhes dos assuntos
+abordados ao longo do semestre. Os tópicos abordados, respeitando o
+plano de ensino da disciplina, podem variar em abrangência e
+profundidade.
+
+#+BEGIN_CENTER
+[**Acesse o material das aulas e videoaulas**](aulas/).
+#+END_CENTER
+
+- Aula Inaugural
+  - Apresentação da disciplina; visão geral de um compilador
+- Análise Léxica
+  - Introdução; expressões regulares; autômatos finitos
+  - Algoritmo de subconjuntos; *flex*
+- Análise Sintática
+  - Introdução; gramáticas livres de contexto
+  - Descendente
+    - Descendente recursiva com retrocesso; conjuntos primeiro e sequência
+    - Descendente preditiva tabular; *bison*
+  - Ascendente
+    - Introdução (relembrando o algoritmo de subconjuntos)
+    - LR(0) e SLR(1)
+    - LR(1) e LALR(1)
+- Análise Semântica
+  - Análise sensível ao contexto
+  - Ordem e avaliação de atributos
+  - Esquemas S e L-atribuídos
+- Geração de Código
+  - Taxonomia e geração de código para expressões
+  - Declarações, escopo e atribuição (endereçamento de variáveis)
+  - Cálculo recursivo de endereço de arranjos multidimensionais
+  - Avaliação de expressões booleanas + remendos
+  - Controle de fluxo
+- Suporte de Execução
+  - Implementando chamadas de função, retorno
+  - Alocação de registradores
+- Otimização
+  - Introdução, janela e grafos de fluxo
+  - Local e Global
+- Fechamento
+
+** Material de apoio
+
+** Exercícios
+
+** Projeto de Compilador
+
+- [**Projeto de Compilador**](projeto/)
+  - Apresentação
+  - Especificação das etapas
+  - Forma de avaliação
+
+** Contato
+
+Se você encontrar algum problema, e também no caso de dúvidas, entre em contato por e-mail:
+- Prof. Lucas (schnorr@inf.ufrgs.br)
