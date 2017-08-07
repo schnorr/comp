@@ -34,9 +34,9 @@ estratégias pedagógicas alternativas:
   - Edição 2017/2 - Turma A
   - Segundas e Quartas, 10:30 – 12:10
 
-** Conteúdo
+** Substância
 
-- [[conteudo/index.org][Conteúdo da disciplina]]
+- [[conteudo/index.org][Acesse o conteúdo da disciplina]]
   - Aulas e videoaulas
   - Material de apoio
   - Exercícios
