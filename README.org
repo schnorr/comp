@@ -36,14 +36,12 @@ estratégias pedagógicas alternativas:
 
 ** Aulas e Videoaulas
 
+[[aulas/index.org][Acesse o material das aulas e videoaulas]]
+
 A lista abaixo apresenta uma visão geral com detalhes dos assuntos
 abordados ao longo do semestre. Os tópicos abordados, respeitando o
 plano de ensino da disciplina, podem variar em abrangência e
 profundidade.
-
-#+BEGIN_CENTER
-[[aulas/index.org][Acesse o material das aulas e videoaulas]]
-#+END_CENTER
 
 - Aula Inaugural
   - Apresentação da disciplina; visão geral de um compilador
