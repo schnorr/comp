@@ -18,19 +18,19 @@ alternativos de ensino com o objetivo de melhorar o aprendizado
 da disciplina. Os dois documentos abaixo fornecem um apanhado dessas
 estratégias pedagógicas alternativas:
 
-- [Compilando Interações (Projeto de inovação didática - PAAP/UFRGS)](download/compiladores-projeto-inovacao.pdf)
-- [Aprendizado invertido em compiladores (TCC de Lucas Jones)](http://www.lume.ufrgs.br/handle/10183/147664)
+- [[download/compiladores-projeto-inovacao.pdf][Compilando Interações (Projeto de inovação didática - PAAP/UFRGS)]]
+- [[http://www.lume.ufrgs.br/handle/10183/147664][Aprendizado invertido em compiladores (TCC de Lucas Jones)]]
 
 ** Plano e Cronograma
 
-- [**Plano da disciplina**](plano/) (permanente), com detalhamento dos seguintes itens
+- [[plano/][Plano da disciplina]] (permanente), com detalhamento dos seguintes itens
   - Conteúdo programático
   - Metodologia
   - Experiências de aprendizagem
   - Critérios de avaliação
   - Atividades de recuperação
   - Bibliografia
-- [[Cronograma][cronograma/]]
+- [[cronograma/][Cronograma]]
   - Edição 2017/2 - Turma A
   - Segundas e Quartas, 10:30 – 12:10
 
@@ -42,7 +42,7 @@ plano de ensino da disciplina, podem variar em abrangência e
 profundidade.
 
 #+BEGIN_CENTER
-[[**Acesse o material das aulas e videoaulas**][aulas/]].
+[[aulas/][Acesse o material das aulas e videoaulas]]
 #+END_CENTER
 
 - Aula Inaugural
@@ -83,7 +83,7 @@ profundidade.
 
 ** Projeto de Compilador
 
-- [[**Projeto de Compilador**][projeto/]
+- [[projeto/][Projeto de Compilador]]
   - Apresentação
   - Especificação das etapas
   - Forma de avaliação
@@ -91,4 +91,4 @@ profundidade.
 ** Contato
 
 Se você encontrar algum problema, e também no caso de dúvidas, entre em contato por e-mail:
-- Prof. Lucas (schnorr@inf.ufrgs.br)
+- [[schnorr@inf.ufrgs.br][Prof. Lucas (schnorr@inf.ufrgs.br)]]
