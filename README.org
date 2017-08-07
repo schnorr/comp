@@ -34,9 +34,12 @@ estratégias pedagógicas alternativas:
   - Edição 2017/2 - Turma A
   - Segundas e Quartas, 10:30 – 12:10
 
-** Aulas, Videoaulas, Material de apoio, Exercícios
+** Conteúdo
 
-[[conteudo/index.org][Acesse o conteúdo da disciplina.]]
+- [[conteudo/index.org][Conteúdo da disciplina]]
+  - Aulas e videoaulas
+  - Material de apoio
+  - Exercícios
 
 ** Projeto de Compilador
 
