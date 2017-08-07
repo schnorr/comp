@@ -23,14 +23,14 @@ estratégias pedagógicas alternativas:
 
 ** Plano e Cronograma
 
-- [[plano/][Plano da disciplina]] (permanente), com detalhamento dos seguintes itens
+- [[plano/index.org][Plano da disciplina]] (permanente), com detalhamento dos seguintes itens
   - Conteúdo programático
   - Metodologia
   - Experiências de aprendizagem
   - Critérios de avaliação
   - Atividades de recuperação
   - Bibliografia
-- [[cronograma/][Cronograma]]
+- [[cronograma/index.org][Cronograma]]
   - Edição 2017/2 - Turma A
   - Segundas e Quartas, 10:30 – 12:10
 
@@ -42,7 +42,7 @@ plano de ensino da disciplina, podem variar em abrangência e
 profundidade.
 
 #+BEGIN_CENTER
-[[aulas/][Acesse o material das aulas e videoaulas]]
+[[aulas/index.org][Acesse o material das aulas e videoaulas]]
 #+END_CENTER
 
 - Aula Inaugural
@@ -83,7 +83,7 @@ profundidade.
 
 ** Projeto de Compilador
 
-- [[projeto/][Projeto de Compilador]]
+- [[projeto/index.org][Projeto de Compilador]]
   - Apresentação
   - Especificação das etapas
   - Forma de avaliação
