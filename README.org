@@ -36,7 +36,7 @@ estratégias pedagógicas alternativas:
 
 ** Aulas, Videoaulas, Material de apoio, Exercícios
 
-[[conteudo/aulas/index.org][Acesse o conteúdo da disciplina.]]
+[[conteudo/index.org][Acesse o conteúdo da disciplina.]]
 
 ** Projeto de Compilador
 
