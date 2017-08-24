@@ -10,16 +10,22 @@ profundidade.
   - Apresentação da disciplina; visão geral de um compilador
 - Análise Léxica
   - Introdução; expressões regulares; autômatos finitos
-  - Algoritmo de subconjuntos; *flex*
+  - O algoritmo de subconjuntos
+  - O construtor de analisadores léxicos *flex*
 - Análise Sintática
-  - Introdução; gramáticas livres de contexto
+  - Introdução
+    - Gramáticas livres de contexto
+    - Transformações gramaticais
   - Descendente
-    - Descendente recursiva com retrocesso; conjuntos primeiro e sequência
-    - Descendente preditiva tabular; *bison*
+    - Recursiva com retrocesso
+    - Recursiva preditiva
+    - Conjuntos primeiro e sequência
+    - LL(1): Descendente preditiva tabular
   - Ascendente
     - Introdução (relembrando o algoritmo de subconjuntos)
     - LR(0) e SLR(1)
     - LR(1) e LALR(1)
+    - O construtor de analisadores gramaticais ascendentes *bison*
 - Análise Semântica
   - Análise sensível ao contexto
   - Ordem e avaliação de atributos
