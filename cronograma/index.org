@@ -213,6 +213,8 @@ rubber --pdf cronograma.tex
 
 * Cronograma
 
+O cronograma também está [[./cronograma.pdf][disponível em formato PDF]].
+
 #+header: :var dep=cronograma
 #+begin_src R :results value table :session :exports output :colnames yes
 aulas %>%
