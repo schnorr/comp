@@ -17,9 +17,9 @@
 
 * Compiladores (INF01147)
 
-#+BEGIN_EXPORT html
+#+begin_html
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="img/88x31.png" /></a>
-#+END_EXPORT
+#+end_html
 
 Seja bemvinda(o) a disciplina de compiladores, passagem obrigatória
 para os alunos de CIC (Ciência da Computação) e ECP (Engenharia da
