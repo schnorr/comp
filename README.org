@@ -1,5 +1,7 @@
 * Compiladores (INF01147)
 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="img/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
 Seja bemvinda(o) a disciplina de compiladores, passagem obrigatória
 para os alunos de CIC (Ciência da Computação) e ECP (Engenharia da
 Computação) do INF (Instituto de Informática) da UFRGS (Universidade
