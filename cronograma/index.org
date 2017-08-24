@@ -215,6 +215,8 @@ rubber --pdf cronograma.tex
 
 O cronograma também está [[./cronograma.pdf][disponível em formato PDF]].
 
+Última atualização realizada em 2017-08-24.
+
 #+header: :var dep=cronograma
 #+begin_src R :results value table :session :exports output :colnames yes
 aulas %>%
