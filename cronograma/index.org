@@ -21,4 +21,235 @@
 #+TAGS: noexport(n) deprecated(d)
 
 * Planejamento                                                     :noexport:
+** Modelo do cronograma em TEX                                      :ATTACH:
+:PROPERTIES:
+:Attachments: layout-cronograma.tex
+:ID:       be43e1ff-0a91-4c3f-9e17-1fa62e6795ce
+:END:
+
+** Aulas (em ORG)
+
+#+NAME: listagem_de_encontros
+| Setor      | Descrição                                                             |       Local | Projeto                |
+|------------+-----------------------------------------------------------------------+-------------+------------------------|
+|            | Definições, requisitos e posicionamento da disciplina                 |             | Definições iniciais    |
+| Léxica     | Introdução, Expressões Regulares, Autômatos Finitos                   |             | Início E1 (flex)       |
+| Léxica     | Autômato Finito Determinístico, Conversão AFND para AFD               |             |                        |
+| Sintática  | Introdução, Gramáticas Livres de Contexto, Transformações             |             |                        |
+|            |                                                                       |      67-103 | Avaliação              |
+| Sintática  | Introdução Descendente (top-down), Recursivo com Retrocesso/Preditivo |             | Início E2 (bison)      |
+| Sintática  | Conjuntos Primeiro e Sequência, Parser LL(1)                          |             |                        |
+| Sintática  | Introdução Ascendente (bottom-up), Parser LR(0)                       |             |                        |
+| Sintática  | Árvore Sintática Abstrata                                             |             | Início E3 (AST)        |
+|            |                                                                       |      67-104 | Avaliação              |
+| Sintática  | Parser SLR(1) e LR(1)                                                 |             |                        |
+| Semântica  | Esquemas S e L-Atribuídos                                             |             |                        |
+|            |                                                                       |      73-103 | Avaliação              |
+| Semântica  | Implementação de Esquemas S e L-Atribuídos                            |             | Início E4 (Tipos)      |
+|            | Revisão                                                               |             |                        |
+|            | P1                                                                    | 72-Castilho |                        |
+|            |                                                                       |      67-104 | Avaliação              |
+| Código     | Taxonomia e Expressões                                                |             | Início E5 (Código)     |
+| Código     | Declarações, Escopos e Atribuição                                     |             |                        |
+| Código     | Endereçamento de Arranjos multidimensionais                           |             |                        |
+| Código     | Expressões Lógicas com atalho, Controle de Fluxo                      |             |                        |
+| Código     | Controle de Fluxo                                                     |             |                        |
+|            |                                                                       |      67-104 | Avaliação              |
+| Execução   | Introdução, Registro de Ativação                                      |             | Início E6 (Chamada)    |
+| Execução   | Chamada e retorno de Função, Passagem de parâmetros                   |             |                        |
+|            |                                                                       |      73-103 | Avaliação              |
+| Otimização | Introdução, Janela e Grafos de Fluxo                                  |             | Início E7 (Otimização) |
+| Otimização | Local e Global, Otimização em laços                                   |             |                        |
+|            | P2                                                                    | 72-Castilho |                        |
+|            | PR                                                                    |             |                        |
+
+** Cronograma (para TEX)
+#+name: cronograma
+#+header: :var aulas=listagem_de_encontros
+#+begin_src R :results output :session :exports both
+suppressMessages(library(lubridate));
+suppressMessages(library(tidyverse));
+suppressMessages(library(xtable));
+
+aulas <- aulas %>% as.tibble();
+
+daysOff <- c(
+ymd("2017-9-7"),   # Independen
+ymd("2017-9-20"),  # Farroupilh
+ymd("2017-10-12"), # Religioso 
+ymd("2017-10-16"), # SEMAC     
+ymd("2017-10-17"), # SEMAC     
+ymd("2017-10-18"), # SEMAC     
+ymd("2017-10-19"), # SEMAC     
+ymd("2017-10-20"), # SEMAC     
+ymd("2017-10-21"), # Dia nao letive
+ymd("2017-10-26"), # LICIA
+ymd("2017-10-27"), # LICIA
+ymd("2017-10-28"), # Servidor  
+ymd("2017-11-2"),  # Mortos    
+ymd("2017-11-15"), # Republica 
+seq(ymd("2017-11-14"), ymd("2017-11-28"), by="days"), # EcoSud
+ymd("2017-12-23"), # Recesso   
+ymd("2017-12-24"), # Recesso   
+ymd("2017-12-25"), # Recesso   
+ymd("2017-12-26"), # Recesso   
+ymd("2017-12-27"), # Recesso   
+ymd("2017-12-28"), # Recesso   
+ymd("2017-12-29"), # Recesso   
+ymd("2017-12-30"), # Recesso   
+ymd("2017-12-31"), # Recesso   
+ymd("2018-1-1"),   # Recesso   
+ymd("2018-1-6"),   # Vestibular
+ymd("2018-1-7"),   # Vestibular
+ymd("2018-1-8"),   # Vestibular
+ymd("2018-1-9"),   # Vestibular
+ymd("2018-1-10")   # Vestibular
+)
+
+dataDaRecuperação <- ymd("2018-01-22");
+
+dates <- tibble(Dia=seq(ymd("2017-08-28"), ymd("2018-01-27"), by="days")) %>%
+    # Define o dia da semana
+    mutate(DiaDaSemana = wday(Dia)) %>%
+    # Compiladores Segundas-Quartas
+    filter(DiaDaSemana %in% c(2, 4)) %>%
+    # Remove dias onde não haverá aula
+    filter(!(Dia %in% daysOff));
+
+aulas %>%
+    # Associa as datas
+    bind_cols(dates %>% slice(1:nrow(aulas))) %>%
+    # Altera a data da PR
+    mutate(Dia = case_when (grepl("PR", Descrição) ~ dataDaRecuperação,
+                            TRUE ~ Dia)) %>%
+    # Converte as datas para caracter
+    mutate(Encontro = as.character(Dia)) %>%
+    # Ordena as aulas
+    mutate(N = 1:nrow(.)) -> aulas;
+
+aulas %>%
+    select(N, Encontro, Local, Setor, Descrição, Projeto) %>%
+    as.data.frame() %>%
+    xtable(.) %>%
+    print (print.results=FALSE,
+           booktabs = TRUE,
+           include.rownames=FALSE) %>%
+    as.character -> cronograma;
+#+end_src
+
+#+RESULTS: cronograma
+
+** Dias por etapa do projeto (em R)
+#+name: dias_por_etapa
+#+header: :var dep=cronograma
+#+begin_src R :results output :session :exports both
+entregaUltimaEtapa = ymd("2018-1-10");
+
+aulas %>%
+    drop_na() %>%
+    mutate(Etapa = as.integer(cumsum(ifelse(grepl("Início", Projeto), 1, 0)))) %>%
+    select(Etapa, Projeto, Dia) %>%
+    filter(Etapa != 0) %>%
+    filter(Dia <= entregaUltimaEtapa) %>%
+    bind_rows(tibble(Etapa=7, Projeto="", Dia=entregaUltimaEtapa)) %>%
+    group_by(Etapa) %>%
+    summarize(Duração = as.integer(max(Dia) - min(Dia))) %>%
+    mutate(Texto = paste0("E", Etapa, " = ", Duração, " dias")) -> dias_por_etapa
+dias_por_etapa
+#+end_src
+
+#+RESULTS: dias_por_etapa
+#+begin_example
+# A tibble: 7 x 3
+  Etapa Duração        Texto
+  <dbl>   <int>        <chr>
+1     1      12 E1 = 12 dias
+2     2      14 E2 = 14 dias
+3     3       9  E3 = 9 dias
+4     4       9  E4 = 9 dias
+5     5      30 E5 = 30 dias
+6     6       7  E6 = 7 dias
+7     7      21 E7 = 21 dias
+#+end_example
+
+#+RESULTS:
+#+begin_example
+# A tibble: 7 x 2
+  Etapa Duração
+  <dbl>   <int>
+1     1      12
+2     2      14
+3     3       9
+4     4       9
+5     5      30
+6     6       7
+7     7      21
+#+end_example
+
+** Cronograma (em PDF)
+#+name: modelo_cronograma
+#+header: :var dep0=cronograma
+#+header: :var dep1=dias_por_etapa
+#+begin_src R :results output :session :exports both
+cronograma.modelo.filename = "data/be/43e1ff-0a91-4c3f-9e17-1fa62e6795ce/layout-cronograma.tex"
+cronograma.modelo = readChar(cronograma.modelo.filename, file.info(cronograma.modelo.filename)$size);
+turma = "A";
+semestre = "2017/2"
+cronograma.modelo <- gsub("TURMA", turma, cronograma.modelo);
+cronograma.modelo <- gsub("SEMESTRE", semestre, cronograma.modelo);
+cronograma.modelo <- gsub("TABELA", gsub("\\\\", "\\\\\\\\", cronograma), cronograma.modelo);
+cronograma.modelo <- gsub("DIASPORETAPA", paste(dias_por_etapa$Texto, collapse=", "), cronograma.modelo);
+write(cronograma.modelo, "cronograma.tex");
+#+end_src
+
+#+RESULTS: modelo_cronograma
+
+#+header: :var dep=modelo_cronograma
+#+begin_src shell :results output
+rubber --pdf cronograma.tex
+#+end_src
+
+#+RESULTS:
+
 * Cronograma
+
+#+header: :var dep=cronograma
+#+begin_src R :results value table :session :exports output :colnames yes
+aulas %>%
+    select(N, Encontro, Local, Setor, Descrição, Projeto) %>%
+    as.data.frame
+#+end_src
+
+#+RESULTS:
+|  N |   Encontro |       Local | Setor      | Descrição                                                             | Projeto                |
+|----+------------+-------------+------------+-----------------------------------------------------------------------+------------------------|
+|  1 | 2017-08-28 |             |            | Definições, requisitos e posicionamento da disciplina                 | Definições iniciais    |
+|  2 | 2017-08-30 |             | Léxica     | Introdução, Expressões Regulares, Autômatos Finitos                   | Início E1 (flex)       |
+|  3 | 2017-09-04 |             | Léxica     | Autômato Finito Determinístico, Conversão AFND para AFD               |                        |
+|  4 | 2017-09-06 |             | Sintática  | Introdução, Gramáticas Livres de Contexto, Transformações             |                        |
+|  5 | 2017-09-11 |      67-103 |            |                                                                       | Avaliação              |
+|  6 | 2017-09-13 |             | Sintática  | Introdução Descendente (top-down), Recursivo com Retrocesso/Preditivo | Início E2 (bison)      |
+|  7 | 2017-09-18 |             | Sintática  | Conjuntos Primeiro e Sequência, Parser LL(1)                          |                        |
+|  8 | 2017-09-25 |             | Sintática  | Introdução Ascendente (bottom-up), Parser LR(0)                       |                        |
+|  9 | 2017-09-27 |             | Sintática  | Árvore Sintática Abstrata                                             | Início E3 (AST)        |
+| 10 | 2017-10-02 |      67-104 |            |                                                                       | Avaliação              |
+| 11 | 2017-10-04 |             | Sintática  | Parser SLR(1) e LR(1)                                                 |                        |
+| 12 | 2017-10-09 |             | Semântica  | Esquemas S e L-Atribuídos                                             |                        |
+| 13 | 2017-10-11 |      73-103 |            |                                                                       | Avaliação              |
+| 14 | 2017-10-23 |             | Semântica  | Implementação de Esquemas S e L-Atribuídos                            | Início E4 (Tipos)      |
+| 15 | 2017-10-25 |             |            | Revisão                                                               |                        |
+| 16 | 2017-10-30 | 72-Castilho |            | P1                                                                    |                        |
+| 17 | 2017-11-01 |      67-104 |            |                                                                       | Avaliação              |
+| 18 | 2017-11-06 |             | Código     | Taxonomia e Expressões                                                | Início E5 (Código)     |
+| 19 | 2017-11-08 |             | Código     | Declarações, Escopos e Atribuição                                     |                        |
+| 20 | 2017-11-13 |             | Código     | Endereçamento de Arranjos multidimensionais                           |                        |
+| 21 | 2017-11-29 |             | Código     | Expressões Lógicas com atalho, Controle de Fluxo                      |                        |
+| 22 | 2017-12-04 |             | Código     | Controle de Fluxo                                                     |                        |
+| 23 | 2017-12-06 |      67-104 |            |                                                                       | Avaliação              |
+| 24 | 2017-12-11 |             | Execução   | Introdução, Registro de Ativação                                      | Início E6 (Chamada)    |
+| 25 | 2017-12-13 |             | Execução   | Chamada e retorno de Função, Passagem de parâmetros                   |                        |
+| 26 | 2017-12-18 |      73-103 |            |                                                                       | Avaliação              |
+| 27 | 2017-12-20 |             | Otimização | Introdução, Janela e Grafos de Fluxo                                  | Início E7 (Otimização) |
+| 28 | 2018-01-03 |             | Otimização | Local e Global, Otimização em laços                                   |                        |
+| 29 | 2018-01-15 | 72-Castilho |            | P2                                                                    |                        |
+| 30 | 2018-01-22 |             |            | PR                                                                    |                        |
