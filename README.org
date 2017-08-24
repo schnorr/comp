@@ -51,4 +51,4 @@ estratégias pedagógicas alternativas:
 ** Contato
 
 Se você encontrar algum problema, e também no caso de dúvidas, entre em contato por e-mail:
-- [[schnorr@inf.ufrgs.br][Prof. Lucas (schnorr@inf.ufrgs.br)]]
+- [[http://www.inf.ufrgs.br/~schnorr][Prof. Lucas (http://www.inf.ufrgs.br/~schnorr)]]
