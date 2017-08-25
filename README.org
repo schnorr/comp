@@ -71,10 +71,10 @@ estratégias pedagógicas alternativas:
   - Forma de avaliação
    
 ** Bibliografia
-+ Compilers: Principles, Techniques and Tools. Aho, A.; Sethi, R.; Ullman, J. D.
-+ Engineering a Compiler. Cooper & Torczon. 2nd edition.
-+ Implementação de Linguagens de Programação: Compiladores. Price & Toscani.
-+ Lex & Yacc. Mason & Brown.
++ [[https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools][Compilers: Principles, Techniques and Tools. Aho, A.; Sethi, R.; Ullman, J. D.]]
++ [[https://www.elsevier.com/books/engineering-a-compiler/cooper/978-0-12-088478-0][Engineering a Compiler. Cooper & Torczon. 2nd edition.]]
++ [[http://www.inf.ufrgs.br/site/publicacoes/livros-didaticos/livros09/][Implementação de Linguagens de Programação: Compiladores. Price & Toscani.]]
++ [[http://shop.oreilly.com/product/9781565920002.do][Lex & Yacc. Mason & Brown.]]
 + Projeto moderno de compiladores. Grune, Bal e Langendoen.
 ** Contato
 
