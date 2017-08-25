@@ -1,3 +1,4 @@
+#+startup: overview indent
 #+OPTIONS: html-link-use-abs-url:nil html-postamble:auto
 #+OPTIONS: html-preamble:t html-scripts:t html-style:t
 #+OPTIONS: html5-fancy:nil tex:t
@@ -68,7 +69,13 @@ estratégias pedagógicas alternativas:
   - Apresentação
   - Especificação das etapas
   - Forma de avaliação
-
+   
+** Bibliografia
++ Compilers: Principles, Techniques and Tools. Aho, A.; Sethi, R.; Ullman, J. D.
++ Engineering a Compiler. Cooper & Torczon. 2nd edition.
++ Implementação de Linguagens de Programação: Compiladores. Price & Toscani.
++ Lex & Yacc. Mason & Brown.
++ Projeto moderno de compiladores. Grune, Bal e Langendoen.
 ** Contato
 
 Se você encontrar algum problema, e também no caso de dúvidas, entre em contato por e-mail:
