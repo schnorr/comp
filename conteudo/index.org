@@ -7,8 +7,8 @@ disciplina, podem variar em abrangência e profundidade.
 
 | Setor      | Descrição                                                      |
 |------------+----------------------------------------------------------------|
-| Inaugural  | Apresentação da disciplina                                     |
-| Inaugural  | Visão geral de um compilador                                   |
+| Geral      | Apresentação da disciplina                                     |
+| Geral      | Visão geral de um compilador                                   |
 | Léxica     | Introdução, Expressões Regulares, Autômatos Finitos            |
 | Léxica     | Processo conceitual de construção do analisador léxico         |
 | Léxica     | O Algoritmo de subconjuntos (Conversão AFND para AFD)          |
@@ -38,7 +38,7 @@ disciplina, podem variar em abrangência e profundidade.
 | Execução   | Chamada e retorno de Função, Passagem de parâmetros            |
 | Otimização | Introdução, Janela e Grafos de Fluxo                           |
 | Otimização | Local e Global, Otimização em laços                            |
-|            | Discussão e reflexão sobre os conceitos da disciplina          |
+| Geral      | Discussão e reflexão sobre os conceitos da disciplina          |
 
 ** Material de apoio
 ** Exercícios
