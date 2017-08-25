@@ -19,16 +19,16 @@
 
 ** Especificação, pesos, e prazos de entrega
 
-| Etapa | Assunto principal                | Peso (%) | Cumulativo (%) | Entrega |
-|-------+----------------------------------+----------+----------------+---------|
-| E1    | Análise Léxica                   |       10 |             10 |         |
-| E2    | Análise Sintática                |       15 |             25 |         |
-| E3    | /Árvore Sintática Abstrata/        |       15 |             40 |         |
-| E4    | Análise Semântica                |       15 |             55 |         |
-| E5    | Geração de Código 1 (uma função) |       20 |             75 |         |
-| E6    | Código 2 (chamada/retorno)       |       15 |             90 |         |
-| E7    | Otimização                       |       10 |            100 |         |
-|-------+----------------------------------+----------+----------------+---------|
+| Etapa | Assunto principal         | Peso (%) | Cumulativo (%) | Entrega |
+|-------+---------------------------+----------+----------------+---------|
+| E1    | [[./etapa1.org][Análise Léxica]]            |       10 |             10 |         |
+| E2    | [[./etapa2.org][Análise Sintática]]         |       15 |             25 |         |
+| E3    | [[./etapa3.org][Árvore Sintática Abstrata]] |       15 |             40 |         |
+| E4    | [[./etapa4.org][Análise Semântica]]         |       15 |             55 |         |
+| E5    | [[./etapa5.org][Geração de Código]]         |       20 |             75 |         |
+| E6    | [[./etapa6.org][Suporte de Execução]]       |       15 |             90 |         |
+| E7    | [[./etapa7.org][Otimização]]                |       10 |            100 |         |
+|-------+---------------------------+----------+----------------+---------|
 
 ** Formação dos Grupos
 
