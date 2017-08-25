@@ -21,7 +21,7 @@ Os trabalhos devem ser realizados em grupos de *dois alunos*.  Uma vez
 formado, o grupo informa os seus membros ao professor, por e-mail. A
 definição de grupos é definitiva, válida do início ao fim do semestre.
 
-* Regras de desenvolvimento
+** Regras de desenvolvimento
 
 Requerimentos obrigatórios na realização de todas as etapas.  A função
 =main= deve estar em um arquivo chamado =main.c=. Ela não deve ser
@@ -34,7 +34,7 @@ A entrada para o =flex= deve estar em um arquivo com o nome
 obrigatórios nesta etapa do projeto de compiladores. Elas serão
 consideradas na avaliação subjetiva da etapa.
 
-** Git e Cmake
+*** Git e Cmake
 
 A solução desta etapa do projeto de compiladores deve vir acompanhada
 de um repositório git que manteve o histórico de desenvolvimento do
@@ -53,7 +53,7 @@ membros do grupo na construção da etapa.
   informado ao professor para leitura e, no caso de necessidade, para
   escrita.
 
-** Código Inicial
+*** Código Inicial
 
 O código inicial do projeto encontra-se no =bitbucket.org=, e pode ser
 clonado e inicialmente compilado (supondo que as bibliotecas
@@ -77,7 +77,7 @@ de código fonte devem ser adicionados, modifique o arquivo
 =CMakeLists.txt= apropriadamente para que o novo arquivo seja incluído
 no processo de compilação.
 
-** Configurar Makefiles para Etapa
+*** Configurar Makefiles para Etapa
 
 Para configurar o sistema de compilação para uma determinada etapa, os
 passos abaixo devem ser realizados (supondo etapa 2). Adicionalmente,
@@ -89,7 +89,7 @@ $ cmake -DETAPA_1=OFF -DETAPA_2=ON .
 $ make
 #+END_EXAMPLE
 
-** Atualizações do Professor
+*** Atualizações do Professor
 
 O professor pode efetuar alterações no repositório de referência. Os
 alunos deverão pegar as modificações da seguinte forma (supondo que
@@ -100,7 +100,7 @@ $ git pull origin master
 Conflitos podem acontecer. Se o grupo não souber como resolvê-los,
 entre em contato com o professor.
 
-** Avaliação automática
+*** Avaliação automática
 
 Um conjunto de testes já estão disponíveis no repositório para que o
 grupo possa se autoavaliar. Para lançar estes testes, depois de ter
@@ -112,7 +112,7 @@ encontra-se os arquivos compilados (supondo Etapa 1):
 ctest -R e1
 #+END_EXAMPLE
 
-** Formato de Entrega
+*** Formato de Entrega
 
 O líder do grupo deve marcar, utilizando uma tag do git, o commit que
 representa a solução do grupo. Em seguida, através do formulário de
@@ -136,7 +136,7 @@ $ make
 #+end_src
 #+Latex: }
 
-** Recomendações
+*** Recomendações
 
 Executem vários testes. Verifiquem a conformidade com cada uma das
 regras desse formato e da especificação da etapa. Verifiquem se o
@@ -145,7 +145,7 @@ para desenvolvimento. Incluam os nomes dos componentes do grupo em
 comentários no início de todos os códigos fonte do seu
 trabalho. Retirem dúvidas com o professor antes do prazo final.
 
-* Avaliação das Etapas
+** Avaliação das Etapas
 
 Cada etapa do projeto de compiladores é avaliada objetiva e
 subjetivamente, com pesos iguais. A *nota objetiva* é definida por
@@ -163,7 +163,7 @@ para cada membro do grupo.
 apresentação obrigatória. Etapas não apresentadas na data prevista
 recebem nota zero.
 
-* Política de Atraso
+** Política de Atraso
 
 Todas as etapas do projeto de compilador tem a mesma política de
 atraso. As soluções de cada etapa devem ser enviadas até as datas de
@@ -172,7 +172,7 @@ limite serão avaliadas normalmente, até 100%. Qualquer solução
 recebida após a data limite inicialmente estabelecida receberá nota
 zero.
 
-* Pesos e prazos de entrega das etapas
+** Pesos e prazos de entrega das etapas
 
 Os seguintes pesos serão adotados para cada etapa do projeto de compilador:
 
