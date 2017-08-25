@@ -1,48 +1,44 @@
 * Conteúdo
 ** Aulas e videoaulas
 
-A lista abaixo apresenta uma visão geral com detalhes dos assuntos
-abordados ao longo do semestre. Os tópicos abordados, respeitando o
-plano de ensino da disciplina, podem variar em abrangência e
-profundidade.
+A tabela abaixo traz uma lista dos assuntos abordados ao longo do
+semestre, por setor. Os tópicos, respeitando o plano de ensino da
+disciplina, podem variar em abrangência e profundidade.
 
-- Aula Inaugural
-  - Apresentação da disciplina; visão geral de um compilador
-- Análise Léxica
-  - Introdução; expressões regulares; autômatos finitos
-  - O algoritmo de subconjuntos
-  - O construtor de analisadores léxicos *flex*
-- Análise Sintática
-  - Introdução
-    - Gramáticas livres de contexto
-    - Transformações gramaticais
-  - Descendente
-    - Recursiva com retrocesso
-    - Recursiva preditiva
-    - Conjuntos primeiro e sequência
-    - LL(1): Descendente preditiva tabular
-  - Ascendente
-    - Introdução (relembrando o algoritmo de subconjuntos)
-    - LR(0) e SLR(1)
-    - LR(1) e LALR(1)
-    - O construtor de analisadores gramaticais ascendentes *bison*
-- Análise Semântica
-  - Análise sensível ao contexto
-  - Ordem e avaliação de atributos
-  - Esquemas S e L-atribuídos
-- Geração de Código
-  - Taxonomia e geração de código para expressões
-  - Declarações, escopo e atribuição (endereçamento de variáveis)
-  - Cálculo recursivo de endereço de arranjos multidimensionais
-  - Avaliação de expressões booleanas + remendos
-  - Controle de fluxo
-- Suporte de Execução
-  - Implementando chamadas de função, retorno
-  - Alocação de registradores
-- Otimização
-  - Introdução, janela e grafos de fluxo
-  - Local e Global
-- Fechamento
+| Setor      | Descrição                                                      |
+|------------+----------------------------------------------------------------|
+| Inaugural  | Apresentação da disciplina                                     |
+| Inaugural  | Visão geral de um compilador                                   |
+| Léxica     | Introdução, Expressões Regulares, Autômatos Finitos            |
+| Léxica     | Processo conceitual de construção do analisador léxico         |
+| Léxica     | O Algoritmo de subconjuntos (Conversão AFND para AFD)          |
+| Léxica     | O construtor de analisadores léxicos *flex*                      |
+| Sintática  | Introdução a análise sintática                                 |
+| Sintática  | Gramáticas Livres de Contexto                                  |
+| Sintática  | Algumas transformações gramaticais                             |
+| Sintática  | Introdução a análise Descendente (/top-down/)                    |
+| Sintática  | Recursivo com Retrocesso/Preditivo                             |
+| Sintática  | Conjuntos Primeiro e Sequência                                 |
+| Sintática  | LL(1) - Preditivo tabular                                      |
+| Sintática  | Árvore Sintática Abstrata (AST - /Abstract Syntax Tree/)         |
+| Sintática  | Introdução a análise Ascendente (/bottom-up/)                    |
+| Sintática  | LR(0)                                                          |
+| Sintática  | SLR(1)                                                         |
+| Sintática  | LR(1)                                                          |
+| Sintática  | LALR(1) - /bison/                                                |
+| Sintática  | O construtor de analisadores gramaticais ascendentes *bison*     |
+| Semântica  | Esquemas S e L-Atribuídos, Ordem e avaliação de atributos      |
+| Semântica  | Implementação de Esquemas S e L-Atribuídos                     |
+| Código     | Taxonomia e geração de código para expressões                  |
+| Código     | Endereçamento de variáveis (declarações, escopos e atribuição) |
+| Código     | Endereçamento de arranjos multidimensionais                    |
+| Código     | Expressões Lógicas com atalho, técnica de remendos             |
+| Código     | Controle de Fluxo                                              |
+| Execução   | Introdução, Registro de Ativação                               |
+| Execução   | Chamada e retorno de Função, Passagem de parâmetros            |
+| Otimização | Introdução, Janela e Grafos de Fluxo                           |
+| Otimização | Local e Global, Otimização em laços                            |
+|            | Discussão e reflexão sobre os conceitos da disciplina          |
 
 ** Material de apoio
 ** Exercícios
