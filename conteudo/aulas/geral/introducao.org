@@ -21,7 +21,7 @@
   + meio de comunicação entre o usuário e o computador \linebreak
 
 #+CAPTION: Do pensamento humano não estruturado ao computador
-[[./img/pensamento_humano-computador.pdf]]
+[[./img/pensamento_humano-computador.png]]
 
 + <2->Linguagens em diferentes níveis de abstração
   + Baixo nível (de máquina, usada pelo computador)
@@ -33,7 +33,7 @@
 + <2->Linguagens Simbólicas
   + Exemplo: Assembly
   + Add 4(0), #1
-+ <3->*Linguagens orientadas ao usuário*
++ <3-> *Linguagens orientadas ao usuário*
   + Maioria das linguagens de programação
     + C, Fortran, Pascal, Algol, Ada, Objective-C, C++
     + *x += 1;
@@ -44,7 +44,7 @@
 + <1-> Forte: é um programa de computador que transforma uma
   *linguagem de alto nível* qualquer em uma *linguagem de máquina* de uma determinada arquitetura
 #+CAPTION: Do programa fonte ao programa objeto
-[[./img/programa_fonte-compilador-objeto.pdf]]
+[[./img/programa_fonte-compilador-objeto.png]]
   \vfill
 + <2-> Fraca: é um programa de computador que transforma uma
   linguagem de alto nível em outra linguagem qualquer
@@ -81,7 +81,7 @@
 \vfill
 
 #+CAPTION: Os passos de tradução
-[[./img/etapas_compilacao.pdf]]
+[[./img/etapas_compilacao.png]]
 
 * Partes do processo de compilação
 + Análise (front-end) \\
@@ -99,7 +99,7 @@
 
 #+CAPTION: As etapas do passo de compilação.
 #+ATTR_LATEX: :width 6.5cm
-[[./img/fases_compilacao.pdf]]
+[[./img/fases_compilacao.png]]
 
 * Análise Lexical (scanner)
 + Identificar sequências significativas na entrada: *lexemas*
@@ -110,7 +110,7 @@
 
 #+CAPTION: O funcionamento da análise léxica.
 #+ATTR_LATEX: :width 8cm
-[[./img/analisa_lexica.pdf]]
+[[./img/analisa_lexica.png]]
 
 + Um token é composto de: *<nome-token, valor-atributo>*
 + Exemplo
@@ -140,7 +140,7 @@
 
 #+CAPTION: O funcionamento da análise sintática.
 #+ATTR_LATEX: :width 8cm
-[[./img/analisa_sintatica.pdf]]
+[[./img/analisa_sintatica.png]]
 
 + Funções
   + Verificar a estrutura gramatical do programa
@@ -172,7 +172,7 @@ Através do uso de *Gramáticas Livres de Contexto*
 + Considerando a entrada: *while i < 100 do i = j + i*
 
 #+CAPTION: A árvore de derivação.
-[[./img/arvore_derivacao.pdf]]
+[[./img/arvore_derivacao.png]]
 
 * Análise Semântica
 + Avaliar a *consistência semântica* do programa
@@ -291,7 +291,7 @@ L2: ...
 
 #+CAPTION: As etapas do passo de compilação.
 #+ATTR_LATEX: :width 6.5cm
-[[./img/fases_compilacao.pdf]]
+[[./img/fases_compilacao.png]]
 
 * Geradores de Compiladores
 + Análise Léxica -- *lex* e *flex*
