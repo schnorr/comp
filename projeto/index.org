@@ -15,7 +15,9 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-Última atualização deste documento (veja a data do commit).
+O trabalho consiste no projeto e implementação de um compilador
+funcional para uma determinada gramática de linguagem de programação
+especificada em cada semestre.
 
 ** Especificação, pesos, e prazos de entrega
 
