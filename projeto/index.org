@@ -48,26 +48,47 @@ comando =git log= na raiz do repositório solução do grupo. O comando =git
 blame= também será utilizado para verificar a participação de todos os
 membros do grupo na construção da etapa.
 
-- *Nota importante*: O repositório git utilizado pelo grupo deve ser
-  *privado aos membros do grupo*. O endereço do repositório deve ser
-  informado ao professor para leitura e, no caso de necessidade, para
-  escrita.
-
 *** Código Inicial
 
-O código inicial do projeto encontra-se no =bitbucket.org=, e pode ser
-clonado e inicialmente compilado (supondo que as bibliotecas
-necessárias para compilação já estão instaladas) assim:
-#+Latex: {\scriptsize
+O código inicial do projeto encontra-se em um repositório no
+Github. Existem duas formas de obtê-lo, *sendo a primeira delas
+recomendada*.
+
+1. Fork and Clone
+
+   Ir ao site https://github.com/schnorr/pc e clicar em Fork. Uma vez
+   com sua cópia, clonar localmente com a seguinte sequência de
+   comandos, lembrando que USUARIO deve ser substituído pelo seu
+   usuário github:
+
+   #+BEGIN_EXAMPLE
+   git clone https://github.com/USUARIO/pc
+   cd pc
+   #+END_EXAMPLE
+
+2. Clone and Push
+
+   Nesta opção, *que não é recomendada*, realiza-se o seguinte
+   procedimento, assumindo que o link utilizado é válido e comporta um
+   repositório GIT virgem, sem conteúdo.
+
+   #+BEGIN_EXAMPLE
+   git clone https://github.com/schnorr/pc
+   cd pc
+   git remote add MEUREPO https://seuservidorgit.com/seusuario/seurepositorio/
+   git push MEUREPO master
+   #+END_EXAMPLE
+
+Em ambos os casos, o compilador pode ser inicialmente compilado
+(supondo que as bibliotecas necessárias para compilação já estão
+instaladas) da seguinte forma:
+
 #+BEGIN_EXAMPLE
-$ git clone https://bitbucket.org/schnorr/compil-2016-1.git
-$ cd compil-2016-1
-$ mkdir build
-$ cd build
-$ cmake ..
-$ make
+mkdir build
+cd build
+cmake ..
+make
 #+END_EXAMPLE
-#+Latex: }
 
 Note que os arquivos =scanner.l= e =parser.y= deverão ser fortemente
 modificados para atender aos requisitos deste trabalho. Eles estão
@@ -85,8 +106,8 @@ pode-se realizar estes passos através da interface do =ccmake= (pacote
 =cmake-curses-gui= em um Linux Debian).
 
 #+BEGIN_EXAMPLE
-$ cmake -DETAPA_1=OFF -DETAPA_2=ON .
-$ make
+cmake -DETAPA_1=OFF -DETAPA_2=ON .
+make
 #+END_EXAMPLE
 
 *** Atualizações do Professor
@@ -95,10 +116,13 @@ O professor pode efetuar alterações no repositório de referência. Os
 alunos deverão pegar as modificações da seguinte forma (supondo que
 origin é o repositório de referência do professor):
 #+BEGIN_EXAMPLE
-$ git pull origin master
+git pull origin master
 #+END_EXAMPLE
+
 Conflitos podem acontecer. Se o grupo não souber como resolvê-los,
-entre em contato com o professor.
+entre em contato com o professor. Entender como funciona
+o GIT e adotar boas práticas de desenvolvimento em equipe ajuda a
+resolver os problemas.
 
 *** Avaliação automática
 
@@ -114,27 +138,35 @@ ctest -R e1
 
 *** Formato de Entrega
 
-O líder do grupo deve marcar, utilizando uma tag do git, o commit que
-representa a solução do grupo. Em seguida, através do formulário de
-submissão moodle correspondente a submissão de um determinada etapa do
-projeto de compilador, o líder do grupo informará o link para o
-repositório git e o nome da tag que representa a solução. Embora o
-repositório git tenha que ser *obrigatoriamente configurado como
-privado*, tenha certeza que o professor possa clonar o
-repositório. *Observação*: A solução deve ser baseada nos arquivos
-inicialmente oferecidos aos alunos. O professor deve poder executar a
-sequência de comandos mostrado ao lado para avaliar o resultado do
-trabalho (supondo Etapa 3):
+O líder do grupo deve marcar, utilizando uma *tag* do git, o commit que
+representa a solução do grupo para uma determinada etapa. Utilize uma
+tag significativa, como por exemplo *E1* ou *Etapa1* para a etapa 1. Para
+enviar a tag para o seu servidor, uma opção específica deve ser
+utilizada, da seguinte forma:
 
-#+Latex: {\scriptsize
+#+BEGIN_EXAMPLE
+git push --tags ORIGIN master
+#+END_EXAMPLE
+
+Em seguida, *antes do prazo limite de entrega estabelecido*, envie um
+e-mail para o professor informando:
+- O identificador da etapa (E1, E2, ...)
+- O link para que o professor possa clonar o repositório
+- O nome da tag que marca o commit que representa a solução
+
+Tenha certeza que o professor possa clonar o repositório. *Observação*:
+A solução deve ser baseada nos arquivos inicialmente oferecidos aos
+alunos. O professor deve poder executar a sequência de comandos para
+avaliar o resultado do trabalho (supondo Etapa 3):
+
 #+begin_src R :results output :session :exports both
-$ cd diretorio-com-a-solucao
-$ mkdir build
-$ cd build
-$ cmake -DETAPA_1=OFF -DETAPA_2=OFF -DETAPA_3=ON ..
-$ make
+cd diretorio-com-a-solucao
+mkdir build
+cd build
+cmake -DETAPA_1=OFF -DETAPA_2=OFF -DETAPA_3=ON ..
+make
+ctest -R e3
 #+end_src
-#+Latex: }
 
 *** Recomendações
 

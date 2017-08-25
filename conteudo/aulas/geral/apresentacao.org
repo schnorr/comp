@@ -155,16 +155,6 @@ Em dúvidas
 + Duplas, avaliação com entrevista em laboratório
 + Respeito das especificações, linguagem C
 + Testes automáticos com cmake/ctest
-| Etapa | Assunto principal          | Peso (%) |
-|-------+----------------------------+----------|
-| E1    | Léxico                     |       10 |
-| E2    | Sintático                  |       10 |
-| E3    | /Abstract Syntax Tree/       |       15 |
-| E4    | Semântico                  |       20 |
-| E5    | Código 1 (uma função)      |       25 |
-| E6    | Código 2 (chamada/retorno) |       10 |
-| E7    | Otimização                 |       10 |
-|-------+----------------------------+----------|
 
 \vfill
 
