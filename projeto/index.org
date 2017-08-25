@@ -208,9 +208,9 @@ cógigo, a legibilidade, os comentários assim como a organização do
 código e os recursos apresentados. A nota subjetiva pode ser diferente
 para cada membro do grupo.
 
-*Importante:* Todos os membros do grupo devem estar presente na
-apresentação obrigatória. Etapas não apresentadas na data prevista
-recebem nota zero.
+*Importante*
+- Todos os membros do grupo devem estar presente na apresentação obrigatória
+- Etapas não apresentadas na data prevista recebem nota zero.
 
 ** Política de Atraso
 
