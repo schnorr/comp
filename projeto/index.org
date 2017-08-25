@@ -15,7 +15,7 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-* Formação dos Grupos
+** Formação dos Grupos
 
 Os trabalhos devem ser realizados em grupos de *dois alunos*.  Uma vez
 formado, o grupo informa os seus membros ao professor, por e-mail. A
