@@ -19,7 +19,7 @@
 
 ** Especificação, pesos, e prazos de entrega
 
-| Etapa | Assunto principal         | Peso (%) | Cumulativo (%) | Entrega |
+| Etapa | Descrição e Especificação | Peso (%) | Cumulativo (%) | Entrega |
 |-------+---------------------------+----------+----------------+---------|
 | E1    | [[./etapa1.org][Análise Léxica]]            |       10 |             10 |         |
 | E2    | [[./etapa2.org][Análise Sintática]]         |       15 |             25 |         |
