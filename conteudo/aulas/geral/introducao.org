@@ -34,16 +34,16 @@
 + <2->Linguagens Simbólicas
   + Exemplo: Assembly
   + Add 4(0), #1
-+ <3->\alert{Linguagens orientadas ao usuário}
++ <3->*Linguagens orientadas ao usuário*
   + Maioria das linguagens de programação
     + C, Fortran, Pascal, Algol, Ada, Objective-C, C++
     + *x += 1;
 + <4->Linguagens orientadas à aplicação (scripts)
   + Excel, SQL, Matlab, R, ...
 ** Tradução de Linguagens de Programação
-+ Duas definições para \alert{compilador}
++ Duas definições para *compilador*
 + <1-> Forte: é um programa de computador que transforma uma
-  \alert{linguagem de alto nível} qualquer em uma \alert{linguagem de máquina} de uma determinada arquitetura
+  *linguagem de alto nível* qualquer em uma *linguagem de máquina* de uma determinada arquitetura
 #+CAPTION: Do programa fonte ao programa objeto
 [[./img/programa_fonte-compilador-objeto.pdf]]
   \vfill
@@ -65,7 +65,7 @@
     + Várias etapas
     + Programas auxiliares
       + Normalmente embutidos
-    + <2->Exemplo utilizando \alert{gcc}
+    + <2->Exemplo utilizando *gcc*
       + gcc -E hello.c > hello-pre.c
       + gcc -c hello-pre.c -o hello.o
       + nm hello.o
@@ -86,13 +86,13 @@
 
 ** Partes do processo de compilação
 + Análise (front-end) \\
-  \alert{Reconhecer} o que o usuário quer escrever
+  *Reconhecer* o que o usuário quer escrever
   + ``Palavras'' \rightarrow análise lexical
   + ``Frases'' \rightarrow análise sintática/semântica
   + Detecção de erros
     \vfill
 + <2->Síntese (back-end) \\
-  \alert{Produzir} alguma coisa, em função da análise
+  *Produzir* alguma coisa, em função da análise
   + Meta-representação do programa (código intermediário)
   + Tabela de símbolos
   + Código otimizado
@@ -103,8 +103,8 @@
 [[./img/fases_compilacao.pdf]]
 
 ** Análise Lexical (scanner)
-+ Identificar sequências significativas na entrada: \alert{lexemas}
-+ Quando um lexema é identificado, gera um \alert{token}
++ Identificar sequências significativas na entrada: *lexemas*
++ Quando um lexema é identificado, gera um *token*
 + Funções adicionais
   + Começa a construção da tabela de símbolos
   + Detecção de erros léxicos, gerando mensagens de erro
@@ -117,7 +117,7 @@
 + Exemplo
 
 ** Como reconhecer os tokens?
-+ Através do uso de \alert{Expressões Regulares}
++ Através do uso de *Expressões Regulares*
 + Algumas regras para formação de palavras válidas
   + Concatenação: xy (x seguido de y)
   + Alternação: x|y (x ou y)
@@ -148,13 +148,13 @@
   + Detecção de erros sintáticos, gerando mensagens de erro
   + Tentar sobreviver a um erro sintático
 ** Como construir a árvore de sintaxe?
-Através do uso de \alert{Gramáticas Livres de Contexto}
+Através do uso de *Gramáticas Livres de Contexto*
 + Conjunto de símbolos terminais (T), símbolos não-terminais (NT)
 + Conjunto de produções (ou Regras de derivação) \linebreak
   <NT> \rightarrow sequência de <T> ou <NT>
 + Um <NT> como o símbolo inicial da gramática
 
-+ Notação para gramáticas: \alert{BNF} (Backus-Naur Form) \\
++ Notação para gramáticas: *BNF* (Backus-Naur Form) \\
   | *<comando>*   | \to | <while>                        |
   | *<comando>*   | \rightarrow | <atrib>                        |
   | <while>     | \rightarrow | while <expr-bool> do <comando> |
@@ -169,19 +169,19 @@ Através do uso de \alert{Gramáticas Livres de Contexto}
   | <número>    | \rightarrow | 100                            |
 #+END_EXAMPLE
 ** Árvore de derivação
-+ Ilustra a \alert{derivação das regras} de uma gramática
++ Ilustra a *derivação das regras* de uma gramática
 + Considerando a entrada: *while i < 100 do i = j + i*
 
 #+CAPTION: A árvore de derivação.
 [[./img/arvore_derivacao.pdf]]
 
 ** Análise Semântica
-+ Avaliar a \alert{consistência semântica} do programa
++ Avaliar a *consistência semântica* do programa
 + Verificação de tipos
   + Métodos de coerção (caso a definição da linguagem autorisar)
 + Exemplo
 ** Geração de Código Intermediário
-+ Usa a \alert{representação interna} do compilador
++ Usa a *representação interna* do compilador
   + Exemplo: LLVM Language Reference Manual \linebreak
     http://www.llvm.org/docs/LangRef.html
 + Gera código objeto ou intermediário
@@ -200,7 +200,7 @@ Através do uso de \alert{Gramáticas Livres de Contexto}
   L2: ...
   #+END_SRC
 ** Otimização de Código
- + Realizar \alert{otimizações} sobre o código intermediário
+ + Realizar *otimizações* sobre o código intermediário
    + Desempenho durante a execução
    + Eficiência na ocupação dos recursos \linebreak
      \rightarrow diminuir quantidade de memória, de registradores
@@ -265,7 +265,7 @@ L2: ...
 \vspace{1cm}
 ** Gerência da Tabela de Símbolos
 + Acompanha todas as fases do compilador
-+ Guarda atributos das \alert{variáveis} e \alert{funções} do programa
++ Guarda atributos das *variáveis* e *funções* do programa
 + <2->Atributos de variáveis
   + Espaço de memória
   + Tipo
@@ -275,13 +275,13 @@ L2: ...
   + Método de passagem de parâmetro (valor, referência, ...)
   + Tipo de retorno
 \vfill
-+ <3->\alert{Acesso eficiente}
++ <3->*Acesso eficiente*
   + Inserção
   + Extração
 ** Tratamento e Recuperação de Erros
 + O que fazer quando um erro é detectado? \\
   (considerando apenas erros léxicos e sintáticos?)
-+ <2->\alert{Sobreviver}, se recuperando da seguinte forma
++ <2->*Sobreviver*, se recuperando da seguinte forma
   + Fazer uma suposição a respeito do erro
   + Continuar a análise confiando na suposição feita
 \vfill
@@ -289,11 +289,14 @@ L2: ...
 + <3-> Como sobreviver a um erro sintático?
 + <3-> E sobre erros de geração/otimização de código?
 ** Estrutura Geral de um Compilador
-\hspace{2.5cm}\includegraphics[width=.6\linewidth]{fases_compilacao_pratica.pdf}\hfill
+
+#+CAPTION: As etapas do passo de compilação.
+#+ATTR_LATEX: :width 6.5cm
+[[./img/fases_compilacao.pdf]]
 
 ** Geradores de Compiladores
-+ Análise Léxica -- \alert{lex} e \alert{flex}
-+ Análise Sintática -- \alert{yacc} e \alert{bison}
++ Análise Léxica -- *lex* e *flex*
++ Análise Sintática -- *yacc* e *bison*
 + Gerador de Código
 ** Conclusão da Aula de Hoje
 - Estrutura geral de um compilador
