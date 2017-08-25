@@ -15,6 +15,21 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
+Última atualização deste documento (veja a data do commit).
+
+** Especificação, pesos, e prazos de entrega
+
+| Etapa | Assunto principal                | Peso (%) | Cumulativo (%) | Entrega |
+|-------+----------------------------------+----------+----------------+---------|
+| E1    | Análise Léxica                   |       10 |             10 |         |
+| E2    | Análise Sintática                |       15 |             25 |         |
+| E3    | /Árvore Sintática Abstrata/        |       15 |             40 |         |
+| E4    | Análise Semântica                |       15 |             55 |         |
+| E5    | Geração de Código 1 (uma função) |       20 |             75 |         |
+| E6    | Código 2 (chamada/retorno)       |       15 |             90 |         |
+| E7    | Otimização                       |       10 |            100 |         |
+|-------+----------------------------------+----------+----------------+---------|
+
 ** Formação dos Grupos
 
 Os trabalhos devem ser realizados em grupos de *dois alunos*.  Uma vez
@@ -204,17 +219,3 @@ limite serão avaliadas normalmente, até 100%. Qualquer solução
 recebida após a data limite inicialmente estabelecida receberá nota
 zero.
 
-** Pesos e prazos de entrega das etapas
-
-Os seguintes pesos serão adotados para cada etapa do projeto de compilador:
-
-| Etapa | Assunto principal          | Peso (%) | Entrega |
-|-------+----------------------------+----------+---------|
-| E1    | Léxico                     |       10 |         |
-| E2    | Sintático                  |       10 |         |
-| E3    | /Abstract Syntax Tree/       |       15 |         |
-| E4    | Semântico                  |       20 |         |
-| E5    | Código 1 (uma função)      |       25 |         |
-| E6    | Código 2 (chamada/retorno) |       10 |         |
-| E7    | Otimização                 |       10 |         |
-|-------+----------------------------+----------+---------|
