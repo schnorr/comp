@@ -6,17 +6,16 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 #+EXPORT_SELECT_TAGS: export
 
-#+Title: Compiladores \linebreak \linebreak Visão geral de um compilador
-#+Author: Prof. Lucas M. Schnorr \linebreak UFRGS
+#+Title: Visão geral de um compilador
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
 #+Date: \copyleft
 
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
-#+OPTIONS:   H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
-* Aula 01 (Introdução Geral de Compiladores)
-** Linguagens de Programação
+* Linguagens de Programação
 + Modelos de Linguagem de Programação (MLP)
 + Linguagem de programação
   + meio de comunicação entre o usuário e o computador \linebreak
@@ -27,7 +26,7 @@
 + <2->Linguagens em diferentes níveis de abstração
   + Baixo nível (de máquina, usada pelo computador)
   + Alto nível (próxima ao pensamento humano)
-** Níveis de Abstração em Linguagens
+* Níveis de Abstração em Linguagens
 + Linguagens de máquina
   + Seqûencia de zeros e uns (0011010000011101)
   + Notação binária
@@ -40,7 +39,7 @@
     + *x += 1;
 + <4->Linguagens orientadas à aplicação (scripts)
   + Excel, SQL, Matlab, R, ...
-** Tradução de Linguagens de Programação
+* Tradução de Linguagens de Programação
 + Duas definições para *compilador*
 + <1-> Forte: é um programa de computador que transforma uma
   *linguagem de alto nível* qualquer em uma *linguagem de máquina* de uma determinada arquitetura
@@ -56,8 +55,8 @@
   + Exemplo: Java, Python
   + Por questões de desempenho 
 
-** Passos no processo de tradução
-*** Texto						     :B_column:BMCOL:
+* Passos no processo de tradução
+** Texto                                                    :B_column:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.6
     :BEAMER_env: column
@@ -74,7 +73,7 @@
       + ldd hello
       + hexdump hello.o | wc -l
       + hexdump hello | wc -l
-*** Figura						     :B_column:BMCOL:
+** Figura                                                   :B_column:BMCOL:
 :PROPERTIES:
     :BEAMER_col: 0.43
     :BEAMER_env: column
@@ -84,7 +83,7 @@
 #+CAPTION: Os passos de tradução
 [[./img/etapas_compilacao.pdf]]
 
-** Partes do processo de compilação
+* Partes do processo de compilação
 + Análise (front-end) \\
   *Reconhecer* o que o usuário quer escrever
   + ``Palavras'' \rightarrow análise lexical
@@ -96,13 +95,13 @@
   + Meta-representação do programa (código intermediário)
   + Tabela de símbolos
   + Código otimizado
-** Estrutura de um Compilador em etapas
+* Estrutura de um Compilador em etapas
 
 #+CAPTION: As etapas do passo de compilação.
 #+ATTR_LATEX: :width 6.5cm
 [[./img/fases_compilacao.pdf]]
 
-** Análise Lexical (scanner)
+* Análise Lexical (scanner)
 + Identificar sequências significativas na entrada: *lexemas*
 + Quando um lexema é identificado, gera um *token*
 + Funções adicionais
@@ -116,7 +115,7 @@
 + Um token é composto de: *<nome-token, valor-atributo>*
 + Exemplo
 
-** Como reconhecer os tokens?
+* Como reconhecer os tokens?
 + Através do uso de *Expressões Regulares*
 + Algumas regras para formação de palavras válidas
   + Concatenação: xy (x seguido de y)
@@ -132,7 +131,7 @@
   + Manual do SED: http://www.gnu.org/software/sed/
   + man grep (seção "Regular Expressions")
 
-** Análise Sintática (parsing)
+* Análise Sintática (parsing)
 + Tem como entrada um fluxo de tokens
 + Mapeia sequências de tokens para estruturas sintáticas
 + Cria uma *Árvore de Sintaxe*
@@ -147,7 +146,7 @@
   + Verificar a estrutura gramatical do programa
   + Detecção de erros sintáticos, gerando mensagens de erro
   + Tentar sobreviver a um erro sintático
-** Como construir a árvore de sintaxe?
+* Como construir a árvore de sintaxe?
 Através do uso de *Gramáticas Livres de Contexto*
 + Conjunto de símbolos terminais (T), símbolos não-terminais (NT)
 + Conjunto de produções (ou Regras de derivação) \linebreak
@@ -168,19 +167,19 @@ Através do uso de *Gramáticas Livres de Contexto*
   | <variável>  | \rightarrow | j                              |
   | <número>    | \rightarrow | 100                            |
 #+END_EXAMPLE
-** Árvore de derivação
+* Árvore de derivação
 + Ilustra a *derivação das regras* de uma gramática
 + Considerando a entrada: *while i < 100 do i = j + i*
 
 #+CAPTION: A árvore de derivação.
 [[./img/arvore_derivacao.pdf]]
 
-** Análise Semântica
+* Análise Semântica
 + Avaliar a *consistência semântica* do programa
 + Verificação de tipos
   + Métodos de coerção (caso a definição da linguagem autorisar)
 + Exemplo
-** Geração de Código Intermediário
+* Geração de Código Intermediário
 + Usa a *representação interna* do compilador
   + Exemplo: LLVM Language Reference Manual \linebreak
     http://www.llvm.org/docs/LangRef.html
@@ -199,7 +198,7 @@ Através do uso de *Gramáticas Livres de Contexto*
       goto L0
   L2: ...
   #+END_SRC
-** Otimização de Código
+* Otimização de Código
  + Realizar *otimizações* sobre o código intermediário
    + Desempenho durante a execução
    + Eficiência na ocupação dos recursos \linebreak
@@ -225,13 +224,13 @@ L2:
        goto L0
    L2:     
    #+END_SRC
-** Geração de Código Objeto
+* Geração de Código Objeto
 + Gerar código objeto considerando
   + Qual é a arquitetura alvo
   + Alocação de memória
   + Seleção de registradores
 + Exemplo considerando a entrada: *while i < 100 do i = j + i*
-*** <2-> Código Otimizado                                             :BMCOL:
+** <2-> Código Otimizado                                             :BMCOL:
     :PROPERTIES:
     :BEAMER_envargs: C[t]
     :BEAMER_col: 0.38
@@ -245,7 +244,7 @@ L2:
 #+END_SRC
 \vspace{1cm}
 
-*** <2-> Código Objeto para PC8086                                    :BMCOL:
+** <2-> Código Objeto para PC8086                                    :BMCOL:
     :PROPERTIES:
     :BEAMER_envargs: C[t]
     :BEAMER_col: 0.6
@@ -263,7 +262,7 @@ L0: MOV AX, i
 L2: ...
 #+END_SRC
 \vspace{1cm}
-** Gerência da Tabela de Símbolos
+* Gerência da Tabela de Símbolos
 + Acompanha todas as fases do compilador
 + Guarda atributos das *variáveis* e *funções* do programa
 + <2->Atributos de variáveis
@@ -278,7 +277,7 @@ L2: ...
 + <3->*Acesso eficiente*
   + Inserção
   + Extração
-** Tratamento e Recuperação de Erros
+* Tratamento e Recuperação de Erros
 + O que fazer quando um erro é detectado? \\
   (considerando apenas erros léxicos e sintáticos?)
 + <2->*Sobreviver*, se recuperando da seguinte forma
@@ -288,17 +287,17 @@ L2: ...
 + <3-> Como sobreviver a um erro léxico? \\
 + <3-> Como sobreviver a um erro sintático?
 + <3-> E sobre erros de geração/otimização de código?
-** Estrutura Geral de um Compilador
+* Estrutura Geral de um Compilador
 
 #+CAPTION: As etapas do passo de compilação.
 #+ATTR_LATEX: :width 6.5cm
 [[./img/fases_compilacao.pdf]]
 
-** Geradores de Compiladores
+* Geradores de Compiladores
 + Análise Léxica -- *lex* e *flex*
 + Análise Sintática -- *yacc* e *bison*
 + Gerador de Código
-** Conclusão da Aula de Hoje
+* Conclusão da Aula de Hoje
 - Estrutura geral de um compilador
 
 + Leituras recomendadas
