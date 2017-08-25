@@ -1,1 +1,188 @@
-* Projeto de Compilador
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador -- Entrega, Avaliação, Regras Gerais
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* Formação dos Grupos
+
+Os trabalhos devem ser realizados em grupos de *dois alunos*.  Uma vez
+formado, o grupo informa os seus membros ao professor, por e-mail. A
+definição de grupos é definitiva, válida do início ao fim do semestre.
+
+* Regras de desenvolvimento
+
+Requerimentos obrigatórios na realização de todas as etapas.  A função
+=main= deve estar em um arquivo chamado =main.c=. Ela não deve ser
+alterada sob qualquer hipótese. Outros arquivos fontes são encorajados
+de forma a manter a modularidade do código fonte. Sugere-se e edição
+do arquivo =cc_misc.c=, com suas funções =main_init= e =main_finalize= para a
+alocar e liberar estruturas de dados globais.
+A entrada para o =flex= deve estar em um arquivo com o nome
+=scanner.l=. As subseções seguintes apresentam os requisitos técnicos
+obrigatórios nesta etapa do projeto de compiladores. Elas serão
+consideradas na avaliação subjetiva da etapa.
+
+** Git e Cmake
+
+A solução desta etapa do projeto de compiladores deve vir acompanhada
+de um repositório git que manteve o histórico de desenvolvimento do
+projeto. Cada commit deve ser o menor possível (utilize a ferramenta
+=git gui= para comitar apenas parte do arquivo modificado). Cada ação de
+commit deve vir com mensagens significativas explicando a mudança
+feita. Todos os membros do grupo devem ter feito ações de commit, pelo
+fato deste trabalho ser colaborativo. Estas duas ações -- mensagens de
+commit e quem fez o commit -- serão obtidas pelo professor através do
+comando =git log= na raiz do repositório solução do grupo. O comando =git
+blame= também será utilizado para verificar a participação de todos os
+membros do grupo na construção da etapa.
+
+- *Nota importante*: O repositório git utilizado pelo grupo deve ser
+  *privado aos membros do grupo*. O endereço do repositório deve ser
+  informado ao professor para leitura e, no caso de necessidade, para
+  escrita.
+
+** Código Inicial
+
+O código inicial do projeto encontra-se no =bitbucket.org=, e pode ser
+clonado e inicialmente compilado (supondo que as bibliotecas
+necessárias para compilação já estão instaladas) assim:
+#+Latex: {\scriptsize
+#+BEGIN_EXAMPLE
+$ git clone https://bitbucket.org/schnorr/compil-2016-1.git
+$ cd compil-2016-1
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+#+END_EXAMPLE
+#+Latex: }
+
+Note que os arquivos =scanner.l= e =parser.y= deverão ser fortemente
+modificados para atender aos requisitos deste trabalho. Eles estão
+praticamente vazios. A solução do aluno deve partir deste código
+inicial e utilizar a mesma estrutura de diretórios. Se novos arquivos
+de código fonte devem ser adicionados, modifique o arquivo
+=CMakeLists.txt= apropriadamente para que o novo arquivo seja incluído
+no processo de compilação.
+
+** Configurar Makefiles para Etapa
+
+Para configurar o sistema de compilação para uma determinada etapa, os
+passos abaixo devem ser realizados (supondo etapa 2). Adicionalmente,
+pode-se realizar estes passos através da interface do =ccmake= (pacote
+=cmake-curses-gui= em um Linux Debian).
+
+#+BEGIN_EXAMPLE
+$ cmake -DETAPA_1=OFF -DETAPA_2=ON .
+$ make
+#+END_EXAMPLE
+
+** Atualizações do Professor
+
+O professor pode efetuar alterações no repositório de referência. Os
+alunos deverão pegar as modificações da seguinte forma (supondo que
+origin é o repositório de referência do professor):
+#+BEGIN_EXAMPLE
+$ git pull origin master
+#+END_EXAMPLE
+Conflitos podem acontecer. Se o grupo não souber como resolvê-los,
+entre em contato com o professor.
+
+** Avaliação automática
+
+Um conjunto de testes já estão disponíveis no repositório para que o
+grupo possa se autoavaliar. Para lançar estes testes, depois de ter
+compilado o programa utilizando as instruções acima e com a ferramenta
+=valgrind= instalada, execute o seguinte comando no diretório onde
+encontra-se os arquivos compilados (supondo Etapa 1):
+
+#+BEGIN_EXAMPLE
+ctest -R e1
+#+END_EXAMPLE
+
+** Formato de Entrega
+
+O líder do grupo deve marcar, utilizando uma tag do git, o commit que
+representa a solução do grupo. Em seguida, através do formulário de
+submissão moodle correspondente a submissão de um determinada etapa do
+projeto de compilador, o líder do grupo informará o link para o
+repositório git e o nome da tag que representa a solução. Embora o
+repositório git tenha que ser *obrigatoriamente configurado como
+privado*, tenha certeza que o professor possa clonar o
+repositório. *Observação*: A solução deve ser baseada nos arquivos
+inicialmente oferecidos aos alunos. O professor deve poder executar a
+sequência de comandos mostrado ao lado para avaliar o resultado do
+trabalho (supondo Etapa 3):
+
+#+Latex: {\scriptsize
+#+begin_src R :results output :session :exports both
+$ cd diretorio-com-a-solucao
+$ mkdir build
+$ cd build
+$ cmake -DETAPA_1=OFF -DETAPA_2=OFF -DETAPA_3=ON ..
+$ make
+#+end_src
+#+Latex: }
+
+** Recomendações
+
+Executem vários testes. Verifiquem a conformidade com cada uma das
+regras desse formato e da especificação da etapa. Verifiquem se o
+trabalho pode ser compilado e rodado em outro sistema fora o usado
+para desenvolvimento. Incluam os nomes dos componentes do grupo em
+comentários no início de todos os códigos fonte do seu
+trabalho. Retirem dúvidas com o professor antes do prazo final.
+
+* Avaliação das Etapas
+
+Cada etapa do projeto de compiladores é avaliada objetiva e
+subjetivamente, com pesos iguais. A *nota objetiva* é definida por
+testes automáticos (quando possível) que verificam as soluções dos
+alunos. Esta nota é atribuída igualmente para todos os membros do
+grupo. A *nota subjetiva* é definida pelo professor, mediante
+apresentação pelos membros do grupo em aula definida para tal. Esta
+nota compreende a apresentação do trabalho, o conhecimento técnico, as
+opções argumentadas de implementação, a originalidade, a qualidade do
+cógigo, a legibilidade, os comentários assim como a organização do
+código e os recursos apresentados. A nota subjetiva pode ser diferente
+para cada membro do grupo.
+
+*Importante:* Todos os membros do grupo devem estar presente na
+apresentação obrigatória. Etapas não apresentadas na data prevista
+recebem nota zero.
+
+* Política de Atraso
+
+Todas as etapas do projeto de compilador tem a mesma política de
+atraso. As soluções de cada etapa devem ser enviadas até as datas de
+entrega especificadas neste local. As soluções recebidas antes da data
+limite serão avaliadas normalmente, até 100%. Qualquer solução
+recebida após a data limite inicialmente estabelecida receberá nota
+zero.
+
+* Pesos e prazos de entrega das etapas
+
+Os seguintes pesos serão adotados para cada etapa do projeto de compilador:
+
+| Etapa | Assunto principal          | Peso (%) | Entrega |
+|-------+----------------------------+----------+---------|
+| E1    | Léxico                     |       10 |         |
+| E2    | Sintático                  |       10 |         |
+| E3    | /Abstract Syntax Tree/       |       15 |         |
+| E4    | Semântico                  |       20 |         |
+| E5    | Código 1 (uma função)      |       25 |         |
+| E6    | Código 2 (chamada/retorno) |       10 |         |
+| E7    | Otimização                 |       10 |         |
+|-------+----------------------------+----------+---------|
