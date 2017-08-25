@@ -19,7 +19,7 @@
 ** O professor
 Prof. Lucas M. Schnorr
 + Prédio 43425, Sala 202
-+ www.inf.ufrgs.br/\raise.17ex\hbox{$\scriptstyle\sim$}schnorr/
++ [[http://www.inf.ufrgs.br/~schnorr][http://www.inf.ufrgs.br/~schnorr]]
 + schnorr@inf.ufrgs.br
 + [[http://twitter.com/lucasschnorr/][@lucasschnorr]]
 
@@ -93,8 +93,8 @@ while (i <= 10) {
 \vfill
 
 + <2-> Principais compiladores para a família C/C++
-  + gcc -- \murl{http}{gcc.gnu.org/}
-  + LLVM/clang -- \murl{http}{www.llvm.org/}
+  + gcc -- http://gcc.gnu.org/
+  + LLVM/clang -- http://www.llvm.org/
   + Intel (icc)
 + <2->Novas arquiteturas: Celulares, Raspberry Pi, ARM, ...
 + <3->Disciplina interessante sob vários aspectos
@@ -148,11 +148,11 @@ Em dúvidas
 - [[https://github.com/schnorr/comp/issues][Abra uma Issue no Github]]
 - Envie um e-mail para o professor
 ** Avaliação
-\alert{Duas provas} (P1 e P2), 25% de peso cada
+*Duas provas* (P1 e P2), 25% de peso cada
 + Testará os aspectos teóricos da disciplina
 + Recuperação possível no final do semestre
 
-\alert{Projeto de Compilador} (T), 50% de peso
+*Projeto de Compilador* (T), 50% de peso
 + Duplas, avaliação com entrevista em laboratório
 + Respeito das especificações, linguagem C
 + Testes automáticos com cmake/ctest
@@ -169,5 +169,5 @@ Em dúvidas
 
 \vfill
 
-+ <2->Nota final: $P1 \times 0.25 + P2 \times 0.25 + T \times 0.50$ \rightarrow Conceito
++ <2->Nota final: P1 \times 0.25 + P2 \times 0.25 + T \times 0.50 \rightarrow Conceito
 
