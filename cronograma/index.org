@@ -60,7 +60,7 @@
 |            |                                                                       |      73-103 | Avaliação              |
 | Otimização | Introdução, Janela e Grafos de Fluxo                                  |             | Início E7 (Otimização) |
 | Otimização | Local e Global, Otimização em laços                                   |             |                        |
-|            | P2                                                                    | 72-Castilho |                        |
+|            | P2                                                                    |     65-AUD1 |                        |
 |            | PR                                                                    |             |                        |
 
 ** Cronograma (para TEX)
