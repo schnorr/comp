@@ -98,7 +98,8 @@ ymd("2017-12-28"), # Recesso
 ymd("2017-12-29"), # Recesso   
 ymd("2017-12-30"), # Recesso   
 ymd("2017-12-31"), # Recesso   
-ymd("2018-1-1"),   # Recesso   
+ymd("2018-1-1"),   # Recesso
+ymd("2018-1-3"),   # Ajuste de cronograma
 ymd("2018-1-6"),   # Vestibular
 ymd("2018-1-7"),   # Vestibular
 ymd("2018-1-8"),   # Vestibular
@@ -254,6 +255,6 @@ aulas %>%
 | 25 | 2017-12-13 |             | Execução   | Chamada e retorno de Função, Passagem de parâmetros                   |                        |
 | 26 | 2017-12-18 |      73-103 |            |                                                                       | Avaliação              |
 | 27 | 2017-12-20 |             | Otimização | Introdução, Janela e Grafos de Fluxo                                  | Início E7 (Otimização) |
-| 28 | 2018-01-03 |             | Otimização | Local e Global, Otimização em laços                                   |                        |
-| 29 | 2018-01-15 | 72-Castilho |            | P2                                                                    |                        |
+| 28 | 2018-01-15 |             | Otimização | Local e Global, Otimização em laços                                   |                        |
+| 29 | 2018-01-17 | 72-Castilho |            | P2                                                                    |                        |
 | 30 | 2018-01-22 |             |            | PR                                                                    |                        |
