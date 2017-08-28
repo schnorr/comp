@@ -274,13 +274,13 @@ L2: ...
   + Método de passagem de parâmetro (valor, referência, ...)
   + Tipo de retorno
 \vfill
-+ <3->*Acesso eficiente*
++ <3-> *Acesso eficiente*
   + Inserção
   + Extração
 * Tratamento e Recuperação de Erros
 + O que fazer quando um erro é detectado? \\
   (considerando apenas erros léxicos e sintáticos?)
-+ <2->*Sobreviver*, se recuperando da seguinte forma
++ <2-> *Sobreviver*, se recuperando da seguinte forma
   + Fazer uma suposição a respeito do erro
   + Continuar a análise confiando na suposição feita
 \vfill
