@@ -20,7 +20,7 @@ Prof. Lucas M. Schnorr
 + Prédio 43425, Sala 202
 + [[http://www.inf.ufrgs.br/~schnorr][http://www.inf.ufrgs.br/~schnorr]]
 + schnorr@inf.ufrgs.br
-+ [[http://twitter.com/lucasschnorr/][@lucasschnorr]]
++ [[http://twitter.com/lucasschnorr/][@lucasschnorr]] =#COMP_UFRGS=
 
 \vfill
 
