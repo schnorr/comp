@@ -77,7 +77,7 @@ Existem duas formas de obtê-lo, *sendo a primeira delas recomendada*.
 
 1. Fork and Clone
 
-   Ir ao site https://github.com/schnorr/pc e clicar em Fork. Uma vez
+   Ir ao site https://github.com/schnorr/pc e clicar em *Fork*. Uma vez
    com sua cópia, clonar localmente com a seguinte sequência de
    comandos, lembrando que USUARIO deve ser substituído pelo seu
    usuário github:
