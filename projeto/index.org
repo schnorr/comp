@@ -71,9 +71,9 @@ membros do grupo na construção da etapa.
 
 *** Código Inicial
 
-O código inicial do projeto encontra-se em um repositório no
-Github. Existem duas formas de obtê-lo, *sendo a primeira delas
-recomendada*.
+O código inicial do projeto encontra-se em um repositório no Github.
+
+Existem duas formas de obtê-lo, *sendo a primeira delas recomendada*.
 
 1. Fork and Clone
 
