@@ -1,0 +1,480 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador: Etapa 1 de *Análise Léxica*
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+A primeira etapa do trabalho consiste em fazer um analisador léxico
+utilizando a ferramenta de geração de reconhecedores =flex= e preencher
+uma tabela com os símbolos relevantes encontrados, incluindo em qual a
+linha do arquivo o lexema correspondente aparece.
+
+* Funcionalidades Necessárias
+\label{sec.funcionalidades}
+
+** Definir expressões regulares
+
+Reconhecimento dos lexemas correspondentes aos tokens descritos na
+Seção \ref{sec.tokens}, unicamente através da definição de expressões
+regulares no arquivo da ferramenta =flex=. Cada expressão regular deve
+estar associada a pelo menos um tipo de token. Os tipos de tokens
+estão listados no arquivo de configuração do =bison=.
+
+** Implementar uma tabela de símbolos                             :noexport:
+
+Implementar uma estrutura de dados que será a tabela de símbolos do
+compilador. Esta tabela deve ser implementada como uma estrutura na
+forma de um dicionário onde cada entrada é representada por uma chave
+e um conteúdo. A chave, única no dicionário, deve ser uma cadeia de
+caracteres do tipo =char*= enquanto que o conteúdo correspondente deve
+ser uma =struct= com diferentes campos que mudam ao longo das etapas do
+projeto de compilador. Na etapa um, o conteúdo das entradas na tabela
+de símbolos está especificado na Subseção~\ref{subsec.preencher}. Para
+facilitar a codificação da tabela de símbolos, o nome do tipo de dado
+do dicionário deve ser =comp_dict_t=, enquanto que as entradas no
+dicionário devem ser do tipo cujo nome é =comp_dict_item_t=.  Esses
+novos tipos de dados devem vir acompanhados de funções para
+gerenciá-los, tais como funções de criação, alteração, adição de uma
+nova entrada, etc. *Deve-se prever a existência de várias tabelas de
+símbolos no projeto de compilador*.
+
+** Contagem de linhas
+
+Controlar o número de linha do arquivo de entrada. A função cujo
+protótipo é =comp_get_line_number()= (em =cc_misc.c=) deve ser
+implementada. Ela é utilizada nos testes automáticos. Arquivos começam
+pela linha número um.
+
+** Preencher a tabela de símbolos
+
+A tabela de símbolos deve ser preenchida com os tokens:
+- identificadores
+- literais (inteiros, flutuantes, caracteres, cadeia de caracteres)
+Outros tokens devem estar ausentes da tabela de símbolos. A _chave_ de
+cada entrada na tabela deve ser o *lexema* do token encontrado. O
+_conteúdo_ de cada entrada na tabela de símbolos deve ser o número da
+linha onde o último lexema correspondente foi encontrado.  Na
+ocorrência de múltiplos lexemas idênticos na entrada, somente o número
+da linha da última ocorrência deve estar registrado na entrada
+correspondente.
+
+# Isto implica que, nesta etapa, o único campo da =struct=
+# =comp_dict_item_t= é um valor inteiro que contém o número da linha onde
+# o lexema foi encontrado.  
+
+** Ignorar comentários
+
+Ignorar comentários no formato C99: tudo o que segue a partir de =//= e
+tudo que está compreendido entre =/*= e =*/=. As linhas devem ser
+contabilizadas mesmo dentro de comentários do segundo tipo. Espaços
+devem ser igualmente ignorados.
+
+
+# Exemplos de comentários válidos de acordo com a especificação C99 e
+# que devem ser ignorados através de expressões regulares:
+
+# #+BEGIN_EXAMPLE
+# /* este
+#    //
+#      é um comentário multi-linha */
+# // este é um comentário de uma linha
+# #+END_EXAMPLE
+
+** Lançar erros léxicos
+
+Lançar erros léxicos ao encontrar caracteres inválidos na entrada,
+retornando o token de erro correspondente.
+
+** Listar o conteúdo tabela de símbolos
+
+Implementar a função =comp_print_table=, em =cc_misc.c= de forma a listar
+todas as entradas da tabela de símbolos. Deve-se utilizar
+obrigatoriamente a função =void cc_dict_etapa_1_print_entrada (char
+*key, int line)= para imprimir uma entrada. Esta função será utilizada
+na avaliação automática para averiguar se a solução insere somente os
+tokens que devem ser inseridos na tabela de símbolos.
+
+* Descrição dos Tokens
+\label{sec.tokens}
+
+Existem tokens que correspondem a caracteres particulares, como
+vírgula, ponto-e-vírgula, parênteses, para os quais é mais conveniente
+usar seu próprio código =ASCII=, convertido para inteiro, como valor de
+retorno que os identifica. Para os tokens compostos, como palavras
+reservadas e identificadores, utiliza-se uma constante, com recursos
+do =bison=, com um código maior do que 255 para representá-los. Os
+tokens se enquadram em diferentes categorias:
+
+1. palavras reservadas da linguagem
+2. caracteres especiais
+3. operadores compostos
+4. identificadores
+5. literais.
+
+O analisador léxico deve, para as categorias de palavras reservadas,
+operadores compostos, identificadores e literais, retornar o token
+correspondente de acordo o que está definido no arquivo =parser.y= (veja
+as linhas que começam por =%token=). Para a categoria de caracteres
+especiais, o analisador léxico deve retornar o código =ASCII= através de
+uma única regra que retorna =yytext[0]=.
+
+** Palavras Reservadas da Linguagem
+
+As palavras reservadas da linguagem são:
+#+BEGIN_EXAMPLE
+int float bool char string if then else
+while do input output return const static
+foreach for switch case break continue class
+private public protected
+#+END_EXAMPLE
+
+** Caracteres Especiais
+
+Os caracteres simples especiais empregados pela linguagem são listados
+abaixo separados apenas por espaços, e devem ser retornados com o
+próprio código =ASCII= convertido para inteiro. São eles:
+#+BEGIN_EXAMPLE
+ ,   ;   :   (   )   [   ]   {   }   +   - 
+ *   /   <   >   =   !   &   $   %   #   ^
+#+END_EXAMPLE
+
+** Operadores Compostos
+
+A linguagem possui operadores compostos, além dos operadores
+representados por alguns dos caracteres da seção anterior.  Os
+operadores compostos são:
+#+BEGIN_EXAMPLE
+<=    >=    ==     !=    &&    ||    >>     <<
+#+END_EXAMPLE
+
+** Identificadores
+
+Os identificadores da linguagem são formados por um caractere
+alfabético seguido de zero ou mais caracteres alfanuméricos, onde
+considera-se caractere alfabético como letras maiúsculas ou minúsculas
+ou o caractere sublinhado e onde dígitos são =0=, =1=, =2=, ..., =9=.
+
+** Literais
+
+Literais são formas de descrever constantes no código fonte. Literais
+do tipo =int= são representados como repetições de um ou mais dígitos
+precedidos opcionalmente pelo sinal de negativo ou positivo. Literais
+em =float= são formados como um inteiro seguido de ponto decimal e uma
+sequência de dígitos. Literais do tipo =bool= podem ser =false= ou =true=.
+Literais do tipo =char= são representados por um único caractere entre
+entre aspas simples como por exemplo o \texttt{'a'}, \texttt{'='} e
+\texttt{'+'}. Literais do tipo \texttt{string} são qualquer sequência
+de caracteres entre aspas duplas, como por exemplo \texttt{"meu nome"}
+ou \texttt{"x = 3;"}. Os literais do tipo =char= e =string= devem ser
+inseridos na tabela de símbolos sem as aspas que os identificam no
+código fonte.
+
+* 2016-05-21 Gerador de tokens para testes                         :noexport:
+
+Tokens desta especificação:
+
+#+begin_src txt :tangle tokens.input
+//palavras reservadas
+TK_PR_INT int
+TK_PR_FLOAT float
+TK_PR_BOOL bool
+TK_PR_CHAR char
+TK_PR_STRING string
+TK_PR_IF if
+TK_PR_THEN then
+TK_PR_ELSE else
+TK_PR_WHILE while
+TK_PR_DO do
+TK_PR_INPUT input
+TK_PR_OUTPUT output
+TK_PR_RETURN return
+TK_PR_CONST const
+TK_PR_STATIC static
+TK_PR_FOREACH foreach
+TK_PR_FOR for
+TK_PR_SWITCH switch
+TK_PR_CASE case
+TK_PR_BREAK break
+TK_PR_CONTINUE continue
+TK_PR_CLASS class
+TK_PR_PRIVATE private
+TK_PR_PUBLIC public
+TK_PR_PROTECTED protected
+//caracteres especiais
+TK_ESPECIAL ,
+TK_ESPECIAL ;
+TK_ESPECIAL :
+TK_ESPECIAL (
+TK_ESPECIAL ) 
+TK_ESPECIAL [
+TK_ESPECIAL ]
+TK_ESPECIAL {
+TK_ESPECIAL }
+TK_ESPECIAL +
+TK_ESPECIAL - 
+TK_ESPECIAL *
+TK_ESPECIAL /
+TK_ESPECIAL <
+TK_ESPECIAL >
+TK_ESPECIAL =
+TK_ESPECIAL !
+TK_ESPECIAL &
+TK_ESPECIAL $
+TK_ESPECIAL %
+TK_ESPECIAL #
+TK_ESPECIAL ^
+//operadores compostos
+TK_OC_LE <=
+TK_OC_GE >=
+TK_OC_EQ ==
+TK_OC_NE !=
+TK_OC_AND &&
+TK_OC_OR ||
+TK_OC_SR >>
+TK_OC_SL <<
+//identificadores
+TK_IDENTIFICADOR id
+TK_IDENTIFICADOR ID
+TK_IDENTIFICADOR _id
+TK_IDENTIFICADOR _ID
+TK_IDENTIFICADOR _01
+//literais
+TK_LIT_INT 12
+TK_LIT_INT -12
+TK_LIT_INT +12
+TK_LIT_FLOAT 12.34
+TK_LIT_FLOAT -12.34
+TK_LIT_FLOAT +12.34
+TK_LIT_FALSE false
+TK_LIT_TRUE true
+TK_LIT_CHAR 'a'
+TK_LIT_CHAR '='
+TK_LIT_CHAR '+'
+TK_LIT_STRING "meu nome"
+TK_LIT_STRING "x = 3"
+#+end_src
+
+Extras:
+
+#+begin_src txt :tangle extra_00.input
+12
+ //34  56
+78
+INF47: 1 TK_LIT_INT [12]
+INF47: 3 TK_LIT_INT [78]
+INF47TABLE: [12] 1
+INF47TABLE: [78] 3
+#+end_src
+
+#+begin_src txt :tangle extra_01.input
+12 /*
+   34  56
+*/78
+INF47: 1 TK_LIT_INT [12]
+INF47: 3 TK_LIT_INT [78]
+INF47TABLE: [12] 1
+INF47TABLE: [78] 3
+#+end_src
+
+#+begin_src txt :tangle extra_02.input
+id12
+34
+56.78
+INF47: 1 TK_IDENTIFICADOR [id12]
+INF47: 2 TK_LIT_INT [34]
+INF47: 3 TK_LIT_FLOAT [56.78]
+INF47TABLE: [id12] 1
+INF47TABLE: [34] 2
+INF47TABLE: [56.78] 3
+#+end_src
+
+Gerador de testes para esta especificação:
+
+#+begin_src sh :results output :session :exports both
+sed "/^\/\/.*/d" tokens.input > tokens_aux.input
+CONTADOR=1
+DIR=saida
+mkdir -p $DIR
+rm -rf $DIR/*
+while read -r line; do
+  #unique identifier
+  TOKEN=`echo "$line" | cut -d" " -f2-`
+  TIPO=`echo "$line" | cut -d" " -f1`
+
+  UNIQUE=$(echo 00000$CONTADOR | tail -c 4)
+  ENTRADATEST="entrada_$UNIQUE"
+  ENTRADA="$DIR/$ENTRADATEST"
+  TESH="$DIR/aval_$UNIQUE.tesh"
+  TESHV="$DIR/valg_$UNIQUE.tesh"
+
+  #generate input
+  echo "$TOKEN" > $ENTRADA
+
+  #generate tesh
+  echo "#! ./tesh" > $TESH
+  echo "! timeout 5" >> $TESH
+  echo "$ ./main tests/e1/$ENTRADATEST" >> $TESH
+  echo "> 1 $TIPO [$TOKEN]" >> $TESH
+  #the following four lines do not work
+  #echo "! setenv INF47_TABLE=True" >> $TESH
+  #echo "$ ./main tests/e1/$ENTRADATEST" >> $TESH
+  #TK=`echo "$TOKEN" | sed "s/\"//g"`
+  #echo "> Etapa 1 Tabela: $TK 1" >> $TESH
+
+  #generate tesh for valgrind
+  echo "#! ./tesh" > $TESHV
+  echo "! timeout 15" >> $TESHV
+  echo "! output ignore" >> $TESHV
+  echo "$ ./tests/scripts/valgrindtest ./main tests/e1/$ENTRADATEST" >> $TESHV
+
+  CONTADOR=$(($CONTADOR + 1))
+done < "tokens_aux.input"
+
+for file in extra_*.input; do
+  UNIQUE=$(echo 00000$CONTADOR | tail -c 4)
+  ENTRADATEST="entrada_$UNIQUE"
+  ENTRADA="$DIR/$ENTRADATEST"
+  TESH="$DIR/aval_$UNIQUE.tesh"
+  TESHV="$DIR/valg_$UNIQUE.tesh"
+
+  #define input
+  cat $file | sed "/^INF47/d" > $ENTRADA
+
+  #generate tesh
+  echo "#! ./tesh" > $TESH
+  echo "! timeout 5" >> $TESH
+  echo "$ ./main tests/e1/$ENTRADATEST" >> $TESH
+  cat $file | grep INF47 | sed -e "s/INF47:/>/" -e "/INF47TABLE:/d" >> $TESH
+  echo "! setenv INF47_TABLE=True" >> $TESH
+  echo "$ ./main tests/e1/$ENTRADATEST" >> $TESH
+  cat $file | grep INF47TABLE: | sed -e "s/INF47TABLE:/>/" >> $TESH
+
+  #generate tesh for valgrind
+  echo "#! ./tesh" > $TESHV
+  echo "! timeout 15" >> $TESHV
+  echo "! output ignore" >> $TESHV
+  echo "$ ./tests/scripts/valgrindtest ./main tests/e1/$ENTRADATEST" >> $TESHV
+
+  CONTADOR=$(($CONTADOR + 1))
+done
+
+echo "$(($CONTADOR)) testes gerados."
+
+#+end_src
+
+#+RESULTS:
+: 77 testes gerados.
+
+* 2016-05-21 Entrega Etapa 1                                       :noexport:
+
+#+TBLNAME:etapa1tags
+|----+----------+--------------+--------------------------------------------------------------+---------------|
+|----+----------+--------------+--------------------------------------------------------------+---------------|
+
+Call `org-table-export' command in the table, export to file =etapa1.csv=.
+
+#+begin_src sh :results output :session :exports both
+TESTSDIR=`pwd`/saida/
+FILE=etapa1.csv
+DIR=results/etapa1/
+mkdir -p $DIR
+rm -rf $DIR/*
+cp $FILE $DIR
+cd $DIR
+
+# prepare reference empty repository
+git clone git@bitbucket.org:schnorr/compil-2016-1.git ref
+MAIN="`pwd`/ref/src/main.c"
+
+# loop over solutions
+while read -r line; do
+   UNIQUE=`echo "$line" | cut -d, -f1`
+   GITREF=`echo "$line" | cut -d, -f4`
+   TAGREF=`echo "$line" | cut -d, -f5`
+
+   if [ -z $TAGREF ]; then
+      continue
+   fi
+   echo $UNIQUE $GITREF $TAGREF
+
+   # clone the repository
+   git clone $GITREF $UNIQUE
+
+   # let's customize it
+   cd $UNIQUE
+   git checkout $TAGREF
+   rm -rf `find | grep CMakeCache.txt`
+   rm -rf `find | grep build`
+
+   # copy main.c
+   cp $MAIN src/main.c
+
+   # erase existing tests
+   rm -rf tests/e[123456]/
+   # use new set of tests
+   mkdir -p tests/e1/
+   cp $TESTSDIR/* tests/e1
+
+   cd ..
+
+   # preparing the out-of-source build dir
+   BUILDIR=b-$UNIQUE
+   mkdir -p $BUILDIR; cd $BUILDIR;
+   cmake -DETAPA_1=ON ../$UNIQUE/; make;
+   cd ..
+done < $FILE
+#+end_src
+
+* 2016-05-23 Execução da Avaliação                                 :noexport:
+
+#+begin_src sh :results output :session :exports both
+  cd results/etapa1/
+  for group in `ls -1d b-*`; do
+    echo $group
+    cd $group
+    ctest
+    cd ..
+  done > etapa1.log
+  cp etapa1.log ../../
+#+end_src
+
+#+RESULTS:
+
+* 2016-05-24 Interpretação da Avaliação                            :noexport:
+
+#+begin_src sh :results output :session :exports both
+cat etapa1.log | sed "/^b-../d" | awk -v RS="Test project" '{ print $0 > "temp"(NR-1) }'
+TOTALTESTS=`cat temp1  | grep Test\ \# | tail -n1 | cut -d"/" -f1`
+DIR=etapa1
+mkdir -p $DIR/
+rm -rf $DIR/*
+mkdir -p $DIR/testes/
+SAIDACSV=$DIR/etapa1.csv
+echo "grupo,total,falhos,nota" > $SAIDACSV
+for i in `seq 1 9`; do
+   FILE=temp${i}
+   echo "== $i =="
+   cat $FILE | grep \(Failed\)
+   FAILEDTESTS=`cat $FILE | grep \(Failed\) | wc -l`
+   SUCCESSRATE=`echo "($TOTALTESTS-$FAILEDTESTS)/$TOTALTESTS*10" | bc -l`
+   echo "Group $i obtained $SUCCESSRATE success rate."
+   echo "$i,$TOTALTESTS,$FAILEDTESTS,$SUCCESSRATE" >> $SAIDACSV
+done > $DIR/etapa1-eval.log
+cp etapa1.log $DIR
+cp -prf saida/* $DIR/testes/
+tar cfz etapa1.tar.gz etapa1
+#+end_src
+
+#+RESULTS:
+
