@@ -1,0 +1,145 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Expressões Regulares
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Expressão Regular (ER)
+- Como definir uma ER?
+  - ER básicas \rightarrow definida por literais
+  - ER complexas \rightarrow combinação de ER básicas (definição regular)
+
+#+latex: \vfill
+
+- <2-> Algumas regras para formação de palavras válidas
+  - Concatenação: xy (x seguido de y)
+  - Alternação: x|y (x ou y)
+  - Repetição: x* (x repetido 0 ou mais vezes)
+  - Repetição: x+ (x repetido 1 ou mais vezes)
+
+* Precedência e Associatividade m Expressões Regulares
+- Precedência (da maior para a menor, na ordem)
+  | Operadores unários | =*= =+= |
+  | Concatenção        |     |
+  | Operador           | \vert   |
+- Sempre associativo à esquerda
+
+- *Parênteses* para resolver casos ambíguos
+- <2->Exemplos
+  #+BEGIN_SRC ER
+  (a)|((b)*(c))  equivalente a:
+  a|b*c     
+
+  a(b|c)d        diferente de:
+  ab|cd
+  #+END_SRC
+
+* Exemplos de Expressões Regulares
+- *ab* representa o conjunto de um único elemento { ab }
+- *(a|b)* \rightarrow { a, b }
+- *(a|b)(a|b)* \rightarrow { aa, ab, ba, bb }
+- *a** \rightarrow { $\epsilon$, a, aa, aaa, aaaa, ... }
+- *(a|b)** \rightarrow todas as strings com a e b
+- *(a|b)*aa(a|b)* \rightarrow todas as strings com a e b, com pelo menos
+  duas letras ``a'' consecutivas
+
+#+latex: \vfill
+
+- <2-> *Exercício Rápido* \\
+  Todas as strings com *a* e *b*, começando por *b* e não tendo duas letras *a* consecutivas?
+
+* Propriedades Algébricas
+- Comutativa: $r|s = s|r$
+- Associativa: $r|(s|t) = (r|s)|t$
+- Concatenação Associativa: $(rs)t = r(st)$
+- Concatenação Distributiva \\
+  $r(s|t) = rs|rt$ \\
+  $(r|s)t = rt|st$
+- Vazio é identidade da Concatenação \\
+  $\epsilon r = r$ \\
+  $r \epsilon = r$
+- Relação entre * e $\epsilon$ \\
+  $r^* = (r|\epsilon)^*$
+- * é idempotente: $r^{**} = r^*$
+
+#+latex: \vfill
+
+- Operador =|= é comutativo e associativo
+- Operador =*= é potência
+
+* Extensões de Expressões Regulares
+- *Uma ou mais instâncias* -- operador unário pós-fixado \alert{+} \linebreak
+  $r^* = r^{+} | \epsilon$ \\
+  $r^+ = rr^* = rr^*$
+
+- <2-> *Zero ou mais instância* -- operador unário pós-fixado \alert{?} \\
+  $r? = r|\epsilon$ \\
+  Precedência equivalente a \alert{$*$} e \alert{$+$}
+
+- <3-> *Classes de caracteres* \\
+  $[A-Z] = A|B|C|D|...|X|U|V|W|Z$ \\
+  $[0-9] = 0|1|2|3|4|5|6|7|8|9$
+
+- <4-> Outras extensões
+  - Ver o manual do $grep$ (abra um terminal, digite ``man grep'')
+* Definições Regulares
+- Nomear certas expressões regulares ($nome$)
+- Usá-las em ERs subsequentes (fazendo parte das $er$)\\
+  $nome_1 \rightarrow er_1$ \\
+  $nome_2 \rightarrow er_2$ \\
+  ... \\
+  $nome_n \rightarrow er_n$ \\
+- <2->\alert{Restrições}
+  - Cada $nome_i$ é definido uma vez e não faz parte do alfabeto
+  - Cada $er_i$ tem símbolos do alfabeto e nomes definidos antes
+  \rightarrow Evitar definições recursivas
+- <3->Exemplo para os identificadores da linguagem C\\
+  $letra\_ \rightarrow [A-Za-z\_]$ \\
+  $digito \rightarrow [0-9]$ \\
+  $identificador \rightarrow letra\_ (letra\_ | digito)^*$
+
+* Casos de Estudo: Definições Regulares
+- Datas com diferentes separadores
+  - <2-> Solução?
+    | data      | \rightarrow | dia separador mes separador ano |
+    | dia       | \rightarrow | [0-3\epsilon][0-9]                     |
+    | mes       | \rightarrow | (0\vert1\vert\epsilon)[0-2]                    |
+    | ano       | \rightarrow | aaaa                            |
+    | a         | \rightarrow | [0-9\epsilon]                          |
+    | separador | \rightarrow | \_ \vert . \vert -                      |
+\vfill
+- <3-> Ponto flutuante sem sinal
+  - <4-> Solução?
+    | num      | \rightarrow | digitos fracao expoente |
+    | digito   | \rightarrow | 0 \vert 1 \vert 2 \vert ... \vert 9     |
+    | digitos  | \rightarrow | digito digito^*         |
+    | fracao   | \rightarrow | .digitos \vert \epsilon            |
+    | expoente | \rightarrow | (E(+\vert-\vert\epsilon)digitos\vert\epsilon      |
+* Exercícios
+- Descrever as seguintes linguagens
+  - $(a|\epsilon)(b|ba)$
+  - $0^*10^*10^*10$
+  - $(aa|bb)^*((ab|ba)(aa|bb)^* (ab|ba)(aa|bb)^*)^*$
+
+* ER comuns em Compiladores
+- Algumas ER comuns em analisadores léxicos
+  | if            | \rightarrow | *if*                                |
+  | then          | \rightarrow | *then*                              |
+  | else          | \rightarrow | *else*                              |
+  | relop         | \rightarrow | < \vert <= \vert = \vert >= \vert >               |
+  | identificador | \rightarrow | letra(letra\vert digito)              |
+  | numero        | \rightarrow | digito*(.digito+)?(E(+\vert-)?digito+)? |
+\vfill
+- <2->\alert{Pergunta} \\
+  Será que =tmp_1= é um identificador?
