@@ -121,3 +121,10 @@
   + Se ab é encontrado
     + Reconhece a
     + b é mantido no buffer de entrada
+
+
+
+* Exemplos
+- Uma calculadora usando flex/bison: [[https://bitbucket.org/schnorr/calc][calc]]
+- Um leitor de rastros usando flex/bison: [[https://github.com/schnorr/pajeng/tree/master/src/libpaje][PajeNG's libpaje]]
+  - Procure pelos arquivos =.y= e =.l=
