@@ -125,7 +125,7 @@
     | digito   | \rightarrow | 0 \vert 1 \vert 2 \vert ... \vert 9     |
     | digitos  | \rightarrow | digito digito^*         |
     | fracao   | \rightarrow | .digitos \vert \epsilon            |
-    | expoente | \rightarrow | (E(+\vert-\vert\epsilon)digitos\vert\epsilon      |
+    | expoente | \rightarrow | (E(+\vert-\vert\epsilon)digitos)\vert\epsilon     |
 * Exercícios
 - Descrever as seguintes linguagens
   - $(a|\epsilon)(b|ba)$
