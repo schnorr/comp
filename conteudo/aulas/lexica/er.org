@@ -134,12 +134,14 @@
 
 * ER comuns em Compiladores
 - Algumas ER comuns em analisadores léxicos
-  | if            | \rightarrow | *if*                                |
-  | then          | \rightarrow | *then*                              |
-  | else          | \rightarrow | *else*                              |
-  | relop         | \rightarrow | < \vert <= \vert = \vert >= \vert >               |
-  | identificador | \rightarrow | letra(letra\vert digito)              |
-  | numero        | \rightarrow | digito*(.digito+)?(E(+\vert-)?digito+)? |
+  | if            | \rightarrow | *if*                                  |
+  | then          | \rightarrow | *then*                                |
+  | else          | \rightarrow | *else*                                |
+  | relop         | \rightarrow | < \vert <= \vert = \vert >= \vert >                 |
+  | identificador | \rightarrow | letra(letra\vert digito)                |
+  | numero        | \rightarrow | digito*(.digito+)?(E(\plus\vert-)?digito+)? |
 \vfill
 - <2->\alert{Pergunta} \\
   Será que =tmp_1= é um identificador?
+
+
