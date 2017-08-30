@@ -9,8 +9,9 @@ disciplina, podem variar em abrangência e profundidade.
 |------------+----------------------------------------------------------------+--------+-------+------------|
 | Geral      | [[./aulas/geral/apresentacao.org][Apresentação da disciplina]]                                     |        |       |            |
 | Geral      | [[./aulas/geral/introducao.org][Visão geral de um compilador]]                                   | [[https://www.youtube.com/watch?v=V66oegRycIY][#000]]   |       |            |
-| Léxica     | Introdução, Expressões Regulares, Autômatos Finitos            |        |       |            |
-| Léxica     | Processo conceitual de construção do analisador léxico         |        |       |            |
+| Léxica     | [[./aulas/lexica/introducao.org][Introdução]]                                                     | [[https://www.youtube.com/watch?v=RQGjYfh6rVs][#001]]   |       |            |
+| Léxica     | [[./aulas/lexica/er.org][Expressões Regulares]]                                           | [[https://www.youtube.com/watch?v=axYbRJ-jvzo][#003]]   |       |            |
+| Léxica     | Diagramas de Transição, Autômatos Finitos (AFND e AFD)         |        |       |            |
 | Léxica     | O Algoritmo de subconjuntos (Conversão AFND para AFD)          |        |       |            |
 | Léxica     | O construtor de analisadores léxicos *flex*                      |        |       |            |
 | Sintática  | Introdução a análise sintática                                 |        |       |            |
