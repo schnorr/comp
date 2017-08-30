@@ -56,7 +56,6 @@
   }
   #+END_EXAMPLE
 
-
 * Especificação de Entrada Flex
 + Contém três seções
   + Definições (em C, incluído no início da saída)
@@ -121,8 +120,6 @@
   + Se ab é encontrado
     + Reconhece a
     + b é mantido no buffer de entrada
-
-
 
 * Exemplos
 - Uma calculadora usando flex/bison: [[https://bitbucket.org/schnorr/calc][calc]]
