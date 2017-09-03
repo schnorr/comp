@@ -16,7 +16,7 @@
 #+LATEX_HEADER: \input{../org-babel.tex}
 
 * Visão Geral
-Considerando um AFND \alert{N} e um AFD \alert{D}
+Considerando um AFND *N* e um AFD *D*
 - Cada estado de D equivale a um conjunto de estados de N
 
 #+Latex: \vfill
