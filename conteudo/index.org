@@ -16,7 +16,7 @@ disciplina, podem variar em abrangência e profundidade.
 | Léxica     | [[./aulas/lexica/introducao.org][Introdução]]                                                     | [[https://www.youtube.com/watch?v=RQGjYfh6rVs][#001]]             |       |            |
 | Léxica     | [[./aulas/lexica/er.org][Expressões Regulares]]                                           | [[https://www.youtube.com/watch?v=axYbRJ-jvzo][#003]]             |       |            |
 | Léxica     | [[./aulas/lexica/af.org][Diagramas de Transição, Thompson, Autômatos Finitos]]            | [[https://www.youtube.com/watch?v=crziskoiF4s][#004]], [[https://www.youtube.com/watch?v=RhdvJRLpSWg][#005]]       |       |            |
-| Léxica     | O Algoritmo de subconjuntos (Conversão AFND para AFD)          | [[https://www.youtube.com/watch?v=Y8NRKV51VME][#006]]             |       |            |
+| Léxica     | [[./aulas/lexica/subconjuntos.org][O Algoritmo de subconjuntos (Conversão AFND para AFD)]]          | [[https://www.youtube.com/watch?v=Y8NRKV51VME][#006]]             |       |            |
 | Léxica     | [[./aulas/lexica/flex.org][O construtor de analisadores léxicos *flex]]*                      |                  |       |            |
 | Sintática  | Introdução a análise sintática                                 | [[https://www.youtube.com/watch?v=T9Io9Bi0Dh0][#007]], [[https://www.youtube.com/watch?v=D_o1cmfmm9A][#008]], [[https://www.youtube.com/watch?v=Zkzs5WeSS30][#009]] |       |            |
 | Sintática  | Gramáticas Livres de Contexto                                  |                  |       |            |

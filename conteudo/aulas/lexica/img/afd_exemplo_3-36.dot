@@ -1,0 +1,31 @@
+#
+# AFD para (a|b)*abb
+#
+digraph {
+  rankdir=LR;
+  margin=0;
+  compound=true;
+
+  start [shape = point, pos = "-1,0!"];
+  node [shape = circle];
+  A [ pos = "0,0!"];
+  B [ pos = "2,0!"];
+  C [ pos = "2,2!"];
+  D [ pos = "4,0!"];
+  node [shape = doublecircle];
+  E [ pos = "6,0!"];
+
+  edge [fontsize = "20pt"];
+
+  start -> A;
+  A -> B [ label = "a"];
+  A -> C [ label = "b"];
+  B -> B [ label = "a"];
+  B -> D [ label = "b"];
+  C -> B [ label = "a"];
+  C -> C [ label = "b"];
+  D -> B [ label = "a"];
+  D -> E [ label = "b"];
+  E -> B [ label = "a"];
+  E -> C [ label = "b"];
+}
