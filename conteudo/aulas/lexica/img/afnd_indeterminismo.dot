@@ -1,0 +1,21 @@
+#
+# AFND para mostrar indeterminismo a|(a|b)*
+#
+digraph indeterminismo {
+  rankdir=LR;
+  margin=0;
+
+  start [shape = point];
+  ES_0 [shape = circle];
+  ES_2 [shape = circle];
+  ES_1 [shape = doublecircle];  
+
+
+  start -> ES_0;
+  ES_0 -> ES_1 [label = "a", fontsize = "20pt"];
+  ES_0 -> ES_2 [label = "a", fontsize = "20pt"];
+  ES_0 -> ES_1 [label = "b", fontsize = "20pt"];
+  ES_0 -> ES_1 [ label = "&epsilon;", fontsize = "20pt" ];
+  ES_1 -> ES_0 [ label = "&epsilon;", fontsize = "20pt" ];
+  ES_2 -> ES_1 [ label = "&epsilon;", fontsize = "20pt" ];
+}

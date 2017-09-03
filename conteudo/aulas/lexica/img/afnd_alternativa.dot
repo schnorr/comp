@@ -1,0 +1,37 @@
+#
+# AFND para reconhecer a|b
+#
+digraph reconhecer_alternativa {
+  rankdir=LR;
+  margin=0;
+
+  ES_0 [shape = circle];
+  start [shape = point];
+  ES_5 [shape = doublecircle];  
+
+  subgraph cluster_a {
+    bgcolor = lightgrey;
+    color=black;
+    ES_1 [shape = circle, style=filled, fillcolor=white];
+    ES_2 [shape = doublecircle, style=filled, fillcolor=white];
+  };
+
+  subgraph cluster_b {
+    bgcolor = lightgrey;
+    color=black;
+    ES_3 [shape = circle, style=filled, fillcolor=white];
+    ES_4 [shape = doublecircle, style=filled, fillcolor=white];
+    
+  }
+
+  start -> ES_0;
+  ES_0 -> ES_1 [ label = "&epsilon;", fontsize = "20pt" ];
+  ES_0 -> ES_3 [ label = "&epsilon;", fontsize = "20pt" ];
+
+  ES_1 -> ES_2 [label = "a", fontsize = "20pt"];
+  ES_3 -> ES_4 [label = "b", fontsize = "20pt"];
+
+  ES_2 -> ES_5 [ label = "&epsilon;", fontsize = "20pt" ];
+  ES_4 -> ES_5 [ label = "&epsilon;", fontsize = "20pt" ];
+
+}

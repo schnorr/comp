@@ -1,0 +1,220 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Autômatos Finitos (Deterministas ou não)
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Construindo um analisador léxico
+
+Na ordem, de cima para baixo
+- Em parênteses: técnica de conversão
+
+#+BEGIN_CENTER
+*Várias definições de ER*
+
+(Algoritmo de Thompson) \linebreak
+
+*Vários AFND*
+
+(Concatenção com ligações vazias) \linebreak
+
+*Um único AFND*
+
+(Algoritmo de Subconjuntos) \linebreak
+
+*Um único AFD*
+
+(Gerador de código) \linebreak
+
+Função em uma linguagem de usuário
+#+END_CENTER
+
+
+
+
+
+* Diagramas de Transição
+- Coleção de nós que representam estados
+- Arestas entre estados, rotulada por um ou mais símbolos
+
+Convenções
+- Estados de \alert{aceitação} (ou finais)
+- Estados de \alert{aceitação com *}
+- Estado \alert{inicial}
+
+#+Latex: \pause
+
+\vfill
+
+Exemplo, supondo
+  | identificador | \rightarrow | letra (letra \vert digito)* |
+
+#+Latex: \pause
+
+Exemplo, supondo
+  | relop | \rightarrow | < \vert > \vert <= \vert >= \vert = \vert < |
+* Definição de Autômato Finito
+Autômato finito $M$ sobre alfabeto $\Sigma$ é (K, $\Sigma$, $\delta, $e0$, F)
+
+\vfill
+
+K é um conjunto finito de estados
+
+$\Sigma$ é o alfabeto de símbolos da linguagem
+
+$\delta : K * \Sigma \rightarrow K$ é a função de transição de estados, *parcial*
+
+$e0$ é o estado inicial
+
+$F$ é o conjunto de estados finais
+* Exemplo de Autômato Finito
+#+BEGIN_CENTER
+Autômato que reconhece números reais e inteiros
+#+END_CENTER
+
+\vfill
+
+** Definição                                                         :BMCOL:
+ :PROPERTIES:
+ :BEAMER_envargs: C[t]
+ :BEAMER_col: 0.5
+ :END:
+$M = (K, \Sigma, \delta, e0, F)$
+- $\Sigma = \{ d, . \}$
+- K = (e_0, e_1, e_2, e_3)
+- F = (e_1, e_3)
+- \delta(e_0, d) = e_1
+- \delta(e_1, d) = e_1
+- \delta(e_1, .) = e_2
+- \delta(e_2, d) = e_3
+- \delta(e_3, d) = e_3
+** Tabela de Transições                                              :BMCOL:
+ :PROPERTIES:
+ :BEAMER_envargs: C[t]
+ :BEAMER_col: 0.5
+ :END:
+|     | d   | .   |
+|-----+-----+-----|
+| e_0 | e_1 |     |
+| e_1 | e_1 | e_2 |
+| e_2 | e_3 |     |
+| e_3 | e_3 |     |
+* Segundo Exemplo de Autômato Finito
+|         |    | a  | b  |
+|---------+----+----+----|
+| inicial | q_0 | q_1 | q_2 |
+|         | q_1 | q_0 | q_2 |
+| final   | q_2 | q_2 | q_2 |
+
+\vfill
+
+#+BEGIN_CENTER
+Este autômato corresponde a qual expressão regular?
+#+END_CENTER
+
+* Dois tipos de autômatos: AFD e AFND
+- *Autômato Finito Não-Determinístico* (AFND)
+  - Tem um conjunto de estados S
+  - Funções de transição
+  - Um estado de partida
+  - Um conjunto de estados finais (de aceitação)
+
+\vfill
+
+- *Autômato Finito Determinístico* (AFD)
+  - Como um AFND
+  - _Não tem transições vazias_
+  - _No máximo uma transição de saída por símbolo_
+
+* Construção de Thompson
+
+Expressão Regular \rightarrow AFND
+- Cada ER básica se traduz em um AFND
+- Pode-se agregar os AFND conforme se agregam as ERs
+
+Cada AFND tem exatamente um estado de partida e um estado final
+
+\vfill
+
+Referências:
+- https://en.wikipedia.org/wiki/Thompson's_construction
+
+* Reconhecedores básicos
+#+BEGIN_CENTER
+AFND para reconhecer $\bf\epsilon$
+#+END_CENTER
+
+#+ATTR_LATEX: :width .5\linewidth
+[[./img/afnd_vazio.png]]
+
+\vfill
+
+#+BEGIN_CENTER
+AFND para reconhecer um símbolo *a*
+#+END_CENTER
+
+#+ATTR_LATEX: :width .5\linewidth
+[[./img/afnd_a.png]]
+* Reconhecedor de Alternativa
+#+BEGIN_CENTER
+AFND que reconhece a alternativa *a|b*
+#+END_CENTER
+
+#+ATTR_LATEX: :width \linewidth
+[[./img/afnd_alternativa.png]]
+* Reconhecedor de Concatenação
+#+BEGIN_CENTER
+AFND que reconhece a alternativa *ab*
+#+END_CENTER
+
+#+ATTR_LATEX: :width \linewidth
+[[./img/afnd_concatenacao.png]]
+* AFND reconhecedor do Fechamento de Kleene
+
+#+BEGIN_CENTER
+AFND que reconhece *a**
+#+END_CENTER
+
+#+ATTR_LATEX: :width \linewidth
+[[./img/afnd_fecho.png]]
+
+* Exercício
+#+BEGIN_CENTER
+Construir um AFND que reconheça *(a|b)*abb*
+#+END_CENTER
+
+\pause
+
+# #+ATTR_LATEX: :width \linewidth
+# [[./img/afnd_exercicio.png]]
+
+\pause
+
+* Qual o problema de AFND?
+Pontos positivos
+- Bastante poderoso para implementar ERs
+- Aplicação trivial: ERs \rightarrow AFNDs \rightarrow Full AFND (léxico)
+
+\pause
+
+Pontos negativos (*Problema*)
+  - \epsilon-transições
+  - Várias transições de saída com o mesmo símbolo
+
+  #+ATTR_Latex: :width .5\linewidth
+  [[./img/afnd_indeterminismo.png]]
+
+\pause
+
+- Fácil para a fase de projeto, *difícil de implementar*

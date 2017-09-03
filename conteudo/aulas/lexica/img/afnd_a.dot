@@ -1,0 +1,12 @@
+#
+# AFND para reconhecer "a"
+#
+digraph reconhecer_vazio {
+	rankdir=LR;
+        margin=0;
+	node [shape = circle]; ES_0;
+	node [shape = doublecircle]; ES_1;
+	node [shape = point]; start;
+	start -> ES_0;
+	ES_0 -> ES_1 [ label = "a", fontsize = "20pt" ];
+}
