@@ -58,7 +58,7 @@ estratégias pedagógicas alternativas:
 
 ** Principal
 
-- [[./conteudo/index.org][Acesse o conteúdo da disciplina]]
+- [[./conteudo/][Acesse o conteúdo da disciplina]]
   - Aulas e videoaulas
   - Material de apoio
   - Exercícios
