@@ -20,14 +20,14 @@
   são os símbolos básicos da linguagem \\
   \scriptsize todos os tipos de tokens (palavras-chave, identificador, caracteres especiais, ...)  \normalsize
 
-- <2-> *Não-terminais* (NT) \\
+- *Não-terminais* (NT) \\
   variáveis sintáticas, representam conjuntos de cadeias \\
   \rightarrow Impõem uma *estrutura hierárquica*
 
-- <3-> *Símbolo inicial*  (que é um não-terminal) \\
+- *Símbolo inicial*  (que é um não-terminal) \\
   por convenção, listado primeiro
 
-- <4-> *Produções*
+- *Produções*
   - Cabeça (lado esquerdo) -- sempre é um NT
   - Um símbolo ``\rightarrow'' (ou \texttt{::=} utilizando a notação original BNF) 
   - Corpo (lado direito) -- sequência de T e NT
@@ -151,11 +151,13 @@ Ascendente parte de *ccbca* e tenta chegar a $S$ \\
 * Outras Definições
 - Gramática *sem ciclos* -- inexistência de produções tipo \\
   $A \Rightarrow^- A$ para algum $A \in NT$
-- <2->Gramática *\epsilon-Livre* -- inexistência de produções tipo \\
+- Gramática *\epsilon-Livre* -- inexistência de produções tipo \\
   $A \rightarrow \epsilon$, salvo $S \rightarrow \epsilon$ onde $S$ é o símbolo inicial
-- <3->Gramática *Fatorada à Esquerda* -- sem produções tipo \\
+
+#+Latex: \pause\vfill
+- Gramática *Fatorada à Esquerda* -- sem produções tipo \\
   $A \rightarrow {\alpha}{\beta_1} | {\alpha}{\beta_2}$, sendo $\alpha$ uma forma sentencial
-- <4->Gramática *Recursiva à Esquerda* -- com a produção \\
+- Gramática *Recursiva à Esquerda* -- com a produção \\
  @@latex: $A \Rightarrow^- A{\alpha}$ @@para algum $A \in NT$
   - Recursão direta ou indireta
   - Impossibilita uma análise descendente (/top-down/)
