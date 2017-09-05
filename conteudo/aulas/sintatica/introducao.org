@@ -21,7 +21,7 @@ Funções da Análise Sintática
 - Emitir mensagens para erros sintáticos
   - Maior parte dos erros de análise são sintáticos
 
-[[./img/analisa_sintatica_aula04.pdf]]
+[[./img/analisa_sintatica_aula04.png]]
 
 #+Latex: \vfill\pause
 
