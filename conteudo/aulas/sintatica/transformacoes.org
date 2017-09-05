@@ -1,0 +1,108 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Transformações Gramaticais
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Transformações gramaticais
+Eliminação de produções vazias
+- Transformando a gramática em \epsilon-Livre
+
+#+latex: \vfill
+
+Eliminação da recursividade à esquerda
+- Habilitando uma gramática para análise descendente
+
+#+latex: \vfill
+
+Fatoração gramatical
+- Permitir tomada de decisão com um único símbolo na tomada
+* Eliminação de produções vazias ($A \rightarrow \epsilon$)
+Seguindo a intuição
+| chamadaDeFunção     | \rightarrow | ident *(* argumentosOpcionais *)* |
+| argumentosOpcionais | \rightarrow | listaArgumentos \vert \epsilon           |
+| listaArgumentos     | \rightarrow | arg \vert arg , listaArgumentos   |
+
+* Eliminação de produções vazias \hfill $G = (N, T, P, S)$
+
+#+BEGIN_CENTER
+*Exemplo de aplicação*:
+| S | \rightarrow | B z B |   |   | B | \rightarrow | AAA |   |   | A | \rightarrow | a \vert \epsilon |
+#+END_CENTER
+
+#+Latex: \pause
+
+Considerando a gramática
++ Reunir em \alert{$N_\epsilon$} todos os não-terminais que geram $\epsilon$ \\
+  $N_\epsilon = \{ A\ |\ A \rightarrow \epsilon \}$ , repita  \\
+  $N_\epsilon = N_\epsilon \cup \{ X\ |\ X \rightarrow X_1...X_n \in P$  tal que $X_1...X_n \in N_\epsilon \}$ \\
+  até que o conjunto $N_\epsilon$ se estabilize (não aumente) \\
+
+#+Latex: \pause
+
++ Construir um conjunto de produções sem produções vazias \\
+  Para obter G_1 = (N, T, P_1, S), onde P_1 é: \\
+  $\alert{P_1} = \{ A \rightarrow \alpha\ |\ \alpha \neq \epsilon \}$, repita \\
+  Para $A \rightarrow \alpha \in P_1$ e $X \in N_\epsilon$ tal que $\alpha = \alpha_1X\alpha_2$ e $\alpha_1\alpha_2 \neq \epsilon$ \\
+  Faça $P_1 = P_1 \in \{ A \rightarrow \alpha_1\alpha_2 \}$ até que $P_1$
+  se estabilize
+
+#+Latex: \pause
+
++ Incluir a produção vazia se necessário \\
+  $G_2 = (N, T, P_2, S)$ onde $\alert{P_2} = P_1 \cup \{ S \rightarrow \epsilon \}$
+
+* Eliminação da recursividade à esquerda (Exemplo 1)
++ Eliminando \alert{recursão direta} (manualmente) \\
+  $A \rightarrow Aa\ |\ b$
++ Gramáticas equivalentes
+#+latex: \pause
+  + Com a produção vazia ($\epsilon$) \\
+    $A \rightarrow bX$ \\
+    $X \rightarrow aX\ |\ \epsilon$
+#+latex: \pause
+  + Sem a produção vazia \\
+    $A \rightarrow b\ |\ bX$ \\
+    $X \rightarrow a\ |\ aX$
+#+latex: \vfill\pause
++ <4->Pode ainda haver \alert{recursão indireta}, descrita em \\
+  Dragão seção 4.3.3 \\
+  Série Didática seção 3.1.2
+
+* Eliminação da recursividade à esquerda (Exemplo 2)
+Considerando a gramática de operações aritméticas \\
+  $E \rightarrow E + T\ |\ T$ \\
+  $T \rightarrow T * F\ |\ F$ \\
+  $F \rightarrow (\ E\ )\ |\ id$
+
+#+Latex: \vfill
+
+A produção $E \rightarrow E + T\ |\ T$ se torna \\
+  $E \rightarrow TE'$ \\
+  $E' \rightarrow +TE'\ |\ \epsilon$
+A produção $T \rightarrow T * F\ |\ F$ se torna \\
+  $T \rightarrow FT'$ \\
+  $T' \rightarrow *FT'\ |\ \epsilon$
+
+* Fatoração gramatical
++ Duas produções se iniciam com a mesma forma sentencial \\
+  $A \rightarrow \alpha\beta_1\ |\ \alpha\beta_2$
++ Fatorando \\
+  $A \rightarrow {\alpha}X$ \\
+  $X \rightarrow \beta_1\ |\ \beta_2$
+\vfill
++ Exemplo: reconhecimento de condições aninhadas \\
+  comando $\rightarrow$ *if* expressão *then* comando *else* comando \\
+  comando $\rightarrow$ *if* expressão *then* comando
+
