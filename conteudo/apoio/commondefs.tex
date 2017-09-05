@@ -1,0 +1,46 @@
+\newcommand{\estudante}{%
+\noindent%
+\begin{tabularx}{\textwidth}{lXlp{3cm}}
+
+{\bf \Large Nome:}
+&
+\hrulefill
+&
+{\bf \Large Cartão:}
+&
+\hrulefill
+\end{tabularx}
+}
+
+\newcommand{\prova}[3]{%
+\estudante
+\bigskip
+\begin{center}
+{\LARGE Prova \##2} \\ #3
+\end{center}
+A prova é individual e sem consulta. Leia atentamente toda a prova e,
+após, responda as questões. Se surgirem dúvidas, você pode consultar o
+professor nos primeiros 15 minutos. Decorridos estes, a interpretação
+das questões faz parte da prova. Faça as suposições necessárias e
+explicite-as como parte da resolução da questão. Usar lápis é
+permitido, mas provas assim feitas não sofrem revisão da
+correção. Aparelhos eletrônicos não podem ser utilizados.
+\bigskip
+\begin{center}
+{\Large -- Questões --}
+\end{center}
+}
+
+\newcommand{\folharesposta}{%
+\estudante
+}
+
+\newcommand{\ata}[3]{%
+\bigskip
+\begin{center}
+{\LARGE {\bf Ata de Presença} \\ #1 Verificação de Aproveitamento (Prova #2)} \\ #3
+\end{center}
+}
+
+\newcommand{\continua}{\vfill\hfill {\bf Continua no verso $\hookleftarrow$}\newpage}
+\newcommand{\termina}{\vfill\hfill {\bf Fim.}}
