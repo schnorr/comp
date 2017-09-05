@@ -18,8 +18,8 @@ disciplina, podem variar em abrangência e profundidade.
 | Léxica     | [[./aulas/lexica/af.org][Diagramas de Transição, Thompson, Autômatos Finitos]]            | [[https://www.youtube.com/watch?v=crziskoiF4s][#004]], [[https://www.youtube.com/watch?v=RhdvJRLpSWg][#005]]       |       |            |
 | Léxica     | [[./aulas/lexica/subconjuntos.org][O Algoritmo de subconjuntos (Conversão AFND para AFD)]]          | [[https://www.youtube.com/watch?v=Y8NRKV51VME][#006]]             |       |            |
 | Léxica     | [[./aulas/lexica/flex.org][O construtor de analisadores léxicos *flex]]*                      |                  |       |            |
-| Sintática  | Introdução a análise sintática                                 | [[https://www.youtube.com/watch?v=T9Io9Bi0Dh0][#007]], [[https://www.youtube.com/watch?v=D_o1cmfmm9A][#008]], [[https://www.youtube.com/watch?v=Zkzs5WeSS30][#009]] |       |            |
-| Sintática  | Gramáticas Livres de Contexto                                  |                  |       |            |
+| Sintática  | [[./aulas/sintatica/introducao.org][Introdução a análise sintática]]                                 | [[https://www.youtube.com/watch?v=T9Io9Bi0Dh0][#007]], [[https://www.youtube.com/watch?v=D_o1cmfmm9A][#008]], [[https://www.youtube.com/watch?v=Zkzs5WeSS30][#009]] |       |            |
+| Sintática  | [[./aulas/sintatica/glc.org][Gramáticas Livres de Contexto]]                                  |                  |       |            |
 | Sintática  | Algumas transformações gramaticais                             |                  |       |            |
 | Sintática  | Introdução a análise Descendente (/top-down/)                    |                  |       |            |
 | Sintática  | Recursivo com Retrocesso/Preditivo                             |                  |       |            |
