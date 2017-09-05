@@ -1,0 +1,83 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Análise Sintática
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+Funções da Análise Sintática
+- *Verificar a ordem de tokens* pertence à linguagem
+- Emitir mensagens para erros sintáticos
+  - Maior parte dos erros de análise são sintáticos
+
+[[./img/analisa_sintatica_aula04.pdf]]
+
+#+Latex: \vfill\pause
+
+- Construir a *árvore de derivação* para a entrada
+  - Na prática: ações de síntese são feitas imediatamente
+
+* Tratamento de Erros
+
+Objetivos
+
+- Informar o erro de forma clara e precisa
+- Recuperar-se rapidamente (para detectar mais erros)
+- Custo baixo quando a entrada é correta
+
+#+Latex: \vfill\pause
+
+Várias estratégias
+- *Modo pânico* \\
+  \rightarrow Descarta tokens até um token de sincronismo
+#+Latex: \pause
+- *Recuperação em nível de frase* \\
+  \rightarrow Realizar a correção local
+  - Substituição, exclusão, inserção de tokens
+#+Latex: \pause
+- *Produções de erro* \\
+  \rightarrow Prever erros com produções gramaticais
+#+Latex: \pause
+- *Correção global* \\
+  \rightarrow Sequência mínima de mudanças \\
+  Não utilizado na prática (a semântica pode mudar)
+
+* Hierarquia de linguagens (Noam Chomsky) 
+- Regulares (Tipo 3) \rightarrow Autômatos de Estados Finitos \\
+  A \rightarrow a | aB | $\epsilon$
+
+- Livres de Contexto (2) \rightarrow Autômato com pilha \\
+  A \rightarrow v (um símbolo a esquerda)
+
+- Sensíveis ao Contexto (1) \rightarrow Máquina de Turing restrita\\
+  wAz \rightarrow wvz (onde w e z são o contexto)
+
+- Recursivamente Enumeráveis (0) \rightarrow Máquina de Turing\\
+  u \rightarrow v (desde que u não seja vazio)
+
+#+Latex: \pause\vfill
+
+[[https://en.wikipedia.org/wiki/Chomsky_hierarchy#The_hierarchy][The Chomsky Hierarchy]] (Wikipedia)
+
+#+Latex: \pause\vfill
+
+#+BEGIN_CENTER
+Sintaxe de Linguagens de Programação
+
+_Gramáticas Livres de Contexto (GLC)_
+
+Expressividade da recursão
+#+END_CENTER
+
+
