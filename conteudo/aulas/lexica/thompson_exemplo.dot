@@ -1,0 +1,83 @@
+#
+# Árvore de Thompson ((a|b)*|b*a)|a*b(b|a)*c?
+#
+digraph thompson_tree {
+  rankdir=TB;
+    node[shape = square, margin="0,0", fontsize=14];
+
+
+  ER_0 [ label="ER" ];
+
+  ER_11 [ label="ER" ];
+  ER_12 [ label="|" ];
+  ER_13 [ label="ER" ];
+    
+  ER_21 [ label="ER" ];
+  ER_22 [ label="|" ];
+  ER_23 [ label="ER" ];
+  ER_24 [ label="ER*" ];
+  ER_25 [ label="ER" ];
+    
+  ER_31 [ label="ER*" ];
+  ER_32 [ label="ER" ];
+  ER_33 [ label="ER" ];
+  ER_34 [ label="a" ];
+  ER_35 [ label="ER" ];
+  ER_36 [ label="ER" ];
+    
+  ER_41 [ label="ER" ];
+  ER_42 [ label="|" ];
+  ER_43 [ label="ER" ];
+  ER_44 [ label="ER" ];
+  ER_45 [ label="a" ];
+  ER_46 [ label="ER*" ];
+  ER_47 [ label="ER?" ];
+
+  ER_51 [ label="a" ];
+  ER_52 [ label="b" ];
+  ER_53 [ label="b" ];
+  ER_54 [ label="ER" ];
+  ER_55 [ label="|" ];
+  ER_56 [ label="ER" ];
+  ER_57 [ label="c" ];
+
+  ER_61 [ label="b" ];
+  ER_62 [ label="a" ];
+
+  ER_0 -> ER_11;
+  ER_0 -> ER_12;
+  ER_0 -> ER_13;
+
+  ER_11 -> ER_21;
+  ER_11 -> ER_22;
+  ER_11 -> ER_23;
+  ER_13 -> ER_24;
+  ER_13 -> ER_25;
+
+  ER_21 -> ER_31;
+  ER_23 -> ER_32;
+  ER_23 -> ER_33;
+  ER_24 -> ER_34;
+  ER_25 -> ER_35;
+  ER_25 -> ER_36;
+
+ER_31 -> ER_41;
+ER_31 -> ER_42;
+ER_31 -> ER_43;
+ER_32 -> ER_44;
+ER_33 -> ER_45;
+ER_35 -> ER_46;
+ER_36 -> ER_47;
+
+ER_41 -> ER_51;
+ER_43 -> ER_52;
+ER_44 -> ER_53;
+ER_46 -> ER_54;
+ER_46 -> ER_55;
+ER_46 -> ER_56;
+ER_47 -> ER_57;
+
+ER_54 -> ER_61;
+ER_56 -> ER_62;
+
+}

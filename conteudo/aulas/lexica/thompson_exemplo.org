@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Exemplo de Construção de Thompson
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Exercício Proposto
+
+#+BEGIN_CENTER
+Construir a ``árvore'' com mecanismo de Thompson \rightarrow AFND \rightarrow AFD.
+
+
+((a|b)*|b*a)|a*b(b|a)*c?
+#+END_CENTER
+
+#+Latex: \vfill
+
+Expressões Regulares
+- Concatenação: xy
+- Alternação: x|y 
+- Repetição: x*   
+
+#+Latex: \vfill
+
+ER \rightarrow ER ER \\  
+ER \rightarrow ER \vert ER  \\
+ER \rightarrow ER*     
+
+* ``Árvore'' (com precedência e associatividade de ER)
+((a|b)*|b*a)|a*b(b|a)*c?
+
+#+ATTR_LATEX: :width .6\linewidth
+[[./thompson_exemplo.png]]
