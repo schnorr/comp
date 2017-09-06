@@ -44,3 +44,11 @@ ER \rightarrow ER*
 
 #+ATTR_LATEX: :width .6\linewidth
 [[./thompson_exemplo.png]]
+
+* AFND
+
+De baixo para cima, construir o AFND.
+
+* AFD
+
+Aplicar o algoritmo de subconjuntos.
