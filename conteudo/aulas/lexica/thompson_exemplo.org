@@ -33,8 +33,10 @@ Expressões Regulares
 
 #+Latex: \vfill
 
-ER \rightarrow ER ER \\  
-ER \rightarrow ER \vert ER  \\
+ER \rightarrow ER ER
+
+ER \rightarrow ER \vert ER
+
 ER \rightarrow ER*     
 
 * ``Árvore'' (com precedência e associatividade de ER)
