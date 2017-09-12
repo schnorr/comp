@@ -51,7 +51,7 @@
   termo     & \rightarrow & termo \texttt{/} fator \\
   termo     & \rightarrow & fator \\
   fator     & \rightarrow & \texttt{(} expressão \texttt{)} \\
-  fator     & \rightarrow & \texttt{( id )} \\
+  fator     & \rightarrow & \texttt{ id } \\
   \end{tabular}
   \end{center}
   #+end_latex
