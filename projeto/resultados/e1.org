@@ -1,0 +1,200 @@
+* Resultados da Etapa 1
+** Notas subjetivas e objetivas, final
+
+| Grupo | ID     | Subjetiva | Objetiva | Final |
+|-------+--------+-----------+----------+-------|
+| H     | ???464 |        10 |      9.6 |   9.8 |
+| L     | ???076 |         5 |      8.9 |  6.95 |
+| F     | ???093 |         9 |      9.6 |   9.3 |
+| D     | ???528 |        10 |      9.5 |  9.75 |
+| B     | ???515 |        10 |      9.3 |  9.65 |
+| I     | ???676 |         5 |      9.2 |   7.1 |
+| E     | ???243 |        10 |      9.8 |   9.9 |
+| K     | ???495 |         9 |      8.1 |  8.55 |
+| G     | ???866 |        10 |      8.9 |  9.45 |
+| J     | ???675 |        10 |      9.3 |  9.65 |
+| C     | ???064 |         9 |      9.6 |   9.3 |
+| A     | ???490 |         9 |      9.3 |  9.15 |
+| M     | ???394 |         0 |      nil |   nil |
+| K     | ???955 |         0 |      8.1 |  4.05 |
+| G     | ???834 |        10 |      8.9 |  9.45 |
+| B     | ???513 |        10 |      9.3 |  9.65 |
+| C     | ???024 |         9 |      9.6 |   9.3 |
+| L     | ???679 |         5 |      8.9 |  6.95 |
+| E     | ???106 |        10 |      9.8 |   9.9 |
+| H     | ???684 |        10 |      9.6 |   9.8 |
+| F     | ???090 |         9 |      9.6 |   9.3 |
+| A     | ???722 |         0 |      9.3 |  4.65 |
+| D     | ???172 |        10 |      9.5 |  9.75 |
+| J     | ???666 |        10 |      9.3 |  9.65 |
+
+** Relatório de erros por grupo
+
+| Grupo | Teste falho   |
+|-------+---------------|
+| A     | e1_aval_062     |
+| A     | e1_aval_063     |
+| A     | e1_aval_065     |
+| A     | e1_aval_066     |
+| A     | e1_avaliacao_00 |
+| A     | e1_avaliacao_02 |
+| A     | e1_avaliacao_05 |
+| A     | e1_avaliacao_07 |
+| A     | e1_avaliacao_08 |
+| A     | e1_avaliacao_11 |
+| A     | e1_avaliacao_14 |
+| A     | e1_avaliacao_16 |
+| B     | e1_aval_062     |
+| B     | e1_aval_063     |
+| B     | e1_aval_065     |
+| B     | e1_aval_066     |
+| B     | e1_avaliacao_00 |
+| B     | e1_avaliacao_02 |
+| B     | e1_avaliacao_05 |
+| B     | e1_avaliacao_07 |
+| B     | e1_avaliacao_08 |
+| B     | e1_avaliacao_11 |
+| B     | e1_avaliacao_14 |
+| B     | e1_avaliacao_16 |
+| C     | e1_avaliacao_00 |
+| C     | e1_avaliacao_02 |
+| C     | e1_avaliacao_05 |
+| C     | e1_avaliacao_07 |
+| C     | e1_avaliacao_08 |
+| C     | e1_avaliacao_11 |
+| C     | e1_avaliacao_14 |
+| C     | e1_avaliacao_16 |
+| D     | e1_aval_067     |
+| D     | e1_aval_068     |
+| D     | e1_avaliacao_00 |
+| D     | e1_avaliacao_02 |
+| D     | e1_avaliacao_05 |
+| D     | e1_avaliacao_07 |
+| D     | e1_avaliacao_08 |
+| D     | e1_avaliacao_11 |
+| D     | e1_avaliacao_14 |
+| D     | e1_avaliacao_16 |
+| E     | e1_avaliacao_00 |
+| E     | e1_avaliacao_02 |
+| E     | e1_avaliacao_08 |
+| E     | e1_avaliacao_16 |
+| F     | e1_aval_062     |
+| F     | e1_aval_063     |
+| F     | e1_aval_065     |
+| F     | e1_aval_066     |
+| F     | e1_avaliacao_00 |
+| F     | e1_avaliacao_02 |
+| F     | e1_avaliacao_08 |
+| F     | e1_avaliacao_16 |
+| G     | e1_aval_067     |
+| G     | e1_aval_068     |
+| G     | e1_aval_074     |
+| G     | e1_aval_075     |
+| G     | e1_aval_076     |
+| G     | e1_avaliacao_00 |
+| G     | e1_avaliacao_01 |
+| G     | e1_avaliacao_02 |
+| G     | e1_avaliacao_03 |
+| G     | e1_avaliacao_05 |
+| G     | e1_avaliacao_06 |
+| G     | e1_avaliacao_07 |
+| G     | e1_avaliacao_08 |
+| G     | e1_avaliacao_09 |
+| G     | e1_avaliacao_10 |
+| G     | e1_avaliacao_11 |
+| G     | e1_avaliacao_12 |
+| G     | e1_avaliacao_13 |
+| G     | e1_avaliacao_14 |
+| G     | e1_avaliacao_15 |
+| G     | e1_avaliacao_16 |
+| H     | e1_aval_062     |
+| H     | e1_aval_063     |
+| H     | e1_aval_065     |
+| H     | e1_aval_066     |
+| H     | e1_avaliacao_00 |
+| H     | e1_avaliacao_02 |
+| H     | e1_avaliacao_08 |
+| H     | e1_avaliacao_16 |
+| I     | e1_aval_074     |
+| I     | e1_aval_075     |
+| I     | e1_aval_076     |
+| I     | e1_avaliacao_00 |
+| I     | e1_avaliacao_01 |
+| I     | e1_avaliacao_02 |
+| I     | e1_avaliacao_05 |
+| I     | e1_avaliacao_07 |
+| I     | e1_avaliacao_08 |
+| I     | e1_avaliacao_10 |
+| I     | e1_avaliacao_11 |
+| I     | e1_avaliacao_12 |
+| I     | e1_avaliacao_13 |
+| I     | e1_avaliacao_14 |
+| I     | e1_avaliacao_16 |
+| J     | e1_aval_062     |
+| J     | e1_aval_063     |
+| J     | e1_aval_065     |
+| J     | e1_aval_066     |
+| J     | e1_avaliacao_00 |
+| J     | e1_avaliacao_02 |
+| J     | e1_avaliacao_05 |
+| J     | e1_avaliacao_07 |
+| J     | e1_avaliacao_08 |
+| J     | e1_avaliacao_11 |
+| J     | e1_avaliacao_14 |
+| J     | e1_avaliacao_16 |
+| K     | e1_avaliacao_00 |
+| K     | e1_avaliacao_02 |
+| K     | e1_avaliacao_08 |
+| K     | e1_avaliacao_16 |
+| K     | e1_valg_056     |
+| K     | e1_valg_057     |
+| K     | e1_valg_058     |
+| K     | e1_valg_059     |
+| K     | e1_valg_060     |
+| K     | e1_valg_061     |
+| K     | e1_valg_062     |
+| K     | e1_valg_063     |
+| K     | e1_valg_064     |
+| K     | e1_valg_065     |
+| K     | e1_valg_066     |
+| K     | e1_valg_067     |
+| K     | e1_valg_068     |
+| K     | e1_valg_069     |
+| K     | e1_valg_070     |
+| K     | e1_valg_071     |
+| K     | e1_valg_072     |
+| K     | e1_valg_073     |
+| K     | e1_valg_074     |
+| K     | e1_valg_075     |
+| K     | e1_valg_076     |
+| K     | e1_valgrind_00  |
+| K     | e1_valgrind_02  |
+| K     | e1_valgrind_05  |
+| K     | e1_valgrind_07  |
+| K     | e1_valgrind_08  |
+| K     | e1_valgrind_10  |
+| K     | e1_valgrind_11  |
+| K     | e1_valgrind_12  |
+| K     | e1_valgrind_13  |
+| K     | e1_valgrind_14  |
+| L     | e1_aval_045     |
+| L     | e1_aval_046     |
+| L     | e1_aval_047     |
+| L     | e1_aval_062     |
+| L     | e1_aval_063     |
+| L     | e1_aval_065     |
+| L     | e1_aval_066     |
+| L     | e1_aval_074     |
+| L     | e1_aval_075     |
+| L     | e1_aval_076     |
+| L     | e1_avaliacao_00 |
+| L     | e1_avaliacao_02 |
+| L     | e1_avaliacao_05 |
+| L     | e1_avaliacao_07 |
+| L     | e1_avaliacao_08 |
+| L     | e1_avaliacao_10 |
+| L     | e1_avaliacao_11 |
+| L     | e1_avaliacao_12 |
+| L     | e1_avaliacao_13 |
+| L     | e1_avaliacao_14 |
+| L     | e1_avaliacao_16 |
