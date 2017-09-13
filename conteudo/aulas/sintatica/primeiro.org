@@ -59,7 +59,7 @@ B \rightarrow cbB | ca | bX
 #+END_CENTER
 + Como resolver esse problema?
 
-* Calcular o \alert{Primeiro(X)} de X
+* Calcular o *Primeiro(X)* de X
 
 #+BEGIN_CENTER
 X pode ser qualquer forma sentencial
