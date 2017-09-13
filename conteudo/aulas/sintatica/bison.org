@@ -1,0 +1,160 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: BISON
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+   + \texttt{yacc} -Yet Another Compiler Compiler
+   + Produz um analisador ascendente para uma gramática
+   + Usado para produzir compiladores para várias linguagens
+     + Pascal, C, C++, ...
+   + Outros usos
+     + bc (calculadora)
+     + eqn & pic (formatadores para troff)
+     + Verificar a sintaxe SQL
+     + Lex
+   + *bison* -- versão livre da GNU
+* Especificação de Entrada
+   + Contém três seções
+     + Definições (em C, incluído no início da saída)
+     + Regras (Especificação da Gramática)
+     + Código (em C, incluído no fim da saída)
+   + Sintaxe
+     #+BEGIN_SRC text
+Definições
+%%
+Regras
+%%
+Código Suplementar
+     #+END_SRC
+* Seção de Regras \normalsize (seção principal)
+   + Contém a gramática
+   + Exemplo
+     #+BEGIN_SRC C
+expr : expr '+' term | term;
+term : term '*' factor | factor;
+factor : '(' expr ')'  | ID | NUM;   
+     #+END_SRC
+* Seção de Definições \normalsize (seção auxiliar)
+   + Contém a definição de tokens, símbolo inicial
+   + Exemplo
+     #+BEGIN_SRC C
+%{
+  #include <stdio.h>
+  #include <stdlib.h>
+%}
+%token ID NUM /* notar a declaração dos tokens */
+%start expr     
+     #+END_SRC
+* Interação com o analisador léxico
+   + Flex produz uma função \texttt{yylex()}
+   + Bison produz uma função \texttt{yyparse()}
+   \vfill
+   + Flex e Bison: concebidos para interagirem
+     + yyparse() chama yylex() para obter um token
+   \vfill
+   + Duas opções
+     + Ou implementamos manualmente yylex()
+     + Ou \alert{utilizamos Flex diretamente}
+* Sequência básica operacional
+   + Supondo os arquivos
+     + *scanner.l* com as especificações de tokens em lex
+     + *parser.y* com a gramática em yacc
+   \vfill
+   + Ordem de passos possível para construir o analisador
+     #+BEGIN_SRC bash
+bison -d parser.y
+flex scanner.l
+gcc -c lex.yy.c y.tab.c
+gcc -o parser lex.yy.o y.tab.o -lfl     
+     #+END_SRC
+   \vfill
+   + *scanner.l* deve incluir na seção de definições
+     #+BEGIN_SRC C
+     #include "y.tab.h"
+     #+END_SRC
+* Miscelânea
+   + As regras da gramática
+     + \alert{Podem ser recursivas tanto a esquerda quanto a direita}
+     + Não podem ser ambíguas
+   + Usa um parser ascendente LALR(1)
+     + Solicita um token
+     + Empilha
+     + Redução?
+       + Sim $\leadsto$ reduz usando a regra correspondente
+       + Não $\leadsto$ lê outro token na entrada
+   + Não pode olhar mais que um token de /lookahead/
+   + \texttt{bison -v gramatica.y} gera a tabela de estados
+* Exemplo (Lex) -- arquivo \texttt{scanner.l}
+   #+begin_src LEX
+%{
+#include <stdio.h>
+#include "y.tab.h"
+%}
+id [_a-zA-Z][_a-zA-Z0-9]*
+wspc [ \t\n]+
+semi [;]
+comma [,]
+%%
+int { return INT; }
+char { return CHAR; }
+float { return FLOAT; }
+{comma} { return COMMA; }
+{semi} { return SEMI; }
+{id} { return ID;}
+{wspc} {;}
+   #+end_src
+* Exemplo (Bison) -- arquivo \texttt{parser.y}
+#+begin_src YACC
+%{
+#include <stdio.h>
+#include <stdlib.h>
+%}
+%start line
+%token CHAR, COMMA, FLOAT, ID, INT, SEMI
+%%
+decl : type ID list { printf("Success!\n"); } ;
+list : COMMA ID list | SEMI;
+type : INT | CHAR | FLOAT;
+%%
+#+end_src
++ Notem uma ação para a regra \texttt{decl}
+* Ações e Atributos
+   + Cada regra pode ter \alert{ações} (semânticas)
+   + Exemplo
+     #+begin_src YACC
+     E: E '+' E    { $$ = $1 + $3; }
+      | INT_LIT    { $$ = INT_VAL; };
+     #+end_src
+   + \texttt{\$n} é o atributo do n-ésimo símbolo na regra
+   + O default é que os atributos sejam do tipo inteiro
+   + Pode-se mudar o tipo através da diretiva
+     #+begin_src YACC
+     %token<...>  /* com o tipo do token */
+     %type<...>   /* tipo do não-terminal, com %union */
+     #+end_src
+* Ações e Atributos (Exemplo)
+   #+begin_src YACC
+%union {
+   char* nome;
+   int inteiro;
+   node* no;
+}
+%token<nome> IDF /* IDF terá atributo de tipo char* */
+%type<no> E      /* E terá atributo de tipo node* */
+%%
+E: E  '+' E { $$ = create_node($1, $3, "plus"); }
+| IDF        { $$ = create_leaf($1); };
+   #+end_src
