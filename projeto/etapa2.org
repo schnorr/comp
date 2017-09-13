@@ -1,0 +1,928 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador: Etapa 2 de *Análise Sintática*
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+O trabalho consiste no projeto e implementação de um compilador
+funcional para uma linguagem de programação que a partir de agora
+chamaremos de *Linguagem \K*. Na segunda etapa do trabalho é preciso
+construir um _analisador _sintático_ utilizando a ferramenta de geração
+de reconhecedores =bison= e continuar o preenchimento da tabela de
+símbolos com outras informações, associando os valores corretos aos
+=tokens=. O analisador sintático deve portanto verificar se a sentença
+fornecida (o programa de entrada) faz parte da linguagem ou não.
+
+* Funcionalidades Necessárias
+** Definir a gramática da linguagem
+
+A gramática da linguagem \K deve ser definida de acordo com a
+descrição geral apresentada na Seção \ref{sec.descricao}. As regras
+gramaticais devem ser incorporadas ao arquivo =parser.y=, arquivo este
+que conterá a gramática usando a sintaxe do bison.
+
+# \subsection{Adicionar produções gramaticais de erro}
+# Considerando a descrição da linguagem \K apresentada na
+# Seção~\ref{sec.descricao}, o grupo deve identificar pelo menos {\bf
+# três} situações comuns de erros sintáticos que o usuário possa cometer,
+# adicionando produções
+# gramaticais que capturam automaticamente estes erros durante o processo
+# de análise sintática. Caso eles ocorram, o compilador deve terminar da
+# mesma forma que terminaria para uma situação de erro não prevista, com
+# comportamento idêntico ao descrito na próxima
+# subseção~\ref{sec.relatorio}.
+
+** Relatório de Erro Sintático
+\label{sec.relatorio}
+
+Caso a análise sintática termine de forma correta, o programa deve
+retornar zero. Na ausência de erros sintáticos, esse valor é
+automaticamente retornado pelo bison através da função =yyparse()=,
+chamada pela função =main= do programa. Caso a entrada não seja
+reconhecida, deve-se imprimir uma mensagem de erro informando a linha
+do código da entrada que gerou o erro sintático e informações
+adicionais que auxiliem o programador que está utilizando o compilador
+a identificar o erro sintático identificado.  Na ocasião de uma
+mensagem de erro, o analisador sintático deve retornar um valor
+diferente de zero. Esses valores são importantes pois são utilizados
+durante o processo de avaliação automática (incluindo os testes
+realizados com =ctest=).
+
+** Enriquecimento da tabela de símbolos
+
+Uma vez que vários lexemas da entrada podem representar =tokens= de
+tipos diferentes, a tabela de símbolos deve ser alterada de forma que
+a _chave_ de cada uma das entradas não seja mais simplesmente o lexema,
+mas a combinação entre o lexema e o tipo do =token=.  O tipo de um
+determinado =token= pode ser somente um dentre as seguintes constantes.
+Elas estão definidas no arquivo =main.h= do repositório e podem
+ser livremente utilizadas em qualquer parte do código.
+
+#+latex: {\small
+#+BEGIN_EXAMPLE
+#define POA_LIT_INT    1
+#define POA_LIT_FLOAT  2
+#define POA_LIT_CHAR   3
+#define POA_LIT_STRING 4
+#define POA_LIT_BOOL   5
+#define POA_IDENT      6
+#+END_EXAMPLE
+#+latex: }
+
+O _conteúdo_ de cada entrada na tabela de símbolos deve ter pelo menos
+três campos: número da linha da última ocorrência do lexema, o tipo do
+=token= da última ocorrência, e o valor do token convertido para o tipo
+apropriado (inteiro =int=, ponto-flutuante =float=, caractere =char=,
+booleano =bool= ou cadeia de caracteres =char*=). O segundo campo,
+representado pelo tipo do =token= deve ser o mesmo utilizado na chave da
+entrada.
+
+O valor do token é um campo que pode assumir diferentes tipos: uma
+possibilidade é utilizar a construção =union= da linguagem C para conter
+os diferentes tipos possíveis para os símbolos. A conversão deve ser
+feita utilizando funções tais como =atoi=, no caso de números inteiros,
+e =atof=, no caso de ponto-flutuantes. Os tipos caractere e cadeia de
+caracteres não devem conter aspas no campo valor (e devem ser
+duplicados com =strdup=).
+
+** Associação de valor ao =token= (=yylval=)
+
+O analisador léxico é o responsável pela criação da entrada na tabela
+de símbolos para um determinado =token= que acaba de ser
+reconhecido. Nesta etapa, deve-se associar um ponteiro para a
+estrutura de dados que representa o conteúdo da entrada na tabela de
+símbolos ao =token= correspondente. Esta associação deve ser feita pelo
+analisador léxico (ou seja, no arquivo =scanner.l=).
+
+Ela é realizada através do uso da variável global =yylval=[fn:0] que é
+usada pelo =flex= para dar um ``valor'' ao =token=, além do identificador
+(um número inteiro, como na E1) retornado imediatamente após o
+reconhecimento. Como esta variável global pode ser configurada com a
+diretiva =%union=, sugere-se o uso do campo =valor_lexico= para a
+associação. Portanto, a associação deverá ser feita através de uma
+atribuição para a variável =yylval.valor_lexico=. O tipo do
+=valor_lexico= deve ser um ponteiro para uma entrada na tabela
+de símbolos.
+
+[fn:0] \tiny http://www.gnu.org/software/bison/manual/html_node/Token-Values.html
+
+** Remoção de conflitos gramaticais
+
+Deve-se realizar a remoção de conflitos Reduce/Reduce[fn:1] e
+Shift/Reduce[fn:2] de todas as regras gramaticais. Estes conflitos
+devem ser tratados através do uso de configurações para o bison (veja
+a documentação sobre =%left=, =%right= ou =%nonassoc=). Os mesmos podem ser
+observados através de uma análise cuidadosa do arquivo =parser.output=
+gerado automaticamente quando compilado. Notem que a remoção de
+conflitos pode ser feita, em alguns casos, somente através da
+re-escrita de partes da gramática.
+
+[fn:1] \tiny http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html
+[fn:2] \tiny http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html
+
+** Listar o conteúdo tabela de símbolos
+
+Implementar a função =comp_print_table=, em =cc_misc.c=, para listar _todas_
+as entradas da tabela de símbolos. Utilize a função =void
+cc_dict_etapa_2_print_entrada (char *key, int line, int tipo)= para
+imprimir uma entrada. Esta função será utilizada na avaliação
+automática para averiguar se a solução insere somente os tokens que
+devem ser inseridos na tabela de símbolos.
+* A Linguagem \K
+
+\label{sec.descricao} Um programa na linguagem \K é composto por três
+elementos, todos opcionais: um conjunto de declarações de
+_variáveis globais_, um conjunto de declarações de _novos tipos_, um
+conjunto de _funções_. Esses elementos podem aparecer intercaladamente e
+em qualquer ordem.
+
+# Somente as declarações de variáveis globais são *terminadas* por
+# ponto-e-vírgula. 
+
+** Declarações de Novos Tipos
+\label{sec.novostipos}
+
+Novos tipos podem ser declarados apenas no escopo global em \K através
+da palavra reservada =class=, seguida de um nome e enfim uma lista de
+campos fornecida entre colchetes onde os campos são separados por dois
+pontos (através do caractere especial ':'). Cada campo tem o
+encapsulamento, o tipo e um identificador do campo.  Existem três
+encapsulamentos possíveis, identificados pelas palavras reservadas:
+=protected=, =private=, e =public=. Declarações de novos tipos são
+terminadas por ponto-e-vírgula. O tipo de um campo que faz parte de
+uma declaração de novo tipo não pode ser um tipo de usuário, ou seja,
+um tipo declarado com =class=.
+
+** Declarações de Variáveis Globais
+\label{sec.varglobais}
+
+As variáveis são declaradas pelo seu tipo, seguidas pelo seu nome. O
+tipo pode estar precedido opcionalmente pela palavra reservada
+=static=. A linguagem inclui também a declaração de vetores, feita pela
+definição de seu tamanho inteiro positivo entre colchetes, colocada à
+direita do nome, ou seja, ao final da declaração.  Variáveis podem ser
+dos tipos primitivos =int=, =float=, =char=, =bool= e =string=; e também podem
+ser dos tipos declarados pelo usuário. Neste último caso, o nome do
+tipo é aquele utilizado depois da palavra reservada =class= quando este
+foi declarado.  As declarações de variáveis globais são terminadas por
+ponto-e-vírgula.
+
+** Definição de Funções
+\label{sec.funcoes}
+
+Cada função é definida por um cabeçalho e um corpo, sendo que esta
+definição não é terminada por ponto-e-vírgula. O cabeçalho consiste no
+tipo do valor de retorno, seguido pelo nome da função e terminado por
+uma lista.  O tipo pode estar precedido opcionalmente pela palavra
+reservada =static=.  A lista é dada entre parênteses e é composta por
+zero ou mais parâmetros de entrada, separados por vírgula. Cada
+parâmetro é definido pelo seu tipo e nome, e não pode ser do tipo
+vetor. O tipo de um parâmetro pode ser opcionalmente precedido da
+palavra reservada =const=. O corpo da função é um bloco de comandos.
+
+** Bloco de Comandos
+\label{sec.bloco}
+
+Um bloco de comandos é definido entre chaves, e consiste em uma
+sequência, possivelmente vazia, de comandos simples cada um *terminado*
+por ponto-e-vírgula.  Um bloco de comandos é considerado como um
+comando único simples, recursivamente, e pode ser utilizado em
+qualquer construção que aceite um comando simples.
+
+** Comandos Simples
+\label{sec.comandos}
+
+Os comandos simples da linguagem podem ser: declaração de variável
+local, atribuição, construções de fluxo de controle, operações de
+entrada, de saída, e de retorno, um bloco de comandos, e chamadas de
+função.
+
+#+BEGIN_CENTER
+_Declaração de Variável_
+#+END_CENTER
+Consiste no tipo da variável precedido opcionalmente pela palavra
+reservada =static=, e o nome da variável. Os tipos podem ser aqueles
+descritos na Seção \ref{sec.varglobais}. As declarações locais, ao
+contrário das globais, não permitem vetores e podem permitir o uso da
+palavra reservada =const= antes do tipo (após a palavra reservada =static=
+caso esta aparecer). Uma variável local pode ser opcionalmente
+inicializada com um valor válido caso sua declaração seja seguida do
+operador composto ``\texttt{<=}'' e de um identificador ou
+literal. Somente tipos primitivos podem ser inicializados.
+
+#+BEGIN_CENTER
+_Comando de Atribuição_
+#+END_CENTER
+Existem duas formas de atribuição: para identificadores cujo tipo é
+primitivo (veja Seção \ref{sec.varglobais}), e para identificadores de
+tipo declarado pelo usuário (veja Seção
+\ref{sec.novostipos}). Identificadores de tipos primitivos simples
+podem receber valores assim:
+#+BEGIN_EXAMPLE
+identificador = expressão
+identificador[expressão] = expressão
+#+END_EXAMPLE
+Para os identificadores cujo tipo é aquele declarado pelo usuário pode
+ter seus campos acessados diretamente através do operador =$=, assim:
+#+BEGIN_EXAMPLE
+identificador$campo = expressão
+#+END_EXAMPLE
+
+#+BEGIN_CENTER
+_Comandos de Entrada e Saída_
+#+END_CENTER
+Identificado pela palavra reservada =input=, seguida de uma expressão.
+O comando de saída é identificado pela palavra reservada =output=,
+seguida de uma lista de expressões separadas por vírgulas.
+
+# =output=
+# =input=
+
+# TODO => semântica
+# , onde cada elemento pode ser uma cadeia de caracteres
+#   ou uma expressão aritmética a ser impressa. 
+
+# _Comando Vazio_: para facilitar a escrita de programas aceitando o
+# caractere de ponto-e-vírgula como terminador, e não apenas separador,
+# a linguagem deve aceitar também o comando vazio. 
+
+#+Latex: \vspace{2\baselineskip}
+
+#+BEGIN_CENTER
+_Chamada de Função_
+#+END_CENTER
+Uma chamada de função consiste no nome da função, seguida de
+argumentos entre parênteses separados por vírgula. Um argumento pode
+ser uma expressão.
+
+#+BEGIN_CENTER
+_Comandos de Shift_
+#+END_CENTER
+Sendo número um literal inteiro positivo, temos:
+#+BEGIN_EXAMPLE
+identificador << numero
+identificador >> numero
+#+END_EXAMPLE
+
+#+BEGIN_CENTER
+_Comando de Retorno, Break, Continue e Case_
+#+END_CENTER
+Retorno é a palavra reservada =return= seguida de uma expressão. Os
+comandos =break= e =continue= são simples. O comando =case= é o único que
+não termina por ponto-e-vírgula, por ser considerado um marcador de
+lugar. Ele é seguido de um literal inteiro, seguido enfim por
+dois-pontos.
+
+#+BEGIN_CENTER
+_Comandos de Controle de Fluxo_
+#+END_CENTER
+\K possui construções condicionais, iterativas e de seleção para
+controle estruturado de fluxo. As condicionais incluem o =if= com o =else=
+opcional, assim:
+#+BEGIN_EXAMPLE
+if (expressão) then bloco
+if (expressão) then bloco else bloco
+#+END_EXAMPLE
+As construções iterativas incluem, o =foreach=, =for=, =while do= e =do while=
+nos seguintes formatos:
+#+BEGIN_EXAMPLE
+foreach (identificador: lista) bloco
+for (lista: expressão: lista) bloco
+while (expressão) do bloco
+do bloco while (expressão)
+#+END_EXAMPLE
+A =lista= do =foreach= é uma lista de expressões separadas por vírgula. Os
+dois marcadores =lista= do comando =for= são listas de comandos separados
+por vírgula. A única construção de seleção é o =switch-case=, seguindo o
+seguinte padrão:
+#+BEGIN_EXAMPLE
+switch (expressão) bloco
+#+END_EXAMPLE
+
+Em todas as construções de controle de fluxo, o termo =bloco= indica um
+bloco de comandos (veja Seção \ref{sec.bloco}).
+
+# =foreach=
+# =switch= / =case=
+# =break=
+# =continue=
+# =while do=
+# =do while=
+# if then else
+
+** Expressões Aritméticas e Lógicas
+
+As expressões aritméticas podem ter como operandos: (a)
+identificadores, opcionalmente seguidos de expressão inteira entre
+colchetes, para acesso a vetores; (b) literais numéricos como inteiro
+e ponto-flutuante; (c) chamada de função. As expressões aritméticas
+podem ser formadas recursivamente com operadores aritméticos, assim
+como permitem o uso de parênteses para associatividade.
+
+Expressões lógicas podem ser formadas através dos operadores
+relacionais aplicados a expressões aritméticas, ou de operadores
+lógicos aplicados a expressões lógicas, recursivamente. Outras
+expressões podem ser formadas considerando variáveis lógicas do tipo
+\texttt{bool}.  Nesta etapa do trabalho, porém, não haverá distinção
+alguma entre expressões aritméticas, inteiras, de caracteres ou
+lógicas.  A descrição sintática deve aceitar qualquer operadores e
+subexpressão de um desses tipos como válidos, deixando para a análise
+semântica das próximas etapas do projeto a tarefa de verificar a
+validade dos operandos e operadores.
+
+
+# , como descrito na Seção~\ref{sec.comandos} acima. O
+# caractere especial ``\texttt{-}'' (veja especificação da etapa 1)
+# indica subtração.
+# %Os operadores \texttt{\&} e \texttt{\$} não serão considerados nesta
+# %avaliação.
+# % operações com chars ou strings não são descritas, mas acho que não tem
+# % problema nesta etapa
+
+* Casos omissos
+
+Casos não previstos serão discutidos com o professor. Abaixo os casos
+omissos já detectados e cujo interpretação já foi definida.
+
+* Requisitos Obrigatórios                                          :noexport:
+\label{sec.requerimentos}
+
+A função \texttt{main} deve estar em um arquivo chamado
+\texttt{main.c}, {e não deve ser alterada sob qualquer
+  hipótese}. Outros arquivos fontes são encorajados de forma a manter
+a modularidade do código fonte. Sugere-se e edição do arquivo
+\texttt{misc.c}, com suas funções \texttt{main\_init} e
+\texttt{main\_finalize} para a eventual necessidade de alocar e
+liberar estruturas de dados globais.  A entrada para o \flex deve
+estar em um arquivo com o nome \texttt{scanner.l}. A entrada para o
+\bison deve estar em um arquivo com o nome \texttt{parser.y}. As
+subseções seguintes apresentam os requisitos técnicos obrigatórios
+nesta etapa do projeto de compiladores. Elas serão consideradas na
+avaliação subjetiva da etapa.
+
+
+
+** Git e Cmake
+
+A solução desta etapa do projeto de compiladores deve vir acompanhada
+de um repositório git que manteve o histórico de desenvolvimento do
+projeto. Cada commit deve ser o menor possível (utilize a ferramenta
+\texttt{git gui} para comitar apenas parte do arquivo
+modificado). Cada ação de commit deve vir com mensagens significativas
+explicando a mudança feita. Todos os membros do grupo devem ter feito
+ações de commit, pelo fato deste trabalho ser colaborativo. Estas duas
+ações -- mensagens de commit e quem fez o commit -- serão obtidas pelo
+professor através do comando \texttt{git log} na raiz do repositório
+solução do grupo. O comando \texttt{git blame} também será utilizado
+para verificar a participação de todos os membros do grupo na
+construção da etapa.
+
+\begin{itemize}
+\item {\bf Nota importante:} O repositório git utilizado pelo grupo
+  deve ser {\bf privado aos membros do grupo}. O endereço do
+  repositório deve ser informado ao professor para leitura e, no caso
+  de necessidade, para escrita.
+\end{itemize}
+
+** Código Inicial
+
+O código inicial desta etapa do projeto é o código obtido como
+resultado na etapa anterior, mais o código atualizado do repositório
+git do professor. Para realizar um \emph{merge} das modificações e
+ativar o funcionamento da função \texttt{main} correspondente a etapa
+2, deve-se executar os seguintes comandos, configurando também o
+processo de compilação com a seguinte sequência de comandos (supondo
+que o diretório corrente é \texttt{build} e que o diretório superior
+contém os fontes do programa, e que o nome \texttt{origin} é o nome do
+repositório git do professor):
+\begin{verbatim}
+$ git pull origin master
+$ cmake -DETAPA_1=OFF -DETAPA_2=ON ..
+$ make
+\end{verbatim}
+O arquivo \texttt{parser.y} deverá ser fortemente modificado para
+atender aos requisitos deste trabalho. A solução do aluno deve partir
+disto e utilizar a mesma estrutura de diretórios. Se novos arquivos de
+código fonte devem ser adicionados, modifique o arquivo
+\texttt{CMakeLists.txt} apropriadamente para que o novo arquivo seja
+incluído no processo de compilação.
+
+** Avaliação automática
+
+Um conjunto de testes já estão disponíveis no repositório para que o
+grupo possa se autoavaliar. Para lançar estes testes, depois de ter
+compilado o programa utilizando as instruções acima e com a ferramenta
+\texttt{valgrind} instalada, execute o seguinte comando no diretório
+onde encontra-se os arquivos compilados:
+\begin{verbatim}
+ctest -R e2
+\end{verbatim}
+Caso os testes falhem, utilize a opção \texttt{-V} com o comando
+\texttt{ctest}. Informações adicionais serão apresentadas, e sua
+interpretação poderá auxiliá-los a resolver os problemas que geraram
+as falhas detectadas.
+
+* Dúvidas                                                          :noexport:
+
+Crie um novo tópico no fórum de discussão do projeto de compilador no
+moodle.
+
+\hfill Bom trabalho!
+
+* 2016-05-22 Planejamento da Avaliação                             :noexport:
+
+- relatório de erro sintático
+  - verificar na saída se o erro sintática é corretamente explicitado
+- testes para tabela de símbolos
+  - verificar o conteúdo da tabela de símbolos
+- associação de valor ao token com yyleval
+  - verificar com grep no arquivo parser.y
+- nenhum conflito gramatical
+  - verificar compilação do bison
+- testes com entradas corretas
+
+* 2016-05-22 Possíveis testes                                      :noexport:
+
+- Escopo global
+  - Variáveis globais
+    #+begin_src txt :tangle i_e2_001.ptg
+    int a1;
+    #+end_src
+  - Novos tipos
+    #+begin_src txt :tangle i_e2_002.ptg
+    class t [ private int a ];
+    #+end_src    
+  - Funções
+    #+begin_src txt :tangle i_e2_003.ptg
+    int f () {}
+    #+end_src 
+  - Em qualquer ordem
+    #+begin_src txt :tangle i_e2_004.ptg
+    int f () {}
+    class t [ private int a ];
+    int a1;
+    #+end_src
+    #+begin_src txt :tangle i_e2_005.ptg
+    class t [ private int a ];
+    int f () {}
+    int a1;
+    #+end_src
+    #+begin_src txt :tangle i_e2_006.ptg
+    class t [ private int a ];
+    int a1;
+    int f () {}
+    #+end_src
+    #+begin_src txt :tangle i_e2_007.ptg
+    int a1;
+    int f () {}
+    class t [ private int a ];
+    #+end_src
+- Novos tipos
+  - lista de campos
+    #+begin_src txt :tangle i_e2_008.ptg
+    class t [ private int a : private int b ];
+    #+end_src
+  - protected
+    #+begin_src txt :tangle i_e2_009.ptg
+    class t [ protected int a ];
+    #+end_src
+  - private
+    #+begin_src txt :tangle i_e2_010.ptg
+    class t [ private int a ];
+    #+end_src
+  - public
+    #+begin_src txt :tangle i_e2_011.ptg
+    class t [ public int a ];
+    #+end_src
+- Variáveis globais
+    #+begin_src txt :tangle i_e2_012.ptg
+    int a;
+    #+end_src
+  - static
+    #+begin_src txt :tangle i_e2_013.ptg
+    static int a;
+    #+end_src
+  - vetores
+    #+begin_src txt :tangle i_e2_014.ptg
+    static int a[200];
+    #+end_src
+  - testar todos os tipos
+    - int, float, char, bool, string, tipos de usuario
+    #+begin_src txt :tangle i_e2_015.ptg
+    int a;
+    #+end_src
+    #+begin_src txt :tangle i_e2_016.ptg
+    float a;
+    #+end_src
+    #+begin_src txt :tangle i_e2_017.ptg
+    char a;
+    #+end_src
+    #+begin_src txt :tangle i_e2_018.ptg
+    bool a;
+    #+end_src
+    #+begin_src txt :tangle i_e2_019.ptg
+    string a;
+    #+end_src
+    #+begin_src txt :tangle i_e2_020.ptg
+    tipo a;
+    #+end_src
+- Funções
+    #+begin_src txt :tangle i_e2_021.ptg
+    int f () {}
+    #+end_src
+  - static
+    #+begin_src txt :tangle i_e2_022.ptg
+    static int f () {}
+    #+end_src
+  - sem parâmetros
+    #+begin_src txt :tangle i_e2_023.ptg
+    static int f () {}
+    #+end_src
+  - com parâmetros
+    #+begin_src txt :tangle i_e2_024.ptg
+    static int f (int a, int b, int c) {}
+    #+end_src
+  - usar const nos parâmetros
+    #+begin_src txt :tangle i_e2_025.ptg
+    static int f (int a, const int b, const int c) {}
+    #+end_src
+- Bloco de comandos
+  - Recursivamente
+    #+begin_src txt :tangle i_e2_026.ptg
+    int f (){{{{};};};}
+    #+end_src
+  - Separado por ponto-e-vírgula
+    #+begin_src txt :tangle i_e2_027.ptg
+    int f (){{};{};}
+    #+end_src
+- Declaração de variável local
+  - normal
+    #+begin_src txt :tangle i_e2_028.ptg
+    int f () { int a; }
+    #+end_src
+  - static
+    #+begin_src txt :tangle i_e2_029.ptg
+    int f () { static int a; }
+    #+end_src
+  - testar todos os tipos novamente
+    - int, float, char, bool, string, tipos de usuario
+    #+begin_src txt :tangle i_e2_030.ptg
+    int f () { int a; }
+    #+end_src
+    #+begin_src txt :tangle i_e2_031.ptg
+    int f () { float a; }
+    #+end_src
+    #+begin_src txt :tangle i_e2_032.ptg
+    int f () { char a; }
+    #+end_src
+    #+begin_src txt :tangle i_e2_033.ptg
+    int f () { bool a; }
+    #+end_src
+    #+begin_src txt :tangle i_e2_034.ptg
+    int f () { string a; }
+    #+end_src
+    #+begin_src txt :tangle i_e2_035.ptg
+    int f () { tipo a; }
+    #+end_src
+  - const após static
+    #+begin_src txt :tangle i_e2_036.ptg
+    int f () { static const int a; }
+    #+end_src
+  - inicialização para tipos primitivos
+    #+begin_src txt :tangle i_e2_037.ptg
+    int f () { int a <= 100; }
+    #+end_src
+    #+begin_src txt :tangle i_e2_038.ptg
+    int f () { int b; int a <= b; }
+    #+end_src
+- Atribuição
+  - variáveis simples
+    #+begin_src txt :tangle i_e2_039.ptg
+    int f () { a = 3; }
+    #+end_src
+  - para vetores com expressão aritmética
+    #+begin_src txt :tangle i_e2_040.ptg
+    int f () { a[t+a] = 3; }
+    #+end_src
+  - para campos com !
+    #+begin_src txt :tangle i_e2_041.ptg
+    int f () { a!b = 3; }
+    #+end_src
+- Entrada/Saída
+  - input seguido de expressão
+    #+begin_src txt :tangle i_e2_042.ptg
+    int f () { input 3+b; }
+    #+end_src
+  - output com lista de expressões
+    #+begin_src txt :tangle i_e2_043.ptg
+    int f () { output 3+b, 3+b; }
+    #+end_src
+- Chamada de função
+  - normal sem argumentos
+    #+begin_src txt :tangle i_e2_044.ptg
+    int f () { f(); }
+    #+end_src
+  - com argumentos
+    #+begin_src txt :tangle i_e2_045.ptg
+    int f () { f(2, 3, x, 4); }
+    #+end_src
+  - com argumentos onde há uma expressão
+    #+begin_src txt :tangle i_e2_046.ptg
+    int f () { f(2, 3-2, x+1, 4); }
+    #+end_src
+- Shift
+  - << 20
+    #+begin_src txt :tangle i_e2_047.ptg
+    int f () { x << 20; }
+    #+end_src
+  - >> 10
+    #+begin_src txt :tangle i_e2_048.ptg
+    int f () { x >> 10; }
+    #+end_src
+- Retorno, break, continue, case
+  - return com expressão
+    #+begin_src txt :tangle i_e2_049.ptg
+    int f () { return 2+3; }
+    #+end_src
+  - break
+    #+begin_src txt :tangle i_e2_050.ptg
+    int f () { break; }
+    #+end_src
+  - continue
+    #+begin_src txt :tangle i_e2_051.ptg
+    int f () { continue; }
+    #+end_src
+  - case sem terminador de ponto-e-vírgula, inteiro :
+    #+begin_src txt :tangle i_e2_052.ptg
+    int f () { case 20: }
+    #+end_src
+- Fluxo de controle
+  - if then
+    #+begin_src txt :tangle i_e2_053.ptg
+    int f () { if (true) then { x = 3;};; }
+    #+end_src
+    #+begin_src txt :tangle i_e2_054.ptg
+    int f () { if (true) then x = 3;; }
+    #+end_src
+  - if then com else
+    #+begin_src txt :tangle i_e2_055.ptg
+    int f () { if (true) then { x = 3;}; else {};; }
+    #+end_src
+  - foreach (identificador: lista) comando
+    - lista de expressões separadas por vírgula
+    #+begin_src txt :tangle i_e2_056.ptg
+    int f () { foreach ( ident : 2+3, 4+5, a+b) {};; }
+    #+end_src
+  - for (lista: expressão: lista) comando
+    - lista de comando separado por vírgula
+    #+begin_src txt :tangle i_e2_057.ptg
+    int f () { for (x = 3, a = 1: 2+3 : s=1) {};; }
+    #+end_src
+  - while (exp) do comando
+    #+begin_src txt :tangle i_e2_058.ptg
+    int f () { while (2+3) do {};; }
+    #+end_src
+  - do comando while (exp)
+    #+begin_src txt :tangle i_e2_059.ptg
+    int f () { do {}; while (2+3); }
+    #+end_src
+  - switch (exp) comando
+    #+begin_src txt :tangle i_e2_060.ptg
+    int f () { switch (2+3) {};; }
+    #+end_src
+- Expressões Aritméticas/Lógicas
+  - Recursivamente
+    #+begin_src txt :tangle i_e2_061.ptg
+    int f () { x = 2+3*2/3-2; }
+    #+end_src
+  - Uso de parênteses
+    #+begin_src txt :tangle i_e2_062.ptg
+    int f () { x = 2+3*2/(3-2); }
+    #+end_src
+  - Operadores relacionais com expressões aritméticas
+    #+begin_src txt :tangle i_e2_063.ptg
+    int f () { x = 2 < 3; }
+    #+end_src
+  - Com chamada de função na lógica, na aritmética
+    #+begin_src txt :tangle i_e2_064.ptg
+    int f () { x = f() < 3+g(); }
+    #+end_src
+
+* 2016-05-23 Gerador de testes                                     :noexport:
+
+#+begin_src sh :results output :session :exports both
+  DIR=saida2
+  mkdir -p $DIR
+  rm -rf $DIR/*
+  cp i_e2_*.ptg $DIR/
+  for input in `ls -1 i_e2_*.ptg`; do
+    #unique identifier
+    UNIQUE=`echo "$input" | cut -d"_" -f3 | cut -d"." -f1`
+    TESH="$DIR/aval_${UNIQUE}.tesh"
+    TESHV="$DIR/valg_${UNIQUE}.tesh"
+
+    #generate tesh
+    echo "#! ./tesh" > $TESH
+    echo "! timeout 5" >> $TESH
+    echo "! output ignore" >> $TESH
+    echo "$ ./main tests/e2/${input}" >> $TESH
+
+    #generate tesh for valgrind
+    echo "#! ./tesh" > $TESHV
+    echo "! timeout 15" >> $TESHV
+    echo "! output ignore" >> $TESHV
+    echo "$ ./tests/scripts/valgrindtest ./main tests/e2/${input}" >> $TESHV
+  done
+#+end_src
+
+* 2016-05-23 Entrega Etapa 2                                       :noexport:
+
+#+TBLNAME:etapa2tags
+|----+----------+--------------+--------------------------------------------------------------+---------------|
+|----+----------+--------------+--------------------------------------------------------------+---------------|
+
+Call `org-table-export' command in the table, export to file =etapa2.csv=.
+
+
+#+begin_src sh :results output :session :exports both
+TESTSDIR=`pwd`/saida2/
+FILE=etapa2.csv
+DIR=results/etapa2/
+mkdir -p $DIR
+rm -rf $DIR/*
+cp $FILE $DIR
+cd $DIR
+
+# prepare reference empty repository
+git clone git@bitbucket.org:schnorr/compil-2016-1.git ref
+MAIN="`pwd`/ref/src/main.c"
+
+# loop over solutions
+while read -r line; do
+   UNIQUE=`echo "$line" | cut -d, -f1`
+   GITREF=`echo "$line" | cut -d, -f4`
+   TAGREF=`echo "$line" | cut -d, -f5`
+
+   if [ -z $TAGREF ]; then
+      continue
+   fi
+   echo $UNIQUE $GITREF $TAGREF
+
+   # clone the repository
+   git clone $GITREF $UNIQUE
+
+   # let's customize it
+   cd $UNIQUE
+   git checkout $TAGREF
+   rm -rf `find | grep CMakeCache.txt`
+   rm -rf `find | grep build`
+
+   # copy main.c
+   cp $MAIN src/main.c
+
+   # erase existing tests
+   rm -rf tests/e[123456]/
+   # use new set of tests
+   mkdir -p tests/e2/
+   cp $TESTSDIR/* tests/e2
+
+   cd ..
+
+   # preparing the out-of-source build dir
+   BUILDIR=b-$UNIQUE
+   mkdir -p $BUILDIR; cd $BUILDIR;
+   cmake -DETAPA_1=OFF -DETAPA_2=ON ../$UNIQUE/; make;
+   cd ..
+done < $FILE
+#+end_src
+
+* 2016-05-23 Execução da etapa 2                                   :noexport:
+
+#+begin_src sh :results output :session :exports both
+  cd results/etapa2/
+  for group in `ls -1d b-*`; do
+    echo $group
+    cd $group
+    ctest -R e2_aval
+    cd ..
+  done > etapa2.log
+cp etapa2.log ../../
+#+end_src
+
+* 2016-05-24 Interpretação                                         :noexport:
+
+#+begin_src sh :results output :session :exports both
+ET=etapa2
+cat ${ET}.log | sed "/^b-../d" | awk -v RS="Test project" '{ print $0 > "temp"(NR-1) }'
+TOTALTESTS=`cat temp1  | grep aval | grep "#" | cut -d"/" -f1 | sed "s/ //g" | tail -n1`
+DIR=${ET}
+mkdir -p $DIR/
+rm -rf $DIR/*
+mkdir -p $DIR/testes/
+SAIDACSV=$DIR/${ET}.csv
+echo "grupo,total,falhos,nota" > $SAIDACSV
+for i in `seq 1 9`; do
+   FILE=temp${i}
+   echo "== $i =="
+   cat $FILE | grep \(Failed\)
+   FAILEDTESTS=`cat $FILE | grep \(Failed\) | grep aval | wc -l`
+   SUCCESSRATE=`echo "($TOTALTESTS-$FAILEDTESTS)/$TOTALTESTS*10" | bc -l`
+   echo "Group $i obtained $SUCCESSRATE success rate."
+   echo "$i,$TOTALTESTS,$FAILEDTESTS,$SUCCESSRATE" >> $SAIDACSV
+done > $DIR/${ET}-eval.log
+cp ${ET}.log $DIR
+cp -prf saida/* $DIR/testes/
+tar cfz ${ET}.tar.gz ${ET}
+cat ${ET}/${ET}.csv
+#+end_src
+
+* 2016-05-24 Subjetiva                                             :noexport:
+
+- Erros (0.5)
+
+#+begin_src sh :results output :session :exports both
+  cd results/etapa2/
+  ERRADA=errada.ptg
+  echo "int f({}" > errada.ptg
+  for i in `ls -1d b-*`; do
+      echo "== $i =="
+      M="$i/main"
+      $M errada.ptg 2>&1 > saida
+      cat saida | grep "{" | wc -l
+  done
+#+end_src
+
+- Enriquecimento (1.0)
+- yylval (0.5)
+
+
+#+begin_src sh :results output :session :exports both
+  cd results/etapa2/
+  ERRADA=errada.ptg
+  echo "int f({}" > errada.ptg
+  for i in `seq -w 01 09`; do
+      echo "== $i =="
+      cat $i/scanner.l | grep yylval | wc -l
+  done
+#+end_src
+
+- Conflitos (1.0)
+
+#+begin_src sh :results output :session :exports both
+  cd results/etapa2/
+  for i in `ls -1d b-*`; do
+      echo "== $i =="
+      cd $i; 
+make clean; make 2> saida > /dev/null; cat saida | grep conflict  | cut -d: -f3 | cut -d"[" -f1
+cd ..
+  done
+#+end_src
+
+
+- Summary
+
+|   | Erro | Enriq. | yylval | conflitos | Subjetivo |
+|---+------+--------+--------+-----------+-----------|
+|---+------+--------+--------+-----------+-----------|
+
+Export with =org-table-export= to =subjetivo.csv=.
+
+#+begin_src sh :results output :session :exports both
+cat subjetivo.csv
+#+end_src
+
+* 2016-05-24 Subjetivo etapa 2                                     :noexport:
+
+#+begin_src sh :results output :session :exports both
+cat etapa2/etapa2.csv | sed "s/nota/auto/" > netapa2.csv
+cat subjetivo.csv | cut -d"," -f6 | sed "s/XXXX/-10/" > fim.csv
+echo "subjetivo" > fim2.csv
+for i in `tail -n+2 fim.csv`; do
+  echo `echo "10 + $i" | bc -l`
+done >> fim2.csv
+cat fim2.csv
+paste -d, netapa2.csv fim2.csv > fetapa2.csv
+cat fetapa2.csv
+#+end_src
+
+#+begin_src R :results output :session :exports both
+df <- read.csv("fetapa2.csv");
+df$nota = (df$auto + df$subjetivo)/2;
+df;
+write.csv(df, "etapa2/etapa2.csv");
+#+end_src
+
+#+begin_src sh :results output :session :exports both
+tar cfz etapa2.tar.gz etapa2
+#+end_src
