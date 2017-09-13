@@ -19,7 +19,8 @@ disciplina, podem variar em abrangência e profundidade.
 | Sintática  | [[./aulas/sintatica/transformacoes.org][Transformações gramaticais]]                             | [[https://www.youtube.com/watch?v=vW22y2iWEXE][#012]], [[https://www.youtube.com/watch?v=s-d-KBXSGgM][#013]]       | [[./apoio/apoio-01-transformacoes.pdf][#01]]      |            |
 | Sintática  | [[./aulas/sintatica/descendente.org][Análise Descendente e Força Bruta]]                      | [[ https://www.youtube.com/watch?v=hC6usaHLazU][#014]]             |          |            |
 | Sintática  | [[./aulas/sintatica/preditivos.org][Analisadores Preditivos]]                                | [[https://www.youtube.com/watch?v=rfxUziLglfo][#015]]             |          |            |
-| Sintática  | [[./aulas/sintatica/primeiro-sequencia.org][Conjuntos Primeiro e Sequência]]                         |                  |          |            |
+| Sintática  | [[./aulas/sintatica/primeiro.org][Conjunto Primeiro]]                                      |                  |          |            |
+| Sintática  | [[./aulas/sintatica/sequencia.org][Conjunto Sequência]]                                     |                  |          |            |
 | Sintática  | LL(1) - Preditivo tabular                              |                  |          |            |
 | Sintática  | Árvore Sintática Abstrata (AST - /Abstract Syntax Tree/) |                  |          |            |
 | Sintática  | Introdução a análise Ascendente (/bottom-up/)            |                  |          |            |
