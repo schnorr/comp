@@ -198,3 +198,19 @@
 | L     | e1_avaliacao_13 |
 | L     | e1_avaliacao_14 |
 | L     | e1_avaliacao_16 |
+** Relatório de publicidade
+
+Todos os repositórios devem ser privados.
+
+Estes são os repositórios públicos:
+
+| Id |
+|----+
+| C  |
+| D  |
+| E  |
+| F  |
+| H  |
+| K  |
+| L  |
+
