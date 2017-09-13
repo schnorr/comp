@@ -28,7 +28,7 @@ A entrega sempre é até as 23:59 do dia.
 | Etapa | Descrição e Especificação | Peso (%) | Cumulativo (%) |    Entrega | Resultados |
 |-------+---------------------------+----------+----------------+------------+------------|
 | E1    | [[./etapa1.org][Análise Léxica]] ([[./etapa1.pdf][PDF]])      |       10 |             10 | 2017-09-10 | [[./resultados/e1.org][Relatório]]  |
-| E2    | [[./etapa2.org][Análise Sintática]]         |       15 |             25 | 2017-10-01 |            |
+| E2    | [[./etapa2.org][Análise Sintática]] ([[./etapa2.pdf][PDF]])   |       15 |             25 | 2017-10-01 |            |
 | E3    | [[./etapa3.org][Árvore Sintática Abstrata]] |       15 |             40 | 2017-10-10 |            |
 | E4    | [[./etapa4.org][Análise Semântica]]         |       15 |             55 | 2017-10-31 |            |
 | E5    | [[./etapa5.org][Geração de Código]]         |       20 |             75 | 2017-12-05 |            |
