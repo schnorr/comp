@@ -17,7 +17,7 @@ disciplina, podem variar em abrangência e profundidade.
 | Sintática  | [[./aulas/sintatica/introducao.org][Introdução a análise sintática]]                         | [[https://www.youtube.com/watch?v=T9Io9Bi0Dh0][#007]], [[https://www.youtube.com/watch?v=D_o1cmfmm9A][#008]], [[https://www.youtube.com/watch?v=Zkzs5WeSS30][#009]] |          |            |
 | Sintática  | [[./aulas/sintatica/glc.org][Gramáticas Livres de Contexto]]                          | [[https://www.youtube.com/watch?v=98FDEWeSZeA][#010]], [[https://www.youtube.com/watch?v=qmv_7dciREM][#011]]       |          |            |
 | Sintática  | [[./aulas/sintatica/transformacoes.org][Transformações gramaticais]]                             | [[https://www.youtube.com/watch?v=vW22y2iWEXE][#012]], [[https://www.youtube.com/watch?v=s-d-KBXSGgM][#013]]       | [[./apoio/apoio-01-transformacoes.pdf][#01]]      |            |
-| Sintática  | [[./aulas/sintatica/descendente.org][Análise Descendente e Força Bruta]]                      |                  |          |            |
+| Sintática  | [[./aulas/sintatica/descendente.org][Análise Descendente e Força Bruta]]                      | [[ https://www.youtube.com/watch?v=hC6usaHLazU][#014]]             |          |            |
 | Sintática  | [[./aulas/sintatica/preditivos.org][Analisadores Preditivos]]                                |                  |          |            |
 | Sintática  | [[./aulas/sintatica/primeiro-sequencia.org][Conjuntos Primeiro e Sequência]]                         |                  |          |            |
 | Sintática  | LL(1) - Preditivo tabular                              |                  |          |            |
