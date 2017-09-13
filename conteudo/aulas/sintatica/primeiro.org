@@ -44,11 +44,13 @@ Supondo as regras de produção para o não-terminal A
 A $\rightarrow$ \beta_1 | \beta_2 | \beta_3 | ... | \beta_n
 
 #+BEGIN_CENTER
-Os conjuntos Primeiro de cada uma dessas
+Todo os conjuntos Primeiro de cada uma das
 
-produções devem obrigatoriamente ser *disjuntos*
+produções devem obrigatoriamente ser *disjuntos* par a par
 
-Primeiro(\beta_1) $\bigcap$ Primeiro(\beta_2) $\bigcap$ ... $\bigcap$ Primeiro(\beta_n) = \emptyset
+Primeiro(\beta_1) $\bigcap$ Primeiro(\beta_2) = \emptyset; ...; Primeiro(\beta_1) $\bigcap$ Primeiro(\beta_n) = \emptyset
+Primeiro(\beta_2) $\bigcap$ Primeiro(\beta_3) = \emptyset; ...; Primeiro(\beta_2) $\bigcap$ Primeiro(\beta_n) = \emptyset
+...
 #+END_CENTER
 
 #+Latex: \vfill\pause
