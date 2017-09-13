@@ -300,8 +300,7 @@ opcional, assim:
 if (expressão) then bloco
 if (expressão) then bloco else bloco
 #+END_EXAMPLE
-As construções iterativas incluem, o =foreach=, =for=, =while do= e =do while=
-nos seguintes formatos:
+As construções iterativas são as seguintes no formato:
 #+BEGIN_EXAMPLE
 foreach (identificador: lista) bloco
 for (lista: expressão: lista) bloco
