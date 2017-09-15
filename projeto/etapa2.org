@@ -369,6 +369,10 @@ Uma declaração de novo tipo não pode ser vazia.
 Variáveis globais não recebem valores no momento da sua declaração, ao
 contrário das variáveis locais conforme restrições da especificação.
 
+** Vetores em novos tipos
+
+Novos tipos podem ter campos que são vetores de tipos primitivos.
+
 * 2016-05-22 Planejamento da Avaliação                             :noexport:
 
 - relatório de erro sintático
