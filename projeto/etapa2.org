@@ -360,6 +360,15 @@ validade dos operandos e operadores.
 Casos não previstos serão discutidos com o professor. Abaixo os casos
 omissos já detectados e cujo interpretação já foi definida.
 
+** Quantidade mínima de campos
+
+Uma declaração de novo tipo não pode ser vazia.
+
+** Valor inicial para variáveis globais
+
+Variáveis globais não recebem valores no momento da sua declaração, ao
+contrário das variáveis locais conforme restrições da especificação.
+
 * 2016-05-22 Planejamento da Avaliação                             :noexport:
 
 - relatório de erro sintático
