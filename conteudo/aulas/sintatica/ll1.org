@@ -99,7 +99,6 @@ Correlaciona cada não-terminal com cada terminal \Rightarrow \alert{M[NT,T]}
 
 A tabela guia as ações de empilhamento da análise LL(1)
 + *Exemplo* com a entrada *()()*
-
 * Análise Preditiva Tabular -- Exemplo 1
    + Reconhecer \textbf{id+id*id}
    + Considerando a tabela preditiva
