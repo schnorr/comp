@@ -134,10 +134,10 @@ _Resposta_
 | else-parte | else \epsilon   | $ else    |
 | exp        | 0 1      | )         |
 * 3: Calcule o conjunto Sequência de cada não-terminal
-| decl-sequência | \rightarrow | decl decl-seq'     |
-| decl-seq'      | \rightarrow | *;* decl-sequência |
-| decl-seq'      | \rightarrow | \epsilon           |
-| decl           | \rightarrow | *s*                |
+| DS  | \rightarrow | D DS' |
+| DS' | \rightarrow | ; DS  |
+| DS' | \rightarrow | \epsilon     |
+| D   | \rightarrow | s     |
 
 #+Latex: \vfill\pause
 
