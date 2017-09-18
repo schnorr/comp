@@ -156,7 +156,7 @@ _Resposta_
 | S \rightarrow ACE       |
 | A \rightarrow a \vert b \vert \epsilon |
 | C \rightarrow c \vert d \vert \epsilon |
-| D \rightarrow e         |
+| E \rightarrow e         |
 
 Implementação possível para o não-terminal A()
 
