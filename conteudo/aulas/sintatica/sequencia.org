@@ -147,11 +147,16 @@ _Resposta_
 _Resposta_
 #+END_CENTER
 
-|     | Primeiro | Sequência |
-|-----+----------+-----------|
-| DS  | s        | $         |
-| DS' | ; \epsilon      | $         |
-| D   | s        | ;         |
+|     | PRI | SEQ |
+|-----+-----+-----|
+| DS  | s   | $   |
+| DS' | ; \epsilon | $   |
+| D   | s   | ;   |
+
+Explicações
+- ; \in SEQ(D) porque pela regra #1 temos D DS'
+- $ \in SEQ(DS) porque DS é NT inicial em #1
+- $ \in SEQ(DS') porque em #1 ele aparece no final da produção
 
 * Fechamento Primeiro/Sequência(A)
 
