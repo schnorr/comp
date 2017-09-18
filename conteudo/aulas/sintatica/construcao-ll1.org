@@ -1,0 +1,110 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Construção da Tabela LL(1)
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Videos                                                           :noexport:
+
+- Análise LL(1): https://www.youtube.com/watch?v=6DeJtQJzTf0&index=17&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
+  - https://www.youtube.com/watch?v=1QeP9cSeDD4&index=32&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
+- Tabela LL(1): https://www.youtube.com/watch?v=oQawGigbVk4&index=18&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
+- Exemplos
+  - https://www.youtube.com/watch?v=AyLzlrBZ0hA&index=33&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
+  - https://www.youtube.com/watch?v=87VbeBEP8ZU&index=34&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
+
+* Algoritmo de Construção
+   + Para cada produção \alert{A $\rightarrow$ $\alpha$} da gramática, faça
+   \vfill
+   + Para cada terminal *a* em Primeiro(\alpha), inclua (A $\rightarrow$ \alpha) em M[A,a]
+   + <2->Se $\epsilon$ $\in$ Primeiro(\alpha), inclua (A $\rightarrow$ \alpha) em M[A,b]
+     + Para cada terminal *b* em Sequência(A)
+   + <3->Se $\epsilon$ $\in$ Primeiro(\alpha) e $ \in Sequência(A), inclua (A $\rightarrow$ \alpha) em M[A,$]
+   \vfill
+   + <4->Ao fim do algoritmo
+     + Células vazias na tabela são consideradas erros
+* Exemplo 1
+
+São terminais: id + * ( ) $
+
+São não-terminais: E E' T T' F
+
+#+Latex: \vfill
+
+Gramática
+
+| E  | \rightarrow | TE'      |
+| E' | \rightarrow | +TE' \vert \epsilon |
+| T  | \rightarrow | FT'      |
+| T' | \rightarrow | *FT' \vert \epsilon |
+| F  | \rightarrow | (E) \vert id |
+
+Primeiro/Sequência
+
+
+|    | Primeiro | Sequência |
+|----+----------+-----------|
+| /  | <>       | <>        |
+| E  | ( id     | ) $       |
+| E' | + \epsilon      | ) $       |
+| T  | ( id     | + ) $     |
+| T' | $*$ \epsilon    | + ) $     |
+| F  | ( id     | + $*$ ) $ |
+
+* Solução do Exemplo 1
+   \small
+   |   |    | id                | +                       | *                   | (                 | )                       | $                       |
+   |---+----+-------------------+-------------------------+---------------------+-------------------+-------------------------+-------------------------|
+   | / | <> | <>                | <>                      | <>                  | <>                | <>                      | <>                      |
+   | # | E  | E \rightarrow TE' |                         |                     | E \rightarrow TE' |                         |                         |
+   | # | E' |                   | E' \rightarrow +TE'     |                     |                   | E' \rightarrow \epsilon | E' \rightarrow \epsilon |
+   | # | T  | T \rightarrow FT' |                         |                     | T \rightarrow FT' |                         |                         |
+   | # | T' |                   | T' \rightarrow \epsilon | T' \rightarrow *FT' |                   | T' \rightarrow \epsilon | T' \rightarrow \epsilon |
+   | # | F  | F \rightarrow id  |                         |                     | F \rightarrow (E) |                         |                         |
+   |---+----+-------------------+-------------------------+---------------------+-------------------+-------------------------+-------------------------|
+   \normalsize
+* Exemplo 2
+São terminais: a b e i t $
+
+São não-terminais: S S' E
+
+Gramática do *else* opcional				    
+| S  | \rightarrow | iEtSS' \vert a |
+| S' | \rightarrow | eS \vert \epsilon     |
+| E  | \rightarrow | b          |
+Primeiro/Sequência
+|    | Primeiro | Sequência |
+|----+----------+-----------|
+| /  | <>       | <>        |
+| S  | i a      | e $       |
+| S' | e \epsilon      | e $       |
+| E  | b        | t         |
+* Solução do Exemplo 2
+   + Notem como a ambiguidade se manifesta
+     + Reconhecendo S' e temos um *else*, o que fazer?
+     + <2-> Devemos escolher S' \rightarrow eS \\
+       (casar o *else* com o *then* mais próximo)
+
+   |   |    | a               | b               | e                       | i                    | t            | $                       |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+   | / | <> | <>              | <>              | <>                      | <>                   | <>           | <>                      |
+   | # | S  | S \rightarrow a |                 |                         | S \rightarrow iEtSS' | \hspace{1cm} |                         |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+   | # | S' |                 |                 | S' \rightarrow eS       |                      |              | S' \rightarrow \epsilon |
+   | # |    |                 |                 | S' \rightarrow \epsilon |                      |              |                         |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+   | # | E  |                 | E \rightarrow b |                         |                      |              |                         |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+
+
