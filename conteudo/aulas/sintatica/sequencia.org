@@ -145,11 +145,11 @@ _Resposta_
 _Resposta_
 #+END_CENTER
 
-|                | Primeiro | Sequência |
-|----------------+----------+-----------|
-| decl-sequência | s        | s         |
-| decl           | s        | ;         |
-| decl-seq'      | ; \epsilon      | $         |
+|     | Primeiro | Sequência |
+|-----+----------+-----------|
+| DS  | s        | $         |
+| DS' | ; \epsilon      | $         |
+| D   | s        | ;         |
 
 * Fechamento Primeiro/Sequência(A)
 
