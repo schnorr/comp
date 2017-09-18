@@ -23,6 +23,7 @@ disciplina, podem variar em abrangência e profundidade.
 | Sintática  | [[./aulas/sintatica/sequencia.org][Conjunto Sequência]]                                     | [[https://www.youtube.com/watch?v=Cz3P0_P74BA][Nico#02]]     | [[https://www.youtube.com/watch?v=Hd7K0m_Vhz4][#E3]] [[https://www.youtube.com/watch?v=aleJco17iHs][#E4]]  |       |
 | Projeto    | [[./aulas/sintatica/bison.org][bison]]                                                  |             |          |       |
 | Sintática  | [[./aulas/sintatica/ll1.org][LL(1): Introdução e Gramática]]                          |             |          |       |
+| Sintática  | [[./aulas/sintatica/construcao-ll1.org][Construção da Tabela LL(1)]]                             |             |          |       |
 | Sintática  | Árvore Sintática Abstrata (AST - /Abstract Syntax Tree/) |             |          |       |
 | Sintática  | Introdução a análise Ascendente (/bottom-up/)            |             |          |       |
 | Sintática  | LR(0)                                                  |             |          |       |
