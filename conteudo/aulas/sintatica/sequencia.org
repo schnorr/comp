@@ -175,3 +175,14 @@ A() {
     default: abortar ("Erro Sintático");
  }
 #+END_SRC
+* Exercício final
+
+#+BEGIN_CENTER
+Calcule os conjuntos primeiro e sequência
+#+END_CENTER
+
+| S \rightarrow XYZ       |
+| X \rightarrow aXb \vert \epsilon   |
+| Y \rightarrow cYZcX \vert d |
+| Z \rightarrow eZYe \vert f  |
+
