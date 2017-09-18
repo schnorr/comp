@@ -24,16 +24,38 @@
   - https://www.youtube.com/watch?v=AyLzlrBZ0hA&index=33&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
   - https://www.youtube.com/watch?v=87VbeBEP8ZU&index=34&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
 
+* Definição Formal de Gramáticas LL(1)
+Considerando A $\rightarrow$ $\alpha$ $\vert$ $\beta$
+
+#+Latex:\vfill
+
+1. Para um terminal *a*, somente uma produção começa por *a*
+   + Primeiro(\alpha) $\bigcap$ Primeiro(\beta) = \emptyset
+2. Somente uma produção pode derivar para \epsilon
+3. Se uma produção deriva pra vazio, a outra não deve iniciar com o
+   que vem depois de A, ou seja
+   - Se \alpha \Rightarrow^* \epsilon, Primeiro(\beta) $\bigcap$ Sequência(A) = \emptyset 
+   - Se \beta \Rightarrow^* \epsilon, Primeiro(\alpha) $\bigcap$ Sequência(A) = \emptyset
+
+#+latex:\vfill\pause
+São LL(1)?
+  | S  | \rightarrow | iEtSS' \vert a |   | \hspace{2cm} |   | A | \rightarrow | a \vert B  |
+  | S' | \rightarrow | eS \vert \epsilon     |   |              |   | B | \rightarrow | aA \vert b |
+  | E  | \rightarrow | b          |   |              |   |   |   |        |
+
 * Como funciona a Análise LL(1)
 Utiliza uma *pilha explícita* (ao invés de recursão)
 + Três tipos de ações: empilhamento, casamento e aceita
+
 
 Sendo a gramática de cadeias de parênteses balanceados
 | S | \rightarrow ( S ) S \vert \epsilon |
 
 #+latex: \vfill\pause
-
 Análise da entrada *()*
+
+Pilha com $, Tokens da entrada e $, _Tabela com ações_
+
 | Pilha de análise sintática | Entrada | Ação        |
 |----------------------------+---------+-------------|
 | $ S                        | () $    | S \rightarrow ( S ) S |
@@ -45,6 +67,17 @@ Análise da entrada *()*
 
 + Relação com passos de *derivação à esquerda* da cadeia
 + Decisões guiadas pela *Tabela de Análise Sintática LL(1)*
+* Regras elementares da análise
+Seja
++ X um símbolo no topo da pilha
++ *a* um token no buffer de entrada
+
+Etapas
++ <2->Se X \equal\equal $ e a \equal\equal $ $\leadsto$ Reconheceu a sentença
++ <3->Se X \equal\equal a e a != $ $\leadsto$ Desempilha e avança
++ <4->Se X é um não-terminal $\leadsto$ Consulta a tabela M[X,a]
+  + Se contém X \rightarrow UVW $\leadsto$ Empilha WVU
+  + <5->Se for vazia $\leadsto$ tratamento de erros
 * Tabela de Análise Sintática LL(1)
 Correlaciona cada não-terminal com cada terminal \Rightarrow \alert{M[NT,T]}
 + Controla as ações de empilhamento (e substituição por \epsilon)
@@ -66,22 +99,38 @@ Correlaciona cada não-terminal com cada terminal \Rightarrow \alert{M[NT,T]}
 
 A tabela guia as ações de empilhamento da análise LL(1)
 + *Exemplo* com a entrada *()()*
-* Definição Formal de Gramáticas LL(1)
-Considerando A $\rightarrow$ $\alpha$ $\vert$ $\beta$
 
-#+Latex:\vfill
+* Análise Preditiva Tabular -- Exemplo 1
+   + Reconhecer \textbf{id+id*id}
+   + Considerando a tabela preditiva
+   + A pilha começa com *E*
+   \small
+   |   |    | id                | +                       | *                   | (                 | )                       | $                       |
+   |---+----+-------------------+-------------------------+---------------------+-------------------+-------------------------+-------------------------|
+   | / | <> | <>                | <>                      | <>                  | <>                | <>                      | <>                      |
+   | # | E  | E \rightarrow TE' |                         |                     | E \rightarrow TE' |                         |                         |
+   | # | E' |                   | E' \rightarrow +TE'     |                     |                   | E' \rightarrow \epsilon | E' \rightarrow \epsilon |
+   | # | T  | T \rightarrow FT' |                         |                     | T \rightarrow FT' |                         |                         |
+   | # | T' |                   | T' \rightarrow \epsilon | T' \rightarrow *FT' |                   | T' \rightarrow \epsilon | T' \rightarrow \epsilon |
+   | # | F  | F \rightarrow id  |                         |                     | F \rightarrow (E) |                         |                         |
+   |---+----+-------------------+-------------------------+---------------------+-------------------+-------------------------+-------------------------|
+   \normalsize
+* Análise Preditiva Tabular -- Exemplo 2
+   + Reconhecer \textbf{ibtibtaeaea}
+   + Considerando a tabela preditiva
+   + A pilha começa com *S*
+   + Devemos tratar a \alert{ambiguidade} em M[S',e]
+     + Faça desconsiderando S' \rightarrow \epsilon
+     + O que acontece se desconsiderarmos S' \rightarrow eS?
+   |   |    | a               | b               | e                       | i                    | t            | $                       |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+   | / | <> | <>              | <>              | <>                      | <>                   | <>           | <>                      |
+   | # | S  | S \rightarrow a |                 |                         | S \rightarrow iEtSS' | \hspace{1cm} |                         |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+   | # | S' |                 |                 | S' \rightarrow eS       |                      |              | S' \rightarrow \epsilon |
+   | # |    |                 |                 | S' \rightarrow \epsilon |                      |              |                         |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+   | # | E  |                 | E \rightarrow b |                         |                      |              |                         |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
 
-1. Para um terminal *a*, somente uma produção começa por *a*
-   + Primeiro(\alpha) $\bigcap$ Primeiro(\beta) = \emptyset
-2. Somente uma produção pode derivar para \epsilon
-3. Se uma produção deriva pra vazio, a outra não deve iniciar com o
-   que vem depois de A, ou seja
-   - Se \alpha \Rightarrow^* \epsilon, Primeiro(\beta) $\bigcap$ Sequência(A) = \emptyset 
-   - Se \beta \Rightarrow^* \epsilon, Primeiro(\alpha) $\bigcap$ Sequência(A) = \emptyset
-
-#+latex:\vfill\pause
-São LL(1)?
-  | S  | \rightarrow | iEtSS' \vert a |   | \hspace{2cm} |   | A | \rightarrow | a \vert B  |
-  | S' | \rightarrow | eS \vert \epsilon     |   |              |   | B | \rightarrow | aA \vert b |
-  | E  | \rightarrow | b          |   |              |   |   |   |        |
 
