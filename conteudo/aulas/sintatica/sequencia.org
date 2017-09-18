@@ -134,10 +134,12 @@ _Resposta_
 | else-parte | else \epsilon   | $ else    |
 | exp        | 0 1      | )         |
 * 3: Calcule o conjunto Sequência de cada não-terminal
-| DS  | \rightarrow | D DS' |
-| DS' | \rightarrow | ; DS  |
-| DS' | \rightarrow | \epsilon     |
-| D   | \rightarrow | s     |
+| Regra |     |   |       |
+|-------+-----+---+-------|
+| #1    | DS  | \rightarrow | D DS' |
+| #2    | DS' | \rightarrow | ; DS  |
+| #3    | DS' | \rightarrow | \epsilon     |
+| #4    | D   | \rightarrow | s     |
 
 #+Latex: \vfill\pause
 
