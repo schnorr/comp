@@ -1,0 +1,45 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Gerenciamento de Erros em Descendentes
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Modo pânico
+Descarte a entrada até achar um *token de sincronismo*
+- Existe uma série de heurísticas
+- Uma possível: utilizar o conjunto Sequência(A)
+#+latex: \pause\vfill
+
+Exemplo para a gramática de operadores aritméticos
+
+#+latex: \scriptsize
+|   |    | id      | +         | *        | (       | )      | $      |
+|---+----+---------+-----------+----------+---------+--------+--------|
+| / | <> | <>      | <>        | <>       | <>      | <>     | <>     |
+| # | E  | E \rightarrow TE' |           |          | E \rightarrow TE' | *synch*  | *synch*  |
+| # | E' |         | E' \rightarrow +TE' |          |         | E' \rightarrow \epsilon | E' \rightarrow \epsilon |
+| # | T  | T \rightarrow FT' | *synch*     |          | T \rightarrow FT' | *synch*  | *synch*  |
+| # | T' |         | T' \rightarrow \epsilon    | T' \rightarrow *FT' |         | T' \rightarrow \epsilon | T' \rightarrow \epsilon |
+| # | F  | F \rightarrow id  | *synch*     | *synch*    | F \rightarrow (E) | *synch*  | *synch*  |
+|---+----+---------+-----------+----------+---------+--------+--------|
+#+latex: \normalsize
+
+Funcionamento
+- Se M[A,a] é branco $\leadsto$ ignore o token na entrada
+- Se M[A,a] é *synch* $\leadsto$ desempilhe
+- Se terminal na pilha for diferente da entrada $\leadsto$ desempilhe
+
+#+latex: \vfill
+
+Teste as entradas erradas: \textbf{+ id * + id} \hfill \textbf{) id * + id}
