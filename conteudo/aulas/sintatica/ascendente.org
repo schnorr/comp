@@ -140,7 +140,7 @@ Quais são os handles?
 | T * F            | T * F  | E \rightarrow T * F           |
 |------------------+--------+---------------------|
 
-* Empilha-Reduz
+* Análise ascendente _Empilha-Reduz_
 Todos os ascendentes usam *Empilha-Reduz* (/shift-reduce/)
 
 #+BEGIN_CENTER
@@ -154,7 +154,7 @@ LR(0) -- SLR(1) -- LR(1) -- LALR(1)
 Uma _pilha_ e um _buffer de entrada_
 - *Empilha* (/shift/): empilha um token da entrada
 - *Reduz* (/reduce/): realiza a poda do handle sempre no topo da pilha
-- *Aceita*: reconhece a sentença de entrada
+  - *Aceita*: reconhece a sentença de entrada
 - *Erro*: ativa o tratamento de erros sintáticos
 
 * Exemplo
