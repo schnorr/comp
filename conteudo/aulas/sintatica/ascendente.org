@@ -1,0 +1,199 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Análise Sintática Ascendente
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Descendente /versus/ Ascendente
+Entrada: =ccbca=
+
+| S | \rightarrow | AB       |
+| A | \rightarrow | c \vert \epsilon    |
+| B | \rightarrow | cbB \vert ca |
+
+#+BEGIN_CENTER
+Análise Descendente
+
+*S* \Rightarrow_{S \rightarrow AB} AB \Rightarrow_{A \rightarrow c} cB \Rightarrow_{B \rightarrow cbB} ccbB \Rightarrow_{B \rightarrow ca} *ccbca*
+#+END_CENTER
+
+#+latex: \pause
+
+#+BEGIN_CENTER
+Análise Ascendente
+
+*ccbca* \Rightarrow_{A \rightarrow c} Acbca \Rightarrow_{B \rightarrow ca} AcbB \Rightarrow_{B \rightarrow cbB} AB \Rightarrow_{S \rightarrow AB} *S*
+#+END_CENTER
+
+#+latex: \vfill
+
+Análise Ascendente
+- Mais sofisticada (aceita recursão à esquerda)
+  - Convive bem com recursão à direita (limitado pela memória)
+- Abrange um número maior de gramáticas
+- Funciona com uma _pilha_, e _reduções_ com a poda do _handle_
+* O Processo de Redução
+
+*Redução* é a substituição do corpo pela cabeça
+- Efetua-se várias reduções, até obter o símbolo inicial
+
+#+BEGIN_CENTER
+Principais decisões: _quando_ e _por qual produção_
+#+END_CENTER
+
+#+Latex: \vfill\pause
+
+Entrada: =abbcde=
+| *S* | \rightarrow | aABe    |
+| A | \rightarrow | Abc \vert b |
+| B | \rightarrow | d       | 
+
+Processo de Redução
+
+| abbcde                    |
+| a\alert{b}bcde (A \rightarrow b)    |
+| a\alert{Abc}de (A \rightarrow Abc)  |
+| aA\alert{d}e   (B \rightarrow d)    |
+| \alert{aABe}   (S \rightarrow aABe) |
+| S                         |
+* Um segundo exemplo
+Entrada: =id*id=
+
+| E | \rightarrow | E+T \vert T  |
+| T | \rightarrow | T*F \vert F  |
+| F | \rightarrow | (E) \vert id |
+
+Processo de Redução
+| $id * id$ | F \rightarrow id    |
+| $F * id$  | T \rightarrow F     |
+| $T * id$  | F \rightarrow id    |
+| $T * F$   | T \rightarrow T * F |
+| $T$       | E \rightarrow T     |
+| $E$       |                     |
+
+#+latex: \pause
+
+Observações
+- Uma redução é o inverso de um passo de derivação
+- Percebam a derivação *mais à direita* (olhando debaixo para cima)
+* O /Handle/
+- Subcadeia que casa com o corpo de uma produção
+- Sua redução garante a derivação mais à direita
+
+#+BEGIN_CENTER
+*Definição formal* \\
+\scriptsize (considerando derivações mais à direita) \normalsize
+
+S \Rightarrow^{*} \alpha A \omega \Rightarrow \alpha \beta \omega
+
+Então, \beta é um /handle/ de \alpha \beta \omega \\
+(sendo que \omega contém apenas símbolos terminais)
+#+END_CENTER
+
+#+Latex: \pause
+
+#+BEGIN_CENTER
+*Poda do Handle*
+
+Permite construir uma derivação mais à direita ao reverso
+
+S = \gamma_0 \Rightarrow \gamma_1 \Rightarrow ... \Rightarrow \gamma_{n-1} \Rightarrow \gamma_n = \mu \\
+Localiza-se \beta_n em \gamma_n, escolhe-se uma A_n \rightarrow \beta_n para obter \gamma_{n-1}
+#+END_CENTER
+
+#+Latex: \vfill\pause
+
+Para uma gramática ambígua, vários /handles/ possíveis
+- Pois existem várias derivações mais à direita possíveis
+
+* Poda do Handle \small (Exemplo)
+Entrada =id*id=
+| E | \rightarrow | E+T \vert T  |
+| T | \rightarrow | T*F \vert F  |
+| F | \rightarrow | (E) \vert id |
+
+A derivação mais à direita de =id*id= é \\
+=E= \Rightarrow T \Rightarrow T*F \Rightarrow T*id \Rightarrow F*id \Rightarrow =id*id=
+#+Latex: \vfill
+
+Quais são os handles?
+
+#+latex: \pause
+
+|------------------+--------+---------------------|
+| Forma Sentencial | Handle | Produção de Redução |
+|------------------+--------+---------------------|
+| id_1 * id_2        | id_1    | F \rightarrow id              |
+| F * id           | F      | T \rightarrow F               |
+| T * id           | id     | F \rightarrow id              |
+| T * F            | T * F  | E \rightarrow T * F           |
+|------------------+--------+---------------------|
+
+* Empilha-Reduz
+Todos os ascendentes usam *Empilha-Reduz* (/shift-reduce/)
+
+#+BEGIN_CENTER
+Várias formas de detectar /handles/
+
+LR(0) -- SLR(1) -- LR(1) -- LALR(1)
+#+END_CENTER
+
+#+Latex: \pause\vfill
+
+Uma _pilha_ e um _buffer de entrada_
+- *Empilha* (/shift/): empilha um token da entrada
+- *Reduz* (/reduce/): realiza a poda do handle sempre no topo da pilha
+- *Aceita*: reconhece a sentença de entrada
+- *Erro*: ativa o tratamento de erros sintáticos
+
+* Exemplo
+
+| E | \rightarrow | E+T \vert T  |
+| T | \rightarrow | T*F \vert F  |
+| F | \rightarrow | (E) \vert id |
+
+#+BEGIN_CENTER
+Ações de analisador Empilha-Reduz para =id*id=
+#+END_CENTER
+
+|--------------+-----------------------+-----------------|
+| Pilha        |               Entrada | Ação            |
+|--------------+-----------------------+-----------------|
+| <l>          |                   <r> |                 |
+| $            |           id_1 * id_2 $ | empilha         |
+| $ id_1        |    \hfill     * id_2 $ | reduz F \rightarrow id    |
+| $ F          |   \hfill     * id_2$ $ | reduz T \rightarrow F     |
+| $ T          |   \hfill     * id_2$ $ | empilha         |
+| $ T *        |   \hfill       id_2$ $ | empilha         |
+| $ T * id_2    |  \hfill             $ | reduz F \rightarrow id    |
+| $ T * F      |              \hfill $ | reduz T \rightarrow $T*F$ |
+| $ T          | \hfill              $ | reduz E \rightarrow T     |
+| $ \textbf{E} | \hfill              $ | aceita          |
+|--------------+-----------------------+-----------------|
+
+* Conflitos Empilha-Reduz
+Duas situações onde não funciona
++ Conflito *Reduz-Reduz*: mais de uma redução possível
++ Conflito *Empilha-Reduz*: ambos válidos com o mesmo /lookahead/
+
+| stmt | \rightarrow | *if* expr *then* stmt           |
+|      |   | *if* expr *then* stmt *else* stmt |
+|      |   | *other*                       |
+
+O que fazer?
+
+| Pilha                   |          \hfill Entrada |
+|-------------------------+-------------------------|
+| <l>                     |                     <r> |
+| $ ... *if* expr *then* stmt | \hspace{1cm} *else* ... $ |
