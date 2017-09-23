@@ -26,8 +26,8 @@ disciplina, podem variar em abrangência e profundidade.
 | Descendente | [[./aulas/sintatica/construcao-ll1.org][Construção da Tabela LL(1)]]                             | [[https://www.youtube.com/watch?v=oQawGigbVk4][#17]]         | [[https://www.youtube.com/watch?v=AyLzlrBZ0hA][#E1]] [[https://www.youtube.com/watch?v=87VbeBEP8ZU][#E2]]  |       |
 | Descendente | [[./aulas/sintatica/erros-descendente.org][Gerenciamento de erros]]                                 |             |          |       |
 | Sintática   | Árvore Sintática Abstrata (AST - /Abstract Syntax Tree/) |             |          |       |
-| Ascendente  | [[./aulas/sintatica/ascendente.org][Análise Ascendente]]                                     | [[https://www.youtube.com/watch?v=Xi6ZIj65Sv0][#19]]         |          |       |
-| Ascendente  | [[./conteudo/aulas/lr.org][Gramáticas LR e Análise LR]]                             |             |          |       |
+| Ascendente  | [[./aulas/sintatica/ascendente.org][Análise Ascendente]]                                     | [[https://www.youtube.com/watch?v=Xi6ZIj65Sv0][#19]] [[https://www.youtube.com/watch?v=rFMgNn0tk0U][#21]]     |          |       |
+| Ascendente  | [[./conteudo/aulas/lr.org][Análise LR]]                                             | [[https://www.youtube.com/watch?v=rmgptuHU880][#22]] [[https://www.youtube.com/watch?v=x7NgogBRfO4][#20]]     |          |       |
 | Ascendente  | LR(0)                                                  |             |          |       |
 | Ascendente  | SLR(1)                                                 |             |          |       |
 | Ascendente  | LR(1)                                                  |             |          |       |

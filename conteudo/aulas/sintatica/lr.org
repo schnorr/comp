@@ -6,7 +6,7 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 #+EXPORT_SELECT_TAGS: export
 
-#+Title: Gramáticas LR
+#+Title: Análise LR
 #+Author: Prof. Lucas M. Schnorr (UFRGS)
 #+Date: \copyleft
 
@@ -32,7 +32,7 @@ Uma _pilha_ e um _buffer de entrada_
 - *Aceita*: reconhece a sentença de entrada
 - *Erro*: ativa o tratamento de erros sintáticos
 
-* Gramáticas LR
+* Análise LR
 - Entrada lida da esquerda para a direita: *L* de /left-to-right/
 - Aplica-se uma derivação mais à direita: *R* de /rightmost/
 
@@ -40,6 +40,7 @@ Uma _pilha_ e um _buffer de entrada_
 
 #+BEGIN_CENTER
 Análise LR
+(Empilha-Reduz)
 
 Um *autômato de estados finitos* com _pilha_
 #+END_CENTER
