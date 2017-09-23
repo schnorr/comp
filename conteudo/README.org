@@ -27,6 +27,7 @@ disciplina, podem variar em abrangência e profundidade.
 | Descendente | [[./aulas/sintatica/erros-descendente.org][Gerenciamento de erros]]                                 |             |          |       |
 | Sintática   | Árvore Sintática Abstrata (AST - /Abstract Syntax Tree/) |             |          |       |
 | Ascendente  | [[./aulas/sintatica/ascendente.org][Análise Ascendente]]                                     | [[https://www.youtube.com/watch?v=Xi6ZIj65Sv0][#19]]         |          |       |
+| Ascendente  | [[./conteudo/aulas/lr.org][Gramáticas LR e Análise LR]]                             |             |          |       |
 | Ascendente  | LR(0)                                                  |             |          |       |
 | Ascendente  | SLR(1)                                                 |             |          |       |
 | Ascendente  | LR(1)                                                  |             |          |       |
