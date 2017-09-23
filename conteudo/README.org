@@ -24,6 +24,7 @@ disciplina, podem variar em abrangência e profundidade.
 | Projeto     | [[./aulas/sintatica/bison.org][bison]]                                                  |             |          |       |
 | Descendente | [[./aulas/sintatica/ll1.org][LL(1): Introdução e Gramática]]                          | [[https://www.youtube.com/watch?v=6DeJtQJzTf0][#16]]         | [[https://www.youtube.com/watch?v=1QeP9cSeDD4][#E1]]      |       |
 | Descendente | [[./aulas/sintatica/construcao-ll1.org][Construção da Tabela LL(1)]]                             | [[https://www.youtube.com/watch?v=oQawGigbVk4][#17]]         | [[https://www.youtube.com/watch?v=AyLzlrBZ0hA][#E1]] [[https://www.youtube.com/watch?v=87VbeBEP8ZU][#E2]]  |       |
+| Descendente | [[./aulas/sintatica/erros-descendente.org][Gerenciamento de erros]]                                 |             |          |       |
 | Sintática   | Árvore Sintática Abstrata (AST - /Abstract Syntax Tree/) |             |          |       |
 | Ascendente  | Introdução a análise Ascendente (/bottom-up/)            |             |          |       |
 | Ascendente  | LR(0)                                                  |             |          |       |
