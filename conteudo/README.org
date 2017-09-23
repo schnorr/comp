@@ -25,11 +25,11 @@ disciplina, podem variar em abrangência e profundidade.
 | Descendente | [[./aulas/sintatica/ll1.org][LL(1): Introdução e Gramática]]                          | [[https://www.youtube.com/watch?v=6DeJtQJzTf0][#16]]         | [[https://www.youtube.com/watch?v=1QeP9cSeDD4][#E1]]      |       |
 | Descendente | [[./aulas/sintatica/construcao-ll1.org][Construção da Tabela LL(1)]]                             | [[https://www.youtube.com/watch?v=oQawGigbVk4][#17]]         | [[https://www.youtube.com/watch?v=AyLzlrBZ0hA][#E1]] [[https://www.youtube.com/watch?v=87VbeBEP8ZU][#E2]]  |       |
 | Sintática   | Árvore Sintática Abstrata (AST - /Abstract Syntax Tree/) |             |          |       |
-| Sintática   | Introdução a análise Ascendente (/bottom-up/)            |             |          |       |
-| Sintática   | LR(0)                                                  |             |          |       |
-| Sintática   | SLR(1)                                                 |             |          |       |
-| Sintática   | LR(1)                                                  |             |          |       |
-| Sintática   | LALR(1) - /bison/                                        |             |          |       |
+| Ascendente  | Introdução a análise Ascendente (/bottom-up/)            |             |          |       |
+| Ascendente  | LR(0)                                                  |             |          |       |
+| Ascendente  | SLR(1)                                                 |             |          |       |
+| Ascendente  | LR(1)                                                  |             |          |       |
+| Ascendente  | LALR(1) - /bison/                                        |             |          |       |
 | Semântica   | Esquemas S e L-Atribuídos, Avaliação de atributos      |             |          |       |
 | Semântica   | Implementação de Esquemas S e L-Atribuídos             |             |          |       |
 | Código      | Taxonomia e geração de código para expressões          |             |          |       |
