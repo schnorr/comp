@@ -30,7 +30,6 @@ disciplina, podem variar em abrangência e profundidade.
 | Sintática   | SLR(1)                                                 |             |          |       |
 | Sintática   | LR(1)                                                  |             |          |       |
 | Sintática   | LALR(1) - /bison/                                        |             |          |       |
-| Sintática   | O construtor de analisadores gramaticais *bison*         |             |          |       |
 | Semântica   | Esquemas S e L-Atribuídos, Avaliação de atributos      |             |          |       |
 | Semântica   | Implementação de Esquemas S e L-Atribuídos             |             |          |       |
 | Código      | Taxonomia e geração de código para expressões          |             |          |       |
