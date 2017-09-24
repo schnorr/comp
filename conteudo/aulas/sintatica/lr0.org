@@ -1,0 +1,297 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: LR(0)
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Evolução de Parsers LR
+Donald Knuth propõem parser LR(1) (1965) \hfill \small \alert{LR Canônico}
++ Reconhece gramáticas livre de contexto determinista
++ Tempo de análise linear
+#+latex: \vfill\pause
+Versões simplificadas (1969) sobre LR(0)
++ LALR
++ SLR
+Diferenças
+- Definição de /handle/
+- Cálculo do conjunto de símbolos a frente
+
+* LR \small (Motivação)
++ Como construir a tabela de ações e transições?
++ Como detectar um /handle/?
+
+
+| E | \rightarrow | E+T \vert T  |
+| T | \rightarrow | T*F \vert F  |
+| F | \rightarrow | (E) \vert id |
+
+Supondo a análise de id*id
+|-------+-------------+--------------|
+| Pilha |     Entrada | Ação         |
+|-------+-------------+--------------|
+| <l>   |         <r> |              |
+| $     | id_1 * id_2 $ | empilha      |
+| $ id_1 |     * id_2 $ | reduz F \rightarrow id |
+| $ F   |     * id_2 $ | reduz T \rightarrow F  |
+| $ T   |     * id_2 $ |              |
+|-------+-------------+--------------|
+
+#+BEGIN_CENTER
+Devo reduzir T \rightarrow E ou empilhar o *? 
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+Manter *estados* para saber onde se encontra na análise
++ Um estado representa um _conjunto de itens_
+* Item LR(0)
+Definição de Item LR(0) de uma gramática
++ É uma produção com um $\bullet$ em alguma posição no corpo
++ Indica o quanto já foi visto de uma produção
+
+#+Latex: \vfill\pause
+
+Supondo a produção A \rightarrow \beta\gamma, três itens possíveis
++ A \rightarrow \bullet \beta\gamma \\
+  Um item que é uma \alert{possibilidade}
++ A \rightarrow \beta \bullet \gamma \\
+  (Progredimos reconhecendo \beta)\\
+  Um item \alert{parcialmente completo}
++ A \rightarrow \beta\gamma \bullet \\
+  \beta\gamma estão empilhados \\
+  Um item \alert{completo}
+
+#+Latex: \vfill\pause
+
+A produção $A \rightarrow \epsilon$ gera um item A \rightarrow \bullet
+* Exemplo do cálculo de Itens LR(0)
+#+BEGIN_CENTER
+Quantos itens LR(0) temos para esta gramática?
+#+END_CENTER
+
+| S  | \rightarrow | ( S ) S |
+| S  | \rightarrow | \epsilon       |
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+Esta gramática tem seis itens.
+#+END_CENTER
+
+| S  | \rightarrow | \bullet ( S ) S |
+| S  | \rightarrow | ( \bullet S ) S |
+| S  | \rightarrow | ( S \bullet ) S |
+| S  | \rightarrow | ( S ) \bullet S |
+| S  | \rightarrow | ( S ) S \bullet |
+| S  | \rightarrow | \bullet         |
+* Autômato Finito para LR(0)
+Quais são as transições do autômato de itens LR(0)?
++ Consideramos o item A \rightarrow \alpha \bullet \gamma
++ Consideramos que \gamma começa com X, temos então \\
+  A \rightarrow \alpha \bullet X \eta
+#+Latex: \vfill\pause
+Analisando X
++ é terminal \Rightarrow transição simboliza uma ação de /empilhar/
++ é não-terminal \Rightarrow transição com \epsilon para X \rightarrow \bullet \beta
+  - Considerar todas as produções com X na cabeça
+* Autômato Finito para LR(0) -- Exemplo
+#+BEGIN_CENTER
+Construir o autômato a partir de S' \rightarrow \bullet ( S ) S
+#+END_CENTER
+
+| S  | \rightarrow | ( S ) S |
+| S  | \rightarrow | \epsilon       |
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+Qual o problema deste autômato? E qual a solução?
+#+END_CENTER
+
+#+Latex: \pause
+
+#+BEGIN_CENTER
+_Indeterminismo_ e _Ausência de Estado Inicial_
+#+END_CENTER
+
+#+BEGIN_CENTER
+Algoritmo de Subconjuntos
+
+\scriptsize
+Fechamento-\epsilon(T) e Fechamento-\epsilon(Movimento(T,a))
+\normalsize
+
+Estender a gramática
+#+END_CENTER
+* Discussão sobre LR(0)
+Estender a gramática é simples
+
+| /                     | < |    |   |         |
+| Nova regra com        |   | S' | \rightarrow | S       |
+| novo terminal inicial |   |    |   |         |
+|-----------------------+---+----+---+---------|
+| Demais regras da      |   | S  | \rightarrow | ( S ) S |
+| gramática original    |   | S  | \rightarrow | \epsilon       |
+
+
+Partimos da gramática estendida
+1. Criamos o autômato finito não determinístico
+2. Aplicamos o algoritmo de subconjuntos
+3. Construímos a tabela de análise correspondente
+
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+Será que não há uma forma mais rápida?
+#+END_CENTER
+
+#+latex: \pause
+
+#+BEGIN_CENTER
+Solução: aplicar o algoritmo de subconjuntos interativamente
+
+Fechamento e Transição
+#+END_CENTER
+
+* Função de Fechamento
+Fechamento(=I=), sendo =I= um conjunto de itens, contém
+- Todos os itens de =I=
+- Se A \rightarrow \alpha \bullet B \beta \in Fechamento(=I=) e existe a produção B \rightarrow \gamma \\
+  Então B \rightarrow \bullet \gamma faz parte do Fechamento(=I=)
+
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+Definir o Fechamento({E' \rightarrow \bullet E})
+#+END_CENTER
+
+  | E' | \rightarrow | E          |
+  | E  | \rightarrow | E + T \vert T  |
+  | T  | \rightarrow | T * F \vert F  |
+  | F  | \rightarrow | ( E ) \vert id |
+
+#+latex: \pause
+Acabamos de definir o *Estado Inicial* do autômato LR(0)
+- Agrega todas as situações de início
+
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+_Itens de base_ versus Itens derivados
+#+END_CENTER
+
+* Função de Transição
+#+BEGIN_CENTER
+Transição(=I=, X)
+
+=I= tem o item A \rightarrow \alpha \bullet X \beta, teremos A \rightarrow \alpha X \bullet \beta após a transição \\
+calculando o fechamento sobre \beta
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+Informalmente
+- Mover \bullet para a direita nos itens de =I= onde \bullet precede X \\
+  A \rightarrow \alpha \bullet X \beta em =I=, teremos \\
+  A \rightarrow \alpha X \bullet \beta, calculando seu fechamento
+
+#+latex: \vfill
+
+Retorna um conjunto de itens *já existente ou não*
+
+* Função de Transição (Exemplo)
+Se =I= = { [E' \rightarrow E\bullet], [E \rightarrow E\bullet + T] }
++ Qual o conjunto de transição(=I=, +) ?
++ Qual o conjunto de transição(=I=, $) ?
+
+| E' | \rightarrow | E          |
+| E  | \rightarrow | E + T \vert T  |
+| T  | \rightarrow | T * F \vert F  |
+| F  | \rightarrow | ( E ) \vert id |
+
+* Função de Transição (Resposta do Exemplo)
+Se \texttt{I} = { [E' \rightarrow E\bullet], [E \rightarrow E\bullet + T] }
++ Transição(\texttt{I}, +) \\
+  |---+-------------+---------------|
+  | E | \rightarrow | E + \bullet T |
+  |---+-------------+---------------|
+  | T | \rightarrow | \bullet T * F |
+  | T | \rightarrow | \bullet F     |
+  | F | \rightarrow | \bullet ( E ) |
+  | F | \rightarrow | \bullet id    |
+  |---+-------------+---------------|
++ Transição(\texttt{I}, $) $\leadsto$ *Aceita*
+  
+* Autômato completo para a gramática anterior
+#+ATTR_LATEX: :width .57\linewidth
+[[./img/lr0-4-31.png]]
+
+* Construindo um exemplo completo
+Gramática de parênteses balanceados com um *a* no meio
+| A \rightarrow ( A ) |
+| A \rightarrow a     |
+
+Utilizando as funções de fechamento e transição
+- Construa o autômato finito determinístico LR(0)
+* Representação tabular do autômato LR(0)
+#+latex: \vfill
+_Ação_: empilha ou reduz
++ Se [A \rightarrow \alpha \bullet a \beta] $\in I_i$ e Transição($I_i$, a) = $I_j$ \\
+  defina Ação(i, a) como ``j'' (empilha)
++ Se [A \rightarrow \alpha \bullet] $\in I_i$ \\
+  defina Ação(i, a) como ``Reduz por A \rightarrow \alpha'' \forall símbolos terminais \\
++ Se [S' \rightarrow S \bullet] $\in I_i$ \hfill (Ação de aceitação)\\
+  defina Ação(i, $) como ``Aceita''
+
+#+latex: \vfill
+
+_Transição_: empilha
++ Para todos os não-terminais A \\
+  Se Transição(I_i, A) = I_j, então Transição(i, A) = ``j'' (empilha)
+#+latex: \vfill
+
+#+BEGIN_CENTER
+Estado inicial é aquele construído a partir de [S' \rightarrow \bullet S] \\
+#+END_CENTER
+
+* Construindo a tabela (Exemplo)
+
+| 0 | A' \rightarrow A  |
+| 1 | A \rightarrow (A) |
+| 2 | A \rightarrow a   |
+
+#+BEGIN_CENTER
+Transforme o autômato LR(0) em formato tabular
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+|        | <c>  | <c>  | <c>  | <c> | <c> |
+| Estado | (    | a    | )    | $   | A   |
+|      / | <    |      |      | >   |     |
+|--------+------+------+------+-----+-----|
+|      0 | 3    | 2    |      |     | 1   |
+|      1 | R(0) | R(0) | R(0) | a   |     |
+|      2 | R(2) | R(2) | R(2) |     |     |
+|      3 | 3    | 2    |      |     | 4   |
+|      4 |      |      | 5    |     |     |
+|      5 | R(1) | R(1) | R(1) |     |     |
+
+#+latex: \vfill
+
+#+BEGIN_CENTER
+Analisando a entrada *((a))*
+#+END_CENTER
+
+

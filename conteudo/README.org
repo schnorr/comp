@@ -28,7 +28,7 @@ disciplina, podem variar em abrangência e profundidade.
 | Sintática   | Árvore Sintática Abstrata (AST - /Abstract Syntax Tree/) |             |          |       |
 | Ascendente  | [[./aulas/sintatica/ascendente.org][Análise Ascendente]]                                     | [[https://www.youtube.com/watch?v=Xi6ZIj65Sv0][#19]] [[https://www.youtube.com/watch?v=rFMgNn0tk0U][#21]]     |          |       |
 | Ascendente  | [[./conteudo/aulas/lr.org][Análise LR]]                                             | [[https://www.youtube.com/watch?v=rmgptuHU880][#22]] [[https://www.youtube.com/watch?v=x7NgogBRfO4][#20]]     |          |       |
-| Ascendente  | LR(0)                                                  |             |          |       |
+| Ascendente  | [[./aulas/sintatica/lr0.org][LR(0)]]                                                  |             |          |       |
 | Ascendente  | SLR(1)                                                 |             |          |       |
 | Ascendente  | LR(1)                                                  |             |          |       |
 | Ascendente  | LALR(1) - /bison/                                        |             |          |       |
