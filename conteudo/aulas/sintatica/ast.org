@@ -1,0 +1,91 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Árvore Sintática Abstrata (AST)
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Processo de derivação
+Representação do processo de derivação
+- Mostra a estrutura sintática do programa
+
+#+Latex: \vfill
+
+Estrutura hierárquica
++ Raiz é o símbolo inicial da gramática
++ Vértices intermediários são não-terminais
++ Folhas são os terminais e palavras vazias ($\epsilon$)
+* Árvores de Derivação
+
+#+BEGIN_CENTER
+Como fica a árvore de derivação para *(34 - 3) \times 42*
+#+END_CENTER
+
+| exp | \rightarrow | exp op exp |
+| exp | \rightarrow | *(* exp *)*    |
+| exp | \rightarrow | *número*     |
+| op  | \rightarrow | *+* \vert *-* \vert *\times*  |
+
+#+latex: \vfill\pause
+Podemos simplificar a árvore de derivação?
++ Mantendo a semântica (geração de código)
+* Árvore Sintática Abstrata (AST)
+#+BEGIN_CENTER
+Análise sintática é o centro do compilador
+
+Simplificação da árvore de derivação, com semântica idêntica
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+Princípio da tradução direcionada por sintaxe
++ Significado da entrada deve ter relação direta com a sintaxe
+
+* AST -- Exemplo 1
+Supondo a gramática de expr. ariméticas com atribuição
+  | stmt  | \rightarrow | ident = exp                  |
+  | ident | \rightarrow | *var*                        |
+  | exp   | \rightarrow | exp op exp                   |
+  | exp   | \rightarrow | *(* exp *)*                  |
+  | exp   | \rightarrow | *número*                     |
+  | op    | \rightarrow | *+* \vert *-* \vert *\times* |
+Como fica a AST para *var = (34 - 3) \times 42* ?
+* AST -- Exemplo 2
+Supondo a gramática para o comando *if*
+  | stmt    | \rightarrow | if-stmt \vert *outra*           |
+  | if-stmt | \rightarrow | *if (* exp *)* stmt             |
+  | if-stmt | \rightarrow | *if (* exp *)* stmt *else* stmt |
+  | exp     | \rightarrow | *false* \vert *true*            |
+AST para *if (false) if (true) outra else outra* ?
+* AST -- Exemplo 3
+Supondo a gramática para os comandos *do while* e *if*
+  | stmt       | \rightarrow | while-stmt \vert if-stmt \vert *outra* |
+  | while-stmt | \rightarrow | *do* stmt *while (* exp *)*            |
+  | if-stmt    | \rightarrow | *if (* exp *)* stmt                    |
+  | if-stmt    | \rightarrow | *if (* exp *)* stmt *else* stmt        |
+  | exp        | \rightarrow | *false* \vert *true*                   |
+*if (false) if (true) outra else do outra while (true)* ?
+* AST -- Exemplo 4
+Supondo gramática de seq. de comandos separados por *;*
+  | seq-stmt | \rightarrow | stmt *;* seq-stmt \vert stmt |
+  | stmt     | \rightarrow | *comando*                    | 
+Qual a AST para *comando;comando;comando;* ?  
+* AST -- Exemplo 5
+Supondo a gramática
+  | seq-stmt   | \rightarrow | stmt *;* seq-stmt \vert stmt           |
+  | stmt       | \rightarrow | while-stmt \vert if-stmt \vert *outra* |
+  | while-stmt | \rightarrow | *do* stmt *while (* exp *)*            |
+  | if-stmt    | \rightarrow | *if (* exp *)* stmt                    |
+  | if-stmt    | \rightarrow | *if (* exp *)* stmt *else* stmt        |
+  | exp        | \rightarrow | *false* \vert *true*                   |
+*do if (true) outra while (false); if(false) outra* ?
