@@ -34,3 +34,59 @@ Regras de construção da tabela LR(0) -- Lembrete
   + defina Ação(=E0=, $) como ``Aceita''
 + Para todos os não-terminais A, se Transição(=E0=, A) = =E1=
   + defina Transição(=E0=, A) = ``Empilha =E1=''
+
+* Gramáticas LR(0)
+Gramáticas LR(0) \Rightarrow reconhecidas pela Análise LR(0)
+#+latex: \vfill\pause
+Algoritmo para Análise LR(0)
++ Se um estado contiver [A \rightarrow \alpha \bullet \alert{x} \beta] (\alert{x} sendo um terminal)
+  + A ação é de empilhar o estado que contém [A \rightarrow \alpha \alert{x} \bullet \beta] 
++ Se um estado contiver [A \rightarrow \gamma \bullet]
+  + A ação é de reduzir pela regra A \rightarrow \gamma \forall terminais
+#+latex: \vfill\pause
+Uma gramática é LR(0) se não houver ambiguidades
++ Autômato LR(0) \Rightarrow sem conflitos
++ Tabela LR(0) \Rightarrow cada célula *com uma única ação*
+* Conflitos
+Empilha-Reduz - um estado contiver os seguintes itens
+| / | < |   | >       |
+|---+---+---+---------|
+|   | A | \rightarrow | \alpha \bullet     |
+|   | A | \rightarrow | \alpha \bullet x \beta |
+|---+---+---+---------|
+Reduz-Reduz - um estado contiver os seguintes itens
+| / | < |   | >   |
+|---+---+---+-----|
+|   | A | \rightarrow | \alpha \bullet |
+|   | B | \rightarrow | \beta \bullet |
+|---+---+---+-----|
+* Exemplos e contra-exemplos
+
+São LR(0)
+
+#+BEGIN_CENTER
+Gramática de parênteses balanceados com um *a* no meio
+#+END_CENTER
+| A | \rightarrow | (A) \vert a |
+#+latex: \vfill
+
+Não são LR(0)
+
+#+BEGIN_CENTER
+Gramática de expressões aritméticas rudimentares
+#+END_CENTER
+| E | \rightarrow | E + n \vert n |
+
+#+BEGIN_CENTER
+Gramática de parênteses balanceados
+#+END_CENTER
+| S | \rightarrow | ( S ) S \vert \epsilon |
+
+
+#+BEGIN_CENTER
+Gramática do *else* opcional
+#+END_CENTER
+| S  | \rightarrow | IF \vert *a*                 |
+| IF | \rightarrow | *if* S \vert *if* S *else* S |
+
+
