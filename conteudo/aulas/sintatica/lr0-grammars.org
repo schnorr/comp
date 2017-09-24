@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Gramáticas LR(0)
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Exercício de construção do autômato LR(0)
+#+BEGIN_CENTER
+Construa o autômato determinístico LR(0) e a tabela LR(0)
+#+END_CENTER
+
+| S | \rightarrow | B B |
+| B | \rightarrow | a B |
+| B | \rightarrow | c   |
+
+#+latex: \vfill
+Regras de construção da tabela LR(0) -- Lembrete
++ Se [A \rightarrow \alpha \bullet a \beta] \in =E0= e Transição(=E0=, a) = =E1=
+  + defina Ação(=E0=, a) como ``Empilha =E1=''
++ Se [A \rightarrow \alpha \bullet] \in =E0=
+  + defina Ação(=E0=, a) \forall terminal a como ``Reduz A \rightarrow \alpha''
++ Se [S' \rightarrow S \bullet] \in =E0=
+  + defina Ação(=E0=, $) como ``Aceita''
++ Para todos os não-terminais A, se Transição(=E0=, A) = =E1=
+  + defina Transição(=E0=, A) = ``Empilha =E1=''
