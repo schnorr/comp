@@ -385,6 +385,18 @@ por exemplo, pode ser de um tipo novo, assim como seus parâmetros. O
 nome do novo tipo é o identificador do tipo; a palavra reservada =class=
 serve unicamente para definir um novo tipo; e não para utilizá-lo.
 
+** Listas das estruturas de controle de fluxo
+
+Não podem ser vazias.
+
+** Expressão inteira entre colchetes
+
+Tem que ser uma expressão.
+
+** Bloco dentro de comandos de controle de fluxo
+
+Não tem ponto-e-vírgula.
+
 * 2016-05-22 Planejamento da Avaliação                             :noexport:
 
 - relatório de erro sintático
