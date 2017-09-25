@@ -146,18 +146,20 @@ Quais são os handles?
 Como detectar os handles _automaticamente_?
 #+END_CENTER
 
-* Análise ascendente _Empilha-Reduz_
-Todos os ascendentes usam *Empilha-Reduz* (/shift-reduce/)
-
+* Detecção de Handles e Algoritmo Empilha-Reduz
 #+BEGIN_CENTER
 Várias formas de detectar /handles/
 
 LR(0) -- SLR(1) -- LR(1) -- LALR(1)
 #+END_CENTER
 
+#+BEGIN_CENTER
+Todos os ascendentes usam *Empilha-Reduz* (/shift-reduce/)
+#+END_CENTER
+
 #+Latex: \pause\vfill
 
-Uma _pilha_ e um _buffer de entrada_
+Uma _pilha_, um _buffer de entrada_, e uma _tabela com ações/transições_
 - *Empilha* (/shift/): empilha um token da entrada
 - *Reduz* (/reduce/): realiza a poda do handle sempre no topo da pilha
   - *Aceita*: reconhece a sentença de entrada
