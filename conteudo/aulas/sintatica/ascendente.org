@@ -140,6 +140,12 @@ Quais são os handles?
 | T * F            | T * F  | E \rightarrow T * F           |
 |------------------+--------+---------------------|
 
+#+latex: \pause
+
+#+BEGIN_CENTER
+Como detectar os handles _automaticamente_?
+#+END_CENTER
+
 * Análise ascendente _Empilha-Reduz_
 Todos os ascendentes usam *Empilha-Reduz* (/shift-reduce/)
 
