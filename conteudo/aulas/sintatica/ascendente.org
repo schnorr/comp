@@ -117,7 +117,7 @@ Localiza-se \beta_n em \gamma_n, escolhe-se uma A_n \rightarrow \beta_n para obt
 Para uma gramática ambígua, vários /handles/ possíveis
 - Pois existem várias derivações mais à direita possíveis
 
-* Poda do Handle \small (Exemplo)
+* Poda do Handle @@latex:\small@@ (Exemplo)
 Entrada =id*id=
 | E | \rightarrow | E+T \vert T  |
 | T | \rightarrow | T*F \vert F  |
