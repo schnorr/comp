@@ -86,13 +86,13 @@ Após uma ação de redução, há uma transição
 :BEAMER_col: 0.2
 :END:
 
-| /   | <   |     |
-| (1) | E \rightarrow | E+T |
-| (2) | E \rightarrow | T   |
-| (3) | T \rightarrow | T*F |
-| (4) | T \rightarrow | F   |
-| (5) | F \rightarrow | (E) |
-| (6) | F \rightarrow | id  |
+| /   | <       |
+| (1) | E \rightarrow E+T |
+| (2) | E \rightarrow T   |
+| (3) | T \rightarrow T*F |
+| (4) | T \rightarrow F   |
+| (5) | F \rightarrow (E) |
+| (6) | F \rightarrow id  |
 
 #+BEGIN_EXPORT latex
 \vrule{}
