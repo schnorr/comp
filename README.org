@@ -65,7 +65,7 @@ estratégias pedagógicas alternativas:
 
 ** Projeto de Compilador
 
-- [[./projeto/index.org][Projeto de Compilador]]
+- [[./projeto/README.org][Projeto de Compilador]]
   - Apresentação
   - Especificação das etapas
   - Forma de avaliação
