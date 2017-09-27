@@ -1,0 +1,443 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador: Etapa 3 de *Árvore Sintática Abstrata*
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+#+Language: pt-br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+#+BEGIN_EXPORT latex
+\newcommand{\astprograma}{\uppercase{ Ast\_Programa}\xspace}
+\newcommand{\astfuncao}{\uppercase{ Ast\_Funcao}\xspace}
+\newcommand{\astifelse}{\uppercase{ Ast\_If\_Else}\xspace}
+\newcommand{\astdowhile}{\uppercase{ Ast\_Do\_While}\xspace}
+\newcommand{\astwhiledo}{\uppercase{ Ast\_While\_Do}\xspace}
+\newcommand{\astinput}{\uppercase{ Ast\_Input}\xspace}
+\newcommand{\astoutput}{\uppercase{ Ast\_Output}\xspace}
+\newcommand{\astatribuicao}{\uppercase{ Ast\_Atribuicao}\xspace}
+\newcommand{\astreturn}{\uppercase{ Ast\_Return}\xspace}
+\newcommand{\astbloco}{\uppercase{ Ast\_Bloco}\xspace}
+\newcommand{\astidentificador}{\uppercase{ Ast\_Identificador}\xspace}
+\newcommand{\astliteral}{\uppercase{ Ast\_Literal}\xspace}
+\newcommand{\astarimsoma}{\uppercase{ Ast\_Arim\_Soma}\xspace}
+\newcommand{\astarimsubtracao}{\uppercase{ Ast\_Arim\_Subtracao}\xspace}
+\newcommand{\astarimmultiplicacao}{\uppercase{ Ast\_Arim\_Multiplicacao}\xspace}
+\newcommand{\astarimdivisao}{\uppercase{ Ast\_Arim\_Divisao}\xspace}
+\newcommand{\astariminversao}{\uppercase{ Ast\_Arim\_Inversao}\xspace}
+\newcommand{\astlogicoe}{\uppercase{ Ast\_Logico\_E}\xspace}
+\newcommand{\astlogicoou}{\uppercase{ Ast\_Logico\_Ou}\xspace}
+\newcommand{\astlogicocompdif}{\uppercase{ Ast\_Logico\_Comp\_Dif}\xspace}
+\newcommand{\astlogicocompigual}{\uppercase{ Ast\_Logico\_Comp\_Igual}\xspace}
+\newcommand{\astlogicocomple}{\uppercase{ Ast\_Logico\_Comp\_Le}\xspace}
+\newcommand{\astlogicocompge}{\uppercase{ Ast\_Logico\_Comp\_Ge}\xspace}
+\newcommand{\astlogicocompl}{\uppercase{ Ast\_Logico\_Comp\_L}\xspace}
+\newcommand{\astlogicocompg}{\uppercase{ Ast\_Logico\_Comp\_G}\xspace}
+\newcommand{\astlogicocompnegacao}{\uppercase{ Ast\_Logico\_Comp\_Negacao}\xspace}
+\newcommand{\astvetorindexado}{\uppercase{ Ast\_Vetor\_Indexado}\xspace}
+\newcommand{\astchamadadefuncao}{\uppercase{ Ast\_Chamada\_De\_Funcao}\xspace}
+
+\newcommand{\expressaotext}{\emph{Expressão}\xspace}
+\newcommand{\saidatext}{\emph{Saída}\xspace}
+\newcommand{\condicaotext}{\emph{Condição}\xspace}
+\newcommand{\comandotext}{\emph{Comando}\xspace}
+#+END_EXPORT
+
+A terceira etapa do projeto de compilador para a *Linguagem \K* consiste
+na criação da árvore sintática abstrata (/Abstract Syntax Tree/ -- AST)
+baseada no programa de entrada, escrito em \K, e considerando as
+convenções estabelecidas na Seção \ref{ast}. A árvore deve ser criada
+a medida que as regras semânticas são executadas e deve ser mantida em
+memória mesmo após o fim da análise sintática, ou seja, quando =yyparse=
+retornar. A avaliação deste trabalho será feita de duas formas:
+primeiro, através de uma análise subjetiva visual da árvore, através
+da geração de um arquivo em formato =dot= definido pelo pacote GraphViz
+(funções serão fornecidas para tal através do repositório GIT do
+professor); segundo, por uma verificação do código implementado pelos
+alunos. Uma comparação automática da árvore gerada com aquela esperada
+para um determinado programa fonte também pode ser utilizado.
+
+* Funcionalidades Necessárias
+** Implementação de uma estrutura de dados em árvore               :noexport:
+
+Deve ser definido um novo tipo de dado para uma estrutura de dados em
+árvore. Cada nó desta árvore tem uma série de informações relacionadas
+a esta etapa do trabalho (veja a Seção \ref{sec.descricao_no} para
+detalhes). Dentre estas, salienta-se o fato de que cada nó deve ter um
+número arbitrário de filhos que também são nós da árvore. O nome do
+tipo de dado para o nó da árvore deve ser \texttt{comp\_tree\_t}. Este
+novo tipo de dado deve vir acompanhado de funções tradicionais tais
+como criação, remoção, alteração, e qualquer outra função que o grupo
+achar pertinente implementar.
+
+** Criar a árvore sintática abstrata
+
+Criar a árvore sintática abstrata para uma entrada qualquer escrita em
+\K, instrumentando a gramática com ações semânticas ao lado das regras
+de produção descritas no arquivo =parser.y= para a criação dos nós da
+árvore e conexão entre eles (veja a Seção \ref{ast} para detalhes
+sobre os nós da árvore). A árvore deve permanecer em memória após o
+fim da análise sintática, ou seja, acessível na função =main_finalize=
+do programa.
+
+** Remoção de conflitos/ajustes gramaticais
+
+Caso existem conflitos remanescentes da etapa anterior, do tipo
+/Reduce-Reduce/ e /Shift-Reduce/, estes devem ser removidos através dos
+comandos =%left=, =%right= ou =%nonassoc= do bison. A permanência de
+conflitos na etapa corrente pode fazer com que a AST gerada seja
+diferente daquela esperada e detalhada na Seção \ref{ast}. Um outro
+motivo para estas diferenças pode advir da gramática ser muito
+diferente, com produções que não permitam a geração apropriada da
+árvore sintática tal qual ela é descrita nesta especificação.  Caso
+estas situações ocorram, o grupo deve realizar novos ajustes
+gramaticais e acertar a ordem dos comandos citados acima que removem
+conflitos. De qualquer forma, a solução desta etapa deve ser livre de
+conflitos informados pelo bison e deve se adequar a especificação AST
+da Seção \ref{ast}.
+
+** Gerar a árvore em formato /dot/                                  :noexport:
+
+Gerar o arquivo em format /dot/ ara análise gráfica e avaliação
+utilizando as funções fornecidas pelo professor para que o grupo possa
+visualizar a árvore sintática abstrata gerada. Essas funções estão no
+repositório, nos arquivos =gv.c= e =gv.h=, devidamente
+documentados. Somente as funções =gv_declare= e =gv_connect= podem ser
+utilizadas pelo grupo. A árvore será impressa na saída padrão do
+programa, podendo ser redirecionada para arquivo.
+
+** Implementar programas em \K
+
+Dois programas utilizando a sintaxe da linguagem \K devem ser
+implementados e disponibilizados juntamente com a solução desta
+etapa. O grupo tem a liberdade de escolher qualquer algoritmo para ser
+implementado. Sugere-se fortemente que os programas explorem todas as
+características sintáticas da linguagem, sendo assim exemplos
+representativos.
+
+* Descrição da Árvore
+
+A árvore sintática abstrata, do inglês /Abstract Syntax Tree/ (AST), é
+uma árvore n-ária onde os nós folha representam os tokens presentes no
+programa fonte, os nós intermediários são utilizados para criar uma
+hierarquia que condiz com as regras sintáticas, e a raiz representa o
+programa inteiro.  Essa árvore registra as derivações reconhecidas
+pelo analisador sintático, tornando mais fáceis as etapas posteriores
+de verificação e síntese, já que permite consultas em qualquer ordem.
+
+A árvore é abstrata porque não precisa representar detalhadamente
+todas as derivações gramaticais para uma entrada dada.  Tipicamente
+serão omitidas derivações intermediárias onde um símbolo não terminal
+gera somente um outro símbolo terminal, tokens que são palavras
+reservadas, e todos os símbolos ``de sincronismo'' ou identificação do
+código, os quais estão implícitos na estrutura hierárquica criada. São
+mantidos somente os nós fundamentais para a correta representada da
+entrada de maneira hierárquica.
+
+Os nós da árvores serão de =tipos= relacionados aos símbolos não
+terminais, ou a nós que representam operações diferentes, no caso das
+expressões. É importante notar que declarações de tipos e variáveis
+não figuram na AST, pois não geram código, salvo nas situações onde as
+variáveis devem ser inicializadas.
+
+** Nó da AST
+\label{sec.descricao_no}
+
+Cada nó da AST tem um tipo associado, e este deve ser um dos tipos
+declarados no arquivo =cc_ast.h= disponibilizado.  Quando o nó da AST for
+um dos tipos:
+| \astidentificador | \astliteral | \astfuncao | 
+ele deve conter obrigatoriamente um ponteiro para a entrada
+correspondente na tabela de símbolos. Além disso, cada nó da AST deve
+ter uma estrutura que apontaq para os seus filhos. O código da
+estrutura em árvore já está disponível e deve ser usado (=src/cc_ast.c=
+com protótipos em =include/cc_ast.h=) O apêndice \ref{ast} detalha o que
+deve ter para cada tipo de nó da AST.
+
+** Descrição detalhada dos nós da AST
+\label{ast}
+
+Esta seção apresenta graficamente como deve ficar cada nó da AST
+considerando as suas características, principalmente a quantidade de
+nós filhos.  As subseções seguintes tem nomes de acordo com os
+comandos do tipo =#define= no arquivo =cc_ast.h=. Em todas as subseções
+seguintes, considere a seguinte regra de generalização para um
+determinado nó da árvore e seus possíveis tipos.
+
+#+BEGIN_CENTER
+_Comando_
+#+END_CENTER
+
+| \astifelse | \astdowhile | \astwhiledo         | \astatribuicao |
+| \astreturn | \astbloco   | \astchamadadefuncao |                |
+
+# - \astinput
+# - \astoutput
+
+#+BEGIN_CENTER
+_Condição_ e _Expressão_
+#+END_CENTER
+
+| \astidentificador     | \astliteral           | \astarimsoma        |
+| \astarimsubtracao     | \astarimmultiplicacao | \astarimdivisao     |
+| \astariminversao      | \astlogicoe           | \astlogicoou        |
+| \astlogicocompdif     | \astlogicocompigual   | \astlogicocomple    |
+| \astlogicocompge      | \astlogicocompl       | \astlogicocompg     |
+| \astlogicocompnegacao | \astvetorindexado     | \astchamadadefuncao |
+
+*** Programa e Função
+**** \astprograma
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astprograma};
+          \node[draw,rectangle] (f_1) [right=5cm of p_1] {\tiny \astfuncao};
+          \node[draw,rectangle] (f_2) [right=5cm of f_1] {\tiny \astfuncao};
+          \node (f_n) [right=5cm of f_2] {...};
+          \path[->]
+             (p_1) edge node {primeira\_funcao} (f_1)
+             (f_1) edge node {prox\_funcao} (f_2)
+             (f_2) edge node {prox\_funcao} (f_n);
+\end{tikzpicture}
+
+**** \astfuncao
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astfuncao};
+          \node[draw,rectangle] (f_1) [right=5cm of p_1] {\comandotext};
+          \node[draw,rectangle] (f_2) [right=5cm of f_1] {\comandotext};
+          \node (f_n) [right=5cm of f_2] {...};
+          \path[->]
+             (p_1) edge node {primeiro\_comando} (f_1)
+             (f_1) edge node {prox\_comando} (f_2)
+             (f_2) edge node {prox\_comando} (f_n);
+\end{tikzpicture}
+
+*** Comandos
+**** \astifelse (com o =else= sendo opcional)
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astifelse};
+          \node[draw,rectangle] (f_1) [below left=3cm of p_1] {\condicaotext};
+          \node[draw,rectangle] (f_2) [below=3cm of p_1] {\comandotext, se verdade};
+          \node[draw,rectangle] (f_3) [below right=3cm of p_1] {\comandotext, se falso};
+          \path[->]
+             (p_1) edge [bend right] (f_1)
+             (p_1) edge  (f_2)
+             (p_1) edge [bend left] (f_3);
+\end{tikzpicture}
+
+**** \astdowhile e \astwhiledo
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astdowhile};
+          \node[draw,rectangle] (f_1) [below left=3cm of p_1] {\comandotext};
+          \node[draw,rectangle] (f_3) [below right=3cm of p_1] {\condicaotext};
+          \path[->]
+             (p_1) edge [bend right] (f_1)
+             (p_1) edge [bend left] (f_3);
+\end{tikzpicture}
+**** \astwhiledo                                                :noexport:
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astwhiledo};
+          \node[draw,rectangle] (f_1) [below left=3cm of p_1] {\condicaotext};
+          \node[draw,rectangle] (f_3) [below right=3cm of p_1] {\comandotext};
+          \path[->]
+             (p_1) edge [bend right] (f_1)
+             (p_1) edge [bend left] (f_3);
+\end{tikzpicture}
+
+**** \astinput                                                     :noexport:
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astinput};
+          \node[draw,rectangle] (f_1) [below left=3cm of p_1] {\expressaotext};
+          \node[draw,rectangle] (f_2) [below right=3cm of p_1] {\astidentificador};
+          \path[->]
+             (p_1) edge (f_1)
+             (p_1) edge (f_2)
+             ;
+\end{tikzpicture}
+
+**** \astoutput                                                    :noexport:
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astoutput};
+          \node[draw,rectangle] (f_1) [right=5cm of p_1] {\saidatext};
+          \node[draw,rectangle] (f_2) [right=5cm of f_1] {\saidatext};
+          \node (f_n) [right=5cm of f_2] {...};
+          \path[->]
+             (p_1) edge node {primeira\_saída} (f_1)
+             (f_1) edge node {prox\_saída} (f_2)
+             (f_2) edge node {prox\_saída} (f_n);
+\end{tikzpicture}
+
+**** \astatribuicao
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astatribuicao};
+          \node[draw,rectangle] (f_1) [below left=3cm of p_1] {\astidentificador ou \astvetorindexado};
+          \node[draw,rectangle] (f_3) [right=6cm of f_1] {\expressaotext};
+          \path[->]
+             (p_1) edge [bend right] (f_1)
+             (p_1) edge [bend left] (f_3);
+\end{tikzpicture}
+
+***** Declaração com inicialização
+
+Declarações de variáveis em geral não aparecem na AST. No caso
+específico onde uma declaração de variável tem uma inicialização de
+valor, esta deve aparecer na AST pelo fato que é passível de gerar
+código. Sendo assim, a árvore deve ser semelhante aquela para
+\astatribuicao.
+
+***** Atribuição para campos de um tipo definido pelo usuário
+
+Nos casos onde temos =identificador!campo = expressão=, a AST
+correspondente deve ser idêntica a \astatribuicao, com um nó
+adicional filho (do tipo \astidentificador) para identificador o
+campo.
+
+**** \astreturn
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astreturn};
+          \node[draw,rectangle] (f_1) [right=5cm of p_1] {\expressaotext};
+          \path[->]
+             (p_1) edge (f_1)
+             ;
+\end{tikzpicture}
+
+**** \astbloco (recursivo)
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astbloco};
+          \node[draw,rectangle] (f_1) [right=5cm of p_1] {\comandotext};
+          \node[draw,rectangle] (f_2) [right=5cm of f_1] {\comandotext};
+          \node (f_n) [right=5cm of f_2] {...};
+          \path[->]
+             (p_1) edge node {primeiro\_comando} (f_1)
+             (f_1) edge node {prox\_comando} (f_2)
+             (f_2) edge node {prox\_comando} (f_n);
+\end{tikzpicture}
+
+*** Condição, Expressão
+**** \astidentificador e \astliteral
+
+Os nós do tipo \astidentificador e \astliteral não têm filhos que são
+nós da AST. No entanto, eles devem ter obrigatoriamente um ponteiro
+para a entrada na tabela de símbolos.
+
+**** Expressões aritméticas binárias
+
+Os nós do tipo:
+- \astarimsoma
+- \astarimsubtracao
+- \astarimmultiplicacao
+- \astarimdivisao
+
+têm dois filhos, como mostrado abaixo (utilizando neste exemplo o nó
+do tipo \astarimsoma).
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astarimsoma};
+          \node[draw,rectangle] (f_1) [below left=3cm of p_1] {\expressaotext};
+          \node[draw,rectangle] (f_3) [below right=3cm of p_1] {\expressaotext};
+          \path[->]
+             (p_1) edge [bend right] (f_1)
+             (p_1) edge [bend left] (f_3);
+\end{tikzpicture}
+
+**** Expressão aritmética unária
+
+O nó do tipo \astariminversao tem somente um filho, como mostrado
+abaixo.
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astariminversao};
+          \node[draw,rectangle] (f_1) [below=2cm of p_1] {\expressaotext};
+          \path[->]
+             (p_1) edge (f_1)
+             ;
+\end{tikzpicture}
+
+**** Expressões lógicas binárias
+
+Os nós do tipo:
+- \astlogicoe
+- \astlogicoou
+- \astlogicocompdif
+- \astlogicocompigual
+- \astlogicocomple
+- \astlogicocompge
+- \astlogicocompl
+- \astlogicocompg
+
+têm dois filhos, como mostrado abaixo (utilizando neste exemplo o nó
+do tipo \astlogicoe).
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astlogicoe};
+          \node[draw,rectangle] (f_1) [below left=3cm of p_1] {\expressaotext};
+          \node[draw,rectangle] (f_3) [below right=3cm of p_1] {\expressaotext};
+          \path[->]
+             (p_1) edge [bend right] (f_1)
+             (p_1) edge [bend left] (f_3);
+\end{tikzpicture}
+
+**** Expressão lógica unária
+
+O nó do tipo \astlogicocompnegacao tem somente um filho, como mostrado
+abaixo.
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astlogicocompnegacao};
+          \node[draw,rectangle] (f_1) [below=2cm of p_1] {\expressaotext};
+          \path[->]
+             (p_1) edge (f_1)
+             ;
+\end{tikzpicture}
+
+**** \astvetorindexado
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astvetorindexado};
+          \node[draw,rectangle] (f_1) [below left=3cm of p_1] {\astidentificador};
+          \node[draw,rectangle] (f_3) [below right=3cm of p_1] {\expressaotext};
+          \path[->]
+             (p_1) edge [bend right] (f_1)
+             (p_1) edge [bend left] (f_3);
+\end{tikzpicture}
+
+**** \astchamadadefuncao
+
+\begin{tikzpicture}[scale=1,on grid,auto]
+          \node[draw,rectangle] (p_1) {\tiny \astchamadadefuncao};
+          \node[draw,rectangle] (f_1) [below left=3cm of p_1] {\astidentificador};
+          \node[draw,rectangle] (f_3) [below right=3cm of p_1] {\expressaotext};
+          \node[draw,rectangle] (f_4) [right=4cm of f_3] {\expressaotext};
+          \node[draw,rectangle] (f_5) [right=4cm of f_4] {\expressaotext};
+          \node (f_n) [right=4cm of f_5] {...};
+          \path[->]
+             (p_1) edge [bend right] (f_1)
+             (p_1) edge [bend left] node {primeiro\_arg} (f_3)
+             (f_3) edge node {prox\_arg} (f_4)
+             (f_4) edge node {prox\_arg} (f_5)
+             (f_5) edge node {prox\_arg} (f_n)
+             ;
+\end{tikzpicture}
+*** Outras construções presentes na sintaxe
+A construção da AST para os comandos não listados acima mas que fazem
+parte da sintaxe são opcionais.
+* Casos omissos
+
+Casos não previstos serão discutidos com o professor.
