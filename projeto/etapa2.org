@@ -397,6 +397,15 @@ Tem que ser uma expressão.
 
 Não tem ponto-e-vírgula.
 
+** Comandos dentro do for
+
+Nas duas listas dentro do =for=, não podem aparecer comandos simples que
+contenham vírgulas, como o =output= e o =input=.
+
+** Listas de expressões nos comandos =output= e =input=
+
+Não podem ser vazias.
+
 * 2016-05-22 Planejamento da Avaliação                             :noexport:
 
 - relatório de erro sintático
