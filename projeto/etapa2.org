@@ -402,9 +402,9 @@ Não tem ponto-e-vírgula.
 Nas duas listas dentro do =for=, não podem aparecer comandos simples que
 contenham vírgulas, como o =output= e o =input=.
 
-** Listas de expressões nos comandos =output= e =input=
+** Listas de expressões no comando =output=
 
-Não podem ser vazias.
+Não pode ser vazia.
 
 * 2016-05-22 Planejamento da Avaliação                             :noexport:
 
