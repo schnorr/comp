@@ -400,7 +400,7 @@ Não tem ponto-e-vírgula.
 ** Comandos dentro do for
 
 Nas duas listas dentro do =for=, não podem aparecer comandos simples que
-contenham vírgulas, como o =output= e o =input=.
+contenham vírgulas, como o =output= e o =input=, nem comando =case=.
 
 ** Listas de expressões no comando =output=
 
