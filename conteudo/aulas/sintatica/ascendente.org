@@ -119,7 +119,7 @@ Localiza-se \beta_n em \gamma_n, escolhe-se uma A_n \rightarrow \beta_n para obt
 Para uma gramática ambígua, vários /handles/ possíveis
 - Pois existem várias derivações mais à direita possíveis
 
-* Poda do Handle @@latex:\small@@ (Exemplo)
+* Exemplo de Poda do Handle
 Entrada =id*id=
 | E | \rightarrow | E+T \vert T  |
 | T | \rightarrow | T*F \vert F  |
@@ -179,20 +179,20 @@ Uma _pilha_, um _buffer de entrada_, e uma _tabela com ações/transições_
 Ações de analisador Empilha-Reduz para =id*id=
 #+END_CENTER
 
-|--------------+-----------------------+-----------------|
-| Pilha        |               Entrada | Ação            |
-|--------------+-----------------------+-----------------|
-| <l>          |                   <r> |                 |
-| $            |           id_1 * id_2 $ | empilha         |
-| $ id_1        |    \hfill     * id_2 $ | reduz F \rightarrow id    |
-| $ F          |   \hfill     * id_2$ $ | reduz T \rightarrow F     |
-| $ T          |   \hfill     * id_2$ $ | empilha         |
-| $ T *        |   \hfill       id_2$ $ | empilha         |
-| $ T * id_2    |  \hfill             $ | reduz F \rightarrow id    |
-| $ T * F      |              \hfill $ | reduz T \rightarrow $T*F$ |
-| $ T          | \hfill              $ | reduz E \rightarrow T     |
-| $ \textbf{E} | \hfill              $ | aceita          |
-|--------------+-----------------------+-----------------|
+|-----------+-------------+---------------|
+| Pilha     |     Entrada | Ação          |
+|-----------+-------------+---------------|
+| <l>       |         <r> |               |
+| $         | id_1 * id_2 $ | empilha       |
+| $ id_1     |     * id_2 $ | reduz F \rightarrow id  |
+| $ F       |    * id_2$ $ | reduz T \rightarrow F   |
+| $ T       |    * id_2$ $ | empilha       |
+| $ T *     |      id_2$ $ | empilha       |
+| $ T * id_2 |           $ | reduz F \rightarrow id  |
+| $ T * F   |           $ | reduz T \rightarrow T*F |
+| $ T       |           $ | reduz E \rightarrow T   |
+| $ =E=       |           $ | aceita        |
+|-----------+-------------+---------------|
 
 * Conflitos Empilha-Reduz
 Duas situações onde não funciona
@@ -205,7 +205,7 @@ Duas situações onde não funciona
 
 O que fazer?
 
-| Pilha                   |          \hfill Entrada |
-|-------------------------+-------------------------|
-| <l>                     |                     <r> |
-| $ ... *if* expr *then* stmt | \hspace{1cm} *else* ... $ |
+| Pilha                   |    Entrada |
+|-------------------------+------------|
+| <l>                     |        <r> |
+| $ ... *if* expr *then* stmt | *else* ... $ |
