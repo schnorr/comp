@@ -185,9 +185,9 @@ Ações de analisador Empilha-Reduz para =id*id=
 | <l>       |         <r> |               |
 | $         | id_1 * id_2 $ | empilha       |
 | $ id_1     |     * id_2 $ | reduz F \rightarrow id  |
-| $ F       |    * id_2$ $ | reduz T \rightarrow F   |
-| $ T       |    * id_2$ $ | empilha       |
-| $ T *     |      id_2$ $ | empilha       |
+| $ F       |     * id_2 $ | reduz T \rightarrow F   |
+| $ T       |     * id_2 $ | empilha       |
+| $ T *     |       id_2 $ | empilha       |
 | $ T * id_2 |           $ | reduz F \rightarrow id  |
 | $ T * F   |           $ | reduz T \rightarrow T*F |
 | $ T       |           $ | reduz E \rightarrow T   |
