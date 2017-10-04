@@ -198,7 +198,6 @@ Calcular o fechamento de [S \rightarrow \bullet L, $]
 
 [P \rightarrow \bullet ( ), (]
 
-
 * Transição LR(1) -- Exemplo
 
 #+BEGIN_CENTER
