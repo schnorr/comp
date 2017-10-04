@@ -61,12 +61,12 @@ Entrada: =abbcde=
 
 Processo de Redução
 
-| abbcde                    |
-| a\alert{b}bcde (A \rightarrow b)    |
-| a\alert{Abc}de (A \rightarrow Abc)  |
-| aA\alert{d}e   (B \rightarrow d)    |
-| \alert{aABe}   (S \rightarrow aABe) |
-| S                         |
+| a b b c d e                 |
+| a *b* b c d e (A \rightarrow b)         |
+| a *A b c* d e (A \rightarrow Abc)       |
+| a A *d* e   (B \rightarrow d)           |
+| *a A B e*   (S \rightarrow aABe)        |
+| S                           |
 * Um segundo exemplo
 Entrada: =id*id=
 
