@@ -44,8 +44,8 @@
 |            |                                                                       |      67-104 | Avaliação              |
 | Sintática  | Parser SLR(1) e LR(1)                                                 |             |                        |
 | Semântica  | Esquemas S e L-Atribuídos                                             |             |                        |
-|            |                                                                       |      73-103 | Avaliação              |
 | Semântica  | Implementação de Esquemas S e L-Atribuídos                            |             | Início E4 (Tipos)      |
+|            |                                                                       |      73-103 | Avaliação              |
 |            | Revisão                                                               |             |                        |
 |            | P1                                                                    | 72-Castilho |                        |
 |            |                                                                       |      67-104 | Avaliação              |
@@ -165,9 +165,9 @@ dias_por_etapa
   Etapa Duração        Texto
   <dbl>   <int>        <chr>
 1     1      12 E1 = 12 dias
-2     2      14 E2 = 14 dias
-3     3       9  E3 = 9 dias
-4     4       9  E4 = 9 dias
+2     2      12 E2 = 12 dias
+3     3      12 E3 = 12 dias
+4     4      21 E4 = 21 dias
 5     5      30 E5 = 30 dias
 6     6       7  E6 = 7 dias
 7     7      21 E7 = 21 dias
@@ -238,8 +238,8 @@ aulas %>%
 | 10 | 2017-10-02 |      67-104 |            |                                                                       | Avaliação              |
 | 11 | 2017-10-04 |             | Sintática  | Parser SLR(1) e LR(1)                                                 |                        |
 | 12 | 2017-10-09 |             | Semântica  | Esquemas S e L-Atribuídos                                             |                        |
-| 13 | 2017-10-11 |      73-103 |            |                                                                       | Avaliação              |
-| 14 | 2017-10-23 |             | Semântica  | Implementação de Esquemas S e L-Atribuídos                            | Início E4 (Tipos)      |
+| 13 | 2017-10-11 |             | Semântica  | Implementação de Esquemas S e L-Atribuídos                            | Início E4 (Tipos)      |
+| 14 | 2017-10-23 |      73-103 |            |                                                                       | Avaliação              |
 | 15 | 2017-10-25 |             |            | Revisão                                                               |                        |
 | 16 | 2017-10-30 | 72-Castilho |            | P1                                                                    |                        |
 | 17 | 2017-11-01 |      67-104 |            |                                                                       | Avaliação              |
@@ -254,5 +254,5 @@ aulas %>%
 | 26 | 2017-12-18 |      73-103 |            |                                                                       | Avaliação              |
 | 27 | 2017-12-20 |             | Otimização | Introdução, Janela e Grafos de Fluxo                                  | Início E7 (Otimização) |
 | 28 | 2018-01-15 |             | Otimização | Local e Global, Otimização em laços                                   |                        |
-| 29 | 2018-01-17 | 72-Castilho |            | P2                                                                    |                        |
+| 29 | 2018-01-17 |     65-AUD1 |            | P2                                                                    |                        |
 | 30 | 2018-01-22 |             |            | PR                                                                    |                        |
