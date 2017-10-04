@@ -16,7 +16,7 @@
 #+LATEX_HEADER: \input{../org-babel.tex}
 
 * Evolução de Parsers LR
-Donald Knuth propõem parser LR(1) (1965) \hfill \small \alert{LR Canônico}
+Donald Knuth propõem parser LR(1) (1965) *LR Canônico*
 + Reconhece gramáticas livre de contexto determinista
 + Tempo de análise linear
 #+latex: \vfill\pause
@@ -27,7 +27,7 @@ Diferenças
 - Definição de /handle/
 - Cálculo do conjunto de símbolos a frente
 
-* LR \small (Motivação)
+* LR (Motivação)
 + Como construir a tabela de ações e transições?
 + Como detectar um /handle/?
 
@@ -57,20 +57,20 @@ Manter *estados* para saber onde se encontra na análise
 + Um estado representa um _conjunto de itens_
 * Item LR(0)
 Definição de Item LR(0) de uma gramática
-+ É uma produção com um $\bullet$ em alguma posição no corpo
++ É uma produção com um \bullet em alguma posição no corpo
 + Indica o quanto já foi visto de uma produção
 
 #+Latex: \vfill\pause
 
 Supondo a produção A \rightarrow \beta\gamma, três itens possíveis
 + A \rightarrow \bullet \beta\gamma \\
-  Um item que é uma \alert{possibilidade}
+  Um item que é uma *possibilidade*
 + A \rightarrow \beta \bullet \gamma \\
   (Progredimos reconhecendo \beta)\\
-  Um item \alert{parcialmente completo}
+  Um item *parcialmente completo*
 + A \rightarrow \beta\gamma \bullet \\
   \beta\gamma estão empilhados \\
-  Um item \alert{completo}
+  Um item *completo*
 
 #+Latex: \vfill\pause
 
@@ -128,9 +128,9 @@ _Indeterminismo_ e _Ausência de Estado Inicial_
 #+BEGIN_CENTER
 Algoritmo de Subconjuntos
 
-\scriptsize
+#+latex: \scriptsize
 Fechamento-\epsilon(T) e Fechamento-\epsilon(Movimento(T,a))
-\normalsize
+#+latex: \normalsize
 
 Estender a gramática
 #+END_CENTER
@@ -221,8 +221,8 @@ Se =I= = { [E' \rightarrow E\bullet], [E \rightarrow E\bullet + T] }
 | F  | \rightarrow | ( E ) \vert id |
 
 * Função de Transição (Resposta do Exemplo)
-Se \texttt{I} = { [E' \rightarrow E\bullet], [E \rightarrow E\bullet + T] }
-+ Transição(\texttt{I}, +) \\
+Se =I= = { [E' \rightarrow E\bullet], [E \rightarrow E\bullet + T] }
++ Transição(=I=, +) \\
   |---+-------------+---------------|
   | E | \rightarrow | E + \bullet T |
   |---+-------------+---------------|
@@ -231,7 +231,7 @@ Se \texttt{I} = { [E' \rightarrow E\bullet], [E \rightarrow E\bullet + T] }
   | F | \rightarrow | \bullet ( E ) |
   | F | \rightarrow | \bullet id    |
   |---+-------------+---------------|
-+ Transição(\texttt{I}, $) $\leadsto$ *Aceita*
++ Transição(=I=, $) leva para *Aceita*
   
 * Autômato completo para a gramática anterior
 #+ATTR_LATEX: :width .57\linewidth
@@ -247,11 +247,11 @@ Utilizando as funções de fechamento e transição
 * Representação tabular do autômato LR(0)
 #+latex: \vfill
 _Ação_: empilha ou reduz
-+ Se [A \rightarrow \alpha \bullet a \beta] $\in I_i$ e Transição($I_i$, a) = $I_j$ \\
++ Se [A \rightarrow \alpha \bullet a \beta] \in I_i e Transição(I_i, a) = I_j \\
   defina Ação(i, a) como ``j'' (empilha)
-+ Se [A \rightarrow \alpha \bullet] $\in I_i$ \\
++ Se [A \rightarrow \alpha \bullet] \in I_i \\
   defina Ação(i, a) como ``Reduz por A \rightarrow \alpha'' \forall símbolos terminais \\
-+ Se [S' \rightarrow S \bullet] $\in I_i$ \hfill (Ação de aceitação)\\
++ Se [S' \rightarrow S \bullet] \in I_i \hfill (Ação de aceitação)\\
   defina Ação(i, $) como ``Aceita''
 
 #+latex: \vfill
