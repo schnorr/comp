@@ -93,7 +93,9 @@ Observações
 
 #+BEGIN_CENTER
 *Definição formal* \\
-\scriptsize (considerando derivações mais à direita) \normalsize
+#+Latex: \scriptsize
+(considerando derivações mais à direita)
+#+Latex: \normalsize
 
 S \Rightarrow^{*} \alpha A \omega \Rightarrow \alpha \beta \omega
 
