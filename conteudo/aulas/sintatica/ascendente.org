@@ -75,12 +75,12 @@ Entrada: =id*id=
 | F | \rightarrow | (E) \vert id |
 
 Processo de Redução
-| $id * id$ | F \rightarrow id    |
-| $F * id$  | T \rightarrow F     |
-| $T * id$  | F \rightarrow id    |
-| $T * F$   | T \rightarrow T * F |
-| $T$       | E \rightarrow T     |
-| $E$       |                     |
+| id * id | F \rightarrow id    |
+| F * id  | T \rightarrow F     |
+| T * id  | F \rightarrow id    |
+| T * F   | T \rightarrow T * F |
+| T       | E \rightarrow T     |
+| E       |           |
 
 #+latex: \pause
 
