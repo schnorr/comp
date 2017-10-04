@@ -251,7 +251,7 @@ _Ação_: empilha ou reduz
   defina Ação(i, a) como ``j'' (empilha)
 + Se [A \rightarrow \alpha \bullet] \in I_i \\
   defina Ação(i, a) como ``Reduz por A \rightarrow \alpha'' \forall símbolos terminais \\
-+ Se [S' \rightarrow S \bullet] \in I_i \hfill (Ação de aceitação)\\
++ Se [S' \rightarrow S \bullet] \in I_i  (Ação de aceitação)\\
   defina Ação(i, $) como ``Aceita''
 
 #+latex: \vfill
