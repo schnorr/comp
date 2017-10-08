@@ -33,7 +33,9 @@ disciplina, podem variar em abrangência e profundidade.
 | Ascendente  | [[./aulas/sintatica/slr1.org][SLR(1)]]                                                 | [[https://www.youtube.com/watch?v=JbibRU1xNlE][#28]] [[https://www.youtube.com/watch?v=2xzH5ZY-mkE][#29]]     |             |       |
 | Ascendente  | [[./aulas/sintatica/lr1.org][LR(1)]]                                                  | [[https://www.youtube.com/watch?v=S_c9rvDpRG4][#30]] [[https://www.youtube.com/watch?v=iFp4NOAwsMo][#31]] [[https://www.youtube.com/watch?v=EaOKp-XJCa4][#33]] | [[https://www.youtube.com/watch?v=4cdec27mOwM][#32]] [[https://www.youtube.com/watch?v=HvVoHBQslr4][#34]] [[https://www.youtube.com/watch?v=TwOp5Y3zZlk][#36]] |       |
 | Ascendente  | [[./aulas/sintatica/lalr1.org][LALR(1)]]                                                |             |             |       |
-| Semântica   | Esquemas S e L-Atribuídos, Avaliação de atributos      |             |             |       |
+| Semântica   | [[./aulas/semantica/introducao.org][Introdução]]                                             |             |             |       |
+| Semântica   | [[./aulas/semantica/funcionamento.org][Funcionamento e tipos de atributos]]                     |             |             |       |
+| Semântica   | [[./aulas/semantica/ordem.org][Esquemas S e L-Atribuídos]]                              |             |             |       |
 | Semântica   | Implementação de Esquemas S e L-Atribuídos             |             |             |       |
 | Código      | Taxonomia e geração de código para expressões          |             |             |       |
 | Código      | Endereçamento de variáveis                             |             |             |       |
