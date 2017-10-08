@@ -1,0 +1,120 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Implementação de S-Atribuído
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+Focado em analisadores *ascendentes*
++ Somente atributos sintetizados
+
+Implementação
++ Atributos são mantidos na pilha de análise
++ No momento da redução 
+    + Atributos sintetizados da cabeça são calculados a partir dos
+      atributos que estão na pilha (do corpo da produção)
+
+#+latex: \vfill
+
+\pause Considerando o esquema de tradução
+  | A | \rightarrow | X Y Z | { A.a = f(X.x, Y.y, Z.z); } |
+
+\pause Pilha
+  | Análise | Atributo |                 |
+  |---------+----------+-----------------|
+  | Z       | Z.z      | \leftarrow Topo |
+  | Y       | Y.y      |                 |
+  | X       | X.x      |                 |
+  | ...     | ...      |                 |
+* Exemplo
+Esquema de tradução de uma calculadora
+  \scriptsize
+  | L | \rightarrow | E *n*    | L.val = E.val           |
+  | E | \rightarrow | E_1 + T | E.val = $E_1$.val + T.val |
+  | E | \rightarrow | T      | E.val = T.val           |
+  | T | \rightarrow | T_1 * F | T.val = $T_1$.val * F.val |
+  | T | \rightarrow | F      | T.val = F.val            |
+  | F | \rightarrow | ( E )  | F.val = E.val           |
+  | F | \rightarrow | *digit*  | F.val = digit.lexval    |
+\normalsize
+
+\pause Possível implementação da calculadora
+  \scriptsize
+  | L | \rightarrow | E *n*    | print Atr(topo)               |
+  | E | \rightarrow | E_1 + T | att = Atr(topo-2) + Atr(topo) |
+  |   |   |        | topo = topo-2;                |
+  |   |   |        | Atr(topo) = att;              |
+  | E | \rightarrow | T      |                               |
+  | T | \rightarrow | T_1 * F | att = Atr(topo-2) * Atr(topo) |
+  |   |   |        | topo = topo-2;                |
+  |   |   |        | Atr(topo) = att;              |
+  | T | \rightarrow | F      |                               |
+  | F | \rightarrow | ( E )  | att = Atr(topo-1)             |
+  |   |   |        | topo = topo-1;                |
+  |   |   |        | atr(topo) = att;              |
+  | F | \rightarrow | *digit*  | Atr(topo) = digit.lexval      |
+  \normalsize
+
+\pause Testar com a entrada \textbf{2*3+4n}
+
+* Exemplo
+\small
+|   | Atributo | Pilha   |     Entrada | Produção  |
+| / | <l>      | <l>     |         <r> |           |
+|---+----------+---------+-------------+-----------|
+|   |          | $       | 2 * 3 + 4 n |           |
+|   |          | $ 2     |   * 3 + 4 n | F \rightarrow digit |
+|   | 2        | $ F     |   * 3 + 4 n | T \rightarrow F     |
+|   | 2        | $ T     |   * 3 + 4 n |           |
+|   | 2 _      | $ T *   |     3 + 4 n |           |
+|   | 2 _      | $ T * 3 |       + 4 n |           |
+|   | 2 _ 3    | $ T * F |       + 4 n | F \rightarrow digit |
+|   | 6        | $ T     |       + 4 n | T \rightarrow T * F |
+|   | 6        | $ E     |       + 4 n | E \rightarrow T     |
+|   | 6 _      | $ E +   |         4 n |           |
+|   | 6 _      | $ E + 4 |           n |           |
+|   | 6 _ 4    | $ E + F |           n | F \rightarrow digit |
+|   | 6 _ 4    | $ E + T |           n | T \rightarrow F     |
+|   | 10       | $ E     |           n |           |
+|   | 10       | $ E n   |             |           |
+|   | 10       | $ L     |             | L \rightarrow E n   |
+
+* Exercício 1
+O esquema de tradução dirigida pela sintaxe que segue *traduz*
+  uma linguagem com terminais a, b e c em uma linguagem cujos
+  terminais são 2, 3, 4, 5, e 6. Usando um analisador *ascendente*
+  que executa as ações semânticas imediatamente após reduzir a
+  regra correspondente, diga o resultado da tradução da entrada
+  *aaadbc*?
+Esquema de Tradução
+  | S | \rightarrow | AB | { print "1" } |
+  | S | \rightarrow | AS | { print "2" } |
+  | A | \rightarrow | a  | { print "3" } |
+  | B | \rightarrow | bC | { print "4" } |
+  | B | \rightarrow | dB | { print "5" } |
+  | C | \rightarrow | c  | { print "6" } |
+* Exercício 2
+O esquema de tradução dirigida pela sintaxe que segue *traduz*
+  uma linguagem com terminais a, b e c em uma linguagem cujos
+  terminais são 2, 3, 4, 5, e 6. Usando um analisador *ascendente*
+  que executa as ações semânticas imediatamente após reduzir a
+  regra correspondente, diga o resultado da tradução da entrada
+  *aaadbc*?
+Esquema de Tradução
+  | S | \rightarrow | AB   | { S.node = new node (A.node, B.node); }   |
+  | S | \rightarrow | AS_1 | { S.node = new node (A.node, S_1.node); } |
+  | A | \rightarrow | a    | { A.node = new node ("a"); }              |
+  | B | \rightarrow | bC   | { B.node = new node ("b", C.node); }      |
+  | B | \rightarrow | dB   | { B.node = new node ("d", B.node); }      |
+  | C | \rightarrow | c    | { C.node = new node ("c"); }     |
