@@ -36,7 +36,8 @@ disciplina, podem variar em abrangência e profundidade.
 | Semântica   | [[./aulas/semantica/introducao.org][Introdução]]                                             |             |             |       |
 | Semântica   | [[./aulas/semantica/funcionamento.org][Funcionamento e tipos de atributos]]                     |             |             |       |
 | Semântica   | [[./aulas/semantica/ordem.org][Esquemas S e L-Atribuídos]]                              |             |             |       |
-| Semântica   | Implementação de Esquemas S e L-Atribuídos             |             |             |       |
+| Semântica   | [[./aulas/semantica/l-atribuido.org][Implementação de L-Atribuído]]                           |             |             |       |
+| Semântica   | [[./aulas/semantica/s-atribuido.org][Implementação de S-Atribuído]]                           |             |             |       |
 | Código      | Taxonomia e geração de código para expressões          |             |             |       |
 | Código      | Endereçamento de variáveis                             |             |             |       |
 | Código      | Endereçamento de arranjos multidimensionais            |             |             |       |
