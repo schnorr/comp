@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Ordem de Avaliação de Atributos
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Ordem de Avaliação
+Cálculo de Atributos
++ Calculam atributos considerando outros atributos
++ Estabelece uma dependência entre as regras semânticas
+#+latex: \vfill
+\pause *Grafo de dependências*
++ Representa o fluxo de informações entre os atributos
++ \pause Somente atributos sintetizados
+    + O grafo é igual a árvore sintática
++ \pause Atributos sintetizados e herdados à esquerda
+    + O grafo é parecido com a árvore sintática
++ \pause Outra configuração de cálculo de atributo
+    + Obriga uma análise semântica independente da sintática
+#+latex: \vfill
+\pause Esquemas S-atribuídos e L-atribuídos
++ Têm restrições para criar o grafo de dependência
+* Exemplo
+Considerando a gramática com ações semânticas
+  | T  | \rightarrow | FT'        | \texttt{ T'.h = F.val }                  |
+  |    |             |            | \texttt{ T.val = T'.s }                  |
+  | T' | \rightarrow | $*FT'_1$   | \texttt{ $T'_1$.h = T'.h * F.val }       |
+  |    |             |            | \texttt{ T'.s = $T'_1$.s }               |
+  | T' | \rightarrow | $\epsilon$ | \texttt{ T'.s = T'.h }                   |
+  | F  | \rightarrow | *digit*    | \texttt{ F.val = atoi(digit.lexema) } |
+Calcular o grafo de dependências para $3*5$
+* *S-Atribuído*
+Requisitos
++ Todos os atributos são sintetizados
++ Ações semânticas dispostas à direita das produções
+Exemplo
+  | L | \rightarrow | E *n*   | { L.val = E.val   }         |
+  | E | \rightarrow | E_1 + T | { E.val = $E_1$.val + T.val } |
+  | E | \rightarrow | T       | { E.val = T.val          }  |
+  | T | \rightarrow | T_1 * F | { T.val = $T_1$.val * F.val } |
+  | T | \rightarrow | F       | { T.val = F.val           } |
+  | F | \rightarrow | ( E )   | { F.val = E.val          }  |
+  | F | \rightarrow | *digit* | { F.val = digit.lexval    } |
+#+latex: \vfill
+\pause Especialmente útil em analisadores ascendentes (LR)
++ Não precisamos criar a árvore explicitamente
++ Possibilita geração de código durante a análise sintática
+* *L-Atribuído*
+Requisitos
++ Atributos podem ser sintetizados ou
++ Atributos podem ser herdados se
+    + A dependência é da esquerda para a direita\\
+	 *(e jamais da direita para a esquerda)*
+
+\pause Formalmente, considerando
++ $A \rightarrow X_1X_2...X_n$ e atributo herdado $X_i.a$ \\
+    $X_i.a$ só pode depender de
+    + atributos herdados associados à cabeça A
+    + atributos herdados/sintetizados às ocorrências dos símbolos $X_1, X_2, ..., X_{i-1}$ localizados à esquerda de X_i
+	 
+\pause Exemplo
+  | D | \rightarrow | T { L.in = T.tipo + D.val } L    |
+* Exercícios
+Para cada $f$ e cada regra, diga se é S-Atribuída, L-Atribuída, ou nenhuma delas?
+| A | \rightarrow | BC | \texttt{ B.h = $f_1$(A.h) } |
+|   |             |    | \texttt{ C.h = $f_2$(B.s) } |
+|   |             |    | \texttt{ A.s = $f_3$(C.s) } |
+
+| A | \rightarrow | DE | \texttt{ E.h = $f_4$(A.h) } |
+|   |             |    | \texttt{ D.h = $f_5$(E.s) } |
+|   |             |    | \texttt{ A.s = $f_6$(D.s) } |
+
+Considerando esta G, crie o grafo para $float\ id_1,\ id_2,\ id_3$
+  | D | \rightarrow | T L         | \texttt{ L.h = T.tipo }               |
+  | T | \rightarrow | *int*       | \texttt{ T.tipo = inteiro}            |
+  | T | \rightarrow | *float*     | \texttt{ T.tipo = flutuante}          |
+  | L | \rightarrow | $L_1$, *id* | \texttt{ $L_1$.h = L.h }              |
+  |   |             |             | \texttt{ adicionaTipo (id.key, L.h) } |
+  | L | \rightarrow | *id*        | \texttt{ adicionaTipo (id.key, L.h)}  |
