@@ -1,0 +1,124 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Implementação de L-Atribuído
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Implementação de Esquemas L-Atribuído 
+Focado em analisadores *descendentes*
++ Possibilitam o uso de atributos herdados e sintetizados \\
+    (dentro dos limites do esquema L-Atribuído)
+#+latex: \vfill
+
+\pause Supondo a seguinte gramática
+  | E | \rightarrow | T R   |
+  | R | \rightarrow | + T R |
+  | R | \rightarrow | - T R |
+\pause Analisador *descendente recursivo*
++ Uma função reconhecedora para cada não-terminal
+
+\pause Idéia simples
++ Atributos herdados são os *argumentos* da função
++ Atributos sintetizados fazem parte do *retorno* da função
+
+*  Método
+#+begin_src Pascal
+Procedure dfvisit (n : node);
+Begin
+   Para cada filho m_i de n,
+   da esquerda para a direita, faça
+      Avalie os atributos herdados de m_i
+      Dfvisit (m_i)
+   Avalie os atributos sintetizados de n
+End;
+#+end_src
+\pause Um esquema em *L-Atribuído*
+  | S | \rightarrow | { A_1.h = 1; } A_1 { A_2.h = 1; } A_2  |
+  | A | \rightarrow | a { print(A.h) }                        |
+*  Recursividade à Esquerda
+Analisadores descendentes
++ Não admitem recursividade à esquerda
+Supondo o esquema de tradução seguinte
++ Entrada: *3 4 5*
+  | A | \rightarrow | A_1 *digit* | { A.val = A_1.val + digit.lexval } |
+  | A | \rightarrow | *digit*     | { A.val = digit.lexval }           |
+\pause Removendo a recursão a esquerda
+  | A | \rightarrow | digit { X.h = digit.lexval } X { A.val = X.s }           |
+  | X | \rightarrow | digit { X_1.h = X.h + digit.lexval } X_1 { X.s = X_1.s } |
+  | X | \rightarrow | \epsilon { X.s = X.h }                                     |
+\pause Como fica a implementação descendente recursiva?
+*  Removendo Recursão à Esquerda
+Considerando o esquema de tradução
+  | A | \rightarrow | A_1 Y | { A.a = \textbf{g}(A_1.a, Y.y) } |
+  | A | \rightarrow | X     | { A.a = \textbf{f}(X.x) } |
+Algoritmo que remove a recursão, temos
+  | A | \rightarrow | X R      |
+  | R | \rightarrow | Y R      |
+  | R | \rightarrow | \epsilon |
+Com ações semânticas
+  | A | \rightarrow | X { R.h = \textbf{f}(X.x) } R { A.a = R.s }   |
+  | R | \rightarrow | Y { R_1.h = \textbf{g}(R.h, Y.y) } R_1 { R.s = R_1.s } |
+  | R | \rightarrow | \epsilon { R.s = R.h }                          |
++ R contém os atributos R.s e R.h
+*  Utilizando a *Pilha*
+Considerando o esquema de tradução
+  | A | \rightarrow | digit { X.h = digit.lexval } X { A.val = X.s }           |
+  | X | \rightarrow | digit { X_1.h = X.h + digit.lexval } X_1 { X.s = X_1.s } |
+  | X | \rightarrow | \epsilon { X.s = X.h }                                     |
+Entrada *3 4 5* e uma Análise Preditiva Tabular com pilha
+*  Utilizando a *Pilha*
+Comportamento da Pilha e Entrada
+\tiny
+|   | Pilha                                                                                       | Entrada |
+| / | <l>                                                                                         |     <r> |
+|   | $ A                                                                                         | 3 4 5 $ |
+|   | $  { A.val = X.s } X  { X.h = digit.lexval }  digit                                         | 3 4 5 $ |
+|   | $  { A.val = X.s } X  { X.h = 3 }                                                           |   4 5 $ |
+|   | $  { A.val = X.s } X                                                                        |   4 5 $ |
+|   | $  { A.val = X.s }  { X.s = X_1.s } X_1  { X_1.h = X.h + digit.lexval } digit                  |   4 5 $ |
+|   | $  { A.val = X.s }  { X.s = X_1.s } X_1  { X_1.h = X.h + digit.lexval }                        |     5 $ |
+|   | $  { A.val = X.s }  { X.s = X_1.s } X_1  { X_1.h = 3 + 4 }                                     |     5 $ |
+|   | $  { A.val = X.s }  { X.s = X_1.s } X_1                                                       |     5 $ |
+|   | $  { A.val = X.s }  { X.s = X_1.s }  { X_1.s = X_2.s } X_2 { X_2.h = X_1.h + digit.lexval } digit |     5 $ |
+|   | $  { A.val = X.s }  { X.s = X_1.s }  { X_1.s = X_2.s } X_2 { X_2.h = X_1.h + digit.lexval }       |       $ |
+|   | $  { A.val = X.s }  { X.s = X_1.s }  { X_1.s = X_2.s } X_2 { X_2.h = 7 + 5 }                     |       $ |
+|   | $  { A.val = X.s }  { X.s = X_1.s }  { X_1.s = X_2.s } X_2                                      |       $ |
+|   | $  { A.val = X.s }  { X.s = X_1.s }  { X_1.s = X_2.s }                                         |       $ |
+|   | $  { A.val = X.s }  { X.s = X_1.s }  { X_1.s = X_2.s } { X_2.s = X_2.h }                         |       $ |
+|   |                                                                                             |         |
+*  Ascendente?
+Uma análise *ascendente* em L-Atribuído? Possível?
+
+\pause  Problema
++ Atributos herdados vêm dos pais, que serão avaliados depois dos
+    filhos, no momento da redução
+  | A | \rightarrow | { B.h = f(A.h); } B C |
+\pause  Uma possível solução não natural
++ Introduzir um *marcador* no lugar da ação semântica
+    | A | \rightarrow | M B C                                   |
+    | M | \rightarrow | \epsilon { M.h = A.h; M.s = f(M.h); } |
++ Coordenar a presença de A.h e M.h (igual a B.h) na pilha
+* Exercício
+Considerando o esquema de tradução
+\scriptsize
+| E | \rightarrow | T { R.h = T.ptr; }  R { E.ptr = R.s;  }                                |
+| R | \rightarrow | + T { $R_1$.h = geraNo('+', R.h, T.ptr);  } $R_1$  { R.s = $R_1$.s;  }   |
+| R | \rightarrow | - T { $R_1$.h = geraNo('-', R.h, T.ptr);  } $R_1$  { R.s = $R_1$.s;  }   |
+| R | \rightarrow | \epsilon { R.s = R.h; }                                                            |
+| T | \rightarrow | ( E ) { T.ptr = E.ptr; }                                                           |
+| T | \rightarrow | id { T.ptr = geraFolha(id, id.nome); }                                             |
+| T | \rightarrow | enum { T.ptr = geraFolha(num, num.val);  }                                         |
+\normalsize
+O que acontece quando temos a entrada \textbf{x - 2 + y}?
+
