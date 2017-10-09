@@ -47,10 +47,10 @@ Antes da geração de código, o compilador precisa saber
 #+latex: \vfill
 
 \pause Respostas para estas questões
-+ Devem ser derivadas a partir do código fonte
-+ Obtidas das regras do projeto da linguagem de entrada
++ No código fonte
++ Regras do projeto da LP
 
-\pause Durante o processo de *Análise Sensível ao Contexto*
+Obtidas no processo de *Análise Sensível ao Contexto*
 * Alguns usos
 Associa um *significado* ao código de entrada
 
