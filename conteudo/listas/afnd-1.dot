@@ -1,0 +1,29 @@
+#
+# AFND
+#
+digraph {
+  rankdir=LR;
+  margin=0;
+  compound=true;
+
+  start [shape = point];
+  node [shape = circle];
+  0;
+  1;
+  2;
+  node [shape=doublecircle];
+  3;
+
+  edge [fontsize = "20pt"];
+
+  start -> 0;
+  0 -> 1 [ label = "a"];
+  1 -> 2 [ label = "b"];
+  2 -> 3 [ label = "b"];
+  3 -> 0 [ label = "a"];
+
+  0 -> 3 [ label = "&epsilon;"];
+  1 -> 0 [ label = "&epsilon;"];
+  2 -> 1 [ label = "&epsilon;"];
+  3 -> 2 [ label = "&epsilon;"];
+}

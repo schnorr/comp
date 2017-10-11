@@ -1,0 +1,161 @@
+\documentclass{compiladores}
+\begin{document}
+
+\begin{center}
+{\LARGE Lista de Exercícios \#10}\\
+{\bf Geração de Código}
+\end{center}
+
+\bigskip
+
+\begin{listanumerada}
+\item \label{x} Transforme a gramática abaixo em um esquema de tradução que gere TAC.
+
+  \begin{tabular}{llll}
+    S  &  $\rightarrow$  &  x = E;            \\
+    E  &  $\rightarrow$  &  E$_1$ + T         \\
+    E  &  $\rightarrow$  &  E$_1$ - T         \\
+    E  &  $\rightarrow$  &  T                 \\
+    T  &  $\rightarrow$  &  T$_1$ * F         \\
+    T  &  $\rightarrow$  &  T$_1$ / F         \\
+    T  &  $\rightarrow$  &  F                 \\
+    F  &  $\rightarrow$  &  ( E )             \\
+    F  &  $\rightarrow$  &  \textbf{digit}    \\
+    F  &  $\rightarrow$  &  \textbf{var}    \\
+  \end{tabular}
+
+\item Suponha que os operadores do código TAC ($+ - * /$) só suportem
+  operandos do mesmo tipo e que existe somente dois tipos na
+  linguagem: \texttt{int} e \texttt{float}. Altere o esquema de
+  tradução do exercício~\ref{x} para utilizar apropriadamente os
+  operadores TAC. Mostre exemplos que estressam a funcionalidade.
+
+\item \label{y} Suponha que uma linguagem tenha apenas escopo
+  global. Declarações de variáveis dentro de funções não são
+  autorizadas nesta linguagem. Crie um esquema de tradução para
+  calcular os endereços dessas variáveis em relação ao endereço base
+  do segmento de dados. Esta informação deve ser mantida na tabela de
+  símbolos.
+
+\item \label{y1} Altere o esquema de tradução do exercício~\ref{y}
+  para gerar TAC considerando diferentes entradas válidas de
+  expressões aritméticas. O acesso ao conteúdo das variáveis é feito
+  levando-se em conta o endereço base do segmento de dados.
+
+\item \label{y2} Suponha que os operandos $+ - * /$ do código TAC não aceitam
+  endereços como parâmetros. Por exemplo, o seguinte código TAC é
+  ilegal. Na linha 1, temos um endereço no primeiro parâmetro do
+  operando $*$; na linha 2, temos um endereço no segundo parâmetro do
+  operando $+$:
+  \begin{lstlisting}
+    t0 = (fp+0) * 5.2
+    t1 = t0 + (fp+8)
+  \end{lstlisting}
+  Sabendo desta limitação, altere o esquema de tradução resultante do
+  exercício~\ref{y1} para que os valores em memória (parâmetros de
+  endereçamento) sejam primeiramente colocados em registradores para
+  que os operandos possam trabalhar sobre eles. Utilize o operando
+  \texttt{load} do nosso TAC hipotético para carregar os valores da
+  memória para os registradores. Exemplo:
+  \begin{lstlisting}
+    t0 = load (fp+0)
+    t1 = load (fp+8)
+    t2 = t0 * 5.2
+    t3 = t2 + t1
+  \end{lstlisting}
+
+\item \label{a} Crie um esquema de tradução para a declaração de variáveis com
+  escopo aninhado. Mostre o funcionamento com entradas
+  válidas.
+
+\item Incremente o esquema de tradução resultante do exercício~\ref{a}
+  para a geração de código TAC para expressões aritméticas. Considere
+  as limitações TAC apresentadas no exercício~\ref{y2}.
+
+\item Como você implementaria a geração de código para o comando de
+  atribuição em uma linguagem com escopo aninhado?
+
+\item Considere uma linguagem orientada a objetos com o conceito de
+  herança. Como você implementaria o endereçamento dos atributos de
+  instância?
+\end{listanumerada}
+\end{document}
+
+\item \label{x1} Transforme a gramática do exercício~\ref{x} em um esquema de
+  tradução que cria uma árvore de derivação.
+
+\item Repita o exercício~\ref{x1}, criando uma árvore sintática
+  abstrata para qualquer entrada.
+
+\item \label{y} Repita o exercício~\ref{x1}, criando um grafo acíclico
+  direcionado.
+
+\item \label{t} O esquema de tradução abaixo gera uma árvore sintática
+  abstrata. Mostre seu funcionamento para uma série de entradas
+  válidas.
+
+\begin{tabular}{lll}
+ E  &  $\rightarrow$  &  T \texttt{ \{ R.h = T.ptr; \} } R \texttt{ \{ E.ptr = R.s; \} }                                \\
+ R  &  $\rightarrow$  &  + T \texttt{ \{ $R_1$.h = geraNo('+', R.h, T.ptr); \} } $R_1$ \texttt{ \{ R.s = $R_1$.s; \} }  \\
+ R  &  $\rightarrow$  &  - T \texttt{ \{ $R_1$.h = geraNo('-', R.h, T.ptr); \} } $R_1$ \texttt{ \{ R.s = $R_1$.s; \} }  \\
+ R  &  $\rightarrow$  &  $\epsilon$ \texttt{ \{ R.s = R.h; \} }                                                         \\
+ T  &  $\rightarrow$  &  ( E ) \texttt{ \{ T.ptr = E.ptr; \} }                                                          \\
+ T  &  $\rightarrow$  &  id \texttt{ \{ T.ptr = geraFolha(id, id.nome); \} }                                            \\
+ T  &  $\rightarrow$  &  enum \texttt{ \{ T.ptr = geraFolha(num, num.val); \} }                                         \\
+\end{tabular}
+
+\item O que é um bloco básico? Por que alguns compiladores adotam um
+  conceito de bloco básico diferente do tradicional? Discorra sobre as
+  vantagens de cada abordagem e seu impacto nas etapas de otimização,
+  por exemplo.
+
+\item Construa o grafo de fluxo de controle para o código abaixo:
+  
+  \begin{lstlisting}
+       stmt0
+       while (i < 100) { stmt1 }
+       stmt2
+       if (x = y) { stmt3 } else { stmt4 }
+       stmt5
+  \end{lstlisting}
+
+\item Construa o grafo de dependência de dados para o código abaixo:
+
+  \begin{lstlisting}
+       x = 0
+       i = 1
+       while (i < 100)
+           if (a[i] > 0)
+              then x = x + a[i]
+           i = i + 1
+       print x
+    \end{lstlisting}
+
+\item Qual a vantagem e a desvantagem da IR linear de código de um endereço?
+
+\item \label{z} Transforme a gramática do exercício~\ref{x} em um esquema de
+  tradução que gere código de um endereço.
+
+\item Traduza uma série de entradas válidas utilizando o esquema de
+  tradução do exercício~\ref{z}.
+
+\item \label{y1} Altere o esquema de tradução criado no exercício~\ref{y},
+  gerando código de um endereço. Utilize o grafo acíclico direcionado
+  para aproveitar valores eventualmente já calculados.
+
+\item Refaça o exercício~\ref{y1}, gerando código de três endereços.
+
+\item O que é TAC?
+
+\item Crie um esquema de tradução para gerar uma IR pós-fixada a
+  partir de uma IR pré-fixada de expressões aritméticas. Apresente uma
+  série de entradas válidas mostrando o seu funcionamento com uma
+  analisador ascendente e outro analisador descendente. Explique as
+  diferenças, caso existam, nos esquemas de tradução para cada um dos
+  analisadores.
+
+\item Existem três abordagens para implementar TAC em memória, ou
+  seja, manter o código TAC em memória. Qual delas você acha mais
+  apropriada para o projeto de compiladores?
+\end{listanumerada}
+\end{document}

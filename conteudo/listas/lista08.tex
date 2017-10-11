@@ -1,0 +1,147 @@
+\documentclass{compiladores}
+\begin{document}
+
+\begin{center}
+{\LARGE Lista de Exercícios \#08}\\
+{\bf Análise Semântica, Esquemas S e L-Atribuído}
+\end{center}
+
+\bigskip
+
+\begin{listanumerada}
+\item \label{x} Crie a árvore de derivação anotada para diversas entradas válidas da gramática seguinte:
+
+  \begin{tabular}{llll}
+    L  &  $\rightarrow$  &  E \textbf{n}    &  \texttt{\{ L.val = E.val   \}}            \\
+    E  &  $\rightarrow$  &  E$_1$ + T       &  \texttt{\{ E.val = $E_1$.val + T.val \}}  \\
+    E  &  $\rightarrow$  &  E$_1$ - T       &  \texttt{\{ E.val = $E_1$.val - T.val \}}  \\
+    E  &  $\rightarrow$  &  T               &  \texttt{\{ E.val = T.val          \}}     \\
+    T  &  $\rightarrow$  &  T$_1$ * F       &  \texttt{\{ T.val = $T_1$.val * F.val \}}  \\
+    T  &  $\rightarrow$  &  T$_1$ / F       &  \texttt{\{ T.val = $T_1$.val / F.val \}}  \\
+    T  &  $\rightarrow$  &  F               &  \texttt{\{ T.val = F.val           \}}    \\
+    F  &  $\rightarrow$  &  ( E )           &  \texttt{\{ F.val = E.val          \}}     \\
+    F  &  $\rightarrow$  &  \textbf{digit}  &  \texttt{\{ F.val = digit.lexval    \}}    \\
+  \end{tabular}
+
+\item \label{y} Crie a árvore de derivação anotada para diversas entradas válidas da gramática seguinte:
+
+  \begin{tabular}{llll}
+    E   &  $\rightarrow$  &  $TE'$           & \texttt{\{ E'.h = T.val; E.val = E'.s \} } \\
+    E'  &  $\rightarrow$  &  $+TE'_1$        & \texttt{\{ $E'_1$.h = E'.h + T.val; E'.s = $E'_1$.s \} } \\
+    E'  &  $\rightarrow$  &  $-TE'_1$        & \texttt{\{ $E'_1$.h = E'.h - T.val; E'.s = $E'_1$.s \} } \\
+    E'  &  $\rightarrow$  &  $\epsilon$      &  \texttt{\{ E'.s = E'.h; \} }             \\
+    T   &  $\rightarrow$  &  $FT'$           &  \texttt{\{ T'.h = F.val; T.val = T'.s \} }             \\
+    T'  &  $\rightarrow$  &  $*FT'_1$        &  \texttt{\{ $T'_1$.h = T'.h * F.val; T'.s = $T'_1$.s \} }         \\
+    T'  &  $\rightarrow$  &  $/FT'_1$        &  \texttt{\{ $T'_1$.h = T'.h / F.val; T'.s = $T'_1$.s \} }         \\
+    T'  &  $\rightarrow$  &  $\epsilon$      &  \texttt{\{ T'.s = T'.h; \} }             \\
+    F   &  $\rightarrow$  &  \textbf{digit}  &  \texttt{\{ F.val = digit.lexval; \} }     \\
+  \end{tabular}
+
+\item Crie o grafo de dependências para as diversas entradas válidas utilizadas no exercício~\ref{x}.
+
+\item Crie o grafo de dependências para as diversas entradas válidas utilizadas no exercício~\ref{y}.
+
+\item \label{w} O que o seguinte esquema de tradução faz? Mostre exemplos.
+
+  \begin{tabular}{llll}
+    A & $\rightarrow$ & $A_1$ {\bf digit} & \texttt{\{ A.val = $A_1$.val + digit.lexval; \}} \\
+    A & $\rightarrow$ & {\bf digit} & \texttt{\{ A.val = digit.lexval; \}} \\
+  \end{tabular}
+
+\item \label{z} Altere o esquema de tradução do exercício~\ref{w} para que seja
+  colocado no atributo \texttt{val} do símbolo raiz o valor decimal
+  correspondente à sequência de tokens. Por exemplo, para a sequência
+  $3 4 5$, o valor de $A.val$ deve ser $3*10^2 + 4 * 10^1 + 5 * 10^0$.
+
+\item Considerando o esquema de tradução resultante do
+  exercício~\ref{z}, mostre o comportamento da pilha para um certo
+  número de entradas válidas e levando em conta uma análise
+  descendente.
+
+\item A gramática abaixo gera adições de constantes inteiras e
+  ponto-fluturante. Quando dois inteiros são somados, o tipo
+  resultante é inteiro; quando dois ponto-flutuantes são somados, o
+  tipo resultante é ponto-flutuante; caso contrário, é um erro. Defina
+  um esquema de tradução para determinar o tipo de cada subexpressão.
+
+  \begin{tabular}{lll}
+    E & $\rightarrow$ & E + T \\
+    E & $\rightarrow$ & T \\
+    T & $\rightarrow$ & r \\
+    T & $\rightarrow$ & i \\
+  \end{tabular}
+
+\item Considerando esta G, crie o grafo de dependência para $float\ id_1,\ id_2,\ id_3$
+
+\begin{tabular}{llll}
+ D  &  $\rightarrow$  &  T L                 &  \texttt{ L.h = T.tipo }                \\
+ T  &  $\rightarrow$  &  \textbf{int}        &  \texttt{ T.tipo = inteiro}             \\
+ T  &  $\rightarrow$  &  \textbf{float}      &  \texttt{ T.tipo = flutuante}           \\
+ L  &  $\rightarrow$  &  $L_1$, \textbf{id}  &  \texttt{ $L_1$.h = L.h }               \\
+    &                 &                      &  \texttt{ adicionaTipo (id.key, L.h) }  \\
+ L  &  $\rightarrow$  &  \textbf{id}         &  \texttt{ adicionaTipo (id.key, L.h)}   \\
+\end{tabular}
+
+\item O que devemos fazer em um esquema de tradução L-atribuído para
+  realizar uma análise ascendente?
+
+\item \label{t} Considerando o esquema de tradução abaixo, o que acontece quando
+  temos a entrada {\bf x - 2 + y}?
+
+\begin{tabular}{lll}
+ E  &  $\rightarrow$  &  T \texttt{ \{ R.h = T.ptr; \} } R \texttt{ \{ E.ptr = R.s; \} }                                \\
+ R  &  $\rightarrow$  &  + T \texttt{ \{ $R_1$.h = geraNo('+', R.h, T.ptr); \} } $R_1$ \texttt{ \{ R.s = $R_1$.s; \} }  \\
+ R  &  $\rightarrow$  &  - T \texttt{ \{ $R_1$.h = geraNo('-', R.h, T.ptr); \} } $R_1$ \texttt{ \{ R.s = $R_1$.s; \} }  \\
+ R  &  $\rightarrow$  &  $\epsilon$ \texttt{ \{ R.s = R.h; \} }                                                         \\
+ T  &  $\rightarrow$  &  ( E ) \texttt{ \{ T.ptr = E.ptr; \} }                                                          \\
+ T  &  $\rightarrow$  &  id \texttt{ \{ T.ptr = geraFolha(id, id.nome); \} }                                            \\
+ T  &  $\rightarrow$  &  enum \texttt{ \{ T.ptr = geraFolha(num, num.val); \} }                                         \\
+\end{tabular}
+
+\item Por que o esquema de tradução do exercício~\ref{t} não funciona
+  em analisadores ascendentes? Altere o esquema de tradução do
+  exercício~\ref{t} para que seja possível realizar uma análise
+  ascendente. Mostre seu funcionamento através de entradas válidas.
+
+\item O esquema de tradução do exercício~\ref{x} é perfeitamente
+  adaptado para uma análise descendente. Por quê?
+
+\item Altere o esquema de tradução do exercício~\ref{x} para que ele
+  funcione de forma descedente considerando uma pilha. Mostre seu
+  funcionamento com entradas válidas.
+
+\item O esquema de tradução dirigida pela sintaxe que segue \textbf{traduz}
+     uma linguagem com terminais a, b e c em uma linguagem cujos
+     terminais são 1, 2, 3, 4, 5, e 6. Usando um analisador \textbf{ascendente}
+     que executa as ações semânticas imediatamente após reduzir a
+     regra correspondente, diga o resultado da tradução da entrada
+     \textbf{aaadbc}?
+
+     \begin{tabular}{llll}
+       S  &  $\rightarrow$  &  AB  &  \{ print ``1'' \}  \\
+       S  &  $\rightarrow$  &  AS  &  \{ print ``2'' \}  \\
+       A  &  $\rightarrow$  &  a   &  \{ print ``3'' \}  \\
+       B  &  $\rightarrow$  &  bC  &  \{ print ``4'' \}  \\
+       B  &  $\rightarrow$  &  dB  &  \{ print ``5'' \}  \\
+       C  &  $\rightarrow$  &  c   &  \{ print ``6'' \}  \\
+     \end{tabular}
+
+\item O esquema de tradução dirigida pela sintaxe que segue \textbf{traduz}
+     uma linguagem com terminais a, b e c em uma linguagem cujos
+     terminais são 2, 3, 4, 5, e 6. Usando um analisador \textbf{ascendente}
+     que executa as ações semânticas imediatamente após reduzir a
+     regra correspondente, diga o resultado da tradução da entrada
+     \textbf{aaadbc}?
+
+
+     \begin{tabular}{llll}
+       S  &  $\rightarrow$  &  AB      &  \{ S.node = new node (A.node, B.node); \}      \\
+       S  &  $\rightarrow$  &  AS$_1$  &  \{ S.node = new node (A.node, S$_1$.node); \}  \\
+       A  &  $\rightarrow$  &  a       &  \{ A.node = new node (``a''); \}               \\
+       B  &  $\rightarrow$  &  bC      &  \{ B.node = new node (``b'', C.node); \}       \\
+       B  &  $\rightarrow$  &  dB      &  \{ B.node = new node (``d'', B.node); \}       \\
+       C  &  $\rightarrow$  &  c       &  \{ C.node = new node (``c''); \}               \\
+     \end{tabular}
+
+\end{listanumerada}
+\end{document}

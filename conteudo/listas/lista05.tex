@@ -1,0 +1,83 @@
+\documentclass{compiladores}
+\begin{document}
+
+
+\begin{center}
+{\LARGE Lista de Exercícios \#05}\\
+{\bf Análise Sintática Ascendente e Tabelas LR}
+\end{center}
+
+\begin{listanumerada}
+\item O que é um \emph{Handle}? O que significa o processo de ``Poda do \emph{Handle}''?
+
+\item \label{x} Considerando a gramática $S \rightarrow 0 S 1\ |\ 0 1$, indique
+  o \emph{handle} em cada uma das seguintes formas sentenciais:
+  \begin{lista}
+    \item 000111
+    \item 00S11
+  \end{lista}
+
+\item Considerando a gramática do exercício~\ref{x}, mostre os passos
+  da análise de {\bf 000111} utilizando Empilha/Reduz.
+
+\item \label{y} Considerando a gramática $S \rightarrow
+  SS+\ |\ SS*\ |\ a$, indique o \emph{handle} em cada uma das
+  seguintes formas sentenciais:
+  \begin{lista}
+    \item $SSS+a*+$
+    \item $SS+a*a+$
+    \item $aaa*a++$
+  \end{lista}
+
+\item Considerando a gramática do exercício~\ref{y}, mostre os passos
+  da análise de {\bf aaa*a++} utilizando Empilha/Reduz.
+
+\item Considerando a seguinte gramática: \\
+     \begin{tabular}{rcl}
+     {\bf E} & $\rightarrow$ & E A T | T \\
+     T & $\rightarrow$ & T B F | F \\
+     F & $\rightarrow$ & ( E ) | id \\
+     A & $\rightarrow$ & + | - \\
+     B & $\rightarrow$ & $*$ | $/$ \\
+     \end{tabular} \\
+     Mostre os passos do analisador Empilha/Reduz para as seguintes entradas:
+     \begin{lista}
+       \item $id+id*id/id$
+       \item $id/id/id$
+       \item $id-id+id$
+     \end{lista}
+
+\item Considerando as seguintes produções de uma gramática: \\
+  \begin{tabularx}{\linewidth}{clclclclclcl}
+    (1)& E  & $\rightarrow$ & E + T  & (3)& T & $\rightarrow$ & T $*$ F  & (5)&  F  & $\rightarrow$ & (E) \\
+    (2)& E  & $\rightarrow$ & T      & (4)& T & $\rightarrow$ & F      & (6)& F  & $\rightarrow$ & id \\
+  \end{tabularx} \\
+  E a seguinte tabela LR para a análise ascendente desta gramática: \\
+  \begin{tabular}{rllllll|rrr}
+    \hline
+    Estado  &  id  &  +   &  $*$  &  (   &  )    &  \$  &  E  &  T  &   F  \\
+    \hline
+    0  &  e5  &      &       &  e4  &       &      &  1  &  2  &   3  \\
+    1  &      &  e6  &       &      &       &  a   &     &     &      \\
+    2  &      &  r2  &  e7   &      &  r2   &  r2  &     &     &      \\
+    3  &      &  r4  &  r4   &      &  r4   &  r4  &     &     &      \\
+    4  &  e5  &      &       &  e4  &       &      &  8  &  2  &   3  \\
+    5  &      &  r6  &  r6   &      &  r6   &  r6  &     &     &      \\
+    6  &  e5  &      &       &  e4  &       &      &     &  9  &   3  \\
+    7  &  e5  &      &       &  e4  &       &      &     &     &  10  \\
+    8  &      &  e6  &       &      &  e11  &      &     &     &      \\
+    9  &      &  r1  &  e7   &      &  r1   &  r1  &     &     &      \\
+    10  &      &  r3  &  r3   &      &  r3   &  r3  &     &     &      \\
+    11  &      &  r5  &  r5   &      &  r5   &  r5  &     &     &      \\\hline
+  \end{tabular} \\
+  Onde {\bf e5} significa ``Empilhar 5'', {\bf r3} significa ``Reduzir
+  pela regra 3'' e {\bf a} significa ``Aceitar''. Mostre os passos do
+  algoritmo Empilha/Reduz guiado por esta tabela considerando as
+  seguintes entradas:
+  \begin{lista}
+  \item $id+id*id+id$
+  \item $id+id+id$
+  \item $id*id*id$
+  \end{lista}
+\end{listanumerada}
+\end{document}

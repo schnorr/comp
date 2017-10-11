@@ -1,0 +1,180 @@
+\documentclass{compiladores}
+\begin{document}
+\begin{center}
+{\LARGE Lista de Exercícios \#04}\\
+{\bf Análise Descendente, Gramáticas LL(1) e Tabelas Preditivas}
+\end{center}
+
+\begin{listanumerada}
+\item
+Como sabemos quando uma gramática não é LL(1)?
+
+\item A gramática seguinte não pode ser utilizada em uma análise
+  preditiva descendente. Identifique e corrija o problema,
+  reescrevendo a gramática. Mostre que a nova gramática, corrigida,
+  satisfaz a condição LL(1). \\
+  \begin{tabular}{rcl}
+    L & $\rightarrow$ & Ra | Qba \\
+    R & $\rightarrow$ & aba | caba | Rbc \\
+    Q & $\rightarrow$ & bbc | bc \\
+  \end{tabular}
+
+\item A gramática seguinte satisfaz a condição LL(1)? Justifique a sua
+  resposta. Se ela não satisfazer, reescreva-a como uma gramática
+  LL(1) equivalente, capaz de reconhecer a mesma linguagem. \\
+  \begin{tabular}{rcl}
+    A & $\rightarrow$ & Ba \\
+    B & $\rightarrow$ & dab | Cb \\
+    C & $\rightarrow$ & cB | Ac \\
+  \end{tabular}
+
+\item Para cada uma das gramáticas seguintes, defina analisadores
+  preditivos descendentes através da construção de tabelas preditivas
+  de análise. Algumas dessas gramáticas precisam ser, inicialmente,
+  fatoradas à esquerda ou ter sua recursão à esquerda eliminada.
+  \begin{lista}
+  \item $S \rightarrow 0\ S\ 1\ |\ 0\ 1$
+  \item $S \rightarrow +\ S\ S\ |\ *\ S\ S\ |\ a$
+  \item $S \rightarrow S\ (\ S\ )\ S\ |\ {\epsilon}$
+  \item $S \rightarrow S + S\ |\ SS\ |\ (\ S\ )\ |\ S\ *\ |\ a$
+  \item $S \rightarrow (\ L\ )\ |\ a$ e $L \rightarrow L, S\ |\ S$
+  \item $S \rightarrow aSbS | bSaS | {\epsilon}$
+  \item Gramática para expressões boleanas: \\
+    \begin{tabular}{rcl}
+      bexpr & $\rightarrow$ & bexpr {\bf or} bterm | bterm \\
+      bterm & $\rightarrow$ & bfactor | bfactor \\
+      bfactor & $\rightarrow$ & {\bf not} bfactor | {\bf (} bexpr {\bf )} | {\bf true} | {\bf false}
+    \end{tabular}
+  \end{lista}
+
+\item É possível realizar a construção de um analisador preditivo
+  descendente para a gramática $S \rightarrow SS+ |\ SS* |\ a$ utilizada
+  para descrever as expressões pós-fixadas com o operador $a$? Quais
+  são as modificações necessárias na gramática para efetuar tal tarefa?
+
+\item \label{x1} A gramática seguinte satisfaz a condição LL(1)? Justifique a sua
+  resposta. Qual tipo de linguagem ela descreve? \\
+    \begin{tabular}{rcl}
+      S & $\rightarrow$ & $(L) | p | q$ \\
+      L & $\rightarrow$ & $L and S | L or S | S$ \\
+    \end{tabular}
+
+\item Implemente, em pseudo-código, um analisador recursivo
+  descendente para a linguagem descrita no exercício~\ref{x1},
+  transformando a gramática em LL(1) se necessário.
+
+\item Seja L uma linguagem cujas sentenças são formadas de qualquer
+  texto. A seguinte sentença faz parte desta linguagem: ``um (grande)
+  animal chamado gato (podendo logicamente ser um leão ou um tigre
+  \{que são cada vez mais raros\} ou ainda um tigre dente-de-sabre
+  \{que está extinto [ ler mais em Kurten ], o que é uma vergonha\} ou
+  leopardo) é um atraente (mas perigoso) amigo''. Você pode supor, por
+  simplicidade, que o texto consiste apenas de letras e
+  espaços. Defina uma gramática LL(1) que descreva esta linguagem e,
+  por fim, construa uma tabela preditiva de análise descendente para a
+  mesma. Mostre que a tabela funciona para uma entrada válida e uma
+  entrada não válida.
+
+\item Considere a seguinte gramática \\
+    \begin{tabular}{rcl}
+      expressão & $\rightarrow$ & átomo | lista \\
+      átomo & $\rightarrow$ & número | idenficador \\
+      lista & $\rightarrow$ & (sequência\_de\_expressões) \\
+      sequência\_de\_expressões & $\rightarrow$ & expressão, sequência\_de\_expressão | expressão \\
+    \end{tabular}
+    \begin{lista}
+      \item Fatore à esquerda esta gramática, se necessário, e elimine a recursão à esquerda, se existir.
+      \item Construa uma tabela preditiva de análise descendente LL(1) para esta gramática.
+      \item Mostre as ações do analisador LL(1) correspondente, considerando a entrada {\bf (a,(b,(2)),(c))}
+    \end{lista}
+
+\item Considerando a gramática \texttt{g1}. O conjunto dos símbolos
+  terminais é \{a, b, c\}, o conjunto dos símbolos não-terminais é
+  \{S, A, B, C\}, o símbolo inicial é S, e as produções são as
+  seguintes: \\
+  \begin{tabular}{rcl}
+    S & $\rightarrow$ & cA | b \\
+    A & $\rightarrow$ & cBC | bSA | a \\
+    B & $\rightarrow$ & cc | Cb \\
+    C & $\rightarrow$ & aS | ba \\
+  \end{tabular}
+
+  Considerando a gramática \texttt{g2}. O conjunto dos símbolos
+  terminais é \{a, b\}, o conjunto dos símbolos não-terminais é \{S,
+  A\}, o símbolo inicial é S, e as produções são as seguintes: \\
+  \begin{tabular}{rcl}
+    S & $\rightarrow$ & abA | aa \\
+    A & $\rightarrow$ & bb | bS \\
+  \end{tabular} \\
+  Considerando a gramática \texttt{g3}. O conjunto dos símbolos
+  terminais é \{a, b, c\}, o conjunto dos símbolos não-terminais é
+  \{S, A, B\}, o símbolo inicial é S, e as produções são as seguintes:
+  \\
+  \begin{tabular}{rcl}
+    S & $\rightarrow$ & AaS | B \\
+    A & $\rightarrow$ & cS | $\epsilon$ \\
+    B & $\rightarrow$ & b \\
+  \end{tabular} \\
+
+  \begin{lista}
+    \item Para cada gramática \texttt{g1}, \texttt{g2} e \texttt{g3},
+      fatore à esquerda se necessário, e elimine a recursão à esquerda
+      se houver.
+    \item Construa tabelas preditivas LL(1) para a análise descendente
+      para cada gramática \texttt{g1}, \texttt{g2} e \texttt{g3}.
+    \item Para a gramática \texttt{g1}, mostre os passos da análise de
+      {\bf ccccba} utilizando a tabela construída.
+    \item Para a gramática \texttt{g2}, mostre os passos da análise de
+      {\bf abbb} utilizando a tabela construída.
+    \item Para a gramática \texttt{g3}, mostre os passos da análise de
+      {\bf acbab} utilizando a tabela construída.
+  \end{lista}
+
+\item Construa a tabela preditiva da seguinte gramática (já fatorada à
+  esquerda e sem recursão à esquerda): \\
+     \begin{tabularx}{\linewidth}{lcllcllcl}
+     E  & $\rightarrow$ & TE'             \\
+     E' & $\rightarrow$ & ATE' | $\epsilon$ \\
+     T  & $\rightarrow$ & FT' \\
+     T' & $\rightarrow$ & BFT' | $\epsilon$ \\
+     F  & $\rightarrow$ & (E) | id \\
+     A  & $\rightarrow$ & + | - \\
+     B  & $\rightarrow$ & $*$ | $/$
+     \end{tabularx}
+     \begin{lista}
+       \item Mostre os passos de análise para a entrada {\bf id / id - id}
+       \item Caso exista ambiguidade, resolva o problema modificando a
+         tabela. Justifique cada escolha.
+       \item Mostre os passos de análise para {\bf id * id / id} e
+         {\bf id + id - id}, mostrando o efeito das suas decisões.
+     \end{lista}
+
+\item Construa a tabela preditiva da seguinte gramática e mostre os passos de {\bf ibtibtaeaea} \\
+    \begin{tabular}{lcl}
+     S & $\rightarrow$ & iEtSS' | a \\
+     S' & $\rightarrow$ & eS | $\epsilon$ \\
+     E & $\rightarrow$ & b\\
+     \end{tabular}
+
+\item Contrua a tabela preditiva da seguinte gramática \\
+  \label{y}
+    \begin{tabular}{lcl}
+     S & $\rightarrow$ & {\bf if (} E {\bf )} SS' | {\bf \{} S {\bf\}} | {\bf a} \\
+     S' & $\rightarrow$ & {\bf else} S | $\epsilon$ \\
+     E & $\rightarrow$ & b\\
+     \end{tabular}
+    \begin{lista}
+      \item Mostre os passos de análise para {\bf if(b)\{if(b)a\}elsea }
+      \item Mostre os passos de análise para {\bf if(b)\{if(b)\{if(b)a\}elsea\}else\{if(b)aelse\{a\}\}}
+    \end{lista}
+\item Explique o porquê da gramática seguinte não ser ambígua, fazendo
+  referência ao exercício~\ref{y}. Construa a tabela
+  preditiva desta gramática e mostre os passos de análise para {\bf  \{if\{a\}else\{a\}\}} \\
+    \begin{tabular}{lcl}
+     S & $\rightarrow$ & {\bf \{} A {\bf \}} \\
+     A & $\rightarrow$ & {\bf if} SA' | {\bf a} \\
+     A' & $\rightarrow$ & {\bf else} S \\
+     \end{tabular}
+
+\end{listanumerada}
+\end{document}

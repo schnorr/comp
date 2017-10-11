@@ -1,0 +1,107 @@
+\documentclass{compiladores}
+\begin{document}
+
+\begin{center}
+{\LARGE Lista de Exercícios \#02}\\
+{\bf Gramáticas Livres de Contexto e Transformações}
+\end{center}
+
+\begin{listanumerada}
+\item
+Quais os principais objetivos do tratamento de erros da análise sintática?
+
+\item 
+Explique as três principais estratégias de tratamento de erros. Diga
+uma vantagem de cada uma delas.
+
+\item
+O que é uma Gramática Livre de Contexto? O que a faz descrever a maioria das linguagens de programação?
+
+\item
+\label{execz}
+Considerando a gramática livre de contexto descrita pelo conjunto de
+produções $P = \{ S \rightarrow S\ S\ +\ |\ S\ S\ *\ |\ a\ \}$ e a
+cadeira de entrada $aa + a*$.
+\begin{lista}
+\item Dê uma derivação mais à esquerda para a cadeia.
+\item Dê uma derivação mais à direita para a cadeia.
+\item Dê uma árvore de derivação para a cadeia.
+\item A gramática é ambígua? Justifique a sua resposta.
+\item Descreva textualmente a linguagem gerada por essa gramática.
+\end{lista}
+
+\item
+Repita o exercício~\ref{execz} para cada uma das seguintes gramáticas e cadeias.
+\begin{lista}
+\item $S \rightarrow 0\ S\ 1\ |\ 0\ 1$ com as cadeias $000111$ e $01011001$. 
+\item $S \rightarrow +\ S\ S\ |\ *\ S\ S\ |\ a$ com as cadeiras $+*aaa$ e $+a*aa$.
+\item $S \rightarrow S\ (\ S\ )\ S\ |\ {\epsilon}$ com as cadeias $(()())$ e $((()())()())$.
+\item $S \rightarrow S + S\ |\ SS\ |\ (\ S\ )\ |\ S\ *\ |\ a$ com as cadeias $(a+a)*a$ e $(a*a)a$.
+\item $S \rightarrow (\ L\ )\ |\ a$ e $L \rightarrow L, S\ |\ S$ com a cadeia $((a,a),a,(a))$.
+\item $S \rightarrow aSbS | bSaS | {\epsilon}$ com a cadeia $aabbab$.
+\end{lista}
+
+\item
+\label{execy}
+Considerando a gramática definida pelo conjunto de produções $P = \{ E
+\rightarrow E - E\ |\ E + E\ |\ E * E\ |\ -E\ |\ +E\ |\ ( E )\ |\ id\ \}$,
+elabore as sequências de derivações mais à esquerda e mais à direita para
+as seguintes entradas:
+\begin{lista}
+\item $-(id+id*(id+id)*id)$
+\item $(id)+(id)-(id*id)+(id+id)$
+\item $((id*id)+(id+id))-(id)$
+\item $(id+id-(id*id+id))+((id*id)-(id*id*id))$
+\end{lista}
+
+\item
+Mostre que a gramática do exercício~\ref{execy} é ambígua utilizando
+qualquer entrada válida para a gramática.
+
+\item
+Sugira uma gramática alternativa aquela do exercício~\ref{execy} mas
+que não seja ambígua e que aceita exatamente a mesma linguagem gerada.
+
+\item
+\label{execx}
+A gramática $G = (N, NT, P, S)$, o conjunto de não-terminais $NT = \{
+S, L, E \}$, o conjunto de terminais $T = \{ begin, end, id, ;, :=,
+\vee, \neg \}$ e as produções $P = \{ S \rightarrow
+begin\ L\ end\ |\ id := E, L \rightarrow L\ ;\ S\ |\ S, E \rightarrow
+E \vee E\ |\ \neg E\ |\ id\ \}$ é ambígua? Suporte a sua resposta com
+argumentos.
+
+\item
+Define uma $G'$ não ambígua e equivalente à gramática $G$ do
+  exercício \ref{execx}.
+
+\item
+Elimine a recursividade à esquerda das produções de $G$ do
+  exercício \ref{execx}.
+
+\item
+Quais as duas principais estratégias de análise sintática? Diferencie-as conceitualmente e com um exemplo.
+
+\item
+A gramática a seguir define expressões regulares sob os símbolos $a$ e
+$b$, usando o operador $+$ no lugar do operador $|$ para a união, a
+fim de evitar o conflito com a barra vertical usada como um
+meta-símbolo nas gramáticas:
+\begin{tabular}{rclcrcl}
+$rexpr$ & $\rightarrow$ & $rexpr + rterm\ |\ rterm$ & \hfill & $rterm$ & $\rightarrow$ & $rterm rfactor\ |\ rfactor$ \\
+$rfactor$ & $\rightarrow$ & $rfactor *\ |\ rprimary$ & \hfill & $rprimary$ & $\rightarrow$ & $a\ |\ b$
+\end{tabular}
+\begin{lista}
+\item Fatore esta gramática à esquerda.
+\item A fatoração à esquerda torna a gramática adequada para a análise sintática descendente?
+\item Além da fatoração à esquerda, elimine a recursão à esquerda da gramática original.
+\item A gramática resultante é adequada para a análise sintática descendente?
+\end{lista}
+
+\item Considerando a gramática $S \rightarrow AB$, $A \rightarrow
+  c|{\epsilon}$ e $B \rightarrow cbB|ca$, aplique as estratégias
+  ascendente e descendente de análise para cada entrada: $ccbca$,
+  $ca$, $cbca$, $cca$, $cbcbcbcbca$ e $ccbcbca$.
+\end{listanumerada}
+\end{document}
+

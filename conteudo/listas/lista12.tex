@@ -1,0 +1,211 @@
+\documentclass{compiladores}
+\begin{document}
+
+\begin{center}
+{\LARGE Lista de Exercícios \#12}\\
+{\bf Geração de TAC, Checagem de Tipos, Expressões Booleanas, Controle de Fluxo}
+\end{center}
+
+\bigskip
+
+\begin{listanumerada}
+\item Determine os endereços relativos para os identificadores seguintes considerando o esquema de tradução abaixo:
+  \begin{lista}
+  \item \texttt{float x;}
+  \item \texttt{record \{ float x; float y; \} p;}
+  \item \texttt{record \{ int tag; float x; float y; \} q;}
+  \end{lista}
+
+  \medskip
+
+  \begin{tabular}{lll}
+    P  &  $\rightarrow$  &  M D                                                    \\
+    M  &  $\rightarrow$  &  $\epsilon$ \texttt { \{ offset = 0; \} }                           \\
+    D  &  $\rightarrow$  &  T id; \texttt { \{ top.put(id.lexeme, T.tipo, offset);   offset += T.width; \} } D$_1$         \\
+    D  &  $\rightarrow$  &  $\epsilon$                                             \\
+    T  &  $\rightarrow$  &  \textbf{record} `\{' X D `\}' Y                        \\
+    X  &  $\rightarrow$  &  $\epsilon$ \texttt{ \{ Env.push(top); top = new Env();   Stack.push(offset); offset = 0; \} }       \\
+    Y  &  $\rightarrow$  &  $\epsilon$ \texttt{ \{ T.tipo = record(top); T.width = offset; top = Env.pop(); offset = Stack.pop(); \}  }\\
+  \end{tabular}
+
+\item Utilize o esquema de tradução abaixo para construir diferentes tipos válidos:
+
+ \medskip
+
+  \begin{tabular}{lll}
+    T  &  $\rightarrow$  &  B \texttt{ \{ t = B.type; w = B.width; \} } C                        \\
+    B  &  $\rightarrow$  &  \textbf{int} \texttt{ \{ B.type = integer; B.width = 4; \} }         \\
+    B  &  $\rightarrow$  &  \textbf{float}  \texttt{ \{ B.type = float; B.width = 8; \} }        \\
+    C  &  $\rightarrow$  &  $\epsilon$ \texttt{ \{ C.type = t; C.width = w; \} }                 \\
+    C  &  $\rightarrow$  &  \textbf{[ num ]} $C_1$ \texttt{ \{ array(num.value, $C_1$.type); C.width = num.value * $C_1$.width; \} }\\
+  \end{tabular}
+
+\item O que é avaliação em curto-circuito? Quais suas vantagens e desvantagens?
+
+\item Qual a diferença entre avaliação numérica e por controle considerando expressões booleanas?
+
+\item \label{x} Considerando o esquema de tradução para avaliação numérica de
+  expressões booleanas abaixo, gere código intermediário as seguintes
+  expressões lógicas:
+  \begin{lista}
+  \item a $<$ b and not c $>$ d
+  \item a $<$ b or c $<$ d and e $<$ f
+  \item not a $<$ b or not c $>$ d and x $<$ q
+  \item not (a $<$ b or not c $>$ d) and x $<$ q
+
+  \end{lista}
+  \medskip
+  \begin{tabular}{llll}
+    E  &  $\rightarrow$  &  E$_1$ or E$_2$   &  \et{ \{ E.nome = temp(); }                                      \\
+    &                 &                   &  \et{ \ \ \ gera(E.nome = $E_1$.nome or $E_2$.nome \} }             \\
+    E  &  $\rightarrow$  &  E$_1$ and E$_2$  &  \et{ \{ E.nome = temp(); }                                         \\
+    &                 &                   &  \et{ \ \ \ gera(E.nome = $E_1$.nome and $E_2$.nome \} }            \\
+    E  &  $\rightarrow$  &  not E$_1$        &  \et{ \{ E.nome = temp(); }                                         \\
+    &                 &                   &  \et{ \ \ \ gera(E.nome = not $E_1$.nome \} }                       \\
+    E  &  $\rightarrow$  &  (E$_1$)          &  \et{ \{ E.nome = $E_1$.nome \} }                                   \\
+    E  &  $\rightarrow$  &  E$_1$ op E$_2$   &  \et{ \{ E.nome = temp(); }                                         \\
+    &                 &                   &  \et{ \ \ \ gera(if $E_1$.nome op.simb $E_2$.nome goto proxq+3); }  \\
+    &                 &                   &  \et{ \ \ \ gera(E.nome = 0); }                                     \\
+    &                 &                   &  \et{ \ \ \ gera(goto proxq+2); }                                   \\
+    &                 &                   &  \et{ \ \ \ gera(E.nome = 1); \} }                                  \\
+    E  &  $\rightarrow$  &  true             &  \et{ \{ E.nome = temp();  }                                        \\
+    &                 &                   &  \et{ \ \ gera(E.nome = 1); \} }                                    \\
+    E  &  $\rightarrow$  &  false            &  \et{ \{ E.nome = temp();  }                                        \\
+    &                 &                   &  \et{ \ \ gera(E.nome = 0); \} }                                    \\
+  \end{tabular}
+
+\item Avalie as expressões do exercício~\ref{x} considerando
+  o esquema para avaliação por fluxo de controle abaixo.
+
+  \medskip
+
+  \begin{tabular}{lll}
+    B  &  $\rightarrow$  &  \et{ \{ $B_1$.t=B.t; $B_1$.f=rot(); \} } B$_1$ or \et{ \{ $B_2$.t=B.t; $B_2$.f=B.f; \} } B$_2$   \\
+    &                 &  \et{ \{ B.code=$B_1$.code $\vert\vert$\ label($B_1$.f) $\vert\vert$\ $B_2$.code \} }                 \\
+    B  &  $\rightarrow$  &  \et{ \{ $B_1$.t=rot(); $B_1$.f=B.f; \} } B$_1$ and \et{ \{ $B_2$.t=B.t; $B_2$.f=B.f; \} } B$_2$  \\
+    &                 &  \et{ \{ B.code=$B_1$.code $\vert\vert$\ label($B_1$.t) $\vert\vert$\ $B_2$.code \} }                 \\
+    B  &  $\rightarrow$  &  not \et{ \{ $B_1$.t=B.f; $B_1$.f=B.t; \} } B$_1$ \et{ \{ B.code=$B_1$.code; \} }                 \\
+    B  &  $\rightarrow$  &  (B$_1$) \et{ \{ B.code=$B_1$.code; B.t=$B_1$.t; B.f=$B_1$.f; \} }                                \\
+    B  &  $\rightarrow$  &  true \et{ \{ B.code=gera(goto B.t); \} }                                                         \\
+    B  &  $\rightarrow$  &  false \et{ \{ B.code=gera(goto B.f); \} }                                                        \\
+    B  &  $\rightarrow$  &  E$_1$ relop E$_2$ \et{ \{ B.code=$E_1$.code $\vert\vert$ $E_2$.code $\vert\vert$ }               \\
+    &                 &  \et{ gera(if $E_1$.local relop.lexval $E_2$.local goto B.t) $\vert\vert$ }                       \\
+    &                 &  \et{ gera(goto B.f); \} }                                                                        \\
+  \end{tabular}
+\end{listanumerada}
+
+\bigskip
+
+Considerando o esquema de tradução abaixo:
+
+\medskip
+
+\begin{tabular}{lll}
+ S  &  $\rightarrow$  &  attr \et{ \{ S.code=gera(attr.lexval) $\vert\vert$ gera(goto S.next) \} }                        \\
+ S  &  $\rightarrow$  &  if  \et{ \{ B.t=rot(); B.f=S.next; \} }                                            \\
+    &                 &  (B) \et{ \{ $S_1$.next=S.next; \} }                                                \\
+    &                 &  S$_1$ \et{ \{ S.code=B.code $\vert\vert$ gera(B.t:) $\vert\vert$ $S_1$.code  \} }  \\
+ S  &  $\rightarrow$  &  if  \et{ \{ B.t=rot(); B.f=rot(); \} }                                                           \\
+    &                 &  (B) \et{ \{ $S_1$.next=S.next; \} }                                                              \\
+    &                 &  S$_1$ else \et{ \{ $S_2$.next=S.next; \} }                                                       \\
+    &                 &  S$_2$ \et{ \{ S.code=B.code $\vert\vert$ gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$ }       \\
+    &                 &  \et{ \ \ \ \ \ gera(B.f:); $\vert\vert$ $S_2$.code \} }                                          \\
+ S  &  $\rightarrow$  &  while \et{ \{ B.f=S.next; B.t=rot(); \} }                                                        \\
+    &                 &  (B) \et{ \{ S.begin=rot(); $S_1$.next=S.begin; \} }                                              \\
+    &                 &  S$_1$ \et{ \{ S.code=gera(S.begin:) $\vert\vert$ B.code $\vert\vert$ }                           \\
+    &                 &  \et{\ \ \ \ \ gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$ gera(goto S.begin)  \} }           \\
+ B  &  $\rightarrow$  &  \et{ \{ $B_1$.t=B.t; $B_1$.f=rot(); \} } B$_1$ or \et{ \{ $B_2$.t=B.t; $B_2$.f=B.f; \} } B$_2$   \\
+    &                 &  \et{ \{ B.code=$B_1$.code $\vert\vert$\ label($B_1$.f) $\vert\vert$\ $B_2$.code \} }                 \\
+ B  &  $\rightarrow$  &  \et{ \{ $B_1$.t=rot(); $B_1$.f=B.f; \} } B$_1$ and \et{ \{ $B_2$.t=B.t; $B_2$.f=B.f; \} } B$_2$  \\
+    &                 &  \et{ \{ B.code=$B_1$.code $\vert\vert$\ label($B_1$.t) $\vert\vert$\ $B_2$.code \} }                 \\
+ B  &  $\rightarrow$  &  not \et{ \{ $B_1$.t=B.f; $B_1$.f=B.t; \} } B$_1$ \et{ \{ B.code=$B_1$.code; \} }                 \\
+ B  &  $\rightarrow$  &  (B$_1$) \et{ \{ B.code=$B_1$.code; B.t=$B_1$.t; B.f=$B_1$.f; \} }                                \\
+ B  &  $\rightarrow$  &  true \et{ \{ B.code=gera(goto B.t); \} }                                                         \\
+ B  &  $\rightarrow$  &  false \et{ \{ B.code=gera(goto B.f); \} }                                                        \\
+ B  &  $\rightarrow$  &  E$_1$ relop E$_2$ \et{ \{ B.code=$E_1$.code $\vert\vert$ $E_2$.code $\vert\vert$ }               \\
+    &                 &  \et{ gera(if $E_1$.local relop.lexval $E_2$.local goto B.t) $\vert\vert$ }                       \\
+    &                 &  \et{ gera(goto B.f); \} }                                                                        \\
+\end{tabular}
+
+\medskip
+
+Gere o código TAC para os trechos de código seguintes:
+
+\begin{listanumerada}
+\item 
+  \begin{lstlisting}
+    if (not (a < b or not c > d) and x < q) {
+       x = z;
+    }
+  \end{lstlisting}
+
+\item 
+  \begin{lstlisting}
+    while (a < b && e != f) {
+      if (c < d){
+        x = y + z;
+      }else{
+        x = x - z;
+      }
+    }  
+  \end{lstlisting}
+
+\item
+  \begin{lstlisting}
+    if (x > a){
+      x = a;
+    }else{
+      x = q;
+    }
+  \end{lstlisting}
+\end{listanumerada}
+
+\medskip
+
+Altere o esquema de tradução para fluxo de controle acima e adicione
+regras de tradução para construções do tipo:
+\begin{listanumerada}
+\item 
+  \begin{lstlisting}
+    if (not (a < b or not c > d) and x < q) {
+      x = z;
+    }else if (x > b){
+      x = k;
+    }else if (a > e){
+      x = q;
+    }
+  \end{lstlisting}
+
+\item
+  \begin{lstlisting}
+    if (x > a){
+      x = a;
+    }else if (x > b){
+      x = k;
+    }else{
+      x = q;
+    }
+  \end{lstlisting}
+
+\item 
+  \begin{lstlisting}
+    for (i = x; x < a; s = a){
+      if (x > a){
+        x = a;
+      }
+    }
+  \end{lstlisting}
+
+\item 
+  \begin{lstlisting}
+    switch (a){
+      case d: x = c;
+      case b: x = b;
+      default: x = c;
+    }
+  \end{lstlisting}
+\end{listanumerada}
+
+Traduza para TAC o código acima utilizando o esquema de tradução modificado.
+
+\end{document}

@@ -1,0 +1,26 @@
+#
+# AFD
+#
+digraph {
+  rankdir=LR;
+  margin=0;
+  compound=true;
+
+  start [shape=point];
+  node [shape=circle];
+  0;
+  1;
+  2;
+  node [shape=doublecircle];
+  3;
+
+  start -> 0;
+  0 -> 0 [label="b"];
+  0 -> 1 [label="a"];
+  1 -> 1 [label="a"];
+  1 -> 2 [label="b"];
+  2 -> 1 [label="a"];
+  2 -> 3 [label="b"];
+  3 -> 1 [label="a"];
+  3 -> 0 [label="b"];
+}

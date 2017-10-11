@@ -1,0 +1,166 @@
+\documentclass{compiladores}
+\begin{document}
+
+\begin{center}
+{\LARGE Lista de Exercícios \#06}\\
+{\bf LR(0) e SLR(1)}
+\end{center}
+
+\begin{listanumerada}
+\item O que é um item LR(0)?
+\item Qual o significa do ponto -- $\bullet$ -- em um item LR(0)?
+\item O que distingue os itens de base dos itens derivados de um conjunto de itens LR(0)?
+\item O que é a ``Coleção Canônica de Conjuntos''?
+\item \label{x} Considerando a gramática: \\
+     \begin{tabular}{rcl}
+     $Objetivo$ & $\rightarrow$ & E \\
+     E & $\rightarrow$ & E + T | T \\
+     T & $\rightarrow$ & T $*$ F | F \\
+     F & $\rightarrow$ & ( E ) | id
+     \end{tabular}
+     \begin{lista}
+       \item Qual o significado do item $Objetivo \rightarrow \bullet E$ ?
+       \item Qual o significado do item $Objetivo \rightarrow E \bullet$ ?
+       \item Qual o significado do item $E \rightarrow E \bullet + T$ ?
+       \item Qual o significado do item $E \rightarrow E + \bullet T$ ?
+       \item Qual o significado do item $E \rightarrow E + T \bullet$ ?
+       \item O item $E \rightarrow E + \bullet T$ pode indicar o mesmo
+         estado que os itens $T \rightarrow \bullet (E)$ e $T
+         \rightarrow \bullet id$ ? Justifique.
+     \end{lista}
+
+\item \label{xx} Considerando a gramática do exercício~\ref{x}, calcule o
+  fechamento dos seguintes conjuntos de itens.
+  \begin{lista}
+    \item A = \{ $Objetivo \rightarrow \bullet E$ \}
+    \item B = \{ $E \rightarrow \bullet E + T$ \}
+    \item C = \{ $E \rightarrow E + \bullet T$ \}
+    \item D = \{ $T \rightarrow \bullet T * F$ \}
+    \item E = \{ $T \rightarrow \bullet T * F$; $E \rightarrow E + \bullet T$ \}
+    \item F = \{ $F \rightarrow (\bullet E)$ \}
+    \item G = \{ $F \rightarrow (E \bullet)$; $E \rightarrow E \bullet + T$ \}
+    \item H = \{ $Objetivo \rightarrow E \bullet$; $E \rightarrow E \bullet + T$ \}
+  \end{lista}
+
+\item \label{y} Considerando a gramática do exercício~\ref{x}, calcule
+  o fechamento do conjunto inicial.  Note que a gramática já está
+  estendida, pela regra $Objetivo \rightarrow E$. Isso implica que o
+  conjunto inicial é o seguinte $I_0 = \{ Objetivo \rightarrow \bullet
+  E \}$.
+
+\item Considerando a gramática do exercício~\ref{x}, e os conjuntos de
+  itens do exercício~\ref{xx}, calcule a função de transição --
+  \texttt{tran} -- desses conjuntos como especificado abaixo.
+  \begin{lista}
+    \item Para cada não-terminal {\bf NT} da gramática, calcule \texttt{tran}(A, {\bf NT}) \\
+      Exemplos: \texttt{tran}(A, '\texttt{E}'), \texttt{tran}(A, '\texttt{F}'), \texttt{tran}(A, '\texttt{T}')
+    \item Para cada terminal {\bf t} da gramática, calcule \texttt{tran}(A, {\bf t}) \\
+      Exemplos: \texttt{tran}(A, '\texttt{*}'), \texttt{tran}(A, '\texttt{(}'),  \texttt{tran}(A, '\texttt{id}')
+    \item \texttt{tran}(G, '\texttt{+}') e \texttt{tran}(G, '\texttt{)}')
+    \item \texttt{tran}(F, '\texttt{(}')
+    \item \texttt{tran}(H, '\texttt{\$}') e \texttt{tran}(H, '\texttt{+}')
+    \item \texttt{tran}(C, '\texttt{T}'), \texttt{tran}(C, '\texttt{(}'), \texttt{tran}(C, '\texttt{id}'), \texttt{tran}(C, '\texttt{F}')
+  \end{lista}
+
+\item Considerando a gramática do exercício~\ref{x} e a solução do
+  exercício~\ref{y}, calcule a coleção canônica de conjuntos
+  utilizando a função de transição (com os não-terminais e terminais
+  da gramática) para criar novos conjuntos.
+
+\item \label{br} A linguagem do barulho de um relógio (BR) é representada pela
+  seguinte gramática: \\
+     \begin{tabular}{rcl}
+     {\bf \emph{Objetivo}} & $\rightarrow$ & $BarulhoRelogio$ \\
+     $BarulhoRelogio$ & $\rightarrow$ & $BarulhoRelogio$ \texttt{tique taque} \\
+     & | & \texttt{tique taque} \\
+     \end{tabular} \\
+     \begin{lista}
+       \item Quais são os items LR(0) da gramática BR?
+       \item Quais são os conjuntos First de BR?
+       \item Construa a coleção canônica de conjuntos.
+     \end{lista}
+
+\item \label{g1} Construa a coleção canônica de conjuntos para a seguinte gramática: \\
+  \begin{tabular}{rcl}
+    {\bf \emph{Início}} & $\rightarrow$ & $S$ \\
+    $S$ & $\rightarrow$ & $Aa$ \\
+    $A$ & $\rightarrow$ & $BC\ |\ BCf$ \\
+    $B$ & $\rightarrow$ & $b$ \\
+    $C$ & $\rightarrow$ & $c$ \\
+  \end{tabular} \\
+
+\item \label{g2} Construa a coleção canônica de conjuntos para a seguinte gramática: \\
+  \begin{tabular}{rcl}
+    {\bf \emph{Início}} & $\rightarrow$ & $A\ |\ B$\\
+    $A$ & $\rightarrow$ & $( A )\ |\ a$ \\
+    $B$ & $\rightarrow$ & $( B )\ |\ b$ \\
+  \end{tabular} \\
+
+\item \label{g3} Construa a coleção canônica de conjuntos para a seguinte gramática: \\
+  \begin{tabular}{rcl}
+    {\bf \emph{Objetivo}} & $\rightarrow$ & $Lista$ \\
+    $Lista$ & $\rightarrow$ & $Lista\ Par\ |\ Par$ \\ 
+    $Par$ & $\rightarrow$ & $( Par )\ |\ (\ )$ \\
+  \end{tabular} \\
+
+\item \label{br-automato} Construa um autômato finito determinista
+  considerando o resultado do exercício~\ref{br}. Lembre-se que cada
+  conjunto da coleção construída se transforma em um estado do
+  autômato, e os resultados da aplicação da função de transição ditam
+  as transições do autômato.
+
+\item \label{g1-automato}Repita o exercício~\ref{br-automato} para o
+  resultado do exercício~\ref{g1}.
+\item \label{g2-automato}Repita o exercício~\ref{br-automato} para o
+  resultado do exercício~\ref{g2}.
+\item \label{g3-automato}Repita o exercício~\ref{br-automato} para o
+  resultado do exercício~\ref{g3}.
+
+\item Construa a tabela SLR(1) baseado no resultado do exercício~\ref{br-automato}
+  \begin{lista}
+    \item Seguindo a tabela, faça a análise da entrada \texttt{tique taque tique taque tique taque}
+  \end{lista}
+\item Construa a tabela SLR(1) baseado no resultado do exercício~\ref{g1-automato}
+  \begin{lista}
+    \item Seguindo a tabela, faça a análise da entrada \texttt{bca} e \texttt{bcfa}
+  \end{lista}
+\item Construa a tabela SLR(1) baseado no resultado do exercício~\ref{g2-automato}
+  \begin{lista}
+    \item Seguindo a tabela, faça a análise da entrada  \texttt{(((a)))}, de \texttt{((b))}, e de \texttt{b}
+  \end{lista}
+\item Construa a tabela SLR(1) baseado no resultado do exercício~\ref{g3-automato} e, seguindo esta tabela, faça a análise de:
+  \begin{lista}
+    \item \texttt{(())()}
+    \item \texttt{(())(())()}
+    \item \texttt{((()())())()(()())}
+  \end{lista}
+
+\item Construa uma tabela LR(0) e uma tabela SLR(1) para a seguinte gramática \\
+     \begin{tabular}{rcl}
+     S & $\rightarrow$ & a \textbf( L \textbf)\ |\ \textbf{a} \\
+     L & $\rightarrow$ & S \textbf, L \ |\ S \\
+     \end{tabular} \\
+     Mostre a análise da entrada {\bf a(a,a)} considerando cada tabela. Há diferença?
+
+\item Construa uma tabela LR(0) e uma tabela SLR(1) para a gramática
+  $S \rightarrow iSeS\ |\ iS\ | a$. 
+  \begin{lista}
+    \item Quais são as diferenças, caso existam, entre as duas tabelas?
+    \item Mostre os passos de análise considerando cada tabela e as entradas: \\
+      \texttt{iaea}, \texttt{iaia}, \texttt{ iaiaeaea}, \texttt{ iaiaiaeaea}
+  \end{lista}
+
+\item Esta gramática é ambígua \\
+     \begin{tabular}{rcl}
+     S & $\rightarrow$ & AS | b \\
+     A & $\rightarrow$ & SA | a
+     \end{tabular}
+     \begin{lista}
+       \item Construa a coleção canônica de conjuntos de itens LR(0) para esta gramática. 
+       \item Baseado na coleção de conjuntos, desenhe o autômato com seus estados e transições.
+       \item O autômato desenhado é determinista ou não-determinista?
+       \item Tente construir a tabela LR(0) baseado no autômato desenhado.
+       \item Certamente existem conflitos no momento da criação da tabela. Quais são eles?
+     \end{lista}
+\end{listanumerada}
+\end{document}

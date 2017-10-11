@@ -1,0 +1,82 @@
+\documentclass{compiladores}
+\begin{document}
+
+
+\begin{center}
+{\LARGE Lista de Exercícios \#07}\\
+{\bf LR(1)}
+\end{center}
+
+\bigskip
+
+Resolva as eventuais ambiguidades das gramáticas abaixo no momento da
+construção das tabelas LR(1).
+
+Justifique as decisões tomadas para a resolução dessas ambiguidades.
+
+\bigskip
+
+\begin{listanumerada}
+\item \label{x} Construa a tabela LR(1) da gramática abaixo.
+ 
+    \begin{tabular}{rcl}
+     E & $\rightarrow$ & E + T $\vert$ T \\
+     T & $\rightarrow$ & T $*$ F $\vert$ F \\
+     F & $\rightarrow$ & ( E ) $\vert$ id
+     \end{tabular}
+
+\item \label{br} Calcule a tabela LR(1) para a linguagem do barulho de um
+  relógio (BR), representada pela seguinte gramática:
+
+     \begin{tabular}{rcl}
+     $B$ & $\rightarrow$ & $B$ \texttt{tique taque} \\
+     & | & \texttt{tique taque} \\
+     \end{tabular} 
+
+\item \label{g1} Calcule a tabela LR(1) para a seguinte gramática:
+
+  \begin{tabular}{rcl}
+    $S$ & $\rightarrow$ & $Aa$ \\
+    $A$ & $\rightarrow$ & $BC\ |\ BCf$ \\
+    $B$ & $\rightarrow$ & $b$ \\
+    $C$ & $\rightarrow$ & $c$ \\
+  \end{tabular} \\
+
+\item \label{g2} Construa a tabela LR(1) para a seguinte gramática:
+
+  \begin{tabular}{rcl}
+    $I$ & $\rightarrow$ & $A\ |\ B$ \\
+    $A$ & $\rightarrow$ & $( A )\ |\ a$ \\
+    $B$ & $\rightarrow$ & $( B )\ |\ b$ \\
+  \end{tabular} \\
+
+\item \label{g3} Construa a tabela LR(1) para a seguinte gramática:
+
+  \begin{tabular}{rcl}
+    $Lista$ & $\rightarrow$ & $Lista\ Par\ |\ Par$ \\ 
+    $Par$ & $\rightarrow$ & $( Par )\ |\ (\ )$ \\
+  \end{tabular} \\
+
+\item Construa a tabela LR(1) para a seguinte gramática:
+
+     \begin{tabular}{rcl}
+     S & $\rightarrow$ & a \textbf( L \textbf)\ $\vert$\ \textbf{a} \\
+     L & $\rightarrow$ & S \textbf, L \ $\vert$\ S \\
+     \end{tabular} \\
+
+\item Construa a tabela LR(1) para a seguinte gramática: 
+
+  \begin{tabular}{rcl}
+    S & $\rightarrow$ & iSeS \\
+    S & $\rightarrow$ & iS \\
+    S & $\rightarrow$ & a
+  \end{tabular}
+
+\item Construa a tabela LR(1) para a seguinte gramática:
+
+     \begin{tabular}{rcl}
+     S & $\rightarrow$ & AS $\vert$ b \\
+     A & $\rightarrow$ & SA $\vert$ a
+     \end{tabular}
+\end{listanumerada}
+\end{document}
