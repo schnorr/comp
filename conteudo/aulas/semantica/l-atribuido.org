@@ -46,9 +46,11 @@ End;
 \pause Um esquema em *L-Atribuído*
   | S | \rightarrow | { A_1.h = 1; } A_1 { A_2.h = 1; } A_2  |
   | A | \rightarrow | a { print(A.h) }                        |
-* Recursividade à Esquerda
-Analisadores descendentes
-+ Não admitem recursividade à esquerda
+* Recursividade à Esquerda (Exemplo Prático)
+#+BEGIN_CENTER
+Analisadores descendentes não admitem recursividade à esquerda
+#+END_CENTER
+
 Supondo o esquema de tradução seguinte
 + Entrada: *3 4 5*
   | A | \rightarrow | A_1 *digit* | { A.val = A_1.val + digit.lexval } |
@@ -58,7 +60,7 @@ Supondo o esquema de tradução seguinte
   | X | \rightarrow | digit { X_1.h = X.h + digit.lexval } X_1 { X.s = X_1.s } |
   | X | \rightarrow | \epsilon { X.s = X.h }                                     |
 \pause Como fica a implementação descendente recursiva?
-* Removendo Recursão à Esquerda
+* Removendo Recursão à Esquerda (Caso Geral)
 Considerando o esquema de tradução
   | A | \rightarrow | A_1 Y | { A.a = \textbf{g}(A_1.a, Y.y) } |
   | A | \rightarrow | X     | { A.a = \textbf{f}(X.x) } |
@@ -97,7 +99,7 @@ Comportamento da Pilha e Entrada
 |   | $  { A.val = X.s }  { X.s = X_1.s }  { X_1.s = X_2.s }                                         |       $ |
 |   | $  { A.val = X.s }  { X.s = X_1.s }  { X_1.s = X_2.s } { X_2.s = X_2.h }                         |       $ |
 |   |                                                                                             |         |
-* Ascendente?
+* Ascendente?                                                      :noexport:
 Uma análise *ascendente* em L-Atribuído? Possível?
 
 \pause  Problema
