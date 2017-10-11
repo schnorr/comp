@@ -103,12 +103,13 @@ Consideramos o esquema de tradução dirigida pela sintaxe que traduz
 uma linguagem com terminais a, b, c e d em uma linguagem cujos
 terminais são 1, 2, 3, 4, 5 e 6.
 
-| S | \rightarrow | AB | { print "1" } |
-| S | \rightarrow | AS | { print "2" } |
-| A | \rightarrow | a  | { print "3" } |
-| B | \rightarrow | bC | { print "4" } |
-| B | \rightarrow | dB | { print "5" } |
-| C | \rightarrow | c  | { print "6" } |
+| /   | >  |           |
+| S \rightarrow | AB | print "1" |
+| S \rightarrow | AS | print "2" |
+| A \rightarrow | a  | print "3" |
+| B \rightarrow | bC | print "4" |
+| B \rightarrow | dB | print "5" |
+| C \rightarrow | c  | print "6" |
 
 Usando um _analisador ascendente_ que executa as ações semânticas
 imediatamente após reduzir a regra correspondente, diga o resultado da
@@ -123,12 +124,13 @@ Consideramos o esquema de tradução dirigida pela sintaxe que traduz
 uma linguagem com terminais a, b, c e d em uma representação
 hierárquica (árvore) em memória.
 
-| S \rightarrow | AB | =S.n = new node (A.n, B.n);= |
-| S \rightarrow | AS_1 | =S.n = new node (A.n,= S_{1} =.n);=  |
-| A \rightarrow | a  | =A.n = new node ("a");=      |
-| B \rightarrow | bC | =B.n = new node ("b", C.n);= |
-| C \rightarrow | c  | =C.n = new node ("c");=      |
-| B \rightarrow | dB | =B.n = new node ("d", B.n);= |
+| /   | >   |                              |
+| S \rightarrow | AB  | =S.n = new node (A.n, B.n);=   |
+| S \rightarrow | AS_1 | =S.n = new node (A.n,= S_{1} =.n);= |
+| A \rightarrow | a   | =A.n = new node ("a");=        |
+| B \rightarrow | bC  | =B.n = new node ("b", C.n);=   |
+| C \rightarrow | c   | =C.n = new node ("c");=        |
+| B \rightarrow | dB  | =B.n = new node ("d", B.n);=   |
 
 Usando um _analisador ascendente_ que executa as ações semânticas
 imediatamente após reduzir a regra correspondente, diga o resultado da
@@ -136,3 +138,15 @@ tradução da entrada =aadbc=?
 
 1. Construa a árvore de derivação
 2. Execute as reduções na ordem correta
+* Exercício 3: definição do valor inteiro
+
+O esquema abaixo reconhece uma sequência de dígitos e calcula a soma
+deles em um atributo =val= que fica, no final do reconhecimento,
+definido na raiz.
+
+| /   | >        |                               |
+| A \rightarrow | A_1 digit | A.val = A_{1}.val + digit.lexval |
+| A \rightarrow | digit    | A.val = digit.lexval          |
+
+Modifique o esquema de forma que suas ações calculem o valor inteiro
+correspondente àquela sequência de dígitos.
