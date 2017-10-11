@@ -32,7 +32,7 @@ Focado em analisadores *descendentes*
 + Atributos herdados são os *argumentos* da função
 + Atributos sintetizados fazem parte do *retorno* da função
 
-*  Método
+* Método                                                           :noexport:
 #+begin_src Pascal
 Procedure dfvisit (n : node);
 Begin
