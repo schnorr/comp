@@ -1,0 +1,227 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador: Etapa 4 para Análise Semântica
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+#+Language: pt-br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+A quarta etapa do trabalho de implementação de um compilador para a
+*Linguagem \K* consiste em verificações semânticas durante o processo de
+compilação. Estas verificações fazem parte do sistema de tipos da
+Linguagem \K, que tem como característica a existência de coerção
+entre os tipos inteiros, flutuantes e booleanos de acordo com um
+conjunto de regras detalhado na Seção \ref{coercao} deste documento.
+Toda a verificação de tipos é feita de forma estática, em tempo de
+compilação, e deve considerar o nível de *escopo aninhado*. Finalmente,
+todos os nós da Árvore Sintática Abstrata (AST), gerada na etapa
+anterior, devem ter obrigatoriamente um campo que indica o seu tipo. O
+tipo de um determinado nó da AST pode, em algumas situações, não ser
+definido diretamente. Nestes casos, seu tipo deve ser inferido de
+acordo com as regras de inferência da linguagem (apresentadas na
+Seção \ref{coercao}). Uma série de testes de coerência comportamental
+das construções sintáticas reconhecidas e representadas na AST devem
+ser feitas nesta etapa. A Seção \ref{funcionalidades}, a seguir,
+apresenta as funcionalidades necessárias que devem ser apresentadas
+nesta etapa. A Seção~\ref{retorno} apresenta os códigos de retorno
+para os possíveis erros semânticos encontrados.
+
+
+* Funcionalidades Necessárias
+\label{funcionalidades}
+
+** Escopo aninhado na Linguagem \K
+
+A gramática da linguagem permite que variáveis locais possam ser
+declaradas dentro de um bloco de código (delimitado por abre-fecha
+chaves). Uma árvore de tabela de símbolos deve ser criada durante o
+processo de análise sintática para permitir a verificação de escopo
+aninhado, começando pelo escopo global, passando pelo escopo das
+funções e enfim o escopo dos blocos (que podem conter outros blocos
+recursivamente). O encontro do tipo de um identificador deve acontecer
+através das regras de *escopo estático*, da seguinte forma: primeiro no
+escopo onde o identificador foi encontrado; em seguida, nos escopos
+acima considerando a árvore; em seguida, na função que contém a árvore
+de blocos; e, por fim, no escopo global. Por exemplo, considerando o
+código abaixo, o tipo da variável =var= deve ser procurado inicialmente
+no Bloco C, em seguida no Bloco A, em seguida na função f e por fim,
+caso ainda não foi encontrado, no escopo global. *Dica*: A forma mais
+simples de implementar escopo aninhado é através de uma pilha.
+
+#+BEGIN_EXAMPLE
+//Escopo global
+int f ()
+//Escopo da função
+{
+   {
+      //Bloco A
+      {
+         //Bloco B
+      };
+      {
+         //Bloco C
+         var = 10;
+      }
+   }
+}
+#+END_EXAMPLE
+
+** Verificação de declarações
+
+Todos os identificadores devem ter sido declarados no momento do seu
+uso, seja como variável, como vetor ou como função. Essa verificação
+de declaração prévia deve considerar o escopo aninhado da
+linguagem. Todas as entradas na tabela de símbolos devem ter um tipo
+associado conforme a declaração, verificando-se se não houve dupla
+declaração ou se o símbolo não foi declarado. Variáveis com o mesmo
+nome podem existir em escopos diferentes.
+
+** Uso correto de identificadores
+
+O uso de identificadores deve ser compatível com sua declaração e com
+seu tipo. Variáveis somente podem ser usadas sem indexação, vetores
+somente podem ser utilizados com indexação, e funções apenas devem ser
+usadas como chamada de função, isto é, seguidas da lista de argumentos
+entre parênteses.
+
+** Tipos e tamanho dos dados
+
+Uma declaração de variável deve permitir ao compilador definir o tipo
+e o tamanho (descrito na Seção \ref{coercao}) da variável na sua
+entrada na tabela de símbolos. Com o auxílio dessa informação, quando
+necessário, os tipos de dados corretos devem ser inferidos onde forem
+usados, em expressões aritméticas, relacionais, lógicas, ou para
+índices de vetores. Isso implica que todos os nós da AST são
+candidatos a terem um tipo definido de acordo com as regras de
+inferência de tipos. Esse processo de inferência está descrito na
+Seção \ref{coercao}.
+
+** Anotação da coerção de tipos
+Os tipos inteiro, flutuante e booleanos podem sofrer coerção de acordo
+com o conjunto de regras apresentados na Seção~\ref{coercao} deste
+documento. A solução desta etapa deve marcar todos os nós da AST onde
+uma coerção deverá acontecer no momento da geração de código. Note que
+a coerção em si ainda não deve acontecer, apenas deve-se detectar e
+anotar na AST qual coerção deverá acontecer.
+
+** Argumentos e parâmetros
+
+A lista de argumentos fornecidos em uma chamada de função deve ser
+verificada contra a lista de parâmetros formais na declaração da mesma
+função. Cada chamada de função deve prover um argumento para cada
+parâmetro, e ter o seu tipo compatível. A compatibilidade de tipos da
+linguagem é apresentada na Seção \ref{coercao} deste documento.
+
+** Verificação de tipos em comandos
+\label{tipos-comandos}
+
+Todos os comandos simples da linguagem deve ser verificados
+semanticamente.  O comando \texttt{input} somente aceita
+identificadores de qualquer tipo como parâmetro; o comando
+\texttt{output} aceita um literal \texttt{string} ou uma expressão
+aritmética a ser impressa. O comando de retorno \texttt{return} deve
+ser seguido obrigatoriamente por uma expressão cujo tipo é compatível
+com o tipo de retorno da função. Prevalece o tipo do identificador em
+um comando de atribuição.
+
+* Sistema de tipos da Linguagem \K
+\label{coercao}
+
+** Coerção
+As regras de coerção de tipos da Linguagem \K são as seguintes:
+\begin{itemize}
+\item Não há coerção para os tipos \texttt{string} e \texttt{char}
+\item Um tipo \texttt{int} pode ser convertido implicitamente para \texttt{float} e para \texttt{bool}
+\item Um tipo \texttt{bool} pode ser convertido implicitamente para \texttt{float} e para \texttt{int}
+\item Um tipo \texttt{float} pode ser convertido implicitamente para \texttt{int} e para \texttt{bool}, perdendo precisão
+\end{itemize}
+
+** Inferência
+As regras de inferência de tipos da Linguagem \K são as seguintes:
+\begin{multicols}{2}
+\begin{itemize}
+\item A partir de \texttt{int} e \texttt{int}, infere-se \texttt{int}
+\item A partir de \texttt{float} e \texttt{float}, infere-se \texttt{float}
+\item A partir de \texttt{bool} e \texttt{bool}, infere-se \texttt{bool}
+\item A partir de \texttt{float} e \texttt{int}, infere-se \texttt{float}
+\item A partir de \texttt{bool} e \texttt{int}, infere-se \texttt{int}
+\item A partir de \texttt{bool} e \texttt{float}, infere-se \texttt{float}
+\end{itemize}
+\end{multicols}
+
+** Tamanho
+O tamanho dos tipos da linguagem \K é definido da seguinte forma:
+#+BEGIN_LaTeX
+\begin{multicols}{2}
+\begin{itemize}
+\item Um \texttt{char} ocupa 1 byte
+\item Um \texttt{string} ocupa 1 byte para cada caractere
+\item Um \texttt{int} ocupa 4 bytes
+\item Um \texttt{float} ocupa 8 bytes
+\item Um \texttt{bool} ocupa 1 byte
+\item Um vetor ocupa o seu tamanho vezes o seu tipo
+\end{itemize}
+\end{multicols}
+#+END_LaTeX
+
+** Código de tipos
+\label{codigo-tipos}
+Para simplificar a codificação do compilador, sugere-se a utilização
+das seguintes definições:
+#+BEGIN_EXAMPLE
+#define IKS_INT        1
+#define IKS_FLOAT      2
+#define IKS_CHAR       3
+#define IKS_STRING     4
+#define IKS_BOOL       5
+#+END_EXAMPLE
+
+* Códigos de retorno para erros semânticos
+\label{retorno}
+
+A lista abaixo apresenta os códigos de retorno que devem ser
+utilizados quando o compilador encontrar erros semânticos. O programa
+deve lançar uma chamada exit utilizando esses códigos imediamente após
+a impressão da linha que descreve o erro encontrado. Outros erros
+podem ser criados pelo grupo, bastante para tal adicioná-los ao final
+desta lista, informando o professor da existência deles no momento da
+submissão.
+
+#+BEGIN_EXAMPLE
+#define IKS_SUCCESS            0 //caso não houver nenhum tipo de erro
+
+/* Verificação de declarações */
+#define IKS_ERROR_UNDECLARED  1 //identificador não declarado
+#define IKS_ERROR_DECLARED    2 //identificador já declarado
+
+/* Uso correto de identificadores */
+#define IKS_ERROR_VARIABLE    3 //identificador deve ser utilizado como variável
+#define IKS_ERROR_VECTOR      4 //identificador deve ser utilizado como vetor
+#define IKS_ERROR_FUNCTION    5 //identificador deve ser utilizado como função
+
+/* Tipos e tamanho de dados */
+#define IKS_ERROR_WRONG_TYPE  6 //tipos incompatíveis
+#define IKS_ERROR_STRING_TO_X 7 //coerção impossível do tipo string
+#define IKS_ERROR_CHAR_TO_X   8 //coerção impossível do tipo char
+
+/* Argumentos e parâmetros */
+#define IKS_ERROR_MISSING_ARGS    9  //faltam argumentos 
+#define IKS_ERROR_EXCESS_ARGS     10 //sobram argumentos 
+#define IKS_ERROR_WRONG_TYPE_ARGS 11 //argumentos incompatíveis
+
+/* Verificação de tipos em comandos */
+#define IKS_ERROR_WRONG_PAR_INPUT  12 //parâmetro não é identificador
+#define IKS_ERROR_WRONG_PAR_OUTPUT 13 //parâmetro não é literal string ou expressão
+#define IKS_ERROR_WRONG_PAR_RETURN 14 //parâmetro não é expressão compatível com tipo do retorno
+#+END_EXAMPLE
+
