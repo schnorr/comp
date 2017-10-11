@@ -46,7 +46,7 @@ End;
 \pause Um esquema em *L-Atribuído*
   | S | \rightarrow | { A_1.h = 1; } A_1 { A_2.h = 1; } A_2  |
   | A | \rightarrow | a { print(A.h) }                        |
-*  Recursividade à Esquerda
+* Recursividade à Esquerda
 Analisadores descendentes
 + Não admitem recursividade à esquerda
 Supondo o esquema de tradução seguinte
@@ -58,7 +58,7 @@ Supondo o esquema de tradução seguinte
   | X | \rightarrow | digit { X_1.h = X.h + digit.lexval } X_1 { X.s = X_1.s } |
   | X | \rightarrow | \epsilon { X.s = X.h }                                     |
 \pause Como fica a implementação descendente recursiva?
-*  Removendo Recursão à Esquerda
+* Removendo Recursão à Esquerda
 Considerando o esquema de tradução
   | A | \rightarrow | A_1 Y | { A.a = \textbf{g}(A_1.a, Y.y) } |
   | A | \rightarrow | X     | { A.a = \textbf{f}(X.x) } |
@@ -71,13 +71,13 @@ Com ações semânticas
   | R | \rightarrow | Y { R_1.h = \textbf{g}(R.h, Y.y) } R_1 { R.s = R_1.s } |
   | R | \rightarrow | \epsilon { R.s = R.h }                          |
 + R contém os atributos R.s e R.h
-*  Utilizando a *Pilha*
+* Utilizando a *Pilha*
 Considerando o esquema de tradução
   | A | \rightarrow | digit { X.h = digit.lexval } X { A.val = X.s }           |
   | X | \rightarrow | digit { X_1.h = X.h + digit.lexval } X_1 { X.s = X_1.s } |
   | X | \rightarrow | \epsilon { X.s = X.h }                                     |
 Entrada *3 4 5* e uma Análise Preditiva Tabular com pilha
-*  Utilizando a *Pilha*
+* Utilizando a *Pilha*
 Comportamento da Pilha e Entrada
 \tiny
 |   | Pilha                                                                                       | Entrada |
@@ -97,7 +97,7 @@ Comportamento da Pilha e Entrada
 |   | $  { A.val = X.s }  { X.s = X_1.s }  { X_1.s = X_2.s }                                         |       $ |
 |   | $  { A.val = X.s }  { X.s = X_1.s }  { X_1.s = X_2.s } { X_2.s = X_2.h }                         |       $ |
 |   |                                                                                             |         |
-*  Ascendente?
+* Ascendente?
 Uma análise *ascendente* em L-Atribuído? Possível?
 
 \pause  Problema
