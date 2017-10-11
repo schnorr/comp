@@ -16,42 +16,49 @@
 #+LATEX_HEADER: \input{../org-babel.tex}
 
 * Introdução
-Focado em analisadores *ascendentes*
-+ Somente atributos sintetizados
 
-Implementação
-+ Atributos são mantidos na pilha de análise
-+ No momento da redução 
-    + Atributos sintetizados da cabeça são calculados a partir dos
-      atributos que estão na pilha (do corpo da produção)
+#+BEGIN_CENTER
+Especialmente para analisadores *ascendentes*, _com atributos sintetizados_
+#+END_CENTER
 
 #+latex: \vfill
 
-\pause Considerando o esquema de tradução
-  | A | \rightarrow | X Y Z | { A.a = f(X.x, Y.y, Z.z); } |
+Uma implementação possível
++ Atributos são mantidos na pilha de análise
++ No momento da redução 
+    + Atributos sintetizados para aa cabeça da produção são calculados
+      a partir dos atributos que estão na pilha, o corpo da produção
 
-\pause Pilha
-  | Análise | Atributo |                 |
-  |---------+----------+-----------------|
-  | Z       | Z.z      | \leftarrow Topo |
-  | Y       | Y.y      |                 |
-  | X       | X.x      |                 |
-  | ...     | ...      |                 |
-* Exemplo
-Esquema de tradução de uma calculadora
-  \scriptsize
-  | L | \rightarrow | E *n*    | L.val = E.val           |
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+Considerando o esquema de tradução
+#+END_CENTER
+| A \rightarrow XYZ | { A.a = f(X.x, Y.y, Z.z); } |
+
+#+latex: \pause
+
+| Topo \rightarrow | Z        | Z.z       |
+|        | Y        | Y.y       |
+|        | X        | X.x       |
+|        | ...      | ...       |
+| /      | <c>      | <c>       |
+|        | *Símbolos* | *Atributos* |
+
+* Esquema de tradução de uma calculadora
+#+latex: \scriptsize
+  | L | \rightarrow | E      | L.val = E.val            |
   | E | \rightarrow | E_1 + T | E.val = $E_1$.val + T.val |
-  | E | \rightarrow | T      | E.val = T.val           |
+  | E | \rightarrow | T      | E.val = T.val            |
   | T | \rightarrow | T_1 * F | T.val = $T_1$.val * F.val |
   | T | \rightarrow | F      | T.val = F.val            |
-  | F | \rightarrow | ( E )  | F.val = E.val           |
-  | F | \rightarrow | *digit*  | F.val = digit.lexval    |
-\normalsize
+  | F | \rightarrow | ( E )  | F.val = E.val            |
+  | F | \rightarrow | *digit*  | F.val = digit.lexval     |
+#+latex: \normalsize\pause
 
-\pause Possível implementação da calculadora
-  \scriptsize
-  | L | \rightarrow | E *n*    | print Atr(topo)               |
+Possível implementação da calculadora
+#+latex: \scriptsize
+  | L | \rightarrow | E      | print Atr(topo)               |
   | E | \rightarrow | E_1 + T | att = Atr(topo-2) + Atr(topo) |
   |   |   |        | topo = topo-2;                |
   |   |   |        | Atr(topo) = att;              |
@@ -64,57 +71,68 @@ Esquema de tradução de uma calculadora
   |   |   |        | topo = topo-1;                |
   |   |   |        | atr(topo) = att;              |
   | F | \rightarrow | *digit*  | Atr(topo) = digit.lexval      |
-  \normalsize
+#+latex: \normalsize\pause
 
-\pause Testar com a entrada \textbf{2*3+4n}
+Testar com a entrada =2*3+4n=
 
-* Exemplo
+* Análise LR com o Esquema da calculadora
 \small
 |   | Atributo | Pilha   |     Entrada | Produção  |
 | / | <l>      | <l>     |         <r> |           |
 |---+----------+---------+-------------+-----------|
-|   |          | $       | 2 * 3 + 4 n |           |
-|   |          | $ 2     |   * 3 + 4 n | F \rightarrow digit |
-|   | 2        | $ F     |   * 3 + 4 n | T \rightarrow F     |
-|   | 2        | $ T     |   * 3 + 4 n |           |
-|   | 2 _      | $ T *   |     3 + 4 n |           |
-|   | 2 _      | $ T * 3 |       + 4 n |           |
-|   | 2 _ 3    | $ T * F |       + 4 n | F \rightarrow digit |
-|   | 6        | $ T     |       + 4 n | T \rightarrow T * F |
-|   | 6        | $ E     |       + 4 n | E \rightarrow T     |
-|   | 6 _      | $ E +   |         4 n |           |
-|   | 6 _      | $ E + 4 |           n |           |
-|   | 6 _ 4    | $ E + F |           n | F \rightarrow digit |
-|   | 6 _ 4    | $ E + T |           n | T \rightarrow F     |
-|   | 10       | $ E     |           n |           |
-|   | 10       | $ E n   |             |           |
-|   | 10       | $ L     |             | L \rightarrow E n   |
+|   | $        | $       | 2 * 3 + 4 $ |           |
+|   | $        | $ 2     |   * 3 + 4 $ | F \rightarrow digit |
+|   | $ 2      | $ F     |   * 3 + 4 $ | T \rightarrow F     |
+|   | $ 2      | $ T     |   * 3 + 4 $ |           |
+|   | $ 2 _    | $ T *   |     3 + 4 $ |           |
+|   | $ 2 _    | $ T * 3 |       + 4 $ |           |
+|   | $ 2 _ 3  | $ T * F |       + 4 $ | F \rightarrow digit |
+|   | $ 6      | $ T     |       + 4 $ | T \rightarrow T * F |
+|   | $ 6      | $ E     |       + 4 $ | E \rightarrow T     |
+|   | $ 6 _    | $ E +   |         4 $ |           |
+|   | $ 6 _    | $ E + 4 |           $ |           |
+|   | $ 6 _ 4  | $ E + F |           $ | F \rightarrow digit |
+|   | $ 6 _ 4  | $ E + T |           $ | T \rightarrow F     |
+|   | $ 10     | $ E     |           $ |           |
+|   | $ 10     | $ E n   |           $ |           |
+|   | $ 10     | $ L     |           $ | L \rightarrow E n   |
 
-* Exercício 1
-O esquema de tradução dirigida pela sintaxe que segue *traduz*
-  uma linguagem com terminais a, b e c em uma linguagem cujos
-  terminais são 2, 3, 4, 5, e 6. Usando um analisador *ascendente*
-  que executa as ações semânticas imediatamente após reduzir a
-  regra correspondente, diga o resultado da tradução da entrada
-  *aaadbc*?
-Esquema de Tradução
-  | S | \rightarrow | AB | { print "1" } |
-  | S | \rightarrow | AS | { print "2" } |
-  | A | \rightarrow | a  | { print "3" } |
-  | B | \rightarrow | bC | { print "4" } |
-  | B | \rightarrow | dB | { print "5" } |
-  | C | \rightarrow | c  | { print "6" } |
-* Exercício 2
-O esquema de tradução dirigida pela sintaxe que segue *traduz*
-  uma linguagem com terminais a, b e c em uma linguagem cujos
-  terminais são 2, 3, 4, 5, e 6. Usando um analisador *ascendente*
-  que executa as ações semânticas imediatamente após reduzir a
-  regra correspondente, diga o resultado da tradução da entrada
-  *aaadbc*?
-Esquema de Tradução
-  | S | \rightarrow | AB   | { S.node = new node (A.node, B.node); }   |
-  | S | \rightarrow | AS_1 | { S.node = new node (A.node, S_1.node); } |
-  | A | \rightarrow | a    | { A.node = new node ("a"); }              |
-  | B | \rightarrow | bC   | { B.node = new node ("b", C.node); }      |
-  | B | \rightarrow | dB   | { B.node = new node ("d", B.node); }      |
-  | C | \rightarrow | c    | { C.node = new node ("c"); }     |
+* Exercício 1: tradução simples, impressão na tela
+
+Consideramos o esquema de tradução dirigida pela sintaxe que traduz
+uma linguagem com terminais a, b, c e d em uma linguagem cujos
+terminais são 1, 2, 3, 4, 5 e 6.
+
+| S | \rightarrow | AB | { print "1" } |
+| S | \rightarrow | AS | { print "2" } |
+| A | \rightarrow | a  | { print "3" } |
+| B | \rightarrow | bC | { print "4" } |
+| B | \rightarrow | dB | { print "5" } |
+| C | \rightarrow | c  | { print "6" } |
+
+Usando um _analisador ascendente_ que executa as ações semânticas
+imediatamente após reduzir a regra correspondente, diga o resultado da
+tradução da entrada =aadbc=?
+
+1. Construa a árvore de derivação
+2. Execute as reduções na ordem correta
+
+* Exercício 2: criação de uma árvore
+
+Consideramos o esquema de tradução dirigida pela sintaxe que traduz
+uma linguagem com terminais a, b, c e d em uma representação
+hierárquica (árvore) em memória.
+
+| S \rightarrow | AB | =S.n = new node (A.n, B.n);= |
+| S \rightarrow | AS_1 | =S.n = new node (A.n,= S_{1} =.n);=  |
+| A \rightarrow | a  | =A.n = new node ("a");=      |
+| B \rightarrow | bC | =B.n = new node ("b", C.n);= |
+| C \rightarrow | c  | =C.n = new node ("c");=      |
+| B \rightarrow | dB | =B.n = new node ("d", B.n);= |
+
+Usando um _analisador ascendente_ que executa as ações semânticas
+imediatamente após reduzir a regra correspondente, diga o resultado da
+tradução da entrada =aadbc=?
+
+1. Construa a árvore de derivação
+2. Execute as reduções na ordem correta
