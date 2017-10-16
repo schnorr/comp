@@ -441,3 +441,9 @@ parte da sintaxe são opcionais.
 * Casos omissos
 
 Casos não previstos serão discutidos com o professor.
+
+** =AST_VETOR_INDEXADO= do lado esquerdo de uma atribuição
+
+Tem dois filhos: =AST_IDENTIFICADOR= e a árvore de uma expressão que
+indica a indexação do vetor. A mesma estrutura para =AST_VETOR_INDEXADO=
+é utilizada quando um vetor indexado aparece em uma expressão.
