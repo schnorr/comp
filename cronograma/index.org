@@ -207,10 +207,13 @@ write(cronograma.modelo, "cronograma.tex");
 
 #+header: :var dep=modelo_cronograma
 #+begin_src shell :results output
+pwd
+rm -f cronograma.pdf
 rubber --pdf cronograma.tex
 #+end_src
 
 #+RESULTS:
+: /home/schnorr/ensino/github/comp/cronograma
 
 * Cronograma
 
