@@ -48,10 +48,10 @@
 |            |                                                                       |      73-103 | Avaliação              |
 |            | Revisão                                                               |             |                        |
 |            | P1                                                                    | 72-Castilho |                        |
-|            |                                                                       |      67-104 | Avaliação              |
-| Código     | Taxonomia e Expressões                                                |             | Início E5 (Código)     |
-| Código     | Declarações, Escopos e Atribuição                                     |             |                        |
+| Código     | Taxonomia e Expressões                                                |             |                        |
+| Código     | Declarações, Escopos e Atribuição                                     |             | Início E5 (Código)     |
 | Código     | Endereçamento de Arranjos multidimensionais                           |             |                        |
+|            |                                                                       |      67-104 | Avaliação              |
 | Código     | Expressões Lógicas com atalho, Controle de Fluxo                      |             |                        |
 | Código     | Controle de Fluxo                                                     |             |                        |
 |            |                                                                       |      67-104 | Avaliação              |
@@ -242,10 +242,10 @@ aulas %>%
 | 14 | 2017-10-23 |      73-103 |            |                                                                       | Avaliação              |
 | 15 | 2017-10-25 |             |            | Revisão                                                               |                        |
 | 16 | 2017-10-30 | 72-Castilho |            | P1                                                                    |                        |
-| 17 | 2017-11-01 |      67-104 |            |                                                                       | Avaliação              |
-| 18 | 2017-11-06 |             | Código     | Taxonomia e Expressões                                                | Início E5 (Código)     |
-| 19 | 2017-11-08 |             | Código     | Declarações, Escopos e Atribuição                                     |                        |
-| 20 | 2017-11-13 |             | Código     | Endereçamento de Arranjos multidimensionais                           |                        |
+| 17 | 2017-11-01 |             | Código     | Taxonomia e Expressões                                                |                        |
+| 18 | 2017-11-06 |             | Código     | Declarações, Escopos e Atribuição                                     | Início E5 (Código)     |
+| 19 | 2017-11-08 |             | Código     | Endereçamento de Arranjos multidimensionais                           |                        |
+| 20 | 2017-11-13 |      67-104 |            |                                                                       | Avaliação              |
 | 21 | 2017-11-29 |             | Código     | Expressões Lógicas com atalho, Controle de Fluxo                      |                        |
 | 22 | 2017-12-04 |             | Código     | Controle de Fluxo                                                     |                        |
 | 23 | 2017-12-06 |      67-104 |            |                                                                       | Avaliação              |
