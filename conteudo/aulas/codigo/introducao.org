@@ -1,0 +1,62 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Análise Semântica
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Estrutura de um Compilador em fases
+
+#+ATTR_LATEX: :width .6\linewidth
+[[../geral/img/fases_compilacao_pratica.png]]
+
+* Transformações em Passos -- Vantagens
+
+Passos -- construção de conhecimento gradativa
+
+#+latex: \vfill
+
+Otimização
+
+Simplicidade
+
+Portabilidade
+
+* Representação Intermediária (IR)
+
+Derivar informações sobre o código a ser compilado
+
+Essas informações precisam ser mantidas na compilação
+
+#+LAtex: \pause
+
+*Representação Intermediária* (IR)
++ Necessária para se manter conhecimento -- *expressividade*
++ Presente em praticamente todos os compiladores
+
+#+latex: \vfill\pause
+
+Como escolher uma IR? \rightarrow várias influências
++ Linguagem fonte (C /versus/ Perl e ponteiros)
++ Máquina alvo (IR parecida com Assembly)
++ Aplicações (Objective-C /versus/ C e hierarquia de classes)
+
+# Comment. Eng. a Compiler. Cooper. (Pg. 223) For example, a
+# source-to-source translator might use an IR that closely resembles
+# the source code, while a compiler that produces assembly code for a
+# microcontroller might obtain better results with an
+# assembly-code-like IR. Similarly, a compiler for C might need
+# annotations about pointer values that are irrelevant in a compiler
+# for Perl, and a Java compiler keeps records about the class
+# hierarchy that have no counterpart in a C compiler.
+
