@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Taxonomia
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* IR -- Taxonomia
+Existem diversos tipos de IR
+#+latex: \vfill
+Eixos conceituais principais
++ Organização estrutural
++ Nível de abstração
++ Espaço de nomes
+#+latex: \vfill
+Três categorias de IR
++ Gráficas
++ Lineares
++ Híbridas
+* Organização Estrutural
+
+Influencia todos os processos
++ Análise
++ Otimização
++ Geração
+
+#+latex: \vfill
+
+IR em formato de árvore
++ Passagens serão na forma de percurso na árvore
+
+IR linear, textual
++ Passagens seguirão a ordem linear
+
+* Nível de abstração
+
+*IR Alta* \scriptsize -- High IR (HIR) \normalsize
++ Usada nos primeiros estágios do compilador
++ Simplificação de construções gramaticais para guardar somente
+    as informações necessárias para geração e otimização de código
+
+#+latex: \vfill\pause
+
+*IR Média* \scriptsize -- Medium IR (MIR) \normalsize
++ Boa base para a geração de código eficiente
++ Pode expressar todas as características de linguagens de
+    programação de forma independente da linguagem
++ Representação de variáveis, temporários, registradores
+
+#+latex: \vfill\pause
+
+*IR Baixa* \scriptsize -- Low IR (LIR) \normalsize
++ Quase um para um com linguagem de máquina
++ Dependente da arquitetura
+
+* Nível de abstração
+
+Supondo que temos uma construção \textbf{float a[20][10]}
+#+latex: \vfill
+|   | HIR           | MIR          | LIR            |             |
+|---+---------------+--------------+----------------+-------------|
+| / |               | <            | <              |             |
+|   | t1 \leftarrow a[i,j+2] | t1 \leftarrow j+2     | r1 \leftarrow [fp - 4]  | i           |
+|   |               | t2 \leftarrow i*20    | r2 \leftarrow r1 + 2    |             |
+|   |               | t3 \leftarrow t1 + t2 | r3 \leftarrow [fp - 8]  | j           |
+|   |               | t4 \leftarrow 4 * t3  | r4 \leftarrow r3 * 20   |             |
+|   |               | t5 \leftarrow addr a  | r5 \leftarrow r4 + r2   | base        |
+|   |               | t6 \leftarrow t5 + t4 | r7 \leftarrow fp - 216  | fp register |
+|   |               | t7 \leftarrow *t6     | f1 \leftarrow [r7 + r6] |             |
+|---+---------------+--------------+----------------+-------------|
+
+* Espaço de Nomes
+
+Nomes para representar valores no código
+
+Exemplo
++ Para avaliar *a-2*b*
+    | $t_1$ | \leftarrow | $b$       |
+    | $t_2$ | \leftarrow | $2 * t_1$  |
+    | $t_3$ | \leftarrow | $a$       |
+    | $t_4$ | \leftarrow | $t_3 - t_2$ |
++ \pause Poderíamos substituir $t_2$ e $t_4$ por $t_1$
+#+latex: \vfill\pause
+
+Escolha do *esquema de nomes* tem um efeito significativo
++ Otimização
++ Tempo de compilação
+
