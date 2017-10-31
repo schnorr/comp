@@ -1,0 +1,123 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: IR Gráficas
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* IR Gráficas
+Grafos -- utilizada em muitos compiladores
+
+Fatores de diferenciação entre as IR gráficas
++ Organização estrutural
++ Nível de abstração
++ Correlação do grafo com o código
+
+#+latex: \vfill
+
+São IR Gráficas
++ Baseadas na árvore sintática
+    + Árvore de derivação
+    + *Árvore Sintática Abstrata* (AST)
+    + Grafos acíclicos direcionados
+
++ Baseadas em grafo
+    + Grafo de fluxo de controle
+    + Grafo de dependências
+
+* Baseadas na Árvore Sintática
+Exemplo de base: considerando a gramática abaixo \\
+  \rightarrow Entradas $x=(b*c)+(b*c);$ e $x=a*2+a*2*b;$
+  | L | \rightarrow | x = E;             |
+  | E | \rightarrow | E + T \vert T          |
+  | T | \rightarrow | T * F \vert F          |
+  | F | \rightarrow | ( E ) \vert *num* \vert *name* |
+   
+*Árvore de Derivação*
++ Representação gráfica da derivação
++ Grande demais
+
+#+Latex: \pause
+*Árvore Sintatica Abstrata (AST)*
++ Mantém somente o essencial de uma árvore de derivação
++ Sendo fiel a estrutura do código fonte
+#+Latex: \pause
+*Grafos Acíclicos Direcionados (DAG)*
++ Contração da AST que evita duplicações
++ Mais compacta possível
+* Baseadas em Grafo
+Modelar outros aspectos do comportamento do programa
+#+latex: \vfill\pause
+*Grafo de Fluxo de Controle (CFG)*
++ Noção de *bloco básico*
++ Exemplo
+    #+begin_src C
+    stmt0
+    while (i < 100) { stmt1 }
+    stmt2
+    if (x = y) { stmt3 } else { stmt4 }
+    stmt5
+    #+end_src
++ \pause Operações dentro do bloco?
+    + AST de expressões, DAG, ou uma IR linear
+    + *IR Híbrido*
++ \pause Conceito diferente de bloco básico \rightarrow trade-off
++ \pause Muitas partes do compilador dependem do CFG
+    + Escalonamento de instruções
+    + Alocação global de registradores
+* Baseadas em Grafo
+*Grafo de Dependências de Dados*
++ Codificam o fluxo de valores
++ Do ponto da definição até sua utilização
+
+Nós representam operações
+
+Arestas representam relação entre definição e utilização
+* Baseadas em Grafo
+Exemplo
+  #+begin_src C
+  1   loadAI  rarp, @a => ra
+  2   loadI   2        => r2
+  3   loadAI  rarp, @b => rb
+  4   loadAI  rarp, @c => rc
+  5   loadAI  rarp, @d => rd
+  6   mult    ra, r2   => ra
+  7   mult    ra, rb   => ra
+  8   mult    ra, rc   => ra
+  9   mult    ra, rd   => ra
+  10  storeAI ra      => rarp, @a
+  #+end_src
+#+latex: \vfill
+\pause  Instruções 1 e 2 precedem 6
++ OOO (Out Of Order) Processors
+
+* IR Gráficas
+Exemplo
+  #+begin_src C
+  1   x = 0
+  2   i = 1
+  3   while (i < 100)
+  4       if (a[i] > 0)
+  5          then x = x + a[i]
+  6       i = i + 1
+  7   print x
+  #+end_src
+#+latex: \vfill
+Mais alto nível
++ Difícil de diferenciar as células de a
++ Nós 5 e 6 dependem deles mesmos
+#+latex: \vfill
+\pause  Grafos de dependências são derivados
++ Criados para uma tarefa específica e descartados
++ Função central em escalonamento de instruções
+
