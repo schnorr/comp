@@ -60,3 +60,11 @@ Como escolher uma IR? \rightarrow várias influências
 # for Perl, and a Java compiler keeps records about the class
 # hierarchy that have no counterpart in a C compiler.
 
+* Geração de IR: Código de Três Endereços
++ Expressões
++ Declarações
++ Comandos de atribuição
++ Vetores e Registros
++ Expressões boleanas
++ Comandos de decisão
++ Comandos de iteração
