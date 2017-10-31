@@ -42,8 +42,18 @@ disciplina, podem variar em abrangência e profundidade.
 
 *** Segunda Parte
 
- | Setor      | Descrição                                             | Videos | Apoio | Lista |
- |------------+-------------------------------------------------------+--------+-------+-------|
+ | Setor   | Descrição  | Videos | Apoio | Lista |
+ |---------+------------+--------+-------+-------|
+ | Código  | [[./aulas/codigo/introducao.org][Introdução]] |        |       |       |
+ | Código  | [[./aulas/codigo/taxonomia.org][Taxonomia]]  |        |       |       |
+ | Código  | [[./aulas/codigo/graficas.org][Gráficas]]   |        |       |       |
+ | Código  | [[./aulas/codigo/lineares.org][Lineares]]   |        |       | [[./listas/lista09.pdf][#09]]   |
+ |---------+------------+--------+-------+-------|
+ | Geração | [[./aulas/codigo/expressoes.org][Expressões]] |        |       | [[./listas/lista10.pdf][#10]]   |
+
+*** Organização antiga
+
+
  | Código     | Taxonomia e geração de código para expressões         |        |       | [[./listas/lista09.pdf][#09]]   |
  | Código     | Endereçamento de variáveis                            |        |       | [[./listas/lista10.pdf][#10]]   |
  | Código     | Endereçamento de arranjos multidimensionais           |        |       | [[./listas/lista11.pdf][#11]]   |
