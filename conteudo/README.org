@@ -18,7 +18,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Geração | [[./aulas/codigo/enderecamento.org][Endereçamento de Variáveis]] |        |       |       |
  | Geração | [[./aulas/codigo/arranjos.org][Arranjos Multidimensionais]] |        |       |       |
  | Geração | [[./aulas/codigo/arranjos2.org][Endereçando Arranjos]]       |        |       |       |
- | Geração | [[./aulas/codigo/arranjos3.org][Esquema para Arranjos]]      |        |       |       |
+ | Geração | [[./aulas/codigo/arranjos3.org][Esquema para Arranjos]]      |        |       | [[./listas/lista11.pdf][#11]]   |
 
 *** Primeira Parte
 
