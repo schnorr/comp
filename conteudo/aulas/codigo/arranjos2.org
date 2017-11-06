@@ -1,0 +1,109 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Endereçando Arranjos Multidimensionais
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Arranjos de $n-1$ dimensões com $low_k$ / $high_k$
+
+Declaração na forma: $A[low_0..high_0][low_1..high_1]..[low_{n-1}..high_{n-1}]$
+
+#+latex: \vfill
+
+Acesso na forma: $A[i_0][i_1]...[i_{n-1}]$ \\
+
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+$endereco = base + d_k * w$ \\
+#+END_CENTER
+
+#+BEGIN_EXPORT latex
+\begin{equation}
+d_k = \left\{ 
+\begin{array}{l l}
+ i_k - low_k & \quad \text{se $k = 0$}\\
+ d_{k-1} * |high_k-low_k| + (i_k - low_k) & \quad \text{se $k \geq 1$}
+\end{array} \right.
+\end{equation}
+#+END_EXPORT
+
+* Gerando TAC para arranjos
+
+TAC para arranjos multidimensionais
++ Múltiplas operações aritméticas
++ Cresce com a quantidade de dimensões
+\pause Ilustrando o problema com um exemplo: $A[4..6][-2..10]$
+
++ \pause Cálculo para $A[5][-1]$, supondo $base=16$ e $w=4$ \\
+    $base + ((i_0 - low_0) * n_1 + (i_1 - low_1)) * w$ \\
+    $16 + ((5 - 4) * 12 + (-1 - -2)) * 4$
+\pause Uma melhor abordagem
++ *Otimizar o cálculo de endereços*
+
+#+latex: \vfill\pause
+
+*Solução*: separar a fórmula de cálculo de endereço em duas
+    + Uma com a parte *variável* \\
+      \rightarrow considera todos os índices $i_k$
+    + Uma segunda parte *constante* \\
+      \rightarrow considera $base$, $w$, $low_k$ e $high_k$ (ou $n_k$)
+
+* Isolando a parte constante e a variável
+Exemplo com duas dimensões
+#+latex: \vfill
+$base + [(i_0 - low_0) * n_1 + (i_1 - low_1)] * w$
+\pause $base + (i_0 - low_0) * n_1 * w + (i_1 - low_1) * w$
+\pause $base + i_0 * n_1 * w - low_0 * n_1 * w + i_1 * w - low_1 * w$
+\pause $base - low_0 * n_1 * w - low_1 * w + i_0 * n_1 * w + i_1 * w$
+\pause $base - (low_0 * n_1 + low_1) * w + (i_0 * n_1 + i_1) * w$
+#+latex: \vfill
+\pause Qual a característica das partes constante e variável?
++ \pause *Recursiva*
+* Definições recursivas
+
+*Declaração*, seja $A[low_0..high_0][low_1..high_1]..[low_k..high_k]$
+
+Cálculo do valor constante $C_A$ de um arranjo $A$
+
+#+BEGIN_EXPORT latex
+  \begin{equation}
+  C_A = base - r_k * w
+  \end{equation}
+  \begin{equation}
+  r_k = \left\{ 
+  \begin{array}{l l}
+  low_k & \quad \text{se $k = 0$} \\
+  r_{k-1} * |high_k-low_k| + low_k & \quad \text{se $k \geq 1$}
+  \end{array} \right.
+  \end{equation}
+#+END_EXPORT
+
+#+latex: \vfill
+\pause *Acesso*, seja $A[i_0][i_1]..[i_k]$
+\pause Cálculo do endereço final
+
+#+BEGIN_EXPORT latex
+  \begin{equation}
+  endereco = C_A + d_k * w
+  \end{equation}
+  \begin{equation}
+  d_k = \left\{ 
+  \begin{array}{l l}
+  i_k & \quad \text{se $k = 0$} \\
+  d_{k-1} * |high_k-low_k| + i_k & \quad \text{se $k \geq 1$}
+  \end{array} \right.
+  \end{equation}
+#+END_EXPORT
+
