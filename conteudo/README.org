@@ -16,6 +16,7 @@ disciplina, podem variar em abrangência e profundidade.
  |---------+----------------------------+--------+-------+-------|
  | Geração | [[./aulas/codigo/expressoes.org][Expressões]]                 |        |       | [[./listas/lista10.pdf][#10]]   |
  | Geração | [[./aulas/codigo/enderecamento.org][Endereçamento de Variáveis]] |        |       |       |
+ | Geração | [[./aulas/codigo/arranjos.org][Arranjos Multidimensionais]] |        |       |       |
 
 *** Primeira Parte
 
