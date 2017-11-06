@@ -4,6 +4,19 @@
 A tabela abaixo traz uma lista dos assuntos abordados ao longo do
 semestre, por setor. Os tópicos, respeitando o plano de ensino da
 disciplina, podem variar em abrangência e profundidade.
+
+*** Segunda Parte
+
+ | Setor   | Descrição                  | Videos | Apoio | Lista |
+ |---------+----------------------------+--------+-------+-------|
+ | Código  | [[./aulas/codigo/introducao.org][Introdução]]                 |        |       |       |
+ | Código  | [[./aulas/codigo/taxonomia.org][Taxonomia]]                  |        |       |       |
+ | Código  | [[./aulas/codigo/graficas.org][Gráficas]]                   |        |       |       |
+ | Código  | [[./aulas/codigo/lineares.org][Lineares]]                   |        |       | [[./listas/lista09.pdf][#09]]   |
+ |---------+----------------------------+--------+-------+-------|
+ | Geração | [[./aulas/codigo/expressoes.org][Expressões]]                 |        |       | [[./listas/lista10.pdf][#10]]   |
+ | Geração | [[./aulas/codigo/enderecamento.org][Endereçamento de Variáveis]] |        |       |       |
+
 *** Primeira Parte
 
  | Setor       | Descrição                                              | Videos      | Apoio       | Lista |
@@ -39,18 +52,6 @@ disciplina, podem variar em abrangência e profundidade.
  | Semântica   | [[./aulas/semantica/ordem.org][Ordem de avaliação de atribudos]]                        |             |             |       |
  | Semântica   | [[./aulas/semantica/l-atribuido.org][Implementação de L-Atribuído]]                           |             |             |       |
  | Semântica   | [[./aulas/semantica/s-atribuido.org][Implementação de S-Atribuído]]                           |             |             | [[./listas/lista08.pdf][#08]]   |
-
-*** Segunda Parte
-
- | Setor   | Descrição                  | Videos | Apoio | Lista |
- |---------+----------------------------+--------+-------+-------|
- | Código  | [[./aulas/codigo/introducao.org][Introdução]]                 |        |       |       |
- | Código  | [[./aulas/codigo/taxonomia.org][Taxonomia]]                  |        |       |       |
- | Código  | [[./aulas/codigo/graficas.org][Gráficas]]                   |        |       |       |
- | Código  | [[./aulas/codigo/lineares.org][Lineares]]                   |        |       | [[./listas/lista09.pdf][#09]]   |
- |---------+----------------------------+--------+-------+-------|
- | Geração | [[./aulas/codigo/expressoes.org][Expressões]]                 |        |       | [[./listas/lista10.pdf][#10]]   |
- | Geração | [[./aulas/codigo/enderecamento.org][Endereçamento de Variáveis]] |        |       |       |
 
 *** Organização antiga
 
