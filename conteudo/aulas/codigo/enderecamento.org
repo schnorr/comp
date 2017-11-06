@@ -15,6 +15,26 @@
 #+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
+* Atribuição
+
+Para atribuir o valor a uma variável \\
+precisamos saber seu endereço
+
+#+BEGIN_EXAMPLE
+storeAI r0 => r1,4
+#+END_EXAMPLE
+
+Que significa
+
+#+BEGIN_EXAMPLE
+Memória(r1 + 4) = Conteúdo(r0)
+#+END_EXAMPLE
+
+#+latex: \pause
+
+Como saber o valor de =r1= e o deslocamento =4=?
+- Precisamos saber como endereçar variáveis!
+
 * Endereçamento de variáveis
 Endereços de variáveis \rightarrow cálculo de *deslocamento*
 + Referente a =rbss= (variáveis globais)
