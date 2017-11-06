@@ -19,14 +19,21 @@
 Endereços de variáveis \rightarrow cálculo de *deslocamento*
 + Referente a =rbss= (variáveis globais)
 + Referente a =fp= (variáveis locais)
-#+latex: \vfill
-\pause  Escopo simples (único)
+
+#+latex: \vfill\pause
+
+Escopo simples (único)
 + Todas as variáveis são ``globais''
     + Alocadas estaticamente, impossibilidade de recursão
 + Endereços: sempre deslocamento em relação a =rbss=
-\pause  Escopo local/global (dois)
+
+#+latex: \pause
+
+Escopo local/global (dois)
 + Endereços: desloc. para =rbss= (global) e para =fp= (local)
-\pause  Escopo aninhado (múltiplos)
+
+#+Latex: \pause
+Escopo aninhado (múltiplos)
 + Cálculo de endereços idêntico ao local/global
 + Mas e a _declaração de variáveis aninhadas_?
     + Diferença entre escopo anônimo e nomeado
@@ -44,6 +51,7 @@ Exemplo de gramática para declarações
     + Considerar qual o tipo de escopo que é implementado
 * Endereçamento com escopo único
 Uma variável global =desloc= inicializada para zero
+
 Endereços são um deslocamento com em relação a =rbss=
 
 | P | \rightarrow | D     |                                              |
@@ -58,7 +66,7 @@ Endereços são um deslocamento com em relação a =rbss=
   int b;
   int c;
 
-  a = 3; //obter endereço de a (gerar um store)
+  b = 3; //obter endereço de a (gerar um store)
   #+END_SRC
 * Endereçamento com *escopo aninhado* nomeado
 Como fazer, considerando escopo nomeado (função)?
@@ -90,7 +98,8 @@ int fun ()
 }
 #+END_SRC
 \pause  *Resposta*
-+ Todas são um deslocamento em relação ao =fp= de =fun=
++ Todas são um deslocamento em relação ao =fp= de =fun= \\
+  (implementação alternativa: dar ao bloco um registro)
 #+latex: \vfill
 \pause  Implementação
 + Sempre com pilha de tabela de símbolos
