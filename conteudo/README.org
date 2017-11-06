@@ -59,9 +59,6 @@ disciplina, podem variar em abrangência e profundidade.
 *** Organização antiga
 
 
- | Código     | Taxonomia e geração de código para expressões         |        |       | [[./listas/lista09.pdf][#09]]   |
- | Código     | Endereçamento de variáveis                            |        |       | [[./listas/lista10.pdf][#10]]   |
- | Código     | Endereçamento de arranjos multidimensionais           |        |       | [[./listas/lista11.pdf][#11]]   |
  | Código     | Expressões Lógicas com atalho, técnica de remendos    |        |       | [[./listas/lista12.pdf][#12]]   |
  | Código     | Controle de Fluxo                                     |        |       |       |
  | Execução   | Introdução, Registro de Ativação                      |        |       |       |
