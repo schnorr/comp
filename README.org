@@ -53,9 +53,7 @@ estratégias pedagógicas alternativas:
 ** Principal
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
-  - Aulas e videoaulas
-  - Material de apoio
-  - Exercícios
+- [[./acompanhamento.org][Acompanhamento das Avaliações]]
 
 ** Projeto de Compilador
 
