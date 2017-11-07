@@ -45,13 +45,7 @@ estratégias pedagógicas alternativas:
 
 ** Plano e Cronograma
 
-- [[./plano/index.org][Plano da disciplina]] (permanente), com detalhamento dos seguintes itens
-  - Conteúdo programático
-  - Metodologia
-  - Experiências de aprendizagem
-  - Critérios de avaliação
-  - Atividades de recuperação
-  - Bibliografia
+- [[./plano/index.org][Plano da disciplina]] (permanente)
 - [[./cronograma/index.org][Cronograma]]
   - Edição 2017/2 - Turma A
   - Segundas e Quartas, 10:30 – 12:10
