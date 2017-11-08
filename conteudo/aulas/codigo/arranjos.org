@@ -20,7 +20,7 @@
 Arranjos
 - começam em $0$
 - terminam em $n-1$
-- O$n$ o tamanho do arranjo
+- $n$ o tamanho do arranjo
 
 #+latex: \pause\vfill
 
