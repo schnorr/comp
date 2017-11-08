@@ -92,6 +92,7 @@ Cálculo do valor constante $C_A$ de um arranjo $A$
 
 #+latex: \vfill
 \pause *Acesso*, seja $A[i_0][i_1]..[i_k]$
+
 \pause Cálculo do endereço final
 
 #+BEGIN_EXPORT latex
