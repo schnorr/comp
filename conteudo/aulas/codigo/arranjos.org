@@ -205,7 +205,7 @@ d_k = \left\{
 \end{array} \right.
 \end{equation}
 \begin{equation}
-n_k = high_k - low_k
+n_k = | high_k - low_k |
 \end{equation}
 #+END_EXPORT
 
