@@ -7,18 +7,21 @@ disciplina, podem variar em abrangência e profundidade.
 
 *** Segunda Parte
 
- | Setor   | Descrição                  | Videos | Apoio | Lista |
- |---------+----------------------------+--------+-------+-------|
- | Código  | [[./aulas/codigo/introducao.org][Introdução]]                 |        |       |       |
- | Código  | [[./aulas/codigo/taxonomia.org][Taxonomia]]                  |        |       |       |
- | Código  | [[./aulas/codigo/graficas.org][Gráficas]]                   |        |       |       |
- | Código  | [[./aulas/codigo/lineares.org][Lineares]]                   |        |       | [[./listas/lista09.pdf][#09]]   |
- |---------+----------------------------+--------+-------+-------|
- | Geração | [[./aulas/codigo/expressoes.org][Expressões]]                 |        |       | [[./listas/lista10.pdf][#10]]   |
- | Geração | [[./aulas/codigo/enderecamento.org][Endereçamento de Variáveis]] |        |       |       |
- | Geração | [[./aulas/codigo/arranjos.org][Arranjos Multidimensionais]] |        |       |       |
- | Geração | [[./aulas/codigo/arranjos2.org][Endereçando Arranjos]]       |        |       |       |
- | Geração | [[./aulas/codigo/arranjos3.org][Esquema para Arranjos]]      |        |       | [[./listas/lista11.pdf][#11]]   |
+ | Setor   | Descrição                        | Videos | Apoio | Lista |
+ |---------+----------------------------------+--------+-------+-------|
+ | Código  | [[./aulas/codigo/introducao.org][Introdução]]                       |        |       |       |
+ | Código  | [[./aulas/codigo/taxonomia.org][Taxonomia]]                        |        |       |       |
+ | Código  | [[./aulas/codigo/graficas.org][Gráficas]]                         |        |       |       |
+ | Código  | [[./aulas/codigo/lineares.org][Lineares]]                         |        |       | [[./listas/lista09.pdf][#09]]   |
+ |---------+----------------------------------+--------+-------+-------|
+ | Geração | [[./aulas/codigo/expressoes.org][Expressões]]                       |        |       | [[./listas/lista10.pdf][#10]]   |
+ | Geração | [[./aulas/codigo/enderecamento.org][Endereçamento de Variáveis]]       |        |       |       |
+ | Geração | [[./aulas/codigo/arranjos.org][Arranjos Multidimensionais]]       |        |       |       |
+ | Geração | [[./aulas/codigo/arranjos2.org][Endereçando Arranjos]]             |        |       |       |
+ | Geração | [[./aulas/codigo/arranjos3.org][Esquema para Arranjos]]            |        |       | [[./listas/lista11.pdf][#11]]   |
+ | Geração | [[./aulas/codigo/logicas.org][Expressões Lógicas]]               |        |       | [[./listas/lista12.pdf][#12]]   |
+ | Geração | [[./aulas/codigo/logicas-esquema.org][Esquemas para Expressões Lógicas]] |        |       |       |
+ | Geração | [[./aulas/codigo/fluxo.org][Fluxo de Controle]]                |        |       |       |
 
 *** Primeira Parte
 
@@ -58,9 +61,6 @@ disciplina, podem variar em abrangência e profundidade.
 
 *** Organização antiga
 
-
- | Código     | Expressões Lógicas com atalho, técnica de remendos    |        |       | [[./listas/lista12.pdf][#12]]   |
- | Código     | Controle de Fluxo                                     |        |       |       |
  | Execução   | Introdução, Registro de Ativação                      |        |       |       |
  | Execução   | Chamada e retorno de Função, Passagem de parâmetros   |        |       |       |
  | Otimização | Introdução, Janela e Grafos de Fluxo                  |        |       |       |
