@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Fluxo de Controle
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Controle de Fluxo
+Controlar o fluxo de execução
++ Gerar código de controle
++ Utiliza rótulos e desvios
+#+latex: \vfill
+Estudaremos três situações (if, if else, while)
+Gramática (B é uma expressão booleana)
+  | S | \rightarrow | if (B) S_1          |
+  | S | \rightarrow | if (B) S_1 else S_2 |
+  | S | \rightarrow | while (B) S_1       |
+* Controle de Fluxo -- if
+| S | \rightarrow | if { B.t=rot(); B.f=S.next;  }                                          |
+|   |             | (B) { $S_1$.next=S.next; }                                            |
+|   |             | S_1 { S.code=B.code $\vert\vert$ gera(B.t:) $\vert\vert$ $S_1$.code  } |
+* Fluxo de Execução -- if else
+| S | \rightarrow | if {  B.t=rot(); B.f=rot();   }                                               |
+|   |   | (B) {  S_1 .next=S.next; }                                                     |
+|   |   | S_1 else { $S_2$.next=S.next; }                                                 |
+|   |   | S_2  {  S.code=B.code $\vert\vert$ gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$  |
+|   |   | gera(goto S.next) $\vert\vert$ gera(B.f:); $\vert\vert$ $S_2$.code                                         } |
+* Controle de Fluxo -- while
+| S | \rightarrow | while { B.f=S.next; B.t=rot();  }                                              |
+|   |             | (B) { S.begin=rot(); $S_1$.next=S.begin;  }                                       |
+|   |             | S_1 { S.code=gera(S.begin:) $\vert\vert$ B.code $\vert\vert$                     |
+|   |             |  gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$ gera(goto S.begin)  }    |
+* Gramática para Exercício
+| S | \rightarrow | attr { S.code=gera(attr.lexval) $\vert\vert$ gera(goto S.next)  }             |
+| S | \rightarrow | if  { B.t=rot(); B.f=rot();  }                                        |
+|   |   | (B) { $S_1$.next=S.next;  }                                            |
+|   |   | S_1 else { $S_2$.next=S.next; }                                         |
+|   |   | S_2 { S.code=B.code $\vert\vert$ gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$                |
+|   |   | gera(B.f:); $\vert\vert$ $S_2$.code }                                          |
+| S | \rightarrow | while { B.f=S.next; B.t=rot();  }                                     |
+|   |   | (B) { S.begin=rot(); $S_1$.next=S.begin;  }                            |
+|   |   | S_1 { S.code=gera(S.begin:) $\vert\vert$ B.code $\vert\vert$                           |
+|   |   | gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$ gera(goto S.begin) }                   |
+| B | \rightarrow | { $B_1$.t=rot(); $B_1$.f=B.f;  } B_1 and { $B_2$.t=B.t; $B_2$.f=B.f;  } B_2 |
+|   |   | { B.code=$B_1$.code \vert\vert label($B_1$.t) \vert\vert $B_2$.code  }                   |
+| B | \rightarrow | E_1 relop E_2 { B.code=$E_1$.code $\vert\vert$ $E_2$.code $\vert\vert$                    |
+|   |   |  gera(if $E_1$.local relop.lexval $E_2$.local goto B.t) $\vert\vert$            |
+|   |   |  gera(goto B.f);  }                                                 |
+* Controle de Fluxo -- Exercício
+Gere o TAC para o código seguinte
+  #+begin_src C
+  while (a < b && e != f) {
+     if (c < d){
+       x = y + z;
+     }else{
+       x = x - z;
+     }
+  }
+  #+end_src
+
