@@ -54,8 +54,8 @@
 |            |                                                                       |      67-104 | Avaliação              |
 | Código     | Expressões Lógicas com atalho, Controle de Fluxo                      |             |                        |
 | Código     | Controle de Fluxo                                                     |             |                        |
-|            |                                                                       |      67-104 | Avaliação              |
 | Execução   | Introdução, Registro de Ativação                                      |             | Início E6 (Chamada)    |
+|            |                                                                       |      67-105 | Avaliação              |
 | Execução   | Chamada e retorno de Função, Passagem de parâmetros                   |             |                        |
 |            |                                                                       |      73-103 | Avaliação              |
 | Otimização | Introdução, Janela e Grafos de Fluxo                                  |             | Início E7 (Otimização) |
