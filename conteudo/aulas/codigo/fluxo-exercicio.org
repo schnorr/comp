@@ -35,6 +35,37 @@
 |   |   |  gera(if $E_1$.local relop.lexval $E_2$.local goto B.t) $\vert\vert$            |
 |   |   |  gera(goto B.f);  }                                                 |
 
+* Remendos (apenas operações lógicas)
+| B | \rightarrow | E_1 relop E_2 |
+\scriptsize
+#+BEGIN_EXAMPLE
+x = remendo()
+y = remendo()
+B.code = E1.code || E2.code ||
+         "cmp_LT E1.temp, E2.temp => r1" || "cbr r1 -> x, y"
+B.tl = lista(x) //cria uma lista com apenas um remendo
+B.fl = lista(y)
+#+END_EXAMPLE
+\normalsize
+| B | \rightarrow | B_1 and B_2 |
+\scriptsize
+#+BEGIN_EXAMPLE
+x = rot();
+remenda (B1.tl, x);
+B.tl = B2.tl;
+B.fl = concat(B1.fl, B2.fl)
+B.code = B1.code || "x: " || B2.code
+#+END_EXAMPLE
+\normalsize
+| B | \rightarrow | B_1 or B_2 |
+\scriptsize
+#+BEGIN_EXAMPLE
+x = rot();
+remenda (B1.fl, x);
+B.fl = B2.fl;
+B.tl = concat(B1.tl, B2.tl)
+B.code = B1.code || "x: " || B2.code   
+#+END_EXAMPLE
 * Exercício
 
 Gere o TAC para o código seguinte
