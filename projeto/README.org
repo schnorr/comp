@@ -31,7 +31,7 @@ A entrega sempre é até as 23:59 do dia.
 | E2    | [[./etapa2.org][Análise Sintática]] ([[./etapa2.pdf][PDF]])         |       15 |             25 | 2017-10-01 | [[./resultados/e2.org][Relatório e Notas]] |
 | E3    | [[./etapa3.org][Árvore Sintática Abstrata]] ([[./etapa3.pdf][PDF]]) |       15 |             40 | _2017-10-22_ | [[./resultados/e3.org][Notas]]             |
 | E4    | [[./etapa4.org][Análise Semântica]] ([[./etapa4.pdf][PDF]])         |       15 |             55 | 2017-11-12 | [[./resultados/e4.org][Notas]]             |
-| E5    | [[./etapa5.org][Geração de Código]] ([[./etapa5.pdf][PDF]])         |       20 |             75 | 2017-12-05 |                   |
+| E5    | [[./etapa5.org][Geração de Código]] ([[./etapa5.pdf][PDF]])         |       20 |             75 | 2017-12-10 |                   |
 | E6    | [[./etapa6.org][Suporte de Execução]]             |       15 |             90 | 2017-12-17 |                   |
 | E7    | [[./etapa7.org][Otimização]]                      |       10 |            100 | 2018-01-10 |                   |
 |-------+---------------------------------+----------+----------------+------------+-------------------|
