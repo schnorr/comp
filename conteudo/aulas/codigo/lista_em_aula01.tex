@@ -1,0 +1,94 @@
+\documentclass[11pt,portuguese,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[landscape,margin=0.4cm]{geometry}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{listings}
+\newcommand{\et}[1]{\texttt{#1}}
+\begin{document}
+
+%% \exercicioaula{01}{Geração de Código}
+
+Considerando o esquema de tradução L-atribuído abaixo e sabendo que os operadores \texttt{*} e \texttt{\&\&} tem maior precedência:
+
+\medskip
+
+\begin{tabularx}{\textwidth}{llX}
+ S  &  $\rightarrow$  &  if  \et{ \{ B.t=rot(); B.f=S.next; \} }  (B) \et{ \{ $S_1$.next=S.next; \} }  S$_1$ \et{ \{ S.code=B.code    $\vert\vert$ gera(B.t:) $\vert\vert$ $S_1$.code  \} }  \\\medskip
+
+ S  &  $\rightarrow$  &  if  \et{ \{ B.t=rot(); B.f=rot(); \} }  (B)   \et{ \{ $S_1$.next=S.next; \} }  S$_1$ else \et{ \{     $S_2$.next=S.next; \} }   S$_2$ \\
+    &                 & \et{ \{ S.code=B.code $\vert\vert$    gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$  gera(B.f:);    $\vert\vert$ $S_2$.code \} }  \\\medskip
+
+ 
+ S  &  $\rightarrow$  &  while \et{ \{ B.f=S.next; B.t=rot(); \} }  (B) \et{ \{ S.beg=rot(); $S_1$.next=S.beg; \} }                                              \\\medskip
+    &                 &  S$_1$ \et{ \{ S.code=gera(S.beg:) $\vert\vert$ B.code $\vert\vert$  gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$ gera(goto S.beg)  \} }           \\\medskip
+
+
+
+ S  &  $\rightarrow$  &  \textbf{nome} = E;    \texttt{\small \{ S.code = E.code; $\vert\vert$  \ \  gera(nome.local = E.local); \} }                                 \\\medskip
+
+
+
+ B  &  $\rightarrow$  &  \et{ \{ $B_1$.t=B.t; $B_1$.f=rot(); \} } B$_1$ or \et{ \{ $B_2$.t=B.t; $B_2$.f=B.f; \} } B$_2$   \et{ \{ B.code=$B_1$.code $\vert\vert$\ label($B_1$.f) $\vert\vert$\ $B_2$.code \} }                 \\\medskip
+
+
+ B  &  $\rightarrow$  &  \et{ \{ $B_1$.t=rot(); $B_1$.f=B.f; \} } B$_1$ and \et{ \{ $B_2$.t=B.t; $B_2$.f=B.f; \} } B$_2$  \et{ \{ B.code=$B_1$.code $\vert\vert$\ label($B_1$.t) $\vert\vert$\ $B_2$.code \} }                 \\\medskip
+
+
+ B  &  $\rightarrow$  &  not \et{ \{ $B_1$.t=B.f; $B_1$.f=B.t; \} } B$_1$ \et{ \{ B.code=$B_1$.code; \} }                 \\\medskip
+
+
+ B  &  $\rightarrow$  &  (B$_1$) \et{ \{ B.code=$B_1$.code; B.t=$B_1$.t; B.f=$B_1$.f; \} }                                \\\medskip
+
+
+ B  &  $\rightarrow$  &  true \et{ \{ B.code=gera(goto B.t); \} }                                                         \\\medskip
+
+
+ B  &  $\rightarrow$  &  false \et{ \{ B.code=gera(goto B.f); \} }                                                        \\\medskip
+
+
+ B  &  $\rightarrow$  &  E$_1$ relop E$_2$ \et{ \{ B.code=$E_1$.code $\vert\vert$ $E_2$.code $\vert\vert$ }    \et{ gera(if $E_1$.local relop.lexval $E_2$.local goto B.t) $\vert\vert$ }  \et{ gera(goto B.f); \} }                                                                        \\\medskip
+
+
+
+ E  &  $\rightarrow$  &  $E_1 + E_2$           \texttt{\small \{ E.local = temp();  \ \ E.code = $E_1$.code $\vert\vert$ $E_2$.code $\vert\vert$  gera(E.local = $E_1$.local + $E_2$.local); \}           }         \\\medskip
+ E  &  $\rightarrow$  &  $E_1 * E_2$           \texttt{\small \{ E.local = temp();  \ \ E.code = $E_1$.code $\vert\vert$ $E_2$.code $\vert\vert$  gera(E.local = $E_1$.local $*$ $E_2$.local); \}           }       \\\medskip
+ E  &  $\rightarrow$  &  ( $E_1$ )             \texttt{\small \{ E.local = $E_1$.local; \ \ E.code = $E_1$.code \} }                                      \\\medskip
+ E  &  $\rightarrow$  &  \textbf{id}           \texttt{\small \{ E.local = id.lexval; \ \ E.code = ""; \} }                                               \\\medskip
+
+\end{tabularx}
+
+\vspace{-.5cm}
+
+Gere o código TAC para o trecho de código seguinte considerando o esquema de tradução acima:
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item 
+  \begin{lstlisting}
+    if (a < b && c < d)
+       x = 2
+  \end{lstlisting} \ \\
+
+\item 
+  \begin{lstlisting}
+    if (a < b) x = 2
+    while (c < d) y = 3
+    if (e < f) z = 4
+  \end{lstlisting}
+
+
+\item 
+  \begin{lstlisting}
+    while (a < b + 3 && (e - 2) != f)
+      if (c < d)
+        x = y + z;
+      else
+        if (a > d)
+          x = x - z;
+  \end{lstlisting}
+\end{enumerate}
+\end{multicols}
+\end{document}
