@@ -39,8 +39,8 @@
 
 Gere o TAC para o código seguinte
 
-1. Usando um esquema L-atribuído (veja slide anterior)
-2. Usando remendos (S-atribuído)
+1. Usando um esquema L-atribuído
+2. Usando remendos em um esquema S-atribuído
 
 #+begin_src C
 while (a < b and e != f) {
