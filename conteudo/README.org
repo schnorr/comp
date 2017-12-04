@@ -22,6 +22,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Geração | [[./aulas/codigo/logicas.org][Expressões Lógicas]]               |        | [[./apoio/apoio-70-traducao-booleana.pdf][#70]]   | [[./listas/lista12.pdf][#12]]   |
  | Geração | [[./aulas/codigo/logicas-esquema.org][Esquemas para Expressões Lógicas]] |        |       |       |
  | Geração | [[./aulas/codigo/fluxo.org][Fluxo de Controle]]                |        |       |       |
+ | Geração | [[./aulas/codigo/fluxo-exercicio.org][Exercício de Fluxo de Controle]]   |        |       | [[./aulas/codigo/lista_em_aula01.pdf][#L0]]   |
 
 *** Primeira Parte
 
