@@ -7,22 +7,29 @@ disciplina, podem variar em abrangência e profundidade.
 
 *** Segunda Parte
 
- | Setor   | Descrição                        | Videos | Apoio | Lista |
- |---------+----------------------------------+--------+-------+-------|
- | Código  | [[./aulas/codigo/introducao.org][Introdução]]                       |        |       |       |
- | Código  | [[./aulas/codigo/taxonomia.org][Taxonomia]]                        |        |       |       |
- | Código  | [[./aulas/codigo/graficas.org][Gráficas]]                         |        |       |       |
- | Código  | [[./aulas/codigo/lineares.org][Lineares]]                         |        |       | [[./listas/lista09.pdf][#09]]   |
- |---------+----------------------------------+--------+-------+-------|
- | Geração | [[./aulas/codigo/expressoes.org][Expressões]]                       |        |       | [[./listas/lista10.pdf][#10]]   |
- | Geração | [[./aulas/codigo/enderecamento.org][Endereçamento de Variáveis]]       |        |       |       |
- | Geração | [[./aulas/codigo/arranjos.org][Arranjos Multidimensionais]]       |        |       |       |
- | Geração | [[./aulas/codigo/arranjos2.org][Endereçando Arranjos]]             |        |       |       |
- | Geração | [[./aulas/codigo/arranjos3.org][Esquema para Arranjos]]            |        | [[./apoio/apoio-69-traducao-arranjo.pdf][#69]]   | [[./listas/lista11.pdf][#11]]   |
- | Geração | [[./aulas/codigo/logicas.org][Expressões Lógicas]]               |        | [[./apoio/apoio-70-traducao-booleana.pdf][#70]]   | [[./listas/lista12.pdf][#12]]   |
- | Geração | [[./aulas/codigo/logicas-esquema.org][Esquemas para Expressões Lógicas]] |        |       |       |
- | Geração | [[./aulas/codigo/fluxo.org][Fluxo de Controle]]                |        |       |       |
- | Geração | [[./aulas/codigo/fluxo-exercicio.org][Exercício de Fluxo de Controle]]   |        |       | [[./aulas/codigo/lista_em_aula01.pdf][#L0]]   |
+ | Setor    | Descrição                        | Videos | Apoio | Lista |
+ |----------+----------------------------------+--------+-------+-------|
+ | Código   | [[./aulas/codigo/introducao.org][Introdução]]                       |        |       |       |
+ | Código   | [[./aulas/codigo/taxonomia.org][Taxonomia]]                        |        |       |       |
+ | Código   | [[./aulas/codigo/graficas.org][Gráficas]]                         |        |       |       |
+ | Código   | [[./aulas/codigo/lineares.org][Lineares]]                         |        |       | [[./listas/lista09.pdf][#09]]   |
+ |----------+----------------------------------+--------+-------+-------|
+ | Geração  | [[./aulas/codigo/expressoes.org][Expressões]]                       |        |       | [[./listas/lista10.pdf][#10]]   |
+ | Geração  | [[./aulas/codigo/enderecamento.org][Endereçamento de Variáveis]]       |        |       |       |
+ | Geração  | [[./aulas/codigo/arranjos.org][Arranjos Multidimensionais]]       |        |       |       |
+ | Geração  | [[./aulas/codigo/arranjos2.org][Endereçando Arranjos]]             |        |       |       |
+ | Geração  | [[./aulas/codigo/arranjos3.org][Esquema para Arranjos]]            |        | [[./apoio/apoio-69-traducao-arranjo.pdf][#69]]   | [[./listas/lista11.pdf][#11]]   |
+ | Geração  | [[./aulas/codigo/logicas.org][Expressões Lógicas]]               |        | [[./apoio/apoio-70-traducao-booleana.pdf][#70]]   | [[./listas/lista12.pdf][#12]]   |
+ | Geração  | [[./aulas/codigo/logicas-esquema.org][Esquemas para Expressões Lógicas]] |        |       |       |
+ | Geração  | [[./aulas/codigo/fluxo.org][Fluxo de Controle]]                |        |       |       |
+ | Geração  | [[./aulas/codigo/fluxo-exercicio.org][Exercício de Fluxo de Controle]]   |        |       | [[./aulas/codigo/lista_em_aula01.pdf][#L0]]   |
+ |----------+----------------------------------+--------+-------+-------|
+ | Execução | [[./aulas/execucao/introduca.org][Introdução]]                       |        |       |       |
+ | Execução | [[./aulas/execucao/organizacao.org][Organização da Memória]]           |        |       |       |
+ | Execução | [[./aulas/execucao/exemplos.org][Exemplos com ILOC]]                |        |       |       |
+ | Execução | [[./aulas/execucao/sequencia.org][Sequência de chamada]]             |        |       |       |
+ | Execução | [[./aulas/execucao/passagem.org][Passagem de parâmetros]]           |        |       |       |
+ |----------+----------------------------------+--------+-------+-------|
 
 *** Primeira Parte
 
@@ -62,8 +69,6 @@ disciplina, podem variar em abrangência e profundidade.
 
 *** Organização antiga
 
- | Execução   | Introdução, Registro de Ativação                      |        |       |       |
- | Execução   | Chamada e retorno de Função, Passagem de parâmetros   |        |       |       |
  | Otimização | Introdução, Janela e Grafos de Fluxo                  |        |       |       |
  | Otimização | Local e Global, Otimização em laços                   |        |       |       |
  | Geral      | Discussão e reflexão sobre os conceitos da disciplina |        |       |       |
