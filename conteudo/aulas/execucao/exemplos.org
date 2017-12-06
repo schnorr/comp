@@ -1,0 +1,138 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Exemplos com ILOC
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Função principal
+Entrada
+  #+BEGIN_SRC amarela
+  int main () { }
+  #+END_SRC
+#+latex: \vfill
+\pause  ILOC
+  #+BEGIN_SRC iloc
+  loadI 1024 => fp
+  loadI 1024 => sp
+  loadI 7 => bss
+  jumpI => L0
+  L0: addI sp, 0 => sp
+  halt
+  #+END_SRC
++ Segmento de dados depois do segmento de código
++ A pilha começa no endereço 1024
++ Cada linha de código ocupa um único byte
+* Variáveis locais na pilha
+Entrada
+  #+BEGIN_SRC amarela
+  int main () { int x; x = 34; }
+  #+END_SRC
+\pause  ILOC
+  #+BEGIN_SRC iloc
+  loadI 1024 => fp
+  loadI 1024 => sp
+  loadI 9 => bss
+  jumpI => L0
+  L0: addI sp, 4 => sp
+  loadI 34 => r0
+  storeAI r0 => fp, 0
+  halt
+  #+END_SRC
+* Variáveis globais e locais
+Entrada
+  #+BEGIN_SRC amarela
+  int y; int main () { int x; y = 59; x = 33; }
+  #+END_SRC
+\pause  ILOC
+  #+BEGIN_SRC iloc
+  loadI 1024 => fp
+  loadI 1024 => sp
+  loadI 11 => bss
+  jumpI => L0
+  L0: addI sp, 4 => sp
+  loadI 59 => r0
+  storeAI r0 => bss, 0
+  loadI 33 => r0
+  storeAI r0 => fp, 0
+  halt
+  #+END_SRC
+* Chamada de função
+Entrada
+  #+BEGIN_SRC amarela
+  int f() { return 73; } int main() { int x; x = f(); }
+  #+END_SRC
+\pause  ILOC
+  \tiny
+  #+BEGIN_SRC iloc
+  loadI 1024 => fp
+  loadI 1024 => sp
+  loadI 23 => bss
+  jumpI => L1
+  L0: i2i sp => fp
+  addI sp, 16 => sp   //final do epílogo
+  loadI 73 => r0      //seq retorno
+  storeAI r0 => fp, 12
+  loadAI fp, 0 => r0  //obtém end. retorno
+  loadAI fp, 4 => r1  //obtém sp salvo
+  loadAI fp, 8 => r2  //obtém fp salvo
+  store r1 => sp
+  store r2 => fp
+  jump r0
+  L1: addI sp, 4 => sp
+  storeAI 20 => sp, 0 //seq. chamada
+  storeAI sp => sp, 4
+  storeAI fp => sp, 8
+  jumpI => L0
+  loadAI sp, 12 => r0
+  storeAI r0 => fp, 0
+  halt
+  #+END_SRC
+* Passagem por valor
+Entrada
+  \small
+  #+BEGIN_SRC amarela
+  int f(int y) { return y; } int main() { int x; x = f(x); }
+  #+END_SRC
+  \normalsize
+\pause  ILOC
+  \tiny
+  #+BEGIN_SRC bash
+  loadI 1024 => fp
+  loadI 1024 => sp
+  loadI 26 => bss
+  jumpI => L1
+  L0: i2i sp => fp
+  addI sp, 20 => sp   //final do epílogo
+  loadAI fp, 12 => r0 //pega parâmetro
+  storeAI r0 => fp, 20  //salva em y
+  loadAI fp, 20 => r0 //seq retorno
+  storeAI r0 => fp, 16
+  loadAI fp, 0 => r0  //obtém end. retorno
+  loadAI fp, 4 => r1  //obtém sp salvo
+  loadAI fp, 8 => r2  //obtém fp salvo
+  store r1 => sp
+  store r2 => fp
+  jump r0
+  L1: addI sp, 4 => sp
+  storeAI 23 => sp, 0 //seq. chamada
+  storeAI sp => sp, 4
+  storeAI fp => sp, 8
+  loadAI fp, 0 => r0
+  storeAI r0 => sp, 12
+  jumpI => L0
+  loadAI sp, 16 => r0
+  storeAI r0 => fp, 0
+  halt
+  #+END_SRC
+
