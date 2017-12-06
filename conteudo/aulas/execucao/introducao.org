@@ -14,3 +14,37 @@
 #+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
 #+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
+
+* Contextualização
+
+Geração de Código Intermediário resolve
++ Cálculo de endereçamento para arranjos
++ Endereçamento para variáveis locais
++ Expressões aritméticas e booleanas
++ Construções de fluxo de controle
++ Atribuições para variáveis
+
+#+latex: \bigskip
+
+O que falta?
+
+#+latex: \pause
+
++ Implementação da chamadas de funções
++ Gerenciar parâmetros formais e reais (passagem de parâmetro)
++ Qual a primeira instrução a ser executada?
+
+* Suporte à Execução
+
+Conjunto de rotinas chamado *Pacote de Suporte à Execução*
++ Código adicional embutido no binário
++ Espalhado em várias partes do segmento de código
++ Gerado pelo compilador: assume uma pilha, gerenciando-a
+
+#+latex: \bigskip\pause
+
+Envolve uma série de conceitos e técnicas
++ Composição do binário do programa (e carga em memória)
++ ``Alocação dinâmica'' de endereços de memória (na pilha)
++ Acesso a variáveis e dados
++ Chamadas de funções
