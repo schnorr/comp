@@ -24,7 +24,7 @@ disciplina, podem variar em abrangência e profundidade.
  | Geração  | [[./aulas/codigo/fluxo.org][Fluxo de Controle]]                |        |       |       |
  | Geração  | [[./aulas/codigo/fluxo-exercicio.org][Exercício de Fluxo de Controle]]   |        |       | [[./aulas/codigo/lista_em_aula01.pdf][#L0]]   |
  |----------+----------------------------------+--------+-------+-------|
- | Execução | [[./aulas/execucao/introduca.org][Introdução]]                       |        |       |       |
+ | Execução | [[./aulas/execucao/introducao.org][Introdução]]                       |        |       |       |
  | Execução | [[./aulas/execucao/organizacao.org][Organização da Memória]]           |        |       |       |
  | Execução | [[./aulas/execucao/exemplos.org][Exemplos com ILOC]]                |        |       |       |
  | Execução | [[./aulas/execucao/sequencia.org][Sequência de chamada]]             |        |       |       |
