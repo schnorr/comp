@@ -1,0 +1,256 @@
+* Resultados da Etapa 5
+
+** Sumário
+
+ |-------+--------+-----------+----------+-------|
+ | Grupo | ID     | Subjetiva | Objetiva | Final |
+ |-------+--------+-----------+----------+-------|
+ | C     | ???064 |         9 |      6.1 |  7.55 |
+ | C     | ???024 |         9 |      6.1 |  7.55 |
+ | H     | ???464 |       9.5 |      5.5 |   7.5 |
+ | H     | ???684 |       9.5 |      5.5 |   7.5 |
+ | K     | ???495 |       8.5 |      5.8 |  7.15 |
+ | B     | ???515 |         9 |      2.6 |   5.8 |
+ | B     | ???513 |         9 |      2.6 |   5.8 |
+ | D     | ???528 |         5 |      2.6 |   3.8 |
+ | D     | ???172 |         5 |      2.6 |   3.8 |
+ | G     | ???866 |         7 |        0 |   3.5 |
+ | L     | ???076 |         2 |        0 |     1 |
+ | E     | ???243 |         2 |        0 |     1 |
+ | E     | ???106 |         2 |        0 |     1 |
+ | F     | ???093 |         0 |        0 |     0 |
+ | I     | ???676 |         0 |        0 |     0 |
+ | J     | ???675 |         0 |        0 |     0 |
+ | A     | ???490 |         0 |        0 |     0 |
+ | K     | ???955 |         0 |        0 |     0 |
+ | G     | ???834 |         0 |        0 |     0 |
+ | L     | ???679 |         0 |        0 |     0 |
+ | F     | ???090 |         0 |        0 |     0 |
+ | A     | ???722 |         0 |        0 |     0 |
+ | J     | ???666 |         0 |        0 |     0 |
+ |-------+--------+-----------+----------+-------|
+
+** Detalhes dos testes automáticos
+
+| Grupo | Teste falho    |
+|-------+----------------|
+| B     | e5_avaliacao_01_0 |
+| B     | e5_avaliacao_01_1 |
+| B     | e5_avaliacao_03_0 |
+| B     | e5_avaliacao_03_1 |
+| B     | e5_avaliacao_04_0 |
+| B     | e5_avaliacao_04_1 |
+| B     | e5_avaliacao_05_0 |
+| B     | e5_avaliacao_05_1 |
+| B     | e5_avaliacao_06_1 |
+| B     | e5_avaliacao_07_1 |
+| B     | e5_avaliacao_09_0 |
+| B     | e5_avaliacao_09_1 |
+| B     | e5_avaliacao_10_0 |
+| B     | e5_avaliacao_10_1 |
+| B     | e5_avaliacao_11_0 |
+| B     | e5_avaliacao_11_1 |
+| B     | e5_avaliacao_12_0 |
+| B     | e5_avaliacao_12_1 |
+| B     | e5_avaliacao_13_0 |
+| B     | e5_avaliacao_13_1 |
+| B     | e5_avaliacao_14_0 |
+| B     | e5_avaliacao_14_1 |
+| B     | e5_avaliacao_15_0 |
+| B     | e5_avaliacao_15_1 |
+| B     | e5_avaliacao_16_0 |
+| B     | e5_avaliacao_16_1 |
+| B     | e5_avaliacao_17_0 |
+| B     | e5_avaliacao_17_1 |
+| C     | e5_avaliacao_01_0 |
+| C     | e5_avaliacao_01_1 |
+| C     | e5_avaliacao_02_0 |
+| C     | e5_avaliacao_03_0 |
+| C     | e5_avaliacao_03_1 |
+| C     | e5_avaliacao_06_0 |
+| C     | e5_avaliacao_07_0 |
+| C     | e5_avaliacao_07_1 |
+| C     | e5_avaliacao_08_1 |
+| C     | e5_avaliacao_14_0 |
+| C     | e5_avaliacao_14_1 |
+| C     | e5_avaliacao_15_0 |
+| C     | e5_avaliacao_15_1 |
+| C     | e5_avaliacao_16_0 |
+| C     | e5_avaliacao_16_1 |
+| D     | e5_avaliacao_00_0 |
+| D     | e5_avaliacao_00_1 |
+| D     | e5_avaliacao_01_0 |
+| D     | e5_avaliacao_01_1 |
+| D     | e5_avaliacao_02_0 |
+| D     | e5_avaliacao_02_1 |
+| D     | e5_avaliacao_03_0 |
+| D     | e5_avaliacao_03_1 |
+| D     | e5_avaliacao_04_0 |
+| D     | e5_avaliacao_04_1 |
+| D     | e5_avaliacao_05_0 |
+| D     | e5_avaliacao_05_1 |
+| D     | e5_avaliacao_09_0 |
+| D     | e5_avaliacao_09_1 |
+| D     | e5_avaliacao_10_0 |
+| D     | e5_avaliacao_10_1 |
+| D     | e5_avaliacao_12_0 |
+| D     | e5_avaliacao_12_1 |
+| D     | e5_avaliacao_13_0 |
+| D     | e5_avaliacao_13_1 |
+| D     | e5_avaliacao_14_0 |
+| D     | e5_avaliacao_14_1 |
+| D     | e5_avaliacao_15_0 |
+| D     | e5_avaliacao_15_1 |
+| D     | e5_avaliacao_16_0 |
+| D     | e5_avaliacao_16_1 |
+| D     | e5_avaliacao_17_0 |
+| D     | e5_avaliacao_17_1 |
+| E     | e5_avaliacao_00_0 |
+| E     | e5_avaliacao_00_1 |
+| E     | e5_avaliacao_01_0 |
+| E     | e5_avaliacao_01_1 |
+| E     | e5_avaliacao_02_0 |
+| E     | e5_avaliacao_02_1 |
+| E     | e5_avaliacao_03_0 |
+| E     | e5_avaliacao_03_1 |
+| E     | e5_avaliacao_04_0 |
+| E     | e5_avaliacao_04_1 |
+| E     | e5_avaliacao_05_0 |
+| E     | e5_avaliacao_05_1 |
+| E     | e5_avaliacao_06_0 |
+| E     | e5_avaliacao_06_1 |
+| E     | e5_avaliacao_07_0 |
+| E     | e5_avaliacao_07_1 |
+| E     | e5_avaliacao_08_0 |
+| E     | e5_avaliacao_08_1 |
+| E     | e5_avaliacao_09_0 |
+| E     | e5_avaliacao_09_1 |
+| E     | e5_avaliacao_10_0 |
+| E     | e5_avaliacao_10_1 |
+| E     | e5_avaliacao_11_0 |
+| E     | e5_avaliacao_11_1 |
+| E     | e5_avaliacao_12_0 |
+| E     | e5_avaliacao_12_1 |
+| E     | e5_avaliacao_13_0 |
+| E     | e5_avaliacao_13_1 |
+| E     | e5_avaliacao_14_0 |
+| E     | e5_avaliacao_14_1 |
+| E     | e5_avaliacao_15_0 |
+| E     | e5_avaliacao_15_1 |
+| E     | e5_avaliacao_16_0 |
+| E     | e5_avaliacao_16_1 |
+| E     | e5_avaliacao_17_0 |
+| E     | e5_avaliacao_17_1 |
+| E     | e5_avaliacao_18_0 |
+| E     | e5_avaliacao_18_1 |
+| G     | e5_avaliacao_00_0 |
+| G     | e5_avaliacao_00_1 |
+| G     | e5_avaliacao_01_0 |
+| G     | e5_avaliacao_01_1 |
+| G     | e5_avaliacao_02_0 |
+| G     | e5_avaliacao_02_1 |
+| G     | e5_avaliacao_03_0 |
+| G     | e5_avaliacao_03_1 |
+| G     | e5_avaliacao_04_0 |
+| G     | e5_avaliacao_04_1 |
+| G     | e5_avaliacao_05_0 |
+| G     | e5_avaliacao_05_1 |
+| G     | e5_avaliacao_06_0 |
+| G     | e5_avaliacao_06_1 |
+| G     | e5_avaliacao_07_0 |
+| G     | e5_avaliacao_07_1 |
+| G     | e5_avaliacao_08_0 |
+| G     | e5_avaliacao_08_1 |
+| G     | e5_avaliacao_09_0 |
+| G     | e5_avaliacao_09_1 |
+| G     | e5_avaliacao_10_0 |
+| G     | e5_avaliacao_10_1 |
+| G     | e5_avaliacao_11_0 |
+| G     | e5_avaliacao_11_1 |
+| G     | e5_avaliacao_12_0 |
+| G     | e5_avaliacao_12_1 |
+| G     | e5_avaliacao_13_0 |
+| G     | e5_avaliacao_13_1 |
+| G     | e5_avaliacao_14_0 |
+| G     | e5_avaliacao_14_1 |
+| G     | e5_avaliacao_15_0 |
+| G     | e5_avaliacao_15_1 |
+| G     | e5_avaliacao_16_0 |
+| G     | e5_avaliacao_16_1 |
+| G     | e5_avaliacao_17_0 |
+| G     | e5_avaliacao_17_1 |
+| G     | e5_avaliacao_18_0 |
+| G     | e5_avaliacao_18_1 |
+| H     | e5_avaliacao_05_0 |
+| H     | e5_avaliacao_05_1 |
+| H     | e5_avaliacao_09_0 |
+| H     | e5_avaliacao_09_1 |
+| H     | e5_avaliacao_10_0 |
+| H     | e5_avaliacao_10_1 |
+| H     | e5_avaliacao_11_0 |
+| H     | e5_avaliacao_11_1 |
+| H     | e5_avaliacao_12_0 |
+| H     | e5_avaliacao_12_1 |
+| H     | e5_avaliacao_13_0 |
+| H     | e5_avaliacao_13_1 |
+| H     | e5_avaliacao_14_1 |
+| H     | e5_avaliacao_15_1 |
+| H     | e5_avaliacao_16_1 |
+| H     | e5_avaliacao_17_0 |
+| H     | e5_avaliacao_17_1 |
+| K     | e5_avaliacao_00_0 |
+| K     | e5_avaliacao_01_0 |
+| K     | e5_avaliacao_02_0 |
+| K     | e5_avaliacao_03_0 |
+| K     | e5_avaliacao_09_0 |
+| K     | e5_avaliacao_09_1 |
+| K     | e5_avaliacao_10_0 |
+| K     | e5_avaliacao_10_1 |
+| K     | e5_avaliacao_11_0 |
+| K     | e5_avaliacao_11_1 |
+| K     | e5_avaliacao_12_0 |
+| K     | e5_avaliacao_12_1 |
+| K     | e5_avaliacao_13_0 |
+| K     | e5_avaliacao_13_1 |
+| K     | e5_avaliacao_17_0 |
+| K     | e5_avaliacao_17_1 |
+| L     | e5_avaliacao_00_0 |
+| L     | e5_avaliacao_00_1 |
+| L     | e5_avaliacao_01_0 |
+| L     | e5_avaliacao_01_1 |
+| L     | e5_avaliacao_02_0 |
+| L     | e5_avaliacao_02_1 |
+| L     | e5_avaliacao_03_0 |
+| L     | e5_avaliacao_03_1 |
+| L     | e5_avaliacao_04_0 |
+| L     | e5_avaliacao_04_1 |
+| L     | e5_avaliacao_05_0 |
+| L     | e5_avaliacao_05_1 |
+| L     | e5_avaliacao_06_0 |
+| L     | e5_avaliacao_06_1 |
+| L     | e5_avaliacao_07_0 |
+| L     | e5_avaliacao_07_1 |
+| L     | e5_avaliacao_08_0 |
+| L     | e5_avaliacao_08_1 |
+| L     | e5_avaliacao_09_0 |
+| L     | e5_avaliacao_09_1 |
+| L     | e5_avaliacao_10_0 |
+| L     | e5_avaliacao_10_1 |
+| L     | e5_avaliacao_11_0 |
+| L     | e5_avaliacao_11_1 |
+| L     | e5_avaliacao_12_0 |
+| L     | e5_avaliacao_12_1 |
+| L     | e5_avaliacao_13_0 |
+| L     | e5_avaliacao_13_1 |
+| L     | e5_avaliacao_14_0 |
+| L     | e5_avaliacao_14_1 |
+| L     | e5_avaliacao_15_0 |
+| L     | e5_avaliacao_15_1 |
+| L     | e5_avaliacao_16_0 |
+| L     | e5_avaliacao_16_1 |
+| L     | e5_avaliacao_17_0 |
+| L     | e5_avaliacao_17_1 |
+| L     | e5_avaliacao_18_0 |
+| L     | e5_avaliacao_18_1 |
+|-------+----------------|
+
