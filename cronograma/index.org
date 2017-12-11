@@ -251,11 +251,11 @@ aulas %>%
 | 20 | 2017-11-13 |      67-104 |            |                                                                       | Avaliação              |
 | 21 | 2017-11-29 |             | Código     | Expressões Lógicas com atalho, Controle de Fluxo                      |                        |
 | 22 | 2017-12-04 |             | Código     | Controle de Fluxo                                                     |                        |
-| 23 | 2017-12-06 |      67-104 |            |                                                                       | Avaliação              |
-| 24 | 2017-12-11 |             | Execução   | Introdução, Registro de Ativação                                      | Início E6 (Chamada)    |
+| 23 | 2017-12-06 |             | Execução   | Introdução, Registro de Ativação                                      | Início E6 (Chamada)    |
+| 24 | 2017-12-11 |      67-105 |            |                                                                       | Avaliação              |
 | 25 | 2017-12-13 |             | Execução   | Chamada e retorno de Função, Passagem de parâmetros                   |                        |
-| 26 | 2017-12-18 |      73-103 |            |                                                                       | Avaliação              |
-| 27 | 2017-12-20 |             | Otimização | Introdução, Janela e Grafos de Fluxo                                  | Início E7 (Otimização) |
+| 26 | 2017-12-18 |             | Otimização | Introdução, Janela e Grafos de Fluxo                                  | Início E7 (Otimização) |
+| 27 | 2017-12-20 |      73-103 |            |                                                                       | Avaliação              |
 | 28 | 2018-01-15 |             | Otimização | Local e Global, Otimização em laços                                   |                        |
 | 29 | 2018-01-17 |     65-AUD1 |            | P2                                                                    |                        |
 | 30 | 2018-01-22 |             |            | PR                                                                    |                        |
