@@ -88,7 +88,7 @@ Entrada
   loadAI fp, 8 => r2  //obtém fp salvo
   store r1 => sp
   store r2 => fp
-  jump r0
+  jump => r0
   L1: addI sp, 4 => sp
   storeAI 20 => sp, 0 //seq. chamada
   storeAI sp => sp, 4
