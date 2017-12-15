@@ -99,40 +99,50 @@ Entrada
   halt
   #+END_SRC
 * Passagem por valor
-Entrada
-  \small
-  #+BEGIN_SRC amarela
-  int f(int y) { return y; } int main() { int x; x = f(x); }
-  #+END_SRC
-  \normalsize
-\pause  ILOC
-  \tiny
-  #+BEGIN_SRC bash
-  loadI 1024 => fp
-  loadI 1024 => sp
-  loadI 26 => bss
-  jumpI => L1
-  L0: i2i sp => fp
-  addI sp, 20 => sp   //final do epílogo
-  loadAI fp, 12 => r0 //pega parâmetro
-  storeAI r0 => fp, 20  //salva em y
-  loadAI fp, 20 => r0 //seq retorno
-  storeAI r0 => fp, 16
-  loadAI fp, 0 => r0  //obtém end. retorno
-  loadAI fp, 4 => r1  //obtém sp salvo
-  loadAI fp, 8 => r2  //obtém fp salvo
-  store r1 => sp
-  store r2 => fp
-  jump r0
-  L1: addI sp, 4 => sp
-  storeAI 23 => sp, 0 //seq. chamada
-  storeAI sp => sp, 4
-  storeAI fp => sp, 8
-  loadAI fp, 0 => r0
-  storeAI r0 => sp, 12
-  jumpI => L0
-  loadAI sp, 16 => r0
-  storeAI r0 => fp, 0
-  halt
-  #+END_SRC
+#+latex: \tiny
+#+BEGIN_SRC amarela
+int f(int y) { return y; } int main() { int x; x = f(x); }
+#+END_SRC
+
+#+BEGIN_SRC asm
+// Programa de entrada
+// int foo(int y) { return y; } int main() { int x; x = foo(x); }
+
+// FP: Frame Pointer
+// SP: Stack Pointer
+// BSS: uninitialized data segment
+	
+// Inicializa os registradores rfp (FP), rsp (SP), e rbss (BSS)
+// FP e SP apontam inicialmente para a base da pilha
+// BSS aponta para o início do segmento de dados
+loadI 1024 => rfp
+loadI 1024 => rsp
+loadI 29 => rbss
+// O código da função main está em L1, salta para lá	
+jumpI => L1
+// Início da função foo
+L0: i2i rsp => rfp     // Atualiza o rfp (FP)
+addI rsp, 20 => rsp    // Atualiza o rsp (SP)
+loadAI rfp, 12 => r0   // Obtém o parâmetro
+storeAI r0 => rfp, 20  // Salva o parâmetro na variável y
+loadAI rfp, 20 => r0   // Salva o valor da variável y em r0
+storeAI r0 => rfp, 16  // Registra o valor de retorno
+loadAI rfp, 0 => r0    // Obtém end. retorno
+loadAI rfp, 4 => r1    // Obtém rsp (SP) salvo
+loadAI rfp, 8 => r2    // Obtém rfp (FP) salvo
+store r1 => rsp        // Atualiza o rsp (SP)
+store r2 => rfp        // Atualiza o rfp (FP)
+jump => r0             // Salta para o endereço de retorno
+// Início da função main	
+L1: addI rsp, 4 => rsp // Reserva espaço para a variável local x
+addI rpc,7  => r1      // Calcula o endereço de retorno (7 instruções abaixo)
+storeAI r1  => rsp, 0  // Salva o endereço de retorno
+storeAI rsp => rsp, 4  // Salva o rsp (SP)
+storeAI rfp => rsp, 8  // Salva o rfp (FP)
+loadAI  rfp, 0 => r0   // Carrega o valor da variável x em r0
+storeAI r0 => rsp, 12  // Empilha o parâmetro
+jumpI => L0            // Salta para o início da função chamada
+loadAI rsp, 16 => r0   // Retorno da função, carrega o valor de retorno
+storeAI r0 => rfp, 0   // Salva o retorno na variável x
+#+END_SRC
 
