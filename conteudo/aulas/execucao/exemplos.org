@@ -137,7 +137,7 @@ jump => r0             // Salta para o endereço de retorno
 // Início da função main	
 L1:
 addI rsp, 4 => rsp // Reserva espaço para a variável local x
-addI rpc,7  => r1      // Calcula o endereço de retorno (7 instruções abaixo)
+addI rpc, 7  => r1      // Calcula o endereço de retorno (7 instruções abaixo)
 storeAI r1  => rsp, 0  // Salva o endereço de retorno
 storeAI rsp => rsp, 4  // Salva o rsp (SP)
 storeAI rfp => rsp, 8  // Salva o rfp (FP)
