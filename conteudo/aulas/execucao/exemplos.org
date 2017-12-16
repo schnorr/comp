@@ -131,8 +131,8 @@ storeAI r0 => rfp, 16  // Registra o valor de retorno
 loadAI rfp, 0 => r0    // Obtém end. retorno
 loadAI rfp, 4 => r1    // Obtém rsp (SP) salvo
 loadAI rfp, 8 => r2    // Obtém rfp (FP) salvo
-store r1 => rsp        // Atualiza o rsp (SP)
-store r2 => rfp        // Atualiza o rfp (FP)
+i2i r1 => rsp        // Atualiza o rsp (SP)
+i2i r2 => rfp        // Atualiza o rfp (FP)
 jump => r0             // Salta para o endereço de retorno
 // Início da função main	
 L1:
