@@ -121,7 +121,8 @@ loadI 29 => rbss
 // O código da função main está em L1, salta para lá	
 jumpI => L1
 // Início da função foo
-L0: i2i rsp => rfp     // Atualiza o rfp (FP)
+L0:
+i2i rsp => rfp     // Atualiza o rfp (FP)
 addI rsp, 20 => rsp    // Atualiza o rsp (SP)
 loadAI rfp, 12 => r0   // Obtém o parâmetro
 storeAI r0 => rfp, 20  // Salva o parâmetro na variável y
@@ -134,7 +135,8 @@ store r1 => rsp        // Atualiza o rsp (SP)
 store r2 => rfp        // Atualiza o rfp (FP)
 jump => r0             // Salta para o endereço de retorno
 // Início da função main	
-L1: addI rsp, 4 => rsp // Reserva espaço para a variável local x
+L1:
+addI rsp, 4 => rsp // Reserva espaço para a variável local x
 addI rpc,7  => r1      // Calcula o endereço de retorno (7 instruções abaixo)
 storeAI r1  => rsp, 0  // Salva o endereço de retorno
 storeAI rsp => rsp, 4  // Salva o rsp (SP)
