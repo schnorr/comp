@@ -104,7 +104,7 @@ Entrada
 int f(int y) { return y; } int main() { int x; x = f(x); }
 #+END_SRC
 
-#+BEGIN_SRC asm
+#+BEGIN_SRC asm :tangle exemplo5.iloc
 // Programa de entrada
 // int foo(int y) { return y; } int main() { int x; x = foo(x); }
 
