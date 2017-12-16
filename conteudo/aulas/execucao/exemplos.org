@@ -148,3 +148,70 @@ loadAI rsp, 16 => r0   // Retorno da função, carrega o valor de retorno
 storeAI r0 => rfp, 0   // Salva o retorno na variável x
 #+END_SRC
 
+#+begin_src shell :results output
+SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
+$SIM -t 1 --stack 1024 -m 1 exemplo5.iloc
+#+end_src
+
+#+RESULTS:
+#+begin_example
+0 ['loadI', 1024, 'rfp']
+0 0 0 0 0
+1 ['loadI', 1024, 'rsp']
+0 0 0 0 0
+2 ['loadI', 29, 'rbss']
+0 0 0 0 0
+3 ['jumpI', 16]
+0 0 0 0 0
+16 ['addI', 'rsp', 4, 'rsp']
+0 0 0 0 0
+17 ['addI', 'rpc', 7, 'r1']
+0 0 0 0 0
+18 ['storeAI', 'r1', 'rsp', 0]
+0 24 0 0 0
+19 ['storeAI', 'rsp', 'rsp', 4]
+0 24 0 0 0
+20 ['storeAI', 'rfp', 'rsp', 8]
+0 24 0 0 0
+21 ['loadAI', 'rfp', 0, 'r0']
+0 24 0 0 0
+22 ['storeAI', 'r0', 'rsp', 12]
+0 24 0 0 0
+23 ['jumpI', 4]
+0 24 0 0 0
+4 ['i2i', 'rsp', 'rfp']
+0 24 0 0 0
+5 ['addI', 'rsp', 20, 'rsp']
+0 24 0 0 0
+6 ['loadAI', 'rfp', 12, 'r0']
+0 24 0 0 0
+7 ['storeAI', 'r0', 'rfp', 20]
+0 24 0 0 0
+8 ['loadAI', 'rfp', 20, 'r0']
+0 24 0 0 0
+9 ['storeAI', 'r0', 'rfp', 16]
+0 24 0 0 0
+10 ['loadAI', 'rfp', 0, 'r0']
+0 24 0 0 0
+11 ['loadAI', 'rfp', 4, 'r1']
+24 24 0 0 0
+12 ['loadAI', 'rfp', 8, 'r2']
+24 1028 0 0 0
+13 ['i2i', 'r1', 'rsp']
+24 1028 1024 0 0
+14 ['i2i', 'r2', 'rfp']
+24 1028 1024 0 0
+15 ['jump', 'r0']
+24 1028 1024 0 0
+24 ['loadAI', 'rsp', 16, 'r0']
+24 1028 1024 0 0
+25 ['storeAI', 'r0', 'rfp', 0]
+0 1028 1024 0 0
+00001024 0
+00001028 24
+00001032 1028
+00001036 1024
+00001040 0
+00001044 0
+00001048 0
+#+end_example
