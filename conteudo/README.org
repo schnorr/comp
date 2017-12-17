@@ -3,7 +3,9 @@
 
 A tabela abaixo traz uma lista dos assuntos abordados ao longo do
 semestre, por setor. Os tópicos, respeitando o plano de ensino da
-disciplina, podem variar em abrangência e profundidade.
+disciplina, podem variar em abrangência e profundidade. Todos os links
+de conteúdo apontam para arquivos ORG que devem ser processados com
+e-macs e org-mode para gerar os PDFs.
 
 *** Segunda Parte
 
