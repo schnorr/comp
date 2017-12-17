@@ -5,7 +5,11 @@ A tabela abaixo traz uma lista dos assuntos abordados ao longo do
 semestre, por setor. Os tópicos, respeitando o plano de ensino da
 disciplina, podem variar em abrangência e profundidade. Todos os links
 de conteúdo apontam para arquivos ORG que devem ser processados com
-e-macs e org-mode para gerar os PDFs.
+e-macs e org-mode para gerar os PDFs. Arquivos Makefile foram
+colocados neste repositório para auxiliar neste processo de criação de
+PDFs. Eles assumem a existência de uma versão recente de e-macs
+(25.*), uma versão recente de org-mode (9.*), e o programa =pdflatex=
+para compilação de arquivos TEX diretamente para PDF.
 
 *** Segunda Parte
 
