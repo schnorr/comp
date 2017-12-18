@@ -39,7 +39,8 @@ PDF.
  | Execução | [[./aulas/execucao/exemplos.org][Exemplos com ILOC]]                |        |       |       |
  | Execução | [[./aulas/execucao/sequencia.org][Sequência de chamada]]             |        |       |       |
  | Execução | [[./aulas/execucao/passagem.org][Passagem de parâmetros]]           |        |       |       |
- |----------+----------------------------------+--------+-------+-------|
+ | Código   | [[./aulas/execucao/geracao.org][Geração de Código]]                |        |       |       |
+ | Código   | [[./aulas/execucao/alocacao.org][Alocação de Registradores]]        |        |       |       |
 
 *** Primeira Parte
 
