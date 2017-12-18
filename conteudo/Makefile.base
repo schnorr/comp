@@ -1,6 +1,3 @@
 %.pdf: %.org
 	emacs -batch $^ --funcall org-babel-tangle
 	emacs -batch $^ --funcall org-beamer-export-to-pdf
-
-clean:
-	rm -f *.tex *~
