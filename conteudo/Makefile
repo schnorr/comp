@@ -5,3 +5,4 @@ all:
 	+$(MAKE) -C aulas/lexica
 	+$(MAKE) -C aulas/semantica
 	+$(MAKE) -C aulas/sintatica
+	+$(MAKE) -C aulas/otimizacao
