@@ -15,3 +15,55 @@
 #+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
+* Otimização de Código
+
+Aspectos contraditórios
++ Uso de memória
++ Velocidade de execução
+
+Código ótimo
++ Problema não decidível \rightarrow Utilizar heurísticas
++ Devemos pensar em *melhorias* ao invés de otimização
+
+* Estrutura de um *Compilador* em fases
+
+#+ATTR_LATEX: :width .6\linewidth
+[[../geral/img/fases_compilacao.png]]
+
+* Otimização de Código
+
+*Otimização do código intermediário*
++ Eliminar atribuições redundantes
++ Suprimir subexpressões comuns
++ Eliminar temporários desnecessários
++ Trocar instruções de lugar
+
+*Otimização de código objeto*
++ Troca de instruções de máquina por instruções mais rápidas
++ Melhor utilização de registradores
+
+* Otimização de Código
+
+Como melhorar?
+
+#+latex: \small
+
+#+begin_src C
+int x[SIZE];
+int main () {
+  int i;
+  for (i = 0; i < SIZE; i++) x[i] = 1;
+}
+#+end_src
+
+#+latex: \pause\vfill
+
+Possível alteração no código de usuário
+
+#+begin_src C
+int x[SIZE];
+int main () {
+  register int *p;
+  for (p = (int*)x; p < (int*)x+SIZE;) *p++ = 1;
+}
+#+end_src
