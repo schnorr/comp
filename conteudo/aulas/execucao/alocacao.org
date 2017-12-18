@@ -1,0 +1,141 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Alocação de Registradores
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Alocação de Registradores
+Existem várias estratégias de alocação de registradores
+
+Utilizaremos uma baseada em
++ Vida e morte de uma variável
++ Grafo de interferência de registradores
++ Coloração de grafos para definir alocação
+* Vida e morte de uma variável
+Uma variável está viva
++ A partir da instrução logo após sua definição: *p_i*
++ Até logo depois de seu último uso: *p_j*
+Intervalo [p_i, p_j] de vida uma variável
+#+latex: \vfill
+| a: | s1 = ld(x)   |
+| b: | s2 = s1 + 4  |
+| c: | s3 = s1 * 8  |
+| d: | s4 = s1 - 4  |
+| e: | s5 = s1 / 2  |
+| f: | s6 = s2 * s3 |
+| g: | s7 = s4 - s5 |
+| h: | s8 = s6 * s7 |
+#+latex: \vfill
+#+latex: \pause
+
+s1 e s2 tem intervalo de vida de 4 instruções
+
+#+latex: \pause
+
+Quantas variáveis estão vivas nas instruções *e* e *f*?
+
+* Análise de vida de variáveis
+live-in(d) \\
+  \rightarrow conjunto de variáveis vivas até o ponto antes da instrução *d*
+live-out(d) \\
+  \rightarrow conjunto de variáveis vivas no ponto depois da instrução *d*
+#+latex: \vfill
+| a: | s1 = ld(x)   |
+| b: | s2 = s1 + 4  |
+| c: | s3 = s1 * 8  |
+| d: | s4 = s1 - 4  |
+| e: | s5 = s1 / 2  |
+| f: | s6 = s2 * s3 |
+| g: | s7 = s4 - s5 |
+| h: | s8 = s6 * s7 |
+#+latex: \vfill
+\pause Qual o live-in(e) e o live-out(e)?
++ \pause  live-in(e) = { s1, s2, s3, s4 }
++ \pause  live-out(e) = { s2, s3, s4, s5 }
+* Grafo de interferências de registradores
+Grafo não-direcionado que resume a análise de vida
+#+latex: \vfill
+Cada nó do grafo representa uma variável
++ Candidata a ser alocada em um registrador
+Uma aresta interconecta duas variáveis *v1* e *v2*
++ Se existe uma instrução onde elas estão vivas ao mesmo tempo
++ Diz-se então que as variáveis v1 e v2 se interferem
+#+latex: \vfill
+\pause Exemplo
+  | a: | s1 = ld(x)   |
+  | b: | s2 = s1 + 4  |
+  | c: | s3 = s1 * 8  |
+  | d: | s4 = s1 - 4  |
+  | e: | s5 = s1 / 2  |
+  | f: | s6 = s2 * s3 |
+  | g: | s7 = s4 - s5 |
+  | h: | s8 = s6 * s7 |
+* Coloração de grafos para alocação de registradores
+Duas passagens
++ Gera-se código com número infinito de registradores
++ Aloca-se registradores minimizando o *derramamento* (/spills/)
+    + Usa-se o grafo de interferência de registradores
+#+latex: \vfill
+\pause Coloração de grafos \rightarrow Forma de gerenciar os derramamentos
++ Feita sobre o grafo de interferência de registradores
+#+latex: \vfill
+\pause *Problema da k-coloração*
++ Escolher uma cor para um grafo dentro de k possíveis cores de
+    forma que nenhum nó adjacente possua a mesma cor
++ Menor inteiro k para qual o grafo pode ser colorido \\
+    \rightarrow *Número cromático do grafo*
+* Coloração de grafos para alocação de registradores
+Aplicar o algoritmo de coloração ao grafo de interferências
+
+#+latex: \pause
+
+Número cromático menor que quantidade de registradores
++ Não temos nada a fazer
+
+#+latex: \pause
+
+Caso contrário
++ Não há alternativa, temos que derramar registradores
++ Mas quais registradores?
+
+#+latex: \vfill\pause
+
+*Problema*
++ Determinar o menor número k para colorir um grafo \\
+    \rightarrow *NP-Completo* para k > 2
++ Devemos portanto usar uma heurística
+
+* Coloração de grafos para alocação de registradores
+
+Heurística para testar a k-coloração
+
+#+latex: \vfill
+
+Escolhemos um valor para *k*
+
+Suponha que um nó *n* do grafo possui menos que *k* vizinhos
+
+Remove *n* e suas arestas de G, obtendo um grafo G'
++ Este nó (e suas arestas) podem ser alocados sem derramamentos a *n* registradores
++ Uma coloração de G' com *k* cores pode ser estendido para G
+    atribuindo-se a *n* uma cor não atribuída a nenhum de seus
+    vizinhos
+
+#+latex: \vfill\pause
+
+Eliminando repetidamente nós com menos de *k* arestas
++ O grafo se torna vazio \rightarrow Produzimos uma coloração *k*
++ \pause Obtemos um grafo onde cada nó tem *k* ou mais arestas \\
+    \rightarrow Coloração *k* não é possível \\
+    \rightarrow Necessita derramamento
