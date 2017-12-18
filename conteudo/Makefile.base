@@ -1,16 +1,6 @@
-%.tex: %.org
-	emacs -batch $^  --funcall org-babel-tangle
-	emacs -batch --eval "(setq enable-local-eval t)" \
-                     --eval "(setq enable-local-variables t)" \
-                     --eval "(setq org-export-babel-evaluate t)" $^ \
-	             --funcall org-beamer-export-to-latex
-
-%.pdf: %.tex
-	pdflatex $^
-	pdflatex $^
+%.pdf: %.org
+	emacs -batch $^ --funcall org-babel-tangle
+	emacs -batch $^ --funcall org-beamer-export-to-pdf
 
 clean:
-	rm -f $(NAME).aux $(NAME).bbl $(NAME).blg $(NAME).log $(NAME).out *~
-
-distclean: clean
-	rm -f $(NAME).html $(NAME).tex $(NAME).pdf
+	rm -f *.tex *~
