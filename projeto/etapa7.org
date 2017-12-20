@@ -15,3 +15,66 @@
 #+TAGS: Lucas(L) noexport(n) deprecated(d)
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
+
+A sétima etapa do trabalho de implementação de um compilador para a
+*Linguagem \K* consiste na implementação de técnicas de otimização de
+código intermediário. Utilizaremos como representação intermediária a
+*Linguagem ILOC*. A solução desta etapa deve estar organizada de forma
+modular. Ela deve ser aplicada sistematicamente sobre a saída gerada
+do compilador e da sequência de ativação, resultado das etapas cinco e
+seis.
+
+# Além disso, em um contexto ideal, ela deve poder funcionar de forma
+# independente, dando como entrada um arquivo com código ILOC e
+# gerando um outro arquivo com código ILOC otimizado. O professor
+# utilizará esta segunda forma de funcionamento para avaliar o
+# trabalho.
+
+* Funcionalidades Necessárias
+
+
+** Módulo de Otimização
+
+Crie um módulo de otimização dentro do compilador capaz de receber
+uma estrutura de dados com código ILOC como entrada e retornar uma
+outra estrutura com código ILOC otimizado. Caso ativado, o compilador
+deve gerar código já otimizado. O módulo deve poder ser desativado com
+um parâmetro específico (sugere-se que o grupo adote =-O0= para tal).
+
+** Otimização de Janela
+:PROPERTIES:
+:CUSTOM_ID: janela
+:END:
+
+Implemente uma série de técnicas de otimização de janela
+(\emph{peephole optimization}). O tamanho da janela deve ser
+parametrizável através de um argumento para o programa, sendo que o
+tamanho padrão de janela é de duas instruções. O passo de avanço da
+janela é sempre de uma instrução. As seguintes técnicas devem ser
+implementadas:
+
+- Eliminação de instrução redundante
+- Otimizações de fluxo de controle
+- Simplificações algébricas
+- Avaliação de constantes
+- Propagação de cópias
+
+** Definição da Heurística
+
+O grupo deve definir uma heurística de otimização utilizando as
+técnicas implementadas. Ela deve ter:
+
+- Quantidade de passagens de otimização
+- Ordem da aplicação das técnicas do item [[#janela]]
+- Tamanho da janela em cada passagem (ou tamanho fixo)
+
+Fica a critério do grupo definir diferentes níveis de otimização,
+seguindo o estilo dos compiladores mais comuns (=-O0=, =-O1=, =-O2= e =-O3=,
+por exemplo). /Pelo menos um nível de otimização deve ser implementado/.
+
+** Documentação
+
+Forneça documentação apropriada para que seja possível entender como
+utilizar o módulo de otimização. Isso inclui uma lista de todos os
+parâmetros aceitos pelo compilador assim como uma descrição do que
+cada um deles faz.
