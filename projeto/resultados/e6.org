@@ -1,0 +1,70 @@
+* Resultados da Etapa 6
+
+** Sumário
+
+|-------+--------+-----------+----------+-------|
+| Grupo | ID     | Subjetiva | Objetiva | Final |
+|-------+--------+-----------+----------+-------|
+| H     | ???464 |       9.5 |      8.8 |  9.15 |
+| H     | ???684 |       9.5 |      8.8 |  9.15 |
+| B     | ???515 |         9 |      8.8 |   8.9 |
+| B     | ???513 |         9 |      8.8 |   8.9 |
+| K     | ???495 |       9.5 |      6.3 |   7.9 |
+| C     | ???064 |       8.5 |        5 |  6.75 |
+| C     | ???024 |       8.5 |        5 |  6.75 |
+| G     | ???866 |         8 |      2.5 |  5.25 |
+| L     | ???679 |         5 |        0 |   2.5 |
+| L     | ???076 |         0 |        0 |     0 |
+| E     | ???243 |         0 |        0 |     0 |
+| K     | ???955 |         0 |        0 |     0 |
+| G     | ???834 |         0 |        0 |     0 |
+| E     | ???106 |         0 |        0 |     0 |
+| F     | ???093 |         0 |      nil |   nil |
+| D     | ???528 |         0 |      nil |   nil |
+| I     | ???676 |         0 |      nil |   nil |
+| J     | ???675 |         0 |      nil |   nil |
+| A     | ???490 |         0 |      nil |   nil |
+| F     | ???090 |         0 |      nil |   nil |
+| A     | ???722 |         0 |      nil |   nil |
+| D     | ???172 |         0 |      nil |   nil |
+| J     | ???666 |         0 |      nil |   nil |
+|-------+--------+-----------+----------+-------|
+
+** Detalhes dos testes automáticos
+
+|-------+---------------|
+| Grupo | Teste falho   |
+|-------+---------------|
+| B     | e6_avaliacao_05 |
+| C     | e6_avaliacao_03 |
+| C     | e6_avaliacao_05 |
+| C     | e6_avaliacao_06 |
+| C     | e6_avaliacao_07 |
+| E     | e6_avaliacao_00 |
+| E     | e6_avaliacao_01 |
+| E     | e6_avaliacao_02 |
+| E     | e6_avaliacao_03 |
+| E     | e6_avaliacao_04 |
+| E     | e6_avaliacao_05 |
+| E     | e6_avaliacao_06 |
+| E     | e6_avaliacao_07 |
+| G     | e6_avaliacao_02 |
+| G     | e6_avaliacao_03 |
+| G     | e6_avaliacao_04 |
+| G     | e6_avaliacao_05 |
+| G     | e6_avaliacao_06 |
+| G     | e6_avaliacao_07 |
+| H     | e6_avaliacao_05 |
+| K     | e6_avaliacao_03 |
+| K     | e6_avaliacao_05 |
+| K     | e6_avaliacao_07 |
+| L     | e6_avaliacao_00 |
+| L     | e6_avaliacao_01 |
+| L     | e6_avaliacao_02 |
+| L     | e6_avaliacao_03 |
+| L     | e6_avaliacao_04 |
+| L     | e6_avaliacao_05 |
+| L     | e6_avaliacao_06 |
+| L     | e6_avaliacao_07 |
+|-------+---------------|
+
