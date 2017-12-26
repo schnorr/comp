@@ -31,8 +31,6 @@ seis.
 # trabalho.
 
 * Funcionalidades Necessárias
-
-
 ** Módulo de Otimização
 
 Crie um módulo de otimização dentro do compilador capaz de receber
@@ -78,3 +76,11 @@ Forneça documentação apropriada para que seja possível entender como
 utilizar o módulo de otimização. Isso inclui uma lista de todos os
 parâmetros aceitos pelo compilador assim como uma descrição do que
 cada um deles faz.
+* Avaliação
+
+Uma entrada na Linguagem \K é fornecida ao compilador. Caso -O0 seja
+fornecido também, espera-se que a saída ILOC é gerada sem
+otimizações. Caso -O1, ou -O2, ou -O3 sejam fornecidos, a saída ILOC é
+gerada com otimizações. Através de vários testes, será comparada a
+saída sem e com tais níveis de otimização e será observado o que
+mudou. As mudanças esperadas são aquelas descritas na seção anterior.
