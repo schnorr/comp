@@ -1,0 +1,75 @@
+* Resultados da Etapa 7
+
+Somente avaliação subjetiva segundo a [[../etapa7.org][Especificação
+da Etapa 7]]. Segue avaliação por grupo.
+
+** B
+
+#+name: e7gB
+| Critério                           | Nota |
+|------------------------------------+------|
+| Eliminação de instrução redundante |   10 |
+| Otimizações de fluxo de controle   |   10 |
+| Simplificações algébricas          |   10 |
+| Avaliação de constantes            |    0 |
+| Propagação de cópias               |   10 |
+| Definição da Heurística            |    5 |
+| Documentação                       |    5 |
+| Subjetivo                          |    7 |
+
+Tem uma função main que realiza vários testes automaticamente.
+
+** E
+
+#+name: e7gE
+| Critério                           | Nota |
+|------------------------------------+------|
+| Eliminação de instrução redundante |      |
+| Otimizações de fluxo de controle   |      |
+| Simplificações algébricas          |   10 |
+| Avaliação de constantes            |      |
+| Propagação de cópias               |      |
+| Definição da Heurística            |      |
+| Documentação                       |    5 |
+| Subjetivo                          |    5 |
+|------------------------------------+------|
+
+Arquivo separado em tests contém um esboço de solução independente do
+resto do compilador.
+
+** G
+
+#+name: e7gG
+| Critério                           | Nota |
+|------------------------------------+------|
+| Eliminação de instrução redundante |      |
+| Otimizações de fluxo de controle   |      |
+| Simplificações algébricas          |      |
+| Avaliação de constantes            |      |
+| Propagação de cópias               |      |
+| Definição da Heurística            |   10 |
+| Documentação                       |   10 |
+| Subjetivo                          |    7 |
+|------------------------------------+------|
+
+O binário tem uma opção de ajuda que fornece detalhes de como deve ser
+chamado (embora não indique exemplos para o qual o compilador com suas
+otimizações funcione). Ao ser chamado seguindo a especificação da
+ajuda, o programa entra em laço infinito ocupando 100% da
+CPU. Portanto, não foi possível testar as otimizações
+
+** H
+
+#+name: e7gH
+| Critério                           | Nota |
+|------------------------------------+------|
+| Eliminação de instrução redundante |      |
+| Otimizações de fluxo de controle   |   10 |
+| Simplificações algébricas          |      |
+| Avaliação de constantes            |   10 |
+| Propagação de cópias               |      |
+| Definição da Heurística            |    7 |
+| Documentação                       |   10 |
+| Subjetivo                          |    8 |
+|------------------------------------+------|
+
