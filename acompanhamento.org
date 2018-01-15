@@ -17,7 +17,7 @@
 
 * Sumário de avaliações
 
-As avaliações *E7* e *P2* acontecerão.
+A avaliação *P2* acontecerá.
 
 Para tomar conhecimento novamente das fórmulas utilizadas:
 - [[./plano/index.org][As ponderações gerais]]
