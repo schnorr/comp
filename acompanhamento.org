@@ -6,14 +6,17 @@
 #+Date: schnorr@inf.ufrgs.br
 
 #+LATEX_CLASS: article
-#+LATEX_CLASS_OPTIONS: [10pt, twocolumn, a4paper]
-#+LATEX_HEADER: \input{org-babel.tex}
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
 
 #+OPTIONS: toc:nil
 #+STARTUP: overview indent
 #+TAGS: Lucas(L) noexport(n) deprecated(d)
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
+
+#+LATEX_HEADER: \usepackage[margin=1cm]{geometry}
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
 
 * Sumário de avaliações
 
