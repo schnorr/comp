@@ -74,37 +74,26 @@ suppressMessages(library(xtable));
 aulas <- aulas %>% as.tibble();
 
 daysOff <- c(
-ymd("2017-9-7"),   # Independen
-ymd("2017-9-20"),  # Farroupilh
-ymd("2017-10-12"), # Religioso 
-ymd("2017-10-16"), # SEMAC     
-ymd("2017-10-17"), # SEMAC     
-ymd("2017-10-18"), # SEMAC     
-ymd("2017-10-19"), # SEMAC     
-ymd("2017-10-20"), # SEMAC     
-ymd("2017-10-21"), # Dia nao letive
-ymd("2017-10-26"), # LICIA
-ymd("2017-10-27"), # LICIA
-ymd("2017-10-28"), # Servidor  
-ymd("2017-11-2"),  # Mortos    
-ymd("2017-11-15"), # Republica 
-seq(ymd("2017-11-14"), ymd("2017-11-28"), by="days"), # EcoSud
-ymd("2017-12-23"), # Recesso   
-ymd("2017-12-24"), # Recesso   
-ymd("2017-12-25"), # Recesso   
-ymd("2017-12-26"), # Recesso   
-ymd("2017-12-27"), # Recesso   
-ymd("2017-12-28"), # Recesso   
-ymd("2017-12-29"), # Recesso   
-ymd("2017-12-30"), # Recesso   
-ymd("2017-12-31"), # Recesso   
-ymd("2018-1-1"),   # Recesso
-ymd("2018-1-3"),   # Ajuste de cronograma
-ymd("2018-1-6"),   # Vestibular
-ymd("2018-1-7"),   # Vestibular
-ymd("2018-1-8"),   # Vestibular
-ymd("2018-1-9"),   # Vestibular
-ymd("2018-1-10")   # Vestibular
+ymd("2018-03-30"), # Religioso
+ymd("2018-03-31"), # Não Letivo
+seq(ymd("2018-04-04"), ymd("2018-04-06"), by="days"), # ERAD
+ymd("2018-04-21"), # Tiradentes
+ymd("2018-05-01"), # Trabalho
+ymd("2018-05-19"), # Portas Abert
+ymd("2018-05-31"), # Religioso
+ymd("2018-06-01"), # Não Letivo
+seq(ymd("2018-06-03"), ymd("2018-06-17"), by="days"), # BRAFITEC
+ymd("2018-09-07"), # Independência
+ymd("2018-09-20"), # Farroupilha
+ymd("2018-10-12"), # Religioso
+ymd("2018-10-15"), # SEMAC
+ymd("2018-10-16"), # SEMAC
+ymd("2018-10-17"), # SEMAC
+ymd("2018-10-18"), # SEMAC
+ymd("2018-10-19"), # SEMAC
+ymd("2018-10-20"), # Não Letivo
+ymd("2018-11-02"), # Mortos
+ymd("2018-11-15")  # República
 )
 
 dataDaRecuperação <- ymd("2018-07-12");
