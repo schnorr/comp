@@ -134,47 +134,38 @@ aulas %>%
 #+name: dias_por_etapa
 #+header: :var dep=cronograma
 #+begin_src R :results output :session :exports both
-entregaUltimaEtapa = ymd("2018-1-10");
+entregaUltimaEtapa = ymd("2018-07-08");
 
 aulas %>%
     drop_na() %>%
-    mutate(Etapa = as.integer(cumsum(ifelse(grepl("Início", Projeto), 1, 0)))) %>%
-    select(Etapa, Projeto, Dia) %>%
-    filter(Etapa != 0) %>%
-    filter(Dia <= entregaUltimaEtapa) %>%
-    bind_rows(tibble(Etapa=7, Projeto="", Dia=entregaUltimaEtapa)) %>%
-    group_by(Etapa) %>%
-    summarize(Duração = as.integer(max(Dia) - min(Dia))) %>%
-    mutate(Texto = paste0("E", Etapa, " = ", Duração, " dias")) -> dias_por_etapa
-dias_por_etapa
+    select(Projeto, Dia) %>%
+    filter(grepl("Início", Projeto)) %>%
+    bind_cols(
+        aulas %>%
+        drop_na() %>%
+        filter(grepl("Avaliação", Projeto)) %>%
+        select(Dia) %>%
+        rename(Fim = Dia) %>%
+        bind_rows(tibble(Fim = entregaUltimaEtapa))
+    ) %>%
+    mutate(Duração = as.integer(Fim - Dia)) %>%
+    rename(Início = Dia)  %>%
+    mutate(Texto = gsub("Início ", "", paste0(Projeto, " = ", Duração))) -> dias_por_etapa
+dias_por_etapa %>% select(Texto)
 #+end_src
 
 #+RESULTS: dias_por_etapa
 #+begin_example
-# A tibble: 7 x 3
-  Etapa Duração        Texto
-  <dbl>   <int>        <chr>
-1     1      12 E1 = 12 dias
-2     2      12 E2 = 12 dias
-3     3      12 E3 = 12 dias
-4     4      21 E4 = 21 dias
-5     5      30 E5 = 30 dias
-6     6       7  E6 = 7 dias
-7     7      21 E7 = 21 dias
-#+end_example
-
-#+RESULTS:
-#+begin_example
-# A tibble: 7 x 2
-  Etapa Duração
-  <dbl>   <int>
-1     1      12
-2     2      14
-3     3       9
-4     4       9
-5     5      30
-6     6       7
-7     7      21
+# A tibble: 7 x 1
+                      Texto
+                      <chr>
+1       E1 (flex) = 12 dias
+2      E2 (bison) = 19 dias
+3        E3 (AST) = 21 dias
+4      E4 (Tipos) = 21 dias
+5     E5 (Código) = 21 dias
+6     E6 (Chamada) = 9 dias
+7 E7 (Otimização) = 12 dias
 #+end_example
 
 ** Cronograma (em PDF)
