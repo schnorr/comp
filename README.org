@@ -46,9 +46,7 @@ estratégias pedagógicas alternativas:
 ** Plano e Cronograma
 
 - [[./plano/index.org][Plano da disciplina]] (permanente)
-- [[./cronograma/index.org][Cronograma]]
-  - Edição 2017/2 - Turma A
-  - Segundas e Quartas, 10:30 – 12:10
+- [[./cronograma/index.org][Cronograma]] (Edição 2018/1 - Turma A, Terças e Quintas, 13:30 – 15:10)
 
 ** Principal
 
@@ -57,10 +55,7 @@ estratégias pedagógicas alternativas:
 
 ** Projeto de Compilador
 
-- [[./projeto/README.org][Projeto de Compilador]]
-  - Apresentação
-  - Especificação das etapas
-  - Forma de avaliação
+- [[./projeto/README.org][Projeto de Compilador]] (Especificação das etapas, Forma de avaliação)
    
 ** Bibliografia
 + [[https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools][Compilers: Principles, Techniques and Tools. Aho, A.; Sethi, R.; Ullman, J. D.]]
