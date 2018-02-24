@@ -157,15 +157,15 @@ dias_por_etapa %>% select(Texto)
 #+RESULTS: dias_por_etapa
 #+begin_example
 # A tibble: 7 x 1
-                      Texto
-                      <chr>
-1       E1 (flex) = 12 dias
-2      E2 (bison) = 19 dias
-3        E3 (AST) = 21 dias
-4      E4 (Tipos) = 21 dias
-5     E5 (Código) = 21 dias
-6     E6 (Chamada) = 9 dias
-7 E7 (Otimização) = 12 dias
+                 Texto
+                 <chr>
+1       E1 (flex) = 12
+2      E2 (bison) = 19
+3        E3 (AST) = 21
+4      E4 (Tipos) = 21
+5     E5 (Código) = 21
+6     E6 (Chamada) = 9
+7 E7 (Otimização) = 12
 #+end_example
 
 ** Cronograma (em PDF)
