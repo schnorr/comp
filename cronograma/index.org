@@ -109,11 +109,11 @@ ymd("2018-1-10")   # Vestibular
 
 dataDaRecuperação <- ymd("2018-07-12");
 
-dates <- tibble(Dia=seq(ymd("2017-08-28"), ymd("2018-01-27"), by="days")) %>%
+dates <- tibble(Dia=seq(ymd("2018-03-05"), ymd("2018-07-14"), by="days")) %>%
     # Define o dia da semana
     mutate(DiaDaSemana = wday(Dia)) %>%
-    # Compiladores Segundas-Quartas
-    filter(DiaDaSemana %in% c(2, 4)) %>%
+    # Aulas de Compiladores nas Terças-Quintas
+    filter(DiaDaSemana %in% c(3, 5)) %>%
     # Remove dias onde não haverá aula
     filter(!(Dia %in% daysOff));
 
