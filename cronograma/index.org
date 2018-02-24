@@ -130,6 +130,7 @@ aulas %>%
 #+RESULTS: cronograma
 
 ** Dias por etapa do projeto (em R)
+
 #+name: dias_por_etapa
 #+header: :var dep=cronograma
 #+begin_src R :results output :session :exports both
@@ -184,7 +185,7 @@ dias_por_etapa
 cronograma.modelo.filename = "data/be/43e1ff-0a91-4c3f-9e17-1fa62e6795ce/layout-cronograma.tex"
 cronograma.modelo = readChar(cronograma.modelo.filename, file.info(cronograma.modelo.filename)$size);
 turma = "A";
-semestre = "2017/2"
+semestre = "2018/1 -- Outono";
 cronograma.modelo <- gsub("TURMA", turma, cronograma.modelo);
 cronograma.modelo <- gsub("SEMESTRE", semestre, cronograma.modelo);
 cronograma.modelo <- gsub("TABELA", gsub("\\\\", "\\\\\\\\", cronograma), cronograma.modelo);
