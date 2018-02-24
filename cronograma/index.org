@@ -107,7 +107,7 @@ ymd("2018-1-9"),   # Vestibular
 ymd("2018-1-10")   # Vestibular
 )
 
-dataDaRecuperação <- ymd("2018-01-22");
+dataDaRecuperação <- ymd("2018-07-12");
 
 dates <- tibble(Dia=seq(ymd("2017-08-28"), ymd("2018-01-27"), by="days")) %>%
     # Define o dia da semana
