@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # -*- mode: org -*-
 
-#+Title: Projeto de Compilador -- Entrega, Avaliação, Regras Gerais
+#+Title: Projeto de Compilador -- Entrega, Avaliação, Regras
 #+Author: Lucas Mello Schnorr
 #+Date: schnorr@inf.ufrgs.br
 
@@ -16,7 +16,7 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 O trabalho consiste no projeto e implementação de um compilador
-funcional para uma determinada gramática de linguagem de programação
+para uma determinada gramática de linguagem de programação
 especificada em cada semestre. Este documento estabelece as regras
 gerais do projeto de compilador, com links para especificação das
 etapas.
