@@ -28,7 +28,7 @@
   - Repetição: x* (x repetido 0 ou mais vezes)
   - Repetição: x+ (x repetido 1 ou mais vezes)
 
-* Precedência e Associatividade m Expressões Regulares
+* Precedência e Associatividade em Expressões Regulares
 - Precedência (da maior para a menor, na ordem)
   | Operadores unários | =*= =+= |
   | Concatenção        |     |
