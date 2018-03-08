@@ -156,7 +156,7 @@ A linguagem possui operadores compostos, além dos operadores
 representados por alguns dos caracteres da seção anterior.  Os
 operadores compostos são:
 #+BEGIN_EXAMPLE
-<=    >=    ==     !=    &&    ||    >>     <<
+<=    >=    ==     !=    &&    ||    >>     <<     %>%
 #+END_EXAMPLE
 
 ** Identificadores
