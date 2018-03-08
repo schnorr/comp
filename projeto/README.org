@@ -27,9 +27,9 @@ A entrega sempre é até as 23:59 do dia. Tanto o commit da sua solução
 quanto a submissão do formulário devem acontecer no prazo. O
 formulário único para entrega de todas as etapas é o seguinte:
 
-#+BEGIN_CENTER
--- [[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]] --
-#+END_CENTER
+|-----------------------------|
+| -- [[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]] -- |
+|-----------------------------|
 
 | Etapa | Descrição e Especificação                  | Peso (%) | Cumul. (%) |    Entrega | Resultados |
 |-------+--------------------------------------------+----------+------------+------------+------------|
