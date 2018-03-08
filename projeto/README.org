@@ -138,7 +138,7 @@ pode-se realizar estes passos através da interface do =ccmake= (pacote
 =cmake-curses-gui= em um Linux Debian).
 
 #+BEGIN_EXAMPLE
-cmake -DETAPA_1=OFF -DETAPA_2=ON .
+cmake -DE1=OFF -DE2=ON .
 make
 #+END_EXAMPLE
 
@@ -195,7 +195,7 @@ avaliar o resultado do trabalho (supondo Etapa 3):
 cd diretorio-com-a-solucao
 mkdir build
 cd build
-cmake -DETAPA_1=OFF -DETAPA_2=OFF -DETAPA_3=ON ..
+cmake -DE1=OFF -DE2=OFF -DE3=ON ..
 make
 ctest -R e3
 #+end_src
