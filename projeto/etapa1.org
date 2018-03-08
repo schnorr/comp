@@ -176,7 +176,7 @@ precedidos opcionalmente pelo sinal de negativo ou positivo. Literais
 em =float= são formados como um inteiro seguido de ponto decimal e uma
 sequência de dígitos. Literais do tipo =bool= podem ser =false= ou =true=.
 Literais do tipo =char= são representados por um único caractere entre
-entre aspas simples como por exemplo o ='a'=, ='='= e ='+'=. Literais do tipo
+entre aspas simples como por exemplo o ='a'=, ='='= e ='+'= . Literais do tipo
 =string= são qualquer sequência de caracteres entre aspas duplas, como
 por exemplo ="meu nome"= ou ="x = 3;"= . Os literais do tipo =char= e =string=
 devem ser inseridos na tabela de símbolos sem as aspas que os
