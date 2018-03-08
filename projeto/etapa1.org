@@ -67,7 +67,9 @@ _conteúdo_ de cada entrada na tabela de símbolos deve ser o número da
 linha onde o último lexema correspondente foi encontrado.  Na
 ocorrência de múltiplos lexemas idênticos na entrada, somente o número
 da linha da última ocorrência deve estar registrado na entrada
-correspondente.
+correspondente. No caso dos literais caracter e string, deve ser
+registrado na tabela de símbolo o lexema sem as aspas (sejam elas
+simples ou duplas).
 
 # Isto implica que, nesta etapa, o único campo da =struct=
 # =comp_dict_item_t= é um valor inteiro que contém o número da linha onde
