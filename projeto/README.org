@@ -180,8 +180,8 @@ utilizada, da seguinte forma:
 git push --tags ORIGIN master
 #+END_EXAMPLE
 
-Em seguida, *antes do prazo limite de entrega estabelecido*, envie um
-e-mail para o professor informando:
+Em seguida, *antes do prazo limite de entrega estabelecido*, submeta
+(através do formulário único de submissão) as seguintes informações:
 - O identificador da etapa (E1, E2, ...)
 - O link para que o professor possa clonar o repositório
 - O nome da tag que marca o commit que representa a solução
