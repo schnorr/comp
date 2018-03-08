@@ -86,7 +86,7 @@
   $r^* = r^{+} | \epsilon$ \\
   $r^+ = rr^* = rr^*$
 
-- <2-> *Zero ou mais instância* -- operador unário pós-fixado \alert{?} \\
+- <2-> *Zero ou uma instância* -- operador unário pós-fixado \alert{?} \\
   $r? = r|\epsilon$ \\
   Precedência equivalente a \alert{$*$} e \alert{$+$}
 
