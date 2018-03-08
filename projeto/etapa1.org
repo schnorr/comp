@@ -21,7 +21,7 @@ uma tabela com os símbolos relevantes encontrados, incluindo em qual a
 linha do arquivo o lexema correspondente aparece.
 
 * Funcionalidades Necessárias
-\label{sec.funcionalidades}
+#+latex: \label{sec.funcionalidades}
 
 ** Definir expressões regulares
 
@@ -106,7 +106,7 @@ na avaliação automática para averiguar se a solução insere somente os
 tokens que devem ser inseridos na tabela de símbolos.
 
 * Descrição dos Tokens
-\label{sec.tokens}
+#+latex: \label{sec.tokens}
 
 Existem tokens que correspondem a caracteres particulares, como
 vírgula, ponto-e-vírgula, parênteses, para os quais é mais conveniente
