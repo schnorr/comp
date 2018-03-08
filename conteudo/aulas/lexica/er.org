@@ -59,6 +59,8 @@
 - <2-> *Exercício Rápido* \\
   Todas as strings com *a* e *b*, começando por *b* e não tendo duas letras *a* consecutivas?
 
+# b(ab)*
+
 * Propriedades Algébricas
 - Comutativa: $r|s = s|r$
 - Associativa: $r|(s|t) = (r|s)|t$
