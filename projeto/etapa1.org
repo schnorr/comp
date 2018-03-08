@@ -146,8 +146,7 @@ abaixo separados apenas por espaços, e devem ser retornados com o
 próprio código =ASCII= convertido para inteiro. São eles:
 #+BEGIN_EXAMPLE
  ,   ;   :   (   )   [   ]   {   }   +   - 
- *   /   <   >   =   !   &   $   %   #   ^
- .
+ *   /   <   >   =   !   &   %   #   ^   .
 #+END_EXAMPLE
 
 ** Operadores Compostos
@@ -156,7 +155,7 @@ A linguagem possui operadores compostos, além dos operadores
 representados por alguns dos caracteres da seção anterior.  Os
 operadores compostos são:
 #+BEGIN_EXAMPLE
-<=    >=    ==     !=    &&    ||    >>     <<     %>%
+<=    >=    ==     !=    &&    ||    >>     <<     %>%    %|%
 #+END_EXAMPLE
 
 ** Identificadores
