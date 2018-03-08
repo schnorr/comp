@@ -60,6 +60,7 @@
   Todas as strings com *a* e *b*, começando por *b* e não tendo duas letras *a* consecutivas?
 
 # b(ab)*
+# (b+(ab+)*(a|b|\epsilon))*
 
 * Propriedades Algébricas
 - Comutativa: $r|s = s|r$
