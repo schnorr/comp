@@ -28,12 +28,6 @@ quanto a submissão do formulário devem acontecer no prazo. O link para
 o formulário único que permite realizar a entrega de todas as etapas
 encontra-se abaixo.
 
-*** Formulário de Entrega
-
-|-----------------------------|
-| -- [[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]] -- |
-|-----------------------------|
-
 *** Prazos e Especificação
 
 | Etapa | Descrição e Especificação                  | Peso (%) | Cumul. (%) |    Entrega | Resultados |
@@ -46,6 +40,12 @@ encontra-se abaixo.
 | E6    | (obsoleto) [[./etapa6.org][Suporte de Execução]] ([[./etapa6.pdf][PDF]])       |       15 |         90 | 2018-06-27 |            |
 | E7    | (obsoleto) [[./etapa7.org][Otimização]] ([[./etapa7.pdf][PDF]])                |       10 |        100 | 2018-07-08 |            |
 |-------+--------------------------------------------+----------+------------+------------+------------|
+
+*** Procedimento de Entrega
+
+|-----------------------|
+| [[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]] |
+|-----------------------|
 
 ** Formação dos Grupos
 
