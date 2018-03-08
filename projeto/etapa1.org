@@ -67,9 +67,7 @@ _conteúdo_ de cada entrada na tabela de símbolos deve ser o número da
 linha onde o último lexema correspondente foi encontrado.  Na
 ocorrência de múltiplos lexemas idênticos na entrada, somente o número
 da linha da última ocorrência deve estar registrado na entrada
-correspondente. No caso dos literais caracter e string, deve ser
-registrado na tabela de símbolo o lexema sem as aspas (sejam elas
-simples ou duplas).
+correspondente.
 
 # Isto implica que, nesta etapa, o único campo da =struct=
 # =comp_dict_item_t= é um valor inteiro que contém o número da linha onde
@@ -178,9 +176,15 @@ sequência de dígitos. Literais do tipo =bool= podem ser =false= ou =true=.
 Literais do tipo =char= são representados por um único caractere entre
 entre aspas simples como por exemplo o ='a'=, ='='= e ='+'= . Literais do tipo
 =string= são qualquer sequência de caracteres entre aspas duplas, como
-por exemplo ="meu nome"= ou ="x = 3;"= . Os literais do tipo =char= e =string=
-devem ser inseridos na tabela de símbolos sem as aspas que os
-identificam no código fonte.
+por exemplo
+
+#+BEGIN_EXAMPLE
+"meu nome"
+"x = 3;"
+#+END_EXAMPLE
+
+Os literais do tipo =char= e =string= devem ser inseridos na tabela de
+símbolos sem as aspas que os identificam no código fonte.
 
 * 2016-05-21 Gerador de tokens para testes                         :noexport:
 
