@@ -28,7 +28,7 @@ quanto a submissão do formulário devem acontecer no prazo. O
 formulário único para entrega de todas as etapas é o seguinte:
 
 #+BEGIN_CENTER
-[[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]]
+-- [[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]] --
 #+END_CENTER
 
 | Etapa | Descrição e Especificação                  | Peso (%) | Cumul. (%) |    Entrega | Resultados |
