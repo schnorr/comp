@@ -25,16 +25,16 @@ etapas.
 
 A entrega sempre é até as 23:59 do dia.
 
-| Etapa | Descrição e Especificação       | Peso (%) | Cumulativo (%) |    Entrega | Resultados |
-|-------+---------------------------------+----------+----------------+------------+------------|
-| E1    | [[./etapa1.org][Análise Léxica]] ([[./etapa1.pdf][PDF]])            |       10 |             10 | 2017-09-10 |            |
-| E2    | [[./etapa2.org][Análise Sintática]] ([[./etapa2.pdf][PDF]])         |       15 |             25 | 2017-10-01 |            |
-| E3    | [[./etapa3.org][Árvore Sintática Abstrata]] ([[./etapa3.pdf][PDF]]) |       15 |             40 | _2017-10-22_ |            |
-| E4    | [[./etapa4.org][Análise Semântica]] ([[./etapa4.pdf][PDF]])         |       15 |             55 | 2017-11-12 |            |
-| E5    | [[./etapa5.org][Geração de Código]] ([[./etapa5.pdf][PDF]])         |       20 |             75 | 2017-12-10 |            |
-| E6    | [[./etapa6.org][Suporte de Execução]] ([[./etapa6.pdf][PDF]])       |       15 |             90 | 2017-12-19 |            |
-| E7    | [[./etapa7.org][Otimização]] ([[./etapa7.pdf][PDF]])                |       10 |            100 | 2018-01-10 |            |
-|-------+---------------------------------+----------+----------------+------------+------------|
+| Etapa | Descrição e Especificação       | Peso (%) | Cumulativo (%) | Entrega | Resultados |
+|-------+---------------------------------+----------+----------------+---------+------------|
+| E1    | [[./etapa1.org][Análise Léxica]] ([[./etapa1.pdf][PDF]])            |       10 |             10 |         |            |
+| E2    | [[./etapa2.org][Análise Sintática]] ([[./etapa2.pdf][PDF]])         |       15 |             25 |         |            |
+| E3    | [[./etapa3.org][Árvore Sintática Abstrata]] ([[./etapa3.pdf][PDF]]) |       15 |             40 |         |            |
+| E4    | [[./etapa4.org][Análise Semântica]] ([[./etapa4.pdf][PDF]])         |       15 |             55 |         |            |
+| E5    | [[./etapa5.org][Geração de Código]] ([[./etapa5.pdf][PDF]])         |       20 |             75 |         |            |
+| E6    | [[./etapa6.org][Suporte de Execução]] ([[./etapa6.pdf][PDF]])       |       15 |             90 |         |            |
+| E7    | [[./etapa7.org][Otimização]] ([[./etapa7.pdf][PDF]])                |       10 |            100 |         |            |
+|-------+---------------------------------+----------+----------------+---------+------------|
 
 ** Formação dos Grupos
 
