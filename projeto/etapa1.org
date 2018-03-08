@@ -176,12 +176,11 @@ precedidos opcionalmente pelo sinal de negativo ou positivo. Literais
 em =float= são formados como um inteiro seguido de ponto decimal e uma
 sequência de dígitos. Literais do tipo =bool= podem ser =false= ou =true=.
 Literais do tipo =char= são representados por um único caractere entre
-entre aspas simples como por exemplo o \texttt{'a'}, \texttt{'='} e
-\texttt{'+'}. Literais do tipo \texttt{string} são qualquer sequência
-de caracteres entre aspas duplas, como por exemplo \texttt{"meu nome"}
-ou \texttt{"x = 3;"}. Os literais do tipo =char= e =string= devem ser
-inseridos na tabela de símbolos sem as aspas que os identificam no
-código fonte.
+entre aspas simples como por exemplo o ='a'=, ='='= e ='+'=. Literais do tipo
+=string= são qualquer sequência de caracteres entre aspas duplas, como
+por exemplo ="meu nome"= ou ="x = 3;"= . Os literais do tipo =char= e =string=
+devem ser inseridos na tabela de símbolos sem as aspas que os
+identificam no código fonte.
 
 * 2016-05-21 Gerador de tokens para testes                         :noexport:
 
