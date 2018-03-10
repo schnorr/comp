@@ -82,36 +82,35 @@ membros do grupo na construção da etapa.
 
 *** Código Inicial
 
-O código inicial do projeto encontra-se em um repositório no Github.
+O código inicial do projeto encontra-se em um repositório público no
+Github cujo link é https://github.com/schnorr/pc. Sabendo que o
+repositório do grupo deve ser obrigatoriamente *privado*, deve-se evitar
+um clique em *Fork* pois sendo o repositório original público, o fork
+também o será. Sendo assim, recomenda-se criar um repositório novo com
+todo o histórico do repositório de referência do professor cujo link
+está acima, assim podendo criar um repositório privado. Receber novas
+modificações do repositório base é apenas questão de adicionar um
+remote (do repositório de referência do professor) e executar um pull
+desse remote. Caso o grupo já tenha criado um fork e iniciado o
+desenvolvimento do trabalho, pode-se consultar [[https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private ][esta questão no
+StackOverflow]] para torná-lo privado. Alternativamente, na situação
+onde o grupo deseja utilizar o GitHub, pode-se adotar a [[https://github.com/new/import][ferramenta de
+importação de projeto do GitHub]]. As alterações do repositório de
+referência podem ser obtidas da mesma forma descrita acima (com adição
+de remote e pull).
 
-Existem duas formas de obtê-lo, *sendo a primeira delas recomendada*.
+Abaixo uma listagem de comandos para clonar o repositório com o código
+inicial e envio dos commits para o repositório do grupo, assumindo que
+este já foi criado em algum serviço de GIT.
 
-1. Fork and Clone
+#+BEGIN_EXAMPLE
+git clone https://github.com/schnorr/pc
+cd pc
+git remote add MEUREPO https://seuservidorgit.com/seusuario/seurepositorio/
+git push MEUREPO master
+#+END_EXAMPLE
 
-   Ir ao site https://github.com/schnorr/pc e clicar em *Fork*. Uma vez
-   com sua cópia, clonar localmente com a seguinte sequência de
-   comandos, lembrando que USUARIO deve ser substituído pelo seu
-   usuário github:
-
-   #+BEGIN_EXAMPLE
-   git clone https://github.com/USUARIO/pc
-   cd pc
-   #+END_EXAMPLE
-
-2. Clone and Push
-
-   Nesta opção, *que não é recomendada*, realiza-se o seguinte
-   procedimento, assumindo que o link utilizado é válido e comporta um
-   repositório GIT virgem, sem conteúdo.
-
-   #+BEGIN_EXAMPLE
-   git clone https://github.com/schnorr/pc
-   cd pc
-   git remote add MEUREPO https://seuservidorgit.com/seusuario/seurepositorio/
-   git push MEUREPO master
-   #+END_EXAMPLE
-
-Em ambos os casos, o compilador pode ser inicialmente compilado
+O código inicial do compilador pode ser inicialmente compilado
 (supondo que as bibliotecas necessárias para compilação já estão
 instaladas) da seguinte forma:
 
