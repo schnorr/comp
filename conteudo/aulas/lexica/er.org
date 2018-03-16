@@ -116,7 +116,7 @@
 - Datas com diferentes separadores
   - <2-> Solução?
     | data      | \rightarrow | dia separador mes separador ano |
-    | dia       | \rightarrow | (0[1-9])\vert([1-2][0-9])\vert(3(1\vert2))            |
+    | dia       | \rightarrow | (0[1-9])\vert([1-2][0-9])\vert(3(0\vert1))            |
     | mes       | \rightarrow | (0[1-9])\vert1[0-2]                            |
     | ano       | \rightarrow | aaaa                            |
     | a         | \rightarrow | [0-9\epsilon]                          |
