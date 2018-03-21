@@ -33,7 +33,7 @@ encontra-se abaixo.
 | Etapa | Descrição e Especificação                  | Peso (%) | Cumul. (%) |    Entrega | Resultados |
 |-------+--------------------------------------------+----------+------------+------------+------------|
 | E1    | [[./etapa1.org][Análise Léxica]]                             |       10 |         10 | 2018-03-19 |            |
-| E2    | (obsoleto) [[./etapa2.org][Análise Sintática]] ([[./etapa2.pdf][PDF]])         |       15 |         25 | 2018-04-09 |            |
+| E2    | [[./etapa2.org][Análise Sintática]]                          |       15 |         25 | 2018-04-09 |            |
 | E3    | (obsoleto) [[./etapa3.org][Árvore Sintática Abstrata]] ([[./etapa3.pdf][PDF]]) |       15 |         40 | 2018-04-23 |            |
 | E4    | (obsoleto) [[./etapa4.org][Análise Semântica]] ([[./etapa4.pdf][PDF]])         |       15 |         55 | 2018-05-09 |            |
 | E5    | (obsoleto) [[./etapa5.org][Geração de Código]] ([[./etapa5.pdf][PDF]])         |       20 |         75 | 2018-05-28 |            |
