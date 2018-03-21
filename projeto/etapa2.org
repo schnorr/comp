@@ -118,8 +118,8 @@ de símbolos.
 
 ** Remoção de conflitos gramaticais
 
-Deve-se realizar a remoção de conflitos Reduce/Reduce[fn:1] e
-Shift/Reduce[fn:2] de todas as regras gramaticais. Estes conflitos
+Deve-se realizar a remoção de conflitos Reduce/Reduce [2] e
+Shift/Reduce [3] de todas as regras gramaticais. Estes conflitos
 devem ser tratados através do uso de configurações para o bison (veja
 a documentação sobre =%left=, =%right= ou =%nonassoc=). Os mesmos podem ser
 observados através de uma análise cuidadosa do arquivo =parser.output=
@@ -128,8 +128,8 @@ construtivo da especificação em passos, verificando em cada passo a
 inexistência de conflitos. Por vezes, a remoção de conflitos pode ser
 feita somente através de uma revisão de partes da gramática.
 
-[fn:1] \tiny http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html
-[fn:2] \tiny http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html
+[2]: http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html
+[3]: http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html
 
 ** Listar o conteúdo tabela de símbolos
 
