@@ -104,7 +104,7 @@ estrutura de dados que representa o conteúdo da entrada na tabela de
 símbolos ao =token= correspondente. Esta associação deve ser feita pelo
 analisador léxico (ou seja, no arquivo =scanner.l=).
 
-Ela é realizada através do uso da variável global =yylval=[fn:0] que é
+Ela é realizada através do uso da variável global =yylval=[1] que é
 usada pelo =flex= para dar um ``valor'' ao =token=, além do identificador
 (um número inteiro, como na E1) retornado imediatamente após o
 reconhecimento. Como esta variável global pode ser configurada com a
@@ -114,7 +114,7 @@ atribuição para a variável =yylval.valor_lexico=. O tipo do
 =valor_lexico= deve ser um ponteiro para uma entrada na tabela
 de símbolos.
 
-[fn:0] \tiny http://www.gnu.org/software/bison/manual/html_node/Token-Values.html
+[1]: http://www.gnu.org/software/bison/manual/html_node/Token-Values.html
 
 ** Remoção de conflitos gramaticais
 
