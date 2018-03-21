@@ -17,19 +17,13 @@
 
 O trabalho consiste no projeto e implementação de um compilador
 funcional para uma linguagem de programação que a partir de agora
-chamaremos de:
-
-#+BEGIN_CENTER
-*A Linguagem*
-#+END_CENTER
-
-Na segunda etapa do trabalho é preciso construir um analisador
-sintático utilizando a ferramenta de geração de reconhecedores =bison= e
-continuar o preenchimento da tabela de símbolos com outras
-informações, associando valores aos =tokens= (através da variável global
-=yylval=). O analisador sintático deve portanto verificar se a sentença
-fornecida -- o programa de entrada a ser compilado -- faz parte da
-linguagem ou não.
+chamaremos de *A Linguagem*. Na segunda etapa do trabalho é preciso
+construir um analisador sintático utilizando a ferramenta de geração
+de reconhecedores =bison= e continuar o preenchimento da tabela de
+símbolos com outras informações, associando valores aos =tokens=
+(através da variável global =yylval=). O analisador sintático deve
+portanto verificar se a sentença fornecida -- o programa de entrada a
+ser compilado -- faz parte da linguagem ou não.
 
 * Funcionalidades Necessárias
 ** Definir a gramática da linguagem
