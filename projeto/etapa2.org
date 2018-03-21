@@ -338,6 +338,34 @@ ponto-e-vírgula.
 # =do while=
 # if then else
 
+#+BEGIN_CENTER
+_Comandos com Pipes_
+#+END_CENTER
+
+A linguagem possui dois tokens (=%>%= e =%|%=) que servem como /pipes/. Eles
+podem ser utilizados em chamadas de função encadeadas com o estilo de
+programação com /pipes/, sendo que a sequência deve ser obrigatoriamente
+terminada por uma chamada de função seguida de um ponto-e-vírgula (que
+termina o comando com /pipe/). Sendo assim, o uso de um /pipe/ implica no
+uso obrigatório de duas chamadas de função, uma antes e outra depois
+dele. O exemplo mínimo abaixo ilustra este caso.
+
+#+BEGIN_EXAMPLE
+f() %>% g(., a);
+#+END_EXAMPLE
+
+Os comandos com /pipes/ podem ter encadeamento de múltiplas funções:
+
+#+BEGIN_EXAMPLE
+f() %>% g(., a) %>% z(.);
+#+END_EXAMPLE
+
+E também podem ser utilizados em atribuições:
+
+#+BEGIN_EXAMPLE
+a = f() %>% g(., a) %|% z(.);
+#+END_EXAMPLE
+
 ** Expr. Aritméticas, Lógicas, e com /Pipes/
 
 As expressões podem ser de três tipos: aritméticas, lógicas, e com
