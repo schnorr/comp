@@ -20,7 +20,7 @@ funcional para uma linguagem de programação que a partir de agora
 chamaremos de:
 
 #+BEGIN_CENTER
-*Linguagen \K*
+*A Linguagem*
 #+END_CENTER
 
 Na segunda etapa do trabalho é preciso construir um analisador
@@ -34,13 +34,13 @@ linguagem ou não.
 * Funcionalidades Necessárias
 ** Definir a gramática da linguagem
 
-A gramática da linguagem \K deve ser definida a partir da descrição
+A gramática da linguagem deve ser definida a partir da descrição
 geral da Seção \ref{sec.descricao}. As regras gramaticais devem ser
 incorporadas ao arquivo =parser.y=, arquivo este que conterá a gramática
 usando a sintaxe do bison.
 
 # \subsection{Adicionar produções gramaticais de erro}
-# Considerando a descrição da linguagem \K apresentada na
+# Considerando a descrição da linguagem apresentada na
 # Seção~\ref{sec.descricao}, o grupo deve identificar pelo menos {\bf
 # três} situações comuns de erros sintáticos que o usuário possa cometer,
 # adicionando produções
@@ -51,7 +51,7 @@ usando a sintaxe do bison.
 # subseção~\ref{sec.relatorio}.
 
 ** Relatório de Erro Sintático
-\label{sec.relatorio}
+#+latex: \label{sec.relatorio}
 
 Caso a análise sintática termine de forma correta, o programa deve
 retornar zero. Na ausência de erros sintáticos, esse valor é
@@ -144,9 +144,11 @@ tabela de símbolos. Utilize a função =void
 cc_dict_etapa_2_print_entrada (char *key, int line, int tipo)= para
 imprimir uma entrada. Esta função será utilizada na avaliação para
 averiguar se a solução preenche a tabela de símbolos.
-* A Linguagem \K
+* A Linguagem
 
-\label{sec.descricao} Um programa na linguagem \K é composto por três
+#+latex: \label{sec.descricao}
+
+Um programa na linguagem é composto por três
 elementos, todos opcionais: um conjunto de declarações de
 _variáveis globais_, um conjunto de declarações de _novos tipos_, um
 conjunto de _funções_. Esses elementos podem aparecer intercaladamente e
@@ -158,7 +160,7 @@ em qualquer ordem.
 ** Declarações de Novos Tipos
 \label{sec.novostipos}
 
-Novos tipos podem ser declarados apenas no escopo global em \K através
+Novos tipos podem ser declarados apenas no escopo global através
 da palavra reservada =class=, seguida de um nome e enfim uma lista de
 campos não vazia fornecida entre colchetes onde os campos são separados por dois
 pontos (através do caractere especial ':'). Cada campo tem o
@@ -302,7 +304,7 @@ dois-pontos.
 #+BEGIN_CENTER
 _Comandos de Controle de Fluxo_
 #+END_CENTER
-\K possui construções condicionais, iterativas e de seleção para
+A linguagem possui construções condicionais, iterativas e de seleção para
 controle estruturado de fluxo. As condicionais incluem o =if= com o =else=
 opcional, assim:
 #+BEGIN_EXAMPLE
