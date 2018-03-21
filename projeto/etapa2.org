@@ -277,7 +277,9 @@ _Chamada de Função_
 #+END_CENTER
 Uma chamada de função consiste no nome da função, seguida de
 argumentos entre parênteses separados por vírgula. Um argumento pode
-ser uma expressão.
+ser uma expressão, ou um simples marcador de lugar através do token =.=
+(ponto). Caso o argumento seja o ponto, veja a descrição de comandos
+com /pipes/ abaixo.
 
 #+BEGIN_CENTER
 _Comandos de Shift_
