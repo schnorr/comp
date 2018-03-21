@@ -129,6 +129,7 @@ inexistência de conflitos. Por vezes, a remoção de conflitos pode ser
 feita somente através de uma revisão de partes da gramática.
 
 [2]: http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html
+
 [3]: http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html
 
 ** Listar o conteúdo tabela de símbolos
