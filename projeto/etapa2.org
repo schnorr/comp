@@ -152,7 +152,7 @@ em qualquer ordem.
 # ponto-e-vírgula. 
 
 ** Declarações de Novos Tipos
-\label{sec.novostipos}
+#+latex: \label{sec.novostipos}
 
 Novos tipos podem ser declarados apenas no escopo global através
 da palavra reservada =class=, seguida de um nome e enfim uma lista de
@@ -172,7 +172,7 @@ nome do novo tipo é o identificador do tipo; a palavra reservada =class=
 serve unicamente para definir um novo tipo; e não para utilizá-lo.
 
 ** Declarações de Variáveis Globais
-\label{sec.varglobais}
+#+latex: \label{sec.varglobais}
 
 As variáveis são declaradas pelo seu tipo, seguidas pelo seu nome. O
 tipo pode estar precedido opcionalmente pela palavra reservada
@@ -186,7 +186,7 @@ foi declarado.  As declarações de variáveis globais são terminadas por
 ponto-e-vírgula, e não podem receber valores de inicialização.
 
 ** Definição de Funções
-\label{sec.funcoes}
+#+latex: \label{sec.funcoes}
 
 Cada função é definida por um cabeçalho e um corpo, sendo que esta
 definição não é terminada por ponto-e-vírgula. O cabeçalho consiste no
@@ -200,7 +200,7 @@ vetor. O tipo de um parâmetro pode ser opcionalmente precedido da
 palavra reservada =const=. O corpo da função é um bloco de comandos.
 
 ** Bloco de Comandos
-\label{sec.bloco}
+#+latex: \label{sec.bloco}
 
 Um bloco de comandos é definido entre chaves, e consiste em uma
 sequência, possivelmente vazia, de comandos simples cada um *terminado*
@@ -209,7 +209,7 @@ comando único simples, recursivamente, e pode ser utilizado em
 qualquer construção que aceite um comando simples.
 
 ** Comandos Simples
-\label{sec.comandos}
+#+latex: \label{sec.comandos}
 
 Os comandos simples da linguagem podem ser: declaração de variável
 local, atribuição, construções de fluxo de controle, operações de
