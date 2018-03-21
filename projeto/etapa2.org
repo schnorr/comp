@@ -338,9 +338,10 @@ ponto-e-vírgula.
 # =do while=
 # if then else
 
-** Expressões Aritméticas e Lógicas
+** Expr. Aritméticas, Lógicas, e com /Pipes/
 
-As expressões aritméticas podem ter como operandos: (a)
+As expressões podem ser de três tipos: aritméticas, lógicas, e com
+/pipes/. As expressões aritméticas podem ter como operandos: (a)
 identificadores, opcionalmente seguidos de expressão inteira entre
 colchetes, para acesso a vetores; (b) literais numéricos como inteiro
 e ponto-flutuante; (c) chamada de função. As expressões aritméticas
@@ -358,6 +359,8 @@ subexpressão de um desses tipos como válidos, deixando para a análise
 semântica das próximas etapas do projeto a tarefa de verificar a
 validade dos operandos e operadores.
 
+As expressões com /pipes/ podem ser vistas como os comandos com /pipes/,
+detalhado na seção anterior.
 
 # , como descrito na Seção~\ref{sec.comandos} acima. O
 # caractere especial ``\texttt{-}'' (veja especificação da etapa 1)
