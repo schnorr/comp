@@ -218,7 +218,7 @@ entrada, de saída, e de retorno, um bloco de comandos, e chamadas de
 função.
 
 #+BEGIN_CENTER
-_Declaração de Variável_
+*_Declaração de Variável_*
 #+END_CENTER
 Consiste no tipo da variável precedido opcionalmente pela palavra
 reservada =static=, e o nome da variável. Os tipos podem ser aqueles
@@ -231,7 +231,7 @@ operador composto ``\texttt{<=}'' e de um identificador ou
 literal. Somente tipos primitivos podem ser inicializados.
 
 #+BEGIN_CENTER
-_Comando de Atribuição_
+*_Comando de Atribuição_*
 #+END_CENTER
 Existem duas formas de atribuição: para identificadores cujo tipo é
 primitivo (veja Seção \ref{sec.varglobais}), e para identificadores de
@@ -249,7 +249,7 @@ identificador.campo = expressão
 #+END_EXAMPLE
 
 #+BEGIN_CENTER
-_Comandos de Entrada e Saída_
+*_Comandos de Entrada e Saída_*
 #+END_CENTER
 Identificado pela palavra reservada =input=, seguida de uma expressão.
 O comando de saída é identificado pela palavra reservada =output=,
@@ -270,7 +270,7 @@ onde cada expressão não pode ser vazia.
 #+Latex: \vspace{2\baselineskip}
 
 #+BEGIN_CENTER
-_Chamada de Função_
+*_Chamada de Função_*
 #+END_CENTER
 Uma chamada de função consiste no nome da função, seguida de
 argumentos entre parênteses separados por vírgula. Um argumento pode
@@ -279,7 +279,7 @@ ser uma expressão, ou um simples marcador de lugar através do token =.=
 com /pipes/ abaixo.
 
 #+BEGIN_CENTER
-_Comandos de Shift_
+*_Comandos de Shift_*
 #+END_CENTER
 Sendo número um literal inteiro positivo, temos:
 #+BEGIN_EXAMPLE
@@ -288,7 +288,7 @@ identificador >> numero
 #+END_EXAMPLE
 
 #+BEGIN_CENTER
-_Comando de Retorno, Break, Continue e Case_
+*_Comando de Retorno, Break, Continue e Case_*
 #+END_CENTER
 Retorno é a palavra reservada =return= seguida de uma expressão. Os
 comandos =break= e =continue= são simples. O comando =case= é o único que
@@ -297,7 +297,7 @@ lugar. Ele é seguido de um literal inteiro, seguido enfim por
 dois-pontos.
 
 #+BEGIN_CENTER
-_Comandos de Controle de Fluxo_
+*_Comandos de Controle de Fluxo_*
 #+END_CENTER
 A linguagem possui construções condicionais, iterativas e de seleção para
 controle estruturado de fluxo. As condicionais incluem o =if= com o =else=
