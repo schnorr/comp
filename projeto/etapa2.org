@@ -336,7 +336,7 @@ ponto-e-vírgula.
 # if then else
 
 #+BEGIN_CENTER
-_Comandos com Pipes_
+*_Comandos com Pipes_*
 #+END_CENTER
 
 A linguagem possui dois tokens (=%>%= e =%|%=) que servem como /pipes/. Eles
