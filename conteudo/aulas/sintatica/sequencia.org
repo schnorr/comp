@@ -155,6 +155,7 @@ _Resposta_
 
 Explicações
 - ; \in SEQ(D) porque pela regra #1 temos D DS'
+- $ \in SEQ(D) porque DS' pode virar \epsilon
 - $ \in SEQ(DS) porque DS é NT inicial em #1
 - $ \in SEQ(DS') porque em #1 ele aparece no final da produção
 
