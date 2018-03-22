@@ -151,7 +151,7 @@ _Resposta_
 |-----+-----+-----|
 | DS  | s   | $   |
 | DS' | ; \epsilon | $   |
-| D   | s   | ;   |
+| D   | s   | ; $ |
 
 Explicações
 - ; \in SEQ(D) porque pela regra #1 temos D DS'
