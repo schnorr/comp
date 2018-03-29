@@ -107,7 +107,9 @@ Analisando X
   - Considerar todas as produções com X na cabeça
 * Autômato Finito para LR(0) -- Exemplo
 #+BEGIN_CENTER
-Construir o autômato a partir de S' \rightarrow \bullet ( S ) S
+Construir o autômato a partir de S' \rightarrow \bullet S
+
+(ou seja uma gramática estendida)
 #+END_CENTER
 
 | S  | \rightarrow | ( S ) S |
