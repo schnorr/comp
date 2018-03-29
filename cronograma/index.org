@@ -40,9 +40,9 @@
 | Sintática  | Intro. Desc. (top-down), Rec. com Retrocesso/Preditivo |        | Início E2 (bison)      |
 | Sintática  | Conjuntos Primeiro e Sequência, Parser LL(1)           |        |                        |
 | Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |        |                        |
-| Sintática  | Árvore Sintática Abstrata                              |        | Início E3 (AST)        |
+| Sintática  | Laboratório para realização da E2                      | 67-101 | Implementação E2       |
 |            |                                                        | 67-104 | Avaliação E2           |
-| Sintática  | Parser SLR(1) e LR(1)                                  |        |                        |
+| Sintática  | Árvore Sintática Abstrata, Parser SLR(1) e LR(1)       |        | Início E3 (AST)        |
 | Semântica  | Esquemas S e L-Atribuídos                              |        |                        |
 | Semântica  | Implementação de Esquemas S e L-Atribuídos             |        | Início E4 (Tipos)      |
 |            |                                                        | 67-104 | Avaliação E3           |
@@ -218,9 +218,9 @@ aulas %>%
 |  6 | 2018-03-22 |        | Sintática  | Intro. Desc. (top-down), Rec. com Retrocesso/Preditivo | Início E2 (bison)      |
 |  7 | 2018-03-27 |        | Sintática  | Conjuntos Primeiro e Sequência, Parser LL(1)           |                        |
 |  8 | 2018-03-29 |        | Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |                        |
-|  9 | 2018-04-03 |        | Sintática  | Árvore Sintática Abstrata                              | Início E3 (AST)        |
+|  9 | 2018-04-03 | 67-101 | Sintática  | Laboratório para realização da E2                      | Implementação E2       |
 | 10 | 2018-04-10 | 67-104 |            |                                                        | Avaliação E2           |
-| 11 | 2018-04-12 |        | Sintática  | Parser SLR(1) e LR(1)                                  |                        |
+| 11 | 2018-04-12 |        | Sintática  | Árvore Sintática Abstrata, Parser SLR(1) e LR(1)       | Início E3 (AST)        |
 | 12 | 2018-04-17 |        | Semântica  | Esquemas S e L-Atribuídos                              |                        |
 | 13 | 2018-04-19 |        | Semântica  | Implementação de Esquemas S e L-Atribuídos             | Início E4 (Tipos)      |
 | 14 | 2018-04-24 | 67-104 |            |                                                        | Avaliação E3           |
