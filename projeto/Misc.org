@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Outros Geradores de Parsers
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* LL (Top-down)
+
+- ANTLR - http://www.antlr.org/
+
+* LR (Bottom-up)
+
+- Ply (Python) - http://www.dabeaz.com/ply/
+
