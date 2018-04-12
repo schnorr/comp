@@ -52,12 +52,12 @@
 \newcommand{\comandotext}{\emph{Comando}\xspace}
 #+END_EXPORT
 
-A terceira etapa do projeto de compilador para a *Linguagem \K* consiste
-na criação da árvore sintática abstrata (/Abstract Syntax Tree/ -- AST)
-baseada no programa de entrada, escrito em \K, e considerando as
-convenções estabelecidas na Seção \ref{ast}. A árvore deve ser criada
-a medida que as regras semânticas são executadas e deve ser mantida em
-memória mesmo após o fim da análise sintática, ou seja, quando =yyparse=
+A terceira etapa do projeto de compilador para a linguagem consiste na
+criação da árvore sintática abstrata (/Abstract Syntax Tree/ -- AST)
+baseada no programa de entrada e considerando as convenções
+estabelecidas na Seção \ref{ast}. A árvore deve ser criada a medida
+que as regras semânticas são executadas e deve ser mantida em memória
+mesmo após o fim da análise sintática, ou seja, quando =yyparse=
 retornar. A avaliação deste trabalho será feita de duas formas:
 primeiro, através de uma análise subjetiva visual da árvore, através
 da geração de um arquivo em formato =dot= definido pelo pacote GraphViz
@@ -81,13 +81,13 @@ achar pertinente implementar.
 
 ** Criar a árvore sintática abstrata
 
-Criar a árvore sintática abstrata para uma entrada qualquer escrita em
-\K, instrumentando a gramática com ações semânticas ao lado das regras
-de produção descritas no arquivo =parser.y= para a criação dos nós da
-árvore e conexão entre eles (veja a Seção \ref{ast} para detalhes
-sobre os nós da árvore). A árvore deve permanecer em memória após o
-fim da análise sintática, ou seja, acessível na função =main_finalize=
-do programa.
+Criar a árvore sintática abstrata para uma entrada qualquer escrita na
+linguagem, instrumentando a gramática com ações semânticas ao lado das
+regras de produção descritas no arquivo =parser.y= para a criação dos
+nós da árvore e conexão entre eles (veja a Seção \ref{ast} para
+detalhes sobre os nós da árvore). A árvore deve permanecer em memória
+após o fim da análise sintática, ou seja, acessível na função
+=main_finalize= do programa.
 
 ** Remoção de conflitos/ajustes gramaticais
 
@@ -115,9 +115,9 @@ documentados. Somente as funções =gv_declare= e =gv_connect= podem ser
 utilizadas pelo grupo. A árvore será impressa na saída padrão do
 programa, podendo ser redirecionada para arquivo.
 
-** Implementar programas em \K
+** Implementar programas
 
-Dois programas utilizando a sintaxe da linguagem \K devem ser
+Dois programas utilizando a sintaxe da linguagem devem ser
 implementados e disponibilizados juntamente com a solução desta
 etapa. O grupo tem a liberdade de escolher qualquer algoritmo para ser
 implementado. Sugere-se fortemente que os programas explorem todas as
