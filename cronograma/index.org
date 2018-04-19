@@ -44,14 +44,14 @@
 |            |                                                        |    67-104 | Avaliação E2           |
 | Sintática  | Árvore Sintática Abstrata, Parser SLR(1) e LR(1)       |           | Início E3 (AST)        |
 | Semântica  | Esquemas S e L-Atribuídos                              |           |                        |
-| Semântica  | Implementação de Esquemas S e L-Atribuídos             |           | Início E4 (Tipos)      |
-|            |                                                        |    67-104 | Avaliação E3           |
+| Semântica  | Implementação de Esquemas S e L-Atribuídos             |           |                        |
 |            | Revisão                                                |           |                        |
+|            |                                                        |    67-104 | Avaliação E3           |
 |            | P1                                                     |    67-INF |                        |
-| Código     | Taxonomia e Expressões                                 |           | Início E5 (Código)     |
-|            |                                                        |    67-104 | Avaliação E4           |
+| Código     | Taxonomia e Expressões                                 |           | Início E4 (Tipos)      |
 | Código     | Declarações, Escopos e Atribuição                      |           |                        |
-| Código     | Endereçamento de Arranjos multidimensionais            |           |                        |
+| Código     | Endereçamento de Arranjos multidimensionais            |           | Início E5 (Código)     |
+|            |                                                        |    67-104 | Avaliação E4           |
 | Código     | Expressões Lógicas com atalho, Controle de Fluxo       |           |                        |
 | Código     | Controle de Fluxo                                      |           |                        |
 |            |                                                        |    67-104 | Avaliação E5           |
@@ -222,14 +222,14 @@ aulas %>%
 | 10 | 2018-04-10 |    67-104 |            |                                                        | Avaliação E2           |
 | 11 | 2018-04-12 |           | Sintática  | Árvore Sintática Abstrata, Parser SLR(1) e LR(1)       | Início E3 (AST)        |
 | 12 | 2018-04-17 |           | Semântica  | Esquemas S e L-Atribuídos                              |                        |
-| 13 | 2018-04-19 |           | Semântica  | Implementação de Esquemas S e L-Atribuídos             | Início E4 (Tipos)      |
-| 14 | 2018-04-24 |    67-104 |            |                                                        | Avaliação E3           |
-| 15 | 2018-04-26 |           |            | Revisão                                                |                        |
+| 13 | 2018-04-19 |           | Semântica  | Implementação de Esquemas S e L-Atribuídos             |                        |
+| 14 | 2018-04-24 |           |            | Revisão                                                |                        |
+| 15 | 2018-04-26 |    67-104 |            |                                                        | Avaliação E3           |
 | 16 | 2018-05-03 |    67-INF |            | P1                                                     |                        |
-| 17 | 2018-05-08 |           | Código     | Taxonomia e Expressões                                 | Início E5 (Código)     |
-| 18 | 2018-05-10 |    67-104 |            |                                                        | Avaliação E4           |
-| 19 | 2018-05-15 |           | Código     | Declarações, Escopos e Atribuição                      |                        |
-| 20 | 2018-05-17 |           | Código     | Endereçamento de Arranjos multidimensionais            |                        |
+| 17 | 2018-05-08 |           | Código     | Taxonomia e Expressões                                 | Início E4 (Tipos)      |
+| 18 | 2018-05-10 |           | Código     | Declarações, Escopos e Atribuição                      |                        |
+| 19 | 2018-05-15 |           | Código     | Endereçamento de Arranjos multidimensionais            | Início E5 (Código)     |
+| 20 | 2018-05-17 |    67-104 |            |                                                        | Avaliação E4           |
 | 21 | 2018-05-22 |           | Código     | Expressões Lógicas com atalho, Controle de Fluxo       |                        |
 | 22 | 2018-05-24 |           | Código     | Controle de Fluxo                                      |                        |
 | 23 | 2018-05-29 |    67-104 |            |                                                        | Avaliação E5           |
