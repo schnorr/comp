@@ -435,7 +435,7 @@ abaixo.
              (f_5) edge node {prox\_arg} (f_n)
              ;
 \end{tikzpicture}
-*** Outras construções presentes na sintaxe
+*** Outras construções presentes na sintaxe                      :noexport:
 A construção da AST para os comandos não listados acima mas que fazem
 parte da sintaxe são opcionais.
 * Casos omissos
