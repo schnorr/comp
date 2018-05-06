@@ -18,9 +18,7 @@
 #+LATEX_HEADER: \usepackage[utf8]{inputenc}
 #+LATEX_HEADER: \usepackage[T1]{fontenc}
 
-* Sumário de avaliações
-
-Aguarde as avaliações.
+* Ponderações gerais
 
 Para tomar conhecimento novamente das fórmulas utilizadas:
 - [[./plano/index.org][As ponderações gerais]]
