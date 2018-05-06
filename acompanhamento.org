@@ -24,6 +24,71 @@ Para tomar conhecimento novamente das fórmulas utilizadas:
 - [[./plano/index.org][As ponderações gerais]]
 - [[./projeto/README.org][As ponderações das etapas do projeto]]
 
+* Principal
+* P1 Detalhamento
+** Questões
+
+- E1: ER de origem do AFND; AFND para AFD (alg. de subconj.).
+- E2: Conj. Pri/Seq; Análise descendente; Construir tabela LL(1).
+- E3: Classificar algoritmos em ascendentes, descendentes.
+- E4: Análise LL e LR usando tabelas.
+- E5: Justificar qual alg. reconhece uma gramática sem conflitos.
+- E6: Gramática para seq. de dígitos; S-atribuído para calcular valor inteiro.
+- E7: Construir LR(0); tabelas LR(0) e SLR(1)
+
+** Notas máximas
+
+As notas máximas foram:
+
+- E1: [2.0]
+- E2: [2.0]
+- E3: [1.0]
+- E4: [1.0]
+- E5: [1.5]
+- E6: [1.5]
+- E7: [1.0]
+
+Somatório máximo é de 10 pontos. As notas finais são sobre 10.
+
+** Detalhamento por questão
+
+| ID     |  E1 |  E2 |  E3 |  E4 |  E5 |  E6 |  E7 |
+|--------+-----+-----+-----+-----+-----+-----+-----|
+| ???028 | nil | nil | nil | nil | nil | nil | nil |
+| ???587 | 1.9 | 1.3 |   1 | 0.5 | 0.5 | 1.5 |   1 |
+| ???759 | nil | nil | nil | nil | nil | nil | nil |
+| ???262 | 1.9 |   2 | 0.6 |   0 |   0 | 0.5 | 0.7 |
+| ???691 |   1 |   2 | 0.8 |   0 | 0.5 |   0 | 0.5 |
+| ???354 | 1.9 | 1.8 |   1 |   1 | 0.5 |   0 | 0.5 |
+| ???676 | 1.7 |   2 |   1 | 0.5 | 1.5 |   0 |   1 |
+| ???524 |   0 |   1 |   1 |   0 | 0.5 | 1.5 |   1 |
+| ???664 |   1 | 1.5 |   1 | 0.5 | 0.5 | 0.5 | 0.5 |
+| ???845 | 0.5 |   1 | 0.4 |   0 | 0.2 |   0 |   0 |
+| ???175 | 1.9 |   2 |   1 | 0.7 | 0.5 | 0.5 | 0.8 |
+| ???688 |   1 | 1.6 |   1 | 0.6 | 0.5 |   0 |   1 |
+| ???865 | 1.8 | 0.5 |   1 |   0 | 0.5 |   0 | 0.4 |
+| ???686 | nil | nil | nil | nil | nil | nil | nil |
+| ???679 | nil | nil | nil | nil | nil | nil | nil |
+| ???249 |   2 |   2 |   1 | 0.5 | 0.5 | 1.4 |   1 |
+| ???822 | 1.9 | 1.5 | 0.8 |   0 |   1 | 0.5 |   1 |
+| ???516 | 1.5 | 0.2 |   1 |   0 |   0 | 0.5 | 0.8 |
+| ???274 | 1.8 |   2 |   1 | 0.5 | 0.5 | 0.5 | 0.8 |
+| ???332 |   2 | 1.2 |   1 |   1 | 1.5 | 1.5 |   1 |
+| ???675 |   1 |   2 |   1 | 0.5 | 0.5 | 1.5 |   1 |
+| ???271 | 0.7 | 0.7 |   1 |   0 | 0.5 | 0.5 | 0.3 |
+| ???416 | 1.9 | 1.8 | 0.8 |   1 | 0.5 |   0 | 0.7 |
+| ???728 | 1.9 | 1.8 |   1 | 0.5 | 1.3 | 1.5 |   1 |
+| ???572 |   2 |   2 |   1 |   1 | 0.5 |   0 | 0.6 |
+| ???090 |   1 | 0.5 |   1 | 0.5 |   0 |   0 | 0.5 |
+| ???722 | nil | nil | nil | nil | nil | nil | nil |
+| ???261 | 1.9 | 0.6 | 0.8 |   1 | 0.5 | 0.5 | 0.6 |
+| ???410 | 0.5 | 1.7 |   1 | 0.5 |   0 | 0.5 | 0.4 |
+| ???601 | 1.8 |   2 |   1 |   1 | 0.5 | 1.5 |   1 |
+| ???369 | 1.7 |   2 | 0.4 | 0.5 |   0 |   0 | 0.6 |
+| ???681 | 1.5 | 1.7 |   1 | 0.5 | 0.5 |   0 |   1 |
+| ???665 | 1.2 | 1.8 |   1 |   1 | 1.4 | 1.5 |   1 |
+| ???670 |   1 | 1.5 | 0.8 | 0.5 | 0.5 |   0 | 0.5 |
+
 * Avaliação da disciplina
 
 #+BEGIN_CENTER
