@@ -36,11 +36,10 @@ apresenta as funcionalidades necessárias que devem ser apresentadas
 nesta etapa. A Seção~\ref{retorno} apresenta os códigos de retorno
 para os possíveis erros semânticos encontrados.
 
-
 * Funcionalidades Necessárias
 \label{funcionalidades}
 
-** Escopo aninhado na Linguagem \K
+** Escopo aninhado na Linguagem \K                                :noexport:
 
 A gramática da linguagem permite que variáveis locais possam ser
 declaradas dentro de um bloco de código (delimitado por abre-fecha
@@ -94,7 +93,7 @@ somente podem ser utilizados com indexação, e funções apenas devem ser
 usadas como chamada de função, isto é, seguidas da lista de argumentos
 entre parênteses.
 
-** Tipos e tamanho dos dados
+** Tipos e tamanho dos dados                                      :noexport:
 
 Uma declaração de variável deve permitir ao compilador definir o tipo
 e o tamanho (descrito na Seção \ref{coercao}) da variável na sua
@@ -106,7 +105,7 @@ candidatos a terem um tipo definido de acordo com as regras de
 inferência de tipos. Esse processo de inferência está descrito na
 Seção \ref{coercao}.
 
-** Anotação da coerção de tipos
+** Anotação da coerção de tipos                                   :noexport:
 Os tipos inteiro, flutuante e booleanos podem sofrer coerção de acordo
 com o conjunto de regras apresentados na Seção~\ref{coercao} deste
 documento. A solução desta etapa deve marcar todos os nós da AST onde
@@ -122,7 +121,7 @@ função. Cada chamada de função deve prover um argumento para cada
 parâmetro, e ter o seu tipo compatível. A compatibilidade de tipos da
 linguagem é apresentada na Seção \ref{coercao} deste documento.
 
-** Verificação de tipos em comandos
+** Verificação de tipos em comandos                               :noexport:
 \label{tipos-comandos}
 
 Todos os comandos simples da linguagem deve ser verificados
@@ -134,7 +133,7 @@ ser seguido obrigatoriamente por uma expressão cujo tipo é compatível
 com o tipo de retorno da função. Prevalece o tipo do identificador em
 um comando de atribuição.
 
-* Sistema de tipos da Linguagem \K
+* Sistema de tipos da Linguagem \K                                 :noexport:
 \label{coercao}
 
 ** Coerção
