@@ -21,8 +21,8 @@ A quarta etapa do trabalho de implementação de um compilador para a
 Linguagem consiste em verificações semânticas durante o processo de
 compilação.  Toda a verificação de tipos é feita de forma estática, em
 tempo de compilação.  Apresentamos as funcionalidades necessárias que
-devem ser apresentadas nesta etapa. A Seção~\ref{retorno} apresenta os
-códigos de retorno para os possíveis erros semânticos encontrados.
+devem ser apresentadas nesta etapa. A seção final apresenta os códigos
+de retorno para os possíveis erros semânticos encontrados.
 
 * Old Introduction                                                 :noexport:
 
@@ -38,16 +38,18 @@ todos os nós da Árvore Sintática Abstrata (AST), gerada na etapa
 anterior, devem ter obrigatoriamente um campo que indica o seu tipo. O
 tipo de um determinado nó da AST pode, em algumas situações, não ser
 definido diretamente. Nestes casos, seu tipo deve ser inferido de
-acordo com as regras de inferência da linguagem (apresentadas na
-Seção \ref{coercao}). Uma série de testes de coerência comportamental
-das construções sintáticas reconhecidas e representadas na AST devem
-ser feitas nesta etapa. A Seção \ref{funcionalidades}, a seguir,
-apresenta as funcionalidades necessárias que devem ser apresentadas
-nesta etapa. A Seção~\ref{retorno} apresenta os códigos de retorno
-para os possíveis erros semânticos encontrados.
+acordo com as regras de inferência da linguagem (apresentadas na Seção
+\ref{coercao}). Uma série de testes de coerência comportamental das
+construções sintáticas reconhecidas e representadas na AST devem ser
+feitas nesta etapa. A Seção [[#funcionalidades]], a seguir, apresenta as
+funcionalidades necessárias que devem ser apresentadas nesta etapa. A
+Seção~\ref{retorno} apresenta os códigos de retorno para os possíveis
+erros semânticos encontrados.
 
 * Funcionalidades Necessárias
-\label{funcionalidades}
+:PROPERTIES:
+:CUSTOM_ID: funcionalidades
+:END:
 
 ** Escopo aninhado na Linguagem \K                                :noexport:
 
@@ -89,7 +91,7 @@ int f ()
 
 Todos os identificadores devem ter sido declarados no momento do seu
 uso, seja como variável, como vetor ou como função. Essa verificação
-de declaração prévia deve considerar o escopo aninhado da
+de declaração prévia deve considerar o escopo da
 linguagem. Todas as entradas na tabela de símbolos devem ter um tipo
 associado conforme a declaração, verificando-se se não houve dupla
 declaração ou se o símbolo não foi declarado. Variáveis com o mesmo
@@ -195,8 +197,10 @@ das seguintes definições:
 #define IKS_BOOL       5
 #+END_EXAMPLE
 
-* Códigos de retorno para erros semânticos
-\label{retorno}
+* Códigos de retorno para erros semântico
+:PROPERTIES:
+:CUSTOM_ID: retorno
+:END:
 
 A lista abaixo apresenta os códigos de retorno que devem ser
 utilizados quando o compilador encontrar erros semânticos. O programa
@@ -218,19 +222,22 @@ submissão.
 #define IKS_ERROR_VECTOR      4 //identificador deve ser utilizado como vetor
 #define IKS_ERROR_FUNCTION    5 //identificador deve ser utilizado como função
 
+/* Argumentos e parâmetros */
+#define IKS_ERROR_MISSING_ARGS    9  //faltam argumentos 
+#define IKS_ERROR_EXCESS_ARGS     10 //sobram argumentos 
+#define IKS_ERROR_WRONG_TYPE_ARGS 11 //argumentos incompatívei
+#+END_EXAMPLE
+
+* Old Retorno                                                      :noexport:
+
+#+BEGIN_EXAMPLE
 /* Tipos e tamanho de dados */
 #define IKS_ERROR_WRONG_TYPE  6 //tipos incompatíveis
 #define IKS_ERROR_STRING_TO_X 7 //coerção impossível do tipo string
 #define IKS_ERROR_CHAR_TO_X   8 //coerção impossível do tipo char
-
-/* Argumentos e parâmetros */
-#define IKS_ERROR_MISSING_ARGS    9  //faltam argumentos 
-#define IKS_ERROR_EXCESS_ARGS     10 //sobram argumentos 
-#define IKS_ERROR_WRONG_TYPE_ARGS 11 //argumentos incompatíveis
 
 /* Verificação de tipos em comandos */
 #define IKS_ERROR_WRONG_PAR_INPUT  12 //parâmetro não é identificador
 #define IKS_ERROR_WRONG_PAR_OUTPUT 13 //parâmetro não é literal string ou expressão
 #define IKS_ERROR_WRONG_PAR_RETURN 14 //parâmetro não é expressão compatível com tipo do retorno
 #+END_EXAMPLE
-
