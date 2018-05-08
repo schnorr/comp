@@ -103,7 +103,8 @@ O uso de identificadores deve ser compatível com sua declaração e com
 seu tipo. Variáveis somente podem ser usadas sem indexação, vetores
 somente podem ser utilizados com indexação, e funções apenas devem ser
 usadas como chamada de função, isto é, seguidas da lista de argumentos
-entre parênteses.
+entre parênteses. Variáveis que são de tipo de usuário devem obedecer
+as regras impostas na declaração do respectivo tipo.
 
 ** Tipos e tamanho dos dados                                      :noexport:
 
@@ -131,7 +132,10 @@ A lista de argumentos fornecidos em uma chamada de função deve ser
 verificada contra a lista de parâmetros formais na declaração da mesma
 função. Cada chamada de função deve prover um argumento para cada
 parâmetro, e ter o seu tipo compatível. A compatibilidade de tipos da
-linguagem é apresentada na Seção \ref{coercao} deste documento.
+linguagem é aquela da linguagem C, aceitando conversão implícita por 
+estreitamento e alargamento.
+
+# é apresentada na Seção \ref{coercao} deste documento.
 
 ** Verificação de tipos em comandos                               :noexport:
 \label{tipos-comandos}
