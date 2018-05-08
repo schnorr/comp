@@ -16,6 +16,16 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
+
+A quarta etapa do trabalho de implementação de um compilador para a
+Linguagem consiste em verificações semânticas durante o processo de
+compilação.  Toda a verificação de tipos é feita de forma estática, em
+tempo de compilação.  Apresentamos as funcionalidades necessárias que
+devem ser apresentadas nesta etapa. A Seção~\ref{retorno} apresenta os
+códigos de retorno para os possíveis erros semânticos encontrados.
+
+* Old Introduction                                                 :noexport:
+
 A quarta etapa do trabalho de implementação de um compilador para a
 *Linguagem \K* consiste em verificações semânticas durante o processo de
 compilação. Estas verificações fazem parte do sistema de tipos da
