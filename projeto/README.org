@@ -35,7 +35,7 @@ encontra-se abaixo.
 | E1    | [[./etapa1.org][Análise Léxica]]                       |       10 |         10 | 2018-03-19 |            |
 | E2    | [[./etapa2.org][Análise Sintática]]                    |       15 |         25 | 2018-04-09 |            |
 | E3    | [[./etapa3.pdf][Árvore Sintática Abstrata]] ([[./etapa3.pdf][PDF]])      |       15 |         40 | 2018-04-25 |            |
-| E4    | [[./etapa4.org][Análise Semântica]]                    |       15 |         55 | 2018-05-09 |            |
+| E4    | [[./etapa4.org][Análise Semântica]]                    |       15 |         55 | 2018-05-16 |            |
 | E5    | (obsoleto) [[./etapa5.org][Geração de Código]] ([[./etapa5.pdf][PDF]])   |       20 |         75 | 2018-05-28 |            |
 | E6    | (obsoleto) [[./etapa6.org][Suporte de Execução]] ([[./etapa6.pdf][PDF]]) |       15 |         90 | 2018-06-27 |            |
 | E7    | (obsoleto) [[./etapa7.org][Otimização]] ([[./etapa7.pdf][PDF]])          |       10 |        100 | 2018-07-08 |            |
