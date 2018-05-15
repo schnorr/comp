@@ -106,7 +106,7 @@ Por simplicidade, os programas deverão conter _apenas uma função_ chamada =ma
 * Discussão Importante
 
 Na tradução para ILOC, deve-se considerar que o conteúdo de cada
-variável da Linguagem \K está em um endereço de memória. Este endereço
+variável da Linguagem está em um endereço de memória. Este endereço
 deve ser calculado no momento da declaração da variável considerando o
 escopo atual e seu endereço base. Antes de realizar qualquer operação
 sobre uma variável, deve-se antes de tudo carregar o seu conteúdo (a
@@ -154,7 +154,7 @@ da AST.
 
 ** Entrada e Saída Padrão
 
-Organize a sua solução para que o compilador leia o programa em \K da
+Organize a sua solução para que o compilador leia o programa da
 entrada padrão e gere o programa em ILOC na saída padrão. Dessa forma,
 pode-se realizar o seguinte comando (considerando que \texttt{main} é
 o binário do compilador):
@@ -162,8 +162,7 @@ o binário do compilador):
 ./main < entrada.poa > saida.iloc
 #+END_EXAMPLE
 
-\noindent
-Onde =entrada.poa= contém um programa em \K, e =saida.iloc= contém em ILOC traduzido.
+Onde =entrada.poa= contém um programa na linguagem sendo compilada, e =saida.iloc= contém em ILOC traduzido.
 
 \bibliographystyle{plain}
 \bibliography{biblio}
@@ -175,8 +174,8 @@ ILOC[fn:1]  é uma representação intermediária
 parecida com assembly para uma máquina RISC abstrata. A máquina
 abstrata que executa ILOC tem um número ilimitado de
 registradores. ILOC é um código de três endereços com operações de
-registrador a registrador, operações de carga (\emph{load}) e
-armazenamento (\emph{store}), comparações e desvios. Suporta apenas
+registrador a registrador, operações de carga (=load=) e
+armazenamento (=store=), comparações e desvios. Suporta apenas
 modos de endereçamento simples, tais como -- direto, endereço +
 offset, endereço + imediato, e imediato. Os operandos são lidos no
 início do ciclo quem uma operação começa a ser executada. Os operandos
@@ -192,10 +191,10 @@ Um programa ILOC consiste em uma lista sequencial de instruções. Cada
 instrução pode ser precedida por um rótulo. Um rótulo é apenas uma
 cadeia de caracteres sendo separada da instrução por dois pontos. Por
 convenção, limita-se o formato dos rótulos com a expressão regular
-\texttt{[a-z]([a-z]|[0-9]|-)*}. Se alguma instrução precisa de mais de
+=[a-z]([a-z]|[0-9]|-)*=. Se alguma instrução precisa de mais de
 um rótulo, deve ser inserido uma instrução que contém apenas um
-operação \texttt{nop} antes dela, colocando o rótulo adicional na
-instrução \texttt{nop}. Um programa ILOC é definido mais formalmente:
+operação =nop= antes dela, colocando o rótulo adicional na
+instrução =nop=. Um programa ILOC é definido mais formalmente:
 
 | ProgramaILOC    | \rightarrow | ListaInstrucoes                                           |
 | ListaInstrucoes | \rightarrow | Instrucao \vert =label:= Instrucao \vert  Instrucao ListaInstrucoes |
@@ -212,10 +211,10 @@ ponto e vírgulas. Mais formalmente:
 
 Uma operação ILOC corresponde a uma instrução em nível de máquina que
 pode ser executada por uma única unidade funcional em um único
-ciclo. Ela tem um código de operação (\emph{opcode}), uma sequência de
+ciclo. Ela tem um código de operação (=opcode=), uma sequência de
 operandos fontes separados por vírgulas, e uma sequência de operandos
 alvo separados também por vírgulas. Os operandos fonte são separados
-dos operandos alvo pelo símbolo \texttt{=>}, que significa
+dos operandos alvo pelo símbolo ``=>'', que significa
 ``em''. Formalmente:
 
 | Operacao       | \rightarrow | OperacaoNormal \vert OperacaoFluxoControle                   |
@@ -224,45 +223,45 @@ dos operandos alvo pelo símbolo \texttt{=>}, que significa
 | Operando       | \rightarrow | =registrador= \vert =numero= \vert =rotulo=                            |
 
 
-O não-terminal \emph{CodigoOperacao} pode ser qualquer operação ILOC,
-exceto \texttt{cbr}, \texttt{jump}, e \texttt{jumpI}. As tabelas na
+O não-terminal /CodigoOperacao/ pode ser qualquer operação ILOC,
+exceto =cbr=, =jump=, e =jumpI=. As tabelas na
 seção~\ref{iloc-tabelas} mostram o número de operandos e seus tipos
 para cada operação da Linguagem ILOC.
 
-Um \emph{Operando} pode ser um de três tipos: \texttt{registrador},
-\texttt{numero} e \texttt{rotulo}. O tipo de cada operando é
+Um /Operando/ pode ser um de três tipos: =registrador=,
+=numero= e =rotulo=. O tipo de cada operando é
 determinado pelo código da operação e a posição que o operando aparece
 na operação. Por convenção, os registradores começam pela letra
-\texttt{r} (minúscula) e são seguidos por um número inteiro ou uma
+=r= (minúscula) e são seguidos por um número inteiro ou uma
 cadeia de caracteres qualquer. Ainda por convenção, rótulos sempre
-começam pela letra \texttt{L} (maiúscula).
+começam pela letra =L= (maiúscula).
 
 A maioria das operações tem um único operando alvo; algumas operações
 de armazenamento (\emph{store}) tem operandos alvos múltiplos, assim
-como saltos. Por exemplo, \texttt{storeAI} tem um único operando fonte
+como saltos. Por exemplo, =storeAI= tem um único operando fonte
 e dois operandos alvo. A fonte deve ser um registrador, e os alvos
 devem ser um registrador e uma constante imediata. Então, a operação
 da linguagem ILOC:
 
-\texttt{storeAI ri => rj,4} 
+=storeAI ri => rj,4= 
 
-calcula o endereço adicionando \texttt{4} ao conteúdo de \texttt{rj} e
-armazena o valor encontrado no registrador \texttt{ri} na localização da
+calcula o endereço adicionando =4= ao conteúdo de =rj= e
+armazena o valor encontrado no registrador =ri= na localização da
 memória especificada pelo endereço calculado. Em outras palavras:
 
-\textsc{Memória}(\texttt{rj + 4}) $\leftarrow$ \textsc{Conteúdo}(\texttt{ri})
+\textsc{Memória}(=rj + 4=) $\leftarrow$ \textsc{Conteúdo}(=ri=)
 
 Operações de fluxo de controle tem sintática diferente. Uma vez que
 estas operações não definem seus alvos, elas são escritas com uma
-flecha simples \texttt{->} ao invés da flecha dupla
-\texttt{=>}. Formalmente:
+flecha simples =->= ao invés da flecha dupla
+==>=. Formalmente:
 
 | OperacaoFluxoControle | \rightarrow | =cbr register -> label, label= |
 |                       | \vert | =jumpI -> label=               |
 |                       | \vert | =jumpI -> register=            |
 
 
-A primeira operação, \texttt{cbr}, implementa um desvio
+A primeira operação, =cbr=, implementa um desvio
 condicional. As outras duas operações são desvios incondicionais.
 
 ** Convenções de Nome
@@ -270,21 +269,21 @@ condicional. As outras duas operações são desvios incondicionais.
 O código ILOC usa um conjunto simples de convenções de nome.
 
 1. Deslocamentos de memória para variáveis são representados
-  simbolicamente com um \texttt{@} antes do nome da variável.
+  simbolicamente com um =@= antes do nome da variável.
 
 2. Existe um número ilimitado de registradores. Estes são nomeados
-  com inteiros simples, como \texttt{r1789}, ou com nomes simbólicos,
-  como em \texttt{ri} ou \texttt{rj}.
+  com inteiros simples, como =r1789=, ou com nomes simbólicos,
+  como em =ri= ou =rj=.
 
 3. O registrador =fp= ou =rarp= é reservado como um ponteiro para o
   registro de ativação atual. Sendo assim, a operação:
 
-  \texttt{loadAI rarp,@x => r1}
+  =loadAI rarp,@x => r1=
 
-  carrega o conteúdo da variável \texttt{x}, guardada no deslocamento
-  \texttt{@x} a partir do \texttt{rarp}, em \texttt{r1}.
+  carrega o conteúdo da variável =x=, guardada no deslocamento
+  =@x= a partir do =rarp=, em =r1=.
 
-Comentários em ILOC começam com \texttt{//} e continuam até o final da
+Comentários em ILOC começam com =//= e continuam até o final da
 linha.
 
 ** Operações Individuais
