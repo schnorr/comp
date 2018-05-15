@@ -17,7 +17,7 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 A quinta etapa do trabalho de implementação de um compilador para a
-Linguagem \K consiste na geração de código intermediário a partir da
+Linguagem consiste na geração de código intermediário a partir da
 árvore sintática abstrata (AST). Utilizaremos como representação
 intermediária a Linguagem ILOC, descrita em detalhes no apêndice A de
 /Engineering a Compiler/ \cite{keith}, mas com o essencial na Seção
@@ -28,7 +28,7 @@ git de referência (em \emph{scripts}, etapa 5, \texttt{ilocsim}).
 * Funcionalidades Necessárias
 \label{funcionalidades}
 
-** Arranjos Multidimensionais em \K
+** Arranjos Multidimensionais                                     :noexport:
 Altere a gramática para suportar arranjos multidimensionais. A forma
 =tipo nome[n1][n2]...[n]= deve ser utilizada na declaração. No acesso a
 elementos dos arranjos, utilize =id[n1][n2]...[n]= quando existem duas
@@ -83,26 +83,25 @@ Existem pelo menos duas possibilidades de implementação válidas:
    código em uma segunda passagem sobre a AST, através da
    implementação de uma função que faça o percorrimento.
 
-\noindent Informe o professor da sua escolha. Em ambos os casos, ao
+Informe o professor da sua escolha. Em ambos os casos, ao
 final da execução, o compilador deve ter na raiz da árvore AST um
 ponteiro para todo o código intermediário ILOC do programa de entrada.
 A geração de código consiste na criação de uma ou mais instruções ILOC
 juntamente com a união de trechos das sub-árvores, com a criação de
 novos símbolos intermediários e rótulos conforme necessário. Nesta
-etapa, deve-se traduzir as seguintes construções de \K:
+etapa, deve-se traduzir as seguintes construções da linguagem:
 
 - Cálculo de endereço na declaração de variáveis
-  - Endereço de variáveis locais são um deslocamento em relação ao registrador especial \texttt{fp} (\texttt{rarp})
-  - Endereço de variáveis globais são um deslocamento em relação ao registrador especial \texttt{rbss}
+  - Endereço de variáveis locais são um deslocamento em relação ao
+    registrador especial =fp= (ou =rarp=)
+  - Endereço de variáveis globais são um deslocamento em relação ao registrador especial =rbss=
 - Expressões Aritméticas
 - Expressões Booleanas com curto-circuito
 - Arranjos Multidimensionais
 - Comandos de Atribuição
 - Comandos de Fluxo de Controle (a implementação do =switch= é opcional, mas encorajada)
 
-\noindent
-Por simplicidade, os programas em \K deverão conter _apenas uma função_
-chamada =main=.
+Por simplicidade, os programas deverão conter _apenas uma função_ chamada =main=.
 
 * Discussão Importante
 
