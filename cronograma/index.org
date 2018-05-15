@@ -51,11 +51,11 @@
 | Código     | Taxonomia e Expressões                                 |           | Início E4 (Tipos)      |
 | Código     | Declarações, Escopos e Atribuição                      |           |                        |
 | Código     | Endereçamento de Arranjos multidimensionais            |           | Início E5 (Código)     |
-|            |                                                        |    67-104 | Avaliação E4           |
 | Código     | Expressões Lógicas com atalho, Controle de Fluxo       |           |                        |
 | Código     | Controle de Fluxo                                      |           |                        |
-|            |                                                        |    67-104 | Avaliação E5           |
+|            |                                                        |    67-104 | Avaliação E4           |
 | Execução   | Introdução, Registro de Ativação                       |           | Início E6 (Chamada)    |
+|            |                                                        |    67-104 | Avaliação E5           |
 | Execução   | Chamada e retorno de Função, Passagem de parâmetros    |           |                        |
 | Otimização | Introdução, Janela e Grafos de Fluxo                   |           | Início E7 (Otimização) |
 |            |                                                        |    67-104 | Avaliação E6           |
@@ -229,11 +229,11 @@ aulas %>%
 | 17 | 2018-05-08 |           | Código     | Taxonomia e Expressões                                 | Início E4 (Tipos)      |
 | 18 | 2018-05-10 |           | Código     | Declarações, Escopos e Atribuição                      |                        |
 | 19 | 2018-05-15 |           | Código     | Endereçamento de Arranjos multidimensionais            | Início E5 (Código)     |
-| 20 | 2018-05-17 |    67-104 |            |                                                        | Avaliação E4           |
-| 21 | 2018-05-22 |           | Código     | Expressões Lógicas com atalho, Controle de Fluxo       |                        |
-| 22 | 2018-05-24 |           | Código     | Controle de Fluxo                                      |                        |
-| 23 | 2018-05-29 |    67-104 |            |                                                        | Avaliação E5           |
-| 24 | 2018-06-19 |           | Execução   | Introdução, Registro de Ativação                       | Início E6 (Chamada)    |
+| 20 | 2018-05-17 |           | Código     | Expressões Lógicas com atalho, Controle de Fluxo       |                        |
+| 21 | 2018-05-22 |           | Código     | Controle de Fluxo                                      |                        |
+| 22 | 2018-05-24 |    67-104 |            |                                                        | Avaliação E4           |
+| 23 | 2018-05-29 |           | Execução   | Introdução, Registro de Ativação                       | Início E6 (Chamada)    |
+| 24 | 2018-06-19 |    67-104 |            |                                                        | Avaliação E5           |
 | 25 | 2018-06-21 |           | Execução   | Chamada e retorno de Função, Passagem de parâmetros    |                        |
 | 26 | 2018-06-26 |           | Otimização | Introdução, Janela e Grafos de Fluxo                   | Início E7 (Otimização) |
 | 27 | 2018-06-28 |    67-104 |            |                                                        | Avaliação E6           |
