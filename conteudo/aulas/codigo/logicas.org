@@ -60,7 +60,7 @@ Expressão booleana (supondo valores em registradores)
 * Exemplo de tradução numérica (atribuição)
 Expressão lógica a ser utilizada em uma atribuição
   #+BEGIN_CENTER
-  a < b
+  x = a < b
   #+END_CENTER
 #+latex: \vfill
 \pause  Alvo suporta operação de comparação que retorna valor
@@ -114,7 +114,7 @@ Como fica o esquema de tradução?
 * Exercício de tradução por avaliação numérica
 Traduza para ILOC
   #+BEGIN_CENTER
-  a < b or c < d and e < f
+  x = a < b or c < d and e < f
   #+END_CENTER
 Suponha que valores já estão em registradores
 Instruções disponíveis (idênticas ao slide anterior)
