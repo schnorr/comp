@@ -117,6 +117,7 @@ Traduza para ILOC
   x = a < b or c < d and e < f
   #+END_CENTER
 Suponha que valores já estão em registradores
+
 Instruções disponíveis (idênticas ao slide anterior)
   #+BEGIN_SRC C
   comp
