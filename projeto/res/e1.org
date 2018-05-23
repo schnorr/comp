@@ -1,0 +1,150 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+STARTUP: overview indent
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* Avaliação da Etapa 1
+** Quais testes?
+
+No diretório de cada grupo, o arquivo =src/main.c= e o diretório =tests=
+foram substituídos por aqueles oriundos do repositório de referência,
+tomando-se por base o commit ac8f5805784.
+
+** LOG dos testes (normal/valgrind)                                 :ATTACH:
+:PROPERTIES:
+:Attachments: e1.normal.log e1.valgrind.log
+:ID:       06163eff-5ddb-4f80-8513-440245038def
+:END:
+
+Clique nos links:
+- [[./data/06/163eff-5ddb-4f80-8513-440245038def/e1.normal.log]]
+- [[./data/06/163eff-5ddb-4f80-8513-440245038def/e1.valgrind.log]]
+
+** Parse arquivos LOG                                             :noexport:
+
+#+name: e1.logtotable
+#+begin_src shell :results table
+echo "Grupo,E1,Obj"
+cat data/06/163eff-5ddb-4f80-8513-440245038def/e1.normal.log | grep -e passed -e failed | sed -e "s/% .*//" -e "s/|/, E1.normal, /"
+cat data/06/163eff-5ddb-4f80-8513-440245038def/e1.valgrind.log | grep -e passed -e failed | sed -e "s/% .*//" -e "s/|/, E1.valgrind, /"
+#+end_src
+
+#+RESULTS: e1.logtotable
+| Grupo   | E1          | Obj |
+| Alpha   | E1.normal   |  97 |
+| Beta    | E1.normal   |   0 |
+| Delta   | E1.normal   |  97 |
+| Epsilon | E1.normal   |  97 |
+| Gamma   | E1.normal   |  97 |
+| Kappa   | E1.normal   |  97 |
+| Lambda  | E1.normal   |  97 |
+| Nu      | E1.normal   |  97 |
+| Omega   | E1.normal   |  97 |
+| Omicron | E1.normal   |  94 |
+| Phi     | E1.normal   |  97 |
+| Psi     | E1.normal   |  96 |
+| Rho     | E1.normal   |  97 |
+| Sigma   | E1.normal   |  97 |
+| Tau     | E1.normal   |  94 |
+| Zeta    | E1.normal   |  60 |
+| Alpha   | E1.valgrind |  76 |
+| Beta    | E1.valgrind | 100 |
+| Delta   | E1.valgrind | 100 |
+| Epsilon | E1.valgrind |  82 |
+| Gamma   | E1.valgrind | 100 |
+| Kappa   | E1.valgrind | 100 |
+| Lambda  | E1.valgrind |  76 |
+| Nu      | E1.valgrind | 100 |
+| Omega   | E1.valgrind | 100 |
+| Omicron | E1.valgrind | 100 |
+| Phi     | E1.valgrind | 100 |
+| Psi     | E1.valgrind |  94 |
+| Rho     | E1.valgrind | 100 |
+| Sigma   | E1.valgrind |  73 |
+| Tau     | E1.valgrind |   0 |
+| Zeta    | E1.valgrind |  94 |
+
+#+name: e1.r
+#+header: :var dep0=e1.logtotable
+#+begin_src R :results table :session :exports both :colnames yes
+library(tidyr)
+dep0 %>%
+    mutate(Obj = Obj/10) %>%
+    spread(E1, Obj) -> e1.res;
+#+end_src
+
+#+RESULTS: e1.r
+| ID      | E1.normal | E1.valgrind |
+|---------+-----------+-------------|
+| Alpha   |       9.7 |         7.6 |
+| Beta    |         0 |          10 |
+| Delta   |       9.7 |          10 |
+| Epsilon |       9.7 |         8.2 |
+| Gamma   |       9.7 |          10 |
+| Kappa   |       9.7 |          10 |
+| Lambda  |       9.7 |         7.6 |
+| Nu      |       9.7 |          10 |
+| Omega   |       9.7 |          10 |
+| Omicron |       9.4 |          10 |
+| Phi     |       9.7 |          10 |
+| Psi     |       9.6 |         9.4 |
+| Rho     |       9.7 |          10 |
+| Sigma   |       9.7 |         7.3 |
+| Tau     |       9.4 |           0 |
+| Zeta    |         6 |         9.4 |
+
+** Subjetivo
+
+#+name: e1.subjetiva.raw
+| Grupo   | Subjetiva |
+|---------+-----------|
+| Phi     |        10 |
+| Delta   |         7 |
+| Epsilon |         8 |
+| Zeta    |         7 |
+| Psi     |         8 |
+| Gamma   |        10 |
+| Beta    |        10 |
+| Sigma   |         8 |
+| Omega   |        10 |
+| Rho     |         6 |
+| Omicron |        10 |
+| Nu      |        10 |
+| Lambda  |        10 |
+| Kappa   |         6 |
+| Alpha   |        10 |
+| Tau     |         8 |
+
+** Objetivo + Subjetivo + Final
+
+#+header: :var dep0=e1.r
+#+header: :var e1.sub=e1.subjetiva.raw
+#+begin_src R :results table :session :exports output :colnames yes
+e1.res %>%
+    left_join(e1.sub) %>%
+    mutate(E1.final = (E1.normal + Subjetiva) / 2)
+#+end_src
+
+#+RESULTS:
+| Grupo   | E1.normal | E1.valgrind | Subjetiva | E1.final |
+|---------+-----------+-------------+-----------+----------|
+| Alpha   |       9.7 |         7.6 |        10 |     9.85 |
+| Beta    |         0 |          10 |        10 |        5 |
+| Delta   |       9.7 |          10 |         7 |     8.35 |
+| Epsilon |       9.7 |         8.2 |         8 |     8.85 |
+| Gamma   |       9.7 |          10 |        10 |     9.85 |
+| Kappa   |       9.7 |          10 |         6 |     7.85 |
+| Lambda  |       9.7 |         7.6 |        10 |     9.85 |
+| Nu      |       9.7 |          10 |        10 |     9.85 |
+| Omega   |       9.7 |          10 |        10 |     9.85 |
+| Omicron |       9.4 |          10 |        10 |      9.7 |
+| Phi     |       9.7 |          10 |        10 |     9.85 |
+| Psi     |       9.6 |         9.4 |         8 |      8.8 |
+| Rho     |       9.7 |          10 |         6 |     7.85 |
+| Sigma   |       9.7 |         7.3 |         8 |     8.85 |
+| Tau     |       9.4 |           0 |         8 |      8.7 |
+| Zeta    |         6 |         9.4 |         7 |      6.5 |
+
+
+
