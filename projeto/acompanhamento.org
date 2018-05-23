@@ -148,3 +148,49 @@ e1.res %>%
 
 
 
+** Comentários por grupo
+
+Apenas para alguns grupos.
+
+*** Delta
+
+- tiveram problemas técnicos com MV
+- não tem os pipes, não tem o ., tem $ (não deveria ter)
+  - tem o ponto na ER, mas não acha
+
+*** Epsilon
+
+- Problema de clonar, sem acesso, resolvido agora
+
+*** Psi
+
+- Fez comentário multilinha com ER e manual
+  - Mas não é robusto o suficiente
+- O dólar não fazia parte da espec, mas colocaram
+
+*** Zeta
+
+- Não fizeram o comentário multilinha (tatiane se desculpa para a camila)
+- Falta de conhecimento de C para declaração de variáveis globais
+- O int não funciona, por que não usaram corretamente os nomes
+*** Sigma
+
+- $ não gera =TOKEN_ERRO= (faltou linha que captura tudo)
+- %>% %|% não são reconhecidos
+*** Rho
+
+- Nos compostos novos, o return está errado
+  - Corrigido na entrevista
+- Comentário multilinha
+- LETTER não utilizado; DIGIT utilizado
+  - Confusão com COMMENT vs DIGIT
+
+Sugestão:
+- Sorteio antes
+*** Kappa
+
+- Evolui o multilinha da ER até o por estado
+- ., $, %>%, %|% não estão de acordo com a espec
+- Partiu de uma solução já existente
+
+
