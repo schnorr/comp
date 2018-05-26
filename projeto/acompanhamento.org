@@ -4,7 +4,21 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
+* Avaliação das Etapas do Projeto de Compilador
+
+| Relatório de Avaliação     |
+|----------------------------|
+| [[e1][Etapa 1]]                    |
+| [[e2][Etapa 2]]                    |
+| Etapa 3 (por finalizar)    |
+| Etapa 4 (por finalizar)    |
+| Etapa 5 (aguarda soluções) |
+| Etapa 6 (aguarda soluções) |
+| Etapa 7 (aguarda soluções) |
+
 * Avaliação da Etapa 1
+<<e1>>
+
 ** Quais testes?
 
 No diretório de cada grupo, o arquivo =src/main.c= e o diretório =tests=
@@ -191,6 +205,7 @@ Sugestão:
 - ., $, %>%, %|% não estão de acordo com a espec
 - Partiu de uma solução já existente
 * Avaliação da Etapa 2
+<<e2>>
 ** Quais testes?
 
 No diretório de cada grupo, o arquivo =src/main.c= e o diretório =tests=
