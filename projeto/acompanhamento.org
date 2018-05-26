@@ -146,8 +146,6 @@ e1.res %>%
 | Tau     |       9.4 |           0 |         8 |      8.7 |
 | Zeta    |         6 |         9.4 |         7 |      6.5 |
 
-
-
 ** Comentários por grupo
 
 Apenas para alguns grupos.
