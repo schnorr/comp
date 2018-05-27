@@ -11,7 +11,7 @@
 | [[#avaliação-da-etapa-1][Etapa 1]]                    |
 | [[#avaliação-da-etapa-2][Etapa 2]]                    |
 | Etapa 3 (por finalizar)    |
-| Etapa 4 (por finalizar)    |
+| [[#avaliação-da-etapa-4][Etapa 4]]                    |
 | Etapa 5 (aguarda soluções) |
 | Etapa 6 (aguarda soluções) |
 | Etapa 7 (aguarda soluções) |
