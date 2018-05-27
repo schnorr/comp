@@ -8,8 +8,8 @@
 
 | Relatório de Avaliação     |
 |----------------------------|
-| [[#e1][Etapa 1]]                    |
-| [[#e2][Etapa 2]]                    |
+| [[#avaliação-da-etapa-1][Etapa 1]]                    |
+| [[#avaliação-da-etapa-2][Etapa 2]]                    |
 | Etapa 3 (por finalizar)    |
 | Etapa 4 (por finalizar)    |
 | Etapa 5 (aguarda soluções) |
