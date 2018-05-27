@@ -350,3 +350,123 @@ e2.res %>%
 ** Comentários por grupo
 
 Por fornecer.
+* Avaliação da Etapa 4
+** Quais testes?
+
+No diretório de cada grupo, o arquivo =src/main.c= e o diretório =tests=
+foram substituídos por aqueles oriundos do repositório de referência,
+tomando-se por base o commit 476bceb.
+** LOG dos testes (normal/valgrind)                                 :ATTACH:
+:PROPERTIES:
+:Attachments: e4.normal.log e4.valgrind.log
+:ID:       e779b764-cade-404e-81ae-cfbd805d7509
+:END:
+Clique nos links:
+- [[./data/e7/79b764-cade-404e-81ae-cfbd805d7509/e4.normal.log]]
+- [[./data/e7/79b764-cade-404e-81ae-cfbd805d7509/e4.valgrind.log]]
+
+#+name: e4.logtotable
+#+begin_src shell :results table
+echo "Grupo,E4,Obj"
+cat data/e7/79b764-cade-404e-81ae-cfbd805d7509/e4.normal.log | grep -e passed -e failed | sed -e "s/% .*//" -e "s/|/, E4.normal, /"
+cat data/e7/79b764-cade-404e-81ae-cfbd805d7509/e4.valgrind.log | grep -e passed -e failed | sed -e "s/% .*//" -e "s/|/, E4.valgrind, /"
+#+end_src
+
+#+RESULTS: e4.logtotable
+| Grupo   | E4          | Obj |
+| Alpha   | E4.normal   |  75 |
+| Beta    | E4.normal   |  70 |
+| Delta   | E4.normal   |  20 |
+| Epsilon | E4.normal   |  70 |
+| Gamma   | E4.normal   |  30 |
+| Kappa   | E4.normal   |  20 |
+| Lambda  | E4.normal   |  20 |
+| Nu      | E4.normal   |  65 |
+| Omega   | E4.normal   |  70 |
+| Omicron | E4.normal   |  35 |
+| Phi     | E4.normal   |  75 |
+| Sigma   | E4.normal   |  70 |
+| Alpha   | E4.valgrind |  10 |
+| Beta    | E4.valgrind |  10 |
+| Delta   | E4.valgrind |  10 |
+| Epsilon | E4.valgrind |  10 |
+| Gamma   | E4.valgrind |  10 |
+| Kappa   | E4.valgrind |  30 |
+| Lambda  | E4.valgrind |  10 |
+| Nu      | E4.valgrind |  10 |
+| Omega   | E4.valgrind |  10 |
+| Omicron | E4.valgrind |  10 |
+| Phi     | E4.valgrind |  10 |
+| Sigma   | E4.valgrind |  10 |
+
+#+name: e4.r
+#+header: :var dep0=e4.logtotable
+#+begin_src R :results table :session :exports both :colnames yes
+library(tidyr)
+dep0 %>%
+    mutate(Obj = Obj/10) %>%
+    spread(E4, Obj) -> e4.res;
+#+end_src
+
+#+RESULTS: e4.r
+| Grupo   | E4.normal | E4.valgrind |
+|---------+-----------+-------------|
+| Alpha   |       7.5 |           1 |
+| Beta    |         7 |           1 |
+| Delta   |         2 |           1 |
+| Epsilon |         7 |           1 |
+| Gamma   |         3 |           1 |
+| Kappa   |         2 |           3 |
+| Lambda  |         2 |           1 |
+| Nu      |       6.5 |           1 |
+| Omega   |         7 |           1 |
+| Omicron |       3.5 |           1 |
+| Phi     |       7.5 |           1 |
+| Sigma   |         7 |           1 |
+
+** Subjetivo
+
+#+name: e4.subjetiva.raw
+| Grupo   | Subjetiva |
+|---------+-----------|
+| Delta   |         6 |
+| Phi     |         9 |
+| Gamma   |         9 |
+| Lambda  |         9 |
+| Nu      |         8 |
+| Sigma   |         9 |
+| Kappa   |       9.5 |
+| Epsilon |        10 |
+| Omega   |         9 |
+| Omicron |         7 |
+| Alpha   |         9 |
+| Beta    |        10 |
+
+** Objetivo + Subjetivo + Final
+
+#+header: :var dep0=e4.r
+#+header: :var e4.sub=e4.subjetiva.raw
+#+begin_src R :results table :session :exports output :colnames yes
+e4.res %>%
+    left_join(e4.sub) %>%
+    mutate(E4.final = (E4.normal + Subjetiva) / 2)
+#+end_src
+
+#+RESULTS:
+| Grupo   | E4.normal | E4.valgrind | Subjetiva | E4.final |
+|---------+-----------+-------------+-----------+----------|
+| Alpha   |       7.5 |           1 |         9 |     8.25 |
+| Beta    |         7 |           1 |        10 |      8.5 |
+| Delta   |         2 |           1 |         6 |        4 |
+| Epsilon |         7 |           1 |        10 |      8.5 |
+| Gamma   |         3 |           1 |         9 |        6 |
+| Kappa   |         2 |           3 |       9.5 |     5.75 |
+| Lambda  |         2 |           1 |         9 |      5.5 |
+| Nu      |       6.5 |           1 |         8 |     7.25 |
+| Omega   |         7 |           1 |         9 |        8 |
+| Omicron |       3.5 |           1 |         7 |     5.25 |
+| Phi     |       7.5 |           1 |         9 |     8.25 |
+| Sigma   |         7 |           1 |         9 |        8 |
+** Comentários por grupo
+
+Por fornecer.
