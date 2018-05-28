@@ -158,7 +158,7 @@ um dos tipos:
 | \astidentificador | \astliteral | \astfuncao | 
 ele deve conter obrigatoriamente um ponteiro para a entrada
 correspondente na tabela de símbolos. Além disso, cada nó da AST deve
-ter uma estrutura que apontaq para os seus filhos. O código da
+ter uma estrutura que aponta para os seus filhos. O código da
 estrutura em árvore já está disponível e deve ser usado (=src/cc_ast.c=
 com protótipos em =include/cc_ast.h=) O apêndice \ref{ast} detalha o que
 deve ter para cada tipo de nó da AST.
