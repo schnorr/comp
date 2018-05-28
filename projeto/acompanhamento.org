@@ -350,6 +350,117 @@ e2.res %>%
 ** Comentários por grupo
 
 Por fornecer.
+* Avaliação da Etapa 3
+** Método
+
+A avaliação =Subjetiva= foi baseada unicamente na entrevista, enquanto
+que a =Subjetivo.2= foi calculada principalmente baseada em uma análise
+de código submetido pelo grupo e na verificação se o programa compila.
+
+** Tabela de análise =Subjetivo.2=
+
+| Critério                 | Peso |
+|--------------------------+------|
+| Ausência de conflitos    |    1 |
+| Implementar programas    |    1 |
+| Programa (lista funções) |    1 |
+| Função (lista comandos)  |    1 |
+| Ifelse                   |    1 |
+| Dowhile                  |    1 |
+| Atribuição               |    1 |
+| Retorno                  |    1 |
+| Expressões Binárias      |    1 |
+| Expressões Unárias       |    1 |
+| Vetor indexado           |    1 |
+| Chamada de função        |    1 |
+
+** Subjetiva + Subjetivo.2 + Final
+
+| Grupo   | Subjetiva | Subjetivo.2 | Final |
+|---------+-----------+-------------+-------|
+| Kappa   |        10 |          10 |    10 |
+| Epsilon |        10 |          10 |    10 |
+| Phi     |        10 |          10 |    10 |
+| Nu      |        10 |        9.83 |  9.91 |
+| Omega   |        10 |        9.17 |  9.59 |
+| Alpha   |         9 |          10 |   9.5 |
+| Sigma   |         9 |          10 |   9.5 |
+| Beta    |        10 |           9 |   9.5 |
+| Lambda  |         0 |          10 |     8 |
+| Omicron |         0 |        9.42 |  7.54 |
+| Psi     |         0 |        9.17 |  7.34 |
+| Gamma   |         0 |        7.92 |  6.34 |
+| Delta   |         0 |        6.08 |  4.86 |
+| Rho     |         0 |        4.58 |  3.66 |
+
+** Comentários por grupo
+*** Rho
+
+- programa, $$ recebe dois valores, deveria ser um
+- =decl_funcao=, o bloco não é conectado ao nó função
+- bloco, comandos não são conectados ao bloco
+- return, expressão não é conectada ao nó
+- problemas similares aos acima nos demais itens
+- ifelse: como diferenciar else opcional?
+- na exp. par.: não há necessidade de se criar nó
+- chamada de função: ausência do identificador
+
+*** Epsilon
+
+- Otimizações nos comandos iterativos e condicionais
+  - Isto é interessante
+
+*** Omega
+
+- Falta o identificador do grupo nos arquivos
+  - Com nome dos membros
+- Codificação de precedência na própria gramática
+
+*** Beta
+
+- Simplificar as chamadas de =createAstItem=
+  - Qual é a do =tree_make_node(NULL)=? Se inútil, remove.
+
+*** Delta
+
+- listaDeElementos: não conecta corretamente a lista de funções
+- Qual o objetivo de fazer isso (no arquivo parser.y)? 
+  #+BEGIN_EXAMPLE
+  tableEntry* _entrada  = $2;
+  tableEntry  entrada   = *_entrada;
+  #+END_EXAMPLE
+- blocoDeComandos: não conecta os múltiplos comandos
+- Embora okay, código que cria o nó =if= faz potencialmente coisas
+  desnecessária: por que criar um =comp_tree_t= além do nó ternário?
+- em expressao, o tipo de nó parece não estar correto
+- atribuição com campos deve ser binária também
+
+*** Omicron
+
+- Atribuição com vetor indexado deve ser binária
+  - O mesmo pvale para atribuição para campo de tipo de usuário
+- Por que um =AST_PLACE_HOLDER= para argumentos que são expressões?
+
+*** Nu
+
+- em Attribution, o nó deve ser binário quando no acesso de campos de
+  tipo de usuário
+
+*** Gamma
+
+- Colocar nome dos membros nos arquivos fonte
+- =body=, faltou encadear a lista de funções
+  - Utilizando a própria árvore de análise ao invés de variáveis
+    globais auxiliares: remover as variáveis globais =count= e
+    =last_function=.
+- Na lista de comandos (=simple_commands=), testa-se =$$=, mas a cabeça
+  não é definida anteriormente (apenas na redução)
+
+*** Psi
+
+- =bloco_comandos=, quando não há nada, não há necessidade de se criar
+  um nó AST vazio
+
 * Avaliação da Etapa 4
 ** Quais testes?
 
