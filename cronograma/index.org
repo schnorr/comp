@@ -59,6 +59,7 @@
 | Execução   | Chamada e retorno de Função, Passagem de parâmetros    |           |                        |
 | Otimização | Introdução, Janela e Grafos de Fluxo                   |           | Início E7 (Otimização) |
 |            |                                                        |    67-104 | Avaliação E6           |
+|            | Revisão para a prova                                   |           |                        |
 |            | P2                                                     |  Castilho |                        |
 |            | PR                                                     |           |                        |
 
@@ -96,7 +97,7 @@ ymd("2018-11-02"), # Mortos
 ymd("2018-11-15")  # República
 )
 
-dataDaRecuperação <- ymd("2018-07-12");
+dataDaRecuperação <- ymd("2018-07-17");
 
 dates <- tibble(Dia=seq(ymd("2018-03-05"), ymd("2018-07-14"), by="days")) %>%
     # Define o dia da semana
@@ -237,5 +238,6 @@ aulas %>%
 | 25 | 2018-06-26 |           | Execução   | Chamada e retorno de Função, Passagem de parâmetros    |                        |
 | 26 | 2018-06-28 |           | Otimização | Introdução, Janela e Grafos de Fluxo                   | Início E7 (Otimização) |
 | 27 | 2018-07-03 |    67-104 |            |                                                        | Avaliação E6           |
-| 28 | 2018-07-05 |  Castilho |            | P2                                                     |                        |
-| 29 | 2018-07-12 |           |            | PR                                                     |                        |
+| 28 | 2018-07-05 |           |            | Revisão para a prova                                   |                        |
+| 29 | 2018-07-10 |  Castilho |            | P2                                                     |                        |
+| 30 | 2018-07-17 |           |            | PR                                                     |                        |
