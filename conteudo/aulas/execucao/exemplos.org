@@ -23,7 +23,7 @@ int main () { }
 
 #+latex: \vfill\pause
 ILOC
-#+BEGIN_SRC iloc
+#+BEGIN_SRC iloc :tangle exemplo1.iloc
 loadI 1024 => fp
 loadI 1024 => sp
 loadI 7 => bss
@@ -39,8 +39,9 @@ Entrada
 #+BEGIN_SRC amarela
 int main () { int x; x = 34; }
 #+END_SRC
-\pause  ILOC
-#+BEGIN_SRC iloc
+#+latex: \pause
+ILOC
+#+BEGIN_SRC iloc :tangle exemplo2.iloc
 loadI 1024 => fp
 loadI 1024 => sp
 loadI 9 => bss
@@ -55,8 +56,9 @@ Entrada
 #+BEGIN_SRC amarela
 int y; int main () { int x; y = 59; x = 33; }
 #+END_SRC
-\pause  ILOC
-#+BEGIN_SRC iloc
+#+latex: \pause
+ILOC
+#+BEGIN_SRC iloc :tangle exemplo3.iloc
 loadI 1024 => fp
 loadI 1024 => sp
 loadI 11 => bss
@@ -73,9 +75,10 @@ Entrada
 #+BEGIN_SRC amarela
 int f() { return 73; } int main() { int x; x = f(); }
 #+END_SRC
-\pause  ILOC
-\tiny
-#+BEGIN_SRC iloc
+#+latex: \pause
+ILOC
+#+latex: \tiny
+#+BEGIN_SRC iloc :tangle exemplo4.iloc
 loadI 1024 => fp
 loadI 1024 => sp
 loadI 23 => bss
