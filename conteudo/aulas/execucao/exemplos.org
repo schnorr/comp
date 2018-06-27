@@ -34,6 +34,42 @@ halt
 + Segmento de dados depois do segmento de código
 + A pilha começa no endereço 1024
 + Cada linha de código ocupa um único byte
+
+#+begin_src shell :results output :export both
+SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
+$SIM -x -t -s --data 500 --stack 1024 exemplo1.iloc
+#+end_src
+
+#+RESULTS:
+#+begin_example
+0 ['loadI', 1024, 'rarp']
+Change of rarp ignored (strict mode)
+1 ['loadI', 1024, 'rsp']
+Change of rsp ignored (strict mode)
+2 ['loadI', 7, 'rbss']
+Change of rbss ignored (strict mode)
+3 ['jumpI', 4]
+4 ['addI', 'rsp', 0, 'rsp']
+5 ['halt']
+count	instruction
+    3	loadI
+    1	jumpI
+    1	addI
+    1	halt
+
+instructions executed:    6
+register         read:    1 write:    7
+memory           read:    0 write:    0
+
+  register    value
+      rarp     1024
+      rbss      500
+       rpc        5
+       rsp     1024
+
+    memory    value
+#+end_example
+
 * Variáveis locais na pilha
 Entrada
 #+BEGIN_SRC amarela
@@ -51,6 +87,47 @@ loadI 34 => r0
 storeAI r0 => rarp, 0
 halt
 #+END_SRC
+
+#+begin_src shell :results output :export both
+SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
+$SIM -x -t -s --data 500 --stack 1024 exemplo2.iloc
+#+end_src
+
+#+RESULTS:
+#+begin_example
+0 ['loadI', 1024, 'rarp']
+Change of rarp ignored (strict mode)
+1 ['loadI', 1024, 'rsp']
+Change of rsp ignored (strict mode)
+2 ['loadI', 9, 'rbss']
+Change of rbss ignored (strict mode)
+3 ['jumpI', 4]
+4 ['addI', 'rsp', 4, 'rsp']
+5 ['loadI', 34, 'r0']
+6 ['storeAI', 'r0', 'rarp', 0]
+7 ['halt']
+count	instruction
+    4	loadI
+    1	jumpI
+    1	addI
+    1	storeAI
+    1	halt
+
+instructions executed:    8
+register         read:    3 write:   10
+memory           read:    0 write:    1
+
+  register    value
+        r0       34
+      rarp     1024
+      rbss      500
+       rpc        7
+       rsp     1028
+
+    memory    value
+00001024       34
+#+end_example
+
 * Variáveis globais e locais
 Entrada
 #+BEGIN_SRC amarela
@@ -70,7 +147,52 @@ loadI 33 => r0
 storeAI r0 => rarp, 0
 halt
 #+END_SRC
+
+#+begin_src shell :results output :export both
+SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
+$SIM -x -t -s --data 500 --stack 1024 exemplo3.iloc
+#+end_src
+
+#+RESULTS:
+#+begin_example
+0 ['loadI', 1024, 'rarp']
+Change of rarp ignored (strict mode)
+1 ['loadI', 1024, 'rsp']
+Change of rsp ignored (strict mode)
+2 ['loadI', 11, 'rbss']
+Change of rbss ignored (strict mode)
+3 ['jumpI', 4]
+4 ['addI', 'rsp', 4, 'rsp']
+5 ['loadI', 59, 'r0']
+6 ['storeAI', 'r0', 'rbss', 0]
+7 ['loadI', 33, 'r0']
+8 ['storeAI', 'r0', 'rarp', 0]
+9 ['halt']
+count	instruction
+    5	loadI
+    2	storeAI
+    1	jumpI
+    1	addI
+    1	halt
+
+instructions executed:   10
+register         read:    5 write:   13
+memory           read:    0 write:    2
+
+  register    value
+        r0       33
+      rarp     1024
+      rbss      500
+       rpc        9
+       rsp     1028
+
+    memory    value
+00000500       59
+00001024       33
+#+end_example
+
 * Chamada de função
+
 Entrada
 #+BEGIN_SRC amarela
 int f() { return 73; } int main() { int x; x = f(); }
@@ -103,7 +225,76 @@ loadAI rsp, 12 => r0
 storeAI r0 => rarp, 0
 halt
 #+END_SRC
+
+#+begin_src shell :results output :export both
+SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
+$SIM -x -t -s --data 500 --stack 1024 exemplo4.iloc
+#+end_src
+
+#+RESULTS:
+#+begin_example
+0 ['loadI', 1024, 'rarp']
+Change of rarp ignored (strict mode)
+1 ['loadI', 1024, 'rsp']
+Change of rsp ignored (strict mode)
+2 ['loadI', 23, 'rbss']
+Change of rbss ignored (strict mode)
+3 ['jumpI', 14]
+14 ['addI', 'rsp', 4, 'rsp']
+15 ['loadI', 20, 'r3']
+16 ['storeAI', 'r3', 'rsp', 0]
+17 ['storeAI', 'rsp', 'rsp', 4]
+18 ['storeAI', 'rarp', 'rsp', 8]
+19 ['jumpI', 4]
+4 ['i2i', 'rsp', 'rarp']
+5 ['addI', 'rsp', 16, 'rsp']
+6 ['loadI', 73, 'r0']
+7 ['storeAI', 'r0', 'rarp', 12]
+8 ['loadAI', 'rarp', 0, 'r0']
+9 ['loadAI', 'rarp', 4, 'r1']
+10 ['loadAI', 'rarp', 8, 'r2']
+11 ['store', 'r1', 'rsp']
+12 ['store', 'r2', 'rarp']
+13 ['jump', 'r0']
+20 ['loadAI', 'rsp', 12, 'r0']
+21 ['storeAI', 'r0', 'rarp', 0]
+22 ['halt']
+count	instruction
+    5	loadI
+    5	storeAI
+    4	loadAI
+    2	jumpI
+    2	addI
+    2	store
+    1	i2i
+    1	jump
+    1	halt
+
+instructions executed:   23
+register         read:   22 write:   32
+memory           read:    4 write:    7
+
+  register    value
+        r0        0
+        r1     1028
+        r2     1024
+        r3       20
+      rarp     1028
+      rbss      500
+       rpc       22
+       rsp     1044
+
+    memory    value
+00001028        0
+00001032     1028
+00001036     1024
+00001040       73
+00001044     1028
+#+end_example
+
+
 * Passagem por valor
+
 #+latex: \tiny
 #+BEGIN_SRC amarela
 int f(int y) { return y; } int main() { int x; x = f(x); }
@@ -153,70 +344,70 @@ loadAI rsp, 16 => r0   // Retorno da função, carrega o valor de retorno
 storeAI r0 => rarp, 0   // Salva o retorno na variável x
 #+END_SRC
 
-#+begin_src shell :results output
+#+begin_src shell :results output :export both
 SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
-$SIM -t 1 --stack 1024 -m 1 exemplo5.iloc
+$SIM -x -t -s --data 500 --stack 1024 exemplo5.iloc
 #+end_src
 
 #+RESULTS:
 #+begin_example
 0 ['loadI', 1024, 'rarp']
-0 0 0 0 0
+Change of rarp ignored (strict mode)
 1 ['loadI', 1024, 'rsp']
-0 0 0 0 0
+Change of rsp ignored (strict mode)
 2 ['loadI', 29, 'rbss']
-0 0 0 0 0
+Change of rbss ignored (strict mode)
 3 ['jumpI', 16]
-0 0 0 0 0
 16 ['addI', 'rsp', 4, 'rsp']
-0 0 0 0 0
 17 ['addI', 'rpc', 7, 'r1']
-0 0 0 0 0
 18 ['storeAI', 'r1', 'rsp', 0]
-0 24 0 0 0
 19 ['storeAI', 'rsp', 'rsp', 4]
-0 24 0 0 0
 20 ['storeAI', 'rarp', 'rsp', 8]
-0 24 0 0 0
 21 ['loadAI', 'rarp', 0, 'r0']
-0 24 0 0 0
 22 ['storeAI', 'r0', 'rsp', 12]
-0 24 0 0 0
 23 ['jumpI', 4]
-0 24 0 0 0
 4 ['i2i', 'rsp', 'rarp']
-0 24 0 0 0
 5 ['addI', 'rsp', 20, 'rsp']
-0 24 0 0 0
 6 ['loadAI', 'rarp', 12, 'r0']
-0 24 0 0 0
 7 ['storeAI', 'r0', 'rarp', 20]
-0 24 0 0 0
 8 ['loadAI', 'rarp', 20, 'r0']
-0 24 0 0 0
 9 ['storeAI', 'r0', 'rarp', 16]
-0 24 0 0 0
 10 ['loadAI', 'rarp', 0, 'r0']
-0 24 0 0 0
 11 ['loadAI', 'rarp', 4, 'r1']
-24 24 0 0 0
 12 ['loadAI', 'rarp', 8, 'r2']
-24 1028 0 0 0
 13 ['i2i', 'r1', 'rsp']
-24 1028 1024 0 0
 14 ['i2i', 'r2', 'rarp']
-24 1028 1024 0 0
 15 ['jump', 'r0']
-24 1028 1024 0 0
 24 ['loadAI', 'rsp', 16, 'r0']
-24 1028 1024 0 0
 25 ['storeAI', 'r0', 'rarp', 0]
-0 1028 1024 0 0
-00001024 0
-00001028 24
-00001032 1028
-00001036 1024
-00001040 0
-00001044 0
-00001048 0
+count	instruction
+    7	storeAI
+    7	loadAI
+    3	loadI
+    3	addI
+    3	i2i
+    2	jumpI
+    1	jump
+
+instructions executed:   26
+register         read:   28 write:   39
+memory           read:    7 write:    7
+
+  register    value
+        r0        0
+        r1     1028
+        r2     1024
+      rarp     1024
+      rbss      500
+       rpc       25
+       rsp     1028
+
+    memory    value
+00001024        0
+00001028       24
+00001032     1028
+00001036     1024
+00001040        0
+00001044        0
+00001048        0
 #+end_example
