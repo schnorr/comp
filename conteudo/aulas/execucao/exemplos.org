@@ -17,87 +17,88 @@
 
 * Função principal
 Entrada
-  #+BEGIN_SRC amarela
-  int main () { }
-  #+END_SRC
-#+latex: \vfill
-\pause  ILOC
-  #+BEGIN_SRC iloc
-  loadI 1024 => fp
-  loadI 1024 => sp
-  loadI 7 => bss
-  jumpI => L0
-  L0: addI sp, 0 => sp
-  halt
-  #+END_SRC
+#+BEGIN_SRC amarela
+int main () { }
+#+END_SRC
+
+#+latex: \vfill\pause
+ILOC
+#+BEGIN_SRC iloc
+loadI 1024 => fp
+loadI 1024 => sp
+loadI 7 => bss
+jumpI => L0
+L0: addI sp, 0 => sp
+halt
+#+END_SRC
 + Segmento de dados depois do segmento de código
 + A pilha começa no endereço 1024
 + Cada linha de código ocupa um único byte
 * Variáveis locais na pilha
 Entrada
-  #+BEGIN_SRC amarela
-  int main () { int x; x = 34; }
-  #+END_SRC
+#+BEGIN_SRC amarela
+int main () { int x; x = 34; }
+#+END_SRC
 \pause  ILOC
-  #+BEGIN_SRC iloc
-  loadI 1024 => fp
-  loadI 1024 => sp
-  loadI 9 => bss
-  jumpI => L0
-  L0: addI sp, 4 => sp
-  loadI 34 => r0
-  storeAI r0 => fp, 0
-  halt
-  #+END_SRC
+#+BEGIN_SRC iloc
+loadI 1024 => fp
+loadI 1024 => sp
+loadI 9 => bss
+jumpI => L0
+L0: addI sp, 4 => sp
+loadI 34 => r0
+storeAI r0 => fp, 0
+halt
+#+END_SRC
 * Variáveis globais e locais
 Entrada
-  #+BEGIN_SRC amarela
-  int y; int main () { int x; y = 59; x = 33; }
-  #+END_SRC
+#+BEGIN_SRC amarela
+int y; int main () { int x; y = 59; x = 33; }
+#+END_SRC
 \pause  ILOC
-  #+BEGIN_SRC iloc
-  loadI 1024 => fp
-  loadI 1024 => sp
-  loadI 11 => bss
-  jumpI => L0
-  L0: addI sp, 4 => sp
-  loadI 59 => r0
-  storeAI r0 => bss, 0
-  loadI 33 => r0
-  storeAI r0 => fp, 0
-  halt
-  #+END_SRC
+#+BEGIN_SRC iloc
+loadI 1024 => fp
+loadI 1024 => sp
+loadI 11 => bss
+jumpI => L0
+L0: addI sp, 4 => sp
+loadI 59 => r0
+storeAI r0 => bss, 0
+loadI 33 => r0
+storeAI r0 => fp, 0
+halt
+#+END_SRC
 * Chamada de função
 Entrada
-  #+BEGIN_SRC amarela
-  int f() { return 73; } int main() { int x; x = f(); }
-  #+END_SRC
+#+BEGIN_SRC amarela
+int f() { return 73; } int main() { int x; x = f(); }
+#+END_SRC
 \pause  ILOC
-  \tiny
-  #+BEGIN_SRC iloc
-  loadI 1024 => fp
-  loadI 1024 => sp
-  loadI 23 => bss
-  jumpI => L1
-  L0: i2i sp => fp
-  addI sp, 16 => sp   //final do epílogo
-  loadI 73 => r0      //seq retorno
-  storeAI r0 => fp, 12
-  loadAI fp, 0 => r0  //obtém end. retorno
-  loadAI fp, 4 => r1  //obtém sp salvo
-  loadAI fp, 8 => r2  //obtém fp salvo
-  store r1 => sp
-  store r2 => fp
-  jump => r0
-  L1: addI sp, 4 => sp
-  storeAI 20 => sp, 0 //seq. chamada
-  storeAI sp => sp, 4
-  storeAI fp => sp, 8
-  jumpI => L0
-  loadAI sp, 12 => r0
-  storeAI r0 => fp, 0
-  halt
-  #+END_SRC
+\tiny
+#+BEGIN_SRC iloc
+loadI 1024 => fp
+loadI 1024 => sp
+loadI 23 => bss
+jumpI => L1
+L0: i2i sp => fp
+addI sp, 16 => sp   //final do epílogo
+loadI 73 => r0      //seq retorno
+storeAI r0 => fp, 12
+loadAI fp, 0 => r0  //obtém end. retorno
+loadAI fp, 4 => r1  //obtém sp salvo
+loadAI fp, 8 => r2  //obtém fp salvo
+store r1 => sp
+store r2 => fp
+jump => r0
+L1: addI sp, 4 => sp
+storeAI 20 => sp, 0 //seq. chamada
+storeAI sp => sp, 4
+storeAI fp => sp, 8
+jumpI => L0
+loadAI sp, 12 => r0
+storeAI r0 => fp, 0
+halt
+#+END_SRC
 * Passagem por valor
 #+latex: \tiny
 #+BEGIN_SRC amarela
