@@ -35,7 +35,7 @@ halt
 + A pilha começa no endereço 1024
 + Cada linha de código ocupa um único byte
 
-#+begin_src shell :results output :export both
+#+begin_src shell :results output :exports both
 SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
 $SIM -x -t -s --data 500 --stack 1024 exemplo1.iloc
 #+end_src
@@ -88,7 +88,7 @@ storeAI r0 => rarp, 0
 halt
 #+END_SRC
 
-#+begin_src shell :results output :export both
+#+begin_src shell :results output :exports both
 SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
 $SIM -x -t -s --data 500 --stack 1024 exemplo2.iloc
 #+end_src
@@ -148,7 +148,7 @@ storeAI r0 => rarp, 0
 halt
 #+END_SRC
 
-#+begin_src shell :results output :export both
+#+begin_src shell :results output :exports both
 SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
 $SIM -x -t -s --data 500 --stack 1024 exemplo3.iloc
 #+end_src
@@ -226,7 +226,7 @@ storeAI r0 => rarp, 0
 halt
 #+END_SRC
 
-#+begin_src shell :results output :export both
+#+begin_src shell :results output :exports both
 SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
 $SIM -x -t -s --data 500 --stack 1024 exemplo4.iloc
 #+end_src
@@ -344,7 +344,7 @@ loadAI rsp, 16 => r0   // Retorno da função, carrega o valor de retorno
 storeAI r0 => rarp, 0   // Salva o retorno na variável x
 #+END_SRC
 
-#+begin_src shell :results output :export both
+#+begin_src shell :results output :exports both
 SIM=/home/schnorr/ensino/pc/tests/scripts/ilocsim
 $SIM -x -t -s --data 500 --stack 1024 exemplo5.iloc
 #+end_src
