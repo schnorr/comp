@@ -80,8 +80,8 @@ PDF.
  |------------+----------------------------------+--------+-------+-------|
  | Otimização | [[./aulas/otimizacao/introducao.org][Introdução]]                       |        |       |       |
  | Otimização | [[./aulas/otimizacao/janela.org][de Janela]]                        |        |       |       |
- | Otimização | [[./aulas/otimizacao/grafos.org][Grafos de Fluxo de Controle]]      |        |       |       |
  | Otimização | [[./aulas/otimizacao/subexpressoes.org][Subexpressões]]                    |        |       |       |
+ | Otimização | [[./aulas/otimizacao/grafos.org][Grafos de Fluxo de Controle]]      |        |       |       |
  |------------+----------------------------------+--------+-------+-------|
 
 *** Organização antiga
