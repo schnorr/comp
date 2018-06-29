@@ -472,6 +472,7 @@ tomando-se por base o commit 476bceb.
 :Attachments: e4.normal.log e4.valgrind.log
 :ID:       e779b764-cade-404e-81ae-cfbd805d7509
 :END:
+
 Clique nos links:
 - [[./data/e7/79b764-cade-404e-81ae-cfbd805d7509/e4.normal.log]]
 - [[./data/e7/79b764-cade-404e-81ae-cfbd805d7509/e4.valgrind.log]]
@@ -534,6 +535,44 @@ dep0 %>%
 | Omicron |       3.5 |           1 |
 | Phi     |       7.5 |           1 |
 | Sigma   |         7 |           1 |
+** LOG dos de testes (normal/valgrind) resubmissões Omicron/Psi     :ATTACH:
+:PROPERTIES:
+:Attachments: e4.normal.4.log e4.valgrind.4.log
+:ID:       4604171d-9a98-488c-a2dd-5486d591fbef
+:END:
+
+Clique nos links:
+- [[./data/46/04171d-9a98-488c-a2dd-5486d591fbef/e4.normal.4.log]]
+- [[./data/46/04171d-9a98-488c-a2dd-5486d591fbef/e4.valgrind.4.log]]
+
+#+name: e4.logtotable2
+#+begin_src shell :results table
+echo "Grupo,E4,Obj"
+cat data/46/04171d-9a98-488c-a2dd-5486d591fbef/e4.normal.4.log | grep -e passed -e failed | sed -e "s/% .*//" -e "s/|/, E4.normal, /"
+cat data/46/04171d-9a98-488c-a2dd-5486d591fbef/e4.valgrind.4.log | grep -e passed -e failed | sed -e "s/% .*//" -e "s/|/, E4.valgrind, /"
+#+end_src
+
+#+RESULTS: e4.logtotable2
+| Grupo   | E4          | Obj |
+| Omicron | E4.normal   |  30 |
+| Psi     | E4.normal   |  65 |
+| Omicron | E4.valgrind |   0 |
+| Psi     | E4.valgrind |  10 |
+
+#+name: e4.r2
+#+header: :var dep0=e4.logtotable2
+#+begin_src R :results table :session :exports both :colnames yes
+library(tidyr)
+dep0 %>%
+    mutate(Obj = Obj/10) %>%
+    spread(E4, Obj) -> e4.res.2;
+#+end_src
+
+#+RESULTS: e4.r2
+| Grupo   | E4.normal | E4.valgrind |
+|---------+-----------+-------------|
+| Omicron |         3 |           0 |
+| Psi     |       6.5 |           1 |
 
 ** Subjetivo
 
@@ -552,13 +591,20 @@ dep0 %>%
 | Omicron |         7 |
 | Alpha   |         9 |
 | Beta    |        10 |
+| Psi     |         7 |
 
 ** Objetivo + Subjetivo + Final
 
 #+header: :var dep0=e4.r
+#+header: :var dep1=e4.r2
 #+header: :var e4.sub=e4.subjetiva.raw
 #+begin_src R :results table :session :exports output :colnames yes
 e4.res %>%
+    bind_rows(e4.res.2) %>%
+    group_by(Grupo) %>%
+    arrange(-E4.normal) %>%
+    slice(1) %>%
+    ungroup() %>%
     left_join(e4.sub) %>%
     mutate(E4.final = (E4.normal + Subjetiva) / 2)
 #+end_src
@@ -577,6 +623,7 @@ e4.res %>%
 | Omega   |         7 |           1 |         9 |        8 |
 | Omicron |       3.5 |           1 |         7 |     5.25 |
 | Phi     |       7.5 |           1 |         9 |     8.25 |
+| Psi     |       6.5 |           1 |         7 |     6.75 |
 | Sigma   |         7 |           1 |         9 |        8 |
 ** Comentários por grupo
 
