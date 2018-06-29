@@ -1,0 +1,132 @@
+Omicron|Test project /home/schnorr/ensino/private/junho_e4/Omicron-E4/b.e4.junho
+Omicron|      Start 467: e4_valgrind_qwe01
+Omicron| 1/20 Test #467: e4_valgrind_qwe01 ................***Failed    0.64 sec
+Omicron|      Start 468: e4_valgrind_qwe02
+Omicron| 2/20 Test #468: e4_valgrind_qwe02 ................***Failed    0.61 sec
+Omicron|      Start 469: e4_valgrind_qwe03
+Omicron| 3/20 Test #469: e4_valgrind_qwe03 ................***Failed    0.63 sec
+Omicron|      Start 470: e4_valgrind_qwe05
+Omicron| 4/20 Test #470: e4_valgrind_qwe05 ................***Failed    0.68 sec
+Omicron|      Start 471: e4_valgrind_qwe06
+Omicron| 5/20 Test #471: e4_valgrind_qwe06 ................***Failed    0.61 sec
+Omicron|      Start 472: e4_valgrind_qwe07
+Omicron| 6/20 Test #472: e4_valgrind_qwe07 ................***Failed    0.62 sec
+Omicron|      Start 473: e4_valgrind_qwe08
+Omicron| 7/20 Test #473: e4_valgrind_qwe08 ................***Failed    0.61 sec
+Omicron|      Start 474: e4_valgrind_qwe09
+Omicron| 8/20 Test #474: e4_valgrind_qwe09 ................***Failed    0.73 sec
+Omicron|      Start 475: e4_valgrind_qwe10
+Omicron| 9/20 Test #475: e4_valgrind_qwe10 ................***Failed    0.69 sec
+Omicron|      Start 476: e4_valgrind_qwe11
+Omicron|10/20 Test #476: e4_valgrind_qwe11 ................***Failed    0.67 sec
+Omicron|      Start 477: e4_valgrind_qwe12
+Omicron|11/20 Test #477: e4_valgrind_qwe12 ................***Failed    0.62 sec
+Omicron|      Start 478: e4_valgrind_qwe13
+Omicron|12/20 Test #478: e4_valgrind_qwe13 ................***Failed    0.67 sec
+Omicron|      Start 479: e4_valgrind_qwe14
+Omicron|13/20 Test #479: e4_valgrind_qwe14 ................***Failed    0.62 sec
+Omicron|      Start 480: e4_valgrind_qwe15
+Omicron|14/20 Test #480: e4_valgrind_qwe15 ................***Failed    0.66 sec
+Omicron|      Start 481: e4_valgrind_qwe16
+Omicron|15/20 Test #481: e4_valgrind_qwe16 ................***Failed    0.66 sec
+Omicron|      Start 482: e4_valgrind_qwe17
+Omicron|16/20 Test #482: e4_valgrind_qwe17 ................***Failed    0.65 sec
+Omicron|      Start 483: e4_valgrind_qwe18
+Omicron|17/20 Test #483: e4_valgrind_qwe18 ................***Failed    0.67 sec
+Omicron|      Start 484: e4_valgrind_qwe19
+Omicron|18/20 Test #484: e4_valgrind_qwe19 ................***Failed    0.68 sec
+Omicron|      Start 485: e4_valgrind_qwe20
+Omicron|19/20 Test #485: e4_valgrind_qwe20 ................***Failed    0.67 sec
+Omicron|      Start 486: e4_valgrind_qwe21
+Omicron|20/20 Test #486: e4_valgrind_qwe21 ................***Failed    0.69 sec
+Omicron|
+Omicron|0% tests passed, 20 tests failed out of 20
+Omicron|
+Omicron|Total Test time (real) =  13.08 sec
+Omicron|
+Omicron|The following tests FAILED:
+Omicron|	467 - e4_valgrind_qwe01 (Failed)
+Omicron|	468 - e4_valgrind_qwe02 (Failed)
+Omicron|	469 - e4_valgrind_qwe03 (Failed)
+Omicron|	470 - e4_valgrind_qwe05 (Failed)
+Omicron|	471 - e4_valgrind_qwe06 (Failed)
+Omicron|	472 - e4_valgrind_qwe07 (Failed)
+Omicron|	473 - e4_valgrind_qwe08 (Failed)
+Omicron|	474 - e4_valgrind_qwe09 (Failed)
+Omicron|	475 - e4_valgrind_qwe10 (Failed)
+Omicron|	476 - e4_valgrind_qwe11 (Failed)
+Omicron|	477 - e4_valgrind_qwe12 (Failed)
+Omicron|	478 - e4_valgrind_qwe13 (Failed)
+Omicron|	479 - e4_valgrind_qwe14 (Failed)
+Omicron|	480 - e4_valgrind_qwe15 (Failed)
+Omicron|	481 - e4_valgrind_qwe16 (Failed)
+Omicron|	482 - e4_valgrind_qwe17 (Failed)
+Omicron|	483 - e4_valgrind_qwe18 (Failed)
+Omicron|	484 - e4_valgrind_qwe19 (Failed)
+Omicron|	485 - e4_valgrind_qwe20 (Failed)
+Omicron|	486 - e4_valgrind_qwe21 (Failed)
+Psi|Test project /home/schnorr/ensino/private/junho_e4/Psi-E4/b.e4.junho
+Psi|      Start 467: e4_valgrind_qwe01
+Psi| 1/20 Test #467: e4_valgrind_qwe01 ................***Failed    0.57 sec
+Psi|      Start 468: e4_valgrind_qwe02
+Psi| 2/20 Test #468: e4_valgrind_qwe02 ................   Passed    0.57 sec
+Psi|      Start 469: e4_valgrind_qwe03
+Psi| 3/20 Test #469: e4_valgrind_qwe03 ................***Failed    0.57 sec
+Psi|      Start 470: e4_valgrind_qwe05
+Psi| 4/20 Test #470: e4_valgrind_qwe05 ................***Failed    0.57 sec
+Psi|      Start 471: e4_valgrind_qwe06
+Psi| 5/20 Test #471: e4_valgrind_qwe06 ................   Passed    0.57 sec
+Psi|      Start 472: e4_valgrind_qwe07
+Psi| 6/20 Test #472: e4_valgrind_qwe07 ................***Failed    0.59 sec
+Psi|      Start 473: e4_valgrind_qwe08
+Psi| 7/20 Test #473: e4_valgrind_qwe08 ................***Failed    0.57 sec
+Psi|      Start 474: e4_valgrind_qwe09
+Psi| 8/20 Test #474: e4_valgrind_qwe09 ................***Failed    0.66 sec
+Psi|      Start 475: e4_valgrind_qwe10
+Psi| 9/20 Test #475: e4_valgrind_qwe10 ................***Failed    0.58 sec
+Psi|      Start 476: e4_valgrind_qwe11
+Psi|10/20 Test #476: e4_valgrind_qwe11 ................***Failed    0.57 sec
+Psi|      Start 477: e4_valgrind_qwe12
+Psi|11/20 Test #477: e4_valgrind_qwe12 ................***Failed    0.56 sec
+Psi|      Start 478: e4_valgrind_qwe13
+Psi|12/20 Test #478: e4_valgrind_qwe13 ................***Failed    0.57 sec
+Psi|      Start 479: e4_valgrind_qwe14
+Psi|13/20 Test #479: e4_valgrind_qwe14 ................***Failed    0.56 sec
+Psi|      Start 480: e4_valgrind_qwe15
+Psi|14/20 Test #480: e4_valgrind_qwe15 ................***Failed    0.57 sec
+Psi|      Start 481: e4_valgrind_qwe16
+Psi|15/20 Test #481: e4_valgrind_qwe16 ................***Failed    0.61 sec
+Psi|      Start 482: e4_valgrind_qwe17
+Psi|16/20 Test #482: e4_valgrind_qwe17 ................***Failed    0.59 sec
+Psi|      Start 483: e4_valgrind_qwe18
+Psi|17/20 Test #483: e4_valgrind_qwe18 ................***Failed    0.58 sec
+Psi|      Start 484: e4_valgrind_qwe19
+Psi|18/20 Test #484: e4_valgrind_qwe19 ................***Failed    0.60 sec
+Psi|      Start 485: e4_valgrind_qwe20
+Psi|19/20 Test #485: e4_valgrind_qwe20 ................***Failed    0.59 sec
+Psi|      Start 486: e4_valgrind_qwe21
+Psi|20/20 Test #486: e4_valgrind_qwe21 ................***Failed    0.57 sec
+Psi|
+Psi|10% tests passed, 18 tests failed out of 20
+Psi|
+Psi|Total Test time (real) =  11.63 sec
+Psi|
+Psi|The following tests FAILED:
+Psi|	467 - e4_valgrind_qwe01 (Failed)
+Psi|	469 - e4_valgrind_qwe03 (Failed)
+Psi|	470 - e4_valgrind_qwe05 (Failed)
+Psi|	472 - e4_valgrind_qwe07 (Failed)
+Psi|	473 - e4_valgrind_qwe08 (Failed)
+Psi|	474 - e4_valgrind_qwe09 (Failed)
+Psi|	475 - e4_valgrind_qwe10 (Failed)
+Psi|	476 - e4_valgrind_qwe11 (Failed)
+Psi|	477 - e4_valgrind_qwe12 (Failed)
+Psi|	478 - e4_valgrind_qwe13 (Failed)
+Psi|	479 - e4_valgrind_qwe14 (Failed)
+Psi|	480 - e4_valgrind_qwe15 (Failed)
+Psi|	481 - e4_valgrind_qwe16 (Failed)
+Psi|	482 - e4_valgrind_qwe17 (Failed)
+Psi|	483 - e4_valgrind_qwe18 (Failed)
+Psi|	484 - e4_valgrind_qwe19 (Failed)
+Psi|	485 - e4_valgrind_qwe20 (Failed)
+Psi|	486 - e4_valgrind_qwe21 (Failed)
