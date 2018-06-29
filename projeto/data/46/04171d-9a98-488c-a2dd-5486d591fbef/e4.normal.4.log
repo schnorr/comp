@@ -1,0 +1,115 @@
+Omicron|Test project /home/schnorr/ensino/private/junho_e4/Omicron-E4/b.e4.junho
+Omicron|      Start 447: e4_qwe01
+Omicron| 1/20 Test #447: e4_qwe01 .........................***Failed    0.03 sec
+Omicron|      Start 448: e4_qwe02
+Omicron| 2/20 Test #448: e4_qwe02 .........................   Passed    0.03 sec
+Omicron|      Start 449: e4_qwe03
+Omicron| 3/20 Test #449: e4_qwe03 .........................***Failed    0.03 sec
+Omicron|      Start 450: e4_qwe05
+Omicron| 4/20 Test #450: e4_qwe05 .........................***Failed    0.03 sec
+Omicron|      Start 451: e4_qwe06
+Omicron| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
+Omicron|      Start 452: e4_qwe07
+Omicron| 6/20 Test #452: e4_qwe07 .........................***Failed    0.03 sec
+Omicron|      Start 453: e4_qwe08
+Omicron| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
+Omicron|      Start 454: e4_qwe09
+Omicron| 8/20 Test #454: e4_qwe09 .........................   Passed    0.03 sec
+Omicron|      Start 455: e4_qwe10
+Omicron| 9/20 Test #455: e4_qwe10 .........................***Failed    0.03 sec
+Omicron|      Start 456: e4_qwe11
+Omicron|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
+Omicron|      Start 457: e4_qwe12
+Omicron|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
+Omicron|      Start 458: e4_qwe13
+Omicron|12/20 Test #458: e4_qwe13 .........................   Passed    0.03 sec
+Omicron|      Start 459: e4_qwe14
+Omicron|13/20 Test #459: e4_qwe14 .........................   Passed    0.03 sec
+Omicron|      Start 460: e4_qwe15
+Omicron|14/20 Test #460: e4_qwe15 .........................***Failed    0.03 sec
+Omicron|      Start 461: e4_qwe16
+Omicron|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
+Omicron|      Start 462: e4_qwe17
+Omicron|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
+Omicron|      Start 463: e4_qwe18
+Omicron|17/20 Test #463: e4_qwe18 .........................***Failed    0.03 sec
+Omicron|      Start 464: e4_qwe19
+Omicron|18/20 Test #464: e4_qwe19 .........................***Failed    0.03 sec
+Omicron|      Start 465: e4_qwe20
+Omicron|19/20 Test #465: e4_qwe20 .........................***Failed    0.04 sec
+Omicron|      Start 466: e4_qwe21
+Omicron|20/20 Test #466: e4_qwe21 .........................***Failed    0.03 sec
+Omicron|
+Omicron|30% tests passed, 14 tests failed out of 20
+Omicron|
+Omicron|Total Test time (real) =   0.60 sec
+Omicron|
+Omicron|The following tests FAILED:
+Omicron|	447 - e4_qwe01 (Failed)
+Omicron|	449 - e4_qwe03 (Failed)
+Omicron|	450 - e4_qwe05 (Failed)
+Omicron|	452 - e4_qwe07 (Failed)
+Omicron|	455 - e4_qwe10 (Failed)
+Omicron|	456 - e4_qwe11 (Failed)
+Omicron|	457 - e4_qwe12 (Failed)
+Omicron|	460 - e4_qwe15 (Failed)
+Omicron|	461 - e4_qwe16 (Failed)
+Omicron|	462 - e4_qwe17 (Failed)
+Omicron|	463 - e4_qwe18 (Failed)
+Omicron|	464 - e4_qwe19 (Failed)
+Omicron|	465 - e4_qwe20 (Failed)
+Omicron|	466 - e4_qwe21 (Failed)
+Psi|Test project /home/schnorr/ensino/private/junho_e4/Psi-E4/b.e4.junho
+Psi|      Start 447: e4_qwe01
+Psi| 1/20 Test #447: e4_qwe01 .........................   Passed    0.03 sec
+Psi|      Start 448: e4_qwe02
+Psi| 2/20 Test #448: e4_qwe02 .........................   Passed    0.03 sec
+Psi|      Start 449: e4_qwe03
+Psi| 3/20 Test #449: e4_qwe03 .........................   Passed    0.04 sec
+Psi|      Start 450: e4_qwe05
+Psi| 4/20 Test #450: e4_qwe05 .........................   Passed    0.03 sec
+Psi|      Start 451: e4_qwe06
+Psi| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
+Psi|      Start 452: e4_qwe07
+Psi| 6/20 Test #452: e4_qwe07 .........................   Passed    0.03 sec
+Psi|      Start 453: e4_qwe08
+Psi| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
+Psi|      Start 454: e4_qwe09
+Psi| 8/20 Test #454: e4_qwe09 .........................   Passed    0.03 sec
+Psi|      Start 455: e4_qwe10
+Psi| 9/20 Test #455: e4_qwe10 .........................   Passed    0.03 sec
+Psi|      Start 456: e4_qwe11
+Psi|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
+Psi|      Start 457: e4_qwe12
+Psi|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
+Psi|      Start 458: e4_qwe13
+Psi|12/20 Test #458: e4_qwe13 .........................   Passed    0.03 sec
+Psi|      Start 459: e4_qwe14
+Psi|13/20 Test #459: e4_qwe14 .........................   Passed    0.03 sec
+Psi|      Start 460: e4_qwe15
+Psi|14/20 Test #460: e4_qwe15 .........................***Failed    0.03 sec
+Psi|      Start 461: e4_qwe16
+Psi|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
+Psi|      Start 462: e4_qwe17
+Psi|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
+Psi|      Start 463: e4_qwe18
+Psi|17/20 Test #463: e4_qwe18 .........................   Passed    0.03 sec
+Psi|      Start 464: e4_qwe19
+Psi|18/20 Test #464: e4_qwe19 .........................***Failed    0.03 sec
+Psi|      Start 465: e4_qwe20
+Psi|19/20 Test #465: e4_qwe20 .........................   Passed    0.03 sec
+Psi|      Start 466: e4_qwe21
+Psi|20/20 Test #466: e4_qwe21 .........................***Failed    0.03 sec
+Psi|
+Psi|65% tests passed, 7 tests failed out of 20
+Psi|
+Psi|Total Test time (real) =   0.58 sec
+Psi|
+Psi|The following tests FAILED:
+Psi|	456 - e4_qwe11 (Failed)
+Psi|	457 - e4_qwe12 (Failed)
+Psi|	460 - e4_qwe15 (Failed)
+Psi|	461 - e4_qwe16 (Failed)
+Psi|	462 - e4_qwe17 (Failed)
+Psi|	464 - e4_qwe19 (Failed)
+Psi|	466 - e4_qwe21 (Failed)
