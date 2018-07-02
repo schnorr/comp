@@ -37,7 +37,7 @@ encontra-se abaixo.
 | E3    | [[./etapa3.pdf][Árvore Sintática Abstrata]] ([[./etapa3.pdf][PDF]]) |       15 |         40 | 2018-04-25 |            |
 | E4    | [[./etapa4.org][Análise Semântica]]               |       15 |         55 | 2018-05-23 |            |
 | E5    | [[./etapa5.pdf][Geração de Código]] ([[./etapa5.pdf][PDF]])         |       20 |         75 | 2018-06-18 |            |
-| E6    | [[./etapa6.org][Suporte de Execução]]             |       15 |         90 | 2018-07-02 |            |
+| E6    | [[./etapa6.org][Suporte de Execução]]             |       15 |         90 | 2018-07-04 |            |
 | E7    | (obsoleto) [[./etapa7.org][Otimização]] ([[./etapa7.pdf][PDF]])     |       10 |        100 | 2018-07-08 |            |
 |-------+---------------------------------+----------+------------+------------+------------|
 
