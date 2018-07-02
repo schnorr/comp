@@ -58,8 +58,8 @@
 | Execução   | Introdução, Registro de Ativação                       |           | Início E6 (Chamada)    |
 | Execução   | Chamada e retorno de Função, Passagem de parâmetros    |           |                        |
 | Otimização | Introdução, Janela e Grafos de Fluxo                   |           | Início E7 (Otimização) |
-|            |                                                        |    67-104 | Avaliação E6           |
 |            | Revisão para a prova                                   |           |                        |
+|            |                                                        |    67-103 | Avaliação E6           |
 |            | P2                                                     |  Castilho |                        |
 |            | PR                                                     |           |                        |
 
@@ -237,7 +237,7 @@ aulas %>%
 | 24 | 2018-06-21 |           | Execução   | Introdução, Registro de Ativação                       | Início E6 (Chamada)    |
 | 25 | 2018-06-26 |           | Execução   | Chamada e retorno de Função, Passagem de parâmetros    |                        |
 | 26 | 2018-06-28 |           | Otimização | Introdução, Janela e Grafos de Fluxo                   | Início E7 (Otimização) |
-| 27 | 2018-07-03 |    67-104 |            |                                                        | Avaliação E6           |
-| 28 | 2018-07-05 |           |            | Revisão para a prova                                   |                        |
+| 27 | 2018-07-03 |           |            | Revisão para a prova                                   |                        |
+| 28 | 2018-07-05 |    67-103 |            |                                                        | Avaliação E6           |
 | 29 | 2018-07-10 |  Castilho |            | P2                                                     |                        |
 | 30 | 2018-07-17 |           |            | PR                                                     |                        |
