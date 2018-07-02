@@ -628,3 +628,131 @@ e4.res %>%
 ** Comentários por grupo
 
 Por fornecer.
+
+* Avaliação da Etapa 5
+** Quais testes?
+
+No diretório de cada grupo, o diretório =tests= foi substituído por
+aquele oriundo do repositório de referência, tomando-se por base o
+commit 207376a.
+
+** LOG dos testes (normal/valgrind)                                 :ATTACH:
+:PROPERTIES:
+:Attachments: e5.normal.log e5.valgrind.log
+:ID:       33ac53f4-b269-48d1-8028-f7e497e8b9df
+:END:
+
+Clique nos links:
+- [[./data/33/ac53f4-b269-48d1-8028-f7e497e8b9df/e5.normal.log]]
+- [[./data/33/ac53f4-b269-48d1-8028-f7e497e8b9df/e5.valgrind.log]]
+
+#+name: e5.logtotable
+#+begin_src shell :results table
+echo "Grupo,E5,Obj"
+cat data/33/ac53f4-b269-48d1-8028-f7e497e8b9df/e5.normal.log | grep -e passed -e failed | sed -e "s/% .*//" -e "s/|/, E5.normal, /"
+cat data/33/ac53f4-b269-48d1-8028-f7e497e8b9df/e5.valgrind.log | grep -e passed -e failed | sed -e "s/% .*//" -e "s/|/, E5.valgrind, /"
+#+end_src
+
+#+RESULTS: e5.logtotable
+| Grupo   | E5          | Obj |
+| Alpha   | E5.normal   |  89 |
+| Beta    | E5.normal   |  16 |
+| Delta   | E5.normal   |   0 |
+| Epsilon | E5.normal   |  79 |
+| Gamma   | E5.normal   |  21 |
+| Kappa   | E5.normal   |  58 |
+| Lambda  | E5.normal   |   0 |
+| Nu      | E5.normal   |   0 |
+| Omega   | E5.normal   |   0 |
+| Omicron | E5.normal   |   0 |
+| Phi     | E5.normal   |   0 |
+| Sigma   | E5.normal   |   0 |
+| Alpha   | E5.valgrind |   0 |
+| Beta    | E5.valgrind |   0 |
+| Delta   | E5.valgrind |   0 |
+| Epsilon | E5.valgrind |   0 |
+| Gamma   | E5.valgrind |   0 |
+| Kappa   | E5.valgrind |   0 |
+| Lambda  | E5.valgrind |   0 |
+| Nu      | E5.valgrind |   0 |
+| Omega   | E5.valgrind |   0 |
+| Omicron | E5.valgrind |   0 |
+| Phi     | E5.valgrind |   0 |
+| Sigma   | E5.valgrind |   0 |
+
+#+name: e5.r
+#+header: :var dep0=e5.logtotable
+#+begin_src R :results table :session :exports both :colnames yes
+library(tidyr)
+dep0 %>%
+    mutate(Obj = Obj/10) %>%
+    spread(E5, Obj) %>%
+    arrange(-E5.normal) -> e5.res;
+#+end_src
+
+#+RESULTS: e5.r
+| Grupo   | E5.normal | E5.valgrind |
+|---------+-----------+-------------|
+| Alpha   |       8.9 |           0 |
+| Epsilon |       7.9 |           0 |
+| Kappa   |       5.8 |           0 |
+| Gamma   |       2.1 |           0 |
+| Beta    |       1.6 |           0 |
+| Delta   |         0 |           0 |
+| Lambda  |         0 |           0 |
+| Nu      |         0 |           0 |
+| Omega   |         0 |           0 |
+| Omicron |         0 |           0 |
+| Phi     |         0 |           0 |
+| Sigma   |         0 |           0 |
+** Subjetivo
+
+#+name: e5.subjetiva.raw
+| Grupo   | Subjetiva |
+|---------+-----------|
+| Delta   |         3 |
+| Phi     |         5 |
+| Gamma   |           |
+| Lambda  |         5 |
+| Nu      |         9 |
+| Sigma   |         7 |
+| Kappa   |           |
+| Epsilon |        10 |
+| Omega   |       7.5 |
+| Omicron |         5 |
+| Alpha   |        10 |
+| Beta    |         7 |
+| Psi     |           |
+
+** Objetivo + Subjetivo + Final
+
+#+header: :var dep0=e5.r
+#+header: :var e5.sub=e5.subjetiva.raw
+#+begin_src R :results table :session :exports output :colnames yes
+e5.res %>%
+    group_by(Grupo) %>%
+    arrange(-E5.normal) %>%
+    slice(1) %>%
+    ungroup() %>%
+    left_join(e5.sub) %>%
+    mutate(E5.final = (E5.normal + Subjetiva) / 2)
+#+end_src
+
+#+RESULTS:
+| Grupo   | E5.normal | E5.valgrind | Subjetiva | E5.final |
+|---------+-----------+-------------+-----------+----------|
+| Alpha   |       8.9 |           0 |        10 |     9.45 |
+| Beta    |       1.6 |           0 |         7 |      4.3 |
+| Delta   |         0 |           0 |         3 |      1.5 |
+| Epsilon |       7.9 |           0 |        10 |     8.95 |
+| Gamma   |       2.1 |           0 |       nil |      nil |
+| Kappa   |       5.8 |           0 |       nil |      nil |
+| Lambda  |         0 |           0 |         5 |      2.5 |
+| Nu      |         0 |           0 |         9 |      4.5 |
+| Omega   |         0 |           0 |       7.5 |     3.75 |
+| Omicron |         0 |           0 |         5 |      2.5 |
+| Phi     |         0 |           0 |         5 |      2.5 |
+| Sigma   |         0 |           0 |         7 |      3.5 |
+** Comentários por grupo
+
+Por fornecer.
