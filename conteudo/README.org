@@ -1,3 +1,6 @@
+#+STARTUP: overview
+#+STARTUP: indent
+
 * Conteúdo
 ** Aulas e videoaulas
 
@@ -89,3 +92,25 @@ PDF.
  | Otimização | Introdução, Janela e Grafos de Fluxo                  |        |       |       |
  | Otimização | Local e Global, Otimização em laços                   |        |       |       |
  | Geral      | Discussão e reflexão sobre os conceitos da disciplina |        |       |       |
+* Revisão P2
+
+- Introdução à Geração de Código
+  - Taxonomia
+- Geração de código
+  - Como é uma questão de geração de código?
+    - Mapear a geração das instruções sobre uma gramática
+  - Expressões
+  - Expressões lógicas em uma única passagem
+    - Curto-circuito \to remendos
+  - Arranjos multidimencionais
+    - C_A (na declaração, com valores estáticos) e da geração de código
+      do acesso (com valores dinâmicos)
+    - Mapeamento das equações de endereçamento para a gramática
+  - "Imaginar a pilha": compilador gera código que gerencia uma pilha
+    (alterar os valors de RARP e SP) sem que a pilha exista.
+  - Informação mínima no RA para funcionar chamada de função
+    - VD + Endereço de retorno
+  - Função que retorna valor, como esse valor é "trazido" para a
+    função chamadora? Na função chamada, se coloca o valor em um lugar
+    específico na pilha (offset de rarp); em seguida, a função
+    chamadora consulta aquele mesmo lugar (offset de sp).
