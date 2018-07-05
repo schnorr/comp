@@ -13,7 +13,7 @@
 | [[#avaliação-da-etapa-3][Etapa 3]]                    |
 | [[#avaliação-da-etapa-4][Etapa 4]]                    |
 | [[#avaliação-da-etapa-5][Etapa 5]]                    |
-| Etapa 6 (aguarda soluções) |
+| [[#avaliação-da-etapa-6][Etapa 6]]                    |
 | Etapa 7 (aguarda soluções) |
 
 * Avaliação da Etapa 1
