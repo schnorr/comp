@@ -756,3 +756,56 @@ e5.res %>%
 ** Comentários por grupo
 
 Por fornecer.
+* Avaliação da Etapa 6
+** Quais testes?
+
+No diretório de cada grupo, o diretório =tests= foi substituído por
+aquele oriundo do repositório de referência, tomando-se por base o
+commit c500d9b.
+
+** LOG dos testes (apenas normal)                                   :ATTACH:
+:PROPERTIES:
+:Attachments: e6.normal.log
+:ID:       31656d7e-6a31-4fab-929e-eb3412ebec6d
+:END:
+
+Clique nos links:
+- [[./data/31/656d7e-6a31-4fab-929e-eb3412ebec6d/e6.normal.log]]
+
+#+name: e6.logtotable
+#+begin_src shell :results table
+echo "Grupo,E6,Obj"
+cat data/31/656d7e-6a31-4fab-929e-eb3412ebec6d/e6.normal.log | grep -e passed -e failed | sed -e "s/% .*//" -e "s/|/, E6.normal, /"
+#+end_src
+
+#+RESULTS: e6.logtotable
+| Grupo   | E6        | Obj |
+| Alpha   | E6.normal |   0 |
+| Epsilon | E6.normal |   0 |
+| Gamma   | E6.normal |   0 |
+| Kappa   | E6.normal |   0 |
+| Lambda  | E6.normal |   0 |
+| Omicron | E6.normal |   0 |
+| Sigma   | E6.normal |   0 |
+
+#+name: e6.r
+#+header: :var dep0=e6.logtotable
+#+begin_src R :results table :session :exports both :colnames yes
+library(tidyr)
+dep0 %>%
+    mutate(Obj = Obj/10) %>%
+    spread(E6, Obj) %>%
+    arrange(-E6.normal) -> e6.res;
+#+end_src
+
+#+RESULTS: e6.r
+| Grupo   | E6.normal |
+|---------+-----------|
+| Alpha   |         0 |
+| Epsilon |         0 |
+| Gamma   |         0 |
+| Kappa   |         0 |
+| Lambda  |         0 |
+| Omicron |         0 |
+| Sigma   |         0 |
+
