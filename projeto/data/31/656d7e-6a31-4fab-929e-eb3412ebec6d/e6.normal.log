@@ -1,0 +1,217 @@
+Alpha|Test project /home/schnorr/ensino/private/junho_e6/Alpha-E6/b.e6.junho
+Alpha|    Start 750: e6_avaliacao_00
+Alpha|1/8 Test #750: e6_avaliacao_00 ..................***Failed    2.04 sec
+Alpha|    Start 751: e6_avaliacao_01
+Alpha|2/8 Test #751: e6_avaliacao_01 ..................***Failed    2.03 sec
+Alpha|    Start 752: e6_avaliacao_02
+Alpha|3/8 Test #752: e6_avaliacao_02 ..................***Failed    0.09 sec
+Alpha|    Start 753: e6_avaliacao_03
+Alpha|4/8 Test #753: e6_avaliacao_03 ..................***Failed    2.05 sec
+Alpha|    Start 754: e6_avaliacao_04
+Alpha|5/8 Test #754: e6_avaliacao_04 ..................***Failed    0.09 sec
+Alpha|    Start 755: e6_avaliacao_05
+Alpha|6/8 Test #755: e6_avaliacao_05 ..................***Failed    2.05 sec
+Alpha|    Start 756: e6_avaliacao_06
+Alpha|7/8 Test #756: e6_avaliacao_06 ..................***Failed    2.11 sec
+Alpha|    Start 757: e6_avaliacao_07
+Alpha|8/8 Test #757: e6_avaliacao_07 ..................***Failed    0.22 sec
+Alpha|
+Alpha|0% tests passed, 8 tests failed out of 8
+Alpha|
+Alpha|Total Test time (real) =  10.69 sec
+Alpha|
+Alpha|The following tests FAILED:
+Alpha|	750 - e6_avaliacao_00 (Failed)
+Alpha|	751 - e6_avaliacao_01 (Failed)
+Alpha|	752 - e6_avaliacao_02 (Failed)
+Alpha|	753 - e6_avaliacao_03 (Failed)
+Alpha|	754 - e6_avaliacao_04 (Failed)
+Alpha|	755 - e6_avaliacao_05 (Failed)
+Alpha|	756 - e6_avaliacao_06 (Failed)
+Alpha|	757 - e6_avaliacao_07 (Failed)
+Epsilon|Test project /home/schnorr/ensino/private/junho_e6/Epsilon-E6/b.e6.junho
+Epsilon|    Start 750: e6_avaliacao_00
+Epsilon|1/8 Test #750: e6_avaliacao_00 ..................***Failed    0.20 sec
+Epsilon|    Start 751: e6_avaliacao_01
+Epsilon|2/8 Test #751: e6_avaliacao_01 ..................***Failed    0.23 sec
+Epsilon|    Start 752: e6_avaliacao_02
+Epsilon|3/8 Test #752: e6_avaliacao_02 ..................***Failed    0.18 sec
+Epsilon|    Start 753: e6_avaliacao_03
+Epsilon|4/8 Test #753: e6_avaliacao_03 ..................***Failed    0.17 sec
+Epsilon|    Start 754: e6_avaliacao_04
+Epsilon|5/8 Test #754: e6_avaliacao_04 ..................***Failed    0.18 sec
+Epsilon|    Start 755: e6_avaliacao_05
+Epsilon|6/8 Test #755: e6_avaliacao_05 ..................***Failed    0.16 sec
+Epsilon|    Start 756: e6_avaliacao_06
+Epsilon|7/8 Test #756: e6_avaliacao_06 ..................***Failed    0.20 sec
+Epsilon|    Start 757: e6_avaliacao_07
+Epsilon|8/8 Test #757: e6_avaliacao_07 ..................***Failed    0.19 sec
+Epsilon|
+Epsilon|0% tests passed, 8 tests failed out of 8
+Epsilon|
+Epsilon|Total Test time (real) =   1.53 sec
+Epsilon|
+Epsilon|The following tests FAILED:
+Epsilon|	750 - e6_avaliacao_00 (Failed)
+Epsilon|	751 - e6_avaliacao_01 (Failed)
+Epsilon|	752 - e6_avaliacao_02 (Failed)
+Epsilon|	753 - e6_avaliacao_03 (Failed)
+Epsilon|	754 - e6_avaliacao_04 (Failed)
+Epsilon|	755 - e6_avaliacao_05 (Failed)
+Epsilon|	756 - e6_avaliacao_06 (Failed)
+Epsilon|	757 - e6_avaliacao_07 (Failed)
+Gamma|Test project /home/schnorr/ensino/private/junho_e6/Gamma-E6/b.e6.junho
+Gamma|    Start 750: e6_avaliacao_00
+Gamma|1/8 Test #750: e6_avaliacao_00 ..................***Failed    0.18 sec
+Gamma|    Start 751: e6_avaliacao_01
+Gamma|2/8 Test #751: e6_avaliacao_01 ..................***Failed    0.16 sec
+Gamma|    Start 752: e6_avaliacao_02
+Gamma|3/8 Test #752: e6_avaliacao_02 ..................***Failed    0.14 sec
+Gamma|    Start 753: e6_avaliacao_03
+Gamma|4/8 Test #753: e6_avaliacao_03 ..................***Failed    0.17 sec
+Gamma|    Start 754: e6_avaliacao_04
+Gamma|5/8 Test #754: e6_avaliacao_04 ..................***Failed    0.19 sec
+Gamma|    Start 755: e6_avaliacao_05
+Gamma|6/8 Test #755: e6_avaliacao_05 ..................***Failed    0.19 sec
+Gamma|    Start 756: e6_avaliacao_06
+Gamma|7/8 Test #756: e6_avaliacao_06 ..................***Failed    0.24 sec
+Gamma|    Start 757: e6_avaliacao_07
+Gamma|8/8 Test #757: e6_avaliacao_07 ..................***Failed    0.26 sec
+Gamma|
+Gamma|0% tests passed, 8 tests failed out of 8
+Gamma|
+Gamma|Total Test time (real) =   1.55 sec
+Gamma|
+Gamma|The following tests FAILED:
+Gamma|	750 - e6_avaliacao_00 (Failed)
+Gamma|	751 - e6_avaliacao_01 (Failed)
+Gamma|	752 - e6_avaliacao_02 (Failed)
+Gamma|	753 - e6_avaliacao_03 (Failed)
+Gamma|	754 - e6_avaliacao_04 (Failed)
+Gamma|	755 - e6_avaliacao_05 (Failed)
+Gamma|	756 - e6_avaliacao_06 (Failed)
+Gamma|	757 - e6_avaliacao_07 (Failed)
+Kappa|Test project /home/schnorr/ensino/private/junho_e6/Kappa-E6/b.e6.junho
+Kappa|    Start 750: e6_avaliacao_00
+Kappa|1/8 Test #750: e6_avaliacao_00 ..................***Failed    2.12 sec
+Kappa|    Start 751: e6_avaliacao_01
+Kappa|2/8 Test #751: e6_avaliacao_01 ..................***Failed    2.11 sec
+Kappa|    Start 752: e6_avaliacao_02
+Kappa|3/8 Test #752: e6_avaliacao_02 ..................***Failed    2.11 sec
+Kappa|    Start 753: e6_avaliacao_03
+Kappa|4/8 Test #753: e6_avaliacao_03 ..................***Failed    2.15 sec
+Kappa|    Start 754: e6_avaliacao_04
+Kappa|5/8 Test #754: e6_avaliacao_04 ..................***Failed    2.18 sec
+Kappa|    Start 755: e6_avaliacao_05
+Kappa|6/8 Test #755: e6_avaliacao_05 ..................***Failed    2.24 sec
+Kappa|    Start 756: e6_avaliacao_06
+Kappa|7/8 Test #756: e6_avaliacao_06 ..................***Failed    2.19 sec
+Kappa|    Start 757: e6_avaliacao_07
+Kappa|8/8 Test #757: e6_avaliacao_07 ..................***Failed    2.27 sec
+Kappa|
+Kappa|0% tests passed, 8 tests failed out of 8
+Kappa|
+Kappa|Total Test time (real) =  17.39 sec
+Kappa|
+Kappa|The following tests FAILED:
+Kappa|	750 - e6_avaliacao_00 (Failed)
+Kappa|	751 - e6_avaliacao_01 (Failed)
+Kappa|	752 - e6_avaliacao_02 (Failed)
+Kappa|	753 - e6_avaliacao_03 (Failed)
+Kappa|	754 - e6_avaliacao_04 (Failed)
+Kappa|	755 - e6_avaliacao_05 (Failed)
+Kappa|	756 - e6_avaliacao_06 (Failed)
+Kappa|	757 - e6_avaliacao_07 (Failed)
+Lambda|Test project /home/schnorr/ensino/private/junho_e6/Lambda-E6/b.e6.junho
+Lambda|    Start 750: e6_avaliacao_00
+Lambda|1/8 Test #750: e6_avaliacao_00 ..................***Failed    2.26 sec
+Lambda|    Start 751: e6_avaliacao_01
+Lambda|2/8 Test #751: e6_avaliacao_01 ..................***Failed    2.46 sec
+Lambda|    Start 752: e6_avaliacao_02
+Lambda|3/8 Test #752: e6_avaliacao_02 ..................***Failed    2.30 sec
+Lambda|    Start 753: e6_avaliacao_03
+Lambda|4/8 Test #753: e6_avaliacao_03 ..................***Failed    0.50 sec
+Lambda|    Start 754: e6_avaliacao_04
+Lambda|5/8 Test #754: e6_avaliacao_04 ..................***Failed    2.29 sec
+Lambda|    Start 755: e6_avaliacao_05
+Lambda|6/8 Test #755: e6_avaliacao_05 ..................***Failed    0.51 sec
+Lambda|    Start 756: e6_avaliacao_06
+Lambda|7/8 Test #756: e6_avaliacao_06 ..................***Failed    2.26 sec
+Lambda|    Start 757: e6_avaliacao_07
+Lambda|8/8 Test #757: e6_avaliacao_07 ..................***Failed    2.43 sec
+Lambda|
+Lambda|0% tests passed, 8 tests failed out of 8
+Lambda|
+Lambda|Total Test time (real) =  15.04 sec
+Lambda|
+Lambda|The following tests FAILED:
+Lambda|	750 - e6_avaliacao_00 (Failed)
+Lambda|	751 - e6_avaliacao_01 (Failed)
+Lambda|	752 - e6_avaliacao_02 (Failed)
+Lambda|	753 - e6_avaliacao_03 (Failed)
+Lambda|	754 - e6_avaliacao_04 (Failed)
+Lambda|	755 - e6_avaliacao_05 (Failed)
+Lambda|	756 - e6_avaliacao_06 (Failed)
+Lambda|	757 - e6_avaliacao_07 (Failed)
+Omicron|Test project /home/schnorr/ensino/private/junho_e6/Omicron-E6/b.e6.junho
+Omicron|    Start 750: e6_avaliacao_00
+Omicron|1/8 Test #750: e6_avaliacao_00 ..................***Failed    0.68 sec
+Omicron|    Start 751: e6_avaliacao_01
+Omicron|2/8 Test #751: e6_avaliacao_01 ..................***Failed    0.79 sec
+Omicron|    Start 752: e6_avaliacao_02
+Omicron|3/8 Test #752: e6_avaliacao_02 ..................***Failed    0.58 sec
+Omicron|    Start 753: e6_avaliacao_03
+Omicron|4/8 Test #753: e6_avaliacao_03 ..................***Failed    0.57 sec
+Omicron|    Start 754: e6_avaliacao_04
+Omicron|5/8 Test #754: e6_avaliacao_04 ..................***Failed    0.57 sec
+Omicron|    Start 755: e6_avaliacao_05
+Omicron|6/8 Test #755: e6_avaliacao_05 ..................***Failed    0.55 sec
+Omicron|    Start 756: e6_avaliacao_06
+Omicron|7/8 Test #756: e6_avaliacao_06 ..................***Failed    0.58 sec
+Omicron|    Start 757: e6_avaliacao_07
+Omicron|8/8 Test #757: e6_avaliacao_07 ..................***Failed    0.58 sec
+Omicron|
+Omicron|0% tests passed, 8 tests failed out of 8
+Omicron|
+Omicron|Total Test time (real) =   4.99 sec
+Omicron|
+Omicron|The following tests FAILED:
+Omicron|	750 - e6_avaliacao_00 (Failed)
+Omicron|	751 - e6_avaliacao_01 (Failed)
+Omicron|	752 - e6_avaliacao_02 (Failed)
+Omicron|	753 - e6_avaliacao_03 (Failed)
+Omicron|	754 - e6_avaliacao_04 (Failed)
+Omicron|	755 - e6_avaliacao_05 (Failed)
+Omicron|	756 - e6_avaliacao_06 (Failed)
+Omicron|	757 - e6_avaliacao_07 (Failed)
+Sigma|Test project /home/schnorr/ensino/private/junho_e6/Sigma-E6/b.e6.junho
+Sigma|    Start 750: e6_avaliacao_00
+Sigma|1/8 Test #750: e6_avaliacao_00 ..................***Failed    0.56 sec
+Sigma|    Start 751: e6_avaliacao_01
+Sigma|2/8 Test #751: e6_avaliacao_01 ..................***Failed    0.54 sec
+Sigma|    Start 752: e6_avaliacao_02
+Sigma|3/8 Test #752: e6_avaliacao_02 ..................***Failed    0.53 sec
+Sigma|    Start 753: e6_avaliacao_03
+Sigma|4/8 Test #753: e6_avaliacao_03 ..................***Failed    0.55 sec
+Sigma|    Start 754: e6_avaliacao_04
+Sigma|5/8 Test #754: e6_avaliacao_04 ..................***Failed    0.53 sec
+Sigma|    Start 755: e6_avaliacao_05
+Sigma|6/8 Test #755: e6_avaliacao_05 ..................***Failed    0.54 sec
+Sigma|    Start 756: e6_avaliacao_06
+Sigma|7/8 Test #756: e6_avaliacao_06 ..................***Failed    0.55 sec
+Sigma|    Start 757: e6_avaliacao_07
+Sigma|8/8 Test #757: e6_avaliacao_07 ..................***Failed    0.54 sec
+Sigma|
+Sigma|0% tests passed, 8 tests failed out of 8
+Sigma|
+Sigma|Total Test time (real) =   4.42 sec
+Sigma|
+Sigma|The following tests FAILED:
+Sigma|	750 - e6_avaliacao_00 (Failed)
+Sigma|	751 - e6_avaliacao_01 (Failed)
+Sigma|	752 - e6_avaliacao_02 (Failed)
+Sigma|	753 - e6_avaliacao_03 (Failed)
+Sigma|	754 - e6_avaliacao_04 (Failed)
+Sigma|	755 - e6_avaliacao_05 (Failed)
+Sigma|	756 - e6_avaliacao_06 (Failed)
+Sigma|	757 - e6_avaliacao_07 (Failed)
