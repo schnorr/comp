@@ -39,6 +39,12 @@ Revisões:
   - de fato o ; depois de bloco de comandos não deve ter, corrigido vários testes
   - ; faltante em asl76 corrigido
   - outros, ver diff do commit no repositório de referência
+- E4.O
+  - O return foi colocado na função principal de todos os testes
+  - Vetores devem ser globais; corrigidos
+  - Correção do teste 12 para refletir a intenção original
+  - Encapsulamentos obrigatórios adicionados
+  - outros, ver diff do commit no repositório de referência
 
 | ID     | E1.O | E1.S | E2.O | E2.S | E3.S | E4.O | E4.S | E5.O | E5.S | E6.O | E6.S |  P1 | Freq |
 |--------+------+------+------+------+------+------+------+------+------+------+------+-----+------|
