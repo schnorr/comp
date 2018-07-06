@@ -1,718 +1,93 @@
-Alpha|Test project /home/schnorr/ensino/private/junho_e5/Alpha-E5/b.e5.junho
-Alpha|      Start 712: e5_asd01
-Alpha| 1/19 Test #712: e5_asd01 .........................   Passed    0.07 sec
-Alpha|      Start 713: e5_asd02
-Alpha| 2/19 Test #713: e5_asd02 .........................   Passed    0.06 sec
-Alpha|      Start 714: e5_asd03
-Alpha| 3/19 Test #714: e5_asd03 .........................   Passed    0.06 sec
-Alpha|      Start 715: e5_asd04
-Alpha| 4/19 Test #715: e5_asd04 .........................   Passed    0.06 sec
-Alpha|      Start 716: e5_asd05
-Alpha| 5/19 Test #716: e5_asd05 .........................   Passed    0.06 sec
-Alpha|      Start 717: e5_asd06
-Alpha| 6/19 Test #717: e5_asd06 .........................   Passed    0.07 sec
-Alpha|      Start 718: e5_asd07
-Alpha| 7/19 Test #718: e5_asd07 .........................   Passed    0.05 sec
-Alpha|      Start 719: e5_asd08
-Alpha| 8/19 Test #719: e5_asd08 .........................   Passed    0.06 sec
-Alpha|      Start 720: e5_asd09
-Alpha| 9/19 Test #720: e5_asd09 .........................   Passed    0.07 sec
-Alpha|      Start 721: e5_asd10
-Alpha|10/19 Test #721: e5_asd10 .........................   Passed    0.05 sec
-Alpha|      Start 722: e5_asd11
-Alpha|11/19 Test #722: e5_asd11 .........................   Passed    0.07 sec
-Alpha|      Start 723: e5_asd12
-Alpha|12/19 Test #723: e5_asd12 .........................   Passed    0.06 sec
-Alpha|      Start 724: e5_asd13
-Alpha|13/19 Test #724: e5_asd13 .........................   Passed    0.06 sec
-Alpha|      Start 725: e5_asd14
-Alpha|14/19 Test #725: e5_asd14 .........................   Passed    0.10 sec
-Alpha|      Start 726: e5_asd15
-Alpha|15/19 Test #726: e5_asd15 .........................   Passed    0.10 sec
-Alpha|      Start 727: e5_asd16
-Alpha|16/19 Test #727: e5_asd16 .........................   Passed    0.07 sec
-Alpha|      Start 728: e5_asd17
-Alpha|17/19 Test #728: e5_asd17 .........................   Passed    0.05 sec
-Alpha|      Start 729: e5_asd18
-Alpha|18/19 Test #729: e5_asd18 .........................***Failed    0.06 sec
-Alpha|      Start 730: e5_asd19
-Alpha|19/19 Test #730: e5_asd19 .........................***Failed    0.06 sec
+Alpha|Test project /home/schnorr/ensino/private/julho_e5/Alpha-E5/b.e5.julho
+Alpha|    Start 713: e5_asd02
+Alpha|1/1 Test #713: e5_asd02 .........................   Passed    0.06 sec
 Alpha|
-Alpha|89% tests passed, 2 tests failed out of 19
+Alpha|100% tests passed, 0 tests failed out of 1
 Alpha|
-Alpha|Total Test time (real) =   1.28 sec
-Alpha|
-Alpha|The following tests FAILED:
-Alpha|	729 - e5_asd18 (Failed)
-Alpha|	730 - e5_asd19 (Failed)
-Beta|Test project /home/schnorr/ensino/private/junho_e5/Beta-E5/b.e5.junho
-Beta|      Start 712: e5_asd01
-Beta| 1/19 Test #712: e5_asd01 .........................   Passed    0.07 sec
-Beta|      Start 713: e5_asd02
-Beta| 2/19 Test #713: e5_asd02 .........................***Failed    0.05 sec
-Beta|      Start 714: e5_asd03
-Beta| 3/19 Test #714: e5_asd03 .........................   Passed    0.07 sec
-Beta|      Start 715: e5_asd04
-Beta| 4/19 Test #715: e5_asd04 .........................***Failed    0.06 sec
-Beta|      Start 716: e5_asd05
-Beta| 5/19 Test #716: e5_asd05 .........................***Failed    0.06 sec
-Beta|      Start 717: e5_asd06
-Beta| 6/19 Test #717: e5_asd06 .........................***Failed    0.06 sec
-Beta|      Start 718: e5_asd07
-Beta| 7/19 Test #718: e5_asd07 .........................***Failed    0.06 sec
-Beta|      Start 719: e5_asd08
-Beta| 8/19 Test #719: e5_asd08 .........................***Failed    0.07 sec
-Beta|      Start 720: e5_asd09
-Beta| 9/19 Test #720: e5_asd09 .........................***Failed    0.06 sec
-Beta|      Start 721: e5_asd10
-Beta|10/19 Test #721: e5_asd10 .........................***Failed    0.06 sec
-Beta|      Start 722: e5_asd11
-Beta|11/19 Test #722: e5_asd11 .........................***Failed    0.08 sec
-Beta|      Start 723: e5_asd12
-Beta|12/19 Test #723: e5_asd12 .........................***Failed    0.07 sec
-Beta|      Start 724: e5_asd13
-Beta|13/19 Test #724: e5_asd13 .........................***Failed    0.06 sec
-Beta|      Start 725: e5_asd14
-Beta|14/19 Test #725: e5_asd14 .........................***Failed    0.06 sec
-Beta|      Start 726: e5_asd15
-Beta|15/19 Test #726: e5_asd15 .........................***Failed    0.06 sec
-Beta|      Start 727: e5_asd16
-Beta|16/19 Test #727: e5_asd16 .........................   Passed    0.06 sec
-Beta|      Start 728: e5_asd17
-Beta|17/19 Test #728: e5_asd17 .........................***Failed    0.06 sec
-Beta|      Start 729: e5_asd18
-Beta|18/19 Test #729: e5_asd18 .........................***Failed    0.06 sec
-Beta|      Start 730: e5_asd19
-Beta|19/19 Test #730: e5_asd19 .........................***Failed    0.06 sec
+Alpha|Total Test time (real) =   0.07 sec
+Beta|Test project /home/schnorr/ensino/private/julho_e5/Beta-E5/b.e5.julho
+Beta|    Start 713: e5_asd02
+Beta|1/1 Test #713: e5_asd02 .........................   Passed    0.07 sec
 Beta|
-Beta|16% tests passed, 16 tests failed out of 19
+Beta|100% tests passed, 0 tests failed out of 1
 Beta|
-Beta|Total Test time (real) =   1.20 sec
-Beta|
-Beta|The following tests FAILED:
-Beta|	713 - e5_asd02 (Failed)
-Beta|	715 - e5_asd04 (Failed)
-Beta|	716 - e5_asd05 (Failed)
-Beta|	717 - e5_asd06 (Failed)
-Beta|	718 - e5_asd07 (Failed)
-Beta|	719 - e5_asd08 (Failed)
-Beta|	720 - e5_asd09 (Failed)
-Beta|	721 - e5_asd10 (Failed)
-Beta|	722 - e5_asd11 (Failed)
-Beta|	723 - e5_asd12 (Failed)
-Beta|	724 - e5_asd13 (Failed)
-Beta|	725 - e5_asd14 (Failed)
-Beta|	726 - e5_asd15 (Failed)
-Beta|	728 - e5_asd17 (Failed)
-Beta|	729 - e5_asd18 (Failed)
-Beta|	730 - e5_asd19 (Failed)
-Delta|Test project /home/schnorr/ensino/private/junho_e5/Delta-E5/b.e5.junho
-Delta|      Start 712: e5_asd01
-Delta| 1/19 Test #712: e5_asd01 .........................***Failed    0.06 sec
-Delta|      Start 713: e5_asd02
-Delta| 2/19 Test #713: e5_asd02 .........................***Failed    0.06 sec
-Delta|      Start 714: e5_asd03
-Delta| 3/19 Test #714: e5_asd03 .........................***Failed    0.06 sec
-Delta|      Start 715: e5_asd04
-Delta| 4/19 Test #715: e5_asd04 .........................***Failed    0.07 sec
-Delta|      Start 716: e5_asd05
-Delta| 5/19 Test #716: e5_asd05 .........................***Failed    0.06 sec
-Delta|      Start 717: e5_asd06
-Delta| 6/19 Test #717: e5_asd06 .........................***Failed    0.07 sec
-Delta|      Start 718: e5_asd07
-Delta| 7/19 Test #718: e5_asd07 .........................***Failed    0.07 sec
-Delta|      Start 719: e5_asd08
-Delta| 8/19 Test #719: e5_asd08 .........................***Failed    0.07 sec
-Delta|      Start 720: e5_asd09
-Delta| 9/19 Test #720: e5_asd09 .........................***Failed    0.05 sec
-Delta|      Start 721: e5_asd10
-Delta|10/19 Test #721: e5_asd10 .........................***Failed    0.06 sec
-Delta|      Start 722: e5_asd11
-Delta|11/19 Test #722: e5_asd11 .........................***Failed    0.06 sec
-Delta|      Start 723: e5_asd12
-Delta|12/19 Test #723: e5_asd12 .........................***Failed    0.06 sec
-Delta|      Start 724: e5_asd13
-Delta|13/19 Test #724: e5_asd13 .........................***Failed    0.06 sec
-Delta|      Start 725: e5_asd14
-Delta|14/19 Test #725: e5_asd14 .........................***Failed    0.05 sec
-Delta|      Start 726: e5_asd15
-Delta|15/19 Test #726: e5_asd15 .........................***Failed    0.06 sec
-Delta|      Start 727: e5_asd16
-Delta|16/19 Test #727: e5_asd16 .........................***Failed    0.06 sec
-Delta|      Start 728: e5_asd17
-Delta|17/19 Test #728: e5_asd17 .........................***Failed    0.06 sec
-Delta|      Start 729: e5_asd18
-Delta|18/19 Test #729: e5_asd18 .........................***Failed    0.05 sec
-Delta|      Start 730: e5_asd19
-Delta|19/19 Test #730: e5_asd19 .........................***Failed    0.06 sec
+Beta|Total Test time (real) =   0.08 sec
+Delta|Test project /home/schnorr/ensino/private/julho_e5/Delta-E5/b.e5.julho
+Delta|    Start 713: e5_asd02
+Delta|1/1 Test #713: e5_asd02 .........................***Failed    0.07 sec
 Delta|
-Delta|0% tests passed, 19 tests failed out of 19
+Delta|0% tests passed, 1 tests failed out of 1
 Delta|
-Delta|Total Test time (real) =   1.18 sec
+Delta|Total Test time (real) =   0.08 sec
 Delta|
 Delta|The following tests FAILED:
-Delta|	712 - e5_asd01 (Failed)
 Delta|	713 - e5_asd02 (Failed)
-Delta|	714 - e5_asd03 (Failed)
-Delta|	715 - e5_asd04 (Failed)
-Delta|	716 - e5_asd05 (Failed)
-Delta|	717 - e5_asd06 (Failed)
-Delta|	718 - e5_asd07 (Failed)
-Delta|	719 - e5_asd08 (Failed)
-Delta|	720 - e5_asd09 (Failed)
-Delta|	721 - e5_asd10 (Failed)
-Delta|	722 - e5_asd11 (Failed)
-Delta|	723 - e5_asd12 (Failed)
-Delta|	724 - e5_asd13 (Failed)
-Delta|	725 - e5_asd14 (Failed)
-Delta|	726 - e5_asd15 (Failed)
-Delta|	727 - e5_asd16 (Failed)
-Delta|	728 - e5_asd17 (Failed)
-Delta|	729 - e5_asd18 (Failed)
-Delta|	730 - e5_asd19 (Failed)
-Epsilon|Test project /home/schnorr/ensino/private/junho_e5/Epsilon-E5/b.e5.junho
-Epsilon|      Start 712: e5_asd01
-Epsilon| 1/19 Test #712: e5_asd01 .........................   Passed    0.06 sec
-Epsilon|      Start 713: e5_asd02
-Epsilon| 2/19 Test #713: e5_asd02 .........................   Passed    0.06 sec
-Epsilon|      Start 714: e5_asd03
-Epsilon| 3/19 Test #714: e5_asd03 .........................   Passed    0.06 sec
-Epsilon|      Start 715: e5_asd04
-Epsilon| 4/19 Test #715: e5_asd04 .........................   Passed    0.05 sec
-Epsilon|      Start 716: e5_asd05
-Epsilon| 5/19 Test #716: e5_asd05 .........................***Failed    0.06 sec
-Epsilon|      Start 717: e5_asd06
-Epsilon| 6/19 Test #717: e5_asd06 .........................   Passed    0.06 sec
-Epsilon|      Start 718: e5_asd07
-Epsilon| 7/19 Test #718: e5_asd07 .........................   Passed    0.06 sec
-Epsilon|      Start 719: e5_asd08
-Epsilon| 8/19 Test #719: e5_asd08 .........................   Passed    0.06 sec
-Epsilon|      Start 720: e5_asd09
-Epsilon| 9/19 Test #720: e5_asd09 .........................   Passed    0.06 sec
-Epsilon|      Start 721: e5_asd10
-Epsilon|10/19 Test #721: e5_asd10 .........................   Passed    0.06 sec
-Epsilon|      Start 722: e5_asd11
-Epsilon|11/19 Test #722: e5_asd11 .........................***Failed    0.06 sec
-Epsilon|      Start 723: e5_asd12
-Epsilon|12/19 Test #723: e5_asd12 .........................   Passed    0.06 sec
-Epsilon|      Start 724: e5_asd13
-Epsilon|13/19 Test #724: e5_asd13 .........................***Failed    0.06 sec
-Epsilon|      Start 725: e5_asd14
-Epsilon|14/19 Test #725: e5_asd14 .........................***Failed    0.05 sec
-Epsilon|      Start 726: e5_asd15
-Epsilon|15/19 Test #726: e5_asd15 .........................   Passed    0.10 sec
-Epsilon|      Start 727: e5_asd16
-Epsilon|16/19 Test #727: e5_asd16 .........................   Passed    0.06 sec
-Epsilon|      Start 728: e5_asd17
-Epsilon|17/19 Test #728: e5_asd17 .........................   Passed    0.06 sec
-Epsilon|      Start 729: e5_asd18
-Epsilon|18/19 Test #729: e5_asd18 .........................   Passed    0.06 sec
-Epsilon|      Start 730: e5_asd19
-Epsilon|19/19 Test #730: e5_asd19 .........................   Passed    0.07 sec
+Epsilon|Test project /home/schnorr/ensino/private/julho_e5/Epsilon-E5/b.e5.julho
+Epsilon|    Start 713: e5_asd02
+Epsilon|1/1 Test #713: e5_asd02 .........................   Passed    0.07 sec
 Epsilon|
-Epsilon|79% tests passed, 4 tests failed out of 19
+Epsilon|100% tests passed, 0 tests failed out of 1
 Epsilon|
-Epsilon|Total Test time (real) =   1.20 sec
-Epsilon|
-Epsilon|The following tests FAILED:
-Epsilon|	716 - e5_asd05 (Failed)
-Epsilon|	722 - e5_asd11 (Failed)
-Epsilon|	724 - e5_asd13 (Failed)
-Epsilon|	725 - e5_asd14 (Failed)
-Gamma|Test project /home/schnorr/ensino/private/junho_e5/Gamma-E5/b.e5.junho
-Gamma|      Start 712: e5_asd01
-Gamma| 1/19 Test #712: e5_asd01 .........................   Passed    0.07 sec
-Gamma|      Start 713: e5_asd02
-Gamma| 2/19 Test #713: e5_asd02 .........................   Passed    0.07 sec
-Gamma|      Start 714: e5_asd03
-Gamma| 3/19 Test #714: e5_asd03 .........................   Passed    0.07 sec
-Gamma|      Start 715: e5_asd04
-Gamma| 4/19 Test #715: e5_asd04 .........................***Failed    0.05 sec
-Gamma|      Start 716: e5_asd05
-Gamma| 5/19 Test #716: e5_asd05 .........................***Failed    0.06 sec
-Gamma|      Start 717: e5_asd06
-Gamma| 6/19 Test #717: e5_asd06 .........................***Failed    0.06 sec
-Gamma|      Start 718: e5_asd07
-Gamma| 7/19 Test #718: e5_asd07 .........................***Failed    0.06 sec
-Gamma|      Start 719: e5_asd08
-Gamma| 8/19 Test #719: e5_asd08 .........................***Failed    0.06 sec
-Gamma|      Start 720: e5_asd09
-Gamma| 9/19 Test #720: e5_asd09 .........................***Failed    0.06 sec
-Gamma|      Start 721: e5_asd10
-Gamma|10/19 Test #721: e5_asd10 .........................***Failed    0.06 sec
-Gamma|      Start 722: e5_asd11
-Gamma|11/19 Test #722: e5_asd11 .........................***Failed    0.06 sec
-Gamma|      Start 723: e5_asd12
-Gamma|12/19 Test #723: e5_asd12 .........................***Failed    0.06 sec
-Gamma|      Start 724: e5_asd13
-Gamma|13/19 Test #724: e5_asd13 .........................***Failed    0.06 sec
-Gamma|      Start 725: e5_asd14
-Gamma|14/19 Test #725: e5_asd14 .........................***Failed    0.06 sec
-Gamma|      Start 726: e5_asd15
-Gamma|15/19 Test #726: e5_asd15 .........................***Failed    0.06 sec
-Gamma|      Start 727: e5_asd16
-Gamma|16/19 Test #727: e5_asd16 .........................   Passed    0.06 sec
-Gamma|      Start 728: e5_asd17
-Gamma|17/19 Test #728: e5_asd17 .........................***Failed    0.05 sec
-Gamma|      Start 729: e5_asd18
-Gamma|18/19 Test #729: e5_asd18 .........................***Failed    0.06 sec
-Gamma|      Start 730: e5_asd19
-Gamma|19/19 Test #730: e5_asd19 .........................***Failed    0.06 sec
+Epsilon|Total Test time (real) =   0.08 sec
+Gamma|Test project /home/schnorr/ensino/private/julho_e5/Gamma-E5/b.e5.julho
+Gamma|    Start 713: e5_asd02
+Gamma|1/1 Test #713: e5_asd02 .........................   Passed    0.07 sec
 Gamma|
-Gamma|21% tests passed, 15 tests failed out of 19
+Gamma|100% tests passed, 0 tests failed out of 1
 Gamma|
-Gamma|Total Test time (real) =   1.17 sec
-Gamma|
-Gamma|The following tests FAILED:
-Gamma|	715 - e5_asd04 (Failed)
-Gamma|	716 - e5_asd05 (Failed)
-Gamma|	717 - e5_asd06 (Failed)
-Gamma|	718 - e5_asd07 (Failed)
-Gamma|	719 - e5_asd08 (Failed)
-Gamma|	720 - e5_asd09 (Failed)
-Gamma|	721 - e5_asd10 (Failed)
-Gamma|	722 - e5_asd11 (Failed)
-Gamma|	723 - e5_asd12 (Failed)
-Gamma|	724 - e5_asd13 (Failed)
-Gamma|	725 - e5_asd14 (Failed)
-Gamma|	726 - e5_asd15 (Failed)
-Gamma|	728 - e5_asd17 (Failed)
-Gamma|	729 - e5_asd18 (Failed)
-Gamma|	730 - e5_asd19 (Failed)
-Kappa|Test project /home/schnorr/ensino/private/junho_e5/Kappa-E5/b.e5.junho
-Kappa|      Start 712: e5_asd01
-Kappa| 1/19 Test #712: e5_asd01 .........................   Passed    0.06 sec
-Kappa|      Start 713: e5_asd02
-Kappa| 2/19 Test #713: e5_asd02 .........................   Passed    0.07 sec
-Kappa|      Start 714: e5_asd03
-Kappa| 3/19 Test #714: e5_asd03 .........................   Passed    0.07 sec
-Kappa|      Start 715: e5_asd04
-Kappa| 4/19 Test #715: e5_asd04 .........................   Passed    0.06 sec
-Kappa|      Start 716: e5_asd05
-Kappa| 5/19 Test #716: e5_asd05 .........................***Failed    0.07 sec
-Kappa|      Start 717: e5_asd06
-Kappa| 6/19 Test #717: e5_asd06 .........................   Passed    0.06 sec
-Kappa|      Start 718: e5_asd07
-Kappa| 7/19 Test #718: e5_asd07 .........................   Passed    0.07 sec
-Kappa|      Start 719: e5_asd08
-Kappa| 8/19 Test #719: e5_asd08 .........................   Passed    0.07 sec
-Kappa|      Start 720: e5_asd09
-Kappa| 9/19 Test #720: e5_asd09 .........................   Passed    0.06 sec
-Kappa|      Start 721: e5_asd10
-Kappa|10/19 Test #721: e5_asd10 .........................***Failed    0.06 sec
-Kappa|      Start 722: e5_asd11
-Kappa|11/19 Test #722: e5_asd11 .........................***Failed    0.06 sec
-Kappa|      Start 723: e5_asd12
-Kappa|12/19 Test #723: e5_asd12 .........................   Passed    0.06 sec
-Kappa|      Start 724: e5_asd13
-Kappa|13/19 Test #724: e5_asd13 .........................***Failed    0.05 sec
-Kappa|      Start 725: e5_asd14
-Kappa|14/19 Test #725: e5_asd14 .........................***Failed    0.06 sec
-Kappa|      Start 726: e5_asd15
-Kappa|15/19 Test #726: e5_asd15 .........................***Failed    0.06 sec
-Kappa|      Start 727: e5_asd16
-Kappa|16/19 Test #727: e5_asd16 .........................   Passed    0.06 sec
-Kappa|      Start 728: e5_asd17
-Kappa|17/19 Test #728: e5_asd17 .........................***Failed    0.05 sec
-Kappa|      Start 729: e5_asd18
-Kappa|18/19 Test #729: e5_asd18 .........................***Failed    0.06 sec
-Kappa|      Start 730: e5_asd19
-Kappa|19/19 Test #730: e5_asd19 .........................   Passed    0.07 sec
+Gamma|Total Test time (real) =   0.08 sec
+Kappa|Test project /home/schnorr/ensino/private/julho_e5/Kappa-E5/b.e5.julho
+Kappa|    Start 713: e5_asd02
+Kappa|1/1 Test #713: e5_asd02 .........................   Passed    0.07 sec
 Kappa|
-Kappa|58% tests passed, 8 tests failed out of 19
+Kappa|100% tests passed, 0 tests failed out of 1
 Kappa|
-Kappa|Total Test time (real) =   1.19 sec
-Kappa|
-Kappa|The following tests FAILED:
-Kappa|	716 - e5_asd05 (Failed)
-Kappa|	721 - e5_asd10 (Failed)
-Kappa|	722 - e5_asd11 (Failed)
-Kappa|	724 - e5_asd13 (Failed)
-Kappa|	725 - e5_asd14 (Failed)
-Kappa|	726 - e5_asd15 (Failed)
-Kappa|	728 - e5_asd17 (Failed)
-Kappa|	729 - e5_asd18 (Failed)
-Lambda|Test project /home/schnorr/ensino/private/junho_e5/Lambda-E5/b.e5.junho
-Lambda|      Start 712: e5_asd01
-Lambda| 1/19 Test #712: e5_asd01 .........................***Failed    0.07 sec
-Lambda|      Start 713: e5_asd02
-Lambda| 2/19 Test #713: e5_asd02 .........................***Failed    0.06 sec
-Lambda|      Start 714: e5_asd03
-Lambda| 3/19 Test #714: e5_asd03 .........................***Failed    0.05 sec
-Lambda|      Start 715: e5_asd04
-Lambda| 4/19 Test #715: e5_asd04 .........................***Failed    0.07 sec
-Lambda|      Start 716: e5_asd05
-Lambda| 5/19 Test #716: e5_asd05 .........................***Failed    0.07 sec
-Lambda|      Start 717: e5_asd06
-Lambda| 6/19 Test #717: e5_asd06 .........................***Failed    0.06 sec
-Lambda|      Start 718: e5_asd07
-Lambda| 7/19 Test #718: e5_asd07 .........................***Failed    0.06 sec
-Lambda|      Start 719: e5_asd08
-Lambda| 8/19 Test #719: e5_asd08 .........................***Failed    0.06 sec
-Lambda|      Start 720: e5_asd09
-Lambda| 9/19 Test #720: e5_asd09 .........................***Failed    0.06 sec
-Lambda|      Start 721: e5_asd10
-Lambda|10/19 Test #721: e5_asd10 .........................***Failed    0.07 sec
-Lambda|      Start 722: e5_asd11
-Lambda|11/19 Test #722: e5_asd11 .........................***Failed    0.06 sec
-Lambda|      Start 723: e5_asd12
-Lambda|12/19 Test #723: e5_asd12 .........................***Failed    0.07 sec
-Lambda|      Start 724: e5_asd13
-Lambda|13/19 Test #724: e5_asd13 .........................***Failed    0.07 sec
-Lambda|      Start 725: e5_asd14
-Lambda|14/19 Test #725: e5_asd14 .........................***Failed    0.06 sec
-Lambda|      Start 726: e5_asd15
-Lambda|15/19 Test #726: e5_asd15 .........................***Failed    0.06 sec
-Lambda|      Start 727: e5_asd16
-Lambda|16/19 Test #727: e5_asd16 .........................***Failed    0.06 sec
-Lambda|      Start 728: e5_asd17
-Lambda|17/19 Test #728: e5_asd17 .........................***Failed    0.06 sec
-Lambda|      Start 729: e5_asd18
-Lambda|18/19 Test #729: e5_asd18 .........................***Failed    0.05 sec
-Lambda|      Start 730: e5_asd19
-Lambda|19/19 Test #730: e5_asd19 .........................***Failed    0.06 sec
+Kappa|Total Test time (real) =   0.08 sec
+Lambda|Test project /home/schnorr/ensino/private/julho_e5/Lambda-E5/b.e5.julho
+Lambda|    Start 713: e5_asd02
+Lambda|1/1 Test #713: e5_asd02 .........................   Passed    0.07 sec
 Lambda|
-Lambda|0% tests passed, 19 tests failed out of 19
+Lambda|100% tests passed, 0 tests failed out of 1
 Lambda|
-Lambda|Total Test time (real) =   1.18 sec
-Lambda|
-Lambda|The following tests FAILED:
-Lambda|	712 - e5_asd01 (Failed)
-Lambda|	713 - e5_asd02 (Failed)
-Lambda|	714 - e5_asd03 (Failed)
-Lambda|	715 - e5_asd04 (Failed)
-Lambda|	716 - e5_asd05 (Failed)
-Lambda|	717 - e5_asd06 (Failed)
-Lambda|	718 - e5_asd07 (Failed)
-Lambda|	719 - e5_asd08 (Failed)
-Lambda|	720 - e5_asd09 (Failed)
-Lambda|	721 - e5_asd10 (Failed)
-Lambda|	722 - e5_asd11 (Failed)
-Lambda|	723 - e5_asd12 (Failed)
-Lambda|	724 - e5_asd13 (Failed)
-Lambda|	725 - e5_asd14 (Failed)
-Lambda|	726 - e5_asd15 (Failed)
-Lambda|	727 - e5_asd16 (Failed)
-Lambda|	728 - e5_asd17 (Failed)
-Lambda|	729 - e5_asd18 (Failed)
-Lambda|	730 - e5_asd19 (Failed)
-Nu|Test project /home/schnorr/ensino/private/junho_e5/Nu-E5/b.e5.junho
-Nu|      Start 712: e5_asd01
-Nu| 1/19 Test #712: e5_asd01 .........................***Failed    0.07 sec
-Nu|      Start 713: e5_asd02
-Nu| 2/19 Test #713: e5_asd02 .........................***Failed    0.07 sec
-Nu|      Start 714: e5_asd03
-Nu| 3/19 Test #714: e5_asd03 .........................***Failed    0.07 sec
-Nu|      Start 715: e5_asd04
-Nu| 4/19 Test #715: e5_asd04 .........................***Failed    0.06 sec
-Nu|      Start 716: e5_asd05
-Nu| 5/19 Test #716: e5_asd05 .........................***Failed    0.06 sec
-Nu|      Start 717: e5_asd06
-Nu| 6/19 Test #717: e5_asd06 .........................***Failed    0.06 sec
-Nu|      Start 718: e5_asd07
-Nu| 7/19 Test #718: e5_asd07 .........................***Failed    0.06 sec
-Nu|      Start 719: e5_asd08
-Nu| 8/19 Test #719: e5_asd08 .........................***Failed    0.06 sec
-Nu|      Start 720: e5_asd09
-Nu| 9/19 Test #720: e5_asd09 .........................***Failed    0.07 sec
-Nu|      Start 721: e5_asd10
-Nu|10/19 Test #721: e5_asd10 .........................***Failed    0.05 sec
-Nu|      Start 722: e5_asd11
-Nu|11/19 Test #722: e5_asd11 .........................***Failed    0.07 sec
-Nu|      Start 723: e5_asd12
-Nu|12/19 Test #723: e5_asd12 .........................***Failed    0.06 sec
-Nu|      Start 724: e5_asd13
-Nu|13/19 Test #724: e5_asd13 .........................***Failed    0.06 sec
-Nu|      Start 725: e5_asd14
-Nu|14/19 Test #725: e5_asd14 .........................***Failed    0.06 sec
-Nu|      Start 726: e5_asd15
-Nu|15/19 Test #726: e5_asd15 .........................***Failed    0.06 sec
-Nu|      Start 727: e5_asd16
-Nu|16/19 Test #727: e5_asd16 .........................***Failed    0.05 sec
-Nu|      Start 728: e5_asd17
-Nu|17/19 Test #728: e5_asd17 .........................***Failed    0.05 sec
-Nu|      Start 729: e5_asd18
-Nu|18/19 Test #729: e5_asd18 .........................***Failed    0.05 sec
-Nu|      Start 730: e5_asd19
-Nu|19/19 Test #730: e5_asd19 .........................***Failed    0.06 sec
+Lambda|Total Test time (real) =   0.08 sec
+Nu|Test project /home/schnorr/ensino/private/julho_e5/Nu-E5/b.e5.julho
+Nu|    Start 713: e5_asd02
+Nu|1/1 Test #713: e5_asd02 .........................   Passed    0.07 sec
 Nu|
-Nu|0% tests passed, 19 tests failed out of 19
+Nu|100% tests passed, 0 tests failed out of 1
 Nu|
-Nu|Total Test time (real) =   1.15 sec
-Nu|
-Nu|The following tests FAILED:
-Nu|	712 - e5_asd01 (Failed)
-Nu|	713 - e5_asd02 (Failed)
-Nu|	714 - e5_asd03 (Failed)
-Nu|	715 - e5_asd04 (Failed)
-Nu|	716 - e5_asd05 (Failed)
-Nu|	717 - e5_asd06 (Failed)
-Nu|	718 - e5_asd07 (Failed)
-Nu|	719 - e5_asd08 (Failed)
-Nu|	720 - e5_asd09 (Failed)
-Nu|	721 - e5_asd10 (Failed)
-Nu|	722 - e5_asd11 (Failed)
-Nu|	723 - e5_asd12 (Failed)
-Nu|	724 - e5_asd13 (Failed)
-Nu|	725 - e5_asd14 (Failed)
-Nu|	726 - e5_asd15 (Failed)
-Nu|	727 - e5_asd16 (Failed)
-Nu|	728 - e5_asd17 (Failed)
-Nu|	729 - e5_asd18 (Failed)
-Nu|	730 - e5_asd19 (Failed)
-Omega|Test project /home/schnorr/ensino/private/junho_e5/Omega-E5/b.e5.junho
-Omega|      Start 712: e5_asd01
-Omega| 1/19 Test #712: e5_asd01 .........................***Failed    0.06 sec
-Omega|      Start 713: e5_asd02
-Omega| 2/19 Test #713: e5_asd02 .........................***Failed    0.05 sec
-Omega|      Start 714: e5_asd03
-Omega| 3/19 Test #714: e5_asd03 .........................***Failed    0.06 sec
-Omega|      Start 715: e5_asd04
-Omega| 4/19 Test #715: e5_asd04 .........................***Failed    0.06 sec
-Omega|      Start 716: e5_asd05
-Omega| 5/19 Test #716: e5_asd05 .........................***Failed    0.06 sec
-Omega|      Start 717: e5_asd06
-Omega| 6/19 Test #717: e5_asd06 .........................***Failed    0.06 sec
-Omega|      Start 718: e5_asd07
-Omega| 7/19 Test #718: e5_asd07 .........................***Failed    0.06 sec
-Omega|      Start 719: e5_asd08
-Omega| 8/19 Test #719: e5_asd08 .........................***Failed    0.06 sec
-Omega|      Start 720: e5_asd09
-Omega| 9/19 Test #720: e5_asd09 .........................***Failed    0.06 sec
-Omega|      Start 721: e5_asd10
-Omega|10/19 Test #721: e5_asd10 .........................***Failed    0.06 sec
-Omega|      Start 722: e5_asd11
-Omega|11/19 Test #722: e5_asd11 .........................***Failed    0.06 sec
-Omega|      Start 723: e5_asd12
-Omega|12/19 Test #723: e5_asd12 .........................***Failed    0.06 sec
-Omega|      Start 724: e5_asd13
-Omega|13/19 Test #724: e5_asd13 .........................***Failed    0.06 sec
-Omega|      Start 725: e5_asd14
-Omega|14/19 Test #725: e5_asd14 .........................***Failed    0.06 sec
-Omega|      Start 726: e5_asd15
-Omega|15/19 Test #726: e5_asd15 .........................***Failed    0.06 sec
-Omega|      Start 727: e5_asd16
-Omega|16/19 Test #727: e5_asd16 .........................***Failed    0.06 sec
-Omega|      Start 728: e5_asd17
-Omega|17/19 Test #728: e5_asd17 .........................***Failed    0.06 sec
-Omega|      Start 729: e5_asd18
-Omega|18/19 Test #729: e5_asd18 .........................***Failed    0.05 sec
-Omega|      Start 730: e5_asd19
-Omega|19/19 Test #730: e5_asd19 .........................***Failed    0.06 sec
+Nu|Total Test time (real) =   0.08 sec
+Omega|Test project /home/schnorr/ensino/private/julho_e5/Omega-E5/b.e5.julho
+Omega|    Start 713: e5_asd02
+Omega|1/1 Test #713: e5_asd02 .........................   Passed    0.07 sec
 Omega|
-Omega|0% tests passed, 19 tests failed out of 19
+Omega|100% tests passed, 0 tests failed out of 1
 Omega|
-Omega|Total Test time (real) =   1.15 sec
-Omega|
-Omega|The following tests FAILED:
-Omega|	712 - e5_asd01 (Failed)
-Omega|	713 - e5_asd02 (Failed)
-Omega|	714 - e5_asd03 (Failed)
-Omega|	715 - e5_asd04 (Failed)
-Omega|	716 - e5_asd05 (Failed)
-Omega|	717 - e5_asd06 (Failed)
-Omega|	718 - e5_asd07 (Failed)
-Omega|	719 - e5_asd08 (Failed)
-Omega|	720 - e5_asd09 (Failed)
-Omega|	721 - e5_asd10 (Failed)
-Omega|	722 - e5_asd11 (Failed)
-Omega|	723 - e5_asd12 (Failed)
-Omega|	724 - e5_asd13 (Failed)
-Omega|	725 - e5_asd14 (Failed)
-Omega|	726 - e5_asd15 (Failed)
-Omega|	727 - e5_asd16 (Failed)
-Omega|	728 - e5_asd17 (Failed)
-Omega|	729 - e5_asd18 (Failed)
-Omega|	730 - e5_asd19 (Failed)
-Omicron|Test project /home/schnorr/ensino/private/junho_e5/Omicron-E5/b.e5.junho
-Omicron|      Start 712: e5_asd01
-Omicron| 1/19 Test #712: e5_asd01 .........................***Failed    0.06 sec
-Omicron|      Start 713: e5_asd02
-Omicron| 2/19 Test #713: e5_asd02 .........................***Failed    0.07 sec
-Omicron|      Start 714: e5_asd03
-Omicron| 3/19 Test #714: e5_asd03 .........................***Failed    0.07 sec
-Omicron|      Start 715: e5_asd04
-Omicron| 4/19 Test #715: e5_asd04 .........................***Failed    0.06 sec
-Omicron|      Start 716: e5_asd05
-Omicron| 5/19 Test #716: e5_asd05 .........................***Failed    0.07 sec
-Omicron|      Start 717: e5_asd06
-Omicron| 6/19 Test #717: e5_asd06 .........................***Failed    0.06 sec
-Omicron|      Start 718: e5_asd07
-Omicron| 7/19 Test #718: e5_asd07 .........................***Failed    0.07 sec
-Omicron|      Start 719: e5_asd08
-Omicron| 8/19 Test #719: e5_asd08 .........................***Failed    0.06 sec
-Omicron|      Start 720: e5_asd09
-Omicron| 9/19 Test #720: e5_asd09 .........................***Failed    0.06 sec
-Omicron|      Start 721: e5_asd10
-Omicron|10/19 Test #721: e5_asd10 .........................***Failed    0.07 sec
-Omicron|      Start 722: e5_asd11
-Omicron|11/19 Test #722: e5_asd11 .........................***Failed    0.06 sec
-Omicron|      Start 723: e5_asd12
-Omicron|12/19 Test #723: e5_asd12 .........................***Failed    0.07 sec
-Omicron|      Start 724: e5_asd13
-Omicron|13/19 Test #724: e5_asd13 .........................***Failed    0.06 sec
-Omicron|      Start 725: e5_asd14
-Omicron|14/19 Test #725: e5_asd14 .........................***Failed    0.07 sec
-Omicron|      Start 726: e5_asd15
-Omicron|15/19 Test #726: e5_asd15 .........................***Failed    0.06 sec
-Omicron|      Start 727: e5_asd16
-Omicron|16/19 Test #727: e5_asd16 .........................***Failed    0.06 sec
-Omicron|      Start 728: e5_asd17
-Omicron|17/19 Test #728: e5_asd17 .........................***Failed    0.06 sec
-Omicron|      Start 729: e5_asd18
-Omicron|18/19 Test #729: e5_asd18 .........................***Failed    0.06 sec
-Omicron|      Start 730: e5_asd19
-Omicron|19/19 Test #730: e5_asd19 .........................***Failed    0.06 sec
+Omega|Total Test time (real) =   0.08 sec
+Omicron|Test project /home/schnorr/ensino/private/julho_e5/Omicron-E5/b.e5.julho
+Omicron|    Start 713: e5_asd02
+Omicron|1/1 Test #713: e5_asd02 .........................   Passed    0.06 sec
 Omicron|
-Omicron|0% tests passed, 19 tests failed out of 19
+Omicron|100% tests passed, 0 tests failed out of 1
 Omicron|
-Omicron|Total Test time (real) =   1.23 sec
-Omicron|
-Omicron|The following tests FAILED:
-Omicron|	712 - e5_asd01 (Failed)
-Omicron|	713 - e5_asd02 (Failed)
-Omicron|	714 - e5_asd03 (Failed)
-Omicron|	715 - e5_asd04 (Failed)
-Omicron|	716 - e5_asd05 (Failed)
-Omicron|	717 - e5_asd06 (Failed)
-Omicron|	718 - e5_asd07 (Failed)
-Omicron|	719 - e5_asd08 (Failed)
-Omicron|	720 - e5_asd09 (Failed)
-Omicron|	721 - e5_asd10 (Failed)
-Omicron|	722 - e5_asd11 (Failed)
-Omicron|	723 - e5_asd12 (Failed)
-Omicron|	724 - e5_asd13 (Failed)
-Omicron|	725 - e5_asd14 (Failed)
-Omicron|	726 - e5_asd15 (Failed)
-Omicron|	727 - e5_asd16 (Failed)
-Omicron|	728 - e5_asd17 (Failed)
-Omicron|	729 - e5_asd18 (Failed)
-Omicron|	730 - e5_asd19 (Failed)
-Phi|Test project /home/schnorr/ensino/private/junho_e5/Phi-E5/b.e5.junho
-Phi|      Start 712: e5_asd01
-Phi| 1/19 Test #712: e5_asd01 .........................***Failed    0.07 sec
-Phi|      Start 713: e5_asd02
-Phi| 2/19 Test #713: e5_asd02 .........................***Failed    0.07 sec
-Phi|      Start 714: e5_asd03
-Phi| 3/19 Test #714: e5_asd03 .........................***Failed    0.06 sec
-Phi|      Start 715: e5_asd04
-Phi| 4/19 Test #715: e5_asd04 .........................***Failed    0.06 sec
-Phi|      Start 716: e5_asd05
-Phi| 5/19 Test #716: e5_asd05 .........................***Failed    0.07 sec
-Phi|      Start 717: e5_asd06
-Phi| 6/19 Test #717: e5_asd06 .........................***Failed    0.07 sec
-Phi|      Start 718: e5_asd07
-Phi| 7/19 Test #718: e5_asd07 .........................***Failed    0.05 sec
-Phi|      Start 719: e5_asd08
-Phi| 8/19 Test #719: e5_asd08 .........................***Failed    0.06 sec
-Phi|      Start 720: e5_asd09
-Phi| 9/19 Test #720: e5_asd09 .........................***Failed    0.06 sec
-Phi|      Start 721: e5_asd10
-Phi|10/19 Test #721: e5_asd10 .........................***Failed    0.06 sec
-Phi|      Start 722: e5_asd11
-Phi|11/19 Test #722: e5_asd11 .........................***Failed    0.06 sec
-Phi|      Start 723: e5_asd12
-Phi|12/19 Test #723: e5_asd12 .........................***Failed    0.06 sec
-Phi|      Start 724: e5_asd13
-Phi|13/19 Test #724: e5_asd13 .........................***Failed    0.06 sec
-Phi|      Start 725: e5_asd14
-Phi|14/19 Test #725: e5_asd14 .........................***Failed    0.07 sec
-Phi|      Start 726: e5_asd15
-Phi|15/19 Test #726: e5_asd15 .........................***Failed    0.07 sec
-Phi|      Start 727: e5_asd16
-Phi|16/19 Test #727: e5_asd16 .........................***Failed    0.07 sec
-Phi|      Start 728: e5_asd17
-Phi|17/19 Test #728: e5_asd17 .........................***Failed    0.06 sec
-Phi|      Start 729: e5_asd18
-Phi|18/19 Test #729: e5_asd18 .........................***Failed    0.06 sec
-Phi|      Start 730: e5_asd19
-Phi|19/19 Test #730: e5_asd19 .........................***Failed    0.06 sec
+Omicron|Total Test time (real) =   0.07 sec
+Phi|Test project /home/schnorr/ensino/private/julho_e5/Phi-E5/b.e5.julho
+Phi|    Start 713: e5_asd02
+Phi|1/1 Test #713: e5_asd02 .........................***Failed    0.07 sec
 Phi|
-Phi|0% tests passed, 19 tests failed out of 19
+Phi|0% tests passed, 1 tests failed out of 1
 Phi|
-Phi|Total Test time (real) =   1.22 sec
+Phi|Total Test time (real) =   0.08 sec
 Phi|
 Phi|The following tests FAILED:
-Phi|	712 - e5_asd01 (Failed)
 Phi|	713 - e5_asd02 (Failed)
-Phi|	714 - e5_asd03 (Failed)
-Phi|	715 - e5_asd04 (Failed)
-Phi|	716 - e5_asd05 (Failed)
-Phi|	717 - e5_asd06 (Failed)
-Phi|	718 - e5_asd07 (Failed)
-Phi|	719 - e5_asd08 (Failed)
-Phi|	720 - e5_asd09 (Failed)
-Phi|	721 - e5_asd10 (Failed)
-Phi|	722 - e5_asd11 (Failed)
-Phi|	723 - e5_asd12 (Failed)
-Phi|	724 - e5_asd13 (Failed)
-Phi|	725 - e5_asd14 (Failed)
-Phi|	726 - e5_asd15 (Failed)
-Phi|	727 - e5_asd16 (Failed)
-Phi|	728 - e5_asd17 (Failed)
-Phi|	729 - e5_asd18 (Failed)
-Phi|	730 - e5_asd19 (Failed)
-Sigma|Test project /home/schnorr/ensino/private/junho_e5/Sigma-E5/b.e5.junho
-Sigma|      Start 712: e5_asd01
-Sigma| 1/19 Test #712: e5_asd01 .........................***Failed    0.08 sec
-Sigma|      Start 713: e5_asd02
-Sigma| 2/19 Test #713: e5_asd02 .........................***Failed    0.05 sec
-Sigma|      Start 714: e5_asd03
-Sigma| 3/19 Test #714: e5_asd03 .........................***Failed    0.07 sec
-Sigma|      Start 715: e5_asd04
-Sigma| 4/19 Test #715: e5_asd04 .........................***Failed    0.06 sec
-Sigma|      Start 716: e5_asd05
-Sigma| 5/19 Test #716: e5_asd05 .........................***Failed    0.06 sec
-Sigma|      Start 717: e5_asd06
-Sigma| 6/19 Test #717: e5_asd06 .........................***Failed    0.07 sec
-Sigma|      Start 718: e5_asd07
-Sigma| 7/19 Test #718: e5_asd07 .........................***Failed    0.06 sec
-Sigma|      Start 719: e5_asd08
-Sigma| 8/19 Test #719: e5_asd08 .........................***Failed    0.06 sec
-Sigma|      Start 720: e5_asd09
-Sigma| 9/19 Test #720: e5_asd09 .........................***Failed    0.06 sec
-Sigma|      Start 721: e5_asd10
-Sigma|10/19 Test #721: e5_asd10 .........................***Failed    0.07 sec
-Sigma|      Start 722: e5_asd11
-Sigma|11/19 Test #722: e5_asd11 .........................***Failed    0.06 sec
-Sigma|      Start 723: e5_asd12
-Sigma|12/19 Test #723: e5_asd12 .........................***Failed    0.05 sec
-Sigma|      Start 724: e5_asd13
-Sigma|13/19 Test #724: e5_asd13 .........................***Failed    0.07 sec
-Sigma|      Start 725: e5_asd14
-Sigma|14/19 Test #725: e5_asd14 .........................***Failed    0.05 sec
-Sigma|      Start 726: e5_asd15
-Sigma|15/19 Test #726: e5_asd15 .........................***Failed    0.06 sec
-Sigma|      Start 727: e5_asd16
-Sigma|16/19 Test #727: e5_asd16 .........................***Failed    0.06 sec
-Sigma|      Start 728: e5_asd17
-Sigma|17/19 Test #728: e5_asd17 .........................***Failed    0.07 sec
-Sigma|      Start 729: e5_asd18
-Sigma|18/19 Test #729: e5_asd18 .........................***Failed    0.07 sec
-Sigma|      Start 730: e5_asd19
-Sigma|19/19 Test #730: e5_asd19 .........................***Failed    0.06 sec
+Sigma|Test project /home/schnorr/ensino/private/julho_e5/Sigma-E5/b.e5.julho
+Sigma|    Start 713: e5_asd02
+Sigma|1/1 Test #713: e5_asd02 .........................***Failed    0.05 sec
 Sigma|
-Sigma|0% tests passed, 19 tests failed out of 19
+Sigma|0% tests passed, 1 tests failed out of 1
 Sigma|
-Sigma|Total Test time (real) =   1.21 sec
+Sigma|Total Test time (real) =   0.06 sec
 Sigma|
 Sigma|The following tests FAILED:
-Sigma|	712 - e5_asd01 (Failed)
 Sigma|	713 - e5_asd02 (Failed)
-Sigma|	714 - e5_asd03 (Failed)
-Sigma|	715 - e5_asd04 (Failed)
-Sigma|	716 - e5_asd05 (Failed)
-Sigma|	717 - e5_asd06 (Failed)
-Sigma|	718 - e5_asd07 (Failed)
-Sigma|	719 - e5_asd08 (Failed)
-Sigma|	720 - e5_asd09 (Failed)
-Sigma|	721 - e5_asd10 (Failed)
-Sigma|	722 - e5_asd11 (Failed)
-Sigma|	723 - e5_asd12 (Failed)
-Sigma|	724 - e5_asd13 (Failed)
-Sigma|	725 - e5_asd14 (Failed)
-Sigma|	726 - e5_asd15 (Failed)
-Sigma|	727 - e5_asd16 (Failed)
-Sigma|	728 - e5_asd17 (Failed)
-Sigma|	729 - e5_asd18 (Failed)
-Sigma|	730 - e5_asd19 (Failed)

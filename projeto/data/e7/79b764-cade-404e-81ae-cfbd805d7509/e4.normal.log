@@ -1,684 +1,650 @@
+Alpha|Test project /home/schnorr/ensino/private
 Alpha|Test project /home/schnorr/ensino/private/maio_e4/Alpha-E4/b.e4.maio
-Alpha|      Start 447: e4_qwe01
-Alpha| 1/20 Test #447: e4_qwe01 .........................   Passed    0.03 sec
-Alpha|      Start 448: e4_qwe02
-Alpha| 2/20 Test #448: e4_qwe02 .........................   Passed    0.03 sec
-Alpha|      Start 449: e4_qwe03
-Alpha| 3/20 Test #449: e4_qwe03 .........................   Passed    0.03 sec
-Alpha|      Start 450: e4_qwe05
-Alpha| 4/20 Test #450: e4_qwe05 .........................   Passed    0.03 sec
-Alpha|      Start 451: e4_qwe06
-Alpha| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
-Alpha|      Start 452: e4_qwe07
-Alpha| 6/20 Test #452: e4_qwe07 .........................   Passed    0.04 sec
-Alpha|      Start 453: e4_qwe08
-Alpha| 7/20 Test #453: e4_qwe08 .........................   Passed    0.04 sec
-Alpha|      Start 454: e4_qwe09
-Alpha| 8/20 Test #454: e4_qwe09 .........................   Passed    0.03 sec
-Alpha|      Start 455: e4_qwe10
-Alpha| 9/20 Test #455: e4_qwe10 .........................   Passed    0.03 sec
-Alpha|      Start 456: e4_qwe11
-Alpha|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
-Alpha|      Start 457: e4_qwe12
-Alpha|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
-Alpha|      Start 458: e4_qwe13
-Alpha|12/20 Test #458: e4_qwe13 .........................   Passed    0.03 sec
-Alpha|      Start 459: e4_qwe14
-Alpha|13/20 Test #459: e4_qwe14 .........................   Passed    0.03 sec
-Alpha|      Start 460: e4_qwe15
-Alpha|14/20 Test #460: e4_qwe15 .........................***Failed    0.03 sec
-Alpha|      Start 461: e4_qwe16
-Alpha|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Alpha|      Start 462: e4_qwe17
-Alpha|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
-Alpha|      Start 463: e4_qwe18
-Alpha|17/20 Test #463: e4_qwe18 .........................   Passed    0.03 sec
-Alpha|      Start 464: e4_qwe19
-Alpha|18/20 Test #464: e4_qwe19 .........................   Passed    0.03 sec
-Alpha|      Start 465: e4_qwe20
-Alpha|19/20 Test #465: e4_qwe20 .........................   Passed    0.03 sec
-Alpha|      Start 466: e4_qwe21
-Alpha|20/20 Test #466: e4_qwe21 .........................   Passed    0.03 sec
+Alpha|      Start 632: e4_qwe01
+Alpha| 1/20 Test #632: e4_qwe01 .........................   Passed    0.03 sec
+Alpha|      Start 633: e4_qwe02
+Alpha| 2/20 Test #633: e4_qwe02 .........................   Passed    0.03 sec
+Alpha|      Start 634: e4_qwe03
+Alpha| 3/20 Test #634: e4_qwe03 .........................   Passed    0.03 sec
+Alpha|      Start 635: e4_qwe05
+Alpha| 4/20 Test #635: e4_qwe05 .........................   Passed    0.04 sec
+Alpha|      Start 636: e4_qwe06
+Alpha| 5/20 Test #636: e4_qwe06 .........................   Passed    0.03 sec
+Alpha|      Start 637: e4_qwe07
+Alpha| 6/20 Test #637: e4_qwe07 .........................   Passed    0.03 sec
+Alpha|      Start 638: e4_qwe08
+Alpha| 7/20 Test #638: e4_qwe08 .........................   Passed    0.03 sec
+Alpha|      Start 639: e4_qwe09
+Alpha| 8/20 Test #639: e4_qwe09 .........................   Passed    0.04 sec
+Alpha|      Start 640: e4_qwe10
+Alpha| 9/20 Test #640: e4_qwe10 .........................   Passed    0.04 sec
+Alpha|      Start 641: e4_qwe11
+Alpha|10/20 Test #641: e4_qwe11 .........................   Passed    0.03 sec
+Alpha|      Start 642: e4_qwe12
+Alpha|11/20 Test #642: e4_qwe12 .........................   Passed    0.03 sec
+Alpha|      Start 643: e4_qwe13
+Alpha|12/20 Test #643: e4_qwe13 .........................   Passed    0.03 sec
+Alpha|      Start 644: e4_qwe14
+Alpha|13/20 Test #644: e4_qwe14 .........................   Passed    0.03 sec
+Alpha|      Start 645: e4_qwe15
+Alpha|14/20 Test #645: e4_qwe15 .........................   Passed    0.03 sec
+Alpha|      Start 646: e4_qwe16
+Alpha|15/20 Test #646: e4_qwe16 .........................***Failed    0.03 sec
+Alpha|      Start 647: e4_qwe17
+Alpha|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Alpha|      Start 648: e4_qwe18
+Alpha|17/20 Test #648: e4_qwe18 .........................   Passed    0.03 sec
+Alpha|      Start 649: e4_qwe19
+Alpha|18/20 Test #649: e4_qwe19 .........................   Passed    0.03 sec
+Alpha|      Start 650: e4_qwe20
+Alpha|19/20 Test #650: e4_qwe20 .........................   Passed    0.03 sec
+Alpha|      Start 651: e4_qwe21
+Alpha|20/20 Test #651: e4_qwe21 .........................   Passed    0.03 sec
 Alpha|
-Alpha|75% tests passed, 5 tests failed out of 20
+Alpha|90% tests passed, 2 tests failed out of 20
 Alpha|
-Alpha|Total Test time (real) =   0.63 sec
+Alpha|Total Test time (real) =   0.62 sec
 Alpha|
 Alpha|The following tests FAILED:
-Alpha|	456 - e4_qwe11 (Failed)
-Alpha|	457 - e4_qwe12 (Failed)
-Alpha|	460 - e4_qwe15 (Failed)
-Alpha|	461 - e4_qwe16 (Failed)
-Alpha|	462 - e4_qwe17 (Failed)
+Alpha|	646 - e4_qwe16 (Failed)
+Alpha|	647 - e4_qwe17 (Failed)
 ast.dot|Test project /home/schnorr/ensino/private
+Beta|Test project /home/schnorr/ensino/private
 Beta|Test project /home/schnorr/ensino/private/maio_e4/Beta-E4/b.e4.maio
-Beta|      Start 447: e4_qwe01
-Beta| 1/20 Test #447: e4_qwe01 .........................   Passed    0.03 sec
-Beta|      Start 448: e4_qwe02
-Beta| 2/20 Test #448: e4_qwe02 .........................   Passed    0.03 sec
-Beta|      Start 449: e4_qwe03
-Beta| 3/20 Test #449: e4_qwe03 .........................   Passed    0.03 sec
-Beta|      Start 450: e4_qwe05
-Beta| 4/20 Test #450: e4_qwe05 .........................   Passed    0.03 sec
-Beta|      Start 451: e4_qwe06
-Beta| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
-Beta|      Start 452: e4_qwe07
-Beta| 6/20 Test #452: e4_qwe07 .........................   Passed    0.03 sec
-Beta|      Start 453: e4_qwe08
-Beta| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
-Beta|      Start 454: e4_qwe09
-Beta| 8/20 Test #454: e4_qwe09 .........................   Passed    0.03 sec
-Beta|      Start 455: e4_qwe10
-Beta| 9/20 Test #455: e4_qwe10 .........................   Passed    0.03 sec
-Beta|      Start 456: e4_qwe11
-Beta|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
-Beta|      Start 457: e4_qwe12
-Beta|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
-Beta|      Start 458: e4_qwe13
-Beta|12/20 Test #458: e4_qwe13 .........................   Passed    0.03 sec
-Beta|      Start 459: e4_qwe14
-Beta|13/20 Test #459: e4_qwe14 .........................***Failed    0.04 sec
-Beta|      Start 460: e4_qwe15
-Beta|14/20 Test #460: e4_qwe15 .........................***Failed    0.03 sec
-Beta|      Start 461: e4_qwe16
-Beta|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Beta|      Start 462: e4_qwe17
-Beta|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
-Beta|      Start 463: e4_qwe18
-Beta|17/20 Test #463: e4_qwe18 .........................   Passed    0.03 sec
-Beta|      Start 464: e4_qwe19
-Beta|18/20 Test #464: e4_qwe19 .........................   Passed    0.03 sec
-Beta|      Start 465: e4_qwe20
-Beta|19/20 Test #465: e4_qwe20 .........................   Passed    0.03 sec
-Beta|      Start 466: e4_qwe21
-Beta|20/20 Test #466: e4_qwe21 .........................   Passed    0.03 sec
+Beta|      Start 632: e4_qwe01
+Beta| 1/20 Test #632: e4_qwe01 .........................   Passed    0.03 sec
+Beta|      Start 633: e4_qwe02
+Beta| 2/20 Test #633: e4_qwe02 .........................   Passed    0.03 sec
+Beta|      Start 634: e4_qwe03
+Beta| 3/20 Test #634: e4_qwe03 .........................   Passed    0.03 sec
+Beta|      Start 635: e4_qwe05
+Beta| 4/20 Test #635: e4_qwe05 .........................   Passed    0.04 sec
+Beta|      Start 636: e4_qwe06
+Beta| 5/20 Test #636: e4_qwe06 .........................   Passed    0.03 sec
+Beta|      Start 637: e4_qwe07
+Beta| 6/20 Test #637: e4_qwe07 .........................   Passed    0.04 sec
+Beta|      Start 638: e4_qwe08
+Beta| 7/20 Test #638: e4_qwe08 .........................   Passed    0.03 sec
+Beta|      Start 639: e4_qwe09
+Beta| 8/20 Test #639: e4_qwe09 .........................   Passed    0.03 sec
+Beta|      Start 640: e4_qwe10
+Beta| 9/20 Test #640: e4_qwe10 .........................   Passed    0.03 sec
+Beta|      Start 641: e4_qwe11
+Beta|10/20 Test #641: e4_qwe11 .........................   Passed    0.03 sec
+Beta|      Start 642: e4_qwe12
+Beta|11/20 Test #642: e4_qwe12 .........................***Failed    0.03 sec
+Beta|      Start 643: e4_qwe13
+Beta|12/20 Test #643: e4_qwe13 .........................   Passed    0.03 sec
+Beta|      Start 644: e4_qwe14
+Beta|13/20 Test #644: e4_qwe14 .........................***Failed    0.03 sec
+Beta|      Start 645: e4_qwe15
+Beta|14/20 Test #645: e4_qwe15 .........................   Passed    0.03 sec
+Beta|      Start 646: e4_qwe16
+Beta|15/20 Test #646: e4_qwe16 .........................***Failed    0.04 sec
+Beta|      Start 647: e4_qwe17
+Beta|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Beta|      Start 648: e4_qwe18
+Beta|17/20 Test #648: e4_qwe18 .........................   Passed    0.03 sec
+Beta|      Start 649: e4_qwe19
+Beta|18/20 Test #649: e4_qwe19 .........................   Passed    0.03 sec
+Beta|      Start 650: e4_qwe20
+Beta|19/20 Test #650: e4_qwe20 .........................   Passed    0.03 sec
+Beta|      Start 651: e4_qwe21
+Beta|20/20 Test #651: e4_qwe21 .........................   Passed    0.03 sec
 Beta|
-Beta|70% tests passed, 6 tests failed out of 20
+Beta|80% tests passed, 4 tests failed out of 20
 Beta|
-Beta|Total Test time (real) =   0.60 sec
+Beta|Total Test time (real) =   0.61 sec
 Beta|
 Beta|The following tests FAILED:
-Beta|	456 - e4_qwe11 (Failed)
-Beta|	457 - e4_qwe12 (Failed)
-Beta|	459 - e4_qwe14 (Failed)
-Beta|	460 - e4_qwe15 (Failed)
-Beta|	461 - e4_qwe16 (Failed)
-Beta|	462 - e4_qwe17 (Failed)
+Beta|	642 - e4_qwe12 (Failed)
+Beta|	644 - e4_qwe14 (Failed)
+Beta|	646 - e4_qwe16 (Failed)
+Beta|	647 - e4_qwe17 (Failed)
+Delta|Test project /home/schnorr/ensino/private
 Delta|Test project /home/schnorr/ensino/private/maio_e4/Delta-E4/b.e4.maio
-Delta|      Start 447: e4_qwe01
-Delta| 1/20 Test #447: e4_qwe01 .........................   Passed    0.03 sec
-Delta|      Start 448: e4_qwe02
-Delta| 2/20 Test #448: e4_qwe02 .........................***Failed    0.03 sec
-Delta|      Start 449: e4_qwe03
-Delta| 3/20 Test #449: e4_qwe03 .........................   Passed    0.04 sec
-Delta|      Start 450: e4_qwe05
-Delta| 4/20 Test #450: e4_qwe05 .........................***Failed    0.03 sec
-Delta|      Start 451: e4_qwe06
-Delta| 5/20 Test #451: e4_qwe06 .........................***Failed    0.03 sec
-Delta|      Start 452: e4_qwe07
-Delta| 6/20 Test #452: e4_qwe07 .........................***Failed    0.03 sec
-Delta|      Start 453: e4_qwe08
-Delta| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
-Delta|      Start 454: e4_qwe09
-Delta| 8/20 Test #454: e4_qwe09 .........................***Failed    0.03 sec
-Delta|      Start 455: e4_qwe10
-Delta| 9/20 Test #455: e4_qwe10 .........................   Passed    0.04 sec
-Delta|      Start 456: e4_qwe11
-Delta|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
-Delta|      Start 457: e4_qwe12
-Delta|11/20 Test #457: e4_qwe12 .........................***Failed    0.04 sec
-Delta|      Start 458: e4_qwe13
-Delta|12/20 Test #458: e4_qwe13 .........................***Failed    0.03 sec
-Delta|      Start 459: e4_qwe14
-Delta|13/20 Test #459: e4_qwe14 .........................***Failed    0.03 sec
-Delta|      Start 460: e4_qwe15
-Delta|14/20 Test #460: e4_qwe15 .........................***Failed    0.03 sec
-Delta|      Start 461: e4_qwe16
-Delta|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Delta|      Start 462: e4_qwe17
-Delta|16/20 Test #462: e4_qwe17 .........................***Failed    0.04 sec
-Delta|      Start 463: e4_qwe18
-Delta|17/20 Test #463: e4_qwe18 .........................***Failed    0.03 sec
-Delta|      Start 464: e4_qwe19
-Delta|18/20 Test #464: e4_qwe19 .........................***Failed    0.04 sec
-Delta|      Start 465: e4_qwe20
-Delta|19/20 Test #465: e4_qwe20 .........................***Failed    0.03 sec
-Delta|      Start 466: e4_qwe21
-Delta|20/20 Test #466: e4_qwe21 .........................***Failed    0.03 sec
+Delta|      Start 632: e4_qwe01
+Delta| 1/20 Test #632: e4_qwe01 .........................***Failed    0.03 sec
+Delta|      Start 633: e4_qwe02
+Delta| 2/20 Test #633: e4_qwe02 .........................***Failed    0.03 sec
+Delta|      Start 634: e4_qwe03
+Delta| 3/20 Test #634: e4_qwe03 .........................***Failed    0.03 sec
+Delta|      Start 635: e4_qwe05
+Delta| 4/20 Test #635: e4_qwe05 .........................***Failed    0.03 sec
+Delta|      Start 636: e4_qwe06
+Delta| 5/20 Test #636: e4_qwe06 .........................***Failed    0.03 sec
+Delta|      Start 637: e4_qwe07
+Delta| 6/20 Test #637: e4_qwe07 .........................***Failed    0.03 sec
+Delta|      Start 638: e4_qwe08
+Delta| 7/20 Test #638: e4_qwe08 .........................   Passed    0.03 sec
+Delta|      Start 639: e4_qwe09
+Delta| 8/20 Test #639: e4_qwe09 .........................***Failed    0.03 sec
+Delta|      Start 640: e4_qwe10
+Delta| 9/20 Test #640: e4_qwe10 .........................***Failed    0.05 sec
+Delta|      Start 641: e4_qwe11
+Delta|10/20 Test #641: e4_qwe11 .........................   Passed    0.03 sec
+Delta|      Start 642: e4_qwe12
+Delta|11/20 Test #642: e4_qwe12 .........................   Passed    0.03 sec
+Delta|      Start 643: e4_qwe13
+Delta|12/20 Test #643: e4_qwe13 .........................   Passed    0.03 sec
+Delta|      Start 644: e4_qwe14
+Delta|13/20 Test #644: e4_qwe14 .........................***Failed    0.03 sec
+Delta|      Start 645: e4_qwe15
+Delta|14/20 Test #645: e4_qwe15 .........................***Failed    0.03 sec
+Delta|      Start 646: e4_qwe16
+Delta|15/20 Test #646: e4_qwe16 .........................***Failed    0.03 sec
+Delta|      Start 647: e4_qwe17
+Delta|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Delta|      Start 648: e4_qwe18
+Delta|17/20 Test #648: e4_qwe18 .........................***Failed    0.03 sec
+Delta|      Start 649: e4_qwe19
+Delta|18/20 Test #649: e4_qwe19 .........................***Failed    0.03 sec
+Delta|      Start 650: e4_qwe20
+Delta|19/20 Test #650: e4_qwe20 .........................***Failed    0.04 sec
+Delta|      Start 651: e4_qwe21
+Delta|20/20 Test #651: e4_qwe21 .........................***Failed    0.03 sec
 Delta|
 Delta|20% tests passed, 16 tests failed out of 20
 Delta|
-Delta|Total Test time (real) =   0.66 sec
+Delta|Total Test time (real) =   0.62 sec
 Delta|
 Delta|The following tests FAILED:
-Delta|	448 - e4_qwe02 (Failed)
-Delta|	450 - e4_qwe05 (Failed)
-Delta|	451 - e4_qwe06 (Failed)
-Delta|	452 - e4_qwe07 (Failed)
-Delta|	454 - e4_qwe09 (Failed)
-Delta|	456 - e4_qwe11 (Failed)
-Delta|	457 - e4_qwe12 (Failed)
-Delta|	458 - e4_qwe13 (Failed)
-Delta|	459 - e4_qwe14 (Failed)
-Delta|	460 - e4_qwe15 (Failed)
-Delta|	461 - e4_qwe16 (Failed)
-Delta|	462 - e4_qwe17 (Failed)
-Delta|	463 - e4_qwe18 (Failed)
-Delta|	464 - e4_qwe19 (Failed)
-Delta|	465 - e4_qwe20 (Failed)
-Delta|	466 - e4_qwe21 (Failed)
+Delta|	632 - e4_qwe01 (Failed)
+Delta|	633 - e4_qwe02 (Failed)
+Delta|	634 - e4_qwe03 (Failed)
+Delta|	635 - e4_qwe05 (Failed)
+Delta|	636 - e4_qwe06 (Failed)
+Delta|	637 - e4_qwe07 (Failed)
+Delta|	639 - e4_qwe09 (Failed)
+Delta|	640 - e4_qwe10 (Failed)
+Delta|	644 - e4_qwe14 (Failed)
+Delta|	645 - e4_qwe15 (Failed)
+Delta|	646 - e4_qwe16 (Failed)
+Delta|	647 - e4_qwe17 (Failed)
+Delta|	648 - e4_qwe18 (Failed)
+Delta|	649 - e4_qwe19 (Failed)
+Delta|	650 - e4_qwe20 (Failed)
+Delta|	651 - e4_qwe21 (Failed)
 e3.dot|Test project /home/schnorr/ensino/private
+Epsilon|Test project /home/schnorr/ensino/private
 Epsilon|Test project /home/schnorr/ensino/private/maio_e4/Epsilon-E4/b.e4.maio
-Epsilon|      Start 447: e4_qwe01
-Epsilon| 1/20 Test #447: e4_qwe01 .........................   Passed    0.03 sec
-Epsilon|      Start 448: e4_qwe02
-Epsilon| 2/20 Test #448: e4_qwe02 .........................   Passed    0.04 sec
-Epsilon|      Start 449: e4_qwe03
-Epsilon| 3/20 Test #449: e4_qwe03 .........................   Passed    0.03 sec
-Epsilon|      Start 450: e4_qwe05
-Epsilon| 4/20 Test #450: e4_qwe05 .........................   Passed    0.03 sec
-Epsilon|      Start 451: e4_qwe06
-Epsilon| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
-Epsilon|      Start 452: e4_qwe07
-Epsilon| 6/20 Test #452: e4_qwe07 .........................   Passed    0.04 sec
-Epsilon|      Start 453: e4_qwe08
-Epsilon| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
-Epsilon|      Start 454: e4_qwe09
-Epsilon| 8/20 Test #454: e4_qwe09 .........................   Passed    0.03 sec
-Epsilon|      Start 455: e4_qwe10
-Epsilon| 9/20 Test #455: e4_qwe10 .........................   Passed    0.03 sec
-Epsilon|      Start 456: e4_qwe11
-Epsilon|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
-Epsilon|      Start 457: e4_qwe12
-Epsilon|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
-Epsilon|      Start 458: e4_qwe13
-Epsilon|12/20 Test #458: e4_qwe13 .........................   Passed    0.03 sec
-Epsilon|      Start 459: e4_qwe14
-Epsilon|13/20 Test #459: e4_qwe14 .........................***Failed    0.03 sec
-Epsilon|      Start 460: e4_qwe15
-Epsilon|14/20 Test #460: e4_qwe15 .........................***Failed    0.03 sec
-Epsilon|      Start 461: e4_qwe16
-Epsilon|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Epsilon|      Start 462: e4_qwe17
-Epsilon|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
-Epsilon|      Start 463: e4_qwe18
-Epsilon|17/20 Test #463: e4_qwe18 .........................   Passed    0.03 sec
-Epsilon|      Start 464: e4_qwe19
-Epsilon|18/20 Test #464: e4_qwe19 .........................   Passed    0.03 sec
-Epsilon|      Start 465: e4_qwe20
-Epsilon|19/20 Test #465: e4_qwe20 .........................   Passed    0.03 sec
-Epsilon|      Start 466: e4_qwe21
-Epsilon|20/20 Test #466: e4_qwe21 .........................   Passed    0.03 sec
+Epsilon|      Start 632: e4_qwe01
+Epsilon| 1/20 Test #632: e4_qwe01 .........................   Passed    0.04 sec
+Epsilon|      Start 633: e4_qwe02
+Epsilon| 2/20 Test #633: e4_qwe02 .........................   Passed    0.03 sec
+Epsilon|      Start 634: e4_qwe03
+Epsilon| 3/20 Test #634: e4_qwe03 .........................   Passed    0.04 sec
+Epsilon|      Start 635: e4_qwe05
+Epsilon| 4/20 Test #635: e4_qwe05 .........................   Passed    0.03 sec
+Epsilon|      Start 636: e4_qwe06
+Epsilon| 5/20 Test #636: e4_qwe06 .........................   Passed    0.03 sec
+Epsilon|      Start 637: e4_qwe07
+Epsilon| 6/20 Test #637: e4_qwe07 .........................   Passed    0.03 sec
+Epsilon|      Start 638: e4_qwe08
+Epsilon| 7/20 Test #638: e4_qwe08 .........................   Passed    0.03 sec
+Epsilon|      Start 639: e4_qwe09
+Epsilon| 8/20 Test #639: e4_qwe09 .........................   Passed    0.03 sec
+Epsilon|      Start 640: e4_qwe10
+Epsilon| 9/20 Test #640: e4_qwe10 .........................   Passed    0.03 sec
+Epsilon|      Start 641: e4_qwe11
+Epsilon|10/20 Test #641: e4_qwe11 .........................   Passed    0.03 sec
+Epsilon|      Start 642: e4_qwe12
+Epsilon|11/20 Test #642: e4_qwe12 .........................   Passed    0.03 sec
+Epsilon|      Start 643: e4_qwe13
+Epsilon|12/20 Test #643: e4_qwe13 .........................   Passed    0.04 sec
+Epsilon|      Start 644: e4_qwe14
+Epsilon|13/20 Test #644: e4_qwe14 .........................***Failed    0.03 sec
+Epsilon|      Start 645: e4_qwe15
+Epsilon|14/20 Test #645: e4_qwe15 .........................***Failed    0.03 sec
+Epsilon|      Start 646: e4_qwe16
+Epsilon|15/20 Test #646: e4_qwe16 .........................***Failed    0.03 sec
+Epsilon|      Start 647: e4_qwe17
+Epsilon|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Epsilon|      Start 648: e4_qwe18
+Epsilon|17/20 Test #648: e4_qwe18 .........................   Passed    0.03 sec
+Epsilon|      Start 649: e4_qwe19
+Epsilon|18/20 Test #649: e4_qwe19 .........................   Passed    0.03 sec
+Epsilon|      Start 650: e4_qwe20
+Epsilon|19/20 Test #650: e4_qwe20 .........................   Passed    0.04 sec
+Epsilon|      Start 651: e4_qwe21
+Epsilon|20/20 Test #651: e4_qwe21 .........................   Passed    0.03 sec
 Epsilon|
-Epsilon|70% tests passed, 6 tests failed out of 20
+Epsilon|80% tests passed, 4 tests failed out of 20
 Epsilon|
 Epsilon|Total Test time (real) =   0.63 sec
 Epsilon|
 Epsilon|The following tests FAILED:
-Epsilon|	456 - e4_qwe11 (Failed)
-Epsilon|	457 - e4_qwe12 (Failed)
-Epsilon|	459 - e4_qwe14 (Failed)
-Epsilon|	460 - e4_qwe15 (Failed)
-Epsilon|	461 - e4_qwe16 (Failed)
-Epsilon|	462 - e4_qwe17 (Failed)
+Epsilon|	644 - e4_qwe14 (Failed)
+Epsilon|	645 - e4_qwe15 (Failed)
+Epsilon|	646 - e4_qwe16 (Failed)
+Epsilon|	647 - e4_qwe17 (Failed)
+Gamma|Test project /home/schnorr/ensino/private
 Gamma|Test project /home/schnorr/ensino/private/maio_e4/Gamma-E4/b.e4.maio
-Gamma|      Start 447: e4_qwe01
-Gamma| 1/20 Test #447: e4_qwe01 .........................   Passed    0.03 sec
-Gamma|      Start 448: e4_qwe02
-Gamma| 2/20 Test #448: e4_qwe02 .........................***Failed    0.03 sec
-Gamma|      Start 449: e4_qwe03
-Gamma| 3/20 Test #449: e4_qwe03 .........................   Passed    0.04 sec
-Gamma|      Start 450: e4_qwe05
-Gamma| 4/20 Test #450: e4_qwe05 .........................   Passed    0.03 sec
-Gamma|      Start 451: e4_qwe06
-Gamma| 5/20 Test #451: e4_qwe06 .........................***Failed    0.03 sec
-Gamma|      Start 452: e4_qwe07
-Gamma| 6/20 Test #452: e4_qwe07 .........................   Passed    0.03 sec
-Gamma|      Start 453: e4_qwe08
-Gamma| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
-Gamma|      Start 454: e4_qwe09
-Gamma| 8/20 Test #454: e4_qwe09 .........................***Failed    0.03 sec
-Gamma|      Start 455: e4_qwe10
-Gamma| 9/20 Test #455: e4_qwe10 .........................   Passed    0.04 sec
-Gamma|      Start 456: e4_qwe11
-Gamma|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
-Gamma|      Start 457: e4_qwe12
-Gamma|11/20 Test #457: e4_qwe12 .........................***Failed    0.04 sec
-Gamma|      Start 458: e4_qwe13
-Gamma|12/20 Test #458: e4_qwe13 .........................***Failed    0.03 sec
-Gamma|      Start 459: e4_qwe14
-Gamma|13/20 Test #459: e4_qwe14 .........................***Failed    0.03 sec
-Gamma|      Start 460: e4_qwe15
-Gamma|14/20 Test #460: e4_qwe15 .........................***Failed    0.03 sec
-Gamma|      Start 461: e4_qwe16
-Gamma|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Gamma|      Start 462: e4_qwe17
-Gamma|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
-Gamma|      Start 463: e4_qwe18
-Gamma|17/20 Test #463: e4_qwe18 .........................***Failed    0.03 sec
-Gamma|      Start 464: e4_qwe19
-Gamma|18/20 Test #464: e4_qwe19 .........................***Failed    0.03 sec
-Gamma|      Start 465: e4_qwe20
-Gamma|19/20 Test #465: e4_qwe20 .........................***Failed    0.03 sec
-Gamma|      Start 466: e4_qwe21
-Gamma|20/20 Test #466: e4_qwe21 .........................***Failed    0.03 sec
+Gamma|      Start 632: e4_qwe01
+Gamma| 1/20 Test #632: e4_qwe01 .........................   Passed    0.04 sec
+Gamma|      Start 633: e4_qwe02
+Gamma| 2/20 Test #633: e4_qwe02 .........................***Failed    0.03 sec
+Gamma|      Start 634: e4_qwe03
+Gamma| 3/20 Test #634: e4_qwe03 .........................   Passed    0.04 sec
+Gamma|      Start 635: e4_qwe05
+Gamma| 4/20 Test #635: e4_qwe05 .........................   Passed    0.04 sec
+Gamma|      Start 636: e4_qwe06
+Gamma| 5/20 Test #636: e4_qwe06 .........................***Failed    0.03 sec
+Gamma|      Start 637: e4_qwe07
+Gamma| 6/20 Test #637: e4_qwe07 .........................   Passed    0.03 sec
+Gamma|      Start 638: e4_qwe08
+Gamma| 7/20 Test #638: e4_qwe08 .........................   Passed    0.03 sec
+Gamma|      Start 639: e4_qwe09
+Gamma| 8/20 Test #639: e4_qwe09 .........................***Failed    0.03 sec
+Gamma|      Start 640: e4_qwe10
+Gamma| 9/20 Test #640: e4_qwe10 .........................   Passed    0.03 sec
+Gamma|      Start 641: e4_qwe11
+Gamma|10/20 Test #641: e4_qwe11 .........................***Failed    0.03 sec
+Gamma|      Start 642: e4_qwe12
+Gamma|11/20 Test #642: e4_qwe12 .........................***Failed    0.03 sec
+Gamma|      Start 643: e4_qwe13
+Gamma|12/20 Test #643: e4_qwe13 .........................***Failed    0.03 sec
+Gamma|      Start 644: e4_qwe14
+Gamma|13/20 Test #644: e4_qwe14 .........................***Failed    0.03 sec
+Gamma|      Start 645: e4_qwe15
+Gamma|14/20 Test #645: e4_qwe15 .........................***Failed    0.03 sec
+Gamma|      Start 646: e4_qwe16
+Gamma|15/20 Test #646: e4_qwe16 .........................***Failed    0.03 sec
+Gamma|      Start 647: e4_qwe17
+Gamma|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Gamma|      Start 648: e4_qwe18
+Gamma|17/20 Test #648: e4_qwe18 .........................***Failed    0.03 sec
+Gamma|      Start 649: e4_qwe19
+Gamma|18/20 Test #649: e4_qwe19 .........................***Failed    0.03 sec
+Gamma|      Start 650: e4_qwe20
+Gamma|19/20 Test #650: e4_qwe20 .........................***Failed    0.04 sec
+Gamma|      Start 651: e4_qwe21
+Gamma|20/20 Test #651: e4_qwe21 .........................***Failed    0.03 sec
 Gamma|
 Gamma|30% tests passed, 14 tests failed out of 20
 Gamma|
-Gamma|Total Test time (real) =   0.59 sec
+Gamma|Total Test time (real) =   0.65 sec
 Gamma|
 Gamma|The following tests FAILED:
-Gamma|	448 - e4_qwe02 (Failed)
-Gamma|	451 - e4_qwe06 (Failed)
-Gamma|	454 - e4_qwe09 (Failed)
-Gamma|	456 - e4_qwe11 (Failed)
-Gamma|	457 - e4_qwe12 (Failed)
-Gamma|	458 - e4_qwe13 (Failed)
-Gamma|	459 - e4_qwe14 (Failed)
-Gamma|	460 - e4_qwe15 (Failed)
-Gamma|	461 - e4_qwe16 (Failed)
-Gamma|	462 - e4_qwe17 (Failed)
-Gamma|	463 - e4_qwe18 (Failed)
-Gamma|	464 - e4_qwe19 (Failed)
-Gamma|	465 - e4_qwe20 (Failed)
-Gamma|	466 - e4_qwe21 (Failed)
+Gamma|	633 - e4_qwe02 (Failed)
+Gamma|	636 - e4_qwe06 (Failed)
+Gamma|	639 - e4_qwe09 (Failed)
+Gamma|	641 - e4_qwe11 (Failed)
+Gamma|	642 - e4_qwe12 (Failed)
+Gamma|	643 - e4_qwe13 (Failed)
+Gamma|	644 - e4_qwe14 (Failed)
+Gamma|	645 - e4_qwe15 (Failed)
+Gamma|	646 - e4_qwe16 (Failed)
+Gamma|	647 - e4_qwe17 (Failed)
+Gamma|	648 - e4_qwe18 (Failed)
+Gamma|	649 - e4_qwe19 (Failed)
+Gamma|	650 - e4_qwe20 (Failed)
+Gamma|	651 - e4_qwe21 (Failed)
+Kappa|Test project /home/schnorr/ensino/private
 Kappa|Test project /home/schnorr/ensino/private/maio_e4/Kappa-E4/b.e4.maio
-Kappa|      Start 447: e4_qwe01
-Kappa| 1/20 Test #447: e4_qwe01 .........................***Failed    0.04 sec
-Kappa|      Start 448: e4_qwe02
-Kappa| 2/20 Test #448: e4_qwe02 .........................   Passed    0.03 sec
-Kappa|      Start 449: e4_qwe03
-Kappa| 3/20 Test #449: e4_qwe03 .........................***Failed    0.03 sec
-Kappa|      Start 450: e4_qwe05
-Kappa| 4/20 Test #450: e4_qwe05 .........................***Failed    0.04 sec
-Kappa|      Start 451: e4_qwe06
-Kappa| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
-Kappa|      Start 452: e4_qwe07
-Kappa| 6/20 Test #452: e4_qwe07 .........................***Failed    0.03 sec
-Kappa|      Start 453: e4_qwe08
-Kappa| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
-Kappa|      Start 454: e4_qwe09
-Kappa| 8/20 Test #454: e4_qwe09 .........................***Failed    0.03 sec
-Kappa|      Start 455: e4_qwe10
-Kappa| 9/20 Test #455: e4_qwe10 .........................***Failed    0.03 sec
-Kappa|      Start 456: e4_qwe11
-Kappa|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
-Kappa|      Start 457: e4_qwe12
-Kappa|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
-Kappa|      Start 458: e4_qwe13
-Kappa|12/20 Test #458: e4_qwe13 .........................***Failed    0.03 sec
-Kappa|      Start 459: e4_qwe14
-Kappa|13/20 Test #459: e4_qwe14 .........................   Passed    0.03 sec
-Kappa|      Start 460: e4_qwe15
-Kappa|14/20 Test #460: e4_qwe15 .........................***Failed    0.03 sec
-Kappa|      Start 461: e4_qwe16
-Kappa|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Kappa|      Start 462: e4_qwe17
-Kappa|16/20 Test #462: e4_qwe17 .........................***Failed    0.04 sec
-Kappa|      Start 463: e4_qwe18
-Kappa|17/20 Test #463: e4_qwe18 .........................***Failed    0.03 sec
-Kappa|      Start 464: e4_qwe19
-Kappa|18/20 Test #464: e4_qwe19 .........................***Failed    0.04 sec
-Kappa|      Start 465: e4_qwe20
-Kappa|19/20 Test #465: e4_qwe20 .........................***Failed    0.03 sec
-Kappa|      Start 466: e4_qwe21
-Kappa|20/20 Test #466: e4_qwe21 .........................***Failed    0.03 sec
+Kappa|      Start 632: e4_qwe01
+Kappa| 1/20 Test #632: e4_qwe01 .........................   Passed    0.04 sec
+Kappa|      Start 633: e4_qwe02
+Kappa| 2/20 Test #633: e4_qwe02 .........................   Passed    0.04 sec
+Kappa|      Start 634: e4_qwe03
+Kappa| 3/20 Test #634: e4_qwe03 .........................   Passed    0.03 sec
+Kappa|      Start 635: e4_qwe05
+Kappa| 4/20 Test #635: e4_qwe05 .........................   Passed    0.03 sec
+Kappa|      Start 636: e4_qwe06
+Kappa| 5/20 Test #636: e4_qwe06 .........................   Passed    0.03 sec
+Kappa|      Start 637: e4_qwe07
+Kappa| 6/20 Test #637: e4_qwe07 .........................   Passed    0.04 sec
+Kappa|      Start 638: e4_qwe08
+Kappa| 7/20 Test #638: e4_qwe08 .........................   Passed    0.03 sec
+Kappa|      Start 639: e4_qwe09
+Kappa| 8/20 Test #639: e4_qwe09 .........................   Passed    0.04 sec
+Kappa|      Start 640: e4_qwe10
+Kappa| 9/20 Test #640: e4_qwe10 .........................   Passed    0.04 sec
+Kappa|      Start 641: e4_qwe11
+Kappa|10/20 Test #641: e4_qwe11 .........................***Failed    0.03 sec
+Kappa|      Start 642: e4_qwe12
+Kappa|11/20 Test #642: e4_qwe12 .........................   Passed    0.03 sec
+Kappa|      Start 643: e4_qwe13
+Kappa|12/20 Test #643: e4_qwe13 .........................***Failed    0.03 sec
+Kappa|      Start 644: e4_qwe14
+Kappa|13/20 Test #644: e4_qwe14 .........................   Passed    0.03 sec
+Kappa|      Start 645: e4_qwe15
+Kappa|14/20 Test #645: e4_qwe15 .........................   Passed    0.03 sec
+Kappa|      Start 646: e4_qwe16
+Kappa|15/20 Test #646: e4_qwe16 .........................***Failed    0.03 sec
+Kappa|      Start 647: e4_qwe17
+Kappa|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Kappa|      Start 648: e4_qwe18
+Kappa|17/20 Test #648: e4_qwe18 .........................   Passed    0.03 sec
+Kappa|      Start 649: e4_qwe19
+Kappa|18/20 Test #649: e4_qwe19 .........................   Passed    0.03 sec
+Kappa|      Start 650: e4_qwe20
+Kappa|19/20 Test #650: e4_qwe20 .........................   Passed    0.03 sec
+Kappa|      Start 651: e4_qwe21
+Kappa|20/20 Test #651: e4_qwe21 .........................   Passed    0.04 sec
 Kappa|
-Kappa|20% tests passed, 16 tests failed out of 20
+Kappa|80% tests passed, 4 tests failed out of 20
 Kappa|
-Kappa|Total Test time (real) =   0.65 sec
+Kappa|Total Test time (real) =   0.66 sec
 Kappa|
 Kappa|The following tests FAILED:
-Kappa|	447 - e4_qwe01 (Failed)
-Kappa|	449 - e4_qwe03 (Failed)
-Kappa|	450 - e4_qwe05 (Failed)
-Kappa|	452 - e4_qwe07 (Failed)
-Kappa|	454 - e4_qwe09 (Failed)
-Kappa|	455 - e4_qwe10 (Failed)
-Kappa|	456 - e4_qwe11 (Failed)
-Kappa|	457 - e4_qwe12 (Failed)
-Kappa|	458 - e4_qwe13 (Failed)
-Kappa|	460 - e4_qwe15 (Failed)
-Kappa|	461 - e4_qwe16 (Failed)
-Kappa|	462 - e4_qwe17 (Failed)
-Kappa|	463 - e4_qwe18 (Failed)
-Kappa|	464 - e4_qwe19 (Failed)
-Kappa|	465 - e4_qwe20 (Failed)
-Kappa|	466 - e4_qwe21 (Failed)
+Kappa|	641 - e4_qwe11 (Failed)
+Kappa|	643 - e4_qwe13 (Failed)
+Kappa|	646 - e4_qwe16 (Failed)
+Kappa|	647 - e4_qwe17 (Failed)
+Lambda|Test project /home/schnorr/ensino/private
 Lambda|Test project /home/schnorr/ensino/private/maio_e4/Lambda-E4/b.e4.maio
-Lambda|      Start 447: e4_qwe01
-Lambda| 1/20 Test #447: e4_qwe01 .........................***Failed    0.04 sec
-Lambda|      Start 448: e4_qwe02
-Lambda| 2/20 Test #448: e4_qwe02 .........................   Passed    0.03 sec
-Lambda|      Start 449: e4_qwe03
-Lambda| 3/20 Test #449: e4_qwe03 .........................***Failed    0.04 sec
-Lambda|      Start 450: e4_qwe05
-Lambda| 4/20 Test #450: e4_qwe05 .........................***Failed    0.04 sec
-Lambda|      Start 451: e4_qwe06
-Lambda| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
-Lambda|      Start 452: e4_qwe07
-Lambda| 6/20 Test #452: e4_qwe07 .........................***Failed    0.03 sec
-Lambda|      Start 453: e4_qwe08
-Lambda| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
-Lambda|      Start 454: e4_qwe09
-Lambda| 8/20 Test #454: e4_qwe09 .........................***Failed    0.04 sec
-Lambda|      Start 455: e4_qwe10
-Lambda| 9/20 Test #455: e4_qwe10 .........................***Failed    0.03 sec
-Lambda|      Start 456: e4_qwe11
-Lambda|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
-Lambda|      Start 457: e4_qwe12
-Lambda|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
-Lambda|      Start 458: e4_qwe13
-Lambda|12/20 Test #458: e4_qwe13 .........................***Failed    0.03 sec
-Lambda|      Start 459: e4_qwe14
-Lambda|13/20 Test #459: e4_qwe14 .........................   Passed    0.04 sec
-Lambda|      Start 460: e4_qwe15
-Lambda|14/20 Test #460: e4_qwe15 .........................***Failed    0.04 sec
-Lambda|      Start 461: e4_qwe16
-Lambda|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Lambda|      Start 462: e4_qwe17
-Lambda|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
-Lambda|      Start 463: e4_qwe18
-Lambda|17/20 Test #463: e4_qwe18 .........................***Failed    0.03 sec
-Lambda|      Start 464: e4_qwe19
-Lambda|18/20 Test #464: e4_qwe19 .........................***Failed    0.03 sec
-Lambda|      Start 465: e4_qwe20
-Lambda|19/20 Test #465: e4_qwe20 .........................***Failed    0.03 sec
-Lambda|      Start 466: e4_qwe21
-Lambda|20/20 Test #466: e4_qwe21 .........................***Failed    0.03 sec
+Lambda|      Start 632: e4_qwe01
+Lambda| 1/20 Test #632: e4_qwe01 .........................   Passed    0.04 sec
+Lambda|      Start 633: e4_qwe02
+Lambda| 2/20 Test #633: e4_qwe02 .........................   Passed    0.03 sec
+Lambda|      Start 634: e4_qwe03
+Lambda| 3/20 Test #634: e4_qwe03 .........................   Passed    0.03 sec
+Lambda|      Start 635: e4_qwe05
+Lambda| 4/20 Test #635: e4_qwe05 .........................   Passed    0.03 sec
+Lambda|      Start 636: e4_qwe06
+Lambda| 5/20 Test #636: e4_qwe06 .........................   Passed    0.03 sec
+Lambda|      Start 637: e4_qwe07
+Lambda| 6/20 Test #637: e4_qwe07 .........................   Passed    0.03 sec
+Lambda|      Start 638: e4_qwe08
+Lambda| 7/20 Test #638: e4_qwe08 .........................   Passed    0.03 sec
+Lambda|      Start 639: e4_qwe09
+Lambda| 8/20 Test #639: e4_qwe09 .........................   Passed    0.03 sec
+Lambda|      Start 640: e4_qwe10
+Lambda| 9/20 Test #640: e4_qwe10 .........................   Passed    0.04 sec
+Lambda|      Start 641: e4_qwe11
+Lambda|10/20 Test #641: e4_qwe11 .........................   Passed    0.03 sec
+Lambda|      Start 642: e4_qwe12
+Lambda|11/20 Test #642: e4_qwe12 .........................   Passed    0.03 sec
+Lambda|      Start 643: e4_qwe13
+Lambda|12/20 Test #643: e4_qwe13 .........................   Passed    0.03 sec
+Lambda|      Start 644: e4_qwe14
+Lambda|13/20 Test #644: e4_qwe14 .........................   Passed    0.03 sec
+Lambda|      Start 645: e4_qwe15
+Lambda|14/20 Test #645: e4_qwe15 .........................   Passed    0.03 sec
+Lambda|      Start 646: e4_qwe16
+Lambda|15/20 Test #646: e4_qwe16 .........................   Passed    0.04 sec
+Lambda|      Start 647: e4_qwe17
+Lambda|16/20 Test #647: e4_qwe17 .........................   Passed    0.04 sec
+Lambda|      Start 648: e4_qwe18
+Lambda|17/20 Test #648: e4_qwe18 .........................   Passed    0.03 sec
+Lambda|      Start 649: e4_qwe19
+Lambda|18/20 Test #649: e4_qwe19 .........................   Passed    0.04 sec
+Lambda|      Start 650: e4_qwe20
+Lambda|19/20 Test #650: e4_qwe20 .........................   Passed    0.03 sec
+Lambda|      Start 651: e4_qwe21
+Lambda|20/20 Test #651: e4_qwe21 .........................   Passed    0.03 sec
 Lambda|
-Lambda|20% tests passed, 16 tests failed out of 20
+Lambda|100% tests passed, 0 tests failed out of 20
 Lambda|
-Lambda|Total Test time (real) =   0.62 sec
-Lambda|
-Lambda|The following tests FAILED:
-Lambda|	447 - e4_qwe01 (Failed)
-Lambda|	449 - e4_qwe03 (Failed)
-Lambda|	450 - e4_qwe05 (Failed)
-Lambda|	452 - e4_qwe07 (Failed)
-Lambda|	454 - e4_qwe09 (Failed)
-Lambda|	455 - e4_qwe10 (Failed)
-Lambda|	456 - e4_qwe11 (Failed)
-Lambda|	457 - e4_qwe12 (Failed)
-Lambda|	458 - e4_qwe13 (Failed)
-Lambda|	460 - e4_qwe15 (Failed)
-Lambda|	461 - e4_qwe16 (Failed)
-Lambda|	462 - e4_qwe17 (Failed)
-Lambda|	463 - e4_qwe18 (Failed)
-Lambda|	464 - e4_qwe19 (Failed)
-Lambda|	465 - e4_qwe20 (Failed)
-Lambda|	466 - e4_qwe21 (Failed)
+Lambda|Total Test time (real) =   0.64 sec
+Nu|Test project /home/schnorr/ensino/private
 Nu|Test project /home/schnorr/ensino/private/maio_e4/Nu-E4/b.e4.maio
-Nu|      Start 447: e4_qwe01
-Nu| 1/20 Test #447: e4_qwe01 .........................   Passed    0.04 sec
-Nu|      Start 448: e4_qwe02
-Nu| 2/20 Test #448: e4_qwe02 .........................***Failed    0.03 sec
-Nu|      Start 449: e4_qwe03
-Nu| 3/20 Test #449: e4_qwe03 .........................   Passed    0.03 sec
-Nu|      Start 450: e4_qwe05
-Nu| 4/20 Test #450: e4_qwe05 .........................   Passed    0.04 sec
-Nu|      Start 451: e4_qwe06
-Nu| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
-Nu|      Start 452: e4_qwe07
-Nu| 6/20 Test #452: e4_qwe07 .........................   Passed    0.03 sec
-Nu|      Start 453: e4_qwe08
-Nu| 7/20 Test #453: e4_qwe08 .........................   Passed    0.04 sec
-Nu|      Start 454: e4_qwe09
-Nu| 8/20 Test #454: e4_qwe09 .........................   Passed    0.04 sec
-Nu|      Start 455: e4_qwe10
-Nu| 9/20 Test #455: e4_qwe10 .........................   Passed    0.03 sec
-Nu|      Start 456: e4_qwe11
-Nu|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
-Nu|      Start 457: e4_qwe12
-Nu|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
-Nu|      Start 458: e4_qwe13
-Nu|12/20 Test #458: e4_qwe13 .........................   Passed    0.03 sec
-Nu|      Start 459: e4_qwe14
-Nu|13/20 Test #459: e4_qwe14 .........................   Passed    0.04 sec
-Nu|      Start 460: e4_qwe15
-Nu|14/20 Test #460: e4_qwe15 .........................***Failed    0.03 sec
-Nu|      Start 461: e4_qwe16
-Nu|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Nu|      Start 462: e4_qwe17
-Nu|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
-Nu|      Start 463: e4_qwe18
-Nu|17/20 Test #463: e4_qwe18 .........................***Failed    0.03 sec
-Nu|      Start 464: e4_qwe19
-Nu|18/20 Test #464: e4_qwe19 .........................   Passed    0.04 sec
-Nu|      Start 465: e4_qwe20
-Nu|19/20 Test #465: e4_qwe20 .........................   Passed    0.04 sec
-Nu|      Start 466: e4_qwe21
-Nu|20/20 Test #466: e4_qwe21 .........................   Passed    0.03 sec
+Nu|      Start 632: e4_qwe01
+Nu| 1/20 Test #632: e4_qwe01 .........................   Passed    0.03 sec
+Nu|      Start 633: e4_qwe02
+Nu| 2/20 Test #633: e4_qwe02 .........................***Failed    0.04 sec
+Nu|      Start 634: e4_qwe03
+Nu| 3/20 Test #634: e4_qwe03 .........................   Passed    0.03 sec
+Nu|      Start 635: e4_qwe05
+Nu| 4/20 Test #635: e4_qwe05 .........................   Passed    0.03 sec
+Nu|      Start 636: e4_qwe06
+Nu| 5/20 Test #636: e4_qwe06 .........................   Passed    0.03 sec
+Nu|      Start 637: e4_qwe07
+Nu| 6/20 Test #637: e4_qwe07 .........................   Passed    0.04 sec
+Nu|      Start 638: e4_qwe08
+Nu| 7/20 Test #638: e4_qwe08 .........................   Passed    0.03 sec
+Nu|      Start 639: e4_qwe09
+Nu| 8/20 Test #639: e4_qwe09 .........................   Passed    0.04 sec
+Nu|      Start 640: e4_qwe10
+Nu| 9/20 Test #640: e4_qwe10 .........................   Passed    0.04 sec
+Nu|      Start 641: e4_qwe11
+Nu|10/20 Test #641: e4_qwe11 .........................   Passed    0.03 sec
+Nu|      Start 642: e4_qwe12
+Nu|11/20 Test #642: e4_qwe12 .........................   Passed    0.03 sec
+Nu|      Start 643: e4_qwe13
+Nu|12/20 Test #643: e4_qwe13 .........................   Passed    0.03 sec
+Nu|      Start 644: e4_qwe14
+Nu|13/20 Test #644: e4_qwe14 .........................   Passed    0.04 sec
+Nu|      Start 645: e4_qwe15
+Nu|14/20 Test #645: e4_qwe15 .........................***Failed    0.03 sec
+Nu|      Start 646: e4_qwe16
+Nu|15/20 Test #646: e4_qwe16 .........................***Failed    0.03 sec
+Nu|      Start 647: e4_qwe17
+Nu|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Nu|      Start 648: e4_qwe18
+Nu|17/20 Test #648: e4_qwe18 .........................***Failed    0.03 sec
+Nu|      Start 649: e4_qwe19
+Nu|18/20 Test #649: e4_qwe19 .........................   Passed    0.03 sec
+Nu|      Start 650: e4_qwe20
+Nu|19/20 Test #650: e4_qwe20 .........................   Passed    0.03 sec
+Nu|      Start 651: e4_qwe21
+Nu|20/20 Test #651: e4_qwe21 .........................   Passed    0.03 sec
 Nu|
-Nu|65% tests passed, 7 tests failed out of 20
+Nu|75% tests passed, 5 tests failed out of 20
 Nu|
-Nu|Total Test time (real) =   0.65 sec
+Nu|Total Test time (real) =   0.64 sec
 Nu|
 Nu|The following tests FAILED:
-Nu|	448 - e4_qwe02 (Failed)
-Nu|	456 - e4_qwe11 (Failed)
-Nu|	457 - e4_qwe12 (Failed)
-Nu|	460 - e4_qwe15 (Failed)
-Nu|	461 - e4_qwe16 (Failed)
-Nu|	462 - e4_qwe17 (Failed)
-Nu|	463 - e4_qwe18 (Failed)
+Nu|	633 - e4_qwe02 (Failed)
+Nu|	645 - e4_qwe15 (Failed)
+Nu|	646 - e4_qwe16 (Failed)
+Nu|	647 - e4_qwe17 (Failed)
+Nu|	648 - e4_qwe18 (Failed)
+Omega|Test project /home/schnorr/ensino/private
 Omega|Test project /home/schnorr/ensino/private/maio_e4/Omega-E4/b.e4.maio
-Omega|      Start 447: e4_qwe01
-Omega| 1/20 Test #447: e4_qwe01 .........................   Passed    0.03 sec
-Omega|      Start 448: e4_qwe02
-Omega| 2/20 Test #448: e4_qwe02 .........................   Passed    0.03 sec
-Omega|      Start 449: e4_qwe03
-Omega| 3/20 Test #449: e4_qwe03 .........................   Passed    0.03 sec
-Omega|      Start 450: e4_qwe05
-Omega| 4/20 Test #450: e4_qwe05 .........................   Passed    0.03 sec
-Omega|      Start 451: e4_qwe06
-Omega| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
-Omega|      Start 452: e4_qwe07
-Omega| 6/20 Test #452: e4_qwe07 .........................   Passed    0.04 sec
-Omega|      Start 453: e4_qwe08
-Omega| 7/20 Test #453: e4_qwe08 .........................   Passed    0.04 sec
-Omega|      Start 454: e4_qwe09
-Omega| 8/20 Test #454: e4_qwe09 .........................   Passed    0.03 sec
-Omega|      Start 455: e4_qwe10
-Omega| 9/20 Test #455: e4_qwe10 .........................   Passed    0.03 sec
-Omega|      Start 456: e4_qwe11
-Omega|10/20 Test #456: e4_qwe11 .........................***Failed    0.04 sec
-Omega|      Start 457: e4_qwe12
-Omega|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
-Omega|      Start 458: e4_qwe13
-Omega|12/20 Test #458: e4_qwe13 .........................***Failed    0.03 sec
-Omega|      Start 459: e4_qwe14
-Omega|13/20 Test #459: e4_qwe14 .........................   Passed    0.03 sec
-Omega|      Start 460: e4_qwe15
-Omega|14/20 Test #460: e4_qwe15 .........................***Failed    0.04 sec
-Omega|      Start 461: e4_qwe16
-Omega|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Omega|      Start 462: e4_qwe17
-Omega|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
-Omega|      Start 463: e4_qwe18
-Omega|17/20 Test #463: e4_qwe18 .........................   Passed    0.03 sec
-Omega|      Start 464: e4_qwe19
-Omega|18/20 Test #464: e4_qwe19 .........................   Passed    0.03 sec
-Omega|      Start 465: e4_qwe20
-Omega|19/20 Test #465: e4_qwe20 .........................   Passed    0.03 sec
-Omega|      Start 466: e4_qwe21
-Omega|20/20 Test #466: e4_qwe21 .........................   Passed    0.03 sec
+Omega|      Start 632: e4_qwe01
+Omega| 1/20 Test #632: e4_qwe01 .........................   Passed    0.03 sec
+Omega|      Start 633: e4_qwe02
+Omega| 2/20 Test #633: e4_qwe02 .........................   Passed    0.03 sec
+Omega|      Start 634: e4_qwe03
+Omega| 3/20 Test #634: e4_qwe03 .........................   Passed    0.03 sec
+Omega|      Start 635: e4_qwe05
+Omega| 4/20 Test #635: e4_qwe05 .........................   Passed    0.03 sec
+Omega|      Start 636: e4_qwe06
+Omega| 5/20 Test #636: e4_qwe06 .........................   Passed    0.03 sec
+Omega|      Start 637: e4_qwe07
+Omega| 6/20 Test #637: e4_qwe07 .........................   Passed    0.04 sec
+Omega|      Start 638: e4_qwe08
+Omega| 7/20 Test #638: e4_qwe08 .........................   Passed    0.03 sec
+Omega|      Start 639: e4_qwe09
+Omega| 8/20 Test #639: e4_qwe09 .........................   Passed    0.03 sec
+Omega|      Start 640: e4_qwe10
+Omega| 9/20 Test #640: e4_qwe10 .........................   Passed    0.04 sec
+Omega|      Start 641: e4_qwe11
+Omega|10/20 Test #641: e4_qwe11 .........................   Passed    0.03 sec
+Omega|      Start 642: e4_qwe12
+Omega|11/20 Test #642: e4_qwe12 .........................   Passed    0.03 sec
+Omega|      Start 643: e4_qwe13
+Omega|12/20 Test #643: e4_qwe13 .........................***Failed    0.03 sec
+Omega|      Start 644: e4_qwe14
+Omega|13/20 Test #644: e4_qwe14 .........................   Passed    0.03 sec
+Omega|      Start 645: e4_qwe15
+Omega|14/20 Test #645: e4_qwe15 .........................   Passed    0.03 sec
+Omega|      Start 646: e4_qwe16
+Omega|15/20 Test #646: e4_qwe16 .........................***Failed    0.03 sec
+Omega|      Start 647: e4_qwe17
+Omega|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Omega|      Start 648: e4_qwe18
+Omega|17/20 Test #648: e4_qwe18 .........................   Passed    0.03 sec
+Omega|      Start 649: e4_qwe19
+Omega|18/20 Test #649: e4_qwe19 .........................   Passed    0.04 sec
+Omega|      Start 650: e4_qwe20
+Omega|19/20 Test #650: e4_qwe20 .........................   Passed    0.03 sec
+Omega|      Start 651: e4_qwe21
+Omega|20/20 Test #651: e4_qwe21 .........................   Passed    0.03 sec
 Omega|
-Omega|70% tests passed, 6 tests failed out of 20
+Omega|85% tests passed, 3 tests failed out of 20
 Omega|
-Omega|Total Test time (real) =   0.64 sec
+Omega|Total Test time (real) =   0.66 sec
 Omega|
 Omega|The following tests FAILED:
-Omega|	456 - e4_qwe11 (Failed)
-Omega|	457 - e4_qwe12 (Failed)
-Omega|	458 - e4_qwe13 (Failed)
-Omega|	460 - e4_qwe15 (Failed)
-Omega|	461 - e4_qwe16 (Failed)
-Omega|	462 - e4_qwe17 (Failed)
+Omega|	643 - e4_qwe13 (Failed)
+Omega|	646 - e4_qwe16 (Failed)
+Omega|	647 - e4_qwe17 (Failed)
+Omicron|Test project /home/schnorr/ensino/private
 Omicron|Test project /home/schnorr/ensino/private/maio_e4/Omicron-E4/b.e4.maio
-Omicron|      Start 447: e4_qwe01
-Omicron| 1/20 Test #447: e4_qwe01 .........................   Passed    0.04 sec
-Omicron|      Start 448: e4_qwe02
-Omicron| 2/20 Test #448: e4_qwe02 .........................   Passed    0.04 sec
-Omicron|      Start 449: e4_qwe03
-Omicron| 3/20 Test #449: e4_qwe03 .........................   Passed    0.03 sec
-Omicron|      Start 450: e4_qwe05
-Omicron| 4/20 Test #450: e4_qwe05 .........................***Failed    0.04 sec
-Omicron|      Start 451: e4_qwe06
-Omicron| 5/20 Test #451: e4_qwe06 .........................***Failed    0.03 sec
-Omicron|      Start 452: e4_qwe07
-Omicron| 6/20 Test #452: e4_qwe07 .........................***Failed    0.04 sec
-Omicron|      Start 453: e4_qwe08
-Omicron| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
-Omicron|      Start 454: e4_qwe09
-Omicron| 8/20 Test #454: e4_qwe09 .........................   Passed    0.03 sec
-Omicron|      Start 455: e4_qwe10
-Omicron| 9/20 Test #455: e4_qwe10 .........................   Passed    0.03 sec
-Omicron|      Start 456: e4_qwe11
-Omicron|10/20 Test #456: e4_qwe11 .........................***Failed    0.03 sec
-Omicron|      Start 457: e4_qwe12
-Omicron|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
-Omicron|      Start 458: e4_qwe13
-Omicron|12/20 Test #458: e4_qwe13 .........................   Passed    0.04 sec
-Omicron|      Start 459: e4_qwe14
-Omicron|13/20 Test #459: e4_qwe14 .........................***Failed    0.03 sec
-Omicron|      Start 460: e4_qwe15
-Omicron|14/20 Test #460: e4_qwe15 .........................***Failed    0.04 sec
-Omicron|      Start 461: e4_qwe16
-Omicron|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Omicron|      Start 462: e4_qwe17
-Omicron|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
-Omicron|      Start 463: e4_qwe18
-Omicron|17/20 Test #463: e4_qwe18 .........................***Failed    0.03 sec
-Omicron|      Start 464: e4_qwe19
-Omicron|18/20 Test #464: e4_qwe19 .........................***Failed    0.03 sec
-Omicron|      Start 465: e4_qwe20
-Omicron|19/20 Test #465: e4_qwe20 .........................***Failed    0.03 sec
-Omicron|      Start 466: e4_qwe21
-Omicron|20/20 Test #466: e4_qwe21 .........................***Failed    0.04 sec
+Omicron|      Start 632: e4_qwe01
+Omicron| 1/20 Test #632: e4_qwe01 .........................   Passed    0.03 sec
+Omicron|      Start 633: e4_qwe02
+Omicron| 2/20 Test #633: e4_qwe02 .........................   Passed    0.03 sec
+Omicron|      Start 634: e4_qwe03
+Omicron| 3/20 Test #634: e4_qwe03 .........................   Passed    0.03 sec
+Omicron|      Start 635: e4_qwe05
+Omicron| 4/20 Test #635: e4_qwe05 .........................***Failed    0.03 sec
+Omicron|      Start 636: e4_qwe06
+Omicron| 5/20 Test #636: e4_qwe06 .........................***Failed    0.04 sec
+Omicron|      Start 637: e4_qwe07
+Omicron| 6/20 Test #637: e4_qwe07 .........................***Failed    0.03 sec
+Omicron|      Start 638: e4_qwe08
+Omicron| 7/20 Test #638: e4_qwe08 .........................   Passed    0.04 sec
+Omicron|      Start 639: e4_qwe09
+Omicron| 8/20 Test #639: e4_qwe09 .........................   Passed    0.03 sec
+Omicron|      Start 640: e4_qwe10
+Omicron| 9/20 Test #640: e4_qwe10 .........................   Passed    0.03 sec
+Omicron|      Start 641: e4_qwe11
+Omicron|10/20 Test #641: e4_qwe11 .........................   Passed    0.03 sec
+Omicron|      Start 642: e4_qwe12
+Omicron|11/20 Test #642: e4_qwe12 .........................   Passed    0.03 sec
+Omicron|      Start 643: e4_qwe13
+Omicron|12/20 Test #643: e4_qwe13 .........................   Passed    0.03 sec
+Omicron|      Start 644: e4_qwe14
+Omicron|13/20 Test #644: e4_qwe14 .........................***Failed    0.03 sec
+Omicron|      Start 645: e4_qwe15
+Omicron|14/20 Test #645: e4_qwe15 .........................***Failed    0.03 sec
+Omicron|      Start 646: e4_qwe16
+Omicron|15/20 Test #646: e4_qwe16 .........................***Failed    0.03 sec
+Omicron|      Start 647: e4_qwe17
+Omicron|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Omicron|      Start 648: e4_qwe18
+Omicron|17/20 Test #648: e4_qwe18 .........................***Failed    0.03 sec
+Omicron|      Start 649: e4_qwe19
+Omicron|18/20 Test #649: e4_qwe19 .........................***Failed    0.03 sec
+Omicron|      Start 650: e4_qwe20
+Omicron|19/20 Test #650: e4_qwe20 .........................***Failed    0.03 sec
+Omicron|      Start 651: e4_qwe21
+Omicron|20/20 Test #651: e4_qwe21 .........................***Failed    0.03 sec
 Omicron|
-Omicron|35% tests passed, 13 tests failed out of 20
+Omicron|45% tests passed, 11 tests failed out of 20
 Omicron|
-Omicron|Total Test time (real) =   0.66 sec
+Omicron|Total Test time (real) =   0.61 sec
 Omicron|
 Omicron|The following tests FAILED:
-Omicron|	450 - e4_qwe05 (Failed)
-Omicron|	451 - e4_qwe06 (Failed)
-Omicron|	452 - e4_qwe07 (Failed)
-Omicron|	456 - e4_qwe11 (Failed)
-Omicron|	457 - e4_qwe12 (Failed)
-Omicron|	459 - e4_qwe14 (Failed)
-Omicron|	460 - e4_qwe15 (Failed)
-Omicron|	461 - e4_qwe16 (Failed)
-Omicron|	462 - e4_qwe17 (Failed)
-Omicron|	463 - e4_qwe18 (Failed)
-Omicron|	464 - e4_qwe19 (Failed)
-Omicron|	465 - e4_qwe20 (Failed)
-Omicron|	466 - e4_qwe21 (Failed)
+Omicron|	635 - e4_qwe05 (Failed)
+Omicron|	636 - e4_qwe06 (Failed)
+Omicron|	637 - e4_qwe07 (Failed)
+Omicron|	644 - e4_qwe14 (Failed)
+Omicron|	645 - e4_qwe15 (Failed)
+Omicron|	646 - e4_qwe16 (Failed)
+Omicron|	647 - e4_qwe17 (Failed)
+Omicron|	648 - e4_qwe18 (Failed)
+Omicron|	649 - e4_qwe19 (Failed)
+Omicron|	650 - e4_qwe20 (Failed)
+Omicron|	651 - e4_qwe21 (Failed)
+Phi|Test project /home/schnorr/ensino/private
 Phi|Test project /home/schnorr/ensino/private/maio_e4/Phi-E4/b.e4.maio
-Phi|      Start 447: e4_qwe01
-Phi| 1/20 Test #447: e4_qwe01 .........................   Passed    0.04 sec
-Phi|      Start 448: e4_qwe02
-Phi| 2/20 Test #448: e4_qwe02 .........................   Passed    0.03 sec
-Phi|      Start 449: e4_qwe03
-Phi| 3/20 Test #449: e4_qwe03 .........................   Passed    0.03 sec
-Phi|      Start 450: e4_qwe05
-Phi| 4/20 Test #450: e4_qwe05 .........................   Passed    0.03 sec
-Phi|      Start 451: e4_qwe06
-Phi| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
-Phi|      Start 452: e4_qwe07
-Phi| 6/20 Test #452: e4_qwe07 .........................   Passed    0.03 sec
-Phi|      Start 453: e4_qwe08
-Phi| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
-Phi|      Start 454: e4_qwe09
-Phi| 8/20 Test #454: e4_qwe09 .........................   Passed    0.03 sec
-Phi|      Start 455: e4_qwe10
-Phi| 9/20 Test #455: e4_qwe10 .........................   Passed    0.03 sec
-Phi|      Start 456: e4_qwe11
-Phi|10/20 Test #456: e4_qwe11 .........................***Failed    0.04 sec
-Phi|      Start 457: e4_qwe12
-Phi|11/20 Test #457: e4_qwe12 .........................***Failed    0.04 sec
-Phi|      Start 458: e4_qwe13
-Phi|12/20 Test #458: e4_qwe13 .........................   Passed    0.04 sec
-Phi|      Start 459: e4_qwe14
-Phi|13/20 Test #459: e4_qwe14 .........................   Passed    0.03 sec
-Phi|      Start 460: e4_qwe15
-Phi|14/20 Test #460: e4_qwe15 .........................***Failed    0.04 sec
-Phi|      Start 461: e4_qwe16
-Phi|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Phi|      Start 462: e4_qwe17
-Phi|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
-Phi|      Start 463: e4_qwe18
-Phi|17/20 Test #463: e4_qwe18 .........................   Passed    0.03 sec
-Phi|      Start 464: e4_qwe19
-Phi|18/20 Test #464: e4_qwe19 .........................   Passed    0.03 sec
-Phi|      Start 465: e4_qwe20
-Phi|19/20 Test #465: e4_qwe20 .........................   Passed    0.03 sec
-Phi|      Start 466: e4_qwe21
-Phi|20/20 Test #466: e4_qwe21 .........................   Passed    0.03 sec
+Phi|      Start 632: e4_qwe01
+Phi| 1/20 Test #632: e4_qwe01 .........................   Passed    0.04 sec
+Phi|      Start 633: e4_qwe02
+Phi| 2/20 Test #633: e4_qwe02 .........................   Passed    0.03 sec
+Phi|      Start 634: e4_qwe03
+Phi| 3/20 Test #634: e4_qwe03 .........................   Passed    0.04 sec
+Phi|      Start 635: e4_qwe05
+Phi| 4/20 Test #635: e4_qwe05 .........................   Passed    0.03 sec
+Phi|      Start 636: e4_qwe06
+Phi| 5/20 Test #636: e4_qwe06 .........................   Passed    0.03 sec
+Phi|      Start 637: e4_qwe07
+Phi| 6/20 Test #637: e4_qwe07 .........................   Passed    0.03 sec
+Phi|      Start 638: e4_qwe08
+Phi| 7/20 Test #638: e4_qwe08 .........................   Passed    0.03 sec
+Phi|      Start 639: e4_qwe09
+Phi| 8/20 Test #639: e4_qwe09 .........................   Passed    0.03 sec
+Phi|      Start 640: e4_qwe10
+Phi| 9/20 Test #640: e4_qwe10 .........................   Passed    0.05 sec
+Phi|      Start 641: e4_qwe11
+Phi|10/20 Test #641: e4_qwe11 .........................   Passed    0.03 sec
+Phi|      Start 642: e4_qwe12
+Phi|11/20 Test #642: e4_qwe12 .........................***Failed    0.03 sec
+Phi|      Start 643: e4_qwe13
+Phi|12/20 Test #643: e4_qwe13 .........................   Passed    0.03 sec
+Phi|      Start 644: e4_qwe14
+Phi|13/20 Test #644: e4_qwe14 .........................   Passed    0.03 sec
+Phi|      Start 645: e4_qwe15
+Phi|14/20 Test #645: e4_qwe15 .........................   Passed    0.03 sec
+Phi|      Start 646: e4_qwe16
+Phi|15/20 Test #646: e4_qwe16 .........................***Failed    0.03 sec
+Phi|      Start 647: e4_qwe17
+Phi|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Phi|      Start 648: e4_qwe18
+Phi|17/20 Test #648: e4_qwe18 .........................   Passed    0.03 sec
+Phi|      Start 649: e4_qwe19
+Phi|18/20 Test #649: e4_qwe19 .........................   Passed    0.03 sec
+Phi|      Start 650: e4_qwe20
+Phi|19/20 Test #650: e4_qwe20 .........................   Passed    0.03 sec
+Phi|      Start 651: e4_qwe21
+Phi|20/20 Test #651: e4_qwe21 .........................   Passed    0.03 sec
 Phi|
-Phi|75% tests passed, 5 tests failed out of 20
+Phi|85% tests passed, 3 tests failed out of 20
 Phi|
-Phi|Total Test time (real) =   0.62 sec
+Phi|Total Test time (real) =   0.63 sec
 Phi|
 Phi|The following tests FAILED:
-Phi|	456 - e4_qwe11 (Failed)
-Phi|	457 - e4_qwe12 (Failed)
-Phi|	460 - e4_qwe15 (Failed)
-Phi|	461 - e4_qwe16 (Failed)
-Phi|	462 - e4_qwe17 (Failed)
+Phi|	642 - e4_qwe12 (Failed)
+Phi|	646 - e4_qwe16 (Failed)
+Phi|	647 - e4_qwe17 (Failed)
 program|Test project /home/schnorr/ensino/private
+Psi|Test project /home/schnorr/ensino/private
+Rho|Test project /home/schnorr/ensino/private
 saida.dot|Test project /home/schnorr/ensino/private
+Sigma|Test project /home/schnorr/ensino/private
 Sigma|Test project /home/schnorr/ensino/private/maio_e4/Sigma-E4/b.e4.maio
-Sigma|      Start 447: e4_qwe01
-Sigma| 1/20 Test #447: e4_qwe01 .........................   Passed    0.03 sec
-Sigma|      Start 448: e4_qwe02
-Sigma| 2/20 Test #448: e4_qwe02 .........................   Passed    0.03 sec
-Sigma|      Start 449: e4_qwe03
-Sigma| 3/20 Test #449: e4_qwe03 .........................   Passed    0.03 sec
-Sigma|      Start 450: e4_qwe05
-Sigma| 4/20 Test #450: e4_qwe05 .........................   Passed    0.03 sec
-Sigma|      Start 451: e4_qwe06
-Sigma| 5/20 Test #451: e4_qwe06 .........................   Passed    0.03 sec
-Sigma|      Start 452: e4_qwe07
-Sigma| 6/20 Test #452: e4_qwe07 .........................   Passed    0.03 sec
-Sigma|      Start 453: e4_qwe08
-Sigma| 7/20 Test #453: e4_qwe08 .........................   Passed    0.03 sec
-Sigma|      Start 454: e4_qwe09
-Sigma| 8/20 Test #454: e4_qwe09 .........................   Passed    0.03 sec
-Sigma|      Start 455: e4_qwe10
-Sigma| 9/20 Test #455: e4_qwe10 .........................   Passed    0.03 sec
-Sigma|      Start 456: e4_qwe11
-Sigma|10/20 Test #456: e4_qwe11 .........................***Failed    0.04 sec
-Sigma|      Start 457: e4_qwe12
-Sigma|11/20 Test #457: e4_qwe12 .........................***Failed    0.03 sec
-Sigma|      Start 458: e4_qwe13
-Sigma|12/20 Test #458: e4_qwe13 .........................   Passed    0.03 sec
-Sigma|      Start 459: e4_qwe14
-Sigma|13/20 Test #459: e4_qwe14 .........................***Failed    0.03 sec
-Sigma|      Start 460: e4_qwe15
-Sigma|14/20 Test #460: e4_qwe15 .........................***Failed    0.03 sec
-Sigma|      Start 461: e4_qwe16
-Sigma|15/20 Test #461: e4_qwe16 .........................***Failed    0.03 sec
-Sigma|      Start 462: e4_qwe17
-Sigma|16/20 Test #462: e4_qwe17 .........................***Failed    0.03 sec
-Sigma|      Start 463: e4_qwe18
-Sigma|17/20 Test #463: e4_qwe18 .........................   Passed    0.03 sec
-Sigma|      Start 464: e4_qwe19
-Sigma|18/20 Test #464: e4_qwe19 .........................   Passed    0.03 sec
-Sigma|      Start 465: e4_qwe20
-Sigma|19/20 Test #465: e4_qwe20 .........................   Passed    0.04 sec
-Sigma|      Start 466: e4_qwe21
-Sigma|20/20 Test #466: e4_qwe21 .........................   Passed    0.03 sec
+Sigma|      Start 632: e4_qwe01
+Sigma| 1/20 Test #632: e4_qwe01 .........................   Passed    0.03 sec
+Sigma|      Start 633: e4_qwe02
+Sigma| 2/20 Test #633: e4_qwe02 .........................   Passed    0.03 sec
+Sigma|      Start 634: e4_qwe03
+Sigma| 3/20 Test #634: e4_qwe03 .........................   Passed    0.04 sec
+Sigma|      Start 635: e4_qwe05
+Sigma| 4/20 Test #635: e4_qwe05 .........................   Passed    0.04 sec
+Sigma|      Start 636: e4_qwe06
+Sigma| 5/20 Test #636: e4_qwe06 .........................   Passed    0.03 sec
+Sigma|      Start 637: e4_qwe07
+Sigma| 6/20 Test #637: e4_qwe07 .........................   Passed    0.03 sec
+Sigma|      Start 638: e4_qwe08
+Sigma| 7/20 Test #638: e4_qwe08 .........................   Passed    0.04 sec
+Sigma|      Start 639: e4_qwe09
+Sigma| 8/20 Test #639: e4_qwe09 .........................   Passed    0.03 sec
+Sigma|      Start 640: e4_qwe10
+Sigma| 9/20 Test #640: e4_qwe10 .........................   Passed    0.03 sec
+Sigma|      Start 641: e4_qwe11
+Sigma|10/20 Test #641: e4_qwe11 .........................   Passed    0.03 sec
+Sigma|      Start 642: e4_qwe12
+Sigma|11/20 Test #642: e4_qwe12 .........................   Passed    0.03 sec
+Sigma|      Start 643: e4_qwe13
+Sigma|12/20 Test #643: e4_qwe13 .........................   Passed    0.03 sec
+Sigma|      Start 644: e4_qwe14
+Sigma|13/20 Test #644: e4_qwe14 .........................***Failed    0.03 sec
+Sigma|      Start 645: e4_qwe15
+Sigma|14/20 Test #645: e4_qwe15 .........................***Failed    0.03 sec
+Sigma|      Start 646: e4_qwe16
+Sigma|15/20 Test #646: e4_qwe16 .........................***Failed    0.03 sec
+Sigma|      Start 647: e4_qwe17
+Sigma|16/20 Test #647: e4_qwe17 .........................***Failed    0.03 sec
+Sigma|      Start 648: e4_qwe18
+Sigma|17/20 Test #648: e4_qwe18 .........................   Passed    0.03 sec
+Sigma|      Start 649: e4_qwe19
+Sigma|18/20 Test #649: e4_qwe19 .........................   Passed    0.03 sec
+Sigma|      Start 650: e4_qwe20
+Sigma|19/20 Test #650: e4_qwe20 .........................   Passed    0.03 sec
+Sigma|      Start 651: e4_qwe21
+Sigma|20/20 Test #651: e4_qwe21 .........................   Passed    0.03 sec
 Sigma|
-Sigma|70% tests passed, 6 tests failed out of 20
+Sigma|80% tests passed, 4 tests failed out of 20
 Sigma|
-Sigma|Total Test time (real) =   0.63 sec
+Sigma|Total Test time (real) =   0.64 sec
 Sigma|
 Sigma|The following tests FAILED:
-Sigma|	456 - e4_qwe11 (Failed)
-Sigma|	457 - e4_qwe12 (Failed)
-Sigma|	459 - e4_qwe14 (Failed)
-Sigma|	460 - e4_qwe15 (Failed)
-Sigma|	461 - e4_qwe16 (Failed)
-Sigma|	462 - e4_qwe17 (Failed)
+Sigma|	644 - e4_qwe14 (Failed)
+Sigma|	645 - e4_qwe15 (Failed)
+Sigma|	646 - e4_qwe16 (Failed)
+Sigma|	647 - e4_qwe17 (Failed)

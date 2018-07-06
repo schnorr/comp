@@ -6,7 +6,7 @@ Alpha| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.03 sec
 Alpha|      Start  3: e1_aval_003
 Alpha| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
 Alpha|      Start  4: e1_aval_004
-Alpha| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.04 sec
+Alpha| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
 Alpha|      Start  5: e1_aval_005
 Alpha| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
 Alpha|      Start  6: e1_aval_006
@@ -30,11 +30,11 @@ Alpha|14/78 Test #14: e1_aval_014 ......................   Passed    0.03 sec
 Alpha|      Start 15: e1_aval_015
 Alpha|15/78 Test #15: e1_aval_015 ......................   Passed    0.03 sec
 Alpha|      Start 16: e1_aval_016
-Alpha|16/78 Test #16: e1_aval_016 ......................   Passed    0.04 sec
+Alpha|16/78 Test #16: e1_aval_016 ......................   Passed    0.03 sec
 Alpha|      Start 17: e1_aval_017
 Alpha|17/78 Test #17: e1_aval_017 ......................   Passed    0.03 sec
 Alpha|      Start 18: e1_aval_018
-Alpha|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
+Alpha|18/78 Test #18: e1_aval_018 ......................   Passed    0.04 sec
 Alpha|      Start 19: e1_aval_019
 Alpha|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Alpha|      Start 20: e1_aval_020
@@ -46,15 +46,15 @@ Alpha|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Alpha|      Start 23: e1_aval_023
 Alpha|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
 Alpha|      Start 24: e1_aval_024
-Alpha|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
+Alpha|24/78 Test #24: e1_aval_024 ......................   Passed    0.04 sec
 Alpha|      Start 25: e1_aval_025
 Alpha|25/78 Test #25: e1_aval_025 ......................   Passed    0.03 sec
 Alpha|      Start 26: e1_aval_026
 Alpha|26/78 Test #26: e1_aval_026 ......................   Passed    0.03 sec
 Alpha|      Start 27: e1_aval_027
-Alpha|27/78 Test #27: e1_aval_027 ......................   Passed    0.04 sec
+Alpha|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
 Alpha|      Start 28: e1_aval_028
-Alpha|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
+Alpha|28/78 Test #28: e1_aval_028 ......................   Passed    0.04 sec
 Alpha|      Start 29: e1_aval_029
 Alpha|29/78 Test #29: e1_aval_029 ......................   Passed    0.03 sec
 Alpha|      Start 30: e1_aval_030
@@ -62,7 +62,7 @@ Alpha|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
 Alpha|      Start 31: e1_aval_031
 Alpha|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Alpha|      Start 32: e1_aval_032
-Alpha|32/78 Test #32: e1_aval_032 ......................   Passed    0.04 sec
+Alpha|32/78 Test #32: e1_aval_032 ......................   Passed    0.03 sec
 Alpha|      Start 33: e1_aval_033
 Alpha|33/78 Test #33: e1_aval_033 ......................   Passed    0.03 sec
 Alpha|      Start 34: e1_aval_034
@@ -72,7 +72,7 @@ Alpha|35/78 Test #35: e1_aval_035 ......................   Passed    0.03 sec
 Alpha|      Start 36: e1_aval_036
 Alpha|36/78 Test #36: e1_aval_036 ......................   Passed    0.03 sec
 Alpha|      Start 37: e1_aval_037
-Alpha|37/78 Test #37: e1_aval_037 ......................   Passed    0.03 sec
+Alpha|37/78 Test #37: e1_aval_037 ......................   Passed    0.04 sec
 Alpha|      Start 38: e1_aval_038
 Alpha|38/78 Test #38: e1_aval_038 ......................   Passed    0.03 sec
 Alpha|      Start 39: e1_aval_039
@@ -80,7 +80,7 @@ Alpha|39/78 Test #39: e1_aval_039 ......................   Passed    0.03 sec
 Alpha|      Start 40: e1_aval_040
 Alpha|40/78 Test #40: e1_aval_040 ......................   Passed    0.03 sec
 Alpha|      Start 41: e1_aval_041
-Alpha|41/78 Test #41: e1_aval_041 ......................   Passed    0.04 sec
+Alpha|41/78 Test #41: e1_aval_041 ......................   Passed    0.03 sec
 Alpha|      Start 42: e1_aval_042
 Alpha|42/78 Test #42: e1_aval_042 ......................   Passed    0.03 sec
 Alpha|      Start 43: e1_aval_043
@@ -112,11 +112,11 @@ Alpha|55/78 Test #55: e1_aval_055 ......................   Passed    0.03 sec
 Alpha|      Start 56: e1_aval_056
 Alpha|56/78 Test #56: e1_aval_056 ......................   Passed    0.03 sec
 Alpha|      Start 57: e1_aval_057
-Alpha|57/78 Test #57: e1_aval_057 ......................   Passed    0.04 sec
+Alpha|57/78 Test #57: e1_aval_057 ......................   Passed    0.03 sec
 Alpha|      Start 58: e1_aval_058
-Alpha|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
+Alpha|58/78 Test #58: e1_aval_058 ......................   Passed    0.04 sec
 Alpha|      Start 59: e1_aval_059
-Alpha|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
+Alpha|59/78 Test #59: e1_aval_059 ......................   Passed    0.04 sec
 Alpha|      Start 60: e1_aval_060
 Alpha|60/78 Test #60: e1_aval_060 ......................   Passed    0.03 sec
 Alpha|      Start 61: e1_aval_061
@@ -142,268 +142,184 @@ Alpha|70/78 Test #70: e1_aval_070 ......................   Passed    0.03 sec
 Alpha|      Start 71: e1_aval_071
 Alpha|71/78 Test #71: e1_aval_071 ......................   Passed    0.03 sec
 Alpha|      Start 72: e1_aval_072
-Alpha|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
+Alpha|72/78 Test #72: e1_aval_072 ......................   Passed    0.04 sec
 Alpha|      Start 73: e1_aval_073
 Alpha|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
 Alpha|      Start 74: e1_aval_074
-Alpha|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
+Alpha|74/78 Test #74: e1_aval_074 ......................   Passed    0.04 sec
 Alpha|      Start 75: e1_aval_075
-Alpha|75/78 Test #75: e1_aval_075 ......................   Passed    0.04 sec
+Alpha|75/78 Test #75: e1_aval_075 ......................   Passed    0.03 sec
 Alpha|      Start 76: e1_aval_076
 Alpha|76/78 Test #76: e1_aval_076 ......................   Passed    0.04 sec
 Alpha|      Start 77: e1_aval_077
-Alpha|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Alpha|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Alpha|      Start 78: e1_aval_078
-Alpha|78/78 Test #78: e1_aval_078 ......................***Failed    0.04 sec
+Alpha|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Alpha|
-Alpha|97% tests passed, 2 tests failed out of 78
+Alpha|100% tests passed, 0 tests failed out of 78
 Alpha|
-Alpha|Total Test time (real) =   2.39 sec
-Alpha|
-Alpha|The following tests FAILED:
-Alpha|	 77 - e1_aval_077 (Failed)
-Alpha|	 78 - e1_aval_078 (Failed)
+Alpha|Total Test time (real) =   2.38 sec
 Beta|Test project /home/schnorr/ensino/private/maio_e1/Beta-E1/b.e1.maio
 Beta|      Start  1: e1_aval_001
-Beta| 1/78 Test  #1: e1_aval_001 ......................***Failed    0.03 sec
+Beta| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
 Beta|      Start  2: e1_aval_002
-Beta| 2/78 Test  #2: e1_aval_002 ......................***Failed    0.03 sec
+Beta| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.03 sec
 Beta|      Start  3: e1_aval_003
-Beta| 3/78 Test  #3: e1_aval_003 ......................***Failed    0.03 sec
+Beta| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
 Beta|      Start  4: e1_aval_004
-Beta| 4/78 Test  #4: e1_aval_004 ......................***Failed    0.03 sec
+Beta| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
 Beta|      Start  5: e1_aval_005
-Beta| 5/78 Test  #5: e1_aval_005 ......................***Failed    0.04 sec
+Beta| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
 Beta|      Start  6: e1_aval_006
-Beta| 6/78 Test  #6: e1_aval_006 ......................***Failed    0.04 sec
+Beta| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
 Beta|      Start  7: e1_aval_007
-Beta| 7/78 Test  #7: e1_aval_007 ......................***Failed    0.03 sec
+Beta| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
 Beta|      Start  8: e1_aval_008
-Beta| 8/78 Test  #8: e1_aval_008 ......................***Failed    0.03 sec
+Beta| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
 Beta|      Start  9: e1_aval_009
-Beta| 9/78 Test  #9: e1_aval_009 ......................***Failed    0.03 sec
+Beta| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Beta|      Start 10: e1_aval_010
-Beta|10/78 Test #10: e1_aval_010 ......................***Failed    0.03 sec
+Beta|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
 Beta|      Start 11: e1_aval_011
-Beta|11/78 Test #11: e1_aval_011 ......................***Failed    0.03 sec
+Beta|11/78 Test #11: e1_aval_011 ......................   Passed    0.03 sec
 Beta|      Start 12: e1_aval_012
-Beta|12/78 Test #12: e1_aval_012 ......................***Failed    0.04 sec
+Beta|12/78 Test #12: e1_aval_012 ......................   Passed    0.03 sec
 Beta|      Start 13: e1_aval_013
-Beta|13/78 Test #13: e1_aval_013 ......................***Failed    0.03 sec
+Beta|13/78 Test #13: e1_aval_013 ......................   Passed    0.03 sec
 Beta|      Start 14: e1_aval_014
-Beta|14/78 Test #14: e1_aval_014 ......................***Failed    0.03 sec
+Beta|14/78 Test #14: e1_aval_014 ......................   Passed    0.03 sec
 Beta|      Start 15: e1_aval_015
-Beta|15/78 Test #15: e1_aval_015 ......................***Failed    0.03 sec
+Beta|15/78 Test #15: e1_aval_015 ......................   Passed    0.04 sec
 Beta|      Start 16: e1_aval_016
-Beta|16/78 Test #16: e1_aval_016 ......................***Failed    0.03 sec
+Beta|16/78 Test #16: e1_aval_016 ......................   Passed    0.03 sec
 Beta|      Start 17: e1_aval_017
-Beta|17/78 Test #17: e1_aval_017 ......................***Failed    0.03 sec
+Beta|17/78 Test #17: e1_aval_017 ......................   Passed    0.03 sec
 Beta|      Start 18: e1_aval_018
-Beta|18/78 Test #18: e1_aval_018 ......................***Failed    0.03 sec
+Beta|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
 Beta|      Start 19: e1_aval_019
-Beta|19/78 Test #19: e1_aval_019 ......................***Failed    0.03 sec
+Beta|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Beta|      Start 20: e1_aval_020
-Beta|20/78 Test #20: e1_aval_020 ......................***Failed    0.03 sec
+Beta|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
 Beta|      Start 21: e1_aval_021
-Beta|21/78 Test #21: e1_aval_021 ......................***Failed    0.03 sec
+Beta|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
 Beta|      Start 22: e1_aval_022
-Beta|22/78 Test #22: e1_aval_022 ......................***Failed    0.03 sec
+Beta|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Beta|      Start 23: e1_aval_023
-Beta|23/78 Test #23: e1_aval_023 ......................***Failed    0.03 sec
+Beta|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
 Beta|      Start 24: e1_aval_024
-Beta|24/78 Test #24: e1_aval_024 ......................***Failed    0.03 sec
+Beta|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
 Beta|      Start 25: e1_aval_025
-Beta|25/78 Test #25: e1_aval_025 ......................***Failed    0.04 sec
+Beta|25/78 Test #25: e1_aval_025 ......................   Passed    0.03 sec
 Beta|      Start 26: e1_aval_026
-Beta|26/78 Test #26: e1_aval_026 ......................***Failed    0.04 sec
+Beta|26/78 Test #26: e1_aval_026 ......................   Passed    0.03 sec
 Beta|      Start 27: e1_aval_027
-Beta|27/78 Test #27: e1_aval_027 ......................***Failed    0.03 sec
+Beta|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
 Beta|      Start 28: e1_aval_028
-Beta|28/78 Test #28: e1_aval_028 ......................***Failed    0.04 sec
+Beta|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
 Beta|      Start 29: e1_aval_029
-Beta|29/78 Test #29: e1_aval_029 ......................***Failed    0.03 sec
+Beta|29/78 Test #29: e1_aval_029 ......................   Passed    0.04 sec
 Beta|      Start 30: e1_aval_030
-Beta|30/78 Test #30: e1_aval_030 ......................***Failed    0.03 sec
+Beta|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
 Beta|      Start 31: e1_aval_031
-Beta|31/78 Test #31: e1_aval_031 ......................***Failed    0.03 sec
+Beta|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Beta|      Start 32: e1_aval_032
-Beta|32/78 Test #32: e1_aval_032 ......................***Failed    0.03 sec
+Beta|32/78 Test #32: e1_aval_032 ......................   Passed    0.03 sec
 Beta|      Start 33: e1_aval_033
-Beta|33/78 Test #33: e1_aval_033 ......................***Failed    0.03 sec
+Beta|33/78 Test #33: e1_aval_033 ......................   Passed    0.03 sec
 Beta|      Start 34: e1_aval_034
-Beta|34/78 Test #34: e1_aval_034 ......................***Failed    0.03 sec
+Beta|34/78 Test #34: e1_aval_034 ......................   Passed    0.03 sec
 Beta|      Start 35: e1_aval_035
-Beta|35/78 Test #35: e1_aval_035 ......................***Failed    0.03 sec
+Beta|35/78 Test #35: e1_aval_035 ......................   Passed    0.03 sec
 Beta|      Start 36: e1_aval_036
-Beta|36/78 Test #36: e1_aval_036 ......................***Failed    0.03 sec
+Beta|36/78 Test #36: e1_aval_036 ......................   Passed    0.03 sec
 Beta|      Start 37: e1_aval_037
-Beta|37/78 Test #37: e1_aval_037 ......................***Failed    0.03 sec
+Beta|37/78 Test #37: e1_aval_037 ......................   Passed    0.03 sec
 Beta|      Start 38: e1_aval_038
-Beta|38/78 Test #38: e1_aval_038 ......................***Failed    0.03 sec
+Beta|38/78 Test #38: e1_aval_038 ......................   Passed    0.03 sec
 Beta|      Start 39: e1_aval_039
-Beta|39/78 Test #39: e1_aval_039 ......................***Failed    0.03 sec
+Beta|39/78 Test #39: e1_aval_039 ......................   Passed    0.03 sec
 Beta|      Start 40: e1_aval_040
-Beta|40/78 Test #40: e1_aval_040 ......................***Failed    0.03 sec
+Beta|40/78 Test #40: e1_aval_040 ......................   Passed    0.03 sec
 Beta|      Start 41: e1_aval_041
-Beta|41/78 Test #41: e1_aval_041 ......................***Failed    0.03 sec
+Beta|41/78 Test #41: e1_aval_041 ......................   Passed    0.03 sec
 Beta|      Start 42: e1_aval_042
-Beta|42/78 Test #42: e1_aval_042 ......................***Failed    0.03 sec
+Beta|42/78 Test #42: e1_aval_042 ......................   Passed    0.03 sec
 Beta|      Start 43: e1_aval_043
-Beta|43/78 Test #43: e1_aval_043 ......................***Failed    0.03 sec
+Beta|43/78 Test #43: e1_aval_043 ......................   Passed    0.04 sec
 Beta|      Start 44: e1_aval_044
-Beta|44/78 Test #44: e1_aval_044 ......................***Failed    0.03 sec
+Beta|44/78 Test #44: e1_aval_044 ......................   Passed    0.03 sec
 Beta|      Start 45: e1_aval_045
-Beta|45/78 Test #45: e1_aval_045 ......................***Failed    0.03 sec
+Beta|45/78 Test #45: e1_aval_045 ......................   Passed    0.04 sec
 Beta|      Start 46: e1_aval_046
-Beta|46/78 Test #46: e1_aval_046 ......................***Failed    0.04 sec
+Beta|46/78 Test #46: e1_aval_046 ......................   Passed    0.04 sec
 Beta|      Start 47: e1_aval_047
-Beta|47/78 Test #47: e1_aval_047 ......................***Failed    0.04 sec
+Beta|47/78 Test #47: e1_aval_047 ......................   Passed    0.04 sec
 Beta|      Start 48: e1_aval_048
-Beta|48/78 Test #48: e1_aval_048 ......................***Failed    0.04 sec
+Beta|48/78 Test #48: e1_aval_048 ......................   Passed    0.03 sec
 Beta|      Start 49: e1_aval_049
-Beta|49/78 Test #49: e1_aval_049 ......................***Failed    0.03 sec
+Beta|49/78 Test #49: e1_aval_049 ......................   Passed    0.03 sec
 Beta|      Start 50: e1_aval_050
-Beta|50/78 Test #50: e1_aval_050 ......................***Failed    0.03 sec
+Beta|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
 Beta|      Start 51: e1_aval_051
-Beta|51/78 Test #51: e1_aval_051 ......................***Failed    0.03 sec
+Beta|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
 Beta|      Start 52: e1_aval_052
-Beta|52/78 Test #52: e1_aval_052 ......................***Failed    0.03 sec
+Beta|52/78 Test #52: e1_aval_052 ......................   Passed    0.03 sec
 Beta|      Start 53: e1_aval_053
-Beta|53/78 Test #53: e1_aval_053 ......................***Failed    0.03 sec
+Beta|53/78 Test #53: e1_aval_053 ......................   Passed    0.03 sec
 Beta|      Start 54: e1_aval_054
-Beta|54/78 Test #54: e1_aval_054 ......................***Failed    0.03 sec
+Beta|54/78 Test #54: e1_aval_054 ......................   Passed    0.03 sec
 Beta|      Start 55: e1_aval_055
-Beta|55/78 Test #55: e1_aval_055 ......................***Failed    0.03 sec
+Beta|55/78 Test #55: e1_aval_055 ......................   Passed    0.03 sec
 Beta|      Start 56: e1_aval_056
-Beta|56/78 Test #56: e1_aval_056 ......................***Failed    0.03 sec
+Beta|56/78 Test #56: e1_aval_056 ......................   Passed    0.03 sec
 Beta|      Start 57: e1_aval_057
-Beta|57/78 Test #57: e1_aval_057 ......................***Failed    0.03 sec
+Beta|57/78 Test #57: e1_aval_057 ......................   Passed    0.03 sec
 Beta|      Start 58: e1_aval_058
-Beta|58/78 Test #58: e1_aval_058 ......................***Failed    0.03 sec
+Beta|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
 Beta|      Start 59: e1_aval_059
-Beta|59/78 Test #59: e1_aval_059 ......................***Failed    0.03 sec
+Beta|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
 Beta|      Start 60: e1_aval_060
-Beta|60/78 Test #60: e1_aval_060 ......................***Failed    0.04 sec
+Beta|60/78 Test #60: e1_aval_060 ......................   Passed    0.03 sec
 Beta|      Start 61: e1_aval_061
-Beta|61/78 Test #61: e1_aval_061 ......................***Failed    0.03 sec
+Beta|61/78 Test #61: e1_aval_061 ......................   Passed    0.04 sec
 Beta|      Start 62: e1_aval_062
-Beta|62/78 Test #62: e1_aval_062 ......................***Failed    0.03 sec
+Beta|62/78 Test #62: e1_aval_062 ......................   Passed    0.04 sec
 Beta|      Start 63: e1_aval_063
-Beta|63/78 Test #63: e1_aval_063 ......................***Failed    0.03 sec
+Beta|63/78 Test #63: e1_aval_063 ......................   Passed    0.03 sec
 Beta|      Start 64: e1_aval_064
-Beta|64/78 Test #64: e1_aval_064 ......................***Failed    0.03 sec
+Beta|64/78 Test #64: e1_aval_064 ......................   Passed    0.03 sec
 Beta|      Start 65: e1_aval_065
-Beta|65/78 Test #65: e1_aval_065 ......................***Failed    0.03 sec
+Beta|65/78 Test #65: e1_aval_065 ......................   Passed    0.03 sec
 Beta|      Start 66: e1_aval_066
-Beta|66/78 Test #66: e1_aval_066 ......................***Failed    0.04 sec
+Beta|66/78 Test #66: e1_aval_066 ......................   Passed    0.03 sec
 Beta|      Start 67: e1_aval_067
-Beta|67/78 Test #67: e1_aval_067 ......................***Failed    0.03 sec
+Beta|67/78 Test #67: e1_aval_067 ......................   Passed    0.04 sec
 Beta|      Start 68: e1_aval_068
-Beta|68/78 Test #68: e1_aval_068 ......................***Failed    0.03 sec
+Beta|68/78 Test #68: e1_aval_068 ......................   Passed    0.03 sec
 Beta|      Start 69: e1_aval_069
-Beta|69/78 Test #69: e1_aval_069 ......................***Failed    0.04 sec
+Beta|69/78 Test #69: e1_aval_069 ......................   Passed    0.03 sec
 Beta|      Start 70: e1_aval_070
-Beta|70/78 Test #70: e1_aval_070 ......................***Failed    0.03 sec
+Beta|70/78 Test #70: e1_aval_070 ......................   Passed    0.04 sec
 Beta|      Start 71: e1_aval_071
-Beta|71/78 Test #71: e1_aval_071 ......................***Failed    0.03 sec
+Beta|71/78 Test #71: e1_aval_071 ......................   Passed    0.03 sec
 Beta|      Start 72: e1_aval_072
-Beta|72/78 Test #72: e1_aval_072 ......................***Failed    0.03 sec
+Beta|72/78 Test #72: e1_aval_072 ......................   Passed    0.04 sec
 Beta|      Start 73: e1_aval_073
-Beta|73/78 Test #73: e1_aval_073 ......................***Failed    0.04 sec
+Beta|73/78 Test #73: e1_aval_073 ......................   Passed    0.04 sec
 Beta|      Start 74: e1_aval_074
-Beta|74/78 Test #74: e1_aval_074 ......................***Failed    0.03 sec
+Beta|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Beta|      Start 75: e1_aval_075
-Beta|75/78 Test #75: e1_aval_075 ......................***Failed    0.03 sec
+Beta|75/78 Test #75: e1_aval_075 ......................   Passed    0.03 sec
 Beta|      Start 76: e1_aval_076
-Beta|76/78 Test #76: e1_aval_076 ......................***Failed    0.03 sec
+Beta|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
 Beta|      Start 77: e1_aval_077
-Beta|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Beta|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Beta|      Start 78: e1_aval_078
-Beta|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Beta|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Beta|
-Beta|0% tests passed, 78 tests failed out of 78
+Beta|100% tests passed, 0 tests failed out of 78
 Beta|
-Beta|Total Test time (real) =   2.37 sec
-Beta|
-Beta|The following tests FAILED:
-Beta|	  1 - e1_aval_001 (Failed)
-Beta|	  2 - e1_aval_002 (Failed)
-Beta|	  3 - e1_aval_003 (Failed)
-Beta|	  4 - e1_aval_004 (Failed)
-Beta|	  5 - e1_aval_005 (Failed)
-Beta|	  6 - e1_aval_006 (Failed)
-Beta|	  7 - e1_aval_007 (Failed)
-Beta|	  8 - e1_aval_008 (Failed)
-Beta|	  9 - e1_aval_009 (Failed)
-Beta|	 10 - e1_aval_010 (Failed)
-Beta|	 11 - e1_aval_011 (Failed)
-Beta|	 12 - e1_aval_012 (Failed)
-Beta|	 13 - e1_aval_013 (Failed)
-Beta|	 14 - e1_aval_014 (Failed)
-Beta|	 15 - e1_aval_015 (Failed)
-Beta|	 16 - e1_aval_016 (Failed)
-Beta|	 17 - e1_aval_017 (Failed)
-Beta|	 18 - e1_aval_018 (Failed)
-Beta|	 19 - e1_aval_019 (Failed)
-Beta|	 20 - e1_aval_020 (Failed)
-Beta|	 21 - e1_aval_021 (Failed)
-Beta|	 22 - e1_aval_022 (Failed)
-Beta|	 23 - e1_aval_023 (Failed)
-Beta|	 24 - e1_aval_024 (Failed)
-Beta|	 25 - e1_aval_025 (Failed)
-Beta|	 26 - e1_aval_026 (Failed)
-Beta|	 27 - e1_aval_027 (Failed)
-Beta|	 28 - e1_aval_028 (Failed)
-Beta|	 29 - e1_aval_029 (Failed)
-Beta|	 30 - e1_aval_030 (Failed)
-Beta|	 31 - e1_aval_031 (Failed)
-Beta|	 32 - e1_aval_032 (Failed)
-Beta|	 33 - e1_aval_033 (Failed)
-Beta|	 34 - e1_aval_034 (Failed)
-Beta|	 35 - e1_aval_035 (Failed)
-Beta|	 36 - e1_aval_036 (Failed)
-Beta|	 37 - e1_aval_037 (Failed)
-Beta|	 38 - e1_aval_038 (Failed)
-Beta|	 39 - e1_aval_039 (Failed)
-Beta|	 40 - e1_aval_040 (Failed)
-Beta|	 41 - e1_aval_041 (Failed)
-Beta|	 42 - e1_aval_042 (Failed)
-Beta|	 43 - e1_aval_043 (Failed)
-Beta|	 44 - e1_aval_044 (Failed)
-Beta|	 45 - e1_aval_045 (Failed)
-Beta|	 46 - e1_aval_046 (Failed)
-Beta|	 47 - e1_aval_047 (Failed)
-Beta|	 48 - e1_aval_048 (Failed)
-Beta|	 49 - e1_aval_049 (Failed)
-Beta|	 50 - e1_aval_050 (Failed)
-Beta|	 51 - e1_aval_051 (Failed)
-Beta|	 52 - e1_aval_052 (Failed)
-Beta|	 53 - e1_aval_053 (Failed)
-Beta|	 54 - e1_aval_054 (Failed)
-Beta|	 55 - e1_aval_055 (Failed)
-Beta|	 56 - e1_aval_056 (Failed)
-Beta|	 57 - e1_aval_057 (Failed)
-Beta|	 58 - e1_aval_058 (Failed)
-Beta|	 59 - e1_aval_059 (Failed)
-Beta|	 60 - e1_aval_060 (Failed)
-Beta|	 61 - e1_aval_061 (Failed)
-Beta|	 62 - e1_aval_062 (Failed)
-Beta|	 63 - e1_aval_063 (Failed)
-Beta|	 64 - e1_aval_064 (Failed)
-Beta|	 65 - e1_aval_065 (Failed)
-Beta|	 66 - e1_aval_066 (Failed)
-Beta|	 67 - e1_aval_067 (Failed)
-Beta|	 68 - e1_aval_068 (Failed)
-Beta|	 69 - e1_aval_069 (Failed)
-Beta|	 70 - e1_aval_070 (Failed)
-Beta|	 71 - e1_aval_071 (Failed)
-Beta|	 72 - e1_aval_072 (Failed)
-Beta|	 73 - e1_aval_073 (Failed)
-Beta|	 74 - e1_aval_074 (Failed)
-Beta|	 75 - e1_aval_075 (Failed)
-Beta|	 76 - e1_aval_076 (Failed)
-Beta|	 77 - e1_aval_077 (Failed)
-Beta|	 78 - e1_aval_078 (Failed)
+Beta|Total Test time (real) =   2.44 sec
 Delta|Test project /home/schnorr/ensino/private/maio_e1/Delta-E1/b.e1.maio
 Delta|      Start  1: e1_aval_001
 Delta| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.04 sec
@@ -414,15 +330,15 @@ Delta| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
 Delta|      Start  4: e1_aval_004
 Delta| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
 Delta|      Start  5: e1_aval_005
-Delta| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.04 sec
+Delta| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
 Delta|      Start  6: e1_aval_006
 Delta| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
 Delta|      Start  7: e1_aval_007
 Delta| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
 Delta|      Start  8: e1_aval_008
-Delta| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.04 sec
+Delta| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
 Delta|      Start  9: e1_aval_009
-Delta| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.04 sec
+Delta| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Delta|      Start 10: e1_aval_010
 Delta|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
 Delta|      Start 11: e1_aval_011
@@ -434,23 +350,23 @@ Delta|13/78 Test #13: e1_aval_013 ......................   Passed    0.03 sec
 Delta|      Start 14: e1_aval_014
 Delta|14/78 Test #14: e1_aval_014 ......................   Passed    0.03 sec
 Delta|      Start 15: e1_aval_015
-Delta|15/78 Test #15: e1_aval_015 ......................   Passed    0.03 sec
+Delta|15/78 Test #15: e1_aval_015 ......................   Passed    0.04 sec
 Delta|      Start 16: e1_aval_016
 Delta|16/78 Test #16: e1_aval_016 ......................   Passed    0.03 sec
 Delta|      Start 17: e1_aval_017
 Delta|17/78 Test #17: e1_aval_017 ......................   Passed    0.03 sec
 Delta|      Start 18: e1_aval_018
-Delta|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
+Delta|18/78 Test #18: e1_aval_018 ......................   Passed    0.04 sec
 Delta|      Start 19: e1_aval_019
-Delta|19/78 Test #19: e1_aval_019 ......................   Passed    0.04 sec
+Delta|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Delta|      Start 20: e1_aval_020
-Delta|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
+Delta|20/78 Test #20: e1_aval_020 ......................   Passed    0.04 sec
 Delta|      Start 21: e1_aval_021
 Delta|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
 Delta|      Start 22: e1_aval_022
 Delta|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Delta|      Start 23: e1_aval_023
-Delta|23/78 Test #23: e1_aval_023 ......................   Passed    0.04 sec
+Delta|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
 Delta|      Start 24: e1_aval_024
 Delta|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
 Delta|      Start 25: e1_aval_025
@@ -460,19 +376,19 @@ Delta|26/78 Test #26: e1_aval_026 ......................   Passed    0.03 sec
 Delta|      Start 27: e1_aval_027
 Delta|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
 Delta|      Start 28: e1_aval_028
-Delta|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
+Delta|28/78 Test #28: e1_aval_028 ......................   Passed    0.04 sec
 Delta|      Start 29: e1_aval_029
-Delta|29/78 Test #29: e1_aval_029 ......................   Passed    0.03 sec
+Delta|29/78 Test #29: e1_aval_029 ......................   Passed    0.04 sec
 Delta|      Start 30: e1_aval_030
-Delta|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
+Delta|30/78 Test #30: e1_aval_030 ......................   Passed    0.04 sec
 Delta|      Start 31: e1_aval_031
 Delta|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Delta|      Start 32: e1_aval_032
-Delta|32/78 Test #32: e1_aval_032 ......................   Passed    0.03 sec
+Delta|32/78 Test #32: e1_aval_032 ......................   Passed    0.04 sec
 Delta|      Start 33: e1_aval_033
 Delta|33/78 Test #33: e1_aval_033 ......................   Passed    0.03 sec
 Delta|      Start 34: e1_aval_034
-Delta|34/78 Test #34: e1_aval_034 ......................   Passed    0.04 sec
+Delta|34/78 Test #34: e1_aval_034 ......................   Passed    0.03 sec
 Delta|      Start 35: e1_aval_035
 Delta|35/78 Test #35: e1_aval_035 ......................   Passed    0.03 sec
 Delta|      Start 36: e1_aval_036
@@ -480,19 +396,19 @@ Delta|36/78 Test #36: e1_aval_036 ......................   Passed    0.03 sec
 Delta|      Start 37: e1_aval_037
 Delta|37/78 Test #37: e1_aval_037 ......................   Passed    0.03 sec
 Delta|      Start 38: e1_aval_038
-Delta|38/78 Test #38: e1_aval_038 ......................   Passed    0.03 sec
+Delta|38/78 Test #38: e1_aval_038 ......................   Passed    0.04 sec
 Delta|      Start 39: e1_aval_039
 Delta|39/78 Test #39: e1_aval_039 ......................   Passed    0.03 sec
 Delta|      Start 40: e1_aval_040
 Delta|40/78 Test #40: e1_aval_040 ......................   Passed    0.03 sec
 Delta|      Start 41: e1_aval_041
-Delta|41/78 Test #41: e1_aval_041 ......................   Passed    0.04 sec
+Delta|41/78 Test #41: e1_aval_041 ......................   Passed    0.03 sec
 Delta|      Start 42: e1_aval_042
-Delta|42/78 Test #42: e1_aval_042 ......................   Passed    0.04 sec
+Delta|42/78 Test #42: e1_aval_042 ......................   Passed    0.03 sec
 Delta|      Start 43: e1_aval_043
 Delta|43/78 Test #43: e1_aval_043 ......................   Passed    0.03 sec
 Delta|      Start 44: e1_aval_044
-Delta|44/78 Test #44: e1_aval_044 ......................   Passed    0.04 sec
+Delta|44/78 Test #44: e1_aval_044 ......................   Passed    0.03 sec
 Delta|      Start 45: e1_aval_045
 Delta|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
 Delta|      Start 46: e1_aval_046
@@ -504,13 +420,13 @@ Delta|48/78 Test #48: e1_aval_048 ......................   Passed    0.03 sec
 Delta|      Start 49: e1_aval_049
 Delta|49/78 Test #49: e1_aval_049 ......................   Passed    0.03 sec
 Delta|      Start 50: e1_aval_050
-Delta|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
+Delta|50/78 Test #50: e1_aval_050 ......................   Passed    0.04 sec
 Delta|      Start 51: e1_aval_051
 Delta|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
 Delta|      Start 52: e1_aval_052
 Delta|52/78 Test #52: e1_aval_052 ......................   Passed    0.03 sec
 Delta|      Start 53: e1_aval_053
-Delta|53/78 Test #53: e1_aval_053 ......................   Passed    0.04 sec
+Delta|53/78 Test #53: e1_aval_053 ......................   Passed    0.03 sec
 Delta|      Start 54: e1_aval_054
 Delta|54/78 Test #54: e1_aval_054 ......................   Passed    0.03 sec
 Delta|      Start 55: e1_aval_055
@@ -520,7 +436,7 @@ Delta|56/78 Test #56: e1_aval_056 ......................   Passed    0.03 sec
 Delta|      Start 57: e1_aval_057
 Delta|57/78 Test #57: e1_aval_057 ......................   Passed    0.03 sec
 Delta|      Start 58: e1_aval_058
-Delta|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
+Delta|58/78 Test #58: e1_aval_058 ......................   Passed    0.04 sec
 Delta|      Start 59: e1_aval_059
 Delta|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
 Delta|      Start 60: e1_aval_060
@@ -532,7 +448,7 @@ Delta|62/78 Test #62: e1_aval_062 ......................   Passed    0.03 sec
 Delta|      Start 63: e1_aval_063
 Delta|63/78 Test #63: e1_aval_063 ......................   Passed    0.03 sec
 Delta|      Start 64: e1_aval_064
-Delta|64/78 Test #64: e1_aval_064 ......................   Passed    0.03 sec
+Delta|64/78 Test #64: e1_aval_064 ......................   Passed    0.04 sec
 Delta|      Start 65: e1_aval_065
 Delta|65/78 Test #65: e1_aval_065 ......................   Passed    0.03 sec
 Delta|      Start 66: e1_aval_066
@@ -548,9 +464,9 @@ Delta|70/78 Test #70: e1_aval_070 ......................   Passed    0.03 sec
 Delta|      Start 71: e1_aval_071
 Delta|71/78 Test #71: e1_aval_071 ......................   Passed    0.03 sec
 Delta|      Start 72: e1_aval_072
-Delta|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
+Delta|72/78 Test #72: e1_aval_072 ......................   Passed    0.04 sec
 Delta|      Start 73: e1_aval_073
-Delta|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
+Delta|73/78 Test #73: e1_aval_073 ......................   Passed    0.04 sec
 Delta|      Start 74: e1_aval_074
 Delta|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Delta|      Start 75: e1_aval_075
@@ -564,22 +480,22 @@ Delta|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
 Delta|
 Delta|97% tests passed, 2 tests failed out of 78
 Delta|
-Delta|Total Test time (real) =   2.36 sec
+Delta|Total Test time (real) =   2.42 sec
 Delta|
 Delta|The following tests FAILED:
 Delta|	 77 - e1_aval_077 (Failed)
 Delta|	 78 - e1_aval_078 (Failed)
 Epsilon|Test project /home/schnorr/ensino/private/maio_e1/Epsilon-E1/b.e1.maio
 Epsilon|      Start  1: e1_aval_001
-Epsilon| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
+Epsilon| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.04 sec
 Epsilon|      Start  2: e1_aval_002
-Epsilon| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.03 sec
+Epsilon| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.04 sec
 Epsilon|      Start  3: e1_aval_003
-Epsilon| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
+Epsilon| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.04 sec
 Epsilon|      Start  4: e1_aval_004
-Epsilon| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
+Epsilon| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.04 sec
 Epsilon|      Start  5: e1_aval_005
-Epsilon| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
+Epsilon| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.04 sec
 Epsilon|      Start  6: e1_aval_006
 Epsilon| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
 Epsilon|      Start  7: e1_aval_007
@@ -589,11 +505,11 @@ Epsilon| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
 Epsilon|      Start  9: e1_aval_009
 Epsilon| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Epsilon|      Start 10: e1_aval_010
-Epsilon|10/78 Test #10: e1_aval_010 ......................   Passed    0.04 sec
+Epsilon|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
 Epsilon|      Start 11: e1_aval_011
-Epsilon|11/78 Test #11: e1_aval_011 ......................   Passed    0.04 sec
+Epsilon|11/78 Test #11: e1_aval_011 ......................   Passed    0.03 sec
 Epsilon|      Start 12: e1_aval_012
-Epsilon|12/78 Test #12: e1_aval_012 ......................   Passed    0.04 sec
+Epsilon|12/78 Test #12: e1_aval_012 ......................   Passed    0.03 sec
 Epsilon|      Start 13: e1_aval_013
 Epsilon|13/78 Test #13: e1_aval_013 ......................   Passed    0.03 sec
 Epsilon|      Start 14: e1_aval_014
@@ -609,7 +525,7 @@ Epsilon|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
 Epsilon|      Start 19: e1_aval_019
 Epsilon|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Epsilon|      Start 20: e1_aval_020
-Epsilon|20/78 Test #20: e1_aval_020 ......................   Passed    0.04 sec
+Epsilon|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
 Epsilon|      Start 21: e1_aval_021
 Epsilon|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
 Epsilon|      Start 22: e1_aval_022
@@ -617,11 +533,11 @@ Epsilon|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Epsilon|      Start 23: e1_aval_023
 Epsilon|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
 Epsilon|      Start 24: e1_aval_024
-Epsilon|24/78 Test #24: e1_aval_024 ......................   Passed    0.04 sec
+Epsilon|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
 Epsilon|      Start 25: e1_aval_025
-Epsilon|25/78 Test #25: e1_aval_025 ......................   Passed    0.03 sec
+Epsilon|25/78 Test #25: e1_aval_025 ......................   Passed    0.04 sec
 Epsilon|      Start 26: e1_aval_026
-Epsilon|26/78 Test #26: e1_aval_026 ......................   Passed    0.04 sec
+Epsilon|26/78 Test #26: e1_aval_026 ......................   Passed    0.03 sec
 Epsilon|      Start 27: e1_aval_027
 Epsilon|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
 Epsilon|      Start 28: e1_aval_028
@@ -631,9 +547,9 @@ Epsilon|29/78 Test #29: e1_aval_029 ......................   Passed    0.03 sec
 Epsilon|      Start 30: e1_aval_030
 Epsilon|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
 Epsilon|      Start 31: e1_aval_031
-Epsilon|31/78 Test #31: e1_aval_031 ......................   Passed    0.04 sec
+Epsilon|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Epsilon|      Start 32: e1_aval_032
-Epsilon|32/78 Test #32: e1_aval_032 ......................   Passed    0.04 sec
+Epsilon|32/78 Test #32: e1_aval_032 ......................   Passed    0.03 sec
 Epsilon|      Start 33: e1_aval_033
 Epsilon|33/78 Test #33: e1_aval_033 ......................   Passed    0.03 sec
 Epsilon|      Start 34: e1_aval_034
@@ -643,9 +559,9 @@ Epsilon|35/78 Test #35: e1_aval_035 ......................   Passed    0.03 sec
 Epsilon|      Start 36: e1_aval_036
 Epsilon|36/78 Test #36: e1_aval_036 ......................   Passed    0.03 sec
 Epsilon|      Start 37: e1_aval_037
-Epsilon|37/78 Test #37: e1_aval_037 ......................   Passed    0.04 sec
+Epsilon|37/78 Test #37: e1_aval_037 ......................   Passed    0.03 sec
 Epsilon|      Start 38: e1_aval_038
-Epsilon|38/78 Test #38: e1_aval_038 ......................   Passed    0.03 sec
+Epsilon|38/78 Test #38: e1_aval_038 ......................   Passed    0.04 sec
 Epsilon|      Start 39: e1_aval_039
 Epsilon|39/78 Test #39: e1_aval_039 ......................   Passed    0.03 sec
 Epsilon|      Start 40: e1_aval_040
@@ -657,7 +573,7 @@ Epsilon|42/78 Test #42: e1_aval_042 ......................   Passed    0.03 sec
 Epsilon|      Start 43: e1_aval_043
 Epsilon|43/78 Test #43: e1_aval_043 ......................   Passed    0.03 sec
 Epsilon|      Start 44: e1_aval_044
-Epsilon|44/78 Test #44: e1_aval_044 ......................   Passed    0.03 sec
+Epsilon|44/78 Test #44: e1_aval_044 ......................   Passed    0.04 sec
 Epsilon|      Start 45: e1_aval_045
 Epsilon|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
 Epsilon|      Start 46: e1_aval_046
@@ -667,11 +583,11 @@ Epsilon|47/78 Test #47: e1_aval_047 ......................   Passed    0.03 sec
 Epsilon|      Start 48: e1_aval_048
 Epsilon|48/78 Test #48: e1_aval_048 ......................   Passed    0.03 sec
 Epsilon|      Start 49: e1_aval_049
-Epsilon|49/78 Test #49: e1_aval_049 ......................   Passed    0.04 sec
+Epsilon|49/78 Test #49: e1_aval_049 ......................   Passed    0.03 sec
 Epsilon|      Start 50: e1_aval_050
 Epsilon|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
 Epsilon|      Start 51: e1_aval_051
-Epsilon|51/78 Test #51: e1_aval_051 ......................   Passed    0.04 sec
+Epsilon|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
 Epsilon|      Start 52: e1_aval_052
 Epsilon|52/78 Test #52: e1_aval_052 ......................   Passed    0.03 sec
 Epsilon|      Start 53: e1_aval_053
@@ -679,11 +595,11 @@ Epsilon|53/78 Test #53: e1_aval_053 ......................   Passed    0.03 sec
 Epsilon|      Start 54: e1_aval_054
 Epsilon|54/78 Test #54: e1_aval_054 ......................   Passed    0.03 sec
 Epsilon|      Start 55: e1_aval_055
-Epsilon|55/78 Test #55: e1_aval_055 ......................   Passed    0.04 sec
+Epsilon|55/78 Test #55: e1_aval_055 ......................   Passed    0.03 sec
 Epsilon|      Start 56: e1_aval_056
 Epsilon|56/78 Test #56: e1_aval_056 ......................   Passed    0.03 sec
 Epsilon|      Start 57: e1_aval_057
-Epsilon|57/78 Test #57: e1_aval_057 ......................   Passed    0.04 sec
+Epsilon|57/78 Test #57: e1_aval_057 ......................   Passed    0.03 sec
 Epsilon|      Start 58: e1_aval_058
 Epsilon|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
 Epsilon|      Start 59: e1_aval_059
@@ -699,7 +615,7 @@ Epsilon|63/78 Test #63: e1_aval_063 ......................   Passed    0.03 sec
 Epsilon|      Start 64: e1_aval_064
 Epsilon|64/78 Test #64: e1_aval_064 ......................   Passed    0.03 sec
 Epsilon|      Start 65: e1_aval_065
-Epsilon|65/78 Test #65: e1_aval_065 ......................   Passed    0.03 sec
+Epsilon|65/78 Test #65: e1_aval_065 ......................   Passed    0.04 sec
 Epsilon|      Start 66: e1_aval_066
 Epsilon|66/78 Test #66: e1_aval_066 ......................   Passed    0.03 sec
 Epsilon|      Start 67: e1_aval_067
@@ -721,19 +637,15 @@ Epsilon|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Epsilon|      Start 75: e1_aval_075
 Epsilon|75/78 Test #75: e1_aval_075 ......................   Passed    0.04 sec
 Epsilon|      Start 76: e1_aval_076
-Epsilon|76/78 Test #76: e1_aval_076 ......................   Passed    0.04 sec
+Epsilon|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
 Epsilon|      Start 77: e1_aval_077
-Epsilon|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Epsilon|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Epsilon|      Start 78: e1_aval_078
-Epsilon|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Epsilon|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Epsilon|
-Epsilon|97% tests passed, 2 tests failed out of 78
+Epsilon|100% tests passed, 0 tests failed out of 78
 Epsilon|
-Epsilon|Total Test time (real) =   2.42 sec
-Epsilon|
-Epsilon|The following tests FAILED:
-Epsilon|	 77 - e1_aval_077 (Failed)
-Epsilon|	 78 - e1_aval_078 (Failed)
+Epsilon|Total Test time (real) =   2.41 sec
 Gamma|Test project /home/schnorr/ensino/private/maio_e1/Gamma-E1/b.e1.maio
 Gamma|      Start  1: e1_aval_001
 Gamma| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
@@ -750,7 +662,7 @@ Gamma| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
 Gamma|      Start  7: e1_aval_007
 Gamma| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
 Gamma|      Start  8: e1_aval_008
-Gamma| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.04 sec
+Gamma| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
 Gamma|      Start  9: e1_aval_009
 Gamma| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Gamma|      Start 10: e1_aval_010
@@ -794,15 +706,15 @@ Gamma|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
 Gamma|      Start 29: e1_aval_029
 Gamma|29/78 Test #29: e1_aval_029 ......................   Passed    0.03 sec
 Gamma|      Start 30: e1_aval_030
-Gamma|30/78 Test #30: e1_aval_030 ......................   Passed    0.04 sec
+Gamma|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
 Gamma|      Start 31: e1_aval_031
 Gamma|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Gamma|      Start 32: e1_aval_032
 Gamma|32/78 Test #32: e1_aval_032 ......................   Passed    0.03 sec
 Gamma|      Start 33: e1_aval_033
-Gamma|33/78 Test #33: e1_aval_033 ......................   Passed    0.03 sec
+Gamma|33/78 Test #33: e1_aval_033 ......................   Passed    0.04 sec
 Gamma|      Start 34: e1_aval_034
-Gamma|34/78 Test #34: e1_aval_034 ......................   Passed    0.03 sec
+Gamma|34/78 Test #34: e1_aval_034 ......................   Passed    0.04 sec
 Gamma|      Start 35: e1_aval_035
 Gamma|35/78 Test #35: e1_aval_035 ......................   Passed    0.03 sec
 Gamma|      Start 36: e1_aval_036
@@ -846,7 +758,7 @@ Gamma|54/78 Test #54: e1_aval_054 ......................   Passed    0.03 sec
 Gamma|      Start 55: e1_aval_055
 Gamma|55/78 Test #55: e1_aval_055 ......................   Passed    0.03 sec
 Gamma|      Start 56: e1_aval_056
-Gamma|56/78 Test #56: e1_aval_056 ......................   Passed    0.03 sec
+Gamma|56/78 Test #56: e1_aval_056 ......................   Passed    0.04 sec
 Gamma|      Start 57: e1_aval_057
 Gamma|57/78 Test #57: e1_aval_057 ......................   Passed    0.03 sec
 Gamma|      Start 58: e1_aval_058
@@ -854,21 +766,21 @@ Gamma|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
 Gamma|      Start 59: e1_aval_059
 Gamma|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
 Gamma|      Start 60: e1_aval_060
-Gamma|60/78 Test #60: e1_aval_060 ......................   Passed    0.04 sec
+Gamma|60/78 Test #60: e1_aval_060 ......................   Passed    0.03 sec
 Gamma|      Start 61: e1_aval_061
-Gamma|61/78 Test #61: e1_aval_061 ......................   Passed    0.03 sec
+Gamma|61/78 Test #61: e1_aval_061 ......................   Passed    0.04 sec
 Gamma|      Start 62: e1_aval_062
-Gamma|62/78 Test #62: e1_aval_062 ......................   Passed    0.04 sec
+Gamma|62/78 Test #62: e1_aval_062 ......................   Passed    0.03 sec
 Gamma|      Start 63: e1_aval_063
 Gamma|63/78 Test #63: e1_aval_063 ......................   Passed    0.03 sec
 Gamma|      Start 64: e1_aval_064
 Gamma|64/78 Test #64: e1_aval_064 ......................   Passed    0.03 sec
 Gamma|      Start 65: e1_aval_065
-Gamma|65/78 Test #65: e1_aval_065 ......................   Passed    0.04 sec
+Gamma|65/78 Test #65: e1_aval_065 ......................   Passed    0.03 sec
 Gamma|      Start 66: e1_aval_066
 Gamma|66/78 Test #66: e1_aval_066 ......................   Passed    0.03 sec
 Gamma|      Start 67: e1_aval_067
-Gamma|67/78 Test #67: e1_aval_067 ......................   Passed    0.03 sec
+Gamma|67/78 Test #67: e1_aval_067 ......................   Passed    0.04 sec
 Gamma|      Start 68: e1_aval_068
 Gamma|68/78 Test #68: e1_aval_068 ......................   Passed    0.03 sec
 Gamma|      Start 69: e1_aval_069
@@ -886,19 +798,15 @@ Gamma|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Gamma|      Start 75: e1_aval_075
 Gamma|75/78 Test #75: e1_aval_075 ......................   Passed    0.03 sec
 Gamma|      Start 76: e1_aval_076
-Gamma|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
+Gamma|76/78 Test #76: e1_aval_076 ......................   Passed    0.04 sec
 Gamma|      Start 77: e1_aval_077
-Gamma|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Gamma|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Gamma|      Start 78: e1_aval_078
-Gamma|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Gamma|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Gamma|
-Gamma|97% tests passed, 2 tests failed out of 78
+Gamma|100% tests passed, 0 tests failed out of 78
 Gamma|
-Gamma|Total Test time (real) =   2.36 sec
-Gamma|
-Gamma|The following tests FAILED:
-Gamma|	 77 - e1_aval_077 (Failed)
-Gamma|	 78 - e1_aval_078 (Failed)
+Gamma|Total Test time (real) =   2.35 sec
 Kappa|Test project /home/schnorr/ensino/private/maio_e1/Kappa-E1/b.e1.maio
 Kappa|      Start  1: e1_aval_001
 Kappa| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
@@ -909,7 +817,7 @@ Kappa| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
 Kappa|      Start  4: e1_aval_004
 Kappa| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
 Kappa|      Start  5: e1_aval_005
-Kappa| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
+Kappa| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.04 sec
 Kappa|      Start  6: e1_aval_006
 Kappa| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
 Kappa|      Start  7: e1_aval_007
@@ -923,13 +831,13 @@ Kappa|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
 Kappa|      Start 11: e1_aval_011
 Kappa|11/78 Test #11: e1_aval_011 ......................   Passed    0.03 sec
 Kappa|      Start 12: e1_aval_012
-Kappa|12/78 Test #12: e1_aval_012 ......................   Passed    0.03 sec
+Kappa|12/78 Test #12: e1_aval_012 ......................   Passed    0.04 sec
 Kappa|      Start 13: e1_aval_013
-Kappa|13/78 Test #13: e1_aval_013 ......................   Passed    0.04 sec
+Kappa|13/78 Test #13: e1_aval_013 ......................   Passed    0.03 sec
 Kappa|      Start 14: e1_aval_014
 Kappa|14/78 Test #14: e1_aval_014 ......................   Passed    0.03 sec
 Kappa|      Start 15: e1_aval_015
-Kappa|15/78 Test #15: e1_aval_015 ......................   Passed    0.04 sec
+Kappa|15/78 Test #15: e1_aval_015 ......................   Passed    0.03 sec
 Kappa|      Start 16: e1_aval_016
 Kappa|16/78 Test #16: e1_aval_016 ......................   Passed    0.03 sec
 Kappa|      Start 17: e1_aval_017
@@ -937,7 +845,7 @@ Kappa|17/78 Test #17: e1_aval_017 ......................   Passed    0.03 sec
 Kappa|      Start 18: e1_aval_018
 Kappa|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
 Kappa|      Start 19: e1_aval_019
-Kappa|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
+Kappa|19/78 Test #19: e1_aval_019 ......................   Passed    0.04 sec
 Kappa|      Start 20: e1_aval_020
 Kappa|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
 Kappa|      Start 21: e1_aval_021
@@ -947,35 +855,35 @@ Kappa|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Kappa|      Start 23: e1_aval_023
 Kappa|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
 Kappa|      Start 24: e1_aval_024
-Kappa|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
+Kappa|24/78 Test #24: e1_aval_024 ......................   Passed    0.04 sec
 Kappa|      Start 25: e1_aval_025
 Kappa|25/78 Test #25: e1_aval_025 ......................   Passed    0.03 sec
 Kappa|      Start 26: e1_aval_026
 Kappa|26/78 Test #26: e1_aval_026 ......................   Passed    0.03 sec
 Kappa|      Start 27: e1_aval_027
-Kappa|27/78 Test #27: e1_aval_027 ......................   Passed    0.04 sec
+Kappa|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
 Kappa|      Start 28: e1_aval_028
 Kappa|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
 Kappa|      Start 29: e1_aval_029
-Kappa|29/78 Test #29: e1_aval_029 ......................   Passed    0.04 sec
+Kappa|29/78 Test #29: e1_aval_029 ......................   Passed    0.03 sec
 Kappa|      Start 30: e1_aval_030
-Kappa|30/78 Test #30: e1_aval_030 ......................   Passed    0.04 sec
+Kappa|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
 Kappa|      Start 31: e1_aval_031
-Kappa|31/78 Test #31: e1_aval_031 ......................   Passed    0.04 sec
+Kappa|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Kappa|      Start 32: e1_aval_032
-Kappa|32/78 Test #32: e1_aval_032 ......................   Passed    0.04 sec
+Kappa|32/78 Test #32: e1_aval_032 ......................   Passed    0.03 sec
 Kappa|      Start 33: e1_aval_033
-Kappa|33/78 Test #33: e1_aval_033 ......................   Passed    0.03 sec
+Kappa|33/78 Test #33: e1_aval_033 ......................   Passed    0.04 sec
 Kappa|      Start 34: e1_aval_034
 Kappa|34/78 Test #34: e1_aval_034 ......................   Passed    0.03 sec
 Kappa|      Start 35: e1_aval_035
-Kappa|35/78 Test #35: e1_aval_035 ......................   Passed    0.03 sec
+Kappa|35/78 Test #35: e1_aval_035 ......................   Passed    0.04 sec
 Kappa|      Start 36: e1_aval_036
 Kappa|36/78 Test #36: e1_aval_036 ......................   Passed    0.03 sec
 Kappa|      Start 37: e1_aval_037
 Kappa|37/78 Test #37: e1_aval_037 ......................   Passed    0.03 sec
 Kappa|      Start 38: e1_aval_038
-Kappa|38/78 Test #38: e1_aval_038 ......................   Passed    0.03 sec
+Kappa|38/78 Test #38: e1_aval_038 ......................   Passed    0.04 sec
 Kappa|      Start 39: e1_aval_039
 Kappa|39/78 Test #39: e1_aval_039 ......................   Passed    0.03 sec
 Kappa|      Start 40: e1_aval_040
@@ -985,13 +893,13 @@ Kappa|41/78 Test #41: e1_aval_041 ......................   Passed    0.03 sec
 Kappa|      Start 42: e1_aval_042
 Kappa|42/78 Test #42: e1_aval_042 ......................   Passed    0.03 sec
 Kappa|      Start 43: e1_aval_043
-Kappa|43/78 Test #43: e1_aval_043 ......................   Passed    0.04 sec
+Kappa|43/78 Test #43: e1_aval_043 ......................   Passed    0.03 sec
 Kappa|      Start 44: e1_aval_044
-Kappa|44/78 Test #44: e1_aval_044 ......................   Passed    0.04 sec
+Kappa|44/78 Test #44: e1_aval_044 ......................   Passed    0.03 sec
 Kappa|      Start 45: e1_aval_045
 Kappa|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
 Kappa|      Start 46: e1_aval_046
-Kappa|46/78 Test #46: e1_aval_046 ......................   Passed    0.03 sec
+Kappa|46/78 Test #46: e1_aval_046 ......................   Passed    0.04 sec
 Kappa|      Start 47: e1_aval_047
 Kappa|47/78 Test #47: e1_aval_047 ......................   Passed    0.03 sec
 Kappa|      Start 48: e1_aval_048
@@ -999,7 +907,7 @@ Kappa|48/78 Test #48: e1_aval_048 ......................   Passed    0.03 sec
 Kappa|      Start 49: e1_aval_049
 Kappa|49/78 Test #49: e1_aval_049 ......................   Passed    0.03 sec
 Kappa|      Start 50: e1_aval_050
-Kappa|50/78 Test #50: e1_aval_050 ......................   Passed    0.04 sec
+Kappa|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
 Kappa|      Start 51: e1_aval_051
 Kappa|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
 Kappa|      Start 52: e1_aval_052
@@ -1047,23 +955,19 @@ Kappa|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
 Kappa|      Start 73: e1_aval_073
 Kappa|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
 Kappa|      Start 74: e1_aval_074
-Kappa|74/78 Test #74: e1_aval_074 ......................   Passed    0.04 sec
+Kappa|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Kappa|      Start 75: e1_aval_075
-Kappa|75/78 Test #75: e1_aval_075 ......................   Passed    0.04 sec
+Kappa|75/78 Test #75: e1_aval_075 ......................   Passed    0.03 sec
 Kappa|      Start 76: e1_aval_076
-Kappa|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
+Kappa|76/78 Test #76: e1_aval_076 ......................   Passed    0.04 sec
 Kappa|      Start 77: e1_aval_077
-Kappa|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Kappa|77/78 Test #77: e1_aval_077 ......................   Passed    0.04 sec
 Kappa|      Start 78: e1_aval_078
-Kappa|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Kappa|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Kappa|
-Kappa|97% tests passed, 2 tests failed out of 78
+Kappa|100% tests passed, 0 tests failed out of 78
 Kappa|
-Kappa|Total Test time (real) =   2.40 sec
-Kappa|
-Kappa|The following tests FAILED:
-Kappa|	 77 - e1_aval_077 (Failed)
-Kappa|	 78 - e1_aval_078 (Failed)
+Kappa|Total Test time (real) =   2.42 sec
 Lambda|Test project /home/schnorr/ensino/private/maio_e1/Lambda-E1/b.e1.maio
 Lambda|      Start  1: e1_aval_001
 Lambda| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
@@ -1072,7 +976,7 @@ Lambda| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.03 sec
 Lambda|      Start  3: e1_aval_003
 Lambda| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
 Lambda|      Start  4: e1_aval_004
-Lambda| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
+Lambda| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.04 sec
 Lambda|      Start  5: e1_aval_005
 Lambda| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.04 sec
 Lambda|      Start  6: e1_aval_006
@@ -1080,7 +984,7 @@ Lambda| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
 Lambda|      Start  7: e1_aval_007
 Lambda| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
 Lambda|      Start  8: e1_aval_008
-Lambda| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
+Lambda| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.04 sec
 Lambda|      Start  9: e1_aval_009
 Lambda| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Lambda|      Start 10: e1_aval_010
@@ -1088,7 +992,7 @@ Lambda|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
 Lambda|      Start 11: e1_aval_011
 Lambda|11/78 Test #11: e1_aval_011 ......................   Passed    0.03 sec
 Lambda|      Start 12: e1_aval_012
-Lambda|12/78 Test #12: e1_aval_012 ......................   Passed    0.03 sec
+Lambda|12/78 Test #12: e1_aval_012 ......................   Passed    0.04 sec
 Lambda|      Start 13: e1_aval_013
 Lambda|13/78 Test #13: e1_aval_013 ......................   Passed    0.04 sec
 Lambda|      Start 14: e1_aval_014
@@ -1096,11 +1000,11 @@ Lambda|14/78 Test #14: e1_aval_014 ......................   Passed    0.03 sec
 Lambda|      Start 15: e1_aval_015
 Lambda|15/78 Test #15: e1_aval_015 ......................   Passed    0.03 sec
 Lambda|      Start 16: e1_aval_016
-Lambda|16/78 Test #16: e1_aval_016 ......................   Passed    0.03 sec
+Lambda|16/78 Test #16: e1_aval_016 ......................   Passed    0.04 sec
 Lambda|      Start 17: e1_aval_017
 Lambda|17/78 Test #17: e1_aval_017 ......................   Passed    0.03 sec
 Lambda|      Start 18: e1_aval_018
-Lambda|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
+Lambda|18/78 Test #18: e1_aval_018 ......................   Passed    0.04 sec
 Lambda|      Start 19: e1_aval_019
 Lambda|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Lambda|      Start 20: e1_aval_020
@@ -1108,17 +1012,17 @@ Lambda|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
 Lambda|      Start 21: e1_aval_021
 Lambda|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
 Lambda|      Start 22: e1_aval_022
-Lambda|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
+Lambda|22/78 Test #22: e1_aval_022 ......................   Passed    0.04 sec
 Lambda|      Start 23: e1_aval_023
 Lambda|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
 Lambda|      Start 24: e1_aval_024
-Lambda|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
+Lambda|24/78 Test #24: e1_aval_024 ......................   Passed    0.04 sec
 Lambda|      Start 25: e1_aval_025
 Lambda|25/78 Test #25: e1_aval_025 ......................   Passed    0.03 sec
 Lambda|      Start 26: e1_aval_026
 Lambda|26/78 Test #26: e1_aval_026 ......................   Passed    0.03 sec
 Lambda|      Start 27: e1_aval_027
-Lambda|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
+Lambda|27/78 Test #27: e1_aval_027 ......................   Passed    0.04 sec
 Lambda|      Start 28: e1_aval_028
 Lambda|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
 Lambda|      Start 29: e1_aval_029
@@ -1130,13 +1034,13 @@ Lambda|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Lambda|      Start 32: e1_aval_032
 Lambda|32/78 Test #32: e1_aval_032 ......................   Passed    0.03 sec
 Lambda|      Start 33: e1_aval_033
-Lambda|33/78 Test #33: e1_aval_033 ......................   Passed    0.03 sec
+Lambda|33/78 Test #33: e1_aval_033 ......................   Passed    0.04 sec
 Lambda|      Start 34: e1_aval_034
 Lambda|34/78 Test #34: e1_aval_034 ......................   Passed    0.03 sec
 Lambda|      Start 35: e1_aval_035
 Lambda|35/78 Test #35: e1_aval_035 ......................   Passed    0.03 sec
 Lambda|      Start 36: e1_aval_036
-Lambda|36/78 Test #36: e1_aval_036 ......................   Passed    0.03 sec
+Lambda|36/78 Test #36: e1_aval_036 ......................   Passed    0.04 sec
 Lambda|      Start 37: e1_aval_037
 Lambda|37/78 Test #37: e1_aval_037 ......................   Passed    0.03 sec
 Lambda|      Start 38: e1_aval_038
@@ -1148,11 +1052,11 @@ Lambda|40/78 Test #40: e1_aval_040 ......................   Passed    0.03 sec
 Lambda|      Start 41: e1_aval_041
 Lambda|41/78 Test #41: e1_aval_041 ......................   Passed    0.03 sec
 Lambda|      Start 42: e1_aval_042
-Lambda|42/78 Test #42: e1_aval_042 ......................   Passed    0.04 sec
+Lambda|42/78 Test #42: e1_aval_042 ......................   Passed    0.03 sec
 Lambda|      Start 43: e1_aval_043
 Lambda|43/78 Test #43: e1_aval_043 ......................   Passed    0.03 sec
 Lambda|      Start 44: e1_aval_044
-Lambda|44/78 Test #44: e1_aval_044 ......................   Passed    0.04 sec
+Lambda|44/78 Test #44: e1_aval_044 ......................   Passed    0.03 sec
 Lambda|      Start 45: e1_aval_045
 Lambda|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
 Lambda|      Start 46: e1_aval_046
@@ -1166,7 +1070,7 @@ Lambda|49/78 Test #49: e1_aval_049 ......................   Passed    0.03 sec
 Lambda|      Start 50: e1_aval_050
 Lambda|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
 Lambda|      Start 51: e1_aval_051
-Lambda|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
+Lambda|51/78 Test #51: e1_aval_051 ......................   Passed    0.04 sec
 Lambda|      Start 52: e1_aval_052
 Lambda|52/78 Test #52: e1_aval_052 ......................   Passed    0.03 sec
 Lambda|      Start 53: e1_aval_053
@@ -1180,7 +1084,7 @@ Lambda|56/78 Test #56: e1_aval_056 ......................   Passed    0.03 sec
 Lambda|      Start 57: e1_aval_057
 Lambda|57/78 Test #57: e1_aval_057 ......................   Passed    0.03 sec
 Lambda|      Start 58: e1_aval_058
-Lambda|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
+Lambda|58/78 Test #58: e1_aval_058 ......................   Passed    0.04 sec
 Lambda|      Start 59: e1_aval_059
 Lambda|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
 Lambda|      Start 60: e1_aval_060
@@ -1192,9 +1096,9 @@ Lambda|62/78 Test #62: e1_aval_062 ......................   Passed    0.03 sec
 Lambda|      Start 63: e1_aval_063
 Lambda|63/78 Test #63: e1_aval_063 ......................   Passed    0.03 sec
 Lambda|      Start 64: e1_aval_064
-Lambda|64/78 Test #64: e1_aval_064 ......................   Passed    0.04 sec
+Lambda|64/78 Test #64: e1_aval_064 ......................   Passed    0.03 sec
 Lambda|      Start 65: e1_aval_065
-Lambda|65/78 Test #65: e1_aval_065 ......................   Passed    0.04 sec
+Lambda|65/78 Test #65: e1_aval_065 ......................   Passed    0.03 sec
 Lambda|      Start 66: e1_aval_066
 Lambda|66/78 Test #66: e1_aval_066 ......................   Passed    0.03 sec
 Lambda|      Start 67: e1_aval_067
@@ -1202,33 +1106,29 @@ Lambda|67/78 Test #67: e1_aval_067 ......................   Passed    0.03 sec
 Lambda|      Start 68: e1_aval_068
 Lambda|68/78 Test #68: e1_aval_068 ......................   Passed    0.03 sec
 Lambda|      Start 69: e1_aval_069
-Lambda|69/78 Test #69: e1_aval_069 ......................   Passed    0.03 sec
+Lambda|69/78 Test #69: e1_aval_069 ......................   Passed    0.04 sec
 Lambda|      Start 70: e1_aval_070
 Lambda|70/78 Test #70: e1_aval_070 ......................   Passed    0.03 sec
 Lambda|      Start 71: e1_aval_071
-Lambda|71/78 Test #71: e1_aval_071 ......................   Passed    0.04 sec
+Lambda|71/78 Test #71: e1_aval_071 ......................   Passed    0.03 sec
 Lambda|      Start 72: e1_aval_072
-Lambda|72/78 Test #72: e1_aval_072 ......................   Passed    0.04 sec
+Lambda|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
 Lambda|      Start 73: e1_aval_073
-Lambda|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
+Lambda|73/78 Test #73: e1_aval_073 ......................   Passed    0.04 sec
 Lambda|      Start 74: e1_aval_074
-Lambda|74/78 Test #74: e1_aval_074 ......................   Passed    0.04 sec
+Lambda|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Lambda|      Start 75: e1_aval_075
 Lambda|75/78 Test #75: e1_aval_075 ......................   Passed    0.03 sec
 Lambda|      Start 76: e1_aval_076
-Lambda|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
+Lambda|76/78 Test #76: e1_aval_076 ......................   Passed    0.04 sec
 Lambda|      Start 77: e1_aval_077
-Lambda|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Lambda|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Lambda|      Start 78: e1_aval_078
-Lambda|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Lambda|78/78 Test #78: e1_aval_078 ......................   Passed    0.04 sec
 Lambda|
-Lambda|97% tests passed, 2 tests failed out of 78
+Lambda|100% tests passed, 0 tests failed out of 78
 Lambda|
-Lambda|Total Test time (real) =   2.35 sec
-Lambda|
-Lambda|The following tests FAILED:
-Lambda|	 77 - e1_aval_077 (Failed)
-Lambda|	 78 - e1_aval_078 (Failed)
+Lambda|Total Test time (real) =   2.48 sec
 Nu|Test project /home/schnorr/ensino/private/maio_e1/Nu-E1/b.e1.maio
 Nu|      Start  1: e1_aval_001
 Nu| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.04 sec
@@ -1237,17 +1137,17 @@ Nu| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.03 sec
 Nu|      Start  3: e1_aval_003
 Nu| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
 Nu|      Start  4: e1_aval_004
-Nu| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.04 sec
+Nu| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
 Nu|      Start  5: e1_aval_005
-Nu| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
+Nu| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.04 sec
 Nu|      Start  6: e1_aval_006
-Nu| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
+Nu| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.04 sec
 Nu|      Start  7: e1_aval_007
 Nu| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
 Nu|      Start  8: e1_aval_008
 Nu| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
 Nu|      Start  9: e1_aval_009
-Nu| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
+Nu| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.04 sec
 Nu|      Start 10: e1_aval_010
 Nu|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
 Nu|      Start 11: e1_aval_011
@@ -1255,7 +1155,7 @@ Nu|11/78 Test #11: e1_aval_011 ......................   Passed    0.03 sec
 Nu|      Start 12: e1_aval_012
 Nu|12/78 Test #12: e1_aval_012 ......................   Passed    0.03 sec
 Nu|      Start 13: e1_aval_013
-Nu|13/78 Test #13: e1_aval_013 ......................   Passed    0.04 sec
+Nu|13/78 Test #13: e1_aval_013 ......................   Passed    0.03 sec
 Nu|      Start 14: e1_aval_014
 Nu|14/78 Test #14: e1_aval_014 ......................   Passed    0.03 sec
 Nu|      Start 15: e1_aval_015
@@ -1269,7 +1169,7 @@ Nu|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
 Nu|      Start 19: e1_aval_019
 Nu|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Nu|      Start 20: e1_aval_020
-Nu|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
+Nu|20/78 Test #20: e1_aval_020 ......................   Passed    0.04 sec
 Nu|      Start 21: e1_aval_021
 Nu|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
 Nu|      Start 22: e1_aval_022
@@ -1277,7 +1177,7 @@ Nu|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Nu|      Start 23: e1_aval_023
 Nu|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
 Nu|      Start 24: e1_aval_024
-Nu|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
+Nu|24/78 Test #24: e1_aval_024 ......................   Passed    0.04 sec
 Nu|      Start 25: e1_aval_025
 Nu|25/78 Test #25: e1_aval_025 ......................   Passed    0.03 sec
 Nu|      Start 26: e1_aval_026
@@ -1287,11 +1187,11 @@ Nu|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
 Nu|      Start 28: e1_aval_028
 Nu|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
 Nu|      Start 29: e1_aval_029
-Nu|29/78 Test #29: e1_aval_029 ......................   Passed    0.04 sec
+Nu|29/78 Test #29: e1_aval_029 ......................   Passed    0.03 sec
 Nu|      Start 30: e1_aval_030
 Nu|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
 Nu|      Start 31: e1_aval_031
-Nu|31/78 Test #31: e1_aval_031 ......................   Passed    0.04 sec
+Nu|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Nu|      Start 32: e1_aval_032
 Nu|32/78 Test #32: e1_aval_032 ......................   Passed    0.03 sec
 Nu|      Start 33: e1_aval_033
@@ -1301,13 +1201,13 @@ Nu|34/78 Test #34: e1_aval_034 ......................   Passed    0.03 sec
 Nu|      Start 35: e1_aval_035
 Nu|35/78 Test #35: e1_aval_035 ......................   Passed    0.03 sec
 Nu|      Start 36: e1_aval_036
-Nu|36/78 Test #36: e1_aval_036 ......................   Passed    0.04 sec
+Nu|36/78 Test #36: e1_aval_036 ......................   Passed    0.03 sec
 Nu|      Start 37: e1_aval_037
 Nu|37/78 Test #37: e1_aval_037 ......................   Passed    0.03 sec
 Nu|      Start 38: e1_aval_038
 Nu|38/78 Test #38: e1_aval_038 ......................   Passed    0.03 sec
 Nu|      Start 39: e1_aval_039
-Nu|39/78 Test #39: e1_aval_039 ......................   Passed    0.03 sec
+Nu|39/78 Test #39: e1_aval_039 ......................   Passed    0.04 sec
 Nu|      Start 40: e1_aval_040
 Nu|40/78 Test #40: e1_aval_040 ......................   Passed    0.03 sec
 Nu|      Start 41: e1_aval_041
@@ -1319,7 +1219,7 @@ Nu|43/78 Test #43: e1_aval_043 ......................   Passed    0.03 sec
 Nu|      Start 44: e1_aval_044
 Nu|44/78 Test #44: e1_aval_044 ......................   Passed    0.03 sec
 Nu|      Start 45: e1_aval_045
-Nu|45/78 Test #45: e1_aval_045 ......................   Passed    0.04 sec
+Nu|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
 Nu|      Start 46: e1_aval_046
 Nu|46/78 Test #46: e1_aval_046 ......................   Passed    0.03 sec
 Nu|      Start 47: e1_aval_047
@@ -1347,9 +1247,9 @@ Nu|57/78 Test #57: e1_aval_057 ......................   Passed    0.03 sec
 Nu|      Start 58: e1_aval_058
 Nu|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
 Nu|      Start 59: e1_aval_059
-Nu|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
+Nu|59/78 Test #59: e1_aval_059 ......................   Passed    0.04 sec
 Nu|      Start 60: e1_aval_060
-Nu|60/78 Test #60: e1_aval_060 ......................   Passed    0.03 sec
+Nu|60/78 Test #60: e1_aval_060 ......................   Passed    0.04 sec
 Nu|      Start 61: e1_aval_061
 Nu|61/78 Test #61: e1_aval_061 ......................   Passed    0.03 sec
 Nu|      Start 62: e1_aval_062
@@ -1369,13 +1269,13 @@ Nu|68/78 Test #68: e1_aval_068 ......................   Passed    0.03 sec
 Nu|      Start 69: e1_aval_069
 Nu|69/78 Test #69: e1_aval_069 ......................   Passed    0.03 sec
 Nu|      Start 70: e1_aval_070
-Nu|70/78 Test #70: e1_aval_070 ......................   Passed    0.03 sec
+Nu|70/78 Test #70: e1_aval_070 ......................   Passed    0.04 sec
 Nu|      Start 71: e1_aval_071
 Nu|71/78 Test #71: e1_aval_071 ......................   Passed    0.04 sec
 Nu|      Start 72: e1_aval_072
-Nu|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
+Nu|72/78 Test #72: e1_aval_072 ......................   Passed    0.04 sec
 Nu|      Start 73: e1_aval_073
-Nu|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
+Nu|73/78 Test #73: e1_aval_073 ......................   Passed    0.04 sec
 Nu|      Start 74: e1_aval_074
 Nu|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Nu|      Start 75: e1_aval_075
@@ -1383,20 +1283,16 @@ Nu|75/78 Test #75: e1_aval_075 ......................   Passed    0.03 sec
 Nu|      Start 76: e1_aval_076
 Nu|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
 Nu|      Start 77: e1_aval_077
-Nu|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Nu|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Nu|      Start 78: e1_aval_078
-Nu|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Nu|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Nu|
-Nu|97% tests passed, 2 tests failed out of 78
+Nu|100% tests passed, 0 tests failed out of 78
 Nu|
-Nu|Total Test time (real) =   2.37 sec
-Nu|
-Nu|The following tests FAILED:
-Nu|	 77 - e1_aval_077 (Failed)
-Nu|	 78 - e1_aval_078 (Failed)
+Nu|Total Test time (real) =   2.45 sec
 Omega|Test project /home/schnorr/ensino/private/maio_e1/Omega-E1/b.e1.maio
 Omega|      Start  1: e1_aval_001
-Omega| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
+Omega| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.04 sec
 Omega|      Start  2: e1_aval_002
 Omega| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.03 sec
 Omega|      Start  3: e1_aval_003
@@ -1414,7 +1310,7 @@ Omega| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
 Omega|      Start  9: e1_aval_009
 Omega| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Omega|      Start 10: e1_aval_010
-Omega|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
+Omega|10/78 Test #10: e1_aval_010 ......................   Passed    0.04 sec
 Omega|      Start 11: e1_aval_011
 Omega|11/78 Test #11: e1_aval_011 ......................   Passed    0.03 sec
 Omega|      Start 12: e1_aval_012
@@ -1432,15 +1328,15 @@ Omega|17/78 Test #17: e1_aval_017 ......................   Passed    0.03 sec
 Omega|      Start 18: e1_aval_018
 Omega|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
 Omega|      Start 19: e1_aval_019
-Omega|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
+Omega|19/78 Test #19: e1_aval_019 ......................   Passed    0.04 sec
 Omega|      Start 20: e1_aval_020
 Omega|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
 Omega|      Start 21: e1_aval_021
-Omega|21/78 Test #21: e1_aval_021 ......................   Passed    0.04 sec
+Omega|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
 Omega|      Start 22: e1_aval_022
 Omega|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Omega|      Start 23: e1_aval_023
-Omega|23/78 Test #23: e1_aval_023 ......................   Passed    0.04 sec
+Omega|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
 Omega|      Start 24: e1_aval_024
 Omega|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
 Omega|      Start 25: e1_aval_025
@@ -1494,15 +1390,15 @@ Omega|48/78 Test #48: e1_aval_048 ......................   Passed    0.03 sec
 Omega|      Start 49: e1_aval_049
 Omega|49/78 Test #49: e1_aval_049 ......................   Passed    0.03 sec
 Omega|      Start 50: e1_aval_050
-Omega|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
+Omega|50/78 Test #50: e1_aval_050 ......................   Passed    0.04 sec
 Omega|      Start 51: e1_aval_051
-Omega|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
+Omega|51/78 Test #51: e1_aval_051 ......................   Passed    0.04 sec
 Omega|      Start 52: e1_aval_052
 Omega|52/78 Test #52: e1_aval_052 ......................   Passed    0.03 sec
 Omega|      Start 53: e1_aval_053
-Omega|53/78 Test #53: e1_aval_053 ......................   Passed    0.04 sec
+Omega|53/78 Test #53: e1_aval_053 ......................   Passed    0.03 sec
 Omega|      Start 54: e1_aval_054
-Omega|54/78 Test #54: e1_aval_054 ......................   Passed    0.03 sec
+Omega|54/78 Test #54: e1_aval_054 ......................   Passed    0.04 sec
 Omega|      Start 55: e1_aval_055
 Omega|55/78 Test #55: e1_aval_055 ......................   Passed    0.03 sec
 Omega|      Start 56: e1_aval_056
@@ -1514,7 +1410,7 @@ Omega|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
 Omega|      Start 59: e1_aval_059
 Omega|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
 Omega|      Start 60: e1_aval_060
-Omega|60/78 Test #60: e1_aval_060 ......................   Passed    0.04 sec
+Omega|60/78 Test #60: e1_aval_060 ......................   Passed    0.03 sec
 Omega|      Start 61: e1_aval_061
 Omega|61/78 Test #61: e1_aval_061 ......................   Passed    0.03 sec
 Omega|      Start 62: e1_aval_062
@@ -1522,21 +1418,21 @@ Omega|62/78 Test #62: e1_aval_062 ......................   Passed    0.03 sec
 Omega|      Start 63: e1_aval_063
 Omega|63/78 Test #63: e1_aval_063 ......................   Passed    0.03 sec
 Omega|      Start 64: e1_aval_064
-Omega|64/78 Test #64: e1_aval_064 ......................   Passed    0.04 sec
+Omega|64/78 Test #64: e1_aval_064 ......................   Passed    0.03 sec
 Omega|      Start 65: e1_aval_065
 Omega|65/78 Test #65: e1_aval_065 ......................   Passed    0.03 sec
 Omega|      Start 66: e1_aval_066
 Omega|66/78 Test #66: e1_aval_066 ......................   Passed    0.03 sec
 Omega|      Start 67: e1_aval_067
-Omega|67/78 Test #67: e1_aval_067 ......................   Passed    0.03 sec
+Omega|67/78 Test #67: e1_aval_067 ......................   Passed    0.04 sec
 Omega|      Start 68: e1_aval_068
 Omega|68/78 Test #68: e1_aval_068 ......................   Passed    0.03 sec
 Omega|      Start 69: e1_aval_069
 Omega|69/78 Test #69: e1_aval_069 ......................   Passed    0.03 sec
 Omega|      Start 70: e1_aval_070
-Omega|70/78 Test #70: e1_aval_070 ......................   Passed    0.03 sec
+Omega|70/78 Test #70: e1_aval_070 ......................   Passed    0.04 sec
 Omega|      Start 71: e1_aval_071
-Omega|71/78 Test #71: e1_aval_071 ......................   Passed    0.03 sec
+Omega|71/78 Test #71: e1_aval_071 ......................   Passed    0.04 sec
 Omega|      Start 72: e1_aval_072
 Omega|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
 Omega|      Start 73: e1_aval_073
@@ -1548,17 +1444,13 @@ Omega|75/78 Test #75: e1_aval_075 ......................   Passed    0.03 sec
 Omega|      Start 76: e1_aval_076
 Omega|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
 Omega|      Start 77: e1_aval_077
-Omega|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Omega|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Omega|      Start 78: e1_aval_078
-Omega|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Omega|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Omega|
-Omega|97% tests passed, 2 tests failed out of 78
+Omega|100% tests passed, 0 tests failed out of 78
 Omega|
-Omega|Total Test time (real) =   2.41 sec
-Omega|
-Omega|The following tests FAILED:
-Omega|	 77 - e1_aval_077 (Failed)
-Omega|	 78 - e1_aval_078 (Failed)
+Omega|Total Test time (real) =   2.38 sec
 Omicron|Test project /home/schnorr/ensino/private/maio_e1/Omicron-E1/b.e1.maio
 Omicron|      Start  1: e1_aval_001
 Omicron| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
@@ -1573,21 +1465,21 @@ Omicron| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
 Omicron|      Start  6: e1_aval_006
 Omicron| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
 Omicron|      Start  7: e1_aval_007
-Omicron| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
+Omicron| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.04 sec
 Omicron|      Start  8: e1_aval_008
-Omicron| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
+Omicron| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.04 sec
 Omicron|      Start  9: e1_aval_009
 Omicron| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Omicron|      Start 10: e1_aval_010
-Omicron|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
+Omicron|10/78 Test #10: e1_aval_010 ......................   Passed    0.04 sec
 Omicron|      Start 11: e1_aval_011
-Omicron|11/78 Test #11: e1_aval_011 ......................   Passed    0.03 sec
+Omicron|11/78 Test #11: e1_aval_011 ......................   Passed    0.04 sec
 Omicron|      Start 12: e1_aval_012
 Omicron|12/78 Test #12: e1_aval_012 ......................   Passed    0.03 sec
 Omicron|      Start 13: e1_aval_013
 Omicron|13/78 Test #13: e1_aval_013 ......................   Passed    0.03 sec
 Omicron|      Start 14: e1_aval_014
-Omicron|14/78 Test #14: e1_aval_014 ......................   Passed    0.04 sec
+Omicron|14/78 Test #14: e1_aval_014 ......................   Passed    0.03 sec
 Omicron|      Start 15: e1_aval_015
 Omicron|15/78 Test #15: e1_aval_015 ......................   Passed    0.03 sec
 Omicron|      Start 16: e1_aval_016
@@ -1599,17 +1491,17 @@ Omicron|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
 Omicron|      Start 19: e1_aval_019
 Omicron|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Omicron|      Start 20: e1_aval_020
-Omicron|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
+Omicron|20/78 Test #20: e1_aval_020 ......................   Passed    0.04 sec
 Omicron|      Start 21: e1_aval_021
 Omicron|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
 Omicron|      Start 22: e1_aval_022
-Omicron|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
+Omicron|22/78 Test #22: e1_aval_022 ......................   Passed    0.04 sec
 Omicron|      Start 23: e1_aval_023
-Omicron|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
+Omicron|23/78 Test #23: e1_aval_023 ......................   Passed    0.04 sec
 Omicron|      Start 24: e1_aval_024
-Omicron|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
+Omicron|24/78 Test #24: e1_aval_024 ......................   Passed    0.04 sec
 Omicron|      Start 25: e1_aval_025
-Omicron|25/78 Test #25: e1_aval_025 ......................   Passed    0.03 sec
+Omicron|25/78 Test #25: e1_aval_025 ......................   Passed    0.04 sec
 Omicron|      Start 26: e1_aval_026
 Omicron|26/78 Test #26: e1_aval_026 ......................   Passed    0.03 sec
 Omicron|      Start 27: e1_aval_027
@@ -1623,15 +1515,15 @@ Omicron|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
 Omicron|      Start 31: e1_aval_031
 Omicron|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Omicron|      Start 32: e1_aval_032
-Omicron|32/78 Test #32: e1_aval_032 ......................   Passed    0.03 sec
+Omicron|32/78 Test #32: e1_aval_032 ......................   Passed    0.04 sec
 Omicron|      Start 33: e1_aval_033
-Omicron|33/78 Test #33: e1_aval_033 ......................   Passed    0.03 sec
+Omicron|33/78 Test #33: e1_aval_033 ......................   Passed    0.04 sec
 Omicron|      Start 34: e1_aval_034
 Omicron|34/78 Test #34: e1_aval_034 ......................   Passed    0.03 sec
 Omicron|      Start 35: e1_aval_035
 Omicron|35/78 Test #35: e1_aval_035 ......................   Passed    0.03 sec
 Omicron|      Start 36: e1_aval_036
-Omicron|36/78 Test #36: e1_aval_036 ......................   Passed    0.04 sec
+Omicron|36/78 Test #36: e1_aval_036 ......................   Passed    0.03 sec
 Omicron|      Start 37: e1_aval_037
 Omicron|37/78 Test #37: e1_aval_037 ......................   Passed    0.03 sec
 Omicron|      Start 38: e1_aval_038
@@ -1649,13 +1541,13 @@ Omicron|43/78 Test #43: e1_aval_043 ......................   Passed    0.03 sec
 Omicron|      Start 44: e1_aval_044
 Omicron|44/78 Test #44: e1_aval_044 ......................   Passed    0.03 sec
 Omicron|      Start 45: e1_aval_045
-Omicron|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
+Omicron|45/78 Test #45: e1_aval_045 ......................   Passed    0.04 sec
 Omicron|      Start 46: e1_aval_046
 Omicron|46/78 Test #46: e1_aval_046 ......................   Passed    0.03 sec
 Omicron|      Start 47: e1_aval_047
 Omicron|47/78 Test #47: e1_aval_047 ......................   Passed    0.03 sec
 Omicron|      Start 48: e1_aval_048
-Omicron|48/78 Test #48: e1_aval_048 ......................   Passed    0.04 sec
+Omicron|48/78 Test #48: e1_aval_048 ......................   Passed    0.03 sec
 Omicron|      Start 49: e1_aval_049
 Omicron|49/78 Test #49: e1_aval_049 ......................   Passed    0.03 sec
 Omicron|      Start 50: e1_aval_050
@@ -1685,11 +1577,11 @@ Omicron|61/78 Test #61: e1_aval_061 ......................   Passed    0.03 sec
 Omicron|      Start 62: e1_aval_062
 Omicron|62/78 Test #62: e1_aval_062 ......................   Passed    0.03 sec
 Omicron|      Start 63: e1_aval_063
-Omicron|63/78 Test #63: e1_aval_063 ......................   Passed    0.03 sec
+Omicron|63/78 Test #63: e1_aval_063 ......................   Passed    0.04 sec
 Omicron|      Start 64: e1_aval_064
 Omicron|64/78 Test #64: e1_aval_064 ......................   Passed    0.04 sec
 Omicron|      Start 65: e1_aval_065
-Omicron|65/78 Test #65: e1_aval_065 ......................   Passed    0.03 sec
+Omicron|65/78 Test #65: e1_aval_065 ......................   Passed    0.04 sec
 Omicron|      Start 66: e1_aval_066
 Omicron|66/78 Test #66: e1_aval_066 ......................   Passed    0.03 sec
 Omicron|      Start 67: e1_aval_067
@@ -1699,34 +1591,27 @@ Omicron|68/78 Test #68: e1_aval_068 ......................   Passed    0.03 sec
 Omicron|      Start 69: e1_aval_069
 Omicron|69/78 Test #69: e1_aval_069 ......................   Passed    0.03 sec
 Omicron|      Start 70: e1_aval_070
-Omicron|70/78 Test #70: e1_aval_070 ......................   Passed    0.03 sec
+Omicron|70/78 Test #70: e1_aval_070 ......................   Passed    0.04 sec
 Omicron|      Start 71: e1_aval_071
-Omicron|71/78 Test #71: e1_aval_071 ......................   Passed    0.04 sec
+Omicron|71/78 Test #71: e1_aval_071 ......................   Passed    0.03 sec
 Omicron|      Start 72: e1_aval_072
 Omicron|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
 Omicron|      Start 73: e1_aval_073
-Omicron|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
+Omicron|73/78 Test #73: e1_aval_073 ......................   Passed    0.04 sec
 Omicron|      Start 74: e1_aval_074
-Omicron|74/78 Test #74: e1_aval_074 ......................***Failed    0.03 sec
+Omicron|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Omicron|      Start 75: e1_aval_075
-Omicron|75/78 Test #75: e1_aval_075 ......................***Failed    0.03 sec
+Omicron|75/78 Test #75: e1_aval_075 ......................   Passed    0.04 sec
 Omicron|      Start 76: e1_aval_076
-Omicron|76/78 Test #76: e1_aval_076 ......................***Failed    0.03 sec
+Omicron|76/78 Test #76: e1_aval_076 ......................   Passed    0.04 sec
 Omicron|      Start 77: e1_aval_077
-Omicron|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Omicron|77/78 Test #77: e1_aval_077 ......................   Passed    0.04 sec
 Omicron|      Start 78: e1_aval_078
-Omicron|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Omicron|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Omicron|
-Omicron|94% tests passed, 5 tests failed out of 78
+Omicron|100% tests passed, 0 tests failed out of 78
 Omicron|
-Omicron|Total Test time (real) =   2.35 sec
-Omicron|
-Omicron|The following tests FAILED:
-Omicron|	 74 - e1_aval_074 (Failed)
-Omicron|	 75 - e1_aval_075 (Failed)
-Omicron|	 76 - e1_aval_076 (Failed)
-Omicron|	 77 - e1_aval_077 (Failed)
-Omicron|	 78 - e1_aval_078 (Failed)
+Omicron|Total Test time (real) =   2.53 sec
 Phi|Test project /home/schnorr/ensino/private/maio_e1/Phi-E1/b.e1.maio
 Phi|      Start  1: e1_aval_001
 Phi| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
@@ -1735,19 +1620,19 @@ Phi| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.03 sec
 Phi|      Start  3: e1_aval_003
 Phi| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
 Phi|      Start  4: e1_aval_004
-Phi| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.04 sec
+Phi| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
 Phi|      Start  5: e1_aval_005
 Phi| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
 Phi|      Start  6: e1_aval_006
-Phi| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
+Phi| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.04 sec
 Phi|      Start  7: e1_aval_007
-Phi| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
+Phi| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.04 sec
 Phi|      Start  8: e1_aval_008
 Phi| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
 Phi|      Start  9: e1_aval_009
-Phi| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.04 sec
+Phi| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Phi|      Start 10: e1_aval_010
-Phi|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
+Phi|10/78 Test #10: e1_aval_010 ......................   Passed    0.04 sec
 Phi|      Start 11: e1_aval_011
 Phi|11/78 Test #11: e1_aval_011 ......................   Passed    0.03 sec
 Phi|      Start 12: e1_aval_012
@@ -1793,9 +1678,9 @@ Phi|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Phi|      Start 32: e1_aval_032
 Phi|32/78 Test #32: e1_aval_032 ......................   Passed    0.03 sec
 Phi|      Start 33: e1_aval_033
-Phi|33/78 Test #33: e1_aval_033 ......................   Passed    0.03 sec
+Phi|33/78 Test #33: e1_aval_033 ......................   Passed    0.04 sec
 Phi|      Start 34: e1_aval_034
-Phi|34/78 Test #34: e1_aval_034 ......................   Passed    0.03 sec
+Phi|34/78 Test #34: e1_aval_034 ......................   Passed    0.04 sec
 Phi|      Start 35: e1_aval_035
 Phi|35/78 Test #35: e1_aval_035 ......................   Passed    0.03 sec
 Phi|      Start 36: e1_aval_036
@@ -1811,7 +1696,7 @@ Phi|40/78 Test #40: e1_aval_040 ......................   Passed    0.03 sec
 Phi|      Start 41: e1_aval_041
 Phi|41/78 Test #41: e1_aval_041 ......................   Passed    0.03 sec
 Phi|      Start 42: e1_aval_042
-Phi|42/78 Test #42: e1_aval_042 ......................   Passed    0.03 sec
+Phi|42/78 Test #42: e1_aval_042 ......................   Passed    0.04 sec
 Phi|      Start 43: e1_aval_043
 Phi|43/78 Test #43: e1_aval_043 ......................   Passed    0.03 sec
 Phi|      Start 44: e1_aval_044
@@ -1827,17 +1712,17 @@ Phi|48/78 Test #48: e1_aval_048 ......................   Passed    0.03 sec
 Phi|      Start 49: e1_aval_049
 Phi|49/78 Test #49: e1_aval_049 ......................   Passed    0.03 sec
 Phi|      Start 50: e1_aval_050
-Phi|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
+Phi|50/78 Test #50: e1_aval_050 ......................   Passed    0.04 sec
 Phi|      Start 51: e1_aval_051
 Phi|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
 Phi|      Start 52: e1_aval_052
 Phi|52/78 Test #52: e1_aval_052 ......................   Passed    0.03 sec
 Phi|      Start 53: e1_aval_053
-Phi|53/78 Test #53: e1_aval_053 ......................   Passed    0.04 sec
+Phi|53/78 Test #53: e1_aval_053 ......................   Passed    0.03 sec
 Phi|      Start 54: e1_aval_054
-Phi|54/78 Test #54: e1_aval_054 ......................   Passed    0.04 sec
+Phi|54/78 Test #54: e1_aval_054 ......................   Passed    0.03 sec
 Phi|      Start 55: e1_aval_055
-Phi|55/78 Test #55: e1_aval_055 ......................   Passed    0.04 sec
+Phi|55/78 Test #55: e1_aval_055 ......................   Passed    0.03 sec
 Phi|      Start 56: e1_aval_056
 Phi|56/78 Test #56: e1_aval_056 ......................   Passed    0.03 sec
 Phi|      Start 57: e1_aval_057
@@ -1845,7 +1730,7 @@ Phi|57/78 Test #57: e1_aval_057 ......................   Passed    0.03 sec
 Phi|      Start 58: e1_aval_058
 Phi|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
 Phi|      Start 59: e1_aval_059
-Phi|59/78 Test #59: e1_aval_059 ......................   Passed    0.04 sec
+Phi|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
 Phi|      Start 60: e1_aval_060
 Phi|60/78 Test #60: e1_aval_060 ......................   Passed    0.03 sec
 Phi|      Start 61: e1_aval_061
@@ -1863,7 +1748,7 @@ Phi|66/78 Test #66: e1_aval_066 ......................   Passed    0.04 sec
 Phi|      Start 67: e1_aval_067
 Phi|67/78 Test #67: e1_aval_067 ......................   Passed    0.03 sec
 Phi|      Start 68: e1_aval_068
-Phi|68/78 Test #68: e1_aval_068 ......................   Passed    0.03 sec
+Phi|68/78 Test #68: e1_aval_068 ......................   Passed    0.04 sec
 Phi|      Start 69: e1_aval_069
 Phi|69/78 Test #69: e1_aval_069 ......................   Passed    0.03 sec
 Phi|      Start 70: e1_aval_070
@@ -1875,23 +1760,19 @@ Phi|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
 Phi|      Start 73: e1_aval_073
 Phi|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
 Phi|      Start 74: e1_aval_074
-Phi|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
+Phi|74/78 Test #74: e1_aval_074 ......................   Passed    0.04 sec
 Phi|      Start 75: e1_aval_075
-Phi|75/78 Test #75: e1_aval_075 ......................   Passed    0.03 sec
+Phi|75/78 Test #75: e1_aval_075 ......................   Passed    0.04 sec
 Phi|      Start 76: e1_aval_076
 Phi|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
 Phi|      Start 77: e1_aval_077
-Phi|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Phi|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Phi|      Start 78: e1_aval_078
-Phi|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Phi|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Phi|
-Phi|97% tests passed, 2 tests failed out of 78
+Phi|100% tests passed, 0 tests failed out of 78
 Phi|
-Phi|Total Test time (real) =   2.43 sec
-Phi|
-Phi|The following tests FAILED:
-Phi|	 77 - e1_aval_077 (Failed)
-Phi|	 78 - e1_aval_078 (Failed)
+Phi|Total Test time (real) =   2.44 sec
 Psi|Test project /home/schnorr/ensino/private/maio_e1/Psi-E1/b.e1.maio
 Psi|      Start  1: e1_aval_001
 Psi| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
@@ -1904,17 +1785,17 @@ Psi| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
 Psi|      Start  5: e1_aval_005
 Psi| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
 Psi|      Start  6: e1_aval_006
-Psi| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
+Psi| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.04 sec
 Psi|      Start  7: e1_aval_007
-Psi| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
+Psi| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.04 sec
 Psi|      Start  8: e1_aval_008
-Psi| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.04 sec
+Psi| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
 Psi|      Start  9: e1_aval_009
 Psi| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Psi|      Start 10: e1_aval_010
-Psi|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
+Psi|10/78 Test #10: e1_aval_010 ......................   Passed    0.04 sec
 Psi|      Start 11: e1_aval_011
-Psi|11/78 Test #11: e1_aval_011 ......................   Passed    0.03 sec
+Psi|11/78 Test #11: e1_aval_011 ......................   Passed    0.04 sec
 Psi|      Start 12: e1_aval_012
 Psi|12/78 Test #12: e1_aval_012 ......................   Passed    0.03 sec
 Psi|      Start 13: e1_aval_013
@@ -1928,13 +1809,13 @@ Psi|16/78 Test #16: e1_aval_016 ......................   Passed    0.03 sec
 Psi|      Start 17: e1_aval_017
 Psi|17/78 Test #17: e1_aval_017 ......................   Passed    0.03 sec
 Psi|      Start 18: e1_aval_018
-Psi|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
+Psi|18/78 Test #18: e1_aval_018 ......................   Passed    0.04 sec
 Psi|      Start 19: e1_aval_019
 Psi|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Psi|      Start 20: e1_aval_020
 Psi|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
 Psi|      Start 21: e1_aval_021
-Psi|21/78 Test #21: e1_aval_021 ......................   Passed    0.04 sec
+Psi|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
 Psi|      Start 22: e1_aval_022
 Psi|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Psi|      Start 23: e1_aval_023
@@ -1952,7 +1833,7 @@ Psi|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
 Psi|      Start 29: e1_aval_029
 Psi|29/78 Test #29: e1_aval_029 ......................   Passed    0.03 sec
 Psi|      Start 30: e1_aval_030
-Psi|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
+Psi|30/78 Test #30: e1_aval_030 ......................   Passed    0.04 sec
 Psi|      Start 31: e1_aval_031
 Psi|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Psi|      Start 32: e1_aval_032
@@ -1978,9 +1859,9 @@ Psi|41/78 Test #41: e1_aval_041 ......................   Passed    0.03 sec
 Psi|      Start 42: e1_aval_042
 Psi|42/78 Test #42: e1_aval_042 ......................   Passed    0.03 sec
 Psi|      Start 43: e1_aval_043
-Psi|43/78 Test #43: e1_aval_043 ......................   Passed    0.04 sec
+Psi|43/78 Test #43: e1_aval_043 ......................   Passed    0.03 sec
 Psi|      Start 44: e1_aval_044
-Psi|44/78 Test #44: e1_aval_044 ......................   Passed    0.04 sec
+Psi|44/78 Test #44: e1_aval_044 ......................   Passed    0.03 sec
 Psi|      Start 45: e1_aval_045
 Psi|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
 Psi|      Start 46: e1_aval_046
@@ -1996,9 +1877,9 @@ Psi|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
 Psi|      Start 51: e1_aval_051
 Psi|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
 Psi|      Start 52: e1_aval_052
-Psi|52/78 Test #52: e1_aval_052 ......................   Passed    0.03 sec
+Psi|52/78 Test #52: e1_aval_052 ......................   Passed    0.04 sec
 Psi|      Start 53: e1_aval_053
-Psi|53/78 Test #53: e1_aval_053 ......................   Passed    0.03 sec
+Psi|53/78 Test #53: e1_aval_053 ......................   Passed    0.04 sec
 Psi|      Start 54: e1_aval_054
 Psi|54/78 Test #54: e1_aval_054 ......................   Passed    0.03 sec
 Psi|      Start 55: e1_aval_055
@@ -2012,11 +1893,11 @@ Psi|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
 Psi|      Start 59: e1_aval_059
 Psi|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
 Psi|      Start 60: e1_aval_060
-Psi|60/78 Test #60: e1_aval_060 ......................   Passed    0.03 sec
+Psi|60/78 Test #60: e1_aval_060 ......................   Passed    0.04 sec
 Psi|      Start 61: e1_aval_061
 Psi|61/78 Test #61: e1_aval_061 ......................   Passed    0.03 sec
 Psi|      Start 62: e1_aval_062
-Psi|62/78 Test #62: e1_aval_062 ......................   Passed    0.04 sec
+Psi|62/78 Test #62: e1_aval_062 ......................   Passed    0.03 sec
 Psi|      Start 63: e1_aval_063
 Psi|63/78 Test #63: e1_aval_063 ......................   Passed    0.03 sec
 Psi|      Start 64: e1_aval_064
@@ -2036,28 +1917,23 @@ Psi|70/78 Test #70: e1_aval_070 ......................   Passed    0.03 sec
 Psi|      Start 71: e1_aval_071
 Psi|71/78 Test #71: e1_aval_071 ......................   Passed    0.03 sec
 Psi|      Start 72: e1_aval_072
-Psi|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
+Psi|72/78 Test #72: e1_aval_072 ......................   Passed    0.04 sec
 Psi|      Start 73: e1_aval_073
 Psi|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
 Psi|      Start 74: e1_aval_074
-Psi|74/78 Test #74: e1_aval_074 ......................   Passed    0.04 sec
+Psi|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Psi|      Start 75: e1_aval_075
-Psi|75/78 Test #75: e1_aval_075 ......................***Failed    0.03 sec
+Psi|75/78 Test #75: e1_aval_075 ......................   Passed    0.04 sec
 Psi|      Start 76: e1_aval_076
-Psi|76/78 Test #76: e1_aval_076 ......................   Passed    0.04 sec
+Psi|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
 Psi|      Start 77: e1_aval_077
-Psi|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Psi|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Psi|      Start 78: e1_aval_078
-Psi|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Psi|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Psi|
-Psi|96% tests passed, 3 tests failed out of 78
+Psi|100% tests passed, 0 tests failed out of 78
 Psi|
-Psi|Total Test time (real) =   2.43 sec
-Psi|
-Psi|The following tests FAILED:
-Psi|	 75 - e1_aval_075 (Failed)
-Psi|	 77 - e1_aval_077 (Failed)
-Psi|	 78 - e1_aval_078 (Failed)
+Psi|Total Test time (real) =   2.44 sec
 Rho|Test project /home/schnorr/ensino/private/maio_e1/Rho-E1/b.e1.maio
 Rho|      Start  1: e1_aval_001
 Rho| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.04 sec
@@ -2074,7 +1950,7 @@ Rho| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
 Rho|      Start  7: e1_aval_007
 Rho| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
 Rho|      Start  8: e1_aval_008
-Rho| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.04 sec
+Rho| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
 Rho|      Start  9: e1_aval_009
 Rho| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Rho|      Start 10: e1_aval_010
@@ -2100,7 +1976,7 @@ Rho|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Rho|      Start 20: e1_aval_020
 Rho|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
 Rho|      Start 21: e1_aval_021
-Rho|21/78 Test #21: e1_aval_021 ......................   Passed    0.04 sec
+Rho|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
 Rho|      Start 22: e1_aval_022
 Rho|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Rho|      Start 23: e1_aval_023
@@ -2116,7 +1992,7 @@ Rho|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
 Rho|      Start 28: e1_aval_028
 Rho|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
 Rho|      Start 29: e1_aval_029
-Rho|29/78 Test #29: e1_aval_029 ......................   Passed    0.03 sec
+Rho|29/78 Test #29: e1_aval_029 ......................   Passed    0.04 sec
 Rho|      Start 30: e1_aval_030
 Rho|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
 Rho|      Start 31: e1_aval_031
@@ -2140,27 +2016,27 @@ Rho|39/78 Test #39: e1_aval_039 ......................   Passed    0.03 sec
 Rho|      Start 40: e1_aval_040
 Rho|40/78 Test #40: e1_aval_040 ......................   Passed    0.03 sec
 Rho|      Start 41: e1_aval_041
-Rho|41/78 Test #41: e1_aval_041 ......................   Passed    0.03 sec
+Rho|41/78 Test #41: e1_aval_041 ......................   Passed    0.04 sec
 Rho|      Start 42: e1_aval_042
 Rho|42/78 Test #42: e1_aval_042 ......................   Passed    0.03 sec
 Rho|      Start 43: e1_aval_043
 Rho|43/78 Test #43: e1_aval_043 ......................   Passed    0.03 sec
 Rho|      Start 44: e1_aval_044
-Rho|44/78 Test #44: e1_aval_044 ......................   Passed    0.03 sec
+Rho|44/78 Test #44: e1_aval_044 ......................   Passed    0.04 sec
 Rho|      Start 45: e1_aval_045
 Rho|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
 Rho|      Start 46: e1_aval_046
-Rho|46/78 Test #46: e1_aval_046 ......................   Passed    0.03 sec
+Rho|46/78 Test #46: e1_aval_046 ......................   Passed    0.04 sec
 Rho|      Start 47: e1_aval_047
 Rho|47/78 Test #47: e1_aval_047 ......................   Passed    0.03 sec
 Rho|      Start 48: e1_aval_048
-Rho|48/78 Test #48: e1_aval_048 ......................   Passed    0.04 sec
+Rho|48/78 Test #48: e1_aval_048 ......................   Passed    0.03 sec
 Rho|      Start 49: e1_aval_049
 Rho|49/78 Test #49: e1_aval_049 ......................   Passed    0.03 sec
 Rho|      Start 50: e1_aval_050
 Rho|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
 Rho|      Start 51: e1_aval_051
-Rho|51/78 Test #51: e1_aval_051 ......................   Passed    0.04 sec
+Rho|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
 Rho|      Start 52: e1_aval_052
 Rho|52/78 Test #52: e1_aval_052 ......................   Passed    0.03 sec
 Rho|      Start 53: e1_aval_053
@@ -2170,15 +2046,15 @@ Rho|54/78 Test #54: e1_aval_054 ......................   Passed    0.03 sec
 Rho|      Start 55: e1_aval_055
 Rho|55/78 Test #55: e1_aval_055 ......................   Passed    0.03 sec
 Rho|      Start 56: e1_aval_056
-Rho|56/78 Test #56: e1_aval_056 ......................   Passed    0.03 sec
+Rho|56/78 Test #56: e1_aval_056 ......................   Passed    0.04 sec
 Rho|      Start 57: e1_aval_057
 Rho|57/78 Test #57: e1_aval_057 ......................   Passed    0.03 sec
 Rho|      Start 58: e1_aval_058
 Rho|58/78 Test #58: e1_aval_058 ......................   Passed    0.03 sec
 Rho|      Start 59: e1_aval_059
-Rho|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
+Rho|59/78 Test #59: e1_aval_059 ......................   Passed    0.04 sec
 Rho|      Start 60: e1_aval_060
-Rho|60/78 Test #60: e1_aval_060 ......................   Passed    0.03 sec
+Rho|60/78 Test #60: e1_aval_060 ......................   Passed    0.04 sec
 Rho|      Start 61: e1_aval_061
 Rho|61/78 Test #61: e1_aval_061 ......................   Passed    0.03 sec
 Rho|      Start 62: e1_aval_062
@@ -2190,7 +2066,7 @@ Rho|64/78 Test #64: e1_aval_064 ......................   Passed    0.03 sec
 Rho|      Start 65: e1_aval_065
 Rho|65/78 Test #65: e1_aval_065 ......................   Passed    0.03 sec
 Rho|      Start 66: e1_aval_066
-Rho|66/78 Test #66: e1_aval_066 ......................   Passed    0.04 sec
+Rho|66/78 Test #66: e1_aval_066 ......................   Passed    0.03 sec
 Rho|      Start 67: e1_aval_067
 Rho|67/78 Test #67: e1_aval_067 ......................   Passed    0.03 sec
 Rho|      Start 68: e1_aval_068
@@ -2202,44 +2078,40 @@ Rho|70/78 Test #70: e1_aval_070 ......................   Passed    0.03 sec
 Rho|      Start 71: e1_aval_071
 Rho|71/78 Test #71: e1_aval_071 ......................   Passed    0.03 sec
 Rho|      Start 72: e1_aval_072
-Rho|72/78 Test #72: e1_aval_072 ......................   Passed    0.04 sec
+Rho|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
 Rho|      Start 73: e1_aval_073
 Rho|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
 Rho|      Start 74: e1_aval_074
-Rho|74/78 Test #74: e1_aval_074 ......................   Passed    0.04 sec
+Rho|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Rho|      Start 75: e1_aval_075
 Rho|75/78 Test #75: e1_aval_075 ......................   Passed    0.03 sec
 Rho|      Start 76: e1_aval_076
 Rho|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
 Rho|      Start 77: e1_aval_077
-Rho|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Rho|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Rho|      Start 78: e1_aval_078
-Rho|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Rho|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Rho|
-Rho|97% tests passed, 2 tests failed out of 78
+Rho|100% tests passed, 0 tests failed out of 78
 Rho|
-Rho|Total Test time (real) =   2.39 sec
-Rho|
-Rho|The following tests FAILED:
-Rho|	 77 - e1_aval_077 (Failed)
-Rho|	 78 - e1_aval_078 (Failed)
+Rho|Total Test time (real) =   2.42 sec
 Sigma|Test project /home/schnorr/ensino/private/maio_e1/Sigma-E1/b.e1.maio
 Sigma|      Start  1: e1_aval_001
 Sigma| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
 Sigma|      Start  2: e1_aval_002
 Sigma| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.03 sec
 Sigma|      Start  3: e1_aval_003
-Sigma| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
+Sigma| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.04 sec
 Sigma|      Start  4: e1_aval_004
-Sigma| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
+Sigma| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.04 sec
 Sigma|      Start  5: e1_aval_005
-Sigma| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
+Sigma| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.04 sec
 Sigma|      Start  6: e1_aval_006
-Sigma| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
+Sigma| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.04 sec
 Sigma|      Start  7: e1_aval_007
-Sigma| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.04 sec
+Sigma| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
 Sigma|      Start  8: e1_aval_008
-Sigma| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
+Sigma| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.04 sec
 Sigma|      Start  9: e1_aval_009
 Sigma| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Sigma|      Start 10: e1_aval_010
@@ -2253,7 +2125,7 @@ Sigma|13/78 Test #13: e1_aval_013 ......................   Passed    0.03 sec
 Sigma|      Start 14: e1_aval_014
 Sigma|14/78 Test #14: e1_aval_014 ......................   Passed    0.03 sec
 Sigma|      Start 15: e1_aval_015
-Sigma|15/78 Test #15: e1_aval_015 ......................   Passed    0.03 sec
+Sigma|15/78 Test #15: e1_aval_015 ......................   Passed    0.04 sec
 Sigma|      Start 16: e1_aval_016
 Sigma|16/78 Test #16: e1_aval_016 ......................   Passed    0.03 sec
 Sigma|      Start 17: e1_aval_017
@@ -2261,15 +2133,15 @@ Sigma|17/78 Test #17: e1_aval_017 ......................   Passed    0.03 sec
 Sigma|      Start 18: e1_aval_018
 Sigma|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
 Sigma|      Start 19: e1_aval_019
-Sigma|19/78 Test #19: e1_aval_019 ......................   Passed    0.04 sec
+Sigma|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Sigma|      Start 20: e1_aval_020
-Sigma|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
+Sigma|20/78 Test #20: e1_aval_020 ......................   Passed    0.04 sec
 Sigma|      Start 21: e1_aval_021
 Sigma|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
 Sigma|      Start 22: e1_aval_022
 Sigma|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Sigma|      Start 23: e1_aval_023
-Sigma|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
+Sigma|23/78 Test #23: e1_aval_023 ......................   Passed    0.04 sec
 Sigma|      Start 24: e1_aval_024
 Sigma|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
 Sigma|      Start 25: e1_aval_025
@@ -2277,7 +2149,7 @@ Sigma|25/78 Test #25: e1_aval_025 ......................   Passed    0.03 sec
 Sigma|      Start 26: e1_aval_026
 Sigma|26/78 Test #26: e1_aval_026 ......................   Passed    0.03 sec
 Sigma|      Start 27: e1_aval_027
-Sigma|27/78 Test #27: e1_aval_027 ......................   Passed    0.04 sec
+Sigma|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
 Sigma|      Start 28: e1_aval_028
 Sigma|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
 Sigma|      Start 29: e1_aval_029
@@ -2301,9 +2173,9 @@ Sigma|37/78 Test #37: e1_aval_037 ......................   Passed    0.03 sec
 Sigma|      Start 38: e1_aval_038
 Sigma|38/78 Test #38: e1_aval_038 ......................   Passed    0.03 sec
 Sigma|      Start 39: e1_aval_039
-Sigma|39/78 Test #39: e1_aval_039 ......................   Passed    0.04 sec
+Sigma|39/78 Test #39: e1_aval_039 ......................   Passed    0.03 sec
 Sigma|      Start 40: e1_aval_040
-Sigma|40/78 Test #40: e1_aval_040 ......................   Passed    0.04 sec
+Sigma|40/78 Test #40: e1_aval_040 ......................   Passed    0.03 sec
 Sigma|      Start 41: e1_aval_041
 Sigma|41/78 Test #41: e1_aval_041 ......................   Passed    0.03 sec
 Sigma|      Start 42: e1_aval_042
@@ -2311,13 +2183,13 @@ Sigma|42/78 Test #42: e1_aval_042 ......................   Passed    0.03 sec
 Sigma|      Start 43: e1_aval_043
 Sigma|43/78 Test #43: e1_aval_043 ......................   Passed    0.03 sec
 Sigma|      Start 44: e1_aval_044
-Sigma|44/78 Test #44: e1_aval_044 ......................   Passed    0.04 sec
+Sigma|44/78 Test #44: e1_aval_044 ......................   Passed    0.03 sec
 Sigma|      Start 45: e1_aval_045
 Sigma|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
 Sigma|      Start 46: e1_aval_046
-Sigma|46/78 Test #46: e1_aval_046 ......................   Passed    0.04 sec
+Sigma|46/78 Test #46: e1_aval_046 ......................   Passed    0.03 sec
 Sigma|      Start 47: e1_aval_047
-Sigma|47/78 Test #47: e1_aval_047 ......................   Passed    0.03 sec
+Sigma|47/78 Test #47: e1_aval_047 ......................   Passed    0.04 sec
 Sigma|      Start 48: e1_aval_048
 Sigma|48/78 Test #48: e1_aval_048 ......................   Passed    0.03 sec
 Sigma|      Start 49: e1_aval_049
@@ -2327,7 +2199,7 @@ Sigma|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
 Sigma|      Start 51: e1_aval_051
 Sigma|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
 Sigma|      Start 52: e1_aval_052
-Sigma|52/78 Test #52: e1_aval_052 ......................   Passed    0.03 sec
+Sigma|52/78 Test #52: e1_aval_052 ......................   Passed    0.04 sec
 Sigma|      Start 53: e1_aval_053
 Sigma|53/78 Test #53: e1_aval_053 ......................   Passed    0.03 sec
 Sigma|      Start 54: e1_aval_054
@@ -2351,9 +2223,9 @@ Sigma|62/78 Test #62: e1_aval_062 ......................   Passed    0.03 sec
 Sigma|      Start 63: e1_aval_063
 Sigma|63/78 Test #63: e1_aval_063 ......................   Passed    0.03 sec
 Sigma|      Start 64: e1_aval_064
-Sigma|64/78 Test #64: e1_aval_064 ......................   Passed    0.03 sec
+Sigma|64/78 Test #64: e1_aval_064 ......................   Passed    0.04 sec
 Sigma|      Start 65: e1_aval_065
-Sigma|65/78 Test #65: e1_aval_065 ......................   Passed    0.03 sec
+Sigma|65/78 Test #65: e1_aval_065 ......................   Passed    0.04 sec
 Sigma|      Start 66: e1_aval_066
 Sigma|66/78 Test #66: e1_aval_066 ......................   Passed    0.04 sec
 Sigma|      Start 67: e1_aval_067
@@ -2369,42 +2241,38 @@ Sigma|71/78 Test #71: e1_aval_071 ......................   Passed    0.03 sec
 Sigma|      Start 72: e1_aval_072
 Sigma|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
 Sigma|      Start 73: e1_aval_073
-Sigma|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
+Sigma|73/78 Test #73: e1_aval_073 ......................   Passed    0.04 sec
 Sigma|      Start 74: e1_aval_074
 Sigma|74/78 Test #74: e1_aval_074 ......................   Passed    0.03 sec
 Sigma|      Start 75: e1_aval_075
 Sigma|75/78 Test #75: e1_aval_075 ......................   Passed    0.03 sec
 Sigma|      Start 76: e1_aval_076
-Sigma|76/78 Test #76: e1_aval_076 ......................   Passed    0.03 sec
+Sigma|76/78 Test #76: e1_aval_076 ......................   Passed    0.04 sec
 Sigma|      Start 77: e1_aval_077
-Sigma|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Sigma|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Sigma|      Start 78: e1_aval_078
-Sigma|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Sigma|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Sigma|
-Sigma|97% tests passed, 2 tests failed out of 78
+Sigma|100% tests passed, 0 tests failed out of 78
 Sigma|
-Sigma|Total Test time (real) =   2.42 sec
-Sigma|
-Sigma|The following tests FAILED:
-Sigma|	 77 - e1_aval_077 (Failed)
-Sigma|	 78 - e1_aval_078 (Failed)
+Sigma|Total Test time (real) =   2.45 sec
 Tau|Test project /home/schnorr/ensino/private/maio_e1/Tau-E1/b.e1.maio
 Tau|      Start  1: e1_aval_001
-Tau| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.04 sec
+Tau| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
 Tau|      Start  2: e1_aval_002
-Tau| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.04 sec
+Tau| 2/78 Test  #2: e1_aval_002 ......................   Passed    0.03 sec
 Tau|      Start  3: e1_aval_003
 Tau| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
 Tau|      Start  4: e1_aval_004
 Tau| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
 Tau|      Start  5: e1_aval_005
-Tau| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.04 sec
+Tau| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
 Tau|      Start  6: e1_aval_006
-Tau| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.04 sec
+Tau| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
 Tau|      Start  7: e1_aval_007
-Tau| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.03 sec
+Tau| 7/78 Test  #7: e1_aval_007 ......................   Passed    0.04 sec
 Tau|      Start  8: e1_aval_008
-Tau| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.04 sec
+Tau| 8/78 Test  #8: e1_aval_008 ......................   Passed    0.03 sec
 Tau|      Start  9: e1_aval_009
 Tau| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Tau|      Start 10: e1_aval_010
@@ -2416,7 +2284,7 @@ Tau|12/78 Test #12: e1_aval_012 ......................   Passed    0.03 sec
 Tau|      Start 13: e1_aval_013
 Tau|13/78 Test #13: e1_aval_013 ......................   Passed    0.03 sec
 Tau|      Start 14: e1_aval_014
-Tau|14/78 Test #14: e1_aval_014 ......................   Passed    0.04 sec
+Tau|14/78 Test #14: e1_aval_014 ......................   Passed    0.03 sec
 Tau|      Start 15: e1_aval_015
 Tau|15/78 Test #15: e1_aval_015 ......................   Passed    0.03 sec
 Tau|      Start 16: e1_aval_016
@@ -2426,15 +2294,15 @@ Tau|17/78 Test #17: e1_aval_017 ......................   Passed    0.03 sec
 Tau|      Start 18: e1_aval_018
 Tau|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
 Tau|      Start 19: e1_aval_019
-Tau|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
+Tau|19/78 Test #19: e1_aval_019 ......................   Passed    0.04 sec
 Tau|      Start 20: e1_aval_020
-Tau|20/78 Test #20: e1_aval_020 ......................   Passed    0.03 sec
+Tau|20/78 Test #20: e1_aval_020 ......................   Passed    0.04 sec
 Tau|      Start 21: e1_aval_021
-Tau|21/78 Test #21: e1_aval_021 ......................   Passed    0.03 sec
+Tau|21/78 Test #21: e1_aval_021 ......................   Passed    0.04 sec
 Tau|      Start 22: e1_aval_022
-Tau|22/78 Test #22: e1_aval_022 ......................   Passed    0.04 sec
+Tau|22/78 Test #22: e1_aval_022 ......................   Passed    0.03 sec
 Tau|      Start 23: e1_aval_023
-Tau|23/78 Test #23: e1_aval_023 ......................   Passed    0.03 sec
+Tau|23/78 Test #23: e1_aval_023 ......................   Passed    0.04 sec
 Tau|      Start 24: e1_aval_024
 Tau|24/78 Test #24: e1_aval_024 ......................   Passed    0.03 sec
 Tau|      Start 25: e1_aval_025
@@ -2444,9 +2312,9 @@ Tau|26/78 Test #26: e1_aval_026 ......................   Passed    0.03 sec
 Tau|      Start 27: e1_aval_027
 Tau|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
 Tau|      Start 28: e1_aval_028
-Tau|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
+Tau|28/78 Test #28: e1_aval_028 ......................   Passed    0.04 sec
 Tau|      Start 29: e1_aval_029
-Tau|29/78 Test #29: e1_aval_029 ......................   Passed    0.03 sec
+Tau|29/78 Test #29: e1_aval_029 ......................   Passed    0.04 sec
 Tau|      Start 30: e1_aval_030
 Tau|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
 Tau|      Start 31: e1_aval_031
@@ -2482,15 +2350,15 @@ Tau|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
 Tau|      Start 46: e1_aval_046
 Tau|46/78 Test #46: e1_aval_046 ......................   Passed    0.03 sec
 Tau|      Start 47: e1_aval_047
-Tau|47/78 Test #47: e1_aval_047 ......................   Passed    0.04 sec
+Tau|47/78 Test #47: e1_aval_047 ......................   Passed    0.03 sec
 Tau|      Start 48: e1_aval_048
-Tau|48/78 Test #48: e1_aval_048 ......................   Passed    0.04 sec
+Tau|48/78 Test #48: e1_aval_048 ......................   Passed    0.03 sec
 Tau|      Start 49: e1_aval_049
 Tau|49/78 Test #49: e1_aval_049 ......................   Passed    0.03 sec
 Tau|      Start 50: e1_aval_050
-Tau|50/78 Test #50: e1_aval_050 ......................   Passed    0.03 sec
+Tau|50/78 Test #50: e1_aval_050 ......................   Passed    0.04 sec
 Tau|      Start 51: e1_aval_051
-Tau|51/78 Test #51: e1_aval_051 ......................   Passed    0.04 sec
+Tau|51/78 Test #51: e1_aval_051 ......................   Passed    0.03 sec
 Tau|      Start 52: e1_aval_052
 Tau|52/78 Test #52: e1_aval_052 ......................   Passed    0.03 sec
 Tau|      Start 53: e1_aval_053
@@ -2510,7 +2378,7 @@ Tau|59/78 Test #59: e1_aval_059 ......................   Passed    0.03 sec
 Tau|      Start 60: e1_aval_060
 Tau|60/78 Test #60: e1_aval_060 ......................   Passed    0.03 sec
 Tau|      Start 61: e1_aval_061
-Tau|61/78 Test #61: e1_aval_061 ......................   Passed    0.03 sec
+Tau|61/78 Test #61: e1_aval_061 ......................   Passed    0.04 sec
 Tau|      Start 62: e1_aval_062
 Tau|62/78 Test #62: e1_aval_062 ......................   Passed    0.03 sec
 Tau|      Start 63: e1_aval_063
@@ -2522,7 +2390,7 @@ Tau|65/78 Test #65: e1_aval_065 ......................   Passed    0.03 sec
 Tau|      Start 66: e1_aval_066
 Tau|66/78 Test #66: e1_aval_066 ......................   Passed    0.03 sec
 Tau|      Start 67: e1_aval_067
-Tau|67/78 Test #67: e1_aval_067 ......................   Passed    0.03 sec
+Tau|67/78 Test #67: e1_aval_067 ......................   Passed    0.04 sec
 Tau|      Start 68: e1_aval_068
 Tau|68/78 Test #68: e1_aval_068 ......................   Passed    0.03 sec
 Tau|      Start 69: e1_aval_069
@@ -2534,28 +2402,26 @@ Tau|71/78 Test #71: e1_aval_071 ......................   Passed    0.03 sec
 Tau|      Start 72: e1_aval_072
 Tau|72/78 Test #72: e1_aval_072 ......................   Passed    0.03 sec
 Tau|      Start 73: e1_aval_073
-Tau|73/78 Test #73: e1_aval_073 ......................   Passed    0.04 sec
+Tau|73/78 Test #73: e1_aval_073 ......................   Passed    0.03 sec
 Tau|      Start 74: e1_aval_074
 Tau|74/78 Test #74: e1_aval_074 ......................***Failed    0.03 sec
 Tau|      Start 75: e1_aval_075
 Tau|75/78 Test #75: e1_aval_075 ......................***Failed    0.04 sec
 Tau|      Start 76: e1_aval_076
-Tau|76/78 Test #76: e1_aval_076 ......................***Failed    0.04 sec
+Tau|76/78 Test #76: e1_aval_076 ......................***Failed    0.03 sec
 Tau|      Start 77: e1_aval_077
-Tau|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Tau|77/78 Test #77: e1_aval_077 ......................   Passed    0.03 sec
 Tau|      Start 78: e1_aval_078
-Tau|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
+Tau|78/78 Test #78: e1_aval_078 ......................   Passed    0.03 sec
 Tau|
-Tau|94% tests passed, 5 tests failed out of 78
+Tau|96% tests passed, 3 tests failed out of 78
 Tau|
-Tau|Total Test time (real) =   2.42 sec
+Tau|Total Test time (real) =   2.43 sec
 Tau|
 Tau|The following tests FAILED:
 Tau|	 74 - e1_aval_074 (Failed)
 Tau|	 75 - e1_aval_075 (Failed)
 Tau|	 76 - e1_aval_076 (Failed)
-Tau|	 77 - e1_aval_077 (Failed)
-Tau|	 78 - e1_aval_078 (Failed)
 Zeta|Test project /home/schnorr/ensino/private/maio_e1/Zeta-E1/b.e1.maio
 Zeta|      Start  1: e1_aval_001
 Zeta| 1/78 Test  #1: e1_aval_001 ......................   Passed    0.03 sec
@@ -2566,7 +2432,7 @@ Zeta| 3/78 Test  #3: e1_aval_003 ......................   Passed    0.03 sec
 Zeta|      Start  4: e1_aval_004
 Zeta| 4/78 Test  #4: e1_aval_004 ......................   Passed    0.03 sec
 Zeta|      Start  5: e1_aval_005
-Zeta| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.04 sec
+Zeta| 5/78 Test  #5: e1_aval_005 ......................   Passed    0.03 sec
 Zeta|      Start  6: e1_aval_006
 Zeta| 6/78 Test  #6: e1_aval_006 ......................   Passed    0.03 sec
 Zeta|      Start  7: e1_aval_007
@@ -2578,7 +2444,7 @@ Zeta| 9/78 Test  #9: e1_aval_009 ......................   Passed    0.03 sec
 Zeta|      Start 10: e1_aval_010
 Zeta|10/78 Test #10: e1_aval_010 ......................   Passed    0.03 sec
 Zeta|      Start 11: e1_aval_011
-Zeta|11/78 Test #11: e1_aval_011 ......................   Passed    0.03 sec
+Zeta|11/78 Test #11: e1_aval_011 ......................   Passed    0.04 sec
 Zeta|      Start 12: e1_aval_012
 Zeta|12/78 Test #12: e1_aval_012 ......................   Passed    0.03 sec
 Zeta|      Start 13: e1_aval_013
@@ -2586,13 +2452,13 @@ Zeta|13/78 Test #13: e1_aval_013 ......................   Passed    0.03 sec
 Zeta|      Start 14: e1_aval_014
 Zeta|14/78 Test #14: e1_aval_014 ......................   Passed    0.03 sec
 Zeta|      Start 15: e1_aval_015
-Zeta|15/78 Test #15: e1_aval_015 ......................   Passed    0.03 sec
+Zeta|15/78 Test #15: e1_aval_015 ......................   Passed    0.04 sec
 Zeta|      Start 16: e1_aval_016
-Zeta|16/78 Test #16: e1_aval_016 ......................   Passed    0.03 sec
+Zeta|16/78 Test #16: e1_aval_016 ......................   Passed    0.04 sec
 Zeta|      Start 17: e1_aval_017
 Zeta|17/78 Test #17: e1_aval_017 ......................   Passed    0.03 sec
 Zeta|      Start 18: e1_aval_018
-Zeta|18/78 Test #18: e1_aval_018 ......................   Passed    0.04 sec
+Zeta|18/78 Test #18: e1_aval_018 ......................   Passed    0.03 sec
 Zeta|      Start 19: e1_aval_019
 Zeta|19/78 Test #19: e1_aval_019 ......................   Passed    0.03 sec
 Zeta|      Start 20: e1_aval_020
@@ -2612,11 +2478,11 @@ Zeta|26/78 Test #26: e1_aval_026 ......................   Passed    0.03 sec
 Zeta|      Start 27: e1_aval_027
 Zeta|27/78 Test #27: e1_aval_027 ......................   Passed    0.03 sec
 Zeta|      Start 28: e1_aval_028
-Zeta|28/78 Test #28: e1_aval_028 ......................   Passed    0.03 sec
+Zeta|28/78 Test #28: e1_aval_028 ......................   Passed    0.04 sec
 Zeta|      Start 29: e1_aval_029
-Zeta|29/78 Test #29: e1_aval_029 ......................   Passed    0.03 sec
+Zeta|29/78 Test #29: e1_aval_029 ......................   Passed    0.04 sec
 Zeta|      Start 30: e1_aval_030
-Zeta|30/78 Test #30: e1_aval_030 ......................   Passed    0.04 sec
+Zeta|30/78 Test #30: e1_aval_030 ......................   Passed    0.03 sec
 Zeta|      Start 31: e1_aval_031
 Zeta|31/78 Test #31: e1_aval_031 ......................   Passed    0.03 sec
 Zeta|      Start 32: e1_aval_032
@@ -2636,7 +2502,7 @@ Zeta|38/78 Test #38: e1_aval_038 ......................   Passed    0.03 sec
 Zeta|      Start 39: e1_aval_039
 Zeta|39/78 Test #39: e1_aval_039 ......................   Passed    0.03 sec
 Zeta|      Start 40: e1_aval_040
-Zeta|40/78 Test #40: e1_aval_040 ......................   Passed    0.04 sec
+Zeta|40/78 Test #40: e1_aval_040 ......................   Passed    0.03 sec
 Zeta|      Start 41: e1_aval_041
 Zeta|41/78 Test #41: e1_aval_041 ......................   Passed    0.03 sec
 Zeta|      Start 42: e1_aval_042
@@ -2650,7 +2516,7 @@ Zeta|45/78 Test #45: e1_aval_045 ......................   Passed    0.03 sec
 Zeta|      Start 46: e1_aval_046
 Zeta|46/78 Test #46: e1_aval_046 ......................   Passed    0.03 sec
 Zeta|      Start 47: e1_aval_047
-Zeta|47/78 Test #47: e1_aval_047 ......................   Passed    0.04 sec
+Zeta|47/78 Test #47: e1_aval_047 ......................   Passed    0.03 sec
 Zeta|      Start 48: e1_aval_048
 Zeta|48/78 Test #48: e1_aval_048 ......................***Failed    0.03 sec
 Zeta|      Start 49: e1_aval_049
@@ -2670,23 +2536,23 @@ Zeta|55/78 Test #55: e1_aval_055 ......................***Failed    0.03 sec
 Zeta|      Start 56: e1_aval_056
 Zeta|56/78 Test #56: e1_aval_056 ......................***Failed    0.03 sec
 Zeta|      Start 57: e1_aval_057
-Zeta|57/78 Test #57: e1_aval_057 ......................***Failed    0.04 sec
+Zeta|57/78 Test #57: e1_aval_057 ......................***Failed    0.03 sec
 Zeta|      Start 58: e1_aval_058
-Zeta|58/78 Test #58: e1_aval_058 ......................***Failed    0.03 sec
+Zeta|58/78 Test #58: e1_aval_058 ......................***Failed    0.04 sec
 Zeta|      Start 59: e1_aval_059
-Zeta|59/78 Test #59: e1_aval_059 ......................***Failed    0.03 sec
+Zeta|59/78 Test #59: e1_aval_059 ......................***Failed    0.04 sec
 Zeta|      Start 60: e1_aval_060
 Zeta|60/78 Test #60: e1_aval_060 ......................***Failed    0.03 sec
 Zeta|      Start 61: e1_aval_061
 Zeta|61/78 Test #61: e1_aval_061 ......................***Failed    0.03 sec
 Zeta|      Start 62: e1_aval_062
-Zeta|62/78 Test #62: e1_aval_062 ......................***Failed    0.04 sec
+Zeta|62/78 Test #62: e1_aval_062 ......................***Failed    0.03 sec
 Zeta|      Start 63: e1_aval_063
 Zeta|63/78 Test #63: e1_aval_063 ......................***Failed    0.03 sec
 Zeta|      Start 64: e1_aval_064
 Zeta|64/78 Test #64: e1_aval_064 ......................***Failed    0.03 sec
 Zeta|      Start 65: e1_aval_065
-Zeta|65/78 Test #65: e1_aval_065 ......................***Failed    0.03 sec
+Zeta|65/78 Test #65: e1_aval_065 ......................***Failed    0.04 sec
 Zeta|      Start 66: e1_aval_066
 Zeta|66/78 Test #66: e1_aval_066 ......................***Failed    0.03 sec
 Zeta|      Start 67: e1_aval_067
@@ -2700,7 +2566,7 @@ Zeta|70/78 Test #70: e1_aval_070 ......................***Failed    0.03 sec
 Zeta|      Start 71: e1_aval_071
 Zeta|71/78 Test #71: e1_aval_071 ......................***Failed    0.03 sec
 Zeta|      Start 72: e1_aval_072
-Zeta|72/78 Test #72: e1_aval_072 ......................***Failed    0.03 sec
+Zeta|72/78 Test #72: e1_aval_072 ......................***Failed    0.04 sec
 Zeta|      Start 73: e1_aval_073
 Zeta|73/78 Test #73: e1_aval_073 ......................***Failed    0.03 sec
 Zeta|      Start 74: e1_aval_074
@@ -2710,13 +2576,13 @@ Zeta|75/78 Test #75: e1_aval_075 ......................***Failed    0.03 sec
 Zeta|      Start 76: e1_aval_076
 Zeta|76/78 Test #76: e1_aval_076 ......................***Failed    0.03 sec
 Zeta|      Start 77: e1_aval_077
-Zeta|77/78 Test #77: e1_aval_077 ......................***Failed    0.03 sec
+Zeta|77/78 Test #77: e1_aval_077 ......................***Failed    0.04 sec
 Zeta|      Start 78: e1_aval_078
-Zeta|78/78 Test #78: e1_aval_078 ......................***Failed    0.04 sec
+Zeta|78/78 Test #78: e1_aval_078 ......................***Failed    0.03 sec
 Zeta|
 Zeta|60% tests passed, 31 tests failed out of 78
 Zeta|
-Zeta|Total Test time (real) =   2.36 sec
+Zeta|Total Test time (real) =   2.38 sec
 Zeta|
 Zeta|The following tests FAILED:
 Zeta|	 48 - e1_aval_048 (Failed)

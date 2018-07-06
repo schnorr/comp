@@ -2,7 +2,7 @@ Alpha|Test project /home/schnorr/ensino/private/maio_e2/Alpha-E2/b.e2.maio
 Alpha|      Start 157: e2_asl01
 Alpha| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
 Alpha|      Start 158: e2_asl02
-Alpha| 2/94 Test #158: e2_asl02 .........................   Passed    0.04 sec
+Alpha| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
 Alpha|      Start 159: e2_asl03
 Alpha| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Alpha|      Start 160: e2_asl04
@@ -10,19 +10,19 @@ Alpha| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
 Alpha|      Start 161: e2_asl05
 Alpha| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Alpha|      Start 162: e2_asl06
-Alpha| 6/94 Test #162: e2_asl06 .........................   Passed    0.04 sec
+Alpha| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
 Alpha|      Start 163: e2_asl07
 Alpha| 7/94 Test #163: e2_asl07 .........................   Passed    0.03 sec
 Alpha|      Start 164: e2_asl08
 Alpha| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Alpha|      Start 165: e2_asl09
-Alpha| 9/94 Test #165: e2_asl09 .........................***Failed    0.04 sec
+Alpha| 9/94 Test #165: e2_asl09 .........................***Failed    0.03 sec
 Alpha|      Start 166: e2_asl10
-Alpha|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
+Alpha|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
 Alpha|      Start 167: e2_asl11
 Alpha|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
 Alpha|      Start 168: e2_asl12
-Alpha|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
+Alpha|12/94 Test #168: e2_asl12 .........................   Passed    0.04 sec
 Alpha|      Start 169: e2_asl13
 Alpha|13/94 Test #169: e2_asl13 .........................   Passed    0.03 sec
 Alpha|      Start 170: e2_asl14
@@ -34,9 +34,9 @@ Alpha|16/94 Test #172: e2_asl16 .........................   Passed    0.03 sec
 Alpha|      Start 173: e2_asl17
 Alpha|17/94 Test #173: e2_asl17 .........................   Passed    0.03 sec
 Alpha|      Start 174: e2_asl18
-Alpha|18/94 Test #174: e2_asl18 .........................   Passed    0.03 sec
+Alpha|18/94 Test #174: e2_asl18 .........................   Passed    0.04 sec
 Alpha|      Start 175: e2_asl19
-Alpha|19/94 Test #175: e2_asl19 .........................   Passed    0.04 sec
+Alpha|19/94 Test #175: e2_asl19 .........................   Passed    0.03 sec
 Alpha|      Start 176: e2_asl20
 Alpha|20/94 Test #176: e2_asl20 .........................   Passed    0.03 sec
 Alpha|      Start 177: e2_asl21
@@ -50,7 +50,7 @@ Alpha|24/94 Test #180: e2_asl24 .........................***Failed    0.03 sec
 Alpha|      Start 181: e2_asl25
 Alpha|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
 Alpha|      Start 182: e2_asl26
-Alpha|26/94 Test #182: e2_asl26 .........................   Passed    0.03 sec
+Alpha|26/94 Test #182: e2_asl26 .........................   Passed    0.04 sec
 Alpha|      Start 183: e2_asl27
 Alpha|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
 Alpha|      Start 184: e2_asl28
@@ -72,15 +72,15 @@ Alpha|35/94 Test #191: e2_asl35 .........................   Passed    0.03 sec
 Alpha|      Start 192: e2_asl36
 Alpha|36/94 Test #192: e2_asl36 .........................   Passed    0.03 sec
 Alpha|      Start 193: e2_asl37
-Alpha|37/94 Test #193: e2_asl37 .........................   Passed    0.03 sec
+Alpha|37/94 Test #193: e2_asl37 .........................   Passed    0.04 sec
 Alpha|      Start 194: e2_asl38
 Alpha|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Alpha|      Start 195: e2_asl39
-Alpha|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
+Alpha|39/94 Test #195: e2_asl39 .........................   Passed    0.04 sec
 Alpha|      Start 196: e2_asl40
 Alpha|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
 Alpha|      Start 197: e2_asl41
-Alpha|41/94 Test #197: e2_asl41 .........................   Passed    0.03 sec
+Alpha|41/94 Test #197: e2_asl41 .........................   Passed    0.04 sec
 Alpha|      Start 198: e2_asl42
 Alpha|42/94 Test #198: e2_asl42 .........................   Passed    0.03 sec
 Alpha|      Start 199: e2_asl43
@@ -92,21 +92,21 @@ Alpha|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
 Alpha|      Start 202: e2_asl46
 Alpha|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Alpha|      Start 203: e2_asl47
-Alpha|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Alpha|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Alpha|      Start 204: e2_asl48
-Alpha|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Alpha|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Alpha|      Start 205: e2_asl49
 Alpha|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
 Alpha|      Start 206: e2_asl50
-Alpha|50/94 Test #206: e2_asl50 .........................   Passed    0.04 sec
+Alpha|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Alpha|      Start 207: e2_asl51
-Alpha|51/94 Test #207: e2_asl51 .........................   Passed    0.04 sec
+Alpha|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
 Alpha|      Start 208: e2_asl52
 Alpha|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
 Alpha|      Start 209: e2_asl53
 Alpha|53/94 Test #209: e2_asl53 .........................   Passed    0.03 sec
 Alpha|      Start 210: e2_asl54
-Alpha|54/94 Test #210: e2_asl54 .........................   Passed    0.04 sec
+Alpha|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
 Alpha|      Start 211: e2_asl55
 Alpha|55/94 Test #211: e2_asl55 .........................   Passed    0.04 sec
 Alpha|      Start 212: e2_asl56
@@ -128,7 +128,7 @@ Alpha|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
 Alpha|      Start 220: e2_asl64
 Alpha|64/94 Test #220: e2_asl64 .........................***Failed    0.04 sec
 Alpha|      Start 221: e2_asl65
-Alpha|65/94 Test #221: e2_asl65 .........................***Failed    0.04 sec
+Alpha|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
 Alpha|      Start 222: e2_asl66
 Alpha|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
 Alpha|      Start 223: e2_asl67
@@ -140,7 +140,7 @@ Alpha|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Alpha|      Start 226: e2_asl70
 Alpha|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
 Alpha|      Start 227: e2_asl71
-Alpha|71/94 Test #227: e2_asl71 .........................   Passed    0.04 sec
+Alpha|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Alpha|      Start 228: e2_asl72
 Alpha|72/94 Test #228: e2_asl72 .........................   Passed    0.03 sec
 Alpha|      Start 229: e2_asl73
@@ -150,7 +150,7 @@ Alpha|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Alpha|      Start 231: e2_asl75
 Alpha|75/94 Test #231: e2_asl75 .........................***Failed    0.03 sec
 Alpha|      Start 232: e2_asl76
-Alpha|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Alpha|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Alpha|      Start 233: e2_asl77
 Alpha|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Alpha|      Start 234: e2_asl78
@@ -172,34 +172,33 @@ Alpha|85/94 Test #241: e2_asl85 .........................   Passed    0.03 sec
 Alpha|      Start 242: e2_asl86
 Alpha|86/94 Test #242: e2_asl86 .........................   Passed    0.03 sec
 Alpha|      Start 243: e2_asl87
-Alpha|87/94 Test #243: e2_asl87 .........................   Passed    0.03 sec
+Alpha|87/94 Test #243: e2_asl87 .........................   Passed    0.04 sec
 Alpha|      Start 244: e2_asl88
 Alpha|88/94 Test #244: e2_asl88 .........................   Passed    0.03 sec
 Alpha|      Start 245: e2_asl89
-Alpha|89/94 Test #245: e2_asl89 .........................   Passed    0.04 sec
+Alpha|89/94 Test #245: e2_asl89 .........................   Passed    0.03 sec
 Alpha|      Start 246: e2_asl90
 Alpha|90/94 Test #246: e2_asl90 .........................   Passed    0.03 sec
 Alpha|      Start 247: e2_asl91
 Alpha|91/94 Test #247: e2_asl91 .........................   Passed    0.03 sec
 Alpha|      Start 248: e2_asl92
-Alpha|92/94 Test #248: e2_asl92 .........................   Passed    0.04 sec
+Alpha|92/94 Test #248: e2_asl92 .........................   Passed    0.03 sec
 Alpha|      Start 249: e2_asl93
 Alpha|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Alpha|      Start 250: e2_asl94
 Alpha|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Alpha|
-Alpha|80% tests passed, 19 tests failed out of 94
+Alpha|82% tests passed, 17 tests failed out of 94
 Alpha|
-Alpha|Total Test time (real) =   2.79 sec
+Alpha|Total Test time (real) =   2.87 sec
 Alpha|
 Alpha|The following tests FAILED:
 Alpha|	165 - e2_asl09 (Failed)
+Alpha|	166 - e2_asl10 (Failed)
 Alpha|	180 - e2_asl24 (Failed)
 Alpha|	187 - e2_asl31 (Failed)
 Alpha|	188 - e2_asl32 (Failed)
 Alpha|	200 - e2_asl44 (Failed)
-Alpha|	203 - e2_asl47 (Failed)
-Alpha|	204 - e2_asl48 (Failed)
 Alpha|	205 - e2_asl49 (Failed)
 Alpha|	217 - e2_asl61 (Failed)
 Alpha|	218 - e2_asl62 (Failed)
@@ -210,15 +209,14 @@ Alpha|	222 - e2_asl66 (Failed)
 Alpha|	223 - e2_asl67 (Failed)
 Alpha|	226 - e2_asl70 (Failed)
 Alpha|	231 - e2_asl75 (Failed)
-Alpha|	232 - e2_asl76 (Failed)
 Alpha|	236 - e2_asl80 (Failed)
 Beta|Test project /home/schnorr/ensino/private/maio_e2/Beta-E2/b.e2.maio
 Beta|      Start 157: e2_asl01
-Beta| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
+Beta| 1/94 Test #157: e2_asl01 .........................   Passed    0.04 sec
 Beta|      Start 158: e2_asl02
 Beta| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
 Beta|      Start 159: e2_asl03
-Beta| 3/94 Test #159: e2_asl03 .........................   Passed    0.04 sec
+Beta| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Beta|      Start 160: e2_asl04
 Beta| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
 Beta|      Start 161: e2_asl05
@@ -226,17 +224,17 @@ Beta| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Beta|      Start 162: e2_asl06
 Beta| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
 Beta|      Start 163: e2_asl07
-Beta| 7/94 Test #163: e2_asl07 .........................   Passed    0.03 sec
+Beta| 7/94 Test #163: e2_asl07 .........................   Passed    0.04 sec
 Beta|      Start 164: e2_asl08
-Beta| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
+Beta| 8/94 Test #164: e2_asl08 .........................   Passed    0.04 sec
 Beta|      Start 165: e2_asl09
 Beta| 9/94 Test #165: e2_asl09 .........................***Failed    0.03 sec
 Beta|      Start 166: e2_asl10
-Beta|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Beta|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Beta|      Start 167: e2_asl11
-Beta|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
+Beta|11/94 Test #167: e2_asl11 .........................   Passed    0.04 sec
 Beta|      Start 168: e2_asl12
-Beta|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
+Beta|12/94 Test #168: e2_asl12 .........................   Passed    0.04 sec
 Beta|      Start 169: e2_asl13
 Beta|13/94 Test #169: e2_asl13 .........................***Failed    0.03 sec
 Beta|      Start 170: e2_asl14
@@ -252,7 +250,7 @@ Beta|18/94 Test #174: e2_asl18 .........................   Passed    0.03 sec
 Beta|      Start 175: e2_asl19
 Beta|19/94 Test #175: e2_asl19 .........................***Failed    0.03 sec
 Beta|      Start 176: e2_asl20
-Beta|20/94 Test #176: e2_asl20 .........................***Failed    0.03 sec
+Beta|20/94 Test #176: e2_asl20 .........................***Failed    0.04 sec
 Beta|      Start 177: e2_asl21
 Beta|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
 Beta|      Start 178: e2_asl22
@@ -270,9 +268,9 @@ Beta|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
 Beta|      Start 184: e2_asl28
 Beta|28/94 Test #184: e2_asl28 .........................   Passed    0.03 sec
 Beta|      Start 185: e2_asl29
-Beta|29/94 Test #185: e2_asl29 .........................   Passed    0.04 sec
+Beta|29/94 Test #185: e2_asl29 .........................   Passed    0.03 sec
 Beta|      Start 186: e2_asl30
-Beta|30/94 Test #186: e2_asl30 .........................   Passed    0.03 sec
+Beta|30/94 Test #186: e2_asl30 .........................   Passed    0.04 sec
 Beta|      Start 187: e2_asl31
 Beta|31/94 Test #187: e2_asl31 .........................***Failed    0.03 sec
 Beta|      Start 188: e2_asl32
@@ -306,9 +304,9 @@ Beta|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
 Beta|      Start 202: e2_asl46
 Beta|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Beta|      Start 203: e2_asl47
-Beta|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Beta|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Beta|      Start 204: e2_asl48
-Beta|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Beta|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Beta|      Start 205: e2_asl49
 Beta|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
 Beta|      Start 206: e2_asl50
@@ -316,11 +314,11 @@ Beta|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Beta|      Start 207: e2_asl51
 Beta|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
 Beta|      Start 208: e2_asl52
-Beta|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
+Beta|52/94 Test #208: e2_asl52 .........................   Passed    0.04 sec
 Beta|      Start 209: e2_asl53
 Beta|53/94 Test #209: e2_asl53 .........................   Passed    0.03 sec
 Beta|      Start 210: e2_asl54
-Beta|54/94 Test #210: e2_asl54 .........................   Passed    0.04 sec
+Beta|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
 Beta|      Start 211: e2_asl55
 Beta|55/94 Test #211: e2_asl55 .........................   Passed    0.03 sec
 Beta|      Start 212: e2_asl56
@@ -328,33 +326,33 @@ Beta|56/94 Test #212: e2_asl56 .........................   Passed    0.03 sec
 Beta|      Start 213: e2_asl57
 Beta|57/94 Test #213: e2_asl57 .........................   Passed    0.03 sec
 Beta|      Start 214: e2_asl58
-Beta|58/94 Test #214: e2_asl58 .........................   Passed    0.04 sec
+Beta|58/94 Test #214: e2_asl58 .........................   Passed    0.03 sec
 Beta|      Start 215: e2_asl59
-Beta|59/94 Test #215: e2_asl59 .........................   Passed    0.04 sec
+Beta|59/94 Test #215: e2_asl59 .........................   Passed    0.03 sec
 Beta|      Start 216: e2_asl60
 Beta|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Beta|      Start 217: e2_asl61
 Beta|61/94 Test #217: e2_asl61 .........................   Passed    0.03 sec
 Beta|      Start 218: e2_asl62
-Beta|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
+Beta|62/94 Test #218: e2_asl62 .........................   Passed    0.04 sec
 Beta|      Start 219: e2_asl63
-Beta|63/94 Test #219: e2_asl63 .........................***Failed    0.04 sec
+Beta|63/94 Test #219: e2_asl63 .........................   Passed    0.04 sec
 Beta|      Start 220: e2_asl64
-Beta|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
+Beta|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
 Beta|      Start 221: e2_asl65
-Beta|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
+Beta|65/94 Test #221: e2_asl65 .........................   Passed    0.03 sec
 Beta|      Start 222: e2_asl66
-Beta|66/94 Test #222: e2_asl66 .........................***Failed    0.04 sec
+Beta|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
 Beta|      Start 223: e2_asl67
-Beta|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
+Beta|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
 Beta|      Start 224: e2_asl68
-Beta|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
+Beta|68/94 Test #224: e2_asl68 .........................   Passed    0.04 sec
 Beta|      Start 225: e2_asl69
 Beta|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Beta|      Start 226: e2_asl70
-Beta|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
+Beta|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
 Beta|      Start 227: e2_asl71
-Beta|71/94 Test #227: e2_asl71 .........................   Passed    0.06 sec
+Beta|71/94 Test #227: e2_asl71 .........................***Failed    0.03 sec
 Beta|      Start 228: e2_asl72
 Beta|72/94 Test #228: e2_asl72 .........................   Passed    0.03 sec
 Beta|      Start 229: e2_asl73
@@ -364,7 +362,7 @@ Beta|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Beta|      Start 231: e2_asl75
 Beta|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
 Beta|      Start 232: e2_asl76
-Beta|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Beta|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Beta|      Start 233: e2_asl77
 Beta|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Beta|      Start 234: e2_asl78
@@ -372,7 +370,7 @@ Beta|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Beta|      Start 235: e2_asl79
 Beta|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Beta|      Start 236: e2_asl80
-Beta|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
+Beta|80/94 Test #236: e2_asl80 .........................   Passed    0.03 sec
 Beta|      Start 237: e2_asl81
 Beta|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Beta|      Start 238: e2_asl82
@@ -382,7 +380,7 @@ Beta|83/94 Test #239: e2_asl83 .........................   Passed    0.03 sec
 Beta|      Start 240: e2_asl84
 Beta|84/94 Test #240: e2_asl84 .........................   Passed    0.03 sec
 Beta|      Start 241: e2_asl85
-Beta|85/94 Test #241: e2_asl85 .........................   Passed    0.03 sec
+Beta|85/94 Test #241: e2_asl85 .........................   Passed    0.04 sec
 Beta|      Start 242: e2_asl86
 Beta|86/94 Test #242: e2_asl86 .........................   Passed    0.03 sec
 Beta|      Start 243: e2_asl87
@@ -402,13 +400,12 @@ Beta|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Beta|      Start 250: e2_asl94
 Beta|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Beta|
-Beta|77% tests passed, 22 tests failed out of 94
+Beta|88% tests passed, 11 tests failed out of 94
 Beta|
-Beta|Total Test time (real) =   2.86 sec
+Beta|Total Test time (real) =   2.83 sec
 Beta|
 Beta|The following tests FAILED:
 Beta|	165 - e2_asl09 (Failed)
-Beta|	166 - e2_asl10 (Failed)
 Beta|	169 - e2_asl13 (Failed)
 Beta|	172 - e2_asl16 (Failed)
 Beta|	175 - e2_asl19 (Failed)
@@ -417,21 +414,11 @@ Beta|	178 - e2_asl22 (Failed)
 Beta|	180 - e2_asl24 (Failed)
 Beta|	187 - e2_asl31 (Failed)
 Beta|	188 - e2_asl32 (Failed)
-Beta|	203 - e2_asl47 (Failed)
-Beta|	204 - e2_asl48 (Failed)
 Beta|	205 - e2_asl49 (Failed)
-Beta|	218 - e2_asl62 (Failed)
-Beta|	219 - e2_asl63 (Failed)
-Beta|	220 - e2_asl64 (Failed)
-Beta|	221 - e2_asl65 (Failed)
-Beta|	222 - e2_asl66 (Failed)
-Beta|	223 - e2_asl67 (Failed)
-Beta|	226 - e2_asl70 (Failed)
-Beta|	232 - e2_asl76 (Failed)
-Beta|	236 - e2_asl80 (Failed)
+Beta|	227 - e2_asl71 (Failed)
 Delta|Test project /home/schnorr/ensino/private/maio_e2/Delta-E2/b.e2.maio
 Delta|      Start 157: e2_asl01
-Delta| 1/94 Test #157: e2_asl01 .........................   Passed    0.04 sec
+Delta| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
 Delta|      Start 158: e2_asl02
 Delta| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
 Delta|      Start 159: e2_asl03
@@ -439,7 +426,7 @@ Delta| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Delta|      Start 160: e2_asl04
 Delta| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
 Delta|      Start 161: e2_asl05
-Delta| 5/94 Test #161: e2_asl05 .........................   Passed    0.04 sec
+Delta| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Delta|      Start 162: e2_asl06
 Delta| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
 Delta|      Start 163: e2_asl07
@@ -449,11 +436,11 @@ Delta| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Delta|      Start 165: e2_asl09
 Delta| 9/94 Test #165: e2_asl09 .........................***Failed    0.03 sec
 Delta|      Start 166: e2_asl10
-Delta|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
+Delta|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
 Delta|      Start 167: e2_asl11
 Delta|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
 Delta|      Start 168: e2_asl12
-Delta|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
+Delta|12/94 Test #168: e2_asl12 .........................   Passed    0.04 sec
 Delta|      Start 169: e2_asl13
 Delta|13/94 Test #169: e2_asl13 .........................   Passed    0.03 sec
 Delta|      Start 170: e2_asl14
@@ -461,15 +448,15 @@ Delta|14/94 Test #170: e2_asl14 .........................   Passed    0.03 sec
 Delta|      Start 171: e2_asl15
 Delta|15/94 Test #171: e2_asl15 .........................   Passed    0.03 sec
 Delta|      Start 172: e2_asl16
-Delta|16/94 Test #172: e2_asl16 .........................   Passed    0.03 sec
+Delta|16/94 Test #172: e2_asl16 .........................   Passed    0.04 sec
 Delta|      Start 173: e2_asl17
 Delta|17/94 Test #173: e2_asl17 .........................   Passed    0.03 sec
 Delta|      Start 174: e2_asl18
-Delta|18/94 Test #174: e2_asl18 .........................   Passed    0.04 sec
+Delta|18/94 Test #174: e2_asl18 .........................   Passed    0.03 sec
 Delta|      Start 175: e2_asl19
 Delta|19/94 Test #175: e2_asl19 .........................   Passed    0.03 sec
 Delta|      Start 176: e2_asl20
-Delta|20/94 Test #176: e2_asl20 .........................   Passed    0.03 sec
+Delta|20/94 Test #176: e2_asl20 .........................   Passed    0.04 sec
 Delta|      Start 177: e2_asl21
 Delta|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
 Delta|      Start 178: e2_asl22
@@ -485,7 +472,7 @@ Delta|26/94 Test #182: e2_asl26 .........................   Passed    0.04 sec
 Delta|      Start 183: e2_asl27
 Delta|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
 Delta|      Start 184: e2_asl28
-Delta|28/94 Test #184: e2_asl28 .........................   Passed    0.04 sec
+Delta|28/94 Test #184: e2_asl28 .........................   Passed    0.03 sec
 Delta|      Start 185: e2_asl29
 Delta|29/94 Test #185: e2_asl29 .........................   Passed    0.03 sec
 Delta|      Start 186: e2_asl30
@@ -519,23 +506,23 @@ Delta|43/94 Test #199: e2_asl43 .........................   Passed    0.03 sec
 Delta|      Start 200: e2_asl44
 Delta|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Delta|      Start 201: e2_asl45
-Delta|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
+Delta|45/94 Test #201: e2_asl45 .........................   Passed    0.04 sec
 Delta|      Start 202: e2_asl46
-Delta|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
+Delta|46/94 Test #202: e2_asl46 .........................   Passed    0.04 sec
 Delta|      Start 203: e2_asl47
-Delta|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Delta|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Delta|      Start 204: e2_asl48
-Delta|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Delta|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Delta|      Start 205: e2_asl49
 Delta|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
 Delta|      Start 206: e2_asl50
-Delta|50/94 Test #206: e2_asl50 .........................   Passed    0.04 sec
+Delta|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Delta|      Start 207: e2_asl51
 Delta|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
 Delta|      Start 208: e2_asl52
 Delta|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
 Delta|      Start 209: e2_asl53
-Delta|53/94 Test #209: e2_asl53 .........................   Passed    0.03 sec
+Delta|53/94 Test #209: e2_asl53 .........................   Passed    0.04 sec
 Delta|      Start 210: e2_asl54
 Delta|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
 Delta|      Start 211: e2_asl55
@@ -543,7 +530,7 @@ Delta|55/94 Test #211: e2_asl55 .........................   Passed    0.03 sec
 Delta|      Start 212: e2_asl56
 Delta|56/94 Test #212: e2_asl56 .........................   Passed    0.03 sec
 Delta|      Start 213: e2_asl57
-Delta|57/94 Test #213: e2_asl57 .........................   Passed    0.04 sec
+Delta|57/94 Test #213: e2_asl57 .........................   Passed    0.03 sec
 Delta|      Start 214: e2_asl58
 Delta|58/94 Test #214: e2_asl58 .........................   Passed    0.03 sec
 Delta|      Start 215: e2_asl59
@@ -553,23 +540,23 @@ Delta|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Delta|      Start 217: e2_asl61
 Delta|61/94 Test #217: e2_asl61 .........................   Passed    0.03 sec
 Delta|      Start 218: e2_asl62
-Delta|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Delta|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
 Delta|      Start 219: e2_asl63
-Delta|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Delta|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
 Delta|      Start 220: e2_asl64
-Delta|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
+Delta|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
 Delta|      Start 221: e2_asl65
-Delta|65/94 Test #221: e2_asl65 .........................   Passed    0.03 sec
+Delta|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
 Delta|      Start 222: e2_asl66
-Delta|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
+Delta|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
 Delta|      Start 223: e2_asl67
-Delta|67/94 Test #223: e2_asl67 .........................   Passed    0.04 sec
+Delta|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
 Delta|      Start 224: e2_asl68
 Delta|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Delta|      Start 225: e2_asl69
 Delta|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Delta|      Start 226: e2_asl70
-Delta|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
+Delta|70/94 Test #226: e2_asl70 .........................***Failed    0.04 sec
 Delta|      Start 227: e2_asl71
 Delta|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Delta|      Start 228: e2_asl72
@@ -579,19 +566,19 @@ Delta|73/94 Test #229: e2_asl73 .........................   Passed    0.03 sec
 Delta|      Start 230: e2_asl74
 Delta|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Delta|      Start 231: e2_asl75
-Delta|75/94 Test #231: e2_asl75 .........................   Passed    0.04 sec
+Delta|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
 Delta|      Start 232: e2_asl76
-Delta|76/94 Test #232: e2_asl76 .........................***Failed    0.04 sec
+Delta|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Delta|      Start 233: e2_asl77
 Delta|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Delta|      Start 234: e2_asl78
-Delta|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
+Delta|78/94 Test #234: e2_asl78 .........................   Passed    0.04 sec
 Delta|      Start 235: e2_asl79
 Delta|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Delta|      Start 236: e2_asl80
-Delta|80/94 Test #236: e2_asl80 .........................   Passed    0.04 sec
+Delta|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
 Delta|      Start 237: e2_asl81
-Delta|81/94 Test #237: e2_asl81 .........................   Passed    0.04 sec
+Delta|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Delta|      Start 238: e2_asl82
 Delta|82/94 Test #238: e2_asl82 .........................   Passed    0.04 sec
 Delta|      Start 239: e2_asl83
@@ -605,63 +592,69 @@ Delta|86/94 Test #242: e2_asl86 .........................   Passed    0.03 sec
 Delta|      Start 243: e2_asl87
 Delta|87/94 Test #243: e2_asl87 .........................   Passed    0.03 sec
 Delta|      Start 244: e2_asl88
-Delta|88/94 Test #244: e2_asl88 .........................   Passed    0.04 sec
+Delta|88/94 Test #244: e2_asl88 .........................   Passed    0.03 sec
 Delta|      Start 245: e2_asl89
 Delta|89/94 Test #245: e2_asl89 .........................***Failed    0.03 sec
 Delta|      Start 246: e2_asl90
 Delta|90/94 Test #246: e2_asl90 .........................   Passed    0.03 sec
 Delta|      Start 247: e2_asl91
-Delta|91/94 Test #247: e2_asl91 .........................   Passed    0.04 sec
+Delta|91/94 Test #247: e2_asl91 .........................   Passed    0.03 sec
 Delta|      Start 248: e2_asl92
 Delta|92/94 Test #248: e2_asl92 .........................   Passed    0.03 sec
 Delta|      Start 249: e2_asl93
-Delta|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
+Delta|93/94 Test #249: e2_asl93 .........................   Passed    0.04 sec
 Delta|      Start 250: e2_asl94
-Delta|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
+Delta|94/94 Test #250: e2_asl94 .........................   Passed    0.04 sec
 Delta|
-Delta|93% tests passed, 7 tests failed out of 94
+Delta|86% tests passed, 13 tests failed out of 94
 Delta|
 Delta|Total Test time (real) =   2.88 sec
 Delta|
 Delta|The following tests FAILED:
 Delta|	165 - e2_asl09 (Failed)
+Delta|	166 - e2_asl10 (Failed)
 Delta|	180 - e2_asl24 (Failed)
-Delta|	203 - e2_asl47 (Failed)
-Delta|	204 - e2_asl48 (Failed)
 Delta|	205 - e2_asl49 (Failed)
-Delta|	232 - e2_asl76 (Failed)
+Delta|	218 - e2_asl62 (Failed)
+Delta|	219 - e2_asl63 (Failed)
+Delta|	220 - e2_asl64 (Failed)
+Delta|	221 - e2_asl65 (Failed)
+Delta|	222 - e2_asl66 (Failed)
+Delta|	223 - e2_asl67 (Failed)
+Delta|	226 - e2_asl70 (Failed)
+Delta|	236 - e2_asl80 (Failed)
 Delta|	245 - e2_asl89 (Failed)
 Epsilon|Test project /home/schnorr/ensino/private/maio_e2/Epsilon-E2/b.e2.maio
 Epsilon|      Start 157: e2_asl01
 Epsilon| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
 Epsilon|      Start 158: e2_asl02
-Epsilon| 2/94 Test #158: e2_asl02 .........................   Passed    0.04 sec
+Epsilon| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
 Epsilon|      Start 159: e2_asl03
-Epsilon| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
+Epsilon| 3/94 Test #159: e2_asl03 .........................   Passed    0.04 sec
 Epsilon|      Start 160: e2_asl04
 Epsilon| 4/94 Test #160: e2_asl04 .........................   Passed    0.04 sec
 Epsilon|      Start 161: e2_asl05
-Epsilon| 5/94 Test #161: e2_asl05 .........................   Passed    0.04 sec
+Epsilon| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Epsilon|      Start 162: e2_asl06
 Epsilon| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
 Epsilon|      Start 163: e2_asl07
-Epsilon| 7/94 Test #163: e2_asl07 .........................   Passed    0.03 sec
+Epsilon| 7/94 Test #163: e2_asl07 .........................   Passed    0.04 sec
 Epsilon|      Start 164: e2_asl08
 Epsilon| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Epsilon|      Start 165: e2_asl09
 Epsilon| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
 Epsilon|      Start 166: e2_asl10
-Epsilon|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Epsilon|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Epsilon|      Start 167: e2_asl11
 Epsilon|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
 Epsilon|      Start 168: e2_asl12
 Epsilon|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
 Epsilon|      Start 169: e2_asl13
-Epsilon|13/94 Test #169: e2_asl13 .........................   Passed    0.04 sec
+Epsilon|13/94 Test #169: e2_asl13 .........................   Passed    0.03 sec
 Epsilon|      Start 170: e2_asl14
 Epsilon|14/94 Test #170: e2_asl14 .........................   Passed    0.03 sec
 Epsilon|      Start 171: e2_asl15
-Epsilon|15/94 Test #171: e2_asl15 .........................   Passed    0.04 sec
+Epsilon|15/94 Test #171: e2_asl15 .........................   Passed    0.03 sec
 Epsilon|      Start 172: e2_asl16
 Epsilon|16/94 Test #172: e2_asl16 .........................   Passed    0.03 sec
 Epsilon|      Start 173: e2_asl17
@@ -673,15 +666,15 @@ Epsilon|19/94 Test #175: e2_asl19 .........................   Passed    0.04 sec
 Epsilon|      Start 176: e2_asl20
 Epsilon|20/94 Test #176: e2_asl20 .........................   Passed    0.03 sec
 Epsilon|      Start 177: e2_asl21
-Epsilon|21/94 Test #177: e2_asl21 .........................   Passed    0.04 sec
+Epsilon|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
 Epsilon|      Start 178: e2_asl22
-Epsilon|22/94 Test #178: e2_asl22 .........................   Passed    0.04 sec
+Epsilon|22/94 Test #178: e2_asl22 .........................   Passed    0.03 sec
 Epsilon|      Start 179: e2_asl23
 Epsilon|23/94 Test #179: e2_asl23 .........................   Passed    0.03 sec
 Epsilon|      Start 180: e2_asl24
 Epsilon|24/94 Test #180: e2_asl24 .........................***Failed    0.03 sec
 Epsilon|      Start 181: e2_asl25
-Epsilon|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
+Epsilon|25/94 Test #181: e2_asl25 .........................   Passed    0.04 sec
 Epsilon|      Start 182: e2_asl26
 Epsilon|26/94 Test #182: e2_asl26 .........................   Passed    0.03 sec
 Epsilon|      Start 183: e2_asl27
@@ -695,9 +688,9 @@ Epsilon|30/94 Test #186: e2_asl30 .........................   Passed    0.03 sec
 Epsilon|      Start 187: e2_asl31
 Epsilon|31/94 Test #187: e2_asl31 .........................   Passed    0.03 sec
 Epsilon|      Start 188: e2_asl32
-Epsilon|32/94 Test #188: e2_asl32 .........................   Passed    0.04 sec
+Epsilon|32/94 Test #188: e2_asl32 .........................   Passed    0.03 sec
 Epsilon|      Start 189: e2_asl33
-Epsilon|33/94 Test #189: e2_asl33 .........................   Passed    0.04 sec
+Epsilon|33/94 Test #189: e2_asl33 .........................   Passed    0.03 sec
 Epsilon|      Start 190: e2_asl34
 Epsilon|34/94 Test #190: e2_asl34 .........................   Passed    0.03 sec
 Epsilon|      Start 191: e2_asl35
@@ -707,13 +700,13 @@ Epsilon|36/94 Test #192: e2_asl36 .........................   Passed    0.03 sec
 Epsilon|      Start 193: e2_asl37
 Epsilon|37/94 Test #193: e2_asl37 .........................   Passed    0.03 sec
 Epsilon|      Start 194: e2_asl38
-Epsilon|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
+Epsilon|38/94 Test #194: e2_asl38 .........................   Passed    0.04 sec
 Epsilon|      Start 195: e2_asl39
 Epsilon|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Epsilon|      Start 196: e2_asl40
-Epsilon|40/94 Test #196: e2_asl40 .........................   Passed    0.04 sec
+Epsilon|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
 Epsilon|      Start 197: e2_asl41
-Epsilon|41/94 Test #197: e2_asl41 .........................   Passed    0.04 sec
+Epsilon|41/94 Test #197: e2_asl41 .........................   Passed    0.03 sec
 Epsilon|      Start 198: e2_asl42
 Epsilon|42/94 Test #198: e2_asl42 .........................   Passed    0.03 sec
 Epsilon|      Start 199: e2_asl43
@@ -725,11 +718,11 @@ Epsilon|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
 Epsilon|      Start 202: e2_asl46
 Epsilon|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Epsilon|      Start 203: e2_asl47
-Epsilon|47/94 Test #203: e2_asl47 .........................***Failed    0.04 sec
+Epsilon|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Epsilon|      Start 204: e2_asl48
-Epsilon|48/94 Test #204: e2_asl48 .........................***Failed    0.04 sec
+Epsilon|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Epsilon|      Start 205: e2_asl49
-Epsilon|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
+Epsilon|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Epsilon|      Start 206: e2_asl50
 Epsilon|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Epsilon|      Start 207: e2_asl51
@@ -739,13 +732,13 @@ Epsilon|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
 Epsilon|      Start 209: e2_asl53
 Epsilon|53/94 Test #209: e2_asl53 .........................   Passed    0.03 sec
 Epsilon|      Start 210: e2_asl54
-Epsilon|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
+Epsilon|54/94 Test #210: e2_asl54 .........................   Passed    0.04 sec
 Epsilon|      Start 211: e2_asl55
 Epsilon|55/94 Test #211: e2_asl55 .........................***Failed    0.03 sec
 Epsilon|      Start 212: e2_asl56
-Epsilon|56/94 Test #212: e2_asl56 .........................   Passed    0.04 sec
+Epsilon|56/94 Test #212: e2_asl56 .........................   Passed    0.03 sec
 Epsilon|      Start 213: e2_asl57
-Epsilon|57/94 Test #213: e2_asl57 .........................   Passed    0.04 sec
+Epsilon|57/94 Test #213: e2_asl57 .........................   Passed    0.03 sec
 Epsilon|      Start 214: e2_asl58
 Epsilon|58/94 Test #214: e2_asl58 .........................   Passed    0.03 sec
 Epsilon|      Start 215: e2_asl59
@@ -755,43 +748,43 @@ Epsilon|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Epsilon|      Start 217: e2_asl61
 Epsilon|61/94 Test #217: e2_asl61 .........................   Passed    0.03 sec
 Epsilon|      Start 218: e2_asl62
-Epsilon|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Epsilon|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
 Epsilon|      Start 219: e2_asl63
-Epsilon|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Epsilon|63/94 Test #219: e2_asl63 .........................***Failed    0.04 sec
 Epsilon|      Start 220: e2_asl64
-Epsilon|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
+Epsilon|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
 Epsilon|      Start 221: e2_asl65
-Epsilon|65/94 Test #221: e2_asl65 .........................   Passed    0.03 sec
+Epsilon|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
 Epsilon|      Start 222: e2_asl66
-Epsilon|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
+Epsilon|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
 Epsilon|      Start 223: e2_asl67
-Epsilon|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
+Epsilon|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
 Epsilon|      Start 224: e2_asl68
 Epsilon|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Epsilon|      Start 225: e2_asl69
 Epsilon|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Epsilon|      Start 226: e2_asl70
-Epsilon|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
+Epsilon|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
 Epsilon|      Start 227: e2_asl71
 Epsilon|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Epsilon|      Start 228: e2_asl72
 Epsilon|72/94 Test #228: e2_asl72 .........................   Passed    0.03 sec
 Epsilon|      Start 229: e2_asl73
-Epsilon|73/94 Test #229: e2_asl73 .........................   Passed    0.03 sec
+Epsilon|73/94 Test #229: e2_asl73 .........................   Passed    0.04 sec
 Epsilon|      Start 230: e2_asl74
 Epsilon|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Epsilon|      Start 231: e2_asl75
 Epsilon|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
 Epsilon|      Start 232: e2_asl76
-Epsilon|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Epsilon|76/94 Test #232: e2_asl76 .........................   Passed    0.04 sec
 Epsilon|      Start 233: e2_asl77
 Epsilon|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Epsilon|      Start 234: e2_asl78
 Epsilon|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Epsilon|      Start 235: e2_asl79
-Epsilon|79/94 Test #235: e2_asl79 .........................   Passed    0.04 sec
+Epsilon|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Epsilon|      Start 236: e2_asl80
-Epsilon|80/94 Test #236: e2_asl80 .........................   Passed    0.03 sec
+Epsilon|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
 Epsilon|      Start 237: e2_asl81
 Epsilon|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Epsilon|      Start 238: e2_asl82
@@ -819,23 +812,26 @@ Epsilon|92/94 Test #248: e2_asl92 .........................   Passed    0.03 sec
 Epsilon|      Start 249: e2_asl93
 Epsilon|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Epsilon|      Start 250: e2_asl94
-Epsilon|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
+Epsilon|94/94 Test #250: e2_asl94 .........................   Passed    0.04 sec
 Epsilon|
-Epsilon|93% tests passed, 7 tests failed out of 94
+Epsilon|89% tests passed, 10 tests failed out of 94
 Epsilon|
-Epsilon|Total Test time (real) =   2.93 sec
+Epsilon|Total Test time (real) =   2.94 sec
 Epsilon|
 Epsilon|The following tests FAILED:
-Epsilon|	166 - e2_asl10 (Failed)
 Epsilon|	180 - e2_asl24 (Failed)
-Epsilon|	203 - e2_asl47 (Failed)
-Epsilon|	204 - e2_asl48 (Failed)
-Epsilon|	205 - e2_asl49 (Failed)
 Epsilon|	211 - e2_asl55 (Failed)
-Epsilon|	232 - e2_asl76 (Failed)
+Epsilon|	218 - e2_asl62 (Failed)
+Epsilon|	219 - e2_asl63 (Failed)
+Epsilon|	220 - e2_asl64 (Failed)
+Epsilon|	221 - e2_asl65 (Failed)
+Epsilon|	222 - e2_asl66 (Failed)
+Epsilon|	223 - e2_asl67 (Failed)
+Epsilon|	226 - e2_asl70 (Failed)
+Epsilon|	236 - e2_asl80 (Failed)
 Gamma|Test project /home/schnorr/ensino/private/maio_e2/Gamma-E2/b.e2.maio
 Gamma|      Start 157: e2_asl01
-Gamma| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
+Gamma| 1/94 Test #157: e2_asl01 .........................   Passed    0.04 sec
 Gamma|      Start 158: e2_asl02
 Gamma| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
 Gamma|      Start 159: e2_asl03
@@ -853,7 +849,7 @@ Gamma| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Gamma|      Start 165: e2_asl09
 Gamma| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
 Gamma|      Start 166: e2_asl10
-Gamma|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Gamma|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Gamma|      Start 167: e2_asl11
 Gamma|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
 Gamma|      Start 168: e2_asl12
@@ -873,7 +869,7 @@ Gamma|18/94 Test #174: e2_asl18 .........................   Passed    0.03 sec
 Gamma|      Start 175: e2_asl19
 Gamma|19/94 Test #175: e2_asl19 .........................   Passed    0.03 sec
 Gamma|      Start 176: e2_asl20
-Gamma|20/94 Test #176: e2_asl20 .........................   Passed    0.03 sec
+Gamma|20/94 Test #176: e2_asl20 .........................   Passed    0.04 sec
 Gamma|      Start 177: e2_asl21
 Gamma|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
 Gamma|      Start 178: e2_asl22
@@ -883,11 +879,11 @@ Gamma|23/94 Test #179: e2_asl23 .........................   Passed    0.03 sec
 Gamma|      Start 180: e2_asl24
 Gamma|24/94 Test #180: e2_asl24 .........................***Failed    0.03 sec
 Gamma|      Start 181: e2_asl25
-Gamma|25/94 Test #181: e2_asl25 .........................   Passed    0.04 sec
+Gamma|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
 Gamma|      Start 182: e2_asl26
-Gamma|26/94 Test #182: e2_asl26 .........................   Passed    0.03 sec
+Gamma|26/94 Test #182: e2_asl26 .........................   Passed    0.04 sec
 Gamma|      Start 183: e2_asl27
-Gamma|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
+Gamma|27/94 Test #183: e2_asl27 .........................   Passed    0.04 sec
 Gamma|      Start 184: e2_asl28
 Gamma|28/94 Test #184: e2_asl28 .........................   Passed    0.03 sec
 Gamma|      Start 185: e2_asl29
@@ -897,7 +893,7 @@ Gamma|30/94 Test #186: e2_asl30 .........................   Passed    0.03 sec
 Gamma|      Start 187: e2_asl31
 Gamma|31/94 Test #187: e2_asl31 .........................   Passed    0.03 sec
 Gamma|      Start 188: e2_asl32
-Gamma|32/94 Test #188: e2_asl32 .........................   Passed    0.03 sec
+Gamma|32/94 Test #188: e2_asl32 .........................   Passed    0.04 sec
 Gamma|      Start 189: e2_asl33
 Gamma|33/94 Test #189: e2_asl33 .........................   Passed    0.03 sec
 Gamma|      Start 190: e2_asl34
@@ -907,13 +903,13 @@ Gamma|35/94 Test #191: e2_asl35 .........................   Passed    0.04 sec
 Gamma|      Start 192: e2_asl36
 Gamma|36/94 Test #192: e2_asl36 .........................   Passed    0.03 sec
 Gamma|      Start 193: e2_asl37
-Gamma|37/94 Test #193: e2_asl37 .........................   Passed    0.03 sec
+Gamma|37/94 Test #193: e2_asl37 .........................   Passed    0.04 sec
 Gamma|      Start 194: e2_asl38
-Gamma|38/94 Test #194: e2_asl38 .........................   Passed    0.04 sec
+Gamma|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Gamma|      Start 195: e2_asl39
-Gamma|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
+Gamma|39/94 Test #195: e2_asl39 .........................   Passed    0.04 sec
 Gamma|      Start 196: e2_asl40
-Gamma|40/94 Test #196: e2_asl40 .........................   Passed    0.04 sec
+Gamma|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
 Gamma|      Start 197: e2_asl41
 Gamma|41/94 Test #197: e2_asl41 .........................   Passed    0.04 sec
 Gamma|      Start 198: e2_asl42
@@ -921,17 +917,17 @@ Gamma|42/94 Test #198: e2_asl42 .........................   Passed    0.03 sec
 Gamma|      Start 199: e2_asl43
 Gamma|43/94 Test #199: e2_asl43 .........................   Passed    0.04 sec
 Gamma|      Start 200: e2_asl44
-Gamma|44/94 Test #200: e2_asl44 .........................   Passed    0.04 sec
+Gamma|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Gamma|      Start 201: e2_asl45
-Gamma|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
+Gamma|45/94 Test #201: e2_asl45 .........................***Failed    0.03 sec
 Gamma|      Start 202: e2_asl46
-Gamma|46/94 Test #202: e2_asl46 .........................   Passed    0.04 sec
+Gamma|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Gamma|      Start 203: e2_asl47
-Gamma|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Gamma|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Gamma|      Start 204: e2_asl48
-Gamma|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Gamma|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Gamma|      Start 205: e2_asl49
-Gamma|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
+Gamma|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Gamma|      Start 206: e2_asl50
 Gamma|50/94 Test #206: e2_asl50 .........................***Failed    0.03 sec
 Gamma|      Start 207: e2_asl51
@@ -957,23 +953,23 @@ Gamma|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Gamma|      Start 217: e2_asl61
 Gamma|61/94 Test #217: e2_asl61 .........................***Failed    0.03 sec
 Gamma|      Start 218: e2_asl62
-Gamma|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Gamma|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
 Gamma|      Start 219: e2_asl63
-Gamma|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Gamma|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
 Gamma|      Start 220: e2_asl64
-Gamma|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
+Gamma|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
 Gamma|      Start 221: e2_asl65
 Gamma|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
 Gamma|      Start 222: e2_asl66
-Gamma|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
+Gamma|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
 Gamma|      Start 223: e2_asl67
-Gamma|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
+Gamma|67/94 Test #223: e2_asl67 .........................***Failed    0.04 sec
 Gamma|      Start 224: e2_asl68
 Gamma|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Gamma|      Start 225: e2_asl69
 Gamma|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Gamma|      Start 226: e2_asl70
-Gamma|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
+Gamma|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
 Gamma|      Start 227: e2_asl71
 Gamma|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Gamma|      Start 228: e2_asl72
@@ -981,11 +977,11 @@ Gamma|72/94 Test #228: e2_asl72 .........................   Passed    0.03 sec
 Gamma|      Start 229: e2_asl73
 Gamma|73/94 Test #229: e2_asl73 .........................   Passed    0.03 sec
 Gamma|      Start 230: e2_asl74
-Gamma|74/94 Test #230: e2_asl74 .........................   Passed    0.04 sec
+Gamma|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Gamma|      Start 231: e2_asl75
 Gamma|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
 Gamma|      Start 232: e2_asl76
-Gamma|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Gamma|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Gamma|      Start 233: e2_asl77
 Gamma|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Gamma|      Start 234: e2_asl78
@@ -993,7 +989,7 @@ Gamma|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Gamma|      Start 235: e2_asl79
 Gamma|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Gamma|      Start 236: e2_asl80
-Gamma|80/94 Test #236: e2_asl80 .........................   Passed    0.03 sec
+Gamma|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
 Gamma|      Start 237: e2_asl81
 Gamma|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Gamma|      Start 238: e2_asl82
@@ -1009,36 +1005,37 @@ Gamma|86/94 Test #242: e2_asl86 .........................   Passed    0.03 sec
 Gamma|      Start 243: e2_asl87
 Gamma|87/94 Test #243: e2_asl87 .........................   Passed    0.03 sec
 Gamma|      Start 244: e2_asl88
-Gamma|88/94 Test #244: e2_asl88 .........................   Passed    0.04 sec
+Gamma|88/94 Test #244: e2_asl88 .........................   Passed    0.03 sec
 Gamma|      Start 245: e2_asl89
 Gamma|89/94 Test #245: e2_asl89 .........................   Passed    0.03 sec
 Gamma|      Start 246: e2_asl90
-Gamma|90/94 Test #246: e2_asl90 .........................   Passed    0.03 sec
+Gamma|90/94 Test #246: e2_asl90 .........................   Passed    0.04 sec
 Gamma|      Start 247: e2_asl91
 Gamma|91/94 Test #247: e2_asl91 .........................   Passed    0.03 sec
 Gamma|      Start 248: e2_asl92
 Gamma|92/94 Test #248: e2_asl92 .........................   Passed    0.03 sec
 Gamma|      Start 249: e2_asl93
-Gamma|93/94 Test #249: e2_asl93 .........................   Passed    0.04 sec
+Gamma|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Gamma|      Start 250: e2_asl94
 Gamma|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Gamma|
-Gamma|88% tests passed, 11 tests failed out of 94
+Gamma|87% tests passed, 12 tests failed out of 94
 Gamma|
-Gamma|Total Test time (real) =   2.85 sec
+Gamma|Total Test time (real) =   2.88 sec
 Gamma|
 Gamma|The following tests FAILED:
-Gamma|	166 - e2_asl10 (Failed)
 Gamma|	180 - e2_asl24 (Failed)
-Gamma|	203 - e2_asl47 (Failed)
-Gamma|	204 - e2_asl48 (Failed)
-Gamma|	205 - e2_asl49 (Failed)
+Gamma|	201 - e2_asl45 (Failed)
 Gamma|	206 - e2_asl50 (Failed)
 Gamma|	211 - e2_asl55 (Failed)
 Gamma|	217 - e2_asl61 (Failed)
+Gamma|	218 - e2_asl62 (Failed)
+Gamma|	219 - e2_asl63 (Failed)
+Gamma|	220 - e2_asl64 (Failed)
 Gamma|	221 - e2_asl65 (Failed)
-Gamma|	226 - e2_asl70 (Failed)
-Gamma|	232 - e2_asl76 (Failed)
+Gamma|	222 - e2_asl66 (Failed)
+Gamma|	223 - e2_asl67 (Failed)
+Gamma|	236 - e2_asl80 (Failed)
 Kappa|Test project /home/schnorr/ensino/private/maio_e2/Kappa-E2/b.e2.maio
 Kappa|      Start 157: e2_asl01
 Kappa| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
@@ -1059,15 +1056,15 @@ Kappa| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Kappa|      Start 165: e2_asl09
 Kappa| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
 Kappa|      Start 166: e2_asl10
-Kappa|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Kappa|10/94 Test #166: e2_asl10 .........................   Passed    0.04 sec
 Kappa|      Start 167: e2_asl11
-Kappa|11/94 Test #167: e2_asl11 .........................   Passed    0.04 sec
+Kappa|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
 Kappa|      Start 168: e2_asl12
-Kappa|12/94 Test #168: e2_asl12 .........................   Passed    0.04 sec
+Kappa|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
 Kappa|      Start 169: e2_asl13
 Kappa|13/94 Test #169: e2_asl13 .........................   Passed    0.03 sec
 Kappa|      Start 170: e2_asl14
-Kappa|14/94 Test #170: e2_asl14 .........................   Passed    0.03 sec
+Kappa|14/94 Test #170: e2_asl14 .........................   Passed    0.04 sec
 Kappa|      Start 171: e2_asl15
 Kappa|15/94 Test #171: e2_asl15 .........................   Passed    0.03 sec
 Kappa|      Start 172: e2_asl16
@@ -1087,19 +1084,19 @@ Kappa|22/94 Test #178: e2_asl22 .........................   Passed    0.03 sec
 Kappa|      Start 179: e2_asl23
 Kappa|23/94 Test #179: e2_asl23 .........................   Passed    0.03 sec
 Kappa|      Start 180: e2_asl24
-Kappa|24/94 Test #180: e2_asl24 .........................   Passed    0.04 sec
+Kappa|24/94 Test #180: e2_asl24 .........................   Passed    0.03 sec
 Kappa|      Start 181: e2_asl25
 Kappa|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
 Kappa|      Start 182: e2_asl26
-Kappa|26/94 Test #182: e2_asl26 .........................   Passed    0.04 sec
+Kappa|26/94 Test #182: e2_asl26 .........................   Passed    0.03 sec
 Kappa|      Start 183: e2_asl27
-Kappa|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
+Kappa|27/94 Test #183: e2_asl27 .........................   Passed    0.04 sec
 Kappa|      Start 184: e2_asl28
 Kappa|28/94 Test #184: e2_asl28 .........................   Passed    0.03 sec
 Kappa|      Start 185: e2_asl29
 Kappa|29/94 Test #185: e2_asl29 .........................   Passed    0.03 sec
 Kappa|      Start 186: e2_asl30
-Kappa|30/94 Test #186: e2_asl30 .........................   Passed    0.03 sec
+Kappa|30/94 Test #186: e2_asl30 .........................   Passed    0.04 sec
 Kappa|      Start 187: e2_asl31
 Kappa|31/94 Test #187: e2_asl31 .........................   Passed    0.03 sec
 Kappa|      Start 188: e2_asl32
@@ -1109,17 +1106,17 @@ Kappa|33/94 Test #189: e2_asl33 .........................   Passed    0.03 sec
 Kappa|      Start 190: e2_asl34
 Kappa|34/94 Test #190: e2_asl34 .........................   Passed    0.03 sec
 Kappa|      Start 191: e2_asl35
-Kappa|35/94 Test #191: e2_asl35 .........................   Passed    0.04 sec
+Kappa|35/94 Test #191: e2_asl35 .........................   Passed    0.03 sec
 Kappa|      Start 192: e2_asl36
 Kappa|36/94 Test #192: e2_asl36 .........................   Passed    0.03 sec
 Kappa|      Start 193: e2_asl37
-Kappa|37/94 Test #193: e2_asl37 .........................   Passed    0.04 sec
+Kappa|37/94 Test #193: e2_asl37 .........................   Passed    0.03 sec
 Kappa|      Start 194: e2_asl38
 Kappa|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Kappa|      Start 195: e2_asl39
 Kappa|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Kappa|      Start 196: e2_asl40
-Kappa|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
+Kappa|40/94 Test #196: e2_asl40 .........................   Passed    0.04 sec
 Kappa|      Start 197: e2_asl41
 Kappa|41/94 Test #197: e2_asl41 .........................   Passed    0.03 sec
 Kappa|      Start 198: e2_asl42
@@ -1129,21 +1126,21 @@ Kappa|43/94 Test #199: e2_asl43 .........................   Passed    0.03 sec
 Kappa|      Start 200: e2_asl44
 Kappa|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Kappa|      Start 201: e2_asl45
-Kappa|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
+Kappa|45/94 Test #201: e2_asl45 .........................   Passed    0.04 sec
 Kappa|      Start 202: e2_asl46
 Kappa|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Kappa|      Start 203: e2_asl47
-Kappa|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Kappa|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Kappa|      Start 204: e2_asl48
-Kappa|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Kappa|48/94 Test #204: e2_asl48 .........................   Passed    0.04 sec
 Kappa|      Start 205: e2_asl49
-Kappa|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
+Kappa|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Kappa|      Start 206: e2_asl50
 Kappa|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Kappa|      Start 207: e2_asl51
 Kappa|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
 Kappa|      Start 208: e2_asl52
-Kappa|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
+Kappa|52/94 Test #208: e2_asl52 .........................   Passed    0.04 sec
 Kappa|      Start 209: e2_asl53
 Kappa|53/94 Test #209: e2_asl53 .........................   Passed    0.03 sec
 Kappa|      Start 210: e2_asl54
@@ -1151,35 +1148,35 @@ Kappa|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
 Kappa|      Start 211: e2_asl55
 Kappa|55/94 Test #211: e2_asl55 .........................   Passed    0.03 sec
 Kappa|      Start 212: e2_asl56
-Kappa|56/94 Test #212: e2_asl56 .........................   Passed    0.03 sec
+Kappa|56/94 Test #212: e2_asl56 .........................   Passed    0.04 sec
 Kappa|      Start 213: e2_asl57
 Kappa|57/94 Test #213: e2_asl57 .........................   Passed    0.03 sec
 Kappa|      Start 214: e2_asl58
 Kappa|58/94 Test #214: e2_asl58 .........................   Passed    0.03 sec
 Kappa|      Start 215: e2_asl59
-Kappa|59/94 Test #215: e2_asl59 .........................   Passed    0.03 sec
+Kappa|59/94 Test #215: e2_asl59 .........................   Passed    0.04 sec
 Kappa|      Start 216: e2_asl60
-Kappa|60/94 Test #216: e2_asl60 .........................   Passed    0.04 sec
+Kappa|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Kappa|      Start 217: e2_asl61
-Kappa|61/94 Test #217: e2_asl61 .........................   Passed    0.03 sec
+Kappa|61/94 Test #217: e2_asl61 .........................   Passed    0.04 sec
 Kappa|      Start 218: e2_asl62
-Kappa|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
+Kappa|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
 Kappa|      Start 219: e2_asl63
-Kappa|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
+Kappa|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
 Kappa|      Start 220: e2_asl64
-Kappa|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
+Kappa|64/94 Test #220: e2_asl64 .........................   Passed    0.04 sec
 Kappa|      Start 221: e2_asl65
-Kappa|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
+Kappa|65/94 Test #221: e2_asl65 .........................   Passed    0.04 sec
 Kappa|      Start 222: e2_asl66
-Kappa|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
+Kappa|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
 Kappa|      Start 223: e2_asl67
-Kappa|67/94 Test #223: e2_asl67 .........................   Passed    0.04 sec
+Kappa|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
 Kappa|      Start 224: e2_asl68
 Kappa|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Kappa|      Start 225: e2_asl69
 Kappa|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Kappa|      Start 226: e2_asl70
-Kappa|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
+Kappa|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
 Kappa|      Start 227: e2_asl71
 Kappa|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Kappa|      Start 228: e2_asl72
@@ -1187,25 +1184,25 @@ Kappa|72/94 Test #228: e2_asl72 .........................   Passed    0.03 sec
 Kappa|      Start 229: e2_asl73
 Kappa|73/94 Test #229: e2_asl73 .........................   Passed    0.03 sec
 Kappa|      Start 230: e2_asl74
-Kappa|74/94 Test #230: e2_asl74 .........................   Passed    0.04 sec
+Kappa|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Kappa|      Start 231: e2_asl75
 Kappa|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
 Kappa|      Start 232: e2_asl76
-Kappa|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Kappa|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Kappa|      Start 233: e2_asl77
 Kappa|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Kappa|      Start 234: e2_asl78
 Kappa|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Kappa|      Start 235: e2_asl79
-Kappa|79/94 Test #235: e2_asl79 .........................   Passed    0.04 sec
+Kappa|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Kappa|      Start 236: e2_asl80
-Kappa|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
+Kappa|80/94 Test #236: e2_asl80 .........................   Passed    0.03 sec
 Kappa|      Start 237: e2_asl81
-Kappa|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
+Kappa|81/94 Test #237: e2_asl81 .........................   Passed    0.04 sec
 Kappa|      Start 238: e2_asl82
-Kappa|82/94 Test #238: e2_asl82 .........................   Passed    0.03 sec
+Kappa|82/94 Test #238: e2_asl82 .........................   Passed    0.04 sec
 Kappa|      Start 239: e2_asl83
-Kappa|83/94 Test #239: e2_asl83 .........................   Passed    0.03 sec
+Kappa|83/94 Test #239: e2_asl83 .........................   Passed    0.04 sec
 Kappa|      Start 240: e2_asl84
 Kappa|84/94 Test #240: e2_asl84 .........................   Passed    0.03 sec
 Kappa|      Start 241: e2_asl85
@@ -1223,36 +1220,25 @@ Kappa|90/94 Test #246: e2_asl90 .........................   Passed    0.03 sec
 Kappa|      Start 247: e2_asl91
 Kappa|91/94 Test #247: e2_asl91 .........................   Passed    0.03 sec
 Kappa|      Start 248: e2_asl92
-Kappa|92/94 Test #248: e2_asl92 .........................   Passed    0.04 sec
+Kappa|92/94 Test #248: e2_asl92 .........................   Passed    0.03 sec
 Kappa|      Start 249: e2_asl93
 Kappa|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Kappa|      Start 250: e2_asl94
 Kappa|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Kappa|
-Kappa|87% tests passed, 12 tests failed out of 94
+Kappa|99% tests passed, 1 tests failed out of 94
 Kappa|
-Kappa|Total Test time (real) =   2.89 sec
+Kappa|Total Test time (real) =   2.95 sec
 Kappa|
 Kappa|The following tests FAILED:
-Kappa|	166 - e2_asl10 (Failed)
-Kappa|	203 - e2_asl47 (Failed)
-Kappa|	204 - e2_asl48 (Failed)
-Kappa|	205 - e2_asl49 (Failed)
-Kappa|	218 - e2_asl62 (Failed)
-Kappa|	219 - e2_asl63 (Failed)
-Kappa|	220 - e2_asl64 (Failed)
-Kappa|	221 - e2_asl65 (Failed)
-Kappa|	222 - e2_asl66 (Failed)
-Kappa|	226 - e2_asl70 (Failed)
-Kappa|	232 - e2_asl76 (Failed)
-Kappa|	236 - e2_asl80 (Failed)
+Kappa|	223 - e2_asl67 (Failed)
 Lambda|Test project /home/schnorr/ensino/private/maio_e2/Lambda-E2/b.e2.maio
 Lambda|      Start 157: e2_asl01
 Lambda| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
 Lambda|      Start 158: e2_asl02
 Lambda| 2/94 Test #158: e2_asl02 .........................   Passed    0.04 sec
 Lambda|      Start 159: e2_asl03
-Lambda| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
+Lambda| 3/94 Test #159: e2_asl03 .........................   Passed    0.04 sec
 Lambda|      Start 160: e2_asl04
 Lambda| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
 Lambda|      Start 161: e2_asl05
@@ -1260,13 +1246,13 @@ Lambda| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Lambda|      Start 162: e2_asl06
 Lambda| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
 Lambda|      Start 163: e2_asl07
-Lambda| 7/94 Test #163: e2_asl07 .........................   Passed    0.04 sec
+Lambda| 7/94 Test #163: e2_asl07 .........................   Passed    0.03 sec
 Lambda|      Start 164: e2_asl08
 Lambda| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Lambda|      Start 165: e2_asl09
 Lambda| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
 Lambda|      Start 166: e2_asl10
-Lambda|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Lambda|10/94 Test #166: e2_asl10 .........................   Passed    0.04 sec
 Lambda|      Start 167: e2_asl11
 Lambda|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
 Lambda|      Start 168: e2_asl12
@@ -1280,7 +1266,7 @@ Lambda|15/94 Test #171: e2_asl15 .........................   Passed    0.03 sec
 Lambda|      Start 172: e2_asl16
 Lambda|16/94 Test #172: e2_asl16 .........................   Passed    0.03 sec
 Lambda|      Start 173: e2_asl17
-Lambda|17/94 Test #173: e2_asl17 .........................   Passed    0.03 sec
+Lambda|17/94 Test #173: e2_asl17 .........................   Passed    0.04 sec
 Lambda|      Start 174: e2_asl18
 Lambda|18/94 Test #174: e2_asl18 .........................   Passed    0.03 sec
 Lambda|      Start 175: e2_asl19
@@ -1296,21 +1282,21 @@ Lambda|23/94 Test #179: e2_asl23 .........................   Passed    0.03 sec
 Lambda|      Start 180: e2_asl24
 Lambda|24/94 Test #180: e2_asl24 .........................   Passed    0.03 sec
 Lambda|      Start 181: e2_asl25
-Lambda|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
+Lambda|25/94 Test #181: e2_asl25 .........................   Passed    0.04 sec
 Lambda|      Start 182: e2_asl26
 Lambda|26/94 Test #182: e2_asl26 .........................   Passed    0.03 sec
 Lambda|      Start 183: e2_asl27
-Lambda|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
+Lambda|27/94 Test #183: e2_asl27 .........................   Passed    0.04 sec
 Lambda|      Start 184: e2_asl28
 Lambda|28/94 Test #184: e2_asl28 .........................   Passed    0.03 sec
 Lambda|      Start 185: e2_asl29
-Lambda|29/94 Test #185: e2_asl29 .........................   Passed    0.03 sec
+Lambda|29/94 Test #185: e2_asl29 .........................   Passed    0.04 sec
 Lambda|      Start 186: e2_asl30
 Lambda|30/94 Test #186: e2_asl30 .........................   Passed    0.03 sec
 Lambda|      Start 187: e2_asl31
 Lambda|31/94 Test #187: e2_asl31 .........................   Passed    0.03 sec
 Lambda|      Start 188: e2_asl32
-Lambda|32/94 Test #188: e2_asl32 .........................   Passed    0.03 sec
+Lambda|32/94 Test #188: e2_asl32 .........................   Passed    0.04 sec
 Lambda|      Start 189: e2_asl33
 Lambda|33/94 Test #189: e2_asl33 .........................   Passed    0.03 sec
 Lambda|      Start 190: e2_asl34
@@ -1320,13 +1306,13 @@ Lambda|35/94 Test #191: e2_asl35 .........................   Passed    0.03 sec
 Lambda|      Start 192: e2_asl36
 Lambda|36/94 Test #192: e2_asl36 .........................   Passed    0.03 sec
 Lambda|      Start 193: e2_asl37
-Lambda|37/94 Test #193: e2_asl37 .........................   Passed    0.03 sec
+Lambda|37/94 Test #193: e2_asl37 .........................   Passed    0.04 sec
 Lambda|      Start 194: e2_asl38
 Lambda|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Lambda|      Start 195: e2_asl39
 Lambda|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Lambda|      Start 196: e2_asl40
-Lambda|40/94 Test #196: e2_asl40 .........................   Passed    0.04 sec
+Lambda|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
 Lambda|      Start 197: e2_asl41
 Lambda|41/94 Test #197: e2_asl41 .........................   Passed    0.04 sec
 Lambda|      Start 198: e2_asl42
@@ -1340,11 +1326,11 @@ Lambda|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
 Lambda|      Start 202: e2_asl46
 Lambda|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Lambda|      Start 203: e2_asl47
-Lambda|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Lambda|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Lambda|      Start 204: e2_asl48
-Lambda|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Lambda|48/94 Test #204: e2_asl48 .........................   Passed    0.04 sec
 Lambda|      Start 205: e2_asl49
-Lambda|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
+Lambda|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Lambda|      Start 206: e2_asl50
 Lambda|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Lambda|      Start 207: e2_asl51
@@ -1358,7 +1344,7 @@ Lambda|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
 Lambda|      Start 211: e2_asl55
 Lambda|55/94 Test #211: e2_asl55 .........................   Passed    0.03 sec
 Lambda|      Start 212: e2_asl56
-Lambda|56/94 Test #212: e2_asl56 .........................   Passed    0.04 sec
+Lambda|56/94 Test #212: e2_asl56 .........................   Passed    0.03 sec
 Lambda|      Start 213: e2_asl57
 Lambda|57/94 Test #213: e2_asl57 .........................   Passed    0.03 sec
 Lambda|      Start 214: e2_asl58
@@ -1366,29 +1352,29 @@ Lambda|58/94 Test #214: e2_asl58 .........................   Passed    0.03 sec
 Lambda|      Start 215: e2_asl59
 Lambda|59/94 Test #215: e2_asl59 .........................   Passed    0.03 sec
 Lambda|      Start 216: e2_asl60
-Lambda|60/94 Test #216: e2_asl60 .........................   Passed    0.04 sec
+Lambda|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Lambda|      Start 217: e2_asl61
 Lambda|61/94 Test #217: e2_asl61 .........................   Passed    0.03 sec
 Lambda|      Start 218: e2_asl62
-Lambda|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
+Lambda|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
 Lambda|      Start 219: e2_asl63
-Lambda|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
+Lambda|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
 Lambda|      Start 220: e2_asl64
-Lambda|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
+Lambda|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
 Lambda|      Start 221: e2_asl65
-Lambda|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
+Lambda|65/94 Test #221: e2_asl65 .........................   Passed    0.03 sec
 Lambda|      Start 222: e2_asl66
-Lambda|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
+Lambda|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
 Lambda|      Start 223: e2_asl67
-Lambda|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
+Lambda|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
 Lambda|      Start 224: e2_asl68
-Lambda|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
+Lambda|68/94 Test #224: e2_asl68 .........................   Passed    0.04 sec
 Lambda|      Start 225: e2_asl69
 Lambda|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Lambda|      Start 226: e2_asl70
-Lambda|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
+Lambda|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
 Lambda|      Start 227: e2_asl71
-Lambda|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
+Lambda|71/94 Test #227: e2_asl71 .........................***Failed    0.03 sec
 Lambda|      Start 228: e2_asl72
 Lambda|72/94 Test #228: e2_asl72 .........................   Passed    0.03 sec
 Lambda|      Start 229: e2_asl73
@@ -1398,15 +1384,15 @@ Lambda|74/94 Test #230: e2_asl74 .........................***Failed    0.03 sec
 Lambda|      Start 231: e2_asl75
 Lambda|75/94 Test #231: e2_asl75 .........................***Failed    0.03 sec
 Lambda|      Start 232: e2_asl76
-Lambda|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Lambda|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Lambda|      Start 233: e2_asl77
 Lambda|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Lambda|      Start 234: e2_asl78
-Lambda|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
+Lambda|78/94 Test #234: e2_asl78 .........................   Passed    0.04 sec
 Lambda|      Start 235: e2_asl79
 Lambda|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Lambda|      Start 236: e2_asl80
-Lambda|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
+Lambda|80/94 Test #236: e2_asl80 .........................   Passed    0.04 sec
 Lambda|      Start 237: e2_asl81
 Lambda|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Lambda|      Start 238: e2_asl82
@@ -1416,7 +1402,7 @@ Lambda|83/94 Test #239: e2_asl83 .........................   Passed    0.03 sec
 Lambda|      Start 240: e2_asl84
 Lambda|84/94 Test #240: e2_asl84 .........................   Passed    0.03 sec
 Lambda|      Start 241: e2_asl85
-Lambda|85/94 Test #241: e2_asl85 .........................   Passed    0.03 sec
+Lambda|85/94 Test #241: e2_asl85 .........................   Passed    0.04 sec
 Lambda|      Start 242: e2_asl86
 Lambda|86/94 Test #242: e2_asl86 .........................   Passed    0.03 sec
 Lambda|      Start 243: e2_asl87
@@ -1434,37 +1420,25 @@ Lambda|92/94 Test #248: e2_asl92 .........................   Passed    0.03 sec
 Lambda|      Start 249: e2_asl93
 Lambda|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Lambda|      Start 250: e2_asl94
-Lambda|94/94 Test #250: e2_asl94 .........................   Passed    0.06 sec
+Lambda|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Lambda|
-Lambda|84% tests passed, 15 tests failed out of 94
+Lambda|97% tests passed, 3 tests failed out of 94
 Lambda|
-Lambda|Total Test time (real) =   2.78 sec
+Lambda|Total Test time (real) =   2.87 sec
 Lambda|
 Lambda|The following tests FAILED:
-Lambda|	166 - e2_asl10 (Failed)
-Lambda|	203 - e2_asl47 (Failed)
-Lambda|	204 - e2_asl48 (Failed)
-Lambda|	205 - e2_asl49 (Failed)
-Lambda|	218 - e2_asl62 (Failed)
-Lambda|	219 - e2_asl63 (Failed)
-Lambda|	220 - e2_asl64 (Failed)
-Lambda|	221 - e2_asl65 (Failed)
-Lambda|	222 - e2_asl66 (Failed)
-Lambda|	223 - e2_asl67 (Failed)
-Lambda|	226 - e2_asl70 (Failed)
+Lambda|	227 - e2_asl71 (Failed)
 Lambda|	230 - e2_asl74 (Failed)
 Lambda|	231 - e2_asl75 (Failed)
-Lambda|	232 - e2_asl76 (Failed)
-Lambda|	236 - e2_asl80 (Failed)
 Nu|Test project /home/schnorr/ensino/private/maio_e2/Nu-E2/b.e2.maio
 Nu|      Start 157: e2_asl01
 Nu| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
 Nu|      Start 158: e2_asl02
 Nu| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
 Nu|      Start 159: e2_asl03
-Nu| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
+Nu| 3/94 Test #159: e2_asl03 .........................   Passed    0.04 sec
 Nu|      Start 160: e2_asl04
-Nu| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
+Nu| 4/94 Test #160: e2_asl04 .........................   Passed    0.04 sec
 Nu|      Start 161: e2_asl05
 Nu| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Nu|      Start 162: e2_asl06
@@ -1476,9 +1450,9 @@ Nu| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Nu|      Start 165: e2_asl09
 Nu| 9/94 Test #165: e2_asl09 .........................***Failed    0.03 sec
 Nu|      Start 166: e2_asl10
-Nu|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Nu|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Nu|      Start 167: e2_asl11
-Nu|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
+Nu|11/94 Test #167: e2_asl11 .........................   Passed    0.04 sec
 Nu|      Start 168: e2_asl12
 Nu|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
 Nu|      Start 169: e2_asl13
@@ -1486,7 +1460,7 @@ Nu|13/94 Test #169: e2_asl13 .........................***Failed    0.03 sec
 Nu|      Start 170: e2_asl14
 Nu|14/94 Test #170: e2_asl14 .........................   Passed    0.03 sec
 Nu|      Start 171: e2_asl15
-Nu|15/94 Test #171: e2_asl15 .........................   Passed    0.04 sec
+Nu|15/94 Test #171: e2_asl15 .........................   Passed    0.03 sec
 Nu|      Start 172: e2_asl16
 Nu|16/94 Test #172: e2_asl16 .........................***Failed    0.03 sec
 Nu|      Start 173: e2_asl17
@@ -1494,11 +1468,11 @@ Nu|17/94 Test #173: e2_asl17 .........................   Passed    0.03 sec
 Nu|      Start 174: e2_asl18
 Nu|18/94 Test #174: e2_asl18 .........................   Passed    0.03 sec
 Nu|      Start 175: e2_asl19
-Nu|19/94 Test #175: e2_asl19 .........................***Failed    0.04 sec
+Nu|19/94 Test #175: e2_asl19 .........................***Failed    0.03 sec
 Nu|      Start 176: e2_asl20
 Nu|20/94 Test #176: e2_asl20 .........................***Failed    0.03 sec
 Nu|      Start 177: e2_asl21
-Nu|21/94 Test #177: e2_asl21 .........................   Passed    0.04 sec
+Nu|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
 Nu|      Start 178: e2_asl22
 Nu|22/94 Test #178: e2_asl22 .........................***Failed    0.03 sec
 Nu|      Start 179: e2_asl23
@@ -1512,7 +1486,7 @@ Nu|26/94 Test #182: e2_asl26 .........................   Passed    0.03 sec
 Nu|      Start 183: e2_asl27
 Nu|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
 Nu|      Start 184: e2_asl28
-Nu|28/94 Test #184: e2_asl28 .........................   Passed    0.03 sec
+Nu|28/94 Test #184: e2_asl28 .........................   Passed    0.04 sec
 Nu|      Start 185: e2_asl29
 Nu|29/94 Test #185: e2_asl29 .........................   Passed    0.03 sec
 Nu|      Start 186: e2_asl30
@@ -1522,9 +1496,9 @@ Nu|31/94 Test #187: e2_asl31 .........................***Failed    0.04 sec
 Nu|      Start 188: e2_asl32
 Nu|32/94 Test #188: e2_asl32 .........................***Failed    0.03 sec
 Nu|      Start 189: e2_asl33
-Nu|33/94 Test #189: e2_asl33 .........................   Passed    0.03 sec
+Nu|33/94 Test #189: e2_asl33 .........................   Passed    0.04 sec
 Nu|      Start 190: e2_asl34
-Nu|34/94 Test #190: e2_asl34 .........................   Passed    0.03 sec
+Nu|34/94 Test #190: e2_asl34 .........................   Passed    0.04 sec
 Nu|      Start 191: e2_asl35
 Nu|35/94 Test #191: e2_asl35 .........................   Passed    0.03 sec
 Nu|      Start 192: e2_asl36
@@ -1538,7 +1512,7 @@ Nu|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Nu|      Start 196: e2_asl40
 Nu|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
 Nu|      Start 197: e2_asl41
-Nu|41/94 Test #197: e2_asl41 .........................   Passed    0.03 sec
+Nu|41/94 Test #197: e2_asl41 .........................   Passed    0.04 sec
 Nu|      Start 198: e2_asl42
 Nu|42/94 Test #198: e2_asl42 .........................   Passed    0.03 sec
 Nu|      Start 199: e2_asl43
@@ -1550,9 +1524,9 @@ Nu|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
 Nu|      Start 202: e2_asl46
 Nu|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Nu|      Start 203: e2_asl47
-Nu|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Nu|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Nu|      Start 204: e2_asl48
-Nu|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Nu|48/94 Test #204: e2_asl48 .........................   Passed    0.04 sec
 Nu|      Start 205: e2_asl49
 Nu|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
 Nu|      Start 206: e2_asl50
@@ -1562,17 +1536,17 @@ Nu|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
 Nu|      Start 208: e2_asl52
 Nu|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
 Nu|      Start 209: e2_asl53
-Nu|53/94 Test #209: e2_asl53 .........................   Passed    0.04 sec
+Nu|53/94 Test #209: e2_asl53 .........................   Passed    0.03 sec
 Nu|      Start 210: e2_asl54
 Nu|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
 Nu|      Start 211: e2_asl55
-Nu|55/94 Test #211: e2_asl55 .........................***Failed    0.03 sec
+Nu|55/94 Test #211: e2_asl55 .........................***Failed    0.04 sec
 Nu|      Start 212: e2_asl56
 Nu|56/94 Test #212: e2_asl56 .........................   Passed    0.03 sec
 Nu|      Start 213: e2_asl57
 Nu|57/94 Test #213: e2_asl57 .........................   Passed    0.03 sec
 Nu|      Start 214: e2_asl58
-Nu|58/94 Test #214: e2_asl58 .........................   Passed    0.03 sec
+Nu|58/94 Test #214: e2_asl58 .........................   Passed    0.04 sec
 Nu|      Start 215: e2_asl59
 Nu|59/94 Test #215: e2_asl59 .........................   Passed    0.03 sec
 Nu|      Start 216: e2_asl60
@@ -1580,25 +1554,25 @@ Nu|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Nu|      Start 217: e2_asl61
 Nu|61/94 Test #217: e2_asl61 .........................***Failed    0.03 sec
 Nu|      Start 218: e2_asl62
-Nu|62/94 Test #218: e2_asl62 .........................***Failed    0.05 sec
+Nu|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
 Nu|      Start 219: e2_asl63
-Nu|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
+Nu|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
 Nu|      Start 220: e2_asl64
-Nu|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
+Nu|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
 Nu|      Start 221: e2_asl65
 Nu|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
 Nu|      Start 222: e2_asl66
-Nu|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
+Nu|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
 Nu|      Start 223: e2_asl67
-Nu|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
+Nu|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
 Nu|      Start 224: e2_asl68
-Nu|68/94 Test #224: e2_asl68 .........................   Passed    0.04 sec
+Nu|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Nu|      Start 225: e2_asl69
 Nu|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Nu|      Start 226: e2_asl70
-Nu|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
+Nu|70/94 Test #226: e2_asl70 .........................   Passed    0.04 sec
 Nu|      Start 227: e2_asl71
-Nu|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
+Nu|71/94 Test #227: e2_asl71 .........................***Failed    0.03 sec
 Nu|      Start 228: e2_asl72
 Nu|72/94 Test #228: e2_asl72 .........................***Failed    0.03 sec
 Nu|      Start 229: e2_asl73
@@ -1608,7 +1582,7 @@ Nu|74/94 Test #230: e2_asl74 .........................***Failed    0.03 sec
 Nu|      Start 231: e2_asl75
 Nu|75/94 Test #231: e2_asl75 .........................***Failed    0.03 sec
 Nu|      Start 232: e2_asl76
-Nu|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Nu|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Nu|      Start 233: e2_asl77
 Nu|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Nu|      Start 234: e2_asl78
@@ -1616,19 +1590,19 @@ Nu|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Nu|      Start 235: e2_asl79
 Nu|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Nu|      Start 236: e2_asl80
-Nu|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
+Nu|80/94 Test #236: e2_asl80 .........................   Passed    0.03 sec
 Nu|      Start 237: e2_asl81
-Nu|81/94 Test #237: e2_asl81 .........................   Passed    0.04 sec
+Nu|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Nu|      Start 238: e2_asl82
 Nu|82/94 Test #238: e2_asl82 .........................   Passed    0.03 sec
 Nu|      Start 239: e2_asl83
 Nu|83/94 Test #239: e2_asl83 .........................   Passed    0.03 sec
 Nu|      Start 240: e2_asl84
-Nu|84/94 Test #240: e2_asl84 .........................   Passed    0.04 sec
+Nu|84/94 Test #240: e2_asl84 .........................   Passed    0.03 sec
 Nu|      Start 241: e2_asl85
 Nu|85/94 Test #241: e2_asl85 .........................   Passed    0.03 sec
 Nu|      Start 242: e2_asl86
-Nu|86/94 Test #242: e2_asl86 .........................   Passed    0.04 sec
+Nu|86/94 Test #242: e2_asl86 .........................   Passed    0.03 sec
 Nu|      Start 243: e2_asl87
 Nu|87/94 Test #243: e2_asl87 .........................   Passed    0.03 sec
 Nu|      Start 244: e2_asl88
@@ -1644,15 +1618,14 @@ Nu|92/94 Test #248: e2_asl92 .........................   Passed    0.03 sec
 Nu|      Start 249: e2_asl93
 Nu|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Nu|      Start 250: e2_asl94
-Nu|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
+Nu|94/94 Test #250: e2_asl94 .........................   Passed    0.04 sec
 Nu|
-Nu|70% tests passed, 28 tests failed out of 94
+Nu|81% tests passed, 18 tests failed out of 94
 Nu|
-Nu|Total Test time (real) =   2.91 sec
+Nu|Total Test time (real) =   2.84 sec
 Nu|
 Nu|The following tests FAILED:
 Nu|	165 - e2_asl09 (Failed)
-Nu|	166 - e2_asl10 (Failed)
 Nu|	169 - e2_asl13 (Failed)
 Nu|	172 - e2_asl16 (Failed)
 Nu|	175 - e2_asl19 (Failed)
@@ -1661,37 +1634,28 @@ Nu|	178 - e2_asl22 (Failed)
 Nu|	180 - e2_asl24 (Failed)
 Nu|	187 - e2_asl31 (Failed)
 Nu|	188 - e2_asl32 (Failed)
-Nu|	203 - e2_asl47 (Failed)
-Nu|	204 - e2_asl48 (Failed)
 Nu|	205 - e2_asl49 (Failed)
 Nu|	211 - e2_asl55 (Failed)
 Nu|	217 - e2_asl61 (Failed)
-Nu|	218 - e2_asl62 (Failed)
-Nu|	219 - e2_asl63 (Failed)
-Nu|	220 - e2_asl64 (Failed)
 Nu|	221 - e2_asl65 (Failed)
-Nu|	222 - e2_asl66 (Failed)
-Nu|	223 - e2_asl67 (Failed)
-Nu|	226 - e2_asl70 (Failed)
+Nu|	227 - e2_asl71 (Failed)
 Nu|	228 - e2_asl72 (Failed)
 Nu|	229 - e2_asl73 (Failed)
 Nu|	230 - e2_asl74 (Failed)
 Nu|	231 - e2_asl75 (Failed)
-Nu|	232 - e2_asl76 (Failed)
-Nu|	236 - e2_asl80 (Failed)
 Omega|Test project /home/schnorr/ensino/private/maio_e2/Omega-E2/b.e2.maio
 Omega|      Start 157: e2_asl01
 Omega| 1/94 Test #157: e2_asl01 .........................   Passed    0.04 sec
 Omega|      Start 158: e2_asl02
-Omega| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
+Omega| 2/94 Test #158: e2_asl02 .........................   Passed    0.04 sec
 Omega|      Start 159: e2_asl03
 Omega| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Omega|      Start 160: e2_asl04
-Omega| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
+Omega| 4/94 Test #160: e2_asl04 .........................   Passed    0.04 sec
 Omega|      Start 161: e2_asl05
 Omega| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Omega|      Start 162: e2_asl06
-Omega| 6/94 Test #162: e2_asl06 .........................   Passed    0.04 sec
+Omega| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
 Omega|      Start 163: e2_asl07
 Omega| 7/94 Test #163: e2_asl07 .........................   Passed    0.04 sec
 Omega|      Start 164: e2_asl08
@@ -1699,11 +1663,11 @@ Omega| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Omega|      Start 165: e2_asl09
 Omega| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
 Omega|      Start 166: e2_asl10
-Omega|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Omega|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Omega|      Start 167: e2_asl11
 Omega|11/94 Test #167: e2_asl11 .........................   Passed    0.04 sec
 Omega|      Start 168: e2_asl12
-Omega|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
+Omega|12/94 Test #168: e2_asl12 .........................   Passed    0.04 sec
 Omega|      Start 169: e2_asl13
 Omega|13/94 Test #169: e2_asl13 .........................   Passed    0.03 sec
 Omega|      Start 170: e2_asl14
@@ -1733,7 +1697,7 @@ Omega|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
 Omega|      Start 182: e2_asl26
 Omega|26/94 Test #182: e2_asl26 .........................   Passed    0.03 sec
 Omega|      Start 183: e2_asl27
-Omega|27/94 Test #183: e2_asl27 .........................   Passed    0.04 sec
+Omega|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
 Omega|      Start 184: e2_asl28
 Omega|28/94 Test #184: e2_asl28 .........................   Passed    0.03 sec
 Omega|      Start 185: e2_asl29
@@ -1745,7 +1709,7 @@ Omega|31/94 Test #187: e2_asl31 .........................   Passed    0.03 sec
 Omega|      Start 188: e2_asl32
 Omega|32/94 Test #188: e2_asl32 .........................   Passed    0.03 sec
 Omega|      Start 189: e2_asl33
-Omega|33/94 Test #189: e2_asl33 .........................   Passed    0.04 sec
+Omega|33/94 Test #189: e2_asl33 .........................   Passed    0.03 sec
 Omega|      Start 190: e2_asl34
 Omega|34/94 Test #190: e2_asl34 .........................   Passed    0.04 sec
 Omega|      Start 191: e2_asl35
@@ -1757,7 +1721,7 @@ Omega|37/94 Test #193: e2_asl37 .........................   Passed    0.03 sec
 Omega|      Start 194: e2_asl38
 Omega|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Omega|      Start 195: e2_asl39
-Omega|39/94 Test #195: e2_asl39 .........................   Passed    0.04 sec
+Omega|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Omega|      Start 196: e2_asl40
 Omega|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
 Omega|      Start 197: e2_asl41
@@ -1771,13 +1735,13 @@ Omega|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Omega|      Start 201: e2_asl45
 Omega|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
 Omega|      Start 202: e2_asl46
-Omega|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
+Omega|46/94 Test #202: e2_asl46 .........................   Passed    0.04 sec
 Omega|      Start 203: e2_asl47
-Omega|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Omega|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Omega|      Start 204: e2_asl48
-Omega|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Omega|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Omega|      Start 205: e2_asl49
-Omega|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
+Omega|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Omega|      Start 206: e2_asl50
 Omega|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Omega|      Start 207: e2_asl51
@@ -1785,7 +1749,7 @@ Omega|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
 Omega|      Start 208: e2_asl52
 Omega|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
 Omega|      Start 209: e2_asl53
-Omega|53/94 Test #209: e2_asl53 .........................   Passed    0.04 sec
+Omega|53/94 Test #209: e2_asl53 .........................   Passed    0.03 sec
 Omega|      Start 210: e2_asl54
 Omega|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
 Omega|      Start 211: e2_asl55
@@ -1803,23 +1767,23 @@ Omega|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Omega|      Start 217: e2_asl61
 Omega|61/94 Test #217: e2_asl61 .........................   Passed    0.03 sec
 Omega|      Start 218: e2_asl62
-Omega|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Omega|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
 Omega|      Start 219: e2_asl63
-Omega|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Omega|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
 Omega|      Start 220: e2_asl64
-Omega|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
+Omega|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
 Omega|      Start 221: e2_asl65
-Omega|65/94 Test #221: e2_asl65 .........................   Passed    0.03 sec
+Omega|65/94 Test #221: e2_asl65 .........................***Failed    0.06 sec
 Omega|      Start 222: e2_asl66
-Omega|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
+Omega|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
 Omega|      Start 223: e2_asl67
-Omega|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
+Omega|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
 Omega|      Start 224: e2_asl68
 Omega|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Omega|      Start 225: e2_asl69
-Omega|69/94 Test #225: e2_asl69 .........................   Passed    0.05 sec
+Omega|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Omega|      Start 226: e2_asl70
-Omega|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
+Omega|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
 Omega|      Start 227: e2_asl71
 Omega|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Omega|      Start 228: e2_asl72
@@ -1829,17 +1793,17 @@ Omega|73/94 Test #229: e2_asl73 .........................   Passed    0.03 sec
 Omega|      Start 230: e2_asl74
 Omega|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Omega|      Start 231: e2_asl75
-Omega|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
+Omega|75/94 Test #231: e2_asl75 .........................   Passed    0.04 sec
 Omega|      Start 232: e2_asl76
-Omega|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Omega|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Omega|      Start 233: e2_asl77
 Omega|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Omega|      Start 234: e2_asl78
 Omega|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Omega|      Start 235: e2_asl79
-Omega|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
+Omega|79/94 Test #235: e2_asl79 .........................   Passed    0.04 sec
 Omega|      Start 236: e2_asl80
-Omega|80/94 Test #236: e2_asl80 .........................   Passed    0.03 sec
+Omega|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
 Omega|      Start 237: e2_asl81
 Omega|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Omega|      Start 238: e2_asl82
@@ -1847,13 +1811,13 @@ Omega|82/94 Test #238: e2_asl82 .........................   Passed    0.03 sec
 Omega|      Start 239: e2_asl83
 Omega|83/94 Test #239: e2_asl83 .........................   Passed    0.03 sec
 Omega|      Start 240: e2_asl84
-Omega|84/94 Test #240: e2_asl84 .........................   Passed    0.04 sec
+Omega|84/94 Test #240: e2_asl84 .........................   Passed    0.03 sec
 Omega|      Start 241: e2_asl85
 Omega|85/94 Test #241: e2_asl85 .........................   Passed    0.03 sec
 Omega|      Start 242: e2_asl86
 Omega|86/94 Test #242: e2_asl86 .........................   Passed    0.03 sec
 Omega|      Start 243: e2_asl87
-Omega|87/94 Test #243: e2_asl87 .........................   Passed    0.04 sec
+Omega|87/94 Test #243: e2_asl87 .........................   Passed    0.03 sec
 Omega|      Start 244: e2_asl88
 Omega|88/94 Test #244: e2_asl88 .........................   Passed    0.03 sec
 Omega|      Start 245: e2_asl89
@@ -1869,21 +1833,24 @@ Omega|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Omega|      Start 250: e2_asl94
 Omega|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Omega|
-Omega|95% tests passed, 5 tests failed out of 94
+Omega|91% tests passed, 8 tests failed out of 94
 Omega|
-Omega|Total Test time (real) =   2.85 sec
+Omega|Total Test time (real) =   2.84 sec
 Omega|
 Omega|The following tests FAILED:
-Omega|	166 - e2_asl10 (Failed)
-Omega|	203 - e2_asl47 (Failed)
-Omega|	204 - e2_asl48 (Failed)
-Omega|	205 - e2_asl49 (Failed)
-Omega|	232 - e2_asl76 (Failed)
+Omega|	218 - e2_asl62 (Failed)
+Omega|	219 - e2_asl63 (Failed)
+Omega|	220 - e2_asl64 (Failed)
+Omega|	221 - e2_asl65 (Failed)
+Omega|	222 - e2_asl66 (Failed)
+Omega|	223 - e2_asl67 (Failed)
+Omega|	226 - e2_asl70 (Failed)
+Omega|	236 - e2_asl80 (Failed)
 Omicron|Test project /home/schnorr/ensino/private/maio_e2/Omicron-E2/b.e2.maio
 Omicron|      Start 157: e2_asl01
-Omicron| 1/94 Test #157: e2_asl01 .........................   Passed    0.04 sec
+Omicron| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
 Omicron|      Start 158: e2_asl02
-Omicron| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
+Omicron| 2/94 Test #158: e2_asl02 .........................   Passed    0.04 sec
 Omicron|      Start 159: e2_asl03
 Omicron| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Omicron|      Start 160: e2_asl04
@@ -1893,13 +1860,13 @@ Omicron| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Omicron|      Start 162: e2_asl06
 Omicron| 6/94 Test #162: e2_asl06 .........................   Passed    0.04 sec
 Omicron|      Start 163: e2_asl07
-Omicron| 7/94 Test #163: e2_asl07 .........................   Passed    0.03 sec
+Omicron| 7/94 Test #163: e2_asl07 .........................   Passed    0.04 sec
 Omicron|      Start 164: e2_asl08
-Omicron| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
+Omicron| 8/94 Test #164: e2_asl08 .........................   Passed    0.04 sec
 Omicron|      Start 165: e2_asl09
-Omicron| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
+Omicron| 9/94 Test #165: e2_asl09 .........................   Passed    0.04 sec
 Omicron|      Start 166: e2_asl10
-Omicron|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Omicron|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Omicron|      Start 167: e2_asl11
 Omicron|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
 Omicron|      Start 168: e2_asl12
@@ -1909,9 +1876,9 @@ Omicron|13/94 Test #169: e2_asl13 .........................   Passed    0.03 sec
 Omicron|      Start 170: e2_asl14
 Omicron|14/94 Test #170: e2_asl14 .........................   Passed    0.03 sec
 Omicron|      Start 171: e2_asl15
-Omicron|15/94 Test #171: e2_asl15 .........................   Passed    0.04 sec
+Omicron|15/94 Test #171: e2_asl15 .........................   Passed    0.03 sec
 Omicron|      Start 172: e2_asl16
-Omicron|16/94 Test #172: e2_asl16 .........................   Passed    0.04 sec
+Omicron|16/94 Test #172: e2_asl16 .........................   Passed    0.03 sec
 Omicron|      Start 173: e2_asl17
 Omicron|17/94 Test #173: e2_asl17 .........................   Passed    0.03 sec
 Omicron|      Start 174: e2_asl18
@@ -1925,15 +1892,15 @@ Omicron|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
 Omicron|      Start 178: e2_asl22
 Omicron|22/94 Test #178: e2_asl22 .........................   Passed    0.03 sec
 Omicron|      Start 179: e2_asl23
-Omicron|23/94 Test #179: e2_asl23 .........................   Passed    0.03 sec
+Omicron|23/94 Test #179: e2_asl23 .........................   Passed    0.04 sec
 Omicron|      Start 180: e2_asl24
-Omicron|24/94 Test #180: e2_asl24 .........................***Failed    0.04 sec
+Omicron|24/94 Test #180: e2_asl24 .........................***Failed    0.03 sec
 Omicron|      Start 181: e2_asl25
-Omicron|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
+Omicron|25/94 Test #181: e2_asl25 .........................   Passed    0.04 sec
 Omicron|      Start 182: e2_asl26
-Omicron|26/94 Test #182: e2_asl26 .........................   Passed    0.04 sec
+Omicron|26/94 Test #182: e2_asl26 .........................   Passed    0.03 sec
 Omicron|      Start 183: e2_asl27
-Omicron|27/94 Test #183: e2_asl27 .........................   Passed    0.04 sec
+Omicron|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
 Omicron|      Start 184: e2_asl28
 Omicron|28/94 Test #184: e2_asl28 .........................   Passed    0.03 sec
 Omicron|      Start 185: e2_asl29
@@ -1943,7 +1910,7 @@ Omicron|30/94 Test #186: e2_asl30 .........................   Passed    0.03 sec
 Omicron|      Start 187: e2_asl31
 Omicron|31/94 Test #187: e2_asl31 .........................   Passed    0.03 sec
 Omicron|      Start 188: e2_asl32
-Omicron|32/94 Test #188: e2_asl32 .........................   Passed    0.03 sec
+Omicron|32/94 Test #188: e2_asl32 .........................   Passed    0.05 sec
 Omicron|      Start 189: e2_asl33
 Omicron|33/94 Test #189: e2_asl33 .........................   Passed    0.03 sec
 Omicron|      Start 190: e2_asl34
@@ -1951,15 +1918,15 @@ Omicron|34/94 Test #190: e2_asl34 .........................   Passed    0.03 sec
 Omicron|      Start 191: e2_asl35
 Omicron|35/94 Test #191: e2_asl35 .........................   Passed    0.03 sec
 Omicron|      Start 192: e2_asl36
-Omicron|36/94 Test #192: e2_asl36 .........................   Passed    0.04 sec
+Omicron|36/94 Test #192: e2_asl36 .........................   Passed    0.03 sec
 Omicron|      Start 193: e2_asl37
 Omicron|37/94 Test #193: e2_asl37 .........................   Passed    0.03 sec
 Omicron|      Start 194: e2_asl38
-Omicron|38/94 Test #194: e2_asl38 .........................   Passed    0.04 sec
+Omicron|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Omicron|      Start 195: e2_asl39
-Omicron|39/94 Test #195: e2_asl39 .........................   Passed    0.04 sec
+Omicron|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Omicron|      Start 196: e2_asl40
-Omicron|40/94 Test #196: e2_asl40 .........................   Passed    0.04 sec
+Omicron|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
 Omicron|      Start 197: e2_asl41
 Omicron|41/94 Test #197: e2_asl41 .........................   Passed    0.03 sec
 Omicron|      Start 198: e2_asl42
@@ -1971,17 +1938,17 @@ Omicron|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Omicron|      Start 201: e2_asl45
 Omicron|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
 Omicron|      Start 202: e2_asl46
-Omicron|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
+Omicron|46/94 Test #202: e2_asl46 .........................   Passed    0.04 sec
 Omicron|      Start 203: e2_asl47
-Omicron|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Omicron|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Omicron|      Start 204: e2_asl48
-Omicron|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Omicron|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Omicron|      Start 205: e2_asl49
-Omicron|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
+Omicron|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Omicron|      Start 206: e2_asl50
 Omicron|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Omicron|      Start 207: e2_asl51
-Omicron|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
+Omicron|51/94 Test #207: e2_asl51 .........................   Passed    0.04 sec
 Omicron|      Start 208: e2_asl52
 Omicron|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
 Omicron|      Start 209: e2_asl53
@@ -2003,23 +1970,23 @@ Omicron|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Omicron|      Start 217: e2_asl61
 Omicron|61/94 Test #217: e2_asl61 .........................   Passed    0.03 sec
 Omicron|      Start 218: e2_asl62
-Omicron|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Omicron|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
 Omicron|      Start 219: e2_asl63
-Omicron|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Omicron|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
 Omicron|      Start 220: e2_asl64
-Omicron|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
+Omicron|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
 Omicron|      Start 221: e2_asl65
-Omicron|65/94 Test #221: e2_asl65 .........................   Passed    0.03 sec
+Omicron|65/94 Test #221: e2_asl65 .........................***Failed    0.04 sec
 Omicron|      Start 222: e2_asl66
-Omicron|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
+Omicron|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
 Omicron|      Start 223: e2_asl67
-Omicron|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
+Omicron|67/94 Test #223: e2_asl67 .........................***Failed    0.04 sec
 Omicron|      Start 224: e2_asl68
 Omicron|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Omicron|      Start 225: e2_asl69
 Omicron|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Omicron|      Start 226: e2_asl70
-Omicron|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
+Omicron|70/94 Test #226: e2_asl70 .........................***Failed    0.04 sec
 Omicron|      Start 227: e2_asl71
 Omicron|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Omicron|      Start 228: e2_asl72
@@ -2031,7 +1998,7 @@ Omicron|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Omicron|      Start 231: e2_asl75
 Omicron|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
 Omicron|      Start 232: e2_asl76
-Omicron|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Omicron|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Omicron|      Start 233: e2_asl77
 Omicron|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Omicron|      Start 234: e2_asl78
@@ -2039,13 +2006,13 @@ Omicron|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Omicron|      Start 235: e2_asl79
 Omicron|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Omicron|      Start 236: e2_asl80
-Omicron|80/94 Test #236: e2_asl80 .........................   Passed    0.03 sec
+Omicron|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
 Omicron|      Start 237: e2_asl81
-Omicron|81/94 Test #237: e2_asl81 .........................   Passed    0.04 sec
+Omicron|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Omicron|      Start 238: e2_asl82
 Omicron|82/94 Test #238: e2_asl82 .........................   Passed    0.03 sec
 Omicron|      Start 239: e2_asl83
-Omicron|83/94 Test #239: e2_asl83 .........................   Passed    0.04 sec
+Omicron|83/94 Test #239: e2_asl83 .........................   Passed    0.03 sec
 Omicron|      Start 240: e2_asl84
 Omicron|84/94 Test #240: e2_asl84 .........................   Passed    0.03 sec
 Omicron|      Start 241: e2_asl85
@@ -2053,7 +2020,7 @@ Omicron|85/94 Test #241: e2_asl85 .........................   Passed    0.03 sec
 Omicron|      Start 242: e2_asl86
 Omicron|86/94 Test #242: e2_asl86 .........................   Passed    0.03 sec
 Omicron|      Start 243: e2_asl87
-Omicron|87/94 Test #243: e2_asl87 .........................   Passed    0.04 sec
+Omicron|87/94 Test #243: e2_asl87 .........................   Passed    0.03 sec
 Omicron|      Start 244: e2_asl88
 Omicron|88/94 Test #244: e2_asl88 .........................   Passed    0.03 sec
 Omicron|      Start 245: e2_asl89
@@ -2063,34 +2030,37 @@ Omicron|90/94 Test #246: e2_asl90 .........................   Passed    0.03 sec
 Omicron|      Start 247: e2_asl91
 Omicron|91/94 Test #247: e2_asl91 .........................   Passed    0.03 sec
 Omicron|      Start 248: e2_asl92
-Omicron|92/94 Test #248: e2_asl92 .........................   Passed    0.03 sec
+Omicron|92/94 Test #248: e2_asl92 .........................   Passed    0.04 sec
 Omicron|      Start 249: e2_asl93
-Omicron|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
+Omicron|93/94 Test #249: e2_asl93 .........................   Passed    0.04 sec
 Omicron|      Start 250: e2_asl94
 Omicron|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Omicron|
-Omicron|94% tests passed, 6 tests failed out of 94
+Omicron|90% tests passed, 9 tests failed out of 94
 Omicron|
-Omicron|Total Test time (real) =   2.90 sec
+Omicron|Total Test time (real) =   2.88 sec
 Omicron|
 Omicron|The following tests FAILED:
-Omicron|	166 - e2_asl10 (Failed)
 Omicron|	180 - e2_asl24 (Failed)
-Omicron|	203 - e2_asl47 (Failed)
-Omicron|	204 - e2_asl48 (Failed)
-Omicron|	205 - e2_asl49 (Failed)
-Omicron|	232 - e2_asl76 (Failed)
+Omicron|	218 - e2_asl62 (Failed)
+Omicron|	219 - e2_asl63 (Failed)
+Omicron|	220 - e2_asl64 (Failed)
+Omicron|	221 - e2_asl65 (Failed)
+Omicron|	222 - e2_asl66 (Failed)
+Omicron|	223 - e2_asl67 (Failed)
+Omicron|	226 - e2_asl70 (Failed)
+Omicron|	236 - e2_asl80 (Failed)
 Phi|Test project /home/schnorr/ensino/private/maio_e2/Phi-E2/b.e2.maio
 Phi|      Start 157: e2_asl01
 Phi| 1/94 Test #157: e2_asl01 .........................   Passed    0.04 sec
 Phi|      Start 158: e2_asl02
-Phi| 2/94 Test #158: e2_asl02 .........................   Passed    0.04 sec
+Phi| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
 Phi|      Start 159: e2_asl03
 Phi| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Phi|      Start 160: e2_asl04
-Phi| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
+Phi| 4/94 Test #160: e2_asl04 .........................   Passed    0.04 sec
 Phi|      Start 161: e2_asl05
-Phi| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
+Phi| 5/94 Test #161: e2_asl05 .........................   Passed    0.04 sec
 Phi|      Start 162: e2_asl06
 Phi| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
 Phi|      Start 163: e2_asl07
@@ -2100,7 +2070,7 @@ Phi| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Phi|      Start 165: e2_asl09
 Phi| 9/94 Test #165: e2_asl09 .........................***Failed    0.03 sec
 Phi|      Start 166: e2_asl10
-Phi|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Phi|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Phi|      Start 167: e2_asl11
 Phi|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
 Phi|      Start 168: e2_asl12
@@ -2122,13 +2092,13 @@ Phi|19/94 Test #175: e2_asl19 .........................***Failed    0.04 sec
 Phi|      Start 176: e2_asl20
 Phi|20/94 Test #176: e2_asl20 .........................***Failed    0.03 sec
 Phi|      Start 177: e2_asl21
-Phi|21/94 Test #177: e2_asl21 .........................   Passed    0.04 sec
+Phi|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
 Phi|      Start 178: e2_asl22
-Phi|22/94 Test #178: e2_asl22 .........................***Failed    0.03 sec
+Phi|22/94 Test #178: e2_asl22 .........................***Failed    0.04 sec
 Phi|      Start 179: e2_asl23
 Phi|23/94 Test #179: e2_asl23 .........................   Passed    0.03 sec
 Phi|      Start 180: e2_asl24
-Phi|24/94 Test #180: e2_asl24 .........................***Failed    0.03 sec
+Phi|24/94 Test #180: e2_asl24 .........................***Failed    0.04 sec
 Phi|      Start 181: e2_asl25
 Phi|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
 Phi|      Start 182: e2_asl26
@@ -2142,7 +2112,7 @@ Phi|29/94 Test #185: e2_asl29 .........................   Passed    0.03 sec
 Phi|      Start 186: e2_asl30
 Phi|30/94 Test #186: e2_asl30 .........................   Passed    0.03 sec
 Phi|      Start 187: e2_asl31
-Phi|31/94 Test #187: e2_asl31 .........................   Passed    0.03 sec
+Phi|31/94 Test #187: e2_asl31 .........................   Passed    0.04 sec
 Phi|      Start 188: e2_asl32
 Phi|32/94 Test #188: e2_asl32 .........................   Passed    0.03 sec
 Phi|      Start 189: e2_asl33
@@ -2170,25 +2140,25 @@ Phi|43/94 Test #199: e2_asl43 .........................   Passed    0.03 sec
 Phi|      Start 200: e2_asl44
 Phi|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Phi|      Start 201: e2_asl45
-Phi|45/94 Test #201: e2_asl45 .........................   Passed    0.04 sec
+Phi|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
 Phi|      Start 202: e2_asl46
-Phi|46/94 Test #202: e2_asl46 .........................   Passed    0.04 sec
+Phi|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Phi|      Start 203: e2_asl47
-Phi|47/94 Test #203: e2_asl47 .........................***Failed    0.04 sec
+Phi|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Phi|      Start 204: e2_asl48
-Phi|48/94 Test #204: e2_asl48 .........................***Failed    0.04 sec
+Phi|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Phi|      Start 205: e2_asl49
 Phi|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
 Phi|      Start 206: e2_asl50
 Phi|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Phi|      Start 207: e2_asl51
-Phi|51/94 Test #207: e2_asl51 .........................   Passed    0.04 sec
+Phi|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
 Phi|      Start 208: e2_asl52
 Phi|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
 Phi|      Start 209: e2_asl53
-Phi|53/94 Test #209: e2_asl53 .........................   Passed    0.03 sec
+Phi|53/94 Test #209: e2_asl53 .........................   Passed    0.04 sec
 Phi|      Start 210: e2_asl54
-Phi|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
+Phi|54/94 Test #210: e2_asl54 .........................   Passed    0.04 sec
 Phi|      Start 211: e2_asl55
 Phi|55/94 Test #211: e2_asl55 .........................   Passed    0.03 sec
 Phi|      Start 212: e2_asl56
@@ -2200,27 +2170,27 @@ Phi|58/94 Test #214: e2_asl58 .........................   Passed    0.03 sec
 Phi|      Start 215: e2_asl59
 Phi|59/94 Test #215: e2_asl59 .........................   Passed    0.03 sec
 Phi|      Start 216: e2_asl60
-Phi|60/94 Test #216: e2_asl60 .........................   Passed    0.04 sec
+Phi|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Phi|      Start 217: e2_asl61
 Phi|61/94 Test #217: e2_asl61 .........................***Failed    0.03 sec
 Phi|      Start 218: e2_asl62
-Phi|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Phi|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
 Phi|      Start 219: e2_asl63
-Phi|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Phi|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
 Phi|      Start 220: e2_asl64
-Phi|64/94 Test #220: e2_asl64 .........................***Failed    0.04 sec
+Phi|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
 Phi|      Start 221: e2_asl65
-Phi|65/94 Test #221: e2_asl65 .........................***Failed    0.04 sec
+Phi|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
 Phi|      Start 222: e2_asl66
-Phi|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
+Phi|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
 Phi|      Start 223: e2_asl67
-Phi|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
+Phi|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
 Phi|      Start 224: e2_asl68
 Phi|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Phi|      Start 225: e2_asl69
 Phi|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Phi|      Start 226: e2_asl70
-Phi|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
+Phi|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
 Phi|      Start 227: e2_asl71
 Phi|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Phi|      Start 228: e2_asl72
@@ -2232,7 +2202,7 @@ Phi|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Phi|      Start 231: e2_asl75
 Phi|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
 Phi|      Start 232: e2_asl76
-Phi|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Phi|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Phi|      Start 233: e2_asl77
 Phi|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Phi|      Start 234: e2_asl78
@@ -2240,11 +2210,11 @@ Phi|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Phi|      Start 235: e2_asl79
 Phi|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Phi|      Start 236: e2_asl80
-Phi|80/94 Test #236: e2_asl80 .........................   Passed    0.03 sec
+Phi|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
 Phi|      Start 237: e2_asl81
 Phi|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Phi|      Start 238: e2_asl82
-Phi|82/94 Test #238: e2_asl82 .........................   Passed    0.03 sec
+Phi|82/94 Test #238: e2_asl82 .........................   Passed    0.04 sec
 Phi|      Start 239: e2_asl83
 Phi|83/94 Test #239: e2_asl83 .........................   Passed    0.04 sec
 Phi|      Start 240: e2_asl84
@@ -2252,7 +2222,7 @@ Phi|84/94 Test #240: e2_asl84 .........................   Passed    0.03 sec
 Phi|      Start 241: e2_asl85
 Phi|85/94 Test #241: e2_asl85 .........................   Passed    0.03 sec
 Phi|      Start 242: e2_asl86
-Phi|86/94 Test #242: e2_asl86 .........................   Passed    0.04 sec
+Phi|86/94 Test #242: e2_asl86 .........................   Passed    0.03 sec
 Phi|      Start 243: e2_asl87
 Phi|87/94 Test #243: e2_asl87 .........................   Passed    0.03 sec
 Phi|      Start 244: e2_asl88
@@ -2260,7 +2230,7 @@ Phi|88/94 Test #244: e2_asl88 .........................   Passed    0.03 sec
 Phi|      Start 245: e2_asl89
 Phi|89/94 Test #245: e2_asl89 .........................   Passed    0.03 sec
 Phi|      Start 246: e2_asl90
-Phi|90/94 Test #246: e2_asl90 .........................   Passed    0.04 sec
+Phi|90/94 Test #246: e2_asl90 .........................   Passed    0.03 sec
 Phi|      Start 247: e2_asl91
 Phi|91/94 Test #247: e2_asl91 .........................   Passed    0.03 sec
 Phi|      Start 248: e2_asl92
@@ -2270,26 +2240,28 @@ Phi|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Phi|      Start 250: e2_asl94
 Phi|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Phi|
-Phi|84% tests passed, 15 tests failed out of 94
+Phi|82% tests passed, 17 tests failed out of 94
 Phi|
-Phi|Total Test time (real) =   2.86 sec
+Phi|Total Test time (real) =   2.87 sec
 Phi|
 Phi|The following tests FAILED:
 Phi|	165 - e2_asl09 (Failed)
-Phi|	166 - e2_asl10 (Failed)
 Phi|	169 - e2_asl13 (Failed)
 Phi|	172 - e2_asl16 (Failed)
 Phi|	175 - e2_asl19 (Failed)
 Phi|	176 - e2_asl20 (Failed)
 Phi|	178 - e2_asl22 (Failed)
 Phi|	180 - e2_asl24 (Failed)
-Phi|	203 - e2_asl47 (Failed)
-Phi|	204 - e2_asl48 (Failed)
 Phi|	205 - e2_asl49 (Failed)
 Phi|	217 - e2_asl61 (Failed)
+Phi|	218 - e2_asl62 (Failed)
+Phi|	219 - e2_asl63 (Failed)
 Phi|	220 - e2_asl64 (Failed)
 Phi|	221 - e2_asl65 (Failed)
-Phi|	232 - e2_asl76 (Failed)
+Phi|	222 - e2_asl66 (Failed)
+Phi|	223 - e2_asl67 (Failed)
+Phi|	226 - e2_asl70 (Failed)
+Phi|	236 - e2_asl80 (Failed)
 Psi|Test project /home/schnorr/ensino/private/maio_e2/Psi-E2/b.e2.maio
 Psi|      Start 157: e2_asl01
 Psi| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
@@ -2300,9 +2272,9 @@ Psi| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Psi|      Start 160: e2_asl04
 Psi| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
 Psi|      Start 161: e2_asl05
-Psi| 5/94 Test #161: e2_asl05 .........................   Passed    0.04 sec
+Psi| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Psi|      Start 162: e2_asl06
-Psi| 6/94 Test #162: e2_asl06 .........................   Passed    0.04 sec
+Psi| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
 Psi|      Start 163: e2_asl07
 Psi| 7/94 Test #163: e2_asl07 .........................   Passed    0.03 sec
 Psi|      Start 164: e2_asl08
@@ -2310,7 +2282,7 @@ Psi| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Psi|      Start 165: e2_asl09
 Psi| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
 Psi|      Start 166: e2_asl10
-Psi|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Psi|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Psi|      Start 167: e2_asl11
 Psi|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
 Psi|      Start 168: e2_asl12
@@ -2318,7 +2290,7 @@ Psi|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
 Psi|      Start 169: e2_asl13
 Psi|13/94 Test #169: e2_asl13 .........................   Passed    0.03 sec
 Psi|      Start 170: e2_asl14
-Psi|14/94 Test #170: e2_asl14 .........................   Passed    0.03 sec
+Psi|14/94 Test #170: e2_asl14 .........................   Passed    0.04 sec
 Psi|      Start 171: e2_asl15
 Psi|15/94 Test #171: e2_asl15 .........................***Failed    0.03 sec
 Psi|      Start 172: e2_asl16
@@ -2336,7 +2308,7 @@ Psi|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
 Psi|      Start 178: e2_asl22
 Psi|22/94 Test #178: e2_asl22 .........................   Passed    0.03 sec
 Psi|      Start 179: e2_asl23
-Psi|23/94 Test #179: e2_asl23 .........................***Failed    0.03 sec
+Psi|23/94 Test #179: e2_asl23 .........................   Passed    0.03 sec
 Psi|      Start 180: e2_asl24
 Psi|24/94 Test #180: e2_asl24 .........................   Passed    0.03 sec
 Psi|      Start 181: e2_asl25
@@ -2366,31 +2338,31 @@ Psi|36/94 Test #192: e2_asl36 .........................   Passed    0.03 sec
 Psi|      Start 193: e2_asl37
 Psi|37/94 Test #193: e2_asl37 .........................   Passed    0.03 sec
 Psi|      Start 194: e2_asl38
-Psi|38/94 Test #194: e2_asl38 .........................   Passed    0.04 sec
+Psi|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Psi|      Start 195: e2_asl39
 Psi|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Psi|      Start 196: e2_asl40
 Psi|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
 Psi|      Start 197: e2_asl41
-Psi|41/94 Test #197: e2_asl41 .........................   Passed    0.04 sec
+Psi|41/94 Test #197: e2_asl41 .........................   Passed    0.03 sec
 Psi|      Start 198: e2_asl42
 Psi|42/94 Test #198: e2_asl42 .........................   Passed    0.03 sec
 Psi|      Start 199: e2_asl43
-Psi|43/94 Test #199: e2_asl43 .........................   Passed    0.04 sec
+Psi|43/94 Test #199: e2_asl43 .........................   Passed    0.03 sec
 Psi|      Start 200: e2_asl44
 Psi|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Psi|      Start 201: e2_asl45
-Psi|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
+Psi|45/94 Test #201: e2_asl45 .........................   Passed    0.04 sec
 Psi|      Start 202: e2_asl46
 Psi|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Psi|      Start 203: e2_asl47
-Psi|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Psi|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Psi|      Start 204: e2_asl48
-Psi|48/94 Test #204: e2_asl48 .........................***Failed    0.04 sec
+Psi|48/94 Test #204: e2_asl48 .........................   Passed    0.04 sec
 Psi|      Start 205: e2_asl49
 Psi|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Psi|      Start 206: e2_asl50
-Psi|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
+Psi|50/94 Test #206: e2_asl50 .........................   Passed    0.04 sec
 Psi|      Start 207: e2_asl51
 Psi|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
 Psi|      Start 208: e2_asl52
@@ -2400,7 +2372,7 @@ Psi|53/94 Test #209: e2_asl53 .........................***Failed    0.03 sec
 Psi|      Start 210: e2_asl54
 Psi|54/94 Test #210: e2_asl54 .........................***Failed    0.03 sec
 Psi|      Start 211: e2_asl55
-Psi|55/94 Test #211: e2_asl55 .........................***Failed    0.04 sec
+Psi|55/94 Test #211: e2_asl55 .........................***Failed    0.03 sec
 Psi|      Start 212: e2_asl56
 Psi|56/94 Test #212: e2_asl56 .........................   Passed    0.03 sec
 Psi|      Start 213: e2_asl57
@@ -2408,29 +2380,29 @@ Psi|57/94 Test #213: e2_asl57 .........................   Passed    0.03 sec
 Psi|      Start 214: e2_asl58
 Psi|58/94 Test #214: e2_asl58 .........................   Passed    0.03 sec
 Psi|      Start 215: e2_asl59
-Psi|59/94 Test #215: e2_asl59 .........................   Passed    0.03 sec
+Psi|59/94 Test #215: e2_asl59 .........................   Passed    0.04 sec
 Psi|      Start 216: e2_asl60
 Psi|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Psi|      Start 217: e2_asl61
 Psi|61/94 Test #217: e2_asl61 .........................***Failed    0.03 sec
 Psi|      Start 218: e2_asl62
-Psi|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Psi|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
 Psi|      Start 219: e2_asl63
-Psi|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Psi|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
 Psi|      Start 220: e2_asl64
-Psi|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
+Psi|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
 Psi|      Start 221: e2_asl65
 Psi|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
 Psi|      Start 222: e2_asl66
-Psi|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
+Psi|66/94 Test #222: e2_asl66 .........................***Failed    0.04 sec
 Psi|      Start 223: e2_asl67
-Psi|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
+Psi|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
 Psi|      Start 224: e2_asl68
 Psi|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Psi|      Start 225: e2_asl69
 Psi|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Psi|      Start 226: e2_asl70
-Psi|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
+Psi|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
 Psi|      Start 227: e2_asl71
 Psi|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Psi|      Start 228: e2_asl72
@@ -2440,17 +2412,17 @@ Psi|73/94 Test #229: e2_asl73 .........................   Passed    0.03 sec
 Psi|      Start 230: e2_asl74
 Psi|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Psi|      Start 231: e2_asl75
-Psi|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
+Psi|75/94 Test #231: e2_asl75 .........................   Passed    0.04 sec
 Psi|      Start 232: e2_asl76
-Psi|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Psi|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Psi|      Start 233: e2_asl77
-Psi|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
+Psi|77/94 Test #233: e2_asl77 .........................   Passed    0.04 sec
 Psi|      Start 234: e2_asl78
 Psi|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Psi|      Start 235: e2_asl79
-Psi|79/94 Test #235: e2_asl79 .........................   Passed    0.04 sec
+Psi|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Psi|      Start 236: e2_asl80
-Psi|80/94 Test #236: e2_asl80 .........................   Passed    0.03 sec
+Psi|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
 Psi|      Start 237: e2_asl81
 Psi|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Psi|      Start 238: e2_asl82
@@ -2472,7 +2444,7 @@ Psi|89/94 Test #245: e2_asl89 .........................   Passed    0.03 sec
 Psi|      Start 246: e2_asl90
 Psi|90/94 Test #246: e2_asl90 .........................   Passed    0.03 sec
 Psi|      Start 247: e2_asl91
-Psi|91/94 Test #247: e2_asl91 .........................   Passed    0.03 sec
+Psi|91/94 Test #247: e2_asl91 .........................   Passed    0.04 sec
 Psi|      Start 248: e2_asl92
 Psi|92/94 Test #248: e2_asl92 .........................   Passed    0.03 sec
 Psi|      Start 249: e2_asl93
@@ -2480,50 +2452,52 @@ Psi|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Psi|      Start 250: e2_asl94
 Psi|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Psi|
-Psi|87% tests passed, 12 tests failed out of 94
+Psi|85% tests passed, 14 tests failed out of 94
 Psi|
-Psi|Total Test time (real) =   2.70 sec
+Psi|Total Test time (real) =   2.92 sec
 Psi|
 Psi|The following tests FAILED:
-Psi|	166 - e2_asl10 (Failed)
 Psi|	171 - e2_asl15 (Failed)
 Psi|	174 - e2_asl18 (Failed)
-Psi|	179 - e2_asl23 (Failed)
-Psi|	203 - e2_asl47 (Failed)
-Psi|	204 - e2_asl48 (Failed)
 Psi|	209 - e2_asl53 (Failed)
 Psi|	210 - e2_asl54 (Failed)
 Psi|	211 - e2_asl55 (Failed)
 Psi|	217 - e2_asl61 (Failed)
+Psi|	218 - e2_asl62 (Failed)
+Psi|	219 - e2_asl63 (Failed)
+Psi|	220 - e2_asl64 (Failed)
 Psi|	221 - e2_asl65 (Failed)
-Psi|	232 - e2_asl76 (Failed)
+Psi|	222 - e2_asl66 (Failed)
+Psi|	223 - e2_asl67 (Failed)
+Psi|	226 - e2_asl70 (Failed)
+Psi|	236 - e2_asl80 (Failed)
 Rho|Test project /home/schnorr/ensino/private/maio_e2/Rho-E2/b.e2.maio
 Rho|      Start 157: e2_asl01
 Rho| 1/94 Test #157: e2_asl01 .........................   Passed    0.04 sec
 Rho|      Start 158: e2_asl02
-Rho| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
+Rho| 2/94 Test #158: e2_asl02 .........................   Passed    0.04 sec
 Rho|      Start 159: e2_asl03
 Rho| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Rho|      Start 160: e2_asl04
-Rho| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
+Rho| 4/94 Test #160: e2_asl04 .........................   Passed    0.04 sec
 Rho|      Start 161: e2_asl05
 Rho| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Rho|      Start 162: e2_asl06
-Rho| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
+Rho| 6/94 Test #162: e2_asl06 .........................   Passed    0.04 sec
 Rho|      Start 163: e2_asl07
-Rho| 7/94 Test #163: e2_asl07 .........................   Passed    0.04 sec
+Rho| 7/94 Test #163: e2_asl07 .........................   Passed    0.03 sec
 Rho|      Start 164: e2_asl08
-Rho| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
+Rho| 8/94 Test #164: e2_asl08 .........................   Passed    0.04 sec
 Rho|      Start 165: e2_asl09
 Rho| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
 Rho|      Start 166: e2_asl10
-Rho|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Rho|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Rho|      Start 167: e2_asl11
-Rho|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
+Rho|11/94 Test #167: e2_asl11 .........................   Passed    0.04 sec
 Rho|      Start 168: e2_asl12
-Rho|12/94 Test #168: e2_asl12 .........................   Passed    0.04 sec
+Rho|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
 Rho|      Start 169: e2_asl13
-Rho|13/94 Test #169: e2_asl13 .........................   Passed    0.03 sec
+Rho|13/94 Test #169: e2_asl13 .........................   Passed    0.04 sec
 Rho|      Start 170: e2_asl14
 Rho|14/94 Test #170: e2_asl14 .........................   Passed    0.03 sec
 Rho|      Start 171: e2_asl15
@@ -2533,17 +2507,17 @@ Rho|16/94 Test #172: e2_asl16 .........................   Passed    0.03 sec
 Rho|      Start 173: e2_asl17
 Rho|17/94 Test #173: e2_asl17 .........................   Passed    0.03 sec
 Rho|      Start 174: e2_asl18
-Rho|18/94 Test #174: e2_asl18 .........................   Passed    0.03 sec
+Rho|18/94 Test #174: e2_asl18 .........................   Passed    0.04 sec
 Rho|      Start 175: e2_asl19
 Rho|19/94 Test #175: e2_asl19 .........................   Passed    0.03 sec
 Rho|      Start 176: e2_asl20
-Rho|20/94 Test #176: e2_asl20 .........................   Passed    0.03 sec
+Rho|20/94 Test #176: e2_asl20 .........................   Passed    0.04 sec
 Rho|      Start 177: e2_asl21
 Rho|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
 Rho|      Start 178: e2_asl22
 Rho|22/94 Test #178: e2_asl22 .........................   Passed    0.03 sec
 Rho|      Start 179: e2_asl23
-Rho|23/94 Test #179: e2_asl23 .........................   Passed    0.03 sec
+Rho|23/94 Test #179: e2_asl23 .........................   Passed    0.04 sec
 Rho|      Start 180: e2_asl24
 Rho|24/94 Test #180: e2_asl24 .........................   Passed    0.03 sec
 Rho|      Start 181: e2_asl25
@@ -2551,7 +2525,7 @@ Rho|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
 Rho|      Start 182: e2_asl26
 Rho|26/94 Test #182: e2_asl26 .........................   Passed    0.03 sec
 Rho|      Start 183: e2_asl27
-Rho|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
+Rho|27/94 Test #183: e2_asl27 .........................   Passed    0.04 sec
 Rho|      Start 184: e2_asl28
 Rho|28/94 Test #184: e2_asl28 .........................   Passed    0.03 sec
 Rho|      Start 185: e2_asl29
@@ -2577,13 +2551,13 @@ Rho|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Rho|      Start 195: e2_asl39
 Rho|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Rho|      Start 196: e2_asl40
-Rho|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
+Rho|40/94 Test #196: e2_asl40 .........................   Passed    0.04 sec
 Rho|      Start 197: e2_asl41
 Rho|41/94 Test #197: e2_asl41 .........................   Passed    0.03 sec
 Rho|      Start 198: e2_asl42
 Rho|42/94 Test #198: e2_asl42 .........................   Passed    0.03 sec
 Rho|      Start 199: e2_asl43
-Rho|43/94 Test #199: e2_asl43 .........................   Passed    0.04 sec
+Rho|43/94 Test #199: e2_asl43 .........................   Passed    0.03 sec
 Rho|      Start 200: e2_asl44
 Rho|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Rho|      Start 201: e2_asl45
@@ -2591,17 +2565,17 @@ Rho|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
 Rho|      Start 202: e2_asl46
 Rho|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Rho|      Start 203: e2_asl47
-Rho|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Rho|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Rho|      Start 204: e2_asl48
-Rho|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Rho|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Rho|      Start 205: e2_asl49
-Rho|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
+Rho|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Rho|      Start 206: e2_asl50
 Rho|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Rho|      Start 207: e2_asl51
-Rho|51/94 Test #207: e2_asl51 .........................   Passed    0.04 sec
+Rho|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
 Rho|      Start 208: e2_asl52
-Rho|52/94 Test #208: e2_asl52 .........................   Passed    0.04 sec
+Rho|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
 Rho|      Start 209: e2_asl53
 Rho|53/94 Test #209: e2_asl53 .........................   Passed    0.03 sec
 Rho|      Start 210: e2_asl54
@@ -2621,43 +2595,43 @@ Rho|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Rho|      Start 217: e2_asl61
 Rho|61/94 Test #217: e2_asl61 .........................   Passed    0.03 sec
 Rho|      Start 218: e2_asl62
-Rho|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Rho|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
 Rho|      Start 219: e2_asl63
-Rho|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Rho|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
 Rho|      Start 220: e2_asl64
-Rho|64/94 Test #220: e2_asl64 .........................   Passed    0.04 sec
+Rho|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
 Rho|      Start 221: e2_asl65
-Rho|65/94 Test #221: e2_asl65 .........................   Passed    0.03 sec
+Rho|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
 Rho|      Start 222: e2_asl66
-Rho|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
+Rho|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
 Rho|      Start 223: e2_asl67
-Rho|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
+Rho|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
 Rho|      Start 224: e2_asl68
 Rho|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Rho|      Start 225: e2_asl69
 Rho|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Rho|      Start 226: e2_asl70
-Rho|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
+Rho|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
 Rho|      Start 227: e2_asl71
 Rho|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Rho|      Start 228: e2_asl72
-Rho|72/94 Test #228: e2_asl72 .........................***Failed    0.03 sec
+Rho|72/94 Test #228: e2_asl72 .........................***Failed    0.04 sec
 Rho|      Start 229: e2_asl73
-Rho|73/94 Test #229: e2_asl73 .........................***Failed    0.03 sec
+Rho|73/94 Test #229: e2_asl73 .........................***Failed    0.04 sec
 Rho|      Start 230: e2_asl74
 Rho|74/94 Test #230: e2_asl74 .........................***Failed    0.03 sec
 Rho|      Start 231: e2_asl75
-Rho|75/94 Test #231: e2_asl75 .........................***Failed    0.03 sec
+Rho|75/94 Test #231: e2_asl75 .........................***Failed    0.04 sec
 Rho|      Start 232: e2_asl76
-Rho|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Rho|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Rho|      Start 233: e2_asl77
-Rho|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
+Rho|77/94 Test #233: e2_asl77 .........................   Passed    0.04 sec
 Rho|      Start 234: e2_asl78
 Rho|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Rho|      Start 235: e2_asl79
-Rho|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
+Rho|79/94 Test #235: e2_asl79 .........................   Passed    0.04 sec
 Rho|      Start 236: e2_asl80
-Rho|80/94 Test #236: e2_asl80 .........................   Passed    0.03 sec
+Rho|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
 Rho|      Start 237: e2_asl81
 Rho|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Rho|      Start 238: e2_asl82
@@ -2675,7 +2649,7 @@ Rho|87/94 Test #243: e2_asl87 .........................   Passed    0.03 sec
 Rho|      Start 244: e2_asl88
 Rho|88/94 Test #244: e2_asl88 .........................   Passed    0.03 sec
 Rho|      Start 245: e2_asl89
-Rho|89/94 Test #245: e2_asl89 .........................   Passed    0.04 sec
+Rho|89/94 Test #245: e2_asl89 .........................   Passed    0.03 sec
 Rho|      Start 246: e2_asl90
 Rho|90/94 Test #246: e2_asl90 .........................   Passed    0.03 sec
 Rho|      Start 247: e2_asl91
@@ -2687,28 +2661,29 @@ Rho|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Rho|      Start 250: e2_asl94
 Rho|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Rho|
-Rho|87% tests passed, 12 tests failed out of 94
+Rho|86% tests passed, 13 tests failed out of 94
 Rho|
-Rho|Total Test time (real) =   2.82 sec
+Rho|Total Test time (real) =   2.84 sec
 Rho|
 Rho|The following tests FAILED:
-Rho|	166 - e2_asl10 (Failed)
 Rho|	187 - e2_asl31 (Failed)
 Rho|	188 - e2_asl32 (Failed)
-Rho|	203 - e2_asl47 (Failed)
-Rho|	204 - e2_asl48 (Failed)
-Rho|	205 - e2_asl49 (Failed)
-Rho|	226 - e2_asl70 (Failed)
+Rho|	218 - e2_asl62 (Failed)
+Rho|	219 - e2_asl63 (Failed)
+Rho|	220 - e2_asl64 (Failed)
+Rho|	221 - e2_asl65 (Failed)
+Rho|	222 - e2_asl66 (Failed)
+Rho|	223 - e2_asl67 (Failed)
 Rho|	228 - e2_asl72 (Failed)
 Rho|	229 - e2_asl73 (Failed)
 Rho|	230 - e2_asl74 (Failed)
 Rho|	231 - e2_asl75 (Failed)
-Rho|	232 - e2_asl76 (Failed)
+Rho|	236 - e2_asl80 (Failed)
 Sigma|Test project /home/schnorr/ensino/private/maio_e2/Sigma-E2/b.e2.maio
 Sigma|      Start 157: e2_asl01
 Sigma| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
 Sigma|      Start 158: e2_asl02
-Sigma| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
+Sigma| 2/94 Test #158: e2_asl02 .........................   Passed    0.04 sec
 Sigma|      Start 159: e2_asl03
 Sigma| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Sigma|      Start 160: e2_asl04
@@ -2720,21 +2695,21 @@ Sigma| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
 Sigma|      Start 163: e2_asl07
 Sigma| 7/94 Test #163: e2_asl07 .........................   Passed    0.04 sec
 Sigma|      Start 164: e2_asl08
-Sigma| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
+Sigma| 8/94 Test #164: e2_asl08 .........................   Passed    0.04 sec
 Sigma|      Start 165: e2_asl09
 Sigma| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
 Sigma|      Start 166: e2_asl10
-Sigma|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Sigma|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Sigma|      Start 167: e2_asl11
 Sigma|11/94 Test #167: e2_asl11 .........................   Passed    0.04 sec
 Sigma|      Start 168: e2_asl12
 Sigma|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
 Sigma|      Start 169: e2_asl13
-Sigma|13/94 Test #169: e2_asl13 .........................   Passed    0.04 sec
+Sigma|13/94 Test #169: e2_asl13 .........................   Passed    0.03 sec
 Sigma|      Start 170: e2_asl14
-Sigma|14/94 Test #170: e2_asl14 .........................   Passed    0.03 sec
+Sigma|14/94 Test #170: e2_asl14 .........................   Passed    0.04 sec
 Sigma|      Start 171: e2_asl15
-Sigma|15/94 Test #171: e2_asl15 .........................***Failed    0.04 sec
+Sigma|15/94 Test #171: e2_asl15 .........................***Failed    0.03 sec
 Sigma|      Start 172: e2_asl16
 Sigma|16/94 Test #172: e2_asl16 .........................   Passed    0.03 sec
 Sigma|      Start 173: e2_asl17
@@ -2744,15 +2719,15 @@ Sigma|18/94 Test #174: e2_asl18 .........................   Passed    0.03 sec
 Sigma|      Start 175: e2_asl19
 Sigma|19/94 Test #175: e2_asl19 .........................   Passed    0.03 sec
 Sigma|      Start 176: e2_asl20
-Sigma|20/94 Test #176: e2_asl20 .........................   Passed    0.04 sec
+Sigma|20/94 Test #176: e2_asl20 .........................   Passed    0.03 sec
 Sigma|      Start 177: e2_asl21
-Sigma|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
+Sigma|21/94 Test #177: e2_asl21 .........................   Passed    0.04 sec
 Sigma|      Start 178: e2_asl22
 Sigma|22/94 Test #178: e2_asl22 .........................   Passed    0.03 sec
 Sigma|      Start 179: e2_asl23
-Sigma|23/94 Test #179: e2_asl23 .........................   Passed    0.03 sec
+Sigma|23/94 Test #179: e2_asl23 .........................***Failed    0.03 sec
 Sigma|      Start 180: e2_asl24
-Sigma|24/94 Test #180: e2_asl24 .........................   Passed    0.04 sec
+Sigma|24/94 Test #180: e2_asl24 .........................   Passed    0.03 sec
 Sigma|      Start 181: e2_asl25
 Sigma|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
 Sigma|      Start 182: e2_asl26
@@ -2762,15 +2737,15 @@ Sigma|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
 Sigma|      Start 184: e2_asl28
 Sigma|28/94 Test #184: e2_asl28 .........................   Passed    0.03 sec
 Sigma|      Start 185: e2_asl29
-Sigma|29/94 Test #185: e2_asl29 .........................   Passed    0.04 sec
+Sigma|29/94 Test #185: e2_asl29 .........................   Passed    0.03 sec
 Sigma|      Start 186: e2_asl30
-Sigma|30/94 Test #186: e2_asl30 .........................   Passed    0.03 sec
+Sigma|30/94 Test #186: e2_asl30 .........................   Passed    0.04 sec
 Sigma|      Start 187: e2_asl31
 Sigma|31/94 Test #187: e2_asl31 .........................***Failed    0.03 sec
 Sigma|      Start 188: e2_asl32
 Sigma|32/94 Test #188: e2_asl32 .........................***Failed    0.03 sec
 Sigma|      Start 189: e2_asl33
-Sigma|33/94 Test #189: e2_asl33 .........................   Passed    0.04 sec
+Sigma|33/94 Test #189: e2_asl33 .........................   Passed    0.03 sec
 Sigma|      Start 190: e2_asl34
 Sigma|34/94 Test #190: e2_asl34 .........................   Passed    0.03 sec
 Sigma|      Start 191: e2_asl35
@@ -2780,7 +2755,7 @@ Sigma|36/94 Test #192: e2_asl36 .........................   Passed    0.03 sec
 Sigma|      Start 193: e2_asl37
 Sigma|37/94 Test #193: e2_asl37 .........................   Passed    0.03 sec
 Sigma|      Start 194: e2_asl38
-Sigma|38/94 Test #194: e2_asl38 .........................   Passed    0.04 sec
+Sigma|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Sigma|      Start 195: e2_asl39
 Sigma|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Sigma|      Start 196: e2_asl40
@@ -2790,35 +2765,35 @@ Sigma|41/94 Test #197: e2_asl41 .........................   Passed    0.03 sec
 Sigma|      Start 198: e2_asl42
 Sigma|42/94 Test #198: e2_asl42 .........................   Passed    0.03 sec
 Sigma|      Start 199: e2_asl43
-Sigma|43/94 Test #199: e2_asl43 .........................   Passed    0.03 sec
+Sigma|43/94 Test #199: e2_asl43 .........................   Passed    0.04 sec
 Sigma|      Start 200: e2_asl44
 Sigma|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Sigma|      Start 201: e2_asl45
-Sigma|45/94 Test #201: e2_asl45 .........................   Passed    0.04 sec
+Sigma|45/94 Test #201: e2_asl45 .........................***Failed    0.03 sec
 Sigma|      Start 202: e2_asl46
 Sigma|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Sigma|      Start 203: e2_asl47
-Sigma|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Sigma|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Sigma|      Start 204: e2_asl48
-Sigma|48/94 Test #204: e2_asl48 .........................***Failed    0.04 sec
+Sigma|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Sigma|      Start 205: e2_asl49
-Sigma|49/94 Test #205: e2_asl49 .........................***Failed    0.04 sec
+Sigma|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Sigma|      Start 206: e2_asl50
 Sigma|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Sigma|      Start 207: e2_asl51
-Sigma|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
+Sigma|51/94 Test #207: e2_asl51 .........................   Passed    0.04 sec
 Sigma|      Start 208: e2_asl52
 Sigma|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
 Sigma|      Start 209: e2_asl53
 Sigma|53/94 Test #209: e2_asl53 .........................   Passed    0.04 sec
 Sigma|      Start 210: e2_asl54
-Sigma|54/94 Test #210: e2_asl54 .........................   Passed    0.05 sec
+Sigma|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
 Sigma|      Start 211: e2_asl55
-Sigma|55/94 Test #211: e2_asl55 .........................***Failed    0.05 sec
+Sigma|55/94 Test #211: e2_asl55 .........................***Failed    0.03 sec
 Sigma|      Start 212: e2_asl56
 Sigma|56/94 Test #212: e2_asl56 .........................   Passed    0.03 sec
 Sigma|      Start 213: e2_asl57
-Sigma|57/94 Test #213: e2_asl57 .........................   Passed    0.04 sec
+Sigma|57/94 Test #213: e2_asl57 .........................   Passed    0.03 sec
 Sigma|      Start 214: e2_asl58
 Sigma|58/94 Test #214: e2_asl58 .........................   Passed    0.03 sec
 Sigma|      Start 215: e2_asl59
@@ -2828,23 +2803,23 @@ Sigma|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Sigma|      Start 217: e2_asl61
 Sigma|61/94 Test #217: e2_asl61 .........................***Failed    0.03 sec
 Sigma|      Start 218: e2_asl62
-Sigma|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Sigma|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
 Sigma|      Start 219: e2_asl63
-Sigma|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Sigma|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
 Sigma|      Start 220: e2_asl64
-Sigma|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
+Sigma|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
 Sigma|      Start 221: e2_asl65
-Sigma|65/94 Test #221: e2_asl65 .........................   Passed    0.03 sec
+Sigma|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
 Sigma|      Start 222: e2_asl66
-Sigma|66/94 Test #222: e2_asl66 .........................   Passed    0.04 sec
+Sigma|66/94 Test #222: e2_asl66 .........................***Failed    0.03 sec
 Sigma|      Start 223: e2_asl67
-Sigma|67/94 Test #223: e2_asl67 .........................   Passed    0.04 sec
+Sigma|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
 Sigma|      Start 224: e2_asl68
-Sigma|68/94 Test #224: e2_asl68 .........................   Passed    0.04 sec
+Sigma|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Sigma|      Start 225: e2_asl69
-Sigma|69/94 Test #225: e2_asl69 .........................   Passed    0.04 sec
+Sigma|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Sigma|      Start 226: e2_asl70
-Sigma|70/94 Test #226: e2_asl70 .........................   Passed    0.04 sec
+Sigma|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
 Sigma|      Start 227: e2_asl71
 Sigma|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Sigma|      Start 228: e2_asl72
@@ -2856,7 +2831,7 @@ Sigma|74/94 Test #230: e2_asl74 .........................***Failed    0.03 sec
 Sigma|      Start 231: e2_asl75
 Sigma|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
 Sigma|      Start 232: e2_asl76
-Sigma|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Sigma|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Sigma|      Start 233: e2_asl77
 Sigma|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Sigma|      Start 234: e2_asl78
@@ -2864,167 +2839,172 @@ Sigma|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
 Sigma|      Start 235: e2_asl79
 Sigma|79/94 Test #235: e2_asl79 .........................   Passed    0.04 sec
 Sigma|      Start 236: e2_asl80
-Sigma|80/94 Test #236: e2_asl80 .........................   Passed    0.04 sec
+Sigma|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
 Sigma|      Start 237: e2_asl81
-Sigma|81/94 Test #237: e2_asl81 .........................   Passed    0.05 sec
+Sigma|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Sigma|      Start 238: e2_asl82
-Sigma|82/94 Test #238: e2_asl82 .........................   Passed    0.05 sec
+Sigma|82/94 Test #238: e2_asl82 .........................   Passed    0.03 sec
 Sigma|      Start 239: e2_asl83
-Sigma|83/94 Test #239: e2_asl83 .........................   Passed    0.05 sec
+Sigma|83/94 Test #239: e2_asl83 .........................   Passed    0.06 sec
 Sigma|      Start 240: e2_asl84
-Sigma|84/94 Test #240: e2_asl84 .........................   Passed    0.05 sec
+Sigma|84/94 Test #240: e2_asl84 .........................   Passed    0.03 sec
 Sigma|      Start 241: e2_asl85
-Sigma|85/94 Test #241: e2_asl85 .........................   Passed    0.06 sec
+Sigma|85/94 Test #241: e2_asl85 .........................   Passed    0.03 sec
 Sigma|      Start 242: e2_asl86
-Sigma|86/94 Test #242: e2_asl86 .........................   Passed    0.04 sec
+Sigma|86/94 Test #242: e2_asl86 .........................   Passed    0.03 sec
 Sigma|      Start 243: e2_asl87
-Sigma|87/94 Test #243: e2_asl87 .........................   Passed    0.04 sec
+Sigma|87/94 Test #243: e2_asl87 .........................   Passed    0.03 sec
 Sigma|      Start 244: e2_asl88
-Sigma|88/94 Test #244: e2_asl88 .........................   Passed    0.05 sec
+Sigma|88/94 Test #244: e2_asl88 .........................   Passed    0.03 sec
 Sigma|      Start 245: e2_asl89
-Sigma|89/94 Test #245: e2_asl89 .........................   Passed    0.04 sec
+Sigma|89/94 Test #245: e2_asl89 .........................   Passed    0.03 sec
 Sigma|      Start 246: e2_asl90
-Sigma|90/94 Test #246: e2_asl90 .........................   Passed    0.04 sec
+Sigma|90/94 Test #246: e2_asl90 .........................   Passed    0.03 sec
 Sigma|      Start 247: e2_asl91
-Sigma|91/94 Test #247: e2_asl91 .........................   Passed    0.04 sec
+Sigma|91/94 Test #247: e2_asl91 .........................   Passed    0.03 sec
 Sigma|      Start 248: e2_asl92
 Sigma|92/94 Test #248: e2_asl92 .........................   Passed    0.04 sec
 Sigma|      Start 249: e2_asl93
 Sigma|93/94 Test #249: e2_asl93 .........................   Passed    0.04 sec
 Sigma|      Start 250: e2_asl94
-Sigma|94/94 Test #250: e2_asl94 .........................   Passed    0.04 sec
+Sigma|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Sigma|
-Sigma|86% tests passed, 13 tests failed out of 94
+Sigma|81% tests passed, 18 tests failed out of 94
 Sigma|
-Sigma|Total Test time (real) =   3.36 sec
+Sigma|Total Test time (real) =   2.94 sec
 Sigma|
 Sigma|The following tests FAILED:
-Sigma|	166 - e2_asl10 (Failed)
 Sigma|	171 - e2_asl15 (Failed)
+Sigma|	179 - e2_asl23 (Failed)
 Sigma|	187 - e2_asl31 (Failed)
 Sigma|	188 - e2_asl32 (Failed)
-Sigma|	203 - e2_asl47 (Failed)
-Sigma|	204 - e2_asl48 (Failed)
-Sigma|	205 - e2_asl49 (Failed)
+Sigma|	201 - e2_asl45 (Failed)
 Sigma|	211 - e2_asl55 (Failed)
 Sigma|	217 - e2_asl61 (Failed)
+Sigma|	218 - e2_asl62 (Failed)
+Sigma|	219 - e2_asl63 (Failed)
+Sigma|	220 - e2_asl64 (Failed)
+Sigma|	221 - e2_asl65 (Failed)
+Sigma|	222 - e2_asl66 (Failed)
+Sigma|	223 - e2_asl67 (Failed)
+Sigma|	226 - e2_asl70 (Failed)
 Sigma|	228 - e2_asl72 (Failed)
 Sigma|	229 - e2_asl73 (Failed)
 Sigma|	230 - e2_asl74 (Failed)
-Sigma|	232 - e2_asl76 (Failed)
+Sigma|	236 - e2_asl80 (Failed)
 Tau|Test project /home/schnorr/ensino/private/maio_e2/Tau-E2/b.e2.maio
 Tau|      Start 157: e2_asl01
-Tau| 1/94 Test #157: e2_asl01 .........................   Passed    0.04 sec
+Tau| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
 Tau|      Start 158: e2_asl02
-Tau| 2/94 Test #158: e2_asl02 .........................   Passed    0.04 sec
+Tau| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
 Tau|      Start 159: e2_asl03
 Tau| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Tau|      Start 160: e2_asl04
-Tau| 4/94 Test #160: e2_asl04 .........................   Passed    0.04 sec
+Tau| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
 Tau|      Start 161: e2_asl05
-Tau| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
+Tau| 5/94 Test #161: e2_asl05 .........................   Passed    0.04 sec
 Tau|      Start 162: e2_asl06
-Tau| 6/94 Test #162: e2_asl06 .........................   Passed    0.03 sec
+Tau| 6/94 Test #162: e2_asl06 .........................   Passed    0.04 sec
 Tau|      Start 163: e2_asl07
 Tau| 7/94 Test #163: e2_asl07 .........................   Passed    0.03 sec
 Tau|      Start 164: e2_asl08
 Tau| 8/94 Test #164: e2_asl08 .........................   Passed    0.04 sec
 Tau|      Start 165: e2_asl09
-Tau| 9/94 Test #165: e2_asl09 .........................   Passed    0.05 sec
+Tau| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
 Tau|      Start 166: e2_asl10
-Tau|10/94 Test #166: e2_asl10 .........................***Failed    0.03 sec
+Tau|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Tau|      Start 167: e2_asl11
 Tau|11/94 Test #167: e2_asl11 .........................   Passed    0.03 sec
 Tau|      Start 168: e2_asl12
-Tau|12/94 Test #168: e2_asl12 .........................   Passed    0.03 sec
+Tau|12/94 Test #168: e2_asl12 .........................   Passed    0.04 sec
 Tau|      Start 169: e2_asl13
 Tau|13/94 Test #169: e2_asl13 .........................   Passed    0.04 sec
 Tau|      Start 170: e2_asl14
-Tau|14/94 Test #170: e2_asl14 .........................   Passed    0.04 sec
+Tau|14/94 Test #170: e2_asl14 .........................   Passed    0.03 sec
 Tau|      Start 171: e2_asl15
-Tau|15/94 Test #171: e2_asl15 .........................   Passed    0.05 sec
+Tau|15/94 Test #171: e2_asl15 .........................   Passed    0.03 sec
 Tau|      Start 172: e2_asl16
-Tau|16/94 Test #172: e2_asl16 .........................   Passed    0.04 sec
+Tau|16/94 Test #172: e2_asl16 .........................   Passed    0.03 sec
 Tau|      Start 173: e2_asl17
-Tau|17/94 Test #173: e2_asl17 .........................   Passed    0.04 sec
+Tau|17/94 Test #173: e2_asl17 .........................   Passed    0.03 sec
 Tau|      Start 174: e2_asl18
-Tau|18/94 Test #174: e2_asl18 .........................   Passed    0.04 sec
+Tau|18/94 Test #174: e2_asl18 .........................   Passed    0.03 sec
 Tau|      Start 175: e2_asl19
-Tau|19/94 Test #175: e2_asl19 .........................   Passed    0.04 sec
+Tau|19/94 Test #175: e2_asl19 .........................   Passed    0.03 sec
 Tau|      Start 176: e2_asl20
-Tau|20/94 Test #176: e2_asl20 .........................   Passed    0.04 sec
+Tau|20/94 Test #176: e2_asl20 .........................   Passed    0.03 sec
 Tau|      Start 177: e2_asl21
 Tau|21/94 Test #177: e2_asl21 .........................   Passed    0.03 sec
 Tau|      Start 178: e2_asl22
 Tau|22/94 Test #178: e2_asl22 .........................   Passed    0.04 sec
 Tau|      Start 179: e2_asl23
-Tau|23/94 Test #179: e2_asl23 .........................   Passed    0.04 sec
+Tau|23/94 Test #179: e2_asl23 .........................   Passed    0.03 sec
 Tau|      Start 180: e2_asl24
 Tau|24/94 Test #180: e2_asl24 .........................   Passed    0.03 sec
 Tau|      Start 181: e2_asl25
-Tau|25/94 Test #181: e2_asl25 .........................   Passed    0.04 sec
+Tau|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
 Tau|      Start 182: e2_asl26
 Tau|26/94 Test #182: e2_asl26 .........................   Passed    0.03 sec
 Tau|      Start 183: e2_asl27
-Tau|27/94 Test #183: e2_asl27 .........................   Passed    0.04 sec
+Tau|27/94 Test #183: e2_asl27 .........................   Passed    0.03 sec
 Tau|      Start 184: e2_asl28
 Tau|28/94 Test #184: e2_asl28 .........................   Passed    0.04 sec
 Tau|      Start 185: e2_asl29
-Tau|29/94 Test #185: e2_asl29 .........................   Passed    0.05 sec
+Tau|29/94 Test #185: e2_asl29 .........................   Passed    0.03 sec
 Tau|      Start 186: e2_asl30
-Tau|30/94 Test #186: e2_asl30 .........................   Passed    0.04 sec
+Tau|30/94 Test #186: e2_asl30 .........................   Passed    0.03 sec
 Tau|      Start 187: e2_asl31
-Tau|31/94 Test #187: e2_asl31 .........................   Passed    0.04 sec
+Tau|31/94 Test #187: e2_asl31 .........................   Passed    0.03 sec
 Tau|      Start 188: e2_asl32
-Tau|32/94 Test #188: e2_asl32 .........................   Passed    0.04 sec
+Tau|32/94 Test #188: e2_asl32 .........................   Passed    0.03 sec
 Tau|      Start 189: e2_asl33
-Tau|33/94 Test #189: e2_asl33 .........................   Passed    0.05 sec
+Tau|33/94 Test #189: e2_asl33 .........................   Passed    0.03 sec
 Tau|      Start 190: e2_asl34
-Tau|34/94 Test #190: e2_asl34 .........................   Passed    0.05 sec
+Tau|34/94 Test #190: e2_asl34 .........................   Passed    0.03 sec
 Tau|      Start 191: e2_asl35
-Tau|35/94 Test #191: e2_asl35 .........................   Passed    0.05 sec
+Tau|35/94 Test #191: e2_asl35 .........................   Passed    0.03 sec
 Tau|      Start 192: e2_asl36
-Tau|36/94 Test #192: e2_asl36 .........................   Passed    0.05 sec
+Tau|36/94 Test #192: e2_asl36 .........................   Passed    0.04 sec
 Tau|      Start 193: e2_asl37
-Tau|37/94 Test #193: e2_asl37 .........................   Passed    0.04 sec
+Tau|37/94 Test #193: e2_asl37 .........................   Passed    0.03 sec
 Tau|      Start 194: e2_asl38
-Tau|38/94 Test #194: e2_asl38 .........................   Passed    0.04 sec
+Tau|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Tau|      Start 195: e2_asl39
-Tau|39/94 Test #195: e2_asl39 .........................   Passed    0.04 sec
+Tau|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Tau|      Start 196: e2_asl40
-Tau|40/94 Test #196: e2_asl40 .........................   Passed    0.04 sec
+Tau|40/94 Test #196: e2_asl40 .........................   Passed    0.03 sec
 Tau|      Start 197: e2_asl41
-Tau|41/94 Test #197: e2_asl41 .........................   Passed    0.04 sec
+Tau|41/94 Test #197: e2_asl41 .........................   Passed    0.03 sec
 Tau|      Start 198: e2_asl42
-Tau|42/94 Test #198: e2_asl42 .........................   Passed    0.04 sec
+Tau|42/94 Test #198: e2_asl42 .........................   Passed    0.03 sec
 Tau|      Start 199: e2_asl43
 Tau|43/94 Test #199: e2_asl43 .........................   Passed    0.03 sec
 Tau|      Start 200: e2_asl44
 Tau|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Tau|      Start 201: e2_asl45
-Tau|45/94 Test #201: e2_asl45 .........................   Passed    0.03 sec
+Tau|45/94 Test #201: e2_asl45 .........................***Failed    0.03 sec
 Tau|      Start 202: e2_asl46
 Tau|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Tau|      Start 203: e2_asl47
-Tau|47/94 Test #203: e2_asl47 .........................***Failed    0.03 sec
+Tau|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Tau|      Start 204: e2_asl48
-Tau|48/94 Test #204: e2_asl48 .........................***Failed    0.03 sec
+Tau|48/94 Test #204: e2_asl48 .........................   Passed    0.04 sec
 Tau|      Start 205: e2_asl49
-Tau|49/94 Test #205: e2_asl49 .........................***Failed    0.03 sec
+Tau|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Tau|      Start 206: e2_asl50
-Tau|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
+Tau|50/94 Test #206: e2_asl50 .........................   Passed    0.04 sec
 Tau|      Start 207: e2_asl51
-Tau|51/94 Test #207: e2_asl51 .........................   Passed    0.04 sec
+Tau|51/94 Test #207: e2_asl51 .........................   Passed    0.03 sec
 Tau|      Start 208: e2_asl52
-Tau|52/94 Test #208: e2_asl52 .........................   Passed    0.04 sec
+Tau|52/94 Test #208: e2_asl52 .........................   Passed    0.03 sec
 Tau|      Start 209: e2_asl53
-Tau|53/94 Test #209: e2_asl53 .........................   Passed    0.04 sec
+Tau|53/94 Test #209: e2_asl53 .........................   Passed    0.03 sec
 Tau|      Start 210: e2_asl54
-Tau|54/94 Test #210: e2_asl54 .........................   Passed    0.04 sec
+Tau|54/94 Test #210: e2_asl54 .........................   Passed    0.03 sec
 Tau|      Start 211: e2_asl55
-Tau|55/94 Test #211: e2_asl55 .........................   Passed    0.04 sec
+Tau|55/94 Test #211: e2_asl55 .........................   Passed    0.03 sec
 Tau|      Start 212: e2_asl56
-Tau|56/94 Test #212: e2_asl56 .........................   Passed    0.03 sec
+Tau|56/94 Test #212: e2_asl56 .........................   Passed    0.04 sec
 Tau|      Start 213: e2_asl57
 Tau|57/94 Test #213: e2_asl57 .........................   Passed    0.03 sec
 Tau|      Start 214: e2_asl58
@@ -3036,23 +3016,23 @@ Tau|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
 Tau|      Start 217: e2_asl61
 Tau|61/94 Test #217: e2_asl61 .........................   Passed    0.03 sec
 Tau|      Start 218: e2_asl62
-Tau|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Tau|62/94 Test #218: e2_asl62 .........................***Failed    0.03 sec
 Tau|      Start 219: e2_asl63
-Tau|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Tau|63/94 Test #219: e2_asl63 .........................***Failed    0.03 sec
 Tau|      Start 220: e2_asl64
-Tau|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
+Tau|64/94 Test #220: e2_asl64 .........................***Failed    0.03 sec
 Tau|      Start 221: e2_asl65
 Tau|65/94 Test #221: e2_asl65 .........................***Failed    0.03 sec
 Tau|      Start 222: e2_asl66
-Tau|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
+Tau|66/94 Test #222: e2_asl66 .........................***Failed    0.04 sec
 Tau|      Start 223: e2_asl67
-Tau|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
+Tau|67/94 Test #223: e2_asl67 .........................***Failed    0.03 sec
 Tau|      Start 224: e2_asl68
 Tau|68/94 Test #224: e2_asl68 .........................   Passed    0.03 sec
 Tau|      Start 225: e2_asl69
 Tau|69/94 Test #225: e2_asl69 .........................   Passed    0.03 sec
 Tau|      Start 226: e2_asl70
-Tau|70/94 Test #226: e2_asl70 .........................   Passed    0.03 sec
+Tau|70/94 Test #226: e2_asl70 .........................***Failed    0.03 sec
 Tau|      Start 227: e2_asl71
 Tau|71/94 Test #227: e2_asl71 .........................   Passed    0.03 sec
 Tau|      Start 228: e2_asl72
@@ -3064,15 +3044,15 @@ Tau|74/94 Test #230: e2_asl74 .........................   Passed    0.03 sec
 Tau|      Start 231: e2_asl75
 Tau|75/94 Test #231: e2_asl75 .........................   Passed    0.03 sec
 Tau|      Start 232: e2_asl76
-Tau|76/94 Test #232: e2_asl76 .........................***Failed    0.03 sec
+Tau|76/94 Test #232: e2_asl76 .........................   Passed    0.03 sec
 Tau|      Start 233: e2_asl77
-Tau|77/94 Test #233: e2_asl77 .........................   Passed    0.04 sec
+Tau|77/94 Test #233: e2_asl77 .........................   Passed    0.03 sec
 Tau|      Start 234: e2_asl78
-Tau|78/94 Test #234: e2_asl78 .........................   Passed    0.03 sec
+Tau|78/94 Test #234: e2_asl78 .........................   Passed    0.04 sec
 Tau|      Start 235: e2_asl79
 Tau|79/94 Test #235: e2_asl79 .........................   Passed    0.03 sec
 Tau|      Start 236: e2_asl80
-Tau|80/94 Test #236: e2_asl80 .........................   Passed    0.04 sec
+Tau|80/94 Test #236: e2_asl80 .........................***Failed    0.03 sec
 Tau|      Start 237: e2_asl81
 Tau|81/94 Test #237: e2_asl81 .........................   Passed    0.03 sec
 Tau|      Start 238: e2_asl82
@@ -3092,7 +3072,7 @@ Tau|88/94 Test #244: e2_asl88 .........................   Passed    0.03 sec
 Tau|      Start 245: e2_asl89
 Tau|89/94 Test #245: e2_asl89 .........................   Passed    0.03 sec
 Tau|      Start 246: e2_asl90
-Tau|90/94 Test #246: e2_asl90 .........................   Passed    0.03 sec
+Tau|90/94 Test #246: e2_asl90 .........................   Passed    0.04 sec
 Tau|      Start 247: e2_asl91
 Tau|91/94 Test #247: e2_asl91 .........................   Passed    0.03 sec
 Tau|      Start 248: e2_asl92
@@ -3102,26 +3082,29 @@ Tau|93/94 Test #249: e2_asl93 .........................   Passed    0.03 sec
 Tau|      Start 250: e2_asl94
 Tau|94/94 Test #250: e2_asl94 .........................   Passed    0.03 sec
 Tau|
-Tau|94% tests passed, 6 tests failed out of 94
+Tau|90% tests passed, 9 tests failed out of 94
 Tau|
-Tau|Total Test time (real) =   3.33 sec
+Tau|Total Test time (real) =   2.86 sec
 Tau|
 Tau|The following tests FAILED:
-Tau|	166 - e2_asl10 (Failed)
-Tau|	203 - e2_asl47 (Failed)
-Tau|	204 - e2_asl48 (Failed)
-Tau|	205 - e2_asl49 (Failed)
+Tau|	201 - e2_asl45 (Failed)
+Tau|	218 - e2_asl62 (Failed)
+Tau|	219 - e2_asl63 (Failed)
+Tau|	220 - e2_asl64 (Failed)
 Tau|	221 - e2_asl65 (Failed)
-Tau|	232 - e2_asl76 (Failed)
+Tau|	222 - e2_asl66 (Failed)
+Tau|	223 - e2_asl67 (Failed)
+Tau|	226 - e2_asl70 (Failed)
+Tau|	236 - e2_asl80 (Failed)
 Zeta|Test project /home/schnorr/ensino/private/maio_e2/Zeta-E2/b.e2.maio
 Zeta|      Start 157: e2_asl01
-Zeta| 1/94 Test #157: e2_asl01 .........................   Passed    0.04 sec
+Zeta| 1/94 Test #157: e2_asl01 .........................   Passed    0.03 sec
 Zeta|      Start 158: e2_asl02
-Zeta| 2/94 Test #158: e2_asl02 .........................   Passed    0.05 sec
+Zeta| 2/94 Test #158: e2_asl02 .........................   Passed    0.03 sec
 Zeta|      Start 159: e2_asl03
-Zeta| 3/94 Test #159: e2_asl03 .........................   Passed    0.05 sec
+Zeta| 3/94 Test #159: e2_asl03 .........................   Passed    0.03 sec
 Zeta|      Start 160: e2_asl04
-Zeta| 4/94 Test #160: e2_asl04 .........................   Passed    0.04 sec
+Zeta| 4/94 Test #160: e2_asl04 .........................   Passed    0.03 sec
 Zeta|      Start 161: e2_asl05
 Zeta| 5/94 Test #161: e2_asl05 .........................   Passed    0.03 sec
 Zeta|      Start 162: e2_asl06
@@ -3131,13 +3114,13 @@ Zeta| 7/94 Test #163: e2_asl07 .........................   Passed    0.03 sec
 Zeta|      Start 164: e2_asl08
 Zeta| 8/94 Test #164: e2_asl08 .........................   Passed    0.03 sec
 Zeta|      Start 165: e2_asl09
-Zeta| 9/94 Test #165: e2_asl09 .........................   Passed    0.05 sec
+Zeta| 9/94 Test #165: e2_asl09 .........................   Passed    0.03 sec
 Zeta|      Start 166: e2_asl10
-Zeta|10/94 Test #166: e2_asl10 .........................***Failed    0.05 sec
+Zeta|10/94 Test #166: e2_asl10 .........................   Passed    0.03 sec
 Zeta|      Start 167: e2_asl11
-Zeta|11/94 Test #167: e2_asl11 .........................***Failed    0.04 sec
+Zeta|11/94 Test #167: e2_asl11 .........................***Failed    0.03 sec
 Zeta|      Start 168: e2_asl12
-Zeta|12/94 Test #168: e2_asl12 .........................***Failed    0.04 sec
+Zeta|12/94 Test #168: e2_asl12 .........................***Failed    0.03 sec
 Zeta|      Start 169: e2_asl13
 Zeta|13/94 Test #169: e2_asl13 .........................   Passed    0.03 sec
 Zeta|      Start 170: e2_asl14
@@ -3159,11 +3142,11 @@ Zeta|21/94 Test #177: e2_asl21 .........................***Failed    0.03 sec
 Zeta|      Start 178: e2_asl22
 Zeta|22/94 Test #178: e2_asl22 .........................***Failed    0.03 sec
 Zeta|      Start 179: e2_asl23
-Zeta|23/94 Test #179: e2_asl23 .........................***Failed    0.04 sec
+Zeta|23/94 Test #179: e2_asl23 .........................***Failed    0.03 sec
 Zeta|      Start 180: e2_asl24
-Zeta|24/94 Test #180: e2_asl24 .........................   Passed    0.04 sec
+Zeta|24/94 Test #180: e2_asl24 .........................   Passed    0.03 sec
 Zeta|      Start 181: e2_asl25
-Zeta|25/94 Test #181: e2_asl25 .........................   Passed    0.04 sec
+Zeta|25/94 Test #181: e2_asl25 .........................   Passed    0.03 sec
 Zeta|      Start 182: e2_asl26
 Zeta|26/94 Test #182: e2_asl26 .........................***Failed    0.03 sec
 Zeta|      Start 183: e2_asl27
@@ -3177,7 +3160,7 @@ Zeta|30/94 Test #186: e2_asl30 .........................   Passed    0.04 sec
 Zeta|      Start 187: e2_asl31
 Zeta|31/94 Test #187: e2_asl31 .........................   Passed    0.04 sec
 Zeta|      Start 188: e2_asl32
-Zeta|32/94 Test #188: e2_asl32 .........................   Passed    0.04 sec
+Zeta|32/94 Test #188: e2_asl32 .........................   Passed    0.03 sec
 Zeta|      Start 189: e2_asl33
 Zeta|33/94 Test #189: e2_asl33 .........................   Passed    0.03 sec
 Zeta|      Start 190: e2_asl34
@@ -3193,25 +3176,25 @@ Zeta|38/94 Test #194: e2_asl38 .........................   Passed    0.03 sec
 Zeta|      Start 195: e2_asl39
 Zeta|39/94 Test #195: e2_asl39 .........................   Passed    0.03 sec
 Zeta|      Start 196: e2_asl40
-Zeta|40/94 Test #196: e2_asl40 .........................***Failed    0.03 sec
+Zeta|40/94 Test #196: e2_asl40 .........................***Failed    0.04 sec
 Zeta|      Start 197: e2_asl41
-Zeta|41/94 Test #197: e2_asl41 .........................   Passed    0.03 sec
+Zeta|41/94 Test #197: e2_asl41 .........................   Passed    0.04 sec
 Zeta|      Start 198: e2_asl42
-Zeta|42/94 Test #198: e2_asl42 .........................   Passed    0.03 sec
+Zeta|42/94 Test #198: e2_asl42 .........................   Passed    0.04 sec
 Zeta|      Start 199: e2_asl43
-Zeta|43/94 Test #199: e2_asl43 .........................   Passed    0.03 sec
+Zeta|43/94 Test #199: e2_asl43 .........................   Passed    0.04 sec
 Zeta|      Start 200: e2_asl44
 Zeta|44/94 Test #200: e2_asl44 .........................   Passed    0.03 sec
 Zeta|      Start 201: e2_asl45
 Zeta|45/94 Test #201: e2_asl45 .........................***Failed    0.03 sec
 Zeta|      Start 202: e2_asl46
-Zeta|46/94 Test #202: e2_asl46 .........................   Passed    0.04 sec
+Zeta|46/94 Test #202: e2_asl46 .........................   Passed    0.03 sec
 Zeta|      Start 203: e2_asl47
 Zeta|47/94 Test #203: e2_asl47 .........................   Passed    0.03 sec
 Zeta|      Start 204: e2_asl48
-Zeta|48/94 Test #204: e2_asl48 .........................   Passed    0.04 sec
+Zeta|48/94 Test #204: e2_asl48 .........................   Passed    0.03 sec
 Zeta|      Start 205: e2_asl49
-Zeta|49/94 Test #205: e2_asl49 .........................   Passed    0.04 sec
+Zeta|49/94 Test #205: e2_asl49 .........................   Passed    0.03 sec
 Zeta|      Start 206: e2_asl50
 Zeta|50/94 Test #206: e2_asl50 .........................   Passed    0.03 sec
 Zeta|      Start 207: e2_asl51
@@ -3231,21 +3214,21 @@ Zeta|57/94 Test #213: e2_asl57 .........................   Passed    0.03 sec
 Zeta|      Start 214: e2_asl58
 Zeta|58/94 Test #214: e2_asl58 .........................   Passed    0.03 sec
 Zeta|      Start 215: e2_asl59
-Zeta|59/94 Test #215: e2_asl59 .........................   Passed    0.03 sec
+Zeta|59/94 Test #215: e2_asl59 .........................   Passed    0.04 sec
 Zeta|      Start 216: e2_asl60
-Zeta|60/94 Test #216: e2_asl60 .........................   Passed    0.03 sec
+Zeta|60/94 Test #216: e2_asl60 .........................   Passed    0.04 sec
 Zeta|      Start 217: e2_asl61
-Zeta|61/94 Test #217: e2_asl61 .........................   Passed    0.03 sec
+Zeta|61/94 Test #217: e2_asl61 .........................   Passed    0.04 sec
 Zeta|      Start 218: e2_asl62
-Zeta|62/94 Test #218: e2_asl62 .........................   Passed    0.03 sec
+Zeta|62/94 Test #218: e2_asl62 .........................   Passed    0.04 sec
 Zeta|      Start 219: e2_asl63
-Zeta|63/94 Test #219: e2_asl63 .........................   Passed    0.03 sec
+Zeta|63/94 Test #219: e2_asl63 .........................   Passed    0.04 sec
 Zeta|      Start 220: e2_asl64
-Zeta|64/94 Test #220: e2_asl64 .........................   Passed    0.04 sec
+Zeta|64/94 Test #220: e2_asl64 .........................   Passed    0.03 sec
 Zeta|      Start 221: e2_asl65
 Zeta|65/94 Test #221: e2_asl65 .........................   Passed    0.03 sec
 Zeta|      Start 222: e2_asl66
-Zeta|66/94 Test #222: e2_asl66 .........................   Passed    0.03 sec
+Zeta|66/94 Test #222: e2_asl66 .........................   Passed    0.04 sec
 Zeta|      Start 223: e2_asl67
 Zeta|67/94 Test #223: e2_asl67 .........................   Passed    0.03 sec
 Zeta|      Start 224: e2_asl68
@@ -3281,34 +3264,33 @@ Zeta|82/94 Test #238: e2_asl82 .........................***Failed    0.03 sec
 Zeta|      Start 239: e2_asl83
 Zeta|83/94 Test #239: e2_asl83 .........................***Failed    0.03 sec
 Zeta|      Start 240: e2_asl84
-Zeta|84/94 Test #240: e2_asl84 .........................***Failed    0.03 sec
+Zeta|84/94 Test #240: e2_asl84 .........................***Failed    0.04 sec
 Zeta|      Start 241: e2_asl85
 Zeta|85/94 Test #241: e2_asl85 .........................***Failed    0.03 sec
 Zeta|      Start 242: e2_asl86
 Zeta|86/94 Test #242: e2_asl86 .........................***Failed    0.03 sec
 Zeta|      Start 243: e2_asl87
-Zeta|87/94 Test #243: e2_asl87 .........................***Failed    0.03 sec
+Zeta|87/94 Test #243: e2_asl87 .........................***Failed    0.04 sec
 Zeta|      Start 244: e2_asl88
-Zeta|88/94 Test #244: e2_asl88 .........................***Failed    0.03 sec
+Zeta|88/94 Test #244: e2_asl88 .........................***Failed    0.04 sec
 Zeta|      Start 245: e2_asl89
 Zeta|89/94 Test #245: e2_asl89 .........................***Failed    0.03 sec
 Zeta|      Start 246: e2_asl90
-Zeta|90/94 Test #246: e2_asl90 .........................***Failed    0.03 sec
+Zeta|90/94 Test #246: e2_asl90 .........................***Failed    0.04 sec
 Zeta|      Start 247: e2_asl91
 Zeta|91/94 Test #247: e2_asl91 .........................***Failed    0.03 sec
 Zeta|      Start 248: e2_asl92
-Zeta|92/94 Test #248: e2_asl92 .........................***Failed    0.04 sec
+Zeta|92/94 Test #248: e2_asl92 .........................***Failed    0.03 sec
 Zeta|      Start 249: e2_asl93
-Zeta|93/94 Test #249: e2_asl93 .........................***Failed    0.04 sec
+Zeta|93/94 Test #249: e2_asl93 .........................***Failed    0.03 sec
 Zeta|      Start 250: e2_asl94
-Zeta|94/94 Test #250: e2_asl94 .........................***Failed    0.03 sec
+Zeta|94/94 Test #250: e2_asl94 .........................***Failed    0.04 sec
 Zeta|
-Zeta|67% tests passed, 31 tests failed out of 94
+Zeta|68% tests passed, 30 tests failed out of 94
 Zeta|
-Zeta|Total Test time (real) =   3.01 sec
+Zeta|Total Test time (real) =   2.92 sec
 Zeta|
 Zeta|The following tests FAILED:
-Zeta|	166 - e2_asl10 (Failed)
 Zeta|	167 - e2_asl11 (Failed)
 Zeta|	168 - e2_asl12 (Failed)
 Zeta|	170 - e2_asl14 (Failed)
