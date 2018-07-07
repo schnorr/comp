@@ -744,8 +744,8 @@ e5.res %>%
 | Beta    |        10 |           0 |         7 |      8.5 |
 | Delta   |         0 |           0 |         3 |      1.5 |
 | Epsilon |        10 |           0 |        10 |       10 |
-| Gamma   |        10 |           0 |       nil |      nil |
-| Kappa   |        10 |           0 |       nil |      nil |
+| Gamma   |        10 |           0 |         3 |      6.5 |
+| Kappa   |        10 |           0 |         9 |      9.5 |
 | Lambda  |        10 |           0 |         5 |      7.5 |
 | Nu      |        10 |           0 |         9 |      9.5 |
 | Omega   |        10 |           0 |       7.5 |     8.75 |
