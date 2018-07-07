@@ -712,17 +712,16 @@ dep0 %>%
 |---------+-----------|
 | Delta   |         3 |
 | Phi     |         5 |
-| Gamma   |           |
+| Gamma   |         3 |
 | Lambda  |         5 |
 | Nu      |         9 |
 | Sigma   |         7 |
-| Kappa   |           |
+| Kappa   |         9 |
 | Epsilon |        10 |
 | Omega   |       7.5 |
 | Omicron |         5 |
 | Alpha   |        10 |
 | Beta    |         7 |
-| Psi     |           |
 
 ** Objetivo + Subjetivo + Final
 
