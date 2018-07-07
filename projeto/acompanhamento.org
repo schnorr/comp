@@ -6,6 +6,8 @@
 
 * Avaliação das Etapas do Projeto de Compilador
 
+Consulte em [[../acompanhamento.org]] o sumário dos scores por etapa, por aluno.
+
 | Relatório de Avaliação     |
 |----------------------------|
 | [[#avaliação-da-etapa-1][Etapa 1]]                    |
