@@ -119,6 +119,17 @@ Revisões:
 | ???028 |   10 |    6 |  8.6 |    8 | 3.66 |    0 |    0 |    0 |    0 |    0 |    0 | nil |   44 |
 | ???686 |  9.6 |    8 |    9 |   10 |    0 |    0 |    0 |    0 |    0 |    0 |    0 | nil |   48 |
 
+* P2 Detalhamento
+** Questões
+
+- E1: Mapeamento sobre a gramática na declaração de arranjos multidimensionais
+- E2: Qual o valor de Ca e endereço base
+- E3: Implementação de curto-circuito
+- E4: Alocação/atribuição de registradores
+- E5: Correção de um dado esquema de tradução (if)
+- E6: Geração de código e funcionamento sobre árvore/atributos
+- E7: Grafo de fluxo de controle baseado em blocos básicos
+
 * P1 Detalhamento
 ** Questões
 
