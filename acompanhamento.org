@@ -130,6 +130,60 @@ Revisões:
 - E6: Geração de código e funcionamento sobre árvore/atributos
 - E7: Grafo de fluxo de controle baseado em blocos básicos
 
+** Discussão sobre respostas
+
+Q1
+- Realizar o mapeamento sobre a gramática
+- Explicar cada atributo utilizado
+- Utilizar uma gramática de atributos (sem vars. globais)
+
+Q2
+- Apresentar a árvore com atributos para tes
+- Demonstrar a resposta 9284 incluindo a parcial R final em -2065
+- Demonstrar a resposta 12904 (1024 . 4 . tamanho de tes)
+
+Q3
+- Em L-atribuído, portanto com atributos herdados
+- Gerar código mínimo que demonstra a avaliação por controle de fluxo
+- Não há necessidade de usar remendos, pois é L-atribuído
+- Não usar avaliação numérica, pois curto-circuito implica em controle de fluxo
+
+Q4
+- Análise de vida das variáveis
+  - s1: 2-5
+  - s2: 3-5
+  - s3: 4
+  - s4: 5-6
+  - s5: 6
+  - s6: NA
+- Conclusão
+  - s1 a s3 se interferem
+  - s4 interfere com s1, s2, e s5
+- É 3 o número mínimo de registradores 
+- Fornecer uma alocação válida
+  - s1, s5, s6 ficam em R1
+  - s2 em R2
+  - s3, s4 em R3
+
+Q5
+- Substituir F por S na primeira regra
+  - Ou renomear S para F
+- B.f = rot() ao invés de B.f = B.t
+- Após o S1.code, devemos ter um "jumpI S1.next"
+- A correção do uso de fp e bss é opcional
+- Não remover partes (por exemplo S1.next = S.next)
+  - Elas tem uma função
+
+Q6
+- Definir todos os atributos sobre a árvore
+- Atributos devem estar definidos na ordem correta
+- Código gerado deve estar semanticamente correto
+
+Q7
+- Ver grafos.org, slide "Exemplo 2 – quicksort TAC (líderes)"
+- Líderes: 1, 5, 9, 13, 14, 23
+- Apresentar o grafo com os blocos básicos e suas instruções
+
 * P1 Detalhamento
 ** Questões
 
