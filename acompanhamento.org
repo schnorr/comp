@@ -64,7 +64,6 @@ Os conceitos finais serão enviados por e-mail.
 | ???691 | 4.8 | nil | 1.87 |   76 |
 | ???686 | nil | nil | 2.56 |   41 |
 
-
 ** Versão longa
 
 | ID     | E1.O | E1.S | E2.O | E2.S | E3.S | E4.O | E4.S | E5.O | E5.S |  E6 |  P1 |  P2 | Freq |
