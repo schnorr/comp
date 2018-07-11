@@ -84,6 +84,9 @@ Revisões:
 - E5.O
   - Testes corrigidos para seguir o histórico de nossa linguagem
   - Erros sintáticos de cada grupo foram evitados (editando os testes)
+- E6
+  - Testes foram feitos manualmente com um gigantesco esforço evitando
+    ao máximo os =segfaults= dos compiladores de cada grupo
 
 | ID     | E1.O | E1.S | E2.O | E2.S | E3.S | E4.O | E4.S | E5.O | E5.S | E6.O | E6.S |  P1 |  P2 | Freq |
 |--------+------+------+------+------+------+------+------+------+------+------+------+-----+-----+------|
