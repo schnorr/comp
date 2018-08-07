@@ -23,10 +23,9 @@ etapas.
 
 * Especificação, pesos, e prazos de entrega
 
-A entrega sempre é até as 23:59 do dia. Tanto o commit da sua solução
-quanto a submissão do formulário devem acontecer no prazo. O link para
-o formulário único que permite realizar a entrega de todas as etapas
-encontra-se abaixo.
+A entrega sempre é até as 23:59 do dia. O link para o formulário
+único que permite realizar a entrega de todas as etapas encontra-se
+abaixo.
 
 ** Prazos e Especificação
 
