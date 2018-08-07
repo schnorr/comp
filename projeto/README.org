@@ -23,9 +23,10 @@ etapas.
 
 * Especificação, pesos, e prazos de entrega
 
-A entrega sempre é até as 23:59 do dia. O link para o formulário
-único que permite realizar a entrega de todas as etapas encontra-se
-abaixo.
+A entrega sempre é até as 23:59 do dia.
+
+O link para o formulário único que permite realizar a entrega de todas
+as etapas encontra-se abaixo.
 
 ** Prazos e Especificação
 
