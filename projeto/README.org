@@ -49,8 +49,8 @@ Ao submeter solução para qualquer tarefa desta disciplina, tu declaras:
 - que a mesma não foi copiada ou extraída, seja parcial ou
   integralmente, de nenhuma fonte além daquelas públicas consultadas e
   corretamente referenciadas no trabalho; e
-- estar ciente de que o plágio é uma infração grave segundo o Código
-  Disciplinar Discente da UFRGS.
+- estar ciente de que o plágio é uma infração grave segundo o
+  [[http://www.ufrgs.br/prae/sae/legislacao/codigo-disciplinar-discente][Código Disciplinar Discente da UFRGS]].
 
 |-----------------------|
 | [[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]] |
