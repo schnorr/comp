@@ -53,7 +53,7 @@ Os trabalhos devem ser realizados em grupos de *dois alunos*.  Uma vez
 formado, o grupo informa os seus membros ao professor, por e-mail. A
 definição de grupos é definitiva, válida do início ao fim do semestre.
 
-* Regras de desenvolvimento
+* Regras de desenvolvimento                                        :noexport:
 
 Requerimentos obrigatórios na realização de todas as etapas.  A função
 =main= deve estar em um arquivo chamado =main.c=. Ela não deve ser
