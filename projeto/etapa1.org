@@ -29,8 +29,10 @@ aparece.
 Reconhecimento dos lexemas correspondentes aos tokens descritos na
 seção *Descrição dos Tokens* abaixo, unicamente através da definição de
 expressões regulares no arquivo da ferramenta =flex=. Cada expressão
-regular deve estar associada a pelo menos um tipo de token. Os tipos
-de tokens estão listados no arquivo de configuração do =bison=.
+regular deve estar associada a pelo menos um tipo de
+token. Classificar os lexemas reconhecidos em tokens retornando-as
+constantes definidas no arquivo =tokens.h= fornecido ou códigos ASCII
+para caracteres simples.
 
 ** Implementar uma tabela de símbolos                             :noexport:
 
