@@ -49,15 +49,6 @@ encontra-se abaixo.
 
 ** Procedimento de Entrega
 
-Ao submeter solução para qualquer tarefa desta disciplina, tu declaras:
-
-- que a submissão reflete a solução de sua própria autoria para o problema proposto;
-- que a mesma não foi copiada ou extraída, seja parcial ou
-  integralmente, de nenhuma fonte além daquelas públicas consultadas e
-  corretamente referenciadas no trabalho; e
-- estar ciente de que o plágio é uma infração grave segundo o
-  [[http://www.ufrgs.br/prae/sae/legislacao/codigo-disciplinar-discente][Código Disciplinar Discente da UFRGS]].
-
 Cada grupo deve compactar o conteúdo do seu diretório de trabalho
 executando o comando =tar cvzf etapaX.tgz= (onde X é o dígito
 identificador da etapa) dentro do mesmo diretório. Não utilizem outros
@@ -73,6 +64,15 @@ Os grupos devem verificar as permissões de acesso ao arquivo,
 corrigi-las se necessário com o comando =chmod 744=, e recomenda-se que
 testem o acesso à partir de um local externo.
 
+Ao submeter solução para qualquer tarefa desta disciplina, tu
+declaras: (1) que a submissão reflete a solução de sua própria autoria
+para o problema proposto; (2) que a mesma não foi copiada ou extraída,
+seja parcial ou integralmente, de nenhuma fonte além daquelas públicas
+consultadas e corretamente referenciadas no trabalho; e (3) estar
+ciente de que o plágio é uma infração grave segundo o [[http://www.ufrgs.br/prae/sae/legislacao/codigo-disciplinar-discente][Código
+Disciplinar Discente da UFRGS]]. Caso concordes com esta declaração,
+clique no link abaixo para submeter:
+
 |-----------------------|
 | [[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]] |
 |-----------------------|
@@ -83,7 +83,6 @@ através da chamada make, incluindo a invocação de flex, bison e gcc. A
 execução de make deve gerar um executável no mesmo diretório de
 trabalho chamado apenas e exatamente =etapaX= (onde X é o dígito
 identificador da etapa).
-
 
 * Formação dos Grupos
 
