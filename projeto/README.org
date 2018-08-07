@@ -43,9 +43,9 @@ encontra-se abaixo.
 
 *** E7 desativada
 
-| Etapa | Descrição e Especificação   | Peso (%) | Cumul. (%) |    Entrega | Resultados |
-|-------+-----------------------------+----------+------------+------------+------------|
-| E7    | (obsoleto) [[./etapa7.org][Otimização]] ([[./etapa7.pdf][PDF]]) |       10 |        100 | 2018-07-08 |            |
+| Etapa | Descrição e Especificação   | Peso (%) | Cumul. (%) | Entrega | Resultados |
+|-------+-----------------------------+----------+------------+---------+------------|
+| E7    | (obsoleto) [[./etapa7.org][Otimização]] ([[./etapa7.pdf][PDF]]) |       10 |        100 |         |            |
 
 ** Procedimento de Entrega
 
