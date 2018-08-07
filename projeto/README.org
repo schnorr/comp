@@ -254,6 +254,23 @@ para desenvolvimento. Incluam os nomes dos componentes do grupo em
 comentários no início de todos os códigos fonte do seu
 trabalho. Retirem dúvidas com o professor antes do prazo final.
 
+* Regras de desenvolvimento
+
+Existe uma certa flexibilidade na organização do código fonte, mas há
+uma série de regras que devem ser observadas para permitir que os
+testes automáticos sejam realizados corretamente.
+
+Remova todos os comandos =printf= e afins antes da submissão, pois o
+compilador deve ser silencioso salvo quando indicado o contrário na
+especificação individual de cada etapa. Utilize somente as ferramentas
+padrão, como =make=, =flex=, =bison= e =gcc=. Os arquivos fornecidos em cada
+uma das especificações (por exemplo, =tokens.h=) não devem ser
+modificados. Não use nenhuma estrutura hierárquica de
+diretórios. Todos os seus arquivos, incluindo fontes, teste, Makefile,
+executável, devem estar no mesmo diretório de trabalho. Eles serão
+compactados pelo seu comando tar e descompactados por um comando
+correspondente dentro de um único diretório onde serão testados.
+
 * Avaliação das Etapas
 
 Cada etapa do projeto de compiladores é avaliada objetiva e
