@@ -58,15 +58,47 @@ Ao submeter solução para qualquer tarefa desta disciplina, tu declaras:
 - estar ciente de que o plágio é uma infração grave segundo o
   [[http://www.ufrgs.br/prae/sae/legislacao/codigo-disciplinar-discente][Código Disciplinar Discente da UFRGS]].
 
+Cada grupo deve compactar o conteúdo do seu diretório de trabalho
+executando o comando =tar cvzf etapaX.tgz= (onde X é o dígito
+identificador da etapa) dentro do mesmo diretório. Não utilizem outros
+programas, formatos, comandos, nomes ou organizações de diretórios
+para esse operação. Será gerado um arquivo chamado =etapa1.tgz=, o qual
+deve ser copiado para o servidor http através do comando:
+
+#+BEGIN_EXAMPLE
+scp etapa1.tgz username@html.inf.ufrgs.br:./public_html/
+#+END_EXAMPLE
+
+Os grupos devem verificar as permissões de acesso ao arquivo,
+corrigi-las se necessário com o comando =chmod 744=, e recomenda-se que
+testem o acesso à partir de um local externo.
+
 |-----------------------|
 | [[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]] |
 |-----------------------|
 
+O seu diretório de trabalho deve conter um arquivo =Makefile= com todos
+os comandos necessários à compilação do seu programa, automatizados
+através da chamada make, incluindo a invocação de flex, bison e gcc. A
+execução de make deve gerar um executável no mesmo diretório de
+trabalho chamado apenas e exatamente =etapaX= (onde X é o dígito
+identificador da etapa).
+
+
 * Formação dos Grupos
 
-Os trabalhos devem ser realizados em grupos de *dois alunos*.  Uma vez
-formado, o grupo informa os seus membros ao professor, por e-mail. A
+Os trabalhos devem ser realizados em grupos de *dois alunos*. Não serão
+aceitos grupos de três alunos ou trabalhos individuais em nenhuma
+hipótese, exceto para acomodar número ímpar de alunos na turma. A
 definição de grupos é definitiva, válida do início ao fim do semestre.
+
+Uma vez formado, a dupla informa os seus membros ao professor por
+e-mail. O aluno deve utilizar obrigatoriamente a conta de e-mail do
+instituto de informática. Na mensagem, o aluno informa os nomes e
+códigos de aluno dos componentes do grupo e o *nome de usuário* no
+Instituto de Informática do componente em cuja página será
+disponibilizado o trabalho. O trabalho será acessado automaticamente
+através do servidor =http= do Instituto no diretório home desse usuário.
 
 * Regras de desenvolvimento                                        :noexport:
 
