@@ -21,14 +21,14 @@ especificada em cada semestre. Este documento estabelece as regras
 gerais do projeto de compilador, com links para especificação das
 etapas.
 
-** Especificação, pesos, e prazos de entrega
+* Especificação, pesos, e prazos de entrega
 
 A entrega sempre é até as 23:59 do dia. Tanto o commit da sua solução
 quanto a submissão do formulário devem acontecer no prazo. O link para
 o formulário único que permite realizar a entrega de todas as etapas
 encontra-se abaixo.
 
-*** Prazos e Especificação
+** Prazos e Especificação
 
 | Etapa | Descrição e Especificação       | Peso (%) | Cumul. (%) |    Entrega | Resultados |
 |-------+---------------------------------+----------+------------+------------+------------|
@@ -41,19 +41,19 @@ encontra-se abaixo.
 | E7    | (obsoleto) [[./etapa7.org][Otimização]] ([[./etapa7.pdf][PDF]])     |       10 |        100 | 2018-07-08 |            |
 |-------+---------------------------------+----------+------------+------------+------------|
 
-*** Procedimento de Entrega
+** Procedimento de Entrega
 
 |-----------------------|
 | [[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]] |
 |-----------------------|
 
-** Formação dos Grupos
+* Formação dos Grupos
 
 Os trabalhos devem ser realizados em grupos de *dois alunos*.  Uma vez
 formado, o grupo informa os seus membros ao professor, por e-mail. A
 definição de grupos é definitiva, válida do início ao fim do semestre.
 
-** Regras de desenvolvimento
+* Regras de desenvolvimento
 
 Requerimentos obrigatórios na realização de todas as etapas.  A função
 =main= deve estar em um arquivo chamado =main.c=. Ela não deve ser
@@ -66,7 +66,7 @@ A entrada para o =flex= deve estar em um arquivo com o nome
 obrigatórios nesta etapa do projeto de compiladores. Elas serão
 consideradas na avaliação subjetiva da etapa.
 
-*** Git e Cmake
+** Git e Cmake
 
 A solução desta etapa do projeto de compiladores deve vir acompanhada
 de um repositório git que manteve o histórico de desenvolvimento do
@@ -80,7 +80,7 @@ comando =git log= na raiz do repositório solução do grupo. O comando =git
 blame= também será utilizado para verificar a participação de todos os
 membros do grupo na construção da etapa.
 
-*** Código Inicial
+** Código Inicial
 
 O código inicial do projeto encontra-se em um repositório público no
 Github cujo link é https://github.com/schnorr/pc. Sabendo que o
@@ -129,7 +129,7 @@ de código fonte devem ser adicionados, modifique o arquivo
 =CMakeLists.txt= apropriadamente para que o novo arquivo seja incluído
 no processo de compilação.
 
-*** Configurar Makefiles para Etapa
+** Configurar Makefiles para Etapa
 
 Para configurar o sistema de compilação para uma determinada etapa, os
 passos abaixo devem ser realizados (supondo etapa 2). Adicionalmente,
@@ -141,7 +141,7 @@ cmake -DE1=OFF -DE2=ON .
 make
 #+END_EXAMPLE
 
-*** Atualizações do Professor
+** Atualizações do Professor
 
 O professor pode efetuar alterações no repositório de referência. Os
 alunos deverão pegar as modificações da seguinte forma (supondo que
@@ -155,7 +155,7 @@ entre em contato com o professor. Entender como funciona
 o GIT e adotar boas práticas de desenvolvimento em equipe ajuda a
 resolver os problemas.
 
-*** Avaliação automática
+** Avaliação automática
 
 Um conjunto de testes já estão disponíveis no repositório para que o
 grupo possa se autoavaliar. Para lançar estes testes, depois de ter
@@ -167,7 +167,7 @@ encontra-se os arquivos compilados (supondo Etapa 1):
 ctest -R e1
 #+END_EXAMPLE
 
-*** Formato de Entrega
+** Formato de Entrega
 
 O líder do grupo deve marcar, utilizando uma *tag* do git, o commit que
 representa a solução do grupo para uma determinada etapa. Utilize uma
@@ -199,7 +199,7 @@ make
 ctest -R e3
 #+end_src
 
-*** Recomendações
+** Recomendações
 
 Executem vários testes. Verifiquem a conformidade com cada uma das
 regras desse formato e da especificação da etapa. Verifiquem se o
@@ -208,7 +208,7 @@ para desenvolvimento. Incluam os nomes dos componentes do grupo em
 comentários no início de todos os códigos fonte do seu
 trabalho. Retirem dúvidas com o professor antes do prazo final.
 
-** Avaliação das Etapas
+* Avaliação das Etapas
 
 Cada etapa do projeto de compiladores é avaliada objetiva e
 subjetivamente, com pesos iguais. A *nota objetiva* é definida por
@@ -226,7 +226,7 @@ para cada membro do grupo.
 - Todos os membros do grupo devem estar presente na apresentação obrigatória
 - Etapas não apresentadas na data prevista recebem nota zero.
 
-** Política de Atraso
+* Política de Atraso
 
 Todas as etapas do projeto de compilador tem a mesma política de
 atraso. As soluções de cada etapa devem ser enviadas até as datas de
