@@ -241,5 +241,5 @@ atraso. As soluções de cada etapa devem ser enviadas até as datas de
 entrega especificadas neste local. As soluções recebidas antes da data
 limite serão avaliadas normalmente, até 100%. Qualquer solução
 recebida após a data limite inicialmente estabelecida receberá nota
-zero.
+zero. A nota objetiva de cada etapa pode ser recuperada em até 80%.
 
