@@ -213,13 +213,12 @@ trabalho. Retirem dúvidas com o professor antes do prazo final.
 Cada etapa do projeto de compiladores é avaliada objetiva e
 subjetivamente, com pesos iguais. A *nota objetiva* é definida por
 testes automáticos (quando possível) que verificam as soluções dos
-alunos. Esta nota é atribuída igualmente para todos os membros do
-grupo. A *nota subjetiva* é definida pelo professor, mediante
+alunos. A *nota subjetiva* é definida pelo professor, mediante
 apresentação pelos membros do grupo em aula definida para tal. Esta
 nota compreende a apresentação do trabalho, o conhecimento técnico, as
 opções argumentadas de implementação, a originalidade, a qualidade do
 cógigo, a legibilidade, os comentários assim como a organização do
-código e os recursos apresentados. A nota subjetiva pode ser diferente
+código e os recursos apresentados. A nota final pode ser diferente
 para cada membro do grupo.
 
 *Importante*
