@@ -49,20 +49,27 @@ encontra-se abaixo.
 
 ** Procedimento de Entrega
 
+O seu diretório de trabalho deve conter um arquivo =Makefile= com todos
+os comandos necessários à compilação do seu programa, automatizados
+através da chamada make, incluindo a invocação de flex, bison e gcc. A
+execução de make deve gerar um executável no mesmo diretório de
+trabalho chamado exatamente =etapaX= (onde X é o dígito identificador da
+etapa).
+
 Cada grupo deve compactar o conteúdo do seu diretório de trabalho
 executando o comando =tar cvzf etapaX.tgz= (onde X é o dígito
 identificador da etapa) dentro do mesmo diretório. Não utilizem outros
 programas, formatos, comandos, nomes ou organizações de diretórios
-para esse operação. Será gerado um arquivo chamado =etapa1.tgz=, o qual
+para esse operação. Será gerado um arquivo chamado =etapaX.tgz=, o qual
 deve ser copiado para o servidor http através do comando:
 
 #+BEGIN_EXAMPLE
-scp etapa1.tgz username@html.inf.ufrgs.br:./public_html/
+scp etapaX.tgz username@html.inf.ufrgs.br:./public_html/
 #+END_EXAMPLE
 
-Os grupos devem verificar as permissões de acesso ao arquivo,
-corrigi-las se necessário com o comando =chmod 744=, e recomenda-se que
-testem o acesso à partir de um local externo.
+Verifique as permissões de acesso ao arquivo (com o programa =chmod=
+através de uma conexão com =sftp=). Recomenda-se que testem o acesso à
+partir de um local externo utilizando o programa =wget=.
 
 Ao submeter solução para qualquer tarefa desta disciplina, tu
 declaras: (1) que a submissão reflete a solução de sua própria autoria
@@ -76,13 +83,6 @@ clique no link abaixo para submeter:
 |-----------------------|
 | [[https://goo.gl/forms/KDnyCLPLULr6AcfF2][Formulário de entrega]] |
 |-----------------------|
-
-O seu diretório de trabalho deve conter um arquivo =Makefile= com todos
-os comandos necessários à compilação do seu programa, automatizados
-através da chamada make, incluindo a invocação de flex, bison e gcc. A
-execução de make deve gerar um executável no mesmo diretório de
-trabalho chamado apenas e exatamente =etapaX= (onde X é o dígito
-identificador da etapa).
 
 * Formação dos Grupos
 
