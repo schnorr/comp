@@ -15,8 +15,8 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-A primeira etapa do trabalho consiste em fazer um analisador léxico
-utilizando a ferramenta de geração de reconhecedores =flex=.
+A primeira etapa consiste em fazer um analisador léxico utilizando a
+ferramenta de geração de reconhecedores =flex=.
 
 * Funcionalidades Necessárias
 #+latex: \label{sec.funcionalidades}
