@@ -25,8 +25,8 @@ fornecida em anexo), substituindo a que você escreveu para testes e
 desenvolvimento. Tu deves usar essa estrutura de organização, mantendo
 os nomes de arquivo =tokens.h= e =scanner.l=.
 
-Instruções mais detalhadas sobre o formato de submissão do trabalho e
-cuidados com detalhes específicos estão nas especificações gerais.
+Instruções mais detalhadas sobre o formato de submissão e cuidados com
+detalhes específicos estão na especificação geral.
 
 * Funcionalidades Necessárias
 ** Definir expressões regulares
