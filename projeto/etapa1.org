@@ -16,10 +16,7 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 A primeira etapa do trabalho consiste em fazer um analisador léxico
-utilizando a ferramenta de geração de reconhecedores =flex= e preencher
-uma tabela com os símbolos relevantes encontrados, incluindo nesta
-tabela em qual a linha do arquivo o último lexema correspondente
-aparece.
+utilizando a ferramenta de geração de reconhecedores =flex=.
 
 * Funcionalidades Necessárias
 #+latex: \label{sec.funcionalidades}
@@ -173,16 +170,10 @@ entre aspas simples como por exemplo:
 '+'
 #+END_EXAMPLE
 
-Literais do tipo =string= são qualquer sequência de caracteres entre
-aspas duplas, como por exemplo:
-
 #+BEGIN_EXAMPLE
 "meu nome"
 "x = 3;"
 #+END_EXAMPLE
-
-Os literais do tipo =char= e =string= devem ser inseridos na tabela de
-símbolos sem as aspas que os identificam no código fonte.
 
 * Anexo - Arquivo =tokens.h=
 

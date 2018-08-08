@@ -92,8 +92,8 @@ possibilidade é utilizar a construção =union= da linguagem C para conter
 os diferentes tipos possíveis para os símbolos. A conversão deve ser
 feita utilizando funções tais como =atoi=, no caso de números inteiros,
 e =atof=, no caso de ponto-flutuantes. Os tipos caractere e cadeia de
-caracteres não devem conter aspas no campo valor (e devem ser
-duplicados com =strdup=).
+caracteres não devem conter aspas (simples ou duplas) no campo valor
+(e devem ser duplicados com =strdup=).
 
 ** Associação de valor ao =token= (=yylval=)
 
