@@ -118,13 +118,6 @@ enquadram em diferentes categorias:
 4. identificadores
 5. literais.
 
-O analisador léxico deve, para as categorias de palavras reservadas,
-operadores compostos, identificadores e literais, retornar o token
-correspondente de acordo o que está definido no arquivo =parser.y= (veja
-as linhas que começam por =%token=). Para a categoria de caracteres
-especiais, o analisador léxico deve retornar o código =ASCII= através de
-uma única regra que retorna =yytext[0]=.
-
 ** Palavras Reservadas da Linguagem
 
 As palavras reservadas da linguagem são:
