@@ -294,8 +294,8 @@ L2: ...
 [[./img/fases_compilacao.png]]
 
 * Geradores de Compiladores
-+ Análise Léxica -- *lex* e *flex*
-+ Análise Sintática -- *yacc* e *bison*
++ Análise Léxica -- *flex*
++ Análise Sintática -- *bison*
 + Gerador de Código
 * Conclusão da Aula de Hoje
 - Estrutura geral de um compilador
