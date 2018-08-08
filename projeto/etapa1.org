@@ -99,9 +99,10 @@ Existem tokens que correspondem a caracteres particulares, como
 vírgula, ponto-e-vírgula, parênteses, para os quais é mais conveniente
 usar seu próprio código =ASCII=, convertido para inteiro, como valor de
 retorno que os identifica. Para os tokens compostos, como palavras
-reservadas e identificadores, utiliza-se uma constante, com recursos
-do =bison=, com um código maior do que 255 para representá-los. Os
-tokens se enquadram em diferentes categorias:
+reservadas e identificadores, utiliza-se uma constante, conforme o
+arquivo =tokens.h= fornecido (mais tarde utilizaremos recursos do =bison=)
+com um código maior do que 255 para representá-los. Os tokens se
+enquadram em diferentes categorias:
 
 1. palavras reservadas da linguagem
 2. caracteres especiais
