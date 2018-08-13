@@ -51,7 +51,7 @@
 - *(a|b)(a|b)* \rightarrow { aa, ab, ba, bb }
 - *a** \rightarrow { $\epsilon$, a, aa, aaa, aaaa, ... }
 - *(a|b)** \rightarrow todas as strings com a e b
-- *(a|b)*aa(a|b)* \rightarrow todas as strings com a e b, com pelo menos
+- *(a|b)*aa(a|b)** \rightarrow todas as strings com a e b, com pelo menos
   duas letras ``a'' consecutivas
 
 #+latex: \vfill
