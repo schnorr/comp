@@ -148,17 +148,19 @@
 
 #+BEGIN_CENTER
 Algumas ER comuns em analisadores léxicos
+
+(com modificações para gerar perguntas)
 #+END_CENTER
 
 #+BEGIN_EXAMPLE
-if            -> if                                  
-then          -> then                                
-else          -> else                                
-relop         -> < \vert <= \vert = \vert >= \vert >                 
+if            -> if
+then          -> then
+else          -> else
+relop         -> < | <= | = | >= | >
 letra         -> [A-Za-z_]
 digito        -> [0-9]
-identificador -> letra(letra\vert digito)                
-numero        -> digito*(.digito+)?(E(\plus\vert-)?digito+)?
+identificador -> letra (letra | digito)
+numero        -> digito*(.digito+)?(E(+|-)?digito+)?
 #+END_EXAMPLE
 
 #+latex: \vfill
