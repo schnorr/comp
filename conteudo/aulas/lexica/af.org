@@ -58,7 +58,7 @@ Convenções
 #+Latex: \vfill
 
 Exemplo, supondo
-  | identificador | \rightarrow | letra (letra \vert digito)* |
+  | identificador | \rightarrow | letra (letra \vert digito) |
 
 #+Latex: \pause
 
