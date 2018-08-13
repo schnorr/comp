@@ -160,7 +160,7 @@ relop         -> < | <= | = | >= | >
 letra         -> [A-Za-z_]
 digito        -> [0-9]
 identificador -> letra (letra | digito)
-numero        -> digito*(.digito+)?(E(+|-)?digito+)?
+numero        -> digito*(\.digito+)?(E(+|-)?digito+)?
 #+END_EXAMPLE
 
 #+latex: \vfill
