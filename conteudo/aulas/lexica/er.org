@@ -63,18 +63,18 @@
 # (b+(ab+)*(a|b|\epsilon))*
 
 * Propriedades Algébricas
-- Comutativa: $r|s = s|r$
-- Associativa: $r|(s|t) = (r|s)|t$
-- Concatenação Associativa: $(rs)t = r(st)$
-- Concatenação Distributiva \\
-  $r(s|t) = rs|rt$ \\
-  $(r|s)t = rt|st$
-- Vazio é identidade da Concatenação \\
-  $\epsilon r = r$ \\
-  $r \epsilon = r$
-- Relação entre * e $\epsilon$ \\
-  $r^* = (r|\epsilon)^*$
-- * é idempotente: $r^{**} = r^*$
+
+| Propriedade               | Equivalências               |
+|---------------------------+-----------------------------|
+| Comutativa                | $r \vert s = s \vert r$             |
+| Associativa               | $r \vert (s \vert t) = (r \vert s) \vert t$ |
+| Concatenação Associativa  | $(rs)t = r(st)$             |
+| Concatenação Distributiva | $r(s \vert t) = rs \vert rt$        |
+|                           | $(r \vert s)t = rt \vert st$        |
+| Identidade (\epsilon)            | $\epsilon r = r$                   |
+|                           | $r \epsilon = r$                   |
+| Relação entre * e $\epsilon$     | $r^* = (r \vert \epsilon)^*$             |
+| Idempotência ( com * )    | $r^{**} = r^*$                  |
 
 #+latex: \vfill
 
