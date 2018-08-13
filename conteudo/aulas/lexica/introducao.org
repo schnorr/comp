@@ -143,7 +143,7 @@ Usar _Expressões Regulares_ para definir padrões
 
 #+latex: \vfill
 
-- *String (cadeia, frase)*: sequência finita de símbolos
+- *String (palavra)*: sequência finita de símbolos
   - String Vazia ($\epsilon$) -- epsilon: sequência vazia (nenhum símbolo)
 
 #+latex: \vfill
