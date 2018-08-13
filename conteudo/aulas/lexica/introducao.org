@@ -113,15 +113,23 @@
 - Enumerar os valores possíveis: $<, <=, =, >=, >$ \\
   \rightarrow Complexo e não eficaz
 
-\vfill
+#+latex: \vfill\pause
 
-- <2-> Usar conceitos de linguagens formais
-- <2-> Hierarquia de linguagens (Noam Chomsky)
+- Usar conceitos de linguagens formais
+- Hierarquia de linguagens (Noam Chomsky)
   - *Regulares* (Tipo 3) \rightarrow Autômatos de Estados Finitos
   - Livres de Contexto (2) \rightarrow Autômato com pilha
     - Quando determinista; base da teoria de LPs
   - Sensíveis ao Contexto (1) \rightarrow Máquina de Turing restrita
   - Recursivamente Enumeráveis (0) \rightarrow Máquina de Turing
+
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+Resposta
+
+Usar _Expressões Regulares_ para definir padrões
+#+END_CENTER
 
 * Definições de Linguagens Formais
 
@@ -131,7 +139,7 @@
 #+latex: \vfill
 
 - *Alfabeto ($\Sigma$)* -- sigma: um conjunto finito de símbolos \\
-  $\Sigma = \{ 0, 1 \}$
+  Exemplo de alfabeto para a linguagem binária:  $\Sigma = \{ 0, 1 \}$
 
 #+latex: \vfill
 
