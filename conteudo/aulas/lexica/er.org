@@ -98,19 +98,28 @@
   - Ver o manual do $grep$ (abra um terminal, digite ``man grep'')
 * Definições Regulares
 - Nomear certas expressões regulares ($nome$)
-- Usá-las em ERs subsequentes (fazendo parte das $er$)\\
+- Usá-las em ERs subsequentes (fazendo parte do corpo das ERs)\\
   $nome_1 \rightarrow er_1$ \\
   $nome_2 \rightarrow er_2$ \\
   ... \\
   $nome_n \rightarrow er_n$ \\
-- <2->\alert{Restrições}
+
+#+latex: \vfill\pause
+
+- *Restrições*
   - Cada $nome_i$ é definido uma vez e não faz parte do alfabeto
   - Cada $er_i$ tem símbolos do alfabeto e nomes definidos antes
-  \rightarrow Evitar definições recursivas
-- <3->Exemplo para os identificadores da linguagem C\\
-  $letra\_ \rightarrow [A-Za-z\_]$ \\
-  $digito \rightarrow [0-9]$ \\
-  $identificador \rightarrow letra\_ (letra\_ | digito)^*$
+  - Sem definições recursivas
+
+#+latex: \vfill\pause
+
+- Exemplo para os identificadores da linguagem C
+
+  #+BEGIN_EXAMPLE
+  letra_ -> [A-Za-z_]
+  digito -> [0-9]
+  identificador -> letra_ (letra_ | digito)*
+  #+END_EXAMPLE
 
 * Casos de Estudo: Definições Regulares
 - Datas com diferentes separadores
@@ -136,15 +145,26 @@
   - $(aa|bb)^*((ab|ba)(aa|bb)^* (ab|ba)(aa|bb)^*)^*$
 
 * ER comuns em Compiladores
-- Algumas ER comuns em analisadores léxicos
-  | if            | \rightarrow | *if*                                  |
-  | then          | \rightarrow | *then*                                |
-  | else          | \rightarrow | *else*                                |
-  | relop         | \rightarrow | < \vert <= \vert = \vert >= \vert >                 |
-  | identificador | \rightarrow | letra(letra\vert digito)                |
-  | numero        | \rightarrow | digito*(.digito+)?(E(\plus\vert-)?digito+)? |
-\vfill
-- <2->\alert{Pergunta} \\
-  Será que =tmp_1= é um identificador?
+
+#+BEGIN_CENTER
+Algumas ER comuns em analisadores léxicos
+#+END_CENTER
+
+#+BEGIN_EXAMPLE
+if            -> if                                  
+then          -> then                                
+else          -> else                                
+relop         -> < \vert <= \vert = \vert >= \vert >                 
+letra         -> [A-Za-z_]
+digito        -> [0-9]
+identificador -> letra(letra\vert digito)                
+numero        -> digito*(.digito+)?(E(\plus\vert-)?digito+)?
+#+END_EXAMPLE
+
+#+latex: \vfill
+
+Perguntas
+- Será que =tmp_1= é um identificador?
+- Será que =3.= é um literal ponto flutuante (número)?
 
 
