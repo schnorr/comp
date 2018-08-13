@@ -36,9 +36,9 @@
     #+END_EXAMPLE
 
 * Compilação Típica com Flex
-+ Edição da especificação em um arquivo -- *regras.l*
++ Edição da especificação em um arquivo -- *scanner.l*
 
-+ =flex regras.l=
++ =flex scanner.l=
   + Código em C no arquivo *lex.yy.c*
   + Exporta a função =yylex()= que retorna un token
   + =man flex=
