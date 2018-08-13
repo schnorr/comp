@@ -20,9 +20,9 @@
   - ER básicas \rightarrow definida por literais
   - ER complexas \rightarrow combinação de ER básicas (definição regular)
 
-#+latex: \vfill
+#+latex: \vfill\pause
 
-- <2-> Algumas regras para formação de palavras válidas
+- Algumas regras para formação de palavras válidas
   - Concatenação: xy (x seguido de y)
   - Alternação: x|y (x ou y)
   - Repetição: x* (x repetido 0 ou mais vezes)
