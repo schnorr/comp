@@ -33,7 +33,7 @@
 | Setor      | Descrição                                              |    Local | Projeto             |
 |------------+--------------------------------------------------------+----------+---------------------|
 |            | Definições, requisitos e posicionamento da disciplina  |          | Definições iniciais |
-| Léxica     | Introdução, Expressões Regulares, Autômatos Finitos    |          | Início E1 (flex)    |
+| Léxica     | Introdução, Expressões Regulares, =flex=               |          | Início E1 (flex)    |
 | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD    |          |                     |
 | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações  |          |                     |
 | Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |          |                     |
