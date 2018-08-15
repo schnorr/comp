@@ -65,19 +65,19 @@ Exemplo, supondo
 Exemplo, supondo
   | relop | \rightarrow | < \vert > \vert <= \vert >= \vert = \vert < |
 * Definição de Autômato Finito
-Autômato finito $M$ sobre alfabeto $\Sigma$ é (K, $\Sigma$, $\delta, $e0$, F)
+Autômato finito M sobre alfabeto \Sigma é (K, \Sigma, \delta, e0, F)
 
 #+Latex: \vfill
 
 K é um conjunto finito de estados
 
-$\Sigma$ é o alfabeto de símbolos da linguagem
+\Sigma é o alfabeto de símbolos da linguagem
 
-$\delta : K * \Sigma \rightarrow K$ é a função de transição de estados, *parcial*
+\delta : K \times \Sigma \rightarrow K é a função de transição de estados, *parcial*
 
-$e0$ é o estado inicial
+e0 é o estado inicial
 
-$F$ é o conjunto de estados finais
+F é o conjunto de estados finais
 * Exemplo de Autômato Finito
 #+BEGIN_CENTER
 Autômato que reconhece números reais e inteiros
