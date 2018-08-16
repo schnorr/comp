@@ -168,7 +168,7 @@ entre aspas simples como por exemplo:
 
 #+BEGIN_EXAMPLE
 'a'
-''
+' '
 '+'
 #+END_EXAMPLE
 
