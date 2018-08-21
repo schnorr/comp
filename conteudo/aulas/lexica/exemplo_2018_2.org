@@ -1,0 +1,136 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Exercício Léxico de 2018-2
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Exercício Proposto
+
+#+BEGIN_CENTER
+Construir o AFD da ER:
+
+(a|\epsilon)(b|ba)*
+
+Usando o método:
+
+ER \to (Thompson) \rightarrow AFND \to (Subconjuntos) \rightarrow AFD
+#+END_CENTER
+
+* Grafo em DOT (AFND)                                              :noexport:
+
+#+BEGIN_SRC dot :tangle ./img/lexico-2018-2.dot
+digraph ex1 {
+  rankdir=LR;
+  margin=0;
+  shape = circle;
+
+  0 [shape = circle];
+  start [shape = point];
+  19 [shape = doublecircle];  
+
+  start -> 0;
+  0 -> 1 [ label = "&epsilon;", fontsize = "20pt" ];
+  1 -> 2 [ label = "&epsilon;", fontsize = "20pt" ];
+  1 -> 4 [ label = "&epsilon;", fontsize = "20pt" ];
+  2 -> 3 [ label = "a", fontsize = "20pt"];
+  4 -> 5 [ label = "&epsilon;", fontsize = "20pt" ];
+  3 -> 6 [ label = "&epsilon;", fontsize = "20pt" ];
+  5 -> 6 [ label = "&epsilon;", fontsize = "20pt" ];
+  6 -> 7 [ label = "&epsilon;", fontsize = "20pt" ];
+
+  7 -> 8 [ label = "&epsilon;", fontsize = "20pt" ];
+  8 -> 9 [ label = "&epsilon;", fontsize = "20pt" ];
+  8 -> 17 [ label = "&epsilon;", fontsize = "20pt" ];
+  9 -> 10 [ label = "&epsilon;", fontsize = "20pt" ];
+  9 -> 12 [ label = "&epsilon;", fontsize = "20pt" ];
+  10 -> 11 [label = "b", fontsize = "20pt"];
+  12 -> 13 [label = "b", fontsize = "20pt"];
+  13 -> 14 [ label = "&epsilon;", fontsize = "20pt" ];
+  14 -> 15 [label = "a", fontsize = "20pt"];
+  15 -> 16 [ label = "&epsilon;", fontsize = "20pt" ];
+  11 -> 16 [ label = "&epsilon;", fontsize = "20pt" ];
+  16 -> 17 [ label = "&epsilon;", fontsize = "20pt" ];
+  17 -> 18 [ label = "&epsilon;", fontsize = "20pt" ];
+  18 -> 19 [ label = "&epsilon;", fontsize = "20pt" ];
+
+  # back
+  18 -> 7 [ label = "&epsilon;", fontsize = "20pt" ];
+}
+#+END_SRC
+
+Gerar o PNG:
+
+#+begin_src shell :results output
+cd img;
+dot ./lexico-2018-2.dot -Tpng -o lexico-2018-2.png
+#+end_src
+
+#+RESULTS:
+
+* ER \to (Thompson) \to AFND
+
+[[./img/lexico-2018-2.png]]
+
+* AFND \to (Subconjuntos) \to AFD
+
+O Fechamento-\epsilon é aplicado após todas as operações de movimento.
+
+| Operação | Estados do AFND                    | Estado AFD | a | b |
+|----------+------------------------------------+------------+---+---|
+| Fech-\epsilon   | {0,1,2,4,5,6,7,8,9,10,12,17,18,19} | A          | B | C |
+| Mov(A,a) | {3,6,7,8,9,10,12,17,18,19}         | B          |   | C |
+| Mov(A,b) | {11,13,14,16,17,18,19,7,8,9,10,12} | C          | D | C |
+| Mov(B,a) | \empty                                  |            |   |   |
+| Mov(B,b) | (C)                                |            |   |   |
+| Mov(C,a) | {15,16,17,18,19,7,8,9,10,12}       | D          |   | C |
+| Mov(C,b) | (C)                                |            |   |   |
+| Mov(D,a) | \empty                                  |            |   |   |
+| Mov(D,b) | (C)                                |            |   |   |
+
+* Grafo em DOT (AFD)                                               :noexport:
+
+#+BEGIN_SRC dot :tangle ./img/lexico-2018-2-afd.dot
+digraph ex1 {
+  rankdir=LR;
+  margin=0;
+  shape = circle;
+
+  start [shape = point];
+  A [shape = doublecircle];
+  B [shape = doublecircle];
+  C [shape = doublecircle];
+  D [shape = doublecircle];  
+
+  start -> A;
+  A -> B [ label = "a", fontsize = "20pt" ];
+  A -> C [ label = "b", fontsize = "20pt" ];
+  B -> C [ label = "b", fontsize = "20pt" ];
+  C -> D [ label = "a", fontsize = "20pt" ];
+  C -> C [ label = "b", fontsize = "20pt" ];
+  D -> C [ label = "b", fontsize = "20pt" ];
+}
+#+END_SRC
+
+Gerar o PNG:
+
+#+begin_src shell :results output
+cd img;
+dot ./lexico-2018-2-afd.dot -Tpng -o lexico-2018-2-afd.png
+#+end_src
+
+#+RESULTS:
+
+* AFD resultante
+
+[[./img/lexico-2018-2-afd.png]]
