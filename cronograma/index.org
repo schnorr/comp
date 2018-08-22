@@ -33,7 +33,7 @@
 | Setor      | Descrição                                              |    Local | Projeto             |
 |------------+--------------------------------------------------------+----------+---------------------|
 |            | Definições, requisitos e posicionamento da disciplina  |          | Definições iniciais |
-| Léxica     | Introdução, Expressões Regulares, =flex=               |          | Início E1 (flex)    |
+| Léxica     | Introdução, Expressões Regulares, =flex=                 |          | Início E1 (flex)    |
 | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD    |          |                     |
 | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações  |          |                     |
 | Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |          |                     |
@@ -210,7 +210,7 @@ aulas %>%
 |  N |   Encontro |    Local | Setor      | Descrição                                              | Projeto             |
 |----+------------+----------+------------+--------------------------------------------------------+---------------------|
 |  1 | 2018-08-08 |          |            | Definições, requisitos e posicionamento da disciplina  | Definições iniciais |
-|  2 | 2018-08-13 |          | Léxica     | Introdução, Expressões Regulares, Autômatos Finitos    | Início E1 (flex)    |
+|  2 | 2018-08-13 |          | Léxica     | Introdução, Expressões Regulares, =flex=                 | Início E1 (flex)    |
 |  3 | 2018-08-15 |          | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD    |                     |
 |  4 | 2018-08-20 |          | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações  |                     |
 |  5 | 2018-08-22 |          | Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |                     |
