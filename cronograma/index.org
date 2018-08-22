@@ -36,12 +36,12 @@
 | Léxica     | Introdução, Expressões Regulares, =flex=                 |          | Início E1 (flex)    |
 | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD    |          |                     |
 | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações  |          |                     |
-| Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |          |                     |
+| Sintática  | Intro. Desc. (top-down), Rec. com Retrocesso/Preditivo |          |                     |
 |            |                                                        |   67-103 | Avaliação E1        |
 | Sintática  | Conjuntos Primeiro e Sequência, bison                  |          | Início E2 (bison)   |
-| Sintática  | Parser SLR(1), LR(1) e LALR(1)                         |          |                     |
-| Sintática  | Intro. Desc. (top-down), Rec. com Retrocesso/Preditivo |          |                     |
 | Sintática  | Parser e tabela LL(1)                                  |          |                     |
+| Sintática  | Parser SLR(1), LR(1) e LALR(1)                         |          |                     |
+| Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |          |                     |
 |            |                                                        |   67-102 | Avaliação E2        |
 | Semântica  | Esquemas S e L-Atribuídos                              |          | Início E3 (Árvore)  |
 | Semântica  | Implementação de Esquemas S e L-Atribuídos             |          |                     |
@@ -213,12 +213,12 @@ aulas %>%
 |  2 | 2018-08-13 |          | Léxica     | Introdução, Expressões Regulares, =flex=                 | Início E1 (flex)    |
 |  3 | 2018-08-15 |          | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD    |                     |
 |  4 | 2018-08-20 |          | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações  |                     |
-|  5 | 2018-08-22 |          | Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |                     |
+|  5 | 2018-08-22 |          | Sintática  | Intro. Desc. (top-down), Rec. com Retrocesso/Preditivo |                     |
 |  6 | 2018-08-27 |   67-103 |            |                                                        | Avaliação E1        |
 |  7 | 2018-08-29 |          | Sintática  | Conjuntos Primeiro e Sequência, bison                  | Início E2 (bison)   |
-|  8 | 2018-09-03 |          | Sintática  | Parser SLR(1), LR(1) e LALR(1)                         |                     |
-|  9 | 2018-09-05 |          | Sintática  | Intro. Desc. (top-down), Rec. com Retrocesso/Preditivo |                     |
-| 10 | 2018-09-10 |          | Sintática  | Parser e tabela LL(1)                                  |                     |
+|  8 | 2018-09-03 |          | Sintática  | Parser e tabela LL(1)                                  |                     |
+|  9 | 2018-09-05 |          | Sintática  | Parser SLR(1), LR(1) e LALR(1)                         |                     |
+| 10 | 2018-09-10 |          | Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |                     |
 | 11 | 2018-09-12 |   67-102 |            |                                                        | Avaliação E2        |
 | 12 | 2018-09-17 |          | Semântica  | Esquemas S e L-Atribuídos                              | Início E3 (Árvore)  |
 | 13 | 2018-09-19 |          | Semântica  | Implementação de Esquemas S e L-Atribuídos             |                     |
