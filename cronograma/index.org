@@ -38,10 +38,10 @@
 | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações  |          |                     |
 | Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência) |          |                     |
 |            |                                                        |   67-103 | Avaliação E1        |
-| Sintática  | Conjuntos Primeiro e Sequência, bison                  |          | Início E2 (bison)   |
-| Sintática  | Parser e tabela LL(1)                                  |          |                     |
-| Sintática  | Parser SLR(1), LR(1) e LALR(1)                         |          |                     |
-| Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |          |                     |
+| Sintática  | Parser e tabela LL(1), =bison=                           |          | Início E2 (bison)   |
+| Sintática  | Ascendente, Parser LR(0), SLR(1)                       |          |                     |
+| Sintática  | Parser LR(1)                                           |          |                     |
+| Sintática  | Exercícios LR(1), e LALR(1)                            |          |                     |
 |            |                                                        |   67-102 | Avaliação E2        |
 | Semântica  | Esquemas S e L-Atribuídos                              |          | Início E3 (Árvore)  |
 | Semântica  | Implementação de Esquemas S e L-Atribuídos             |          |                     |
@@ -215,10 +215,10 @@ aulas %>%
 |  4 | 2018-08-20 |          | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações  |                     |
 |  5 | 2018-08-22 |          | Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência) |                     |
 |  6 | 2018-08-27 |   67-103 |            |                                                        | Avaliação E1        |
-|  7 | 2018-08-29 |          | Sintática  | Conjuntos Primeiro e Sequência, bison                  | Início E2 (bison)   |
-|  8 | 2018-09-03 |          | Sintática  | Parser e tabela LL(1)                                  |                     |
-|  9 | 2018-09-05 |          | Sintática  | Parser SLR(1), LR(1) e LALR(1)                         |                     |
-| 10 | 2018-09-10 |          | Sintática  | Introdução Asc. (bottom-up), Parser LR(0)              |                     |
+|  7 | 2018-08-29 |          | Sintática  | Parser e tabela LL(1), =bison=                           | Início E2 (bison)   |
+|  8 | 2018-09-03 |          | Sintática  | Ascendente, Parser LR(0), SLR(1)                       |                     |
+|  9 | 2018-09-05 |          | Sintática  | Parser LR(1)                                           |                     |
+| 10 | 2018-09-10 |          | Sintática  | Exercícios LR(1), e LALR(1)                            |                     |
 | 11 | 2018-09-12 |   67-102 |            |                                                        | Avaliação E2        |
 | 12 | 2018-09-17 |          | Semântica  | Esquemas S e L-Atribuídos                              | Início E3 (Árvore)  |
 | 13 | 2018-09-19 |          | Semântica  | Implementação de Esquemas S e L-Atribuídos             |                     |
