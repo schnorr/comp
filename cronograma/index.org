@@ -36,7 +36,7 @@
 | Léxica     | Introdução, Expressões Regulares, =flex=                 |          | Início E1 (flex)    |
 | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD    |          |                     |
 | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações  |          |                     |
-| Sintática  | Intro. Desc. (top-down), Rec. com Retrocesso/Preditivo |          |                     |
+| Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência) |          |                     |
 |            |                                                        |   67-103 | Avaliação E1        |
 | Sintática  | Conjuntos Primeiro e Sequência, bison                  |          | Início E2 (bison)   |
 | Sintática  | Parser e tabela LL(1)                                  |          |                     |
@@ -213,7 +213,7 @@ aulas %>%
 |  2 | 2018-08-13 |          | Léxica     | Introdução, Expressões Regulares, =flex=                 | Início E1 (flex)    |
 |  3 | 2018-08-15 |          | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD    |                     |
 |  4 | 2018-08-20 |          | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações  |                     |
-|  5 | 2018-08-22 |          | Sintática  | Intro. Desc. (top-down), Rec. com Retrocesso/Preditivo |                     |
+|  5 | 2018-08-22 |          | Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência) |                     |
 |  6 | 2018-08-27 |   67-103 |            |                                                        | Avaliação E1        |
 |  7 | 2018-08-29 |          | Sintática  | Conjuntos Primeiro e Sequência, bison                  | Início E2 (bison)   |
 |  8 | 2018-09-03 |          | Sintática  | Parser e tabela LL(1)                                  |                     |
