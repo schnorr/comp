@@ -179,7 +179,7 @@ entre aspas simples como por exemplo:
 
 * Anexo - Arquivo =tokens.h=
 
-#+BEGIN_SRC C :tangle tokens.h
+#+BEGIN_SRC text :tangle tokens.h
 /*
 Lista dos tokens, com valores constantes associados.  Este arquivo
 será posterioremente substituído, não acrescente nada.  Os valores das
