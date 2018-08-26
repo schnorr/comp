@@ -58,6 +58,18 @@ Temos 18 grupos.
 | Zeta    | ???673 |
 
 * Avaliação da Etapa 1
+** Grupos que não entregaram até o prazo
+
+| Grupo   | ID     |
+|---------+--------|
+| Iota    | ???285 |
+| Iota    | ???091 |
+| Kappa   | ???578 |
+| Kappa   | ???589 |
+| Mu      | ???932 |
+| Mu      | ???794 |
+| Omicron | ???055 |
+
 * Avaliação da Etapa 2
 * Avaliação da Etapa 3
 * Avaliação da Etapa 4
