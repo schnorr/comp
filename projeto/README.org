@@ -58,7 +58,7 @@ etapa).
 
 Cada grupo deve compactar o conteúdo do seu diretório de trabalho
 executando o comando =tar cvzf etapaX.tgz .= (onde X é o dígito
-identificador da etapa) dentro do mesmo diretório. Não utilizem outros
+identificador da etapa) *dentro do mesmo diretório*. Não utilizem outros
 programas, formatos, comandos, nomes ou organizações de diretórios
 para esse operação. Será gerado um arquivo chamado =etapaX.tgz=, o qual
 deve ser copiado para o servidor http através do comando:
