@@ -5,8 +5,7 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 * Avaliação das Etapas do Projeto de Compilador
-
-Consulte em [[../acompanhamento.org]] o sumário dos scores por etapa, por aluno.
+** Sumário
 
 | Relatório de Avaliação     |
 |----------------------------|
