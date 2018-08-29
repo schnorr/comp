@@ -16,9 +16,9 @@
 #+LATEX_HEADER: \input{../org-babel.tex}
 
 * Introdução
-   + \texttt{yacc} -Yet Another Compiler Compiler
+   + =yacc= -Yet Another Compiler Compiler
    + Produz um analisador ascendente para uma gramática
-   + Usado para produzir compiladores para várias linguagens
+   + Pode ser usado para produzir compiladores para várias linguagens
      + Pascal, C, C++, ...
    + Outros usos
      + bc (calculadora)
@@ -59,15 +59,19 @@ factor : '(' expr ')'  | ID | NUM;
 %start expr     
      #+END_SRC
 * Interação com o analisador léxico
-   + Flex produz uma função \texttt{yylex()}
-   + Bison produz uma função \texttt{yyparse()}
-   \vfill
+   + Flex produz uma função =yylex()=
+   + Bison produz uma função =yyparse()=
+
+#+latex: \vfill
+
    + Flex e Bison: concebidos para interagirem
      + yyparse() chama yylex() para obter um token
-   \vfill
+
+#+latex: \vfill
+
    + Duas opções
      + Ou implementamos manualmente yylex()
-     + Ou \alert{utilizamos Flex diretamente}
+     + Ou *utilizamos Flex diretamente* (melhor opção)
 * Sequência básica operacional
    + Supondo os arquivos
      + *scanner.l* com as especificações de tokens em lex
