@@ -19,33 +19,19 @@ O trabalho consiste no projeto e implementação de um compilador
 funcional para uma linguagem de programação que a partir de agora
 chamaremos de *A Linguagem*. Na segunda etapa do trabalho é preciso
 construir um analisador sintático utilizando a ferramenta de geração
-de reconhecedores =bison= e continuar o preenchimento da tabela de
-símbolos com outras informações, associando valores aos =tokens=
-(através da variável global =yylval=). O analisador sintático deve
-portanto verificar se a sentença fornecida -- o programa de entrada a
-ser compilado -- faz parte da linguagem ou não.
+de reconhecedores =bison=.  O analisador sintático deve portanto
+verificar se a sentença fornecida -- o programa de entrada a ser
+compilado -- faz parte da linguagem ou não.
 
 * Funcionalidades Necessárias
 ** Definir a gramática da linguagem
 
-A gramática da linguagem deve ser definida a partir da descrição
-geral da Seção \ref{sec.descricao}. As regras gramaticais devem ser
+A gramática da linguagem deve ser definida a partir da descrição geral
+da Seção "A Linguagem", abaixo. As regras gramaticais devem ser
 incorporadas ao arquivo =parser.y=, arquivo este que conterá a gramática
 usando a sintaxe do bison.
 
-# \subsection{Adicionar produções gramaticais de erro}
-# Considerando a descrição da linguagem apresentada na
-# Seção~\ref{sec.descricao}, o grupo deve identificar pelo menos {\bf
-# três} situações comuns de erros sintáticos que o usuário possa cometer,
-# adicionando produções
-# gramaticais que capturam automaticamente estes erros durante o processo
-# de análise sintática. Caso eles ocorram, o compilador deve terminar da
-# mesma forma que terminaria para uma situação de erro não prevista, com
-# comportamento idêntico ao descrito na próxima
-# subseção~\ref{sec.relatorio}.
-
 ** Relatório de Erro Sintático
-#+latex: \label{sec.relatorio}
 
 Caso a análise sintática termine de forma correta, o programa deve
 retornar zero. Na ausência de erros sintáticos, esse valor é
@@ -57,9 +43,25 @@ adicionais que auxiliem o programador que está utilizando o compilador
 a identificar o erro sintático identificado.  Na ocasião de uma
 mensagem de erro, o analisador sintático deve retornar um valor
 diferente de zero. Esses valores -- zero ou diferente de zero -- são
-utilizados durante a avaliação.
+utilizados durante a avaliação automática.
 
-** Enriquecimento da tabela de símbolos
+** Remoção de conflitos gramaticais
+
+Deve-se realizar a remoção de conflitos Reduce/Reduce [2] e
+Shift/Reduce [3] de todas as regras gramaticais. Estes conflitos
+devem ser tratados através do uso de configurações para o bison (veja
+a documentação sobre =%left=, =%right= ou =%nonassoc=). Os mesmos podem ser
+observados através de uma análise cuidadosa do arquivo =parser.output=
+gerado automaticamente quando compilado.  Sugere-se um processo
+construtivo da especificação em passos, verificando em cada passo a
+inexistência de conflitos. Por vezes, a remoção de conflitos pode ser
+feita somente através de uma revisão de partes da gramática.
+
+[2]: http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html
+
+[3]: http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html
+
+** Enriquecimento da tabela de símbolos                           :noexport:
 
 Uma vez que vários lexemas da entrada podem representar =tokens= de
 tipos diferentes, a tabela de símbolos deve ser alterada de forma que
@@ -95,7 +97,7 @@ e =atof=, no caso de ponto-flutuantes. Os tipos caractere e cadeia de
 caracteres não devem conter aspas (simples ou duplas) no campo valor
 (e devem ser duplicados com =strdup=).
 
-** Associação de valor ao =token= (=yylval=)
+** Associação de valor ao =token= (=yylval=)                          :noexport:
 
 O analisador léxico é o responsável pela criação da entrada na tabela
 de símbolos para um determinado =token= que acaba de ser
@@ -116,29 +118,25 @@ de símbolos.
 
 [1]: http://www.gnu.org/software/bison/manual/html_node/Token-Values.html
 
-** Remoção de conflitos gramaticais
-
-Deve-se realizar a remoção de conflitos Reduce/Reduce [2] e
-Shift/Reduce [3] de todas as regras gramaticais. Estes conflitos
-devem ser tratados através do uso de configurações para o bison (veja
-a documentação sobre =%left=, =%right= ou =%nonassoc=). Os mesmos podem ser
-observados através de uma análise cuidadosa do arquivo =parser.output=
-gerado automaticamente quando compilado.  Sugere-se um processo
-construtivo da especificação em passos, verificando em cada passo a
-inexistência de conflitos. Por vezes, a remoção de conflitos pode ser
-feita somente através de uma revisão de partes da gramática.
-
-[2]: http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html
-
-[3]: http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html
-
-** Listar o conteúdo tabela de símbolos
+** Listar o conteúdo tabela de símbolos                           :noexport:
 
 Implementar a função =comp_print_table= para listar _todas_ as entradas da
 tabela de símbolos. Utilize a função =void
 cc_dict_etapa_2_print_entrada (char *key, int line, int tipo)= para
 imprimir uma entrada. Esta função será utilizada na avaliação para
 averiguar se a solução preenche a tabela de símbolos.
+
+** Adicionar produções gramaticais de erro                        :noexport:
+
+Considerando a descrição da linguagem apresentada na
+Seção~\ref{sec.descricao}, o grupo deve identificar pelo menos {\bf
+três} situações comuns de erros sintáticos que o usuário possa
+cometer, adicionando produções gramaticais que capturam
+automaticamente estes erros durante o processo de análise
+sintática. Caso eles ocorram, o compilador deve terminar da mesma
+forma que terminaria para uma situação de erro não prevista, com
+comportamento idêntico ao descrito na próxima
+subseção~\ref{sec.relatorio}.
 * A Linguagem
 
 #+latex: \label{sec.descricao}
