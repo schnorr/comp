@@ -15,13 +15,19 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-O trabalho consiste no projeto e implementação de um compilador
-funcional para uma linguagem de programação que a partir de agora
-chamaremos de *A Linguagem*. Na segunda etapa do trabalho é preciso
-construir um analisador sintático utilizando a ferramenta de geração
-de reconhecedores =bison=.  O analisador sintático deve portanto
-verificar se a sentença fornecida -- o programa de entrada a ser
-compilado -- faz parte da linguagem ou não.
+A segunda etapa consiste em construir um analisador sintático
+utilizando a ferramenta de geração de reconhecedores =bison=. O arquivo
+=tokens.h= da etapa anterior desaparece, e deve ser substituído pelo
+arquivo =parser.y= (fornecido) com a declaração dos tokens. A função
+principal deve estar em um arquivo =main.c=, separado do arquivo
+=scanner.l= (léxico, da etapa 1) e do =parser.y= (sintático, por codificar
+na etapa 2). A solução desta etapa deve ser composta de dois arquivos:
+=scanner.l=, =parser.y=, e outros arquivos fontes que o grupo achar
+pertinente (deve ser compilados usando o =Makefile= que deve não somente
+executar =flex=, também =bison=).  No final desta etapa o analisador
+sintático gerado pelo bison a partir da gramática deve verificar se a
+sentença fornecida -- o programa de entrada a ser compilado -- faz
+parte da linguagem ou não.
 
 * Funcionalidades Necessárias
 ** Definir a gramática da linguagem
