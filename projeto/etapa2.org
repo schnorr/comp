@@ -18,10 +18,11 @@
 A segunda etapa consiste em construir um analisador sintático
 utilizando a ferramenta de geração de reconhecedores =bison=. O arquivo
 =tokens.h= da etapa anterior desaparece, e deve ser substituído pelo
-arquivo =parser.y= (fornecido) com a declaração dos tokens. A função
-principal deve estar em um arquivo =main.c=, separado do arquivo
-=scanner.l= (léxico, da etapa 1) e do =parser.y= (sintático, por codificar
-na etapa 2). A solução desta etapa deve ser composta de dois arquivos:
+arquivo =parser.y= (fornecido, mas que deve ser modificado para atender
+a esta especificação) com a declaração dos tokens. A função principal
+deve estar em um arquivo =main.c=, separado do arquivo =scanner.l=
+(léxico, da etapa 1) e do =parser.y= (sintático, por codificar na etapa
+2). A solução desta etapa deve ser composta de dois arquivos:
 =scanner.l=, =parser.y=, e outros arquivos fontes que o grupo achar
 pertinente (deve ser compilados usando o =Makefile= que deve não somente
 executar =flex=, também =bison=).  No final desta etapa o analisador
