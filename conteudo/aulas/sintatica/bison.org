@@ -91,16 +91,16 @@ gcc -o parser lex.yy.o y.tab.o -lfl
      #+END_SRC
 * Miscelânea
    + As regras da gramática
-     + \alert{Podem ser recursivas tanto a esquerda quanto a direita}
+     + *Podem ser recursivas tanto a esquerda quanto a direita*
      + Não podem ser ambíguas
    + Usa um parser ascendente LALR(1)
      + Solicita um token
      + Empilha
      + Redução?
-       + Sim $\leadsto$ reduz usando a regra correspondente
-       + Não $\leadsto$ lê outro token na entrada
+       + Sim \to reduz usando a regra correspondente
+       + Não \to lê outro token na entrada
    + Não pode olhar mais que um token de /lookahead/
-   + \texttt{bison -v gramatica.y} gera a tabela de estados
+   + =bison -v parser.y= gera a tabela de estados
 * Exemplo (Lex) -- arquivo \texttt{scanner.l}
    #+begin_src LEX
 %{
