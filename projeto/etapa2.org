@@ -136,53 +136,45 @@ comportamento idêntico ao descrito na próxima
 subseção~\ref{sec.relatorio}.
 * A Linguagem
 
-#+latex: \label{sec.descricao}
-
-Um programa na linguagem é composto por três
-elementos, todos opcionais: um conjunto de declarações de
-_variáveis globais_, um conjunto de declarações de _novos tipos_, um
-conjunto de _funções_. Esses elementos podem aparecer intercaladamente e
-em qualquer ordem.
-
-# Somente as declarações de variáveis globais são *terminadas* por
-# ponto-e-vírgula. 
+Um programa na linguagem é composto por três elementos, todos
+opcionais: um conjunto de declarações de _variáveis globais_, um
+conjunto de declarações de _novos tipos_, um conjunto de _funções_. Esses
+elementos podem aparecer intercaladamente e em qualquer ordem.
 
 ** Declarações de Novos Tipos
-#+latex: \label{sec.novostipos}
 
-Novos tipos podem ser declarados apenas no escopo global através
-da palavra reservada =class=, seguida de um nome e enfim uma lista de
-campos não vazia fornecida entre colchetes onde os campos são separados por dois
-pontos (através do caractere especial ':'). Cada campo tem o
-encapsulamento, o tipo e um identificador do campo.  Existem três
-encapsulamentos possíveis, identificados pelas palavras reservadas:
-=protected=, =private=, e =public=. Declarações de novos tipos são
-terminadas por ponto-e-vírgula. O tipo de um campo que faz parte de
-uma declaração de novo tipo pode ser de qualquer tipo, salvo 
-um tipo de usuário, ou seja, um tipo declarado com =class=.
+Novos tipos podem ser declarados apenas no escopo global através da
+palavra reservada =class=, seguida de um nome e enfim uma lista de
+campos não vazia fornecida entre colchetes onde os campos são
+separados por dois pontos (através do caractere especial ':'). Cada
+campo tem o encapsulamento, que é opcional, o tipo e um identificador
+do campo.  Existem três encapsulamentos possíveis, identificados pelas
+palavras reservadas: =protected=, =private=, e =public=. Declarações de
+novos tipos são terminadas por ponto-e-vírgula. O tipo de um campo que
+faz parte de uma declaração de novo tipo pode ser de qualquer tipo,
+salvo um tipo de usuário, ou seja, um tipo declarado com =class=.
 
 Os nomes de novos tipos podem ser utilizados em qualquer lugar onde um
 tipo normal aparece, salvo quando é explícita a proibição. Uma função,
 por exemplo, pode ser de um tipo novo, assim como seus parâmetros. O
-nome do novo tipo é o identificador do tipo; a palavra reservada =class=
-serve unicamente para definir um novo tipo; e não para utilizá-lo.
+nome do novo tipo é o identificador do tipo, ou seja, a palavra
+reservada =class= serve unicamente para definir um novo tipo e não para
+utilizá-lo.
 
 ** Declarações de Variáveis Globais
-#+latex: \label{sec.varglobais}
 
-As variáveis são declaradas pelo seu tipo, seguidas pelo seu nome. O
-tipo pode estar precedido opcionalmente pela palavra reservada
-=static=. A linguagem inclui também a declaração de vetores, feita pela
-definição de seu tamanho inteiro positivo entre colchetes, colocada à
-direita do nome, ou seja, ao final da declaração.  Variáveis podem ser
-dos tipos primitivos =int=, =float=, =char=, =bool= e =string=; e também podem
-ser dos tipos declarados pelo usuário. Neste último caso, o nome do
-tipo é aquele utilizado depois da palavra reservada =class= quando este
-foi declarado.  As declarações de variáveis globais são terminadas por
+As variáveis são declaradas pelo seu nome, seguido do seu tipo. O tipo
+pode estar precedido opcionalmente pela palavra reservada =static=. A
+linguagem inclui também a declaração de vetores, feita pela definição
+de seu tamanho inteiro positivo entre colchetes, colocada à direita do
+nome, ou seja, ao final da declaração.  Variáveis podem ser dos tipos
+primitivos =int=, =float=, =char=, =bool= e =string=; e também podem ser dos
+tipos declarados pelo usuário. Neste último caso, o nome do tipo é
+aquele utilizado depois da palavra reservada =class= quando este foi
+declarado.  As declarações de variáveis globais são terminadas por
 ponto-e-vírgula, e não podem receber valores de inicialização.
 
 ** Definição de Funções
-#+latex: \label{sec.funcoes}
 
 Cada função é definida por um cabeçalho e um corpo, sendo que esta
 definição não é terminada por ponto-e-vírgula. O cabeçalho consiste no
@@ -196,7 +188,6 @@ vetor. O tipo de um parâmetro pode ser opcionalmente precedido da
 palavra reservada =const=. O corpo da função é um bloco de comandos.
 
 ** Bloco de Comandos
-#+latex: \label{sec.bloco}
 
 Um bloco de comandos é definido entre chaves, e consiste em uma
 sequência, possivelmente vazia, de comandos simples cada um *terminado*
@@ -205,7 +196,6 @@ comando único simples, recursivamente, e pode ser utilizado em
 qualquer construção que aceite um comando simples.
 
 ** Comandos Simples
-#+latex: \label{sec.comandos}
 
 Os comandos simples da linguagem podem ser: declaração de variável
 local, atribuição, construções de fluxo de controle, operações de
@@ -213,59 +203,45 @@ entrada, de saída, e de retorno, um bloco de comandos, e chamadas de
 função.
 
 #+BEGIN_CENTER
-*_Declaração de Variável_*
+*Declaração de Variável*
 #+END_CENTER
 Consiste no tipo da variável precedido opcionalmente pela palavra
 reservada =static=, e o nome da variável. Os tipos podem ser aqueles
-descritos na Seção \ref{sec.varglobais}. As declarações locais, ao
+descritos na seção sobre variáveis globais. As declarações locais, ao
 contrário das globais, não permitem vetores e podem permitir o uso da
 palavra reservada =const= antes do tipo (após a palavra reservada =static=
 caso esta aparecer). Uma variável local pode ser opcionalmente
 inicializada com um valor válido caso sua declaração seja seguida do
-operador composto ``\texttt{<=}'' e de um identificador ou
-literal. Somente tipos primitivos podem ser inicializados.
+operador composto <= e de um identificador ou literal. Somente tipos
+primitivos podem ser inicializados.
 
 #+BEGIN_CENTER
-*_Comando de Atribuição_*
+*Comando de Atribuição*
 #+END_CENTER
 Existem duas formas de atribuição: para identificadores cujo tipo é
-primitivo (veja Seção \ref{sec.varglobais}), e para identificadores de
-tipo declarado pelo usuário (veja Seção
-\ref{sec.novostipos}). Identificadores de tipos primitivos simples
-podem receber valores assim:
+primitivo e para identificadores de tipo declarado pelo
+usuário. Identificadores de tipos primitivos simples podem receber
+valores assim:
 #+BEGIN_EXAMPLE
 identificador = expressão
 identificador[expressão] = expressão
 #+END_EXAMPLE
 Para os identificadores cujo tipo é aquele declarado pelo usuário pode
-ter seus campos acessados diretamente através do operador =.=, assim:
+ter seus campos acessados diretamente através do operador =$=, assim:
 #+BEGIN_EXAMPLE
-identificador.campo = expressão
+identificador$campo = expressão
 #+END_EXAMPLE
 
 #+BEGIN_CENTER
-*_Comandos de Entrada e Saída_*
+*Comandos de Entrada e Saída*
 #+END_CENTER
 Identificado pela palavra reservada =input=, seguida de uma expressão.
 O comando de saída é identificado pela palavra reservada =output=,
 seguida de uma lista obrigatória de expressões separadas por vírgulas,
 onde cada expressão não pode ser vazia.
 
-# =output=
-# =input=
-
-# TODO => semântica
-# , onde cada elemento pode ser uma cadeia de caracteres
-#   ou uma expressão aritmética a ser impressa. 
-
-# _Comando Vazio_: para facilitar a escrita de programas aceitando o
-# caractere de ponto-e-vírgula como terminador, e não apenas separador,
-# a linguagem deve aceitar também o comando vazio. 
-
-#+Latex: \vspace{2\baselineskip}
-
 #+BEGIN_CENTER
-*_Chamada de Função_*
+*Chamada de Função*
 #+END_CENTER
 Uma chamada de função consiste no nome da função, seguida de
 argumentos entre parênteses separados por vírgula. Um argumento pode
@@ -274,7 +250,7 @@ ser uma expressão, ou um simples marcador de lugar através do token =.=
 com /pipes/ abaixo.
 
 #+BEGIN_CENTER
-*_Comandos de Shift_*
+*Comandos de Shift*
 #+END_CENTER
 Sendo número um literal inteiro positivo, temos:
 #+BEGIN_EXAMPLE
@@ -283,8 +259,9 @@ identificador >> numero
 #+END_EXAMPLE
 
 #+BEGIN_CENTER
-*_Comando de Retorno, Break, Continue e Case_*
+*Comando de Retorno, Break, Continue e Case*
 #+END_CENTER
+
 Retorno é a palavra reservada =return= seguida de uma expressão. Os
 comandos =break= e =continue= são simples. O comando =case= é o único que
 não termina por ponto-e-vírgula, por ser considerado um marcador de
@@ -292,7 +269,7 @@ lugar. Ele é seguido de um literal inteiro, seguido enfim por
 dois-pontos.
 
 #+BEGIN_CENTER
-*_Comandos de Controle de Fluxo_*
+*Comandos de Controle de Fluxo*
 #+END_CENTER
 A linguagem possui construções condicionais, iterativas e de seleção para
 controle estruturado de fluxo. As condicionais incluem o =if= com o =else=
@@ -319,8 +296,7 @@ switch (expressão) bloco
 #+END_EXAMPLE
 
 Em todas as construções de controle de fluxo, o termo =bloco= indica um
-bloco de comandos (veja Seção \ref{sec.bloco}). Este não tem
-ponto-e-vírgula.
+bloco de comandos. Este não tem ponto-e-vírgula nestas situações.
 
 # =foreach=
 # =switch= / =case=
@@ -331,7 +307,7 @@ ponto-e-vírgula.
 # if then else
 
 #+BEGIN_CENTER
-*_Comandos com Pipes_*
+*Comandos com Pipes*
 #+END_CENTER
 
 A linguagem possui dois tokens (=%>%= e =%|%=) que servem como /pipes/. Eles
@@ -366,34 +342,22 @@ identificadores, opcionalmente seguidos de expressão inteira entre
 colchetes, para acesso a vetores; (b) literais numéricos como inteiro
 e ponto-flutuante; (c) chamada de função. As expressões aritméticas
 podem ser formadas recursivamente com operadores aritméticos, assim
-como permitem o uso de parênteses para associatividade.
+como permitem o uso de parênteses para forçar uma associatividade
+diferente daquela tradicional, à esquerda.
 
 Expressões lógicas podem ser formadas através dos operadores
 relacionais aplicados a expressões aritméticas, ou de operadores
 lógicos aplicados a expressões lógicas, recursivamente. Outras
 expressões podem ser formadas considerando variáveis lógicas do tipo
-\texttt{bool}.  Nesta etapa do trabalho, porém, não haverá distinção
-alguma entre expressões aritméticas, inteiras, de caracteres ou
-lógicas.  A descrição sintática deve aceitar qualquer operadores e
-subexpressão de um desses tipos como válidos, deixando para a análise
-semântica das próximas etapas do projeto a tarefa de verificar a
-validade dos operandos e operadores.
+=bool=.  Nesta etapa do trabalho não há distinção alguma entre
+expressões aritméticas, inteiras, de caracteres ou lógicas.  A
+descrição sintática deve aceitar qualquer operadores e subexpressão de
+um desses tipos como válidos, deixando para a análise semântica das
+próximas etapas do projeto a tarefa de verificar a validade dos
+operandos e operadores.
 
 As expressões com /pipes/ podem ser vistas como os comandos com /pipes/,
 detalhado na seção anterior.
-
-# , como descrito na Seção~\ref{sec.comandos} acima. O
-# caractere especial ``\texttt{-}'' (veja especificação da etapa 1)
-# indica subtração.
-# %Os operadores \texttt{\&} e \texttt{\$} não serão considerados nesta
-# %avaliação.
-# % operações com chars ou strings não são descritas, mas acho que não tem
-# % problema nesta etapa
-
-* Casos omissos
-
-Casos não previstos serão discutidos com o professor. Abaixo os casos
-omissos já detectados e cujo interpretação já foi definida.
 
 * 2016-05-22 Planejamento da Avaliação                             :noexport:
 
