@@ -70,6 +70,14 @@ Temos 18 grupos.
 | Mu      | ???794 |
 | Omicron | ???055 |
 
+** Arquivos para testes                                             :ATTACH:
+:PROPERTIES:
+:Attachments: e1tests.tgz
+:ID:       86f02d74-4ba9-48bd-8cad-a83ca086a1fa
+:END:
+
+Veja [[./data/86/f02d74-4ba9-48bd-8cad-a83ca086a1fa/e1tests.tgz][este arquivo]].
+
 * Avaliação da Etapa 2
 * Avaliação da Etapa 3
 * Avaliação da Etapa 4
