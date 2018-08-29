@@ -359,6 +359,23 @@ operandos e operadores.
 As expressões com /pipes/ podem ser vistas como os comandos com /pipes/,
 detalhado na seção anterior.
 
+* Anexo - Arquivo =main.c=
+
+#+BEGIN_SRC C :tangle main.c
+/*
+Função principal para impressão de tokens.
+
+Este arquivo será posterioremente substituído, não acrescente nada.
+*/
+#include <stdio.h>
+#include "parser.h"
+
+int main (int argc, char **argv)
+{
+  return yyparse();
+}
+#+END_SRC
+
 * 2016-05-22 Planejamento da Avaliação                             :noexport:
 
 - relatório de erro sintático
