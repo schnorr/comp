@@ -47,7 +47,7 @@ utilizados durante a avaliação automática.
 
 ** Remoção de conflitos gramaticais
 
-Deve-se realizar a remoção de conflitos [[ http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html][Reduce/Reduce]] e [[http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html][Shift/Reduce]]
+Deve-se realizar a remoção de conflitos [[http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html][Reduce/Reduce]] e [[http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html][Shift/Reduce]]
 de todas as regras gramaticais. Estes conflitos devem ser tratados
 através do uso de configurações para o bison (veja a documentação
 sobre =%left=, =%right= ou =%nonassoc=). Os mesmos podem ser observados
