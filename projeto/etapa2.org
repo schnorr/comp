@@ -370,7 +370,7 @@ detalhado na seção anterior.
 
 #+BEGIN_SRC C :tangle main.c
 /*
-Função principal para impressão de tokens.
+Função principal para realização da análise sintática.
 
 Este arquivo será posterioremente substituído, não acrescente nada.
 */
