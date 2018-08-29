@@ -374,7 +374,7 @@ Função principal para impressão de tokens.
 Este arquivo será posterioremente substituído, não acrescente nada.
 */
 #include <stdio.h>
-#include "parser.h"
+int yyparse(void);
 
 int main (int argc, char **argv)
 {
@@ -385,6 +385,11 @@ int main (int argc, char **argv)
 * Anexo - Arquivo =parser.y= inicial
 
 #+BEGIN_SRC txt :tangle parser.y
+%{
+int yylex(void);
+void yyerror (char const *s);
+%}
+
 %token TK_PR_INT
 %token TK_PR_FLOAT
 %token TK_PR_BOOL
