@@ -47,19 +47,16 @@ utilizados durante a avaliação automática.
 
 ** Remoção de conflitos gramaticais
 
-Deve-se realizar a remoção de conflitos Reduce/Reduce [2] e
-Shift/Reduce [3] de todas as regras gramaticais. Estes conflitos
-devem ser tratados através do uso de configurações para o bison (veja
-a documentação sobre =%left=, =%right= ou =%nonassoc=). Os mesmos podem ser
-observados através de uma análise cuidadosa do arquivo =parser.output=
-gerado automaticamente quando compilado.  Sugere-se um processo
-construtivo da especificação em passos, verificando em cada passo a
-inexistência de conflitos. Por vezes, a remoção de conflitos pode ser
-feita somente através de uma revisão de partes da gramática.
-
-[2]: http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html
-
-[3]: http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html
+Deve-se realizar a remoção de conflitos [[ http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html][Reduce/Reduce]] e [[http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html][Shift/Reduce]]
+de todas as regras gramaticais. Estes conflitos devem ser tratados
+através do uso de configurações para o bison (veja a documentação
+sobre =%left=, =%right= ou =%nonassoc=). Os mesmos podem ser observados
+através de uma análise cuidadosa do arquivo =parser.output= gerado
+automaticamente quando o bison é compilado com a opção =--report-file=.
+Sugere-se um processo construtivo da especificação em passos,
+verificando em cada passo a inexistência de conflitos. Por vezes, a
+remoção de conflitos pode ser feita somente através de uma revisão
+mais profunda de partes da gramática.
 
 ** Enriquecimento da tabela de símbolos                           :noexport:
 
