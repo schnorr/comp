@@ -258,6 +258,24 @@ Tudo okay.
 - [ ] Implementação manual do comentário multilinha
 - [ ] Apareceram na entrevista, mas não entregaram até 28/08 via formulário
   - Testes automáticos portanto não realizados
+- [ ] Erro 12
+  #+BEGIN_EXAMPLE
+  Output of <tests/e1/aval_012.tesh:3> mismatch:
+  - 1 TK_PR_OUTPUT [output]
+  + 1 TK_IDENTIFICADOR [output]
+  #+END_EXAMPLE
+- [ ] Erro 54
+  #+BEGIN_EXAMPLE
+  Output of <tests/e1/aval_054.tesh:3> mismatch:
+  - 1 TK_OC_SR [>>]
+  + 1 TK_OC_SL [>>]
+  #+END_EXAMPLE
+- [ ] Erro 55
+  #+BEGIN_EXAMPLE
+  Output of <tests/e1/aval_055.tesh:3> mismatch:
+  - 1 TK_OC_SL [<<]
+  + 1 TK_OC_SR [<<]
+  #+END_EXAMPLE
 
 *** DONE Psi
 
