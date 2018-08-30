@@ -174,7 +174,7 @@ As variáveis são declaradas pelo seu nome, seguido do seu tipo. O tipo
 pode estar precedido opcionalmente pela palavra reservada =static=. A
 linguagem inclui também a declaração de vetores, feita pela definição
 de seu tamanho inteiro positivo entre colchetes, colocada à direita do
-nome, ou seja, ao final da declaração.  Variáveis podem ser dos tipos
+nome.  Variáveis podem ser dos tipos
 primitivos =int=, =float=, =char=, =bool= e =string=; e também podem ser dos
 tipos declarados pelo usuário. Neste último caso, o nome do tipo é
 aquele utilizado depois da palavra reservada =class= quando este foi
