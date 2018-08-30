@@ -415,7 +415,7 @@ Não entregou, fará em atraso.
 | Epsilon | E1.S      |  9.5 |
 | Zeta    | E1.S      |  8.5 |
 | Eta     | E1.S      |  9.5 |
-| Kappa   | E1.S      |    0 |
+| Kappa   | E1.S      |    9 |
 | Psi     | E1.S      |    9 |
 | Theta   | E1.S      |    9 |
 | Iota    | E1.S      |    4 |
@@ -433,7 +433,7 @@ Não entregou, fará em atraso.
 | Epsilon | E1.O      |   10 |
 | Zeta    | E1.O      |    9 |
 | Eta     | E1.O      |  9.9 |
-| Kappa   | E1.O      |  nil |
+| Kappa   | E1.O      |  9.6 |
 | Psi     | E1.O      |  9.6 |
 | Theta   | E1.O      |   10 |
 | Iota    | E1.O      |  8.9 |
