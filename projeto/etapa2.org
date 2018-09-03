@@ -237,6 +237,7 @@ Para os identificadores cujo tipo é aquele declarado pelo usuário pode
 ter seus campos acessados diretamente através do operador =$=, assim:
 #+BEGIN_EXAMPLE
 identificador$campo = expressão
+identificador[expressão]$campo = expressão
 #+END_EXAMPLE
 
 #+BEGIN_CENTER
