@@ -108,7 +108,7 @@ Então, \beta é um /handle/ de \alpha \beta \omega \\
 #+BEGIN_CENTER
 *Poda do Handle*
 
-Permite construir uma derivação mais à direita ao reverso
+Permite reverter um passo de uma derivação mais à direita
 
 S = \gamma_0 \Rightarrow \gamma_1 \Rightarrow ... \Rightarrow \gamma_{n-1} \Rightarrow \gamma_n = \mu \\
 Localiza-se \beta_n em \gamma_n, escolhe-se uma A_n \rightarrow \beta_n para obter \gamma_{n-1}
