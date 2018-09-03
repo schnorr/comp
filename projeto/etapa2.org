@@ -260,10 +260,15 @@ com /pipes/ abaixo.
 #+BEGIN_CENTER
 *Comandos de Shift*
 #+END_CENTER
-Sendo número um literal inteiro positivo, temos:
+Sendo número um literal inteiro positivo, temos ose exemplos válidos
+abaixo. Os exemplos são dados com =<<=, mas as entradas são
+sintaticamente válidas para =>>=. Os exemplos são dados com =número=, mas
+são válidas com =expressão=.
 #+BEGIN_EXAMPLE
-identificador << numero
-identificador >> numero
+identificador << número
+identificador$campo << número
+identificador[expressão] << número
+identificador[expressão]$campo << número
 #+END_EXAMPLE
 
 #+BEGIN_CENTER
