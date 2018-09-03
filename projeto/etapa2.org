@@ -373,7 +373,13 @@ As expressões com /pipes/ podem ser vistas como os comandos com /pipes/,
 detalhado na seção anterior.
 
 As expressões podem consistir também somente por um dos elementos
-acima (a, b, c) e sequência com /pipes/.
+acima (a, b, c), uma sequência com /pipes/, e um tipo de usuário
+(vetorizado ou não), tais como:
+
+#+BEGIN_EXAMPLE
+identificador$campo op expressão
+identificador[expressão]$campo op expressão
+#+END_EXAMPLE
 
 * Anexo - Arquivo =main.c=
 
