@@ -350,7 +350,9 @@ colchetes, para acesso a vetores; (b) literais numéricos como inteiro
 e ponto-flutuante; (c) chamada de função. As expressões aritméticas
 podem ser formadas recursivamente com operadores aritméticos, assim
 como permitem o uso de parênteses para forçar uma associatividade
-diferente daquela tradicional, à esquerda.
+diferente daquela tradicional, à esquerda. As expressões ariméticas
+podem ser formadas também somente por um dos elementos acima (a, b, c).
+
 
 Expressões lógicas podem ser formadas através dos operadores
 relacionais aplicados a expressões aritméticas, ou de operadores
