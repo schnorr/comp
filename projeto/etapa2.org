@@ -350,9 +350,7 @@ colchetes, para acesso a vetores; (b) literais numéricos como inteiro
 e ponto-flutuante; (c) chamada de função. As expressões aritméticas
 podem ser formadas recursivamente com operadores aritméticos, assim
 como permitem o uso de parênteses para forçar uma associatividade
-diferente daquela tradicional, à esquerda. As expressões ariméticas
-podem ser formadas também somente por um dos elementos acima (a, b, c).
-
+diferente daquela tradicional, à esquerda.
 
 Expressões lógicas podem ser formadas através dos operadores
 relacionais aplicados a expressões aritméticas, ou de operadores
@@ -367,6 +365,9 @@ operandos e operadores.
 
 As expressões com /pipes/ podem ser vistas como os comandos com /pipes/,
 detalhado na seção anterior.
+
+As expressões podem consistir também somente por um dos elementos
+acima (a, b, c) e sequência com /pipes/.
 
 * Anexo - Arquivo =main.c=
 
