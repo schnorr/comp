@@ -300,7 +300,10 @@ do bloco while (expressão)
 #+END_EXAMPLE
 A =lista= do =foreach= é uma lista de expressões separadas por vírgula. Os
 dois marcadores =lista= do comando =for= são listas de comandos separados
-por vírgula. Estas listas não podem ser vazias. Nas duas listas dentro
+por vírgula. Como os marcadores =lista= do comando =for= não são blocos de
+comandos, os comandos simples destas listas não devem ser 
+terminados por ponto-e-vírgula.
+Estas listas não podem ser vazias. Nas duas listas dentro
 do =for=, não podem aparecer comandos simples que contenham vírgulas ou
 o comando =case=.  A única construção de
 seleção é o =switch-case=, seguindo o seguinte padrão:
