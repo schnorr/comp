@@ -405,7 +405,7 @@ Os operadores são os seguintes (com uma possível semântica associada):
   - =^= exponenciação
   - todos os comparadores relacionais
 - Ternários
-  - =?= seguindo de =:=, conforme a sintaxe =expressão ? expressão : expressão=
+  - =?= seguido de =:=, conforme a sintaxe =expressão ? expressão : expressão=
 
 As regras de associatividade e precedência de operadores matemáticos
 são aquelas tradicionais de linguagem de programação e da
