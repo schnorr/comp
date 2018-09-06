@@ -384,6 +384,37 @@ identificador$campo op expressão
 identificador[expressão]$campo op expressão
 #+END_EXAMPLE
 
+Os operadores são os seguintes (com uma possível semântica associada):
+
+- Unários
+  - =+= sinal positivo explícito
+  - =-= inverte o sinal
+  - =!= negação lógica
+  - =&= acesso ao endereço da variável
+  - =*= acesso ao valor do ponteiro
+  - =?= avalia uma expressão para =true= ou =false=
+  - =#= acesso a um identificador como uma tabela /hash/
+- Binários
+  - =+= soma
+  - =-= subtração
+  - =*= multiplicação
+  - =/= divisão
+  - =%= resto da divisão
+  - =|= bitwise OR
+  - =&= bitwise AND
+  - =^= exponenciação
+  - todos os comparadores relacionais
+- Ternários
+  - =?= seguindo de =:=, conforme a sintaxe =expressão ? expressão : expressão=
+
+As regras de associatividade e precedência de operadores matemáticos
+são aquelas tradicionais de linguagem de programação e da
+matemática. Além disso, nos casos não coberto por esta regra geral,
+temos as seguintes regras de associatividade:
+
+- Associativos à direita
+  - =&=, =*= (acesso ao valor do ponteiro), =#=
+
 * Anexo - Arquivo =main.c=
 
 #+BEGIN_SRC C :tangle main.c
