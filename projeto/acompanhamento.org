@@ -461,6 +461,38 @@ Não entregou, fará em atraso.
 
 Veja [[./data/7e/7fe48c-7d1f-4882-b6a7-a88d18710693/e2tests.tgz][este arquivo]].
 
+Os testes cuja sintaxe _não_ está correta são:
+- asl11
+- asl12
+- asl14
+- asl15
+- asl17
+- asl21
+- asl22
+- asl23
+- asl26
+- asl29
+- asl34
+- asl40
+- asl45
+- asl68
+- asl69
+- asl71
+- asl82
+- asl83
+- asl84
+- asl85
+- asl86
+- asl87
+- asl88
+- asl89
+- asl90
+- asl91
+- asl92
+- asl93
+- asl94
+- asl95
+
 * Avaliação da Etapa 3
 * Avaliação da Etapa 4
 * Avaliação da Etapa 5
