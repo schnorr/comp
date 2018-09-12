@@ -440,6 +440,19 @@ Não entregou, fará em atraso.
 | Mu      | E1.O      |  nil |
 
 * Avaliação da Etapa 2
+** Grupos que não entregaram até o prazo
+
+| Grupo   | ID     |
+|---------+--------|
+| Mu      | ???932 |
+| Mu      | ???794 |
+| Omicron | ???055 |
+| Sigma   | ???295 |
+| Upsilon | ???741 |
+| Upsilon | ???026 |
+| Zeta    | ???271 |
+| Zeta    | ???673 |
+
 * Avaliação da Etapa 3
 * Avaliação da Etapa 4
 * Avaliação da Etapa 5
