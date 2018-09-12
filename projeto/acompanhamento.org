@@ -453,6 +453,14 @@ Não entregou, fará em atraso.
 | Zeta    | ???271 |
 | Zeta    | ???673 |
 
+** Arquivos para testes                                             :ATTACH:
+:PROPERTIES:
+:Attachments: e2tests.tgz
+:ID:       7e7fe48c-7d1f-4882-b6a7-a88d18710693
+:END:
+
+Veja [[./data/7e/7fe48c-7d1f-4882-b6a7-a88d18710693/e2tests.tgz][este arquivo]].
+
 * Avaliação da Etapa 3
 * Avaliação da Etapa 4
 * Avaliação da Etapa 5
