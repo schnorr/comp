@@ -492,6 +492,43 @@ Os testes cuja sintaxe _não_ está correta são:
 - asl93
 - asl94
 - asl95
+- asl98
+- asl99
+- asl100
+- asl101
+- asl102
+- asl103
+- asl104
+- asl105
+- asl106
+- asl107
+- asl108
+- asl109
+- asl110
+- asl111
+- asl112
+- asl113
+- asl115
+- asl116
+- asl118
+- asl119
+- asl120
+- asl121
+- asl122
+- asl123
+- asl124
+- asl125
+- asl127
+- asl128
+- asl129
+- asl130
+- asl131
+- asl132
+- asl133
+- asl134
+- asl135
+- asl136
+- asl137
 
 ** Comentários por grupo
 *** DONE Tau
