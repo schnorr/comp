@@ -493,6 +493,509 @@ Os testes cuja sintaxe _não_ está correta são:
 - asl94
 - asl95
 
+** Comentários por grupo
+*** DONE Tau
+
+- [ ] asl114 - NOK - ""
+- [ ] asl117 - NOK - ""
+- [ ] Não usou left/right
+- [ ] Fez operador ternário
+- [ ] Usou linha/coluna no erro
+
+*** DONE Lambda
+
+- [ ] asl24 - NOK - ""
+  - Vão resolver durante a aula
+- [ ] asl117 - NOK - ""
+- [ ] por que tem o %union? para usar o error handling
+  - yylval, para passar dados do flex/bison
+- [ ] Usou error-verbose
+
+*** DONE Omega
+
+- [ ] asl117 - NOK - ""
+- %union, para tentar fazer o relatório de erro
+   - yylval e faz um snprintf
+- Relatório de erros que não usa o default
+- Não usou left, right
+- Usaram fatoração à esquerda para resolver ambiguidades
+- Vários comentários nos locais onde houveram conflitos shift/reduce
+
+*** TODO Beta
+
+- [ ] O que faz a função =isLexicalError=?
+  - Diferenciar error sintático de léxico, através desta função
+- [ ] O que faz =%define parse.lac none=
+- [ ] Interpretação errada da especificação na declaração de variáveis locais
+- [ ] asl33 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl35 - NOK - "syntax error, unexpected TK_PR_STATIC, expecting '}', on line 5"
+- [ ] asl36 - NOK - "syntax error, unexpected TK_PR_FLOAT, expecting '}', on line 4"
+- [ ] asl37 - NOK - "syntax error, unexpected TK_PR_CHAR, expecting '}', on line 4"
+- [ ] asl38 - NOK - "syntax error, unexpected TK_PR_BOOL, expecting '}', on line 4"
+- [ ] asl39 - NOK - "syntax error, unexpected TK_PR_STRING, expecting '}', on line 4"
+- [ ] asl41 - NOK - "syntax error, unexpected TK_PR_CONST, expecting '}', on line 6"
+- [ ] asl42 - NOK - "syntax error, unexpected TK_PR_STATIC, expecting '}', on line 6"
+- [ ] asl43 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 6"
+- [ ] asl44 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 6"
+- [ ] asl46 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl48 - NOK - "syntax error, unexpected '[', expecting '(', on line 2"
+- [ ] asl50 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl51 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 6"
+- [ ] asl52 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 6"
+- [ ] asl54 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 5"
+- [ ] asl55 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 5"
+- [ ] asl56 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl57 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl58 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl62 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl63 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl64 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl65 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl66 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl67 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl70 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 5"
+- [ ] asl72 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 11"
+- [ ] asl73 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 11"
+- [ ] asl74 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl75 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl76 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl79 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 4"
+- [ ] asl81 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 5"
+- [ ] asl97 - NOK - "syntax error, unexpected TK_PR_INT, expecting '}', on line 6"
+- [ ] asl114 - NOK - "syntax error, unexpected '/', expecting $end, on line 1"
+- [ ] asl117 - NOK - "syntax error, unexpected '[', expecting TK_OC_SL or TK_OC_SR or '=', on line 7"
+
+*** DONE Alpha
+
+- [ ] Usaram o %prec com UNOP, BINOP, TERNOP
+- [ ] Erro, unexpected yytext
+- [ ] asl09 - NOK - "Error: Unexpected ; on line 4."
+- [ ] asl10 - NOK - "Error: Unexpected ; on line 2."
+- [ ] asl45 - NOK - ""
+- [ ] asl117 - NOK - "Error: Unexpected [ on line 7."
+
+*** DONE Gamma
+
+- [ ] asl114 - NOK - ""
+- [ ] asl117 - NOK - ""
+- [ ] Sistema =catch2= do c++
+- [ ] Sem %right, %left
+- [ ] Erro com yytext, usar error-verbose
+
+*** DONE Eta
+
+- [ ] Não deveria ser necessário "make etapa2" para compilar
+  - Basta "make" para compilar a etapa atual
+- %Left/%right foram utilizados
+- Vários /warnings/ de compilação
+  #+BEGIN_EXAMPLE
+lex.yy.c:1497:16: warning: ‘input’ defined but not used [-Wunused-function]
+     static int input  (void)
+                ^~~~~
+lex.yy.c:1454:17: warning: ‘yyunput’ defined but not used [-Wunused-function]
+     static void yyunput (int c, char * yy_bp )
+                 ^~~~~~~
+main.c: In function ‘main’:
+main.c:9:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv)
+           ~~~~^~~~
+main.c:9:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv)
+                     ~~~~~~~^~~~  
+  #+END_EXAMPLE
+- Corrigiram os testes abaixo
+- [ ] asl53 - NOK - ""
+- [ ] asl54 - NOK - ""
+- [ ] asl55 - NOK - ""
+- [ ] asl114 - NOK - ""
+- [ ] asl117 - NOK - ""
+
+*** TODO Theta
+
+- [ ] O binário deve se chamar =etapa2= e não =parser=
+- [ ] Problema de interpretação na variáveis 
+  - Mesmo caso do grupo Beta
+- [ ] O que é %locations?
+  - Olhar referência, mas não testaram sem.
+- [ ] asl23 - NOK - ""
+- [ ] asl33 - NOK - ""
+- [ ] asl35 - NOK - ""
+- [ ] asl36 - NOK - ""
+- [ ] asl37 - NOK - ""
+- [ ] asl38 - NOK - ""
+- [ ] asl39 - NOK - ""
+- [ ] asl41 - NOK - ""
+- [ ] asl42 - NOK - ""
+- [ ] asl43 - NOK - ""
+- [ ] asl44 - NOK - ""
+- [ ] asl46 - NOK - ""
+- [ ] asl48 - NOK - ""
+- [ ] asl50 - NOK - ""
+- [ ] asl51 - NOK - ""
+- [ ] asl52 - NOK - ""
+- [ ] asl54 - NOK - ""
+- [ ] asl55 - NOK - ""
+- [ ] asl56 - NOK - ""
+- [ ] asl57 - NOK - ""
+- [ ] asl58 - NOK - ""
+- [ ] asl62 - NOK - ""
+- [ ] asl63 - NOK - ""
+- [ ] asl64 - NOK - ""
+- [ ] asl65 - NOK - ""
+- [ ] asl66 - NOK - ""
+- [ ] asl67 - NOK - ""
+- [ ] asl68 - NOK - ""
+- [ ] asl70 - NOK - ""
+- [ ] asl72 - NOK - ""
+- [ ] asl73 - NOK - ""
+- [ ] asl74 - NOK - ""
+- [ ] asl75 - NOK - ""
+- [ ] asl76 - NOK - ""
+- [ ] asl79 - NOK - ""
+- [ ] asl81 - NOK - ""
+- [ ] asl93 - NOK - ""
+- [ ] asl97 - NOK - ""
+- [ ] asl110 - NOK - ""
+- [ ] asl117 - NOK - ""
+
+*** DONE Delta
+
+- [ ] parser.y: warning: 55 shift/reduce conflicts [-Wconflicts-sr]
+  - Remover todos os conflitos de shift/reduce
+- [ ] yyerror implementado em outro arquivo
+- [ ] asl03 - NOK - "error on line 5: syntax error, unexpected '['"
+- [ ] asl04 - NOK - "error on line 5: syntax error, unexpected '['"
+- [ ] asl09 - NOK - "error on line 3: syntax error, unexpected '[', expecting '{'"
+- [ ] asl13 - NOK - "error on line 2: syntax error, unexpected '[', expecting '{'"
+- [ ] asl16 - NOK - "error on line 2: syntax error, unexpected '[', expecting '{'"
+- [ ] asl18 - NOK - "error on line 2: syntax error, unexpected '[', expecting '{'"
+- [ ] asl19 - NOK - "error on line 2: syntax error, unexpected '[', expecting '{'"
+- [ ] asl20 - NOK - "error on line 2: syntax error, unexpected '[', expecting '{'"
+- [ ] asl24 - NOK - "error on line 3: syntax error, unexpected '[', expecting '{'"
+- [ ] asl31 - NOK - "error on line 4: syntax error, unexpected ';'"
+- [ ] asl32 - NOK - "error on line 8: syntax error, unexpected ';'"
+- [ ] asl47 - NOK - "error on line 2: syntax error, unexpected '[', expecting '('"
+- [ ] asl48 - NOK - "error on line 2: syntax error, unexpected '[', expecting '('"
+- [ ] asl49 - NOK - "error on line 4: syntax error, unexpected '[', expecting '{'"
+- [ ] asl62 - NOK - "error on line 5: syntax error, unexpected ';'"
+- [ ] asl63 - NOK - "error on line 8: syntax error, unexpected ';'"
+- [ ] asl64 - NOK - "error on line 7: syntax error, unexpected ';'"
+- [ ] asl65 - NOK - "error on line 8: syntax error, unexpected ';'"
+- [ ] asl66 - NOK - "error on line 7: syntax error, unexpected ';'"
+- [ ] asl70 - NOK - "error on line 8: syntax error, unexpected ';'"
+- [ ] asl80 - NOK - "error on line 6: syntax error, unexpected ';'"
+- [ ] asl81 - NOK - "error on line 7: syntax error, unexpected '['"
+- [ ] asl96 - NOK - "error on line 3: syntax error, unexpected '[', expecting '{'"
+- [ ] asl97 - NOK - "error on line 3: syntax error, unexpected '[', expecting '{'"
+- [ ] asl117 - NOK - "error on line 6: syntax error, unexpected TK_IDENTIFICADOR"
+- [ ] asl121 - NOK - ""
+- [ ] asl126 - NOK - "error on line 7: syntax error, unexpected ';'"
+- [ ] _Vão resubmeter até o dia 19/09 para corrigir os erros acima_
+
+*** TODO Rho
+
+- [ ] asl02 - NOK - ""
+- [ ] asl04 - NOK - ""
+- [ ] asl09 - NOK - ""
+- [ ] asl10 - NOK - ""
+- [ ] asl11 - NOK - ""
+- [ ] asl12 - NOK - ""
+- [ ] asl14 - NOK - ""
+- [ ] asl15 - NOK - ""
+- [ ] asl17 - NOK - ""
+- [ ] asl21 - NOK - ""
+- [ ] asl22 - NOK - ""
+- [ ] asl23 - NOK - ""
+- [ ] asl24 - NOK - ""
+- [ ] asl25 - NOK - ""
+- [ ] asl26 - NOK - ""
+- [ ] asl27 - NOK - ""
+- [ ] asl28 - NOK - ""
+- [ ] asl29 - NOK - ""
+- [ ] asl30 - NOK - ""
+- [ ] asl31 - NOK - ""
+- [ ] asl32 - NOK - ""
+- [ ] asl33 - NOK - ""
+- [ ] asl34 - NOK - ""
+- [ ] asl35 - NOK - ""
+- [ ] asl36 - NOK - ""
+- [ ] asl37 - NOK - ""
+- [ ] asl38 - NOK - ""
+- [ ] asl39 - NOK - ""
+- [ ] asl40 - NOK - ""
+- [ ] asl41 - NOK - ""
+- [ ] asl42 - NOK - ""
+- [ ] asl43 - NOK - ""
+- [ ] asl44 - NOK - ""
+- [ ] asl45 - NOK - ""
+- [ ] asl46 - NOK - ""
+- [ ] asl47 - NOK - ""
+- [ ] asl48 - NOK - ""
+- [ ] asl49 - NOK - ""
+- [ ] asl50 - NOK - ""
+- [ ] asl51 - NOK - ""
+- [ ] asl52 - NOK - ""
+- [ ] asl53 - NOK - ""
+- [ ] asl54 - NOK - ""
+- [ ] asl55 - NOK - ""
+- [ ] asl56 - NOK - ""
+- [ ] asl57 - NOK - ""
+- [ ] asl58 - NOK - ""
+- [ ] asl59 - NOK - ""
+- [ ] asl60 - NOK - ""
+- [ ] asl61 - NOK - ""
+- [ ] asl62 - NOK - ""
+- [ ] asl63 - NOK - ""
+- [ ] asl64 - NOK - ""
+- [ ] asl65 - NOK - ""
+- [ ] asl66 - NOK - ""
+- [ ] asl67 - NOK - ""
+- [ ] asl68 - NOK - ""
+- [ ] asl69 - NOK - ""
+- [ ] asl70 - NOK - ""
+- [ ] asl71 - NOK - ""
+- [ ] asl72 - NOK - ""
+- [ ] asl73 - NOK - ""
+- [ ] asl74 - NOK - ""
+- [ ] asl75 - NOK - ""
+- [ ] asl76 - NOK - ""
+- [ ] asl77 - NOK - ""
+- [ ] asl78 - NOK - ""
+- [ ] asl79 - NOK - ""
+- [ ] asl80 - NOK - ""
+- [ ] asl81 - NOK - ""
+- [ ] asl82 - NOK - ""
+- [ ] asl83 - NOK - ""
+- [ ] asl84 - NOK - ""
+- [ ] asl85 - NOK - ""
+- [ ] asl86 - NOK - ""
+- [ ] asl87 - NOK - ""
+- [ ] asl88 - NOK - ""
+- [ ] asl89 - NOK - ""
+- [ ] asl90 - NOK - ""
+- [ ] asl91 - NOK - ""
+- [ ] asl92 - NOK - ""
+- [ ] asl93 - NOK - ""
+- [ ] asl94 - NOK - ""
+- [ ] asl95 - NOK - ""
+- [ ] asl96 - NOK - ""
+- [ ] asl97 - NOK - ""
+- [ ] asl98 - NOK - ""
+- [ ] asl99 - NOK - ""
+- [ ] asl100 - NOK - ""
+- [ ] asl101 - NOK - ""
+- [ ] asl102 - NOK - ""
+- [ ] asl103 - NOK - ""
+- [ ] asl104 - NOK - ""
+- [ ] asl105 - NOK - ""
+- [ ] asl106 - NOK - ""
+- [ ] asl107 - NOK - ""
+- [ ] asl108 - NOK - ""
+- [ ] asl109 - NOK - ""
+- [ ] asl110 - NOK - ""
+- [ ] asl111 - NOK - ""
+- [ ] asl112 - NOK - ""
+- [ ] asl113 - NOK - ""
+- [ ] asl115 - NOK - ""
+- [ ] asl116 - NOK - ""
+- [ ] asl117 - NOK - ""
+- [ ] asl118 - NOK - ""
+- [ ] asl119 - NOK - ""
+- [ ] asl120 - NOK - ""
+- [ ] asl121 - NOK - ""
+- [ ] asl122 - NOK - ""
+- [ ] asl123 - NOK - ""
+- [ ] asl124 - NOK - ""
+- [ ] asl125 - NOK - ""
+- [ ] asl126 - NOK - ""
+- [ ] asl127 - NOK - ""
+- [ ] asl128 - NOK - ""
+- [ ] asl129 - NOK - ""
+- [ ] asl130 - NOK - ""
+- [ ] asl131 - NOK - ""
+- [ ] asl132 - NOK - ""
+- [ ] asl133 - NOK - ""
+- [ ] asl134 - NOK - ""
+- [ ] asl135 - NOK - ""
+- [ ] asl136 - NOK - ""
+- [ ] asl137 - NOK - ""
+- [ ] Por que NONASSOC PARA then E else?
+  - Por consequência %prec
+  - Visão bem clara do problema do else opcional
+- [ ] _Vão resubmeter até o dia 19/09 para corrigir os erros acima_
+
+*** DONE Kappa
+
+- [ ] Relatório de erro com tentativa YYSTYPE
+- [ ] Não precisou usar %left, %right recomendado tirar
+- [ ] Usou o pack de testes do grupo Omega
+  - 120 e poucos testes
+- [ ] Erro acontece por causa do tab provavelmente
+- [ ] asl63 - NOK - "Line 6: syntax error near " ""
+- [ ] asl117 - NOK - "Line 7: syntax error near "[""
+
+*** TODO Epsilon
+
+- [ ] Verificar conflitos shift/reduce
+  - parser.y: warning: 1 shift/reduce conflict [-Wconflicts-sr]
+- [ ] _Vão resubmeter até o dia 19/09 para corrigir os erros abaixo_
+- [ ] asl18 - NOK - ""
+- [ ] asl23 - NOK - ""
+- [ ] asl24 - NOK - ""
+- [ ] asl26 - NOK - ""
+- [ ] asl45 - NOK - ""
+- [ ] asl55 - NOK - ""
+- [ ] asl61 - NOK - ""
+- [ ] asl65 - NOK - ""
+- [ ] asl68 - NOK - ""
+- [ ] asl71 - NOK - ""
+- [ ] asl72 - NOK - ""
+- [ ] asl73 - NOK - ""
+- [ ] asl74 - NOK - ""
+- [ ] asl75 - NOK - ""
+- [ ] asl83 - NOK - ""
+- [ ] asl85 - NOK - ""
+- [ ] asl114 - NOK - ""
+- [ ] asl117 - NOK - ""
+- [ ] asl125 - NOK - ""
+- [ ] asl130 - NOK - ""
+- [ ] asl137 - NOK - ""
+
+*** DONE Iota
+
+- [ ] Colocar nome em todos os arquivos produzidos
+- [ ] Usou %prec UNARY para resolver operadores que são ao mesmo tempo
+  unários e binários, justificando seu uso
+- [ ] asl01 - NOK - ""
+- [ ] asl02 - NOK - ""
+- [ ] asl03 - NOK - ""
+- [ ] asl04 - NOK - ""
+- [ ] asl05 - NOK - ""
+- [ ] asl06 - NOK - ""
+- [ ] asl07 - NOK - ""
+- [ ] asl08 - NOK - ""
+- [ ] asl09 - NOK - ""
+- [ ] asl10 - NOK - ""
+- [ ] asl24 - NOK - ""
+- [ ] asl47 - NOK - ""
+- [ ] asl48 - NOK - ""
+- [ ] asl49 - NOK - ""
+- [ ] asl62 - NOK - ""
+- [ ] asl63 - NOK - ""
+- [ ] asl64 - NOK - ""
+- [ ] asl65 - NOK - ""
+- [ ] asl66 - NOK - ""
+- [ ] asl67 - NOK - ""
+- [ ] asl70 - NOK - ""
+- [ ] asl71 - NOK - ""
+- [ ] asl80 - NOK - ""
+- [ ] asl81 - NOK - ""
+- [ ] asl96 - NOK - ""
+- [ ] asl97 - NOK - ""
+- [ ] asl117 - NOK - ""
+- [ ] asl126 - NOK - ""
+
+*** TODO Psi
+
+- [ ] Vários /warnings/ importantes
+  #+BEGIN_EXAMPLE
+parser.y: warning: 2 nonterminals useless in grammar [-Wother]
+parser.y: warning: 3 rules useless in grammar [-Wother]
+parser.y:284.9-19: warning: nonterminal useless in grammar: command_for [-Wother]
+ 	command_for |
+         ^^^^^^^^^^^
+parser.y:311.23-34: warning: nonterminal useless in grammar: command_list [-Wother]
+ 	TK_PR_FOR '(' command_list ':' expression command_list ')' command_block
+                       ^^^^^^^^^^^^
+parser.y:284.9-19: warning: rule useless in grammar [-Wother]
+ 	command_for |
+         ^^^^^^^^^^^
+parser.y:311.9-80: warning: rule useless in grammar [-Wother]
+ 	TK_PR_FOR '(' command_list ':' expression command_list ')' command_block
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+parser.y:315.9-32: warning: rule useless in grammar [-Wother]
+ 	command ',' command_list
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+parser.y: warning: 121 shift/reduce conflicts [-Wconflicts-sr]
+parser.y: warning: 3 reduce/reduce conflicts [-Wconflicts-rr]
+parser.y:258.9-18: warning: rule useless in parser due to conflicts [-Wother]
+ 	TK_LIT_INT |
+         ^^^^^^^^^^
+parser.y:320.9-53: warning: rule useless in parser due to conflicts [-Wother]
+ 	TK_PR_SWITCH '(' expression ')' command_block
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  
+  #+END_EXAMPLE
+- [ ] asl01 - NOK - ""
+- [ ] asl02 - NOK - ""
+- [ ] asl03 - NOK - ""
+- [ ] asl04 - NOK - ""
+- [ ] asl05 - NOK - ""
+- [ ] asl06 - NOK - ""
+- [ ] asl07 - NOK - ""
+- [ ] asl08 - NOK - ""
+- [ ] asl09 - NOK - ""
+- [ ] asl10 - NOK - ""
+- [ ] asl24 - NOK - ""
+- [ ] asl28 - NOK - ""
+- [ ] asl31 - NOK - ""
+- [ ] asl32 - NOK - ""
+- [ ] asl47 - NOK - ""
+- [ ] asl48 - NOK - ""
+- [ ] asl49 - NOK - ""
+- [ ] asl53 - NOK - ""
+- [ ] asl54 - NOK - ""
+- [ ] asl55 - NOK - ""
+- [ ] asl58 - NOK - ""
+- [ ] asl59 - NOK - ""
+- [ ] asl60 - NOK - ""
+- [ ] asl61 - NOK - ""
+- [ ] asl65 - NOK - ""
+- [ ] asl70 - NOK - ""
+- [ ] asl72 - NOK - ""
+- [ ] asl73 - NOK - ""
+- [ ] asl74 - NOK - ""
+- [ ] asl75 - NOK - ""
+- [ ] asl77 - NOK - ""
+- [ ] asl78 - NOK - ""
+- [ ] asl79 - NOK - ""
+- [ ] asl80 - NOK - ""
+- [ ] asl81 - NOK - ""
+- [ ] asl85 - NOK - ""
+- [ ] asl96 - NOK - ""
+- [ ] asl97 - NOK - ""
+- [ ] asl114 - NOK - ""
+- [ ] asl117 - NOK - ""
+- [ ] asl126 - NOK - ""
+- [ ] _Vão resubmeter até o dia 19/09 para corrigir os erros abaixo_
+
+*** TODO LATE Upsilon
+
+- [ ] Grupo não entregou no prazo
+  - Veio na entrevista, argumentou que entregou
+- [ ] _Vão submeter até o dia 19/09_
+
+*** TODO LATE Zeta
+
+- [ ] Grupo não entregou no prazo
+  - Veio na entrevista, argumentou que entregou
+- [ ] _Vão submeter até o dia 19/09_
+
+*** TODO LATE Sigma
+
+- [ ] Grupo não entregou no prazo
+  - Veio apresentar mas não tinha feito
+- [ ] _Vão submeter até o dia 19/09_
+
+*** TODO LATE Omicron
+
+- [ ] Grupo não entregou no prazo
+- [ ] Não veio apresentar
+
+*** TODO LATE Mu
+
+- [ ] Grupo não entregou no prazo
+- [ ] Não veio apresentar
+
 * Avaliação da Etapa 3
 * Avaliação da Etapa 4
 * Avaliação da Etapa 5
