@@ -996,6 +996,49 @@ parser.y:320.9-53: warning: rule useless in parser due to conflicts [-Wother]
 - [ ] Grupo não entregou no prazo
 - [ ] Não veio apresentar
 
+** Notas Objetiva e Subjetiva
+
+| Grupo   | Avaliacao | Nota |
+|---------+-----------+------|
+| Tau     | E2.S      |   10 |
+| Lambda  | E2.S      |    9 |
+| Omega   | E2.S      |   10 |
+| Beta    | E2.S      |  8.5 |
+| Alpha   | E2.S      |   10 |
+| Gamma   | E2.S      |   10 |
+| Eta     | E2.S      |  8.5 |
+| Theta   | E2.S      |  8.5 |
+| Delta   | E2.S      |    0 |
+| Rho     | E2.S      |    0 |
+| Kappa   | E2.S      |   10 |
+| Epsilon | E2.S      |    5 |
+| Iota    | E2.S      |    7 |
+| Psi     | E2.S      |    0 |
+| Upsilon | E2.S      |    0 |
+| Zeta    | E2.S      |    0 |
+| Sigma   | E2.S      |    0 |
+| Omicron | E2.S      |    0 |
+| Mu      | E2.S      |    0 |
+| Tau     | E2.O      |  9.8 |
+| Lambda  | E2.O      |  9.8 |
+| Omega   | E2.O      |  9.9 |
+| Beta    | E2.O      |  7.2 |
+| Alpha   | E2.O      |  9.6 |
+| Gamma   | E2.O      |  9.8 |
+| Eta     | E2.O      |  9.6 |
+| Theta   | E2.O      |    7 |
+| Delta   | E2.O      |  7.9 |
+| Rho     | E2.O      |  0.9 |
+| Kappa   | E2.O      |  9.9 |
+| Epsilon | E2.O      |  8.4 |
+| Iota    | E2.O      |  7.9 |
+| Psi     | E2.O      |  6.9 |
+| Upsilon | E2.O      |    0 |
+| Zeta    | E2.O      |    0 |
+| Sigma   | E2.O      |    0 |
+| Omicron | E2.O      |    0 |
+| Mu      | E2.O      |    0 |
+
 * Avaliação da Etapa 3
 * Avaliação da Etapa 4
 * Avaliação da Etapa 5
