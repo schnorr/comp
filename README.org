@@ -52,7 +52,7 @@ estratégias pedagógicas alternativas:
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
 - [[./projeto/README.org][Projeto de Compilador]] ([[./projeto/acompanhamento.org][Acompanhamento das Etapas]])
-  - Um [[./docker/README.org][container docker]] para realização do trabalho
+  - Um [[./projeto/docker/README.org][container docker]] para realização do trabalho
 
 ** Avaliações
 
