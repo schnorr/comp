@@ -15,7 +15,7 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-* Apresentação do container docker
+* Apresentação
 
 Um container docker para realização do projeto de compilador da
 disciplina é disponibilizado. Assumindo que o comando =docker= esteja
@@ -31,7 +31,7 @@ docker run -it schnorr/comp
 
 Ou o equivalente em sua interface gráfica docker. 
 
-* Como o container docker foi construído
+* Construções do container
 
 Para registro, abaixo segue uma descrição de como esse container foi
 construído, por intermédio de arquivo =DockerFile=. O conteúdo deste
