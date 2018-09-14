@@ -31,7 +31,7 @@ docker run -it schnorr/comp
 
 Ou o equivalente em sua interface gráfica docker. 
 
-* Construções do container
+* Construção
 
 Para registro, abaixo segue uma descrição de como esse container foi
 construído, por intermédio de arquivo =DockerFile=. O conteúdo deste
