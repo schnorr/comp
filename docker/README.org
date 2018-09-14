@@ -1,0 +1,76 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Container Docker para Projeto de Compilador
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* Apresentação do container docker
+
+Um container docker para realização do projeto de compilador da
+disciplina é disponibilizado. Assumindo que o comando =docker= esteja
+disponível no seu sistema (seja ele qual for), as instruções abaixo
+permitem realizar a cópia e instanciar um container. O container
+docker está disponível em https://hub.docker.com/r/schnorr/comp/. Para
+obter esse container e "entrar" nele, basta:
+
+#+begin_src shell :results output
+docker pull schnorr/comp
+docker run -it schnorr/comp
+#+end_src
+
+Ou o equivalente em sua interface gráfica docker. 
+
+* Como o container docker foi construído
+
+Para registro, abaixo segue uma descrição de como esse container foi
+construído, por intermédio de arquivo =DockerFile=. O conteúdo deste
+arquivo (veja imediatamente abaixo) tem um conjunto mínimo de
+ferramentas para realizar o projeto de compilador:
+
+#+BEGIN_SRC txt :tangle DockerFile
+FROM debian:testing
+
+RUN apt-get -y update
+RUN apt-get -y install build-essential make gcc gdb flex bison valgrind
+RUN useradd -s /bin/bash --create-home user
+USER user
+WORKDIR /home/user
+#+END_SRC
+
+As ferramentas mínimas:
+- o compilador =gcc=
+- o comando =make= para tratar de =Makefiles=
+- o comando =gdb= para debugar seu programa
+- o comando =valgrind= para debugar ainda mais o seu programa
+- versões recentes de =flex= e =bison= para realizar o trabalho
+
+Coloque o arquivo =DockerFile= com o conteúdo acima em um diretório
+qualquer. Em seguinda, neste diretório qualquer, execute o seguinte
+comando para criar a imagem docker (ou o equivalente utilizando uma
+interface gráfica):
+
+#+begin_src shell :results output
+docker build -t comp .
+#+end_src
+
+Depois para "entrar" no container e realizar o trabalho, lance:
+
+#+begin_src shell :results output
+docker run -it comp
+#+end_src
+
+Essas indicações são sobretudo para um sistema baseado em algum /flavor/
+de Linux. Para windows, procure seguir as orientações disponíveis no
+[site do docker](https://docs.docker.com/get-started/) para
+construções de containers docker.
