@@ -108,6 +108,26 @@ liberar a memória de maneira recursiva (de baixo para cima). O
 programa =valgrind= será utilizado para averiguar a ausência de
 vazamentos de memória.
 
+
+* Testes da avaliação objetiva
+
+O executável gerado nessa deve fazer um laço de compilação e
+descompilação. Ele deve receber o programa pela /entrada padrão/ (como
+habitualmente vinha se fazendo nas etapas anteriores), compilá-lo, e
+descompilá-lo (a partir da árvore) na /saída padrão/.  Como o arquivo
+gerado nunca será totalmente idêntico ao original, o laço
+compilação/descompilação será realizado duas vezes e seus resultados
+comparados, desta forma:
+
+#+BEGIN_EXAMPLE
+# primeiro laço de compilação/descompilação
+./etapa3 < source.txt > eq1.txt
+# segund laço de compilação/descompilação
+./etapa3 < eq1.txt > eq2.txt
+# efetiva comparação (arquivos eq1.txt e eq2.txt devem ser idênticos)
+diff eq1.txt eq2.txt
+#+END_EXAMPLE
+
 * Anexo - Arquivo =main.c=
 
 A função principal da E3 aparece abaixo. A variável global =arvore= de
