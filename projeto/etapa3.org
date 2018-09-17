@@ -118,7 +118,7 @@ implementado. Sugere-se fortemente que os programas explorem todas as
 características sintáticas da linguagem, sendo assim exemplos
 representativos.
 
-* Descrição da Árvore
+* Descrição da Árvore                                              :noexport:
 
 A árvore sintática abstrata, do inglês /Abstract Syntax Tree/ (AST), é
 uma árvore n-ária onde os nós folha representam os tokens presentes no
@@ -432,7 +432,7 @@ abaixo.
 *** Outras construções presentes na sintaxe                      :noexport:
 A construção da AST para os comandos não listados acima mas que fazem
 parte da sintaxe são opcionais.
-* Casos omissos
+* Casos omissos                                                    :noexport:
 
 Casos não previstos serão discutidos com o professor.
 
