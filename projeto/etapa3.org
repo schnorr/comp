@@ -98,9 +98,7 @@ chuves, lista de comandos e fechamento chaves.
 
 ** 5. Remoção de conflitos/ajustes gramaticais
 
-Todos os conflitos /Reduce-Reduce/ e /Shift-Reduce/ devem ser removidos,
-através de mudanças gramaticais ou comandos =%left=, =%right= ou =%nonassoc=
-do bison. 
+Todos os conflitos /Reduce-Reduce/ e /Shift-Reduce/ devem ser removidos.
 
 * Anexo - Arquivo =main.c=
 
