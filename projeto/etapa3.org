@@ -108,7 +108,6 @@ liberar a memória de maneira recursiva (de baixo para cima). O
 programa =valgrind= será utilizado para averiguar a ausência de
 vazamentos de memória.
 
-
 * Testes da avaliação objetiva
 
 O executável gerado nessa deve fazer um laço de compilação e
@@ -140,8 +139,9 @@ da árvore de derivação do programa. A função =descompila=, cujo
 protótipo é dado, deve ser implementada de maneira recursiva para
 imprimir toda a árvore, de cima para baixo, da esquerda para a
 direita. Isso na prática faz com que o programa da entrada seja
-reobtido. A função =libera= deve ser implementada para liberar toda a
-memória que foi alocada para manter a árvore.
+reobtido. A função =libera=, cujo protótipo também é dado, deve ser
+implementada para liberar toda a memória que foi alocada para manter a
+árvore.
 
 #+BEGIN_SRC C :tangle main.c
 /*
