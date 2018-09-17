@@ -83,7 +83,7 @@ ponteiro para a estrutura de dados que guarda a raiz da árvore deve
 ser salvo na variável global =arvore=.
 
 ** 4. Descompilar o programa de entrada
-** Remoção de conflitos/ajustes gramaticais
+** 5. Remoção de conflitos/ajustes gramaticais
 
 Todos os conflitos /Reduce-Reduce/ e /Shift-Reduce/ devem ser removidos,
 através de mudanças gramaticais ou comandos =%left=, =%right= ou =%nonassoc=
