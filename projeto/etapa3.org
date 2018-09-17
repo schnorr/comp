@@ -84,6 +84,7 @@ ser salvo na variável global =arvore=.
 
 ** 4. Descompilar o programa de entrada
 
+Implementar a função =descompila= (veja no anexo =main.c= abaixo).
 O processo de geração de codigo fonte, ou /descompilação/, será
 percorrer a árvore gerada em ordem (ou na ordem apropriada a
 determinado nó), a partir da raiz, e imprimir os símbolos que
@@ -94,11 +95,18 @@ comentários, entre outros, foram ignorados.  Mas a árvore deve ter as
 informações necessárias para gerar facilmente esse programa
 equivalente, e pode ter alguns nós específicos para facilitar essa
 geração, como um nó ``bloco'', que gera a sequência de abertura de
-chuves, lista de comandos e fechamento chaves.
+chuves, lista de comandos e fechamento chaves. 
 
 ** 5. Remoção de conflitos/ajustes gramaticais
 
 Todos os conflitos /Reduce-Reduce/ e /Shift-Reduce/ devem ser removidos.
+
+** 6. Gerenciar corretamente a memória do compilador
+
+Implementar a função =libera= (veja no anexo =main.c= abaixo), que deve
+liberar a memória de maneira recursiva (de baixo para cima). O
+programa =valgrind= será utilizado para averiguar a ausência de
+vazamentos de memória.
 
 * Anexo - Arquivo =main.c=
 
