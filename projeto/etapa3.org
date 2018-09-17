@@ -164,6 +164,10 @@ int main (int argc, char **argv)
   return ret;
 }
 #+END_SRC
+
+Utilize o comando =extern void *avore= nos outros arquivos para ter
+acesso a variável global =arvore= declarada no arquivo =main.c=.
+
 * Anexo - Sobre a Árvore Sintática Abstrata
 ** Apresentação
 
