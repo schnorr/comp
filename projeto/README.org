@@ -36,7 +36,7 @@ as etapas encontra-se abaixo.
 |-------+------------------------------------+----------+------------+------------+------------|
 | E1    | [[./etapa1.org][Análise Léxica]]                     |       10 |         10 | 2018-08-25 |            |
 | E2    | [[./etapa2.org][Análise Sintática]]                  |       15 |         25 | 2018-09-10 |            |
-| E3    | [[./etapa3.pdf][Árvore Sintática Abstrata]]          |       15 |         40 | 2018-09-28 |            |
+| E3    | [[./etapa3.org][Árvore Sintática Abstrata]]          |       15 |         40 | 2018-09-28 |            |
 | E4    | (obsoleto) [[./etapa4.org][Análise Semântica]]       |       15 |         55 | 2018-10-20 |            |
 | E5    | (obsoleto) [[./etapa5.pdf][Geração de Código]] ([[./etapa5.pdf][PDF]]) |       20 |         75 | 2018-11-05 |            |
 | E6    | (obsoleto) [[./etapa6.org][Suporte de Execução]]     |       15 |         90 | 2018-11-24 |            |
