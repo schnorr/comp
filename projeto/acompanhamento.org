@@ -531,6 +531,10 @@ Os testes cuja sintaxe _não_ está correta são:
 - asl137
 
 ** Comentários por grupo
+
+Os comentários são baseados nas submissões originais realizadas até o
+prazo de submissão.
+
 *** DONE Tau
 
 - [ ] asl114 - NOK - ""
