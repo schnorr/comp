@@ -122,7 +122,7 @@ comparados, desta forma:
 #+BEGIN_EXAMPLE
 # primeiro laço de compilação/descompilação
 ./etapa3 < source.txt > eq1.txt
-# segund laço de compilação/descompilação
+# segundo laço de compilação/descompilação
 ./etapa3 < eq1.txt > eq2.txt
 # efetiva comparação (arquivos eq1.txt e eq2.txt devem ser idênticos)
 diff eq1.txt eq2.txt
