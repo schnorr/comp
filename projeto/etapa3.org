@@ -97,24 +97,27 @@ da árvore de derivação do programa. A função =descompila=, cujo
 protótipo é dado, deve ser implementada de maneira recursiva para
 imprimir toda a árvore, de cima para baixo, da esquerda para a
 direita. Isso na prática faz com que o programa da entrada seja
-reobtido.
+reobtido. A função =libera= deve ser implementada para liberar toda a
+memória que foi alocada para manter a árvore.
 
 #+BEGIN_SRC C :tangle main.c
 /*
 Função principal para realização da E3.
 
 Este arquivo não pode ser modificado.
-*/
+,*/
 #include <stdio.h>
 #include "parser.tab.h" //arquivo gerado com bison -d parser.y
 
 void *arvore = NULL;
 void descompila (void *arvore);
+void libera (void *arvore);
 
 int main (int argc, char **argv)
 {
   int ret = yyparse(); 
   descompila (arvore);
+  libera(arvore);
   return ret;
 }
 #+END_SRC
