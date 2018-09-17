@@ -22,8 +22,8 @@ início da criação da árvore sintática abstrata (/Abstract Syntax Tree/
 obrigatoriamente criada a medida que as regras semânticas são
 executadas e deve ser mantida em memória mesmo após o fim da análise
 sintática, ou seja, quando =yyparse= retornar. A árvore deve ser
-impressa na tela após a análise sintática. Esta impressão deve ser
-idêntica ao programa fornecido na entrada do compilador.
+impressa na tela após a análise sintática. O conteúdo impresso deve ser
+idêntico ao programa fornecido na entrada do compilador.
 
 * Funcionalidades Necessárias
 ** Associação de valor ao =token= (com o uso de =yylval=)
