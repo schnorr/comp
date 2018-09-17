@@ -511,3 +511,21 @@ int main (int argc, char **argv)
   return ret;
 }
 #+END_SRC
+* Anexo - Sobre a Árvore Sintática Abstrata
+
+A árvore sintática abstrata, do inglês /Abstract Syntax Tree/ (AST), é
+uma árvore n-ária onde os nós folha representam os tokens presentes no
+programa fonte, os nós intermediários são utilizados para criar uma
+hierarquia que condiz com as regras sintáticas, e a raiz representa o
+programa inteiro.  Essa árvore registra as derivações reconhecidas
+pelo analisador sintático, tornando mais fáceis as etapas posteriores
+de verificação e síntese.
+
+A árvore é abstrata (quando comparada a árvore de derivação gramatical
+completa) porque não precisa representar detalhadamente todas as
+derivações gramaticais para uma entrada dada.  Tipicamente serão
+omitidas derivações intermediárias onde um símbolo não terminal gera
+somente um outro símbolo terminal, tokens que são palavras reservadas,
+e todos os símbolos ``de sincronismo'' ou identificação do código, os
+quais estão implícitos na estrutura hierárquica criada. São mantidos
+somente os nós fundamentais para manter a semântica da entrada.
