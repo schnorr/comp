@@ -26,7 +26,7 @@ impressa na tela após a análise sintática. O conteúdo impresso deve ser
 idêntico ao programa fornecido na entrada do compilador.
 
 * Funcionalidades Necessárias
-** Associação de valor ao =token= (com o uso de =yylval=)
+** 1. Associação de valor ao =token= (com o uso de =yylval=)
 
 Nesta etapa, deve-se associar um _valor_ ao =token= correspondente. Esta
 associação deve ser feita pelo analisador léxico, ou seja, no arquivo
@@ -60,7 +60,7 @@ associado a ele através de uma construção =union= da linguagem C.
 
 [1]: http://www.gnu.org/software/bison/manual/html_node/Token-Values.html
 
-** Implementação de uma estrutura de dados em árvore
+** 2. Implementação de uma estrutura de dados em árvore
 
 Implementar uma estrutura de dados para representar uma árvore em
 memória, com funções habituais tais como criação de nó, remoção,
@@ -69,7 +69,7 @@ profundidade. Qualquer outra função que o grupo achar pertinente
 implementar são também bem vistas. Salienta-se o fato de que cada nó
 deve ter um número arbitrário de filhos que também são nós da árvore.
 
-** Ações /bison/ para construção da árvore de derivação
+** 3. Ações /bison/ para construção da árvore de derivação
 
 Colocar ações semânticas *no final das regras de produção* descritas no
 arquivo para o =bison=, as quais criam ou propagam os nós da árvore,
@@ -82,7 +82,7 @@ já foram criados. Ao final do processo de análise sintática, um
 ponteiro para a estrutura de dados que guarda a raiz da árvore deve
 ser salvo na variável global =arvore=.
 
-** Descompilar o programa de entrada
+** 4. Descompilar o programa de entrada
 ** Remoção de conflitos/ajustes gramaticais
 
 Todos os conflitos /Reduce-Reduce/ e /Shift-Reduce/ devem ser removidos,
