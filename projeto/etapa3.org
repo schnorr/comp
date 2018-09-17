@@ -126,7 +126,11 @@ comparados, desta forma:
 ./etapa3 < eq1.txt > eq2.txt
 # efetiva comparação (arquivos eq1.txt e eq2.txt devem ser idênticos)
 diff eq1.txt eq2.txt
+# verificação do resultado
+echo $?
 #+END_EXAMPLE
+
+O teste é avaliado como correto caso o valor impresso pelo comando =echo= for 0.
 
 * Anexo - Arquivo =main.c=
 
