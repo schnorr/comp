@@ -16,14 +16,14 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-A terceira etapa do projeto de compilador para a linguagem consiste no
-início da criação da árvore sintática abstrata (/Abstract Syntax Tree/
+A terceira etapa do projeto de compilador para a linguagem consiste na
+criação da árvore sintática abstrata (/Abstract Syntax Tree/
 -- AST) baseada no programa de entrada. A árvore deve ser
 obrigatoriamente criada a medida que as regras semânticas são
 executadas e deve ser mantida em memória mesmo após o fim da análise
 sintática, ou seja, quando =yyparse= retornar. A árvore deve ser
 impressa na tela após a análise sintática. O conteúdo impresso deve ser
-idêntico ao programa fornecido na entrada do compilador.
+semanticamente idêntico ao programa fornecido na entrada do compilador.
 
 * Funcionalidades Necessárias
 ** 1. Associação de valor ao =token= (com o uso de =yylval=)
