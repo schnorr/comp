@@ -52,20 +52,12 @@
 \newcommand{\comandotext}{\emph{Comando}\xspace}
 #+END_EXPORT
 
-A terceira etapa do projeto de compilador para a linguagem consiste na
-criação da árvore sintática abstrata (/Abstract Syntax Tree/ -- AST)
-baseada no programa de entrada e considerando as convenções
-estabelecidas na Seção \ref{ast}. A árvore deve ser criada a medida
-que as regras semânticas são executadas e deve ser mantida em memória
-mesmo após o fim da análise sintática, ou seja, quando =yyparse=
-retornar. A avaliação deste trabalho será feita de duas formas:
-primeiro, através de uma análise subjetiva visual da árvore, através
-da geração de um arquivo em formato =dot= definido pelo pacote GraphViz
-(funções serão fornecidas para tal através do repositório GIT do
-professor); segundo, por uma verificação do código implementado pelos
-alunos. Uma comparação automática da árvore gerada com aquela esperada
-para um determinado programa fonte também pode ser utilizado.
-
+A terceira etapa do projeto de compilador para a linguagem consiste no
+início da criação da árvore sintática abstrata (/Abstract Syntax Tree/
+-- AST) baseada no programa de entrada. A árvore deve ser
+obrigatoriamente criada a medida que as regras semânticas são
+executadas e deve ser mantida em memória mesmo após o fim da análise
+sintática, ou seja, quando =yyparse= retornar. A árvore deve ser
 * Funcionalidades Necessárias
 ** Implementação de uma estrutura de dados em árvore               :noexport:
 
@@ -78,6 +70,8 @@ tipo de dado para o nó da árvore deve ser \texttt{comp\_tree\_t}. Este
 novo tipo de dado deve vir acompanhado de funções tradicionais tais
 como criação, remoção, alteração, e qualquer outra função que o grupo
 achar pertinente implementar.
+impressa na tela após a análise sintática. Esta impressão deve ser
+idêntica ao programa fornecido na entrada do compilador.
 
 ** Criar a árvore sintática abstrata
 
