@@ -514,6 +514,7 @@ int main (int argc, char **argv)
 }
 #+END_SRC
 * Anexo - Sobre a Árvore Sintática Abstrata
+** Apresentação
 
 A árvore sintática abstrata, do inglês /Abstract Syntax Tree/ (AST), é
 uma árvore n-ária onde os nós folha representam os tokens presentes no
@@ -531,3 +532,12 @@ somente um outro símbolo terminal, tokens que são palavras reservadas,
 e todos os símbolos ``de sincronismo'' ou identificação do código, os
 quais estão implícitos na estrutura hierárquica criada. São mantidos
 somente os nós fundamentais para manter a semântica da entrada.
+
+** Os nós da árvore
+
+Os nós da árvore serão de =tipos= relacionados aos símbolos não
+terminais, ou a nós que representam operações diferentes, no caso das
+expressões. É importante notar que normalmente as declarações de tipos
+e variáveis podem ser omitidas da AST, pois estas construções
+linguísticas não geram código, salvo nas situações onde as variáveis
+declaradas devem ser inicializadas.
