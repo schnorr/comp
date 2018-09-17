@@ -488,9 +488,11 @@ indica a indexação do vetor. A mesma estrutura para =AST_VETOR_INDEXADO=
 
 A função principal da E3 aparece abaixo. A variável global =arvore= de
 tipo =void*= é um ponteiro para a estrutura de dados que contém a raiz
-da árvore de derivação do programa. A função =imprime=, cujo protótipo é
-dado, deve ser implementada de maneira recursiva para imprimir toda a
-árvore, de cima para baixo, da esquerda para a direita.
+da árvore de derivação do programa. A função =descompila=, cujo
+protótipo é dado, deve ser implementada de maneira recursiva para
+imprimir toda a árvore, de cima para baixo, da esquerda para a
+direita. Isso na prática faz com que o programa da entrada seja
+reobtido.
 
 #+BEGIN_SRC C :tangle main.c
 /*
@@ -502,12 +504,12 @@ Este arquivo não pode ser modificado.
 #include "parser.tab.h" //arquivo gerado com bison -d parser.y
 
 void *arvore = NULL;
-void imprime (void *arvore);
+void descompila (void *arvore);
 
 int main (int argc, char **argv)
 {
   int ret = yyparse(); 
-  imprime (arvore);
+  descompila (arvore);
   return ret;
 }
 #+END_SRC
