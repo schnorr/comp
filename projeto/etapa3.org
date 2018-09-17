@@ -62,7 +62,7 @@ impressa na tela após a análise sintática. Esta impressão deve ser
 idêntica ao programa fornecido na entrada do compilador.
 
 * Funcionalidades Necessárias                                      :noexport:
-** Associação de valor ao =token= (=yylval=)
+** Associação de valor ao =token= (com o uso de =yylval=)
 
 Nesta etapa, deve-se associar um _valor_ ao =token= correspondente. Esta
 associação deve ser feita pelo analisador léxico, ou seja, no arquivo
