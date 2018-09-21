@@ -45,8 +45,8 @@
 |            |                                                        |   67-102 | Avaliação E2        |
 | Semântica  | AST, Esquemas S e L-Atribuídos, =bison= (ações)          |          | Início E3 (Árvore)  |
 | Semântica  | Implementação de Esquemas S e L-Atribuídos             |          |                     |
-|            |                                                        |   67-103 | Avaliação E3        |
 |            | Revisão                                                |          | Início E4 (Tipos)   |
+|            |                                                        |   67-103 | Avaliação E3        |
 |            | P1                                                     | Castilho |                     |
 | Código     | Declarações, Escopos e Atribuição                      |          |                     |
 |            |                                                        |   67-104 | Avaliação E4        |
