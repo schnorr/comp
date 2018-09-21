@@ -222,8 +222,8 @@ aulas %>%
 | 11 | 2018-09-12 |   67-102 |            |                                                        | Avaliação E2        |
 | 12 | 2018-09-17 |          | Semântica  | AST, Esquemas S e L-Atribuídos, =bison= (ações)          | Início E3 (Árvore)  |
 | 13 | 2018-09-19 |          | Semântica  | Implementação de Esquemas S e L-Atribuídos             |                     |
-| 14 | 2018-10-01 |   67-103 |            |                                                        | Avaliação E3        |
-| 15 | 2018-10-03 |          |            | Revisão                                                | Início E4 (Tipos)   |
+| 14 | 2018-10-01 |          |            | Revisão                                                | Início E4 (Tipos)   |
+| 15 | 2018-10-03 |   67-102 |            |                                                        | Avaliação E3        |
 | 16 | 2018-10-08 | Castilho |            | P1                                                     |                     |
 | 17 | 2018-10-10 |          | Código     | Declarações, Escopos e Atribuição                      |                     |
 | 18 | 2018-10-22 |   67-104 |            |                                                        | Avaliação E4        |
