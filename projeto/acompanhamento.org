@@ -1147,33 +1147,65 @@ parser.y:482.9-21: warning: rule useless in grammar [-Wother]
 - [ ] asl114 - NOK - "ERRO!"
 - [ ] asl126 - NOK - "ERRO!"
 
-*** TODO LATE Upsilon
+*** DONE LATE Upsilon
 
 - [ ] Grupo não entregou no prazo
   - Veio na entrevista, argumentou que entregou
 - [ ] _Vão submeter até o dia 19/09_
 
-*** TODO LATE Zeta
+Entrega atrasada
+- Entrega em atraso 2018-09-15 13:34:02
+- Todos os testes passaram
+
+*** DONE LATE Zeta
 
 - [ ] Grupo não entregou no prazo
   - Veio na entrevista, argumentou que entregou
 - [ ] _Vão submeter até o dia 19/09_
 
-*** TODO LATE Sigma
+Entrega em atraso
+
+- Entrega em atraso em 2018-09-19 23:10:34
+- [ ] Disponibilizou no login do outro membro e não avisou o professor
+- [ ] Todos os testes falharam
+- Sugiro que o grupo venha conversar com o professor
+  - Risco de insucesso na disciplina
+
+*** DONE LATE Omicron
+
+- [ ] Grupo não entregou no prazo
+- [ ] Não veio apresentar
+
+Entrega em atraso
+
+- Grupo entrega em atraso em 2018-09-17 01:06:09
+  - Não conversou com o professor (evitou dia da entrevista)
+  - A presença é obrigatória na entrevista
+- Todos os testes passaram
+- [ ] Melhorar o código de erro
+
+*** TODO LATE, LATE AGAIN Sigma
 
 - [ ] Grupo não entregou no prazo
   - Veio apresentar mas não tinha feito
 - [ ] _Vão submeter até o dia 19/09_
 
-*** TODO LATE Omicron
+Situação de abandono
+
+- Não entregou até o prazo extra
+- Sugere-se que venham conversar com o professor com urgência
+  - Risco de insucesso na disciplina
+
+*** TODO LATE, LATE AGAIN Mu
 
 - [ ] Grupo não entregou no prazo
 - [ ] Não veio apresentar
 
-*** TODO LATE Mu
+Situação de abandono
 
-- [ ] Grupo não entregou no prazo
-- [ ] Não veio apresentar
+- Não entregou até o prazo extra
+- Sugere-se que venham conversar com o professor com urgência
+  - Risco de insucesso na disciplina
 
 ** Notas Objetiva e Subjetiva
 
