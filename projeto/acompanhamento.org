@@ -743,7 +743,7 @@ Após recuperação
 - [ ] asl126 - NOK - "error on line 7: syntax error, unexpected ';'"
 - [ ] _Vão resubmeter até o dia 19/09 para corrigir os erros acima_
 
-*** TODO Rho
+*** DONE Rho
 
 - [ ] asl02 - NOK - ""
 - [ ] asl04 - NOK - ""
@@ -875,6 +875,82 @@ Após recuperação
   - Visão bem clara do problema do else opcional
 - [ ] _Vão resubmeter até o dia 19/09 para corrigir os erros acima_
 
+Após nova entrega:
+
+- Nova entrega em 2018-09-16 21:39:54
+- Muitos erros persistem, vejam abaixo, mesmo havendo mais três dias
+  para resolvê-los (o prazo era 19/09, 23:59)
+- [ ] asl11 - NOK - ""
+- [ ] asl12 - NOK - ""
+- [ ] asl14 - NOK - ""
+- [ ] asl15 - NOK - ""
+- [ ] asl17 - NOK - ""
+- [ ] asl21 - NOK - ""
+- [ ] asl22 - NOK - ""
+- [ ] asl23 - NOK - ""
+- [ ] asl26 - NOK - ""
+- [ ] asl29 - NOK - ""
+- [ ] asl34 - NOK - ""
+- [ ] asl40 - NOK - ""
+- [ ] asl45 - NOK - ""
+- [ ] asl68 - NOK - ""
+- [ ] asl69 - NOK - ""
+- [ ] asl71 - NOK - ""
+- [ ] asl82 - NOK - ""
+- [ ] asl83 - NOK - ""
+- [ ] asl84 - NOK - ""
+- [ ] asl85 - NOK - ""
+- [ ] asl86 - NOK - ""
+- [ ] asl87 - NOK - ""
+- [ ] asl88 - NOK - ""
+- [ ] asl89 - NOK - ""
+- [ ] asl90 - NOK - ""
+- [ ] asl91 - NOK - ""
+- [ ] asl92 - NOK - ""
+- [ ] asl93 - NOK - ""
+- [ ] asl94 - NOK - ""
+- [ ] asl95 - NOK - ""
+- [ ] asl98 - NOK - ""
+- [ ] asl99 - NOK - ""
+- [ ] asl100 - NOK - ""
+- [ ] asl101 - NOK - ""
+- [ ] asl102 - NOK - ""
+- [ ] asl103 - NOK - ""
+- [ ] asl104 - NOK - ""
+- [ ] asl105 - NOK - ""
+- [ ] asl106 - NOK - ""
+- [ ] asl107 - NOK - ""
+- [ ] asl108 - NOK - ""
+- [ ] asl109 - NOK - ""
+- [ ] asl110 - NOK - ""
+- [ ] asl111 - NOK - ""
+- [ ] asl112 - NOK - ""
+- [ ] asl113 - NOK - ""
+- [ ] asl115 - NOK - ""
+- [ ] asl116 - NOK - ""
+- [ ] asl117 - NOK - ""
+- [ ] asl118 - NOK - ""
+- [ ] asl119 - NOK - ""
+- [ ] asl120 - NOK - ""
+- [ ] asl121 - NOK - ""
+- [ ] asl122 - NOK - ""
+- [ ] asl123 - NOK - ""
+- [ ] asl124 - NOK - ""
+- [ ] asl125 - NOK - ""
+- [ ] asl127 - NOK - ""
+- [ ] asl128 - NOK - ""
+- [ ] asl129 - NOK - ""
+- [ ] asl130 - NOK - ""
+- [ ] asl131 - NOK - ""
+- [ ] asl132 - NOK - ""
+- [ ] asl133 - NOK - ""
+- [ ] asl134 - NOK - ""
+- [ ] asl135 - NOK - ""
+- [ ] asl136 - NOK - ""
+- [ ] asl137 - NOK - ""
+- Sugiro que o grupo venha conversar com o professor
+  - Risco de insucesso na disciplina
+
 *** DONE Kappa
 
 - [ ] Relatório de erro com tentativa YYSTYPE
@@ -884,7 +960,7 @@ Após recuperação
 - [ ] Erro acontece por causa do tab provavelmente
 - [ ] asl63 - NOK - "Line 6: syntax error near " ""
 
-*** TODO Epsilon
+*** DONE Epsilon
 
 - [ ] Verificar conflitos shift/reduce
   - parser.y: warning: 1 shift/reduce conflict [-Wconflicts-sr]
@@ -910,6 +986,19 @@ Após recuperação
 - [ ] asl125 - NOK - ""
 - [ ] asl130 - NOK - ""
 - [ ] asl137 - NOK - ""
+
+Após nova entrega
+
+- [ ] Nova entrega em 2018-09-19 09:37:28
+- Melhorou, mas ainda sobram os erros abaixo
+- [ ] asl114 - NOK - "line 1: syntax error"
+- [ ] asl125 - NOK - ""
+- [ ] asl126 - NOK - "line 5: syntax error line 6: syntax error line 7: syntax error line 8: syntax error"
+- [ ] asl130 - NOK - ""
+- [ ] asl137 - NOK - ""
+- [ ] Relatórios de erros sintáticos repetidos
+  - Falta de precisão na especificação do erro
+  - Aponta erro para múltiplas linhas, sendo que o erro acontece em uma
 
 *** DONE Iota
 
@@ -944,7 +1033,7 @@ Após recuperação
 - [ ] asl97 - NOK - ""
 - [ ] asl126 - NOK - ""
 
-*** TODO Psi
+*** DONE Psi
 
 - [ ] Vários /warnings/ importantes
   #+BEGIN_EXAMPLE
@@ -1016,6 +1105,47 @@ parser.y:320.9-53: warning: rule useless in parser due to conflicts [-Wother]
 - [ ] asl117 - NOK - ""
 - [ ] asl126 - NOK - ""
 - [ ] _Vão resubmeter até o dia 19/09 para corrigir os erros abaixo_
+
+Após nova entrega
+
+- Nova entrega em 2018-09-19 23:21:21
+- warning: 1 shift/reduce conflict [-Wconflicts-sr]
+- Múltiplos warnings (todos deveriam ter sido resolvidos)
+  #+BEGIN_EXAMPLE
+  parser.y: warning: 1 nonterminal useless in grammar [-Wother]
+parser.y: warning: 6 rules useless in grammar [-Wother]
+parser.y:476.1-13: warning: nonterminal useless in grammar: pipe_elements [-Wother]
+ pipe_elements:
+ ^^^^^^^^^^^^^
+parser.y:477.9-24: warning: rule useless in grammar [-Wother]
+ 	TK_IDENTIFICADOR |
+         ^^^^^^^^^^^^^^^^
+parser.y:478.9-43: warning: rule useless in grammar [-Wother]
+  	TK_IDENTIFICADOR '[' TK_LIT_INT ']' |
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+parser.y:479.9-45: warning: rule useless in grammar [-Wother]
+  	TK_IDENTIFICADOR '$' TK_IDENTIFICADOR |
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+parser.y:480.9-18: warning: rule useless in grammar [-Wother]
+  	TK_LIT_INT |
+         ^^^^^^^^^^
+parser.y:481.9-20: warning: rule useless in grammar [-Wother]
+  	TK_LIT_FLOAT |
+         ^^^^^^^^^^^^
+parser.y:482.9-21: warning: rule useless in grammar [-Wother]
+  	function_call
+         ^^^^^^^^^^^^^
+  #+END_EXAMPLE
+- Testes automáticos melhoraram (veja abaixo), embora o cuidado com a
+  saída de compilação não (veja acima)
+- [ ] asl49 - NOK - "ERRO!"
+- [ ] asl76 - NOK - "ERRO!"
+- [ ] asl77 - NOK - "ERRO!"
+- [ ] asl78 - NOK - "ERRO!"
+- [ ] asl80 - NOK - "ERRO!"
+- [ ] asl97 - NOK - "ERRO!"
+- [ ] asl114 - NOK - "ERRO!"
+- [ ] asl126 - NOK - "ERRO!"
 
 *** TODO LATE Upsilon
 
