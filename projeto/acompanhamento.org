@@ -1192,7 +1192,7 @@ A coluna Peso indica 0.8 para os grupos que entregaram em atraso.
 | Lambda  |  9.9 |    9 |    1 |
 | Mu      |    0 |    0 |  0.8 |
 | Omega   |   10 |   10 |    1 |
-| Omicron |   10 |   10 |  0.8 |
+| Omicron |   10 |    0 |  0.8 |
 | Psi     |  9.4 |    7 |    1 |
 | Rho     |    5 |    4 |    1 |
 | Sigma   |    0 |    0 |  0.8 |
