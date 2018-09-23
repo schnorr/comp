@@ -1054,7 +1054,7 @@ A coluna Peso indica 0.8 para os grupos que entregaram em atraso.
 | Alpha   |  9.8 |   10 |    1 |
 | Beta    |  9.9 |  9.3 |    1 |
 | Delta   |  9.9 |   10 |  0.8 |
-| Epsilon |  9.6 |    7 |  0.8 |
+| Epsilon |  9.6 |    7 |    1 |
 | Eta     |  9.7 |  8.5 |    1 |
 | Gamma   |  9.9 |   10 |    1 |
 | Iota    |    8 |    7 |    1 |
@@ -1063,8 +1063,8 @@ A coluna Peso indica 0.8 para os grupos que entregaram em atraso.
 | Mu      |    0 |    0 |  0.8 |
 | Omega   |   10 |   10 |    1 |
 | Omicron |   10 |   10 |  0.8 |
-| Psi     |  9.4 |    7 |  0.8 |
-| Rho     |    5 |    4 |  0.8 |
+| Psi     |  9.4 |    7 |    1 |
+| Rho     |    5 |    4 |    1 |
 | Sigma   |    0 |    0 |  0.8 |
 | Tau     |  9.9 |   10 |    1 |
 | Theta   |  9.6 |    9 |    1 |
