@@ -539,7 +539,6 @@ prazo de submissão.
 *** DONE Tau
 
 - [ ] asl114 - NOK - ""
-- [ ] asl117 - NOK - ""
 - [ ] Não usou left/right
 - [ ] Fez operador ternário
 - [ ] Usou linha/coluna no erro
@@ -548,14 +547,12 @@ prazo de submissão.
 
 - [ ] asl24 - NOK - ""
   - Vão resolver durante a aula
-- [ ] asl117 - NOK - ""
 - [ ] por que tem o %union? para usar o error handling
   - yylval, para passar dados do flex/bison
 - [ ] Usou error-verbose
 
 *** DONE Omega
 
-- [ ] asl117 - NOK - ""
 - %union, para tentar fazer o relatório de erro
    - yylval e faz um snprintf
 - Relatório de erros que não usa o default
@@ -614,12 +611,10 @@ prazo de submissão.
 - [ ] asl09 - NOK - "Error: Unexpected ; on line 4."
 - [ ] asl10 - NOK - "Error: Unexpected ; on line 2."
 - [ ] asl45 - NOK - ""
-- [ ] asl117 - NOK - "Error: Unexpected [ on line 7."
 
 *** DONE Gamma
 
 - [ ] asl114 - NOK - ""
-- [ ] asl117 - NOK - ""
 - [ ] Sistema =catch2= do c++
 - [ ] Sem %right, %left
 - [ ] Erro com yytext, usar error-verbose
@@ -650,7 +645,6 @@ main.c:9:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
 - [ ] asl54 - NOK - ""
 - [ ] asl55 - NOK - ""
 - [ ] asl114 - NOK - ""
-- [ ] asl117 - NOK - ""
 
 *** TODO Theta
 
@@ -729,7 +723,6 @@ main.c:9:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
 - [ ] asl81 - NOK - "error on line 7: syntax error, unexpected '['"
 - [ ] asl96 - NOK - "error on line 3: syntax error, unexpected '[', expecting '{'"
 - [ ] asl97 - NOK - "error on line 3: syntax error, unexpected '[', expecting '{'"
-- [ ] asl117 - NOK - "error on line 6: syntax error, unexpected TK_IDENTIFICADOR"
 - [ ] asl121 - NOK - ""
 - [ ] asl126 - NOK - "error on line 7: syntax error, unexpected ';'"
 - [ ] _Vão resubmeter até o dia 19/09 para corrigir os erros acima_
@@ -874,7 +867,6 @@ main.c:9:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
   - 120 e poucos testes
 - [ ] Erro acontece por causa do tab provavelmente
 - [ ] asl63 - NOK - "Line 6: syntax error near " ""
-- [ ] asl117 - NOK - "Line 7: syntax error near "[""
 
 *** TODO Epsilon
 
@@ -934,7 +926,6 @@ main.c:9:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
 - [ ] asl81 - NOK - ""
 - [ ] asl96 - NOK - ""
 - [ ] asl97 - NOK - ""
-- [ ] asl117 - NOK - ""
 - [ ] asl126 - NOK - ""
 
 *** TODO Psi
