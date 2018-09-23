@@ -510,7 +510,7 @@ Os testes cuja sintaxe _não_ está correta são:
 - asl113
 - asl115
 - asl116
-- asl117 -> Veja Issue #64
+- asl117 -> Veja [[https://github.com/schnorr/comp/issues/64][Issue #64]]
 - asl118
 - asl119
 - asl120
