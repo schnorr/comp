@@ -560,7 +560,7 @@ prazo de submissão.
 - Usaram fatoração à esquerda para resolver ambiguidades
 - Vários comentários nos locais onde houveram conflitos shift/reduce
 
-*** TODO Beta
+*** DONE Beta
 
 - [ ] O que faz a função =isLexicalError=?
   - Diferenciar error sintático de léxico, através desta função
@@ -604,6 +604,12 @@ prazo de submissão.
 - [ ] asl114 - NOK - "syntax error, unexpected '/', expecting $end, on line 1"
 - [ ] asl117 - NOK - "syntax error, unexpected '[', expecting TK_OC_SL or TK_OC_SR or '=', on line 7"
 
+Após recuperação:
+
+- [ ] Nova entrega no mesmo dia da entrevistas, a tarde, 2018-09-12 15:55:25
+- Sobrou somente um erro
+  - [ ] asl114 - NOK - "syntax error, unexpected '/', expecting $end, on line 1"
+
 *** DONE Alpha
 
 - [ ] Usaram o %prec com UNOP, BINOP, TERNOP
@@ -646,7 +652,7 @@ main.c:9:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
 - [ ] asl55 - NOK - ""
 - [ ] asl114 - NOK - ""
 
-*** TODO Theta
+*** DONE Theta
 
 - [ ] O binário deve se chamar =etapa2= e não =parser=
 - [ ] Problema de interpretação na variáveis 
@@ -693,6 +699,16 @@ main.c:9:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
 - [ ] asl97 - NOK - ""
 - [ ] asl110 - NOK - ""
 - [ ] asl117 - NOK - ""
+
+Após recuperação
+
+- Nova entrega durante a entrevista, 2018-09-12 11:44:21
+- Sobraram alguns erros
+  - [ ] asl23 - NOK - ""
+  - [ ] asl68 - NOK - ""
+  - [ ] asl93 - NOK - ""
+  - [ ] asl110 - NOK - ""
+  - [ ] asl137 - NOK - ""
 
 *** DONE Delta
 
