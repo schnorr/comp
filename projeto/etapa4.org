@@ -158,19 +158,6 @@ O tamanho dos tipos da linguagem é definido da seguinte forma:
 - Um vetor ocupa o seu tamanho vezes o seu tipo
 - Um tipo de usuário ocupa o somatório dos tamanhos dos campos
 
-** Código de tipos
-
-Para simplificar a codificação do compilador, sugere-se a utilização
-das seguintes definições:
-
-#+BEGIN_EXAMPLE
-#define IKS_INT        1
-#define IKS_FLOAT      2
-#define IKS_CHAR       3
-#define IKS_STRING     4
-#define IKS_BOOL       5
-#+END_EXAMPLE
-
 * Anexo - Códigos de retorno para erros semântico
 
 A lista abaixo apresenta os códigos de retorno que devem ser
