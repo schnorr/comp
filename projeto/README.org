@@ -73,7 +73,7 @@ scp etapaX.tgz username@html.inf.ufrgs.br:./public_html/
 #+END_EXAMPLE
 
 *Procedimento da E4 em diante*: O arquivo =etapaX.tgz= deve ser enviado
-por e-mail, obedecendo o tamanho máximo aceito 100KBytes.
+por e-mail, com tamanho máximo de 100KBytes.
 
 Ao submeter solução para qualquer tarefa desta disciplina, tu
 declaras: (1) que a submissão reflete a solução de sua própria autoria
