@@ -60,16 +60,20 @@ Cada grupo deve compactar o conteúdo do seu diretório de trabalho
 executando o comando =tar cvzf etapaX.tgz .= (onde X é o dígito
 identificador da etapa) *dentro do mesmo diretório*. Não utilizem outros
 programas, formatos, comandos, nomes ou organizações de diretórios
-para esse operação. Será gerado um arquivo chamado =etapaX.tgz=, o qual
-deve ser copiado para o servidor http através do comando:
+para esse operação. Será gerado um arquivo chamado =etapaX.tgz=.
+
+*Procedimento até E3 inclusive*: O arquivo =etapaX.tgz= deve ser copiado
+para o servidor http através do comando abaixo. Verifique as
+permissões de acesso ao arquivo (com o programa =chmod= através de uma
+conexão com =sftp=). Recomenda-se que testem o acesso à partir de um
+local externo utilizando o programa =wget=.
 
 #+BEGIN_EXAMPLE
 scp etapaX.tgz username@html.inf.ufrgs.br:./public_html/
 #+END_EXAMPLE
 
-Verifique as permissões de acesso ao arquivo (com o programa =chmod=
-através de uma conexão com =sftp=). Recomenda-se que testem o acesso à
-partir de um local externo utilizando o programa =wget=.
+*Procedimento da E4 em diante*: O arquivo =etapaX.tgz= deve ser enviado
+por e-mail, obedecendo o tamanho máximo aceito 100KBytes.
 
 Ao submeter solução para qualquer tarefa desta disciplina, tu
 declaras: (1) que a submissão reflete a solução de sua própria autoria
