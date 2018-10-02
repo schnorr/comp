@@ -1234,6 +1234,38 @@ A coluna Peso indica 0.8 para os grupos que entregaram em atraso.
 | Zeta    |    0 |    0 |  0.8 |
 
 * Avaliação da Etapa 3
+** Grupos que não entregaram até o prazo
+
+| Grupo   | ID     |
+|---------+--------|
+| Epsilon | ???490 |
+| Epsilon | ???798 |
+| Mu      | ???932 |
+| Mu      | ???794 |
+| Omicron | ???055 |
+| Psi     | ???155 |
+| Psi     | ???499 |
+| Sigma   | ???295 |
+| Zeta    | ???271 |
+| Zeta    | ???673 |
+** Entregas até o prazo
+
+| Timestamp           | Grupo   |
+|---------------------+---------|
+| 2018-09-29 14:03:21 | Tau     |
+| 2018-09-30 19:08:12 | Omega   |
+| 2018-10-01 19:23:07 | Gamma   |
+| 2018-10-01 19:27:23 | Beta    |
+| 2018-10-01 19:27:42 | Eta     |
+| 2018-10-01 20:15:47 | Delta   |
+| 2018-10-01 21:35:57 | Rho     |
+| 2018-10-01 22:56:43 | Iota    |
+| 2018-10-01 23:09:16 | Kappa   |
+| 2018-10-01 23:16:23 | Theta   |
+| 2018-10-01 23:24:57 | Alpha   |
+| 2018-10-01 23:25:54 | Upsilon |
+| 2018-10-01 23:46:15 | Lambda  |
+
 * Avaliação da Etapa 4
 * Avaliação da Etapa 5
 * Avaliação da Etapa 6
