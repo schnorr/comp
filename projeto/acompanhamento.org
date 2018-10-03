@@ -1278,8 +1278,122 @@ arquivos que tem a string =DECL= em um comentário C99 são aqueles que
 permitem que a saída de descompilação seja vazia.
 
 ** Comentários por grupo
+*** Tau
 
-TBD.
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Omega
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Gamma
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Beta
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Eta
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Delta
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Rho
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Iota
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Kappa
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Theta
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Alpha
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Upsilon
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
+
+*** Lambda
+
+- [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
+- [ ] 2. Implementação de uma estrutura de dados em árvore
+- [ ] 3. Ações bison para construção da AST
+- [ ] 4. Descompila
+- [ ] 5. Remoção de conflitos/ajustes gramaticais
+- [ ] 6. Gerenciar corretamente a memória do compilador
 
 * Avaliação da Etapa 4
 * Avaliação da Etapa 5
