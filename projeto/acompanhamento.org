@@ -1265,11 +1265,16 @@ A coluna Peso indica 0.8 para os grupos que entregaram em atraso.
 | 2018-10-01 23:24:57 | Alpha   |
 | 2018-10-01 23:25:54 | Upsilon |
 | 2018-10-01 23:46:15 | Lambda  |
-** Arquivos para testes
+** Arquivos para testes :ATTACH:
+:PROPERTIES:
+:Attachments: e3tests.tgz
+:ID:       ba0a807b-4fbe-4439-b9bb-856ffedcf1bc
+:END:
 
-Veja este arquivo (TBD).
+Veja [[./data/ba/0a807b-4fbe-4439-b9bb-856ffedcf1bc/e3tests.tgz][este arquivo]].
 
-Os arquivos que tem a string =DECL= em um comentário C99 são aqueles que
+Todas as entradas estão sintaticamente corretas de acordo com E2. Os
+arquivos que tem a string =DECL= em um comentário C99 são aqueles que
 permitem que a saída de descompilação seja vazia.
 
 ** Comentários por grupo
