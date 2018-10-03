@@ -1287,6 +1287,172 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
 
+
+Tau
+- [ ] local.tests/e2/input/asl01 0
+- [ ] local.tests/e2/input/asl02 0
+- [ ] local.tests/e2/input/asl03 0
+- [ ] local.tests/e2/input/asl04 0
+- [ ] local.tests/e2/input/asl05 0
+- [ ] local.tests/e2/input/asl06 0
+- [ ] local.tests/e2/input/asl07 0
+- [ ] local.tests/e2/input/asl08 0
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 0
+- [ ] local.tests/e2/input/asl31 0
+- [ ] local.tests/e2/input/asl32 0
+- [ ] local.tests/e2/input/asl33 0
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 0
+- [ ] local.tests/e2/input/asl37 0
+- [ ] local.tests/e2/input/asl38 0
+- [ ] local.tests/e2/input/asl39 0
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 0
+- [ ] local.tests/e2/input/asl44 0
+- [ ] local.tests/e2/input/asl46 0
+- [ ] local.tests/e2/input/asl47 0
+- [ ] local.tests/e2/input/asl48 0
+- [ ] local.tests/e2/input/asl49 0
+- [ ] local.tests/e2/input/asl50 0
+- [ ] local.tests/e2/input/asl51 0
+- [ ] local.tests/e2/input/asl52 0
+- [ ] local.tests/e2/input/asl53 0
+- [ ] local.tests/e2/input/asl54 0
+- [ ] local.tests/e2/input/asl55 0
+- [ ] local.tests/e2/input/asl56 0
+- [ ] local.tests/e2/input/asl57 0
+- [ ] local.tests/e2/input/asl58 0
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+- [ ] local.tests/e2/input/asl62 0
+- [ ] local.tests/e2/input/asl63 0
+- [ ] local.tests/e2/input/asl64 0
+- [ ] local.tests/e2/input/asl65 0
+- [ ] local.tests/e2/input/asl66 0
+- [ ] local.tests/e2/input/asl67 0
+- [ ] local.tests/e2/input/asl70 0
+- [ ] local.tests/e2/input/asl72 0
+- [ ] local.tests/e2/input/asl73 0
+- [ ] local.tests/e2/input/asl74 0
+- [ ] local.tests/e2/input/asl75 0
+- [ ] local.tests/e2/input/asl76 0
+- [ ] local.tests/e2/input/asl77 0
+- [ ] local.tests/e2/input/asl78 0
+- [ ] local.tests/e2/input/asl79 0
+- [ ] local.tests/e2/input/asl80 0
+- [ ] local.tests/e2/input/asl81 0
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 0
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 0
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (8).
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 0
+- [ ] local.tests/e3/i_e3_005.ptg 0
+- [ ] local.tests/e3/i_e3_006.ptg 0
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 0
+- [ ] local.tests/e3/i_e3_009.ptg 0
+- [ ] local.tests/e3/i_e3_010.ptg 0
+- [ ] local.tests/e3/i_e3_011.ptg 0
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 0
+- [ ] local.tests/e3/i_e3_014.ptg 0
+- [ ] local.tests/e3/i_e3_015.ptg 0
+- [ ] local.tests/e3/i_e3_016.ptg 0
+- [ ] local.tests/e3/i_e3_017.ptg 0
+- [ ] local.tests/e3/i_e3_018.ptg 0
+- [ ] local.tests/e3/i_e3_019.ptg 0
+- [ ] local.tests/e3/i_e3_020.ptg 0
+- [ ] local.tests/e3/i_e3_021.ptg 0
+- [ ] local.tests/e3/i_e3_022.ptg 0
+- [ ] local.tests/e3/i_e3_023.ptg 0
+- [ ] local.tests/e3/i_e3_024.ptg 0
+- [ ] local.tests/e3/i_e3_025.ptg 0
+- [ ] local.tests/e3/i_e3_026.ptg 0
+- [ ] local.tests/e3/i_e3_027.ptg 0
+- [ ] local.tests/e3/i_e3_028.ptg 0
+- [ ] local.tests/e3/i_e3_029.ptg 0
+- [ ] local.tests/e3/i_e3_030.ptg 0
+- [ ] local.tests/e3/i_e3_031.ptg 0
+- [ ] local.tests/e3/i_e3_032.ptg 0
+- [ ] local.tests/e3/i_e3_033.ptg 0
+- [ ] local.tests/e3/i_e3_034.ptg 0
+- [ ] local.tests/e3/i_e3_035.ptg 0
+- [ ] local.tests/e3/i_e3_036.ptg 0
+- [ ] local.tests/e3/i_e3_037.ptg 0
+- [ ] local.tests/e3/i_e3_038.ptg 0
+- [ ] local.tests/e3/i_e3_039.ptg 0
+- [ ] local.tests/e3/i_e3_040.ptg 0
+- [ ] local.tests/e3/i_e3_041.ptg 0
+- [ ] local.tests/e3/i_e3_042.ptg 0
+- [ ] local.tests/e3/i_e3_043.ptg 0
+- [ ] local.tests/e3/i_e3_044.ptg 0
+- [ ] local.tests/e3/i_e3_045.ptg 0
+- [ ] local.tests/e3/i_e3_046.ptg 0
+- [ ] local.tests/e3/i_e3_047.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,18d0
+< int fibonacci (int n) {
+< if (n == 0) then {
+< return 1;
+< }
+< ;
+< if (n == 1) then {
+< return 1;
+< }
+< ;
+< return fibonacci(n - 1) + fibonacci(n - 2);
+< }
+< 
+< int main () {
+< int numero;
+< output Insira um numero: ;
+< input numero;
+< output O valor fibonacci eh: , fibonacci(numero);
+< }
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_048.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,14d0
+< numero int;
+< 
+< int main () {
+< output Fatorial de , numero,  = , fatorial(numero);
+< return 0;
+< }
+< 
+< int fatorial (int n) {
+< if (n == 1) then {
+< return 1;
+< }
+< ;
+< return n * fatorial(n - 1);
+< }
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_049.ptg 0
+- [ ] local.tests/e3/i_e3_050.ptg 0
+
 *** Omega
 
 - [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
@@ -1295,6 +1461,252 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 4. Descompila
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
+
+Omega
+- [ ] local.tests/e2/input/asl01 0
+- [ ] local.tests/e2/input/asl02 0
+- [ ] local.tests/e2/input/asl03 0
+- [ ] local.tests/e2/input/asl04 0
+- [ ] local.tests/e2/input/asl05 0
+- [ ] local.tests/e2/input/asl06 0
+- [ ] local.tests/e2/input/asl07 0
+- [ ] local.tests/e2/input/asl08 0
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 0
+- [ ] local.tests/e2/input/asl31 0
+- [ ] local.tests/e2/input/asl32 0
+- [ ] local.tests/e2/input/asl33 0
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 0
+- [ ] local.tests/e2/input/asl37 0
+- [ ] local.tests/e2/input/asl38 0
+- [ ] local.tests/e2/input/asl39 0
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 0
+- [ ] local.tests/e2/input/asl44 0
+- [ ] local.tests/e2/input/asl46 0
+- [ ] local.tests/e2/input/asl47 0
+- [ ] local.tests/e2/input/asl48 0
+- [ ] local.tests/e2/input/asl49 0
+- [ ] local.tests/e2/input/asl50 0
+- [ ] local.tests/e2/input/asl51 0
+- [ ] local.tests/e2/input/asl52 0
+- [ ] local.tests/e2/input/asl53 0
+- [ ] local.tests/e2/input/asl54 0
+- [ ] local.tests/e2/input/asl55 0
+- [ ] local.tests/e2/input/asl56 0
+- [ ] local.tests/e2/input/asl57 0
+- [ ] local.tests/e2/input/asl58 0
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+- [ ] local.tests/e2/input/asl62 0
+- [ ] local.tests/e2/input/asl63 0
+- [ ] local.tests/e2/input/asl64 0
+- [ ] local.tests/e2/input/asl65 0
+- [ ] local.tests/e2/input/asl66 0
+- [ ] local.tests/e2/input/asl67 0
+- [ ] local.tests/e2/input/asl70 0
+- [ ] local.tests/e2/input/asl72 0
+- [ ] local.tests/e2/input/asl73 0
+- [ ] local.tests/e2/input/asl74 0
+- [ ] local.tests/e2/input/asl75 0
+- [ ] local.tests/e2/input/asl76 0
+- [ ] local.tests/e2/input/asl77 0
+- [ ] local.tests/e2/input/asl78 0
+- [ ] local.tests/e2/input/asl79 0
+- [ ] local.tests/e2/input/asl80 0
+- [ ] local.tests/e2/input/asl81 0
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 0
+- [ ] local.tests/e2/input/asl114 0
+- [ ] local.tests/e2/input/asl126 0
+- [ ] local.tests/e3/i_e3_000.ptg 0
+- [ ] local.tests/e3/i_e3_001.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< Line 2: syntax error near ";"
+---
+> Line 1: syntax error near "2"
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 0
+- [ ] local.tests/e3/i_e3_005.ptg 0
+- [ ] local.tests/e3/i_e3_006.ptg 0
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 0
+- [ ] local.tests/e3/i_e3_009.ptg 0
+- [ ] local.tests/e3/i_e3_010.ptg 0
+- [ ] local.tests/e3/i_e3_011.ptg 0
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 0
+- [ ] local.tests/e3/i_e3_014.ptg 0
+- [ ] local.tests/e3/i_e3_015.ptg 0
+- [ ] local.tests/e3/i_e3_016.ptg 0
+- [ ] local.tests/e3/i_e3_017.ptg 0
+- [ ] local.tests/e3/i_e3_018.ptg 0
+- [ ] local.tests/e3/i_e3_019.ptg 0
+- [ ] local.tests/e3/i_e3_020.ptg 0
+- [ ] local.tests/e3/i_e3_021.ptg 0
+- [ ] local.tests/e3/i_e3_022.ptg 0
+- [ ] local.tests/e3/i_e3_023.ptg 0
+- [ ] local.tests/e3/i_e3_024.ptg 0
+- [ ] local.tests/e3/i_e3_025.ptg 0
+- [ ] local.tests/e3/i_e3_026.ptg 0
+- [ ] local.tests/e3/i_e3_027.ptg 0
+- [ ] local.tests/e3/i_e3_028.ptg 0
+- [ ] local.tests/e3/i_e3_029.ptg 0
+- [ ] local.tests/e3/i_e3_030.ptg 0
+- [ ] local.tests/e3/i_e3_031.ptg 0
+- [ ] local.tests/e3/i_e3_032.ptg 0
+- [ ] local.tests/e3/i_e3_033.ptg 0
+- [ ] local.tests/e3/i_e3_034.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+0a1
+> Line 5: syntax error near ";"
+2,7c3
+< vetor [10] int ;int f  (){
+< int x ;
+< 
+< x[vetor][10] = ;
+< }
+< 
+---
+> vetor [10] int ;
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_035.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+0a1
+> Line 5: syntax error near ";"
+2,7c3
+< vetor [10] int ;int f  (){
+< int x ;
+< 
+< x[vetor][(10+20)] = ;
+< }
+< 
+---
+> vetor [10] int ;
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_036.ptg 0
+- [ ] local.tests/e3/i_e3_037.ptg 0
+- [ ] local.tests/e3/i_e3_038.ptg 0
+- [ ] local.tests/e3/i_e3_039.ptg 0
+- [ ] local.tests/e3/i_e3_040.ptg 0
+- [ ] local.tests/e3/i_e3_041.ptg 0
+- [ ] local.tests/e3/i_e3_042.ptg 0
+- [ ] local.tests/e3/i_e3_043.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+0a1
+> Line 26: syntax error near ";"
+3,47c4
+< v [10] int ;int bubblesort  (int vetor2 , int tamanho  ){
+< int i ;
+< 
+< int j ;
+< 
+< int aux ;
+< 
+< int k ;
+< 
+< k = (tamanho-1);
+< 
+< i = 0;
+< 
+< j = 0;
+< 
+< while ((i<tamanho)) do{
+< 
+< j = 0;
+< 
+< while ((j<k)) do{
+< 
+< if ((vetor[j]>vetor[(j+1)])) then{
+< 
+< aux[v][j] = ;
+< 
+< v[j] = v[(j+1)];
+< 
+< v[(j+1)] = aux;
+< }
+< 
+< ;
+< 
+< j = (j+1);
+< }
+< 
+< ;
+< 
+< i = (i+1);
+< 
+< k = (k-1);
+< }
+< 
+< ;
+< }
+< 
+---
+> v [10] int ;
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_044.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+0a1
+> Line 13: syntax error near ";"
+2,29c3
+< vetor [10] int ;int insertionSort  (int vetor2 , int tamanho  ){
+< int i ;
+< 
+< int aux ;
+< 
+< i = 1;
+< 
+< while ((i<tamanho)) do{
+< 
+< while (((i!=0)&&(vetor[i]<vetor[(i-1)]))) do{
+< 
+< aux[vetor][i] = ;
+< 
+< vetor[i] = vetor[(i-1)];
+< 
+< vetor[(i-1)] = aux;
+< 
+< i = (i-1);
+< }
+< 
+< ;
+< 
+< i = (i+1);
+< }
+< 
+< ;
+< }
+< 
+---
+> vetor [10] int ;
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_045.ptg 0
+- [ ] local.tests/e3/i_e3_046.ptg 0
+- [ ] local.tests/e3/i_e3_047.ptg 0
+- [ ] local.tests/e3/i_e3_048.ptg 0
+- [ ] local.tests/e3/i_e3_049.ptg 0
+- [ ] local.tests/e3/i_e3_050.ptg 0
 
 *** Gamma
 
@@ -1305,6 +1717,131 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
 
+Gamma
+- [ ] local.tests/e2/input/asl01 0
+- [ ] local.tests/e2/input/asl02 0
+- [ ] local.tests/e2/input/asl03 0
+- [ ] local.tests/e2/input/asl04 0
+- [ ] local.tests/e2/input/asl05 0
+- [ ] local.tests/e2/input/asl06 0
+- [ ] local.tests/e2/input/asl07 0
+- [ ] local.tests/e2/input/asl08 0
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 0
+- [ ] local.tests/e2/input/asl31 0
+- [ ] local.tests/e2/input/asl32 0
+- [ ] local.tests/e2/input/asl33 0
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 0
+- [ ] local.tests/e2/input/asl37 0
+- [ ] local.tests/e2/input/asl38 0
+- [ ] local.tests/e2/input/asl39 0
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 0
+- [ ] local.tests/e2/input/asl44 0
+- [ ] local.tests/e2/input/asl46 0
+- [ ] local.tests/e2/input/asl47 0
+- [ ] local.tests/e2/input/asl48 0
+- [ ] local.tests/e2/input/asl49 0
+- [ ] local.tests/e2/input/asl50 0
+- [ ] local.tests/e2/input/asl51 0
+- [ ] local.tests/e2/input/asl52 0
+- [ ] local.tests/e2/input/asl53 0
+- [ ] local.tests/e2/input/asl54 0
+- [ ] local.tests/e2/input/asl55 0
+- [ ] local.tests/e2/input/asl56 0
+- [ ] local.tests/e2/input/asl57 0
+- [ ] local.tests/e2/input/asl58 0
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+- [ ] local.tests/e2/input/asl62 0
+- [ ] local.tests/e2/input/asl63 0
+- [ ] local.tests/e2/input/asl64 0
+- [ ] local.tests/e2/input/asl65 0
+- [ ] local.tests/e2/input/asl66 0
+- [ ] local.tests/e2/input/asl67 0
+- [ ] local.tests/e2/input/asl70 0
+- [ ] local.tests/e2/input/asl72 0
+- [ ] local.tests/e2/input/asl73 0
+- [ ] local.tests/e2/input/asl74 0
+- [ ] local.tests/e2/input/asl75 0
+- [ ] local.tests/e2/input/asl76 0
+- [ ] local.tests/e2/input/asl77 0
+- [ ] local.tests/e2/input/asl78 0
+- [ ] local.tests/e2/input/asl79 0
+- [ ] local.tests/e2/input/asl80 0
+- [ ] local.tests/e2/input/asl81 0
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 0
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 0
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (8).
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 0
+- [ ] local.tests/e3/i_e3_005.ptg 0
+- [ ] local.tests/e3/i_e3_006.ptg 0
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 0
+- [ ] local.tests/e3/i_e3_009.ptg 0
+- [ ] local.tests/e3/i_e3_010.ptg 0
+- [ ] local.tests/e3/i_e3_011.ptg 0
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 0
+- [ ] local.tests/e3/i_e3_014.ptg 0
+- [ ] local.tests/e3/i_e3_015.ptg 0
+- [ ] local.tests/e3/i_e3_016.ptg 0
+- [ ] local.tests/e3/i_e3_017.ptg 0
+- [ ] local.tests/e3/i_e3_018.ptg 0
+- [ ] local.tests/e3/i_e3_019.ptg 0
+- [ ] local.tests/e3/i_e3_020.ptg 0
+- [ ] local.tests/e3/i_e3_021.ptg 0
+- [ ] local.tests/e3/i_e3_022.ptg 0
+- [ ] local.tests/e3/i_e3_023.ptg 0
+- [ ] local.tests/e3/i_e3_024.ptg 0
+- [ ] local.tests/e3/i_e3_025.ptg 0
+- [ ] local.tests/e3/i_e3_026.ptg 0
+- [ ] local.tests/e3/i_e3_027.ptg 0
+- [ ] local.tests/e3/i_e3_028.ptg 0
+- [ ] local.tests/e3/i_e3_029.ptg 0
+- [ ] local.tests/e3/i_e3_030.ptg 0
+- [ ] local.tests/e3/i_e3_031.ptg 0
+- [ ] local.tests/e3/i_e3_032.ptg 0
+- [ ] local.tests/e3/i_e3_033.ptg 0
+- [ ] local.tests/e3/i_e3_034.ptg 0
+- [ ] local.tests/e3/i_e3_035.ptg 0
+- [ ] local.tests/e3/i_e3_036.ptg 0
+- [ ] local.tests/e3/i_e3_037.ptg 0
+- [ ] local.tests/e3/i_e3_038.ptg 0
+- [ ] local.tests/e3/i_e3_039.ptg 0
+- [ ] local.tests/e3/i_e3_040.ptg 0
+- [ ] local.tests/e3/i_e3_041.ptg 0
+- [ ] local.tests/e3/i_e3_042.ptg 0
+- [ ] local.tests/e3/i_e3_043.ptg 0
+- [ ] local.tests/e3/i_e3_044.ptg 0
+- [ ] local.tests/e3/i_e3_045.ptg 0
+- [ ] local.tests/e3/i_e3_046.ptg 0
+- [ ] local.tests/e3/i_e3_047.ptg 0
+- [ ] local.tests/e3/i_e3_048.ptg 0
+- [ ] local.tests/e3/i_e3_049.ptg 0
+- [ ] local.tests/e3/i_e3_050.ptg 0
+
 *** Beta
 
 - [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
@@ -1313,6 +1850,137 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 4. Descompila
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
+
+Beta
+- [ ] local.tests/e2/input/asl01 0
+- [ ] local.tests/e2/input/asl02 0
+- [ ] local.tests/e2/input/asl03 0
+- [ ] local.tests/e2/input/asl04 0
+- [ ] local.tests/e2/input/asl05 0
+- [ ] local.tests/e2/input/asl06 0
+- [ ] local.tests/e2/input/asl07 0
+- [ ] local.tests/e2/input/asl08 0
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 0
+- [ ] local.tests/e2/input/asl31 0
+- [ ] local.tests/e2/input/asl32 0
+- [ ] local.tests/e2/input/asl33 0
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 0
+- [ ] local.tests/e2/input/asl37 0
+- [ ] local.tests/e2/input/asl38 0
+- [ ] local.tests/e2/input/asl39 0
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 0
+- [ ] local.tests/e2/input/asl44 0
+- [ ] local.tests/e2/input/asl46 0
+- [ ] local.tests/e2/input/asl47 0
+- [ ] local.tests/e2/input/asl48 0
+- [ ] local.tests/e2/input/asl49 0
+- [ ] local.tests/e2/input/asl50 0
+- [ ] local.tests/e2/input/asl51 0
+- [ ] local.tests/e2/input/asl52 0
+- [ ] local.tests/e2/input/asl53 0
+- [ ] local.tests/e2/input/asl54 0
+- [ ] local.tests/e2/input/asl55 0
+- [ ] local.tests/e2/input/asl56 0
+- [ ] local.tests/e2/input/asl57 0
+- [ ] local.tests/e2/input/asl58 0
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+- [ ] local.tests/e2/input/asl62 0
+- [ ] local.tests/e2/input/asl63 0
+- [ ] local.tests/e2/input/asl64 0
+- [ ] local.tests/e2/input/asl65 0
+- [ ] local.tests/e2/input/asl66 0
+- [ ] local.tests/e2/input/asl67 0
+- [ ] local.tests/e2/input/asl70 0
+- [ ] local.tests/e2/input/asl72 0
+- [ ] local.tests/e2/input/asl73 0
+- [ ] local.tests/e2/input/asl74 0
+- [ ] local.tests/e2/input/asl75 0
+- [ ] local.tests/e2/input/asl76 0
+- [ ] local.tests/e2/input/asl77 0
+- [ ] local.tests/e2/input/asl78 0
+- [ ] local.tests/e2/input/asl79 0
+- [ ] local.tests/e2/input/asl80 0
+- [ ] local.tests/e2/input/asl81 0
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 0
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 0
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< syntax error, unexpected ';', expecting '(', on line 2
+---
+> syntax error, unexpected ',', expecting ';' or '(', on line 1
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 0
+- [ ] local.tests/e3/i_e3_005.ptg 0
+- [ ] local.tests/e3/i_e3_006.ptg 0
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 0
+- [ ] local.tests/e3/i_e3_009.ptg 0
+- [ ] local.tests/e3/i_e3_010.ptg 0
+- [ ] local.tests/e3/i_e3_011.ptg 0
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 0
+- [ ] local.tests/e3/i_e3_014.ptg 0
+- [ ] local.tests/e3/i_e3_015.ptg 0
+- [ ] local.tests/e3/i_e3_016.ptg 0
+- [ ] local.tests/e3/i_e3_017.ptg 0
+- [ ] local.tests/e3/i_e3_018.ptg 0
+- [ ] local.tests/e3/i_e3_019.ptg 0
+- [ ] local.tests/e3/i_e3_020.ptg 0
+- [ ] local.tests/e3/i_e3_021.ptg 0
+- [ ] local.tests/e3/i_e3_022.ptg 0
+- [ ] local.tests/e3/i_e3_023.ptg 0
+- [ ] local.tests/e3/i_e3_024.ptg 0
+- [ ] local.tests/e3/i_e3_025.ptg 0
+- [ ] local.tests/e3/i_e3_026.ptg 0
+- [ ] local.tests/e3/i_e3_027.ptg 0
+- [ ] local.tests/e3/i_e3_028.ptg 0
+- [ ] local.tests/e3/i_e3_029.ptg 0
+- [ ] local.tests/e3/i_e3_030.ptg 0
+- [ ] local.tests/e3/i_e3_031.ptg 0
+- [ ] local.tests/e3/i_e3_032.ptg 0
+- [ ] local.tests/e3/i_e3_033.ptg 0
+- [ ] local.tests/e3/i_e3_034.ptg 0
+- [ ] local.tests/e3/i_e3_035.ptg 0
+- [ ] local.tests/e3/i_e3_036.ptg 0
+- [ ] local.tests/e3/i_e3_037.ptg 0
+- [ ] local.tests/e3/i_e3_038.ptg 0
+- [ ] local.tests/e3/i_e3_039.ptg 0
+- [ ] local.tests/e3/i_e3_040.ptg 0
+- [ ] local.tests/e3/i_e3_041.ptg 0
+- [ ] local.tests/e3/i_e3_042.ptg 0
+- [ ] local.tests/e3/i_e3_043.ptg 0
+- [ ] local.tests/e3/i_e3_044.ptg 0
+- [ ] local.tests/e3/i_e3_045.ptg 0
+- [ ] local.tests/e3/i_e3_046.ptg 0
+- [ ] local.tests/e3/i_e3_047.ptg 0
+- [ ] local.tests/e3/i_e3_048.ptg 0
+- [ ] local.tests/e3/i_e3_049.ptg 0
+- [ ] local.tests/e3/i_e3_050.ptg 0
 
 *** Eta
 
@@ -1323,6 +1991,131 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
 
+Eta
+- [ ] local.tests/e2/input/asl01 0
+- [ ] local.tests/e2/input/asl02 0
+- [ ] local.tests/e2/input/asl03 0
+- [ ] local.tests/e2/input/asl04 0
+- [ ] local.tests/e2/input/asl05 0
+- [ ] local.tests/e2/input/asl06 0
+- [ ] local.tests/e2/input/asl07 0
+- [ ] local.tests/e2/input/asl08 0
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 0
+- [ ] local.tests/e2/input/asl31 0
+- [ ] local.tests/e2/input/asl32 0
+- [ ] local.tests/e2/input/asl33 0
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 0
+- [ ] local.tests/e2/input/asl37 0
+- [ ] local.tests/e2/input/asl38 0
+- [ ] local.tests/e2/input/asl39 0
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 0
+- [ ] local.tests/e2/input/asl44 0
+- [ ] local.tests/e2/input/asl46 0
+- [ ] local.tests/e2/input/asl47 0
+- [ ] local.tests/e2/input/asl48 0
+- [ ] local.tests/e2/input/asl49 0
+- [ ] local.tests/e2/input/asl50 0
+- [ ] local.tests/e2/input/asl51 0
+- [ ] local.tests/e2/input/asl52 0
+- [ ] local.tests/e2/input/asl53 0
+- [ ] local.tests/e2/input/asl54 0
+- [ ] local.tests/e2/input/asl55 0
+- [ ] local.tests/e2/input/asl56 0
+- [ ] local.tests/e2/input/asl57 0
+- [ ] local.tests/e2/input/asl58 0
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+- [ ] local.tests/e2/input/asl62 0
+- [ ] local.tests/e2/input/asl63 0
+- [ ] local.tests/e2/input/asl64 0
+- [ ] local.tests/e2/input/asl65 0
+- [ ] local.tests/e2/input/asl66 0
+- [ ] local.tests/e2/input/asl67 0
+- [ ] local.tests/e2/input/asl70 0
+- [ ] local.tests/e2/input/asl72 0
+- [ ] local.tests/e2/input/asl73 0
+- [ ] local.tests/e2/input/asl74 0
+- [ ] local.tests/e2/input/asl75 0
+- [ ] local.tests/e2/input/asl76 0
+- [ ] local.tests/e2/input/asl77 0
+- [ ] local.tests/e2/input/asl78 0
+- [ ] local.tests/e2/input/asl79 0
+- [ ] local.tests/e2/input/asl80 0
+- [ ] local.tests/e2/input/asl81 0
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 0
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 0
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (8).
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 0
+- [ ] local.tests/e3/i_e3_005.ptg 0
+- [ ] local.tests/e3/i_e3_006.ptg 0
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 0
+- [ ] local.tests/e3/i_e3_009.ptg 0
+- [ ] local.tests/e3/i_e3_010.ptg 0
+- [ ] local.tests/e3/i_e3_011.ptg 0
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 0
+- [ ] local.tests/e3/i_e3_014.ptg 0
+- [ ] local.tests/e3/i_e3_015.ptg 0
+- [ ] local.tests/e3/i_e3_016.ptg 0
+- [ ] local.tests/e3/i_e3_017.ptg 0
+- [ ] local.tests/e3/i_e3_018.ptg 0
+- [ ] local.tests/e3/i_e3_019.ptg 0
+- [ ] local.tests/e3/i_e3_020.ptg 0
+- [ ] local.tests/e3/i_e3_021.ptg 0
+- [ ] local.tests/e3/i_e3_022.ptg 0
+- [ ] local.tests/e3/i_e3_023.ptg 0
+- [ ] local.tests/e3/i_e3_024.ptg 0
+- [ ] local.tests/e3/i_e3_025.ptg 0
+- [ ] local.tests/e3/i_e3_026.ptg 0
+- [ ] local.tests/e3/i_e3_027.ptg 0
+- [ ] local.tests/e3/i_e3_028.ptg 0
+- [ ] local.tests/e3/i_e3_029.ptg 0
+- [ ] local.tests/e3/i_e3_030.ptg 0
+- [ ] local.tests/e3/i_e3_031.ptg 0
+- [ ] local.tests/e3/i_e3_032.ptg 0
+- [ ] local.tests/e3/i_e3_033.ptg 0
+- [ ] local.tests/e3/i_e3_034.ptg 0
+- [ ] local.tests/e3/i_e3_035.ptg 0
+- [ ] local.tests/e3/i_e3_036.ptg 0
+- [ ] local.tests/e3/i_e3_037.ptg 0
+- [ ] local.tests/e3/i_e3_038.ptg 0
+- [ ] local.tests/e3/i_e3_039.ptg 0
+- [ ] local.tests/e3/i_e3_040.ptg 0
+- [ ] local.tests/e3/i_e3_041.ptg 0
+- [ ] local.tests/e3/i_e3_042.ptg 0
+- [ ] local.tests/e3/i_e3_043.ptg 0
+- [ ] local.tests/e3/i_e3_044.ptg 0
+- [ ] local.tests/e3/i_e3_045.ptg 0
+- [ ] local.tests/e3/i_e3_046.ptg 0
+- [ ] local.tests/e3/i_e3_047.ptg 0
+- [ ] local.tests/e3/i_e3_048.ptg 0
+- [ ] local.tests/e3/i_e3_049.ptg 0
+- [ ] local.tests/e3/i_e3_050.ptg 0
+
 *** Delta
 
 - [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
@@ -1331,6 +2124,1327 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 4. Descompila
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
+
+
+Delta
+- [ ] local.tests/e2/input/asl01 0
+- [ ] local.tests/e2/input/asl02 0
+- [ ] local.tests/e2/input/asl03 0
+- [ ] local.tests/e2/input/asl04 0
+- [ ] local.tests/e2/input/asl05 0
+- [ ] local.tests/e2/input/asl06 0
+- [ ] local.tests/e2/input/asl07 0
+- [ ] local.tests/e2/input/asl08 0
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< error on line 3: syntax error, unexpected TK_PR_CONST, expecting ')'
+---
+> error on line 1: syntax error, unexpected TK_IDENTIFICADOR, expecting '(' or ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl31 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f() {
+<  {
+< }}
+---
+> error on line 4: syntax error, unexpected '}', expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl32 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< 
+< int f() {
+<  {
+<  {
+<  {
+< }}}}
+---
+> error on line 6: syntax error, unexpected '}', expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl33 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f() {
+<   a int;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f() {
+<   a float;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_FLOAT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl37 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f() {
+<   a char;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_CHAR
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl38 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f() {
+<   a bool;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_BOOL
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl39 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f() {
+<   a string;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_STRING
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f() {
+<   a int <= 2;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl44 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   b int <= 10;
+<   a int <= b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl46 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   a int;
+< a = 2;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl47 0
+- [ ] local.tests/e2/input/asl48 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< a [10] int;
+< 
+< int f() {
+<   c int;
+< c = 2;
+< a[c+c] = 2;
+< }
+---
+> error on line 4: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl49 0
+- [ ] local.tests/e2/input/asl50 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   c int;
+< input c;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl51 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   c int;
+< output a;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl52 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   c int;
+< output a, b, c;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl53 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,3c1
+< 
+< int f() {
+< (null)}
+---
+> error on line 3: syntax error, unexpected '(', expecting '}'
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl54 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f(int a, int b) {
+<   x int;
+<   y int;
+< (null)xy  }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl55 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f(int a, int b) {
+<   x int;
+< (null)x  }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl56 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   x int;
+< x << 2;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl57 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   x int;
+< x << 4;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl58 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   x int;
+< return x;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+- [ ] local.tests/e2/input/asl62 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   c int;
+< 
+< if (c) then {
+< }
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl63 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,8c1
+< 
+< int f() {
+<   c int;
+< 
+< if (c) then {
+< } else  {
+< }
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl64 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,8c1
+< 
+< int f() {
+<   x int;
+<   i int;
+< foreach (i : x, x, x)
+<  {
+< };
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl65 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,12c1
+< 
+< int f() {
+<   x int;
+<   i int;
+<   j int;
+< for (i = 0;
+< j = 0;
+<  : i : i = 2;
+< j = 3;
+< ) {
+< };
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl66 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,8c1
+< 
+< int f() {
+<   x int;
+<   i int;
+<   j int;
+< while (i) do  {
+< }
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl67 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< 
+< int f() {
+<   x int;
+< do {
+< } while(i);
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl70 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   x int;
+< x = 3;
+< switch (x) {
+< }
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl72 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f() {
+<   a int;
+< (null)}
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl73 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f() {
+<   a int;
+< (null)}
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl74 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f() {
+<   a int;
+< (null)}
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl75 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   a int;
+< a = (null);
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl76 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   c int;
+< a = 2*c+a/b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl77 0
+- [ ] local.tests/e2/input/asl78 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,4c1
+< 
+< int f(int a) {
+< c[5] = 3*(null)a +a;
+< }
+---
+> error on line 3: syntax error, unexpected TK_IDENTIFICADOR, expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl79 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   a int;
+< a = 2*c+k;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl80 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,9c1
+< 
+< int f() {
+< 
+< if (a==2) then {
+< }
+< 
+< if (a+b<=10) then {
+< }
+< }
+---
+> error on line 7: syntax error, unexpected TK_PR_IF, expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl81 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< v1 int;
+< 
+< int f1(float k, int l) {
+<   a int;
+< }
+< v2 [100] int;
+< v3 char;
+---
+> error on line 4: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,8c1
+< class ASL_t [ public int a ];
+< 
+< int f() {
+<   b int;
+< b = 3;
+<   xis xis;
+< xis >> b+2;
+< }
+---
+> error on line 4: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int main() {
+< switch (x) {
+< case 1:y = 2;
+< break;
+< }
+< }
+---
+> error on line 7: syntax error, unexpected '}', expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< error on line 2: syntax error, unexpected ';', expecting '('
+---
+> error on line 1: syntax error, unexpected TK_IDENTIFICADOR, expecting '(' or ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< 
+< int f() {
+<  {
+< } {
+< } {
+< }}
+---
+> error on line 4: syntax error, unexpected '{', expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_005.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,8c1
+< 
+< int f() {
+<   x int;
+< 
+< if (true) then {
+< x = 3;
+< }
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_006.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+< 
+< if (true) then {
+< } else  {
+< }
+< }
+---
+> error on line 7: syntax error, unexpected '}', expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+< while (true) do  {
+< }
+< }
+---
+> error on line 5: syntax error, unexpected '}', expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_009.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   b int;
+< input b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_010.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   b int;
+< output 3+b, 3+b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_011.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   x int;
+< x = 10;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,10c1
+< 
+< int f() {
+<  {
+<  {
+< return 10;
+< } {
+< return 20;
+< }} {
+< return 30;
+< }}
+---
+> error on line 6: syntax error, unexpected '{', expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_014.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,12c1
+< 
+< int f() {
+<   iks int;
+<   zede int;
+<   ka int;
+<   erre int;
+<   caps int;
+<   _tres int;
+< iks = zede;
+< ka = erre;
+< caps = _tres;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_015.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   iks string;
+< iks = "teste";
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_STRING
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_016.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   iks int;
+< iks = 10;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_017.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   iks float;
+< iks = 10.120000;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_FLOAT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_018.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   iks bool;
+<   caps bool;
+< iks = false;
+< caps = true;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_BOOL
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_019.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,5c1
+< 
+< int f() {
+<   iks char;
+< iks = 'c';
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_CHAR
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_020.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   x int;
+<   b int;
+< x = a+b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_021.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   x int;
+<   b int;
+< x = a-b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_022.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   x int;
+<   b int;
+< x = a*b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_023.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   x int;
+<   b int;
+< x = a/b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_024.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< 
+< int f() {
+<   x int;
+<   y int;
+< x = -y;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_025.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   x int;
+< x = a&&b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_026.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   x int;
+< x = a
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_027.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   x int;
+< x = a!=b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_028.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   x int;
+< x = a==b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_029.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   x int;
+< x = a<b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_030.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   x int;
+< x = a>b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_031.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   x int;
+< x = a<=b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_032.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,7c1
+< 
+< int f() {
+<   a int;
+<   b int;
+<   x int;
+< x = a>=b;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_033.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< 
+< int f() {
+<   x int;
+<   z int;
+< x = !z;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_034.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< vetor [10] int;
+< 
+< int f() {
+<   x int;
+< x = vetor[10];
+< }
+---
+> error on line 4: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_035.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< vetor [10] int;
+< 
+< int f() {
+<   x int;
+< x = vetor[10+20];
+< }
+---
+> error on line 4: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_036.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< 
+< int k() {
+< }
+< 
+< int f() {
+< (null)}
+---
+> error on line 6: syntax error, unexpected '(', expecting '}'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_037.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< 
+< int k(int x) {
+< }
+< 
+< int f() {
+< (null)10 }
+---
+> error on line 6: syntax error, unexpected '(', expecting '}'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_038.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< 
+< int k(int x, int y, int z) {
+< }
+< 
+< int f() {
+< (null)102030   }
+---
+> error on line 6: syntax error, unexpected '(', expecting '}'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_039.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,6c1
+< 
+< int k(int x, int y, int z) {
+< }
+< 
+< int f() {
+< (null)10+1020+2030+30   }
+---
+> error on line 6: syntax error, unexpected '(', expecting '}'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_040.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,23c1
+< 
+< int f() {
+<   a int;
+<   x int;
+<   b int;
+<   c int;
+<   y int;
+<   d int;
+<   e int;
+<   f int;
+<   z int;
+<   g int;
+<   h int;
+<   i int;
+<   w int;
+<   j int;
+<   k int;
+<   l int;
+< x = a+b*c;
+< y = d/e-f;
+< z = g+h*i;
+< w = j/k-l;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_041.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,23c1
+< 
+< int f() {
+<   a int;
+<   x int;
+<   b int;
+<   c int;
+<   y int;
+<   d int;
+<   e int;
+<   f int;
+<   z int;
+<   g int;
+<   h int;
+<   i int;
+<   w int;
+<   j int;
+<   k int;
+<   l int;
+< x = a
+< y = d&&e
+< z = g
+< w = j&&k
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_042.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,24c1
+< 
+< int f() {
+<   x int;
+<   a int;
+<   b int;
+<   c int;
+<   d int;
+<   e int;
+<   y int;
+<   f int;
+<   g int;
+<   h int;
+<   i int;
+<   j int;
+<   z int;
+<   k int;
+<   l int;
+<   m int;
+<   n int;
+<   o int;
+< x = a+b+c-d-e;
+< y = f*g*h/i/j;
+< z = k*l*m+n+o;
+< }
+---
+> error on line 3: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_043.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,26c1
+< vetor [10] int;
+< v [10] int;
+< 
+< int bubblesort(int vetor2, int tamanho) {
+<   i int;
+<   j int;
+<   aux int;
+<   k int;
+< k = tamanho-1;
+< i = 0;
+< j = 0;
+< while (i<tamanho) do  {
+< j = 0;
+< while (j<k) do  {
+< 
+< if (vetor[j]>vetor[j+1]) then {
+< aux = v[j];
+< v[j] = v[j+1];
+< v[j+1] = aux;
+< }
+< j = j+1;
+< }
+< i = i+1;
+< k = k-1;
+< }
+< }
+---
+> error on line 5: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_044.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,16c1
+< vetor [10] int;
+< 
+< int insertionSort(int vetor2, int tamanho) {
+<   i int;
+<   aux int;
+< i = 1;
+< while (i<tamanho) do  {
+< while (i!=0&&vetor[i]<vetor[i-1]) do  {
+< aux = vetor[i];
+< vetor[i] = vetor[i-1];
+< vetor[i-1] = aux;
+< i = i-1;
+< }
+< i = i+1;
+< }
+< }
+---
+> error on line 4: syntax error, unexpected TK_PR_INT
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_045.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,42c1
+< a int;
+< b int;
+< cas1 bool;
+< cas2 bool;
+< q int;
+< r int;
+< 
+< int euclidan_division(int vara, int varb) {
+< a = vara;
+< b = varb;
+< cas1 = false;
+< cas2 = false;
+< 
+< if (a<0) then {
+< cas1 = true;
+< a = -a;
+< }
+< 
+< if (b<0) then {
+< cas2 = true;
+< b = -b;
+< }
+< r = a;
+< q = 0;
+< while (r>=b) do  {
+< q = q+1;
+< r = r-b;
+< }
+< 
+< if (cas1&&!cas2) then {
+< q = -q-1;
+< }
+< 
+< if (!cas1&&cas2) then {
+< q = -q;
+< }
+< 
+< if (cas1&&cas2) then {
+< q = q+1;
+< }
+< return q;
+< }
+---
+> error on line 19: syntax error, unexpected TK_PR_IF, expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_046.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,28c1
+< entry int;
+< rank int;
+< aux1 int;
+< aux2 int;
+< aux3 int;
+< 
+< int fibo(int in) {
+< entry = in;
+< 
+< if (entry==0) then {
+< return 0;
+< }
+< 
+< if (entry==1) then {
+< return 1;
+< }
+< rank = 2;
+< aux1 = 0;
+< aux2 = 1;
+< aux3 = 1;
+< while (rank<entry) do  {
+< rank = rank+1;
+< aux1 = aux2;
+< aux2 = aux3;
+< aux3 = aux1+aux2;
+< }
+< return aux3;
+< }
+---
+> error on line 14: syntax error, unexpected TK_PR_IF, expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_047.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,19c1
+< 
+< int fibonacci(int n) {
+< 
+< if (n==0) then {
+< return 1;
+< }
+< 
+< if (n==1) then {
+< return 1;
+< }
+< return (null)n-1 +(null)n-2 ;
+< }
+< 
+< int main() {
+<   numero int;
+< output "Insira um numero: ";
+< input numero;
+< output "O valor fibonacci eh: ", (null)numero ;
+< }
+---
+> error on line 8: syntax error, unexpected TK_PR_IF, expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_048.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,14c1
+< numero int;
+< 
+< int main() {
+< output "Fatorial de ", numero, " = ", (null)numero ;
+< return 0;
+< }
+< 
+< int fatorial(int n) {
+< 
+< if (n==1) then {
+< return 1;
+< }
+< return n*(null)n-1 ;
+< }
+---
+> error on line 4: syntax error, unexpected TK_IDENTIFICADOR, expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_049.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,35c1
+< positivo int;
+< negativo int;
+< dobro int;
+< numero int;
+< indice int;
+< resultado int;
+< 
+< bool inverte() {
+< positivo = 2;
+< negativo = -positivo;
+< dobro = positivo-negativo;
+< }
+< 
+< int converte(bool convertido) {
+< convertido = !(null)2 ;
+< }
+< 
+< int matemagica(int num1, int num2, int num3) {
+< 
+< if (indice>0) then {
+< numero = num2*num1*num2+num3/num1+positivo;
+< numero = -numero;
+< numero = numero-num3+num2+num1*num2;
+< numero = numero+(null)indice23   ;
+< indice = indice-1;
+< return numero;
+< } else  {
+< return 1;
+< }
+< }
+< 
+< int main() {
+< indice = 50;
+< resultado = (null)indice1040   ;
+< }
+---
+> error on line 15: syntax error, unexpected TK_LIT_INT, expecting ';'
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_050.ptg 0
+
 
 *** Rho
 
@@ -1341,6 +3455,134 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
 
+Rho
+- [ ] local.tests/e2/input/asl01 0
+- [ ] local.tests/e2/input/asl02 0
+- [ ] local.tests/e2/input/asl03 0
+- [ ] local.tests/e2/input/asl04 0
+- [ ] local.tests/e2/input/asl05 0
+- [ ] local.tests/e2/input/asl06 0
+- [ ] local.tests/e2/input/asl07 0
+- [ ] local.tests/e2/input/asl08 0
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 0
+- [ ] local.tests/e2/input/asl31 0
+- [ ] local.tests/e2/input/asl32 0
+- [ ] local.tests/e2/input/asl33 0
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 0
+- [ ] local.tests/e2/input/asl37 0
+- [ ] local.tests/e2/input/asl38 0
+- [ ] local.tests/e2/input/asl39 0
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 0
+- [ ] local.tests/e2/input/asl44 0
+- [ ] local.tests/e2/input/asl46 0
+- [ ] local.tests/e2/input/asl47 0
+- [ ] local.tests/e2/input/asl48 0
+- [ ] local.tests/e2/input/asl49 0
+- [ ] local.tests/e2/input/asl50 0
+- [ ] local.tests/e2/input/asl51 0
+- [ ] local.tests/e2/input/asl52 0
+- [ ] local.tests/e2/input/asl53 0
+- [ ] local.tests/e2/input/asl54 0
+- [ ] local.tests/e2/input/asl55 0
+- [ ] local.tests/e2/input/asl56 0
+- [ ] local.tests/e2/input/asl57 0
+- [ ] local.tests/e2/input/asl58 0
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+- [ ] local.tests/e2/input/asl62 0
+- [ ] local.tests/e2/input/asl63 0
+- [ ] local.tests/e2/input/asl64 0
+- [ ] local.tests/e2/input/asl65 0
+- [ ] local.tests/e2/input/asl66 0
+- [ ] local.tests/e2/input/asl67 0
+- [ ] local.tests/e2/input/asl70 0
+- [ ] local.tests/e2/input/asl72 0
+- [ ] local.tests/e2/input/asl73 0
+- [ ] local.tests/e2/input/asl74 0
+- [ ] local.tests/e2/input/asl75 0
+- [ ] local.tests/e2/input/asl76 0
+- [ ] local.tests/e2/input/asl77 0
+- [ ] local.tests/e2/input/asl78 0
+- [ ] local.tests/e2/input/asl79 0
+- [ ] local.tests/e2/input/asl80 0
+- [ ] local.tests/e2/input/asl81 0
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 0
+- [ ] local.tests/e2/input/asl114 0
+- [ ] local.tests/e2/input/asl126 0
+- [ ] local.tests/e3/i_e3_000.ptg 0
+- [ ] local.tests/e3/i_e3_001.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+0a1
+> 
+     #+END_EXAMPLE
+   - Warning: eq1.txt (0) e/ou eq2.txt (1) vazios. Original (8).
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 0
+- [ ] local.tests/e3/i_e3_005.ptg 0
+- [ ] local.tests/e3/i_e3_006.ptg 0
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 0
+- [ ] local.tests/e3/i_e3_009.ptg 0
+- [ ] local.tests/e3/i_e3_010.ptg 0
+- [ ] local.tests/e3/i_e3_011.ptg 0
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 0
+- [ ] local.tests/e3/i_e3_014.ptg 0
+- [ ] local.tests/e3/i_e3_015.ptg 0
+- [ ] local.tests/e3/i_e3_016.ptg 0
+- [ ] local.tests/e3/i_e3_017.ptg 0
+- [ ] local.tests/e3/i_e3_018.ptg 0
+- [ ] local.tests/e3/i_e3_019.ptg 0
+- [ ] local.tests/e3/i_e3_020.ptg 0
+- [ ] local.tests/e3/i_e3_021.ptg 0
+- [ ] local.tests/e3/i_e3_022.ptg 0
+- [ ] local.tests/e3/i_e3_023.ptg 0
+- [ ] local.tests/e3/i_e3_024.ptg 0
+- [ ] local.tests/e3/i_e3_025.ptg 0
+- [ ] local.tests/e3/i_e3_026.ptg 0
+- [ ] local.tests/e3/i_e3_027.ptg 0
+- [ ] local.tests/e3/i_e3_028.ptg 0
+- [ ] local.tests/e3/i_e3_029.ptg 0
+- [ ] local.tests/e3/i_e3_030.ptg 0
+- [ ] local.tests/e3/i_e3_031.ptg 0
+- [ ] local.tests/e3/i_e3_032.ptg 0
+- [ ] local.tests/e3/i_e3_033.ptg 0
+- [ ] local.tests/e3/i_e3_034.ptg 0
+- [ ] local.tests/e3/i_e3_035.ptg 0
+- [ ] local.tests/e3/i_e3_036.ptg 0
+- [ ] local.tests/e3/i_e3_037.ptg 0
+- [ ] local.tests/e3/i_e3_038.ptg 0
+- [ ] local.tests/e3/i_e3_039.ptg 0
+- [ ] local.tests/e3/i_e3_040.ptg 0
+- [ ] local.tests/e3/i_e3_041.ptg 0
+- [ ] local.tests/e3/i_e3_042.ptg 0
+- [ ] local.tests/e3/i_e3_043.ptg 0
+- [ ] local.tests/e3/i_e3_044.ptg 0
+- [ ] local.tests/e3/i_e3_045.ptg 0
+- [ ] local.tests/e3/i_e3_046.ptg 0
+- [ ] local.tests/e3/i_e3_047.ptg 0
+- [ ] local.tests/e3/i_e3_048.ptg 0
+- [ ] local.tests/e3/i_e3_049.ptg 0
+- [ ] local.tests/e3/i_e3_050.ptg 0
+
 *** Iota
 
 - [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
@@ -1349,6 +3591,1108 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 4. Descompila
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
+
+Iota
+- [ ] local.tests/e2/input/asl01 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int v1 ; v1 int ;
+\ No newline at end of file
+---
+>  int v1
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl02 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int static v1 ; v1 static int ;
+\ No newline at end of file
+---
+>  int
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl03 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int ] 2 [ v1 ; v1 [ 2 ] int ;
+\ No newline at end of file
+---
+>  int
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl04 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int static ] 2 [ v1 ; v1 [ 2 ] static int ;
+\ No newline at end of file
+---
+>  int
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl05 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  float a ; a float ;
+\ No newline at end of file
+---
+>  float a
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl06 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  char a ; a char ;
+\ No newline at end of file
+---
+>  char a
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl07 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  bool a ; a bool ;
+\ No newline at end of file
+---
+>  bool a
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl08 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  string a ; a string ;
+\ No newline at end of file
+---
+>  string a
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl09 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1d0
+<  public int x ; ] [ ASL_t class ASL_t v ; class ASL_t [ public int x ] ; v ASL_t ;
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl10 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  ASL_t v ; v ASL_t ;
+\ No newline at end of file
+---
+>  v ASL_t ; ASL_t v ; ASL_t v ; v ASL_t ;
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl13 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1d0
+<  public int a ; ] [ ASL_t class class ASL_t [ public int a ] ;
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl16 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1d0
+<  public int a : public int b ; ] [ AST_t class class AST_t [ public int a : public int b ] ;
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl18 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int a ; ] [ AST_t class class AST_t [ int a ] ;
+\ No newline at end of file
+---
+>  int a
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl19 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1d0
+<  private int a ; ] [ AST_t class class AST_t [ private int a ] ;
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl20 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1d0
+<  protected int a ; ] [ AST_t class class AST_t [ protected int a ] ;
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl24 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1d0
+<  public int a ; ] [ ASL_t class f ASL_t ASL_t xis } { ) ( class ASL_t [ public int a ] ; ASL_t f ( ASL_t xis ) { }
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl25 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f } { ) ( int f ( ) { }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl27 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f static } { ) ( static int f ( ) { }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl28 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a , int b } { ) ( int f ( int a , int b ) { }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl30 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a const } { ) ( int f ( const int a ) { }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl31 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f } { ; } { ) ( int f ( ) { { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl32 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f } { ; } { ; } { ; } { ) ( int f ( ) { { { { } ; } ; } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl33 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; } { ) ( int f ( ) { int a ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl35 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a static ; } { ) ( int f ( ) { static int a ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl36 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f float a ; } { ) ( int f ( ) { float a ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl37 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f char a ; } { ) ( int f ( ) { char a ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl38 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f bool a ; } { ) ( int f ( ) { bool a ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl39 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f string a ; } { ) ( int f ( ) { string a ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl41 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a const ; } { ) ( int f ( ) { const int a ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl42 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a const static ; } { ) ( int f ( ) { static const int a ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl43 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a 2 <= ; } { ) ( int f ( ) { int a <= 2 ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl44 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int b 10 <= ; int a b <= ; } { ) ( int f ( ) { int b <= 10 ; int a <= b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl46 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; a 2 = ; } { ) ( int f ( ) { int a ; a = 2 ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl47 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int ] 10 [ a ; int f 2 ] [ a 2 = ; } { ) ( a [ 10 ] int ; int f ( ) { a [ 2 ] = 2 ; }
+\ No newline at end of file
+---
+>  int
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl48 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int ] 10 [ a ; int f int c ; c 2 = ; c + c ] [ a 2 = ; } { ) ( a [ 10 ] int ; int f ( ) { int c ; c = 2 ; a [ c + c ] = 2 ; }
+\ No newline at end of file
+---
+>  int
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl49 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1d0
+<  public int a ; ] [ ASL_t class int f xis AST_t ; xis a $ 2 = ; } { ) ( class ASL_t [ public int a ] ; int f ( ) { AST_t xis ; xis $ a = 2 ; }
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl50 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int c ; c input ; } { ) ( int f ( ) { int c ; input c ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl51 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int c ; a output ; } { ) ( int f ( ) { int a ; int b ; int c ; output a ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl52 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int c ; a , b , c output ; } { ) ( int f ( ) { int a ; int b ; int c ; output a , b , c ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl53 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f ( f ) ; } { ) ( int f ( ) { f ( ) ; }
+\ No newline at end of file
+---
+>  int f f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl54 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a , int b int x ; int y ; ( f x , y ) ; } { ) ( int f ( int a , int b ) { int x ; int y ; f ( x , y ) ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl55 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a , int b int x ; ( f x , . ) ; } { ) ( int f ( int a , int b ) { int x ; f ( x , . ) ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl56 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; x << 2 ; } { ) ( int f ( ) { int x ; x << 2 ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl57 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; x >> 4 ; } { ) ( int f ( ) { int x ; x >> 4 ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl58 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; x return ; } { ) ( int f ( ) { int x ; return x ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl59 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f break ; } { ) ( int f ( ) { break ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl60 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f continue ; } { ) ( int f ( ) { continue ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl61 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f 245 case : } { ) ( int f ( ) { case 245 : }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl62 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int c ; c } { then ) ( if ; } { ) ( int f ( ) { int c ; if ( c ) then { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl63 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int c ; c } { } { else then ) ( if ; } { ) ( int f ( ) { int c ; if ( c ) then { } else { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl64 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; int i ; x , x , x } { ) : i ( foreach ; } { ) ( int f ( ) { int x ; int i ; foreach ( i : x , x , x ) { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl65 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; int i ; int j ; i 0 = , j 0 = i i 2 = , j 3 = } { ) : : ( for ; } { ) ( int f ( ) { int x ; int i ; int j ; for ( i = 0 , j = 0 : i : i = 2 , j = 3 ) { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl66 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; int i ; int j ; i } { do ) ( while ; } { ) ( int f ( ) { int x ; int i ; int j ; while ( i ) do { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl67 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; } { i ) ( while do ; } { ) ( int f ( ) { int x ; do { } while ( i ) ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl70 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; x 3 = ; x } { ) ( switch ; } { ) ( int f ( ) { int x ; x = 3 ; switch ( x ) { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl72 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; ( f ) %>% ( g . , a ) ; } { ) ( int f ( ) { int a ; f ( ) %>% g ( . , a ) ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl73 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; ( f ) %
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl74 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; ( f ) %>% ( g . , a ) %>% ( z . ) ; } { ) ( int f ( ) { int a ; f ( ) %>% g ( . , a ) %>% z ( . ) ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl75 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; a ( f ) %>% ( g . , a ) %
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl76 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int c ; a 2 * c + a / b = ; } { ) ( int f ( ) { int a ; int b ; int c ; a = 2 * c + a / b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl77 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f 5 ] [ c 2 * c + k ] [ a = ; } { ) ( int f ( ) { c [ 5 ] = a [ 2 * c + k ] ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl78 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a 5 ] [ c 3 * ( f a ) + a = ; } { ) ( int f ( int a ) { c [ 5 ] = 3 * f ( a ) + a ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl79 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; a 2 * c + k ) ( = ; } { ) ( int f ( ) { int a ; a = 2 * ( c + k ) ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl80 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f a == 2 } { then ) ( if ; a + b ) ( <= 10 } { then ) ( if ; } { ) ( int f ( ) { if ( a == 2 ) then { } ; if ( ( a + b ) <= 10 ) then { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl81 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int v1 ; int f1 float k , int l int a ; } { ) ( int ] 100 [ v2 ; char v3 ; v1 int ; int f1 ( float k , int l ) { int a ; } v2 [ 100 ] int ; v3 char ;
+\ No newline at end of file
+---
+>  int v1
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl96 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1d0
+<  public int a ; ] [ ASL_t class int f xis AST_t ; xis a $ << 2 ; } { ) ( class ASL_t [ public int a ] ; int f ( ) { AST_t xis ; xis $ a << 2 ; }
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl97 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1d0
+<  public int a ; ] [ ASL_t class int f int b ; b 3 = ; xis AST_t ; xis a $ >> b + 2 ; } { ) ( class ASL_t [ public int a ] ; int f ( ) { int b ; b = 3 ; AST_t xis ; xis $ a >> b + 2 ; }
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int main x 1 case : y 2 = ; break ; } { ) ( switch ; } { ) ( int main ( ) { switch ( x ) { case 1 : y = 2 ; break ; } ; }
+\ No newline at end of file
+---
+>  int main
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 0
+- [ ] local.tests/e3/i_e3_002.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int xis } { ) ( int xis ( ) { }
+\ No newline at end of file
+---
+>  int xis
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_003.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f1 } { ) ( int f2 } { ) ( int f3 } { ) ( int f1 ( ) { } int f2 ( ) { } int f3 ( ) { }
+\ No newline at end of file
+---
+>  int f1
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_004.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f } { ; } { ; } { ; } { ) ( int f ( ) { { } ; { } ; { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_005.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; true x 3 = ; } { then ) ( if ; } { ) ( int f ( ) { int x ; if ( true ) then { x = 3 ; } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_006.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f true } { } { else then ) ( if ; } { ) ( int f ( ) { if ( true ) then { } else { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_007.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f } { true ) ( while do ; } { ) ( int f ( ) { do { } while ( true ) ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_008.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f true } { do ) ( while ; } { ) ( int f ( ) { while ( true ) do { } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_009.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int b ; b input ; } { ) ( int f ( ) { int b ; input b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_010.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int b ; 3 + b , 3 + b output ; } { ) ( int f ( ) { int b ; output 3 + b , 3 + b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_011.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; x 10 = ; } { ) ( int f ( ) { int x ; x = 10 ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_012.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f 10 return ; } { ) ( int f ( ) { return 10 ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_013.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f 10 return ; } { ; 20 return ; } { ; } { ; 30 return ; } { ; } { ) ( int f ( ) { { { return 10 ; } ; { return 20 ; } ; } ; { return 30 ; } ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_014.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int iks ; int zede ; int ka ; int erre ; int caps ; int _tres ; iks zede = ; ka erre = ; caps _tres = ; } { ) ( int f ( ) { int iks ; int zede ; int ka ; int erre ; int caps ; int _tres ; iks = zede ; ka = erre ; caps = _tres ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_015.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f string iks ; iks teste = ; } { ) ( int f ( ) { string iks ; iks = teste ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_016.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int iks ; iks 10 = ; } { ) ( int f ( ) { int iks ; iks = 10 ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_017.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f float iks ; iks 10.120000 = ; } { ) ( int f ( ) { float iks ; iks = 10.120000 ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_018.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f bool iks ; bool caps ; iks false = ; caps true = ; } { ) ( int f ( ) { bool iks ; bool caps ; iks = false ; caps = true ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_019.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f char iks ; iks c = ; } { ) ( int f ( ) { char iks ; iks = c ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_020.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int x ; int b ; x a + b = ; } { ) ( int f ( ) { int a ; int x ; int b ; x = a + b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_021.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int x ; int b ; x a - b = ; } { ) ( int f ( ) { int a ; int x ; int b ; x = a - b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_022.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int x ; int b ; x a * b = ; } { ) ( int f ( ) { int a ; int x ; int b ; x = a * b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_023.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int x ; int b ; x a / b = ; } { ) ( int f ( ) { int a ; int x ; int b ; x = a / b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_024.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; int y ; x - y = ; } { ) ( int f ( ) { int x ; int y ; x = - y ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_025.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int x ; x a && b = ; } { ) ( int f ( ) { int a ; int b ; int x ; x = a && b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_026.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int x ; x a 
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_027.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int x ; x a != b = ; } { ) ( int f ( ) { int a ; int b ; int x ; x = a != b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_028.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int x ; x a == b = ; } { ) ( int f ( ) { int a ; int b ; int x ; x = a == b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_029.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int x ; x a < b = ; } { ) ( int f ( ) { int a ; int b ; int x ; x = a < b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_030.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int x ; x a > b = ; } { ) ( int f ( ) { int a ; int b ; int x ; x = a > b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_031.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int x ; x a <= b = ; } { ) ( int f ( ) { int a ; int b ; int x ; x = a <= b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_032.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int b ; int x ; x a >= b = ; } { ) ( int f ( ) { int a ; int b ; int x ; x = a >= b ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_033.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; int z ; x ! z = ; } { ) ( int f ( ) { int x ; int z ; x = ! z ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_034.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int ] 10 [ vetor ; int f int x ; x 10 ] [ vetor = ; } { ) ( vetor [ 10 ] int ; int f ( ) { int x ; x = vetor [ 10 ] ; }
+\ No newline at end of file
+---
+>  int
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_035.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int ] 10 [ vetor ; int f int x ; x 10 + 20 ] [ vetor = ; } { ) ( vetor [ 10 ] int ; int f ( ) { int x ; x = vetor [ 10 + 20 ] ; }
+\ No newline at end of file
+---
+>  int
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_036.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int k } { ) ( int f ( k ) ; } { ) ( int k ( ) { } int f ( ) { k ( ) ; }
+\ No newline at end of file
+---
+>  int k
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_037.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int k int x } { ) ( int f ( k 10 ) ; } { ) ( int k ( int x ) { } int f ( ) { k ( 10 ) ; }
+\ No newline at end of file
+---
+>  int k
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_038.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int k int x , int y , int z } { ) ( int f ( k 10 , 20 , 30 ) ; } { ) ( int k ( int x , int y , int z ) { } int f ( ) { k ( 10 , 20 , 30 ) ; }
+\ No newline at end of file
+---
+>  int k
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_039.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int k int x , int y , int z } { ) ( int f ( k 10 + 10 , 20 + 20 , 30 + 30 ) ; } { ) ( int k ( int x , int y , int z ) { } int f ( ) { k ( 10 + 10 , 20 + 20 , 30 + 30 ) ; }
+\ No newline at end of file
+---
+>  int k
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_040.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int x ; int b ; int c ; int y ; int d ; int e ; int f ; int z ; int g ; int h ; int i ; int w ; int j ; int k ; int l ; x a + b * c = ; y d / e - f = ; z g + h ) ( * i = ; w j / k - l ) ( = ; } { ) ( int f ( ) { int a ; int x ; int b ; int c ; int y ; int d ; int e ; int f ; int z ; int g ; int h ; int i ; int w ; int j ; int k ; int l ; x = a + b * c ; y = d / e - f ; z = ( g + h ) * i ; w = j / ( k - l ) ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_041.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int a ; int x ; int b ; int c ; int y ; int d ; int e ; int f ; int z ; int g ; int h ; int i ; int w ; int j ; int k ; int l ; x a 
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_042.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int f int x ; int a ; int b ; int c ; int d ; int e ; int y ; int f ; int g ; int h ; int i ; int j ; int z ; int k ; int l ; int m ; int n ; int o ; x a + b + c - d - e = ; y f * g * h / i / j = ; z k * l * m + n + o = ; } { ) ( int f ( ) { int x ; int a ; int b ; int c ; int d ; int e ; int y ; int f ; int g ; int h ; int i ; int j ; int z ; int k ; int l ; int m ; int n ; int o ; x = a + b + c - d - e ; y = f * g * h / i / j ; z = k * l * m + n + o ; }
+\ No newline at end of file
+---
+>  int f
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_043.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_044.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_045.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int a ; int b ; bool cas1 ; bool cas2 ; int q ; int r ; int euclidan_division int vara , int varb a vara = ; b varb = ; cas1 false = ; cas2 false = ; a < 0 cas1 true = ; a - a = ; } { then ) ( if ; b < 0 cas2 true = ; b - b = ; } { then ) ( if ; r a = ; q 0 = ; r >= b q q + 1 = ; r r - b = ; } { do ) ( while ; cas1 &&
+\ No newline at end of file
+---
+>  int a
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_046.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+<  int entry ; int rank ; int aux1 ; int aux2 ; int aux3 ; int fibo int in entry in = ; entry == 0 0 return ; } { then ) ( if ; entry == 1 1 return ; } { then ) ( if ; rank 2 = ; aux1 0 = ; aux2 1 = ; aux3 1 = ; rank < entry rank rank + 1 = ; aux1 aux2 = ; aux2 aux3 = ; aux3 aux1 + aux2 = ; } { do ) ( while ; aux3 return ; } { ) ( entry int ; rank int ; aux1 int ; aux2 int ; aux3 int ; int fibo ( int in ) { entry = in ; if ( entry == 0 ) then { return 0 ; } ; if ( entry == 1 ) then { return 1 ; } ; rank = 2 ; aux1 = 0 ; aux2 = 1 ; aux3 = 1 ; while ( rank < entry ) do { rank = rank + 1 ; aux1 = aux2 ; aux2 = aux3 ; aux3 = aux1 + aux2 ; } ; return aux3 ; }
+\ No newline at end of file
+---
+>  int entry
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_047.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_048.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_049.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_050.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
 
 *** Kappa
 
@@ -1359,6 +4703,137 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
 
+Kappa
+- [ ] local.tests/e2/input/asl01 0
+- [ ] local.tests/e2/input/asl02 0
+- [ ] local.tests/e2/input/asl03 0
+- [ ] local.tests/e2/input/asl04 0
+- [ ] local.tests/e2/input/asl05 0
+- [ ] local.tests/e2/input/asl06 0
+- [ ] local.tests/e2/input/asl07 0
+- [ ] local.tests/e2/input/asl08 0
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 0
+- [ ] local.tests/e2/input/asl31 0
+- [ ] local.tests/e2/input/asl32 0
+- [ ] local.tests/e2/input/asl33 0
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 0
+- [ ] local.tests/e2/input/asl37 0
+- [ ] local.tests/e2/input/asl38 0
+- [ ] local.tests/e2/input/asl39 0
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 0
+- [ ] local.tests/e2/input/asl44 0
+- [ ] local.tests/e2/input/asl46 0
+- [ ] local.tests/e2/input/asl47 0
+- [ ] local.tests/e2/input/asl48 0
+- [ ] local.tests/e2/input/asl49 0
+- [ ] local.tests/e2/input/asl50 0
+- [ ] local.tests/e2/input/asl51 0
+- [ ] local.tests/e2/input/asl52 0
+- [ ] local.tests/e2/input/asl53 0
+- [ ] local.tests/e2/input/asl54 0
+- [ ] local.tests/e2/input/asl55 0
+- [ ] local.tests/e2/input/asl56 0
+- [ ] local.tests/e2/input/asl57 0
+- [ ] local.tests/e2/input/asl58 0
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+- [ ] local.tests/e2/input/asl62 0
+- [ ] local.tests/e2/input/asl63 0
+- [ ] local.tests/e2/input/asl64 0
+- [ ] local.tests/e2/input/asl65 0
+- [ ] local.tests/e2/input/asl66 0
+- [ ] local.tests/e2/input/asl67 0
+- [ ] local.tests/e2/input/asl70 0
+- [ ] local.tests/e2/input/asl72 0
+- [ ] local.tests/e2/input/asl73 0
+- [ ] local.tests/e2/input/asl74 0
+- [ ] local.tests/e2/input/asl75 0
+- [ ] local.tests/e2/input/asl76 0
+- [ ] local.tests/e2/input/asl77 0
+- [ ] local.tests/e2/input/asl78 0
+- [ ] local.tests/e2/input/asl79 0
+- [ ] local.tests/e2/input/asl80 0
+- [ ] local.tests/e2/input/asl81 0
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 0
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 0
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< Line 2: syntax error near ";"
+---
+> Line 1: syntax error near "2"
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 0
+- [ ] local.tests/e3/i_e3_005.ptg 0
+- [ ] local.tests/e3/i_e3_006.ptg 0
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 0
+- [ ] local.tests/e3/i_e3_009.ptg 0
+- [ ] local.tests/e3/i_e3_010.ptg 0
+- [ ] local.tests/e3/i_e3_011.ptg 0
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 0
+- [ ] local.tests/e3/i_e3_014.ptg 0
+- [ ] local.tests/e3/i_e3_015.ptg 0
+- [ ] local.tests/e3/i_e3_016.ptg 0
+- [ ] local.tests/e3/i_e3_017.ptg 0
+- [ ] local.tests/e3/i_e3_018.ptg 0
+- [ ] local.tests/e3/i_e3_019.ptg 0
+- [ ] local.tests/e3/i_e3_020.ptg 0
+- [ ] local.tests/e3/i_e3_021.ptg 0
+- [ ] local.tests/e3/i_e3_022.ptg 0
+- [ ] local.tests/e3/i_e3_023.ptg 0
+- [ ] local.tests/e3/i_e3_024.ptg 0
+- [ ] local.tests/e3/i_e3_025.ptg 0
+- [ ] local.tests/e3/i_e3_026.ptg 0
+- [ ] local.tests/e3/i_e3_027.ptg 0
+- [ ] local.tests/e3/i_e3_028.ptg 0
+- [ ] local.tests/e3/i_e3_029.ptg 0
+- [ ] local.tests/e3/i_e3_030.ptg 0
+- [ ] local.tests/e3/i_e3_031.ptg 0
+- [ ] local.tests/e3/i_e3_032.ptg 0
+- [ ] local.tests/e3/i_e3_033.ptg 0
+- [ ] local.tests/e3/i_e3_034.ptg 0
+- [ ] local.tests/e3/i_e3_035.ptg 0
+- [ ] local.tests/e3/i_e3_036.ptg 0
+- [ ] local.tests/e3/i_e3_037.ptg 0
+- [ ] local.tests/e3/i_e3_038.ptg 0
+- [ ] local.tests/e3/i_e3_039.ptg 0
+- [ ] local.tests/e3/i_e3_040.ptg 0
+- [ ] local.tests/e3/i_e3_041.ptg 0
+- [ ] local.tests/e3/i_e3_042.ptg 0
+- [ ] local.tests/e3/i_e3_043.ptg 0
+- [ ] local.tests/e3/i_e3_044.ptg 0
+- [ ] local.tests/e3/i_e3_045.ptg 0
+- [ ] local.tests/e3/i_e3_046.ptg 0
+- [ ] local.tests/e3/i_e3_047.ptg 0
+- [ ] local.tests/e3/i_e3_048.ptg 0
+- [ ] local.tests/e3/i_e3_049.ptg 0
+- [ ] local.tests/e3/i_e3_050.ptg 0
+
 *** Theta
 
 - [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
@@ -1367,6 +4842,132 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 4. Descompila
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
+
+Theta
+- [ ] local.tests/e2/input/asl01 0
+- [ ] local.tests/e2/input/asl02 0
+- [ ] local.tests/e2/input/asl03 0
+- [ ] local.tests/e2/input/asl04 0
+- [ ] local.tests/e2/input/asl05 0
+- [ ] local.tests/e2/input/asl06 0
+- [ ] local.tests/e2/input/asl07 0
+- [ ] local.tests/e2/input/asl08 0
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 0
+- [ ] local.tests/e2/input/asl31 0
+- [ ] local.tests/e2/input/asl32 0
+- [ ] local.tests/e2/input/asl33 0
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 0
+- [ ] local.tests/e2/input/asl37 0
+- [ ] local.tests/e2/input/asl38 0
+- [ ] local.tests/e2/input/asl39 0
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 0
+- [ ] local.tests/e2/input/asl44 0
+- [ ] local.tests/e2/input/asl46 0
+- [ ] local.tests/e2/input/asl47 0
+- [ ] local.tests/e2/input/asl48 0
+- [ ] local.tests/e2/input/asl49 0
+- [ ] local.tests/e2/input/asl50 0
+- [ ] local.tests/e2/input/asl51 0
+- [ ] local.tests/e2/input/asl52 0
+- [ ] local.tests/e2/input/asl53 0
+- [ ] local.tests/e2/input/asl54 0
+- [ ] local.tests/e2/input/asl55 0
+- [ ] local.tests/e2/input/asl56 0
+- [ ] local.tests/e2/input/asl57 0
+- [ ] local.tests/e2/input/asl58 0
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+- [ ] local.tests/e2/input/asl62 0
+- [ ] local.tests/e2/input/asl63 0
+- [ ] local.tests/e2/input/asl64 0
+- [ ] local.tests/e2/input/asl65 0
+- [ ] local.tests/e2/input/asl66 0
+- [ ] local.tests/e2/input/asl67 0
+- [ ] local.tests/e2/input/asl70 0
+- [ ] local.tests/e2/input/asl72 0
+- [ ] local.tests/e2/input/asl73 0
+- [ ] local.tests/e2/input/asl74 0
+- [ ] local.tests/e2/input/asl75 0
+- [ ] local.tests/e2/input/asl76 0
+- [ ] local.tests/e2/input/asl77 0
+- [ ] local.tests/e2/input/asl78 0
+- [ ] local.tests/e2/input/asl79 0
+- [ ] local.tests/e2/input/asl80 0
+- [ ] local.tests/e2/input/asl81 0
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 0
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 0
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (8).
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 0
+- [ ] local.tests/e3/i_e3_005.ptg 0
+- [ ] local.tests/e3/i_e3_006.ptg 0
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 0
+- [ ] local.tests/e3/i_e3_009.ptg 0
+- [ ] local.tests/e3/i_e3_010.ptg 0
+- [ ] local.tests/e3/i_e3_011.ptg 0
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 0
+- [ ] local.tests/e3/i_e3_014.ptg 0
+- [ ] local.tests/e3/i_e3_015.ptg 0
+- [ ] local.tests/e3/i_e3_016.ptg 0
+- [ ] local.tests/e3/i_e3_017.ptg 0
+- [ ] local.tests/e3/i_e3_018.ptg 0
+- [ ] local.tests/e3/i_e3_019.ptg 0
+- [ ] local.tests/e3/i_e3_020.ptg 0
+- [ ] local.tests/e3/i_e3_021.ptg 0
+- [ ] local.tests/e3/i_e3_022.ptg 0
+- [ ] local.tests/e3/i_e3_023.ptg 0
+- [ ] local.tests/e3/i_e3_024.ptg 0
+- [ ] local.tests/e3/i_e3_025.ptg 0
+- [ ] local.tests/e3/i_e3_026.ptg 0
+- [ ] local.tests/e3/i_e3_027.ptg 0
+- [ ] local.tests/e3/i_e3_028.ptg 0
+- [ ] local.tests/e3/i_e3_029.ptg 0
+- [ ] local.tests/e3/i_e3_030.ptg 0
+- [ ] local.tests/e3/i_e3_031.ptg 0
+- [ ] local.tests/e3/i_e3_032.ptg 0
+- [ ] local.tests/e3/i_e3_033.ptg 0
+- [ ] local.tests/e3/i_e3_034.ptg 0
+- [ ] local.tests/e3/i_e3_035.ptg 0
+- [ ] local.tests/e3/i_e3_036.ptg 0
+- [ ] local.tests/e3/i_e3_037.ptg 0
+- [ ] local.tests/e3/i_e3_038.ptg 0
+- [ ] local.tests/e3/i_e3_039.ptg 0
+- [ ] local.tests/e3/i_e3_040.ptg 0
+- [ ] local.tests/e3/i_e3_041.ptg 0
+- [ ] local.tests/e3/i_e3_042.ptg 0
+- [ ] local.tests/e3/i_e3_043.ptg 0
+- [ ] local.tests/e3/i_e3_044.ptg 0
+- [ ] local.tests/e3/i_e3_045.ptg 0
+- [ ] local.tests/e3/i_e3_046.ptg 0
+- [ ] local.tests/e3/i_e3_047.ptg 0
+- [ ] local.tests/e3/i_e3_048.ptg 0
+- [ ] local.tests/e3/i_e3_049.ptg 0
+- [ ] local.tests/e3/i_e3_050.ptg 0
+
 
 *** Alpha
 
@@ -1377,6 +4978,453 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
 
+Alpha
+- [ ] local.tests/e2/input/asl01 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (12).
+- [ ] local.tests/e2/input/asl02 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (19).
+- [ ] local.tests/e2/input/asl03 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (18).
+- [ ] local.tests/e2/input/asl04 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (25).
+- [ ] local.tests/e2/input/asl05 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (11).
+- [ ] local.tests/e2/input/asl06 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (10).
+- [ ] local.tests/e2/input/asl07 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (10).
+- [ ] local.tests/e2/input/asl08 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (12).
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (11).
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 0
+- [ ] local.tests/e2/input/asl31 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){{}}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl32 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){{{{}}}}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl33 0
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 0
+- [ ] local.tests/e2/input/asl37 0
+- [ ] local.tests/e2/input/asl38 0
+- [ ] local.tests/e2/input/asl39 0
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){int a <= 2 }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl44 0
+- [ ] local.tests/e2/input/asl46 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){a = 2 }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl47 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){a [2 ]= 2 }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl48 0
+- [ ] local.tests/e2/input/asl49 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1,2
+< class ASL_t [public int a ];int f (){xis $a = 2 }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+> class ASL_t [public int a ];
+\ No newline at end of file
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl50 0
+- [ ] local.tests/e2/input/asl51 0
+- [ ] local.tests/e2/input/asl52 0
+- [ ] local.tests/e2/input/asl53 0
+- [ ] local.tests/e2/input/asl54 0
+- [ ] local.tests/e2/input/asl55 0
+- [ ] local.tests/e2/input/asl56 0
+- [ ] local.tests/e2/input/asl57 0
+- [ ] local.tests/e2/input/asl58 0
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+- [ ] local.tests/e2/input/asl62 0
+- [ ] local.tests/e2/input/asl63 0
+- [ ] local.tests/e2/input/asl64 0
+- [ ] local.tests/e2/input/asl65 0
+- [ ] local.tests/e2/input/asl66 0
+- [ ] local.tests/e2/input/asl67 0
+- [ ] local.tests/e2/input/asl70 0
+- [ ] local.tests/e2/input/asl72 0
+- [ ] local.tests/e2/input/asl73 0
+- [ ] local.tests/e2/input/asl74 0
+- [ ] local.tests/e2/input/asl75 0
+- [ ] local.tests/e2/input/asl76 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){a = (((2 * c )+ a )/ b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl77 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){c [5 ]= a }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl78 0
+- [ ] local.tests/e2/input/asl79 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){a = (2 * (c + k ))}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e2/input/asl80 0
+- [ ] local.tests/e2/input/asl81 0
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 0
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 0
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< Error: Unexpected ; on line 2.
+---
+> Error: Unexpected : on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,3c1
+< int f (){{};
+< {};
+< {}}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 3.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_005.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){if (true ) then{x = 3 };}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_006.ptg 0
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 0
+- [ ] local.tests/e3/i_e3_009.ptg 0
+- [ ] local.tests/e3/i_e3_010.ptg 0
+- [ ] local.tests/e3/i_e3_011.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = 10 }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,3c1
+< int f (){{{return 10 ;};
+< {return 20 ;}};
+< {return 30 ;}}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 2.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_014.ptg 0
+- [ ] local.tests/e3/i_e3_015.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){iks = "teste" }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_016.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){iks = 10 }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_017.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){iks = 10.120000 }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_018.ptg 0
+- [ ] local.tests/e3/i_e3_019.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){iks = 'c' }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_020.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a + b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_021.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a - b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_022.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a * b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_023.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a / b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_024.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (- y )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_025.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a && b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_026.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a 
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_027.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a != b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_028.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a == b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_029.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a < b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_030.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a > b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_031.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a <= b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_032.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (a >= b )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_033.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = (! z )}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_034.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = vetor }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_035.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1c1
+< int f (){x = vetor }
+\ No newline at end of file
+---
+> Error: Unexpected } on line 1.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_036.ptg 0
+- [ ] local.tests/e3/i_e3_037.ptg 0
+- [ ] local.tests/e3/i_e3_038.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_039.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_040.ptg 0
+- [ ] local.tests/e3/i_e3_041.ptg 0
+- [ ] local.tests/e3/i_e3_042.ptg 0
+- [ ] local.tests/e3/i_e3_043.ptg 0
+- [ ] local.tests/e3/i_e3_044.ptg 0
+- [ ] local.tests/e3/i_e3_045.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,21c1
+< 
+< 
+< 
+< 
+< int euclidan_division (int vara ,
+< int varb ){a = vara ;
+< b = varb ;
+< cas1 = false ;
+< cas2 = false ;
+< if ((a < 0 )) then{cas1 = true ;
+< a = (- a );};
+< if ((b < 0 )) then{cas2 = true ;
+< b = (- b );};
+< r = a ;
+< q = 0 ;
+< while ((r >= b )) do {q = (q + 1 );
+< r = (r - b );};
+< if ((cas1 && (! cas2 ))) then{q = (- (q - 1 ))};
+< if ((! (cas1 && cas2 ))) then{q = (- q )};
+< if ((cas1 && cas2 )) then{q = (q + 1 )};
+< return q ;}
+\ No newline at end of file
+---
+> Error: Unexpected } on line 18.
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_046.ptg 1
+   - Problem details
+     #+BEGIN_EXAMPLE
+1,2d0
+< 
+< 
+     #+END_EXAMPLE
+- [ ] local.tests/e3/i_e3_047.ptg 0
+- [ ] local.tests/e3/i_e3_048.ptg 0
+- [ ] local.tests/e3/i_e3_049.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_050.ptg 0
+
 *** Upsilon
 
 - [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
@@ -1386,6 +5434,249 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
 
+Upsilon
+- [ ] local.tests/e2/input/asl01 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (12).
+- [ ] local.tests/e2/input/asl02 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (19).
+- [ ] local.tests/e2/input/asl03 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (18).
+- [ ] local.tests/e2/input/asl04 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (25).
+- [ ] local.tests/e2/input/asl05 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (11).
+- [ ] local.tests/e2/input/asl06 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (10).
+- [ ] local.tests/e2/input/asl07 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (10).
+- [ ] local.tests/e2/input/asl08 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (12).
+- [ ] local.tests/e2/input/asl09 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl10 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (11).
+- [ ] local.tests/e2/input/asl13 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl16 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl18 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl19 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl20 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl24 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl25 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl27 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl28 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl30 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl31 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl32 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl33 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl35 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl36 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl37 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl38 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl39 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl41 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl42 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl43 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl44 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl46 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl47 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl48 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl49 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl50 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl51 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl52 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl53 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl54 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl55 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl56 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl57 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl58 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl59 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl60 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl61 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl62 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl63 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl64 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl65 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl66 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl67 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl70 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl72 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl73 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl74 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl75 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl76 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl77 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl78 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl79 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl80 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl81 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl96 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl97 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (8).
+- [ ] local.tests/e3/i_e3_002.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_003.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_004.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_005.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_006.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_007.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_008.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_009.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_010.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_011.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_012.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_013.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_014.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_015.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_016.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_017.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_018.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_019.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_020.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_021.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_022.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_023.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_024.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_025.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_026.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_027.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_028.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_029.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_030.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_031.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_032.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_033.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_034.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_035.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_036.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_037.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_038.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_039.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_040.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_041.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_042.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_043.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_044.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_045.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_046.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_047.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_048.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_049.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_050.ptg 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+
+
 *** Lambda
 
 - [ ] 1. Associação de valor ao =token= (com uso de =yylval=)
@@ -1394,6 +5685,134 @@ permitem que a saída de descompilação seja vazia.
 - [ ] 4. Descompila
 - [ ] 5. Remoção de conflitos/ajustes gramaticais
 - [ ] 6. Gerenciar corretamente a memória do compilador
+
+Lambda
+- [ ] local.tests/e2/input/asl01 0
+- [ ] local.tests/e2/input/asl02 0
+- [ ] local.tests/e2/input/asl03 0
+- [ ] local.tests/e2/input/asl04 0
+- [ ] local.tests/e2/input/asl05 0
+- [ ] local.tests/e2/input/asl06 0
+- [ ] local.tests/e2/input/asl07 0
+- [ ] local.tests/e2/input/asl08 0
+- [ ] local.tests/e2/input/asl09 0
+- [ ] local.tests/e2/input/asl10 0
+- [ ] local.tests/e2/input/asl13 0
+- [ ] local.tests/e2/input/asl16 0
+- [ ] local.tests/e2/input/asl18 0
+- [ ] local.tests/e2/input/asl19 0
+- [ ] local.tests/e2/input/asl20 0
+- [ ] local.tests/e2/input/asl24 0
+- [ ] local.tests/e2/input/asl25 0
+- [ ] local.tests/e2/input/asl27 0
+- [ ] local.tests/e2/input/asl28 0
+- [ ] local.tests/e2/input/asl30 0
+- [ ] local.tests/e2/input/asl31 0
+- [ ] local.tests/e2/input/asl32 0
+- [ ] local.tests/e2/input/asl33 0
+- [ ] local.tests/e2/input/asl35 0
+- [ ] local.tests/e2/input/asl36 0
+- [ ] local.tests/e2/input/asl37 0
+- [ ] local.tests/e2/input/asl38 0
+- [ ] local.tests/e2/input/asl39 0
+- [ ] local.tests/e2/input/asl41 0
+- [ ] local.tests/e2/input/asl42 0
+- [ ] local.tests/e2/input/asl43 0
+- [ ] local.tests/e2/input/asl44 0
+- [ ] local.tests/e2/input/asl46 0
+- [ ] local.tests/e2/input/asl47 0
+- [ ] local.tests/e2/input/asl48 0
+- [ ] local.tests/e2/input/asl49 0
+- [ ] local.tests/e2/input/asl50 0
+- [ ] local.tests/e2/input/asl51 0
+- [ ] local.tests/e2/input/asl52 0
+- [ ] local.tests/e2/input/asl53 0
+- [ ] local.tests/e2/input/asl54 0
+- [ ] local.tests/e2/input/asl55 0
+- [ ] local.tests/e2/input/asl56 0
+- [ ] local.tests/e2/input/asl57 0
+- [ ] local.tests/e2/input/asl58 0
+- [ ] local.tests/e2/input/asl59 0
+- [ ] local.tests/e2/input/asl60 0
+- [ ] local.tests/e2/input/asl61 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e2/input/asl62 0
+- [ ] local.tests/e2/input/asl63 0
+- [ ] local.tests/e2/input/asl64 0
+- [ ] local.tests/e2/input/asl65 0
+- [ ] local.tests/e2/input/asl66 0
+- [ ] local.tests/e2/input/asl67 0
+- [ ] local.tests/e2/input/asl70 0
+- [ ] local.tests/e2/input/asl72 0
+- [ ] local.tests/e2/input/asl73 0
+- [ ] local.tests/e2/input/asl74 0
+- [ ] local.tests/e2/input/asl75 0
+- [ ] local.tests/e2/input/asl76 0
+- [ ] local.tests/e2/input/asl77 0
+- [ ] local.tests/e2/input/asl78 0
+- [ ] local.tests/e2/input/asl79 0
+- [ ] local.tests/e2/input/asl80 0
+- [ ] local.tests/e2/input/asl81 0
+- [ ] local.tests/e2/input/asl96 0
+- [ ] local.tests/e2/input/asl97 0
+- [ ] local.tests/e2/input/asl114 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (2).
+- [ ] local.tests/e2/input/asl126 0
+   - Problem: eq1.txt (0) e/ou eq2.txt (0) tem que ter algo!
+- [ ] local.tests/e3/i_e3_000.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (1).
+- [ ] local.tests/e3/i_e3_001.ptg 0
+   - Warning: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (8).
+- [ ] local.tests/e3/i_e3_002.ptg 0
+- [ ] local.tests/e3/i_e3_003.ptg 0
+- [ ] local.tests/e3/i_e3_004.ptg 0
+- [ ] local.tests/e3/i_e3_005.ptg 0
+- [ ] local.tests/e3/i_e3_006.ptg 0
+- [ ] local.tests/e3/i_e3_007.ptg 0
+- [ ] local.tests/e3/i_e3_008.ptg 0
+- [ ] local.tests/e3/i_e3_009.ptg 0
+- [ ] local.tests/e3/i_e3_010.ptg 0
+- [ ] local.tests/e3/i_e3_011.ptg 0
+- [ ] local.tests/e3/i_e3_012.ptg 0
+- [ ] local.tests/e3/i_e3_013.ptg 0
+- [ ] local.tests/e3/i_e3_014.ptg 0
+- [ ] local.tests/e3/i_e3_015.ptg 0
+- [ ] local.tests/e3/i_e3_016.ptg 0
+- [ ] local.tests/e3/i_e3_017.ptg 0
+- [ ] local.tests/e3/i_e3_018.ptg 0
+- [ ] local.tests/e3/i_e3_019.ptg 0
+- [ ] local.tests/e3/i_e3_020.ptg 0
+- [ ] local.tests/e3/i_e3_021.ptg 0
+- [ ] local.tests/e3/i_e3_022.ptg 0
+- [ ] local.tests/e3/i_e3_023.ptg 0
+- [ ] local.tests/e3/i_e3_024.ptg 0
+- [ ] local.tests/e3/i_e3_025.ptg 0
+- [ ] local.tests/e3/i_e3_026.ptg 0
+- [ ] local.tests/e3/i_e3_027.ptg 0
+- [ ] local.tests/e3/i_e3_028.ptg 0
+- [ ] local.tests/e3/i_e3_029.ptg 0
+- [ ] local.tests/e3/i_e3_030.ptg 0
+- [ ] local.tests/e3/i_e3_031.ptg 0
+- [ ] local.tests/e3/i_e3_032.ptg 0
+- [ ] local.tests/e3/i_e3_033.ptg 0
+- [ ] local.tests/e3/i_e3_034.ptg 0
+- [ ] local.tests/e3/i_e3_035.ptg 0
+- [ ] local.tests/e3/i_e3_036.ptg 0
+- [ ] local.tests/e3/i_e3_037.ptg 0
+- [ ] local.tests/e3/i_e3_038.ptg 0
+- [ ] local.tests/e3/i_e3_039.ptg 0
+- [ ] local.tests/e3/i_e3_040.ptg 0
+- [ ] local.tests/e3/i_e3_041.ptg 0
+- [ ] local.tests/e3/i_e3_042.ptg 0
+- [ ] local.tests/e3/i_e3_043.ptg 0
+- [ ] local.tests/e3/i_e3_044.ptg 0
+- [ ] local.tests/e3/i_e3_045.ptg 0
+- [ ] local.tests/e3/i_e3_046.ptg 0
+- [ ] local.tests/e3/i_e3_047.ptg 0
+- [ ] local.tests/e3/i_e3_048.ptg 0
+- [ ] local.tests/e3/i_e3_049.ptg 0
+- [ ] local.tests/e3/i_e3_050.ptg 0
+
 
 * Avaliação da Etapa 4
 * Avaliação da Etapa 5
