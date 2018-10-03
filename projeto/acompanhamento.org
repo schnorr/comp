@@ -1265,7 +1265,7 @@ A coluna Peso indica 0.8 para os grupos que entregaram em atraso.
 | 2018-10-01 23:24:57 | Alpha   |
 | 2018-10-01 23:25:54 | Upsilon |
 | 2018-10-01 23:46:15 | Lambda  |
-** Arquivos para testes :ATTACH:
+** Arquivos para testes                                             :ATTACH:
 :PROPERTIES:
 :Attachments: e3tests.tgz
 :ID:       ba0a807b-4fbe-4439-b9bb-856ffedcf1bc
