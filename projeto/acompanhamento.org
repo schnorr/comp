@@ -2637,6 +2637,31 @@ Não entregou. Limite até 10/10.
 Não entregou. Limite até 10/10.
 - Situação de abandono do projeto
 
+** Notas Objetiva e Subjetiva
+
+| Grupo   | E3.O | E3.S |
+|---------+------+------|
+| Alpha   |  6.7 |    0 |
+| Beta    |   10 |   10 |
+| Chi     |    0 |    0 |
+| Delta   |  0.2 |    0 |
+| Epsilon |    0 |    0 |
+| Eta     |   10 |   10 |
+| Gamma   |   10 |   10 |
+| Iota    |  0.2 |    0 |
+| Kappa   |   10 |   10 |
+| Lambda  |  9.7 |  9.5 |
+| Mu      |    0 |    0 |
+| Omega   |  9.7 |  9.5 |
+| Omicron |    0 |    0 |
+| Psi     |    0 |    0 |
+| Rho     |   10 |   10 |
+| Sigma   |    0 |    0 |
+| Tau     |  9.8 |  9.5 |
+| Theta   |   10 |   10 |
+| Upsilon |    0 |    0 |
+| Zeta    |    0 |    0 |
+
 * Avaliação da Etapa 4
 * Avaliação da Etapa 5
 * Avaliação da Etapa 6
