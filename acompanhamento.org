@@ -24,7 +24,7 @@ Para tomar conhecimento novamente das fórmulas utilizadas:
 - [[./plano/index.org][As ponderações gerais]]
 - [[./projeto/README.org][As ponderações das etapas do projeto]]
 
-* Visão Geral das Etapas do Projeto, Provas e Frequência
+* Visão Geral das Etapas do Projeto, Provas e Frequência           :noexport:
 
 Os conceitos finais serão enviados por e-mail.
 
@@ -100,7 +100,7 @@ Os conceitos finais serão enviados por e-mail.
 | ???601 |   10 |    6 |  9.9 |   10 |   10 |    8 |  9.5 |   10 |    9 |  10 | 8.8 | 8.1 |   97 |
 | ???686 |  9.6 |    8 |    9 |   10 |    0 |    0 |    0 |    0 |    0 |   0 | nil | nil |   41 |
 
-* Detalhamento do Projeto
+* Detalhamento do Projeto                                          :noexport:
 
 - =[12456].O= = Objetiva
 - =[123456].S= = Subjetiva
@@ -128,7 +128,7 @@ Revisões:
   - Testes foram feitos manualmente com um gigantesco esforço evitando
     ao máximo os =segfaults= dos compiladores de cada grupo
 
-* P2 Detalhamento
+* P2 Detalhamento                                                  :noexport:
 ** Questões
 
 - E1: Mapeamento sobre a gramática na declaração de arranjos multidimensionais
@@ -233,6 +233,7 @@ Q7
 | ???670 | 1.9 | 0.3 |   0 | 1.5 | 0.5 |   0 |   1 |
 
 * P1 Detalhamento
+* P1 Detalhamento                                                  :noexport:
 ** Questões
 
 - E1: ER de origem do AFND; AFND para AFD (alg. de subconj.).
