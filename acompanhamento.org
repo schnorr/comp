@@ -237,15 +237,15 @@ Q7
 
 A questão 5 foi anulada.
 
-| E  | Peso | Comentário      |
-|----+------+-----------------|
-| E1 |    2 | Léxica          |
-| E2 |  1.5 | Sintática       |
-| E3 |  1.5 | Sintática       |
-| E4 |    1 | Sintática       |
-| E5 |    0 | Questão anulada |
-| E6 |    1 | Semântica       |
-| E7 |    1 | Semântica       |
+| E  | Peso | Comentário      | Gabarito                    |
+|----+------+-----------------+-----------------------------|
+| E1 |    2 | Léxica          | D                           |
+| E2 |  1.5 | Sintática       | C                           |
+| E3 |  1.5 | Sintática       | B                           |
+| E4 |    1 | Sintática       | A, D, A, A, D, A, D, [A, D] |
+| E5 |    0 | Questão anulada |                             |
+| E6 |    1 | Semântica       | questão dissertativa        |
+| E7 |    1 | Semântica       | primeira alternativa        |
 
 ** Sumário
 
