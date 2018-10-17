@@ -2601,15 +2601,6 @@ Até:
 Data limite para fazer o trabalho até dia 10/10.
 - Será considerada entrega em atraso pois a entrega foi artificial
 
-**** TODO LATE Psi
-
-- Cada membro do grupo vai fazer a etapa 3 de maneira independente
-  - Um continua como Psi
-  - O outro cria um novo grupo para E3 chamado Chi
-
-Para ambos, a data limite para fazer o trabalho até dia 10/10.
-- Será considerada entrega em atraso
-
 **** TODO LATE Epsilon
 
 Problemas com o makefile.
@@ -2618,24 +2609,38 @@ Problemas com o makefile.
 Data limite para fazer o trabalho até dia 10/10.
 - Será considerada entrega em atraso
 
-**** TODO LATE Zeta
+**** LATE, LATE AGAIN Psi
+
+- Cada membro do grupo vai fazer a etapa 3 de maneira independente
+  - Um continua como Psi
+  - O outro cria um novo grupo para E3 chamado Chi
+
+Para ambos, a data limite para fazer o trabalho até dia 10/10.
+- Será considerada entrega em atraso
+
+**** LATE, LATE AGAIN Zeta
 
 Data limite para fazer o trabalho até dia 10/10.
 - Será considerada entrega em atraso
 
-**** LATE Omicron
+**** LATE, LATE AGAIN Omicron
 
 Não entregou. Limite até 10/10.
 
-**** LATE Sigma
+**** LATE, LATE AGAIN Sigma
+
+Não entregou. Limite até 10/10.
+- Situação de abandono do projeto
+
+**** LATE, LATE AGAIN Mu
 
 Não entregou. Limite até 10/10.
 - Situação de abandono do projeto
 
-**** LATE Mu
+**** LATE, LATE AGAIN Chi
 
-Não entregou. Limite até 10/10.
-- Situação de abandono do projeto
+Havia o limite até 10/10.
+- Não entregou em recuperação.
 
 ** Notas Objetiva e Subjetiva
 
