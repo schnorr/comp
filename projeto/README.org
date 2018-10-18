@@ -38,8 +38,8 @@ as etapas encontra-se abaixo.
 | E2    | [[./etapa2.org][Análise Sintática]]                  |       15 |         25 | 2018-09-10 |            |
 | E3    | [[./etapa3.org][Árvore Sintática Abstrata]]          |       15 |         40 | 2018-10-01 |            |
 | E4    | [[./etapa4.org][Análise Semântica]]                  |       15 |         55 | 2018-10-20 |            |
-| E5    | (obsoleto) [[./etapa5.pdf][Geração de Código]] ([[./etapa5.pdf][PDF]]) |       20 |         75 | 2018-11-05 |            |
-| E6    | (obsoleto) [[./etapa6.org][Suporte de Execução]]     |       15 |         90 | 2018-11-24 |            |
+| E5    | (obsoleto) [[./etapa5.pdf][Geração de Código]] ([[./etapa5.pdf][PDF]]) |       20 |         75 | 2018-11-12 |            |
+| E6    | (obsoleto) [[./etapa6.org][Suporte de Execução]]     |       15 |         90 | 2018-11-30 |            |
 
 *** E7 desativada
 

@@ -53,13 +53,13 @@
 | Código     | Expressões Lógicas com atalho, Controle de Fluxo       |          | Início E5 (Código)  |
 | Código     | Endereçamento de Arranjos multidimensionais            |          |                     |
 | Código     | Controle de Fluxo                                      |          |                     |
-|            |                                                        |          |                     |
-|            |                                                        |   67-102 | Avaliação E5        |
-| Execução   | Introdução, Registro de Ativação                       |          | Início E6 (Chamada) |
+| Código     | Controle de Fluxo                                      |          |                     |
+| Execução   | Introdução, Registro de Ativação                       |          |                     |
 | Execução   | Chamada e retorno de Função, Passagem de parâmetros    |          |                     |
-| Otimização | Introdução, Janela e Grafos de Fluxo                   |          |                     |
+|            |                                                        |   67-102 | Avaliação E5        |
+| Otimização | Introdução, Janela e Grafos de Fluxo                   |          | Início E6 (Chamada) |
+| Otimização | Grafos de Fluxo e Redução de potência                  |          |                     |
 |            | Revisão                                                |          |                     |
-|            |                                                        |   67-103 | Avaliação E6        |
 |            | P2                                                     | Castilho |                     |
 |            | PR                                                     |          |                     |
 
@@ -230,12 +230,12 @@ aulas %>%
 | 19 | 2018-10-24 |          | Código     | Expressões Lógicas com atalho, Controle de Fluxo       | Início E5 (Código)  |
 | 20 | 2018-10-29 |          | Código     | Endereçamento de Arranjos multidimensionais            |                     |
 | 21 | 2018-10-31 |          | Código     | Controle de Fluxo                                      |                     |
-| 22 | 2018-11-05 |          |            |                                                        |                     |
-| 23 | 2018-11-07 |   67-102 |            |                                                        | Avaliação E5        |
-| 24 | 2018-11-12 |          | Execução   | Introdução, Registro de Ativação                       | Início E6 (Chamada) |
-| 25 | 2018-11-14 |          | Execução   | Chamada e retorno de Função, Passagem de parâmetros    |                     |
-| 26 | 2018-11-19 |          | Otimização | Introdução, Janela e Grafos de Fluxo                   |                     |
-| 27 | 2018-11-21 |          |            | Revisão                                                |                     |
-| 28 | 2018-11-26 |   67-103 |            |                                                        | Avaliação E6        |
+| 22 | 2018-11-05 |          | Código     | Controle de Fluxo                                      |                     |
+| 23 | 2018-11-07 |          | Execução   | Introdução, Registro de Ativação                       |                     |
+| 24 | 2018-11-12 |          | Execução   | Chamada e retorno de Função, Passagem de parâmetros    |                     |
+| 25 | 2018-11-14 |   67-102 |            |                                                        | Avaliação E5        |
+| 26 | 2018-11-19 |          | Otimização | Introdução, Janela e Grafos de Fluxo                   | Início E6 (Chamada) |
+| 27 | 2018-11-21 |          | Otimização | Grafos de Fluxo e Redução de potência                  |                     |
+| 28 | 2018-11-26 |          |            | Revisão                                                |                     |
 | 29 | 2018-11-28 | Castilho |            | P2                                                     |                     |
 | 30 | 2018-12-05 |          |            | PR                                                     |                     |
