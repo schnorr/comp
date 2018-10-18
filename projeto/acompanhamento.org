@@ -1783,7 +1783,7 @@ Após prazo extra
 - [X] 5. Remoção de conflitos/ajustes gramaticais
 - [X] 6. Gerenciar corretamente a memória do compilador
 
-**** TODO Delta
+**** DONE Delta
 
 - [X] 1. Associação de valor ao =token= (com uso de =yylval=)
 - [X] 2. Implementação de uma estrutura de dados em árvore
@@ -2203,6 +2203,256 @@ Corrigir:
 - Todos os vazamentos de memória relatadas
 Até:
 - 10/10
+
+Relatório após recuperação
+- Praticamente nenhum teste funcionou na submissão original
+  - Peso é da recuperação fica portanto em 80%
+- Todos os testes falham na verificação obrigatório com valgrind
+  - Abaixo seguem um relatório por teste com a saída (em uma linha) do valgrind
+  - É uma pena, mas a observação ocasional da saída detalhada do
+    valgrind mostra que o grupo realiza um =strdup= no =parser.y=, que
+    nunca é liberado. Um erro que pode ser facilmente corrigido pelo
+    grupo.
+  - Adicionalmente, ler a issue #68 sobre o emprego de =yylex_destroy()=
+- Os testes com valgrind são obrigatórios.
+  - Caso os desconsiderarmos, todos os testes passam
+  - A nota subjetiva se justifica por isso
+- Colocar os nomes dos membros nos arquivos
+
+- [ ] =local.tests/e2/input/asl02= NOK     
+  - Erro: valgrind leak report ( 3 0 0 16461 0 )
+- [ ] =local.tests/e2/input/asl03= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl04= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl05= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl06= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl07= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl08= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl09= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16464 0 )
+- [ ] =local.tests/e2/input/asl10= NOK     
+  - Erro: valgrind leak report ( 10 0 0 16464 0 )
+- [ ] =local.tests/e2/input/asl13= NOK     
+  - Erro: valgrind leak report ( 14 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl16= NOK     
+  - Erro: valgrind leak report ( 18 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl18= NOK     
+  - Erro: valgrind leak report ( 14 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl19= NOK     
+  - Erro: valgrind leak report ( 14 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl20= NOK     
+  - Erro: valgrind leak report ( 14 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl24= NOK     
+  - Erro: valgrind leak report ( 48 0 0 16462 0 )
+- [ ] =local.tests/e2/input/asl25= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl27= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl28= NOK     
+  - Erro: valgrind leak report ( 10 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl30= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl31= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl32= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl33= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl35= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl36= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl37= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl38= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl39= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl41= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl42= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl43= NOK     
+  - Erro: valgrind leak report ( 8 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl44= NOK     
+  - Erro: valgrind leak report ( 14 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl46= NOK     
+  - Erro: valgrind leak report ( 12 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl47= NOK     
+  - Erro: valgrind leak report ( 12 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl48= NOK     
+  - Erro: valgrind leak report ( 28 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl49= NOK     
+  - Erro: valgrind leak report ( 52 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl50= NOK     
+  - Erro: valgrind leak report ( 10 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl51= NOK     
+  - Erro: valgrind leak report ( 18 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl52= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl53= NOK     
+  - Erro: valgrind leak report ( 6 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl54= NOK     
+  - Erro: valgrind leak report ( 30 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl55= NOK     
+  - Erro: valgrind leak report ( 22 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl56= NOK     
+  - Erro: valgrind leak report ( 12 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl57= NOK     
+  - Erro: valgrind leak report ( 12 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl58= NOK     
+  - Erro: valgrind leak report ( 10 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl59= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl60= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl61= NOK     
+  - Erro: valgrind leak report ( 4 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl62= NOK     
+  - Erro: valgrind leak report ( 10 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl63= NOK     
+  - Erro: valgrind leak report ( 10 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl64= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl65= NOK     
+  - Erro: valgrind leak report ( 36 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl66= NOK     
+  - Erro: valgrind leak report ( 18 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl67= NOK     
+  - Erro: valgrind leak report ( 10 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl70= NOK     
+  - Erro: valgrind leak report ( 14 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl72= NOK     
+  - Erro: valgrind leak report ( 18 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl73= NOK     
+  - Erro: valgrind leak report ( 18 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl74= NOK     
+  - Erro: valgrind leak report ( 22 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl75= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl76= NOK     
+  - Erro: valgrind leak report ( 30 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl77= NOK     
+  - Erro: valgrind leak report ( 18 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl78= NOK     
+  - Erro: valgrind leak report ( 22 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl79= NOK     
+  - Erro: valgrind leak report ( 18 0 0 16460 0 )
+- [ ] =local.tests/e2/input/asl80= NOK     
+  - Erro: valgrind leak report ( 16 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl81= NOK     
+  - Erro: valgrind leak report ( 33 0 0 16461 0 )
+- [ ] =local.tests/e2/input/asl96= NOK     
+  - Erro: valgrind leak report ( 52 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl97= NOK     
+  - Erro: valgrind leak report ( 64 0 0 16458 0 )
+- [ ] =local.tests/e2/input/asl126= NOK     
+  - Erro: valgrind leak report ( 18 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_001.ptg= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_002.ptg= NOK     
+  - Erro: valgrind leak report ( 4 0 0 16462 0 )
+- [ ] =local.tests/e3/i_e3_003.ptg= NOK     
+  - Erro: valgrind leak report ( 15 0 0 16461 0 )
+- [ ] =local.tests/e3/i_e3_004.ptg= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_005.ptg= NOK     
+  - Erro: valgrind leak report ( 12 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_006.ptg= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_007.ptg= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_008.ptg= NOK     
+  - Erro: valgrind leak report ( 2 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_009.ptg= NOK     
+  - Erro: valgrind leak report ( 10 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_010.ptg= NOK     
+  - Erro: valgrind leak report ( 14 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_011.ptg= NOK     
+  - Erro: valgrind leak report ( 12 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_012.ptg= NOK     
+  - Erro: valgrind leak report ( 4 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_013.ptg= NOK     
+  - Erro: valgrind leak report ( 4 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_014.ptg= NOK     
+  - Erro: valgrind leak report ( 110 0 0 16464 0 )
+- [ ] =local.tests/e3/i_e3_015.ptg= NOK     
+  - Erro: valgrind leak report ( 20 0 0 16471 0 )
+- [ ] =local.tests/e3/i_e3_016.ptg= NOK     
+  - Erro: valgrind leak report ( 20 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_017.ptg= NOK     
+  - Erro: valgrind leak report ( 20 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_018.ptg= NOK     
+  - Erro: valgrind leak report ( 35 0 0 16463 0 )
+- [ ] =local.tests/e3/i_e3_019.ptg= NOK     
+  - Erro: valgrind leak report ( 24 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_020.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_021.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_022.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_023.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_024.ptg= NOK     
+  - Erro: valgrind leak report ( 18 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_025.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_026.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_027.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_028.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_029.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_030.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_031.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_032.ptg= NOK     
+  - Erro: valgrind leak report ( 26 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_033.ptg= NOK     
+  - Erro: valgrind leak report ( 18 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_034.ptg= NOK     
+  - Erro: valgrind leak report ( 36 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_035.ptg= NOK     
+  - Erro: valgrind leak report ( 36 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_036.ptg= NOK     
+  - Erro: valgrind leak report ( 10 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_037.ptg= NOK     
+  - Erro: valgrind leak report ( 16 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_038.ptg= NOK     
+  - Erro: valgrind leak report ( 24 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_039.ptg= NOK     
+  - Erro: valgrind leak report ( 24 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_040.ptg= NOK     
+  - Erro: valgrind leak report ( 130 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_041.ptg= NOK     
+  - Erro: valgrind leak report ( 130 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_042.ptg= NOK     
+  - Erro: valgrind leak report ( 146 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_043.ptg= NOK     
+  - Erro: valgrind leak report ( 252 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_044.ptg= NOK     
+  - Erro: valgrind leak report ( 238 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_045.ptg= NOK     
+  - Erro: valgrind leak report ( 310 0 0 16460 0 )
+- [ ] =local.tests/e3/i_e3_046.ptg= NOK     
+  - Erro: valgrind leak report ( 267 0 0 16463 0 )
+- [ ] =local.tests/e3/i_e3_047.ptg= NOK     
+  - Erro: valgrind leak report ( 207 0 0 16489 0 )
+- [ ] =local.tests/e3/i_e3_048.ptg= NOK     
+  - Erro: valgrind leak report ( 153 0 0 16463 0 )
+- [ ] =local.tests/e3/i_e3_049.ptg= NOK     
+  - Erro: valgrind leak report ( 722 0 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_050.ptg= NOK     
+  - Erro: valgrind leak report ( 66 0 0 16458 0 )
 
 **** DONE Omega
 
