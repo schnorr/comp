@@ -2895,13 +2895,384 @@ Relatório após recuperação
   - A nota subjetiva se baseia nisso
 - Colocar os nomes dos membros em todos os arquivos (arvore também)
 
-**** TODO LATE Epsilon
+**** DONE LATE Epsilon
 
 Problemas com o makefile.
 - Conversar com o professor para resolver esses problemas
 
 Data limite para fazer o trabalho até dia 10/10.
 - Será considerada entrega em atraso
+
+Após a recuperação, sem entrevista
+- Pelo menos uma entrada faz criar um arquivo que ocupa todo o espaço livre
+  - Deve haver algum ciclo na árvore criada para alguma entrada
+  - A entrada que gera tal comportamento é a =local.tests/e2/input/asl65=
+- Os testes com valgrind são obrigatórios.
+  - Caso os desconsiderarmos, 50% dos testes passam
+  - A nota subjetiva se baseia nisso
+- Abaixo o relatório dos erros remanescentes (quase 100% dos testes tem erros)
+
+- [ ] =local.tests/e2/input/asl02= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 72 3 0 16482 0 )
+- [ ] =local.tests/e2/input/asl03= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 120 3 0 16482 0 )
+- [ ] =local.tests/e2/input/asl04= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 144 3 0 16482 0 )
+- [ ] =local.tests/e2/input/asl05= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 48 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl06= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 48 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl07= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 48 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl08= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 48 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl09= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 240 16 0 16482 0 )
+- [ ] =local.tests/e2/input/asl10= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 48 8 0 16482 0 )
+- [ ] =local.tests/e2/input/asl13= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 168 8 0 16482 0 )
+- [ ] =local.tests/e2/input/asl16= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 264 10 0 16482 0 )
+- [ ] =local.tests/e2/input/asl18= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 144 8 0 16482 0 )
+- [ ] =local.tests/e2/input/asl19= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 168 8 0 16482 0 )
+- [ ] =local.tests/e2/input/asl20= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 168 8 0 16482 0 )
+- [ ] =local.tests/e2/input/asl24= NOK     
+  - Erro: valgrind leak report ( 338 24 0 16482 0 )
+- [ ] =local.tests/e2/input/asl25= NOK     
+  - Erro: valgrind leak report ( 98 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl27= NOK     
+  - Erro: valgrind leak report ( 122 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl28= NOK     
+  - Erro: valgrind leak report ( 218 4 0 16482 0 )
+- [ ] =local.tests/e2/input/asl30= NOK     
+  - Erro: valgrind leak report ( 170 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl31= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 170 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl32= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 314 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl33= NOK     
+  - Erro: valgrind leak report ( 170 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl35= NOK     
+  - Erro: valgrind leak report ( 194 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl36= NOK     
+  - Erro: valgrind leak report ( 170 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl37= NOK     
+  - Erro: valgrind leak report ( 170 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl38= NOK     
+  - Erro: valgrind leak report ( 170 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl39= NOK     
+  - Erro: valgrind leak report ( 170 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl41= NOK     
+  - Erro: valgrind leak report ( 194 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl42= NOK     
+  - Erro: valgrind leak report ( 218 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl43= NOK     
+  - Erro: valgrind leak report ( 172 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl44= NOK     
+  - Erro: valgrind leak report ( 248 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl46= NOK     
+  - Erro: valgrind leak report ( 220 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl47= NOK     
+  - Erro: valgrind leak report ( 340 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl48= NOK     
+  - Erro: valgrind leak report ( 490 4 0 16482 0 )
+- [ ] =local.tests/e2/input/asl49= NOK     
+  - Erro: valgrind leak report ( 420 14 0 16482 0 )
+- [ ] =local.tests/e2/input/asl50= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 220 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl51= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 364 6 0 16482 0 )
+- [ ] =local.tests/e2/input/asl52= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 416 6 0 16482 0 )
+- [ ] =local.tests/e2/input/asl53= NOK 
+  - Erro: descompilações são diferentes 
+  - Erro: primeiro descompila não funcionou (1) 
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 72 0 0 16710 0 )
+- [ ] =local.tests/e2/input/asl54= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 464 8 0 16482 0 )
+- [ ] =local.tests/e2/input/asl55= NOK 
+  - Erro: descompilações são diferentes 
+  - Erro: primeiro descompila não funcionou (1) 
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 240 4 0 16786 0 )
+- [ ] =local.tests/e2/input/asl56= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 220 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl57= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 220 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl58= NOK     
+  - Erro: valgrind leak report ( 220 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl59= NOK     
+  - Erro: valgrind leak report ( 146 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl60= NOK     
+  - Erro: valgrind leak report ( 146 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl61= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 146 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl62= NOK     
+  - Erro: valgrind leak report ( 340 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl63= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 412 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl64= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 466 4 0 16482 0 )
+- [ ] =local.tests/e2/input/asl66= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 484 6 0 16482 0 )
+- [ ] =local.tests/e2/input/asl67= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 340 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl70= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 366 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl72= NOK 
+  - Erro: descompilações são diferentes 
+  - Erro: primeiro descompila não funcionou (1) 
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 144 2 0 16710 0 )
+- [ ] =local.tests/e2/input/asl73= NOK 
+  - Erro: descompilações são diferentes 
+  - Erro: primeiro descompila não funcionou (1) 
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 144 2 0 16710 0 )
+- [ ] =local.tests/e2/input/asl74= NOK 
+  - Erro: descompilações são diferentes 
+  - Erro: primeiro descompila não funcionou (1) 
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 144 2 0 16710 0 )
+- [ ] =local.tests/e2/input/asl75= NOK 
+  - Erro: descompilações são diferentes 
+  - Erro: primeiro descompila não funcionou (1) 
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 144 2 0 16824 0 )
+- [ ] =local.tests/e2/input/asl76= NOK     
+  - Erro: valgrind leak report ( 442 6 0 16482 0 )
+- [ ] =local.tests/e2/input/asl77= NOK     
+  - Erro: valgrind leak report ( 298 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl78= NOK     
+  - Erro: valgrind leak report ( 346 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl79= NOK     
+  - Erro: valgrind leak report ( 320 2 0 16482 0 )
+- [ ] =local.tests/e2/input/asl80= NOK 
+  - Erro: descompilações são diferentes    
+  - Erro: valgrind leak report ( 560 0 0 16482 0 )
+- [ ] =local.tests/e2/input/asl81= NOK     
+  - Erro: valgrind leak report ( 579 15 0 16482 0 )
+- [ ] =local.tests/e2/input/asl96= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 420 14 0 16482 0 )
+- [ ] =local.tests/e2/input/asl97= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 568 16 0 16482 0 )
+- [ ] =local.tests/e2/input/asl114= NOK  
+  - Erro: primeiro descompila não funcionou (139) 
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 0 0 0 20554 0 )
+- [ ] =local.tests/e2/input/asl126= NOK  
+  - Erro: primeiro descompila não funcionou (139) 
+  - Erro: segundo descompila não funcionou (139) 
+  - Erro: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (0). 
+  - Erro: valgrind leak report ( 240 7 0 20964 0 )
+- [ ] =local.tests/e3/i_e3_000.ptg= NOK  
+  - Erro: primeiro descompila não funcionou (139) 
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 0 0 0 20554 0 )
+- [ ] =local.tests/e3/i_e3_001.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 48 2 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_002.ptg= NOK     
+  - Erro: valgrind leak report ( 100 0 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_003.ptg= NOK     
+  - Erro: valgrind leak report ( 345 0 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_004.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 314 0 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_005.ptg= NOK     
+  - Erro: valgrind leak report ( 388 2 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_006.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 338 0 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_007.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 266 0 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_008.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 266 0 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_009.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 220 2 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_010.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 294 2 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_011.ptg= NOK     
+  - Erro: valgrind leak report ( 220 2 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_012.ptg= NOK     
+  - Erro: valgrind leak report ( 146 0 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_013.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 530 0 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_014.ptg= NOK     
+  - Erro: valgrind leak report ( 702 28 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_015.ptg= NOK     
+  - Erro: valgrind leak report ( 228 4 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_016.ptg= NOK     
+  - Erro: valgrind leak report ( 222 4 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_017.ptg= NOK     
+  - Erro: valgrind leak report ( 222 4 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_018.ptg= NOK     
+  - Erro: valgrind leak report ( 347 9 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_019.ptg= NOK     
+  - Erro: valgrind leak report ( 222 4 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_020.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_021.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_022.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_023.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_024.ptg= NOK     
+  - Erro: valgrind leak report ( 318 4 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_025.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_026.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_027.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_028.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_029.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_030.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_031.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_032.ptg= NOK     
+  - Erro: valgrind leak report ( 392 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_033.ptg= NOK     
+  - Erro: valgrind leak report ( 318 4 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_034.ptg= NOK     
+  - Erro: valgrind leak report ( 418 8 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_035.ptg= NOK     
+  - Erro: valgrind leak report ( 442 8 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_036.ptg= NOK 
+  - Erro: descompilações são diferentes 
+  - Erro: primeiro descompila não funcionou (1) 
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 192 0 0 16864 0 )
+- [ ] =local.tests/e3/i_e3_037.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 342 2 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_038.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 534 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_039.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 606 6 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_040.ptg= NOK     
+  - Erro: valgrind leak report ( 1762 32 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_041.ptg= NOK     
+  - Erro: valgrind leak report ( 1762 32 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_042.ptg= NOK     
+  - Erro: valgrind leak report ( 1862 36 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_043.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 2397 33 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_044.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 1820 27 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_045.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 2936 28 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_046.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 1811 29 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_047.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 1357 9 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_048.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 1005 9 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_049.ptg= NOK     
+  - Erro: valgrind leak report ( 3143 74 0 16482 0 )
+- [ ] =local.tests/e3/i_e3_050.ptg= NOK 
+  - Erro: descompilações são diferentes  
+  - Erro: segundo descompila não funcionou (139)  
+  - Erro: valgrind leak report ( 225 0 0 16482 0 )
 
 **** LATE, LATE AGAIN Psi
 
