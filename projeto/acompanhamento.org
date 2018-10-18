@@ -1312,7 +1312,7 @@ permitem que a saída de descompilação seja vazia.
 - [X] 6. Gerenciar corretamente a memória do compilador
   - Usou %destructor (no caso de erro sintático)
 
-**** TODO Iota
+**** DONE Iota
 
 - [X] 1. Associação de valor ao =token= (com uso de =yylval=)
 - [X] 2. Implementação de uma estrutura de dados em árvore
@@ -1579,6 +1579,19 @@ Corrigir
 - Todos os vazamentos de memória
 Até:
 - 10/10
+
+Após a resubmissão
+
+- Melhorou muito, sobrou apenas um erro
+- [ ] =local.tests/e3/i_e3_045.ptg= NOK  
+  - Erro: primeiro descompila não funcionou (1)  
+  - Erro: eq1.txt (0) e/ou eq2.txt (0) vazios. Original (0). 
+  - Erro: valgrind leak report ( 264 7634 0 0 0 )
+- Código está bem, alguns comentários para melhorar
+  - Cuidar os TABS no Makefile
+  - Interessante o uso do =#pragma once=
+  - Talvez usar funções de aridade indefinida, ao invés de várias =add_?_nodes=
+    - Reduzir a cópia de código
 
 **** TODO Alpha
 
