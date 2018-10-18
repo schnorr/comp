@@ -1783,7 +1783,7 @@ Após prazo extra
 - [X] 5. Remoção de conflitos/ajustes gramaticais
 - [X] 6. Gerenciar corretamente a memória do compilador
 
-**** DONE Delta
+**** DONE LATE Delta
 
 - [X] 1. Associação de valor ao =token= (com uso de =yylval=)
 - [X] 2. Implementação de uma estrutura de dados em árvore
