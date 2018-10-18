@@ -1593,7 +1593,7 @@ Após a resubmissão
   - Talvez usar funções de aridade indefinida, ao invés de várias =add_?_nodes=
     - Reduzir a cópia de código
 
-**** TODO Alpha
+**** DONE Alpha
 
 - [X] 1. Associação de valor ao =token= (com uso de =yylval=)
 - [X] 2. Implementação de uma estrutura de dados em árvore
@@ -1728,6 +1728,29 @@ Após a resubmissão
 
 Sumário:
 - Submeter correções até 10/10.
+
+Após prazo extra
+
+- Melhorou bastante, sobraram apenas os erros seguintes
+- [ ] =local.tests/e2/input/asl77= NOK     
+  - Erro: valgrind leak report ( 56 244 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_034.ptg= NOK     
+  - Erro: valgrind leak report ( 56 16 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_035.ptg= NOK     
+  - Erro: valgrind leak report ( 56 128 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_043.ptg= NOK     
+  - Erro: valgrind leak report ( 224 296 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_044.ptg= NOK     
+  - Erro: valgrind leak report ( 224 296 0 16458 0 )
+- [ ] =local.tests/e3/i_e3_045.ptg= NOK 
+  - Erro: descompilações são diferentes    
+- [ ] =local.tests/e3/i_e3_046.ptg= NOK 
+  - Erro: descompilações são diferentes
+- Algumas sugestões para melhorar
+  - [ ] Colocar o nome dos membros no grupo
+  - [ ] Mover "#includes" do arvore.c para o arvore.h
+    - Manter em apenas um único lugar todos os includes
+    - Cuidar as múltiplas inclusões de arvore.h
 
 **** DONE Theta
 
