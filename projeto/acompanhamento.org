@@ -2526,7 +2526,7 @@ Relatório após recuperação
 - [X] 5. Remoção de conflitos/ajustes gramaticais
 - [X] 6. Gerenciar corretamente a memória do compilador
 
-**** TODO LATE Upsilon
+**** DONE LATE Upsilon
 
 - [ ] =local.tests/e2/input/asl01= NOK     
   - Erro: valgrind leak report ( 72 135 0 16460 0 )
@@ -2886,6 +2886,14 @@ Relatório após recuperação
 
 Data limite para fazer o trabalho até dia 10/10.
 - Será considerada entrega em atraso pois a entrega foi artificial
+
+Relatório após recuperação
+- Vejam, por favor, os comentários fornecidos ao grupo Delta
+  - Os erros são idênticos
+- Os testes com valgrind são obrigatórios.
+  - Caso os desconsiderarmos, todos os testes passam
+  - A nota subjetiva se baseia nisso
+- Colocar os nomes dos membros em todos os arquivos (arvore também)
 
 **** TODO LATE Epsilon
 
