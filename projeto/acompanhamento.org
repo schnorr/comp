@@ -3333,5 +3333,41 @@ Havia o limite até 10/10.
 | Zeta    |    0 |    0 |  0.8 |
 
 * Avaliação da Etapa 4
+** Grupos que não entregaram até o prazo
+
+| Grupo   | ID     |
+|---------+--------|
+| Epsilon | ???490 |
+| Epsilon | ???798 |
+| Mu      | ???932 |
+| Mu      | ???794 |
+| Omicron | ???055 |
+| Psi     | ???499 |
+| Rho     | ???305 |
+| Rho     | ???713 |
+| Sigma   | ???295 |
+| Upsilon | ???741 |
+| Upsilon | ???026 |
+| Zeta    | ???271 |
+| Zeta    | ???673 |
+
+** Entregas até o prazo
+
+Considerando apenas a submissão do formulário.
+
+| Timestamp           | Grupo  |
+|---------------------+--------|
+| 2018-10-20 14:13:43 | Tau    |
+| 2018-10-20 19:57:22 | Beta   |
+| 2018-10-20 21:03:59 | Delta  |
+| 2018-10-20 22:50:38 | Gamma  |
+| 2018-10-20 23:25:48 | Theta  |
+| 2018-10-20 23:41:35 | Alpha  |
+| 2018-10-20 23:49:41 | Iota   |
+| 2018-10-20 23:52:55 | Eta    |
+| 2018-10-20 23:55:25 | Lambda |
+| 2018-10-20 23:58:08 | Omega  |
+| 2018-10-21 00:14:27 | Kappa  |
+
 * Avaliação da Etapa 5
 * Avaliação da Etapa 6
