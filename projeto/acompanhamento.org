@@ -4519,7 +4519,7 @@ dos números foi 0. Uma exceção existe para os que não chamam
 - [ ] =s40.iks= OK  
   - Warning: valgrind leak report ( 73480 0 0 163542 0 )
 
-**** TODO Iota
+**** TODO OK Iota
 
 - [ ] O binário não se chama =etapa4=, mas =etapa3=
   - Corrigido na hora do automático, mas dúvida se grupo fez algo
