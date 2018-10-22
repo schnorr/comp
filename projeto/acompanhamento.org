@@ -5602,11 +5602,287 @@ dos números foi 0. Uma exceção existe para os que não chamam
   programa de forma que tudo termine como começou, de maneira
   elegante, do ponto de vista do monte
 
-**** TODO Kappa
+**** TODO OK Kappa
 
 - [ ] Esqueceram o Makefile!
   - O binário não foi compilado
   - Todos os testes falharam
+  - Enviaram o =makefile= despues
+
+- [ ] =poi01= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi02= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi03= NOK 
+  - Erro: retornou =22= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi04= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi05= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi06= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi07= NOK 
+  - Erro: retornou =1= mas esperava =11= (=ERR_DECLARED=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi08= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi09= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi10= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi11= NOK 
+  - Erro: retornou =11= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi12= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi13= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi14= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi15= NOK 
+  - Erro: retornou =10= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi16= NOK 
+  - Erro: retornou =139= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 24139 0 )
+- [ ] =poi17= NOK 
+  - Erro: retornou =30= mas esperava =31= (=ERR_STRING_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi18= NOK 
+  - Erro: retornou =30= mas esperava =32= (=ERR_CHAR_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi19= NOK 
+  - Erro: retornou =139= mas esperava =33= (=ERR_USER_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 24802 0 )
+- [ ] =poi20= NOK 
+  - Erro: retornou =139= mas esperava =23= (=ERR_USER=) 
+  - Warning: valgrind leak report ( 0 0 0 24802 0 )
+- [ ] =poi21= NOK 
+  - Erro: retornou =30= mas esperava =32= (=ERR_CHAR_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi22= NOK 
+  - Erro: retornou =30= mas esperava =31= (=ERR_STRING_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi23= NOK 
+  - Erro: retornou =139= mas esperava =33= (=ERR_USER_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 24139 0 )
+- [ ] =poi24= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi25= NOK 
+  - Erro: retornou =10= mas esperava =40= (=ERR_MISSING_ARGS=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi26= NOK 
+  - Erro: retornou =10= mas esperava =41= (=ERR_EXCESS_ARGS=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi27= NOK 
+  - Erro: retornou =10= mas esperava =42= (=ERR_WRONG_TYPE_ARGS=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi28= NOK 
+  - Erro: retornou =139= mas esperava =11= (=ERR_DECLARED=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi29= NOK 
+  - Erro: retornou =10= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi30= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi31= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi32= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi33= NOK 
+  - Erro: retornou =32= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi34= NOK 
+  - Erro: retornou =139= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 24141 0 )
+- [ ] =poi35= NOK 
+  - Erro: retornou =31= mas esperava =50= (=ERR_WRONG_PAR_INPUT=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi36= NOK 
+  - Erro: retornou =0= mas esperava =50= (=ERR_WRONG_PAR_INPUT=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi37= NOK 
+  - Erro: retornou =0= mas esperava =50= (=ERR_WRONG_PAR_INPUT=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi38= NOK 
+  - Erro: retornou =32= mas esperava =50= (=ERR_WRONG_PAR_INPUT=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi39= NOK 
+  - Erro: retornou =0= mas esperava =50= (=ERR_WRONG_PAR_INPUT=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi40= NOK 
+  - Erro: retornou =0= mas esperava =50= (=ERR_WRONG_PAR_INPUT=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi41= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi42= NOK 
+  - Erro: retornou =0= mas esperava =51= (=ERR_WRONG_PAR_OUTPUT=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi43= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi44= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi45= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi46= NOK 
+  - Erro: retornou =0= mas esperava =22= (=ERR_FUNCTION=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi47= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi48= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi49= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi50= NOK 
+  - Erro: retornou =31= mas esperava =52= (=ERR_WRONG_PAR_RETURN=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi51= NOK 
+  - Erro: retornou =31= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =poi52= NOK 
+  - Erro: retornou =31= mas esperava =52= (=ERR_WRONG_PAR_RETURN=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe01= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe02= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe03= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe04= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe05= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe06= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe07= NOK 
+  - Erro: retornou =11= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe08= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe09= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe10= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe11= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe12= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe13= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe14= NOK 
+  - Erro: retornou =71= mas esperava =20= (=ERR_VARIABLE=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe15= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =qwe16= NOK 
+  - Erro: retornou =139= mas esperava =33= (=ERR_USER_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 23761 0 )
+- [ ] =qwe17= NOK 
+  - Erro: retornou =139= mas esperava =20= (=ERR_VARIABLE=) 
+  - Warning: valgrind leak report ( 0 0 0 23757 0 )
+- [ ] =qwe18= NOK 
+  - Erro: retornou =139= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s00.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s01.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s02.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s03.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s04.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s05.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s06.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s07.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s08.iks= NOK 
+  - Erro: retornou =30= mas esperava =31= (=ERR_STRING_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s09.iks= NOK 
+  - Erro: retornou =30= mas esperava =32= (=ERR_CHAR_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s10.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s11.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s12.iks= NOK 
+  - Erro: retornou =32= mas esperava =42= (=ERR_WRONG_TYPE_ARGS=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s13.iks= NOK 
+  - Erro: retornou =31= mas esperava =42= (=ERR_WRONG_TYPE_ARGS=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s14.iks= NOK 
+  - Erro: retornou =31= mas esperava =50= (=ERR_WRONG_PAR_INPUT=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s15.iks= NOK 
+  - Erro: retornou =0= mas esperava =51= (=ERR_WRONG_PAR_OUTPUT=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s16.iks= NOK 
+  - Erro: retornou =31= mas esperava =52= (=ERR_WRONG_PAR_RETURN=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s17.iks= NOK 
+  - Erro: retornou =30= mas esperava =31= (=ERR_STRING_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s18.iks= NOK 
+  - Erro: retornou =30= mas esperava =32= (=ERR_CHAR_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s19.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s20.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s21.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s22.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s23.iks= NOK 
+  - Erro: retornou =0= mas esperava =31= (=ERR_STRING_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s24.iks= NOK 
+  - Erro: retornou =0= mas esperava =32= (=ERR_CHAR_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s25.iks= NOK 
+  - Erro: retornou =22= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s26.iks= NOK 
+  - Erro: retornou =30= mas esperava =32= (=ERR_CHAR_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s27.iks= NOK 
+  - Erro: retornou =30= mas esperava =31= (=ERR_STRING_TO_X=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s28.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s29.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s30.iks= NOK 
+  - Erro: retornou =32= mas esperava =52= (=ERR_WRONG_PAR_RETURN=) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s31.iks= NOK 
+  - Erro: retornou =22= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s32.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s34.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s35.iks= NOK 
+  - Erro: retornou =11= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s36.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s37.iks= NOK 
+  - Erro: retornou =11= mas esperava =0= (Sucesso) 
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s38.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s39.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+- [ ] =s40.iks= OK  
+  - Warning: valgrind leak report ( 0 0 0 16460 0 )
+
 
 **** TODO LATE Epsilon
 **** TODO LATE Mu
