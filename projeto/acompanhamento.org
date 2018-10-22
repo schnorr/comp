@@ -3369,5 +3369,19 @@ Considerando apenas a submissão do formulário.
 | 2018-10-20 23:58:08 | Omega  |
 | 2018-10-21 00:14:27 | Kappa  |
 
+** Arquivos para testes                                             :ATTACH:
+:PROPERTIES:
+:Attachments: e4tests.tgz
+:ID:       85c73ba8-bb05-4ee2-b0b9-0146bf9ec026
+:END:
+
+Veja [[./data/85/c73ba8-bb05-4ee2-b0b9-0146bf9ec026/e4tests.tgz][este arquivo]].
+
+Todas as entradas estão sintaticamente corretas de acordo com E2. Os
+arquivos que contém um comentário que começa por =ERR_= contém nesta
+string o identificador do código de erro esperado para o teste. Na
+ausência, assume-se que a entrada está léxica, sintática e
+semanticamente correta e portanto o compilador deve retornar 0.
+
 * Avaliação da Etapa 5
 * Avaliação da Etapa 6
