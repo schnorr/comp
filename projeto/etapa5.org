@@ -79,13 +79,14 @@ Existem pelo menos duas possibilidades de implementação válidas:
    código em uma segunda passagem sobre a AST, através da
    implementação de uma função que faça o percorrimento.
 
-Informe o professor da sua escolha. Em ambos os casos, ao
-final da execução, o compilador deve ter na raiz da árvore AST um
-ponteiro para todo o código intermediário ILOC do programa de entrada.
-A geração de código consiste na criação de uma ou mais instruções ILOC
-juntamente com a união de trechos das sub-árvores, com a criação de
-novos símbolos intermediários e rótulos conforme necessário. Nesta
-etapa, deve-se traduzir as seguintes construções da linguagem:
+Informe o professor da sua escolha. Em ambos os casos, ao final da
+execução, o compilador deve ter na raiz da árvore AST um ponteiro para
+todo o código intermediário ILOC do programa de entrada.  A geração de
+código consiste na criação de uma ou mais instruções ILOC juntamente
+com a união de trechos das sub-árvores, com a criação de novos
+símbolos intermediários e rótulos conforme necessário. Nesta etapa,
+deve-se traduzir as seguintes construções da linguagem considerando
+que existe apenas o tipo =int=:
 
 - Cálculo de endereço na declaração de variáveis
   - Endereço de variáveis locais são um deslocamento em relação ao registrador especial =rfp=
@@ -97,30 +98,16 @@ etapa, deve-se traduzir as seguintes construções da linguagem:
   - if com else opcional
   - as duas versões de while
 
-*Simplificações* (ou seja, não precisa fazer)
-- Os programas deverão conter _apenas uma função_
-  - Ela pode se chamar =main=
-- Existe apenas o tipo =int= na linguagem, ou seja, nada precisa ser
-  feito referente aos outros tipos da linguagem tais como
-  - vetores
-  - strings
-  - char
-  - float
-  - tipos de usuário
-- Não é obrigatório implementar tradução de código para os elementos
-  não estão listados acima, tais como
-  - pipes
-  - comandos de entrada e saída
-  - operações de shift
-  - comandos de retorno, break, continue, case
-  - os comandos for e foreach
-  - o comando switch
-  - comandos com pipes
-  - expressões com pipes
-  - operadores ternários
-  - operadores de acesso ao endereço da variável ou valor do ponteiro
-  - operador ?
-  - operadores binários tais como resto da divisão, bitwise, exponenciação
+*Simplificações*: Os programas deverão conter _apenas uma função_. Nada
+precisa ser feito referente aos outros tipos da linguagem tais como
+vetores, strings, char, float e tipos de usuário. Não é obrigatório
+implementar tradução de código para os elementos não estão listados
+acima, tais como pipes, comandos de entrada e saída, operações de
+shift, comandos de retorno, break, continue, case, os comandos for e
+foreach, o comando switch, comandos com pipes, expressões com pipes,
+operadores ternários, operadores de acesso ao endereço da variável ou
+valor do ponteiro, operador ?, operadores binários tais como resto da
+divisão, bitwise e exponenciação (lista não exaustiva).
 
 ** 4. Endereçamento de variáveis
 
