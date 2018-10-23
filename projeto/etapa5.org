@@ -287,18 +287,18 @@ linha.
 A Linguagem ILOC tem operações de três endereços de registrador para
 registrador.
 
-| *Opcode* | *Fonte*  |          | *Alvo* | *Significado*    |
-|--------+--------+----------+------+----------------|
-| =add=    | =r1, r2= | \Rightarrow &rarr; | =r3=   | $r3 = r1 + r2$ |
-| =sub=    | =r1, r2= | =>       | =r3=   | $r3 = r1 - r2$ |
-| =mult=   | =r1, r2= | =>       | =r3=   | $r3 = r1 * r2$ |
-| =div=    | =r1, r2= | =>       | =r3=   | $r3 = r1 / r2$ |
-| =addI=   | =r1, c2= | =>       | =r3=   | $r3 = r1 + c2$ |
-| =subI=   | =r1, c2= | =>       | =r3=   | $r3 = r1 - c2$ |
-| =rsubI=  | =r1, c2= | =>       | =r3=   | $r3 = c2 - r1$ |
-| =multI=  | =r1, c2= | =>       | =r3=   | $r3 = r1 * c2$ |
-| =divI=   | =r1, c2= | =>       | =r3=   | $r3 = r1 / c2$ |
-| =rdivI=  | =r1, c2= | =>       | =r3=   | $r3 = c2 / r1$ |
+| *Opcode* | *Fonte*  |    | *Alvo* | *Significado*    |
+|--------+--------+----+------+----------------|
+| =add=    | =r1, r2= | =\rangle | =r3=   | $r3 = r1 + r2$ |
+| =sub=    | =r1, r2= | =\rangle | =r3=   | $r3 = r1 - r2$ |
+| =mult=   | =r1, r2= | =\rangle | =r3=   | $r3 = r1 * r2$ |
+| =div=    | =r1, r2= | =\rangle | =r3=   | $r3 = r1 / r2$ |
+| =addI=   | =r1, c2= | =\rangle | =r3=   | $r3 = r1 + c2$ |
+| =subI=   | =r1, c2= | =\rangle | =r3=   | $r3 = r1 - c2$ |
+| =rsubI=  | =r1, c2= | =\rangle | =r3=   | $r3 = c2 - r1$ |
+| =multI=  | =r1, c2= | =\rangle | =r3=   | $r3 = r1 * c2$ |
+| =divI=   | =r1, c2= | =\rangle | =r3=   | $r3 = r1 / c2$ |
+| =rdivI=  | =r1, c2= | =\rangle | =r3=   | $r3 = c2 / r1$ |
 #+TBLFM: $3=>
 
 Todas estas operações realizam a leitura dos operandos origem de
