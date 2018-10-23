@@ -103,7 +103,7 @@ etapa, deve-se traduzir as seguintes construções da linguagem:
 
 Por simplicidade, os programas deverão conter _apenas uma função_ chamada =main=.
 
-* Discussão Importante
+* Endereçamento de variáveis
 
 Na tradução para ILOC, deve-se considerar que o conteúdo de cada
 variável da Linguagem está em um endereço de memória. Este endereço
@@ -111,13 +111,14 @@ deve ser calculado no momento da declaração da variável considerando o
 escopo atual e seu endereço base. Antes de realizar qualquer operação
 sobre uma variável, deve-se antes de tudo carregar o seu conteúdo (a
 partir de um endereço de memória) para um registrador (utilizando a
-operação =load=, por exemplo), para só então realizar a operação
-sobre a variável. Ao final desta operação, o valor resultante estará
+operação =load=, por exemplo), para só então realizar a operação sobre a
+variável. Ao final desta operação, o valor resultante estará
 obrigatoriamente em um registrador. Este valor final deve ser
 transferido para o endereço da variável na memória (utilizando a
-operação =store=, por exemplo).
+operação =store=, por exemplo) caso necessário.
 
 * Dicas de Desenvolvimento
+
 Abaixo listam-se algumas dicas de desenvolvimento que podem ser úteis.
 
 ** Instruções
@@ -129,7 +130,8 @@ trabalho emprega técnicas genéricas de forma funcional, didática, mas
 pode ser otimizada de várias formas antes da geração de código
 assembly. Dois exemplos de otimização são a reutilização de símbolos
 temporários em expressões e o uso de registradores. Entretanto, essas
-otimizações não fazem parte desta etapa do trabalho e são portanto opcionais.
+otimizações não fazem parte desta etapa do trabalho e são portanto
+opcionais.
 
 ** Geração de Código
 
@@ -158,14 +160,13 @@ Organize a sua solução para que o compilador leia o programa da
 entrada padrão e gere o programa em ILOC na saída padrão. Dessa forma,
 pode-se realizar o seguinte comando (considerando que \texttt{main} é
 o binário do compilador):
+
 #+BEGIN_EXAMPLE
 ./main < entrada.poa > saida.iloc
 #+END_EXAMPLE
 
-Onde =entrada.poa= contém um programa na linguagem sendo compilada, e =saida.iloc= contém em ILOC traduzido.
-
-\bibliographystyle{plain}
-\bibliography{biblio}
+Onde =entrada.poa= contém um programa na linguagem sendo compilada, e
+=saida.iloc= contém em ILOC traduzido.
 
 * Anexo - A Linguagem ILOC
 ** Introdução
