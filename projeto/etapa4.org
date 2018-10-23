@@ -197,4 +197,8 @@ deve retornar o valor zero.
 #define ERR_WRONG_PAR_RETURN 52 //parâmetro não é expressão compatível com tipo do retorno
 #+END_SRC
 
+* Melhoramentos                                                    :noexport:
 
+1. Colocar alguns exemplos para cada um dos códigos de erro
+   - Com explicações para evitar interpretação errada
+2. 
