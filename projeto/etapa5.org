@@ -25,7 +25,7 @@ Testes poderão ser realizados através de um simulador simples escrito
 em Python3 e já disponível também no anexo.
 
 * Funcionalidades Necessárias
-** Arranjos Multidimensionais                                     :noexport:
+** Arranjos Multidimensionais                                  :noexport:
 Altere a gramática para suportar arranjos multidimensionais. A forma
 =tipo nome[n1][n2]...[n]= deve ser utilizada na declaração. No acesso a
 elementos dos arranjos, utilize =id[n1][n2]...[n]= quando existem duas
@@ -45,7 +45,7 @@ int funcao_com_arranjos ()
 }
 #+END_EXAMPLE
 
-** Estrutura de Dados para ILOC
+** 1. Estrutura de Dados para ILOC
 
 Implementa uma estrutura de dados para conter o código da operação e
 os argumentos necessários para cada operação. Note que os argumentos
@@ -55,7 +55,7 @@ para manter uma lista de instruções ILOC. Dentre as várias forma de
 implementar, utilize aquela que mais se adequa ao uso em um
 compilador.
 
-** Rótulos e Registradores
+** 2. Rótulos e Registradores
 
 Uma função deve ser adicionada ao projeto de compilador para fornecer
 nomes de rótulos a serem utilizados na geração de código. Os nomes são
@@ -67,7 +67,7 @@ nomes de rótulos e registradores devem seguir a convenção de nomes
 especificada na descrição da linguagem ILOC. Os registradores podem
 ser vistos como variáveis temporárias auxiliares.
 
-** Geração de Código
+** 3. Geração de Código
 
 Existem pelo menos duas possibilidades de implementação válidas:
 
@@ -101,7 +101,7 @@ Não há necessidade de implementar tradução de código para os outros
 elementos da linguagem que não estão explicitamente listados acima.
 Por simplicidade, os programas deverão conter _apenas uma função_.
 
-* Endereçamento de variáveis
+** 4. Endereçamento de variáveis
 
 Na tradução para ILOC, deve-se considerar que o conteúdo de cada
 variável da Linguagem está em um endereço de memória. Este endereço
