@@ -266,20 +266,23 @@ O código ILOC usa um conjunto simples de convenções de nome.
 1. Existe um número ilimitado de registradores. Eles são nomeados com
    um =r= seguido de um número inteiro positivo.
 
-2. O registrador =rfp= é reservado como um ponteiro para o registro de
-   ativação atual. Sendo assim, a operação:
+2. Existe um número ilimitado de rótulos. Eles são nomeados com um =L=
+   seguido de um número inteiro positivo.
+
+3. O registrador =rfp= é reservado como um ponteiro para a base do
+   registro de ativação atual. Sendo assim, a operação abaixo carrega
+   em =r1= a palavra com o conteúdo do endereço obtido através do
+   somatório de =rfp= com o valor 4, ou seja, r1 = Memoria(rfp+4).
 
    #+BEGIN_EXAMPLE
    loadAI rfp,4 => r1
    #+END_EXAMPLE
 
-   r3 = Memoria(r1 + c2)
+4. O registrador =rsp= é reservado como um ponteiro para a base do
+   segmento de dados do programa.
 
-  carrega em =r1= a palavra com o conteúdo do endereço obtido através do
-   somatório de =rfp= com o valor 4 (ou seja, r1 = Memoria(rfp+4)
-
-Comentários em ILOC começam com =//= e continuam até o final da
-linha.
+4. Comentários em ILOC começam com =//= e continuam até o final da
+   linha.
 
 ** Operações Individuais
 *** Aritmética
