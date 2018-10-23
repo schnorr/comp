@@ -99,10 +99,28 @@ etapa, deve-se traduzir as seguintes construções da linguagem:
 
 *Simplificações* (ou seja, não precisa fazer)
 - Os programas deverão conter _apenas uma função_
+  - Ela pode se chamar =main=
 - Existe apenas o tipo =int= na linguagem, ou seja, nada precisa ser
-  feito referente aos outros tipos da linguagem
+  feito referente aos outros tipos da linguagem tais como
+  - vetores
+  - strings
+  - char
+  - float
+  - tipos de usuário
 - Não é obrigatório implementar tradução de código para os elementos
-  não estão listados acima
+  não estão listados acima, tais como
+  - pipes
+  - comandos de entrada e saída
+  - operações de shift
+  - comandos de retorno, break, continue, case
+  - os comandos for e foreach
+  - o comando switch
+  - comandos com pipes
+  - expressões com pipes
+  - operadores ternários
+  - operadores de acesso ao endereço da variável ou valor do ponteiro
+  - operador ?
+  - operadores binários tais como resto da divisão, bitwise, exponenciação
 
 ** 4. Endereçamento de variáveis
 
