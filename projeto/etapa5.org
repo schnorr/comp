@@ -284,25 +284,21 @@ linha.
 ** Operações Individuais
 *** Aritmética
 
-A Linguagem ILOC tem operações de três endereços de registrador para registrador.
+A Linguagem ILOC tem operações de três endereços de registrador para
+registrador.
 
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{tabular}{llll|l}\toprule
-{\bf Opcode} & {\bf Fonte}  &        & {\bf Alvo} & {\bf Significado} \\\toprule
-\et{add}     & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 + r2$ \\
-\et{sub}     & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 - r2$ \\
-\et{mult}    & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 * r2$ \\
-\et{div}     & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 / r2$ \\\midrule
-\et{addI}    & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 + c2$ \\
-\et{subI}    & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 - c2$ \\
-\et{rsubI}   & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = c2 - r1$ \\
-\et{multI}   & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 * c2$ \\
-\et{divI}    & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 / c2$ \\
-\et{rdivI}   & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = c2 / r1$ \\\bottomrule
-\end{tabular}
-\end{center}
-#+END_EXPORT
+| *Opcode* | *Fonte*  |        | *Alvo* | *Significado*    |
+|--------+--------+--------+------+----------------|
+| =add=    | =r1, r2= | \ARROW | =r3=   | $r3 = r1 + r2$ |
+| =sub=    | =r1, r2= | \ARROW | =r3=   | $r3 = r1 - r2$ |
+| =mult=   | =r1, r2= | \ARROW | =r3=   | $r3 = r1 * r2$ |
+| =div=    | =r1, r2= | \ARROW | =r3=   | $r3 = r1 / r2$ |
+| =addI=   | =r1, c2= | \ARROW | =r3=   | $r3 = r1 + c2$ |
+| =subI=   | =r1, c2= | \ARROW | =r3=   | $r3 = r1 - c2$ |
+| =rsubI=  | =r1, c2= | \ARROW | =r3=   | $r3 = c2 - r1$ |
+| =multI=  | =r1, c2= | \ARROW | =r3=   | $r3 = r1 * c2$ |
+| =divI=   | =r1, c2= | \ARROW | =r3=   | $r3 = r1 / c2$ |
+| =rdivI=  | =r1, c2= | \ARROW | =r3=   | $r3 = c2 / r1$ |
 
 Todas estas operações realizam a leitura dos operandos origem de
 registradores ou constantes e escrevem o resultado de volta para um
