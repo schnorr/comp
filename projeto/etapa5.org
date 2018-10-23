@@ -222,18 +222,16 @@ dos operandos alvo pelo símbolo ``=>'', que significa
 | Operando       | \rightarrow | =registrador= \vert =numero= \vert =rotulo=                            |
 
 
-O não-terminal /CodigoOperacao/ pode ser qualquer operação ILOC,
-exceto =cbr=, =jump=, e =jumpI=. As tabelas na
-seção~\ref{iloc-tabelas} mostram o número de operandos e seus tipos
-para cada operação da Linguagem ILOC.
+O não-terminal /CodigoOperacao/ pode ser qualquer operação ILOC, exceto
+=cbr=, =jump=, e =jumpI=. As tabelas do sumário abaixo mostram o número de
+operandos e seus tipos para cada operação da Linguagem ILOC.
 
-Um /Operando/ pode ser um de três tipos: =registrador=,
-=numero= e =rotulo=. O tipo de cada operando é
-determinado pelo código da operação e a posição que o operando aparece
-na operação. Por convenção, os registradores começam pela letra
-=r= (minúscula) e são seguidos por um número inteiro ou uma
-cadeia de caracteres qualquer. Ainda por convenção, rótulos sempre
-começam pela letra =L= (maiúscula).
+Um /Operando/ pode ser um de três tipos: =registrador=, =numero= e =rotulo=. O
+tipo de cada operando é determinado pelo código da operação e a
+posição que o operando aparece na operação. Por convenção, os
+registradores começam pela letra =r= (minúscula) e são seguidos por um
+número inteiro ou uma cadeia de caracteres qualquer. Ainda por
+convenção, rótulos sempre começam pela letra =L= (maiúscula).
 
 A maioria das operações tem um único operando alvo; algumas operações
 de armazenamento (\emph{store}) tem operandos alvos múltiplos, assim
@@ -248,20 +246,18 @@ calcula o endereço adicionando =4= ao conteúdo de =rj= e
 armazena o valor encontrado no registrador =ri= na localização da
 memória especificada pelo endereço calculado. Em outras palavras:
 
-\textsc{Memória}(=rj + 4=) $\leftarrow$ \textsc{Conteúdo}(=ri=)
+/Memória/ (=rj + 4=) \leftarrow /Conteúdo/ (=ri=)
 
 Operações de fluxo de controle tem sintática diferente. Uma vez que
 estas operações não definem seus alvos, elas são escritas com uma
-flecha simples =->= ao invés da flecha dupla
-==>=. Formalmente:
+flecha simples =->= ao invés da flecha dupla ==>=. Formalmente:
 
 | OperacaoFluxoControle | \rightarrow | =cbr register -> label, label= |
 |                       | \vert | =jumpI -> label=               |
 |                       | \vert | =jumpI -> register=            |
 
-
-A primeira operação, =cbr=, implementa um desvio
-condicional. As outras duas operações são desvios incondicionais.
+A primeira operação, =cbr=, implementa um desvio condicional. As outras
+duas operações são desvios incondicionais.
 
 ** Convenções de Nome
 
@@ -315,7 +311,7 @@ ou destino.
 
 As primeiras quatro operações da tabela são operações registrador para
 registrador clássicas. As próximas seis especificam um operando
-imediato. As operações não comutativas, \et{sub} e \et{div}, tem duas
+imediato. As operações não comutativas, =sub= e =div=, tem duas
 formas imediatas alternativas para permitir o operando imediato em
 qualquer lado do operador. As formas imediatas são úteis para
 expressar resultados de certas otimizações, para escrever exemplos de
