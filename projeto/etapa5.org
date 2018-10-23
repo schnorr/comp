@@ -99,7 +99,6 @@ etapa, deve-se traduzir as seguintes construções da linguagem:
 
 Não há necessidade de implementar tradução de código para os outros
 elementos da linguagem que não estão explicitamente listados acima.
-
 Por simplicidade, os programas deverão conter _apenas uma função_.
 
 * Endereçamento de variáveis
