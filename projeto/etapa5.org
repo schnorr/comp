@@ -26,8 +26,6 @@ um simulador simples escrito em Python3 e já disponível no repositório
 git de referência (em \emph{scripts}, etapa 5, \texttt{ilocsim}).
 
 * Funcionalidades Necessárias
-\label{funcionalidades}
-
 ** Arranjos Multidimensionais                                     :noexport:
 Altere a gramática para suportar arranjos multidimensionais. A forma
 =tipo nome[n1][n2]...[n]= deve ser utilizada na declaração. No acesso a
@@ -51,13 +49,12 @@ int funcao_com_arranjos ()
 ** Estrutura de Dados para ILOC
 
 Implementa uma estrutura de dados para conter o código da operação e
-os argumentos necessários para cada operação (consulte a Seção
-\ref{iloc-tabelas} para saber quais são as operações válidas em ILOC e
-seus argumentos). Note que os argumentos das operações são nomes de
-registradores, valores constantes, ou nomes de rótulos. _Além disso_,
-implementa uma estrutura de dados para manter uma lista de instruções
-ILOC. Dentre as várias forma de implementar, utilize aquela que mais
-se adequa ao uso em um compilador.
+os argumentos necessários para cada operação. Note que os argumentos
+das operações são nomes de registradores, valores constantes, ou nomes
+de rótulos. _Além disso_, deve-se implementar uma estrutura de dados
+para manter uma lista de instruções ILOC. Dentre as várias forma de
+implementar, utilize aquela que mais se adequa ao uso em um
+compilador.
 
 ** Rótulos e Registradores
 
@@ -68,8 +65,8 @@ as instruções ILOC devem ser realizadas sobre valores que estão em
 registradores. Sendo assim, uma função deve ser adicionada ao projeto
 de compilador para gerenciar a criação de nomes de registradores. Os
 nomes de rótulos e registradores devem seguir a convenção de nomes
-especificada na Seção \ref{iloc}. Os registradores podem ser vistos
-como variáveis temporárias auxiliares.
+especificada na descrição da linguagem ILOC. Os registradores podem
+ser vistos como variáveis temporárias auxiliares.
 
 ** Geração de Código
 
@@ -92,16 +89,14 @@ novos símbolos intermediários e rótulos conforme necessário. Nesta
 etapa, deve-se traduzir as seguintes construções da linguagem:
 
 - Cálculo de endereço na declaração de variáveis
-  - Endereço de variáveis locais são um deslocamento em relação ao
-    registrador especial =fp=
+  - Endereço de variáveis locais são um deslocamento em relação ao registrador especial =rfp=
   - Endereço de variáveis globais são um deslocamento em relação ao registrador especial =rbss=
 - Expressões Aritméticas
 - Expressões Booleanas com curto-circuito
-- Arranjos Multidimensionais
 - Comandos de Atribuição
-- Comandos de Fluxo de Controle (a implementação do =switch= é opcional, mas encorajada)
+- Comandos de Fluxo de Controle
 
-Por simplicidade, os programas deverão conter _apenas uma função_ chamada =main=.
+Por simplicidade, os programas deverão conter _apenas uma função_.
 
 * Endereçamento de variáveis
 
