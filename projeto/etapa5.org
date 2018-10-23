@@ -167,23 +167,22 @@ Onde =entrada.poa= contém um programa na linguagem sendo compilada, e =saida.il
 \bibliographystyle{plain}
 \bibliography{biblio}
 
-* A Linguagem ILOC
-\label{iloc}
+* Anexo - A Linguagem ILOC
+** Introdução
 
-ILOC[fn:1]  é uma representação intermediária
-parecida com assembly para uma máquina RISC abstrata. A máquina
-abstrata que executa ILOC tem um número ilimitado de
+ILOC é uma representação intermediária parecida com assembly para uma
+máquina RISC abstrata. A máquina abstrata que executa ILOC (veja o
+simulador abaixo escrito em Python) tem um número ilimitado de
 registradores. ILOC é um código de três endereços com operações de
-registrador a registrador, operações de carga (=load=) e
-armazenamento (=store=), comparações e desvios. Suporta apenas
-modos de endereçamento simples, tais como -- direto, endereço +
-offset, endereço + imediato, e imediato. Os operandos são lidos no
-início do ciclo quem uma operação começa a ser executada. Os operandos
-resultantes da operação se tornam definidos no final do ciclo no qual
-a operação se completa.
+registrador a registrador, operações de carga (=load=) e armazenamento
+(=store=), comparações e desvios. Suporta apenas modos de endereçamento
+simples, tais como -- direto, endereço + offset, endereço + imediato,
+e imediato. Os operandos são lidos no início do ciclo que uma operação
+começa a ser executada. Os operandos resultantes da operação se tornam
+definidos no final do ciclo no qual a operação se completa.
 
-[fn:1] Este texto é uma tradução simplificada do apêndice A do
-livro do Keith \cite{keith}.
+*Nota*: Este texto é uma tradução simplificada do apêndice A do livro do
+Keith com adaptação para a disciplina de compiladores na UFRGS.
 
 ** Gramática da Linguagem ILOC
 
