@@ -263,8 +263,8 @@ duas operações são desvios incondicionais.
 
 O código ILOC usa um conjunto simples de convenções de nome.
 
-1. Existe um número ilimitado de registradores. Estes são nomeados com
-   um =r= seguindo de um número inteiro positivo, como =r1789=
+1. Existe um número ilimitado de registradores. Eles são nomeados com
+   um =r= seguido de um número inteiro positivo.
 
 2. O registrador =rfp= é reservado como um ponteiro para o registro de
    ativação atual. Sendo assim, a operação:
