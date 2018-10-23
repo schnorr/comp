@@ -170,6 +170,15 @@ o binário do compilador):
 Onde =entrada.poa= contém um programa na linguagem sendo compilada, e
 =saida.iloc= contém em ILOC traduzido.
 
+** Avaliação automática
+
+Os testes automáticos utilizarão sistematicamente o simulador =ilocsim=
+(veja abaixo) para verificar se o código sintetizado pela solução do
+grupo realiza o que o programa na entrada diz que tem que ser
+feito. Vários mecanismos são empregados para isso, mas o principal é o
+estado da memória (valores que estão na pilha e segmento de dados) no
+final do programa.
+
 * Anexo - A Linguagem ILOC
 ** Introdução
 
