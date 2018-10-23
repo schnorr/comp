@@ -266,17 +266,20 @@ O código ILOC usa um conjunto simples de convenções de nome.
 1. Deslocamentos de memória para variáveis são representados
   simbolicamente com um =@= antes do nome da variável.
 
-2. Existe um número ilimitado de registradores. Estes são nomeados
-  com inteiros simples, como =r1789=, ou com nomes simbólicos,
-  como em =ri= ou =rj=.
+2. Existe um número ilimitado de registradores. Estes são nomeados com
+   um =r= seguindo de um número inteiro positivo, como =r1789=
 
-3. O registrador =fp= ou =rarp= é reservado como um ponteiro para o
-  registro de ativação atual. Sendo assim, a operação:
+3. O registrador =rfp= é reservado como um ponteiro para o registro de
+   ativação atual. Sendo assim, a operação:
 
-  =loadAI rarp,@x => r1=
+   #+BEGIN_EXAMPLE
+   loadAI rfp,4 => r1
+   #+END_EXAMPLE
 
-  carrega o conteúdo da variável =x=, guardada no deslocamento
-  =@x= a partir do =rarp=, em =r1=.
+   r3 = Memoria(r1 + c2)
+
+  carrega em =r1= a palavra com o conteúdo do endereço obtido através do
+   somatório de =rfp= com o valor 4 (ou seja, r1 = Memoria(rfp+4)
 
 Comentários em ILOC começam com =//= e continuam até o final da
 linha.
