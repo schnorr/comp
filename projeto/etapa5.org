@@ -93,7 +93,7 @@ etapa, deve-se traduzir as seguintes construções da linguagem:
 
 - Cálculo de endereço na declaração de variáveis
   - Endereço de variáveis locais são um deslocamento em relação ao
-    registrador especial =fp= (ou =rarp=)
+    registrador especial =fp=
   - Endereço de variáveis globais são um deslocamento em relação ao registrador especial =rbss=
 - Expressões Aritméticas
 - Expressões Booleanas com curto-circuito
