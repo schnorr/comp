@@ -97,13 +97,12 @@ etapa, deve-se traduzir as seguintes construções da linguagem:
   - if com else opcional
   - as duas versões de while
 
-*Simplificações*:
-- Os programas deverão conter _apenas uma função_.
+*Simplificações* (ou seja, não precisa fazer)
+- Os programas deverão conter _apenas uma função_
 - Existe apenas o tipo =int= na linguagem, ou seja, nada precisa ser
-  feito referente aos outros tipos da linguagem (sejam eles primitivos
-  ou de usuário)
-- Não há necessidade de implementar tradução de código para os outros
-  elementos da linguagem que não estão listados acima.
+  feito referente aos outros tipos da linguagem
+- Não é obrigatório implementar tradução de código para os elementos
+  não estão listados acima
 
 ** 4. Endereçamento de variáveis
 
