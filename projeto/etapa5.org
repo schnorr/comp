@@ -588,7 +588,7 @@ class Storage:
       if (strict):
          if (x == "rbss"):
             update = 0
-         if (x == "rarp" and self.rfpFirstUpdate == 0):
+         if (x == "rfp" and self.rfpFirstUpdate == 0):
             update = 0
             self.rfpFirstUpdate = 1
          if (x == "rsp" and self.rspFirstUpdate == 0):
@@ -606,7 +606,7 @@ class Storage:
 #
 class Sim:
    def __init__(self, program, bss, fp, trace=False):
-      self.reg = Storage({'rbss':bss, 'rarp':fp, 'rsp':fp, 'rpc':0})
+      self.reg = Storage({'rbss':bss, 'rfp':fp, 'rpc':0})
       self.mem = Storage()
       self.labels = {}
       self.ip = 0
