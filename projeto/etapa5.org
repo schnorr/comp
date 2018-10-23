@@ -285,35 +285,32 @@ linha.
 *** Aritmética
 
 A Linguagem ILOC tem operações de três endereços de registrador para
-registrador.
+registrador. Todas estas operações realizam a leitura dos operandos
+origem de registradores ou constantes e escrevem o resultado de volta
+para um registrador. Qualquer registrador pode servir como um operando
+origem ou destino.
 
-| *Opcode* | *Fonte*  |        | *Alvo* | *Significado*    |
-|--------+--------+--------+------+----------------|
-| =add=    | =r1, r2= | =>     | =r3=   | $r3 = r1 + r2$ |
-| =sub=    | =r1, r2= | #ERROR | =r3=   | $r3 = r1 - r2$ |
-| =mult=   | =r1, r2= | = \rangle    | =r3=   | $r3 = r1 * r2$ |
-| =div=    | =r1, r2= | = \rangle    | =r3=   | $r3 = r1 / r2$ |
-| =addI=   | =r1, c2= | = \rangle    | =r3=   | $r3 = r1 + c2$ |
-| =subI=   | =r1, c2= | = \rangle    | =r3=   | $r3 = r1 - c2$ |
-| =rsubI=  | =r1, c2= | = \rangle    | =r3=   | $r3 = c2 - r1$ |
-| =multI=  | =r1, c2= | = \rangle    | =r3=   | $r3 = r1 * c2$ |
-| =divI=   | =r1, c2= | = \rangle    | =r3=   | $r3 = r1 / c2$ |
-| =rdivI=  | =r1, c2= | #ERROR | =r3=   | $r3 = c2 / r1$ |
-#+TBLFM: $3=\rangle
-
-Todas estas operações realizam a leitura dos operandos origem de
-registradores ou constantes e escrevem o resultado de volta para um
-registrador. Qualquer registrador pode servir como um operando origem
-ou destino.
+#+BEGIN_EXAMPLE
+add     r1, r2  =>  r3    // r3 = r1 + r2
+sub     r1, r2  =>  r3    // r3 = r1 - r2
+mult    r1, r2  =>  r3    // r3 = r1 * r2
+div     r1, r2  =>  r3    // r3 = r1 / r2
+addI    r1, c2  =>  r3    // r3 = r1 + c2
+subI    r1, c2  =>  r3    // r3 = r1 - c2
+rsubI   r1, c2  =>  r3    // r3 = c2 - r1
+multI   r1, c2  =>  r3    // r3 = r1 * c2
+divI    r1, c2  =>  r3    // r3 = r1 / c2
+rdivI   r1, c2  =>  r3    // r3 = c2 / r1
+#+END_EXAMPLE
 
 As primeiras quatro operações da tabela são operações registrador para
 registrador clássicas. As próximas seis especificam um operando
-imediato. As operações não comutativas, =sub= e =div=, tem duas
-formas imediatas alternativas para permitir o operando imediato em
-qualquer lado do operador. As formas imediatas são úteis para
-expressar resultados de certas otimizações, para escrever exemplos de
-forma mais concisa, e para registrar jeitos óbvios de reduzir a
-demanda por registradores.
+imediato. As operações não comutativas, =sub= e =div=, tem duas formas
+imediatas alternativas para permitir o operando imediato em qualquer
+lado do operador. As formas imediatas são úteis para expressar
+resultados de certas otimizações, para escrever exemplos de forma mais
+concisa, e para registrar jeitos óbvios de reduzir a demanda por
+registradores.
 
 *** Shifts
 
@@ -324,56 +321,55 @@ registradores e imediata.
 #+BEGIN_EXPORT latex
 \begin{center}
 \begin{tabular}{llll|l}\toprule
-{\bf Opcode} & {\bf Fonte}  &        & {\bf Alvo} & {\bf Significado} \\\toprule
-\et{lshift}  & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 << r2$ \\
-\et{lshiftI} & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 << c2$ \\
-\et{rshift}  & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 >> r2$ \\
-\et{rshiftI} & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 >> c2$ \\\bottomrule
+*Opcode* | *Fonte*  |        | *Alvo* | *Significado* 
+=lshift=  r1, r2=  | \ARROW | =r3=    | $r3 = r1 << r2$ 
+=lshiftI= | =r1, c2=  | \ARROW | =r3=    | $r3 = r1 << c2$ 
+=rshift=  | =r1, r2=  | \ARROW | =r3=    | $r3 = r1 >> r2$ 
+=rshiftI= | =r1, c2=  | \ARROW | =r3=    | $r3 = r1 >> c2$ 
 \end{tabular}
 \end{center}
 #+END_EXPORT
 
-
 *** Operações sobre a Memória
 
 ILOC suporta um conjunto de operadores de carga e armazenamento para
-mover valores entre a memória e registradores. As operações \et{load}
-e \et{cload} movem dados da memória para os registradores.
+mover valores entre a memória e registradores. As operações =load=
+e =cload= movem dados da memória para os registradores.
 
 #+BEGIN_EXPORT latex
 \begin{center}
 \begin{tabular}{llll|l}\toprule
-{\bf Opcode} & {\bf Fonte}  &        & {\bf Alvo} & {\bf Significado} \\\toprule
-\et{load}    & \et{r1}      & \ARROW & \et{r2}    & $r2 =$ \textsc{Memoria}($r1$) \\
-\et{loadAI}  & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 =$ \textsc{Memoria}($r1 + c2$) \\
-\et{loadA0}  & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 =$ \textsc{Memoria}($r1 + r2$) \\
-\et{cload}   & \et{r1}     & \ARROW & \et{r2}     & caractere \et{load} \\
-\et{cloadAI} & \et{r1, c2} & \ARROW & \et{r3}     & caractere \et{loadAI} \\
-\et{cloadA0} & \et{r1, r2} & \ARROW & \et{r3}     & caractere \et{loadA0} \\\bottomrule
+*Opcode* | *Fonte*  |        | *Alvo* | *Significado* 
+=load=    | =r1=      | \ARROW | =r2=    | $r2 =$ \textsc{Memoria}($r1$) 
+=loadAI=  | =r1, c2=  | \ARROW | =r3=    | $r3 =$ \textsc{Memoria}($r1 + c2$) 
+=loadA0=  | =r1, r2=  | \ARROW | =r3=    | $r3 =$ \textsc{Memoria}($r1 + r2$) 
+=cload=   | =r1=     | \ARROW | =r2=     | caractere =load= 
+=cloadAI= | =r1, c2= | \ARROW | =r3=     | caractere =loadAI= 
+=cloadA0= | =r1, r2= | \ARROW | =r3=     | caractere =loadA0= 
 \end{tabular}
 \end{center}
 #+END_EXPORT
 
 As operações diferem nos modos de endereçamento que elas suportam. As
-operações \et{load} e \et{cload} assumem um endereço direto na forma
-de um único operando registrador. As operações \et{loadAI} e
-\et{cloadAI} adicionam um valor imediato ao conteúdo do registrador
+operações =load= e =cload= assumem um endereço direto na forma
+de um único operando registrador. As operações =loadAI= e
+=cloadAI= adicionam um valor imediato ao conteúdo do registrador
 para formar um endereço imediatamente antes de realizar a carga. Nós
 chamamos estas de operações de \emph{endereçamento imediato}. As
-operações \et{loadA0} e \et{cloadA0} adicionam o conteúdo de dois
+operações =loadA0= e =cloadA0= adicionam o conteúdo de dois
 registradores para calcular o endereço efetivo imediatamente antes de
 realizar a carga. Estas operações são chamadas de \emph{endereçamento
   por deslocamento}.
 
 Uma outra forma de carga que a Linguagem ILOC suporta é uma operação
-\et{loadI} de carga imediata. Ela recebe um inteiro como argumento e
+=loadI= de carga imediata. Ela recebe um inteiro como argumento e
 coloca este inteiro dentro do registrador alvo.
 
 #+BEGIN_EXPORT latex
 \begin{center}
 \begin{tabular}{llll|l}\toprule
-{\bf Opcode} & {\bf Fonte}  &        & {\bf Alvo} & {\bf Significado} \\\toprule
-\et{loadI}    & \et{c1}      & \ARROW & \et{r2}    & $r2 = c1$ \\\bottomrule
+*Opcode* | *Fonte*  |        | *Alvo* | *Significado* 
+=loadI=    | =c1=      | \ARROW | =r2=    | $r2 = c1$ 
 \end{tabular}
 \end{center}
 #+END_EXPORT
@@ -383,13 +379,13 @@ As operações de armazenamento são semelhantes, conforme a tabela abaixo.
 #+BEGIN_EXPORT latex
 \begin{center}
 \begin{tabular}{llll|l}\toprule
-{\bf Opcode} & {\bf Fonte}  &        & {\bf Alvo}     & {\bf Significado} \\\toprule
-\et{store}    & \et{r1}     & \ARROW & \et{r2}        & \textsc{Memoria}($r2$) $= r1$ \\
-\et{storeAI}  & \et{r1}     & \ARROW & \et{r2, c3}    & \textsc{Memoria}($r2 + c3$) $= r1$ \\
-\et{storeA0}  & \et{r1}     & \ARROW & \et{r2, r3}    & \textsc{Memoria}($r2 + r3$) $= r1$\\
-\et{cstore}   & \et{r1}     & \ARROW & \et{r2}        & caractere \et{store} \\
-\et{cstoreAI} & \et{r1}     & \ARROW & \et{r2, c3}    & caractere \et{storeAI} \\
-\et{cstoreA0} & \et{r1}     & \ARROW & \et{r2, r3}    & caractere \et{storeA0} \\\bottomrule
+*Opcode* | *Fonte*  |        | *Alvo*     | *Significado* 
+=store=    | =r1=     | \ARROW | =r2=        | \textsc{Memoria}($r2$) $= r1$ 
+=storeAI=  | =r1=     | \ARROW | =r2, c3=    | \textsc{Memoria}($r2 + c3$) $= r1$ 
+=storeA0=  | =r1=     | \ARROW | =r2, r3=    | \textsc{Memoria}($r2 + r3$) $= r1$
+=cstore=   | =r1=     | \ARROW | =r2=        | caractere =store= 
+=cstoreAI= | =r1=     | \ARROW | =r2, c3=    | caractere =storeAI= 
+=cstoreA0= | =r1=     | \ARROW | =r2, r3=    | caractere =storeA0= 
 \end{tabular}
 \end{center}
 #+END_EXPORT
