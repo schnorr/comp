@@ -263,13 +263,10 @@ duas operações são desvios incondicionais.
 
 O código ILOC usa um conjunto simples de convenções de nome.
 
-1. Deslocamentos de memória para variáveis são representados
-  simbolicamente com um =@= antes do nome da variável.
-
-2. Existe um número ilimitado de registradores. Estes são nomeados com
+1. Existe um número ilimitado de registradores. Estes são nomeados com
    um =r= seguindo de um número inteiro positivo, como =r1789=
 
-3. O registrador =rfp= é reservado como um ponteiro para o registro de
+2. O registrador =rfp= é reservado como um ponteiro para o registro de
    ativação atual. Sendo assim, a operação:
 
    #+BEGIN_EXAMPLE
