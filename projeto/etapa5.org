@@ -318,17 +318,12 @@ ILOC suporta um conjunto de operações aritméticas de \emph{shift},
 para a esquerda e para a direita, em ambas as formas, com
 registradores e imediata.
 
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{tabular}{llll|l}\toprule
-*Opcode* | *Fonte*  |        | *Alvo* | *Significado* 
-=lshift=  r1, r2=  | \ARROW | =r3=    | $r3 = r1 << r2$ 
-=lshiftI= | =r1, c2=  | \ARROW | =r3=    | $r3 = r1 << c2$ 
-=rshift=  | =r1, r2=  | \ARROW | =r3=    | $r3 = r1 >> r2$ 
-=rshiftI= | =r1, c2=  | \ARROW | =r3=    | $r3 = r1 >> c2$ 
-\end{tabular}
-\end{center}
-#+END_EXPORT
+#+BEGIN_EXAMPLE
+lshift   r1, r2  =>  r3     // r3 = r1 << r2
+lshiftI  r1, c2  =>  r3     // r3 = r1 << c2
+rshift   r1, r2  =>  r3     // r3 = r1 >> r2
+rshiftI  r1, c2  =>  r3     // r3 = r1 >> c2
+#+END_EXAMPLE
 
 *** Operações sobre a Memória
 
@@ -336,107 +331,79 @@ ILOC suporta um conjunto de operadores de carga e armazenamento para
 mover valores entre a memória e registradores. As operações =load=
 e =cload= movem dados da memória para os registradores.
 
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{tabular}{llll|l}\toprule
-*Opcode* | *Fonte*  |        | *Alvo* | *Significado* 
-=load=    | =r1=      | \ARROW | =r2=    | $r2 =$ \textsc{Memoria}($r1$) 
-=loadAI=  | =r1, c2=  | \ARROW | =r3=    | $r3 =$ \textsc{Memoria}($r1 + c2$) 
-=loadA0=  | =r1, r2=  | \ARROW | =r3=    | $r3 =$ \textsc{Memoria}($r1 + r2$) 
-=cload=   | =r1=     | \ARROW | =r2=     | caractere =load= 
-=cloadAI= | =r1, c2= | \ARROW | =r3=     | caractere =loadAI= 
-=cloadA0= | =r1, r2= | \ARROW | =r3=     | caractere =loadA0= 
-\end{tabular}
-\end{center}
-#+END_EXPORT
+#+BEGIN_EXAMPLE
+load    r1       =>   r2    // r2  Memoria(r1) 
+loadAI  r1, c2   =>   r3    // r3  Memoria(r1 + c2) 
+loadA0  r1, r2   =>   r3    // r3  Memoria(r1 + r2) 
+cload   r1       =>   r2    // caractere load 
+cloadAI r1, c2   =>   r3    // caractere loadAI 
+cloadA0 r1, r2   =>   r3    // caractere loadA0 
+#+END_EXAMPLE
 
 As operações diferem nos modos de endereçamento que elas suportam. As
-operações =load= e =cload= assumem um endereço direto na forma
-de um único operando registrador. As operações =loadAI= e
-=cloadAI= adicionam um valor imediato ao conteúdo do registrador
-para formar um endereço imediatamente antes de realizar a carga. Nós
-chamamos estas de operações de \emph{endereçamento imediato}. As
-operações =loadA0= e =cloadA0= adicionam o conteúdo de dois
-registradores para calcular o endereço efetivo imediatamente antes de
-realizar a carga. Estas operações são chamadas de \emph{endereçamento
-  por deslocamento}.
+operações =load= e =cload= assumem um endereço direto na forma de um único
+operando registrador. As operações =loadAI= e =cloadAI= adicionam um valor
+imediato ao conteúdo do registrador para formar um endereço
+imediatamente antes de realizar a carga. Nós chamamos estas de
+operações de \emph{endereçamento imediato}. As operações =loadA0= e
+=cloadA0= adicionam o conteúdo de dois registradores para calcular o
+endereço efetivo imediatamente antes de realizar a carga. Estas
+operações são chamadas de /endereçamento por deslocamento/.
 
 Uma outra forma de carga que a Linguagem ILOC suporta é uma operação
-=loadI= de carga imediata. Ela recebe um inteiro como argumento e
-coloca este inteiro dentro do registrador alvo.
+=loadI= de carga imediata. Ela recebe um inteiro como argumento e coloca
+este inteiro dentro do registrador alvo.
 
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{tabular}{llll|l}\toprule
-*Opcode* | *Fonte*  |        | *Alvo* | *Significado* 
-=loadI=    | =c1=      | \ARROW | =r2=    | $r2 = c1$ 
-\end{tabular}
-\end{center}
-#+END_EXPORT
+#+BEGIN_EXAMPLE
+loadI c1 => r2 // r2 = c1 
+#+END_EXAMPLE
 
 As operações de armazenamento são semelhantes, conforme a tabela abaixo.
 
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{tabular}{llll|l}\toprule
-*Opcode* | *Fonte*  |        | *Alvo*     | *Significado* 
-=store=    | =r1=     | \ARROW | =r2=        | \textsc{Memoria}($r2$) $= r1$ 
-=storeAI=  | =r1=     | \ARROW | =r2, c3=    | \textsc{Memoria}($r2 + c3$) $= r1$ 
-=storeA0=  | =r1=     | \ARROW | =r2, r3=    | \textsc{Memoria}($r2 + r3$) $= r1$
-=cstore=   | =r1=     | \ARROW | =r2=        | caractere =store= 
-=cstoreAI= | =r1=     | \ARROW | =r2, c3=    | caractere =storeAI= 
-=cstoreA0= | =r1=     | \ARROW | =r2, r3=    | caractere =storeA0= 
-\end{tabular}
-\end{center}
-#+END_EXPORT
+#+BEGIN_EXAMPLE
+store    r1 => r2        // Memoria(r2) = r1 
+storeAI  r1 => r2, c3    // Memoria(r2 + c3) = r1 
+storeA0  r1 => r2, r3    // Memoria(r2 + r3) = r1
+cstore   r1 => r2        // caractere store
+cstoreAI r1 => r2, c3    // caractere storeAI
+cstoreA0 r1 => r2, r3    // caractere storeA0
+#+END_EXAMPLE
 
 Não há nenhuma operação de armazenamento imediato.
 
 *** Operações de Cópia entre Registradores
 
 A Linguagem ILOC tem um conjunto de operações para mover valores entre
-registradores, sem passar pela memória.
+registradores, sem passar pela memória. Na listagem abaixo, as
+primeiras duas operações, =i2i= e =c2c=, copiam um valor de um registrador
+para outro, sem conversão. As duas últimas operações realizam
+conversões considerando a codificação de caracteres ASCII.
 
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{tabular}{llll|l}\toprule
-{\bf Opcode} & {\bf Fonte} &        & {\bf Alvo}     & {\bf Significado} \\\toprule
-\et{i2i}     & \et{r1}     & \ARROW & \et{r2}        & $r2 = r1$ para inteiros \\
-\et{c2c}     & \et{r1}     & \ARROW & \et{r2}        & $r2 = r1$ para caracteres \\
-\et{c2i}     & \et{r1}     & \ARROW & \et{r2}        & converte um caractere para um inteiro\\
-\et{i2c}     & \et{r1}     & \ARROW & \et{r2}        & converte um inteiro para caractere \\\bottomrule
-\end{tabular}
-\end{center}
-#+END_EXPORT
-
-As primeiras duas operações, \et{i2i} e \et{c2c}, copiam um valor de
-um registrador para outro, sem conversão. As duas últimas operações
-realizam conversões considerando a codificação de caracteres ASCII.
+#+BEGIN_EXAMPLE
+i2i r1 => r2 // r2 = r1 para inteiros 
+c2c r1 => r2 // r2 = r1 para caracteres 
+c2i r1 => r2 // converte um caractere para um inteiro
+i2c r1 => r2 // converte um inteiro para caractere 
+#+END_EXAMPLE
 
 ** Operações de Fluxo de Controle
+*** Visão Geral
 
 Em geral, operações de comparação na Linguagem ILOC recebem dois
-valores e retornam um valor booleano.
+valores e retornam um valor booleano. A operação condicional =cbr=
+recebe um booleano como argumento e transfere o controle para um de
+dois rótulos alvo. Os dois rótulos alvo não precisam estar definidos
+previamente (pode-se saltar para um código mais a frente do programa).
 
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{tabular}{llll|l}\toprule
-{\bf Opcode} & {\bf Fonte} &        & {\bf Alvo}     & {\bf Significado} \\\toprule
-\et{cmp\_LT} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 < r2$, senão $r3 = false$ \\
-\et{cmp\_LE} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 \leq r2$, senão $r3 = false$ \\
-\et{cmp\_EQ} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 = r2$, senão $r3 = false$ \\
-\et{cmp\_GE} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 \geq r2$, senão $r3 = false$ \\
-\et{cmp\_GT} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 > r2$, senão $r3 = false$ \\
-\et{cmp\_NE} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 \neq r2$, senão $r3 = false$ \\\midrule
-\et{cbr}     & \et{r1}     & \ARROWs & \et{l2, l3}    & $PC = l2$ se $r1 = true$, senão $PC = l3$ \\\bottomrule
-\end{tabular}
-\end{center}
-#+END_EXPORT
-
-A operação condicional \et{cbr} recebe um booleano como argumento e
-transfere o controle para um de dois rótulos alvo. Os dois rótulos
-alvo não precisam estar definidos previamente (pode-se saltar para um
-código mais a frente do programa).
+#+BEGIN_EXAMPLE
+cmp_LT r1, r2 -> r3        // r3 = true se r1 < r2, senão r3 = false 
+cmp_LE r1, r2 -> r3        // r3 = true se r1 \leq r2, senão r3 = false 
+cmp_EQ r1, r2 -> r3        // r3 = true se r1 = r2, senão r3 = false 
+cmp_GE r1, r2 -> r3        // r3 = true se r1 \geq r2, senão r3 = false 
+cmp_GT r1, r2 -> r3        // r3 = true se r1 > r2, senão r3 = false 
+cmp_NE r1, r2 -> r3        // r3 = true se r1 \neq r2, senão r3 = false 
+cbr     r1    -> l2, l3    // PC = l2 se r1 = true, senão PC = l3 
+#+END_EXAMPLE
 
 *** Saltos
 
@@ -449,96 +416,68 @@ imediatamente para este endereço. \emph{Esta segunda forma deve ser
   evitada por ser ambígua.} Mais detalhes a respeito disto na
 referência oficial~\cite{keith}.
 
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{tabular}{llll|l}\toprule
-{\bf Opcode} & {\bf Fonte} &        & {\bf Alvo}     & {\bf Significado} \\\toprule
-\et{jumpI} &  & \ARROWs & \et{l1}        & $PC = l1$ \\
-\et{jump}  &  & \ARROWs & \et{r1}        & $PC = r1$ \\\bottomrule
-\end{tabular}
-\end{center}
-#+END_EXPORT
+#+BEGIN_EXAMPLE
+jumpI -> l1 // PC = l1
+jump  -> r1 // PC = r1
+#+END_EXAMPLE
 
 ** Sumário de Operações ILOC
-\label{iloc-tabelas}
-
 *** Sumários de Operações ILOC Individuais
 
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{tabular}{llll|l}\toprule
-{\bf Opcode} & {\bf Fonte}  &        & {\bf Alvo} & {\bf Significado} \\\toprule
-\et{nop}     &&&                                  & não faz nada   \\\midrule
-
-\et{add}     & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 + r2$ \\
-\et{sub}     & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 - r2$ \\
-\et{mult}    & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 * r2$ \\
-\et{div}     & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 / r2$ \\\midrule
-
-\et{addI}    & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 + c2$ \\
-\et{subI}    & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 - c2$ \\
-\et{rsubI}   & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = c2 - r1$ \\
-\et{multI}   & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 * c2$ \\
-\et{divI}    & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 / c2$ \\
-\et{rdivI}   & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = c2 / r1$ \\\midrule
-
-\et{lshift}  & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 << r2$ \\
-\et{lshiftI} & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 << c2$ \\
-\et{rshift}  & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 >> r2$ \\
-\et{rshiftI} & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 >> c2$ \\\midrule
-
-\et{and}     & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 \land r2$ \\
-\et{andI}    & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 \land c2$ \\
-\et{or}      & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1 \lor r2$ \\
-\et{orI}     & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1 \lor c2$ \\
-\et{xor}      & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 = r1$ xor $r2$ \\
-\et{xorI}     & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 = r1$ xor $c2$ \\\midrule
-
-\et{loadI}    & \et{c1}      & \ARROW & \et{r2}    & $r2 = c1$ \\\bottomrule
-\et{load}    & \et{r1}      & \ARROW & \et{r2}    & $r2 =$ \textsc{Memoria}($r1$) \\
-\et{loadAI}  & \et{r1, c2}  & \ARROW & \et{r3}    & $r3 =$ \textsc{Memoria}($r1 + c2$) \\
-\et{loadA0}  & \et{r1, r2}  & \ARROW & \et{r3}    & $r3 =$ \textsc{Memoria}($r1 + r2$) \\\midrule
-
-\et{cload}   & \et{r1}     & \ARROW & \et{r2}     & caractere \et{load} \\
-\et{cloadAI} & \et{r1, c2} & \ARROW & \et{r3}     & caractere \et{loadAI} \\
-\et{cloadA0} & \et{r1, r2} & \ARROW & \et{r3}     & caractere \et{loadA0} \\\midrule
-
-\et{store}    & \et{r1}     & \ARROW & \et{r2}        & \textsc{Memoria}($r2$) $= r1$ \\
-\et{storeAI}  & \et{r1}     & \ARROW & \et{r2, c3}    & \textsc{Memoria}($r2 + c3$) $= r1$ \\
-\et{storeA0}  & \et{r1}     & \ARROW & \et{r2, r3}    & \textsc{Memoria}($r2 + r3$) $= r1$\\\midrule
-
-\et{cstore}   & \et{r1}     & \ARROW & \et{r2}        & caractere \et{store} \\
-\et{cstoreAI} & \et{r1}     & \ARROW & \et{r2, c3}    & caractere \et{storeAI} \\
-\et{cstoreA0} & \et{r1}     & \ARROW & \et{r2, r3}    & caractere \et{storeA0} \\\midrule
-
-\et{i2i}     & \et{r1}     & \ARROW & \et{r2}        & $r2 = r1$ para inteiros \\
-\et{c2c}     & \et{r1}     & \ARROW & \et{r2}        & $r2 = r1$ para caracteres \\
-\et{c2i}     & \et{r1}     & \ARROW & \et{r2}        & converte um caractere para um inteiro\\
-\et{i2c}     & \et{r1}     & \ARROW & \et{r2}        & converte um inteiro para caractere \\\bottomrule
-\end{tabular}
-\end{center}
-#+END_EXPORT
+#+BEGIN_EXAMPLE
+nop                          // não faz nada   
+add      r1, r2   =>  r3     // r3 = r1 + r2 
+sub      r1, r2   =>  r3     // r3 = r1 - r2 
+mult     r1, r2   =>  r3     // r3 = r1 * r2 
+div      r1, r2   =>  r3     // r3 = r1 / r2 
+addI     r1, c2   =>  r3     // r3 = r1 + c2 
+subI     r1, c2   =>  r3     // r3 = r1 - c2 
+rsubI    r1, c2   =>  r3     // r3 = c2 - r1 
+multI    r1, c2   =>  r3     // r3 = r1 * c2 
+divI     r1, c2   =>  r3     // r3 = r1 / c2 
+rdivI    r1, c2   =>  r3     // r3 = c2 / r1 
+lshift   r1, r2   =>  r3     // r3 = r1 << r2 
+lshiftI  r1, c2   =>  r3     // r3 = r1 << c2 
+rshift   r1, r2   =>  r3     // r3 = r1 >> r2 
+rshiftI  r1, c2   =>  r3     // r3 = r1 >> c2 
+and      r1, r2   =>  r3     // r3 = r1 \land r2 
+andI     r1, c2   =>  r3     // r3 = r1 \land c2 
+or       r1, r2   =>  r3     // r3 = r1 \lor r2 
+orI      r1, c2   =>  r3     // r3 = r1 \lor c2 
+xor      r1, r2   =>  r3     // r3 = r1 xor r2 
+xorI     r1, c2   =>  r3     // r3 = r1 xor c2 
+loadI    c1       =>  r2     // r2 = c1 
+load     r1       =>  r2     // r2 = Memoria(r1) 
+loadAI   r1, c2   =>  r3     // r3 = Memoria(r1 + c2) 
+loadA0   r1, r2   =>  r3     // r3 = Memoria(r1 + r2) 
+cload    r1       =>  r2     // caractere =load 
+cloadAI  r1, c2   =>  r3     // caractere loadAI 
+cloadA0  r1, r2   =>  r3     // caractere loadA0 
+store    r1       =>  r2     // Memoria(r2) = r1 
+storeAI  r1       =>  r2, c3 // Memoria(r2 + c3) = r1 
+storeA0  r1       =>  r2, r3 // Memoria(r2 + r3) = r1
+cstore   r1       =>  r2     // caractere store 
+cstoreAI r1       =>  r2, c3 // caractere storeAI 
+cstoreA0 r1       =>  r2, r3 // caractere storeA0 
+i2i      r1       =>  r2     // r2 = r1 para inteiros 
+c2c      r1       =>  r2     // r2 = r1 para caracteres 
+c2i      r1       =>  r2     // converte um caractere para um inteiro
+i2c      r1       =>  r2     // converte um inteiro para caractere 
+#+END_EXAMPLE
 
 *** Sumários de Operações ILOC de Fluxo de Controle
 
-#+BEGIN_EXPORT latex
-\begin{center}
-\begin{tabular}{llll|l}\toprule
-{\bf Opcode} & {\bf Fonte} &        & {\bf Alvo}     & {\bf Significado} \\\toprule
-\et{jumpI} &  & \ARROWs & \et{l1}        & $PC = l1$ \\
-\et{jump}  &  & \ARROWs & \et{r1}        & $PC = r1$ \\\midrule
-
-\et{cbr}     & \et{r1}     & \ARROWs & \et{l2, l3}    & $PC = l2$ se $r1 = true$, senão $PC = l3$ \\\midrule
-
-\et{cmp\_LT} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 < r2$, senão $r3 = false$ \\
-\et{cmp\_LE} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 \leq r2$, senão $r3 = false$ \\
-\et{cmp\_EQ} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 = r2$, senão $r3 = false$ \\
-\et{cmp\_GE} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 \geq r2$, senão $r3 = false$ \\
-\et{cmp\_GT} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 > r2$, senão $r3 = false$ \\
-\et{cmp\_NE} & \et{r1, r2} & \ARROWs & \et{r3}        & $r3 = true$ se $r1 \neq r2$, senão $r3 = false$ \\\bottomrule
-\end{tabular}
-\end{center}
-#+END_EXPORT
+#+BEGIN_EXAMPLE
+jumpI          ->  l1        // PC = l1 
+jump           ->  r1        // PC = r1 
+cbr    r1      ->  l2, l3    // PC = l2 se r1 = true, senão PC = l3 
+cmp_LT r1, r2  ->  r3        // r3 = true se r1 < r2, senão r3 = false 
+cmp_LE r1, r2  ->  r3        // r3 = true se r1 \leq r2, senão r3 = false 
+cmp_EQ r1, r2  ->  r3        // r3 = true se r1 = r2, senão r3 = false 
+cmp_GE r1, r2  ->  r3        // r3 = true se r1 \geq r2, senão r3 = false 
+cmp_GT r1, r2  ->  r3        // r3 = true se r1 > r2, senão r3 = false 
+cmp_NE r1, r2  ->  r3        // r3 = true se r1 \ne r2, senão r3 = false 
+#+END_EXAMPLE
 
 * Anexo - Simulador ILOC (=ilocsim=)
 
