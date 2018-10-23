@@ -20,10 +20,9 @@ A quinta etapa do trabalho de implementação de um compilador para a
 Linguagem consiste na geração de código intermediário a partir da
 árvore sintática abstrata (AST). Utilizaremos como representação
 intermediária a Linguagem ILOC, descrita em detalhes no apêndice A de
-/Engineering a Compiler/ \cite{keith}, mas com o essencial na Seção
-\ref{iloc} deste documento.  Testes poderão ser realizados através de
-um simulador simples escrito em Python3 e já disponível no repositório
-git de referência (em \emph{scripts}, etapa 5, \texttt{ilocsim}).
+/Engineering a Compiler/, mas com o essencial no anexo deste documento.
+Testes poderão ser realizados através de um simulador simples escrito
+em Python3 e já disponível também no anexo.
 
 * Funcionalidades Necessárias
 ** Arranjos Multidimensionais                                     :noexport:
