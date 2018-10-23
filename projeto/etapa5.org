@@ -272,10 +272,15 @@ O código ILOC usa um conjunto simples de convenções de nome.
 3. O registrador =rfp= é reservado como um ponteiro para a base do
    registro de ativação atual (o registro do topo da pilha).
 
-4. O registrador =rsp= é reservado como um ponteiro para a base do
-   segmento de dados do programa.
+4. O registrador =rsp= é reservado como um ponteiro para o topo da pilha.
 
-4. Comentários em ILOC começam com =//= e continuam até o final da
+5. O registrador =rbss= é reservado para apontar para a base do segmento
+   de dados do programa.
+
+6. O registrador =rpc= é reservado para manter o contador do programa
+   (/program counter/).
+
+7. Comentários em ILOC começam com =//= e continuam até o final da
    linha.
 
 ** Operações Individuais
