@@ -270,7 +270,7 @@ O código ILOC usa um conjunto simples de convenções de nome.
    seguido de um número inteiro positivo.
 
 3. O registrador =rfp= é reservado como um ponteiro para a base do
-   registro de ativação atual (aquele que está no topo da pilha).
+   registro de ativação atual (o registro do topo da pilha).
 
 4. O registrador =rsp= é reservado como um ponteiro para a base do
    segmento de dados do programa.
