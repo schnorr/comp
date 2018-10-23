@@ -332,9 +332,9 @@ mover valores entre a memória e registradores. As operações =load=
 e =cload= movem dados da memória para os registradores.
 
 #+BEGIN_EXAMPLE
-load    r1       =>   r2    // r2  Memoria(r1) 
-loadAI  r1, c2   =>   r3    // r3  Memoria(r1 + c2) 
-loadA0  r1, r2   =>   r3    // r3  Memoria(r1 + r2) 
+load    r1       =>   r2    // r2 = Memoria(r1)
+loadAI  r1, c2   =>   r3    // r3 = Memoria(r1 + c2)
+loadA0  r1, r2   =>   r3    // r3 = Memoria(r1 + r2)
 cload   r1       =>   r2    // caractere load 
 cloadAI r1, c2   =>   r3    // caractere loadAI 
 cloadA0 r1, r2   =>   r3    // caractere loadA0 
