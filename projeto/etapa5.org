@@ -404,7 +404,7 @@ cmp_EQ r1, r2 -> r3        // r3 = true se r1 = r2, senão r3 = false
 cmp_GE r1, r2 -> r3        // r3 = true se r1 \geq r2, senão r3 = false 
 cmp_GT r1, r2 -> r3        // r3 = true se r1 > r2, senão r3 = false 
 cmp_NE r1, r2 -> r3        // r3 = true se r1 \neq r2, senão r3 = false 
-cbr     r1    -> l2, l3    // PC = l2 se r1 = true, senão PC = l3 
+cbr     r1    -> l2, l3    // PC = endereço(l2) se r1 = true, senão PC = endereço(l3)
 #+END_EXAMPLE
 
 *** Saltos
@@ -414,12 +414,10 @@ um salto incondicional e imediato que transfere o controle para um a
 primeira instrução após um rótulo. A segunda recebe um registrador
 como argumento. O conteúdo do registrador é interpretado como um
 endereço de código, transferindo o controle incondicionalmente e
-imediatamente para este endereço. \emph{Esta segunda forma deve ser
-  evitada por ser ambígua.} Mais detalhes a respeito disto na
-referência oficial~\cite{keith}.
+imediatamente para este endereço.
 
 #+BEGIN_EXAMPLE
-jumpI -> l1 // PC = l1
+jumpI -> l1 // PC = endereço(l1)
 jump  -> r1 // PC = r1
 #+END_EXAMPLE
 
@@ -470,9 +468,9 @@ i2c      r1       =>  r2     // converte um inteiro para caractere
 *** Sumários de Operações ILOC de Fluxo de Controle
 
 #+BEGIN_EXAMPLE
-jumpI          ->  l1        // PC = l1 
+jumpI          ->  l1        // PC = endereço(l1)
 jump           ->  r1        // PC = r1 
-cbr    r1      ->  l2, l3    // PC = l2 se r1 = true, senão PC = l3 
+cbr    r1      ->  l2, l3    // PC = endereço(l2) se r1 = true, senão PC = endereço(l3)
 cmp_LT r1, r2  ->  r3        // r3 = true se r1 < r2, senão r3 = false 
 cmp_LE r1, r2  ->  r3        // r3 = true se r1 \leq r2, senão r3 = false 
 cmp_EQ r1, r2  ->  r3        // r3 = true se r1 = r2, senão r3 = false 
