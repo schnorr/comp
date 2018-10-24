@@ -69,7 +69,9 @@ ser vistos como variáveis temporárias auxiliares.
 
 ** 3. Geração de Código
 
-Existem pelo menos duas possibilidades de implementação válidas:
+Os programas deverão conter _apenas uma função_ (que pode se chamar
+=main=).  Existem pelo menos duas possibilidades de implementação
+válidas:
 
 1. *Em uma passagem*: realizar eventuais alterações gramaticais para
    realizar a geração de código em uma única passagem (juntamente com
@@ -98,16 +100,32 @@ que existe apenas o tipo =int=:
   - if com else opcional
   - as duas versões de while
 
-*Simplificações*: Os programas deverão conter _apenas uma função_. Nada
-precisa ser feito referente aos outros tipos da linguagem tais como
-vetores, strings, char, float e tipos de usuário. Não é obrigatório
-implementar tradução de código para os elementos não estão listados
-acima, tais como pipes, comandos de entrada e saída, operações de
-shift, comandos de retorno, break, continue, case, os comandos for e
-foreach, o comando switch, comandos com pipes, expressões com pipes,
-operadores ternários, operadores de acesso ao endereço da variável ou
-valor do ponteiro, operador ?, operadores binários tais como resto da
-divisão, bitwise e exponenciação (lista não exaustiva).
+*Simplificações* (ou seja, não precisa fazer):
+- Nada precisa ser feito referente aos outros tipos da linguagem:
+  - vetores
+  - strings
+  - char
+  - float
+  - e tipos de usuário.
+- Não é obrigatório implementar tradução de código para os elementos
+  não estão listados acima, tais como:
+  - comandos de entrada e saída
+  - operações de shift
+  - comandos de retorno
+  - break
+  - continue
+  - case
+  - os comandos for e foreach
+  - o comando switch
+  - comandos com pipes
+  - expressões com pipes
+  - operadores ternários
+  - operadores de acesso ao endereço da variável ou valor do ponteiro
+  - operador ?
+  - operadores binários tais como
+    - resto da divisão
+    - bitwise
+    - e exponenciação
 
 ** 4. Endereçamento de variáveis
 
