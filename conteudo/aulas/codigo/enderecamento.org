@@ -38,7 +38,7 @@ Como saber o valor de =r1= e o deslocamento =4=?
 * Endereçamento de variáveis
 Endereços de variáveis \rightarrow cálculo de *deslocamento*
 + Referente a =rbss= (variáveis globais)
-+ Referente a =fp= (variáveis locais)
++ Referente a =rfp= (variáveis locais)
 
 #+latex: \vfill\pause
 
@@ -50,7 +50,7 @@ Escopo simples (único)
 #+latex: \pause
 
 Escopo local/global (dois)
-+ Endereços: desloc. para =rbss= (global) e para =fp= (local)
++ Endereços: desloc. para =rbss= (global) e para =rfp= (local)
 
 #+Latex: \pause
 Escopo aninhado (múltiplos)
@@ -102,7 +102,7 @@ Como fazer, considerando escopo nomeado (função)?
 \pause  No início do novo escopo nomeado
 + Criar nova tabela de símbolo, zerar deslocamento
 + No final, desempilhar
-\pause  Endereços em relação a =fp=
+\pause  Endereços em relação a =rfp=
 + Com exceção do escopo global e variáveis estáticas
 * Endereçamento com escopo aninhado *sem nome*
 Qual o endereço das variáveis abaixo?
@@ -118,7 +118,7 @@ int fun ()
 }
 #+END_SRC
 \pause  *Resposta*
-+ Todas são um deslocamento em relação ao =fp= de =fun= \\
++ Todas são um deslocamento em relação ao =rfp= de =fun= \\
   (implementação alternativa: dar ao bloco um registro)
 #+latex: \vfill
 \pause  Implementação
