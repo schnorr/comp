@@ -93,8 +93,10 @@ que existe apenas o tipo =int=:
 - Cálculo de endereço na declaração de variáveis
   - Endereço de variáveis locais são um deslocamento em relação ao registrador especial =rfp=
   - Endereço de variáveis globais são um deslocamento em relação ao registrador especial =rbss=
-- Expressões aritméticas
-- Expressões booleanas com curto-circuito
+- Expressões aritméticas, com operações binárias
+  - soma, subtração, divisão e multiplicação
+- Expressões booleanas por controle de fluxo com curto-circuito
+  - todos os operadores relacionais
 - O comando de atribuição
 - Os seguintes comandos de fluxo de controle
   - if com else opcional
