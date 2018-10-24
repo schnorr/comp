@@ -126,6 +126,7 @@ que existe apenas o tipo =int=:
     - resto da divisão
     - bitwise
     - e exponenciação
+  - qualquer outro elemento da linguagem não explicitado acima
 
 ** 4. Endereçamento de variáveis
 
