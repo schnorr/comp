@@ -3371,17 +3371,155 @@ Considerando apenas a submissão do formulário.
 
 ** Arquivos para testes                                             :ATTACH:
 :PROPERTIES:
-:Attachments: e4tests.tgz
 :ID:       85c73ba8-bb05-4ee2-b0b9-0146bf9ec026
+:Attachments: e4tests.tgz
 :END:
 
 Veja [[./data/85/c73ba8-bb05-4ee2-b0b9-0146bf9ec026/e4tests.tgz][este arquivo]].
 
 Todas as entradas estão sintaticamente corretas de acordo com E2. Os
-arquivos que contém um comentário que começa por =ERR_= contém nesta
-string o identificador do código de erro esperado para o teste. Na
-ausência, assume-se que a entrada está léxica, sintática e
-semanticamente correta e portanto o compilador deve retornar 0.
+arquivos que contém um comentário que começa por =ERR_= são considerados
+errados. Na ausência, assume-se que a entrada está léxica, sintática e
+semanticamente correta e portanto o compilador deve retornar 0. Para
+saber quais os erros esperados por teste, consultar a tabela abaixo:
+
+| Test    | Erro                 |
+|---------+----------------------|
+| poi01   |                      |
+| poi02   |                      |
+| poi03   |                      |
+| poi04   | =ERR_UNDECLARED=       |
+| poi05   | =ERR_UNDECLARED=       |
+| poi06   | =ERR_UNDECLARED=       |
+| poi07   | =ERR_DECLARED=         |
+| poi08   | =ERR_DECLARED=         |
+| poi09   | =ERR_DECLARED=         |
+| poi10   | =ERR_DECLARED=         |
+| poi11   |                      |
+| poi12   | =ERR_VARIABLE=         |
+| poi12   | =ERR_UNDECLARED=       |
+| poi13   | =ERR_VECTOR=           |
+| poi13   | =ERR_VARIABLE=         |
+| poi14   | =ERR_FUNCTION=         |
+| poi14   | =ERR_VARIABLE=         |
+| poi15   |                      |
+| poi16   |                      |
+| poi17   | =ERR_STRING_TO_X=      |
+| poi17   | =ERR_WRONG_TYPE=       |
+| poi18   | =ERR_CHAR_TO_X=        |
+| poi18   | =ERR_WRONG_TYPE=       |
+| poi19   | =ERR_USER_TO_X=        |
+| poi19   | =ERR_WRONG_TYPE=       |
+| poi20   | =ERR_USER_TO_X=        |
+| poi20   | =ERR_WRONG_TYPE=       |
+| poi20   | =ERR_USER=             |
+| poi21   | =ERR_CHAR_TO_X=        |
+| poi22   | =ERR_STRING_TO_X=      |
+| poi23   | =ERR_USER_TO_X=        |
+| poi24   |                      |
+| poi25   | =ERR_MISSING_ARGS=     |
+| poi26   | =ERR_EXCESS_ARGS=      |
+| poi27   | =ERR_WRONG_TYPE_ARGS=  |
+| poi28   | =ERR_DECLARED=         |
+| poi29   |                      |
+| poi30   |                      |
+| poi31   |                      |
+| poi32   |                      |
+| poi33   |                      |
+| poi34   |                      |
+| poi35   | =ERR_WRONG_PAR_INPUT=  |
+| poi36   | =ERR_WRONG_PAR_INPUT=  |
+| poi37   | =ERR_WRONG_PAR_INPUT=  |
+| poi38   | =ERR_WRONG_PAR_INPUT=  |
+| poi39   | =ERR_WRONG_PAR_INPUT=  |
+| poi40   | =ERR_WRONG_PAR_INPUT=  |
+| poi41   |                      |
+| poi42   | =ERR_WRONG_PAR_OUTPUT= |
+| poi43   |                      |
+| poi44   |                      |
+| poi45   |                      |
+| poi46   | =ERR_FUNCTION=         |
+| poi46   | =ERR_VARIABLE=         |
+| poi47   |                      |
+| poi48   |                      |
+| poi49   |                      |
+| poi50   | =ERR_WRONG_PAR_RETURN= |
+| poi51   |                      |
+| poi52   | =ERR_WRONG_PAR_RETURN= |
+| qwe01   |                      |
+| qwe02   | =ERR_UNDECLARED=       |
+| qwe03   |                      |
+| qwe04   |                      |
+| qwe05   |                      |
+| qwe06   | =ERR_UNDECLARED=       |
+| qwe07   |                      |
+| qwe08   | =ERR_DECLARED=         |
+| qwe09   | =ERR_DECLARED=         |
+| qwe10   |                      |
+| qwe11   | =ERR_VECTOR=           |
+| qwe11   | =ERR_VARIABLE=         |
+| qwe12   | =ERR_VARIABLE=         |
+| qwe12   | =ERR_UNDECLARED=       |
+| qwe13   | =ERR_FUNCTION=         |
+| qwe13   | =ERR_VARIABLE=         |
+| qwe14   | =ERR_VARIABLE=         |
+| qwe14   | =ERR_UNDECLARED=       |
+| qwe15   | =ERR_VECTOR=           |
+| qwe16   | =ERR_USER_TO_X=        |
+| qwe16   | =ERR_WRONG_TYPE=       |
+| qwe17   | =ERR_VARIABLE=         |
+| qwe17   | =ERR_USER=             |
+| qwe18   |                      |
+| qwe19   |                      |
+| qwe20   |                      |
+| qwe21   |                      |
+| s00.iks | =ERR_UNDECLARED=       |
+| s01.iks | =ERR_UNDECLARED=       |
+| s02.iks | =ERR_UNDECLARED=       |
+| s03.iks | =ERR_DECLARED=         |
+| s04.iks | =ERR_DECLARED=         |
+| s05.iks | =ERR_VARIABLE=         |
+| s05.iks | =ERR_UNDECLARED=       |
+| s06.iks | =ERR_VECTOR=           |
+| s06.iks | =ERR_VARIABLE=         |
+| s07.iks | =ERR_FUNCTION=         |
+| s07.iks | =ERR_VARIABLE=         |
+| s08.iks | =ERR_STRING_TO_X=      |
+| s08.iks | =ERR_WRONG_TYPE=       |
+| s09.iks | =ERR_CHAR_TO_X=        |
+| s09.iks | =ERR_WRONG_TYPE=       |
+| s10.iks | =ERR_MISSING_ARGS=     |
+| s11.iks | =ERR_EXCESS_ARGS=      |
+| s12.iks | =ERR_WRONG_TYPE_ARGS=  |
+| s13.iks | =ERR_WRONG_TYPE_ARGS=  |
+| s14.iks | =ERR_WRONG_PAR_INPUT=  |
+| s15.iks | =ERR_WRONG_PAR_OUTPUT= |
+| s16.iks | =ERR_WRONG_PAR_RETURN= |
+| s17.iks | =ERR_STRING_TO_X=      |
+| s17.iks | =ERR_WRONG_TYPE=       |
+| s18.iks | =ERR_CHAR_TO_X=        |
+| s18.iks | =ERR_WRONG_TYPE=       |
+| s19.iks | =ERR_WRONG_TYPE=       |
+| s20.iks | =ERR_WRONG_TYPE=       |
+| s21.iks | =ERR_WRONG_TYPE=       |
+| s22.iks | =ERR_WRONG_TYPE=       |
+| s23.iks | =ERR_STRING_TO_X=      |
+| s24.iks | =ERR_CHAR_TO_X=        |
+| s25.iks |                      |
+| s26.iks | =ERR_CHAR_TO_X=        |
+| s27.iks | =ERR_STRING_TO_X=      |
+| s28.iks | =ERR_STRING_TO_X=      |
+| s29.iks | =ERR_CHAR_TO_X=        |
+| s30.iks | =ERR_WRONG_PAR_RETURN= |
+| s31.iks |                      |
+| s32.iks | =ERR_UNDECLARED=       |
+| s35.iks | =ERR_DECLARED=         |
+| s36.iks | =ERR_DECLARED=         |
+| s37.iks | =ERR_DECLARED=         |
+| s38.iks | =ERR_STRING_TO_X=      |
+| s38.iks | =ERR_WRONG_TYPE=       |
+| s39.iks |                      |
+| s40.iks |                      |
 
 ** Comentários por grupos
 **** Explicações sobre a saída valgrind
@@ -5882,7 +6020,6 @@ dos números foi 0. Uma exceção existe para os que não chamam
   - Warning: valgrind leak report ( 0 0 0 16460 0 )
 - [ ] =s40.iks= OK  
   - Warning: valgrind leak report ( 0 0 0 16460 0 )
-
 
 **** TODO LATE Epsilon
 **** TODO LATE Mu
