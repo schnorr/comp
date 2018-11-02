@@ -6527,5 +6527,26 @@ Após resubmissão:
 **** DONE LATE NOK Psi
 **** DONE LATE NOK Sigma
 **** DONE LATE NOK Zeta
+** Notas Objetiva e Subjetiva
+
+Os grupos não listados na tabela abaixo não submeteram.
+
+| Grupo   | E4.O | E4.S | Peso |
+|---------+------+------+------|
+| Beta    | 9.46 | 9.88 |    1 |
+| Omega   | 9.36 | 9.88 |    1 |
+| Tau     | 9.73 | 8.12 |    1 |
+| Gamma   | 7.73 | 9.62 |    1 |
+| Eta     | 9.73 | 7.25 |    1 |
+| Alpha   |  9.2 | 7.62 |    1 |
+| Kappa   | 8.12 | 7.88 |    1 |
+| Theta   | 9.29 | 4.38 |    1 |
+| Lambda  | 9.73 | 6.75 |  0.8 |
+| Epsilon | 6.61 |    6 |  0.8 |
+| Delta   | 5.45 | 3.12 |  0.8 |
+| Iota    |  2.5 | 2.38 |    1 |
+| Rho     |    0 |    0 |  0.8 |
+| Upsilon |    0 |    0 |  0.8 |
+
 * Avaliação da Etapa 5
 * Avaliação da Etapa 6
