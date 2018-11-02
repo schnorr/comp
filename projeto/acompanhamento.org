@@ -3543,7 +3543,7 @@ dos números foi 0. Uma exceção existe para os que não chamam
 
 *Nota:* O valgrind não foi utilizado nas resubmissões.
 
-**** TODO OK Tau
+**** DONE OK Tau
 
 - [ ] =poi01= NOK 
   - Erro: retornou =52= mas esperava =0= (Sucesso) 
@@ -3661,7 +3661,16 @@ dos números foi 0. Uma exceção existe para os que não chamam
 - [ ] =s39.iks= NOK 
   - Erro: retornou =0= mas esperava =10= (=ERR_UNDECLARED=) 
 
-**** TODO OK Beta
+Após resubmissão:
+
+- [ ] =qwe19= NOK 
+ - Erro: retornou =40= mas esperava código(s) =0=
+- [ ] =qwe20= NOK 
+ - Erro: retornou =41= mas esperava código(s) =0=
+- [ ] =qwe21= NOK 
+ - Erro: retornou =42= mas esperava código(s) =0=
+
+**** DONE OK Beta
 
 - [ ] =poi12= NOK 
   - Erro: retornou =21= mas esperava =20= (=ERR_VARIABLE=) 
@@ -3722,7 +3731,22 @@ dos números foi 0. Uma exceção existe para os que não chamam
 - [ ] =s29.iks= NOK 
   - Erro: retornou =30= mas esperava =32= (=ERR_CHAR_TO_X=)
 
-**** TODO OK Delta
+Após resubmissão:
+
+- [ ] =qwe19= NOK 
+ - Erro: retornou =40= mas esperava código(s) =0=
+- [ ] =qwe20= NOK 
+ - Erro: retornou =41= mas esperava código(s) =0=
+- [ ] =qwe21= NOK 
+ - Erro: retornou =42= mas esperava código(s) =0=
+- [ ] =s35.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =11=
+- [ ] =s37.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =11=
+- [ ] =s39.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+
+**** DONE OK Delta
 
 - [ ] =poi01= NOK 
   - Erro: retornou =139= mas esperava =0= (Sucesso) 
@@ -4048,7 +4072,112 @@ dos números foi 0. Uma exceção existe para os que não chamam
   - Erro: retornou =139= mas esperava =0= (Sucesso) 
   - Warning: valgrind leak report ( 0 0 0 61668 0 )
 
-**** TODO OK Gamma
+Após resubmissão com 80%:
+
+- [ ] =poi12= NOK 
+ - Erro: retornou =0= mas esperava código(s) =20,10=
+- [ ] =poi13= NOK 
+ - Erro: retornou =0= mas esperava código(s) =21,20=
+- [ ] =poi14= NOK 
+ - Erro: retornou =0= mas esperava código(s) =22,20=
+- [ ] =poi16= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =poi17= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31,30=
+- [ ] =poi18= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32,30=
+- [ ] =poi19= NOK 
+ - Erro: retornou =139= mas esperava código(s) =33,30=
+- [ ] =poi20= NOK 
+ - Erro: retornou =139= mas esperava código(s) =33,30,23=
+- [ ] =poi23= NOK 
+ - Erro: retornou =30= mas esperava código(s) =33=
+- [ ] =poi24= NOK 
+ - Erro: retornou =30= mas esperava código(s) =0=
+- [ ] =poi25= NOK 
+ - Erro: retornou =0= mas esperava código(s) =40=
+- [ ] =poi26= NOK 
+ - Erro: retornou =0= mas esperava código(s) =41=
+- [ ] =poi27= NOK 
+ - Erro: retornou =0= mas esperava código(s) =42=
+- [ ] =poi28= NOK 
+ - Erro: retornou =0= mas esperava código(s) =11=
+- [ ] =poi34= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =poi42= NOK 
+ - Erro: retornou =0= mas esperava código(s) =51=
+- [ ] =poi46= NOK 
+ - Erro: retornou =0= mas esperava código(s) =22,20=
+- [ ] =poi50= NOK 
+ - Erro: retornou =0= mas esperava código(s) =52=
+- [ ] =poi52= NOK 
+ - Erro: retornou =139= mas esperava código(s) =52=
+- [ ] =qwe11= NOK 
+ - Erro: retornou =0= mas esperava código(s) =21,20=
+- [ ] =qwe12= NOK 
+ - Erro: retornou =0= mas esperava código(s) =20,10=
+- [ ] =qwe13= NOK 
+ - Erro: retornou =0= mas esperava código(s) =22,20=
+- [ ] =qwe14= NOK 
+ - Erro: retornou =0= mas esperava código(s) =20,10=
+- [ ] =qwe15= NOK 
+ - Erro: retornou =0= mas esperava código(s) =21=
+- [ ] =qwe16= NOK 
+ - Erro: retornou =139= mas esperava código(s) =33,30=
+- [ ] =qwe17= NOK 
+ - Erro: retornou =139= mas esperava código(s) =20,23=
+- [ ] =s05.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =20,10=
+- [ ] =s06.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =21,20=
+- [ ] =s07.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =22,20=
+- [ ] =s08.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31,30=
+- [ ] =s09.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32,30=
+- [ ] =s10.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =40=
+- [ ] =s11.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =41=
+- [ ] =s12.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =42=
+- [ ] =s13.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =42=
+- [ ] =s15.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =51=
+- [ ] =s16.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =52=
+- [ ] =s17.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31,30=
+- [ ] =s18.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32,30=
+- [ ] =s19.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =30=
+- [ ] =s20.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =30=
+- [ ] =s21.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =30=
+- [ ] =s22.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =30=
+- [ ] =s23.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31=
+- [ ] =s24.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32=
+- [ ] =s25.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =s28.iks= NOK 
+ - Erro: retornou =30= mas esperava código(s) =31=
+- [ ] =s29.iks= NOK 
+ - Erro: retornou =30= mas esperava código(s) =32=
+- [ ] =s30.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =52=
+- [ ] =s31.iks= NOK 
+ - Erro: retornou =30= mas esperava código(s) =0=
+- [ ] =s38.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31,30=
+
+**** DONE OK Gamma
 
 - [ ] =poi17= NOK 
   - Erro: retornou =30= mas esperava =31= (=ERR_STRING_TO_X=) 
@@ -4102,7 +4231,7 @@ dos números foi 0. Uma exceção existe para os que não chamam
 - [ ] =s39.iks= NOK 
   - Erro: retornou =0= mas esperava =10= (=ERR_UNDECLARED=)
 
-**** TODO OK Theta
+**** DONE OK Theta
 
 - [ ] =poi01= OK  
   - Warning: valgrind leak report ( 0 0 0 316 0 )
@@ -4364,7 +4493,26 @@ dos números foi 0. Uma exceção existe para os que não chamam
 - [ ] =s40.iks= OK  
   - Warning: valgrind leak report ( 0 0 0 316 0 )
 
-**** TODO OK Alpha
+Após resubmissão:
+
+- [ ] =qwe19= NOK 
+ - Erro: retornou =40= mas esperava código(s) =0=
+- [ ] =qwe20= NOK 
+ - Erro: retornou =41= mas esperava código(s) =0=
+- [ ] =qwe21= NOK 
+ - Erro: retornou =42= mas esperava código(s) =0=
+- [ ] =s23.iks= NOK 
+ - Erro: retornou =30= mas esperava código(s) =31=
+- [ ] =s24.iks= NOK 
+ - Erro: retornou =30= mas esperava código(s) =32=
+- [ ] =s35.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =11=
+- [ ] =s37.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =11=
+- [ ] =s39.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+
+**** DONE OK Alpha
 
 - [ ] =poi01= OK  
   - Warning: valgrind leak report ( 73480 0 0 163542 0 )
@@ -4659,7 +4807,28 @@ dos números foi 0. Uma exceção existe para os que não chamam
 - [ ] =s40.iks= OK  
   - Warning: valgrind leak report ( 73480 0 0 163542 0 )
 
-**** TODO OK Iota
+Após resubmissão:
+
+- [ ] =poi16= NOK 
+ - Erro: retornou =20= mas esperava código(s) =0=
+- [ ] =poi30= NOK 
+ - Erro: retornou =50= mas esperava código(s) =0=
+- [ ] =poi31= NOK 
+ - Erro: retornou =50= mas esperava código(s) =0=
+- [ ] =poi32= NOK 
+ - Erro: retornou =50= mas esperava código(s) =0=
+- [ ] =poi33= NOK 
+ - Erro: retornou =50= mas esperava código(s) =0=
+- [ ] =poi34= NOK 
+ - Erro: retornou =50= mas esperava código(s) =0=
+- [ ] =qwe19= NOK 
+ - Erro: retornou =40= mas esperava código(s) =0=
+- [ ] =qwe20= NOK 
+ - Erro: retornou =41= mas esperava código(s) =0=
+- [ ] =qwe21= NOK 
+ - Erro: retornou =42= mas esperava código(s) =0=
+
+**** DONE OK Iota
 
 - [ ] O binário não se chama =etapa4=, mas =etapa3=
   - Corrigido na hora do automático, mas dúvida se grupo fez algo
@@ -4958,7 +5127,178 @@ dos números foi 0. Uma exceção existe para os que não chamam
 - [ ] =s40.iks= OK  
   - Warning: valgrind leak report ( 0 0 0 332 0 )
 
-**** TODO OK Eta
+Após resubmissão:
+
+- [ ] =poi01= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi03= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi10= NOK 
+ - Erro: retornou =10= mas esperava código(s) =11=
+- [ ] =poi11= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi13= NOK 
+ - Erro: retornou =10= mas esperava código(s) =21,20=
+- [ ] =poi14= NOK 
+ - Erro: retornou =10= mas esperava código(s) =22,20=
+- [ ] =poi15= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi16= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi17= NOK 
+ - Erro: retornou =10= mas esperava código(s) =31,30=
+- [ ] =poi18= NOK 
+ - Erro: retornou =10= mas esperava código(s) =32,30=
+- [ ] =poi19= NOK 
+ - Erro: retornou =10= mas esperava código(s) =33,30=
+- [ ] =poi20= NOK 
+ - Erro: retornou =10= mas esperava código(s) =33,30,23=
+- [ ] =poi21= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32=
+- [ ] =poi22= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31=
+- [ ] =poi23= NOK 
+ - Erro: retornou =0= mas esperava código(s) =33=
+- [ ] =poi24= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi25= NOK 
+ - Erro: retornou =10= mas esperava código(s) =40=
+- [ ] =poi26= NOK 
+ - Erro: retornou =10= mas esperava código(s) =41=
+- [ ] =poi27= NOK 
+ - Erro: retornou =10= mas esperava código(s) =42=
+- [ ] =poi29= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi30= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi31= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi32= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi33= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi34= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi35= NOK 
+ - Erro: retornou =10= mas esperava código(s) =50=
+- [ ] =poi36= NOK 
+ - Erro: retornou =10= mas esperava código(s) =50=
+- [ ] =poi37= NOK 
+ - Erro: retornou =10= mas esperava código(s) =50=
+- [ ] =poi38= NOK 
+ - Erro: retornou =10= mas esperava código(s) =50=
+- [ ] =poi39= NOK 
+ - Erro: retornou =10= mas esperava código(s) =50=
+- [ ] =poi40= NOK 
+ - Erro: retornou =10= mas esperava código(s) =50=
+- [ ] =poi41= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi42= NOK 
+ - Erro: retornou =10= mas esperava código(s) =51=
+- [ ] =poi43= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi44= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi45= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi46= NOK 
+ - Erro: retornou =10= mas esperava código(s) =22,20=
+- [ ] =poi47= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi48= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi49= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi50= NOK 
+ - Erro: retornou =30= mas esperava código(s) =52=
+- [ ] =poi51= NOK 
+ - Erro: retornou =30= mas esperava código(s) =0=
+- [ ] =poi52= NOK 
+ - Erro: retornou =30= mas esperava código(s) =52=
+- [ ] =qwe01= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =qwe03= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =qwe04= NOK 
+ - Erro: retornou =30= mas esperava código(s) =0=
+- [ ] =qwe05= NOK 
+ - Erro: retornou =30= mas esperava código(s) =0=
+- [ ] =qwe07= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =qwe09= NOK 
+ - Erro: retornou =30= mas esperava código(s) =11=
+- [ ] =qwe10= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =qwe11= NOK 
+ - Erro: retornou =10= mas esperava código(s) =21,20=
+- [ ] =qwe13= NOK 
+ - Erro: retornou =30= mas esperava código(s) =22,20=
+- [ ] =qwe14= NOK 
+ - Erro: retornou =30= mas esperava código(s) =20,10=
+- [ ] =qwe15= NOK 
+ - Erro: retornou =30= mas esperava código(s) =21=
+- [ ] =qwe17= NOK 
+ - Erro: retornou =30= mas esperava código(s) =20,23=
+- [ ] =qwe18= NOK 
+ - Erro: retornou =30= mas esperava código(s) =0=
+- [ ] =qwe19= NOK 
+ - Erro: retornou =30= mas esperava código(s) =0=
+- [ ] =qwe20= NOK 
+ - Erro: retornou =30= mas esperava código(s) =0=
+- [ ] =qwe21= NOK 
+ - Erro: retornou =30= mas esperava código(s) =0=
+- [ ] =s01.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =10=
+- [ ] =s08.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31,30=
+- [ ] =s09.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32,30=
+- [ ] =s11.iks= NOK 
+ - Erro: retornou =20= mas esperava código(s) =41=
+- [ ] =s12.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =42=
+- [ ] =s13.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =42=
+- [ ] =s14.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =50=
+- [ ] =s15.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =51=
+- [ ] =s16.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =52=
+- [ ] =s17.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31,30=
+- [ ] =s18.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32,30=
+- [ ] =s19.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =30=
+- [ ] =s20.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =30=
+- [ ] =s21.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =30=
+- [ ] =s22.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =30=
+- [ ] =s23.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31=
+- [ ] =s24.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32=
+- [ ] =s25.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =s26.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32=
+- [ ] =s27.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31=
+- [ ] =s28.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =31=
+- [ ] =s29.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =32=
+- [ ] =s30.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =52=
+- [ ] =s31.iks= NOK 
+ - Erro: retornou =30= mas esperava código(s) =0=
+- [ ] =s38.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =31,30=
+
+**** DONE OK Eta
 
 - [ ] =poi03= NOK 
   - Erro: retornou =10= mas esperava =0= (Sucesso) 
@@ -5218,7 +5558,19 @@ dos números foi 0. Uma exceção existe para os que não chamam
 - [ ] =s39.iks= NOK 
   - Erro: retornou =0= mas esperava =10= (=ERR_UNDECLARED=) 
 
-**** TODO OK Lambda
+Na submissão inicial:
+- Um membro do grupo não participou desta etapa
+
+Após resubmissão:
+
+- [ ] =qwe19= NOK 
+ - Erro: retornou =40= mas esperava código(s) =0=
+- [ ] =qwe20= NOK 
+ - Erro: retornou =41= mas esperava código(s) =0=
+- [ ] =qwe21= NOK 
+ - Erro: retornou =42= mas esperava código(s) =0=
+
+**** DONE OK Lambda
 
 - [ ] =poi01= OK  
   - Warning: valgrind leak report ( 0 0 0 16474 0 )
@@ -5501,7 +5853,16 @@ dos números foi 0. Uma exceção existe para os que não chamam
   - Erro: retornou =52= mas esperava =0= (Sucesso) 
   - Warning: valgrind leak report ( 0 0 0 19520 0 )
 
-**** TODO OK Omega
+Após resubmissão com 80%:
+
+- [ ] =qwe19= NOK 
+ - Erro: retornou =40= mas esperava código(s) =0=
+- [ ] =qwe20= NOK 
+ - Erro: retornou =41= mas esperava código(s) =0=
+- [ ] =qwe21= NOK 
+ - Erro: retornou =42= mas esperava código(s) =0=
+
+**** DONE OK Omega
 
 - [ ] =poi01= OK  
   - Warning: valgrind leak report ( 0 0 0 19298 0 )
@@ -5742,7 +6103,7 @@ dos números foi 0. Uma exceção existe para os que não chamam
   programa de forma que tudo termine como começou, de maneira
   elegante, do ponto de vista do monte
 
-**** TODO OK Kappa
+**** DONE OK Kappa
 
 - [ ] Esqueceram o Makefile!
   - O binário não foi compilado
@@ -6023,13 +6384,148 @@ dos números foi 0. Uma exceção existe para os que não chamam
 - [ ] =s40.iks= OK  
   - Warning: valgrind leak report ( 0 0 0 16460 0 )
 
-**** TODO LATE Epsilon
-**** TODO LATE Mu
-**** TODO LATE Omicron
-**** TODO LATE Psi
-**** TODO LATE Rho
-**** TODO LATE Sigma
-**** TODO LATE Upsilon
-**** TODO LATE Zeta
+Após resubmissão:
+
+- [ ] =poi23= NOK 
+ - Erro: retornou =0= mas esperava código(s) =33=
+- [ ] =poi41= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =poi42= NOK 
+ - Erro: retornou =139= mas esperava código(s) =51=
+- [ ] =poi43= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =poi44= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =poi45= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =poi46= NOK 
+ - Erro: retornou =139= mas esperava código(s) =22,20=
+- [ ] =poi50= NOK 
+ - Erro: retornou =0= mas esperava código(s) =52=
+- [ ] =poi52= NOK 
+ - Erro: retornou =0= mas esperava código(s) =52=
+- [ ] =qwe17= NOK 
+ - Erro: retornou =25= mas esperava código(s) =20,23=
+- [ ] =qwe19= NOK 
+ - Erro: retornou =40= mas esperava código(s) =0=
+- [ ] =qwe20= NOK 
+ - Erro: retornou =41= mas esperava código(s) =0=
+- [ ] =qwe21= NOK 
+ - Erro: retornou =42= mas esperava código(s) =0=
+- [ ] =s15.iks= NOK 
+ - Erro: retornou =139= mas esperava código(s) =51=
+- [ ] =s16.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =52=
+- [ ] =s23.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31=
+- [ ] =s24.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32=
+- [ ] =s30.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =52=
+- [ ] =s35.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =11=
+- [ ] =s37.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =11=
+- [ ] =s39.iks= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+
+**** DONE LATE OK Epsilon
+
+- Submeteram com atraso
+  - Lembro que é a segunda ausência na entrevista
+
+- [ ] =poi02= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =poi11= NOK 
+ - Erro: retornou =11= mas esperava código(s) =0=
+- [ ] =poi15= NOK 
+ - Erro: retornou =11= mas esperava código(s) =0=
+- [ ] =poi16= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi17= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31,30=
+- [ ] =poi18= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32,30=
+- [ ] =poi19= NOK 
+ - Erro: retornou =10= mas esperava código(s) =33,30=
+- [ ] =poi20= NOK 
+ - Erro: retornou =10= mas esperava código(s) =33,30,23=
+- [ ] =poi22= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31=
+- [ ] =poi23= NOK 
+ - Erro: retornou =134= mas esperava código(s) =33=
+- [ ] =poi25= NOK 
+ - Erro: retornou =11= mas esperava código(s) =40=
+- [ ] =poi26= NOK 
+ - Erro: retornou =11= mas esperava código(s) =41=
+- [ ] =poi27= NOK 
+ - Erro: retornou =11= mas esperava código(s) =42=
+- [ ] =poi29= NOK 
+ - Erro: retornou =11= mas esperava código(s) =0=
+- [ ] =poi34= NOK 
+ - Erro: retornou =10= mas esperava código(s) =0=
+- [ ] =poi51= NOK 
+ - Erro: retornou =52= mas esperava código(s) =0=
+- [ ] =qwe07= NOK 
+ - Erro: retornou =11= mas esperava código(s) =0=
+- [ ] =qwe16= NOK 
+ - Erro: retornou =10= mas esperava código(s) =33,30=
+- [ ] =qwe17= NOK 
+ - Erro: retornou =10= mas esperava código(s) =20,23=
+- [ ] =qwe18= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =qwe19= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =qwe20= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =qwe21= NOK 
+ - Erro: retornou =139= mas esperava código(s) =0=
+- [ ] =s08.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31,30=
+- [ ] =s09.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32,30=
+- [ ] =s17.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31,30=
+- [ ] =s18.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =32,30=
+- [ ] =s19.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =30=
+- [ ] =s20.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =30=
+- [ ] =s21.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =30=
+- [ ] =s22.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =30=
+- [ ] =s23.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31=
+- [ ] =s27.iks= NOK 
+ - Erro: retornou =139= mas esperava código(s) =31=
+- [ ] =s28.iks= NOK 
+ - Erro: retornou =139= mas esperava código(s) =31=
+- [ ] =s29.iks= NOK 
+ - Erro: retornou =139= mas esperava código(s) =32=
+- [ ] =s30.iks= NOK 
+ - Erro: retornou =139= mas esperava código(s) =52=
+- [ ] =s32.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =10=
+- [ ] =s38.iks= NOK 
+ - Erro: retornou =0= mas esperava código(s) =31,30=
+**** DONE LATE NOK Rho
+
+- Submeteram com atraso
+  - Lembro que é a segunda ausência na entrevista
+- O programa não compila
+
+**** DONE LATE NOK Upsilon
+
+- Submeteram com atraso
+  - Lembro que é a segunda ausência na entrevista
+- O programa compila, mas todos os testes lançam =segfault=
+
+**** DONE LATE NOK Mu
+**** DONE LATE NOK Omicron
+**** DONE LATE NOK Psi
+**** DONE LATE NOK Sigma
+**** DONE LATE NOK Zeta
 * Avaliação da Etapa 5
 * Avaliação da Etapa 6
