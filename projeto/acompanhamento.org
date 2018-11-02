@@ -3541,6 +3541,8 @@ dos números foi 0. Uma exceção existe para os que não chamam
 =yy_destroy()=. Neste caso, o valor do somatório pode ser 16458 que o
 /warning/ do valgrind é omitido.
 
+*Nota:* O valgrind não foi utilizado nas resubmissões.
+
 **** TODO OK Tau
 
 - [ ] =poi01= NOK 
