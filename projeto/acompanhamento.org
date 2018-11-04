@@ -3470,9 +3470,9 @@ saber quais os erros esperados por teste, consultar a tabela abaixo:
 | qwe17   | =ERR_VARIABLE=         |
 | qwe17   | =ERR_USER=             |
 | qwe18   |                      |
-| qwe19   |                      |
-| qwe20   |                      |
-| qwe21   |                      |
+| qwe19   | =ERR_MISSING_ARGS=     |
+| qwe20   | =ERR_EXCESS_ARGS=      |
+| qwe21   | =ERR_WRONG_TYPE_ARGS=  |
 | s00.iks | =ERR_UNDECLARED=       |
 | s01.iks | =ERR_UNDECLARED=       |
 | s02.iks | =ERR_UNDECLARED=       |
