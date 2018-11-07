@@ -24,7 +24,7 @@ int main () { }
 #+latex: \vfill\pause
 ILOC
 #+BEGIN_SRC iloc :tangle exemplo1.iloc
-loadI 1024 => rarp
+loadI 1024 => rfp
 loadI 1024 => rsp
 loadI 7 => rbss
 jumpI => L0
@@ -42,8 +42,8 @@ $SIM -x -t -s --data 500 --stack 1024 exemplo1.iloc
 
 #+RESULTS:
 #+begin_example
-0 ['loadI', 1024, 'rarp']
-Change of rarp ignored (strict mode)
+0 ['loadI', 1024, 'rfp']
+Change of rfp ignored (strict mode)
 1 ['loadI', 1024, 'rsp']
 Change of rsp ignored (strict mode)
 2 ['loadI', 7, 'rbss']
@@ -62,7 +62,7 @@ register         read:    1 write:    7
 memory           read:    0 write:    0
 
   register    value
-      rarp     1024
+       rfp     1024
       rbss      500
        rpc        5
        rsp     1024
@@ -78,13 +78,13 @@ int main () { int x; x = 34; }
 #+latex: \pause
 ILOC
 #+BEGIN_SRC iloc :tangle exemplo2.iloc
-loadI 1024 => rarp
+loadI 1024 => rfp
 loadI 1024 => rsp
 loadI 9 => rbss
 jumpI => L0
 L0: addI rsp, 4 => rsp
 loadI 34 => r0
-storeAI r0 => rarp, 0
+storeAI r0 => rfp, 0
 halt
 #+END_SRC
 
@@ -95,8 +95,8 @@ $SIM -x -t -s --data 500 --stack 1024 exemplo2.iloc
 
 #+RESULTS:
 #+begin_example
-0 ['loadI', 1024, 'rarp']
-Change of rarp ignored (strict mode)
+0 ['loadI', 1024, 'rfp']
+Change of rfp ignored (strict mode)
 1 ['loadI', 1024, 'rsp']
 Change of rsp ignored (strict mode)
 2 ['loadI', 9, 'rbss']
@@ -104,7 +104,7 @@ Change of rbss ignored (strict mode)
 3 ['jumpI', 4]
 4 ['addI', 'rsp', 4, 'rsp']
 5 ['loadI', 34, 'r0']
-6 ['storeAI', 'r0', 'rarp', 0]
+6 ['storeAI', 'r0', 'rfp', 0]
 7 ['halt']
 count	instruction
     4	loadI
@@ -119,7 +119,7 @@ memory           read:    0 write:    1
 
   register    value
         r0       34
-      rarp     1024
+       rfp     1024
       rbss      500
        rpc        7
        rsp     1028
@@ -136,7 +136,7 @@ int y; int main () { int x; y = 59; x = 33; }
 #+latex: \pause
 ILOC
 #+BEGIN_SRC iloc :tangle exemplo3.iloc
-loadI 1024 => rarp
+loadI 1024 => rfp
 loadI 1024 => rsp
 loadI 11 => rbss
 jumpI => L0
@@ -144,7 +144,7 @@ L0: addI rsp, 4 => rsp
 loadI 59 => r0
 storeAI r0 => rbss, 0
 loadI 33 => r0
-storeAI r0 => rarp, 0
+storeAI r0 => rfp, 0
 halt
 #+END_SRC
 
@@ -155,8 +155,8 @@ $SIM -x -t -s --data 500 --stack 1024 exemplo3.iloc
 
 #+RESULTS:
 #+begin_example
-0 ['loadI', 1024, 'rarp']
-Change of rarp ignored (strict mode)
+0 ['loadI', 1024, 'rfp']
+Change of rfp ignored (strict mode)
 1 ['loadI', 1024, 'rsp']
 Change of rsp ignored (strict mode)
 2 ['loadI', 11, 'rbss']
@@ -166,7 +166,7 @@ Change of rbss ignored (strict mode)
 5 ['loadI', 59, 'r0']
 6 ['storeAI', 'r0', 'rbss', 0]
 7 ['loadI', 33, 'r0']
-8 ['storeAI', 'r0', 'rarp', 0]
+8 ['storeAI', 'r0', 'rfp', 0]
 9 ['halt']
 count	instruction
     5	loadI
@@ -181,7 +181,7 @@ memory           read:    0 write:    2
 
   register    value
         r0       33
-      rarp     1024
+       rfp     1024
       rbss      500
        rpc        9
        rsp     1028
@@ -201,28 +201,28 @@ int f() { return 73; } int main() { int x; x = f(); }
 ILOC
 #+latex: \tiny
 #+BEGIN_SRC iloc :tangle exemplo4.iloc
-loadI 1024 => rarp
+loadI 1024 => rfp
 loadI 1024 => rsp
 loadI 23 => rbss
 jumpI => L1
-L0: i2i rsp => rarp
+L0: i2i rsp => rfp
 addI rsp, 16 => rsp   //final do epílogo
 loadI 73 => r0      //seq retorno
-storeAI r0 => rarp, 12
-loadAI rarp, 0 => r0  //obtém end. retorno
-loadAI rarp, 4 => r1  //obtém rsp salvo
-loadAI rarp, 8 => r2  //obtém rarp salvo
+storeAI r0 => rfp, 12
+loadAI rfp, 0 => r0  //obtém end. retorno
+loadAI rfp, 4 => r1  //obtém rsp salvo
+loadAI rfp, 8 => r2  //obtém rfp salvo
 store r1 => rsp
-store r2 => rarp
+store r2 => rfp
 jump => r0
 L1: addI rsp, 4 => rsp
 loadI 20 => r3
 storeAI r3 => rsp, 0
 storeAI rsp => rsp, 4
-storeAI rarp => rsp, 8
+storeAI rfp => rsp, 8
 jumpI => L0
 loadAI rsp, 12 => r0
-storeAI r0 => rarp, 0
+storeAI r0 => rfp, 0
 halt
 #+END_SRC
 
@@ -233,8 +233,8 @@ $SIM -x -t -s --data 500 --stack 1024 exemplo4.iloc
 
 #+RESULTS:
 #+begin_example
-0 ['loadI', 1024, 'rarp']
-Change of rarp ignored (strict mode)
+0 ['loadI', 1024, 'rfp']
+Change of rfp ignored (strict mode)
 1 ['loadI', 1024, 'rsp']
 Change of rsp ignored (strict mode)
 2 ['loadI', 23, 'rbss']
@@ -244,20 +244,20 @@ Change of rbss ignored (strict mode)
 15 ['loadI', 20, 'r3']
 16 ['storeAI', 'r3', 'rsp', 0]
 17 ['storeAI', 'rsp', 'rsp', 4]
-18 ['storeAI', 'rarp', 'rsp', 8]
+18 ['storeAI', 'rfp', 'rsp', 8]
 19 ['jumpI', 4]
-4 ['i2i', 'rsp', 'rarp']
+4 ['i2i', 'rsp', 'rfp']
 5 ['addI', 'rsp', 16, 'rsp']
 6 ['loadI', 73, 'r0']
-7 ['storeAI', 'r0', 'rarp', 12]
-8 ['loadAI', 'rarp', 0, 'r0']
-9 ['loadAI', 'rarp', 4, 'r1']
-10 ['loadAI', 'rarp', 8, 'r2']
+7 ['storeAI', 'r0', 'rfp', 12]
+8 ['loadAI', 'rfp', 0, 'r0']
+9 ['loadAI', 'rfp', 4, 'r1']
+10 ['loadAI', 'rfp', 8, 'r2']
 11 ['store', 'r1', 'rsp']
-12 ['store', 'r2', 'rarp']
+12 ['store', 'r2', 'rfp']
 13 ['jump', 'r0']
 20 ['loadAI', 'rsp', 12, 'r0']
-21 ['storeAI', 'r0', 'rarp', 0]
+21 ['storeAI', 'r0', 'rfp', 0]
 22 ['halt']
 count	instruction
     5	loadI
@@ -279,7 +279,7 @@ memory           read:    4 write:    7
         r1     1028
         r2     1024
         r3       20
-      rarp     1028
+      rfp     1028
       rbss      500
        rpc       22
        rsp     1044
@@ -304,31 +304,31 @@ int f(int y) { return y; } int main() { int x; x = f(x); }
 // Programa de entrada
 // int foo(int y) { return y; } int main() { int x; x = foo(x); }
 
-// RARP: Frame Pointer
+// RFP: Frame Pointer
 // RSP: Stack Pointer
 // RBSS: uninitialized data segment
 	
-// Inicializa os registradores rarp (RARP), rsp (SP), e rbss (RBSS)
-// RARP e RSP apontam inicialmente para a base da pilha
+// Inicializa os registradores rfp (RFP), rsp (SP), e rbss (RBSS)
+// RFP e RSP apontam inicialmente para a base da pilha
 // RBSS aponta para o início do segmento de dados
-loadI 1024 => rarp
+loadI 1024 => rfp
 loadI 1024 => rsp
 loadI 29 => rbss
 // O código da função main está em L1, salta para lá	
 jumpI => L1
 // Início da função foo
 L0:
-i2i rsp => rarp     // Atualiza o rarp (RARP)
+i2i rsp => rfp     // Atualiza o rfp (RFP)
 addI rsp, 20 => rsp    // Atualiza o rsp (SP)
-loadAI rarp, 12 => r0   // Obtém o parâmetro
-storeAI r0 => rarp, 20  // Salva o parâmetro na variável y
-loadAI rarp, 20 => r0   // Salva o valor da variável y em r0
-storeAI r0 => rarp, 16  // Registra o valor de retorno
-loadAI rarp, 0 => r0    // Obtém end. retorno
-loadAI rarp, 4 => r1    // Obtém rsp (SP) salvo
-loadAI rarp, 8 => r2    // Obtém rarp (RARP) salvo
+loadAI rfp, 12 => r0   // Obtém o parâmetro
+storeAI r0 => rfp, 20  // Salva o parâmetro na variável y
+loadAI rfp, 20 => r0   // Salva o valor da variável y em r0
+storeAI r0 => rfp, 16  // Registra o valor de retorno
+loadAI rfp, 0 => r0    // Obtém end. retorno
+loadAI rfp, 4 => r1    // Obtém rsp (SP) salvo
+loadAI rfp, 8 => r2    // Obtém rfp (RFP) salvo
 i2i r1 => rsp        // Atualiza o rsp (SP)
-i2i r2 => rarp        // Atualiza o rarp (RARP)
+i2i r2 => rfp        // Atualiza o rfp (RFP)
 jump => r0             // Salta para o endereço de retorno
 // Início da função main	
 L1:
@@ -336,12 +336,12 @@ addI rsp, 4 => rsp // Reserva espaço para a variável local x
 addI rpc, 7  => r1      // Calcula o endereço de retorno (7 instruções abaixo)
 storeAI r1  => rsp, 0  // Salva o endereço de retorno
 storeAI rsp => rsp, 4  // Salva o rsp (SP)
-storeAI rarp => rsp, 8  // Salva o rarp (RARP)
-loadAI  rarp, 0 => r0   // Carrega o valor da variável x em r0
+storeAI rfp => rsp, 8  // Salva o rfp (RFP)
+loadAI  rfp, 0 => r0   // Carrega o valor da variável x em r0
 storeAI r0 => rsp, 12  // Empilha o parâmetro
 jumpI => L0            // Salta para o início da função chamada
 loadAI rsp, 16 => r0   // Retorno da função, carrega o valor de retorno
-storeAI r0 => rarp, 0   // Salva o retorno na variável x
+storeAI r0 => rfp, 0   // Salva o retorno na variável x
 #+END_SRC
 
 #+begin_src shell :results output :exports both
@@ -351,8 +351,8 @@ $SIM -x -t -s --data 500 --stack 1024 exemplo5.iloc
 
 #+RESULTS:
 #+begin_example
-0 ['loadI', 1024, 'rarp']
-Change of rarp ignored (strict mode)
+0 ['loadI', 1024, 'rfp']
+Change of rfp ignored (strict mode)
 1 ['loadI', 1024, 'rsp']
 Change of rsp ignored (strict mode)
 2 ['loadI', 29, 'rbss']
@@ -362,24 +362,24 @@ Change of rbss ignored (strict mode)
 17 ['addI', 'rpc', 7, 'r1']
 18 ['storeAI', 'r1', 'rsp', 0]
 19 ['storeAI', 'rsp', 'rsp', 4]
-20 ['storeAI', 'rarp', 'rsp', 8]
-21 ['loadAI', 'rarp', 0, 'r0']
+20 ['storeAI', 'rfp', 'rsp', 8]
+21 ['loadAI', 'rfp', 0, 'r0']
 22 ['storeAI', 'r0', 'rsp', 12]
 23 ['jumpI', 4]
-4 ['i2i', 'rsp', 'rarp']
+4 ['i2i', 'rsp', 'rfp']
 5 ['addI', 'rsp', 20, 'rsp']
-6 ['loadAI', 'rarp', 12, 'r0']
-7 ['storeAI', 'r0', 'rarp', 20]
-8 ['loadAI', 'rarp', 20, 'r0']
-9 ['storeAI', 'r0', 'rarp', 16]
-10 ['loadAI', 'rarp', 0, 'r0']
-11 ['loadAI', 'rarp', 4, 'r1']
-12 ['loadAI', 'rarp', 8, 'r2']
+6 ['loadAI', 'rfp', 12, 'r0']
+7 ['storeAI', 'r0', 'rfp', 20]
+8 ['loadAI', 'rfp', 20, 'r0']
+9 ['storeAI', 'r0', 'rfp', 16]
+10 ['loadAI', 'rfp', 0, 'r0']
+11 ['loadAI', 'rfp', 4, 'r1']
+12 ['loadAI', 'rfp', 8, 'r2']
 13 ['i2i', 'r1', 'rsp']
-14 ['i2i', 'r2', 'rarp']
+14 ['i2i', 'r2', 'rfp']
 15 ['jump', 'r0']
 24 ['loadAI', 'rsp', 16, 'r0']
-25 ['storeAI', 'r0', 'rarp', 0]
+25 ['storeAI', 'r0', 'rfp', 0]
 count	instruction
     7	storeAI
     7	loadAI
@@ -397,7 +397,7 @@ memory           read:    7 write:    7
         r0        0
         r1     1028
         r2     1024
-      rarp     1024
+       rfp     1024
       rbss      500
        rpc       25
        rsp     1028
