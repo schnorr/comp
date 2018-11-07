@@ -87,7 +87,7 @@ Utilização no contexto de funções
 
 * Organização interna do Registro de Ativação
 
-Membros devem ser endereçáveis com deslocamento sobre =fp=
+Membros devem ser endereçáveis com deslocamento sobre =rfp=
 
 #+latex: \vfill
 
