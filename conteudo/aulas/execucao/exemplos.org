@@ -294,7 +294,6 @@ memory           read:    4 write:    7
 
 
 
-
 * Passagem por valor
 
 #+latex: \tiny
