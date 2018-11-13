@@ -6646,6 +6646,26 @@ do segmento de dados (=Data=).
 | ijk20 | Stack |      12 |     3 |
 | ijk20 | Stack |      16 |   325 |
 
+** Log dos testes automáticos                                       :ATTACH:
+:PROPERTIES:
+:Attachments: e5v0.log
+:ID:       9dfd58b9-fec8-4d82-acd9-dfafbd178328
+:END:
+
+Consulte [[./data/9d/fd58b9-fec8-4d82-acd9-dfafbd178328/e5v0.log][o arquivo de log]] para obter os resultados elementares (/raw/)
+dos testes automáticos. Cada linha começa pelo nome do grupo, sendo
+que o separador é a barra vertical. A segunda coluna é o identificador
+do teste, e a terceira coluna pode ser =stack=, =data=, =input=, =output=,
+=memory= e =instruction=. Quando for =stack= e =data=, a quarta coluna indica
+a base desses segmentos. Quando for =input=, a quarta coluna contém a
+entrada fornecida pelo grupo (a saída do processo de compilação) para
+o simulador ILOC. Quando for =output=, a quarta coluna contém a saída do
+simulador ILOC. Quando for =memory=, a quarta coluna contém endereços e
+valores da memória ao fim da simulação. E, enfim, quando for
+=instruction=, a quarta coluna conterá as estatísticas das instruções
+executadas (quantidade, instrução). É a partir deste arquivo que é
+definida a tabela abaixo.
+
 ** Testes automáticos (preliminar)
 
 A tabela abaixo mostra os resultados preliminares dos testes
