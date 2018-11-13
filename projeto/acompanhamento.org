@@ -6581,4 +6581,73 @@ Os grupos não listados na tabela abaixo não submeteram.
 | 2018-11-12 23:49:23 | Kappa   |
 | 2018-11-12 23:56:51 | Upsilon |
 
+** Arquivos para testes                                             :ATTACH:
+:PROPERTIES:
+:Attachments: e5tests.tgz
+:ID:       fc3383b2-9293-42da-9563-19b3229a3cc1
+:END:
+
+Veja [[data/fc/3383b2-9293-42da-9563-19b3229a3cc1/e5tests.tgz][este arquivo]].
+
+Todas as entradas estão lexicalmente, sintaticamente e semântica
+corretas de acordo com as etapas anteriores. A tabela abaixo demonstra
+a localização dos valores na memória ao final do programa, assumindo
+que os endereços de deslocamento se referem a base da pilha (=Stack=) ou
+do segmento de dados (=Data=).
+
+| Test  | Type  | Address | Value |
+|-------+-------+---------+-------|
+| ijk00 | Stack |       0 |   923 |
+| ijk01 | Stack |       8 |   923 |
+| ijk02 | Data  |       0 |   923 |
+| ijk03 | Data  |       8 |   923 |
+| ijk04 | Stack |       0 |    30 |
+| ijk04 | Stack |       4 |    46 |
+| ijk04 | Stack |       8 |    76 |
+| ijk05 | Stack |       0 |    -2 |
+| ijk05 | Stack |       4 |   -18 |
+| ijk05 | Stack |       8 |    16 |
+| ijk06 | Stack |       0 |    25 |
+| ijk06 | Stack |       4 |     5 |
+| ijk06 | Stack |       8 |     5 |
+| ijk07 | Stack |       0 |    45 |
+| ijk07 | Stack |       4 |   135 |
+| ijk07 | Stack |       8 |  6075 |
+| ijk08 | Stack |       0 |    55 |
+| ijk08 | Stack |       4 |    15 |
+| ijk08 | Stack |       8 |     3 |
+| ijk09 | Stack |       0 |    46 |
+| ijk09 | Stack |       4 |    15 |
+| ijk09 | Stack |       8 |     3 |
+| ijk10 | Stack |       0 |   300 |
+| ijk10 | Stack |       4 |   400 |
+| ijk10 | Stack |       8 |     2 |
+| ijk11 | Stack |       0 |   800 |
+| ijk11 | Stack |       4 |   400 |
+| ijk11 | Stack |       8 |     2 |
+| ijk12 | Stack |       0 |    20 |
+| ijk13 | Stack |       0 |     2 |
+| ijk14 | Stack |       0 |   393 |
+| ijk14 | Stack |       4 |   393 |
+| ijk15 | Stack |       0 |     1 |
+| ijk15 | Stack |       4 |   393 |
+| ijk16 | Stack |       0 |     1 |
+| ijk16 | Stack |       4 |   393 |
+| ijk17 | Stack |       0 |     5 |
+| ijk18 | Stack |       0 |     5 |
+| ijk19 | Stack |       0 |     0 |
+| ijk19 | Stack |       4 |     1 |
+| ijk19 | Stack |       8 |     2 |
+| ijk19 | Stack |      12 |     3 |
+| ijk19 | Stack |      16 |   293 |
+| ijk20 | Stack |       0 |     1 |
+| ijk20 | Stack |       4 |     0 |
+| ijk20 | Stack |       8 |     2 |
+| ijk20 | Stack |      12 |     3 |
+| ijk20 | Stack |      16 |   325 |
+
+** Comentários por grupos
+
+Por realizar.
+
 * Avaliação da Etapa 6
