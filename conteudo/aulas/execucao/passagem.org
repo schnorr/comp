@@ -70,7 +70,7 @@ Escopo Estático *com* procedimentos aninhados
 * Acesso a dados
 
 Considerando escopo estático, *durante a execução*
-+ Deve-se dereferenciar =diferença\_escopo= vezes \\
++ Deve-se dereferenciar =diferença_escopo= vezes \\
     \rightarrow ``Perda de tempo'' se aninhamento profundo \\
     \rightarrow Principalmente para acessar variáveis globais
 
