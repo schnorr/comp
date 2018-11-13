@@ -6549,4 +6549,36 @@ Os grupos não listados na tabela abaixo não submeteram.
 | Upsilon |    0 |    0 |  0.8 |
 
 * Avaliação da Etapa 5
+** Grupos que não entregaram até o prazo
+
+| Grupo   | ID     |
+|---------+--------|
+| Mu      | ???932 |
+| Mu      | ???794 |
+| Omicron | ???055 |
+| Psi     | ???499 |
+| Rho     | ???305 |
+| Rho     | ???713 |
+| Sigma   | ???295 |
+| Zeta    | ???271 |
+| Zeta    | ???673 |
+
+** Entregas até o prazo
+
+| Timestamp           | Grupo   |
+|---------------------+---------|
+| 2018-11-08 22:31:38 | Tau     |
+| 2018-11-10 14:01:33 | Gamma   |
+| 2018-11-10 16:08:34 | Lambda  |
+| 2018-11-11 20:39:27 | Omega   |
+| 2018-11-12 19:30:09 | Beta    |
+| 2018-11-12 19:45:34 | Theta   |
+| 2018-11-12 21:34:29 | Iota    |
+| 2018-11-12 21:36:55 | Delta   |
+| 2018-11-12 22:13:17 | Alpha   |
+| 2018-11-12 22:48:27 | Epsilon |
+| 2018-11-12 23:31:00 | Eta     |
+| 2018-11-12 23:49:23 | Kappa   |
+| 2018-11-12 23:56:51 | Upsilon |
+
 * Avaliação da Etapa 6
