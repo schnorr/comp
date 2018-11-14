@@ -7162,4 +7162,26 @@ solução do grupo fornece algum código ILOC válido na saída.
 
 Por realizar.
 
+** Notas Objetiva e Subjetiva
+
+| Grupo   | E5.O | E5.S | Peso |
+|---------+------+------+------|
+| Beta    |   10 | 9.95 |    1 |
+| Theta   |   10 | 9.95 |    1 |
+| Epsilon | 9.79 | 8.95 |    1 |
+| Tau     |   10 |  8.7 |    1 |
+| Omega   |   10 | 8.45 |    1 |
+| Gamma   |   10 |  7.7 |    1 |
+| Lambda  |   10 |  7.2 |    1 |
+| Iota    | 6.67 | 8.45 |    1 |
+| Eta     | 6.88 | 5.95 |    1 |
+| Alpha   | 7.71 |      |    1 |
+| Delta   | 5.42 |      |    1 |
+| Kappa   | 1.46 |      |    1 |
+| Upsilon |    0 |      |  0.8 |
+
+- Aguarda-se resubmissão dos grupos sem nota E5.S (Subjetiva)
+  - Focar nos melhoramentos que dão origem a nota E5.O
+- O Grupo =Rho= entregará em atraso.
+
 * Avaliação da Etapa 6
