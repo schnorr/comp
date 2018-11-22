@@ -1,0 +1,124 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Otimização de blocos básicos
+#+Author: Lucas Nesi, Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \input{./c_style.tex}
+
+* Otimização de blocos básicos
+Melhora o desempenho realizando otimizações locais dentro dos
+  blocos básicos.
+
+* Construindo um bloco básico
+Construção de um DAG para cada bloco básico
+- Cada Valor inicial de cada variável será um nó inicial no DAG
+- Cada expressão será um nó no DAG onde seus nós filhos são as
+  expressões ou os nós de valores iniciais das variáveis usadas pela
+  expressão.
+- Alguns nós são marcados como vivos, variáveis que serão utilizadas
+  depois do fim do bloco.
+
+* Otimizações possíveis no bloco básico
+- Encontrar sub-expressões comuns
+- Eliminar código não usado
+- Uso de Identidades Algébricas
+
+* Encontrar Sub-expressões Comuns
+Exemplo:
+
+#+BEGIN_SRC C
+a = b + c
+b = a - d
+c = b + c
+d = a - d
+#+END_SRC
+* Encontrar Sub-expressões Comuns
+#+NAME: img.sub_step1
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/step1.pdf]]
+
+* Encontrar Sub-expressões Comuns
+#+NAME: img.sub_step2
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/step2.pdf]]
+
+* Encontrar Sub-expressões Comuns
+#+NAME: img.sub_step3
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/step3.pdf]]
+
+* Encontrar Sub-expressões Comuns
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/step4.pdf]]
+
+* Encontrar Sub-expressões Comuns
+#+NAME: img.sub_step5
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/step5.pdf]]
+
+* Eliminar código não usado
+Podemos eliminar nós do DAG que calculam variáveis que não serão mais
+utilizadas
+
+- Exemplo: Caso C não seja mais utilizado
+
+#+NAME: img.sub_st
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/step3.pdf]]
+
+* Uso de Identidades Algébricas
+Remover instruções redundantes:
+
+- x + 0 
+- x - 0
+- x \times 1
+- x / 1
+
+* Uso de Identidades Algébricas
+Utilizar operações mais "baratas"
+
+| Operação Custosa | Operação Equivalente |
+|------------------+----------------------|
+| a^2              | a << 1               |
+| 2a               | a+a                  |
+| a/2              | a \times 0.5         |
+| a/2^n            | a >> n               |
+
+* Uso de Identidades Algébricas
+Regras associativas podem expor sub-expressões comuns:
+- Exemplo:
+
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+a = b + c
+t = c + d
+e = t + b
+#+END_SRC
+
+\pause
+- Caso t não seja mas usado podemos simplificar para:
+
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+a = b + c
+e = a + d
+#+END_SRC
+
+* Local Variables                                                  :noexport:
+# Local Variables:
+# org-latex-listings: t
+# End:
+

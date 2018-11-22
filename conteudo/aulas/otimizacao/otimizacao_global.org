@@ -1,0 +1,270 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Otimizações Independentes de Arquitetura Globais
+#+Author: Lucas Nesi, Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \input{./c_style.tex}
+
+* Otimizações Independentes de Arquitetura Globais
+Otimizações que dependem de análise da interação entre os blocos
+básicos
+* Exemplo: Quick Sort 
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+void quicksort(int* a, int m, int n){
+  int i, j, v, x;
+  if (n <= m) return;
+  /* INICIO FRAGMENTO */
+  i = m - 1;
+  j = n;
+  v = a[n];
+  while(1){
+     do i = i+1; while(a[i] < v);
+     do j = j-1; while(a[j] > v);
+     if (i >= j) break;
+     x = a[i]; a[i] = a[j]; a[j] = x;
+  }
+  x = a[i]; a[i] = a[n]; a[n] = x;
+  /* FIM FRAGMENTO */
+  quicksort(m, j); quicksort(i+1, n);
+}
+#+end_src
+
+* Exemplo: Quick Sort - TAC
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+ /* INICIO FRAGMENTO */
+  i = m - 1;
+  j = n;
+  v = a[n];
+#+END_SRC
+
+Pode ser convertido de forma simples para:
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+(1) i = m - 1
+(2) j = n
+(3) t1 = 4*n
+(4) v = a[t1]
+#+end_src
+
+* Exemplo: Quick Sort - TAC
+
+Próxima parte:
+
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+  while(1){
+     do i = i+1; while(a[i] < v);
+#+end_src
+
+Pode ser convertido para:
+
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+(5) i = i + 1
+(6) t2 = 4*i
+(7) t3 = a[t2]
+(8) if t3 < v goto (5)
+#+END_SRC
+
+- =(5)= é a entrada para o =while(1)= e para o bloco =do= de i
+- =(8)= é a verificação do =while(a[i] < v)=
+
+* Exemplo: Quick Sort - TAC
+
+Próxima parte:
+
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+     do j = j-1; while(a[j] > v);
+#+END_SRC
+
+Pode ser convertido para:
+
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+(9) j = j-1
+(10) t4 = 4*j
+(11) t5 = a[t4]
+(12) if t5>v goto (9)
+#+END_SRC
+
+- =(9)= é a entrada para o bloco =do= de j
+
+* Exemplo: Quick Sort - TAC
+Próxima parte:
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+     if (i >= j) break;
+     x = a[i]; a[i] = a[j]; a[j] = x;
+  }
+#+END_SRC
+Pode ser convertido para:
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+(13) if i>=j goto (23)
+(14) t6 = 4*1
+(15) x = a[t6] // x = a[i]
+(16) t7 = 4*i
+(17) t8 = 4*j
+(18) t9 = a[t8]
+(19) a[t7] = t9 // a[i] = a[j]
+(20) t10 = 4*j
+(21) a[t10] = x
+(22) goto (5) // goto while(1)
+#+end_src
+
+* Exemplo: Quick Sort - TAC
+Última parte:
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+  x = a[i]; a[i] = a[n]; a[n] = x;
+  /* FIM FRAGMENTO */
+#+END_SRC
+Pode ser convertido para:
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+(23) t11 = 4*1
+(24) x = a[t11] // x = a[i]
+(25) t12 = 4*i
+(26) t13 = 4*n
+(27) t14 = a[t13]
+(28) a[t12] = t14 // a[i] = a[n]
+(29) t15 = 4*n
+(30) a[t15] = x // a[n] = x
+#+END_SRC
+
+* Exemplo: Quick Sort - TAC
+TAC Final:
+
+| (1)  | i = m - 1          | (16)  | t7 = 4*i     |
+| (2)  | j = n              | (17)  | t8 = 4*j     |
+| (3)  | t1 = 4*n           | (18)  | t9 = a[t8]   |
+| (4)  | v = a[t1]          | (19)  | a[t7] = t9  |
+| (5)  | i = i + 1          | (20)  | t10 = 4*j    |
+| (6)  | t2 = 4*i           | (21)  | a[t10] = x   |
+| (7)  | t3 = a[t2]         | (22)  | goto (5)     |
+| (8)  | if t3 < v goto (5) | (23)  | t11 = 4*1    |
+| (9)  | j = j-1            | (24)  | x = a[t11]   |
+| (10) | t4 = 4*j           | (25)  | t12 = 4*i    |
+| (11) | t5 = a[t4]         | (26)  | t13 = 4*n    |
+| (12) | if t5>v goto (9)   | (27)  | t14 = a[t13] |
+| (13) | if i>=j goto (23)  | (28)  | a[t12] = t14 |
+| (14) | t6 = 4*1           | (29)  | t15 = 4*n    |
+| (15) | x = a[t6]          | (30)  | a[t15] = x   |
+
+* Exemplo: Quick Sort
+Blocos Básicos:
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort1.pdf]]
+
+* Exemplo: Quick Sort - Remoção de Expressões Comuns
+- Localmente dentro de cada bloco
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort2.pdf]]
+
+* Exemplo: Quick Sort - Remoção de Expressões Comuns
+Resultado:
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort3.pdf]]
+
+* Exemplo: Quick Sort - Remoção de Expressões Comuns
+- Globalmente, considerado interação entre blocos
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort4.pdf]]
+
+* Exemplo: Quick Sort - Remoção de Expressões Comuns
+Resultado:
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort5.pdf]]
+
+* Exemplo: Quick Sort - Remoção de Expressões Comuns
+Novas oportunidades:
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort6.pdf]]
+
+* Exemplo: Quick Sort - Remoção de Expressões Comuns
+Resultado:
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort7.pdf]]
+
+* Exemplo: Quick Sort - Remoção de Expressões Comuns
+Podemos simplificar esta operação?
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort8.pdf]]
+
+* Exemplo: Quick Sort - Remoção de Expressões Comuns
+Não, pois =(15)= e =(16)= podem alterar =a=
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort9.pdf]]
+
+* Exemplo: Quick Sort - Propagação de Cópias
+Não precisa passar por intermediário
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort10.pdf]]
+
+* Exemplo: Quick Sort - Propagação de Cópias
+Resultado:
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort11.pdf]]
+
+* Exemplo: Quick Sort - Eliminação de código morto
+A variável =x= não é utilizada
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort12.pdf]]
+
+* Exemplo: Quick Sort - Eliminação de código morto
+Resultado:
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort13.pdf]]
+
+* Exemplo: Quick Sort - Variáveis induzidas em loops
+- Variáveis tem alteração padronizada -> reduzir instruções nos loops
+- Os endereços de acesso são incrementados de 4 em 4 não precisamos
+  incrementar =i= e =j= toda vez.
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort14.pdf]]
+
+* Exemplo: Quick Sort
+Resultado final:
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort15.pdf]]
+
+* Exemplo: Quick Sort
+Primeira Versão:
+#+NAME: img.sub_step4
+#+ATTR_LATEX: :width 0.9\linewidth
+[[./img/quick_sort1.pdf]]
+
+* Local Variables                                                  :noexport:
+# Local Variables:
+# org-latex-listings: t
+# End:
