@@ -91,6 +91,8 @@ PDF.
  | Otimização | [[./aulas/otimizacao/otimizacao_janela.org][de Janela 2]] (LLN)                |        |       |       | Sec8.7 |
  | Otimização | [[./aulas/otimizacao/otimizacao_global.org][Globais]] (LLN)                    |        |       |       | Sec9.1 |
  | Otimização | [[./aulas/otimizacao/otimizacao_gcc.org][GCC]] (LLN)                        |        |       |       |        |
+ | Otimização | [[./aulas/otimizacao/otimizacao-de-codigo-I.pdf][Introdução e Locais]] (JLB)        |        |       |       |        |
+ | Otimização | [[./aulas/otimizacao/otimizacao-de-codigo-II.pdf][Laços]] (JLB)                      |        |       |       |        |
  |------------+----------------------------------+--------+-------+-------+--------|
 
 *** Organização antiga
