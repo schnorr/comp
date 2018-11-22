@@ -6581,6 +6581,15 @@ Os grupos não listados na tabela abaixo não submeteram.
 | 2018-11-12 23:49:23 | Kappa   |
 | 2018-11-12 23:56:51 | Upsilon |
 
+** Entregas em recuperação/atraso
+
+- Delta 18/11
+- Rho 21/11
+- Alpha 21/11
+- Upsilon 21/11
+- Kappa 21/11
+- Iota 21/11
+
 ** Arquivos para testes                                             :ATTACH:
 :PROPERTIES:
 :Attachments: e5tests.tgz
