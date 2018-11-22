@@ -1,0 +1,69 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Discussão \linebreak What's now?
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Expressões regulares
+#+BEGIN_EXPORT latex
+   \vfill
+   \includegraphics[width=.6\linewidth]{./img/regular_expressions.png} \\
+   https://xkcd.com/208/
+#+END_EXPORT
+* Metaprogramação e metalinguagens
+   + /It is the writing of computer programs that write or manipulate
+     other programs (or themselves) as their data, or that do part of
+     the work at compile time that would otherwise be done at runtime./ (Wikipedia)
+   + Conceptual
+     + http://www.ccs3.lanl.gov/~pakin/software/conceptual/
+* Compiladores de compiladores
+   + /It takes a description of a programming language and a target
+     instruction set architecture, and automatically generates a
+     usable compiler from them./ (Wikipedia)
+   + Yacc/Bison/ANTRL
+* Transformação de código
+   + Gerar código C a partir de *C aumentado*
+   + Gerador de slides, relatórios em formato PDF
+     + OrgMode.org \rightarrow Latex Beamer \rightarrow PDF
+   + <2-> Arquivo \rightarrow markdown em HTML
+     + Jekyll, webgen, ...
+   + <3-> Lattes \rightarrow \LaTeX~(TCC de Marcelo Teixeira -- *lattes2latex*)
+     + http://www.inf.ufrgs.br/~nicolas/pdf/tcc_teixeira.pdf
+   + <4-> MPI \rightarrow Pthreads (TCC de Diego Morales -- *m2pi*)
+     + http://www.inf.ufrgs.br/~nicolas/pdf/tcc_diego.pdf
+   + <5-> Paje \rightarrow Inclusão na BD (TCC de Tais Bellini -- *aiyra*)
+     + https://github.com/taisbellini/aiyra (com JavaCC)
+   + <6-> Paje \rightarrow rastro binário (IC Vinicius Herbstrith -- *paje2rst*)
+     + @@latex: {\scriptsize@@ ttp://github.com/Herbstrith/poti/tree/master/src/paje2rst @@latex: }@@
+   + <7-> Pandoc \rightarrow a universal document converter
+* Conclusão da disciplina
+   + Lembrando a Aula 01 (Objetivos da disciplina)
+   #+latex: \vfill\pause
+   + O que vocês acharam?
+     + Teoria
+     + Projeto de compiladores?
+* Avaliação
+   + Portal do aluno
+   + Fórmulário no moodle
+   + Retorno importante
+     + Professor
+     + Departamento
+     + Próximas turmas
+* Fim
+   \vfill
+   \centering
+   \LARGE That's it!
+   \vfill
+   \normalsize
+   Revisão da prova na próxima aula!
