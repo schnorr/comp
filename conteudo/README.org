@@ -94,7 +94,7 @@ PDF.
  | Otimização | [[./aulas/otimizacao/otimizacao-de-codigo-I.pdf][Introdução e Locais]] (JLB)        |        |       |       |        |
  | Otimização | [[./aulas/otimizacao/otimizacao-de-codigo-II.pdf][Laços]] (JLB)                      |        |       |       |        |
  |------------+----------------------------------+--------+-------+-------+--------|
- | Closure    | Discussão (aka: What's now?)     |        |       |       |        |
+ | Closure    | [[./aulas/geral/encerramento.org][Discussão (aka: What's now?)]]     |        |       |       |        |
 
 * Revisão P2
 
