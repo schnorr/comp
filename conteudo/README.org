@@ -94,12 +94,8 @@ PDF.
  | Otimização | [[./aulas/otimizacao/otimizacao-de-codigo-I.pdf][Introdução e Locais]] (JLB)        |        |       |       |        |
  | Otimização | [[./aulas/otimizacao/otimizacao-de-codigo-II.pdf][Laços]] (JLB)                      |        |       |       |        |
  |------------+----------------------------------+--------+-------+-------+--------|
+ | Closure    | Discussão e reflexão             |        |       |       |        |
 
-*** Organização antiga
-
- | Otimização | Introdução, Janela e Grafos de Fluxo                  |        |       |       |
- | Otimização | Local e Global, Otimização em laços                   |        |       |       |
- | Geral      | Discussão e reflexão sobre os conceitos da disciplina |        |       |       |
 * Revisão P2
 
 - Introdução à Geração de Código
