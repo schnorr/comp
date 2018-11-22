@@ -16,11 +16,10 @@
 #+LATEX_HEADER: \input{../org-babel.tex}
 
 * Expressões regulares
-#+BEGIN_EXPORT latex
-   \vfill
-   \includegraphics[width=.6\linewidth]{./img/regular_expressions.png} \\
-   https://xkcd.com/208/
-#+END_EXPORT
+#+attr_latex: :width .6\linewidth
+[[./img/regular_expressions.png]]
+
+https://xkcd.com/208/
 * Metaprogramação e metalinguagens
    + /It is the writing of computer programs that write or manipulate
      other programs (or themselves) as their data, or that do part of
