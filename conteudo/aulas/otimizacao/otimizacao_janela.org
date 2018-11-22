@@ -1,0 +1,121 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Otimização de Janela
+#+Author: Lucas Nesi, Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \input{./c_style.tex}
+
+* Otimização de Janela
+
+- Otimização de Janela (/peephole/) verifica um número específico de
+  instruções (Janela) e procura por padrões
+- Padrões de instruções são substituídos por sequencias de instruções
+  menores/otimizadas
+- Pequenas transformações nas instruções podem gerar otimizações
+- Seguindo regra segura
+
+* Otimização de Janela: Exemplos
+- Eliminação de instruções redundantes
+- Otimizações de controle de fluxo
+- Simplificações algébricas
+- Uso de Idiomas específicos.
+
+* Eliminação de Instruções Redundantes
+- Exemplo de código:
+
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+LD a, RO
+ST RO, a
+#+end_src
+
+- A instrução de ST é desnecessária, já que o valor de =a= já é o de
+  =R0=.
+
+* Eliminação de Código inatingível
+- Exemplo de código:
+
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+if debug == 1 goto L1
+goto L2
+L1: print debug
+L2:
+#+end_src
+
+\pause
+
+- Podemos remover um jump
+
+* Eliminação de Código inatingível
+- Exemplo de código:
+
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+if debug != 1 goto L1
+print debug
+L1:
+#+end_src
+
+\pause
+- Se =debug= foi definido em tempo de compilação (=#define=), já sabemos
+  comportamento:
+  - Se =debug= == 0: Removemos todas estas instruções
+  - Se =debug= == 1: Removemos a verificação e o jump (O print debug
+    sempre executará)
+
+* Otimizações de Fluxo de Controle
+
+- Exemplo Código:
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+goto L1
+L1: goto L2
+#+END_SRC
+
+\pause
+
+Pode ser resumido diretamente em:
+#+ATTR_LATEX: :options style=CStyle
+#+BEGIN_SRC C
+goto L2
+L1: goto L2
+#+END_SRC
+
+- L1 ainda pode ser acessado por outros pontos.
+
+* Simplificações algébricas
+- Similar ao de blocos básicos
+
+* Uso de Idiomas de máquina
+Em diversas arquiteturas:
+
+- Instruções especializadas
+- Arquiteturas RISC
+
+Exemplos =x86=:
+ - Instruções de criptografia: AESENC, SHA256RNDS2
+ - Instruções vetoriais (SIMD): FMA4, AVX
+ - Instruções de virtualização: Intel VT-x, AMD-V
+
+\pause
+Exemplos GPUs:
+ - NVIDIA RTX: Instruções de Ray Tracing
+
+* Local Variables                                                  :noexport:
+# Local Variables:
+# org-latex-listings: t
+# End:
+

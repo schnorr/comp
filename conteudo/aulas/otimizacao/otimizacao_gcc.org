@@ -1,0 +1,133 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Otimizações GCC
+#+Author: Lucas Nesi, Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \input{./c_style.tex}
+
+* Otimizações GCC
+- Habilitado pelas flags O0, O, O2, O3, Os, Og, Ofast
+  - O0: Desliga a otimização
+  - O: Primeiro nível de otimizações
+  - O2: Segundo nível de otimizações
+  - O3: Terceiro nível de otimizações
+  - Os: Igual O2 só que desliga otimizações que aumentam a quantidade
+    de código
+  - Ofast: Realiza otimizações que ignoram a regra conservadora
+- Uma otimização de nível maior contêm todas as otimizações de um
+  nível menor. Ex: O3 têm todas as otimizações de O2.
+
+* Loop Unroll
+- "Desenrrola" completamente ou parcialmente um loop
+- Aumenta a quantidade de instruções por iteração
+- Opção GCC: -funroll-loops
+\pause
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+for(int i=0; i<N; i++){
+   a[i] = 0;
+}
+#+end_src
+\pause
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+for(int i=0; i<N; i+=2){
+   a[i] = 0;
+   a[i+1] = 0;
+   a[i+2] = 0;
+}
+#+end_src
+\pause
+- Exemplo Teórico, pipeline de CPUs modernas prevê o branch correto
+* Inline
+- Em vez de realizar a chamada =CALL= / desviar o controle para um
+  função, cópia o conteúdo dela para o local da sua chamada.
+- Opção GCC: -finline-functions
+- Incluso no -O2
+- Opção GCC: -finline-functions-called-once
+- Incluso no -O
+
+* Inline
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+int somar(int a, int b){
+   return a+b;
+}
+
+int z = somar(x, y);
+#+end_src
+\pause
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+int z = x+y
+#+end_src
+
+* Eliminação de Recursão com cauda
+- Transforma a recursão com cauda para a forma interativa
+- Recursão com cauda é aquela que seu retorno termina com a recursão
+
+* Eliminação de Recursão com cauda
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+int fac_accumulate( int n, int acum ){
+    if (n < 2) return acum;
+    return fac_accumulate( n - 1, acum * n)
+}
+int fac(int n){
+   fac_accumulate(n, 1);
+}
+#+end_src
+\pause
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+int fac_accumulate( int n, int acum ){
+    do{
+       acum *= n;
+    }while(--n > 1)
+    return acum;
+}
+#+end_src
+
+* Loop interchange
+- Troca ordem de execução do Loop
+- Prioriza ordem de acessos para maximizar uso de cache
+- GCC: -O3 ou -floop-interchange 
+
+* Caso: 
+
+- (a*a)*(a*a) == (a*a*a*a)
+\pause
+- (a*a*a*a)
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+t1 = a * a
+t1 = a * t1
+t1 = a * t1
+#+end_src
+
+- (a*a)*(a*a)
+#+ATTR_LATEX: :options style=CStyle
+#+begin_src C
+t1 = a * a
+t1 = t1 * t1
+#+end_src
+
+* OFast
+- Habilita otimizações que podem alterar o resultado do programa
+
+* Local Variables                                                  :noexport:
+# Local Variables:
+# org-latex-listings: t
+# End:
