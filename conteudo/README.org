@@ -78,8 +78,10 @@ PDF.
  | Execução   | [[./aulas/execucao/exemplos.org][Exemplos com ILOC]]                |        |       |       |        |
  | Execução   | [[./aulas/execucao/sequencia.org][Sequência de chamada]]             |        |       |       |        |
  | Execução   | [[./aulas/execucao/passagem.org][Passagem de parâmetros]]           |        |       |       |        |
+ | Execução   | [[./aulas/execucao/ambiente-de-execucao.pdf][Ambiente de Execução]] (JLB)       |        |       |       |        |
  | Código     | [[./aulas/execucao/geracao.org][Geração de Código]]                |        |       |       |        |
  | Código     | [[./aulas/execucao/alocacao.org][Alocação de Registradores]]        |        |       |       |        |
+ | Código     | [[./aulas/execucao/geracao-de-codigo.pdf][Geração de Código]] (JLB)          |        |       |       |        |
  |------------+----------------------------------+--------+-------+-------+--------|
  | Otimização | [[./aulas/otimizacao/introducao.org][Introdução]]                       |        |       |       |        |
  | Otimização | [[./aulas/otimizacao/janela.org][de Janela]]                        |        |       |       | Sec8.7 |
