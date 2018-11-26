@@ -7,7 +7,7 @@
 #+EXPORT_SELECT_TAGS: export
 
 #+Title: A Representação Intermediária da \linebreak Infraestrutura do Compilador LLVM
-#+Author: Gabriel Freytag \linebreak Prof. Lucas M. Schnorr (UFRGS)
+#+Author: Slides preparados por Gabriel Freytag \linebreak  Prof. Lucas M. Schnorr (UFRGS)
 #+Date: \copyleft
 
 #+LaTeX_CLASS: beamer
