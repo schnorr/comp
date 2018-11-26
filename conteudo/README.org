@@ -93,6 +93,7 @@ PDF.
  | Otimização | [[./aulas/otimizacao/otimizacao_gcc.org][GCC]] (LLN)                        |        |       |       |        |
  | Otimização | [[./aulas/otimizacao/otimizacao-de-codigo-I.pdf][Introdução e Locais]] (JLB)        |        |       |       |        |
  | Otimização | [[./aulas/otimizacao/otimizacao-de-codigo-II.pdf][Laços]] (JLB)                      |        |       |       |        |
+ | Otimização | [[./aulas/otimizacao/llvm-otim.org][LLVM]] (GF)                        |        |       |       |        |
  |------------+----------------------------------+--------+-------+-------+--------|
  | Closure    | [[./aulas/geral/encerramento.org][Discussão (aka: What's now?)]]     |        |       |       |        |
 
