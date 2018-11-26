@@ -62,6 +62,7 @@ PDF.
  | Código     | [[./aulas/codigo/taxonomia.org][Taxonomia]]                        |        |       |       |        |
  | Código     | [[./aulas/codigo/graficas.org][Gráficas]]                         |        |       |       |        |
  | Código     | [[./aulas/codigo/lineares.org][Lineares]]                         |        |       | [[./listas/lista09.pdf][#09]]   |        |
+ | Código     | [[./aulas/codigo/llvm-ir.org][LLVM-IR]]                          |        |       |       |        |
  |------------+----------------------------------+--------+-------+-------+--------|
  | Geração    | [[./aulas/codigo/expressoes.org][Expressões]]                       |        |       | [[./listas/lista10.pdf][#10]]   | Sec6.4 |
  | Geração    | [[./aulas/codigo/enderecamento.org][Endereçamento de Variáveis]]       |        |       |       |        |
