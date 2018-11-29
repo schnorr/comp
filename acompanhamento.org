@@ -173,6 +173,7 @@ Q7
 ** Gabarito
 
 P2 espera 44 respostas, com o gabarito abaixo.
+- A ordem das numerações nas respostas =05.O=, =05.P=, e =05.Q= não tem importância
 
 | Questão | Gabarito                           |
 |---------+------------------------------------|
