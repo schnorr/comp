@@ -195,7 +195,7 @@ P2 espera 44 respostas, com o gabarito abaixo.
 | 05.U    | 3972                               |
 | 06.X    | E                                  |
 | 07.X    | B                                  |
-| 08.M    | D                                  |
+| 08.M    | C                                  |
 | 08.N    | A                                  |
 | 08.O    | B                                  |
 | 09.X    | C                                  |
