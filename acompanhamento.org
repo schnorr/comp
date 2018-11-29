@@ -266,13 +266,25 @@ Por aluno
 | ???932 | 3.26 |
 | ???798 | 3.03 |
 
+Gráfico das notas de =P1= e =P2= em função da posição.
+
 #+header: :var dep0=p2.notas
+#+header: :var dep1=p1.notas
 #+begin_src R :results output graphics :file img/p2-posicao.png :exports results :width 600 :height 400 :session
 suppressMessages(library(tidyverse))
-dep0 %>%
+dep1 %>%
     select(-ID) %>%
     mutate(Posição=1:n()) %>%
-    ggplot(aes(x=Posição, y=P2)) +
+    rename(Nota = P1) %>%
+    mutate(Tipo = "P1") %>%
+    bind_rows(
+        dep0 %>%
+        select(-ID) %>%
+        mutate(Posição=1:n()) %>%
+        rename(Nota = P2) %>%
+        mutate(Tipo = "P2")
+    ) %>%
+    ggplot(aes(x=Posição, y=Nota, color=Tipo)) +
     geom_line(alpha=.1) +
     geom_point() +
     theme_bw(base_size=22) +
@@ -1612,6 +1624,7 @@ A questão 5 foi anulada.
 
 ** Sumário
 
+#+name: p1.notas
 | ID     |   P1 |
 |--------+------|
 | ???723 |   10 |
