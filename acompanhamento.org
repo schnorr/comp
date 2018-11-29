@@ -232,6 +232,7 @@ Estatísticas
 
 Por aluno
 
+#+name: p2.notas
 | ID     |   P2 |
 |--------+------|
 | ???238 | 7.73 |
@@ -264,6 +265,22 @@ Por aluno
 | ???155 | 4.55 |
 | ???932 | 3.26 |
 | ???798 | 3.03 |
+
+#+header: :var dep0=p2.notas
+#+begin_src R :results output graphics :file img/p2-posicao.png :exports results :width 600 :height 400 :session
+suppressMessages(library(tidyverse))
+dep0 %>%
+    select(-ID) %>%
+    mutate(Posição=1:n()) %>%
+    ggplot(aes(x=Posição, y=P2)) +
+    geom_line(alpha=.1) +
+    geom_point() +
+    theme_bw(base_size=22) +
+    ylim(0,10)
+#+end_src
+
+#+RESULTS:
+[[file:img/p2-posicao.png]]
 
 ** Taxa de acertos por questão
 
