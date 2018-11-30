@@ -178,6 +178,7 @@ P2 espera 44 respostas, com o gabarito abaixo.
 - A resposta da =14.B= pode ser V ou F
 - A resposta da =19.N= pode também ser =8 6 1 0 0=
 - A resposta da =13.M= pode ter um "do" (13) entre 1 e 12 na sequência
+- A resposta correta da =09.X= é a alternativa =B=
 
 | Questão | Gabarito                           |
 |---------+------------------------------------|
@@ -203,7 +204,7 @@ P2 espera 44 respostas, com o gabarito abaixo.
 | 08.M    | C                                  |
 | 08.N    | A                                  |
 | 08.O    | B                                  |
-| 09.X    | C                                  |
+| 09.X    | B                                  |
 | 10.X    | 01001                              |
 | 11.M    | D                                  |
 | 11.N    | A                                  |
