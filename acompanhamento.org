@@ -174,6 +174,10 @@ Q7
 
 P2 espera 44 respostas, com o gabarito abaixo.
 - A ordem das numerações nas respostas =05.O=, =05.P=, e =05.Q= não tem importância
+- Corrigido o gabarito das questão =17.X= e =18.X=
+- A resposta da =14.B= pode ser V ou F
+- A resposta da =19.N= pode também ser =8 6 1 0 0=
+- A resposta da =13.M= pode ter um "do" (13) entre 1 e 12 na sequência
 
 | Questão | Gabarito                           |
 |---------+------------------------------------|
@@ -215,12 +219,13 @@ P2 espera 44 respostas, com o gabarito abaixo.
 | 15.X    | E                                  |
 | 16.M    | C                                  |
 | 16.N    | B                                  |
-| 17.X    | A                                  |
-| 18.X    | D                                  |
+| 17.X    | E                                  |
+| 18.X    | B                                  |
 | 19.M    | D                                  |
 | 19.N    | 2 1 1 0 0                          |
 | 19.O    | E                                  |
 | 20.X    | A                                  |
+
 ** Sumário
 
 Estatísticas
