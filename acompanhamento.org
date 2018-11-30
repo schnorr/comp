@@ -276,7 +276,7 @@ Gráfico das notas de =P1= e =P2= em função da posição.
 
 #+header: :var dep0=p2.notas
 #+header: :var dep1=p1.notas
-#+begin_src R :results output graphics :file img/p2-posicao.png :exports results :width 600 :height 400 :session
+#+begin_src R :results output graphics :file img/p2-posicao.png :exports results :width 600 :height 400
 suppressMessages(library(tidyverse))
 dep1 %>%
     select(-ID) %>%
