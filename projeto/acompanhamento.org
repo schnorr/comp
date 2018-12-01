@@ -7226,3 +7226,30 @@ Iota entregou de maneira definitiva com 1:13 minutos de atraso.
 | 2018-11-30 23:50:18 | Gamma   |
 | 2018-11-30 23:53:11 | Kappa   |
 | 2018-12-01 01:13:19 | Iota    |
+** Arquivos para testes                                             :ATTACH:
+:PROPERTIES:
+:Attachments: e6tests.tgz
+:ID:       c230a973-0e06-45ff-be22-d4269bd0dde8
+:END:
+
+Veja [[data/c2/30a973-0e06-45ff-be22-d4269bd0dde8/e6tests.tgz][este arquivo]].
+
+Todas as entradas estão lexicalmente, sintaticamente e semântica
+corretas de acordo com as etapas anteriores. A tabela abaixo demonstra
+a localização dos valores na memória ao final do programa, assumindo
+que os endereços de deslocamento se referem a base da pilha (=Stack=) ou
+do segmento de dados (=Data=). No caso da E6, todos os valores
+verificados encontram-se no segmento de dados.
+
+| Test | Type  | Address | Value |
+|------+-------+---------+-------|
+| e00  | Data  |       0 |    99 |
+| e01  | Data  |       0 |    98 |
+| e02  | Data  |       0 |    49 |
+| e03  | Data  |       0 |   720 |
+| e04  | Data  |       0 |    58 |
+| e05  | Data  |       0 |     7 |
+| e06  | Data  |       4 |    52 |
+| e07  | Data  |       4 |   352 |
+
+
