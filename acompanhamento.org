@@ -233,7 +233,7 @@ Estatísticas
 
 #+BEGIN_EXAMPLE
 :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-:   3.020   5.433   6.310   6.277   7.170   8.640
+:   2.730   5.112   6.025   5.993   6.935   8.640
 #+END_EXAMPLE
 
 Por aluno
