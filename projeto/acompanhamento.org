@@ -7193,3 +7193,36 @@ Após o prazo de recuperação até 21/11, temos:
 | Rho     | 9.58 |    5 |  0.8 |
 
 * Avaliação da Etapa 6
+** Grupos que não entregaram até o prazo
+
+| Grupo   | ID     |
+|---------+--------|
+| Zeta    | ???271 |
+| Zeta    | ???673 |
+| Psi     | ???499 |
+| Eta     | ???834 |
+| Eta     | ???424 |
+| Mu      | ???932 |
+| Mu      | ???794 |
+| Omicron | ???055 |
+| Sigma   | ???295 |
+
+** Entregas até o prazo
+
+Iota entregou de maneira definitiva com 1:13 minutos de atraso.
+
+| Timestamp           | Grupo   |
+|---------------------+---------|
+| 2018-11-18 21:03:31 | Tau     |
+| 2018-11-30 12:49:54 | Omega   |
+| 2018-11-30 13:43:03 | Lambda  |
+| 2018-11-30 20:12:52 | Upsilon |
+| 2018-11-30 22:18:47 | Theta   |
+| 2018-11-30 22:41:00 | Epsilon |
+| 2018-11-30 22:44:56 | Alpha   |
+| 2018-11-30 22:48:49 | Beta    |
+| 2018-11-30 23:20:43 | Delta   |
+| 2018-11-30 23:31:19 | Rho     |
+| 2018-11-30 23:50:18 | Gamma   |
+| 2018-11-30 23:53:11 | Kappa   |
+| 2018-12-01 01:13:19 | Iota    |
