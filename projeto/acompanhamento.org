@@ -6675,9 +6675,9 @@ valores da memória ao fim da simulação. E, enfim, quando for
 executadas (quantidade, instrução). É a partir deste arquivo que é
 definida a tabela abaixo.
 
-** Testes automáticos (preliminar)
+** Testes automáticos
 
-A tabela abaixo mostra os resultados preliminares dos testes
+A tabela abaixo mostra os resultados dos testes
 automáticos, considerando as entradas do arquivos para testes.  A
 coluna =Group= e =Test= identificam o grupo e o identificador do teste; a
 coluna =Address= indica o endereço de memória onde o valor =Value.y= deve
