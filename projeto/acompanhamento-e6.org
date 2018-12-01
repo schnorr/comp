@@ -66,11 +66,11 @@ verificados encontram-se no segmento de dados.
 
 ** Log dos testes automáticos                                        :ATTACH:
 :PROPERTIES:
-:Attachments: e6v1.log
 :ID:       1606d53d-54b7-458d-b563-637a983d6637
+:Attachments: e6v2.log
 :END:
 
-Consulte [[./data/16/06d53d-54b7-458d-b563-637a983d6637/e6v1.log][o arquivo de log]] para obter os resultados elementares (/raw/)
+Consulte [[./data/16/06d53d-54b7-458d-b563-637a983d6637/e6v2.log][o arquivo de log]] para obter os resultados elementares (/raw/)
 dos testes automáticos. Cada linha começa pelo nome do grupo, sendo
 que o separador é a barra vertical. A segunda coluna é o identificador
 do teste, e a terceira coluna pode ser =stack=, =data=, =input=, =output=,
