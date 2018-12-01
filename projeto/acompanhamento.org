@@ -7253,3 +7253,39 @@ verificados encontram-se no segmento de dados.
 | e07  | Data  |       4 |   352 |
 
 
+** Log dos testes automáticos                                       :ATTACH:
+:PROPERTIES:
+:Attachments: e6v1.log
+:ID:       1606d53d-54b7-458d-b563-637a983d6637
+:END:
+
+Consulte [[./data/16/06d53d-54b7-458d-b563-637a983d6637/e6v1.log][o arquivo de log]] para obter os resultados elementares (/raw/)
+dos testes automáticos. Cada linha começa pelo nome do grupo, sendo
+que o separador é a barra vertical. A segunda coluna é o identificador
+do teste, e a terceira coluna pode ser =stack=, =data=, =input=, =output=,
+=memory=, =instruction=, e =sixit=. Abaixo segue uma explicação do restante
+da linha dependendo do valor da terceira coluna da linha:
+
+- Se =stack= e =data=, a quarta coluna indica a base desses segmentos.
+- Se =input=, a quarta coluna contém a entrada fornecida pelo grupo (a
+  saída do processo de compilação) para o simulador ILOC
+- Se =output=, a quarta coluna contém a saída do simulador ILOC
+- Se =memory=, a quarta coluna contém endereços e valores da memória ao
+  fim da simulação. Notem 
+- Se =instruction=, a quarta coluna conterá as estatísticas das
+  instruções executadas (quantidade, instrução).
+- Se =sixit=, a quarta coluna indicará o código de saída do
+  simulador. São três os valores possíveis da quarta coluna: =0=, =1=, e
+  =124=.  Caso este valor seja =0=, a simulação ocorreu normalmente (carga
+  do código ILOC, execução do programa e encerramento), ainda que a
+  entrada (o código ILOC fornecido) seja vazio. O valor =1= indica que
+  houve um erro sintático/léxico com o código ILOC produzido pelo
+  compilador do grupo, forçando o simulador a abortar com um erro. E
+  enfim, o código =124= indica que o simulador não terminou após 1
+  segundo de execução, provavelmente por causa de um laço infinito na
+  execução do código ILOC gerado pelo grupo.
+
+É a partir deste arquivo que é definida a nota objetiva e as tabelas
+abaixo.
+
+
