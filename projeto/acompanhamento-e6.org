@@ -64,8 +64,7 @@ verificados encontram-se no segmento de dados.
 | e06  | Data  |       4 |    52 |
 | e07  | Data  |       4 |   352 |
 
-
-** Log dos testes automáticos                                       :ATTACH:
+** Log dos testes automáticos                                        :ATTACH:
 :PROPERTIES:
 :Attachments: e6v1.log
 :ID:       1606d53d-54b7-458d-b563-637a983d6637
@@ -124,28 +123,78 @@ Somente aparecem testes cuja solução do grupo fornece algo válido, ou seja:
 
 | Group   | Test | Address | Value.x | Value.y | Eval  |
 |---------+------+---------+---------+---------+-------|
-| Alpha   | e02  |   10728 |       0 |      49 | FALSE |
-| Alpha   | e04  |   11427 |       0 |      58 | FALSE |
-| Alpha   | e05  |    8988 |       1 |       7 | FALSE |
-| Alpha   | e06  |   13998 |       0 |      52 | FALSE |
-| Alpha   | e07  |   16097 |       0 |     352 | FALSE |
-| Beta    | e00  |   17117 |      99 |      99 | TRUE  |
-| Beta    | e01  |   18782 |      98 |      98 | TRUE  |
-| Beta    | e02  |   16462 |       7 |      49 | FALSE |
-| Beta    | e03  |   10610 |     720 |     720 | TRUE  |
-| Beta    | e04  |    7754 |       7 |      58 | FALSE |
-| Beta    | e05  |    6261 |       7 |       7 | TRUE  |
-| Beta    | e06  |   20667 |       6 |      52 | FALSE |
-| Beta    | e07  |   20976 |       6 |     352 | FALSE |
-| Iota    | e00  |    6336 |      99 |      99 | TRUE  |
-| Iota    | e01  |   11968 |      98 |      98 | TRUE  |
-| Iota    | e02  |    9008 |      49 |      49 | TRUE  |
-| Theta   | e00  |   14524 |      99 |      99 | TRUE  |
-| Upsilon | e00  |   19269 |      99 |      99 | TRUE  |
-| Upsilon | e01  |   13546 |      98 |      98 | TRUE  |
-| Upsilon | e04  |   21232 |      58 |      58 | TRUE  |
-| Upsilon | e06  |    5033 |      52 |      52 | TRUE  |
-| Upsilon | e07  |   11772 |  282432 |     352 | FALSE |
+| Alpha   | e02  |   18634 |       0 |      49 | FALSE |
+| Alpha   | e04  |   10684 |       0 |      58 | FALSE |
+| Alpha   | e05  |    8604 |       1 |       7 | FALSE |
+| Alpha   | e06  |    7352 |       0 |      52 | FALSE |
+| Alpha   | e07  |    9405 |       0 |     352 | FALSE |
+| Beta    | e00  |   14549 |      99 |      99 | TRUE  |
+| Beta    | e01  |   18647 |      98 |      98 | TRUE  |
+| Beta    | e02  |    6952 |       7 |      49 | FALSE |
+| Beta    | e03  |   19417 |     720 |     720 | TRUE  |
+| Beta    | e04  |    5025 |       7 |      58 | FALSE |
+| Beta    | e05  |   12941 |       7 |       7 | TRUE  |
+| Beta    | e06  |    5086 |       6 |      52 | FALSE |
+| Beta    | e07  |   19404 |       6 |     352 | FALSE |
+| Delta   | e00  |   12176 |       0 |      99 | FALSE |
+| Delta   | e01  |   21263 |       0 |      98 | FALSE |
+| Epsilon | e00  |   11183 |      99 |      99 | TRUE  |
+| Epsilon | e01  |    7388 |      98 |      98 | TRUE  |
+| Epsilon | e02  |   15475 |       7 |      49 | FALSE |
+| Gamma   | e00  |    7041 |      99 |      99 | TRUE  |
+| Gamma   | e01  |   16668 |      98 |      98 | TRUE  |
+| Gamma   | e02  |   13545 |       7 |      49 | FALSE |
+| Gamma   | e03  |   11279 |       6 |     720 | FALSE |
+| Gamma   | e05  |   16204 |       1 |       7 | FALSE |
+| Iota    | e00  |    8993 |      99 |      99 | TRUE  |
+| Iota    | e01  |   16996 |      98 |      98 | TRUE  |
+| Iota    | e02  |   17029 |      49 |      49 | TRUE  |
+| Kappa   | e00  |   20341 |      99 |      99 | TRUE  |
+| Kappa   | e01  |    5737 |      98 |      98 | TRUE  |
+| Kappa   | e02  |   11431 |      49 |      49 | TRUE  |
+| Kappa   | e03  |   16949 |       6 |     720 | FALSE |
+| Kappa   | e04  |    9044 |      58 |      58 | TRUE  |
+| Kappa   | e05  |   17780 |       1 |       7 | FALSE |
+| Kappa   | e06  |   13393 |      52 |      52 | TRUE  |
+| Kappa   | e07  |    6648 |     352 |     352 | TRUE  |
+| Lambda  | e00  |    9796 |      99 |      99 | TRUE  |
+| Lambda  | e01  |   13252 |      98 |      98 | TRUE  |
+| Lambda  | e02  |   15069 |      49 |      49 | TRUE  |
+| Lambda  | e03  |   15040 |     720 |     720 | TRUE  |
+| Lambda  | e04  |    8444 |      58 |      58 | TRUE  |
+| Lambda  | e05  |    8845 |       7 |       7 | TRUE  |
+| Lambda  | e06  |   13764 |      52 |      52 | TRUE  |
+| Lambda  | e07  |   21216 |     352 |     352 | TRUE  |
+| Omega   | e00  |    7048 |      99 |      99 | TRUE  |
+| Omega   | e01  |    5677 |      98 |      98 | TRUE  |
+| Omega   | e02  |   16699 |      49 |      49 | TRUE  |
+| Omega   | e03  |    6627 |     720 |     720 | TRUE  |
+| Omega   | e04  |   21360 |      58 |      58 | TRUE  |
+| Omega   | e05  |    8583 |       7 |       7 | TRUE  |
+| Omega   | e06  |   14293 |      52 |      52 | TRUE  |
+| Omega   | e07  |   18850 |     352 |     352 | TRUE  |
+| Rho     | e00  |   19142 |      99 |      99 | TRUE  |
+| Rho     | e01  |    7488 |      98 |      98 | TRUE  |
+| Rho     | e02  |    5493 |      49 |      49 | TRUE  |
+| Rho     | e03  |    5873 |     720 |     720 | TRUE  |
+| Rho     | e04  |   11222 |      58 |      58 | TRUE  |
+| Rho     | e05  |   18863 |       4 |       7 | FALSE |
+| Rho     | e06  |   20714 |      52 |      52 | TRUE  |
+| Rho     | e07  |   18377 |     352 |     352 | TRUE  |
+| Tau     | e00  |    9169 |      99 |      99 | TRUE  |
+| Tau     | e01  |   16432 |      98 |      98 | TRUE  |
+| Tau     | e03  |   17706 |     720 |     720 | TRUE  |
+| Tau     | e04  |    8463 |      58 |      58 | TRUE  |
+| Tau     | e05  |    5869 |       7 |       7 | TRUE  |
+| Tau     | e06  |   11788 |      52 |      52 | TRUE  |
+| Tau     | e07  |    7014 |     352 |     352 | TRUE  |
+| Theta   | e00  |   18258 |      99 |      99 | TRUE  |
+| Upsilon | e00  |   13032 |      99 |      99 | TRUE  |
+| Upsilon | e01  |    9957 |      98 |      98 | TRUE  |
+| Upsilon | e04  |    6615 |      58 |      58 | TRUE  |
+| Upsilon | e06  |   21034 |      52 |      52 | TRUE  |
+| Upsilon | e07  |   18618 |  446748 |     352 | FALSE |
+
 ** Interpretação dos demais resultados automáticos
 
 A tabela abaixo mostra o código de saída do simulador (na coluna
@@ -179,28 +228,28 @@ gerado pelo grupo.
 | Beta    | e05  |     0 |
 | Beta    | e06  |     0 |
 | Beta    | e07  |     0 |
-| Delta   | e00  |   124 |
-| Delta   | e01  |   124 |
+| Delta   | e00  |     0 |
+| Delta   | e01  |     0 |
 | Delta   | e02  |     0 |
 | Delta   | e03  |     0 |
 | Delta   | e04  |   124 |
 | Delta   | e05  |     0 |
 | Delta   | e06  |   124 |
 | Delta   | e07  |   124 |
-| Epsilon | e00  |   124 |
-| Epsilon | e01  |   124 |
-| Epsilon | e02  |   124 |
+| Epsilon | e00  |     0 |
+| Epsilon | e01  |     0 |
+| Epsilon | e02  |     0 |
 | Epsilon | e03  |     1 |
 | Epsilon | e04  |     1 |
 | Epsilon | e05  |     1 |
 | Epsilon | e06  |     1 |
 | Epsilon | e07  |     1 |
-| Gamma   | e00  |   124 |
-| Gamma   | e01  |   124 |
-| Gamma   | e02  |   124 |
-| Gamma   | e03  |   124 |
+| Gamma   | e00  |     0 |
+| Gamma   | e01  |     0 |
+| Gamma   | e02  |     0 |
+| Gamma   | e03  |     0 |
 | Gamma   | e04  |   124 |
-| Gamma   | e05  |   124 |
+| Gamma   | e05  |     0 |
 | Gamma   | e06  |   124 |
 | Gamma   | e07  |   124 |
 | Iota    | e00  |     0 |
@@ -211,46 +260,46 @@ gerado pelo grupo.
 | Iota    | e05  |   124 |
 | Iota    | e06  |     0 |
 | Iota    | e07  |     0 |
-| Kappa   | e00  |     1 |
-| Kappa   | e01  |     1 |
-| Kappa   | e02  |     1 |
-| Kappa   | e03  |     1 |
-| Kappa   | e04  |     1 |
-| Kappa   | e05  |     1 |
-| Kappa   | e06  |     1 |
-| Kappa   | e07  |     1 |
-| Lambda  | e00  |   124 |
-| Lambda  | e01  |   124 |
-| Lambda  | e02  |   124 |
-| Lambda  | e03  |   124 |
-| Lambda  | e04  |   124 |
-| Lambda  | e05  |   124 |
-| Lambda  | e06  |   124 |
-| Lambda  | e07  |   124 |
-| Omega   | e00  |   124 |
-| Omega   | e01  |   124 |
-| Omega   | e02  |   124 |
-| Omega   | e03  |   124 |
-| Omega   | e04  |   124 |
-| Omega   | e05  |   124 |
-| Omega   | e06  |   124 |
-| Omega   | e07  |   124 |
-| Rho     | e00  |   124 |
-| Rho     | e01  |   124 |
-| Rho     | e02  |   124 |
-| Rho     | e03  |   124 |
-| Rho     | e04  |   124 |
-| Rho     | e05  |   124 |
-| Rho     | e06  |   124 |
-| Rho     | e07  |   124 |
-| Tau     | e00  |   124 |
-| Tau     | e01  |   124 |
-| Tau     | e02  |   124 |
-| Tau     | e03  |   124 |
-| Tau     | e04  |   124 |
-| Tau     | e05  |   124 |
-| Tau     | e06  |   124 |
-| Tau     | e07  |   124 |
+| Kappa   | e00  |     0 |
+| Kappa   | e01  |     0 |
+| Kappa   | e02  |     0 |
+| Kappa   | e03  |     0 |
+| Kappa   | e04  |     0 |
+| Kappa   | e05  |     0 |
+| Kappa   | e06  |     0 |
+| Kappa   | e07  |     0 |
+| Lambda  | e00  |     0 |
+| Lambda  | e01  |     0 |
+| Lambda  | e02  |     0 |
+| Lambda  | e03  |     0 |
+| Lambda  | e04  |     0 |
+| Lambda  | e05  |     0 |
+| Lambda  | e06  |     0 |
+| Lambda  | e07  |     0 |
+| Omega   | e00  |     0 |
+| Omega   | e01  |     0 |
+| Omega   | e02  |     0 |
+| Omega   | e03  |     0 |
+| Omega   | e04  |     0 |
+| Omega   | e05  |     0 |
+| Omega   | e06  |     0 |
+| Omega   | e07  |     0 |
+| Rho     | e00  |     0 |
+| Rho     | e01  |     0 |
+| Rho     | e02  |     0 |
+| Rho     | e03  |     0 |
+| Rho     | e04  |     0 |
+| Rho     | e05  |     0 |
+| Rho     | e06  |     0 |
+| Rho     | e07  |     0 |
+| Tau     | e00  |     0 |
+| Tau     | e01  |     0 |
+| Tau     | e02  |     0 |
+| Tau     | e03  |     0 |
+| Tau     | e04  |     0 |
+| Tau     | e05  |     0 |
+| Tau     | e06  |     0 |
+| Tau     | e07  |     0 |
 | Theta   | e00  |     0 |
 | Theta   | e01  |     0 |
 | Theta   | e02  |     0 |
@@ -288,13 +337,5 @@ erro aparece na saída do simulador ilocsim (quando o valor de =Type= é
 | Epsilon | e06  | output | =Erro sintático na linha 1 com a instrução ( Erro na linha 23: Faltam argumentos! )= |
 | Epsilon | e07  | input  | =Erro na linha 14: Sobram argumentos!=                                               |
 | Epsilon | e07  | output | =Erro sintático na linha 1 com a instrução ( Erro na linha 14: Sobram argumentos! )= |
-| Kappa   | e00  | output | =Erro sintático na linha 52 com a instrução ( jumpI => #4 )=                          |
-| Kappa   | e01  | output | =Erro sintático na linha 57 com a instrução ( jumpI => #4 )=                          |
-| Kappa   | e02  | output | =Erro sintático na linha 77 com a instrução ( jumpI => #4 )=                          |
-| Kappa   | e03  | output | =Erro sintático na linha 129 com a instrução ( jumpI => #4 )=                         |
-| Kappa   | e04  | output | =Erro sintático na linha 304 com a instrução ( jumpI => #4 )=                         |
-| Kappa   | e05  | output | =Erro sintático na linha 125 com a instrução ( jumpI => #4 )=                         |
-| Kappa   | e06  | output | =Erro sintático na linha 253 com a instrução ( jumpI => #4 )=                         |
-| Kappa   | e07  | output | =Erro sintático na linha 418 com a instrução ( jumpI => #4 )=                         |
 | Upsilon | e03  | output | =Erro sintático na linha 33 com a instrução ( jumpI => )=                             |
 | Upsilon | e05  | output | =Erro sintático na linha 34 com a instrução ( jumpI => )=                             |
