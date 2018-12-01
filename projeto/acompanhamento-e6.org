@@ -1,0 +1,300 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+STARTUP: overview indent
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* Avaliação da Etapa 6
+** Grupos que não entregaram até o prazo
+
+| Grupo   | ID     |
+|---------+--------|
+| Zeta    | ???271 |
+| Zeta    | ???673 |
+| Psi     | ???499 |
+| Eta     | ???834 |
+| Eta     | ???424 |
+| Mu      | ???932 |
+| Mu      | ???794 |
+| Omicron | ???055 |
+| Sigma   | ???295 |
+
+** Entregas até o prazo
+
+Iota entregou de maneira definitiva com 1:13 minutos de atraso.
+
+| Timestamp           | Grupo   |
+|---------------------+---------|
+| 2018-11-18 21:03:31 | Tau     |
+| 2018-11-30 12:49:54 | Omega   |
+| 2018-11-30 13:43:03 | Lambda  |
+| 2018-11-30 20:12:52 | Upsilon |
+| 2018-11-30 22:18:47 | Theta   |
+| 2018-11-30 22:41:00 | Epsilon |
+| 2018-11-30 22:44:56 | Alpha   |
+| 2018-11-30 22:48:49 | Beta    |
+| 2018-11-30 23:20:43 | Delta   |
+| 2018-11-30 23:31:19 | Rho     |
+| 2018-11-30 23:50:18 | Gamma   |
+| 2018-11-30 23:53:11 | Kappa   |
+| 2018-12-01 01:13:19 | Iota    |
+** Arquivos para testes                                             :ATTACH:
+:PROPERTIES:
+:Attachments: e6tests.tgz
+:ID:       c230a973-0e06-45ff-be22-d4269bd0dde8
+:END:
+
+Veja [[data/c2/30a973-0e06-45ff-be22-d4269bd0dde8/e6tests.tgz][este arquivo]].
+
+Todas as entradas estão lexicalmente, sintaticamente e semântica
+corretas de acordo com as etapas anteriores. A tabela abaixo demonstra
+a localização dos valores na memória ao final do programa, assumindo
+que os endereços de deslocamento se referem a base da pilha (=Stack=) ou
+do segmento de dados (=Data=). No caso da E6, todos os valores
+verificados encontram-se no segmento de dados.
+
+| Test | Type  | Address | Value |
+|------+-------+---------+-------|
+| e00  | Data  |       0 |    99 |
+| e01  | Data  |       0 |    98 |
+| e02  | Data  |       0 |    49 |
+| e03  | Data  |       0 |   720 |
+| e04  | Data  |       0 |    58 |
+| e05  | Data  |       0 |     7 |
+| e06  | Data  |       4 |    52 |
+| e07  | Data  |       4 |   352 |
+
+
+** Log dos testes automáticos                                       :ATTACH:
+:PROPERTIES:
+:Attachments: e6v1.log
+:ID:       1606d53d-54b7-458d-b563-637a983d6637
+:END:
+
+Consulte [[./data/16/06d53d-54b7-458d-b563-637a983d6637/e6v1.log][o arquivo de log]] para obter os resultados elementares (/raw/)
+dos testes automáticos. Cada linha começa pelo nome do grupo, sendo
+que o separador é a barra vertical. A segunda coluna é o identificador
+do teste, e a terceira coluna pode ser =stack=, =data=, =input=, =output=,
+=memory=, =instruction=, e =sixit=. Abaixo segue uma explicação do restante
+da linha dependendo do valor da terceira coluna da linha:
+
+- Se =stack= e =data=, a quarta coluna indica a base desses segmentos.
+- Se =input=, a quarta coluna contém a entrada fornecida pelo grupo (a
+  saída do processo de compilação) para o simulador ILOC
+- Se =output=, a quarta coluna contém a saída do simulador ILOC
+- Se =memory=, a quarta coluna contém endereços e valores da memória ao
+  fim da simulação. Notem 
+- Se =instruction=, a quarta coluna conterá as estatísticas das
+  instruções executadas (quantidade, instrução).
+- Se =sixit=, a quarta coluna indicará o código de saída do
+  simulador. São três os valores possíveis da quarta coluna: =0=, =1=, e
+  =124=.  Caso este valor seja =0=, a simulação ocorreu normalmente (carga
+  do código ILOC, execução do programa e encerramento), ainda que a
+  entrada (o código ILOC fornecido) seja vazio. O valor =1= indica que
+  houve um erro sintático/léxico com o código ILOC produzido pelo
+  compilador do grupo, forçando o simulador a abortar com um erro. E
+  enfim, o código =124= indica que o simulador não terminou após 1
+  segundo de execução, provavelmente por causa de um laço infinito na
+  execução do código ILOC gerado pelo grupo.
+
+É a partir deste arquivo que é definida a nota objetiva e as tabelas
+abaixo.
+
+** Testes automáticos
+
+A tabela abaixo mostra os resultados dos testes automáticos E6,
+considerando as entradas do arquivos para testes.  A coluna =Group= e
+=Test= identificam o grupo e o identificador do teste; a coluna =Address=
+indica o endereço de memória onde o valor =Value.y= deve ser registrado
+para o teste ser considerado certo. A coluna =Eval= é assinalada =TRUE=
+(correta) quando o valor da coluna =Value.x=, registrado no endereço
+pelo código ILOC emitido pelo grupo, for idêntico ao valor em =Value.y=
+esperado. Os endereços da pilha e da base foram definidos de maneira
+aleatória por teste.
+
+Somente aparecem testes cuja solução do grupo fornece algo válido, ou seja:
+- O código ILOC é livre de erros sintáticos
+  - O simulador ILOC é capaz de ler a integralidade das instruções
+    geradas pelo compilador do grupo
+- O código ILOC termina antes de um segundo de simulação
+  - Um segundo foi considerado mais que suficiente para um término
+    considerando o tamanho dos programas fornecidos na entrada
+- O código ILOC produz algo no local esperado do segmento de dados
+  - Veja tabela acima na seção "Arquivos para testes"
+
+| Group   | Test | Address | Value.x | Value.y | Eval  |
+|---------+------+---------+---------+---------+-------|
+| Alpha   | e02  |   10728 |       0 |      49 | FALSE |
+| Alpha   | e04  |   11427 |       0 |      58 | FALSE |
+| Alpha   | e05  |    8988 |       1 |       7 | FALSE |
+| Alpha   | e06  |   13998 |       0 |      52 | FALSE |
+| Alpha   | e07  |   16097 |       0 |     352 | FALSE |
+| Beta    | e00  |   17117 |      99 |      99 | TRUE  |
+| Beta    | e01  |   18782 |      98 |      98 | TRUE  |
+| Beta    | e02  |   16462 |       7 |      49 | FALSE |
+| Beta    | e03  |   10610 |     720 |     720 | TRUE  |
+| Beta    | e04  |    7754 |       7 |      58 | FALSE |
+| Beta    | e05  |    6261 |       7 |       7 | TRUE  |
+| Beta    | e06  |   20667 |       6 |      52 | FALSE |
+| Beta    | e07  |   20976 |       6 |     352 | FALSE |
+| Iota    | e00  |    6336 |      99 |      99 | TRUE  |
+| Iota    | e01  |   11968 |      98 |      98 | TRUE  |
+| Iota    | e02  |    9008 |      49 |      49 | TRUE  |
+| Theta   | e00  |   14524 |      99 |      99 | TRUE  |
+| Upsilon | e00  |   19269 |      99 |      99 | TRUE  |
+| Upsilon | e01  |   13546 |      98 |      98 | TRUE  |
+| Upsilon | e04  |   21232 |      58 |      58 | TRUE  |
+| Upsilon | e06  |    5033 |      52 |      52 | TRUE  |
+| Upsilon | e07  |   11772 |  282432 |     352 | FALSE |
+** Interpretação dos demais resultados automáticos
+
+A tabela abaixo mostra o código de saída do simulador (na coluna
+=Value=) quando é fornecido o código ILOC gerado pelo compilador do
+grupo =Group= munido da entrada cujo identificador esta na coluna =Test=.
+São três os valores possíveis da quarta coluna: =0=, =1=, e =124=.  Caso
+este valor seja =0=, a simulação ocorreu normalmente (carga do código
+ILOC, execução do programa e encerramento), ainda que a entrada (o
+código ILOC fornecido) seja vazio. O valor =1= indica que houve um erro
+sintático/léxico com o código ILOC produzido pelo compilador do grupo,
+forçando o simulador a abortar com um erro. E enfim, o código =124=
+indica que o simulador não terminou após 1 segundo de execução,
+provavelmente por causa de um laço infinito na execução do código ILOC
+gerado pelo grupo.
+
+| Group   | Test | Value |
+|---------+------+-------|
+| Alpha   | e00  |     0 |
+| Alpha   | e01  |     0 |
+| Alpha   | e02  |     0 |
+| Alpha   | e03  |   124 |
+| Alpha   | e04  |     0 |
+| Alpha   | e05  |     0 |
+| Alpha   | e06  |     0 |
+| Alpha   | e07  |     0 |
+| Beta    | e00  |     0 |
+| Beta    | e01  |     0 |
+| Beta    | e02  |     0 |
+| Beta    | e03  |     0 |
+| Beta    | e04  |     0 |
+| Beta    | e05  |     0 |
+| Beta    | e06  |     0 |
+| Beta    | e07  |     0 |
+| Delta   | e00  |   124 |
+| Delta   | e01  |   124 |
+| Delta   | e02  |     0 |
+| Delta   | e03  |     0 |
+| Delta   | e04  |   124 |
+| Delta   | e05  |     0 |
+| Delta   | e06  |   124 |
+| Delta   | e07  |   124 |
+| Epsilon | e00  |   124 |
+| Epsilon | e01  |   124 |
+| Epsilon | e02  |   124 |
+| Epsilon | e03  |     1 |
+| Epsilon | e04  |     1 |
+| Epsilon | e05  |     1 |
+| Epsilon | e06  |     1 |
+| Epsilon | e07  |     1 |
+| Gamma   | e00  |   124 |
+| Gamma   | e01  |   124 |
+| Gamma   | e02  |   124 |
+| Gamma   | e03  |   124 |
+| Gamma   | e04  |   124 |
+| Gamma   | e05  |   124 |
+| Gamma   | e06  |   124 |
+| Gamma   | e07  |   124 |
+| Iota    | e00  |     0 |
+| Iota    | e01  |     0 |
+| Iota    | e02  |     0 |
+| Iota    | e03  |   124 |
+| Iota    | e04  |     0 |
+| Iota    | e05  |   124 |
+| Iota    | e06  |     0 |
+| Iota    | e07  |     0 |
+| Kappa   | e00  |     1 |
+| Kappa   | e01  |     1 |
+| Kappa   | e02  |     1 |
+| Kappa   | e03  |     1 |
+| Kappa   | e04  |     1 |
+| Kappa   | e05  |     1 |
+| Kappa   | e06  |     1 |
+| Kappa   | e07  |     1 |
+| Lambda  | e00  |   124 |
+| Lambda  | e01  |   124 |
+| Lambda  | e02  |   124 |
+| Lambda  | e03  |   124 |
+| Lambda  | e04  |   124 |
+| Lambda  | e05  |   124 |
+| Lambda  | e06  |   124 |
+| Lambda  | e07  |   124 |
+| Omega   | e00  |   124 |
+| Omega   | e01  |   124 |
+| Omega   | e02  |   124 |
+| Omega   | e03  |   124 |
+| Omega   | e04  |   124 |
+| Omega   | e05  |   124 |
+| Omega   | e06  |   124 |
+| Omega   | e07  |   124 |
+| Rho     | e00  |   124 |
+| Rho     | e01  |   124 |
+| Rho     | e02  |   124 |
+| Rho     | e03  |   124 |
+| Rho     | e04  |   124 |
+| Rho     | e05  |   124 |
+| Rho     | e06  |   124 |
+| Rho     | e07  |   124 |
+| Tau     | e00  |   124 |
+| Tau     | e01  |   124 |
+| Tau     | e02  |   124 |
+| Tau     | e03  |   124 |
+| Tau     | e04  |   124 |
+| Tau     | e05  |   124 |
+| Tau     | e06  |   124 |
+| Tau     | e07  |   124 |
+| Theta   | e00  |     0 |
+| Theta   | e01  |     0 |
+| Theta   | e02  |     0 |
+| Theta   | e03  |     0 |
+| Theta   | e04  |   124 |
+| Theta   | e05  |     0 |
+| Theta   | e06  |   124 |
+| Theta   | e07  |   124 |
+| Upsilon | e00  |     0 |
+| Upsilon | e01  |     0 |
+| Upsilon | e02  |     0 |
+| Upsilon | e03  |     1 |
+| Upsilon | e04  |     0 |
+| Upsilon | e05  |     1 |
+| Upsilon | e06  |     0 |
+| Upsilon | e07  |     0 |
+
+A tabela abaixo mostra as razões que levam a saída de erro =1=, que
+indica problema léxico/sintático no código ILOC gerado pelo grupo.
+
+A coluna =Type= indica a origem do erro, se é uma saída do próprio
+compilador do grupo (caso quando =Type= tem o valor =input=), ou quando o
+erro aparece na saída do simulador ilocsim (quando o valor de =Type= é
+=output=).
+
+| Group   | Test | Type   | Value                                                                              |
+|---------+------+--------+------------------------------------------------------------------------------------|
+| Epsilon | e03  | input  | =Erro na linha 10: Sobram argumentos!=                                               |
+| Epsilon | e03  | output | =Erro sintático na linha 1 com a instrução ( Erro na linha 10: Sobram argumentos! )= |
+| Epsilon | e04  | input  | =Erro na linha 35: Faltam argumentos!=                                               |
+| Epsilon | e04  | output | =Erro sintático na linha 1 com a instrução ( Erro na linha 35: Faltam argumentos! )= |
+| Epsilon | e05  | input  | =Erro na linha 7: Sobram argumentos!=                                                |
+| Epsilon | e05  | output | =Erro sintático na linha 1 com a instrução ( Erro na linha 7: Sobram argumentos! )=  |
+| Epsilon | e06  | input  | =Erro na linha 23: Faltam argumentos!=                                               |
+| Epsilon | e06  | output | =Erro sintático na linha 1 com a instrução ( Erro na linha 23: Faltam argumentos! )= |
+| Epsilon | e07  | input  | =Erro na linha 14: Sobram argumentos!=                                               |
+| Epsilon | e07  | output | =Erro sintático na linha 1 com a instrução ( Erro na linha 14: Sobram argumentos! )= |
+| Kappa   | e00  | output | =Erro sintático na linha 52 com a instrução ( jumpI => #4 )=                          |
+| Kappa   | e01  | output | =Erro sintático na linha 57 com a instrução ( jumpI => #4 )=                          |
+| Kappa   | e02  | output | =Erro sintático na linha 77 com a instrução ( jumpI => #4 )=                          |
+| Kappa   | e03  | output | =Erro sintático na linha 129 com a instrução ( jumpI => #4 )=                         |
+| Kappa   | e04  | output | =Erro sintático na linha 304 com a instrução ( jumpI => #4 )=                         |
+| Kappa   | e05  | output | =Erro sintático na linha 125 com a instrução ( jumpI => #4 )=                         |
+| Kappa   | e06  | output | =Erro sintático na linha 253 com a instrução ( jumpI => #4 )=                         |
+| Kappa   | e07  | output | =Erro sintático na linha 418 com a instrução ( jumpI => #4 )=                         |
+| Upsilon | e03  | output | =Erro sintático na linha 33 com a instrução ( jumpI => )=                             |
+| Upsilon | e05  | output | =Erro sintático na linha 34 com a instrução ( jumpI => )=                             |
