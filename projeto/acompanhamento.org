@@ -7289,3 +7289,49 @@ da linha dependendo do valor da terceira coluna da linha:
 abaixo.
 
 
+** Testes automáticos
+
+A tabela abaixo mostra os resultados dos testes automáticos E6,
+considerando as entradas do arquivos para testes.  A coluna =Group= e
+=Test= identificam o grupo e o identificador do teste; a coluna =Address=
+indica o endereço de memória onde o valor =Value.y= deve ser registrado
+para o teste ser considerado certo. A coluna =Eval= é assinalada =TRUE=
+(correta) quando o valor da coluna =Value.x=, registrado no endereço
+pelo código ILOC emitido pelo grupo, for idêntico ao valor em =Value.y=
+esperado. Os endereços da pilha e da base foram definidos de maneira
+aleatória por teste.
+
+Somente aparecem testes cuja solução do grupo fornece algo válido, ou seja:
+- O código ILOC é livre de erros sintáticos
+  - O simulador ILOC é capaz de ler a integralidade das instruções
+    geradas pelo compilador do grupo
+- O código ILOC termina antes de um segundo de simulação
+  - Um segundo foi considerado mais que suficiente para um término
+    considerando o tamanho dos programas fornecidos na entrada
+- O código ILOC produz algo no local esperado do segmento de dados
+  - Veja tabela acima na seção "Arquivos para testes"
+
+| Group   | Test | Address | Value.x | Value.y | Eval  |
+|---------+------+---------+---------+---------+-------|
+| Alpha   | e02  |   10728 |       0 |      49 | FALSE |
+| Alpha   | e04  |   11427 |       0 |      58 | FALSE |
+| Alpha   | e05  |    8988 |       1 |       7 | FALSE |
+| Alpha   | e06  |   13998 |       0 |      52 | FALSE |
+| Alpha   | e07  |   16097 |       0 |     352 | FALSE |
+| Beta    | e00  |   17117 |      99 |      99 | TRUE  |
+| Beta    | e01  |   18782 |      98 |      98 | TRUE  |
+| Beta    | e02  |   16462 |       7 |      49 | FALSE |
+| Beta    | e03  |   10610 |     720 |     720 | TRUE  |
+| Beta    | e04  |    7754 |       7 |      58 | FALSE |
+| Beta    | e05  |    6261 |       7 |       7 | TRUE  |
+| Beta    | e06  |   20667 |       6 |      52 | FALSE |
+| Beta    | e07  |   20976 |       6 |     352 | FALSE |
+| Iota    | e00  |    6336 |      99 |      99 | TRUE  |
+| Iota    | e01  |   11968 |      98 |      98 | TRUE  |
+| Iota    | e02  |    9008 |      49 |      49 | TRUE  |
+| Theta   | e00  |   14524 |      99 |      99 | TRUE  |
+| Upsilon | e00  |   19269 |      99 |      99 | TRUE  |
+| Upsilon | e01  |   13546 |      98 |      98 | TRUE  |
+| Upsilon | e04  |   21232 |      58 |      58 | TRUE  |
+| Upsilon | e06  |    5033 |      52 |      52 | TRUE  |
+| Upsilon | e07  |   11772 |  282432 |     352 | FALSE |
