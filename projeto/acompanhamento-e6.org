@@ -339,3 +339,20 @@ erro aparece na saída do simulador ilocsim (quando o valor de =Type= é
 | Epsilon | e07  | output | =Erro sintático na linha 1 com a instrução ( Erro na linha 14: Sobram argumentos! )= |
 | Upsilon | e03  | output | =Erro sintático na linha 33 com a instrução ( jumpI => )=                             |
 | Upsilon | e05  | output | =Erro sintático na linha 34 com a instrução ( jumpI => )=                             |
+** Notas Objetiva e Subjetiva
+
+| Grupo   | E6.O | E6.S |
+|---------+------+------|
+| Lambda  |   10 |   10 |
+| Omega   |   10 | 9.47 |
+| Rho     | 8.75 | 9.37 |
+| Tau     | 8.75 | 9.37 |
+| Kappa   |  7.5 | 7.42 |
+| Beta    |    5 | 7.26 |
+| Upsilon |    5 | 7.26 |
+| Iota    | 3.75 | 7.26 |
+| Epsilon |  2.5 | 4.21 |
+| Gamma   |  2.5 |    6 |
+| Theta   | 1.25 | 3.63 |
+| Alpha   |    0 | 4.53 |
+| Delta   |    0 | 3.21 |
