@@ -25,7 +25,7 @@ Para tomar conhecimento novamente das fórmulas utilizadas:
 - [[./projeto/README.org][As ponderações das etapas do projeto]]
   - Apenas até E6, a nota final do projeto é normalizada em 9
 
-* Visão Geral das Etapas do Projeto, Provas e Frequência
+* Detalhamento Geral
 
 Situação final.
 
