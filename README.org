@@ -45,7 +45,7 @@ estratégias pedagógicas alternativas:
 * Plano e Cronograma
 
 - [[./plano/index.org][Plano da disciplina]] (permanente)
-- [[./cronograma/index.org][Cronograma Edição 2019/1]] (Turma B, Segundas e Quartas, 15:30 – 15:10)
+- [[./cronograma/index.org][Cronograma Edição 2019/1]] (Turma B, Segundas e Quartas, 15:30 – 17:10)
 
 * Elementos Pedagógicos
 
