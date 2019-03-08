@@ -16,7 +16,7 @@
 | [[#avaliação-da-etapa-5][Etapa 5]]                |
 | [[./acompanhamento-e6.org][Etapa 6]]                |
 
-** Formação dos grupos
+** Formação dos grupos                                            :noexport:
 
 Temos 18 grupos.
 
