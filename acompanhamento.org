@@ -18,14 +18,16 @@
 #+LATEX_HEADER: \usepackage[utf8]{inputenc}
 #+LATEX_HEADER: \usepackage[T1]{fontenc}
 
-* Ponderações gerais
+Aguarde.
+
+* Ponderações gerais                                               :noexport:
 
 Para tomar conhecimento novamente das fórmulas utilizadas:
 - [[./plano/index.org][As ponderações gerais]]
 - [[./projeto/README.org][As ponderações das etapas do projeto]]
   - Apenas até E6, a nota final do projeto é normalizada em 9
 
-* Detalhamento Geral
+* Detalhamento Geral                                               :noexport:
 
 Situação final.
 
@@ -170,7 +172,7 @@ Q7
 | ???665 |   2 | 1.5 | 1.5 | 1.3 |   1 | 1.5 |   1 |
 | ???670 | 1.9 | 0.3 |   0 | 1.5 | 0.5 |   0 |   1 |
 
-* PR
+* PR                                                               :noexport:
 ** Gabarito
 
 PR espera 33 respostas, com o gabarito abaixo.
@@ -358,7 +360,7 @@ PR espera 33 respostas, com o gabarito abaixo.
 | ???490 | 18.N    | =2 1 2 0 2= | =2 1 1 0 0= | FALSE   |
 | ???490 | 18.O    | =E=         | =E=         | TRUE    |
 
-* P2
+* P2                                                               :noexport:
 ** Gabarito
 
 P2 espera 44 respostas, com o gabarito abaixo.
@@ -1806,7 +1808,7 @@ São listadas todas as =1252= respostas com valores:
 | ???984 | 19.O    | E                                  | E                                  | TRUE    |
 | ???984 | 20.X    | D                                  | A                                  | FALSE   |
 
-* P1
+* P1                                                               :noexport:
 ** Pesos
 
 A questão 5 foi anulada.

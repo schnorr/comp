@@ -32,16 +32,16 @@ as etapas encontra-se abaixo.
 
 *** Planejamento para este semestre
 
-| Etapa | Descrição e Especificação | Peso (%) | Cumul. (%) |    Entrega | Resultados |
-|-------+---------------------------+----------+------------+------------+------------|
-| E1    | [[./etapa1.org][Análise Léxica]]            |       10 |         10 | 2018-08-25 |            |
-| E2    | [[./etapa2.org][Análise Sintática]]         |       15 |         25 | 2018-09-10 |            |
-| E3    | [[./etapa3.org][Árvore Sintática Abstrata]] |       15 |         40 | 2018-10-01 |            |
-| E4    | [[./etapa4.org][Análise Semântica]]         |       15 |         55 | 2018-10-20 |            |
-| E5    | [[./etapa5.org][Geração de Código]]         |       20 |         75 | 2018-11-12 |            |
-| E6    | [[./etapa6.org][Suporte de Execução]]       |       15 |         90 | 2018-11-30 |            |
+| Etapa | Descrição e Especificação            | Peso (%) | Cumul. (%) |    Entrega | Resultados |
+|-------+--------------------------------------+----------+------------+------------+------------|
+| E1    | (obsoleto) [[./etapa1.org][Análise Léxica]]            |       10 |         10 | 2018-08-25 |            |
+| E2    | (obsoleto) [[./etapa2.org][Análise Sintática]]         |       15 |         25 | 2018-09-10 |            |
+| E3    | (obsoleto) [[./etapa3.org][Árvore Sintática Abstrata]] |       15 |         40 | 2018-10-01 |            |
+| E4    | (obsoleto) [[./etapa4.org][Análise Semântica]]         |       15 |         55 | 2018-10-20 |            |
+| E5    | (obsoleto) [[./etapa5.org][Geração de Código]]         |       20 |         75 | 2018-11-12 |            |
+| E6    | (obsoleto) [[./etapa6.org][Suporte de Execução]]       |       15 |         90 | 2018-11-30 |            |
 
-*** E7 desativada
+*** E7 desativada                                                :noexport:
 
 | Etapa | Descrição e Especificação   | Peso (%) | Cumul. (%) | Entrega | Resultados |
 |-------+-----------------------------+----------+------------+---------+------------|
@@ -60,10 +60,9 @@ Cada grupo deve compactar o conteúdo do seu diretório de trabalho
 executando o comando =tar cvzf etapaX.tgz .= (onde X é o dígito
 identificador da etapa) *dentro do mesmo diretório*. Não utilizem outros
 programas, formatos, comandos, nomes ou organizações de diretórios
-para esse operação. Será gerado um arquivo chamado =etapaX.tgz=.
-
-*Procedimento da E4 em diante*: O arquivo =etapaX.tgz= deve ser enviado
-por e-mail, com tamanho máximo de 100KBytes.
+para esse operação. Será gerado um arquivo chamado =etapaX.tgz=.  O
+arquivo =etapaX.tgz= deve ser enviado por e-mail, *com tamanho máximo de
+100KBytes*.
 
 Ao submeter solução para qualquer tarefa desta disciplina, tu
 declaras: (1) que a submissão reflete a solução de sua própria autoria

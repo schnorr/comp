@@ -57,7 +57,7 @@ Temos 18 grupos.
 | Zeta    | ???271 |
 | Zeta    | ???673 |
 
-* Avaliação da Etapa 1
+* Avaliação da Etapa 1                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
 | Grupo   | ID     |
@@ -439,7 +439,7 @@ Não entregou, fará em atraso.
 | Iota    | E1.O      |  8.9 |
 | Mu      | E1.O      |  nil |
 
-* Avaliação da Etapa 2
+* Avaliação da Etapa 2                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
 | Grupo   | ID     |
@@ -1233,7 +1233,7 @@ A coluna Peso indica 0.8 para os grupos que entregaram em atraso.
 | Upsilon |   10 |   10 |  0.8 |
 | Zeta    |    0 |    0 |  0.8 |
 
-* Avaliação da Etapa 3
+* Avaliação da Etapa 3                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
 | Grupo   | ID     |
@@ -3332,7 +3332,7 @@ Havia o limite até 10/10.
 | Upsilon |    0 |    8 |  0.8 |
 | Zeta    |    0 |    0 |  0.8 |
 
-* Avaliação da Etapa 4
+* Avaliação da Etapa 4                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
 | Grupo   | ID     |
@@ -6548,7 +6548,7 @@ Os grupos não listados na tabela abaixo não submeteram.
 | Rho     |    0 |    0 |  0.8 |
 | Upsilon |    0 |    0 |  0.8 |
 
-* Avaliação da Etapa 5
+* Avaliação da Etapa 5                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
 | Grupo   | ID     |
