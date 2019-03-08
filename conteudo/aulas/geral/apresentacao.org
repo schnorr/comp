@@ -117,7 +117,7 @@ while (i <= 10) {
 #+BEGIN_CENTER
 ``One /link/ [sic] to rule them all''
 
-https://github.com/schnorr/comp/
+https://gitlab.com/schnorr/comp/
 #+END_CENTER
      
 * Bibliografia                                                     :noexport:
@@ -138,13 +138,13 @@ Em aula
 - Perguntar em caso de dúvida
 
 Em campo
-- https://github.com/schnorr/comp/
+- https://gitlab.com/schnorr/comp/
 - [[https://www.youtube.com/playlist?list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V][Playlist no Youtube]]: videos sobre os conceitos da disciplina
 - Material de apoio
 - Lista de exercícios
 
 Em dúvidas
-- [[https://github.com/schnorr/comp/issues][Abra uma Issue no Github]]
+- [[https://gitlab.com/schnorr/comp/issues][Abra uma Issue no GitLab]]
 - Envie um e-mail para o professor
 * Avaliação
 *Duas provas* (P1 e P2), 25% de peso cada
