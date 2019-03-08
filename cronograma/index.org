@@ -30,38 +30,38 @@
 ** Aulas (em ORG)
 
 #+NAME: listagem_de_encontros
-| Setor      | Descrição                                                        | Local | Projeto             |
-|------------+------------------------------------------------------------------+-------+---------------------|
-|            | Definições, requisitos e posicionamento da disciplina            |       | Definições iniciais |
-| Léxica     | Introdução, Expressões Regulares, =flex=                           |       | Início E1 (flex)    |
-| Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD, =flex= (demo) |       |                     |
-| Sintática  | Intro., Gramáticas Livres de Contexto, Transformações            |       |                     |
-| Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)           |       |                     |
-| Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=                    |       | Início E2 (bison)   |
-| Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |       |                     |
-| Sintática  | Exercícios LR(0), SLR(1)                                         |       |                     |
-| Sintática  | Parser LR(1), LALR(1)                                            |       |                     |
-| Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 |       | Início E3 (Árvore)  |
-|            |                                                                  |       | Avaliação E1, E2    |
-| Semântica  | Esquemas S e L-Atribuídos                                        |       |                     |
-| Semântica  | Implementação de Esquemas S e L-Atribuídos                       |       | Início E4 (Tipos)   |
-|            | Revisão                                                          |       |                     |
-|            | P1                                                               |       |                     |
-|            |                                                                  |       | Avaliação E3        |
-| Código     | Declarações, Escopos e Atribuição                                |       |                     |
-| Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |       |                     |
-| Código     | Endereçamento de Arranjos multidimensionais                      |       | Início E5 (Código)  |
-|            |                                                                  |       | Avaliação E4        |
-| Código     | Controle de Fluxo                                                |       |                     |
-| Código     | Controle de Fluxo                                                |       |                     |
-| Execução   | Introdução, Registro de Ativação                                 |       |                     |
-| Execução   | Chamada e retorno de Função, Passagem de parâmetros              |       | Início E6 (Chamada) |
-|            |                                                                  |       | Avaliação E5        |
-| Otimização | Introdução, Janela e Grafos de Fluxo                             |       |                     |
-| Otimização | Grafos de Fluxo e Redução de potência                            |       |                     |
-|            | Revisão                                                          |       |                     |
-|            | P2                                                               |       |                     |
-|            | PR                                                               |       |                     |
+| Setor      | Descrição                                                        |     Local | Projeto             |
+|------------+------------------------------------------------------------------+-----------+---------------------|
+|            | Definições, requisitos e posicionamento da disciplina            |           | Definições iniciais |
+| Léxica     | Introdução, Expressões Regulares, =flex=                           |           | Início E1 (flex)    |
+| Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD, =flex= (demo) |           |                     |
+| Sintática  | Intro., Gramáticas Livres de Contexto, Transformações            |           |                     |
+| Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)           |           |                     |
+| Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=                    |           | Início E2 (bison)   |
+| Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |           |                     |
+| Sintática  | Exercícios LR(0), SLR(1)                                         |           |                     |
+| Sintática  | Parser LR(1), LALR(1)                                            |           |                     |
+| Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 |           | Início E3 (Árvore)  |
+|            |                                                                  | 43413-104 | Avaliação E1, E2    |
+| Semântica  | Esquemas S e L-Atribuídos                                        |           |                     |
+| Semântica  | Implementação de Esquemas S e L-Atribuídos                       |           | Início E4 (Tipos)   |
+|            | Revisão                                                          |           |                     |
+|            | P1                                                               |           |                     |
+|            |                                                                  | 43413-104 | Avaliação E3        |
+| Código     | Declarações, Escopos e Atribuição                                |           |                     |
+| Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |           |                     |
+| Código     | Endereçamento de Arranjos multidimensionais                      |           | Início E5 (Código)  |
+|            |                                                                  | 43413-104 | Avaliação E4        |
+| Código     | Controle de Fluxo                                                |           |                     |
+| Código     | Controle de Fluxo                                                |           |                     |
+| Execução   | Introdução, Registro de Ativação                                 |           |                     |
+| Execução   | Chamada e retorno de Função, Passagem de parâmetros              |           | Início E6 (Chamada) |
+|            |                                                                  | 43413-104 | Avaliação E5        |
+| Otimização | Introdução, Janela e Grafos de Fluxo                             |           |                     |
+| Otimização | Grafos de Fluxo e Redução de potência                            |           |                     |
+|            | Revisão                                                          |           |                     |
+|            | P2                                                               |           |                     |
+|            | PR                                                               |           |                     |
 
 ** Cronograma (para TEX)
 
@@ -128,6 +128,21 @@ aulas %>%
 
 #+RESULTS: cronograma
 
+#+begin_src R :results output :session :exports both
+aulas %>%
+    filter(!is.na(Local))
+#+end_src
+
+#+RESULTS:
+: 
+: # A tibble: 4 x 8
+:   Setor Descrição  Local Projeto          Dia        DiaDaSemana Encontro      N
+:   <chr> <chr>      <dbl> <chr>            <date>           <dbl> <chr>     <int>
+: 1 ""    ""        43413. Avaliação E1, E2 2019-04-17           4 2019-04-…    11
+: 2 ""    ""        43413. Avaliação E3     2019-05-08           4 2019-05-…    16
+: 3 ""    ""        43413. Avaliação E4     2019-05-22           4 2019-05-…    20
+: 4 ""    ""        43413. Avaliação E5     2019-06-10           2 2019-06-…    25
+
 ** Dias por etapa do projeto (em R)
 
 #+name: dias_por_etapa
@@ -186,7 +201,6 @@ system2("rubber", " --pdf cronograma.tex")
 : 
 : compiling cronograma.tex...
 
-
 * Cronograma
 
 O cronograma também está [[./cronograma.pdf][disponível em formato PDF]].
@@ -199,37 +213,37 @@ aulas %>%
 #+end_src
 
 #+RESULTS:
-|  N |   Encontro | Local | Setor      | Descrição                                                        | Projeto             |
-|----+------------+-------+------------+------------------------------------------------------------------+---------------------|
-|  1 | 2019-03-11 | nil   |            | Definições, requisitos e posicionamento da disciplina            | Definições iniciais |
-|  2 | 2019-03-13 | nil   | Léxica     | Introdução, Expressões Regulares, =flex=                           | Início E1 (flex)    |
-|  3 | 2019-03-18 | nil   | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD, =flex= (demo) |                     |
-|  4 | 2019-03-20 | nil   | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações            |                     |
-|  5 | 2019-03-25 | nil   | Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)           |                     |
-|  6 | 2019-03-27 | nil   | Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=                    | Início E2 (bison)   |
-|  7 | 2019-04-01 | nil   | Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |                     |
-|  8 | 2019-04-03 | nil   | Sintática  | Exercícios LR(0), SLR(1)                                         |                     |
-|  9 | 2019-04-08 | nil   | Sintática  | Parser LR(1), LALR(1)                                            |                     |
-| 10 | 2019-04-15 | nil   | Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 | Início E3 (Árvore)  |
-| 11 | 2019-04-17 | nil   |            |                                                                  | Avaliação E1, E2    |
-| 12 | 2019-04-22 | nil   | Semântica  | Esquemas S e L-Atribuídos                                        |                     |
-| 13 | 2019-04-24 | nil   | Semântica  | Implementação de Esquemas S e L-Atribuídos                       | Início E4 (Tipos)   |
-| 14 | 2019-04-29 | nil   |            | Revisão                                                          |                     |
-| 15 | 2019-05-06 | nil   |            | P1                                                               |                     |
-| 16 | 2019-05-08 | nil   |            |                                                                  | Avaliação E3        |
-| 17 | 2019-05-13 | nil   | Código     | Declarações, Escopos e Atribuição                                |                     |
-| 18 | 2019-05-15 | nil   | Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |                     |
-| 19 | 2019-05-20 | nil   | Código     | Endereçamento de Arranjos multidimensionais                      | Início E5 (Código)  |
-| 20 | 2019-05-22 | nil   |            |                                                                  | Avaliação E4        |
-| 21 | 2019-05-27 | nil   | Código     | Controle de Fluxo                                                |                     |
-| 22 | 2019-05-29 | nil   | Código     | Controle de Fluxo                                                |                     |
-| 23 | 2019-06-03 | nil   | Execução   | Introdução, Registro de Ativação                                 |                     |
-| 24 | 2019-06-05 | nil   | Execução   | Chamada e retorno de Função, Passagem de parâmetros              | Início E6 (Chamada) |
-| 25 | 2019-06-10 | nil   |            |                                                                  | Avaliação E5        |
-| 26 | 2019-06-12 | nil   | Otimização | Introdução, Janela e Grafos de Fluxo                             |                     |
-| 27 | 2019-06-17 | nil   | Otimização | Grafos de Fluxo e Redução de potência                            |                     |
-| 28 | 2019-06-19 | nil   |            | Revisão                                                          |                     |
-| 29 | 2019-06-24 | nil   |            | P2                                                               |                     |
-| 30 | 2019-07-01 | nil   |            | PR                                                               |                     |
+|  N |   Encontro |     Local | Setor      | Descrição                                                        | Projeto             |
+|----+------------+-----------+------------+------------------------------------------------------------------+---------------------|
+|  1 | 2019-03-11 |           |            | Definições, requisitos e posicionamento da disciplina            | Definições iniciais |
+|  2 | 2019-03-13 |           | Léxica     | Introdução, Expressões Regulares, =flex=                           | Início E1 (flex)    |
+|  3 | 2019-03-18 |           | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD, =flex= (demo) |                     |
+|  4 | 2019-03-20 |           | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações            |                     |
+|  5 | 2019-03-25 |           | Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)           |                     |
+|  6 | 2019-03-27 |           | Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=                    | Início E2 (bison)   |
+|  7 | 2019-04-01 |           | Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |                     |
+|  8 | 2019-04-03 |           | Sintática  | Exercícios LR(0), SLR(1)                                         |                     |
+|  9 | 2019-04-08 |           | Sintática  | Parser LR(1), LALR(1)                                            |                     |
+| 10 | 2019-04-15 |           | Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 | Início E3 (Árvore)  |
+| 11 | 2019-04-17 | 43413-104 |            |                                                                  | Avaliação E1, E2    |
+| 12 | 2019-04-22 |           | Semântica  | Esquemas S e L-Atribuídos                                        |                     |
+| 13 | 2019-04-24 |           | Semântica  | Implementação de Esquemas S e L-Atribuídos                       | Início E4 (Tipos)   |
+| 14 | 2019-04-29 |           |            | Revisão                                                          |                     |
+| 15 | 2019-05-06 |           |            | P1                                                               |                     |
+| 16 | 2019-05-08 | 43413-104 |            |                                                                  | Avaliação E3        |
+| 17 | 2019-05-13 |           | Código     | Declarações, Escopos e Atribuição                                |                     |
+| 18 | 2019-05-15 |           | Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |                     |
+| 19 | 2019-05-20 |           | Código     | Endereçamento de Arranjos multidimensionais                      | Início E5 (Código)  |
+| 20 | 2019-05-22 | 43413-104 |            |                                                                  | Avaliação E4        |
+| 21 | 2019-05-27 |           | Código     | Controle de Fluxo                                                |                     |
+| 22 | 2019-05-29 |           | Código     | Controle de Fluxo                                                |                     |
+| 23 | 2019-06-03 |           | Execução   | Introdução, Registro de Ativação                                 |                     |
+| 24 | 2019-06-05 |           | Execução   | Chamada e retorno de Função, Passagem de parâmetros              | Início E6 (Chamada) |
+| 25 | 2019-06-10 | 43413-104 |            |                                                                  | Avaliação E5        |
+| 26 | 2019-06-12 |           | Otimização | Introdução, Janela e Grafos de Fluxo                             |                     |
+| 27 | 2019-06-17 |           | Otimização | Grafos de Fluxo e Redução de potência                            |                     |
+| 28 | 2019-06-19 |           |            | Revisão                                                          |                     |
+| 29 | 2019-06-24 |           |            | P2                                                               |                     |
+| 30 | 2019-07-01 |           |            | PR                                                               |                     |
 
 
