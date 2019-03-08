@@ -47,15 +47,12 @@ estratégias pedagógicas alternativas:
 - [[./plano/index.org][Plano da disciplina]] (permanente)
 - [[./cronograma/index.org][Cronograma Edição 2019/1]] (Turma B, Segundas e Quartas, 15:30 – 17:10)
 
-* Elementos Pedagógicos
+* Conteúdo e Avaliação
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
 - [[./projeto/README.org][Projeto de Compilador]] ([[./projeto/acompanhamento.org][Acompanhamento das Etapas]])
   - Um [[./projeto/docker/README.org][container docker]] para realização do trabalho
-
-* Avaliações
-
-- (obsoleto) [[./acompanhamento.org][Acompanhamento das Avaliações]]
+- [[./acompanhamento.org][Acompanhamento das Avaliações]]
    
 * Bibliografia
 + [[https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools][Compilers: Principles, Techniques and Tools. Aho, A.; Sethi, R.; Ullman, J. D.]]
