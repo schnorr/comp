@@ -1,3 +1,4 @@
+#+TITLE: Compiladores (INF01147)
 #+startup: overview indent
 #+OPTIONS: html-link-use-abs-url:nil html-postamble:auto
 #+OPTIONS: html-preamble:t html-scripts:t html-style:t
@@ -16,8 +17,6 @@
 #+CREATOR: <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.2.2 (<a href="http://orgmode.org">Org</a> mode 9.0.1)
 #+LATEX_HEADER:
 
-* Compiladores (INF01147)
-
 #+begin_html
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="img/88x31.png" /></a>
 #+end_html
@@ -30,7 +29,7 @@ está em português brasileiro [pt-br]. Disponibilizamos aqui os slides
 utilizados pelo professor, material de apoio, exercícios, assim como a
 especificação do projeto de compilador.
 
-** Estratégia Pedagógica
+* Estratégia Pedagógica
 
 As aulas são majoritariamente expositivas; com exercícios em aula com
 acompanhamento do professor e resolução ao final do encontro. Aulas
@@ -43,28 +42,28 @@ estratégias pedagógicas alternativas:
 - [[./download/compiladores-projeto-inovacao.pdf][Compilando Interações (Projeto de inovação didática - PAAP/UFRGS 2014)]]
 - [[http://www.lume.ufrgs.br/handle/10183/147664][Aprendizado invertido em compiladores (TCC de Lucas Jones - 2016)]]
 
-** Plano e Cronograma
+* Plano e Cronograma
 
 - [[./plano/index.org][Plano da disciplina]] (permanente)
 - [[./cronograma/index.org][Cronograma Edição 2018/2]] (Turma A, Segundas e Quartas, 10:30 – 12:10)
 
-** Elementos Pedagógicos
+* Elementos Pedagógicos
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
 - [[./projeto/README.org][Projeto de Compilador]] ([[./projeto/acompanhamento.org][Acompanhamento das Etapas]])
   - Um [[./projeto/docker/README.org][container docker]] para realização do trabalho
 
-** Avaliações
+* Avaliações
 
 - [[./acompanhamento.org][Acompanhamento das Avaliações]]
    
-** Bibliografia
+* Bibliografia
 + [[https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools][Compilers: Principles, Techniques and Tools. Aho, A.; Sethi, R.; Ullman, J. D.]]
 + [[https://www.elsevier.com/books/engineering-a-compiler/cooper/978-0-12-088478-0][Engineering a Compiler. Cooper & Torczon. 2nd edition.]]
 + [[http://www.inf.ufrgs.br/site/publicacoes/livros-didaticos/livros09/][Implementação de Linguagens de Programação: Compiladores. Price & Toscani.]]
 + [[http://shop.oreilly.com/product/9781565920002.do][Lex & Yacc. Mason & Brown.]]
 + Projeto moderno de compiladores. Grune, Bal e Langendoen.
-** Contato
+* Contato
 
 Se você encontrar algum problema, e também no caso de dúvidas, entre em contato por e-mail:
 - [[http://www.inf.ufrgs.br/~schnorr][Prof. Lucas (http://www.inf.ufrgs.br/~schnorr)]]
