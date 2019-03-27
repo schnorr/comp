@@ -253,9 +253,10 @@ onde cada expressão não pode ser vazia.
 #+END_CENTER
 Uma chamada de função consiste no nome da função, seguida de
 argumentos entre parênteses separados por vírgula. Um argumento pode
-ser uma expressão, ou um simples marcador de lugar através do token =.=
-(ponto). Caso o argumento seja o ponto, veja a descrição de comandos
-com /pipes/ abaixo.
+ser uma expressão.
+# , ou um simples marcador de lugar através do token =.=
+# (ponto). Caso o argumento seja o ponto, veja a descrição de comandos
+# com /pipes/ abaixo.
 
 #+BEGIN_CENTER
 *Comandos de Shift*
@@ -271,15 +272,17 @@ identificador[expressão] << número
 identificador[expressão]$campo << número
 #+END_EXAMPLE
 
+#  e Case*
 #+BEGIN_CENTER
-*Comando de Retorno, Break, Continue e Case*
+*Comando de Retorno, Break, Continue*
 #+END_CENTER
 
 Retorno é a palavra reservada =return= seguida de uma expressão. Os
-comandos =break= e =continue= são simples. O comando =case= é o único que
-não termina por ponto-e-vírgula, por ser considerado um marcador de
-lugar. Ele é seguido de um literal inteiro, seguido enfim por
-dois-pontos.
+comandos =break= e =continue= são simples.
+#  O comando =case= é o único que
+# não termina por ponto-e-vírgula, por ser considerado um marcador de
+# lugar. Ele é seguido de um literal inteiro, seguido enfim por
+# dois-pontos.
 
 #+BEGIN_CENTER
 *Comandos de Controle de Fluxo*
@@ -292,24 +295,28 @@ if (expressão) then bloco
 if (expressão) then bloco else bloco
 #+END_EXAMPLE
 As construções iterativas são as seguintes no formato:
+# foreach (identificador: lista) bloco
+# do bloco while (expressão)
 #+BEGIN_EXAMPLE
-foreach (identificador: lista) bloco
 for (lista: expressão: lista) bloco
 while (expressão) do bloco
-do bloco while (expressão)
 #+END_EXAMPLE
-A =lista= do =foreach= é uma lista de expressões separadas por vírgula. Os
+# A =lista= do =foreach= é uma lista de expressões separadas por vírgula. 
+
+Os
 dois marcadores =lista= do comando =for= são listas de comandos separados
 por vírgula. Como os marcadores =lista= do comando =for= não são blocos de
 comandos, os comandos simples destas listas não devem ser 
 terminados por ponto-e-vírgula.
 Estas listas não podem ser vazias. Nas duas listas dentro
-do =for=, não podem aparecer comandos simples que contenham vírgulas ou
-o comando =case=.  A única construção de
-seleção é o =switch-case=, seguindo o seguinte padrão:
-#+BEGIN_EXAMPLE
-switch (expressão) bloco
-#+END_EXAMPLE
+do =for= não podem aparecer comandos simples que contenham vírgulas.
+# ou
+# o comando =case=.
+#   A única construção de
+# seleção é o =switch-case=, seguindo o seguinte padrão:
+# #+BEGIN_EXAMPLE
+# switch (expressão) bloco
+# #+END_EXAMPLE
 
 Em todas as construções de controle de fluxo, o termo =bloco= indica um
 bloco de comandos. Este não tem ponto-e-vírgula nestas situações.
@@ -322,38 +329,38 @@ bloco de comandos. Este não tem ponto-e-vírgula nestas situações.
 # =do while=
 # if then else
 
-#+BEGIN_CENTER
-*Comandos com Pipes*
-#+END_CENTER
+# #+BEGIN_CENTER
+# *Comandos com Pipes*
+# #+END_CENTER
 
-A linguagem possui dois tokens (=%>%= e =%|%=) que servem como /pipes/. Eles
-podem ser utilizados em chamadas de função encadeadas com o estilo de
-programação com /pipes/, sendo que a sequência deve ser obrigatoriamente
-terminada por uma chamada de função seguida de um ponto-e-vírgula (que
-termina o comando com /pipe/). Sendo assim, o uso de um /pipe/ implica no
-uso obrigatório de duas chamadas de função, uma antes e outra depois
-dele. O exemplo mínimo abaixo ilustra este caso.
+# A linguagem possui dois tokens (=%>%= e =%|%=) que servem como /pipes/. Eles
+# podem ser utilizados em chamadas de função encadeadas com o estilo de
+# programação com /pipes/, sendo que a sequência deve ser obrigatoriamente
+# terminada por uma chamada de função seguida de um ponto-e-vírgula (que
+# termina o comando com /pipe/). Sendo assim, o uso de um /pipe/ implica no
+# uso obrigatório de duas chamadas de função, uma antes e outra depois
+# dele. O exemplo mínimo abaixo ilustra este caso.
 
-#+BEGIN_EXAMPLE
-f() %>% g(., a);
-#+END_EXAMPLE
+# #+BEGIN_EXAMPLE
+# f() %>% g(., a);
+# #+END_EXAMPLE
 
-Os comandos com /pipes/ podem ter encadeamento de múltiplas funções:
+# Os comandos com /pipes/ podem ter encadeamento de múltiplas funções:
 
-#+BEGIN_EXAMPLE
-f() %>% g(., a) %>% z(.);
-#+END_EXAMPLE
+# #+BEGIN_EXAMPLE
+# f() %>% g(., a) %>% z(.);
+# #+END_EXAMPLE
 
-E também podem ser utilizados em atribuições:
+# E também podem ser utilizados em atribuições:
 
-#+BEGIN_EXAMPLE
-a = f() %>% g(., a) %|% z(.);
-#+END_EXAMPLE
+# #+BEGIN_EXAMPLE
+# a = f() %>% g(., a) %|% z(.);
+# #+END_EXAMPLE
 
-** Expr. Aritméticas, Lógicas, e com /Pipes/
+** Expr. Aritméticas, Lógicas
 
-As expressões podem ser de três tipos: aritméticas, lógicas, e com
-/pipes/. As expressões aritméticas podem ter como operandos: (a)
+As expressões podem ser de dois tipos: aritméticas, lógicas.
+As expressões aritméticas podem ter como operandos: (a)
 identificadores, opcionalmente seguidos de expressão inteira entre
 colchetes, para acesso a vetores; (b) literais numéricos como inteiro
 e ponto-flutuante; (c) chamada de função. As expressões aritméticas
@@ -372,12 +379,11 @@ um desses tipos como válidos, deixando para a análise semântica das
 próximas etapas do projeto a tarefa de verificar a validade dos
 operandos e operadores.
 
-As expressões com /pipes/ podem ser vistas como os comandos com /pipes/,
-detalhado na seção anterior.
+# As expressões com /pipes/ podem ser vistas como os comandos com /pipes/,
+# detalhado na seção anterior.
 
 As expressões podem consistir também somente por um dos elementos
-acima (a, b, c), uma sequência com /pipes/, e um tipo de usuário
-(vetorizado ou não), tais como:
+acima (a, b, c), e um tipo de usuário (vetorizado ou não), tais como:
 
 #+BEGIN_EXAMPLE
 identificador$campo op expressão
