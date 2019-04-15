@@ -129,7 +129,9 @@ diff eq1.txt eq2.txt
 echo $?
 #+END_EXAMPLE
 
-O teste é avaliado como correto caso o valor impresso pelo comando =echo= for 0.
+O teste é avaliado como correto caso o valor impresso pelo comando
+=echo= for 0 _e_ o conteúdo de =eq1.txt= e =eq2.txt= for diferente de vazio e
+semanticamente idêntico ao arquivo =source.txt=.
 
 * Anexo - Arquivo =main.c=
 
