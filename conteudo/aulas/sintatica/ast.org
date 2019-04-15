@@ -77,15 +77,15 @@ Supondo a gramática para os comandos *do while* e *if*
 *if (false) if (true) outra else do outra while (true)* ?
 * AST -- Exemplo 4
 Supondo gramática de seq. de comandos separados por *;*
-  | seq-stmt | \rightarrow | stmt *;* seq-stmt \vert stmt |
-  | stmt     | \rightarrow | *comando*                    | 
+  | seq-stmt | \rightarrow | stmt *;* seq-stmt \vert stmt *;* |
+  | stmt     | \rightarrow | *comando*                  |
 Qual a AST para *comando;comando;comando;* ?  
 * AST -- Exemplo 5
 Supondo a gramática
-  | seq-stmt   | \rightarrow | stmt *;* seq-stmt \vert stmt           |
+  | seq-stmt   | \rightarrow | stmt *;* seq-stmt \vert stmt *;*     |
   | stmt       | \rightarrow | while-stmt \vert if-stmt \vert *outra* |
-  | while-stmt | \rightarrow | *do* stmt *while (* exp *)*            |
-  | if-stmt    | \rightarrow | *if (* exp *)* stmt                    |
-  | if-stmt    | \rightarrow | *if (* exp *)* stmt *else* stmt        |
-  | exp        | \rightarrow | *false* \vert *true*                   |
-*do if (true) outra while (false); if(false) outra* ?
+  | while-stmt | \rightarrow | *do* stmt *while (* exp *)*        |
+  | if-stmt    | \rightarrow | *if (* exp *)* stmt              |
+  | if-stmt    | \rightarrow | *if (* exp *)* stmt *else* stmt    |
+  | exp        | \rightarrow | *false* \vert *true*                 |
+*do if (true) outra while (false); if(false) outra;* ?
