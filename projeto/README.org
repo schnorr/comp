@@ -32,14 +32,14 @@ as etapas encontra-se abaixo.
 
 *** Planejamento para este semestre
 
-| Etapa | Descrição e Especificação            | Peso (%) | Cumul. (%) |    Entrega | Resultados |
-|-------+--------------------------------------+----------+------------+------------+------------|
-| E1    | [[./etapa1.org][Análise Léxica]]                       |       10 |         10 | 2019-04-14 |            |
-| E2    | [[./etapa2.org][Análise Sintática]]                    |       15 |         25 | 2019-04-14 |            |
-| E3    | (obsoleto) [[./etapa3.org][Árvore Sintática Abstrata]] |       15 |         40 | 2019-05-05 |            |
-| E4    | (obsoleto) [[./etapa4.org][Análise Semântica]]         |       15 |         55 | 2019-05-19 |            |
-| E5    | (obsoleto) [[./etapa5.org][Geração de Código]]         |       20 |         75 | 2019-06-06 |            |
-| E6    | (obsoleto) [[./etapa6.org][Suporte de Execução]]       |       15 |         90 | 2019-06-24 |            |
+| Etapa | Descrição e Especificação      | Peso (%) | Cumul. (%) |    Entrega | Resultados |
+|-------+--------------------------------+----------+------------+------------+------------|
+| E1    | [[./etapa1.org][Análise Léxica]]                 |       10 |         10 | 2019-04-14 |            |
+| E2    | [[./etapa2.org][Análise Sintática]]              |       15 |         25 | 2019-04-14 |            |
+| E3    | [[./etapa3.org][Árvore Sintática Abstrata]]      |       15 |         40 | 2019-05-05 |            |
+| E4    | (obsoleto) [[./etapa4.org][Análise Semântica]]   |       15 |         55 | 2019-05-19 |            |
+| E5    | (obsoleto) [[./etapa5.org][Geração de Código]]   |       20 |         75 | 2019-06-06 |            |
+| E6    | (obsoleto) [[./etapa6.org][Suporte de Execução]] |       15 |         90 | 2019-06-24 |            |
 
 *** E7 desativada                                                :noexport:
 
