@@ -16,46 +16,18 @@
 | [[#avaliação-da-etapa-5][Etapa 5]]                |
 | [[./acompanhamento-e6.org][Etapa 6]]                |
 
-** Formação dos grupos                                            :noexport:
+** Formação dos grupos
 
-Temos 18 grupos.
+Temos 5 grupos.
 
 | Grupo   | ID     |
 |---------+--------|
-| Alpha   | ???700 |
-| Alpha   | ???704 |
-| Beta    | ???760 |
-| Beta    | ???692 |
-| Delta   | ???255 |
-| Delta   | ???269 |
-| Epsilon | ???490 |
-| Epsilon | ???798 |
-| Eta     | ???834 |
-| Eta     | ???424 |
-| Gamma   | ???207 |
-| Gamma   | ???238 |
-| Iota    | ???285 |
-| Iota    | ???091 |
-| Kappa   | ???578 |
-| Kappa   | ???589 |
-| Lambda  | ???739 |
-| Lambda  | ???569 |
-| Mu      | ???932 |
-| Mu      | ???794 |
-| Omega   | ???723 |
-| Omega   | ???059 |
-| Omicron | ???055 |
-| Psi     | ???155 |
-| Psi     | ???499 |
-| Rho     | ???305 |
-| Rho     | ???713 |
-| Tau     | ???256 |
-| Theta   | ???984 |
-| Theta   | ???722 |
-| Upsilon | ???741 |
-| Upsilon | ???026 |
-| Zeta    | ???271 |
-| Zeta    | ???673 |
+| Lambda  | ???552 |
+| Delta   | ???103 |
+| Beta    | ???701 |
+| Beta    | ???698 |
+| Epsilon | ???369 |
+| Alpha   | ???782 |
 
 * Avaliação da Etapa 1                                             :noexport:
 ** Grupos que não entregaram até o prazo
