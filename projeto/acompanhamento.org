@@ -29,7 +29,7 @@ Temos 5 grupos.
 | Epsilon | ???369 |
 | Alpha   | ???782 |
 
-* Avaliação da Etapa 1                                             :noexport:
+* Avaliação da Etapa 1
 ** Comentários por grupo
 *** Epsilon
 
@@ -91,7 +91,7 @@ OK Problema do + no literal inteiro e ponto flutuante
 | Epsilon | E1.O      |   10 |
 | Lambda  | E1.O      |   10 |
 
-* Avaliação da Etapa 2                                             :noexport:
+* Avaliação da Etapa 2
 ** Comentários por grupo
 *** Epsilon
 
