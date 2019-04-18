@@ -30,386 +30,66 @@ Temos 5 grupos.
 | Alpha   | ???782 |
 
 * Avaliação da Etapa 1                                             :noexport:
-** Grupos que não entregaram até o prazo
-
-| Grupo   | ID     |
-|---------+--------|
-| Iota    | ???285 |
-| Iota    | ???091 |
-| Kappa   | ???578 |
-| Kappa   | ???589 |
-| Mu      | ???932 |
-| Mu      | ???794 |
-| Omicron | ???055 |
-
-** Arquivos para testes                                             :ATTACH:
-:PROPERTIES:
-:Attachments: e1tests.tgz
-:ID:       86f02d74-4ba9-48bd-8cad-a83ca086a1fa
-:END:
-
-Veja [[./data/86/f02d74-4ba9-48bd-8cad-a83ca086a1fa/e1tests.tgz][este arquivo]].
-
 ** Comentários por grupo
-*** DONE Tau
+*** Epsilon
 
-Tudo okay.
+- Cuidar nome do arquivo: "Makefile", ou "makefile"
+- Na hora do TGZ, cuidar para que os arquivos estejam na raiz
 
-*** DONE Alpha
+*** Delta
 
-- muita repetição de código
+OK Inversão do shift right pelo left:
+3  Delta   54     NA
+4  Delta   55     NA
 
-*** DONE Beta
+OK Retorna dois tokens ao invés de um
+5  Delta   62     NA
+6  Delta   63     NA
+7  Delta   65     NA
+8  Delta   66     NA
 
-- [ ] Jamais incluir um arquivo =.c= com =#include=
-
-*** DONE Delta
-
-- [ ] Arquivos não estão na raiz (etapa1)
-- [ ] Evitar de submeter diretório metadados do .git
-- [ ] Qual a primeira linha de um arquivo?
+- [X] Problema dos comentários de uma linha e de múltiplas linhas
   #+BEGIN_EXAMPLE
-  int lineCount = 1;
-  #+END_EXAMPLE
-- [ ] Erro 75
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_075.tesh:3> mismatch:
-  1 TK_LIT_INT [12]
-  - 3 TK_LIT_INT [78]
-  #+END_EXAMPLE
-  - [ ] Resolvido durante a entrevista
-
-*** DONE Omicron
-
-- [ ] *Entrega em atraso de 1 dia*
-- [ ] Arquivos não estão na raiz (etapa1)
-- [ ] Erro 54
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_054.tesh:3> mismatch:
-  - 1 TK_OC_SR [>>]
-  + 1 TK_OC_SL [>>]
-  #+END_EXAMPLE
-- [ ] Erro 55
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_055.tesh:3> mismatch:
-  - 1 TK_OC_SL [<<]
-  + 1 TK_OC_SR [<<]
-  #+END_EXAMPLE
-- [ ] Não realizou testes com o léxico, usou um site
-  - Evitar
-- [ ] Fez na correria
-
-*** DONE Gamma
-
-- [ ] Usou uma biblioteca catch2 do C++ para fazer testes
-
-*** DONE Lambda
-
-Tudo okay.
-
-*** DONE Omega
-
-- [ ] Arquivo scanner.yy.c ao invés de lex.yy.c no Makefile
-- [ ] Usou script de testes do grupo Lambda
-
-*** DONE Upsilon
-
-- [ ] Caracteres especiais feitos na última hora
-- [ ] Refatorar o código para os caracteres especiais
-
-*** DONE Rho
-
-- [ ] Problema do yywrap foi resolvido mas não sei exatamente o que faz
-  - Olhar o manual e descobrir o que é essa opção
-- [ ] Falta do sinal \to ler a especificação com mais atenção
-- [ ] Erro 62
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_062.tesh:3> mismatch:
-  - 1 TK_LIT_INT [-12]
-  + 1 TK_ESPECIAL [-]
-  + 1 TK_LIT_INT [12]
-  #+END_EXAMPLE
-- [ ] Erro 63
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_063.tesh:3> mismatch:
-  - 1 TK_LIT_INT [+12]
-  + 1 TK_ESPECIAL [+]
-  + 1 TK_LIT_INT [12]
-  #+END_EXAMPLE
-- [ ] Erro 65
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_065.tesh:3> mismatch:
-  - 1 TK_LIT_FLOAT [-12.34]
-  + 1 TK_ESPECIAL [-]
-  + 1 TK_LIT_FLOAT [12.34]
-  #+END_EXAMPLE
-- [ ] Erro 66
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_066.tesh:3> mismatch:
-  - 1 TK_LIT_FLOAT [+12.34]
-  + 1 TK_ESPECIAL [+]
-  + 1 TK_LIT_FLOAT [12.34]
+9  Delta   74     NA
+10 Delta   75     NA
   #+END_EXAMPLE
 
-*** DONE Epsilon
+- "Some diacritics"
 
-- [ ] Arquivos não estão na raiz (etapa1)
+*** Alpha
 
-*** DONE Zeta
+- Por que fez um identificador inválido?
+- História da string com aspas duplas no meio
+- Usou estados para detectar multilinha
 
-- [ ] Token erro duplo no final do arquivo
-  - Sem entender o porquê
-- [ ] Erro 26
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_026.tesh:3> mismatch:
-  - 1 TK_ESPECIAL [,]
-  + 1 TOKEN_ERRO [,]
-  #+END_EXAMPLE
-- [ ] Erro 62
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_062.tesh:3> mismatch:
-  - 1 TK_LIT_INT [-12]
-  + 1 TK_ESPECIAL [-]
-  + 1 TK_LIT_INT [12]
-  #+END_EXAMPLE
-- [ ] Erro 63
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_063.tesh:3> mismatch:
-  - 1 TK_LIT_INT [+12]
-  + 1 TK_ESPECIAL [+]
-  + 1 TK_LIT_INT [12]
-  #+END_EXAMPLE
-- [ ] Erro 65
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_065.tesh:3> mismatch:
-  - 1 TK_LIT_FLOAT [-12.34]
-  + 1 TK_ESPECIAL [-]
-  + 1 TK_LIT_FLOAT [12.34]
-  #+END_EXAMPLE
-- [ ] Erro 66
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_066.tesh:3> mismatch:
-  - 1 TK_LIT_FLOAT [+12.34]
-  + 1 TK_ESPECIAL [+]
-  + 1 TK_LIT_FLOAT [12.34]
-  #+END_EXAMPLE
-- [ ] Erro 79
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_079.tesh:3> mismatch:
-  - 1 TK_ESPECIAL [|]
-  + 1 TOKEN_ERRO [|]
-  #+END_EXAMPLE
-- [ ] Erro 80
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_080.tesh:3> mismatch:
-  - 1 TK_ESPECIAL [$]
-  + 1 TOKEN_ERRO [$]
-  #+END_EXAMPLE
-- [ ] Erro 81
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_081.tesh:3> mismatch:
-  - 1 TK_ESPECIAL [?]
-  + 1 TOKEN_ERRO [?]
-  #+END_EXAMPLE
+*** Beta
 
-*** DONE Eta
+OK Problema do + no literal inteiro e ponto flutuante
+1   Beta   63     NA
+2   Beta   66     NA
 
-- [ ] Ausência de Makefile
-- [ ] Erro 53
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_053.tesh:3> mismatch:
-  - 1 TK_OC_OR [||]
-  + 1 TK_ESPECIAL [|]
-  + 1 TK_ESPECIAL [|]
-  #+END_EXAMPLE
-- [ ] Fez teste com programa em C que que já tinha
-- [ ] Um membro do grupo não veio, tira portanto 0
+- strings e caracteres complexos
+- contagem de linhas yylineno
 
-*** DONE Kappa
+*** Lambda
 
-- [ ] Implementação manual do comentário multilinha
-- [ ] Apareceram na entrevista, mas não entregaram até 28/08 via formulário
-  - Testes automáticos portanto não realizados
-- [ ] Erro 12
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_012.tesh:3> mismatch:
-  - 1 TK_PR_OUTPUT [output]
-  + 1 TK_IDENTIFICADOR [output]
-  #+END_EXAMPLE
-- [ ] Erro 54
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_054.tesh:3> mismatch:
-  - 1 TK_OC_SR [>>]
-  + 1 TK_OC_SL [>>]
-  #+END_EXAMPLE
-- [ ] Erro 55
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_055.tesh:3> mismatch:
-  - 1 TK_OC_SL [<<]
-  + 1 TK_OC_SR [<<]
-  #+END_EXAMPLE
-
-*** DONE Psi
-
-- [ ] Arquivos não estão na raiz (home/cp/etapa1)
-- [ ] Erro 58
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_058.tesh:3> mismatch:
-  - 1 TK_IDENTIFICADOR [_id]
-  + 1 TOKEN_ERRO [_]
-  + 1 TK_IDENTIFICADOR [id]
-  #+END_EXAMPLE
-- [ ] Erro 59
-  #+BEGIN_EXAMPLE
-  Output of <./tests/e1/aval_059.tesh:3> mismatch:
-  - 1 TK_IDENTIFICADOR [_ID]
-  + 1 TOKEN_ERRO [_]
-  + 1 TK_IDENTIFICADOR [ID]
-  #+END_EXAMPLE
-- [ ] Erro 60
-  #+BEGIN_EXAMPLE
-  - 1 TK_IDENTIFICADOR [_01]
-  + 1 TOKEN_ERRO [_]
-  + 1 TK_LIT_INT [01]
-  #+END_EXAMPLE
-- [X] Erros com identificador corrigidos na hora
-- [ ] Não sabe o que é yylineno
-- [ ] Um membro do grupo não veio, tira portanto 0
-  
-*** DONE Theta
-
-- [ ] Jamais incluir um arquivo =.c= com =#include=
-- [ ] Makefile com problemas, funciona num, no outro não
-- [X] Faltou referências para construção multi-linha, yynowrap
-
-*** DONE Iota
-
-- [ ] Submissão em atraso
-- [ ] Arquivos não estão na raiz (root)
-- [ ] Warnings na compilação =flex=
-  #+BEGIN_EXAMPLE
-  scanner.l:77: warning, rule cannot be matched
-  scanner.l:78: warning, rule cannot be matched
-  #+END_EXAMPLE
-- [ ] Erro 58
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_058.tesh:3> mismatch:
-  - 1 TK_IDENTIFICADOR [_id]
-  + _1 TK_IDENTIFICADOR [id]
-  #+END_EXAMPLE
-- [ ] Erro 59
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_059.tesh:3> mismatch:
-  - 1 TK_IDENTIFICADOR [_ID]
-  + _1 TK_IDENTIFICADOR [ID]
-  #+END_EXAMPLE
-- [ ] Erro 60
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_060.tesh:3> mismatch:
-  - 1 TK_IDENTIFICADOR [_01]
-  + _1 TK_LIT_INT [01]
-  #+END_EXAMPLE
-- [ ] Erro 67
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_067.tesh:3> mismatch:
-  - 1 TK_LIT_FALSE [false]
-  + 1 TK_IDENTIFICADOR [false]
-  #+END_EXAMPLE
-- [ ] Erro 68
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_068.tesh:3> mismatch:
-  - 1 TK_LIT_TRUE [true]
-  + 1 TK_IDENTIFICADOR [true]
-  #+END_EXAMPLE
-- [ ] Erro 72
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_072.tesh:3> mismatch:
-  - 1 TK_LIT_STRING ["meu nome"]
-  + "1 TK_IDENTIFICADOR [meu]
-  + 1 TK_IDENTIFICADOR [nome]
-  + "
-  #+END_EXAMPLE
-- [ ] Erro 73
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_073.tesh:3> mismatch:
-  - 1 TK_LIT_STRING ["x = 3"]
-  + "1 TK_IDENTIFICADOR [x]
-  + 1 TK_ESPECIAL [=]
-  + 1 TK_LIT_INT [3]
-  + "
-  #+END_EXAMPLE
-- [ ] Erro 74
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_074.tesh:3> mismatch:
-    1 TK_LIT_INT [12]
-  + 2 TK_ESPECIAL [/]
-  + 2 TK_ESPECIAL [/]
-  + 2 TK_LIT_INT [34]
-  + 2 TK_LIT_INT [56]
-    3 TK_LIT_INT [78]
-  #+END_EXAMPLE
-- [ ] Erro 75
-  #+BEGIN_EXAMPLE
-  Output of <tests/e1/aval_075.tesh:3> mismatch:
-    1 TK_LIT_INT [12]
-  + 1 TK_ESPECIAL [/]
-  + 1 TK_ESPECIAL [*]
-  + 2 TK_LIT_INT [34]
-  + 2 TK_LIT_INT [56]
-  + 3 TK_ESPECIAL [*]
-  + 3 TK_ESPECIAL [/]
-    3 TK_LIT_INT [78]
-  #+END_EXAMPLE
-- [ ] Um membro do grupo não veio, tira portanto 0
-
-*** TODO Mu
-
-- [ ] Não veio, não entregou
-
-*** TODO Sigma
-
-Não entregou, fará em atraso.
+- Implementou autômato e converteu com ferramenta para ER
+  - Ferramenta de linguagens formais (JFLAP)
 
 ** Notas Objetiva e Subjetiva
 
 | Grupo   | Avaliacao | Nota |
 |---------+-----------+------|
-| Tau     | E1.S      |   10 |
-| Alpha   | E1.S      |  9.5 |
-| Beta    | E1.S      |    9 |
-| Delta   | E1.S      |    8 |
-| Omicron | E1.S      |    7 |
-| Gamma   | E1.S      |   10 |
+| Alpha   | E1.S      |   10 |
+| Beta    | E1.S      |   10 |
+| Delta   | E1.S      |  9.5 |
+| Epsilon | E1.S      |   10 |
 | Lambda  | E1.S      |   10 |
-| Omega   | E1.S      |    9 |
-| Upsilon | E1.S      |    9 |
-| Rho     | E1.S      |    8 |
-| Epsilon | E1.S      |  9.5 |
-| Zeta    | E1.S      |  8.5 |
-| Eta     | E1.S      |  9.5 |
-| Kappa   | E1.S      |    9 |
-| Psi     | E1.S      |    9 |
-| Theta   | E1.S      |    9 |
-| Iota    | E1.S      |    4 |
-| Mu      | E1.S      |    0 |
-| Tau     | E1.O      |   10 |
 | Alpha   | E1.O      |   10 |
-| Beta    | E1.O      |   10 |
-| Delta   | E1.O      |  9.9 |
-| Omicron | E1.O      |  9.8 |
-| Gamma   | E1.O      |   10 |
-| Lambda  | E1.O      |   10 |
-| Omega   | E1.O      |   10 |
-| Upsilon | E1.O      |   10 |
-| Rho     | E1.O      |  9.5 |
+| Beta    | E1.O      |  9.8 |
+| Delta   | E1.O      |    9 |
 | Epsilon | E1.O      |   10 |
-| Zeta    | E1.O      |    9 |
-| Eta     | E1.O      |  9.9 |
-| Kappa   | E1.O      |  9.6 |
-| Psi     | E1.O      |  9.6 |
-| Theta   | E1.O      |   10 |
-| Iota    | E1.O      |  8.9 |
-| Mu      | E1.O      |  nil |
+| Lambda  | E1.O      |   10 |
 
 * Avaliação da Etapa 2                                             :noexport:
 ** Grupos que não entregaram até o prazo
