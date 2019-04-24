@@ -24,7 +24,7 @@ verificação de tipos é feita de forma estática, em tempo de
 compilação.
 
 Finalmente, todos os nós da Árvore Sintática Abstrata (AST), gerada na
-etapa anterior, terão agora um campo que indica o seu tipo. O tipo de
+etapa anterior, terão agora um novo campo que indica o seu tipo. O tipo de
 um determinado nó da AST pode, em algumas situações, não ser definido
 diretamente. Nestes casos, seu tipo deve ser inferido de acordo com as
 regras de inferência da linguagem. Uma série de testes de coerência
@@ -46,19 +46,21 @@ diferentes campos. Os campos registram as seguintes informações:
 - tipo (qual o tipo de dado deste símbolo)
 - tamanho (derivado do tipo)
 - argumentos e seus tipos (no caso de funções)
-- campos e seus tipos (no caso do tipo for de usuário)
 - demais informações do valor do token pelo =yylval= (veja [[./etapa3.org][E3]])
 
 ** 2. Verificação de declarações
 
 Todos os identificadores devem ter sido declarados no momento do seu
 uso, seja como variável, como vetor ou como função. Essa verificação
-de declaração prévia deve considerar o escopo da linguagem. Todas as
-entradas na tabela de símbolos devem ter um tipo associado conforme a
-declaração, verificando-se se não houve dupla declaração
-(=ERR_DECLARED=) ou se o símbolo não foi declarado
-(=ERR_UNDECLARED=). Variáveis com o mesmo nome podem existir em escopos
-diferentes.
+de declaração prévia deve considerar o escopo da linguagem, que pode
+ser o escopo global, o escopo local da função e o escopo de um bloco,
+sendo que este pode ser recursivamente aninhado. Uma forma de se
+implementar estas regras de escopo é através de uma pilha de tabelas
+de símbolos. Todas as entradas na tabela de símbolos devem ter um tipo
+associado conforme a declaração, verificando-se se não houve dupla
+declaração (=ERR_DECLARED=) ou se o símbolo não foi declarado
+(=ERR_UNDECLARED=). Variáveis com o mesmo nome podem co-existir em
+escopos diferentes.
 
 ** 3. Uso correto de identificadores
 
@@ -67,8 +69,7 @@ seu tipo. Variáveis somente podem ser usadas sem indexação
 (=ERR_VARIABLE=), vetores somente podem ser utilizados com indexação
 (=ERR_VECTOR=), e funções apenas devem ser usadas como chamada de função
 (=ERR_FUNCTION=), isto é, seguidas da lista de argumentos entre
-parênteses. Variáveis que são de tipo de usuário devem obedecer as
-regras impostas na declaração do respectivo tipo (=ERR_USER=).
+parênteses.
 
 ** 4. Verificação de tipos (na AST) e tamanho dos dados
 
@@ -77,22 +78,13 @@ e o tamanho da variável na sua entrada na tabela de símbolos. Com o
 auxílio dessa informação, quando necessário, os tipos de dados
 corretos devem ser inferidos onde forem usados, em expressões
 aritméticas, relacionais, lógicas, ou para índices de vetores.
-(=ERR_WRONG_TYPE=, =ERR_STRING_TO_X=, =ERR_CHAR_TO_X=, e
-=ERR_USER_TO_X=). Isso implica que todos os nós da AST são candidatos a
-terem um tipo definido de acordo com as regras de inferência de
-tipos. Um nó da AST deve ter portanto um novo campo que registra o seu
-tipo de dado. O processo de inferência está descrito abaixo.
+(=ERR_WRONG_TYPE=, =ERR_STRING_TO_X=, =ERR_CHAR_TO_X=). Isso implica que
+todos os nós da AST são candidatos a terem um tipo definido de acordo
+com as regras de inferência de tipos. Um nó da AST deve ter portanto
+um novo campo que registra o seu tipo de dado. O processo de
+inferência está descrito abaixo.
 
-** 5. Anotação de conversão implícita de variáveis
-
-Os tipos inteiro, flutuante e booleanos podem sofrer conversão
-implícita de acordo com o conjunto de regras apresentados abaixo. A
-solução desta etapa deve marcar todos os nós da AST onde uma conversão
-implícita deverá acontecer no momento da geração de código. Note que a
-coerção em si ainda não deve acontecer, apenas deve-se detectar e
-anotar na AST qual coerção deverá acontecer.
-
-** 6. Argumentos e parâmetros de funções
+** 5. Argumentos e parâmetros de funções
 
 A lista de argumentos fornecidos em uma chamada de função deve ser
 verificada contra a lista de parâmetros formais na declaração da mesma
@@ -102,12 +94,13 @@ compatível (=ERR_WRONG_TYPE_ARGS=). Tais verificações devem ser
 realizadas levando-se em conta as informações registradas na tabela de
 símbolos.
 
-** 7. Verificação de tipos em comandos
+** 6. Verificação de tipos em comandos
 
 Todos os comandos simples da linguagem deve ser verificados
 semanticamente.  O comando =input= somente aceita identificadores de
-qualquer tipo como parâmetro (=ERR_WRONG_PAR_INPUT=); o comando =output=
-aceita um literal =string= ou uma expressão aritmética a ser impressa
+qualquer tipo como parâmetro (=ERR_WRONG_PAR_INPUT=); considerando que o
+comando =output= aceita uma lista de expressões, cada expressão pode ser
+somente um literal =string= ou uma expressão aritmética a ser impressa
 (=ERR_WRONG_PAR_OUTPUT=). O comando de retorno =return= deve ser seguido
 obrigatoriamente por uma expressão cujo tipo é compatível com o tipo
 de retorno da função (=ERR_WRONG_PAR_RETURN=). Prevalece o tipo do
@@ -129,7 +122,6 @@ identificador em um comando de atribuição.
 
 As regras de coerção de tipos da Linguagem são as seguintes:
 - Não há conversão implícita para os tipos =string= e =char=
-- Não há conversão implícita para/de tipos de usuário
 - Um tipo =int= pode ser convertido implicitamente para =float= e para =bool=
 - Um tipo =bool= pode ser convertido implicitamente para =float= e para =int=
 - Um tipo =float= pode ser convertido implicitamente para =int= e para
@@ -144,7 +136,6 @@ As regras de inferência de tipos da linguagem são as seguintes:
 - A partir de =float= e =int=, infere-se =float=
 - A partir de =bool= e =int=, infere-se =int=
 - A partir de =bool= e =float=, infere-se =float=
-- Não há inferência com tipos de usuário
 
 ** Tamanho
 
@@ -156,7 +147,6 @@ O tamanho dos tipos da linguagem é definido da seguinte forma:
 - Um =float= ocupa 8 bytes
 - Um =bool= ocupa 1 byte
 - Um vetor ocupa o seu tamanho vezes o seu tipo
-- Um tipo de usuário ocupa o somatório dos tamanhos dos campos
 
 * Anexo - Códigos de retorno para erros semântico
 
@@ -178,13 +168,11 @@ deve retornar o valor zero.
 #define ERR_VARIABLE    20 //identificador deve ser utilizado como variável
 #define ERR_VECTOR      21 //identificador deve ser utilizado como vetor
 #define ERR_FUNCTION    22 //identificador deve ser utilizado como função
-#define ERR_USER        23 //identificador deve ser utilizado como de usuário
 
 /* Tipos e tamanho de dados */
 #define ERR_WRONG_TYPE  30 //tipos incompatíveis
 #define ERR_STRING_TO_X 31 //coerção impossível de var do tipo string
 #define ERR_CHAR_TO_X   32 //coerção impossível de var do tipo char
-#define ERR_USER_TO_X   33 //coerção impossível de var do tipo de usuário
 
 /* Argumentos e parâmetros */
 #define ERR_MISSING_ARGS    40 //faltam argumentos 
