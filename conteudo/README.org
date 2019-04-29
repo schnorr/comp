@@ -98,6 +98,34 @@ PDF.
  |------------+----------------------------------+--------+-------+-------+--------|
  | Closure    | [[./aulas/geral/encerramento.org][Discussão (aka: What's now?)]]     |        |       |       |        |
 
+* Revisão P1 (2019/1)
+
+1. Utilizamos o autômato LR(0) do slide 13 em [[./lr0.org]]
+   - Tentamos construir a tabela LR(0) e mostramos que a gramática não
+     é LR(0) por conflitos empilha-reduz em dois estados
+   - Em seguida, tentamos construir a tabela SLR(1) utilizando a
+     heurística do conjunta sequência e felizmente conseguimos mostrar
+     que a gramática SLR(1)
+   - Para terminar, nós realizamos o passo a passo da Análise LR para
+     reconhecer a entrada válida ~(id+id)*id~ e chegamos a conclusão que
+     20 ações são necessárias até o aceite inclusive.
+2. Utilizamos o exercício do slide 7 em [[./lalr1.org]]
+   - Construímos o autômato LR(1) da gramática e chegamos conclusão
+     que sim, esta gramática é LR(1).
+   - Em seguida, demonstramos como o autômato LALR(1) seria
+     construído, fazendo a união de dois estados do LR(1) em somente
+     um estado LALR(1) pelo fato que a primeira dos itens LR(1) são
+     idênticas. Isso fez com que criássemos um conflito reduz-reduz no
+     seguinte estado LALR(1)
+     #+BEGIN_EXAMPLE
+     E -> .e, c/d
+     F -> .e, d/c
+     #+END_EXAMPLE
+     E isso faz com a gramática não seja LALR(1) pois há dois
+     conflitos:
+     - Conflito reduz-reduz com /lookahead/ ~c~
+     - Conflito reduz-reduz com /lookahead/ ~d~
+
 * Revisão P2
 
 - Introdução à Geração de Código
