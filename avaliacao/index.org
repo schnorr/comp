@@ -24,3 +24,1958 @@
 #+TAGS: noexport(n) deprecated(d)
 
 Por ser atualizado.
+
+* Ponderações gerais                                               :noexport:
+
+Para tomar conhecimento novamente das fórmulas utilizadas:
+- [[./plano/index.org][As ponderações gerais]]
+- [[./projeto/README.org][As ponderações das etapas do projeto]]
+  - Apenas até E6, a nota final do projeto é normalizada em 9
+
+* Detalhamento Geral                                               :noexport:
+
+Situação final.
+
+| ID     | E1.O | E1.S | E2.O | E2.S | E3.O | E3.S | E4.O | E4.S | E5.O | E5.S | E6.O | E6.S | Faltas |   P1 |   P2 |    T |
+|--------+------+------+------+------+------+------+------+------+------+------+------+------+--------+------+------+------|
+| ???834 |  9.9 |  9.5 |  9.7 |  8.5 |   10 |   10 |   10 | 7.25 | 6.88 | 5.95 |    0 |    0 |      2 | 8.12 | 7.62 | 7.12 |
+| ???269 |  9.9 |    8 | 7.92 |    8 | 0.16 |  6.4 | 4.14 |  2.5 |   10 |    7 |    0 | 3.21 |      4 | 9.38 | 6.57 | 5.49 |
+| ???692 |   10 |    9 |  9.9 |  9.3 |   10 |   10 | 9.73 | 9.88 |   10 | 9.95 |    5 | 7.26 |      0 |   10 | 9.21 | 8.85 |
+| ???578 |  9.6 |    9 |  9.9 |   10 |   10 |   10 | 8.39 | 7.88 |   10 |  8.7 |  7.5 | 7.42 |      7 | 8.75 | 8.16 | 8.62 |
+| ???700 |   10 |  9.5 |  9.8 |   10 |  9.4 |  9.5 | 9.46 | 7.62 |   10 | 6.95 |    0 | 4.53 |      1 | 4.38 | 7.36 | 7.87 |
+| ???722 |   10 |    9 |  9.6 |    9 |   10 |   10 | 9.55 | 4.38 |   10 | 9.95 | 1.25 | 3.63 |      6 | 8.75 | 8.95 | 7.92 |
+| ???091 |  8.9 |    4 |    8 |    7 |  9.9 |   10 |  2.5 | 2.38 |   10 | 8.45 | 3.75 | 7.26 |      7 | 6.25 | 6.31 | 6.69 |
+| ???059 |   10 |    9 |   10 |   10 |  9.7 |  9.5 | 9.36 | 9.88 |   10 | 8.95 |   10 | 9.47 |      5 |   10 | 7.62 | 9.11 |
+| ???490 |   10 |  9.5 |  9.6 |    7 |    0 |  4.8 | 5.29 |    5 | 9.79 | 8.95 |  2.5 | 4.21 |      4 |  3.5 | 5.26 | 6.18 |
+| ???713 |  9.5 |    8 |  9.8 |    4 |   10 |   10 |    0 |  3.6 | 7.66 |    4 | 8.75 | 9.37 |      6 | 6.62 | 8.68 | 6.39 |
+| ???207 |   10 |   10 |  9.9 |   10 |   10 |   10 | 9.11 | 9.62 |   10 |  7.7 |  2.5 |    6 |      1 | 8.75 | 6.84 | 8.43 |
+| ???295 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     15 | 0.62 |    0 |    0 |
+| ???741 |   10 |    9 |    8 |    8 |    0 |  6.4 |    0 |  2.4 |    8 | 5.16 |    5 | 7.26 |      1 | 6.25 | 6.84 | 5.27 |
+| ???271 |    9 |  8.5 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |      4 | 8.12 | 5.79 | 0.97 |
+| ???424 |    0 |    0 |  9.7 |  8.5 |   10 |   10 |    0 |    0 | 6.88 | 5.95 |    0 |    0 |      7 | 0.62 |  7.1 | 4.61 |
+| ???569 |   10 |   10 |  9.9 |    9 |  9.7 |  9.5 |    8 |  5.4 |   10 |  7.2 |   10 |   10 |      6 |  7.5 | 5.52 | 8.42 |
+| ???256 |   10 |   10 |  9.9 |   10 |  9.8 |  9.5 |   10 | 8.12 |   10 |  8.7 | 8.75 | 9.37 |      2 |   10 |  7.1 | 8.97 |
+| ???155 |  9.6 |    9 |  9.4 |    7 |    0 |    0 |  2.5 | 2.38 |   10 | 8.45 | 3.75 | 7.26 |      0 | 6.25 | 4.74 | 5.47 |
+| ???794 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     22 |    0 |    0 |    0 |
+| ???704 |   10 |  9.5 |  9.8 |   10 |  9.4 |  9.5 | 9.46 | 7.62 |   10 | 6.95 |    0 | 4.53 |      1 | 3.12 | 6.31 | 7.87 |
+| ???026 |   10 |    9 |    8 |    8 |    0 |  6.4 |    0 |  2.4 |    8 | 5.16 |    5 | 7.26 |      7 | 8.75 |    0 | 5.27 |
+| ???739 |   10 |   10 |  9.9 |    9 |  9.7 |  9.5 |    8 |  5.4 |   10 |  7.2 |   10 |   10 |      3 | 8.12 | 8.68 | 8.42 |
+| ???932 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |      5 | 3.75 | 3.16 |    0 |
+| ???305 |  9.5 |    8 |  9.8 |    4 |   10 |   10 |    0 |  3.6 | 7.66 |    4 | 8.75 | 9.37 |      1 |    5 | 5.79 | 6.39 |
+| ???798 |   10 |  9.5 |  9.6 |    7 |    0 |  4.8 | 5.29 |    5 | 9.79 | 8.95 |  2.5 | 4.21 |      2 | 7.88 | 3.42 | 6.18 |
+| ???589 |  9.6 |    9 |  9.9 |   10 |   10 |   10 | 8.39 | 7.88 |   10 |  8.7 |  7.5 | 7.42 |      0 | 1.25 |  7.1 | 8.62 |
+| ???723 |   10 |    9 |   10 |   10 |  9.7 |  9.5 | 9.36 | 9.88 |   10 | 8.95 |   10 | 9.47 |      1 |   10 | 8.16 | 9.11 |
+| ???499 |    0 |    0 |  9.4 |    7 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     14 | 6.88 |    0 | 1.37 |
+| ???055 |  9.8 |    7 |    8 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |      7 | 9.88 |  7.1 |  1.6 |
+| ???760 |   10 |    9 |  9.9 |  9.3 |   10 |   10 | 9.73 | 9.88 |   10 | 9.95 |    5 | 7.26 |      0 |   10 |   10 | 8.85 |
+| ???673 |    9 |  8.5 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |      6 | 8.75 | 5.26 | 0.97 |
+| ???255 |  9.9 |    8 | 7.92 |    8 | 0.16 |  6.4 | 4.14 |  2.5 |   10 |    7 |    0 | 3.21 |      5 | 6.12 | 6.57 | 5.49 |
+| ???238 |   10 |   10 |  9.9 |   10 |   10 |   10 | 9.11 | 9.62 |   10 |  7.7 |  2.5 |    6 |      2 | 8.12 |   10 | 8.43 |
+| ???984 |   10 |    9 |  9.6 |    9 |   10 |   10 | 9.55 | 4.38 |   10 | 9.95 |    0 |    0 |      5 | 8.12 | 6.84 | 7.65 |
+
+* P2 Detalhamento                                                  :noexport:
+** Questões
+
+- E1: Mapeamento sobre a gramática na declaração de arranjos multidimensionais
+- E2: Qual o valor de Ca e endereço base
+- E3: Implementação de curto-circuito
+- E4: Alocação/atribuição de registradores
+- E5: Correção de um dado esquema de tradução (if)
+- E6: Geração de código e funcionamento sobre árvore/atributos
+- E7: Grafo de fluxo de controle baseado em blocos básicos
+
+** Discussão sobre respostas
+
+Q1
+- Realizar o mapeamento sobre a gramática
+- Explicar cada atributo utilizado
+- Utilizar uma gramática de atributos (sem vars. globais)
+
+Q2
+- Apresentar a árvore com atributos para tes
+- Demonstrar a resposta 9284 incluindo a parcial R final em -2065
+- Demonstrar a resposta 12904 (1024 . 4 . tamanho de tes)
+
+Q3
+- Em L-atribuído, portanto com atributos herdados
+- Gerar código mínimo que demonstra a avaliação por controle de fluxo
+- Não há necessidade de usar remendos, pois é L-atribuído
+- Não usar avaliação numérica, pois curto-circuito implica em controle de fluxo
+
+Q4
+- Análise de vida das variáveis
+  - s1: 2-5
+  - s2: 3-5
+  - s3: 4
+  - s4: 5-6
+  - s5: 6
+  - s6: NA
+- Conclusão
+  - s1 a s3 se interferem
+  - s4 interfere com s1, s2, e s5
+- É 3 o número mínimo de registradores 
+- Fornecer uma alocação válida
+  - s1, s5, s6 ficam em R1
+  - s2 em R2
+  - s3, s4 em R3
+
+Q5
+- Substituir F por S na primeira regra
+  - Ou renomear S para F
+- B.f = rot() ao invés de B.f = B.t
+- Após o S1.code, devemos ter um "jumpI S1.next"
+- A correção do uso de fp e bss é opcional
+- Não remover partes (por exemplo S1.next = S.next)
+  - Elas tem uma função
+
+Q6
+- Definir todos os atributos sobre a árvore
+- Atributos devem estar definidos na ordem correta
+- Código gerado deve estar semanticamente correto
+
+Q7
+- Ver grafos.org, slide "Exemplo 2 – quicksort TAC (líderes)"
+- Líderes: 1, 5, 9, 13, 14, 23
+- Apresentar o grafo com os blocos básicos e suas instruções
+
+** Detalhamento por questão
+
+| ID     |  E1 |  E2 |  E3 |  E4 |  E5 |  E6 |  E7 |
+|--------+-----+-----+-----+-----+-----+-----+-----|
+| ???028 | nil | nil | nil | nil | nil | nil | nil |
+| ???587 |   2 | 0.8 | 1.2 |   0 |   1 | 0.5 |   1 |
+| ???759 | nil | nil | nil | nil | nil | nil | nil |
+| ???262 |   2 |   0 | 0.5 | 1.5 | 0.3 |   1 |   1 |
+| ???691 | nil | nil | nil | nil | nil | nil | nil |
+| ???354 | 0.3 | 0.5 | 0.3 | 0.3 |   0 | 0.5 |   1 |
+| ???676 |   2 |   0 |   0 | 1.2 |   1 | 1.5 |   1 |
+| ???524 | 1.5 | 1.2 |   0 |   0 |   1 | 0.7 |   1 |
+| ???664 | 1.5 | 0.7 | 1.5 |   0 |   1 | 1.5 |   1 |
+| ???845 | 0.5 |   0 |   0 | 0.5 |   1 | 0.5 |   0 |
+| ???175 |   0 |   0 |   0 | 1.5 |   1 | 1.5 |   1 |
+| ???688 | 0.5 |   0 |   0 |   1 |   1 | 1.5 |   1 |
+| ???865 | 0.3 |   0 | 0.7 | 0.5 | 0.7 | 0.7 | 0.5 |
+| ???686 | nil | nil | nil | nil | nil | nil | nil |
+| ???679 | nil | nil | nil | nil | nil | nil | nil |
+| ???249 |   2 | 1.2 |   0 | 1.5 | 0.9 | 0.7 |   1 |
+| ???822 |   2 | 0.5 | 0.3 |   0 |   0 | 1.5 |   1 |
+| ???516 | 1.3 | 0.5 |   0 | 1.5 |   1 | 0.5 |   1 |
+| ???274 |   2 | 0.5 |   0 | 1.5 | 0.7 |   1 |   1 |
+| ???332 |   0 | 0.3 |   0 | 1.5 |   1 |   1 |   1 |
+| ???675 |   2 | 0.5 | 0.7 | 1.5 | 0.8 | 1.5 |   1 |
+| ???271 | 0.3 | 0.3 |   0 | 0.3 |   0 | 0.3 |   1 |
+| ???416 |   2 | 1.2 |   0 | 0.3 | 0.8 |   1 |   1 |
+| ???728 | 0.3 |   0 |   0 | 0.5 | 0.5 | 0.3 |   1 |
+| ???572 |   0 |   0 |   0 | 0.5 |   0 |   0 |   1 |
+| ???090 | nil | nil | nil | nil | nil | nil | nil |
+| ???722 | nil | nil | nil | nil | nil | nil | nil |
+| ???261 | nil | nil | nil | nil | nil | nil | nil |
+| ???410 | 1.5 |   0 |   0 | 1.5 | 0.9 | 0.3 |   1 |
+| ???601 |   2 | 1.3 |   0 | 1.3 |   1 | 1.5 |   1 |
+| ???369 | nil | nil | nil | nil | nil | nil | nil |
+| ???681 | nil | nil | nil | nil | nil | nil | nil |
+| ???665 |   2 | 1.5 | 1.5 | 1.3 |   1 | 1.5 |   1 |
+| ???670 | 1.9 | 0.3 |   0 | 1.5 | 0.5 |   0 |   1 |
+
+* PR                                                               :noexport:
+** Gabarito
+
+PR espera 33 respostas, com o gabarito abaixo.
+
+| Questão | Gabarito  |
+|---------+-----------|
+| 01.X    | E         |
+| 02.X    | C         |
+| 03.X    | D         |
+| 04.X    | AADDDAAA  |
+| 05.M    | 100100    |
+| 05.N    | A         |
+| 05.O    | B         |
+| 06.X    | E         |
+| 07.X    | C         |
+| 08.X    | A         |
+| 09.M    | 7 9 12    |
+| 09.N    | 6         |
+| 09.O    | 3 10      |
+| 09.P    | 1 11      |
+| 09.Q    | 2 5 8     |
+| 09.R    | 4         |
+| 10.A    | F         |
+| 10.B    | F         |
+| 10.C    | V         |
+| 10.D    | F         |
+| 10.E    | F         |
+| 11.X    | 10110     |
+| 12.X    | D         |
+| 13.M    | C         |
+| 13.N    | A         |
+| 13.O    | B         |
+| 14.X    | C         |
+| 15.X    | A         |
+| 16.X    | D         |
+| 17.X    | E         |
+| 18.M    | D         |
+| 18.N    | 2 1 1 0 0 |
+| 18.O    | E         |
+** Sumário
+
+| ID     |   PR |
+|--------+------|
+| ???155 | 6.67 |
+| ???424 | 5.15 |
+| ???490 | 4.55 |
+** Taxa de acertos por questão
+
+| Questão | Respostas | Corretas | Taxa |
+|---------+-----------+----------+------|
+| 04.X    |         3 |        3 |  100 |
+| 07.X    |         3 |        3 |  100 |
+| 09.N    |         3 |        3 |  100 |
+| 09.O    |         3 |        3 |  100 |
+| 09.P    |         3 |        3 |  100 |
+| 09.R    |         3 |        3 |  100 |
+| 10.B    |         3 |        3 |  100 |
+| 10.C    |         3 |        3 |  100 |
+| 12.X    |         3 |        3 |  100 |
+| 01.X    |         3 |        2 |   67 |
+| 05.N    |         3 |        2 |   67 |
+| 05.O    |         3 |        2 |   67 |
+| 06.X    |         3 |        2 |   67 |
+| 09.M    |         3 |        2 |   67 |
+| 09.Q    |         3 |        2 |   67 |
+| 10.E    |         3 |        2 |   67 |
+| 13.O    |         3 |        2 |   67 |
+| 18.O    |         3 |        2 |   67 |
+| 02.X    |         3 |        1 |   33 |
+| 03.X    |         3 |        1 |   33 |
+| 10.A    |         3 |        1 |   33 |
+| 10.D    |         3 |        1 |   33 |
+| 14.X    |         3 |        1 |   33 |
+| 15.X    |         3 |        1 |   33 |
+| 16.X    |         3 |        1 |   33 |
+| 17.X    |         3 |        1 |   33 |
+| 18.M    |         3 |        1 |   33 |
+| 05.M    |         3 |        0 |    0 |
+| 08.X    |         3 |        0 |    0 |
+| 11.X    |         3 |        0 |    0 |
+| 13.M    |         3 |        0 |    0 |
+| 13.N    |         3 |        0 |    0 |
+| 18.N    |         3 |        0 |    0 |
+** Detalhamento
+
+| ID     | Questão | Resposta  | Gabarito  | Correta |
+|--------+---------+-----------+-----------+---------|
+| ???155 | 01.X    | =E=         | =E=         | TRUE    |
+| ???155 | 02.X    | =C=         | =C=         | TRUE    |
+| ???155 | 03.X    | =D=         | =D=         | TRUE    |
+| ???155 | 04.X    | =AADDDAAA=  | =AADDDAAA=  | TRUE    |
+| ???155 | 05.M    | =010100=    | =100100=    | FALSE   |
+| ???155 | 05.N    | =A=         | =A=         | TRUE    |
+| ???155 | 05.O    | =B=         | =B=         | TRUE    |
+| ???155 | 06.X    | =E=         | =E=         | TRUE    |
+| ???155 | 07.X    | =C=         | =C=         | TRUE    |
+| ???155 | 08.X    | =D=         | =A=         | FALSE   |
+| ???155 | 09.M    | =12 7 9=    | =7 9 12=    | FALSE   |
+| ???155 | 09.N    | =6=         | =6=         | TRUE    |
+| ???155 | 09.O    | =3 10=      | =3 10=      | TRUE    |
+| ???155 | 09.P    | =1 11=      | =1 11=      | TRUE    |
+| ???155 | 09.Q    | =5 8 2=     | =2 5 8=     | TRUE    |
+| ???155 | 09.R    | =4=         | =4=         | TRUE    |
+| ???155 | 10.A    | =F=         | =F=         | TRUE    |
+| ???155 | 10.B    | =F=         | =F=         | TRUE    |
+| ???155 | 10.C    | =V=         | =V=         | TRUE    |
+| ???155 | 10.D    | =F=         | =F=         | TRUE    |
+| ???155 | 10.E    | =F=         | =F=         | TRUE    |
+| ???155 | 11.X    | =01010=     | =10110=     | FALSE   |
+| ???155 | 12.X    | =D=         | =D=         | TRUE    |
+| ???155 | 13.M    | =A=         | =C=         | FALSE   |
+| ???155 | 13.N    | =B=         | =A=         | FALSE   |
+| ???155 | 13.O    | =B=         | =B=         | TRUE    |
+| ???155 | 14.X    | =B=         | =C=         | FALSE   |
+| ???155 | 15.X    | =E=         | =A=         | FALSE   |
+| ???155 | 16.X    | =D=         | =D=         | TRUE    |
+| ???155 | 17.X    | =E=         | =E=         | TRUE    |
+| ???155 | 18.M    | =B=         | =D=         | FALSE   |
+| ???155 | 18.N    | =1 2 1 0 0= | =2 1 1 0 0= | FALSE   |
+| ???155 | 18.O    | =D=         | =E=         | FALSE   |
+| ???424 | 01.X    | =B=         | =E=         | FALSE   |
+| ???424 | 02.X    | =D=         | =C=         | FALSE   |
+| ???424 | 03.X    | =E=         | =D=         | FALSE   |
+| ???424 | 04.X    | =AADDDAAA=  | =AADDDAAA=  | TRUE    |
+| ???424 | 05.M    | =011100=    | =100100=    | FALSE   |
+| ???424 | 05.N    | =A=         | =A=         | TRUE    |
+| ???424 | 05.O    | =B=         | =B=         | TRUE    |
+| ???424 | 06.X    | =E=         | =E=         | TRUE    |
+| ???424 | 07.X    | =C=         | =C=         | TRUE    |
+| ???424 | 08.X    | =E=         | =A=         | FALSE   |
+| ???424 | 09.M    | =7 9 12=    | =7 9 12=    | TRUE    |
+| ???424 | 09.N    | =6=         | =6=         | TRUE    |
+| ???424 | 09.O    | =10 3=      | =3 10=      | TRUE    |
+| ???424 | 09.P    | =11 1=      | =1 11=      | TRUE    |
+| ???424 | 09.Q    | =5 2=       | =2 5 8=     | FALSE   |
+| ???424 | 09.R    | =4=         | =4=         | TRUE    |
+| ???424 | 10.A    | =V=         | =F=         | FALSE   |
+| ???424 | 10.B    | =F=         | =F=         | TRUE    |
+| ???424 | 10.C    | =V=         | =V=         | TRUE    |
+| ???424 | 10.D    | =V=         | =F=         | FALSE   |
+| ???424 | 10.E    | =V=         | =F=         | FALSE   |
+| ???424 | 11.X    | =01011=     | =10110=     | FALSE   |
+| ???424 | 12.X    | =D=         | =D=         | TRUE    |
+| ???424 | 13.M    | =A=         | =C=         | FALSE   |
+| ???424 | 13.N    | =E=         | =A=         | FALSE   |
+| ???424 | 13.O    | =B=         | =B=         | TRUE    |
+| ???424 | 14.X    | =A=         | =C=         | FALSE   |
+| ???424 | 15.X    | =A=         | =A=         | TRUE    |
+| ???424 | 16.X    | =E=         | =D=         | FALSE   |
+| ???424 | 17.X    | =C=         | =E=         | FALSE   |
+| ???424 | 18.M    | =D=         | =D=         | TRUE    |
+| ???424 | 18.N    | =4=         | =2 1 1 0 0= | FALSE   |
+| ???424 | 18.O    | =E=         | =E=         | TRUE    |
+| ???490 | 01.X    | =E=         | =E=         | TRUE    |
+| ???490 | 02.X    | =D=         | =C=         | FALSE   |
+| ???490 | 03.X    | =C=         | =D=         | FALSE   |
+| ???490 | 04.X    | =AADDDAAA=  | =AADDDAAA=  | TRUE    |
+| ???490 | 05.M    | =010110=    | =100100=    | FALSE   |
+| ???490 | 05.N    | =D=         | =A=         | FALSE   |
+| ???490 | 05.O    | =C=         | =B=         | FALSE   |
+| ???490 | 06.X    | =B=         | =E=         | FALSE   |
+| ???490 | 07.X    | =C=         | =C=         | TRUE    |
+| ???490 | 08.X    | =E=         | =A=         | FALSE   |
+| ???490 | 09.M    | =7 9 12=    | =7 9 12=    | TRUE    |
+| ???490 | 09.N    | =6=         | =6=         | TRUE    |
+| ???490 | 09.O    | =3 10=      | =3 10=      | TRUE    |
+| ???490 | 09.P    | =1 11=      | =1 11=      | TRUE    |
+| ???490 | 09.Q    | =2 5 8=     | =2 5 8=     | TRUE    |
+| ???490 | 09.R    | =4=         | =4=         | TRUE    |
+| ???490 | 10.A    | =V=         | =F=         | FALSE   |
+| ???490 | 10.B    | =F=         | =F=         | TRUE    |
+| ???490 | 10.C    | =V=         | =V=         | TRUE    |
+| ???490 | 10.D    | =V=         | =F=         | FALSE   |
+| ???490 | 10.E    | =F=         | =F=         | TRUE    |
+| ???490 | 11.X    | =01010=     | =10110=     | FALSE   |
+| ???490 | 12.X    | =D=         | =D=         | TRUE    |
+| ???490 | 13.M    | =E=         | =C=         | FALSE   |
+| ???490 | 13.N    | =C=         | =A=         | FALSE   |
+| ???490 | 13.O    | =E=         | =B=         | FALSE   |
+| ???490 | 14.X    | =C=         | =C=         | TRUE    |
+| ???490 | 15.X    | =D=         | =A=         | FALSE   |
+| ???490 | 16.X    | =C=         | =D=         | FALSE   |
+| ???490 | 17.X    | =D=         | =E=         | FALSE   |
+| ???490 | 18.M    | =E=         | =D=         | FALSE   |
+| ???490 | 18.N    | =2 1 2 0 2= | =2 1 1 0 0= | FALSE   |
+| ???490 | 18.O    | =E=         | =E=         | TRUE    |
+
+* P2                                                               :noexport:
+** Gabarito
+
+P2 espera 44 respostas, com o gabarito abaixo.
+- A ordem das numerações nas respostas =05.O=, =05.P=, e =05.Q= não tem importância
+- Corrigido o gabarito das questão =17.X= e =18.X=
+- A resposta da =14.B= pode ser V ou F
+- A resposta da =19.N= pode também ser =8 6 1 0 0=
+- A resposta da =13.M= pode ter um "do" (13) entre 1 e 12 na sequência
+- A resposta correta da =09.X= é a alternativa =B=
+- A questão =05.T= foi cancelada por ninguém ter acertado
+  - Veja Taxa de acertos por questão abaixo
+
+| Questão | Gabarito                           |
+|---------+------------------------------------|
+| 01.X    | C                                  |
+| 02.X    | A                                  |
+| 03.A    | F                                  |
+| 03.B    | F                                  |
+| 03.C    | V                                  |
+| 03.D    | F                                  |
+| 03.E    | F                                  |
+| 04.X    | D                                  |
+| 05.M    | 7 9 12                             |
+| 05.N    | 6                                  |
+| 05.O    | 3 10                               |
+| 05.P    | 1 11                               |
+| 05.Q    | 2 5 8                              |
+| 05.R    | 4                                  |
+| 05.S    | 8                                  |
+| 05.T    | -337                               |
+| 05.U    | 3972                               |
+| 06.X    | E                                  |
+| 07.X    | B                                  |
+| 08.M    | C                                  |
+| 08.N    | A                                  |
+| 08.O    | B                                  |
+| 09.X    | B                                  |
+| 10.X    | 01001                              |
+| 11.M    | D                                  |
+| 11.N    | A                                  |
+| 12.M    | C                                  |
+| 12.N    | D                                  |
+| 13.M    | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 |
+| 13.N    | 13 1 2 4 12 6 3 5 7 5 11 5 8       |
+| 14.A    | F                                  |
+| 14.B    | V                                  |
+| 14.C    | V                                  |
+| 14.D    | F                                  |
+| 14.E    | F                                  |
+| 15.X    | E                                  |
+| 16.M    | C                                  |
+| 16.N    | B                                  |
+| 17.X    | E                                  |
+| 18.X    | B                                  |
+| 19.M    | D                                  |
+| 19.N    | 2 1 1 0 0                          |
+| 19.O    | E                                  |
+| 20.X    | A                                  |
+
+** Sumário
+
+Estatísticas
+
+#+BEGIN_EXAMPLE
+:    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+:   2.730   5.112   6.025   5.993   6.935   8.640
+#+END_EXAMPLE
+
+Por aluno
+- As notas atualizadas após cancelamento da questão =05.T=, que ninguém acertou
+
+#+name: p2.notas
+| ID     |   P2 |
+|--------+------|
+| ???238 | 8.84 |
+| ???760 | 8.84 |
+| ???692 | 8.14 |
+| ???722 | 7.91 |
+| ???713 | 7.67 |
+| ???739 | 7.67 |
+| ???723 | 7.21 |
+| ???578 | 7.21 |
+| ???834 | 6.74 |
+| ???059 | 6.74 |
+| ???700 | 6.51 |
+| ???589 | 6.28 |
+| ???256 | 6.28 |
+| ???424 | 6.28 |
+| ???055 | 6.28 |
+| ???741 | 6.05 |
+| ???984 | 6.05 |
+| ???207 | 6.05 |
+| ???255 | 5.81 |
+| ???269 | 5.81 |
+| ???704 | 5.58 |
+| ???091 | 5.58 |
+| ???305 | 5.12 |
+| ???271 | 5.12 |
+| ???569 | 4.88 |
+| ???673 | 4.65 |
+| ???490 | 4.65 |
+| ???155 | 4.19 |
+| ???798 | 3.02 |
+| ???932 | 2.79 |
+
+Gráfico das notas de =P1= e =P2= em função da posição.
+
+#+header: :var dep0=p2.notas
+#+header: :var dep1=p1.notas
+#+begin_src R :results output graphics :file img/p2-posicao.png :exports results :width 600 :height 400
+suppressMessages(library(tidyverse))
+dep1 %>%
+    select(-ID) %>%
+    mutate(Posição=1:n()) %>%
+    rename(Nota = P1) %>%
+    mutate(Tipo = "P1") %>%
+    bind_rows(
+        dep0 %>%
+        select(-ID) %>%
+        mutate(Posição=1:n()) %>%
+        rename(Nota = P2) %>%
+        mutate(Tipo = "P2")
+    ) %>%
+    ggplot(aes(x=Posição, y=Nota, color=Tipo)) +
+    geom_line(alpha=.1) +
+    geom_point() +
+    theme_bw(base_size=22) +
+    ylim(0,10)
+#+end_src
+
+#+RESULTS:
+[[file:img/p2-posicao.png]]
+
+** Taxa de acertos por questão
+
+No alto da tabela, podemos ver que houveram 100% de acertos na questão
+=05.R= (parabéns turma). No entanto, no fim da tabela, vemos que ninguém
+acertou a questão =05.T= (cálculo do Ca para um arranjo
+multidimensional).
+
+| Questão | Respostas | Corretas | Taxa |
+|---------+-----------+----------+------|
+| 05.R    |        27 |       27 |  100 |
+| 14.B    |        30 |       30 |  100 |
+| 03.C    |        30 |       29 |   97 |
+| 05.N    |        27 |       26 |   96 |
+| 03.D    |        30 |       28 |   93 |
+| 07.X    |        30 |       28 |   93 |
+| 03.B    |        30 |       27 |   90 |
+| 06.X    |        30 |       27 |   90 |
+| 12.M    |        30 |       27 |   90 |
+| 12.N    |        30 |       27 |   90 |
+| 05.Q    |        27 |       24 |   89 |
+| 01.X    |        30 |       25 |   83 |
+| 14.E    |        30 |       24 |   80 |
+| 16.M    |        30 |       24 |   80 |
+| 14.D    |        30 |       23 |   77 |
+| 16.N    |        30 |       23 |   77 |
+| 02.X    |        30 |       22 |   73 |
+| 04.X    |        30 |       22 |   73 |
+| 14.A    |        30 |       22 |   73 |
+| 18.X    |        30 |       22 |   73 |
+| 11.M    |        30 |       21 |   70 |
+| 14.C    |        29 |       20 |   69 |
+| 05.O    |        27 |       18 |   67 |
+| 05.P    |        27 |       18 |   67 |
+| 08.O    |        30 |       20 |   67 |
+| 11.N    |        30 |       20 |   67 |
+| 20.X    |        30 |       18 |   60 |
+| 19.M    |        30 |       17 |   57 |
+| 03.E    |        30 |       16 |   53 |
+| 05.M    |        27 |       14 |   52 |
+| 03.A    |        30 |       15 |   50 |
+| 17.X    |        30 |       15 |   50 |
+| 08.M    |        30 |       14 |   47 |
+| 05.S    |        24 |       11 |   46 |
+| 09.X    |        30 |       10 |   33 |
+| 15.X    |        30 |       10 |   33 |
+| 19.O    |        30 |       10 |   33 |
+| 13.M    |        20 |        4 |   20 |
+| 19.N    |        27 |        4 |   15 |
+| 10.X    |        30 |        4 |   13 |
+| 13.N    |        20 |        2 |   10 |
+| 08.N    |        29 |        2 |    7 |
+| 05.U    |        21 |        1 |    5 |
+| 05.T    |        20 |        0 |    0 |
+
+** Detalhamento
+
+São listadas todas as =1252= respostas com valores:
+- Foram portanto omitidas as questões não respondidas.
+
+| ID     | Questão | Resposta                           | Gabarito                           | Correta |
+|--------+---------+------------------------------------+------------------------------------+---------|
+| ???055 | 01.X    | B                                  | C                                  | FALSE   |
+| ???055 | 02.X    | D                                  | A                                  | FALSE   |
+| ???055 | 03.A    | F                                  | F                                  | TRUE    |
+| ???055 | 03.B    | V                                  | F                                  | FALSE   |
+| ???055 | 03.C    | V                                  | V                                  | TRUE    |
+| ???055 | 03.D    | F                                  | F                                  | TRUE    |
+| ???055 | 03.E    | V                                  | F                                  | FALSE   |
+| ???055 | 04.X    | D                                  | D                                  | TRUE    |
+| ???055 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???055 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???055 | 05.O    | 10 3                               | 3 10                               | TRUE    |
+| ???055 | 05.P    | 11 1                               | 1 11                               | TRUE    |
+| ???055 | 05.Q    | 2 5 8                              | 2 5 8                              | TRUE    |
+| ???055 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???055 | 06.X    | E                                  | E                                  | TRUE    |
+| ???055 | 07.X    | B                                  | B                                  | TRUE    |
+| ???055 | 08.M    | B                                  | C                                  | FALSE   |
+| ???055 | 08.N    | B                                  | A                                  | FALSE   |
+| ???055 | 08.O    | B                                  | B                                  | TRUE    |
+| ???055 | 09.X    | A                                  | B                                  | FALSE   |
+| ???055 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???055 | 11.M    | C                                  | D                                  | FALSE   |
+| ???055 | 11.N    | D                                  | A                                  | FALSE   |
+| ???055 | 12.M    | C                                  | C                                  | TRUE    |
+| ???055 | 12.N    | D                                  | D                                  | TRUE    |
+| ???055 | 14.A    | F                                  | F                                  | TRUE    |
+| ???055 | 14.B    | F                                  | V                                  | TRUE    |
+| ???055 | 14.C    | V                                  | V                                  | TRUE    |
+| ???055 | 14.D    | F                                  | F                                  | TRUE    |
+| ???055 | 14.E    | V                                  | F                                  | FALSE   |
+| ???055 | 15.X    | E                                  | E                                  | TRUE    |
+| ???055 | 16.M    | C                                  | C                                  | TRUE    |
+| ???055 | 16.N    | B                                  | B                                  | TRUE    |
+| ???055 | 17.X    | E                                  | E                                  | TRUE    |
+| ???055 | 18.X    | B                                  | B                                  | TRUE    |
+| ???055 | 19.M    | D                                  | D                                  | TRUE    |
+| ???055 | 19.N    | 6                                  | 2 1 1 0 0                          | FALSE   |
+| ???055 | 19.O    | E                                  | E                                  | TRUE    |
+| ???055 | 20.X    | A                                  | A                                  | TRUE    |
+| ???059 | 01.X    | C                                  | C                                  | TRUE    |
+| ???059 | 02.X    | A                                  | A                                  | TRUE    |
+| ???059 | 03.A    | F                                  | F                                  | TRUE    |
+| ???059 | 03.B    | F                                  | F                                  | TRUE    |
+| ???059 | 03.C    | V                                  | V                                  | TRUE    |
+| ???059 | 03.D    | F                                  | F                                  | TRUE    |
+| ???059 | 03.E    | V                                  | F                                  | FALSE   |
+| ???059 | 04.X    | D                                  | D                                  | TRUE    |
+| ???059 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???059 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???059 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???059 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???059 | 05.Q    | 2 5 8                              | 2 5 8                              | TRUE    |
+| ???059 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???059 | 06.X    | E                                  | E                                  | TRUE    |
+| ???059 | 07.X    | B                                  | B                                  | TRUE    |
+| ???059 | 08.M    | B                                  | C                                  | FALSE   |
+| ???059 | 08.N    | B                                  | A                                  | FALSE   |
+| ???059 | 08.O    | E                                  | B                                  | FALSE   |
+| ???059 | 09.X    | B                                  | B                                  | TRUE    |
+| ???059 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???059 | 11.M    | E                                  | D                                  | FALSE   |
+| ???059 | 11.N    | A                                  | A                                  | TRUE    |
+| ???059 | 12.M    | C                                  | C                                  | TRUE    |
+| ???059 | 12.N    | D                                  | D                                  | TRUE    |
+| ???059 | 14.A    | F                                  | F                                  | TRUE    |
+| ???059 | 14.B    | F                                  | V                                  | TRUE    |
+| ???059 | 14.C    | V                                  | V                                  | TRUE    |
+| ???059 | 14.D    | F                                  | F                                  | TRUE    |
+| ???059 | 14.E    | F                                  | F                                  | TRUE    |
+| ???059 | 15.X    | C                                  | E                                  | FALSE   |
+| ???059 | 16.M    | C                                  | C                                  | TRUE    |
+| ???059 | 16.N    | B                                  | B                                  | TRUE    |
+| ???059 | 17.X    | E                                  | E                                  | TRUE    |
+| ???059 | 18.X    | B                                  | B                                  | TRUE    |
+| ???059 | 19.M    | D                                  | D                                  | TRUE    |
+| ???059 | 19.N    | 4                                  | 2 1 1 0 0                          | FALSE   |
+| ???059 | 19.O    | C                                  | E                                  | FALSE   |
+| ???059 | 20.X    | D                                  | A                                  | FALSE   |
+| ???091 | 01.X    | C                                  | C                                  | TRUE    |
+| ???091 | 02.X    | A                                  | A                                  | TRUE    |
+| ???091 | 03.A    | F                                  | F                                  | TRUE    |
+| ???091 | 03.B    | F                                  | F                                  | TRUE    |
+| ???091 | 03.C    | V                                  | V                                  | TRUE    |
+| ???091 | 03.D    | F                                  | F                                  | TRUE    |
+| ???091 | 03.E    | F                                  | F                                  | TRUE    |
+| ???091 | 04.X    | D                                  | D                                  | TRUE    |
+| ???091 | 05.M    | 7 9                                | 7 9 12                             | FALSE   |
+| ???091 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???091 | 05.O    | 3 10 12                            | 3 10                               | FALSE   |
+| ???091 | 05.P    | 1 11 12                            | 1 11                               | FALSE   |
+| ???091 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???091 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???091 | 05.S    | 11                                 | 8                                  | FALSE   |
+| ???091 | 06.X    | E                                  | E                                  | TRUE    |
+| ???091 | 07.X    | B                                  | B                                  | TRUE    |
+| ???091 | 08.M    | E                                  | C                                  | FALSE   |
+| ???091 | 08.N    | B                                  | A                                  | FALSE   |
+| ???091 | 08.O    | B                                  | B                                  | TRUE    |
+| ???091 | 09.X    | C                                  | B                                  | FALSE   |
+| ???091 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???091 | 11.M    | D                                  | D                                  | TRUE    |
+| ???091 | 11.N    | D                                  | A                                  | FALSE   |
+| ???091 | 12.M    | C                                  | C                                  | TRUE    |
+| ???091 | 12.N    | D                                  | D                                  | TRUE    |
+| ???091 | 14.A    | V                                  | F                                  | FALSE   |
+| ???091 | 14.B    | F                                  | V                                  | TRUE    |
+| ???091 | 14.C    | V                                  | V                                  | TRUE    |
+| ???091 | 14.D    | F                                  | F                                  | TRUE    |
+| ???091 | 14.E    | V                                  | F                                  | FALSE   |
+| ???091 | 15.X    | E                                  | E                                  | TRUE    |
+| ???091 | 16.M    | C                                  | C                                  | TRUE    |
+| ???091 | 16.N    | B                                  | B                                  | TRUE    |
+| ???091 | 17.X    | C                                  | E                                  | FALSE   |
+| ???091 | 18.X    | A                                  | B                                  | FALSE   |
+| ???091 | 19.M    | D                                  | D                                  | TRUE    |
+| ???091 | 19.N    | 6                                  | 2 1 1 0 0                          | FALSE   |
+| ???091 | 19.O    | D                                  | E                                  | FALSE   |
+| ???091 | 20.X    | E                                  | A                                  | FALSE   |
+| ???155 | 01.X    | C                                  | C                                  | TRUE    |
+| ???155 | 02.X    | D                                  | A                                  | FALSE   |
+| ???155 | 03.A    | F                                  | F                                  | TRUE    |
+| ???155 | 03.B    | F                                  | F                                  | TRUE    |
+| ???155 | 03.C    | V                                  | V                                  | TRUE    |
+| ???155 | 03.D    | F                                  | F                                  | TRUE    |
+| ???155 | 03.E    | V                                  | F                                  | FALSE   |
+| ???155 | 04.X    | B                                  | D                                  | FALSE   |
+| ???155 | 05.M    | 7 9                                | 7 9 12                             | FALSE   |
+| ???155 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???155 | 05.O    | 3 10 12                            | 3 10                               | FALSE   |
+| ???155 | 05.P    | 1 11 12                            | 1 11                               | FALSE   |
+| ???155 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???155 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???155 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???155 | 05.T    | 348                                | -337                               | FALSE   |
+| ???155 | 05.U    | 348                                | 3972                               | FALSE   |
+| ???155 | 06.X    | E                                  | E                                  | TRUE    |
+| ???155 | 07.X    | B                                  | B                                  | TRUE    |
+| ???155 | 08.M    | A                                  | C                                  | FALSE   |
+| ???155 | 08.N    | B                                  | A                                  | FALSE   |
+| ???155 | 08.O    | B                                  | B                                  | TRUE    |
+| ???155 | 09.X    | C                                  | B                                  | FALSE   |
+| ???155 | 10.X    | 10101X                             | 01001X                             | FALSE   |
+| ???155 | 11.M    | C                                  | D                                  | FALSE   |
+| ???155 | 11.N    | E                                  | A                                  | FALSE   |
+| ???155 | 12.M    | C                                  | C                                  | TRUE    |
+| ???155 | 12.N    | D                                  | D                                  | TRUE    |
+| ???155 | 13.M    | 2                                  | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???155 | 13.N    | 13 2                               | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???155 | 14.A    | F                                  | F                                  | TRUE    |
+| ???155 | 14.B    | V                                  | V                                  | TRUE    |
+| ???155 | 14.C    | V                                  | V                                  | TRUE    |
+| ???155 | 14.D    | V                                  | F                                  | FALSE   |
+| ???155 | 14.E    | F                                  | F                                  | TRUE    |
+| ???155 | 15.X    | C                                  | E                                  | FALSE   |
+| ???155 | 16.M    | D                                  | C                                  | FALSE   |
+| ???155 | 16.N    | A                                  | B                                  | FALSE   |
+| ???155 | 17.X    | C                                  | E                                  | FALSE   |
+| ???155 | 18.X    | D                                  | B                                  | FALSE   |
+| ???155 | 19.M    | A                                  | D                                  | FALSE   |
+| ???155 | 19.N    | 1 0 0 0 0                          | 2 1 1 0 0                          | FALSE   |
+| ???155 | 19.O    | D                                  | E                                  | FALSE   |
+| ???155 | 20.X    | E                                  | A                                  | FALSE   |
+| ???207 | 01.X    | C                                  | C                                  | TRUE    |
+| ???207 | 02.X    | A                                  | A                                  | TRUE    |
+| ???207 | 03.A    | V                                  | F                                  | FALSE   |
+| ???207 | 03.B    | F                                  | F                                  | TRUE    |
+| ???207 | 03.C    | V                                  | V                                  | TRUE    |
+| ???207 | 03.D    | F                                  | F                                  | TRUE    |
+| ???207 | 03.E    | F                                  | F                                  | TRUE    |
+| ???207 | 04.X    | C                                  | D                                  | FALSE   |
+| ???207 | 05.S    | 16                                 | 8                                  | FALSE   |
+| ???207 | 06.X    | E                                  | E                                  | TRUE    |
+| ???207 | 07.X    | B                                  | B                                  | TRUE    |
+| ???207 | 08.M    | C                                  | C                                  | TRUE    |
+| ???207 | 08.N    | B                                  | A                                  | FALSE   |
+| ???207 | 08.O    | B                                  | B                                  | TRUE    |
+| ???207 | 09.X    | D                                  | B                                  | FALSE   |
+| ???207 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???207 | 11.M    | C                                  | D                                  | FALSE   |
+| ???207 | 11.N    | D                                  | A                                  | FALSE   |
+| ???207 | 12.M    | C                                  | C                                  | TRUE    |
+| ???207 | 12.N    | D                                  | D                                  | TRUE    |
+| ???207 | 13.M    | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | TRUE    |
+| ???207 | 13.N    | 13 16 1 2 12 6 15 5 7 5 11 5 8     | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???207 | 14.A    | F                                  | F                                  | TRUE    |
+| ???207 | 14.B    | V                                  | V                                  | TRUE    |
+| ???207 | 14.C    | V                                  | V                                  | TRUE    |
+| ???207 | 14.D    | F                                  | F                                  | TRUE    |
+| ???207 | 14.E    | F                                  | F                                  | TRUE    |
+| ???207 | 15.X    | D                                  | E                                  | FALSE   |
+| ???207 | 16.M    | C                                  | C                                  | TRUE    |
+| ???207 | 16.N    | B                                  | B                                  | TRUE    |
+| ???207 | 17.X    | E                                  | E                                  | TRUE    |
+| ???207 | 18.X    | B                                  | B                                  | TRUE    |
+| ???207 | 19.M    | D                                  | D                                  | TRUE    |
+| ???207 | 19.N    | 2 1 1 0 0                          | 2 1 1 0 0                          | TRUE    |
+| ???207 | 19.O    | E                                  | E                                  | TRUE    |
+| ???207 | 20.X    | A                                  | A                                  | TRUE    |
+| ???238 | 01.X    | C                                  | C                                  | TRUE    |
+| ???238 | 02.X    | A                                  | A                                  | TRUE    |
+| ???238 | 03.A    | F                                  | F                                  | TRUE    |
+| ???238 | 03.B    | F                                  | F                                  | TRUE    |
+| ???238 | 03.C    | V                                  | V                                  | TRUE    |
+| ???238 | 03.D    | F                                  | F                                  | TRUE    |
+| ???238 | 03.E    | V                                  | F                                  | FALSE   |
+| ???238 | 04.X    | D                                  | D                                  | TRUE    |
+| ???238 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???238 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???238 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???238 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???238 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???238 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???238 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???238 | 05.T    | 88                                 | -337                               | FALSE   |
+| ???238 | 05.U    | 993                                | 3972                               | FALSE   |
+| ???238 | 06.X    | E                                  | E                                  | TRUE    |
+| ???238 | 07.X    | B                                  | B                                  | TRUE    |
+| ???238 | 08.M    | C                                  | C                                  | TRUE    |
+| ???238 | 08.N    | A                                  | A                                  | TRUE    |
+| ???238 | 08.O    | B                                  | B                                  | TRUE    |
+| ???238 | 09.X    | B                                  | B                                  | TRUE    |
+| ???238 | 10.X    | 01001X                             | 01001X                             | TRUE    |
+| ???238 | 11.M    | D                                  | D                                  | TRUE    |
+| ???238 | 11.N    | A                                  | A                                  | TRUE    |
+| ???238 | 12.M    | C                                  | C                                  | TRUE    |
+| ???238 | 12.N    | D                                  | D                                  | TRUE    |
+| ???238 | 13.M    | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | TRUE    |
+| ???238 | 13.N    | 13 1 2 4 12 6 3 5 7 5 11 5 8       | 13 1 2 4 12 6 3 5 7 5 11 5 8       | TRUE    |
+| ???238 | 14.A    | F                                  | F                                  | TRUE    |
+| ???238 | 14.B    | V                                  | V                                  | TRUE    |
+| ???238 | 14.C    | F                                  | V                                  | FALSE   |
+| ???238 | 14.D    | F                                  | F                                  | TRUE    |
+| ???238 | 14.E    | F                                  | F                                  | TRUE    |
+| ???238 | 15.X    | E                                  | E                                  | TRUE    |
+| ???238 | 16.M    | C                                  | C                                  | TRUE    |
+| ???238 | 16.N    | B                                  | B                                  | TRUE    |
+| ???238 | 17.X    | E                                  | E                                  | TRUE    |
+| ???238 | 18.X    | B                                  | B                                  | TRUE    |
+| ???238 | 19.M    | D                                  | D                                  | TRUE    |
+| ???238 | 19.N    | 8 6 1 0                            | 2 1 1 0 0                          | FALSE   |
+| ???238 | 19.O    | B                                  | E                                  | FALSE   |
+| ???238 | 20.X    | A                                  | A                                  | TRUE    |
+| ???255 | 01.X    | C                                  | C                                  | TRUE    |
+| ???255 | 02.X    | A                                  | A                                  | TRUE    |
+| ???255 | 03.A    | F                                  | F                                  | TRUE    |
+| ???255 | 03.B    | F                                  | F                                  | TRUE    |
+| ???255 | 03.C    | V                                  | V                                  | TRUE    |
+| ???255 | 03.D    | F                                  | F                                  | TRUE    |
+| ???255 | 03.E    | F                                  | F                                  | TRUE    |
+| ???255 | 04.X    | A                                  | D                                  | FALSE   |
+| ???255 | 05.M    | 12 7 9                             | 7 9 12                             | FALSE   |
+| ???255 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???255 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???255 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???255 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???255 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???255 | 05.S    | 16                                 | 8                                  | FALSE   |
+| ???255 | 05.T    | 1444                               | -337                               | FALSE   |
+| ???255 | 05.U    | 1444                               | 3972                               | FALSE   |
+| ???255 | 06.X    | E                                  | E                                  | TRUE    |
+| ???255 | 07.X    | B                                  | B                                  | TRUE    |
+| ???255 | 08.M    | B                                  | C                                  | FALSE   |
+| ???255 | 08.N    | C                                  | A                                  | FALSE   |
+| ???255 | 08.O    | E                                  | B                                  | FALSE   |
+| ???255 | 09.X    | C                                  | B                                  | FALSE   |
+| ???255 | 10.X    | 10101X                             | 01001X                             | FALSE   |
+| ???255 | 11.M    | D                                  | D                                  | TRUE    |
+| ???255 | 11.N    | A                                  | A                                  | TRUE    |
+| ???255 | 12.M    | C                                  | C                                  | TRUE    |
+| ???255 | 12.N    | D                                  | D                                  | TRUE    |
+| ???255 | 14.A    | F                                  | F                                  | TRUE    |
+| ???255 | 14.B    | V                                  | V                                  | TRUE    |
+| ???255 | 14.D    | F                                  | F                                  | TRUE    |
+| ???255 | 14.E    | V                                  | F                                  | FALSE   |
+| ???255 | 15.X    | A                                  | E                                  | FALSE   |
+| ???255 | 16.M    | C                                  | C                                  | TRUE    |
+| ???255 | 16.N    | B                                  | B                                  | TRUE    |
+| ???255 | 17.X    | A                                  | E                                  | FALSE   |
+| ???255 | 18.X    | B                                  | B                                  | TRUE    |
+| ???255 | 19.M    | E                                  | D                                  | FALSE   |
+| ???255 | 19.N    | 8 7 4 3 3                          | 2 1 1 0 0                          | FALSE   |
+| ???255 | 19.O    | D                                  | E                                  | FALSE   |
+| ???255 | 20.X    | A                                  | A                                  | TRUE    |
+| ???256 | 01.X    | C                                  | C                                  | TRUE    |
+| ???256 | 02.X    | A                                  | A                                  | TRUE    |
+| ???256 | 03.A    | F                                  | F                                  | TRUE    |
+| ???256 | 03.B    | V                                  | F                                  | FALSE   |
+| ???256 | 03.C    | F                                  | V                                  | FALSE   |
+| ???256 | 03.D    | V                                  | F                                  | FALSE   |
+| ???256 | 03.E    | V                                  | F                                  | FALSE   |
+| ???256 | 04.X    | D                                  | D                                  | TRUE    |
+| ???256 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???256 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???256 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???256 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???256 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???256 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???256 | 05.S    | -8                                 | 8                                  | FALSE   |
+| ???256 | 05.T    | -330                               | -337                               | FALSE   |
+| ???256 | 05.U    | 18480                              | 3972                               | FALSE   |
+| ???256 | 06.X    | E                                  | E                                  | TRUE    |
+| ???256 | 07.X    | B                                  | B                                  | TRUE    |
+| ???256 | 08.M    | B                                  | C                                  | FALSE   |
+| ???256 | 08.N    | C                                  | A                                  | FALSE   |
+| ???256 | 08.O    | B                                  | B                                  | TRUE    |
+| ???256 | 09.X    | D                                  | B                                  | FALSE   |
+| ???256 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???256 | 11.M    | D                                  | D                                  | TRUE    |
+| ???256 | 11.N    | A                                  | A                                  | TRUE    |
+| ???256 | 12.M    | C                                  | C                                  | TRUE    |
+| ???256 | 12.N    | D                                  | D                                  | TRUE    |
+| ???256 | 13.M    | 2 4 12 1 6 9 11 3 7 10 8           | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???256 | 13.N    | 13 16 1 2 12 6 15 7 11 8           | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???256 | 14.A    | F                                  | F                                  | TRUE    |
+| ???256 | 14.B    | V                                  | V                                  | TRUE    |
+| ???256 | 14.C    | F                                  | V                                  | FALSE   |
+| ???256 | 14.D    | F                                  | F                                  | TRUE    |
+| ???256 | 14.E    | V                                  | F                                  | FALSE   |
+| ???256 | 15.X    | E                                  | E                                  | TRUE    |
+| ???256 | 16.M    | C                                  | C                                  | TRUE    |
+| ???256 | 16.N    | B                                  | B                                  | TRUE    |
+| ???256 | 17.X    | B                                  | E                                  | FALSE   |
+| ???256 | 18.X    | B                                  | B                                  | TRUE    |
+| ???256 | 19.M    | D                                  | D                                  | TRUE    |
+| ???256 | 19.N    | 3                                  | 2 1 1 0 0                          | FALSE   |
+| ???256 | 19.O    | E                                  | E                                  | TRUE    |
+| ???256 | 20.X    | A                                  | A                                  | TRUE    |
+| ???269 | 01.X    | C                                  | C                                  | TRUE    |
+| ???269 | 02.X    | D                                  | A                                  | FALSE   |
+| ???269 | 03.A    | V                                  | F                                  | FALSE   |
+| ???269 | 03.B    | F                                  | F                                  | TRUE    |
+| ???269 | 03.C    | V                                  | V                                  | TRUE    |
+| ???269 | 03.D    | F                                  | F                                  | TRUE    |
+| ???269 | 03.E    | V                                  | F                                  | FALSE   |
+| ???269 | 04.X    | D                                  | D                                  | TRUE    |
+| ???269 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???269 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???269 | 05.O    | 3                                  | 3 10                               | FALSE   |
+| ???269 | 05.P    | 11                                 | 1 11                               | FALSE   |
+| ???269 | 05.Q    | 2 5                                | 2 5 8                              | FALSE   |
+| ???269 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???269 | 05.S    | -2                                 | 8                                  | FALSE   |
+| ???269 | 05.T    | -90                                | -337                               | FALSE   |
+| ???269 | 05.U    | 128                                | 3972                               | FALSE   |
+| ???269 | 06.X    | E                                  | E                                  | TRUE    |
+| ???269 | 07.X    | B                                  | B                                  | TRUE    |
+| ???269 | 08.M    | B                                  | C                                  | FALSE   |
+| ???269 | 08.N    | A                                  | A                                  | TRUE    |
+| ???269 | 08.O    | B                                  | B                                  | TRUE    |
+| ???269 | 09.X    | D                                  | B                                  | FALSE   |
+| ???269 | 10.X    | 10101X                             | 01001X                             | FALSE   |
+| ???269 | 11.M    | D                                  | D                                  | TRUE    |
+| ???269 | 11.N    | A                                  | A                                  | TRUE    |
+| ???269 | 12.M    | C                                  | C                                  | TRUE    |
+| ???269 | 12.N    | D                                  | D                                  | TRUE    |
+| ???269 | 13.M    | 2 4 12 1 6 9 5 11 5 3 7 5 10 5 8   | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???269 | 13.N    | 13 2 4 1 12 3 5 7 5 11 5 8         | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???269 | 14.A    | F                                  | F                                  | TRUE    |
+| ???269 | 14.B    | V                                  | V                                  | TRUE    |
+| ???269 | 14.C    | F                                  | V                                  | FALSE   |
+| ???269 | 14.D    | F                                  | F                                  | TRUE    |
+| ???269 | 14.E    | F                                  | F                                  | TRUE    |
+| ???269 | 15.X    | A                                  | E                                  | FALSE   |
+| ???269 | 16.M    | C                                  | C                                  | TRUE    |
+| ???269 | 16.N    | A                                  | B                                  | FALSE   |
+| ???269 | 17.X    | E                                  | E                                  | TRUE    |
+| ???269 | 18.X    | B                                  | B                                  | TRUE    |
+| ???269 | 19.M    | D                                  | D                                  | TRUE    |
+| ???269 | 19.N    | 9                                  | 2 1 1 0 0                          | FALSE   |
+| ???269 | 19.O    | D                                  | E                                  | FALSE   |
+| ???269 | 20.X    | A                                  | A                                  | TRUE    |
+| ???271 | 01.X    | A                                  | C                                  | FALSE   |
+| ???271 | 02.X    | A                                  | A                                  | TRUE    |
+| ???271 | 03.A    | F                                  | F                                  | TRUE    |
+| ???271 | 03.B    | F                                  | F                                  | TRUE    |
+| ???271 | 03.C    | V                                  | V                                  | TRUE    |
+| ???271 | 03.D    | F                                  | F                                  | TRUE    |
+| ???271 | 03.E    | V                                  | F                                  | FALSE   |
+| ???271 | 04.X    | C                                  | D                                  | FALSE   |
+| ???271 | 05.M    | 12 7 9                             | 7 9 12                             | FALSE   |
+| ???271 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???271 | 05.O    | 10 3                               | 3 10                               | TRUE    |
+| ???271 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???271 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???271 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???271 | 05.U    | 2                                  | 3972                               | FALSE   |
+| ???271 | 06.X    | B                                  | E                                  | FALSE   |
+| ???271 | 07.X    | B                                  | B                                  | TRUE    |
+| ???271 | 08.M    | D                                  | C                                  | FALSE   |
+| ???271 | 08.N    | B                                  | A                                  | FALSE   |
+| ???271 | 08.O    | B                                  | B                                  | TRUE    |
+| ???271 | 09.X    | B                                  | B                                  | TRUE    |
+| ???271 | 10.X    | 10101X                             | 01001X                             | FALSE   |
+| ???271 | 11.M    | D                                  | D                                  | TRUE    |
+| ???271 | 11.N    | D                                  | A                                  | FALSE   |
+| ???271 | 12.M    | B                                  | C                                  | FALSE   |
+| ???271 | 12.N    | D                                  | D                                  | TRUE    |
+| ???271 | 14.A    | V                                  | F                                  | FALSE   |
+| ???271 | 14.B    | V                                  | V                                  | TRUE    |
+| ???271 | 14.C    | F                                  | V                                  | FALSE   |
+| ???271 | 14.D    | F                                  | F                                  | TRUE    |
+| ???271 | 14.E    | F                                  | F                                  | TRUE    |
+| ???271 | 15.X    | C                                  | E                                  | FALSE   |
+| ???271 | 16.M    | C                                  | C                                  | TRUE    |
+| ???271 | 16.N    | B                                  | B                                  | TRUE    |
+| ???271 | 17.X    | C                                  | E                                  | FALSE   |
+| ???271 | 18.X    | B                                  | B                                  | TRUE    |
+| ???271 | 19.M    | E                                  | D                                  | FALSE   |
+| ???271 | 19.N    | 8                                  | 2 1 1 0 0                          | FALSE   |
+| ???271 | 19.O    | B                                  | E                                  | FALSE   |
+| ???271 | 20.X    | A                                  | A                                  | TRUE    |
+| ???305 | 01.X    | C                                  | C                                  | TRUE    |
+| ???305 | 02.X    | A                                  | A                                  | TRUE    |
+| ???305 | 03.A    | V                                  | F                                  | FALSE   |
+| ???305 | 03.B    | F                                  | F                                  | TRUE    |
+| ???305 | 03.C    | V                                  | V                                  | TRUE    |
+| ???305 | 03.D    | F                                  | F                                  | TRUE    |
+| ???305 | 03.E    | V                                  | F                                  | FALSE   |
+| ???305 | 04.X    | D                                  | D                                  | TRUE    |
+| ???305 | 05.M    | 12 7 9                             | 7 9 12                             | FALSE   |
+| ???305 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???305 | 05.O    | 3                                  | 3 10                               | FALSE   |
+| ???305 | 05.P    | 11 10 1                            | 1 11                               | FALSE   |
+| ???305 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???305 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???305 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???305 | 05.T    | -4                                 | -337                               | FALSE   |
+| ???305 | 05.U    | 5296                               | 3972                               | FALSE   |
+| ???305 | 06.X    | E                                  | E                                  | TRUE    |
+| ???305 | 07.X    | B                                  | B                                  | TRUE    |
+| ???305 | 08.M    | C                                  | C                                  | TRUE    |
+| ???305 | 08.N    | C                                  | A                                  | FALSE   |
+| ???305 | 08.O    | B                                  | B                                  | TRUE    |
+| ???305 | 09.X    | C                                  | B                                  | FALSE   |
+| ???305 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???305 | 11.M    | D                                  | D                                  | TRUE    |
+| ???305 | 11.N    | A                                  | A                                  | TRUE    |
+| ???305 | 12.M    | A                                  | C                                  | FALSE   |
+| ???305 | 12.N    | D                                  | D                                  | TRUE    |
+| ???305 | 13.M    | 2 16 9 5 11 12 1 15 5 7 5 10 5 8   | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???305 | 13.N    | 15 15 5 7 16 8                     | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???305 | 14.A    | F                                  | F                                  | TRUE    |
+| ???305 | 14.B    | V                                  | V                                  | TRUE    |
+| ???305 | 14.C    | V                                  | V                                  | TRUE    |
+| ???305 | 14.D    | V                                  | F                                  | FALSE   |
+| ???305 | 14.E    | F                                  | F                                  | TRUE    |
+| ???305 | 15.X    | D                                  | E                                  | FALSE   |
+| ???305 | 16.M    | D                                  | C                                  | FALSE   |
+| ???305 | 16.N    | A                                  | B                                  | FALSE   |
+| ???305 | 17.X    | B                                  | E                                  | FALSE   |
+| ???305 | 18.X    | D                                  | B                                  | FALSE   |
+| ???305 | 19.M    | A                                  | D                                  | FALSE   |
+| ???305 | 19.O    | C                                  | E                                  | FALSE   |
+| ???305 | 20.X    | A                                  | A                                  | TRUE    |
+| ???424 | 01.X    | C                                  | C                                  | TRUE    |
+| ???424 | 02.X    | A                                  | A                                  | TRUE    |
+| ???424 | 03.A    | F                                  | F                                  | TRUE    |
+| ???424 | 03.B    | F                                  | F                                  | TRUE    |
+| ???424 | 03.C    | V                                  | V                                  | TRUE    |
+| ???424 | 03.D    | F                                  | F                                  | TRUE    |
+| ???424 | 03.E    | V                                  | F                                  | FALSE   |
+| ???424 | 04.X    | D                                  | D                                  | TRUE    |
+| ???424 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???424 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???424 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???424 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???424 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???424 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???424 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???424 | 05.T    | 2880                               | -337                               | FALSE   |
+| ???424 | 05.U    | 4                                  | 3972                               | FALSE   |
+| ???424 | 06.X    | E                                  | E                                  | TRUE    |
+| ???424 | 07.X    | B                                  | B                                  | TRUE    |
+| ???424 | 08.M    | A                                  | C                                  | FALSE   |
+| ???424 | 08.N    | E                                  | A                                  | FALSE   |
+| ???424 | 08.O    | B                                  | B                                  | TRUE    |
+| ???424 | 09.X    | D                                  | B                                  | FALSE   |
+| ???424 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???424 | 11.M    | A                                  | D                                  | FALSE   |
+| ???424 | 11.N    | A                                  | A                                  | TRUE    |
+| ???424 | 12.M    | C                                  | C                                  | TRUE    |
+| ???424 | 12.N    | D                                  | D                                  | TRUE    |
+| ???424 | 13.M    | 2 4 12 1 6 9 5 11 5 7 5 10 5 8     | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???424 | 13.N    | 13 4 1 6 3 5 7 5 11 5 8            | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???424 | 14.A    | F                                  | F                                  | TRUE    |
+| ???424 | 14.B    | V                                  | V                                  | TRUE    |
+| ???424 | 14.C    | V                                  | V                                  | TRUE    |
+| ???424 | 14.D    | V                                  | F                                  | FALSE   |
+| ???424 | 14.E    | V                                  | F                                  | FALSE   |
+| ???424 | 15.X    | C                                  | E                                  | FALSE   |
+| ???424 | 16.M    | C                                  | C                                  | TRUE    |
+| ???424 | 16.N    | B                                  | B                                  | TRUE    |
+| ???424 | 17.X    | C                                  | E                                  | FALSE   |
+| ???424 | 18.X    | B                                  | B                                  | TRUE    |
+| ???424 | 19.M    | D                                  | D                                  | TRUE    |
+| ???424 | 19.N    | 4                                  | 2 1 1 0 0                          | FALSE   |
+| ???424 | 19.O    | C                                  | E                                  | FALSE   |
+| ???424 | 20.X    | D                                  | A                                  | FALSE   |
+| ???490 | 01.X    | E                                  | C                                  | FALSE   |
+| ???490 | 02.X    | E                                  | A                                  | FALSE   |
+| ???490 | 03.A    | V                                  | F                                  | FALSE   |
+| ???490 | 03.B    | F                                  | F                                  | TRUE    |
+| ???490 | 03.C    | V                                  | V                                  | TRUE    |
+| ???490 | 03.D    | F                                  | F                                  | TRUE    |
+| ???490 | 03.E    | F                                  | F                                  | TRUE    |
+| ???490 | 04.X    | D                                  | D                                  | TRUE    |
+| ???490 | 05.M    | 7 9                                | 7 9 12                             | FALSE   |
+| ???490 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???490 | 05.O    | 10 3 12                            | 3 10                               | FALSE   |
+| ???490 | 05.P    | 11 1 12                            | 1 11                               | FALSE   |
+| ???490 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???490 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???490 | 05.S    | 11                                 | 8                                  | FALSE   |
+| ???490 | 06.X    | E                                  | E                                  | TRUE    |
+| ???490 | 07.X    | B                                  | B                                  | TRUE    |
+| ???490 | 08.M    | E                                  | C                                  | FALSE   |
+| ???490 | 08.N    | B                                  | A                                  | FALSE   |
+| ???490 | 08.O    | E                                  | B                                  | FALSE   |
+| ???490 | 09.X    | B                                  | B                                  | TRUE    |
+| ???490 | 10.X    | 10101X                             | 01001X                             | FALSE   |
+| ???490 | 11.M    | D                                  | D                                  | TRUE    |
+| ???490 | 11.N    | A                                  | A                                  | TRUE    |
+| ???490 | 12.M    | C                                  | C                                  | TRUE    |
+| ???490 | 12.N    | D                                  | D                                  | TRUE    |
+| ???490 | 14.A    | F                                  | F                                  | TRUE    |
+| ???490 | 14.B    | V                                  | V                                  | TRUE    |
+| ???490 | 14.C    | F                                  | V                                  | FALSE   |
+| ???490 | 14.D    | V                                  | F                                  | FALSE   |
+| ???490 | 14.E    | F                                  | F                                  | TRUE    |
+| ???490 | 15.X    | C                                  | E                                  | FALSE   |
+| ???490 | 16.M    | C                                  | C                                  | TRUE    |
+| ???490 | 16.N    | B                                  | B                                  | TRUE    |
+| ???490 | 17.X    | C                                  | E                                  | FALSE   |
+| ???490 | 18.X    | C                                  | B                                  | FALSE   |
+| ???490 | 19.M    | B                                  | D                                  | FALSE   |
+| ???490 | 19.O    | C                                  | E                                  | FALSE   |
+| ???490 | 20.X    | D                                  | A                                  | FALSE   |
+| ???569 | 01.X    | C                                  | C                                  | TRUE    |
+| ???569 | 02.X    | D                                  | A                                  | FALSE   |
+| ???569 | 03.A    | V                                  | F                                  | FALSE   |
+| ???569 | 03.B    | F                                  | F                                  | TRUE    |
+| ???569 | 03.C    | V                                  | V                                  | TRUE    |
+| ???569 | 03.D    | F                                  | F                                  | TRUE    |
+| ???569 | 03.E    | F                                  | F                                  | TRUE    |
+| ???569 | 04.X    | C                                  | D                                  | FALSE   |
+| ???569 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???569 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???569 | 05.O    | 1 2 3 10                           | 3 10                               | FALSE   |
+| ???569 | 05.P    | 11                                 | 1 11                               | FALSE   |
+| ???569 | 05.Q    | 5 8                                | 2 5 8                              | FALSE   |
+| ???569 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???569 | 05.S    | 12                                 | 8                                  | FALSE   |
+| ???569 | 05.T    | 30                                 | -337                               | FALSE   |
+| ???569 | 05.U    | 42                                 | 3972                               | FALSE   |
+| ???569 | 06.X    | E                                  | E                                  | TRUE    |
+| ???569 | 07.X    | B                                  | B                                  | TRUE    |
+| ???569 | 08.M    | B                                  | C                                  | FALSE   |
+| ???569 | 08.N    | E                                  | A                                  | FALSE   |
+| ???569 | 08.O    | B                                  | B                                  | TRUE    |
+| ???569 | 09.X    | B                                  | B                                  | TRUE    |
+| ???569 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???569 | 11.M    | C                                  | D                                  | FALSE   |
+| ???569 | 11.N    | C                                  | A                                  | FALSE   |
+| ???569 | 12.M    | C                                  | C                                  | TRUE    |
+| ???569 | 12.N    | C                                  | D                                  | FALSE   |
+| ???569 | 14.A    | F                                  | F                                  | TRUE    |
+| ???569 | 14.B    | V                                  | V                                  | TRUE    |
+| ???569 | 14.C    | V                                  | V                                  | TRUE    |
+| ???569 | 14.D    | F                                  | F                                  | TRUE    |
+| ???569 | 14.E    | F                                  | F                                  | TRUE    |
+| ???569 | 15.X    | E                                  | E                                  | TRUE    |
+| ???569 | 16.M    | C                                  | C                                  | TRUE    |
+| ???569 | 16.N    | B                                  | B                                  | TRUE    |
+| ???569 | 17.X    | A                                  | E                                  | FALSE   |
+| ???569 | 18.X    | C                                  | B                                  | FALSE   |
+| ???569 | 19.M    | C                                  | D                                  | FALSE   |
+| ???569 | 19.N    | 6                                  | 2 1 1 0 0                          | FALSE   |
+| ???569 | 19.O    | C                                  | E                                  | FALSE   |
+| ???569 | 20.X    | D                                  | A                                  | FALSE   |
+| ???578 | 01.X    | C                                  | C                                  | TRUE    |
+| ???578 | 02.X    | A                                  | A                                  | TRUE    |
+| ???578 | 03.A    | V                                  | F                                  | FALSE   |
+| ???578 | 03.B    | F                                  | F                                  | TRUE    |
+| ???578 | 03.C    | V                                  | V                                  | TRUE    |
+| ???578 | 03.D    | F                                  | F                                  | TRUE    |
+| ???578 | 03.E    | F                                  | F                                  | TRUE    |
+| ???578 | 04.X    | D                                  | D                                  | TRUE    |
+| ???578 | 05.M    | 7 12 9                             | 7 9 12                             | FALSE   |
+| ???578 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???578 | 05.O    | 10 3                               | 3 10                               | TRUE    |
+| ???578 | 05.P    | 11 1                               | 1 11                               | TRUE    |
+| ???578 | 05.Q    | 2 5 8                              | 2 5 8                              | TRUE    |
+| ???578 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???578 | 05.S    | -8                                 | 8                                  | FALSE   |
+| ???578 | 05.T    | -1320                              | -337                               | FALSE   |
+| ???578 | 05.U    | -1325                              | 3972                               | FALSE   |
+| ???578 | 06.X    | E                                  | E                                  | TRUE    |
+| ???578 | 07.X    | B                                  | B                                  | TRUE    |
+| ???578 | 08.M    | C                                  | C                                  | TRUE    |
+| ???578 | 08.N    | B                                  | A                                  | FALSE   |
+| ???578 | 08.O    | B                                  | B                                  | TRUE    |
+| ???578 | 09.X    | D                                  | B                                  | FALSE   |
+| ???578 | 10.X    | 01001X                             | 01001X                             | TRUE    |
+| ???578 | 11.M    | D                                  | D                                  | TRUE    |
+| ???578 | 11.N    | A                                  | A                                  | TRUE    |
+| ???578 | 12.M    | C                                  | C                                  | TRUE    |
+| ???578 | 12.N    | D                                  | D                                  | TRUE    |
+| ???578 | 13.M    | 1 2 14 12 1 9 11 15 7 10 8         | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???578 | 13.N    | 13 1 2 16 12 6 15 7 11 8           | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???578 | 14.A    | F                                  | F                                  | TRUE    |
+| ???578 | 14.B    | V                                  | V                                  | TRUE    |
+| ???578 | 14.C    | F                                  | V                                  | FALSE   |
+| ???578 | 14.D    | V                                  | F                                  | FALSE   |
+| ???578 | 14.E    | F                                  | F                                  | TRUE    |
+| ???578 | 15.X    | E                                  | E                                  | TRUE    |
+| ???578 | 16.M    | C                                  | C                                  | TRUE    |
+| ???578 | 16.N    | B                                  | B                                  | TRUE    |
+| ???578 | 17.X    | E                                  | E                                  | TRUE    |
+| ???578 | 18.X    | B                                  | B                                  | TRUE    |
+| ???578 | 19.M    | D                                  | D                                  | TRUE    |
+| ???578 | 19.N    | 9                                  | 2 1 1 0 0                          | FALSE   |
+| ???578 | 19.O    | E                                  | E                                  | TRUE    |
+| ???578 | 20.X    | B                                  | A                                  | FALSE   |
+| ???589 | 01.X    | C                                  | C                                  | TRUE    |
+| ???589 | 02.X    | A                                  | A                                  | TRUE    |
+| ???589 | 03.A    | V                                  | F                                  | FALSE   |
+| ???589 | 03.B    | F                                  | F                                  | TRUE    |
+| ???589 | 03.C    | V                                  | V                                  | TRUE    |
+| ???589 | 03.D    | F                                  | F                                  | TRUE    |
+| ???589 | 03.E    | F                                  | F                                  | TRUE    |
+| ???589 | 04.X    | D                                  | D                                  | TRUE    |
+| ???589 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???589 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???589 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???589 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???589 | 05.Q    | 2 5 8                              | 2 5 8                              | TRUE    |
+| ???589 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???589 | 05.S    | -16                                | 8                                  | FALSE   |
+| ???589 | 05.T    | -1320                              | -337                               | FALSE   |
+| ???589 | 05.U    | 1336                               | 3972                               | FALSE   |
+| ???589 | 06.X    | E                                  | E                                  | TRUE    |
+| ???589 | 07.X    | B                                  | B                                  | TRUE    |
+| ???589 | 08.M    | B                                  | C                                  | FALSE   |
+| ???589 | 08.N    | B                                  | A                                  | FALSE   |
+| ???589 | 08.O    | B                                  | B                                  | TRUE    |
+| ???589 | 09.X    | D                                  | B                                  | FALSE   |
+| ???589 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???589 | 11.M    | D                                  | D                                  | TRUE    |
+| ???589 | 11.N    | A                                  | A                                  | TRUE    |
+| ???589 | 12.M    | C                                  | C                                  | TRUE    |
+| ???589 | 12.N    | D                                  | D                                  | TRUE    |
+| ???589 | 13.M    | 6 15 5                             | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???589 | 14.A    | V                                  | F                                  | FALSE   |
+| ???589 | 14.B    | V                                  | V                                  | TRUE    |
+| ???589 | 14.C    | V                                  | V                                  | TRUE    |
+| ???589 | 14.D    | F                                  | F                                  | TRUE    |
+| ???589 | 14.E    | F                                  | F                                  | TRUE    |
+| ???589 | 15.X    | A                                  | E                                  | FALSE   |
+| ???589 | 16.M    | C                                  | C                                  | TRUE    |
+| ???589 | 16.N    | B                                  | B                                  | TRUE    |
+| ???589 | 17.X    | C                                  | E                                  | FALSE   |
+| ???589 | 18.X    | C                                  | B                                  | FALSE   |
+| ???589 | 19.M    | A                                  | D                                  | FALSE   |
+| ???589 | 19.N    | 8 2 1                              | 2 1 1 0 0                          | FALSE   |
+| ???589 | 19.O    | C                                  | E                                  | FALSE   |
+| ???589 | 20.X    | A                                  | A                                  | TRUE    |
+| ???673 | 01.X    | C                                  | C                                  | TRUE    |
+| ???673 | 02.X    | D                                  | A                                  | FALSE   |
+| ???673 | 03.A    | V                                  | F                                  | FALSE   |
+| ???673 | 03.B    | F                                  | F                                  | TRUE    |
+| ???673 | 03.C    | V                                  | V                                  | TRUE    |
+| ???673 | 03.D    | F                                  | F                                  | TRUE    |
+| ???673 | 03.E    | F                                  | F                                  | TRUE    |
+| ???673 | 04.X    | D                                  | D                                  | TRUE    |
+| ???673 | 05.M    | 7 12 9                             | 7 9 12                             | FALSE   |
+| ???673 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???673 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???673 | 05.P    | 11 1                               | 1 11                               | TRUE    |
+| ???673 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???673 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???673 | 06.X    | E                                  | E                                  | TRUE    |
+| ???673 | 07.X    | E                                  | B                                  | FALSE   |
+| ???673 | 08.M    | B                                  | C                                  | FALSE   |
+| ???673 | 08.N    | B                                  | A                                  | FALSE   |
+| ???673 | 08.O    | C                                  | B                                  | FALSE   |
+| ???673 | 09.X    | D                                  | B                                  | FALSE   |
+| ???673 | 10.X    | 10101X                             | 01001X                             | FALSE   |
+| ???673 | 11.M    | E                                  | D                                  | FALSE   |
+| ???673 | 11.N    | D                                  | A                                  | FALSE   |
+| ???673 | 12.M    | C                                  | C                                  | TRUE    |
+| ???673 | 12.N    | C                                  | D                                  | FALSE   |
+| ???673 | 14.A    | F                                  | F                                  | TRUE    |
+| ???673 | 14.B    | F                                  | V                                  | TRUE    |
+| ???673 | 14.C    | F                                  | V                                  | FALSE   |
+| ???673 | 14.D    | V                                  | F                                  | FALSE   |
+| ???673 | 14.E    | F                                  | F                                  | TRUE    |
+| ???673 | 15.X    | C                                  | E                                  | FALSE   |
+| ???673 | 16.M    | C                                  | C                                  | TRUE    |
+| ???673 | 16.N    | B                                  | B                                  | TRUE    |
+| ???673 | 17.X    | C                                  | E                                  | FALSE   |
+| ???673 | 18.X    | B                                  | B                                  | TRUE    |
+| ???673 | 19.M    | D                                  | D                                  | TRUE    |
+| ???673 | 19.O    | C                                  | E                                  | FALSE   |
+| ???673 | 20.X    | D                                  | A                                  | FALSE   |
+| ???692 | 01.X    | C                                  | C                                  | TRUE    |
+| ???692 | 02.X    | A                                  | A                                  | TRUE    |
+| ???692 | 03.A    | F                                  | F                                  | TRUE    |
+| ???692 | 03.B    | F                                  | F                                  | TRUE    |
+| ???692 | 03.C    | V                                  | V                                  | TRUE    |
+| ???692 | 03.D    | F                                  | F                                  | TRUE    |
+| ???692 | 03.E    | F                                  | F                                  | TRUE    |
+| ???692 | 04.X    | D                                  | D                                  | TRUE    |
+| ???692 | 05.M    | 7 12 9                             | 7 9 12                             | FALSE   |
+| ???692 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???692 | 05.O    | 10 3                               | 3 10                               | TRUE    |
+| ???692 | 05.P    | 11 1                               | 1 11                               | TRUE    |
+| ???692 | 05.Q    | 2 5 8                              | 2 5 8                              | TRUE    |
+| ???692 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???692 | 05.S    | -8                                 | 8                                  | FALSE   |
+| ???692 | 05.T    | 356                                | -337                               | FALSE   |
+| ???692 | 05.U    | 1104                               | 3972                               | FALSE   |
+| ???692 | 06.X    | E                                  | E                                  | TRUE    |
+| ???692 | 07.X    | B                                  | B                                  | TRUE    |
+| ???692 | 08.M    | C                                  | C                                  | TRUE    |
+| ???692 | 08.N    | B                                  | A                                  | FALSE   |
+| ???692 | 08.O    | B                                  | B                                  | TRUE    |
+| ???692 | 09.X    | B                                  | B                                  | TRUE    |
+| ???692 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???692 | 11.M    | D                                  | D                                  | TRUE    |
+| ???692 | 11.N    | A                                  | A                                  | TRUE    |
+| ???692 | 12.M    | C                                  | C                                  | TRUE    |
+| ???692 | 12.N    | D                                  | D                                  | TRUE    |
+| ???692 | 13.M    | 2 16 12 1 6 9 5 11 5 15 5 7 5 10 8 | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???692 | 13.N    | 13 1 2 16 12 6 15 5 7 5 11 5 8     | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???692 | 14.A    | F                                  | F                                  | TRUE    |
+| ???692 | 14.B    | F                                  | V                                  | TRUE    |
+| ???692 | 14.C    | V                                  | V                                  | TRUE    |
+| ???692 | 14.D    | F                                  | F                                  | TRUE    |
+| ???692 | 14.E    | F                                  | F                                  | TRUE    |
+| ???692 | 15.X    | E                                  | E                                  | TRUE    |
+| ???692 | 16.M    | C                                  | C                                  | TRUE    |
+| ???692 | 16.N    | B                                  | B                                  | TRUE    |
+| ???692 | 17.X    | E                                  | E                                  | TRUE    |
+| ???692 | 18.X    | B                                  | B                                  | TRUE    |
+| ???692 | 19.M    | A                                  | D                                  | FALSE   |
+| ???692 | 19.N    | 2 1 1 0 0                          | 2 1 1 0 0                          | TRUE    |
+| ???692 | 19.O    | E                                  | E                                  | TRUE    |
+| ???692 | 20.X    | A                                  | A                                  | TRUE    |
+| ???700 | 01.X    | C                                  | C                                  | TRUE    |
+| ???700 | 02.X    | A                                  | A                                  | TRUE    |
+| ???700 | 03.A    | V                                  | F                                  | FALSE   |
+| ???700 | 03.B    | F                                  | F                                  | TRUE    |
+| ???700 | 03.C    | V                                  | V                                  | TRUE    |
+| ???700 | 03.D    | F                                  | F                                  | TRUE    |
+| ???700 | 03.E    | F                                  | F                                  | TRUE    |
+| ???700 | 04.X    | D                                  | D                                  | TRUE    |
+| ???700 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???700 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???700 | 05.O    | 10 3                               | 3 10                               | TRUE    |
+| ???700 | 05.P    | 11 1                               | 1 11                               | TRUE    |
+| ???700 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???700 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???700 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???700 | 05.T    | 368                                | -337                               | FALSE   |
+| ???700 | 05.U    | 3988                               | 3972                               | FALSE   |
+| ???700 | 06.X    | E                                  | E                                  | TRUE    |
+| ???700 | 07.X    | B                                  | B                                  | TRUE    |
+| ???700 | 08.M    | B                                  | C                                  | FALSE   |
+| ???700 | 08.N    | B                                  | A                                  | FALSE   |
+| ???700 | 08.O    | C                                  | B                                  | FALSE   |
+| ???700 | 09.X    | A                                  | B                                  | FALSE   |
+| ???700 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???700 | 11.M    | D                                  | D                                  | TRUE    |
+| ???700 | 11.N    | A                                  | A                                  | TRUE    |
+| ???700 | 12.M    | C                                  | C                                  | TRUE    |
+| ???700 | 12.N    | D                                  | D                                  | TRUE    |
+| ???700 | 13.M    | 16 6 2 12 9 11 1 15 7 10 8         | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???700 | 13.N    | 16 13 15 1 7 2 12 11 8             | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???700 | 14.A    | V                                  | F                                  | FALSE   |
+| ???700 | 14.B    | F                                  | V                                  | TRUE    |
+| ???700 | 14.C    | F                                  | V                                  | FALSE   |
+| ???700 | 14.D    | F                                  | F                                  | TRUE    |
+| ???700 | 14.E    | F                                  | F                                  | TRUE    |
+| ???700 | 15.X    | A                                  | E                                  | FALSE   |
+| ???700 | 16.M    | C                                  | C                                  | TRUE    |
+| ???700 | 16.N    | B                                  | B                                  | TRUE    |
+| ???700 | 17.X    | E                                  | E                                  | TRUE    |
+| ???700 | 18.X    | B                                  | B                                  | TRUE    |
+| ???700 | 19.M    | A                                  | D                                  | FALSE   |
+| ???700 | 19.N    | 8                                  | 2 1 1 0 0                          | FALSE   |
+| ???700 | 19.O    | E                                  | E                                  | TRUE    |
+| ???700 | 20.X    | D                                  | A                                  | FALSE   |
+| ???704 | 01.X    | C                                  | C                                  | TRUE    |
+| ???704 | 02.X    | A                                  | A                                  | TRUE    |
+| ???704 | 03.A    | F                                  | F                                  | TRUE    |
+| ???704 | 03.B    | F                                  | F                                  | TRUE    |
+| ???704 | 03.C    | V                                  | V                                  | TRUE    |
+| ???704 | 03.D    | F                                  | F                                  | TRUE    |
+| ???704 | 03.E    | F                                  | F                                  | TRUE    |
+| ???704 | 04.X    | D                                  | D                                  | TRUE    |
+| ???704 | 05.U    | 1314*SIZEOF(FLOAT)                 | 3972                               | FALSE   |
+| ???704 | 06.X    | E                                  | E                                  | TRUE    |
+| ???704 | 07.X    | B                                  | B                                  | TRUE    |
+| ???704 | 08.M    | C                                  | C                                  | TRUE    |
+| ???704 | 08.N    | E                                  | A                                  | FALSE   |
+| ???704 | 08.O    | B                                  | B                                  | TRUE    |
+| ???704 | 09.X    | D                                  | B                                  | FALSE   |
+| ???704 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???704 | 11.M    | C                                  | D                                  | FALSE   |
+| ???704 | 11.N    | D                                  | A                                  | FALSE   |
+| ???704 | 12.M    | C                                  | C                                  | TRUE    |
+| ???704 | 12.N    | D                                  | D                                  | TRUE    |
+| ???704 | 13.M    | 4 6 9 5 11 5 3 5 3 7 5 10 5 8      | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???704 | 13.N    | 4 6 3 5 9 5 7 5 11 5 8             | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???704 | 14.A    | F                                  | F                                  | TRUE    |
+| ???704 | 14.B    | V                                  | V                                  | TRUE    |
+| ???704 | 14.C    | V                                  | V                                  | TRUE    |
+| ???704 | 14.D    | F                                  | F                                  | TRUE    |
+| ???704 | 14.E    | F                                  | F                                  | TRUE    |
+| ???704 | 15.X    | B                                  | E                                  | FALSE   |
+| ???704 | 16.M    | C                                  | C                                  | TRUE    |
+| ???704 | 16.N    | B                                  | B                                  | TRUE    |
+| ???704 | 17.X    | E                                  | E                                  | TRUE    |
+| ???704 | 18.X    | B                                  | B                                  | TRUE    |
+| ???704 | 19.M    | B                                  | D                                  | FALSE   |
+| ???704 | 19.N    | 3                                  | 2 1 1 0 0                          | FALSE   |
+| ???704 | 19.O    | B                                  | E                                  | FALSE   |
+| ???704 | 20.X    | A                                  | A                                  | TRUE    |
+| ???713 | 01.X    | C                                  | C                                  | TRUE    |
+| ???713 | 02.X    | A                                  | A                                  | TRUE    |
+| ???713 | 03.A    | V                                  | F                                  | FALSE   |
+| ???713 | 03.B    | F                                  | F                                  | TRUE    |
+| ???713 | 03.C    | V                                  | V                                  | TRUE    |
+| ???713 | 03.D    | F                                  | F                                  | TRUE    |
+| ???713 | 03.E    | F                                  | F                                  | TRUE    |
+| ???713 | 04.X    | D                                  | D                                  | TRUE    |
+| ???713 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???713 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???713 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???713 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???713 | 05.Q    | 2 5 8                              | 2 5 8                              | TRUE    |
+| ???713 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???713 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???713 | 05.T    | 352                                | -337                               | FALSE   |
+| ???713 | 05.U    | 3972                               | 3972                               | TRUE    |
+| ???713 | 06.X    | E                                  | E                                  | TRUE    |
+| ???713 | 07.X    | B                                  | B                                  | TRUE    |
+| ???713 | 08.M    | C                                  | C                                  | TRUE    |
+| ???713 | 08.N    | B                                  | A                                  | FALSE   |
+| ???713 | 08.O    | E                                  | B                                  | FALSE   |
+| ???713 | 09.X    | C                                  | B                                  | FALSE   |
+| ???713 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???713 | 11.M    | D                                  | D                                  | TRUE    |
+| ???713 | 11.N    | D                                  | A                                  | FALSE   |
+| ???713 | 12.M    | C                                  | C                                  | TRUE    |
+| ???713 | 12.N    | D                                  | D                                  | TRUE    |
+| ???713 | 13.N    | 13 16 1 6 15 5 7 12 11             | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???713 | 14.A    | F                                  | F                                  | TRUE    |
+| ???713 | 14.B    | V                                  | V                                  | TRUE    |
+| ???713 | 14.C    | V                                  | V                                  | TRUE    |
+| ???713 | 14.D    | F                                  | F                                  | TRUE    |
+| ???713 | 14.E    | F                                  | F                                  | TRUE    |
+| ???713 | 15.X    | D                                  | E                                  | FALSE   |
+| ???713 | 16.M    | C                                  | C                                  | TRUE    |
+| ???713 | 16.N    | B                                  | B                                  | TRUE    |
+| ???713 | 17.X    | E                                  | E                                  | TRUE    |
+| ???713 | 18.X    | B                                  | B                                  | TRUE    |
+| ???713 | 19.M    | D                                  | D                                  | TRUE    |
+| ???713 | 19.N    | 2                                  | 2 1 1 0 0                          | FALSE   |
+| ???713 | 19.O    | E                                  | E                                  | TRUE    |
+| ???713 | 20.X    | A                                  | A                                  | TRUE    |
+| ???722 | 01.X    | C                                  | C                                  | TRUE    |
+| ???722 | 02.X    | A                                  | A                                  | TRUE    |
+| ???722 | 03.A    | F                                  | F                                  | TRUE    |
+| ???722 | 03.B    | F                                  | F                                  | TRUE    |
+| ???722 | 03.C    | V                                  | V                                  | TRUE    |
+| ???722 | 03.D    | F                                  | F                                  | TRUE    |
+| ???722 | 03.E    | F                                  | F                                  | TRUE    |
+| ???722 | 04.X    | D                                  | D                                  | TRUE    |
+| ???722 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???722 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???722 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???722 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???722 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???722 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???722 | 05.S    | -4                                 | 8                                  | FALSE   |
+| ???722 | 05.T    | 352                                | -337                               | FALSE   |
+| ???722 | 05.U    | 42                                 | 3972                               | FALSE   |
+| ???722 | 06.X    | E                                  | E                                  | TRUE    |
+| ???722 | 07.X    | B                                  | B                                  | TRUE    |
+| ???722 | 08.M    | C                                  | C                                  | TRUE    |
+| ???722 | 08.N    | B                                  | A                                  | FALSE   |
+| ???722 | 08.O    | B                                  | B                                  | TRUE    |
+| ???722 | 09.X    | B                                  | B                                  | TRUE    |
+| ???722 | 10.X    | 10101X                             | 01001X                             | FALSE   |
+| ???722 | 11.M    | D                                  | D                                  | TRUE    |
+| ???722 | 11.N    | A                                  | A                                  | TRUE    |
+| ???722 | 12.M    | C                                  | C                                  | TRUE    |
+| ???722 | 12.N    | D                                  | D                                  | TRUE    |
+| ???722 | 13.M    | 2 16 12 1 6 11 5 3 7 5 8 10        | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???722 | 13.N    | 13 2 16 12 1 6 11 5 3 7 5 8 10     | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???722 | 14.A    | F                                  | F                                  | TRUE    |
+| ???722 | 14.B    | F                                  | V                                  | TRUE    |
+| ???722 | 14.C    | V                                  | V                                  | TRUE    |
+| ???722 | 14.D    | F                                  | F                                  | TRUE    |
+| ???722 | 14.E    | F                                  | F                                  | TRUE    |
+| ???722 | 15.X    | D                                  | E                                  | FALSE   |
+| ???722 | 16.M    | C                                  | C                                  | TRUE    |
+| ???722 | 16.N    | B                                  | B                                  | TRUE    |
+| ???722 | 17.X    | E                                  | E                                  | TRUE    |
+| ???722 | 18.X    | B                                  | B                                  | TRUE    |
+| ???722 | 19.M    | D                                  | D                                  | TRUE    |
+| ???722 | 19.N    | 8                                  | 2 1 1 0 0                          | FALSE   |
+| ???722 | 19.O    | E                                  | E                                  | TRUE    |
+| ???722 | 20.X    | D                                  | A                                  | FALSE   |
+| ???723 | 01.X    | C                                  | C                                  | TRUE    |
+| ???723 | 02.X    | A                                  | A                                  | TRUE    |
+| ???723 | 03.A    | V                                  | F                                  | FALSE   |
+| ???723 | 03.B    | F                                  | F                                  | TRUE    |
+| ???723 | 03.C    | V                                  | V                                  | TRUE    |
+| ???723 | 03.D    | F                                  | F                                  | TRUE    |
+| ???723 | 03.E    | F                                  | F                                  | TRUE    |
+| ???723 | 04.X    | C                                  | D                                  | FALSE   |
+| ???723 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???723 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???723 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???723 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???723 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???723 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???723 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???723 | 06.X    | E                                  | E                                  | TRUE    |
+| ???723 | 07.X    | B                                  | B                                  | TRUE    |
+| ???723 | 08.M    | C                                  | C                                  | TRUE    |
+| ???723 | 08.N    | B                                  | A                                  | FALSE   |
+| ???723 | 08.O    | B                                  | B                                  | TRUE    |
+| ???723 | 09.X    | B                                  | B                                  | TRUE    |
+| ???723 | 10.X    | 00001X                             | 01001X                             | FALSE   |
+| ???723 | 11.M    | D                                  | D                                  | TRUE    |
+| ???723 | 11.N    | A                                  | A                                  | TRUE    |
+| ???723 | 12.M    | C                                  | C                                  | TRUE    |
+| ???723 | 12.N    | D                                  | D                                  | TRUE    |
+| ???723 | 13.M    | 2 12 4 1 6 9 5 11 5 3 5 7 5 10 5 8 | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???723 | 13.N    | 13 1 6 9 5 11 5 3 5 7 5 10 5 8 4   | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???723 | 14.A    | F                                  | F                                  | TRUE    |
+| ???723 | 14.B    | V                                  | V                                  | TRUE    |
+| ???723 | 14.C    | V                                  | V                                  | TRUE    |
+| ???723 | 14.D    | F                                  | F                                  | TRUE    |
+| ???723 | 14.E    | F                                  | F                                  | TRUE    |
+| ???723 | 15.X    | D                                  | E                                  | FALSE   |
+| ???723 | 16.M    | D                                  | C                                  | FALSE   |
+| ???723 | 16.N    | A                                  | B                                  | FALSE   |
+| ???723 | 17.X    | E                                  | E                                  | TRUE    |
+| ???723 | 18.X    | B                                  | B                                  | TRUE    |
+| ???723 | 19.M    | D                                  | D                                  | TRUE    |
+| ???723 | 19.N    | 9                                  | 2 1 1 0 0                          | FALSE   |
+| ???723 | 19.O    | E                                  | E                                  | TRUE    |
+| ???723 | 20.X    | C                                  | A                                  | FALSE   |
+| ???739 | 01.X    | C                                  | C                                  | TRUE    |
+| ???739 | 02.X    | A                                  | A                                  | TRUE    |
+| ???739 | 03.A    | F                                  | F                                  | TRUE    |
+| ???739 | 03.B    | F                                  | F                                  | TRUE    |
+| ???739 | 03.C    | V                                  | V                                  | TRUE    |
+| ???739 | 03.D    | F                                  | F                                  | TRUE    |
+| ???739 | 03.E    | V                                  | F                                  | FALSE   |
+| ???739 | 04.X    | D                                  | D                                  | TRUE    |
+| ???739 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???739 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???739 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???739 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???739 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???739 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???739 | 05.S    | 16                                 | 8                                  | FALSE   |
+| ???739 | 05.T    | 784                                | -337                               | FALSE   |
+| ???739 | 05.U    | 1914                               | 3972                               | FALSE   |
+| ???739 | 06.X    | E                                  | E                                  | TRUE    |
+| ???739 | 07.X    | B                                  | B                                  | TRUE    |
+| ???739 | 08.M    | C                                  | C                                  | TRUE    |
+| ???739 | 08.N    | B                                  | A                                  | FALSE   |
+| ???739 | 08.O    | E                                  | B                                  | FALSE   |
+| ???739 | 09.X    | B                                  | B                                  | TRUE    |
+| ???739 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???739 | 11.M    | D                                  | D                                  | TRUE    |
+| ???739 | 11.N    | A                                  | A                                  | TRUE    |
+| ???739 | 12.M    | C                                  | C                                  | TRUE    |
+| ???739 | 12.N    | D                                  | D                                  | TRUE    |
+| ???739 | 13.M    | 2 16 12 15 1 6 11 5 7 8            | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???739 | 13.N    | 13 15 1 2 16 12 6 7 5 11 8         | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???739 | 14.A    | F                                  | F                                  | TRUE    |
+| ???739 | 14.B    | V                                  | V                                  | TRUE    |
+| ???739 | 14.C    | V                                  | V                                  | TRUE    |
+| ???739 | 14.D    | F                                  | F                                  | TRUE    |
+| ???739 | 14.E    | F                                  | F                                  | TRUE    |
+| ???739 | 15.X    | E                                  | E                                  | TRUE    |
+| ???739 | 16.M    | C                                  | C                                  | TRUE    |
+| ???739 | 16.N    | B                                  | B                                  | TRUE    |
+| ???739 | 17.X    | E                                  | E                                  | TRUE    |
+| ???739 | 18.X    | E                                  | B                                  | FALSE   |
+| ???739 | 19.M    | D                                  | D                                  | TRUE    |
+| ???739 | 19.N    | 2 1 1 0 0                          | 2 1 1 0 0                          | TRUE    |
+| ???739 | 19.O    | D                                  | E                                  | FALSE   |
+| ???739 | 20.X    | A                                  | A                                  | TRUE    |
+| ???741 | 01.X    | E                                  | C                                  | FALSE   |
+| ???741 | 02.X    | A                                  | A                                  | TRUE    |
+| ???741 | 03.A    | V                                  | F                                  | FALSE   |
+| ???741 | 03.B    | F                                  | F                                  | TRUE    |
+| ???741 | 03.C    | V                                  | V                                  | TRUE    |
+| ???741 | 03.D    | F                                  | F                                  | TRUE    |
+| ???741 | 03.E    | V                                  | F                                  | FALSE   |
+| ???741 | 04.X    | D                                  | D                                  | TRUE    |
+| ???741 | 05.M    | 7 9                                | 7 9 12                             | FALSE   |
+| ???741 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???741 | 05.O    | 3 10 12                            | 3 10                               | FALSE   |
+| ???741 | 05.P    | 1 11 12                            | 1 11                               | FALSE   |
+| ???741 | 05.Q    | 2 5 8                              | 2 5 8                              | TRUE    |
+| ???741 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???741 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???741 | 05.T    | 436                                | -337                               | FALSE   |
+| ???741 | 05.U    | 5280                               | 3972                               | FALSE   |
+| ???741 | 06.X    | E                                  | E                                  | TRUE    |
+| ???741 | 07.X    | B                                  | B                                  | TRUE    |
+| ???741 | 08.M    | C                                  | C                                  | TRUE    |
+| ???741 | 08.N    | B                                  | A                                  | FALSE   |
+| ???741 | 08.O    | B                                  | B                                  | TRUE    |
+| ???741 | 09.X    | C                                  | B                                  | FALSE   |
+| ???741 | 10.X    | 01001X                             | 01001X                             | TRUE    |
+| ???741 | 11.M    | D                                  | D                                  | TRUE    |
+| ???741 | 11.N    | A                                  | A                                  | TRUE    |
+| ???741 | 12.M    | C                                  | C                                  | TRUE    |
+| ???741 | 12.N    | D                                  | D                                  | TRUE    |
+| ???741 | 13.M    | 2 16 12 16 9 11 15 7 10 8          | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???741 | 13.N    | 13 12 16 12 6 15 7 11 8            | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???741 | 14.A    | V                                  | F                                  | FALSE   |
+| ???741 | 14.B    | F                                  | V                                  | TRUE    |
+| ???741 | 14.C    | V                                  | V                                  | TRUE    |
+| ???741 | 14.D    | F                                  | F                                  | TRUE    |
+| ???741 | 14.E    | F                                  | F                                  | TRUE    |
+| ???741 | 15.X    | E                                  | E                                  | TRUE    |
+| ???741 | 16.M    | D                                  | C                                  | FALSE   |
+| ???741 | 16.N    | A                                  | B                                  | FALSE   |
+| ???741 | 17.X    | B                                  | E                                  | FALSE   |
+| ???741 | 18.X    | B                                  | B                                  | TRUE    |
+| ???741 | 19.M    | D                                  | D                                  | TRUE    |
+| ???741 | 19.N    | 7                                  | 2 1 1 0 0                          | FALSE   |
+| ???741 | 19.O    | C                                  | E                                  | FALSE   |
+| ???741 | 20.X    | A                                  | A                                  | TRUE    |
+| ???760 | 01.X    | C                                  | C                                  | TRUE    |
+| ???760 | 02.X    | A                                  | A                                  | TRUE    |
+| ???760 | 03.A    | F                                  | F                                  | TRUE    |
+| ???760 | 03.B    | F                                  | F                                  | TRUE    |
+| ???760 | 03.C    | V                                  | V                                  | TRUE    |
+| ???760 | 03.D    | F                                  | F                                  | TRUE    |
+| ???760 | 03.E    | F                                  | F                                  | TRUE    |
+| ???760 | 04.X    | D                                  | D                                  | TRUE    |
+| ???760 | 05.M    | 7 9 12                             | 7 9 12                             | TRUE    |
+| ???760 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???760 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???760 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???760 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???760 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???760 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???760 | 05.T    | -377                               | -337                               | FALSE   |
+| ???760 | 05.U    | 33                                 | 3972                               | FALSE   |
+| ???760 | 06.X    | E                                  | E                                  | TRUE    |
+| ???760 | 07.X    | B                                  | B                                  | TRUE    |
+| ???760 | 08.M    | C                                  | C                                  | TRUE    |
+| ???760 | 08.N    | B                                  | A                                  | FALSE   |
+| ???760 | 08.O    | B                                  | B                                  | TRUE    |
+| ???760 | 09.X    | A                                  | B                                  | FALSE   |
+| ???760 | 10.X    | 01001X                             | 01001X                             | TRUE    |
+| ???760 | 11.M    | D                                  | D                                  | TRUE    |
+| ???760 | 11.N    | A                                  | A                                  | TRUE    |
+| ???760 | 12.M    | C                                  | C                                  | TRUE    |
+| ???760 | 12.N    | D                                  | D                                  | TRUE    |
+| ???760 | 13.M    | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | TRUE    |
+| ???760 | 13.N    | 13 1 2 4 12 6 3 5 7 5 11 5 8       | 13 1 2 4 12 6 3 5 7 5 11 5 8       | TRUE    |
+| ???760 | 14.A    | F                                  | F                                  | TRUE    |
+| ???760 | 14.B    | V                                  | V                                  | TRUE    |
+| ???760 | 14.C    | V                                  | V                                  | TRUE    |
+| ???760 | 14.D    | F                                  | F                                  | TRUE    |
+| ???760 | 14.E    | F                                  | F                                  | TRUE    |
+| ???760 | 15.X    | A                                  | E                                  | FALSE   |
+| ???760 | 16.M    | C                                  | C                                  | TRUE    |
+| ???760 | 16.N    | B                                  | B                                  | TRUE    |
+| ???760 | 17.X    | E                                  | E                                  | TRUE    |
+| ???760 | 18.X    | B                                  | B                                  | TRUE    |
+| ???760 | 19.M    | D                                  | D                                  | TRUE    |
+| ???760 | 19.N    | 2 1 1 0 0                          | 2 1 1 0 0                          | TRUE    |
+| ???760 | 19.O    | C                                  | E                                  | FALSE   |
+| ???760 | 20.X    | A                                  | A                                  | TRUE    |
+| ???798 | 01.X    | B                                  | C                                  | FALSE   |
+| ???798 | 02.X    | B                                  | A                                  | FALSE   |
+| ???798 | 03.A    | V                                  | F                                  | FALSE   |
+| ???798 | 03.B    | F                                  | F                                  | TRUE    |
+| ???798 | 03.C    | V                                  | V                                  | TRUE    |
+| ???798 | 03.D    | F                                  | F                                  | TRUE    |
+| ???798 | 03.E    | V                                  | F                                  | FALSE   |
+| ???798 | 04.X    | B                                  | D                                  | FALSE   |
+| ???798 | 06.X    | B                                  | E                                  | FALSE   |
+| ???798 | 07.X    | B                                  | B                                  | TRUE    |
+| ???798 | 08.M    | C                                  | C                                  | TRUE    |
+| ???798 | 08.N    | B                                  | A                                  | FALSE   |
+| ???798 | 08.O    | B                                  | B                                  | TRUE    |
+| ???798 | 09.X    | B                                  | B                                  | TRUE    |
+| ???798 | 10.X    | 10101X                             | 01001X                             | FALSE   |
+| ???798 | 11.M    | C                                  | D                                  | FALSE   |
+| ???798 | 11.N    | C                                  | A                                  | FALSE   |
+| ???798 | 12.M    | C                                  | C                                  | TRUE    |
+| ???798 | 12.N    | D                                  | D                                  | TRUE    |
+| ???798 | 14.A    | V                                  | F                                  | FALSE   |
+| ???798 | 14.B    | F                                  | V                                  | TRUE    |
+| ???798 | 14.C    | F                                  | V                                  | FALSE   |
+| ???798 | 14.D    | F                                  | F                                  | TRUE    |
+| ???798 | 14.E    | V                                  | F                                  | FALSE   |
+| ???798 | 15.X    | D                                  | E                                  | FALSE   |
+| ???798 | 16.M    | D                                  | C                                  | FALSE   |
+| ???798 | 16.N    | A                                  | B                                  | FALSE   |
+| ???798 | 17.X    | C                                  | E                                  | FALSE   |
+| ???798 | 18.X    | B                                  | B                                  | TRUE    |
+| ???798 | 19.M    | A                                  | D                                  | FALSE   |
+| ???798 | 19.N    | 6                                  | 2 1 1 0 0                          | FALSE   |
+| ???798 | 19.O    | D                                  | E                                  | FALSE   |
+| ???798 | 20.X    | A                                  | A                                  | TRUE    |
+| ???834 | 01.X    | C                                  | C                                  | TRUE    |
+| ???834 | 02.X    | A                                  | A                                  | TRUE    |
+| ???834 | 03.A    | F                                  | F                                  | TRUE    |
+| ???834 | 03.B    | V                                  | F                                  | FALSE   |
+| ???834 | 03.C    | V                                  | V                                  | TRUE    |
+| ???834 | 03.D    | F                                  | F                                  | TRUE    |
+| ???834 | 03.E    | V                                  | F                                  | FALSE   |
+| ???834 | 04.X    | D                                  | D                                  | TRUE    |
+| ???834 | 05.M    | 7 9                                | 7 9 12                             | FALSE   |
+| ???834 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???834 | 05.O    | 3 10                               | 3 10                               | TRUE    |
+| ???834 | 05.P    | 1 11                               | 1 11                               | TRUE    |
+| ???834 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???834 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???834 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???834 | 05.T    | 352                                | -337                               | FALSE   |
+| ???834 | 05.U    | 132                                | 3972                               | FALSE   |
+| ???834 | 06.X    | E                                  | E                                  | TRUE    |
+| ???834 | 07.X    | B                                  | B                                  | TRUE    |
+| ???834 | 08.M    | B                                  | C                                  | FALSE   |
+| ???834 | 08.O    | C                                  | B                                  | FALSE   |
+| ???834 | 09.X    | D                                  | B                                  | FALSE   |
+| ???834 | 10.X    | 10101X                             | 01001X                             | FALSE   |
+| ???834 | 11.M    | D                                  | D                                  | TRUE    |
+| ???834 | 11.N    | A                                  | A                                  | TRUE    |
+| ???834 | 12.M    | C                                  | C                                  | TRUE    |
+| ???834 | 12.N    | D                                  | D                                  | TRUE    |
+| ???834 | 13.M    | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | TRUE    |
+| ???834 | 13.N    | 13 16 1 2 12 6 7 5 11 5 8          | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???834 | 14.A    | V                                  | F                                  | FALSE   |
+| ???834 | 14.B    | V                                  | V                                  | TRUE    |
+| ???834 | 14.C    | V                                  | V                                  | TRUE    |
+| ???834 | 14.D    | F                                  | F                                  | TRUE    |
+| ???834 | 14.E    | F                                  | F                                  | TRUE    |
+| ???834 | 15.X    | C                                  | E                                  | FALSE   |
+| ???834 | 16.M    | C                                  | C                                  | TRUE    |
+| ???834 | 16.N    | B                                  | B                                  | TRUE    |
+| ???834 | 17.X    | E                                  | E                                  | TRUE    |
+| ???834 | 18.X    | B                                  | B                                  | TRUE    |
+| ???834 | 19.M    | D                                  | D                                  | TRUE    |
+| ???834 | 19.N    | 9                                  | 2 1 1 0 0                          | FALSE   |
+| ???834 | 19.O    | A                                  | E                                  | FALSE   |
+| ???834 | 20.X    | A                                  | A                                  | TRUE    |
+| ???932 | 01.X    | C                                  | C                                  | TRUE    |
+| ???932 | 02.X    | E                                  | A                                  | FALSE   |
+| ???932 | 03.A    | V                                  | F                                  | FALSE   |
+| ???932 | 03.B    | F                                  | F                                  | TRUE    |
+| ???932 | 03.C    | V                                  | V                                  | TRUE    |
+| ???932 | 03.D    | V                                  | F                                  | FALSE   |
+| ???932 | 03.E    | F                                  | F                                  | TRUE    |
+| ???932 | 04.X    | B                                  | D                                  | FALSE   |
+| ???932 | 05.M    | 9                                  | 7 9 12                             | FALSE   |
+| ???932 | 05.N    | 7                                  | 6                                  | FALSE   |
+| ???932 | 05.O    | 10 2                               | 3 10                               | FALSE   |
+| ???932 | 05.P    | 3                                  | 1 11                               | FALSE   |
+| ???932 | 05.Q    | 12                                 | 2 5 8                              | FALSE   |
+| ???932 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???932 | 05.S    | -10                                | 8                                  | FALSE   |
+| ???932 | 05.T    | 4                                  | -337                               | FALSE   |
+| ???932 | 06.X    | A                                  | E                                  | FALSE   |
+| ???932 | 07.X    | C                                  | B                                  | FALSE   |
+| ???932 | 08.M    | A                                  | C                                  | FALSE   |
+| ???932 | 08.N    | B                                  | A                                  | FALSE   |
+| ???932 | 08.O    | D                                  | B                                  | FALSE   |
+| ???932 | 09.X    | C                                  | B                                  | FALSE   |
+| ???932 | 10.X    | 00001X                             | 01001X                             | FALSE   |
+| ???932 | 11.M    | D                                  | D                                  | TRUE    |
+| ???932 | 11.N    | A                                  | A                                  | TRUE    |
+| ???932 | 12.M    | A                                  | C                                  | FALSE   |
+| ???932 | 12.N    | E                                  | D                                  | FALSE   |
+| ???932 | 13.M    | 1 5 6 5 11 5 16 5 9                | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???932 | 13.N    | 6 5 11 5 16 5 4 5 1                | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???932 | 14.A    | F                                  | F                                  | TRUE    |
+| ???932 | 14.B    | V                                  | V                                  | TRUE    |
+| ???932 | 14.C    | V                                  | V                                  | TRUE    |
+| ???932 | 14.D    | V                                  | F                                  | FALSE   |
+| ???932 | 14.E    | F                                  | F                                  | TRUE    |
+| ???932 | 15.X    | D                                  | E                                  | FALSE   |
+| ???932 | 16.M    | D                                  | C                                  | FALSE   |
+| ???932 | 16.N    | A                                  | B                                  | FALSE   |
+| ???932 | 17.X    | A                                  | E                                  | FALSE   |
+| ???932 | 18.X    | A                                  | B                                  | FALSE   |
+| ???932 | 19.M    | E                                  | D                                  | FALSE   |
+| ???932 | 19.N    | 3                                  | 2 1 1 0 0                          | FALSE   |
+| ???932 | 19.O    | C                                  | E                                  | FALSE   |
+| ???932 | 20.X    | A                                  | A                                  | TRUE    |
+| ???984 | 01.X    | C                                  | C                                  | TRUE    |
+| ???984 | 02.X    | A                                  | A                                  | TRUE    |
+| ???984 | 03.A    | V                                  | F                                  | FALSE   |
+| ???984 | 03.B    | F                                  | F                                  | TRUE    |
+| ???984 | 03.C    | V                                  | V                                  | TRUE    |
+| ???984 | 03.D    | F                                  | F                                  | TRUE    |
+| ???984 | 03.E    | V                                  | F                                  | FALSE   |
+| ???984 | 04.X    | D                                  | D                                  | TRUE    |
+| ???984 | 05.M    | 7 9                                | 7 9 12                             | FALSE   |
+| ???984 | 05.N    | 6                                  | 6                                  | TRUE    |
+| ???984 | 05.O    | 3 10 12                            | 3 10                               | FALSE   |
+| ???984 | 05.P    | 1 11 12                            | 1 11                               | FALSE   |
+| ???984 | 05.Q    | 5 8 2                              | 2 5 8                              | TRUE    |
+| ???984 | 05.R    | 4                                  | 4                                  | TRUE    |
+| ???984 | 05.S    | 8                                  | 8                                  | TRUE    |
+| ???984 | 05.T    | 113                                | -337                               | FALSE   |
+| ???984 | 05.U    | 121                                | 3972                               | FALSE   |
+| ???984 | 06.X    | E                                  | E                                  | TRUE    |
+| ???984 | 07.X    | B                                  | B                                  | TRUE    |
+| ???984 | 08.M    | C                                  | C                                  | TRUE    |
+| ???984 | 08.N    | B                                  | A                                  | FALSE   |
+| ???984 | 08.O    | E                                  | B                                  | FALSE   |
+| ???984 | 09.X    | C                                  | B                                  | FALSE   |
+| ???984 | 10.X    | 10100X                             | 01001X                             | FALSE   |
+| ???984 | 11.M    | D                                  | D                                  | TRUE    |
+| ???984 | 11.N    | A                                  | A                                  | TRUE    |
+| ???984 | 12.M    | C                                  | C                                  | TRUE    |
+| ???984 | 12.N    | D                                  | D                                  | TRUE    |
+| ???984 | 13.M    | 2 4 15 12 11 5 3 5 7 5 8           | 2 4 12 1 6 9 5 11 5 3 5 7 5 10 5 8 | FALSE   |
+| ???984 | 13.N    | 13 16 15 7 2 12 11 5 8             | 13 1 2 4 12 6 3 5 7 5 11 5 8       | FALSE   |
+| ???984 | 14.A    | V                                  | F                                  | FALSE   |
+| ???984 | 14.B    | V                                  | V                                  | TRUE    |
+| ???984 | 14.C    | V                                  | V                                  | TRUE    |
+| ???984 | 14.D    | F                                  | F                                  | TRUE    |
+| ???984 | 14.E    | F                                  | F                                  | TRUE    |
+| ???984 | 15.X    | E                                  | E                                  | TRUE    |
+| ???984 | 16.M    | C                                  | C                                  | TRUE    |
+| ???984 | 16.N    | B                                  | B                                  | TRUE    |
+| ???984 | 17.X    | A                                  | E                                  | FALSE   |
+| ???984 | 18.X    | B                                  | B                                  | TRUE    |
+| ???984 | 19.M    | A                                  | D                                  | FALSE   |
+| ???984 | 19.N    | 5                                  | 2 1 1 0 0                          | FALSE   |
+| ???984 | 19.O    | E                                  | E                                  | TRUE    |
+| ???984 | 20.X    | D                                  | A                                  | FALSE   |
+
+* P1                                                               :noexport:
+** Pesos
+
+A questão 5 foi anulada.
+
+| E  | Peso | Comentário      | Gabarito                    |
+|----+------+-----------------+-----------------------------|
+| E1 |    2 | Léxica          | D                           |
+| E2 |  1.5 | Sintática       | C                           |
+| E3 |  1.5 | Sintática       | B                           |
+| E4 |    1 | Sintática       | A, D, A, A, D, A, D, [A, D] |
+| E5 |    0 | Questão anulada |                             |
+| E6 |    1 | Semântica       | questão dissertativa        |
+| E7 |    1 | Semântica       | primeira alternativa        |
+
+** Sumário
+
+#+name: p1.notas
+| ID     |   P1 |
+|--------+------|
+| ???723 |   10 |
+| ???059 |   10 |
+| ???760 |   10 |
+| ???256 |   10 |
+| ???692 |   10 |
+| ???055 | 9.88 |
+| ???269 | 9.38 |
+| ???578 | 8.75 |
+| ???673 | 8.75 |
+| ???722 | 8.75 |
+| ???026 | 8.75 |
+| ???207 | 8.75 |
+| ???834 | 8.12 |
+| ???238 | 8.12 |
+| ???271 | 8.12 |
+| ???984 | 8.12 |
+| ???739 | 8.12 |
+| ???798 | 7.88 |
+| ???569 |  7.5 |
+| ???499 | 6.88 |
+| ???713 | 6.62 |
+| ???155 | 6.25 |
+| ???741 | 6.25 |
+| ???091 | 6.25 |
+| ???255 | 6.12 |
+| ???305 |    5 |
+| ???700 | 4.38 |
+| ???932 | 3.75 |
+| ???490 |  3.5 |
+| ???704 | 3.12 |
+| ???589 | 1.25 |
+| ???295 | 0.62 |
+| ???424 | 0.62 |
+
+** Detalhamento
+
+| ID     |  E1 |  E2 |  E3 |  E4 |  E6 |  E7 |
+|--------+-----+-----+-----+-----+-----+-----|
+| ???834 |  10 |   0 |  10 |  10 |  10 |  10 |
+| ???723 |  10 |  10 |  10 |  10 |  10 |  10 |
+| ???295 |   0 |   0 |   0 |   5 |   0 |   0 |
+| ???238 |  10 |   0 |  10 |  10 |  10 |  10 |
+| ???578 |  10 |  10 |  10 |  10 |   0 |  10 |
+| ???155 |   0 |  10 |  10 |  10 |   0 |  10 |
+| ???059 |  10 |  10 |  10 |  10 |  10 |  10 |
+| ???305 |  10 |   0 |  10 |   5 |   0 |   0 |
+| ???760 |  10 |  10 |  10 |  10 |  10 |  10 |
+| ???794 | nil | nil | nil | nil | nil | nil |
+| ???255 |  10 |   0 |   0 |  10 |   9 |  10 |
+| ???269 |  10 |  10 |  10 |   5 |  10 |  10 |
+| ???713 |  10 |  10 |   0 |   5 |   3 |  10 |
+| ???741 |  10 |   0 |  10 |   5 |   0 |  10 |
+| ???589 |   0 |   0 |   0 |  10 |   0 |   0 |
+| ???499 |  10 |  10 |   0 |  10 |   0 |  10 |
+| ???673 |  10 |  10 |  10 |  10 |   0 |  10 |
+| ???722 |  10 |  10 |  10 |  10 |   0 |  10 |
+| ???798 |  10 |  10 |  10 |   3 |   0 |  10 |
+| ???700 |   0 |  10 |   0 |  10 |   0 |  10 |
+| ???256 |  10 |  10 |  10 |  10 |  10 |  10 |
+| ???271 |  10 |   0 |  10 |  10 |  10 |  10 |
+| ???984 |  10 |  10 |  10 |   5 |   0 |  10 |
+| ???704 |   0 |   0 |  10 |  10 |   0 |   0 |
+| ???424 |   0 |   0 |   0 |   5 |   0 |   0 |
+| ???055 |  10 |  10 |  10 |  10 |   9 |  10 |
+| ???569 |  10 |  10 |  10 |  10 |   0 |   0 |
+| ???490 |   0 |   0 |  10 |   3 |   0 |  10 |
+| ???739 |  10 |   0 |  10 |  10 |  10 |  10 |
+| ???285 | nil | nil | nil | nil | nil | nil |
+| ???091 |  10 |   0 |  10 |   5 |   0 |  10 |
+| ???026 |  10 |  10 |  10 |  10 |   0 |  10 |
+| ???932 |  10 |   0 |   0 |   0 |   0 |  10 |
+| ???207 |  10 |  10 |  10 |  10 |   0 |  10 |
+| ???692 |  10 |  10 |  10 |  10 |  10 |  10 |
+
+* P1 Detalhamento                                                  :noexport:
+** Questões
+
+- E1: ER de origem do AFND; AFND para AFD (alg. de subconj.).
+- E2: Conj. Pri/Seq; Análise descendente; Construir tabela LL(1).
+- E3: Classificar algoritmos em ascendentes, descendentes.
+- E4: Análise LL e LR usando tabelas.
+- E5: Justificar qual alg. reconhece uma gramática sem conflitos.
+- E6: Gramática para seq. de dígitos; S-atribuído para calcular valor inteiro.
+- E7: Construir LR(0); tabelas LR(0) e SLR(1)
+
+** Notas máximas
+
+As notas máximas foram:
+
+- E1: [2.0]
+- E2: [2.0]
+- E3: [1.0]
+- E4: [1.0]
+- E5: [1.5]
+- E6: [1.5]
+- E7: [1.0]
+
+Somatório máximo é de 10 pontos. As notas finais são sobre 10.
+
+** Detalhamento por questão
+
+| ID     |  E1 |  E2 |  E3 |  E4 |  E5 |  E6 |  E7 |
+|--------+-----+-----+-----+-----+-----+-----+-----|
+| ???028 | nil | nil | nil | nil | nil | nil | nil |
+| ???587 | 1.9 | 1.3 |   1 | 0.5 | 0.5 | 1.5 |   1 |
+| ???759 | nil | nil | nil | nil | nil | nil | nil |
+| ???262 | 1.9 |   2 | 0.6 |   0 |   0 | 0.5 | 0.7 |
+| ???691 |   1 |   2 | 0.8 |   0 | 0.5 |   0 | 0.5 |
+| ???354 | 1.9 | 1.8 |   1 |   1 | 0.5 |   0 | 0.5 |
+| ???676 | 1.7 |   2 |   1 | 0.5 | 1.5 |   0 |   1 |
+| ???524 |   0 |   1 |   1 |   0 | 0.5 | 1.5 |   1 |
+| ???664 |   1 | 1.5 |   1 | 0.5 | 0.5 | 0.5 | 0.5 |
+| ???845 | 0.5 |   1 | 0.4 |   0 | 0.2 |   0 |   0 |
+| ???175 | 1.9 |   2 |   1 | 0.7 | 0.5 | 0.5 | 0.8 |
+| ???688 |   1 | 1.6 |   1 | 0.6 | 0.5 |   0 |   1 |
+| ???865 | 1.8 | 0.5 |   1 |   0 | 0.5 |   0 | 0.4 |
+| ???686 | nil | nil | nil | nil | nil | nil | nil |
+| ???679 | nil | nil | nil | nil | nil | nil | nil |
+| ???249 |   2 |   2 |   1 | 0.5 | 0.5 | 1.4 |   1 |
+| ???822 | 1.9 | 1.5 | 0.8 |   0 |   1 | 0.5 |   1 |
+| ???516 | 1.5 | 0.2 |   1 |   0 |   0 | 0.5 | 0.8 |
+| ???274 | 1.8 |   2 |   1 | 0.5 | 0.5 | 0.5 | 0.8 |
+| ???332 |   2 | 1.2 |   1 |   1 | 1.5 | 1.5 |   1 |
+| ???675 |   1 |   2 |   1 | 0.5 | 0.5 | 1.5 |   1 |
+| ???271 | 0.7 | 0.7 |   1 |   0 | 0.5 | 0.5 | 0.3 |
+| ???416 | 1.9 | 1.8 | 0.8 |   1 | 0.5 |   0 | 0.7 |
+| ???728 | 1.9 | 1.8 |   1 | 0.5 | 1.3 | 1.5 |   1 |
+| ???572 |   2 |   2 |   1 |   1 | 0.5 |   0 | 0.6 |
+| ???090 |   1 | 0.5 |   1 | 0.5 |   0 |   0 | 0.5 |
+| ???722 | nil | nil | nil | nil | nil | nil | nil |
+| ???261 | 1.9 | 0.6 | 0.8 |   1 | 0.5 | 0.5 | 0.6 |
+| ???410 | 0.5 | 1.7 |   1 | 0.5 |   0 | 0.5 | 0.4 |
+| ???601 | 1.8 |   2 |   1 |   1 | 0.5 | 1.5 |   1 |
+| ???369 | 1.7 |   2 | 0.4 | 0.5 |   0 |   0 | 0.6 |
+| ???681 | 1.5 | 1.7 |   1 | 0.5 | 0.5 |   0 |   1 |
+| ???665 | 1.2 | 1.8 |   1 |   1 | 1.4 | 1.5 |   1 |
+| ???670 |   1 | 1.5 | 0.8 | 0.5 | 0.5 |   0 | 0.5 |
+
+* Avaliação da disciplina
+
+#+BEGIN_CENTER
+[[https://goo.gl/forms/Hma6HJNo8s3WlD2o2][Avalie a disciplina/professor de maneira anônima]], preferencialmente no
+final do semestre após a conclusão das aulas, mas em qualquer momento
+caso o aluno pense necessário (o professor é notificado por e-mail
+quando uma nova resposta é fornecida no formulário).
+#+END_CENTER
