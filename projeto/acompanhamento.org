@@ -177,7 +177,7 @@ Nenhum.
 | Epsilon | E2.O      |  9.3 |
 | Lambda  | E2.O      |   10 |
 
-* Avaliação da Etapa 3                                             :noexport:
+* Avaliação da Etapa 3
 ** Grupos que não entregaram até o prazo
 
 | Grupo   |
