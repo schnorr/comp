@@ -25,12 +25,11 @@
 
 Por ser atualizado.
 
-* Ponderações gerais                                               :noexport:
+* Ponderações gerais
 
 Para tomar conhecimento novamente das fórmulas utilizadas:
 - [[./plano/index.org][As ponderações gerais]]
 - [[./projeto/README.org][As ponderações das etapas do projeto]]
-  - Apenas até E6, a nota final do projeto é normalizada em 9
 
 * Detalhamento Geral                                               :noexport:
 
