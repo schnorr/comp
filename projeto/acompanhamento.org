@@ -220,7 +220,7 @@ permitem que a saída de descompilação seja vazia.
 - [X] 3. Ações /bison/ para construção da AST
 - [X] 4. Descompilar o programa de entrada
 - [X] 5. Remoção de conflitos/ajustes gramaticais
-- [ ] 6. Gerenciar corretamente a memória do compilador
+- [X] 6. Gerenciar corretamente a memória do compilador
   - Se preocupou pois as funções de libera, mas não executou valgrind
   - Fizemos um teste em laboratório e apareceram inúmeros erros do valgrind
   - *Se valgrind é desconsiderado, a nota objetiva fica em 9.8*
@@ -428,6 +428,7 @@ printf para imprimir a árvore
 
 *Prazo para correção dos problemas do valgrind:*
 - 19/05
+- [X] Correções entregues no dia 20/05
 
 *** Lambda
 
@@ -475,7 +476,7 @@ Não entregou. Não veio na aula.
 
 | Grupo  | E3.O | E3.S |
 |--------+------+------|
-| Alpha  |  0.2 |  9.5 |
+| Alpha  |   10 |  9.5 |
 | Beta   |   10 |   10 |
 | Delta  |    0 |    0 |
 | Lambda |   10 |  9.5 |
