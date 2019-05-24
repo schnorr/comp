@@ -468,17 +468,22 @@ printf para imprimir a árvore
 Não entregou até o prazo estabelecido.
 Entregará até o dia 19/05 conforme combinado em aula do dia 08/05.
 
+Entregou no dia 21/05.
+- Foi realizada apenas a avaliação automática.
+
 *** Epsilon
 
 Não entregou. Não veio na aula.
 
 ** Notas Objetiva e Subjetiva
 
+O grupo ~Delta~ entregou com atraso.
+
 | Grupo  | E3.O | E3.S |
 |--------+------+------|
 | Alpha  |   10 |  9.5 |
 | Beta   |   10 |   10 |
-| Delta  |    0 |    0 |
+| Delta  |   10 |    0 |
 | Lambda |   10 |  9.5 |
 
 * Avaliação da Etapa 4
