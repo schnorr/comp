@@ -50,7 +50,7 @@ e variáveis locais.
 O código a ser embutido no programa para o suporte ao ambiente de
 execução deve ser capaz de gerenciar o fluxo de controle do programa
 através da pilha de ativação. Assuma que existam registradores
-específicos para tal: como o /stack pointer/ =sp= e o /frame pointer/ =rfp=.
+específicos para tal: como o /stack pointer/ =rsp= e o /frame pointer/ =rfp=.
 Os endereços de vínculo estático e dinâmico de cada registro de
 ativação devem ser corretamente calculados.
 
@@ -63,8 +63,10 @@ um subprograma apontando o fluxo de execução para o código da função
 chamada no segmento de código.  De maneira equivalente, o código de
 retorno deve ser capaz de atualizar a pilha e retornar o fluxo de
 execução para a função chamadora, no ponto imediatamente após a
-instrução de chamada do subprograma.  Cada subprograma deve ter um
-rótulo específico indicando a sua primeira instrução.
+instrução de chamada do subprograma. Utilize o registrador especial
+~rpc~ (registrador que contém o /program counter/) para o cálculo do
+endereço de retorno. Cada subprograma deve ter um rótulo específico
+indicando a sua primeira instrução.
 
 ** 4. Passagem de Parâmetros
 
@@ -92,16 +94,16 @@ Onde =entrada.poa= contém um programa, e =saida.iloc= contém em ILOC traduzido
 É interessante enfatizar que a execução do programa começa sempre pela
 função cujo nome é =main=, que pode eventualmente não ser a primeira
 função do código de entrada na linguagem.  Outro ponto bastante
-relevante é que tanto =rfp= (ponteiro do RA) =rsp= (ponteiro do topo da
+relevante é que tanto =rfp= (ponteiro do RA), =rsp= (ponteiro do topo da
 pilha) e =rbss= (ponteiro do segmento de dados) devem ser
 obrigatoriamente inicializados antes do início da execução da função
 principal do programa. Portanto as primeiras instruções no código de
 saída devem ser algo como, em ILOC:
 
 #+BEGIN_EXAMPLE
-loadI 0 => rfp
-loadI 0 => rsp
-loadI 0 => rbss
+loadI 2048 => rfp
+loadI 2048 => rsp
+loadI 1024 => rbss
 #+END_EXAMPLE
 
 Onde os endereços =rfp= e =rsp= são normalmente 0, mas o =rsp= deve
@@ -134,8 +136,6 @@ int main()
 
 #+latex: \bibliographystyle{plain}
 #+latex: \bibliography{biblio}
-
-
 
 * Bib                                                              :noexport:
 #+BEGIN_SRC bibtex :tangle biblio.bib
