@@ -758,49 +758,24 @@ Os grupos não listados na tabela abaixo não submeteram.
 | Delta  |    0 |    3 |
 | Lambda | 8.27 |    9 |
 
-* Avaliação da Etapa 5                                             :noexport:
+* Avaliação da Etapa 5
 ** Grupos que não entregaram até o prazo
 
 | Grupo   | ID     |
 |---------+--------|
-| Mu      | ???932 |
-| Mu      | ???794 |
-| Omicron | ???055 |
-| Psi     | ???499 |
-| Rho     | ???305 |
-| Rho     | ???713 |
-| Sigma   | ???295 |
-| Zeta    | ???271 |
-| Zeta    | ???673 |
+| Delta   | ???103 |
+| Epsilon | ???369 |
+| Alpha   | ???782 |
 
 ** Entregas até o prazo
 
-| Timestamp           | Grupo   |
-|---------------------+---------|
-| 2018-11-08 22:31:38 | Tau     |
-| 2018-11-10 14:01:33 | Gamma   |
-| 2018-11-10 16:08:34 | Lambda  |
-| 2018-11-11 20:39:27 | Omega   |
-| 2018-11-12 19:30:09 | Beta    |
-| 2018-11-12 19:45:34 | Theta   |
-| 2018-11-12 21:34:29 | Iota    |
-| 2018-11-12 21:36:55 | Delta   |
-| 2018-11-12 22:13:17 | Alpha   |
-| 2018-11-12 22:48:27 | Epsilon |
-| 2018-11-12 23:31:00 | Eta     |
-| 2018-11-12 23:49:23 | Kappa   |
-| 2018-11-12 23:56:51 | Upsilon |
+| Timestamp           | Grupo  |
+|---------------------+--------|
+| 2019-06-09 16:23:31 | Lambda |
+| 2019-06-09 23:56:28 | Beta   |
 
 ** Entregas em recuperação/atraso
-
-- Delta 18/11
-- Rho 21/11
-- Alpha 21/11
-- Upsilon 21/11
-- Kappa 21/11
-- Iota 21/11
-
-** Arquivos para testes                                             :ATTACH:
+** Arquivos para testes                                    :ATTACH:noexport:
 :PROPERTIES:
 :Attachments: e5tests.tgz
 :ID:       fc3383b2-9293-42da-9563-19b3229a3cc1
@@ -865,7 +840,7 @@ do segmento de dados (=Data=).
 | ijk20 | Stack |      12 |     3 |
 | ijk20 | Stack |      16 |   325 |
 
-** Log dos testes automáticos                                       :ATTACH:
+** Log dos testes automáticos                              :ATTACH:noexport:
 :PROPERTIES:
 :Attachments: e5v0.log
 :ID:       9dfd58b9-fec8-4d82-acd9-dfafbd178328
@@ -885,7 +860,7 @@ valores da memória ao fim da simulação. E, enfim, quando for
 executadas (quantidade, instrução). É a partir deste arquivo que é
 definida a tabela abaixo.
 
-** Testes automáticos
+** Testes automáticos                                             :noexport:
 
 A tabela abaixo mostra os resultados dos testes
 automáticos, considerando as entradas do arquivos para testes.  A
@@ -1377,11 +1352,11 @@ solução do grupo fornece algum código ILOC válido na saída.
 | Upsilon | ijk02 |   12864 |       0 |     923 | FALSE |
 | Upsilon | ijk03 |   20964 |       0 |     923 | FALSE |
 
-** Comentários por grupos
+** Comentários por grupos                                         :noexport:
 
 Por realizar.
 
-** Notas Objetiva e Subjetiva
+** Notas Objetiva e Subjetiva                                     :noexport:
 
 Após o prazo de recuperação até 21/11, temos:
 
@@ -1401,4 +1376,3 @@ Após o prazo de recuperação até 21/11, temos:
 | Upsilon |   10 | 6.45 |  0.8 |
 | Eta     | 6.88 | 5.95 |    1 |
 | Rho     | 9.58 |    5 |  0.8 |
-
