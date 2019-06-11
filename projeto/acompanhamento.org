@@ -624,11 +624,13 @@ saber quais os erros esperados por teste, consultar a tabela abaixo:
 
 ** Log de execução dos testes                                       :ATTACH:
 :PROPERTIES:
-:Attachments: e4v0.log
+:Attachments: e4v0.log e4v1.log
 :ID:       4a7b2831-ec48-4877-900b-4365d8ea77df
 :END:
 
 Veja o [[./data/4a/7b2831-ec48-4877-900b-4365d8ea77df/e4v0.log]].
+
+Veja (recuperação) o [[./data/4a/7b2831-ec48-4877-900b-4365d8ea77df/e4v1.log]].
 
 ** Comentários por grupos
 *** Explicações sobre a saída valgrind
@@ -727,6 +729,8 @@ Não entregou. Entregar até 31/05.
 
 Disponibilidade para explicar fora do horário.
 
+Entregou em 28/05.
+
 **** Delta
 
 16:47
@@ -747,15 +751,17 @@ Não entregou. Entregar até 27/05.
   - Nenhuma verificação com argumentos (parâmetros reais)
 - [ ] 6. Verificação de tipos em comandos
 
+Entregou em 10/06.
+
 ** Notas Objetiva e Subjetiva
 
 Os grupos não listados na tabela abaixo não submeteram.
 
 | Grupo  | E4.O | E4.S |
 |--------+------+------|
-| Alpha  |    0 |    4 |
+| Alpha  | 9.71 |    4 |
 | Beta   | 9.23 |    9 |
-| Delta  |    0 |    3 |
+| Delta  | 9.04 |    3 |
 | Lambda | 8.27 |    9 |
 
 * Avaliação da Etapa 5
