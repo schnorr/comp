@@ -781,7 +781,7 @@ Os grupos não listados na tabela abaixo não submeteram.
 | 2019-06-09 23:56:28 | Beta   |
 
 ** Entregas em recuperação/atraso
-** Arquivos para testes                                    :ATTACH:noexport:
+** Arquivos para testes                                             :ATTACH:
 :PROPERTIES:
 :Attachments: e5tests.tgz
 :ID:       fc3383b2-9293-42da-9563-19b3229a3cc1
@@ -846,10 +846,10 @@ do segmento de dados (=Data=).
 | ijk20 | Stack |      12 |     3 |
 | ijk20 | Stack |      16 |   325 |
 
-** Log dos testes automáticos                              :ATTACH:noexport:
+** Log dos testes automáticos                                       :ATTACH:
 :PROPERTIES:
-:Attachments: e5v0.log
 :ID:       9dfd58b9-fec8-4d82-acd9-dfafbd178328
+:Attachments: e5v0.log
 :END:
 
 Consulte [[./data/9d/fd58b9-fec8-4d82-acd9-dfafbd178328/e5v0.log][o arquivo de log]] para obter os resultados elementares (/raw/)
@@ -866,7 +866,7 @@ valores da memória ao fim da simulação. E, enfim, quando for
 executadas (quantidade, instrução). É a partir deste arquivo que é
 definida a tabela abaixo.
 
-** Testes automáticos                                             :noexport:
+** Testes automáticos
 
 A tabela abaixo mostra os resultados dos testes
 automáticos, considerando as entradas do arquivos para testes.  A
@@ -1358,27 +1358,67 @@ solução do grupo fornece algum código ILOC válido na saída.
 | Upsilon | ijk02 |   12864 |       0 |     923 | FALSE |
 | Upsilon | ijk03 |   20964 |       0 |     923 | FALSE |
 
-** Comentários por grupos                                         :noexport:
+** Comentários por grupos
+*** Lambda
+- [X] Modulo ILOC.[ch]
+  - Enum para os códigos das instruções
+  - ~struct codigo_iloc~, ou ~codigo_iloc~
+    - char* e estruturas com enum
+- [X] Rótulos e registradores
+  - Geração de código, funções auxiliares
+  - ~gera_rotulo()~ e ~gera_registrador()~
+- [X] Geração de código
+  - A partir da AST, com ~gera_codigo_op_bin~
+    - > 1 passagem (três passagens)
+      - Léxica, sintática + semântica + gera código
+  - Usou função de aridade indefinida para concatenar
+  - Expressões aritméticas, com operações binárias
+    - soma, subtração, divisão e multiplicação
+  - Expressões booleanas por controle de fluxo com curto-circuito
+    - todos os operadores relacionais
+  - O comando de atribuição
+  - Os seguintes comandos de fluxo de controle
+    - if com else opcional
+    - while
+- [X] Coisas a mais
+  - Somente a inicialização foi feita a mais, que é idêntica à atribuição
+  - Operações básicas bitwise and e or pois tem instruções equivalentes em ILOC
+- Valgrind Check!!!
+*** Beta
 
-Por realizar.
+Fizeram tudo.
 
-** Notas Objetiva e Subjetiva                                     :noexport:
+- [X] Estruturas de dados ILOC
+  - ~iloc.h~, ~strucut iloc_instruction~
+  - vetor de ponteiros (/aka/ array list)
+- [X] Label ~new_label~
+  - Máximo de 16 caracteres, de acordo com o máximo inteiro que pode
+    ser guardado em um int
+- [X] Registrador é uma string ~new_register~
+- [X] Geração de código em uma única passagem
+  - [X] Cálculo de endereço na declaração de variáveis
+  - [X] Curto circuito
+  - [X] While
+- [X] Valgrind não estava na spec
+- [X] Testes automatizados que rodam no make
+*** Alpha
+Novo deadline para a E5: 23/06 às 23h59
 
-Após o prazo de recuperação até 21/11, temos:
+- [X] Estrutura de dados ILOC
+  - Módulo ILOC.h ILOC.c
+- [X] Geração de registradores e labels
+- [/] Geração de código, falta bastante
+  - Atribuição, somas, aritmética
+  - Falta o ~if~, ~while~, expressões booleanas e relacionais
+    - Curto circuito
+  - Escopo aninhado (offset das tabelas de símbolos) não implementado
+*** Delta
+Novo deadline para a E5: 23/06 às 23h59
+** Notas Objetiva e Subjetiva
 
-| Grupo   | E5.O | E5.S | Peso |
-|---------+------+------+------|
-| Beta    |   10 | 9.95 |    1 |
-| Theta   |   10 | 9.95 |    1 |
-| Omega   |   10 | 8.95 |    1 |
-| Epsilon | 9.79 | 8.95 |    1 |
-| Kappa   |   10 |  8.7 |    1 |
-| Tau     |   10 |  8.7 |    1 |
-| Iota    |   10 | 8.45 |    1 |
-| Gamma   |   10 |  7.7 |    1 |
-| Lambda  |   10 |  7.2 |    1 |
-| Delta   |   10 |    7 |    1 |
-| Alpha   |   10 | 6.95 |    1 |
-| Upsilon |   10 | 6.45 |  0.8 |
-| Eta     | 6.88 | 5.95 |    1 |
-| Rho     | 9.58 |    5 |  0.8 |
+| Grupo  | E5.O | E5.S |
+|--------+------+------|
+| Alpha  |    0 |    4 |
+| Beta   |   10 |   10 |
+| Delta  |    0 |    0 |
+| Lambda |   10 |   10 |
