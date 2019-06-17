@@ -5,7 +5,8 @@ int main ()
 {
   double t1 = gettime();
   register int *p;
-  for (p = (int*)x; p < ((int*)x+SIZE);){
+  p = (int*)x;
+  while((p < ((int*)x+SIZE))) {
     *p++ = 1;
   }
   double t2 = gettime();
