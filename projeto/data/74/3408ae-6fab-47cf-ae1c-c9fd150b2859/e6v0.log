@@ -1,0 +1,3633 @@
+
+Beta
+
+Beta|e00|stack|34809
+Beta|e00|data|17404
+Beta|e00|input|loadI 20000 => rfp
+Beta|e00|input|loadI 20000 => rsp
+Beta|e00|input|loadI 10000 => rbss
+Beta|e00|input|jumpI -> L3
+Beta|e00|input|L1:
+Beta|e00|input|addI rfp, 24 => rsp
+Beta|e00|input|store r0 => rsp
+Beta|e00|input|addI rsp, 1 => rsp
+Beta|e00|input|store r1 => rsp
+Beta|e00|input|addI rsp, 1 => rsp
+Beta|e00|input|store r2 => rsp
+Beta|e00|input|addI rsp, 1 => rsp
+Beta|e00|input|loadI 99 => r1
+Beta|e00|input|i2i r1 => r0
+Beta|e00|input|jumpI -> L0
+Beta|e00|input|L0:
+Beta|e00|input|storeAI r0 => rfp, 8
+Beta|e00|input|subI rsp, 1 => rsp
+Beta|e00|input|load rsp => r2
+Beta|e00|input|subI rsp, 1 => rsp
+Beta|e00|input|load rsp => r1
+Beta|e00|input|subI rsp, 1 => rsp
+Beta|e00|input|load rsp => r0
+Beta|e00|input|loadAI rfp, 12 => r2
+Beta|e00|input|i2i rfp => rsp
+Beta|e00|input|loadAI rfp, 0 => rfp
+Beta|e00|input|jump -> r2
+Beta|e00|input|L3:
+Beta|e00|input|addI rfp, 24 => rsp
+Beta|e00|input|loadI 0 => r6
+Beta|e00|input|addI rpc, 7 => r5
+Beta|e00|input|storeAI r5 => rsp, 12
+Beta|e00|input|storeAI r6 => rsp, 4
+Beta|e00|input|storeAI rfp => rsp, 0
+Beta|e00|input|i2i rsp => rfp
+Beta|e00|input|addI rsp, 24 => rsp
+Beta|e00|input|jumpI -> L1
+Beta|e00|input|loadAI rsp, 8 => r4
+Beta|e00|input|storeAI r4 => rbss, 0
+Beta|e00|input|L2:
+Beta|e00|input|halt
+Beta|e00|input|
+Beta|e00|output|count	instruction
+Beta|e00|output|    7	addI
+Beta|e00|output|    5	loadI
+Beta|e00|output|    5	storeAI
+Beta|e00|output|    3	jumpI
+Beta|e00|output|    3	i2i
+Beta|e00|output|    3	store
+Beta|e00|output|    3	subI
+Beta|e00|output|    3	load
+Beta|e00|output|    3	loadAI
+Beta|e00|output|    1	jump
+Beta|e00|output|    1	halt
+Beta|e00|output|
+Beta|e00|output|instructions executed:   37
+Beta|e00|output|register         read:   36 write:   58
+Beta|e00|output|memory           read:    6 write:    8
+Beta|e00|output|
+Beta|e00|output|  register    value
+Beta|e00|output|        r0        0
+Beta|e00|output|        r1        0
+Beta|e00|output|        r2       34
+Beta|e00|output|        r4       99
+Beta|e00|output|        r5       34
+Beta|e00|output|        r6        0
+Beta|e00|output|      rbss    17404
+Beta|e00|output|       rfp    34809
+Beta|e00|output|       rpc       36
+Beta|e00|output|       rsp    34833
+Beta|e00|output|
+Beta|e00|output|    memory    value
+Beta|e00|output|00017404       99
+Beta|e00|output|00034833    34809
+Beta|e00|output|00034837        0
+Beta|e00|output|00034841       99
+Beta|e00|output|00034845       34
+Beta|e00|output|00034857        0
+Beta|e00|output|00034858        0
+Beta|e00|output|00034859        0
+Beta|
+Beta|e00|sixit|0
+Beta|e00|memory|00017404|99
+Beta|e00|memory|00034833|34809
+Beta|e00|memory|00034837|0
+Beta|e00|memory|00034841|99
+Beta|e00|memory|00034845|34
+Beta|e00|memory|00034857|0
+Beta|e00|memory|00034858|0
+Beta|e00|memory|00034859|0
+Beta|e00|instruction|7|addI
+Beta|e00|instruction|5|loadI
+Beta|e00|instruction|5|storeAI
+Beta|e00|instruction|3|jumpI
+Beta|e00|instruction|3|i2i
+Beta|e00|instruction|3|store
+Beta|e00|instruction|3|subI
+Beta|e00|instruction|3|load
+Beta|e00|instruction|3|loadAI
+Beta|e00|instruction|1|jump
+Beta|e00|instruction|1|halt
+Beta|e01|stack|39756
+Beta|e01|data|19878
+Beta|e01|input|loadI 20000 => rfp
+Beta|e01|input|loadI 20000 => rsp
+Beta|e01|input|loadI 10000 => rbss
+Beta|e01|input|jumpI -> L3
+Beta|e01|input|L1:
+Beta|e01|input|addI rfp, 28 => rsp
+Beta|e01|input|store r0 => rsp
+Beta|e01|input|addI rsp, 1 => rsp
+Beta|e01|input|store r1 => rsp
+Beta|e01|input|addI rsp, 1 => rsp
+Beta|e01|input|store r2 => rsp
+Beta|e01|input|addI rsp, 1 => rsp
+Beta|e01|input|store r3 => rsp
+Beta|e01|input|addI rsp, 1 => rsp
+Beta|e01|input|loadI 98 => r1
+Beta|e01|input|storeAI r1 => rfp, 0
+Beta|e01|input|loadAI rfp, 0 => r2
+Beta|e01|input|i2i r2 => r0
+Beta|e01|input|jumpI -> L0
+Beta|e01|input|L0:
+Beta|e01|input|storeAI r0 => rfp, 12
+Beta|e01|input|subI rsp, 1 => rsp
+Beta|e01|input|load rsp => r3
+Beta|e01|input|subI rsp, 1 => rsp
+Beta|e01|input|load rsp => r2
+Beta|e01|input|subI rsp, 1 => rsp
+Beta|e01|input|load rsp => r1
+Beta|e01|input|subI rsp, 1 => rsp
+Beta|e01|input|load rsp => r0
+Beta|e01|input|loadAI rfp, 16 => r3
+Beta|e01|input|i2i rfp => rsp
+Beta|e01|input|loadAI rfp, 4 => rfp
+Beta|e01|input|jump -> r3
+Beta|e01|input|L3:
+Beta|e01|input|addI rfp, 24 => rsp
+Beta|e01|input|loadI 0 => r7
+Beta|e01|input|addI rpc, 7 => r6
+Beta|e01|input|storeAI r6 => rsp, 16
+Beta|e01|input|storeAI r7 => rsp, 8
+Beta|e01|input|storeAI rfp => rsp, 4
+Beta|e01|input|i2i rsp => rfp
+Beta|e01|input|addI rsp, 24 => rsp
+Beta|e01|input|jumpI -> L1
+Beta|e01|input|loadAI rsp, 12 => r5
+Beta|e01|input|storeAI r5 => rbss, 0
+Beta|e01|input|L2:
+Beta|e01|input|halt
+Beta|e01|input|
+Beta|e01|output|count	instruction
+Beta|e01|output|    8	addI
+Beta|e01|output|    6	storeAI
+Beta|e01|output|    5	loadI
+Beta|e01|output|    4	store
+Beta|e01|output|    4	loadAI
+Beta|e01|output|    4	subI
+Beta|e01|output|    4	load
+Beta|e01|output|    3	jumpI
+Beta|e01|output|    3	i2i
+Beta|e01|output|    1	jump
+Beta|e01|output|    1	halt
+Beta|e01|output|
+Beta|e01|output|instructions executed:   43
+Beta|e01|output|register         read:   44 write:   68
+Beta|e01|output|memory           read:    8 write:   10
+Beta|e01|output|
+Beta|e01|output|  register    value
+Beta|e01|output|        r0        0
+Beta|e01|output|        r1        0
+Beta|e01|output|        r2        0
+Beta|e01|output|        r3       40
+Beta|e01|output|        r5       98
+Beta|e01|output|        r6       40
+Beta|e01|output|        r7        0
+Beta|e01|output|      rbss    19878
+Beta|e01|output|       rfp    39756
+Beta|e01|output|       rpc       42
+Beta|e01|output|       rsp    39780
+Beta|e01|output|
+Beta|e01|output|    memory    value
+Beta|e01|output|00019878       98
+Beta|e01|output|00039780       98
+Beta|e01|output|00039784    39756
+Beta|e01|output|00039788        0
+Beta|e01|output|00039792       98
+Beta|e01|output|00039796       40
+Beta|e01|output|00039808        0
+Beta|e01|output|00039809        0
+Beta|e01|output|00039810        0
+Beta|e01|output|00039811        0
+Beta|0
+Beta|e01|sixit|0
+Beta|e01|memory|00019878|98
+Beta|e01|memory|00039780|98
+Beta|e01|memory|00039784|39756
+Beta|e01|memory|00039788|0
+Beta|e01|memory|00039792|98
+Beta|e01|memory|00039796|40
+Beta|e01|memory|00039808|0
+Beta|e01|memory|00039809|0
+Beta|e01|memory|00039810|0
+Beta|e01|memory|00039811|0
+Beta|e01|instruction|8|addI
+Beta|e01|instruction|6|storeAI
+Beta|e01|instruction|5|loadI
+Beta|e01|instruction|4|store
+Beta|e01|instruction|4|loadAI
+Beta|e01|instruction|4|subI
+Beta|e01|instruction|4|load
+Beta|e01|instruction|3|jumpI
+Beta|e01|instruction|3|i2i
+Beta|e01|instruction|1|jump
+Beta|e01|instruction|1|halt
+Beta|e02|stack|29256
+Beta|e02|data|14628
+Beta|e02|input|loadI 20000 => rfp
+Beta|e02|input|loadI 20000 => rsp
+Beta|e02|input|loadI 10000 => rbss
+Beta|e02|input|jumpI -> L3
+Beta|e02|input|L1:
+Beta|e02|input|addI rfp, 36 => rsp
+Beta|e02|input|store r0 => rsp
+Beta|e02|input|addI rsp, 1 => rsp
+Beta|e02|input|store r1 => rsp
+Beta|e02|input|addI rsp, 1 => rsp
+Beta|e02|input|store r2 => rsp
+Beta|e02|input|addI rsp, 1 => rsp
+Beta|e02|input|store r3 => rsp
+Beta|e02|input|addI rsp, 1 => rsp
+Beta|e02|input|store r4 => rsp
+Beta|e02|input|addI rsp, 1 => rsp
+Beta|e02|input|store r5 => rsp
+Beta|e02|input|addI rsp, 1 => rsp
+Beta|e02|input|loadAI rfp, 4 => r1
+Beta|e02|input|loadAI rfp, 0 => r2
+Beta|e02|input|mult r1, r2 => r3
+Beta|e02|input|storeAI r3 => rfp, 8
+Beta|e02|input|loadAI rfp, 8 => r4
+Beta|e02|input|i2i r4 => r0
+Beta|e02|input|jumpI -> L0
+Beta|e02|input|L0:
+Beta|e02|input|storeAI r0 => rfp, 20
+Beta|e02|input|subI rsp, 1 => rsp
+Beta|e02|input|load rsp => r5
+Beta|e02|input|subI rsp, 1 => rsp
+Beta|e02|input|load rsp => r4
+Beta|e02|input|subI rsp, 1 => rsp
+Beta|e02|input|load rsp => r3
+Beta|e02|input|subI rsp, 1 => rsp
+Beta|e02|input|load rsp => r2
+Beta|e02|input|subI rsp, 1 => rsp
+Beta|e02|input|load rsp => r1
+Beta|e02|input|subI rsp, 1 => rsp
+Beta|e02|input|load rsp => r0
+Beta|e02|input|loadAI rfp, 24 => r5
+Beta|e02|input|i2i rfp => rsp
+Beta|e02|input|loadAI rfp, 12 => rfp
+Beta|e02|input|jump -> r5
+Beta|e02|input|L3:
+Beta|e02|input|addI rfp, 28 => rsp
+Beta|e02|input|loadI 7 => r7
+Beta|e02|input|storeAI r7 => rfp, 0
+Beta|e02|input|loadAI rfp, 0 => r9
+Beta|e02|input|loadAI rfp, 0 => r8
+Beta|e02|input|loadI 0 => r12
+Beta|e02|input|addI rpc, 9 => r11
+Beta|e02|input|storeAI r11 => rsp, 24
+Beta|e02|input|storeAI r12 => rsp, 16
+Beta|e02|input|storeAI rfp => rsp, 12
+Beta|e02|input|i2i rsp => rfp
+Beta|e02|input|addI rsp, 28 => rsp
+Beta|e02|input|storeAI r9 => rfp, 0
+Beta|e02|input|storeAI r8 => rfp, 4
+Beta|e02|input|jumpI -> L1
+Beta|e02|input|loadAI rsp, 20 => r10
+Beta|e02|input|storeAI r10 => rbss, 0
+Beta|e02|input|L2:
+Beta|e02|input|halt
+Beta|e02|input|
+Beta|e02|output|count	instruction
+Beta|e02|output|   10	addI
+Beta|e02|output|    9	storeAI
+Beta|e02|output|    8	loadAI
+Beta|e02|output|    6	store
+Beta|e02|output|    6	subI
+Beta|e02|output|    6	load
+Beta|e02|output|    5	loadI
+Beta|e02|output|    3	jumpI
+Beta|e02|output|    3	i2i
+Beta|e02|output|    1	mult
+Beta|e02|output|    1	jump
+Beta|e02|output|    1	halt
+Beta|e02|output|
+Beta|e02|output|instructions executed:   59
+Beta|e02|output|register         read:   66 write:   95
+Beta|e02|output|memory           read:   14 write:   15
+Beta|e02|output|
+Beta|e02|output|  register    value
+Beta|e02|output|        r0        0
+Beta|e02|output|        r1        0
+Beta|e02|output|       r10       49
+Beta|e02|output|       r11       56
+Beta|e02|output|       r12        0
+Beta|e02|output|        r2        0
+Beta|e02|output|        r3        0
+Beta|e02|output|        r4        0
+Beta|e02|output|        r5       56
+Beta|e02|output|        r7        7
+Beta|e02|output|        r8        7
+Beta|e02|output|        r9        7
+Beta|e02|output|      rbss    14628
+Beta|e02|output|       rfp    29256
+Beta|e02|output|       rpc       58
+Beta|e02|output|       rsp    29284
+Beta|e02|output|
+Beta|e02|output|    memory    value
+Beta|e02|output|00014628       49
+Beta|e02|output|00029256        7
+Beta|e02|output|00029284        7
+Beta|e02|output|00029288        7
+Beta|e02|output|00029292       49
+Beta|e02|output|00029296    29256
+Beta|e02|output|00029300        0
+Beta|e02|output|00029304       49
+Beta|e02|output|00029308       56
+Beta|e02|output|00029320        0
+Beta|e02|output|00029321        0
+Beta|e02|output|00029322        0
+Beta|e02|output|00029323        0
+Beta|e02|output|00029324        0
+Beta|e02|output|00029325        0
+Beta|0
+Beta|e02|sixit|0
+Beta|e02|memory|00014628|49
+Beta|e02|memory|00029256|7
+Beta|e02|memory|00029284|7
+Beta|e02|memory|00029288|7
+Beta|e02|memory|00029292|49
+Beta|e02|memory|00029296|29256
+Beta|e02|memory|00029300|0
+Beta|e02|memory|00029304|49
+Beta|e02|memory|00029308|56
+Beta|e02|memory|00029320|0
+Beta|e02|memory|00029321|0
+Beta|e02|memory|00029322|0
+Beta|e02|memory|00029323|0
+Beta|e02|memory|00029324|0
+Beta|e02|memory|00029325|0
+Beta|e02|instruction|10|addI
+Beta|e02|instruction|9|storeAI
+Beta|e02|instruction|8|loadAI
+Beta|e02|instruction|6|store
+Beta|e02|instruction|6|subI
+Beta|e02|instruction|6|load
+Beta|e02|instruction|5|loadI
+Beta|e02|instruction|3|jumpI
+Beta|e02|instruction|3|i2i
+Beta|e02|instruction|1|mult
+Beta|e02|instruction|1|jump
+Beta|e02|instruction|1|halt
+Beta|e03|stack|38516
+Beta|e03|data|19258
+Beta|e03|input|loadI 20000 => rfp
+Beta|e03|input|loadI 20000 => rsp
+Beta|e03|input|loadI 10000 => rbss
+Beta|e03|input|jumpI -> L6
+Beta|e03|input|L1:
+Beta|e03|input|addI rfp, 32 => rsp
+Beta|e03|input|store r0 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r1 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r2 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r3 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r4 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r5 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r6 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r7 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r8 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r9 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r10 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r11 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r12 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r13 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r14 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|store r15 => rsp
+Beta|e03|input|addI rsp, 1 => rsp
+Beta|e03|input|loadAI rfp, 0 => r1
+Beta|e03|input|loadI 1 => r2
+Beta|e03|input|cmp_EQ r1, r2 -> r3
+Beta|e03|input|cbr r3 -> L2, L3
+Beta|e03|input|L2:
+Beta|e03|input|loadAI rfp, 0 => r4
+Beta|e03|input|i2i r4 => r0
+Beta|e03|input|jumpI -> L0
+Beta|e03|input|jumpI -> L4
+Beta|e03|input|L3:
+Beta|e03|input|L4:
+Beta|e03|input|loadAI rfp, 0 => r6
+Beta|e03|input|loadI 1 => r7
+Beta|e03|input|sub r6, r7 => r8
+Beta|e03|input|loadI 0 => r11
+Beta|e03|input|addI rpc, 8 => r10
+Beta|e03|input|storeAI r10 => rsp, 20
+Beta|e03|input|storeAI r11 => rsp, 12
+Beta|e03|input|storeAI rfp => rsp, 8
+Beta|e03|input|i2i rsp => rfp
+Beta|e03|input|addI rsp, 32 => rsp
+Beta|e03|input|storeAI r8 => rfp, 0
+Beta|e03|input|jumpI -> L1
+Beta|e03|input|loadAI rsp, 16 => r9
+Beta|e03|input|loadAI rfp, 0 => r12
+Beta|e03|input|mult r9, r12 => r13
+Beta|e03|input|storeAI r13 => rfp, 4
+Beta|e03|input|loadAI rfp, 4 => r14
+Beta|e03|input|i2i r14 => r0
+Beta|e03|input|jumpI -> L0
+Beta|e03|input|L0:
+Beta|e03|input|storeAI r0 => rfp, 16
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r15
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r14
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r13
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r12
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r11
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r10
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r9
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r8
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r7
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r6
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r5
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r4
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r3
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r2
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r1
+Beta|e03|input|subI rsp, 1 => rsp
+Beta|e03|input|load rsp => r0
+Beta|e03|input|loadAI rfp, 20 => r15
+Beta|e03|input|i2i rfp => rsp
+Beta|e03|input|loadAI rfp, 8 => rfp
+Beta|e03|input|jump -> r15
+Beta|e03|input|L6:
+Beta|e03|input|addI rfp, 28 => rsp
+Beta|e03|input|loadI 6 => r17
+Beta|e03|input|storeAI r17 => rfp, 0
+Beta|e03|input|loadAI rfp, 0 => r18
+Beta|e03|input|loadI 0 => r21
+Beta|e03|input|addI rpc, 8 => r20
+Beta|e03|input|storeAI r20 => rsp, 20
+Beta|e03|input|storeAI r21 => rsp, 12
+Beta|e03|input|storeAI rfp => rsp, 8
+Beta|e03|input|i2i rsp => rfp
+Beta|e03|input|addI rsp, 28 => rsp
+Beta|e03|input|storeAI r18 => rfp, 0
+Beta|e03|input|jumpI -> L1
+Beta|e03|input|loadAI rsp, 16 => r19
+Beta|e03|input|storeAI r19 => rbss, 0
+Beta|e03|input|L5:
+Beta|e03|input|halt
+Beta|e03|input|
+Beta|e03|output|count	instruction
+Beta|e03|output|  115	addI
+Beta|e03|output|   96	store
+Beta|e03|output|   96	subI
+Beta|e03|output|   96	load
+Beta|e03|output|   41	loadAI
+Beta|e03|output|   37	storeAI
+Beta|e03|output|   21	loadI
+Beta|e03|output|   18	i2i
+Beta|e03|output|   13	jumpI
+Beta|e03|output|    6	cmp_EQ
+Beta|e03|output|    6	cbr
+Beta|e03|output|    6	jump
+Beta|e03|output|    5	sub
+Beta|e03|output|    5	mult
+Beta|e03|output|    1	halt
+Beta|e03|output|
+Beta|e03|output|instructions executed:  562
+Beta|e03|output|register         read:  676 write:  962
+Beta|e03|output|memory           read:  137 write:  133
+Beta|e03|output|
+Beta|e03|output|  register    value
+Beta|e03|output|        r0        0
+Beta|e03|output|        r1        0
+Beta|e03|output|       r10        0
+Beta|e03|output|       r11        0
+Beta|e03|output|       r12        0
+Beta|e03|output|       r13        0
+Beta|e03|output|       r14        0
+Beta|e03|output|       r15      114
+Beta|e03|output|       r17        6
+Beta|e03|output|       r18        6
+Beta|e03|output|       r19      720
+Beta|e03|output|        r2        0
+Beta|e03|output|       r20      114
+Beta|e03|output|       r21        0
+Beta|e03|output|        r3        0
+Beta|e03|output|        r4        0
+Beta|e03|output|        r5        0
+Beta|e03|output|        r6        0
+Beta|e03|output|        r7        0
+Beta|e03|output|        r8        0
+Beta|e03|output|        r9        0
+Beta|e03|output|      rbss    19258
+Beta|e03|output|       rfp    38516
+Beta|e03|output|       rpc      116
+Beta|e03|output|       rsp    38544
+Beta|e03|output|
+Beta|e03|output|    memory    value
+Beta|e03|output|00019258      720
+Beta|e03|output|00038516        6
+Beta|e03|output|00038544        6
+Beta|e03|output|00038548      720
+Beta|e03|output|00038552    38516
+Beta|e03|output|00038556        0
+Beta|e03|output|00038560      720
+Beta|e03|output|00038564      114
+Beta|e03|output|00038576        0
+Beta|e03|output|00038577        0
+Beta|e03|output|00038578        0
+Beta|e03|output|00038579        0
+Beta|e03|output|00038580        0
+Beta|e03|output|00038581        0
+Beta|e03|output|00038582        0
+Beta|e03|output|00038583        0
+Beta|e03|output|00038584        0
+Beta|e03|output|00038585        0
+Beta|e03|output|00038586        0
+Beta|e03|output|00038587        0
+Beta|e03|output|00038588        0
+Beta|e03|output|00038589        0
+Beta|e03|output|00038590        0
+Beta|e03|output|00038591        0
+Beta|e03|output|00038592        5
+Beta|e03|output|00038596      120
+Beta|e03|output|00038600    38544
+Beta|e03|output|00038604        0
+Beta|e03|output|00038608      120
+Beta|e03|output|00038612       57
+Beta|e03|output|00038624        0
+Beta|e03|output|00038625        6
+Beta|e03|output|00038626        1
+Beta|e03|output|00038627        0
+Beta|e03|output|00038628        0
+Beta|e03|output|00038629        0
+Beta|e03|output|00038630        6
+Beta|e03|output|00038631        1
+Beta|e03|output|00038632        5
+Beta|e03|output|00038633        0
+Beta|e03|output|00038634       57
+Beta|e03|output|00038635        0
+Beta|e03|output|00038636        0
+Beta|e03|output|00038637        0
+Beta|e03|output|00038638        0
+Beta|e03|output|00038639        0
+Beta|e03|output|00038640        4
+Beta|e03|output|00038644       24
+Beta|e03|output|00038648    38592
+Beta|e03|output|00038652        0
+Beta|e03|output|00038656       24
+Beta|e03|output|00038660       57
+Beta|e03|output|00038672        0
+Beta|e03|output|00038673        5
+Beta|e03|output|00038674        1
+Beta|e03|output|00038675        0
+Beta|e03|output|00038676        0
+Beta|e03|output|00038677        0
+Beta|e03|output|00038678        5
+Beta|e03|output|00038679        1
+Beta|e03|output|00038680        4
+Beta|e03|output|00038681        0
+Beta|e03|output|00038682       57
+Beta|e03|output|00038683        0
+Beta|e03|output|00038684        0
+Beta|e03|output|00038685        0
+Beta|e03|output|00038686        0
+Beta|e03|output|00038687        0
+Beta|e03|output|00038688        3
+Beta|e03|output|00038692        6
+Beta|e03|output|00038696    38640
+Beta|e03|output|00038700        0
+Beta|e03|output|00038704        6
+Beta|e03|output|00038708       57
+Beta|e03|output|00038720        0
+Beta|e03|output|00038721        4
+Beta|e03|output|00038722        1
+Beta|e03|output|00038723        0
+Beta|e03|output|00038724        0
+Beta|e03|output|00038725        0
+Beta|e03|output|00038726        4
+Beta|e03|output|00038727        1
+Beta|e03|output|00038728        3
+Beta|e03|output|00038729        0
+Beta|e03|output|00038730       57
+Beta|e03|output|00038731        0
+Beta|e03|output|00038732        0
+Beta|e03|output|00038733        0
+Beta|e03|output|00038734        0
+Beta|e03|output|00038735        0
+Beta|e03|output|00038736        2
+Beta|e03|output|00038740        2
+Beta|e03|output|00038744    38688
+Beta|e03|output|00038748        0
+Beta|e03|output|00038752        2
+Beta|e03|output|00038756       57
+Beta|e03|output|00038768        0
+Beta|e03|output|00038769        3
+Beta|e03|output|00038770        1
+Beta|e03|output|00038771        0
+Beta|e03|output|00038772        0
+Beta|e03|output|00038773        0
+Beta|e03|output|00038774        3
+Beta|e03|output|00038775        1
+Beta|e03|output|00038776        2
+Beta|e03|output|00038777        0
+Beta|e03|output|00038778       57
+Beta|e03|output|00038779        0
+Beta|e03|output|00038780        0
+Beta|e03|output|00038781        0
+Beta|e03|output|00038782        0
+Beta|e03|output|00038783        0
+Beta|e03|output|00038784        1
+Beta|e03|output|00038792    38736
+Beta|e03|output|00038796        0
+Beta|e03|output|00038800        1
+Beta|e03|output|00038804       57
+Beta|e03|output|00038816        0
+Beta|e03|output|00038817        2
+Beta|e03|output|00038818        1
+Beta|e03|output|00038819        0
+Beta|e03|output|00038820        0
+Beta|e03|output|00038821        0
+Beta|e03|output|00038822        2
+Beta|e03|output|00038823        1
+Beta|e03|output|00038824        1
+Beta|e03|output|00038825        0
+Beta|e03|output|00038826       57
+Beta|e03|output|00038827        0
+Beta|e03|output|00038828        0
+Beta|e03|output|00038829        0
+Beta|e03|output|00038830        0
+Beta|e03|output|00038831        0
+Beta|0
+Beta|e03|sixit|0
+Beta|e03|memory|00019258|720
+Beta|e03|memory|00038516|6
+Beta|e03|memory|00038544|6
+Beta|e03|memory|00038548|720
+Beta|e03|memory|00038552|38516
+Beta|e03|memory|00038556|0
+Beta|e03|memory|00038560|720
+Beta|e03|memory|00038564|114
+Beta|e03|memory|00038576|0
+Beta|e03|memory|00038577|0
+Beta|e03|memory|00038578|0
+Beta|e03|memory|00038579|0
+Beta|e03|memory|00038580|0
+Beta|e03|memory|00038581|0
+Beta|e03|memory|00038582|0
+Beta|e03|memory|00038583|0
+Beta|e03|memory|00038584|0
+Beta|e03|memory|00038585|0
+Beta|e03|memory|00038586|0
+Beta|e03|memory|00038587|0
+Beta|e03|instruction|115|addI
+Beta|e03|instruction|96|store
+Beta|e03|instruction|96|subI
+Beta|e03|instruction|96|load
+Beta|e03|instruction|41|loadAI
+Beta|e03|instruction|37|storeAI
+Beta|e03|instruction|21|loadI
+Beta|e03|instruction|18|i2i
+Beta|e03|instruction|13|jumpI
+Beta|e03|instruction|6|cmp_EQ
+Beta|e03|instruction|6|cbr
+Beta|e03|instruction|6|jump
+Beta|e03|instruction|5|sub
+Beta|e03|instruction|5|mult
+Beta|e03|instruction|1|halt
+Beta|e04|stack|19264
+Beta|e04|data|9632
+Beta|e04|input|loadI 20000 => rfp
+Beta|e04|input|loadI 20000 => rsp
+Beta|e04|input|loadI 10000 => rbss
+Beta|e04|input|jumpI -> L5
+Beta|e04|input|L1:
+Beta|e04|input|addI rfp, 36 => rsp
+Beta|e04|input|store r0 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r1 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r2 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r3 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r4 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r5 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|loadAI rfp, 4 => r1
+Beta|e04|input|loadAI rfp, 0 => r2
+Beta|e04|input|mult r1, r2 => r3
+Beta|e04|input|storeAI r3 => rfp, 8
+Beta|e04|input|loadAI rfp, 8 => r4
+Beta|e04|input|i2i r4 => r0
+Beta|e04|input|jumpI -> L0
+Beta|e04|input|L0:
+Beta|e04|input|storeAI r0 => rfp, 20
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r5
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r4
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r3
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r2
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r1
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r0
+Beta|e04|input|loadAI rfp, 24 => r5
+Beta|e04|input|i2i rfp => rsp
+Beta|e04|input|loadAI rfp, 12 => rfp
+Beta|e04|input|jump -> r5
+Beta|e04|input|L3:
+Beta|e04|input|addI rfp, 68 => rsp
+Beta|e04|input|store r6 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r7 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r8 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r9 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r10 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r11 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r12 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r13 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r14 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r15 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r16 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r17 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r18 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r19 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r20 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r21 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r22 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r23 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r24 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|store r25 => rsp
+Beta|e04|input|addI rsp, 1 => rsp
+Beta|e04|input|loadAI rfp, 12 => r7
+Beta|e04|input|storeAI r7 => rfp, 16
+Beta|e04|input|loadAI rfp, 8 => r8
+Beta|e04|input|storeAI r8 => rfp, 20
+Beta|e04|input|loadAI rfp, 4 => r9
+Beta|e04|input|storeAI r9 => rfp, 24
+Beta|e04|input|loadAI rfp, 0 => r10
+Beta|e04|input|storeAI r10 => rfp, 28
+Beta|e04|input|loadAI rfp, 20 => r12
+Beta|e04|input|loadAI rfp, 16 => r11
+Beta|e04|input|loadI 0 => r15
+Beta|e04|input|addI rpc, 9 => r14
+Beta|e04|input|storeAI r14 => rsp, 24
+Beta|e04|input|storeAI r15 => rsp, 16
+Beta|e04|input|storeAI rfp => rsp, 12
+Beta|e04|input|i2i rsp => rfp
+Beta|e04|input|addI rsp, 68 => rsp
+Beta|e04|input|storeAI r12 => rfp, 0
+Beta|e04|input|storeAI r11 => rfp, 4
+Beta|e04|input|jumpI -> L1
+Beta|e04|input|loadAI rsp, 20 => r13
+Beta|e04|input|storeAI r13 => rfp, 32
+Beta|e04|input|loadAI rfp, 28 => r17
+Beta|e04|input|loadAI rfp, 24 => r16
+Beta|e04|input|loadI 0 => r20
+Beta|e04|input|addI rpc, 9 => r19
+Beta|e04|input|storeAI r19 => rsp, 24
+Beta|e04|input|storeAI r20 => rsp, 16
+Beta|e04|input|storeAI rfp => rsp, 12
+Beta|e04|input|i2i rsp => rfp
+Beta|e04|input|addI rsp, 68 => rsp
+Beta|e04|input|storeAI r17 => rfp, 0
+Beta|e04|input|storeAI r16 => rfp, 4
+Beta|e04|input|jumpI -> L1
+Beta|e04|input|loadAI rsp, 20 => r18
+Beta|e04|input|storeAI r18 => rfp, 36
+Beta|e04|input|loadAI rfp, 32 => r21
+Beta|e04|input|loadAI rfp, 36 => r22
+Beta|e04|input|add r21, r22 => r23
+Beta|e04|input|storeAI r23 => rfp, 40
+Beta|e04|input|loadAI rfp, 40 => r24
+Beta|e04|input|i2i r24 => r6
+Beta|e04|input|jumpI -> L2
+Beta|e04|input|L2:
+Beta|e04|input|storeAI r6 => rfp, 52
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r25
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r24
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r23
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r22
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r21
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r20
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r19
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r18
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r17
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r16
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r15
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r14
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r13
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r12
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r11
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r10
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r9
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r8
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r7
+Beta|e04|input|subI rsp, 1 => rsp
+Beta|e04|input|load rsp => r6
+Beta|e04|input|loadAI rfp, 56 => r25
+Beta|e04|input|i2i rfp => rsp
+Beta|e04|input|loadAI rfp, 44 => rfp
+Beta|e04|input|jump -> r25
+Beta|e04|input|L5:
+Beta|e04|input|addI rfp, 32 => rsp
+Beta|e04|input|loadI 7 => r27
+Beta|e04|input|storeAI r27 => rfp, 0
+Beta|e04|input|loadI 3 => r28
+Beta|e04|input|storeAI r28 => rfp, 4
+Beta|e04|input|loadAI rfp, 4 => r32
+Beta|e04|input|loadAI rfp, 4 => r31
+Beta|e04|input|loadAI rfp, 0 => r30
+Beta|e04|input|loadAI rfp, 0 => r29
+Beta|e04|input|loadI 0 => r35
+Beta|e04|input|addI rpc, 11 => r34
+Beta|e04|input|storeAI r34 => rsp, 56
+Beta|e04|input|storeAI r35 => rsp, 48
+Beta|e04|input|storeAI rfp => rsp, 44
+Beta|e04|input|i2i rsp => rfp
+Beta|e04|input|addI rsp, 32 => rsp
+Beta|e04|input|storeAI r32 => rfp, 0
+Beta|e04|input|storeAI r31 => rfp, 4
+Beta|e04|input|storeAI r30 => rfp, 8
+Beta|e04|input|storeAI r29 => rfp, 12
+Beta|e04|input|jumpI -> L3
+Beta|e04|input|loadAI rsp, 52 => r33
+Beta|e04|input|storeAI r33 => rbss, 0
+Beta|e04|input|L4:
+Beta|e04|input|halt
+Beta|e04|input|
+Beta|e04|output|count	instruction
+Beta|e04|output|   42	addI
+Beta|e04|output|   32	storeAI
+Beta|e04|output|   32	store
+Beta|e04|output|   32	subI
+Beta|e04|output|   32	load
+Beta|e04|output|   30	loadAI
+Beta|e04|output|    9	i2i
+Beta|e04|output|    8	loadI
+Beta|e04|output|    7	jumpI
+Beta|e04|output|    3	jump
+Beta|e04|output|    2	mult
+Beta|e04|output|    1	add
+Beta|e04|output|    1	halt
+Beta|e04|output|
+Beta|e04|output|instructions executed:  231
+Beta|e04|output|register         read:  282 write:  384
+Beta|e04|output|memory           read:   62 write:   64
+Beta|e04|output|
+Beta|e04|output|  register    value
+Beta|e04|output|        r0        0
+Beta|e04|output|        r1        0
+Beta|e04|output|       r10        0
+Beta|e04|output|       r11        0
+Beta|e04|output|       r12        0
+Beta|e04|output|       r13        0
+Beta|e04|output|       r14        0
+Beta|e04|output|       r15        0
+Beta|e04|output|       r16        0
+Beta|e04|output|       r17        0
+Beta|e04|output|       r18        0
+Beta|e04|output|       r19        0
+Beta|e04|output|        r2        0
+Beta|e04|output|       r20        0
+Beta|e04|output|       r21        0
+Beta|e04|output|       r22        0
+Beta|e04|output|       r23        0
+Beta|e04|output|       r24        0
+Beta|e04|output|       r25      191
+Beta|e04|output|       r27        7
+Beta|e04|output|       r28        3
+Beta|e04|output|       r29        7
+Beta|e04|output|        r3        0
+Beta|e04|output|       r30        7
+Beta|e04|output|       r31        3
+Beta|e04|output|       r32        3
+Beta|e04|output|       r33       58
+Beta|e04|output|       r34      191
+Beta|e04|output|       r35        0
+Beta|e04|output|        r4        0
+Beta|e04|output|        r5      116
+Beta|e04|output|        r6        0
+Beta|e04|output|        r7        0
+Beta|e04|output|        r8        0
+Beta|e04|output|        r9        0
+Beta|e04|output|      rbss     9632
+Beta|e04|output|       rfp    19264
+Beta|e04|output|       rpc      193
+Beta|e04|output|       rsp    19296
+Beta|e04|output|
+Beta|e04|output|    memory    value
+Beta|e04|output|00009632       58
+Beta|e04|output|00019264        7
+Beta|e04|output|00019268        3
+Beta|e04|output|00019296        3
+Beta|e04|output|00019300        3
+Beta|e04|output|00019304        7
+Beta|e04|output|00019308        7
+Beta|e04|output|00019312        7
+Beta|e04|output|00019316        7
+Beta|e04|output|00019320        3
+Beta|e04|output|00019324        3
+Beta|e04|output|00019328       49
+Beta|e04|output|00019332        9
+Beta|e04|output|00019336       58
+Beta|e04|output|00019340    19264
+Beta|e04|output|00019344        0
+Beta|e04|output|00019348       58
+Beta|e04|output|00019352      191
+Beta|e04|output|00019364        0
+Beta|e04|output|00019365        0
+Beta|e04|output|00019366        0
+Beta|e04|output|00019367        0
+Beta|e04|output|00019368        0
+Beta|e04|output|00019369        0
+Beta|e04|output|00019370        0
+Beta|e04|output|00019371        0
+Beta|e04|output|00019372        0
+Beta|e04|output|00019373        0
+Beta|e04|output|00019374        0
+Beta|e04|output|00019375        0
+Beta|e04|output|00019376        0
+Beta|e04|output|00019377        0
+Beta|e04|output|00019378        0
+Beta|e04|output|00019379        0
+Beta|e04|output|00019380        0
+Beta|e04|output|00019381        0
+Beta|e04|output|00019382        0
+Beta|e04|output|00019383        0
+Beta|e04|output|00019384        3
+Beta|e04|output|00019388        3
+Beta|e04|output|00019392        9
+Beta|e04|output|00019396    19296
+Beta|e04|output|00019400        0
+Beta|e04|output|00019404        9
+Beta|e04|output|00019408      116
+Beta|e04|output|00019420        0
+Beta|e04|output|00019421        0
+Beta|e04|output|00019422        0
+Beta|e04|output|00019423        0
+Beta|e04|output|00019424        0
+Beta|e04|output|00019425      102
+Beta|0
+Beta|e04|sixit|0
+Beta|e04|memory|00009632|58
+Beta|e04|memory|00019264|7
+Beta|e04|memory|00019268|3
+Beta|e04|memory|00019296|3
+Beta|e04|memory|00019300|3
+Beta|e04|memory|00019304|7
+Beta|e04|memory|00019308|7
+Beta|e04|memory|00019312|7
+Beta|e04|memory|00019316|7
+Beta|e04|memory|00019320|3
+Beta|e04|memory|00019324|3
+Beta|e04|memory|00019328|49
+Beta|e04|memory|00019332|9
+Beta|e04|memory|00019336|58
+Beta|e04|memory|00019340|19264
+Beta|e04|memory|00019344|0
+Beta|e04|memory|00019348|58
+Beta|e04|memory|00019352|191
+Beta|e04|memory|00019364|0
+Beta|e04|memory|00019365|0
+Beta|e04|instruction|42|addI
+Beta|e04|instruction|32|storeAI
+Beta|e04|instruction|32|store
+Beta|e04|instruction|32|subI
+Beta|e04|instruction|32|load
+Beta|e04|instruction|30|loadAI
+Beta|e04|instruction|9|i2i
+Beta|e04|instruction|8|loadI
+Beta|e04|instruction|7|jumpI
+Beta|e04|instruction|3|jump
+Beta|e04|instruction|2|mult
+Beta|e04|instruction|1|add
+Beta|e04|instruction|1|halt
+Beta|e05|stack|36386
+Beta|e05|data|18193
+Beta|e05|input|loadI 20000 => rfp
+Beta|e05|input|loadI 20000 => rsp
+Beta|e05|input|loadI 10000 => rbss
+Beta|e05|input|jumpI -> L6
+Beta|e05|input|L1:
+Beta|e05|input|addI rfp, 32 => rsp
+Beta|e05|input|store r0 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r1 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r2 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r3 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r4 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r5 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r6 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r7 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r8 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r9 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r10 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r11 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r12 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r13 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r14 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|store r15 => rsp
+Beta|e05|input|addI rsp, 1 => rsp
+Beta|e05|input|loadAI rfp, 0 => r1
+Beta|e05|input|loadI 0 => r2
+Beta|e05|input|cmp_EQ r1, r2 -> r3
+Beta|e05|input|cbr r3 -> L2, L3
+Beta|e05|input|L2:
+Beta|e05|input|loadI 1 => r4
+Beta|e05|input|i2i r4 => r0
+Beta|e05|input|jumpI -> L0
+Beta|e05|input|jumpI -> L4
+Beta|e05|input|L3:
+Beta|e05|input|L4:
+Beta|e05|input|loadAI rfp, 0 => r6
+Beta|e05|input|loadAI rfp, 0 => r7
+Beta|e05|input|loadI 1 => r8
+Beta|e05|input|sub r7, r8 => r9
+Beta|e05|input|loadI 0 => r12
+Beta|e05|input|addI rpc, 8 => r11
+Beta|e05|input|storeAI r11 => rsp, 20
+Beta|e05|input|storeAI r12 => rsp, 12
+Beta|e05|input|storeAI rfp => rsp, 8
+Beta|e05|input|i2i rsp => rfp
+Beta|e05|input|addI rsp, 32 => rsp
+Beta|e05|input|storeAI r9 => rfp, 0
+Beta|e05|input|jumpI -> L1
+Beta|e05|input|loadAI rsp, 16 => r10
+Beta|e05|input|add r6, r10 => r13
+Beta|e05|input|storeAI r13 => rfp, 4
+Beta|e05|input|loadAI rfp, 4 => r14
+Beta|e05|input|i2i r14 => r0
+Beta|e05|input|jumpI -> L0
+Beta|e05|input|L0:
+Beta|e05|input|storeAI r0 => rfp, 16
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r15
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r14
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r13
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r12
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r11
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r10
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r9
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r8
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r7
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r6
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r5
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r4
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r3
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r2
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r1
+Beta|e05|input|subI rsp, 1 => rsp
+Beta|e05|input|load rsp => r0
+Beta|e05|input|loadAI rfp, 20 => r15
+Beta|e05|input|i2i rfp => rsp
+Beta|e05|input|loadAI rfp, 8 => rfp
+Beta|e05|input|jump -> r15
+Beta|e05|input|L6:
+Beta|e05|input|addI rfp, 24 => rsp
+Beta|e05|input|loadI 3 => r17
+Beta|e05|input|loadI 0 => r20
+Beta|e05|input|addI rpc, 8 => r19
+Beta|e05|input|storeAI r19 => rsp, 20
+Beta|e05|input|storeAI r20 => rsp, 12
+Beta|e05|input|storeAI rfp => rsp, 8
+Beta|e05|input|i2i rsp => rfp
+Beta|e05|input|addI rsp, 24 => rsp
+Beta|e05|input|storeAI r17 => rfp, 0
+Beta|e05|input|jumpI -> L1
+Beta|e05|input|loadAI rsp, 16 => r18
+Beta|e05|input|storeAI r18 => rbss, 0
+Beta|e05|input|L5:
+Beta|e05|input|halt
+Beta|e05|input|
+Beta|e05|output|count	instruction
+Beta|e05|output|   77	addI
+Beta|e05|output|   64	store
+Beta|e05|output|   64	subI
+Beta|e05|output|   64	load
+Beta|e05|output|   25	loadAI
+Beta|e05|output|   24	storeAI
+Beta|e05|output|   16	loadI
+Beta|e05|output|   12	i2i
+Beta|e05|output|    9	jumpI
+Beta|e05|output|    4	cmp_EQ
+Beta|e05|output|    4	cbr
+Beta|e05|output|    4	jump
+Beta|e05|output|    3	sub
+Beta|e05|output|    3	add
+Beta|e05|output|    1	halt
+Beta|e05|output|
+Beta|e05|output|instructions executed:  374
+Beta|e05|output|register         read:  446 write:  639
+Beta|e05|output|memory           read:   89 write:   88
+Beta|e05|output|
+Beta|e05|output|  register    value
+Beta|e05|output|        r0        0
+Beta|e05|output|        r1        0
+Beta|e05|output|       r10        0
+Beta|e05|output|       r11        0
+Beta|e05|output|       r12        0
+Beta|e05|output|       r13        0
+Beta|e05|output|       r14        0
+Beta|e05|output|       r15      112
+Beta|e05|output|       r17        3
+Beta|e05|output|       r18        7
+Beta|e05|output|       r19      112
+Beta|e05|output|        r2        0
+Beta|e05|output|       r20        0
+Beta|e05|output|        r3        0
+Beta|e05|output|        r4        0
+Beta|e05|output|        r5        0
+Beta|e05|output|        r6        0
+Beta|e05|output|        r7        0
+Beta|e05|output|        r8        0
+Beta|e05|output|        r9        0
+Beta|e05|output|      rbss    18193
+Beta|e05|output|       rfp    36386
+Beta|e05|output|       rpc      114
+Beta|e05|output|       rsp    36410
+Beta|e05|output|
+Beta|e05|output|    memory    value
+Beta|e05|output|00018193        7
+Beta|e05|output|00036410        3
+Beta|e05|output|00036414        7
+Beta|e05|output|00036418    36386
+Beta|e05|output|00036422        0
+Beta|e05|output|00036426        7
+Beta|e05|output|00036430      112
+Beta|e05|output|00036442        0
+Beta|e05|output|00036443        0
+Beta|e05|output|00036444        0
+Beta|e05|output|00036445        0
+Beta|e05|output|00036446        0
+Beta|e05|output|00036447        0
+Beta|e05|output|00036448        0
+Beta|e05|output|00036449        0
+Beta|e05|output|00036450        0
+Beta|e05|output|00036451        0
+Beta|e05|output|00036452        0
+Beta|e05|output|00036453        0
+Beta|e05|output|00036454        0
+Beta|e05|output|00036455        0
+Beta|e05|output|00036456        0
+Beta|e05|output|00036457        0
+Beta|e05|output|00036458        2
+Beta|e05|output|00036462        4
+Beta|e05|output|00036466    36410
+Beta|e05|output|00036470        0
+Beta|e05|output|00036474        4
+Beta|e05|output|00036478       58
+Beta|e05|output|00036490        0
+Beta|e05|output|00036491        3
+Beta|e05|output|00036492        0
+Beta|e05|output|00036493        0
+Beta|e05|output|00036494        0
+Beta|e05|output|00036495        0
+Beta|e05|output|00036496        3
+Beta|e05|output|00036497        3
+Beta|e05|output|00036498        1
+Beta|e05|output|00036499        2
+Beta|e05|output|00036500        0
+Beta|e05|output|00036501       58
+Beta|e05|output|00036502        0
+Beta|e05|output|00036503        0
+Beta|e05|output|00036504        0
+Beta|e05|output|00036505        0
+Beta|e05|output|00036506        1
+Beta|e05|output|00036510        2
+Beta|e05|output|00036514    36458
+Beta|e05|output|00036518        0
+Beta|e05|output|00036522        2
+Beta|e05|output|00036526       58
+Beta|e05|output|00036538        0
+Beta|e05|output|00036539        2
+Beta|e05|output|00036540        0
+Beta|e05|output|00036541        0
+Beta|e05|output|00036542        0
+Beta|e05|output|00036543        0
+Beta|e05|output|00036544        2
+Beta|e05|output|00036545        2
+Beta|e05|output|00036546        1
+Beta|e05|output|00036547        1
+Beta|e05|output|00036548        0
+Beta|e05|output|00036549       58
+Beta|e05|output|00036550        0
+Beta|e05|output|00036551        0
+Beta|e05|output|00036552        0
+Beta|e05|output|00036553        0
+Beta|e05|output|00036554        0
+Beta|e05|output|00036562    36506
+Beta|e05|output|00036566        0
+Beta|e05|output|00036570        1
+Beta|e05|output|00036574       58
+Beta|e05|output|00036586        0
+Beta|e05|output|00036587        1
+Beta|e05|output|00036588        0
+Beta|e05|output|00036589        0
+Beta|e05|output|00036590        0
+Beta|e05|output|00036591        0
+Beta|e05|output|00036592        1
+Beta|e05|output|00036593        1
+Beta|e05|output|00036594        1
+Beta|e05|output|00036595        0
+Beta|e05|output|00036596        0
+Beta|e05|output|00036597       58
+Beta|e05|output|00036598        0
+Beta|e05|output|00036599        0
+Beta|e05|output|00036600        0
+Beta|e05|output|00036601        0
+Beta|0
+Beta|e05|sixit|0
+Beta|e05|memory|00018193|7
+Beta|e05|memory|00036410|3
+Beta|e05|memory|00036414|7
+Beta|e05|memory|00036418|36386
+Beta|e05|memory|00036422|0
+Beta|e05|memory|00036426|7
+Beta|e05|memory|00036430|112
+Beta|e05|memory|00036442|0
+Beta|e05|memory|00036443|0
+Beta|e05|memory|00036444|0
+Beta|e05|memory|00036445|0
+Beta|e05|memory|00036446|0
+Beta|e05|memory|00036447|0
+Beta|e05|memory|00036448|0
+Beta|e05|memory|00036449|0
+Beta|e05|memory|00036450|0
+Beta|e05|memory|00036451|0
+Beta|e05|memory|00036452|0
+Beta|e05|memory|00036453|0
+Beta|e05|memory|00036454|0
+Beta|e05|instruction|77|addI
+Beta|e05|instruction|64|store
+Beta|e05|instruction|64|subI
+Beta|e05|instruction|64|load
+Beta|e05|instruction|25|loadAI
+Beta|e05|instruction|24|storeAI
+Beta|e05|instruction|16|loadI
+Beta|e05|instruction|12|i2i
+Beta|e05|instruction|9|jumpI
+Beta|e05|instruction|4|cmp_EQ
+Beta|e05|instruction|4|cbr
+Beta|e05|instruction|4|jump
+Beta|e05|instruction|3|sub
+Beta|e05|instruction|3|add
+Beta|e05|instruction|1|halt
+Beta|e06|stack|41624
+Beta|e06|data|20812
+Beta|e06|input|loadI 20000 => rfp
+Beta|e06|input|loadI 20000 => rsp
+Beta|e06|input|loadI 10000 => rbss
+Beta|e06|input|jumpI -> L5
+Beta|e06|input|L1:
+Beta|e06|input|addI rfp, 32 => rsp
+Beta|e06|input|store r0 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r1 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r2 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r3 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r4 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|loadAI rfp, 4 => r1
+Beta|e06|input|loadAI rfp, 0 => r2
+Beta|e06|input|mult r1, r2 => r3
+Beta|e06|input|i2i r3 => r0
+Beta|e06|input|jumpI -> L0
+Beta|e06|input|L0:
+Beta|e06|input|storeAI r0 => rfp, 16
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r4
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r3
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r2
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r1
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r0
+Beta|e06|input|loadAI rfp, 20 => r4
+Beta|e06|input|i2i rfp => rsp
+Beta|e06|input|loadAI rfp, 8 => rfp
+Beta|e06|input|jump -> r4
+Beta|e06|input|L3:
+Beta|e06|input|addI rfp, 44 => rsp
+Beta|e06|input|store r5 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r6 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r7 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r8 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r9 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r10 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r11 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r12 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r13 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r14 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r15 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r16 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r17 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|store r18 => rsp
+Beta|e06|input|addI rsp, 1 => rsp
+Beta|e06|input|loadAI rfp, 8 => r7
+Beta|e06|input|loadAI rfp, 12 => r6
+Beta|e06|input|loadI 0 => r10
+Beta|e06|input|addI rpc, 9 => r9
+Beta|e06|input|storeAI r9 => rsp, 20
+Beta|e06|input|storeAI r10 => rsp, 12
+Beta|e06|input|storeAI rfp => rsp, 8
+Beta|e06|input|i2i rsp => rfp
+Beta|e06|input|addI rsp, 44 => rsp
+Beta|e06|input|storeAI r7 => rfp, 0
+Beta|e06|input|storeAI r6 => rfp, 4
+Beta|e06|input|jumpI -> L1
+Beta|e06|input|loadAI rsp, 16 => r8
+Beta|e06|input|loadAI rfp, 0 => r12
+Beta|e06|input|loadAI rfp, 4 => r11
+Beta|e06|input|loadI 0 => r15
+Beta|e06|input|addI rpc, 9 => r14
+Beta|e06|input|storeAI r14 => rsp, 20
+Beta|e06|input|storeAI r15 => rsp, 12
+Beta|e06|input|storeAI rfp => rsp, 8
+Beta|e06|input|i2i rsp => rfp
+Beta|e06|input|addI rsp, 44 => rsp
+Beta|e06|input|storeAI r12 => rfp, 0
+Beta|e06|input|storeAI r11 => rfp, 4
+Beta|e06|input|jumpI -> L1
+Beta|e06|input|loadAI rsp, 16 => r13
+Beta|e06|input|add r8, r13 => r16
+Beta|e06|input|storeAI r16 => rfp, 16
+Beta|e06|input|loadAI rfp, 16 => r17
+Beta|e06|input|i2i r17 => r5
+Beta|e06|input|jumpI -> L2
+Beta|e06|input|L2:
+Beta|e06|input|storeAI r5 => rfp, 28
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r18
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r17
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r16
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r15
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r14
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r13
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r12
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r11
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r10
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r9
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r8
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r7
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r6
+Beta|e06|input|subI rsp, 1 => rsp
+Beta|e06|input|load rsp => r5
+Beta|e06|input|loadAI rfp, 32 => r18
+Beta|e06|input|i2i rfp => rsp
+Beta|e06|input|loadAI rfp, 20 => rfp
+Beta|e06|input|jump -> r18
+Beta|e06|input|L5:
+Beta|e06|input|addI rfp, 32 => rsp
+Beta|e06|input|loadI 2018 => r20
+Beta|e06|input|storeAI r20 => rbss, 0
+Beta|e06|input|loadI 2 => r21
+Beta|e06|input|storeAI r21 => rfp, 0
+Beta|e06|input|loadI 2 => r22
+Beta|e06|input|storeAI r22 => rfp, 4
+Beta|e06|input|loadAI rfp, 4 => r32
+Beta|e06|input|loadI 2 => r33
+Beta|e06|input|mult r32, r33 => r34
+Beta|e06|input|loadAI rfp, 4 => r29
+Beta|e06|input|loadI 2 => r30
+Beta|e06|input|mult r29, r30 => r31
+Beta|e06|input|loadAI rfp, 0 => r26
+Beta|e06|input|loadI 3 => r27
+Beta|e06|input|mult r26, r27 => r28
+Beta|e06|input|loadAI rfp, 0 => r23
+Beta|e06|input|loadI 3 => r24
+Beta|e06|input|mult r23, r24 => r25
+Beta|e06|input|loadI 0 => r37
+Beta|e06|input|addI rpc, 11 => r36
+Beta|e06|input|storeAI r36 => rsp, 32
+Beta|e06|input|storeAI r37 => rsp, 24
+Beta|e06|input|storeAI rfp => rsp, 20
+Beta|e06|input|i2i rsp => rfp
+Beta|e06|input|addI rsp, 32 => rsp
+Beta|e06|input|storeAI r34 => rfp, 0
+Beta|e06|input|storeAI r31 => rfp, 4
+Beta|e06|input|storeAI r28 => rfp, 8
+Beta|e06|input|storeAI r25 => rfp, 12
+Beta|e06|input|jumpI -> L3
+Beta|e06|input|loadAI rsp, 28 => r35
+Beta|e06|input|storeAI r35 => rbss, 4
+Beta|e06|input|L4:
+Beta|e06|input|halt
+Beta|e06|input|
+Beta|e06|output|count	instruction
+Beta|e06|output|   34	addI
+Beta|e06|output|   25	storeAI
+Beta|e06|output|   24	store
+Beta|e06|output|   24	subI
+Beta|e06|output|   24	load
+Beta|e06|output|   22	loadAI
+Beta|e06|output|   13	loadI
+Beta|e06|output|    9	i2i
+Beta|e06|output|    7	jumpI
+Beta|e06|output|    6	mult
+Beta|e06|output|    3	jump
+Beta|e06|output|    1	add
+Beta|e06|output|    1	halt
+Beta|e06|output|
+Beta|e06|output|instructions executed:  193
+Beta|e06|output|register         read:  228 write:  323
+Beta|e06|output|memory           read:   46 write:   49
+Beta|e06|output|
+Beta|e06|output|  register    value
+Beta|e06|output|        r0        0
+Beta|e06|output|        r1        0
+Beta|e06|output|       r10        0
+Beta|e06|output|       r11        0
+Beta|e06|output|       r12        0
+Beta|e06|output|       r13        0
+Beta|e06|output|       r14        0
+Beta|e06|output|       r15        0
+Beta|e06|output|       r16        0
+Beta|e06|output|       r17        0
+Beta|e06|output|       r18      159
+Beta|e06|output|        r2        0
+Beta|e06|output|       r20     2018
+Beta|e06|output|       r21        2
+Beta|e06|output|       r22        2
+Beta|e06|output|       r23        2
+Beta|e06|output|       r24        3
+Beta|e06|output|       r25        6
+Beta|e06|output|       r26        2
+Beta|e06|output|       r27        3
+Beta|e06|output|       r28        6
+Beta|e06|output|       r29        2
+Beta|e06|output|        r3        0
+Beta|e06|output|       r30        2
+Beta|e06|output|       r31        4
+Beta|e06|output|       r32        2
+Beta|e06|output|       r33        2
+Beta|e06|output|       r34        4
+Beta|e06|output|       r35       52
+Beta|e06|output|       r36      159
+Beta|e06|output|       r37        0
+Beta|e06|output|        r4       89
+Beta|e06|output|        r5        0
+Beta|e06|output|        r6        0
+Beta|e06|output|        r7        0
+Beta|e06|output|        r8        0
+Beta|e06|output|        r9        0
+Beta|e06|output|      rbss    20812
+Beta|e06|output|       rfp    41624
+Beta|e06|output|       rpc      161
+Beta|e06|output|       rsp    41656
+Beta|e06|output|
+Beta|e06|output|    memory    value
+Beta|e06|output|00020812     2018
+Beta|e06|output|00020816       52
+Beta|e06|output|00041624        2
+Beta|e06|output|00041628        2
+Beta|e06|output|00041656        4
+Beta|e06|output|00041660        4
+Beta|e06|output|00041664        6
+Beta|e06|output|00041668        6
+Beta|e06|output|00041672       52
+Beta|e06|output|00041676    41624
+Beta|e06|output|00041680        0
+Beta|e06|output|00041684       52
+Beta|e06|output|00041688      159
+Beta|e06|output|00041700        0
+Beta|e06|output|00041701        0
+Beta|e06|output|00041702        0
+Beta|e06|output|00041703        0
+Beta|e06|output|00041704        0
+Beta|e06|output|00041705        0
+Beta|e06|output|00041706        0
+Beta|e06|output|00041707        0
+Beta|e06|output|00041708        0
+Beta|e06|output|00041709        0
+Beta|e06|output|00041710        0
+Beta|e06|output|00041711        0
+Beta|e06|output|00041712        0
+Beta|e06|output|00041713        0
+Beta|e06|output|00041714        4
+Beta|e06|output|00041718        4
+Beta|e06|output|00041722    41656
+Beta|e06|output|00041726        0
+Beta|e06|output|00041730       16
+Beta|e06|output|00041734       89
+Beta|e06|output|00041746        0
+Beta|e06|output|00041747        0
+Beta|e06|output|00041748        0
+Beta|e06|output|00041749        0
+Beta|e06|output|00041750       76
+Beta|0
+Beta|e06|sixit|0
+Beta|e06|memory|00020812|2018
+Beta|e06|memory|00020816|52
+Beta|e06|memory|00041624|2
+Beta|e06|memory|00041628|2
+Beta|e06|memory|00041656|4
+Beta|e06|memory|00041660|4
+Beta|e06|memory|00041664|6
+Beta|e06|memory|00041668|6
+Beta|e06|memory|00041672|52
+Beta|e06|memory|00041676|41624
+Beta|e06|memory|00041680|0
+Beta|e06|memory|00041684|52
+Beta|e06|memory|00041688|159
+Beta|e06|memory|00041700|0
+Beta|e06|memory|00041701|0
+Beta|e06|memory|00041702|0
+Beta|e06|memory|00041703|0
+Beta|e06|memory|00041704|0
+Beta|e06|memory|00041705|0
+Beta|e06|memory|00041706|0
+Beta|e06|instruction|34|addI
+Beta|e06|instruction|25|storeAI
+Beta|e06|instruction|24|store
+Beta|e06|instruction|24|subI
+Beta|e06|instruction|24|load
+Beta|e06|instruction|22|loadAI
+Beta|e06|instruction|13|loadI
+Beta|e06|instruction|9|i2i
+Beta|e06|instruction|7|jumpI
+Beta|e06|instruction|6|mult
+Beta|e06|instruction|3|jump
+Beta|e06|instruction|1|add
+Beta|e06|instruction|1|halt
+Beta|e07|stack|31031
+Beta|e07|data|15515
+Beta|e07|input|loadI 20000 => rfp
+Beta|e07|input|loadI 20000 => rsp
+Beta|e07|input|loadI 10000 => rbss
+Beta|e07|input|jumpI -> L5
+Beta|e07|input|L1:
+Beta|e07|input|addI rfp, 36 => rsp
+Beta|e07|input|store r0 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r1 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r2 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r3 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r4 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r5 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|loadAI rfp, 4 => r1
+Beta|e07|input|loadAI rfp, 0 => r2
+Beta|e07|input|mult r1, r2 => r3
+Beta|e07|input|storeAI r3 => rfp, 8
+Beta|e07|input|loadAI rfp, 8 => r4
+Beta|e07|input|i2i r4 => r0
+Beta|e07|input|jumpI -> L0
+Beta|e07|input|L0:
+Beta|e07|input|storeAI r0 => rfp, 20
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r5
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r4
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r3
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r2
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r1
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r0
+Beta|e07|input|loadAI rfp, 24 => r5
+Beta|e07|input|i2i rfp => rsp
+Beta|e07|input|loadAI rfp, 12 => rfp
+Beta|e07|input|jump -> r5
+Beta|e07|input|L3:
+Beta|e07|input|addI rfp, 44 => rsp
+Beta|e07|input|store r6 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r7 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r8 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r9 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r10 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r11 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r12 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r13 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r14 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r15 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r16 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r17 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r18 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r19 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r20 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r21 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r22 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r23 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r24 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r25 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r26 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|store r27 => rsp
+Beta|e07|input|addI rsp, 1 => rsp
+Beta|e07|input|loadAI rfp, 8 => r12
+Beta|e07|input|loadAI rfp, 12 => r8
+Beta|e07|input|loadAI rfp, 12 => r7
+Beta|e07|input|loadI 0 => r11
+Beta|e07|input|addI rpc, 9 => r10
+Beta|e07|input|storeAI r10 => rsp, 24
+Beta|e07|input|storeAI r11 => rsp, 16
+Beta|e07|input|storeAI rfp => rsp, 12
+Beta|e07|input|i2i rsp => rfp
+Beta|e07|input|addI rsp, 44 => rsp
+Beta|e07|input|storeAI r8 => rfp, 0
+Beta|e07|input|storeAI r7 => rfp, 4
+Beta|e07|input|jumpI -> L1
+Beta|e07|input|loadAI rsp, 20 => r9
+Beta|e07|input|loadI 0 => r15
+Beta|e07|input|addI rpc, 9 => r14
+Beta|e07|input|storeAI r14 => rsp, 24
+Beta|e07|input|storeAI r15 => rsp, 16
+Beta|e07|input|storeAI rfp => rsp, 12
+Beta|e07|input|i2i rsp => rfp
+Beta|e07|input|addI rsp, 44 => rsp
+Beta|e07|input|storeAI r12 => rfp, 0
+Beta|e07|input|storeAI r9 => rfp, 4
+Beta|e07|input|jumpI -> L1
+Beta|e07|input|loadAI rsp, 20 => r13
+Beta|e07|input|loadAI rfp, 0 => r18
+Beta|e07|input|loadAI rfp, 0 => r17
+Beta|e07|input|loadI 0 => r21
+Beta|e07|input|addI rpc, 9 => r20
+Beta|e07|input|storeAI r20 => rsp, 24
+Beta|e07|input|storeAI r21 => rsp, 16
+Beta|e07|input|storeAI rfp => rsp, 12
+Beta|e07|input|i2i rsp => rfp
+Beta|e07|input|addI rsp, 44 => rsp
+Beta|e07|input|storeAI r18 => rfp, 0
+Beta|e07|input|storeAI r17 => rfp, 4
+Beta|e07|input|jumpI -> L1
+Beta|e07|input|loadAI rsp, 20 => r19
+Beta|e07|input|loadAI rfp, 4 => r16
+Beta|e07|input|loadI 0 => r24
+Beta|e07|input|addI rpc, 9 => r23
+Beta|e07|input|storeAI r23 => rsp, 24
+Beta|e07|input|storeAI r24 => rsp, 16
+Beta|e07|input|storeAI rfp => rsp, 12
+Beta|e07|input|i2i rsp => rfp
+Beta|e07|input|addI rsp, 44 => rsp
+Beta|e07|input|storeAI r19 => rfp, 0
+Beta|e07|input|storeAI r16 => rfp, 4
+Beta|e07|input|jumpI -> L1
+Beta|e07|input|loadAI rsp, 20 => r22
+Beta|e07|input|add r13, r22 => r25
+Beta|e07|input|storeAI r25 => rfp, 16
+Beta|e07|input|loadAI rfp, 16 => r26
+Beta|e07|input|i2i r26 => r6
+Beta|e07|input|jumpI -> L2
+Beta|e07|input|L2:
+Beta|e07|input|storeAI r6 => rfp, 28
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r27
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r26
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r25
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r24
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r23
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r22
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r21
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r20
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r19
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r18
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r17
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r16
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r15
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r14
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r13
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r12
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r11
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r10
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r9
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r8
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r7
+Beta|e07|input|subI rsp, 1 => rsp
+Beta|e07|input|load rsp => r6
+Beta|e07|input|loadAI rfp, 32 => r27
+Beta|e07|input|i2i rfp => rsp
+Beta|e07|input|loadAI rfp, 20 => rfp
+Beta|e07|input|jump -> r27
+Beta|e07|input|L5:
+Beta|e07|input|addI rfp, 32 => rsp
+Beta|e07|input|loadI 2019 => r29
+Beta|e07|input|storeAI r29 => rbss, 0
+Beta|e07|input|loadI 2 => r30
+Beta|e07|input|storeAI r30 => rfp, 0
+Beta|e07|input|loadI 2 => r31
+Beta|e07|input|storeAI r31 => rfp, 4
+Beta|e07|input|loadAI rfp, 4 => r41
+Beta|e07|input|loadI 2 => r42
+Beta|e07|input|mult r41, r42 => r43
+Beta|e07|input|loadAI rfp, 4 => r38
+Beta|e07|input|loadI 2 => r39
+Beta|e07|input|mult r38, r39 => r40
+Beta|e07|input|loadAI rfp, 0 => r35
+Beta|e07|input|loadI 4 => r36
+Beta|e07|input|mult r35, r36 => r37
+Beta|e07|input|loadAI rfp, 0 => r32
+Beta|e07|input|loadI 3 => r33
+Beta|e07|input|mult r32, r33 => r34
+Beta|e07|input|loadI 0 => r46
+Beta|e07|input|addI rpc, 11 => r45
+Beta|e07|input|storeAI r45 => rsp, 32
+Beta|e07|input|storeAI r46 => rsp, 24
+Beta|e07|input|storeAI rfp => rsp, 20
+Beta|e07|input|i2i rsp => rfp
+Beta|e07|input|addI rsp, 32 => rsp
+Beta|e07|input|storeAI r43 => rfp, 0
+Beta|e07|input|storeAI r40 => rfp, 4
+Beta|e07|input|storeAI r37 => rfp, 8
+Beta|e07|input|storeAI r34 => rfp, 12
+Beta|e07|input|jumpI -> L3
+Beta|e07|input|loadAI rsp, 28 => r44
+Beta|e07|input|storeAI r44 => rbss, 4
+Beta|e07|input|L4:
+Beta|e07|input|halt
+Beta|e07|input|
+Beta|e07|output|count	instruction
+Beta|e07|output|   62	addI
+Beta|e07|output|   46	store
+Beta|e07|output|   46	subI
+Beta|e07|output|   46	load
+Beta|e07|output|   41	storeAI
+Beta|e07|output|   38	loadAI
+Beta|e07|output|   15	loadI
+Beta|e07|output|   15	i2i
+Beta|e07|output|   11	jumpI
+Beta|e07|output|    8	mult
+Beta|e07|output|    5	jump
+Beta|e07|output|    1	add
+Beta|e07|output|    1	halt
+Beta|e07|output|
+Beta|e07|output|instructions executed:  335
+Beta|e07|output|register         read:  404 write:  563
+Beta|e07|output|memory           read:   84 write:   87
+Beta|e07|output|
+Beta|e07|output|  register    value
+Beta|e07|output|        r0        0
+Beta|e07|output|        r1        0
+Beta|e07|output|       r10        0
+Beta|e07|output|       r11        0
+Beta|e07|output|       r12        0
+Beta|e07|output|       r13        0
+Beta|e07|output|       r14        0
+Beta|e07|output|       r15        0
+Beta|e07|output|       r16        0
+Beta|e07|output|       r17        0
+Beta|e07|output|       r18        0
+Beta|e07|output|       r19        0
+Beta|e07|output|        r2        0
+Beta|e07|output|       r20        0
+Beta|e07|output|       r21        0
+Beta|e07|output|       r22        0
+Beta|e07|output|       r23        0
+Beta|e07|output|       r24        0
+Beta|e07|output|       r25        0
+Beta|e07|output|       r26        0
+Beta|e07|output|       r27      221
+Beta|e07|output|       r29     2019
+Beta|e07|output|        r3        0
+Beta|e07|output|       r30        2
+Beta|e07|output|       r31        2
+Beta|e07|output|       r32        2
+Beta|e07|output|       r33        3
+Beta|e07|output|       r34        6
+Beta|e07|output|       r35        2
+Beta|e07|output|       r36        4
+Beta|e07|output|       r37        8
+Beta|e07|output|       r38        2
+Beta|e07|output|       r39        2
+Beta|e07|output|        r4        0
+Beta|e07|output|       r40        4
+Beta|e07|output|       r41        2
+Beta|e07|output|       r42        2
+Beta|e07|output|       r43        4
+Beta|e07|output|       r44      352
+Beta|e07|output|       r45      221
+Beta|e07|output|       r46        0
+Beta|e07|output|        r5      135
+Beta|e07|output|        r6        0
+Beta|e07|output|        r7        0
+Beta|e07|output|        r8        0
+Beta|e07|output|        r9        0
+Beta|e07|output|      rbss    15515
+Beta|e07|output|       rfp    31031
+Beta|e07|output|       rpc      223
+Beta|e07|output|       rsp    31063
+Beta|e07|output|
+Beta|e07|output|    memory    value
+Beta|e07|output|00015515     2019
+Beta|e07|output|00015519      352
+Beta|e07|output|00031031        2
+Beta|e07|output|00031035        2
+Beta|e07|output|00031063        4
+Beta|e07|output|00031067        4
+Beta|e07|output|00031071        8
+Beta|e07|output|00031075        6
+Beta|e07|output|00031079      352
+Beta|e07|output|00031083    31031
+Beta|e07|output|00031087        0
+Beta|e07|output|00031091      352
+Beta|e07|output|00031095      221
+Beta|e07|output|00031107        0
+Beta|e07|output|00031108        0
+Beta|e07|output|00031109        0
+Beta|e07|output|00031110        0
+Beta|e07|output|00031111        0
+Beta|e07|output|00031112        0
+Beta|e07|output|00031113        0
+Beta|e07|output|00031114        0
+Beta|e07|output|00031115        0
+Beta|e07|output|00031116        0
+Beta|e07|output|00031117        0
+Beta|e07|output|00031118        0
+Beta|e07|output|00031119        0
+Beta|e07|output|00031120        0
+Beta|e07|output|00031121        0
+Beta|e07|output|00031122        0
+Beta|e07|output|00031123        0
+Beta|e07|output|00031124        0
+Beta|e07|output|00031125        0
+Beta|e07|output|00031126        0
+Beta|e07|output|00031127        0
+Beta|e07|output|00031128        0
+Beta|e07|output|00031129       16
+Beta|e07|output|00031133        4
+Beta|e07|output|00031137       64
+Beta|e07|output|00031141    31063
+Beta|e07|output|00031145        0
+Beta|e07|output|00031149       64
+Beta|e07|output|00031153      135
+Beta|e07|output|00031165        0
+Beta|e07|output|00031166        0
+Beta|e07|output|00031167        0
+Beta|e07|output|00031168        0
+Beta|e07|output|00031169        0
+Beta|e07|output|00031170      123
+Beta|0
+Beta|e07|sixit|0
+Beta|e07|memory|00015515|2019
+Beta|e07|memory|00015519|352
+Beta|e07|memory|00031031|2
+Beta|e07|memory|00031035|2
+Beta|e07|memory|00031063|4
+Beta|e07|memory|00031067|4
+Beta|e07|memory|00031071|8
+Beta|e07|memory|00031075|6
+Beta|e07|memory|00031079|352
+Beta|e07|memory|00031083|31031
+Beta|e07|memory|00031087|0
+Beta|e07|memory|00031091|352
+Beta|e07|memory|00031095|221
+Beta|e07|memory|00031107|0
+Beta|e07|memory|00031108|0
+Beta|e07|memory|00031109|0
+Beta|e07|memory|00031110|0
+Beta|e07|memory|00031111|0
+Beta|e07|memory|00031112|0
+Beta|e07|memory|00031113|0
+Beta|e07|instruction|62|addI
+Beta|e07|instruction|46|store
+Beta|e07|instruction|46|subI
+Beta|e07|instruction|46|load
+Beta|e07|instruction|41|storeAI
+Beta|e07|instruction|38|loadAI
+Beta|e07|instruction|15|loadI
+Beta|e07|instruction|15|i2i
+Beta|e07|instruction|11|jumpI
+Beta|e07|instruction|8|mult
+Beta|e07|instruction|5|jump
+Beta|e07|instruction|1|add
+Beta|e07|instruction|1|halt
+
+Lambda
+
+Lambda|e00|stack|23465
+Lambda|e00|data|11732
+Lambda|e00|input|loadI 2048 => rfp
+Lambda|e00|input|loadI 2048 => rsp
+Lambda|e00|input|loadI 1024 => rbss
+Lambda|e00|input|loadAI rfp, 4 => r10
+Lambda|e00|input|storeAI r10 => rsp, 4
+Lambda|e00|input|addI rpc, 3 => r11
+Lambda|e00|input|storeAI r11 => rsp, 8
+Lambda|e00|input|jumpI -> Lmain
+Lambda|e00|input|halt
+Lambda|e00|input|Lf:
+Lambda|e00|input|storeAI rfp => rsp, 0
+Lambda|e00|input|i2i rsp => rfp
+Lambda|e00|input|addI rsp, 16 => rsp
+Lambda|e00|input|loadI 99 => r1
+Lambda|e00|input|storeAI r1 => rfp, 12
+Lambda|e00|input|i2i rfp => rsp
+Lambda|e00|input|loadAI rsp, 0 => rfp
+Lambda|e00|input|loadAI rsp, 8 => r2
+Lambda|e00|input|jump -> r2
+Lambda|e00|input|loadI 0 => r3
+Lambda|e00|input|storeAI r3 => rfp, 12
+Lambda|e00|input|i2i rfp => rsp
+Lambda|e00|input|loadAI rsp, 0 => rfp
+Lambda|e00|input|loadAI rsp, 8 => r4
+Lambda|e00|input|jump -> r4
+Lambda|e00|input|Lmain:
+Lambda|e00|input|storeAI rfp => rsp, 0
+Lambda|e00|input|i2i rsp => rfp
+Lambda|e00|input|addI rsp, 16 => rsp
+Lambda|e00|input|loadAI rfp, 4 => r6
+Lambda|e00|input|storeAI r6 => rsp, 4
+Lambda|e00|input|addI rpc, 3 => r7
+Lambda|e00|input|storeAI r7 => rsp, 8
+Lambda|e00|input|jumpI -> Lf
+Lambda|e00|input|loadAI rsp, 12 => r5
+Lambda|e00|input|storeAI r5 => rbss, 0
+Lambda|e00|input|loadI 0 => r8
+Lambda|e00|input|storeAI r8 => rfp, 12
+Lambda|e00|input|i2i rfp => rsp
+Lambda|e00|input|loadAI rsp, 0 => rfp
+Lambda|e00|input|loadAI rsp, 8 => r9
+Lambda|e00|input|jump -> r9
+Lambda|e00|input|
+Lambda|e00|output|count	instruction
+Lambda|e00|output|    9	storeAI
+Lambda|e00|output|    7	loadAI
+Lambda|e00|output|    5	loadI
+Lambda|e00|output|    4	addI
+Lambda|e00|output|    4	i2i
+Lambda|e00|output|    2	jumpI
+Lambda|e00|output|    2	jump
+Lambda|e00|output|    1	halt
+Lambda|e00|output|
+Lambda|e00|output|instructions executed:   34
+Lambda|e00|output|register         read:   35 write:   51
+Lambda|e00|output|memory           read:    7 write:    9
+Lambda|e00|output|
+Lambda|e00|output|  register    value
+Lambda|e00|output|        r1       99
+Lambda|e00|output|       r10        0
+Lambda|e00|output|       r11        8
+Lambda|e00|output|        r2       32
+Lambda|e00|output|        r5       99
+Lambda|e00|output|        r6        0
+Lambda|e00|output|        r7       32
+Lambda|e00|output|        r8        0
+Lambda|e00|output|        r9        8
+Lambda|e00|output|      rbss    11732
+Lambda|e00|output|       rfp    23465
+Lambda|e00|output|       rpc        8
+Lambda|e00|output|       rsp    23465
+Lambda|e00|output|
+Lambda|e00|output|    memory    value
+Lambda|e00|output|00011732       99
+Lambda|e00|output|00023465    23465
+Lambda|e00|output|00023469        0
+Lambda|e00|output|00023473        8
+Lambda|e00|output|00023477        0
+Lambda|e00|output|00023481    23465
+Lambda|e00|output|00023485        0
+Lambda|e00|output|00023489       32
+Lambda|e00|output|00023493       99
+Lambda|
+Lambda|e00|sixit|0
+Lambda|e00|memory|00011732|99
+Lambda|e00|memory|00023465|23465
+Lambda|e00|memory|00023469|0
+Lambda|e00|memory|00023473|8
+Lambda|e00|memory|00023477|0
+Lambda|e00|memory|00023481|23465
+Lambda|e00|memory|00023485|0
+Lambda|e00|memory|00023489|32
+Lambda|e00|memory|00023493|99
+Lambda|e00|instruction|9|storeAI
+Lambda|e00|instruction|7|loadAI
+Lambda|e00|instruction|5|loadI
+Lambda|e00|instruction|4|addI
+Lambda|e00|instruction|4|i2i
+Lambda|e00|instruction|2|jumpI
+Lambda|e00|instruction|2|jump
+Lambda|e00|instruction|1|halt
+Lambda|e01|stack|27218
+Lambda|e01|data|13609
+Lambda|e01|input|loadI 2048 => rfp
+Lambda|e01|input|loadI 2048 => rsp
+Lambda|e01|input|loadI 1024 => rbss
+Lambda|e01|input|loadAI rfp, 4 => r11
+Lambda|e01|input|storeAI r11 => rsp, 4
+Lambda|e01|input|addI rpc, 3 => r12
+Lambda|e01|input|storeAI r12 => rsp, 8
+Lambda|e01|input|jumpI -> Lmain
+Lambda|e01|input|halt
+Lambda|e01|input|Lf:
+Lambda|e01|input|storeAI rfp => rsp, 0
+Lambda|e01|input|i2i rsp => rfp
+Lambda|e01|input|addI rsp, 20 => rsp
+Lambda|e01|input|loadI 98 => r1
+Lambda|e01|input|storeAI r1 => rfp, 16
+Lambda|e01|input|loadAI rfp, 16 => r2
+Lambda|e01|input|storeAI r2 => rfp, 12
+Lambda|e01|input|i2i rfp => rsp
+Lambda|e01|input|loadAI rsp, 0 => rfp
+Lambda|e01|input|loadAI rsp, 8 => r3
+Lambda|e01|input|jump -> r3
+Lambda|e01|input|loadI 0 => r4
+Lambda|e01|input|storeAI r4 => rfp, 12
+Lambda|e01|input|i2i rfp => rsp
+Lambda|e01|input|loadAI rsp, 0 => rfp
+Lambda|e01|input|loadAI rsp, 8 => r5
+Lambda|e01|input|jump -> r5
+Lambda|e01|input|Lmain:
+Lambda|e01|input|storeAI rfp => rsp, 0
+Lambda|e01|input|i2i rsp => rfp
+Lambda|e01|input|addI rsp, 16 => rsp
+Lambda|e01|input|loadAI rfp, 4 => r7
+Lambda|e01|input|storeAI r7 => rsp, 4
+Lambda|e01|input|addI rpc, 3 => r8
+Lambda|e01|input|storeAI r8 => rsp, 8
+Lambda|e01|input|jumpI -> Lf
+Lambda|e01|input|loadAI rsp, 12 => r6
+Lambda|e01|input|storeAI r6 => rbss, 0
+Lambda|e01|input|loadI 0 => r9
+Lambda|e01|input|storeAI r9 => rfp, 12
+Lambda|e01|input|i2i rfp => rsp
+Lambda|e01|input|loadAI rsp, 0 => rfp
+Lambda|e01|input|loadAI rsp, 8 => r10
+Lambda|e01|input|jump -> r10
+Lambda|e01|input|
+Lambda|e01|output|count	instruction
+Lambda|e01|output|   10	storeAI
+Lambda|e01|output|    8	loadAI
+Lambda|e01|output|    5	loadI
+Lambda|e01|output|    4	addI
+Lambda|e01|output|    4	i2i
+Lambda|e01|output|    2	jumpI
+Lambda|e01|output|    2	jump
+Lambda|e01|output|    1	halt
+Lambda|e01|output|
+Lambda|e01|output|instructions executed:   36
+Lambda|e01|output|register         read:   38 write:   54
+Lambda|e01|output|memory           read:    8 write:   10
+Lambda|e01|output|
+Lambda|e01|output|  register    value
+Lambda|e01|output|        r1       98
+Lambda|e01|output|       r10        8
+Lambda|e01|output|       r11        0
+Lambda|e01|output|       r12        8
+Lambda|e01|output|        r2       98
+Lambda|e01|output|        r3       34
+Lambda|e01|output|        r6       98
+Lambda|e01|output|        r7        0
+Lambda|e01|output|        r8       34
+Lambda|e01|output|        r9        0
+Lambda|e01|output|      rbss    13609
+Lambda|e01|output|       rfp    27218
+Lambda|e01|output|       rpc        8
+Lambda|e01|output|       rsp    27218
+Lambda|e01|output|
+Lambda|e01|output|    memory    value
+Lambda|e01|output|00013609       98
+Lambda|e01|output|00027218    27218
+Lambda|e01|output|00027222        0
+Lambda|e01|output|00027226        8
+Lambda|e01|output|00027230        0
+Lambda|e01|output|00027234    27218
+Lambda|e01|output|00027238        0
+Lambda|e01|output|00027242       34
+Lambda|e01|output|00027246       98
+Lambda|e01|output|00027250       98
+Lambda|0
+Lambda|e01|sixit|0
+Lambda|e01|memory|00013609|98
+Lambda|e01|memory|00027218|27218
+Lambda|e01|memory|00027222|0
+Lambda|e01|memory|00027226|8
+Lambda|e01|memory|00027230|0
+Lambda|e01|memory|00027234|27218
+Lambda|e01|memory|00027238|0
+Lambda|e01|memory|00027242|34
+Lambda|e01|memory|00027246|98
+Lambda|e01|memory|00027250|98
+Lambda|e01|instruction|10|storeAI
+Lambda|e01|instruction|8|loadAI
+Lambda|e01|instruction|5|loadI
+Lambda|e01|instruction|4|addI
+Lambda|e01|instruction|4|i2i
+Lambda|e01|instruction|2|jumpI
+Lambda|e01|instruction|2|jump
+Lambda|e01|instruction|1|halt
+Lambda|e02|stack|18991
+Lambda|e02|data|9495
+Lambda|e02|input|loadI 2048 => rfp
+Lambda|e02|input|loadI 2048 => rsp
+Lambda|e02|input|loadI 1024 => rbss
+Lambda|e02|input|loadAI rfp, 4 => r16
+Lambda|e02|input|storeAI r16 => rsp, 4
+Lambda|e02|input|addI rpc, 3 => r17
+Lambda|e02|input|storeAI r17 => rsp, 8
+Lambda|e02|input|jumpI -> Lmain
+Lambda|e02|input|halt
+Lambda|e02|input|Lmult:
+Lambda|e02|input|storeAI rfp => rsp, 0
+Lambda|e02|input|i2i rsp => rfp
+Lambda|e02|input|addI rsp, 28 => rsp
+Lambda|e02|input|loadAI rfp, 16 => r1
+Lambda|e02|input|store r1 => rsp
+Lambda|e02|input|addI rsp, 4 => rsp
+Lambda|e02|input|loadAI rfp, 20 => r2
+Lambda|e02|input|subI rsp, 4 => rsp
+Lambda|e02|input|load rsp => r1
+Lambda|e02|input|mult r1, r2 => r3
+Lambda|e02|input|storeAI r3 => rfp, 24
+Lambda|e02|input|loadAI rfp, 24 => r4
+Lambda|e02|input|storeAI r4 => rfp, 12
+Lambda|e02|input|i2i rfp => rsp
+Lambda|e02|input|loadAI rsp, 0 => rfp
+Lambda|e02|input|loadAI rsp, 8 => r5
+Lambda|e02|input|jump -> r5
+Lambda|e02|input|loadI 0 => r6
+Lambda|e02|input|storeAI r6 => rfp, 12
+Lambda|e02|input|i2i rfp => rsp
+Lambda|e02|input|loadAI rsp, 0 => rfp
+Lambda|e02|input|loadAI rsp, 8 => r7
+Lambda|e02|input|jump -> r7
+Lambda|e02|input|Lmain:
+Lambda|e02|input|storeAI rfp => rsp, 0
+Lambda|e02|input|i2i rsp => rfp
+Lambda|e02|input|addI rsp, 20 => rsp
+Lambda|e02|input|loadI 7 => r8
+Lambda|e02|input|storeAI r8 => rfp, 16
+Lambda|e02|input|loadAI rfp, 16 => r10
+Lambda|e02|input|storeAI r10 => rsp, 16
+Lambda|e02|input|loadAI rfp, 16 => r11
+Lambda|e02|input|storeAI r11 => rsp, 20
+Lambda|e02|input|loadAI rfp, 4 => r12
+Lambda|e02|input|storeAI r12 => rsp, 4
+Lambda|e02|input|addI rpc, 3 => r13
+Lambda|e02|input|storeAI r13 => rsp, 8
+Lambda|e02|input|jumpI -> Lmult
+Lambda|e02|input|loadAI rsp, 12 => r9
+Lambda|e02|input|storeAI r9 => rbss, 0
+Lambda|e02|input|loadI 0 => r14
+Lambda|e02|input|storeAI r14 => rfp, 12
+Lambda|e02|input|i2i rfp => rsp
+Lambda|e02|input|loadAI rsp, 0 => rfp
+Lambda|e02|input|loadAI rsp, 8 => r15
+Lambda|e02|input|jump -> r15
+Lambda|e02|input|
+Lambda|e02|output|count	instruction
+Lambda|e02|output|   13	storeAI
+Lambda|e02|output|   12	loadAI
+Lambda|e02|output|    5	loadI
+Lambda|e02|output|    5	addI
+Lambda|e02|output|    4	i2i
+Lambda|e02|output|    2	jumpI
+Lambda|e02|output|    2	jump
+Lambda|e02|output|    1	store
+Lambda|e02|output|    1	subI
+Lambda|e02|output|    1	load
+Lambda|e02|output|    1	mult
+Lambda|e02|output|    1	halt
+Lambda|e02|output|
+Lambda|e02|output|instructions executed:   48
+Lambda|e02|output|register         read:   55 write:   74
+Lambda|e02|output|memory           read:   13 write:   14
+Lambda|e02|output|
+Lambda|e02|output|  register    value
+Lambda|e02|output|        r1        7
+Lambda|e02|output|       r10        7
+Lambda|e02|output|       r11        7
+Lambda|e02|output|       r12        0
+Lambda|e02|output|       r13       46
+Lambda|e02|output|       r14        0
+Lambda|e02|output|       r15        8
+Lambda|e02|output|       r16        0
+Lambda|e02|output|       r17        8
+Lambda|e02|output|        r2        7
+Lambda|e02|output|        r3       49
+Lambda|e02|output|        r4       49
+Lambda|e02|output|        r5       46
+Lambda|e02|output|        r8        7
+Lambda|e02|output|        r9       49
+Lambda|e02|output|      rbss     9495
+Lambda|e02|output|       rfp    18991
+Lambda|e02|output|       rpc        8
+Lambda|e02|output|       rsp    18991
+Lambda|e02|output|
+Lambda|e02|output|    memory    value
+Lambda|e02|output|00009495       49
+Lambda|e02|output|00018991    18991
+Lambda|e02|output|00018995        0
+Lambda|e02|output|00018999        8
+Lambda|e02|output|00019003        0
+Lambda|e02|output|00019007        7
+Lambda|e02|output|00019011    18991
+Lambda|e02|output|00019015        0
+Lambda|e02|output|00019019       46
+Lambda|e02|output|00019023       49
+Lambda|e02|output|00019027        7
+Lambda|e02|output|00019031        7
+Lambda|e02|output|00019035       49
+Lambda|e02|output|00019039        7
+Lambda|0
+Lambda|e02|sixit|0
+Lambda|e02|memory|00009495|49
+Lambda|e02|memory|00018991|18991
+Lambda|e02|memory|00018995|0
+Lambda|e02|memory|00018999|8
+Lambda|e02|memory|00019003|0
+Lambda|e02|memory|00019007|7
+Lambda|e02|memory|00019011|18991
+Lambda|e02|memory|00019015|0
+Lambda|e02|memory|00019019|46
+Lambda|e02|memory|00019023|49
+Lambda|e02|memory|00019027|7
+Lambda|e02|memory|00019031|7
+Lambda|e02|memory|00019035|49
+Lambda|e02|memory|00019039|7
+Lambda|e02|instruction|13|storeAI
+Lambda|e02|instruction|12|loadAI
+Lambda|e02|instruction|5|loadI
+Lambda|e02|instruction|5|addI
+Lambda|e02|instruction|4|i2i
+Lambda|e02|instruction|2|jumpI
+Lambda|e02|instruction|2|jump
+Lambda|e02|instruction|1|store
+Lambda|e02|instruction|1|subI
+Lambda|e02|instruction|1|load
+Lambda|e02|instruction|1|mult
+Lambda|e02|instruction|1|halt
+Lambda|e03|stack|28527
+Lambda|e03|data|14263
+Lambda|e03|input|loadI 2048 => rfp
+Lambda|e03|input|loadI 2048 => rsp
+Lambda|e03|input|loadI 1024 => rbss
+Lambda|e03|input|loadAI rfp, 4 => r25
+Lambda|e03|input|storeAI r25 => rsp, 4
+Lambda|e03|input|addI rpc, 3 => r26
+Lambda|e03|input|storeAI r26 => rsp, 8
+Lambda|e03|input|jumpI -> Lmain
+Lambda|e03|input|halt
+Lambda|e03|input|Lfatorial:
+Lambda|e03|input|storeAI rfp => rsp, 0
+Lambda|e03|input|i2i rsp => rfp
+Lambda|e03|input|addI rsp, 24 => rsp
+Lambda|e03|input|loadAI rfp, 16 => r1
+Lambda|e03|input|store r1 => rsp
+Lambda|e03|input|addI rsp, 4 => rsp
+Lambda|e03|input|loadI 1 => r2
+Lambda|e03|input|subI rsp, 4 => rsp
+Lambda|e03|input|load rsp => r1
+Lambda|e03|input|cmp_EQ r1, r2 -> r3
+Lambda|e03|input|cbr r3 -> L1, L2
+Lambda|e03|input|L1:
+Lambda|e03|input|loadAI rfp, 16 => r4
+Lambda|e03|input|storeAI r4 => rfp, 12
+Lambda|e03|input|i2i rfp => rsp
+Lambda|e03|input|loadAI rsp, 0 => rfp
+Lambda|e03|input|loadAI rsp, 8 => r5
+Lambda|e03|input|jump -> r5
+Lambda|e03|input|jumpI -> L3
+Lambda|e03|input|L2:
+Lambda|e03|input|nop
+Lambda|e03|input|L3:
+Lambda|e03|input|nop
+Lambda|e03|input|loadAI rfp, 16 => r7
+Lambda|e03|input|store r7 => rsp
+Lambda|e03|input|addI rsp, 4 => rsp
+Lambda|e03|input|loadI 1 => r8
+Lambda|e03|input|subI rsp, 4 => rsp
+Lambda|e03|input|load rsp => r7
+Lambda|e03|input|sub r7, r8 => r9
+Lambda|e03|input|storeAI r9 => rsp, 16
+Lambda|e03|input|loadAI rfp, 4 => r10
+Lambda|e03|input|storeAI r10 => rsp, 4
+Lambda|e03|input|addI rpc, 3 => r11
+Lambda|e03|input|storeAI r11 => rsp, 8
+Lambda|e03|input|jumpI -> Lfatorial
+Lambda|e03|input|loadAI rsp, 12 => r6
+Lambda|e03|input|store r6 => rsp
+Lambda|e03|input|addI rsp, 4 => rsp
+Lambda|e03|input|loadAI rfp, 16 => r12
+Lambda|e03|input|subI rsp, 4 => rsp
+Lambda|e03|input|load rsp => r6
+Lambda|e03|input|mult r6, r12 => r13
+Lambda|e03|input|storeAI r13 => rfp, 20
+Lambda|e03|input|loadAI rfp, 20 => r14
+Lambda|e03|input|storeAI r14 => rfp, 12
+Lambda|e03|input|i2i rfp => rsp
+Lambda|e03|input|loadAI rsp, 0 => rfp
+Lambda|e03|input|loadAI rsp, 8 => r15
+Lambda|e03|input|jump -> r15
+Lambda|e03|input|loadI 0 => r16
+Lambda|e03|input|storeAI r16 => rfp, 12
+Lambda|e03|input|i2i rfp => rsp
+Lambda|e03|input|loadAI rsp, 0 => rfp
+Lambda|e03|input|loadAI rsp, 8 => r17
+Lambda|e03|input|jump -> r17
+Lambda|e03|input|Lmain:
+Lambda|e03|input|storeAI rfp => rsp, 0
+Lambda|e03|input|i2i rsp => rfp
+Lambda|e03|input|addI rsp, 20 => rsp
+Lambda|e03|input|loadI 6 => r18
+Lambda|e03|input|storeAI r18 => rfp, 16
+Lambda|e03|input|loadAI rfp, 16 => r20
+Lambda|e03|input|storeAI r20 => rsp, 16
+Lambda|e03|input|loadAI rfp, 4 => r21
+Lambda|e03|input|storeAI r21 => rsp, 4
+Lambda|e03|input|addI rpc, 3 => r22
+Lambda|e03|input|storeAI r22 => rsp, 8
+Lambda|e03|input|jumpI -> Lfatorial
+Lambda|e03|input|loadAI rsp, 12 => r19
+Lambda|e03|input|storeAI r19 => rbss, 0
+Lambda|e03|input|loadI 0 => r23
+Lambda|e03|input|storeAI r23 => rfp, 12
+Lambda|e03|input|i2i rfp => rsp
+Lambda|e03|input|loadAI rsp, 0 => rfp
+Lambda|e03|input|loadAI rsp, 8 => r24
+Lambda|e03|input|jump -> r24
+Lambda|e03|input|
+Lambda|e03|output|count	instruction
+Lambda|e03|output|   50	loadAI
+Lambda|e03|output|   41	storeAI
+Lambda|e03|output|   30	addI
+Lambda|e03|output|   16	loadI
+Lambda|e03|output|   16	store
+Lambda|e03|output|   16	subI
+Lambda|e03|output|   16	load
+Lambda|e03|output|   14	i2i
+Lambda|e03|output|   10	nop
+Lambda|e03|output|    7	jumpI
+Lambda|e03|output|    7	jump
+Lambda|e03|output|    6	cmp_EQ
+Lambda|e03|output|    6	cbr
+Lambda|e03|output|    5	sub
+Lambda|e03|output|    5	mult
+Lambda|e03|output|    1	halt
+Lambda|e03|output|
+Lambda|e03|output|instructions executed:  246
+Lambda|e03|output|register         read:  285 write:  401
+Lambda|e03|output|memory           read:   66 write:   57
+Lambda|e03|output|
+Lambda|e03|output|  register    value
+Lambda|e03|output|        r1        1
+Lambda|e03|output|       r10        0
+Lambda|e03|output|       r11       42
+Lambda|e03|output|       r12        6
+Lambda|e03|output|       r13      720
+Lambda|e03|output|       r14      720
+Lambda|e03|output|       r15       74
+Lambda|e03|output|       r18        6
+Lambda|e03|output|       r19      720
+Lambda|e03|output|        r2        1
+Lambda|e03|output|       r20        6
+Lambda|e03|output|       r21        0
+Lambda|e03|output|       r22       74
+Lambda|e03|output|       r23        0
+Lambda|e03|output|       r24        8
+Lambda|e03|output|       r25        0
+Lambda|e03|output|       r26        8
+Lambda|e03|output|        r3        1
+Lambda|e03|output|        r4        1
+Lambda|e03|output|        r5       42
+Lambda|e03|output|        r6      120
+Lambda|e03|output|        r7        2
+Lambda|e03|output|        r8        1
+Lambda|e03|output|        r9        1
+Lambda|e03|output|      rbss    14263
+Lambda|e03|output|       rfp    28527
+Lambda|e03|output|       rpc        8
+Lambda|e03|output|       rsp    28527
+Lambda|e03|output|
+Lambda|e03|output|    memory    value
+Lambda|e03|output|00014263      720
+Lambda|e03|output|00028527    28527
+Lambda|e03|output|00028531        0
+Lambda|e03|output|00028535        8
+Lambda|e03|output|00028539        0
+Lambda|e03|output|00028543        6
+Lambda|e03|output|00028547    28527
+Lambda|e03|output|00028551        0
+Lambda|e03|output|00028555       74
+Lambda|e03|output|00028559      720
+Lambda|e03|output|00028563        6
+Lambda|e03|output|00028567      720
+Lambda|e03|output|00028571      120
+Lambda|e03|output|00028575        0
+Lambda|e03|output|00028579       42
+Lambda|e03|output|00028583      120
+Lambda|e03|output|00028587        5
+Lambda|e03|output|00028591      120
+Lambda|e03|output|00028595       24
+Lambda|e03|output|00028599        0
+Lambda|e03|output|00028603       42
+Lambda|e03|output|00028607       24
+Lambda|e03|output|00028611        4
+Lambda|e03|output|00028615       24
+Lambda|e03|output|00028619        6
+Lambda|e03|output|00028623        0
+Lambda|e03|output|00028627       42
+Lambda|e03|output|00028631        6
+Lambda|e03|output|00028635        3
+Lambda|e03|output|00028639        6
+Lambda|e03|output|00028643        2
+Lambda|e03|output|00028647        0
+Lambda|e03|output|00028651       42
+Lambda|e03|output|00028655        2
+Lambda|e03|output|00028659        2
+Lambda|e03|output|00028663        2
+Lambda|e03|output|00028667        1
+Lambda|e03|output|00028671        0
+Lambda|e03|output|00028675       42
+Lambda|e03|output|00028679        1
+Lambda|e03|output|00028683        1
+Lambda|e03|output|00028691        1
+Lambda|0
+Lambda|e03|sixit|0
+Lambda|e03|memory|00014263|720
+Lambda|e03|memory|00028527|28527
+Lambda|e03|memory|00028531|0
+Lambda|e03|memory|00028535|8
+Lambda|e03|memory|00028539|0
+Lambda|e03|memory|00028543|6
+Lambda|e03|memory|00028547|28527
+Lambda|e03|memory|00028551|0
+Lambda|e03|memory|00028555|74
+Lambda|e03|memory|00028559|720
+Lambda|e03|memory|00028563|6
+Lambda|e03|memory|00028567|720
+Lambda|e03|memory|00028571|120
+Lambda|e03|memory|00028575|0
+Lambda|e03|memory|00028579|42
+Lambda|e03|memory|00028583|120
+Lambda|e03|memory|00028587|5
+Lambda|e03|memory|00028591|120
+Lambda|e03|memory|00028595|24
+Lambda|e03|memory|00028599|0
+Lambda|e03|instruction|50|loadAI
+Lambda|e03|instruction|41|storeAI
+Lambda|e03|instruction|30|addI
+Lambda|e03|instruction|16|loadI
+Lambda|e03|instruction|16|store
+Lambda|e03|instruction|16|subI
+Lambda|e03|instruction|16|load
+Lambda|e03|instruction|14|i2i
+Lambda|e03|instruction|10|nop
+Lambda|e03|instruction|7|jumpI
+Lambda|e03|instruction|7|jump
+Lambda|e03|instruction|6|cmp_EQ
+Lambda|e03|instruction|6|cbr
+Lambda|e03|instruction|5|sub
+Lambda|e03|instruction|5|mult
+Lambda|e03|instruction|1|halt
+Lambda|e04|stack|12346
+Lambda|e04|data|6173
+Lambda|e04|input|loadI 2048 => rfp
+Lambda|e04|input|loadI 2048 => rsp
+Lambda|e04|input|loadI 1024 => rbss
+Lambda|e04|input|loadAI rfp, 4 => r40
+Lambda|e04|input|storeAI r40 => rsp, 4
+Lambda|e04|input|addI rpc, 3 => r41
+Lambda|e04|input|storeAI r41 => rsp, 8
+Lambda|e04|input|jumpI -> Lmain
+Lambda|e04|input|halt
+Lambda|e04|input|Lf:
+Lambda|e04|input|storeAI rfp => rsp, 0
+Lambda|e04|input|i2i rsp => rfp
+Lambda|e04|input|addI rsp, 28 => rsp
+Lambda|e04|input|loadAI rfp, 16 => r1
+Lambda|e04|input|store r1 => rsp
+Lambda|e04|input|addI rsp, 4 => rsp
+Lambda|e04|input|loadAI rfp, 20 => r2
+Lambda|e04|input|subI rsp, 4 => rsp
+Lambda|e04|input|load rsp => r1
+Lambda|e04|input|mult r1, r2 => r3
+Lambda|e04|input|storeAI r3 => rfp, 24
+Lambda|e04|input|loadAI rfp, 24 => r4
+Lambda|e04|input|storeAI r4 => rfp, 12
+Lambda|e04|input|i2i rfp => rsp
+Lambda|e04|input|loadAI rsp, 0 => rfp
+Lambda|e04|input|loadAI rsp, 8 => r5
+Lambda|e04|input|jump -> r5
+Lambda|e04|input|loadI 0 => r6
+Lambda|e04|input|storeAI r6 => rfp, 12
+Lambda|e04|input|i2i rfp => rsp
+Lambda|e04|input|loadAI rsp, 0 => rfp
+Lambda|e04|input|loadAI rsp, 8 => r7
+Lambda|e04|input|jump -> r7
+Lambda|e04|input|Lmult:
+Lambda|e04|input|storeAI rfp => rsp, 0
+Lambda|e04|input|i2i rsp => rfp
+Lambda|e04|input|addI rsp, 60 => rsp
+Lambda|e04|input|loadAI rfp, 16 => r8
+Lambda|e04|input|storeAI r8 => rfp, 32
+Lambda|e04|input|loadAI rfp, 20 => r9
+Lambda|e04|input|storeAI r9 => rfp, 36
+Lambda|e04|input|loadAI rfp, 24 => r10
+Lambda|e04|input|storeAI r10 => rfp, 40
+Lambda|e04|input|loadAI rfp, 28 => r11
+Lambda|e04|input|storeAI r11 => rfp, 44
+Lambda|e04|input|loadAI rfp, 32 => r13
+Lambda|e04|input|storeAI r13 => rsp, 16
+Lambda|e04|input|loadAI rfp, 36 => r14
+Lambda|e04|input|storeAI r14 => rsp, 20
+Lambda|e04|input|loadAI rfp, 4 => r15
+Lambda|e04|input|storeAI r15 => rsp, 4
+Lambda|e04|input|addI rpc, 3 => r16
+Lambda|e04|input|storeAI r16 => rsp, 8
+Lambda|e04|input|jumpI -> Lf
+Lambda|e04|input|loadAI rsp, 12 => r12
+Lambda|e04|input|storeAI r12 => rfp, 48
+Lambda|e04|input|loadAI rfp, 40 => r18
+Lambda|e04|input|storeAI r18 => rsp, 16
+Lambda|e04|input|loadAI rfp, 44 => r19
+Lambda|e04|input|storeAI r19 => rsp, 20
+Lambda|e04|input|loadAI rfp, 4 => r20
+Lambda|e04|input|storeAI r20 => rsp, 4
+Lambda|e04|input|addI rpc, 3 => r21
+Lambda|e04|input|storeAI r21 => rsp, 8
+Lambda|e04|input|jumpI -> Lf
+Lambda|e04|input|loadAI rsp, 12 => r17
+Lambda|e04|input|storeAI r17 => rfp, 52
+Lambda|e04|input|loadAI rfp, 48 => r22
+Lambda|e04|input|store r22 => rsp
+Lambda|e04|input|addI rsp, 4 => rsp
+Lambda|e04|input|loadAI rfp, 52 => r23
+Lambda|e04|input|subI rsp, 4 => rsp
+Lambda|e04|input|load rsp => r22
+Lambda|e04|input|add r22, r23 => r24
+Lambda|e04|input|storeAI r24 => rfp, 56
+Lambda|e04|input|loadAI rfp, 56 => r25
+Lambda|e04|input|storeAI r25 => rfp, 12
+Lambda|e04|input|i2i rfp => rsp
+Lambda|e04|input|loadAI rsp, 0 => rfp
+Lambda|e04|input|loadAI rsp, 8 => r26
+Lambda|e04|input|jump -> r26
+Lambda|e04|input|loadI 0 => r27
+Lambda|e04|input|storeAI r27 => rfp, 12
+Lambda|e04|input|i2i rfp => rsp
+Lambda|e04|input|loadAI rsp, 0 => rfp
+Lambda|e04|input|loadAI rsp, 8 => r28
+Lambda|e04|input|jump -> r28
+Lambda|e04|input|Lmain:
+Lambda|e04|input|storeAI rfp => rsp, 0
+Lambda|e04|input|i2i rsp => rfp
+Lambda|e04|input|addI rsp, 24 => rsp
+Lambda|e04|input|loadI 7 => r29
+Lambda|e04|input|storeAI r29 => rfp, 16
+Lambda|e04|input|loadI 3 => r30
+Lambda|e04|input|storeAI r30 => rfp, 20
+Lambda|e04|input|loadAI rfp, 16 => r32
+Lambda|e04|input|storeAI r32 => rsp, 16
+Lambda|e04|input|loadAI rfp, 16 => r33
+Lambda|e04|input|storeAI r33 => rsp, 20
+Lambda|e04|input|loadAI rfp, 20 => r34
+Lambda|e04|input|storeAI r34 => rsp, 24
+Lambda|e04|input|loadAI rfp, 20 => r35
+Lambda|e04|input|storeAI r35 => rsp, 28
+Lambda|e04|input|loadAI rfp, 4 => r36
+Lambda|e04|input|storeAI r36 => rsp, 4
+Lambda|e04|input|addI rpc, 3 => r37
+Lambda|e04|input|storeAI r37 => rsp, 8
+Lambda|e04|input|jumpI -> Lmult
+Lambda|e04|input|loadAI rsp, 12 => r31
+Lambda|e04|input|storeAI r31 => rbss, 0
+Lambda|e04|input|loadI 0 => r38
+Lambda|e04|input|storeAI r38 => rfp, 12
+Lambda|e04|input|i2i rfp => rsp
+Lambda|e04|input|loadAI rsp, 0 => rfp
+Lambda|e04|input|loadAI rsp, 8 => r39
+Lambda|e04|input|jump -> r39
+Lambda|e04|input|
+Lambda|e04|output|count	instruction
+Lambda|e04|output|   36	loadAI
+Lambda|e04|output|   36	storeAI
+Lambda|e04|output|   11	addI
+Lambda|e04|output|    8	i2i
+Lambda|e04|output|    6	loadI
+Lambda|e04|output|    4	jumpI
+Lambda|e04|output|    4	jump
+Lambda|e04|output|    3	store
+Lambda|e04|output|    3	subI
+Lambda|e04|output|    3	load
+Lambda|e04|output|    2	mult
+Lambda|e04|output|    1	add
+Lambda|e04|output|    1	halt
+Lambda|e04|output|
+Lambda|e04|output|instructions executed:  118
+Lambda|e04|output|register         read:  149 write:  185
+Lambda|e04|output|memory           read:   39 write:   39
+Lambda|e04|output|
+Lambda|e04|output|  register    value
+Lambda|e04|output|        r1        3
+Lambda|e04|output|       r10        3
+Lambda|e04|output|       r11        3
+Lambda|e04|output|       r12       49
+Lambda|e04|output|       r13        7
+Lambda|e04|output|       r14        7
+Lambda|e04|output|       r15        0
+Lambda|e04|output|       r16       52
+Lambda|e04|output|       r17        9
+Lambda|e04|output|       r18        3
+Lambda|e04|output|       r19        3
+Lambda|e04|output|        r2        3
+Lambda|e04|output|       r20        0
+Lambda|e04|output|       r21       63
+Lambda|e04|output|       r22       49
+Lambda|e04|output|       r23        9
+Lambda|e04|output|       r24       58
+Lambda|e04|output|       r25       58
+Lambda|e04|output|       r26      105
+Lambda|e04|output|       r29        7
+Lambda|e04|output|        r3        9
+Lambda|e04|output|       r30        3
+Lambda|e04|output|       r31       58
+Lambda|e04|output|       r32        7
+Lambda|e04|output|       r33        7
+Lambda|e04|output|       r34        3
+Lambda|e04|output|       r35        3
+Lambda|e04|output|       r36        0
+Lambda|e04|output|       r37      105
+Lambda|e04|output|       r38        0
+Lambda|e04|output|       r39        8
+Lambda|e04|output|        r4        9
+Lambda|e04|output|       r40        0
+Lambda|e04|output|       r41        8
+Lambda|e04|output|        r5       63
+Lambda|e04|output|        r8        7
+Lambda|e04|output|        r9        7
+Lambda|e04|output|      rbss     6173
+Lambda|e04|output|       rfp    12346
+Lambda|e04|output|       rpc        8
+Lambda|e04|output|       rsp    12346
+Lambda|e04|output|
+Lambda|e04|output|    memory    value
+Lambda|e04|output|00006173       58
+Lambda|e04|output|00012346    12346
+Lambda|e04|output|00012350        0
+Lambda|e04|output|00012354        8
+Lambda|e04|output|00012358        0
+Lambda|e04|output|00012362        7
+Lambda|e04|output|00012366        3
+Lambda|e04|output|00012370    12346
+Lambda|e04|output|00012374        0
+Lambda|e04|output|00012378      105
+Lambda|e04|output|00012382       58
+Lambda|e04|output|00012386        7
+Lambda|e04|output|00012390        7
+Lambda|e04|output|00012394        3
+Lambda|e04|output|00012398        3
+Lambda|e04|output|00012402        7
+Lambda|e04|output|00012406        7
+Lambda|e04|output|00012410        3
+Lambda|e04|output|00012414        3
+Lambda|e04|output|00012418       49
+Lambda|e04|output|00012422        9
+Lambda|e04|output|00012426       58
+Lambda|e04|output|00012430       49
+Lambda|e04|output|00012434        0
+Lambda|e04|output|00012438       63
+Lambda|e04|output|00012442        9
+Lambda|e04|output|00012446        3
+Lambda|e04|output|00012450        3
+Lambda|e04|output|00012454        9
+Lambda|e04|output|00012458        3
+Lambda|0
+Lambda|e04|sixit|0
+Lambda|e04|memory|00006173|58
+Lambda|e04|memory|00012346|12346
+Lambda|e04|memory|00012350|0
+Lambda|e04|memory|00012354|8
+Lambda|e04|memory|00012358|0
+Lambda|e04|memory|00012362|7
+Lambda|e04|memory|00012366|3
+Lambda|e04|memory|00012370|12346
+Lambda|e04|memory|00012374|0
+Lambda|e04|memory|00012378|105
+Lambda|e04|memory|00012382|58
+Lambda|e04|memory|00012386|7
+Lambda|e04|memory|00012390|7
+Lambda|e04|memory|00012394|3
+Lambda|e04|memory|00012398|3
+Lambda|e04|memory|00012402|7
+Lambda|e04|memory|00012406|7
+Lambda|e04|memory|00012410|3
+Lambda|e04|memory|00012414|3
+Lambda|e04|memory|00012418|49
+Lambda|e04|instruction|36|loadAI
+Lambda|e04|instruction|36|storeAI
+Lambda|e04|instruction|11|addI
+Lambda|e04|instruction|8|i2i
+Lambda|e04|instruction|6|loadI
+Lambda|e04|instruction|4|jumpI
+Lambda|e04|instruction|4|jump
+Lambda|e04|instruction|3|store
+Lambda|e04|instruction|3|subI
+Lambda|e04|instruction|3|load
+Lambda|e04|instruction|2|mult
+Lambda|e04|instruction|1|add
+Lambda|e04|instruction|1|halt
+Lambda|e05|stack|26423
+Lambda|e05|data|13211
+Lambda|e05|input|loadI 2048 => rfp
+Lambda|e05|input|loadI 2048 => rsp
+Lambda|e05|input|loadI 1024 => rbss
+Lambda|e05|input|loadAI rfp, 4 => r24
+Lambda|e05|input|storeAI r24 => rsp, 4
+Lambda|e05|input|addI rpc, 3 => r25
+Lambda|e05|input|storeAI r25 => rsp, 8
+Lambda|e05|input|jumpI -> Lmain
+Lambda|e05|input|halt
+Lambda|e05|input|Lgis:
+Lambda|e05|input|storeAI rfp => rsp, 0
+Lambda|e05|input|i2i rsp => rfp
+Lambda|e05|input|addI rsp, 24 => rsp
+Lambda|e05|input|loadAI rfp, 16 => r1
+Lambda|e05|input|store r1 => rsp
+Lambda|e05|input|addI rsp, 4 => rsp
+Lambda|e05|input|loadI 0 => r2
+Lambda|e05|input|subI rsp, 4 => rsp
+Lambda|e05|input|load rsp => r1
+Lambda|e05|input|cmp_EQ r1, r2 -> r3
+Lambda|e05|input|cbr r3 -> L1, L2
+Lambda|e05|input|L1:
+Lambda|e05|input|loadI 1 => r4
+Lambda|e05|input|storeAI r4 => rfp, 12
+Lambda|e05|input|i2i rfp => rsp
+Lambda|e05|input|loadAI rsp, 0 => rfp
+Lambda|e05|input|loadAI rsp, 8 => r5
+Lambda|e05|input|jump -> r5
+Lambda|e05|input|jumpI -> L3
+Lambda|e05|input|L2:
+Lambda|e05|input|nop
+Lambda|e05|input|L3:
+Lambda|e05|input|nop
+Lambda|e05|input|loadAI rfp, 16 => r6
+Lambda|e05|input|store r6 => rsp
+Lambda|e05|input|addI rsp, 4 => rsp
+Lambda|e05|input|loadAI rfp, 16 => r8
+Lambda|e05|input|store r8 => rsp
+Lambda|e05|input|addI rsp, 4 => rsp
+Lambda|e05|input|loadI 1 => r9
+Lambda|e05|input|subI rsp, 4 => rsp
+Lambda|e05|input|load rsp => r8
+Lambda|e05|input|sub r8, r9 => r10
+Lambda|e05|input|storeAI r10 => rsp, 16
+Lambda|e05|input|loadAI rfp, 4 => r11
+Lambda|e05|input|storeAI r11 => rsp, 4
+Lambda|e05|input|addI rpc, 3 => r12
+Lambda|e05|input|storeAI r12 => rsp, 8
+Lambda|e05|input|jumpI -> Lgis
+Lambda|e05|input|loadAI rsp, 12 => r7
+Lambda|e05|input|subI rsp, 4 => rsp
+Lambda|e05|input|load rsp => r6
+Lambda|e05|input|add r6, r7 => r13
+Lambda|e05|input|storeAI r13 => rfp, 20
+Lambda|e05|input|loadAI rfp, 20 => r14
+Lambda|e05|input|storeAI r14 => rfp, 12
+Lambda|e05|input|i2i rfp => rsp
+Lambda|e05|input|loadAI rsp, 0 => rfp
+Lambda|e05|input|loadAI rsp, 8 => r15
+Lambda|e05|input|jump -> r15
+Lambda|e05|input|loadI 0 => r16
+Lambda|e05|input|storeAI r16 => rfp, 12
+Lambda|e05|input|i2i rfp => rsp
+Lambda|e05|input|loadAI rsp, 0 => rfp
+Lambda|e05|input|loadAI rsp, 8 => r17
+Lambda|e05|input|jump -> r17
+Lambda|e05|input|Lmain:
+Lambda|e05|input|storeAI rfp => rsp, 0
+Lambda|e05|input|i2i rsp => rfp
+Lambda|e05|input|addI rsp, 16 => rsp
+Lambda|e05|input|loadI 3 => r19
+Lambda|e05|input|storeAI r19 => rsp, 16
+Lambda|e05|input|loadAI rfp, 4 => r20
+Lambda|e05|input|storeAI r20 => rsp, 4
+Lambda|e05|input|addI rpc, 3 => r21
+Lambda|e05|input|storeAI r21 => rsp, 8
+Lambda|e05|input|jumpI -> Lgis
+Lambda|e05|input|loadAI rsp, 12 => r18
+Lambda|e05|input|storeAI r18 => rbss, 0
+Lambda|e05|input|loadI 0 => r22
+Lambda|e05|input|storeAI r22 => rfp, 12
+Lambda|e05|input|i2i rfp => rsp
+Lambda|e05|input|loadAI rsp, 0 => rfp
+Lambda|e05|input|loadAI rsp, 8 => r23
+Lambda|e05|input|jump -> r23
+Lambda|e05|input|
+Lambda|e05|output|count	instruction
+Lambda|e05|output|   32	loadAI
+Lambda|e05|output|   28	storeAI
+Lambda|e05|output|   20	addI
+Lambda|e05|output|   13	loadI
+Lambda|e05|output|   10	i2i
+Lambda|e05|output|   10	store
+Lambda|e05|output|   10	subI
+Lambda|e05|output|   10	load
+Lambda|e05|output|    6	nop
+Lambda|e05|output|    5	jumpI
+Lambda|e05|output|    5	jump
+Lambda|e05|output|    4	cmp_EQ
+Lambda|e05|output|    4	cbr
+Lambda|e05|output|    3	sub
+Lambda|e05|output|    3	add
+Lambda|e05|output|    1	halt
+Lambda|e05|output|
+Lambda|e05|output|instructions executed:  164
+Lambda|e05|output|register         read:  187 write:  266
+Lambda|e05|output|memory           read:   42 write:   38
+Lambda|e05|output|
+Lambda|e05|output|  register    value
+Lambda|e05|output|        r1        0
+Lambda|e05|output|       r10        0
+Lambda|e05|output|       r11        0
+Lambda|e05|output|       r12       45
+Lambda|e05|output|       r13        7
+Lambda|e05|output|       r14        7
+Lambda|e05|output|       r15       72
+Lambda|e05|output|       r18        7
+Lambda|e05|output|       r19        3
+Lambda|e05|output|        r2        0
+Lambda|e05|output|       r20        0
+Lambda|e05|output|       r21       72
+Lambda|e05|output|       r22        0
+Lambda|e05|output|       r23        8
+Lambda|e05|output|       r24        0
+Lambda|e05|output|       r25        8
+Lambda|e05|output|        r3        1
+Lambda|e05|output|        r4        1
+Lambda|e05|output|        r5       45
+Lambda|e05|output|        r6        3
+Lambda|e05|output|        r7        4
+Lambda|e05|output|        r8        1
+Lambda|e05|output|        r9        1
+Lambda|e05|output|      rbss    13211
+Lambda|e05|output|       rfp    26423
+Lambda|e05|output|       rpc        8
+Lambda|e05|output|       rsp    26423
+Lambda|e05|output|
+Lambda|e05|output|    memory    value
+Lambda|e05|output|00013211        7
+Lambda|e05|output|00026423    26423
+Lambda|e05|output|00026427        0
+Lambda|e05|output|00026431        8
+Lambda|e05|output|00026435        0
+Lambda|e05|output|00026439    26423
+Lambda|e05|output|00026443        0
+Lambda|e05|output|00026447       72
+Lambda|e05|output|00026451        7
+Lambda|e05|output|00026455        3
+Lambda|e05|output|00026459        7
+Lambda|e05|output|00026463        3
+Lambda|e05|output|00026467    26439
+Lambda|e05|output|00026471        0
+Lambda|e05|output|00026475       45
+Lambda|e05|output|00026479        4
+Lambda|e05|output|00026483        2
+Lambda|e05|output|00026487        4
+Lambda|e05|output|00026491        2
+Lambda|e05|output|00026495    26467
+Lambda|e05|output|00026499        0
+Lambda|e05|output|00026503       45
+Lambda|e05|output|00026507        2
+Lambda|e05|output|00026511        1
+Lambda|e05|output|00026515        2
+Lambda|e05|output|00026519        1
+Lambda|e05|output|00026523    26495
+Lambda|e05|output|00026527        0
+Lambda|e05|output|00026531       45
+Lambda|e05|output|00026535        1
+Lambda|e05|output|00026539        0
+Lambda|e05|output|00026547        0
+Lambda|0
+Lambda|e05|sixit|0
+Lambda|e05|memory|00013211|7
+Lambda|e05|memory|00026423|26423
+Lambda|e05|memory|00026427|0
+Lambda|e05|memory|00026431|8
+Lambda|e05|memory|00026435|0
+Lambda|e05|memory|00026439|26423
+Lambda|e05|memory|00026443|0
+Lambda|e05|memory|00026447|72
+Lambda|e05|memory|00026451|7
+Lambda|e05|memory|00026455|3
+Lambda|e05|memory|00026459|7
+Lambda|e05|memory|00026463|3
+Lambda|e05|memory|00026467|26439
+Lambda|e05|memory|00026471|0
+Lambda|e05|memory|00026475|45
+Lambda|e05|memory|00026479|4
+Lambda|e05|memory|00026483|2
+Lambda|e05|memory|00026487|4
+Lambda|e05|memory|00026491|2
+Lambda|e05|memory|00026495|26467
+Lambda|e05|instruction|32|loadAI
+Lambda|e05|instruction|28|storeAI
+Lambda|e05|instruction|20|addI
+Lambda|e05|instruction|13|loadI
+Lambda|e05|instruction|10|i2i
+Lambda|e05|instruction|10|store
+Lambda|e05|instruction|10|subI
+Lambda|e05|instruction|10|load
+Lambda|e05|instruction|6|nop
+Lambda|e05|instruction|5|jumpI
+Lambda|e05|instruction|5|jump
+Lambda|e05|instruction|4|cmp_EQ
+Lambda|e05|instruction|4|cbr
+Lambda|e05|instruction|3|sub
+Lambda|e05|instruction|3|add
+Lambda|e05|instruction|1|halt
+Lambda|e06|stack|36619
+Lambda|e06|data|18309
+Lambda|e06|input|loadI 2048 => rfp
+Lambda|e06|input|loadI 2048 => rsp
+Lambda|e06|input|loadI 1024 => rbss
+Lambda|e06|input|loadAI rfp, 4 => r42
+Lambda|e06|input|storeAI r42 => rsp, 4
+Lambda|e06|input|addI rpc, 3 => r43
+Lambda|e06|input|storeAI r43 => rsp, 8
+Lambda|e06|input|jumpI -> Lmain
+Lambda|e06|input|halt
+Lambda|e06|input|Lf:
+Lambda|e06|input|storeAI rfp => rsp, 0
+Lambda|e06|input|i2i rsp => rfp
+Lambda|e06|input|addI rsp, 24 => rsp
+Lambda|e06|input|loadAI rfp, 16 => r1
+Lambda|e06|input|store r1 => rsp
+Lambda|e06|input|addI rsp, 4 => rsp
+Lambda|e06|input|loadAI rfp, 20 => r2
+Lambda|e06|input|subI rsp, 4 => rsp
+Lambda|e06|input|load rsp => r1
+Lambda|e06|input|mult r1, r2 => r3
+Lambda|e06|input|storeAI r3 => rfp, 12
+Lambda|e06|input|i2i rfp => rsp
+Lambda|e06|input|loadAI rsp, 0 => rfp
+Lambda|e06|input|loadAI rsp, 8 => r4
+Lambda|e06|input|jump -> r4
+Lambda|e06|input|loadI 0 => r5
+Lambda|e06|input|storeAI r5 => rfp, 12
+Lambda|e06|input|i2i rfp => rsp
+Lambda|e06|input|loadAI rsp, 0 => rfp
+Lambda|e06|input|loadAI rsp, 8 => r6
+Lambda|e06|input|jump -> r6
+Lambda|e06|input|Lmult:
+Lambda|e06|input|storeAI rfp => rsp, 0
+Lambda|e06|input|i2i rsp => rfp
+Lambda|e06|input|addI rsp, 36 => rsp
+Lambda|e06|input|loadAI rfp, 16 => r8
+Lambda|e06|input|storeAI r8 => rsp, 16
+Lambda|e06|input|loadAI rfp, 20 => r9
+Lambda|e06|input|storeAI r9 => rsp, 20
+Lambda|e06|input|loadAI rfp, 4 => r10
+Lambda|e06|input|storeAI r10 => rsp, 4
+Lambda|e06|input|addI rpc, 3 => r11
+Lambda|e06|input|storeAI r11 => rsp, 8
+Lambda|e06|input|jumpI -> Lf
+Lambda|e06|input|loadAI rsp, 12 => r7
+Lambda|e06|input|store r7 => rsp
+Lambda|e06|input|addI rsp, 4 => rsp
+Lambda|e06|input|loadAI rfp, 24 => r13
+Lambda|e06|input|storeAI r13 => rsp, 16
+Lambda|e06|input|loadAI rfp, 28 => r14
+Lambda|e06|input|storeAI r14 => rsp, 20
+Lambda|e06|input|loadAI rfp, 4 => r15
+Lambda|e06|input|storeAI r15 => rsp, 4
+Lambda|e06|input|addI rpc, 3 => r16
+Lambda|e06|input|storeAI r16 => rsp, 8
+Lambda|e06|input|jumpI -> Lf
+Lambda|e06|input|loadAI rsp, 12 => r12
+Lambda|e06|input|subI rsp, 4 => rsp
+Lambda|e06|input|load rsp => r7
+Lambda|e06|input|add r7, r12 => r17
+Lambda|e06|input|storeAI r17 => rfp, 32
+Lambda|e06|input|loadAI rfp, 32 => r18
+Lambda|e06|input|storeAI r18 => rfp, 12
+Lambda|e06|input|i2i rfp => rsp
+Lambda|e06|input|loadAI rsp, 0 => rfp
+Lambda|e06|input|loadAI rsp, 8 => r19
+Lambda|e06|input|jump -> r19
+Lambda|e06|input|loadI 0 => r20
+Lambda|e06|input|storeAI r20 => rfp, 12
+Lambda|e06|input|i2i rfp => rsp
+Lambda|e06|input|loadAI rsp, 0 => rfp
+Lambda|e06|input|loadAI rsp, 8 => r21
+Lambda|e06|input|jump -> r21
+Lambda|e06|input|Lmain:
+Lambda|e06|input|storeAI rfp => rsp, 0
+Lambda|e06|input|i2i rsp => rfp
+Lambda|e06|input|addI rsp, 24 => rsp
+Lambda|e06|input|loadI 2018 => r22
+Lambda|e06|input|storeAI r22 => rbss, 0
+Lambda|e06|input|loadI 2 => r23
+Lambda|e06|input|storeAI r23 => rfp, 16
+Lambda|e06|input|loadI 2 => r24
+Lambda|e06|input|storeAI r24 => rfp, 20
+Lambda|e06|input|loadAI rfp, 16 => r26
+Lambda|e06|input|store r26 => rsp
+Lambda|e06|input|addI rsp, 4 => rsp
+Lambda|e06|input|loadI 3 => r27
+Lambda|e06|input|subI rsp, 4 => rsp
+Lambda|e06|input|load rsp => r26
+Lambda|e06|input|mult r26, r27 => r28
+Lambda|e06|input|storeAI r28 => rsp, 16
+Lambda|e06|input|loadAI rfp, 16 => r29
+Lambda|e06|input|store r29 => rsp
+Lambda|e06|input|addI rsp, 4 => rsp
+Lambda|e06|input|loadI 3 => r30
+Lambda|e06|input|subI rsp, 4 => rsp
+Lambda|e06|input|load rsp => r29
+Lambda|e06|input|mult r29, r30 => r31
+Lambda|e06|input|storeAI r31 => rsp, 20
+Lambda|e06|input|loadAI rfp, 20 => r32
+Lambda|e06|input|store r32 => rsp
+Lambda|e06|input|addI rsp, 4 => rsp
+Lambda|e06|input|loadI 2 => r33
+Lambda|e06|input|subI rsp, 4 => rsp
+Lambda|e06|input|load rsp => r32
+Lambda|e06|input|mult r32, r33 => r34
+Lambda|e06|input|storeAI r34 => rsp, 24
+Lambda|e06|input|loadAI rfp, 20 => r35
+Lambda|e06|input|store r35 => rsp
+Lambda|e06|input|addI rsp, 4 => rsp
+Lambda|e06|input|loadI 2 => r36
+Lambda|e06|input|subI rsp, 4 => rsp
+Lambda|e06|input|load rsp => r35
+Lambda|e06|input|mult r35, r36 => r37
+Lambda|e06|input|storeAI r37 => rsp, 28
+Lambda|e06|input|loadAI rfp, 4 => r38
+Lambda|e06|input|storeAI r38 => rsp, 4
+Lambda|e06|input|addI rpc, 3 => r39
+Lambda|e06|input|storeAI r39 => rsp, 8
+Lambda|e06|input|jumpI -> Lmult
+Lambda|e06|input|loadAI rsp, 12 => r25
+Lambda|e06|input|storeAI r25 => rbss, 4
+Lambda|e06|input|loadI 0 => r40
+Lambda|e06|input|storeAI r40 => rfp, 12
+Lambda|e06|input|i2i rfp => rsp
+Lambda|e06|input|loadAI rsp, 0 => rfp
+Lambda|e06|input|loadAI rsp, 8 => r41
+Lambda|e06|input|jump -> r41
+Lambda|e06|input|
+Lambda|e06|output|count	instruction
+Lambda|e06|output|   29	storeAI
+Lambda|e06|output|   28	loadAI
+Lambda|e06|output|   15	addI
+Lambda|e06|output|   11	loadI
+Lambda|e06|output|    8	i2i
+Lambda|e06|output|    7	store
+Lambda|e06|output|    7	subI
+Lambda|e06|output|    7	load
+Lambda|e06|output|    6	mult
+Lambda|e06|output|    4	jumpI
+Lambda|e06|output|    4	jump
+Lambda|e06|output|    1	add
+Lambda|e06|output|    1	halt
+Lambda|e06|output|
+Lambda|e06|output|instructions executed:  128
+Lambda|e06|output|register         read:  155 write:  208
+Lambda|e06|output|memory           read:   35 write:   36
+Lambda|e06|output|
+Lambda|e06|output|  register    value
+Lambda|e06|output|        r1        4
+Lambda|e06|output|       r10        0
+Lambda|e06|output|       r11       42
+Lambda|e06|output|       r12       16
+Lambda|e06|output|       r13        4
+Lambda|e06|output|       r14        4
+Lambda|e06|output|       r15        0
+Lambda|e06|output|       r16       54
+Lambda|e06|output|       r17       52
+Lambda|e06|output|       r18       52
+Lambda|e06|output|       r19      117
+Lambda|e06|output|        r2        4
+Lambda|e06|output|       r22     2018
+Lambda|e06|output|       r23        2
+Lambda|e06|output|       r24        2
+Lambda|e06|output|       r25       52
+Lambda|e06|output|       r26        2
+Lambda|e06|output|       r27        3
+Lambda|e06|output|       r28        6
+Lambda|e06|output|       r29        2
+Lambda|e06|output|        r3       16
+Lambda|e06|output|       r30        3
+Lambda|e06|output|       r31        6
+Lambda|e06|output|       r32        2
+Lambda|e06|output|       r33        2
+Lambda|e06|output|       r34        4
+Lambda|e06|output|       r35        2
+Lambda|e06|output|       r36        2
+Lambda|e06|output|       r37        4
+Lambda|e06|output|       r38        0
+Lambda|e06|output|       r39      117
+Lambda|e06|output|        r4       54
+Lambda|e06|output|       r40        0
+Lambda|e06|output|       r41        8
+Lambda|e06|output|       r42        0
+Lambda|e06|output|       r43        8
+Lambda|e06|output|        r7       36
+Lambda|e06|output|        r8        6
+Lambda|e06|output|        r9        6
+Lambda|e06|output|      rbss    18309
+Lambda|e06|output|       rfp    36619
+Lambda|e06|output|       rpc        8
+Lambda|e06|output|       rsp    36619
+Lambda|e06|output|
+Lambda|e06|output|    memory    value
+Lambda|e06|output|00018309     2018
+Lambda|e06|output|00018313       52
+Lambda|e06|output|00036619    36619
+Lambda|e06|output|00036623        0
+Lambda|e06|output|00036627        8
+Lambda|e06|output|00036631        0
+Lambda|e06|output|00036635        2
+Lambda|e06|output|00036639        2
+Lambda|e06|output|00036643    36619
+Lambda|e06|output|00036647        0
+Lambda|e06|output|00036651      117
+Lambda|e06|output|00036655       52
+Lambda|e06|output|00036659        6
+Lambda|e06|output|00036663        6
+Lambda|e06|output|00036667        4
+Lambda|e06|output|00036671        4
+Lambda|e06|output|00036675       52
+Lambda|e06|output|00036679       36
+Lambda|e06|output|00036683    36643
+Lambda|e06|output|00036687        0
+Lambda|e06|output|00036691       54
+Lambda|e06|output|00036695       16
+Lambda|e06|output|00036699        4
+Lambda|e06|output|00036703        4
+Lambda|e06|output|00036707        4
+Lambda|0
+Lambda|e06|sixit|0
+Lambda|e06|memory|00018309|2018
+Lambda|e06|memory|00018313|52
+Lambda|e06|memory|00036619|36619
+Lambda|e06|memory|00036623|0
+Lambda|e06|memory|00036627|8
+Lambda|e06|memory|00036631|0
+Lambda|e06|memory|00036635|2
+Lambda|e06|memory|00036639|2
+Lambda|e06|memory|00036643|36619
+Lambda|e06|memory|00036647|0
+Lambda|e06|memory|00036651|117
+Lambda|e06|memory|00036655|52
+Lambda|e06|memory|00036659|6
+Lambda|e06|memory|00036663|6
+Lambda|e06|memory|00036667|4
+Lambda|e06|memory|00036671|4
+Lambda|e06|memory|00036675|52
+Lambda|e06|memory|00036679|36
+Lambda|e06|memory|00036683|36643
+Lambda|e06|memory|00036687|0
+Lambda|e06|instruction|29|storeAI
+Lambda|e06|instruction|28|loadAI
+Lambda|e06|instruction|15|addI
+Lambda|e06|instruction|11|loadI
+Lambda|e06|instruction|8|i2i
+Lambda|e06|instruction|7|store
+Lambda|e06|instruction|7|subI
+Lambda|e06|instruction|7|load
+Lambda|e06|instruction|6|mult
+Lambda|e06|instruction|4|jumpI
+Lambda|e06|instruction|4|jump
+Lambda|e06|instruction|1|add
+Lambda|e06|instruction|1|halt
+Lambda|e07|stack|29143
+Lambda|e07|data|14571
+Lambda|e07|input|loadI 2048 => rfp
+Lambda|e07|input|loadI 2048 => rsp
+Lambda|e07|input|loadI 1024 => rbss
+Lambda|e07|input|loadAI rfp, 4 => r51
+Lambda|e07|input|storeAI r51 => rsp, 4
+Lambda|e07|input|addI rpc, 3 => r52
+Lambda|e07|input|storeAI r52 => rsp, 8
+Lambda|e07|input|jumpI -> Lmain
+Lambda|e07|input|halt
+Lambda|e07|input|Lf:
+Lambda|e07|input|storeAI rfp => rsp, 0
+Lambda|e07|input|i2i rsp => rfp
+Lambda|e07|input|addI rsp, 28 => rsp
+Lambda|e07|input|loadAI rfp, 16 => r1
+Lambda|e07|input|store r1 => rsp
+Lambda|e07|input|addI rsp, 4 => rsp
+Lambda|e07|input|loadAI rfp, 20 => r2
+Lambda|e07|input|subI rsp, 4 => rsp
+Lambda|e07|input|load rsp => r1
+Lambda|e07|input|mult r1, r2 => r3
+Lambda|e07|input|storeAI r3 => rfp, 24
+Lambda|e07|input|loadAI rfp, 24 => r4
+Lambda|e07|input|storeAI r4 => rfp, 12
+Lambda|e07|input|i2i rfp => rsp
+Lambda|e07|input|loadAI rsp, 0 => rfp
+Lambda|e07|input|loadAI rsp, 8 => r5
+Lambda|e07|input|jump -> r5
+Lambda|e07|input|loadI 0 => r6
+Lambda|e07|input|storeAI r6 => rfp, 12
+Lambda|e07|input|i2i rfp => rsp
+Lambda|e07|input|loadAI rsp, 0 => rfp
+Lambda|e07|input|loadAI rsp, 8 => r7
+Lambda|e07|input|jump -> r7
+Lambda|e07|input|Lmult:
+Lambda|e07|input|storeAI rfp => rsp, 0
+Lambda|e07|input|i2i rsp => rfp
+Lambda|e07|input|addI rsp, 36 => rsp
+Lambda|e07|input|loadAI rfp, 16 => r10
+Lambda|e07|input|storeAI r10 => rsp, 16
+Lambda|e07|input|loadAI rfp, 16 => r11
+Lambda|e07|input|storeAI r11 => rsp, 20
+Lambda|e07|input|loadAI rfp, 4 => r12
+Lambda|e07|input|storeAI r12 => rsp, 4
+Lambda|e07|input|addI rpc, 3 => r13
+Lambda|e07|input|storeAI r13 => rsp, 8
+Lambda|e07|input|jumpI -> Lf
+Lambda|e07|input|loadAI rsp, 12 => r9
+Lambda|e07|input|storeAI r9 => rsp, 16
+Lambda|e07|input|loadAI rfp, 20 => r14
+Lambda|e07|input|storeAI r14 => rsp, 20
+Lambda|e07|input|loadAI rfp, 4 => r15
+Lambda|e07|input|storeAI r15 => rsp, 4
+Lambda|e07|input|addI rpc, 3 => r16
+Lambda|e07|input|storeAI r16 => rsp, 8
+Lambda|e07|input|jumpI -> Lf
+Lambda|e07|input|loadAI rsp, 12 => r8
+Lambda|e07|input|store r8 => rsp
+Lambda|e07|input|addI rsp, 4 => rsp
+Lambda|e07|input|loadAI rfp, 24 => r18
+Lambda|e07|input|storeAI r18 => rsp, 16
+Lambda|e07|input|loadAI rfp, 28 => r20
+Lambda|e07|input|storeAI r20 => rsp, 16
+Lambda|e07|input|loadAI rfp, 28 => r21
+Lambda|e07|input|storeAI r21 => rsp, 20
+Lambda|e07|input|loadAI rfp, 4 => r22
+Lambda|e07|input|storeAI r22 => rsp, 4
+Lambda|e07|input|addI rpc, 3 => r23
+Lambda|e07|input|storeAI r23 => rsp, 8
+Lambda|e07|input|jumpI -> Lf
+Lambda|e07|input|loadAI rsp, 12 => r19
+Lambda|e07|input|storeAI r19 => rsp, 20
+Lambda|e07|input|loadAI rfp, 4 => r24
+Lambda|e07|input|storeAI r24 => rsp, 4
+Lambda|e07|input|addI rpc, 3 => r25
+Lambda|e07|input|storeAI r25 => rsp, 8
+Lambda|e07|input|jumpI -> Lf
+Lambda|e07|input|loadAI rsp, 12 => r17
+Lambda|e07|input|subI rsp, 4 => rsp
+Lambda|e07|input|load rsp => r8
+Lambda|e07|input|add r8, r17 => r26
+Lambda|e07|input|storeAI r26 => rfp, 32
+Lambda|e07|input|loadAI rfp, 32 => r27
+Lambda|e07|input|storeAI r27 => rfp, 12
+Lambda|e07|input|i2i rfp => rsp
+Lambda|e07|input|loadAI rsp, 0 => rfp
+Lambda|e07|input|loadAI rsp, 8 => r28
+Lambda|e07|input|jump -> r28
+Lambda|e07|input|loadI 0 => r29
+Lambda|e07|input|storeAI r29 => rfp, 12
+Lambda|e07|input|i2i rfp => rsp
+Lambda|e07|input|loadAI rsp, 0 => rfp
+Lambda|e07|input|loadAI rsp, 8 => r30
+Lambda|e07|input|jump -> r30
+Lambda|e07|input|Lmain:
+Lambda|e07|input|storeAI rfp => rsp, 0
+Lambda|e07|input|i2i rsp => rfp
+Lambda|e07|input|addI rsp, 24 => rsp
+Lambda|e07|input|loadI 2019 => r31
+Lambda|e07|input|storeAI r31 => rbss, 0
+Lambda|e07|input|loadI 2 => r32
+Lambda|e07|input|storeAI r32 => rfp, 16
+Lambda|e07|input|loadI 2 => r33
+Lambda|e07|input|storeAI r33 => rfp, 20
+Lambda|e07|input|loadAI rfp, 16 => r35
+Lambda|e07|input|store r35 => rsp
+Lambda|e07|input|addI rsp, 4 => rsp
+Lambda|e07|input|loadI 3 => r36
+Lambda|e07|input|subI rsp, 4 => rsp
+Lambda|e07|input|load rsp => r35
+Lambda|e07|input|mult r35, r36 => r37
+Lambda|e07|input|storeAI r37 => rsp, 16
+Lambda|e07|input|loadAI rfp, 16 => r38
+Lambda|e07|input|store r38 => rsp
+Lambda|e07|input|addI rsp, 4 => rsp
+Lambda|e07|input|loadI 4 => r39
+Lambda|e07|input|subI rsp, 4 => rsp
+Lambda|e07|input|load rsp => r38
+Lambda|e07|input|mult r38, r39 => r40
+Lambda|e07|input|storeAI r40 => rsp, 20
+Lambda|e07|input|loadAI rfp, 20 => r41
+Lambda|e07|input|store r41 => rsp
+Lambda|e07|input|addI rsp, 4 => rsp
+Lambda|e07|input|loadI 2 => r42
+Lambda|e07|input|subI rsp, 4 => rsp
+Lambda|e07|input|load rsp => r41
+Lambda|e07|input|mult r41, r42 => r43
+Lambda|e07|input|storeAI r43 => rsp, 24
+Lambda|e07|input|loadAI rfp, 20 => r44
+Lambda|e07|input|store r44 => rsp
+Lambda|e07|input|addI rsp, 4 => rsp
+Lambda|e07|input|loadI 2 => r45
+Lambda|e07|input|subI rsp, 4 => rsp
+Lambda|e07|input|load rsp => r44
+Lambda|e07|input|mult r44, r45 => r46
+Lambda|e07|input|storeAI r46 => rsp, 28
+Lambda|e07|input|loadAI rfp, 4 => r47
+Lambda|e07|input|storeAI r47 => rsp, 4
+Lambda|e07|input|addI rpc, 3 => r48
+Lambda|e07|input|storeAI r48 => rsp, 8
+Lambda|e07|input|jumpI -> Lmult
+Lambda|e07|input|loadAI rsp, 12 => r34
+Lambda|e07|input|storeAI r34 => rbss, 4
+Lambda|e07|input|loadI 0 => r49
+Lambda|e07|input|storeAI r49 => rfp, 12
+Lambda|e07|input|i2i rfp => rsp
+Lambda|e07|input|loadAI rsp, 0 => rfp
+Lambda|e07|input|loadAI rsp, 8 => r50
+Lambda|e07|input|jump -> r50
+Lambda|e07|input|
+Lambda|e07|output|count	instruction
+Lambda|e07|output|   46	loadAI
+Lambda|e07|output|   45	storeAI
+Lambda|e07|output|   21	addI
+Lambda|e07|output|   12	i2i
+Lambda|e07|output|   11	loadI
+Lambda|e07|output|    9	store
+Lambda|e07|output|    9	subI
+Lambda|e07|output|    9	load
+Lambda|e07|output|    8	mult
+Lambda|e07|output|    6	jumpI
+Lambda|e07|output|    6	jump
+Lambda|e07|output|    1	add
+Lambda|e07|output|    1	halt
+Lambda|e07|output|
+Lambda|e07|output|instructions executed:  184
+Lambda|e07|output|register         read:  229 write:  298
+Lambda|e07|output|memory           read:   55 write:   54
+Lambda|e07|output|
+Lambda|e07|output|  register    value
+Lambda|e07|output|        r1        4
+Lambda|e07|output|       r10        6
+Lambda|e07|output|       r11        6
+Lambda|e07|output|       r12        0
+Lambda|e07|output|       r13       44
+Lambda|e07|output|       r14        8
+Lambda|e07|output|       r15        0
+Lambda|e07|output|       r16       53
+Lambda|e07|output|       r17       64
+Lambda|e07|output|       r18        4
+Lambda|e07|output|       r19       16
+Lambda|e07|output|        r2       16
+Lambda|e07|output|       r20        4
+Lambda|e07|output|       r21        4
+Lambda|e07|output|       r22        0
+Lambda|e07|output|       r23       67
+Lambda|e07|output|       r24        0
+Lambda|e07|output|       r25       74
+Lambda|e07|output|       r26      352
+Lambda|e07|output|       r27      352
+Lambda|e07|output|       r28      137
+Lambda|e07|output|        r3       64
+Lambda|e07|output|       r31     2019
+Lambda|e07|output|       r32        2
+Lambda|e07|output|       r33        2
+Lambda|e07|output|       r34      352
+Lambda|e07|output|       r35        2
+Lambda|e07|output|       r36        3
+Lambda|e07|output|       r37        6
+Lambda|e07|output|       r38        2
+Lambda|e07|output|       r39        4
+Lambda|e07|output|        r4       64
+Lambda|e07|output|       r40        8
+Lambda|e07|output|       r41        2
+Lambda|e07|output|       r42        2
+Lambda|e07|output|       r43        4
+Lambda|e07|output|       r44        2
+Lambda|e07|output|       r45        2
+Lambda|e07|output|       r46        4
+Lambda|e07|output|       r47        0
+Lambda|e07|output|       r48      137
+Lambda|e07|output|       r49        0
+Lambda|e07|output|        r5       74
+Lambda|e07|output|       r50        8
+Lambda|e07|output|       r51        0
+Lambda|e07|output|       r52        8
+Lambda|e07|output|        r8      288
+Lambda|e07|output|        r9       36
+Lambda|e07|output|      rbss    14571
+Lambda|e07|output|       rfp    29143
+Lambda|e07|output|       rpc        8
+Lambda|e07|output|       rsp    29143
+Lambda|e07|output|
+Lambda|e07|output|    memory    value
+Lambda|e07|output|00014571     2019
+Lambda|e07|output|00014575      352
+Lambda|e07|output|00029143    29143
+Lambda|e07|output|00029147        0
+Lambda|e07|output|00029151        8
+Lambda|e07|output|00029155        0
+Lambda|e07|output|00029159        2
+Lambda|e07|output|00029163        2
+Lambda|e07|output|00029167    29143
+Lambda|e07|output|00029171        0
+Lambda|e07|output|00029175      137
+Lambda|e07|output|00029179      352
+Lambda|e07|output|00029183        6
+Lambda|e07|output|00029187        8
+Lambda|e07|output|00029191        4
+Lambda|e07|output|00029195        4
+Lambda|e07|output|00029199      352
+Lambda|e07|output|00029203      288
+Lambda|e07|output|00029207    29167
+Lambda|e07|output|00029211        0
+Lambda|e07|output|00029215       74
+Lambda|e07|output|00029219       64
+Lambda|e07|output|00029223        4
+Lambda|e07|output|00029227       16
+Lambda|e07|output|00029231       64
+Lambda|e07|output|00029235        4
+Lambda|0
+Lambda|e07|sixit|0
+Lambda|e07|memory|00014571|2019
+Lambda|e07|memory|00014575|352
+Lambda|e07|memory|00029143|29143
+Lambda|e07|memory|00029147|0
+Lambda|e07|memory|00029151|8
+Lambda|e07|memory|00029155|0
+Lambda|e07|memory|00029159|2
+Lambda|e07|memory|00029163|2
+Lambda|e07|memory|00029167|29143
+Lambda|e07|memory|00029171|0
+Lambda|e07|memory|00029175|137
+Lambda|e07|memory|00029179|352
+Lambda|e07|memory|00029183|6
+Lambda|e07|memory|00029187|8
+Lambda|e07|memory|00029191|4
+Lambda|e07|memory|00029195|4
+Lambda|e07|memory|00029199|352
+Lambda|e07|memory|00029203|288
+Lambda|e07|memory|00029207|29167
+Lambda|e07|memory|00029211|0
+Lambda|e07|instruction|46|loadAI
+Lambda|e07|instruction|45|storeAI
+Lambda|e07|instruction|21|addI
+Lambda|e07|instruction|12|i2i
+Lambda|e07|instruction|11|loadI
+Lambda|e07|instruction|9|store
+Lambda|e07|instruction|9|subI
+Lambda|e07|instruction|9|load
+Lambda|e07|instruction|8|mult
+Lambda|e07|instruction|6|jumpI
+Lambda|e07|instruction|6|jump
+Lambda|e07|instruction|1|add
+Lambda|e07|instruction|1|halt
