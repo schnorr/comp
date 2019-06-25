@@ -258,7 +258,7 @@ PR espera 33 respostas, com o gabarito abaixo.
 | ???490 | 18.N    | =2 1 2 0 2= | =2 1 1 0 0= | FALSE   |
 | ???490 | 18.O    | =E=         | =E=         | TRUE    |
 
-* P2                                                               :noexport:
+* P2
 ** Gabarito
 
 P2 espera 37 respostas, com o gabarito abaixo.
