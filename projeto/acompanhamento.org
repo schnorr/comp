@@ -1142,3 +1142,127 @@ Fizeram tudo.
 | Beta   |   10 |   10 |
 | Delta  | 9.58 |    7 |
 | Lambda |   10 |   10 |
+* Avaliação da Etapa 6
+** Grupos que não entregaram até o prazo
+
+| Grupo   | ID     |
+|---------+--------|
+| Delta   | ???103 |
+| Alpha   | ???782 |
+
+** Entregas até o prazo
+
+| Timestamp           | Grupo  |
+|---------------------+--------|
+| 2019-06-22 00:45:45 | Lambda |
+| 2019-06-24 22:20:35 | Beta   |
+** Arquivos para testes                                             :ATTACH:
+:PROPERTIES:
+:Attachments: e6tests.tgz
+:ID:       d20c99ae-51bd-4ae9-809d-5d0cea129eac
+:END:
+
+Veja [[data/d2/0c99ae-51bd-4ae9-809d-5d0cea129eac/e6tests.tgz][este arquivo]].
+
+Todas as entradas estão lexicalmente, sintaticamente e semântica
+corretas de acordo com as etapas anteriores. A tabela abaixo demonstra
+a localização dos valores na memória ao final do programa, assumindo
+que os endereços de deslocamento se referem a base da pilha (=Stack=) ou
+do segmento de dados (=Data=).
+
+
+| Test | Type  | Address | Value |
+|------+-------+---------+-------|
+| e00  | Data  |       0 |    99 |
+| e01  | Data  |       0 |    98 |
+| e02  | Data  |       0 |    49 |
+| e03  | Data  |       0 |   720 |
+| e04  | Data  |       0 |    58 |
+| e05  | Data  |       0 |     7 |
+| e06  | Data  |       4 |    52 |
+| e07  | Data  |       4 |   352 |
+
+** Log dos testes automáticos                                       :ATTACH:
+:PROPERTIES:
+:Attachments: e6v0.log
+:ID:       743408ae-6fab-47cf-ae1c-c9fd150b2859
+:END:
+
+Consulte [[./data/74/3408ae-6fab-47cf-ae1c-c9fd150b2859/e6v0.log][o arquivo de log]] para obter os resultados elementares (/raw/)
+dos testes automáticos. Cada linha começa pelo nome do grupo, sendo
+que o separador é a barra vertical. A segunda coluna é o identificador
+do teste, e a terceira coluna pode ser =stack=, =data=, =input=, =output=,
+=memory= e =instruction=. Quando for =stack= e =data=, a quarta coluna indica
+a base desses segmentos. Quando for =input=, a quarta coluna contém a
+entrada fornecida pelo grupo (a saída do processo de compilação) para
+o simulador ILOC. Quando for =output=, a quarta coluna contém a saída
+do simulador ILOC. Quando for =memory=, a quarta coluna contém
+endereços e valores da memória ao fim da simulação. E, enfim, quando
+for =instruction=, a quarta coluna conterá as estatísticas das
+instruções executadas (quantidade, instrução). É a partir deste
+arquivo que é definida a tabela abaixo.
+** Testes automáticos
+
+A tabela abaixo mostra os resultados dos testes
+automáticos, considerando as entradas do arquivos para testes.  A
+coluna =Group= e =Test= identificam o grupo e o identificador do teste; a
+coluna =Address= indica o endereço de memória onde o valor =Value.y= deve
+ser registrado para o teste ser considerado certo. A coluna =Eval= é
+assinalada =TRUE= (correta) quando o valor da coluna =Value.x=, registrado
+no endereço pelo código ILOC emitido pelo grupo, for idêntico ao valor
+em =Value.y= esperado. Os endereços da pilha e da base foram definidos
+de maneira aleatória por teste. Somente aparecem aqueles testes onde a
+solução do grupo fornece algum código ILOC válido na saída.
+
+| Group  | Test | Address | Value.x | Value.y | Eval |
+|--------+------+---------+---------+---------+------|
+| Beta   | e00  |   17404 |      99 |      99 | TRUE |
+| Beta   | e01  |   19878 |      98 |      98 | TRUE |
+| Beta   | e02  |   14628 |      49 |      49 | TRUE |
+| Beta   | e03  |   19258 |     720 |     720 | TRUE |
+| Beta   | e04  |    9632 |      58 |      58 | TRUE |
+| Beta   | e05  |   18193 |       7 |       7 | TRUE |
+| Beta   | e06  |   20816 |      52 |      52 | TRUE |
+| Beta   | e07  |   15519 |     352 |     352 | TRUE |
+| Lambda | e00  |   11732 |      99 |      99 | TRUE |
+| Lambda | e01  |   13609 |      98 |      98 | TRUE |
+| Lambda | e02  |    9495 |      49 |      49 | TRUE |
+| Lambda | e03  |   14263 |     720 |     720 | TRUE |
+| Lambda | e04  |    6173 |      58 |      58 | TRUE |
+| Lambda | e05  |   13211 |       7 |       7 | TRUE |
+| Lambda | e06  |   18313 |      52 |      52 | TRUE |
+| Lambda | e07  |   14575 |     352 |     352 | TRUE |
+** Avaliação Subjetiva
+*** Instrumento de avaliação
+
+| Critério                | Peso |
+|-------------------------+------|
+| Informação ao professor |  0.5 |
+| Projeto do RA           |    1 |
+| Gerenciamento da Pilha  |    2 |
+| Entrada/Saída padrão    |    1 |
+| Inicialização regs.     |    1 |
+| Opinião geral           |    4 |
+
+*** Tabela subjetiva
+
+| Grupo  | Critério                | Peso | Valor |
+|--------+-------------------------+------+-------|
+| Beta   | Informação ao professor |  0.5 |    10 |
+| Beta   | Projeto do RA           |    1 |    10 |
+| Beta   | Gerenciamento da Pilha  |    2 |    10 |
+| Beta   | Entrada/Saída padrão    |    1 |    10 |
+| Beta   | Inicialização regs.     |    1 |    10 |
+| Beta   | Opinião geral           |    4 |    10 |
+| Lambda | Informação ao professor |  0.5 |     0 |
+| Lambda | Projeto do RA           |    1 |     5 |
+| Lambda | Gerenciamento da Pilha  |    2 |    10 |
+| Lambda | Entrada/Saída padrão    |    1 |    10 |
+| Lambda | Inicialização regs.     |    1 |    10 |
+| Lambda | Opinião geral           |    4 |     9 |
+** Notas Objetiva e Subjetiva
+
+| Grupo  | E6.O | E6.S |
+|--------+------+------|
+| Beta   |   10 |   10 |
+| Lambda |   10 | 8.53 |
