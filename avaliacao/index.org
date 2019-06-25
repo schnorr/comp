@@ -23,8 +23,6 @@
 #+EXPORT_SELECT_TAGS: export
 #+TAGS: noexport(n) deprecated(d)
 
-Por ser atualizado.
-
 * Ponderações gerais
 
 Para tomar conhecimento novamente das fórmulas utilizadas:
