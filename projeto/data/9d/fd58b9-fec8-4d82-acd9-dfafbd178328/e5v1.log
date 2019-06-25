@@ -1,0 +1,2242 @@
+
+Alpha
+
+Alpha|ijk00|stack|34351
+Alpha|ijk00|data|17175
+Alpha|ijk00|input|loadI 923=>r0
+Alpha|ijk00|input|storeAI r0=>rfp,0
+Alpha|ijk00|output|count	instruction
+Alpha|ijk00|output|    1	loadI
+Alpha|ijk00|output|    1	storeAI
+Alpha|ijk00|output|
+Alpha|ijk00|output|instructions executed:    2
+Alpha|ijk00|output|register         read:    2 write:    3
+Alpha|ijk00|output|memory           read:    0 write:    1
+Alpha|ijk00|output|
+Alpha|ijk00|output|  register    value
+Alpha|ijk00|output|        r0      923
+Alpha|ijk00|output|      rbss    17175
+Alpha|ijk00|output|       rfp    34351
+Alpha|ijk00|output|       rpc        1
+Alpha|ijk00|output|       rsp    34351
+Alpha|ijk00|output|
+Alpha|ijk00|output|    memory    value
+Alpha|ijk00|output|00034351      923
+Alpha|ijk00|memory|00034351|923
+Alpha|ijk01|stack|20775
+Alpha|ijk01|data|10387
+Alpha|ijk01|input|loadI 923=>r0
+Alpha|ijk01|input|storeAI r0=>rfp,8
+Alpha|ijk01|output|count	instruction
+Alpha|ijk01|output|    1	loadI
+Alpha|ijk01|output|    1	storeAI
+Alpha|ijk01|output|
+Alpha|ijk01|output|instructions executed:    2
+Alpha|ijk01|output|register         read:    2 write:    3
+Alpha|ijk01|output|memory           read:    0 write:    1
+Alpha|ijk01|output|
+Alpha|ijk01|output|  register    value
+Alpha|ijk01|output|        r0      923
+Alpha|ijk01|output|      rbss    10387
+Alpha|ijk01|output|       rfp    20775
+Alpha|ijk01|output|       rpc        1
+Alpha|ijk01|output|       rsp    20775
+Alpha|ijk01|output|
+Alpha|ijk01|output|    memory    value
+Alpha|ijk01|output|00020783      923
+Alpha|ijk01|memory|00020783|923
+Alpha|ijk02|stack|30283
+Alpha|ijk02|data|15141
+Alpha|ijk02|input|loadI 923=>r0
+Alpha|ijk02|input|storeAI r0=>rbss,0
+Alpha|ijk02|output|count	instruction
+Alpha|ijk02|output|    1	loadI
+Alpha|ijk02|output|    1	storeAI
+Alpha|ijk02|output|
+Alpha|ijk02|output|instructions executed:    2
+Alpha|ijk02|output|register         read:    2 write:    3
+Alpha|ijk02|output|memory           read:    0 write:    1
+Alpha|ijk02|output|
+Alpha|ijk02|output|  register    value
+Alpha|ijk02|output|        r0      923
+Alpha|ijk02|output|      rbss    15141
+Alpha|ijk02|output|       rfp    30283
+Alpha|ijk02|output|       rpc        1
+Alpha|ijk02|output|       rsp    30283
+Alpha|ijk02|output|
+Alpha|ijk02|output|    memory    value
+Alpha|ijk02|output|00015141      923
+Alpha|ijk02|memory|00015141|923
+Alpha|ijk03|stack|22963
+Alpha|ijk03|data|11481
+Alpha|ijk03|input|loadI 923=>r0
+Alpha|ijk03|input|storeAI r0=>rbss,8
+Alpha|ijk03|output|count	instruction
+Alpha|ijk03|output|    1	loadI
+Alpha|ijk03|output|    1	storeAI
+Alpha|ijk03|output|
+Alpha|ijk03|output|instructions executed:    2
+Alpha|ijk03|output|register         read:    2 write:    3
+Alpha|ijk03|output|memory           read:    0 write:    1
+Alpha|ijk03|output|
+Alpha|ijk03|output|  register    value
+Alpha|ijk03|output|        r0      923
+Alpha|ijk03|output|      rbss    11481
+Alpha|ijk03|output|       rfp    22963
+Alpha|ijk03|output|       rpc        1
+Alpha|ijk03|output|       rsp    22963
+Alpha|ijk03|output|
+Alpha|ijk03|output|    memory    value
+Alpha|ijk03|output|00011489      923
+Alpha|ijk03|memory|00011489|923
+Alpha|ijk04|stack|20318
+Alpha|ijk04|data|10159
+Alpha|ijk04|input|loadI 14=>r0
+Alpha|ijk04|input|storeAI r0=>rfp,4
+Alpha|ijk04|input|loadI 16=>r1
+Alpha|ijk04|input|storeAI r1=>rfp,8
+Alpha|ijk04|input|loadAI rfp,4=>r5
+Alpha|ijk04|input|loadAI rfp,8=>r6
+Alpha|ijk04|input|add r5,r6=>r7
+Alpha|ijk04|input|storeAI r7=>rfp,0
+Alpha|ijk04|input|loadAI rfp,0=>r11
+Alpha|ijk04|input|loadAI rfp,8=>r12
+Alpha|ijk04|input|add r11,r12=>r13
+Alpha|ijk04|input|storeAI r13=>rfp,4
+Alpha|ijk04|input|loadAI rfp,0=>r17
+Alpha|ijk04|input|loadAI rfp,4=>r18
+Alpha|ijk04|input|add r17,r18=>r19
+Alpha|ijk04|input|storeAI r19=>rfp,8
+Alpha|ijk04|output|count	instruction
+Alpha|ijk04|output|    6	loadAI
+Alpha|ijk04|output|    5	storeAI
+Alpha|ijk04|output|    3	add
+Alpha|ijk04|output|    2	loadI
+Alpha|ijk04|output|
+Alpha|ijk04|output|instructions executed:   16
+Alpha|ijk04|output|register         read:   22 write:   27
+Alpha|ijk04|output|memory           read:    6 write:    5
+Alpha|ijk04|output|
+Alpha|ijk04|output|  register    value
+Alpha|ijk04|output|        r0       14
+Alpha|ijk04|output|        r1       16
+Alpha|ijk04|output|       r11       30
+Alpha|ijk04|output|       r12       16
+Alpha|ijk04|output|       r13       46
+Alpha|ijk04|output|       r17       30
+Alpha|ijk04|output|       r18       46
+Alpha|ijk04|output|       r19       76
+Alpha|ijk04|output|        r5       14
+Alpha|ijk04|output|        r6       16
+Alpha|ijk04|output|        r7       30
+Alpha|ijk04|output|      rbss    10159
+Alpha|ijk04|output|       rfp    20318
+Alpha|ijk04|output|       rpc       15
+Alpha|ijk04|output|       rsp    20318
+Alpha|ijk04|output|
+Alpha|ijk04|output|    memory    value
+Alpha|ijk04|output|00020318       30
+Alpha|ijk04|output|00020322       46
+Alpha|ijk04|output|00020326       76
+Alpha|ijk04|memory|00020318|30
+Alpha|ijk04|memory|00020322|46
+Alpha|ijk04|memory|00020326|76
+Alpha|ijk05|stack|24086
+Alpha|ijk05|data|12043
+Alpha|ijk05|input|loadI 14=>r0
+Alpha|ijk05|input|storeAI r0=>rfp,4
+Alpha|ijk05|input|loadI 16=>r1
+Alpha|ijk05|input|storeAI r1=>rfp,8
+Alpha|ijk05|input|loadAI rfp,4=>r5
+Alpha|ijk05|input|loadAI rfp,8=>r6
+Alpha|ijk05|input|sub r5,r6=>r7
+Alpha|ijk05|input|storeAI r7=>rfp,0
+Alpha|ijk05|input|loadAI rfp,0=>r11
+Alpha|ijk05|input|loadAI rfp,8=>r12
+Alpha|ijk05|input|sub r11,r12=>r13
+Alpha|ijk05|input|storeAI r13=>rfp,4
+Alpha|ijk05|input|loadAI rfp,0=>r17
+Alpha|ijk05|input|loadAI rfp,4=>r18
+Alpha|ijk05|input|sub r17,r18=>r19
+Alpha|ijk05|input|storeAI r19=>rfp,8
+Alpha|ijk05|output|count	instruction
+Alpha|ijk05|output|    6	loadAI
+Alpha|ijk05|output|    5	storeAI
+Alpha|ijk05|output|    3	sub
+Alpha|ijk05|output|    2	loadI
+Alpha|ijk05|output|
+Alpha|ijk05|output|instructions executed:   16
+Alpha|ijk05|output|register         read:   22 write:   27
+Alpha|ijk05|output|memory           read:    6 write:    5
+Alpha|ijk05|output|
+Alpha|ijk05|output|  register    value
+Alpha|ijk05|output|        r0       14
+Alpha|ijk05|output|        r1       16
+Alpha|ijk05|output|       r11       -2
+Alpha|ijk05|output|       r12       16
+Alpha|ijk05|output|       r13      -18
+Alpha|ijk05|output|       r17       -2
+Alpha|ijk05|output|       r18      -18
+Alpha|ijk05|output|       r19       16
+Alpha|ijk05|output|        r5       14
+Alpha|ijk05|output|        r6       16
+Alpha|ijk05|output|        r7       -2
+Alpha|ijk05|output|      rbss    12043
+Alpha|ijk05|output|       rfp    24086
+Alpha|ijk05|output|       rpc       15
+Alpha|ijk05|output|       rsp    24086
+Alpha|ijk05|output|
+Alpha|ijk05|output|    memory    value
+Alpha|ijk05|output|00024086       -2
+Alpha|ijk05|output|00024090      -18
+Alpha|ijk05|output|00024094       16
+Alpha|ijk05|memory|00024086|-2
+Alpha|ijk05|memory|00024090|-18
+Alpha|ijk05|memory|00024094|16
+Alpha|ijk06|stack|37812
+Alpha|ijk06|data|18906
+Alpha|ijk06|input|loadI 75=>r0
+Alpha|ijk06|input|storeAI r0=>rfp,4
+Alpha|ijk06|input|loadI 3=>r1
+Alpha|ijk06|input|storeAI r1=>rfp,8
+Alpha|ijk06|input|loadAI rfp,4=>r5
+Alpha|ijk06|input|loadAI rfp,8=>r6
+Alpha|ijk06|input|div r5,r6=>r7
+Alpha|ijk06|input|storeAI r7=>rfp,0
+Alpha|ijk06|input|loadAI rfp,0=>r11
+Alpha|ijk06|input|loadI 5=>r12
+Alpha|ijk06|input|div r11,r12=>r13
+Alpha|ijk06|input|storeAI r13=>rfp,4
+Alpha|ijk06|input|loadAI rfp,0=>r17
+Alpha|ijk06|input|loadAI rfp,4=>r18
+Alpha|ijk06|input|div r17,r18=>r19
+Alpha|ijk06|input|storeAI r19=>rfp,8
+Alpha|ijk06|output|count	instruction
+Alpha|ijk06|output|    5	storeAI
+Alpha|ijk06|output|    5	loadAI
+Alpha|ijk06|output|    3	loadI
+Alpha|ijk06|output|    3	div
+Alpha|ijk06|output|
+Alpha|ijk06|output|instructions executed:   16
+Alpha|ijk06|output|register         read:   21 write:   27
+Alpha|ijk06|output|memory           read:    5 write:    5
+Alpha|ijk06|output|
+Alpha|ijk06|output|  register    value
+Alpha|ijk06|output|        r0       75
+Alpha|ijk06|output|        r1        3
+Alpha|ijk06|output|       r11       25
+Alpha|ijk06|output|       r12        5
+Alpha|ijk06|output|       r13        5
+Alpha|ijk06|output|       r17       25
+Alpha|ijk06|output|       r18        5
+Alpha|ijk06|output|       r19        5
+Alpha|ijk06|output|        r5       75
+Alpha|ijk06|output|        r6        3
+Alpha|ijk06|output|        r7       25
+Alpha|ijk06|output|      rbss    18906
+Alpha|ijk06|output|       rfp    37812
+Alpha|ijk06|output|       rpc       15
+Alpha|ijk06|output|       rsp    37812
+Alpha|ijk06|output|
+Alpha|ijk06|output|    memory    value
+Alpha|ijk06|output|00037812       25
+Alpha|ijk06|output|00037816        5
+Alpha|ijk06|output|00037820        5
+Alpha|ijk06|memory|00037812|25
+Alpha|ijk06|memory|00037816|5
+Alpha|ijk06|memory|00037820|5
+Alpha|ijk07|stack|19070
+Alpha|ijk07|data|9535
+Alpha|ijk07|input|loadI 15=>r0
+Alpha|ijk07|input|storeAI r0=>rfp,4
+Alpha|ijk07|input|loadI 3=>r1
+Alpha|ijk07|input|storeAI r1=>rfp,8
+Alpha|ijk07|input|loadAI rfp,4=>r5
+Alpha|ijk07|input|loadAI rfp,8=>r6
+Alpha|ijk07|input|mult r5,r6=>r7
+Alpha|ijk07|input|storeAI r7=>rfp,0
+Alpha|ijk07|input|loadAI rfp,0=>r11
+Alpha|ijk07|input|loadAI rfp,8=>r12
+Alpha|ijk07|input|mult r11,r12=>r13
+Alpha|ijk07|input|storeAI r13=>rfp,4
+Alpha|ijk07|input|loadAI rfp,0=>r17
+Alpha|ijk07|input|loadAI rfp,4=>r18
+Alpha|ijk07|input|mult r17,r18=>r19
+Alpha|ijk07|input|storeAI r19=>rfp,8
+Alpha|ijk07|output|count	instruction
+Alpha|ijk07|output|    6	loadAI
+Alpha|ijk07|output|    5	storeAI
+Alpha|ijk07|output|    3	mult
+Alpha|ijk07|output|    2	loadI
+Alpha|ijk07|output|
+Alpha|ijk07|output|instructions executed:   16
+Alpha|ijk07|output|register         read:   22 write:   27
+Alpha|ijk07|output|memory           read:    6 write:    5
+Alpha|ijk07|output|
+Alpha|ijk07|output|  register    value
+Alpha|ijk07|output|        r0       15
+Alpha|ijk07|output|        r1        3
+Alpha|ijk07|output|       r11       45
+Alpha|ijk07|output|       r12        3
+Alpha|ijk07|output|       r13      135
+Alpha|ijk07|output|       r17       45
+Alpha|ijk07|output|       r18      135
+Alpha|ijk07|output|       r19     6075
+Alpha|ijk07|output|        r5       15
+Alpha|ijk07|output|        r6        3
+Alpha|ijk07|output|        r7       45
+Alpha|ijk07|output|      rbss     9535
+Alpha|ijk07|output|       rfp    19070
+Alpha|ijk07|output|       rpc       15
+Alpha|ijk07|output|       rsp    19070
+Alpha|ijk07|output|
+Alpha|ijk07|output|    memory    value
+Alpha|ijk07|output|00019070       45
+Alpha|ijk07|output|00019074      135
+Alpha|ijk07|output|00019078     6075
+Alpha|ijk07|memory|00019070|45
+Alpha|ijk07|memory|00019074|135
+Alpha|ijk07|memory|00019078|6075
+Alpha|ijk08|stack|12897
+Alpha|ijk08|data|6448
+Alpha|ijk08|input|loadI 15=>r0
+Alpha|ijk08|input|storeAI r0=>rfp,4
+Alpha|ijk08|input|loadI 3=>r1
+Alpha|ijk08|input|storeAI r1=>rfp,8
+Alpha|ijk08|input|loadAI rfp,4=>r26
+Alpha|ijk08|input|loadAI rfp,8=>r27
+Alpha|ijk08|input|mult r26,r27=>r28
+Alpha|ijk08|input|loadI 2=>r29
+Alpha|ijk08|input|add r28,r29=>r30
+Alpha|ijk08|input|loadI 20=>r31
+Alpha|ijk08|input|mult r30,r31=>r32
+Alpha|ijk08|input|loadI 4=>r33
+Alpha|ijk08|input|div r32,r33=>r34
+Alpha|ijk08|input|storeAI r34=>rfp,0
+Alpha|ijk08|output|count	instruction
+Alpha|ijk08|output|    5	loadI
+Alpha|ijk08|output|    3	storeAI
+Alpha|ijk08|output|    2	loadAI
+Alpha|ijk08|output|    2	mult
+Alpha|ijk08|output|    1	add
+Alpha|ijk08|output|    1	div
+Alpha|ijk08|output|
+Alpha|ijk08|output|instructions executed:   14
+Alpha|ijk08|output|register         read:   16 write:   25
+Alpha|ijk08|output|memory           read:    2 write:    3
+Alpha|ijk08|output|
+Alpha|ijk08|output|  register    value
+Alpha|ijk08|output|        r0       15
+Alpha|ijk08|output|        r1        3
+Alpha|ijk08|output|       r26       15
+Alpha|ijk08|output|       r27        3
+Alpha|ijk08|output|       r28       45
+Alpha|ijk08|output|       r29        2
+Alpha|ijk08|output|       r30       47
+Alpha|ijk08|output|       r31       20
+Alpha|ijk08|output|       r32      940
+Alpha|ijk08|output|       r33        4
+Alpha|ijk08|output|       r34      235
+Alpha|ijk08|output|      rbss     6448
+Alpha|ijk08|output|       rfp    12897
+Alpha|ijk08|output|       rpc       13
+Alpha|ijk08|output|       rsp    12897
+Alpha|ijk08|output|
+Alpha|ijk08|output|    memory    value
+Alpha|ijk08|output|00012897      235
+Alpha|ijk08|output|00012901       15
+Alpha|ijk08|output|00012905        3
+Alpha|ijk08|memory|00012897|235
+Alpha|ijk08|memory|00012901|15
+Alpha|ijk08|memory|00012905|3
+Alpha|ijk09|stack|42299
+Alpha|ijk09|data|21149
+Alpha|ijk09|input|loadI 15=>r0
+Alpha|ijk09|input|storeAI r0=>rfp,4
+Alpha|ijk09|input|loadI 3=>r1
+Alpha|ijk09|input|storeAI r1=>rfp,8
+Alpha|ijk09|input|loadAI rfp,4=>r26
+Alpha|ijk09|input|loadAI rfp,8=>r27
+Alpha|ijk09|input|add r26,r27=>r28
+Alpha|ijk09|input|loadAI rfp,4=>r29
+Alpha|ijk09|input|add r28,r29=>r30
+Alpha|ijk09|input|loadAI rfp,8=>r31
+Alpha|ijk09|input|add r30,r31=>r32
+Alpha|ijk09|input|loadI 10=>r33
+Alpha|ijk09|input|add r32,r33=>r34
+Alpha|ijk09|input|storeAI r34=>rfp,0
+Alpha|ijk09|output|count	instruction
+Alpha|ijk09|output|    4	loadAI
+Alpha|ijk09|output|    4	add
+Alpha|ijk09|output|    3	loadI
+Alpha|ijk09|output|    3	storeAI
+Alpha|ijk09|output|
+Alpha|ijk09|output|instructions executed:   14
+Alpha|ijk09|output|register         read:   18 write:   25
+Alpha|ijk09|output|memory           read:    4 write:    3
+Alpha|ijk09|output|
+Alpha|ijk09|output|  register    value
+Alpha|ijk09|output|        r0       15
+Alpha|ijk09|output|        r1        3
+Alpha|ijk09|output|       r26       15
+Alpha|ijk09|output|       r27        3
+Alpha|ijk09|output|       r28       18
+Alpha|ijk09|output|       r29       15
+Alpha|ijk09|output|       r30       33
+Alpha|ijk09|output|       r31        3
+Alpha|ijk09|output|       r32       36
+Alpha|ijk09|output|       r33       10
+Alpha|ijk09|output|       r34       46
+Alpha|ijk09|output|      rbss    21149
+Alpha|ijk09|output|       rfp    42299
+Alpha|ijk09|output|       rpc       13
+Alpha|ijk09|output|       rsp    42299
+Alpha|ijk09|output|
+Alpha|ijk09|output|    memory    value
+Alpha|ijk09|output|00042299       46
+Alpha|ijk09|output|00042303       15
+Alpha|ijk09|output|00042307        3
+Alpha|ijk09|memory|00042299|46
+Alpha|ijk09|memory|00042303|15
+Alpha|ijk09|memory|00042307|3
+Alpha|ijk10|stack|33390
+Alpha|ijk10|data|16695
+Alpha|ijk10|input|loadI 400=>r0
+Alpha|ijk10|input|storeAI r0=>rfp,4
+Alpha|ijk10|input|loadI 2=>r1
+Alpha|ijk10|input|storeAI r1=>rfp,8
+Alpha|ijk10|input|loadAI rfp,4=>r26
+Alpha|ijk10|input|loadAI rfp,8=>r27
+Alpha|ijk10|input|div r26,r27=>r28
+Alpha|ijk10|input|loadAI rfp,4=>r29
+Alpha|ijk10|input|add r28,r29=>r30
+Alpha|ijk10|input|loadAI rfp,8=>r31
+Alpha|ijk10|input|div r30,r31=>r32
+Alpha|ijk10|input|loadAI rfp,8=>r33
+Alpha|ijk10|input|div r32,r33=>r34
+Alpha|ijk10|input|storeAI r34=>rfp,0
+Alpha|ijk10|output|count	instruction
+Alpha|ijk10|output|    5	loadAI
+Alpha|ijk10|output|    3	storeAI
+Alpha|ijk10|output|    3	div
+Alpha|ijk10|output|    2	loadI
+Alpha|ijk10|output|    1	add
+Alpha|ijk10|output|
+Alpha|ijk10|output|instructions executed:   14
+Alpha|ijk10|output|register         read:   19 write:   25
+Alpha|ijk10|output|memory           read:    5 write:    3
+Alpha|ijk10|output|
+Alpha|ijk10|output|  register    value
+Alpha|ijk10|output|        r0      400
+Alpha|ijk10|output|        r1        2
+Alpha|ijk10|output|       r26      400
+Alpha|ijk10|output|       r27        2
+Alpha|ijk10|output|       r28      200
+Alpha|ijk10|output|       r29      400
+Alpha|ijk10|output|       r30      600
+Alpha|ijk10|output|       r31        2
+Alpha|ijk10|output|       r32      300
+Alpha|ijk10|output|       r33        2
+Alpha|ijk10|output|       r34      150
+Alpha|ijk10|output|      rbss    16695
+Alpha|ijk10|output|       rfp    33390
+Alpha|ijk10|output|       rpc       13
+Alpha|ijk10|output|       rsp    33390
+Alpha|ijk10|output|
+Alpha|ijk10|output|    memory    value
+Alpha|ijk10|output|00033390      150
+Alpha|ijk10|output|00033394      400
+Alpha|ijk10|output|00033398        2
+Alpha|ijk10|memory|00033390|150
+Alpha|ijk10|memory|00033394|400
+Alpha|ijk10|memory|00033398|2
+Alpha|ijk11|stack|42492
+Alpha|ijk11|data|21246
+Alpha|ijk11|input|loadI 400=>r0
+Alpha|ijk11|input|storeAI r0=>rfp,4
+Alpha|ijk11|input|loadI 2=>r1
+Alpha|ijk11|input|storeAI r1=>rfp,8
+Alpha|ijk11|input|loadAI rfp,4=>r26
+Alpha|ijk11|input|loadAI rfp,4=>r27
+Alpha|ijk11|input|add r26,r27=>r28
+Alpha|ijk11|input|loadAI rfp,8=>r29
+Alpha|ijk11|input|div r28,r29=>r30
+Alpha|ijk11|input|loadAI rfp,4=>r31
+Alpha|ijk11|input|add r30,r31=>r32
+Alpha|ijk11|input|loadAI rfp,8=>r33
+Alpha|ijk11|input|div r32,r33=>r34
+Alpha|ijk11|input|storeAI r34=>rfp,0
+Alpha|ijk11|output|count	instruction
+Alpha|ijk11|output|    5	loadAI
+Alpha|ijk11|output|    3	storeAI
+Alpha|ijk11|output|    2	loadI
+Alpha|ijk11|output|    2	add
+Alpha|ijk11|output|    2	div
+Alpha|ijk11|output|
+Alpha|ijk11|output|instructions executed:   14
+Alpha|ijk11|output|register         read:   19 write:   25
+Alpha|ijk11|output|memory           read:    5 write:    3
+Alpha|ijk11|output|
+Alpha|ijk11|output|  register    value
+Alpha|ijk11|output|        r0      400
+Alpha|ijk11|output|        r1        2
+Alpha|ijk11|output|       r26      400
+Alpha|ijk11|output|       r27      400
+Alpha|ijk11|output|       r28      800
+Alpha|ijk11|output|       r29        2
+Alpha|ijk11|output|       r30      400
+Alpha|ijk11|output|       r31      400
+Alpha|ijk11|output|       r32      800
+Alpha|ijk11|output|       r33        2
+Alpha|ijk11|output|       r34      400
+Alpha|ijk11|output|      rbss    21246
+Alpha|ijk11|output|       rfp    42492
+Alpha|ijk11|output|       rpc       13
+Alpha|ijk11|output|       rsp    42492
+Alpha|ijk11|output|
+Alpha|ijk11|output|    memory    value
+Alpha|ijk11|output|00042492      400
+Alpha|ijk11|output|00042496      400
+Alpha|ijk11|output|00042500        2
+Alpha|ijk11|memory|00042492|400
+Alpha|ijk11|memory|00042496|400
+Alpha|ijk11|memory|00042500|2
+Alpha|ijk12|stack|32298
+Alpha|ijk12|data|16149
+Alpha|ijk12|input|loadI 2=>r24
+Alpha|ijk12|input|loadI 4=>r25
+Alpha|ijk12|input|add r24,r25=>r26
+Alpha|ijk12|input|loadI 2=>r27
+Alpha|ijk12|input|div r26,r27=>r28
+Alpha|ijk12|input|loadI 4=>r29
+Alpha|ijk12|input|add r28,r29=>r30
+Alpha|ijk12|input|loadI 4=>r31
+Alpha|ijk12|input|mult r30,r31=>r32
+Alpha|ijk12|input|storeAI r32=>rfp,0
+Alpha|ijk12|output|count	instruction
+Alpha|ijk12|output|    5	loadI
+Alpha|ijk12|output|    2	add
+Alpha|ijk12|output|    1	div
+Alpha|ijk12|output|    1	mult
+Alpha|ijk12|output|    1	storeAI
+Alpha|ijk12|output|
+Alpha|ijk12|output|instructions executed:   10
+Alpha|ijk12|output|register         read:   10 write:   19
+Alpha|ijk12|output|memory           read:    0 write:    1
+Alpha|ijk12|output|
+Alpha|ijk12|output|  register    value
+Alpha|ijk12|output|       r24        2
+Alpha|ijk12|output|       r25        4
+Alpha|ijk12|output|       r26        6
+Alpha|ijk12|output|       r27        2
+Alpha|ijk12|output|       r28        3
+Alpha|ijk12|output|       r29        4
+Alpha|ijk12|output|       r30        7
+Alpha|ijk12|output|       r31        4
+Alpha|ijk12|output|       r32       28
+Alpha|ijk12|output|      rbss    16149
+Alpha|ijk12|output|       rfp    32298
+Alpha|ijk12|output|       rpc        9
+Alpha|ijk12|output|       rsp    32298
+Alpha|ijk12|output|
+Alpha|ijk12|output|    memory    value
+Alpha|ijk12|output|00032298       28
+Alpha|ijk12|memory|00032298|28
+Alpha|ijk13|stack|40882
+Alpha|ijk13|data|20441
+Alpha|ijk13|input|loadI 2=>r0
+Alpha|ijk13|input|storeAI r0=>rfp,0
+Alpha|ijk13|output|count	instruction
+Alpha|ijk13|output|    1	loadI
+Alpha|ijk13|output|    1	storeAI
+Alpha|ijk13|output|
+Alpha|ijk13|output|instructions executed:    2
+Alpha|ijk13|output|register         read:    2 write:    3
+Alpha|ijk13|output|memory           read:    0 write:    1
+Alpha|ijk13|output|
+Alpha|ijk13|output|  register    value
+Alpha|ijk13|output|        r0        2
+Alpha|ijk13|output|      rbss    20441
+Alpha|ijk13|output|       rfp    40882
+Alpha|ijk13|output|       rpc        1
+Alpha|ijk13|output|       rsp    40882
+Alpha|ijk13|output|
+Alpha|ijk13|output|    memory    value
+Alpha|ijk13|output|00040882        2
+Alpha|ijk13|memory|00040882|2
+Alpha|ijk14|stack|12712
+Alpha|ijk14|data|6356
+Alpha|ijk14|input|loadI 393=>r0
+Alpha|ijk14|input|storeAI r0=>rfp,4
+Alpha|ijk14|input|loadAI rfp,4=>r1
+Alpha|ijk14|input|storeAI r1=>rfp,0
+Alpha|ijk14|output|count	instruction
+Alpha|ijk14|output|    2	storeAI
+Alpha|ijk14|output|    1	loadI
+Alpha|ijk14|output|    1	loadAI
+Alpha|ijk14|output|
+Alpha|ijk14|output|instructions executed:    4
+Alpha|ijk14|output|register         read:    5 write:    6
+Alpha|ijk14|output|memory           read:    1 write:    2
+Alpha|ijk14|output|
+Alpha|ijk14|output|  register    value
+Alpha|ijk14|output|        r0      393
+Alpha|ijk14|output|        r1      393
+Alpha|ijk14|output|      rbss     6356
+Alpha|ijk14|output|       rfp    12712
+Alpha|ijk14|output|       rpc        3
+Alpha|ijk14|output|       rsp    12712
+Alpha|ijk14|output|
+Alpha|ijk14|output|    memory    value
+Alpha|ijk14|output|00012712      393
+Alpha|ijk14|output|00012716      393
+Alpha|ijk14|memory|00012712|393
+Alpha|ijk14|memory|00012716|393
+Alpha|ijk15|stack|11133
+Alpha|ijk15|data|5566
+Alpha|ijk15|input|loadI 1=>r0
+Alpha|ijk15|input|storeAI r0=>rfp,0
+Alpha|ijk15|input|loadI 234=>r1
+Alpha|ijk15|input|storeAI r1=>rfp,4
+Alpha|ijk15|output|count	instruction
+Alpha|ijk15|output|    2	loadI
+Alpha|ijk15|output|    2	storeAI
+Alpha|ijk15|output|
+Alpha|ijk15|output|instructions executed:    4
+Alpha|ijk15|output|register         read:    4 write:    6
+Alpha|ijk15|output|memory           read:    0 write:    2
+Alpha|ijk15|output|
+Alpha|ijk15|output|  register    value
+Alpha|ijk15|output|        r0        1
+Alpha|ijk15|output|        r1      234
+Alpha|ijk15|output|      rbss     5566
+Alpha|ijk15|output|       rfp    11133
+Alpha|ijk15|output|       rpc        3
+Alpha|ijk15|output|       rsp    11133
+Alpha|ijk15|output|
+Alpha|ijk15|output|    memory    value
+Alpha|ijk15|output|00011133        1
+Alpha|ijk15|output|00011137      234
+Alpha|ijk15|memory|00011133|1
+Alpha|ijk15|memory|00011137|234
+Alpha|ijk16|stack|15612
+Alpha|ijk16|data|7806
+Alpha|ijk16|input|loadI 1=>r0
+Alpha|ijk16|input|storeAI r0=>rfp,0
+Alpha|ijk16|input|loadI 234=>r1
+Alpha|ijk16|input|storeAI r1=>rfp,4
+Alpha|ijk16|output|count	instruction
+Alpha|ijk16|output|    2	loadI
+Alpha|ijk16|output|    2	storeAI
+Alpha|ijk16|output|
+Alpha|ijk16|output|instructions executed:    4
+Alpha|ijk16|output|register         read:    4 write:    6
+Alpha|ijk16|output|memory           read:    0 write:    2
+Alpha|ijk16|output|
+Alpha|ijk16|output|  register    value
+Alpha|ijk16|output|        r0        1
+Alpha|ijk16|output|        r1      234
+Alpha|ijk16|output|      rbss     7806
+Alpha|ijk16|output|       rfp    15612
+Alpha|ijk16|output|       rpc        3
+Alpha|ijk16|output|       rsp    15612
+Alpha|ijk16|output|
+Alpha|ijk16|output|    memory    value
+Alpha|ijk16|output|00015612        1
+Alpha|ijk16|output|00015616      234
+Alpha|ijk16|memory|00015612|1
+Alpha|ijk16|memory|00015616|234
+Alpha|ijk17|stack|28613
+Alpha|ijk17|data|14306
+Alpha|ijk17|input|loadI 10=>r0
+Alpha|ijk17|input|storeAI r0=>rfp,0
+Alpha|ijk17|input|loadI 2=>r1
+Alpha|ijk17|input|storeAI r1=>rfp,4
+Alpha|ijk17|output|count	instruction
+Alpha|ijk17|output|    2	loadI
+Alpha|ijk17|output|    2	storeAI
+Alpha|ijk17|output|
+Alpha|ijk17|output|instructions executed:    4
+Alpha|ijk17|output|register         read:    4 write:    6
+Alpha|ijk17|output|memory           read:    0 write:    2
+Alpha|ijk17|output|
+Alpha|ijk17|output|  register    value
+Alpha|ijk17|output|        r0       10
+Alpha|ijk17|output|        r1        2
+Alpha|ijk17|output|      rbss    14306
+Alpha|ijk17|output|       rfp    28613
+Alpha|ijk17|output|       rpc        3
+Alpha|ijk17|output|       rsp    28613
+Alpha|ijk17|output|
+Alpha|ijk17|output|    memory    value
+Alpha|ijk17|output|00028613       10
+Alpha|ijk17|output|00028617        2
+Alpha|ijk17|memory|00028613|10
+Alpha|ijk17|memory|00028617|2
+Alpha|ijk18|stack|36150
+Alpha|ijk18|data|18075
+Alpha|ijk18|input|loadI 10=>r0
+Alpha|ijk18|input|storeAI r0=>rfp,0
+Alpha|ijk18|output|count	instruction
+Alpha|ijk18|output|    1	loadI
+Alpha|ijk18|output|    1	storeAI
+Alpha|ijk18|output|
+Alpha|ijk18|output|instructions executed:    2
+Alpha|ijk18|output|register         read:    2 write:    3
+Alpha|ijk18|output|memory           read:    0 write:    1
+Alpha|ijk18|output|
+Alpha|ijk18|output|  register    value
+Alpha|ijk18|output|        r0       10
+Alpha|ijk18|output|      rbss    18075
+Alpha|ijk18|output|       rfp    36150
+Alpha|ijk18|output|       rpc        1
+Alpha|ijk18|output|       rsp    36150
+Alpha|ijk18|output|
+Alpha|ijk18|output|    memory    value
+Alpha|ijk18|output|00036150       10
+Alpha|ijk18|memory|00036150|10
+Alpha|ijk19|stack|12232
+Alpha|ijk19|data|6116
+Alpha|ijk19|input|loadI 0=>r0
+Alpha|ijk19|input|storeAI r0=>rfp,0
+Alpha|ijk19|input|loadI 1=>r1
+Alpha|ijk19|input|storeAI r1=>rfp,4
+Alpha|ijk19|input|loadI 2=>r2
+Alpha|ijk19|input|storeAI r2=>rfp,8
+Alpha|ijk19|input|loadI 3=>r3
+Alpha|ijk19|input|storeAI r3=>rfp,12
+Alpha|ijk19|output|count	instruction
+Alpha|ijk19|output|    4	loadI
+Alpha|ijk19|output|    4	storeAI
+Alpha|ijk19|output|
+Alpha|ijk19|output|instructions executed:    8
+Alpha|ijk19|output|register         read:    8 write:   12
+Alpha|ijk19|output|memory           read:    0 write:    4
+Alpha|ijk19|output|
+Alpha|ijk19|output|  register    value
+Alpha|ijk19|output|        r0        0
+Alpha|ijk19|output|        r1        1
+Alpha|ijk19|output|        r2        2
+Alpha|ijk19|output|        r3        3
+Alpha|ijk19|output|      rbss     6116
+Alpha|ijk19|output|       rfp    12232
+Alpha|ijk19|output|       rpc        7
+Alpha|ijk19|output|       rsp    12232
+Alpha|ijk19|output|
+Alpha|ijk19|output|    memory    value
+Alpha|ijk19|output|00012232        0
+Alpha|ijk19|output|00012236        1
+Alpha|ijk19|output|00012240        2
+Alpha|ijk19|output|00012244        3
+Alpha|ijk19|memory|00012232|0
+Alpha|ijk19|memory|00012236|1
+Alpha|ijk19|memory|00012240|2
+Alpha|ijk19|memory|00012244|3
+Alpha|ijk20|stack|14215
+Alpha|ijk20|data|7107
+Alpha|ijk20|input|loadI 1=>r0
+Alpha|ijk20|input|storeAI r0=>rfp,0
+Alpha|ijk20|input|loadI 0=>r1
+Alpha|ijk20|input|storeAI r1=>rfp,4
+Alpha|ijk20|input|loadI 2=>r2
+Alpha|ijk20|input|storeAI r2=>rfp,8
+Alpha|ijk20|input|loadI 3=>r3
+Alpha|ijk20|input|storeAI r3=>rfp,12
+Alpha|ijk20|output|count	instruction
+Alpha|ijk20|output|    4	loadI
+Alpha|ijk20|output|    4	storeAI
+Alpha|ijk20|output|
+Alpha|ijk20|output|instructions executed:    8
+Alpha|ijk20|output|register         read:    8 write:   12
+Alpha|ijk20|output|memory           read:    0 write:    4
+Alpha|ijk20|output|
+Alpha|ijk20|output|  register    value
+Alpha|ijk20|output|        r0        1
+Alpha|ijk20|output|        r1        0
+Alpha|ijk20|output|        r2        2
+Alpha|ijk20|output|        r3        3
+Alpha|ijk20|output|      rbss     7107
+Alpha|ijk20|output|       rfp    14215
+Alpha|ijk20|output|       rpc        7
+Alpha|ijk20|output|       rsp    14215
+Alpha|ijk20|output|
+Alpha|ijk20|output|    memory    value
+Alpha|ijk20|output|00014215        1
+Alpha|ijk20|output|00014219        0
+Alpha|ijk20|output|00014223        2
+Alpha|ijk20|output|00014227        3
+Alpha|ijk20|memory|00014215|1
+Alpha|ijk20|memory|00014219|0
+Alpha|ijk20|memory|00014223|2
+Alpha|ijk20|memory|00014227|3
+
+Delta
+
+Delta|ijk00|stack|23119
+Delta|ijk00|data|11559
+Delta|ijk00|input|	loadI 1024 => rfp
+Delta|ijk00|input|	loadI 1024 => rsp
+Delta|ijk00|input|	loadI 5 => rbss
+Delta|ijk00|input|	jumpI  => L0
+Delta|ijk00|input|L0:	nop // main: 3 instructions
+Delta|ijk00|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk00|input|	loadI 923 => r0 
+Delta|ijk00|input|	storeAI r0 => rfp, 0 // store at Memory[rfp + 0] = r0: a = r0
+Delta|ijk00|input|	halt
+Delta|ijk00|input|
+Delta|ijk00|output|Change of rfp ignored (strict mode)
+Delta|ijk00|output|Change of rsp ignored (strict mode)
+Delta|ijk00|output|Change of rbss ignored (strict mode)
+Delta|ijk00|output|count	instruction
+Delta|ijk00|output|    4	loadI
+Delta|ijk00|output|    1	jumpI
+Delta|ijk00|output|    1	nop
+Delta|ijk00|output|    1	addI
+Delta|ijk00|output|    1	storeAI
+Delta|ijk00|output|    1	halt
+Delta|ijk00|output|
+Delta|ijk00|output|instructions executed:    9
+Delta|ijk00|output|register         read:    3 write:   11
+Delta|ijk00|output|memory           read:    0 write:    1
+Delta|ijk00|output|
+Delta|ijk00|output|  register    value
+Delta|ijk00|output|        r0      923
+Delta|ijk00|output|      rbss    11559
+Delta|ijk00|output|       rfp    23119
+Delta|ijk00|output|       rpc        8
+Delta|ijk00|output|       rsp    23123
+Delta|ijk00|output|
+Delta|ijk00|output|    memory    value
+Delta|ijk00|output|00023119      923
+Delta|ijk00|memory|00023119|923
+Delta|ijk00|instruction|Change|of
+Delta|ijk00|instruction|Change|of
+Delta|ijk00|instruction|Change|of
+Delta|ijk00|instruction|4|loadI
+Delta|ijk00|instruction|1|jumpI
+Delta|ijk00|instruction|1|nop
+Delta|ijk00|instruction|1|addI
+Delta|ijk00|instruction|1|storeAI
+Delta|ijk00|instruction|1|halt
+Delta|ijk01|stack|21190
+Delta|ijk01|data|10595
+Delta|ijk01|input|	loadI 1024 => rfp
+Delta|ijk01|input|	loadI 1024 => rsp
+Delta|ijk01|input|	loadI 7 => rbss
+Delta|ijk01|input|	jumpI  => L0
+Delta|ijk01|input|L0:	nop // main: 5 instructions
+Delta|ijk01|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk01|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk01|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk01|input|	loadI 923 => r0 
+Delta|ijk01|input|	storeAI r0 => rfp, 8 // store at Memory[rfp + 8] = r0: a = r0
+Delta|ijk01|input|	halt
+Delta|ijk01|input|
+Delta|ijk01|output|Change of rfp ignored (strict mode)
+Delta|ijk01|output|Change of rsp ignored (strict mode)
+Delta|ijk01|output|Change of rbss ignored (strict mode)
+Delta|ijk01|output|count	instruction
+Delta|ijk01|output|    4	loadI
+Delta|ijk01|output|    3	addI
+Delta|ijk01|output|    1	jumpI
+Delta|ijk01|output|    1	nop
+Delta|ijk01|output|    1	storeAI
+Delta|ijk01|output|    1	halt
+Delta|ijk01|output|
+Delta|ijk01|output|instructions executed:   11
+Delta|ijk01|output|register         read:    5 write:   15
+Delta|ijk01|output|memory           read:    0 write:    1
+Delta|ijk01|output|
+Delta|ijk01|output|  register    value
+Delta|ijk01|output|        r0      923
+Delta|ijk01|output|      rbss    10595
+Delta|ijk01|output|       rfp    21190
+Delta|ijk01|output|       rpc       10
+Delta|ijk01|output|       rsp    21202
+Delta|ijk01|output|
+Delta|ijk01|output|    memory    value
+Delta|ijk01|output|00021198      923
+Delta|ijk01|memory|00021198|923
+Delta|ijk01|instruction|Change|of
+Delta|ijk01|instruction|Change|of
+Delta|ijk01|instruction|Change|of
+Delta|ijk01|instruction|4|loadI
+Delta|ijk01|instruction|3|addI
+Delta|ijk01|instruction|1|jumpI
+Delta|ijk01|instruction|1|nop
+Delta|ijk01|instruction|1|storeAI
+Delta|ijk01|instruction|1|halt
+Delta|ijk02|stack|25111
+Delta|ijk02|data|12555
+Delta|ijk02|input|	loadI 1024 => rfp
+Delta|ijk02|input|	loadI 1024 => rsp
+Delta|ijk02|input|	loadI 4 => rbss
+Delta|ijk02|input|	jumpI  => L0
+Delta|ijk02|input|L0:	nop // main: 2 instructions
+Delta|ijk02|input|	loadI 923 => r0 
+Delta|ijk02|input|	storeAI r0 => rbss, 0 // store at Memory[rbss + 0] = r0: a = r0
+Delta|ijk02|input|	halt
+Delta|ijk02|input|
+Delta|ijk02|output|Change of rfp ignored (strict mode)
+Delta|ijk02|output|Change of rsp ignored (strict mode)
+Delta|ijk02|output|Change of rbss ignored (strict mode)
+Delta|ijk02|output|count	instruction
+Delta|ijk02|output|    4	loadI
+Delta|ijk02|output|    1	jumpI
+Delta|ijk02|output|    1	nop
+Delta|ijk02|output|    1	storeAI
+Delta|ijk02|output|    1	halt
+Delta|ijk02|output|
+Delta|ijk02|output|instructions executed:    8
+Delta|ijk02|output|register         read:    2 write:    9
+Delta|ijk02|output|memory           read:    0 write:    1
+Delta|ijk02|output|
+Delta|ijk02|output|  register    value
+Delta|ijk02|output|        r0      923
+Delta|ijk02|output|      rbss    12555
+Delta|ijk02|output|       rfp    25111
+Delta|ijk02|output|       rpc        7
+Delta|ijk02|output|       rsp    25111
+Delta|ijk02|output|
+Delta|ijk02|output|    memory    value
+Delta|ijk02|output|00012555      923
+Delta|ijk02|memory|00012555|923
+Delta|ijk02|instruction|Change|of
+Delta|ijk02|instruction|Change|of
+Delta|ijk02|instruction|Change|of
+Delta|ijk02|instruction|4|loadI
+Delta|ijk02|instruction|1|jumpI
+Delta|ijk02|instruction|1|nop
+Delta|ijk02|instruction|1|storeAI
+Delta|ijk02|instruction|1|halt
+Delta|ijk03|stack|32306
+Delta|ijk03|data|16153
+Delta|ijk03|input|	loadI 1024 => rfp
+Delta|ijk03|input|	loadI 1024 => rsp
+Delta|ijk03|input|	loadI 4 => rbss
+Delta|ijk03|input|	jumpI  => L0
+Delta|ijk03|input|L0:	nop // main: 2 instructions
+Delta|ijk03|input|	loadI 923 => r0 
+Delta|ijk03|input|	storeAI r0 => rbss, 8 // store at Memory[rbss + 8] = r0: a = r0
+Delta|ijk03|input|	halt
+Delta|ijk03|input|
+Delta|ijk03|output|Change of rfp ignored (strict mode)
+Delta|ijk03|output|Change of rsp ignored (strict mode)
+Delta|ijk03|output|Change of rbss ignored (strict mode)
+Delta|ijk03|output|count	instruction
+Delta|ijk03|output|    4	loadI
+Delta|ijk03|output|    1	jumpI
+Delta|ijk03|output|    1	nop
+Delta|ijk03|output|    1	storeAI
+Delta|ijk03|output|    1	halt
+Delta|ijk03|output|
+Delta|ijk03|output|instructions executed:    8
+Delta|ijk03|output|register         read:    2 write:    9
+Delta|ijk03|output|memory           read:    0 write:    1
+Delta|ijk03|output|
+Delta|ijk03|output|  register    value
+Delta|ijk03|output|        r0      923
+Delta|ijk03|output|      rbss    16153
+Delta|ijk03|output|       rfp    32306
+Delta|ijk03|output|       rpc        7
+Delta|ijk03|output|       rsp    32306
+Delta|ijk03|output|
+Delta|ijk03|output|    memory    value
+Delta|ijk03|output|00016161      923
+Delta|ijk03|memory|00016161|923
+Delta|ijk03|instruction|Change|of
+Delta|ijk03|instruction|Change|of
+Delta|ijk03|instruction|Change|of
+Delta|ijk03|instruction|4|loadI
+Delta|ijk03|instruction|1|jumpI
+Delta|ijk03|instruction|1|nop
+Delta|ijk03|instruction|1|storeAI
+Delta|ijk03|instruction|1|halt
+Delta|ijk04|stack|24927
+Delta|ijk04|data|12463
+Delta|ijk04|input|	loadI 1024 => rfp
+Delta|ijk04|input|	loadI 1024 => rsp
+Delta|ijk04|input|	loadI 21 => rbss
+Delta|ijk04|input|	jumpI  => L0
+Delta|ijk04|input|L0:	nop // main: 19 instructions
+Delta|ijk04|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk04|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk04|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk04|input|	loadI 14 => r0 
+Delta|ijk04|input|	storeAI r0 => rfp, 4 // store at Memory[rfp + 4] = r0: b = r0
+Delta|ijk04|input|	loadI 16 => r1 
+Delta|ijk04|input|	storeAI r1 => rfp, 8 // store at Memory[rfp + 8] = r1: c = r1
+Delta|ijk04|input|	loadAI rfp, 4 => r2 // load b into: r2 = Memory[rfp + 4]
+Delta|ijk04|input|	loadAI rfp, 8 => r3 // load c into: r3 = Memory[rfp + 8]
+Delta|ijk04|input|	add r2, r3 => r4 
+Delta|ijk04|input|	storeAI r4 => rfp, 0 // store at Memory[rfp + 0] = r4: a = r4
+Delta|ijk04|input|	loadAI rfp, 0 => r5 // load a into: r5 = Memory[rfp + 0]
+Delta|ijk04|input|	loadAI rfp, 8 => r6 // load c into: r6 = Memory[rfp + 8]
+Delta|ijk04|input|	add r5, r6 => r7 
+Delta|ijk04|input|	storeAI r7 => rfp, 4 // store at Memory[rfp + 4] = r7: b = r7
+Delta|ijk04|input|	loadAI rfp, 0 => r8 // load a into: r8 = Memory[rfp + 0]
+Delta|ijk04|input|	loadAI rfp, 4 => r9 // load b into: r9 = Memory[rfp + 4]
+Delta|ijk04|input|	add r8, r9 => r10 
+Delta|ijk04|input|	storeAI r10 => rfp, 8 // store at Memory[rfp + 8] = r10: c = r10
+Delta|ijk04|input|	halt
+Delta|ijk04|input|
+Delta|ijk04|output|Change of rfp ignored (strict mode)
+Delta|ijk04|output|Change of rsp ignored (strict mode)
+Delta|ijk04|output|Change of rbss ignored (strict mode)
+Delta|ijk04|output|count	instruction
+Delta|ijk04|output|    6	loadAI
+Delta|ijk04|output|    5	loadI
+Delta|ijk04|output|    5	storeAI
+Delta|ijk04|output|    3	addI
+Delta|ijk04|output|    3	add
+Delta|ijk04|output|    1	jumpI
+Delta|ijk04|output|    1	nop
+Delta|ijk04|output|    1	halt
+Delta|ijk04|output|
+Delta|ijk04|output|instructions executed:   25
+Delta|ijk04|output|register         read:   25 write:   39
+Delta|ijk04|output|memory           read:    6 write:    5
+Delta|ijk04|output|
+Delta|ijk04|output|  register    value
+Delta|ijk04|output|        r0       14
+Delta|ijk04|output|        r1       16
+Delta|ijk04|output|       r10       76
+Delta|ijk04|output|        r2       14
+Delta|ijk04|output|        r3       16
+Delta|ijk04|output|        r4       30
+Delta|ijk04|output|        r5       30
+Delta|ijk04|output|        r6       16
+Delta|ijk04|output|        r7       46
+Delta|ijk04|output|        r8       30
+Delta|ijk04|output|        r9       46
+Delta|ijk04|output|      rbss    12463
+Delta|ijk04|output|       rfp    24927
+Delta|ijk04|output|       rpc       24
+Delta|ijk04|output|       rsp    24939
+Delta|ijk04|output|
+Delta|ijk04|output|    memory    value
+Delta|ijk04|output|00024927       30
+Delta|ijk04|output|00024931       46
+Delta|ijk04|output|00024935       76
+Delta|ijk04|memory|00024927|30
+Delta|ijk04|memory|00024931|46
+Delta|ijk04|memory|00024935|76
+Delta|ijk04|instruction|Change|of
+Delta|ijk04|instruction|Change|of
+Delta|ijk04|instruction|Change|of
+Delta|ijk04|instruction|6|loadAI
+Delta|ijk04|instruction|5|loadI
+Delta|ijk04|instruction|5|storeAI
+Delta|ijk04|instruction|3|addI
+Delta|ijk04|instruction|3|add
+Delta|ijk04|instruction|1|jumpI
+Delta|ijk04|instruction|1|nop
+Delta|ijk04|instruction|1|halt
+Delta|ijk05|stack|21413
+Delta|ijk05|data|10706
+Delta|ijk05|input|	loadI 1024 => rfp
+Delta|ijk05|input|	loadI 1024 => rsp
+Delta|ijk05|input|	loadI 21 => rbss
+Delta|ijk05|input|	jumpI  => L0
+Delta|ijk05|input|L0:	nop // main: 19 instructions
+Delta|ijk05|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk05|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk05|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk05|input|	loadI 14 => r0 
+Delta|ijk05|input|	storeAI r0 => rfp, 4 // store at Memory[rfp + 4] = r0: b = r0
+Delta|ijk05|input|	loadI 16 => r1 
+Delta|ijk05|input|	storeAI r1 => rfp, 8 // store at Memory[rfp + 8] = r1: c = r1
+Delta|ijk05|input|	loadAI rfp, 4 => r2 // load b into: r2 = Memory[rfp + 4]
+Delta|ijk05|input|	loadAI rfp, 8 => r3 // load c into: r3 = Memory[rfp + 8]
+Delta|ijk05|input|	sub r2, r3 => r4 
+Delta|ijk05|input|	storeAI r4 => rfp, 0 // store at Memory[rfp + 0] = r4: a = r4
+Delta|ijk05|input|	loadAI rfp, 0 => r5 // load a into: r5 = Memory[rfp + 0]
+Delta|ijk05|input|	loadAI rfp, 8 => r6 // load c into: r6 = Memory[rfp + 8]
+Delta|ijk05|input|	sub r5, r6 => r7 
+Delta|ijk05|input|	storeAI r7 => rfp, 4 // store at Memory[rfp + 4] = r7: b = r7
+Delta|ijk05|input|	loadAI rfp, 0 => r8 // load a into: r8 = Memory[rfp + 0]
+Delta|ijk05|input|	loadAI rfp, 4 => r9 // load b into: r9 = Memory[rfp + 4]
+Delta|ijk05|input|	sub r8, r9 => r10 
+Delta|ijk05|input|	storeAI r10 => rfp, 8 // store at Memory[rfp + 8] = r10: c = r10
+Delta|ijk05|input|	halt
+Delta|ijk05|input|
+Delta|ijk05|output|Change of rfp ignored (strict mode)
+Delta|ijk05|output|Change of rsp ignored (strict mode)
+Delta|ijk05|output|Change of rbss ignored (strict mode)
+Delta|ijk05|output|count	instruction
+Delta|ijk05|output|    6	loadAI
+Delta|ijk05|output|    5	loadI
+Delta|ijk05|output|    5	storeAI
+Delta|ijk05|output|    3	addI
+Delta|ijk05|output|    3	sub
+Delta|ijk05|output|    1	jumpI
+Delta|ijk05|output|    1	nop
+Delta|ijk05|output|    1	halt
+Delta|ijk05|output|
+Delta|ijk05|output|instructions executed:   25
+Delta|ijk05|output|register         read:   25 write:   39
+Delta|ijk05|output|memory           read:    6 write:    5
+Delta|ijk05|output|
+Delta|ijk05|output|  register    value
+Delta|ijk05|output|        r0       14
+Delta|ijk05|output|        r1       16
+Delta|ijk05|output|       r10       16
+Delta|ijk05|output|        r2       14
+Delta|ijk05|output|        r3       16
+Delta|ijk05|output|        r4       -2
+Delta|ijk05|output|        r5       -2
+Delta|ijk05|output|        r6       16
+Delta|ijk05|output|        r7      -18
+Delta|ijk05|output|        r8       -2
+Delta|ijk05|output|        r9      -18
+Delta|ijk05|output|      rbss    10706
+Delta|ijk05|output|       rfp    21413
+Delta|ijk05|output|       rpc       24
+Delta|ijk05|output|       rsp    21425
+Delta|ijk05|output|
+Delta|ijk05|output|    memory    value
+Delta|ijk05|output|00021413       -2
+Delta|ijk05|output|00021417      -18
+Delta|ijk05|output|00021421       16
+Delta|ijk05|memory|00021413|-2
+Delta|ijk05|memory|00021417|-18
+Delta|ijk05|memory|00021421|16
+Delta|ijk05|instruction|Change|of
+Delta|ijk05|instruction|Change|of
+Delta|ijk05|instruction|Change|of
+Delta|ijk05|instruction|6|loadAI
+Delta|ijk05|instruction|5|loadI
+Delta|ijk05|instruction|5|storeAI
+Delta|ijk05|instruction|3|addI
+Delta|ijk05|instruction|3|sub
+Delta|ijk05|instruction|1|jumpI
+Delta|ijk05|instruction|1|nop
+Delta|ijk05|instruction|1|halt
+Delta|ijk06|stack|37643
+Delta|ijk06|data|18821
+Delta|ijk06|input|	loadI 1024 => rfp
+Delta|ijk06|input|	loadI 1024 => rsp
+Delta|ijk06|input|	loadI 21 => rbss
+Delta|ijk06|input|	jumpI  => L0
+Delta|ijk06|input|L0:	nop // main: 19 instructions
+Delta|ijk06|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk06|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk06|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk06|input|	loadI 75 => r0 
+Delta|ijk06|input|	storeAI r0 => rfp, 4 // store at Memory[rfp + 4] = r0: b = r0
+Delta|ijk06|input|	loadI 3 => r1 
+Delta|ijk06|input|	storeAI r1 => rfp, 8 // store at Memory[rfp + 8] = r1: c = r1
+Delta|ijk06|input|	loadAI rfp, 4 => r2 // load b into: r2 = Memory[rfp + 4]
+Delta|ijk06|input|	loadAI rfp, 8 => r3 // load c into: r3 = Memory[rfp + 8]
+Delta|ijk06|input|	div r2, r3 => r4 
+Delta|ijk06|input|	storeAI r4 => rfp, 0 // store at Memory[rfp + 0] = r4: a = r4
+Delta|ijk06|input|	loadAI rfp, 0 => r5 // load a into: r5 = Memory[rfp + 0]
+Delta|ijk06|input|	loadI 5 => r6 
+Delta|ijk06|input|	div r5, r6 => r7 
+Delta|ijk06|input|	storeAI r7 => rfp, 4 // store at Memory[rfp + 4] = r7: b = r7
+Delta|ijk06|input|	loadAI rfp, 0 => r8 // load a into: r8 = Memory[rfp + 0]
+Delta|ijk06|input|	loadAI rfp, 4 => r9 // load b into: r9 = Memory[rfp + 4]
+Delta|ijk06|input|	div r8, r9 => r10 
+Delta|ijk06|input|	storeAI r10 => rfp, 8 // store at Memory[rfp + 8] = r10: c = r10
+Delta|ijk06|input|	halt
+Delta|ijk06|input|
+Delta|ijk06|output|Change of rfp ignored (strict mode)
+Delta|ijk06|output|Change of rsp ignored (strict mode)
+Delta|ijk06|output|Change of rbss ignored (strict mode)
+Delta|ijk06|output|count	instruction
+Delta|ijk06|output|    6	loadI
+Delta|ijk06|output|    5	storeAI
+Delta|ijk06|output|    5	loadAI
+Delta|ijk06|output|    3	addI
+Delta|ijk06|output|    3	div
+Delta|ijk06|output|    1	jumpI
+Delta|ijk06|output|    1	nop
+Delta|ijk06|output|    1	halt
+Delta|ijk06|output|
+Delta|ijk06|output|instructions executed:   25
+Delta|ijk06|output|register         read:   24 write:   39
+Delta|ijk06|output|memory           read:    5 write:    5
+Delta|ijk06|output|
+Delta|ijk06|output|  register    value
+Delta|ijk06|output|        r0       75
+Delta|ijk06|output|        r1        3
+Delta|ijk06|output|       r10        5
+Delta|ijk06|output|        r2       75
+Delta|ijk06|output|        r3        3
+Delta|ijk06|output|        r4       25
+Delta|ijk06|output|        r5       25
+Delta|ijk06|output|        r6        5
+Delta|ijk06|output|        r7        5
+Delta|ijk06|output|        r8       25
+Delta|ijk06|output|        r9        5
+Delta|ijk06|output|      rbss    18821
+Delta|ijk06|output|       rfp    37643
+Delta|ijk06|output|       rpc       24
+Delta|ijk06|output|       rsp    37655
+Delta|ijk06|output|
+Delta|ijk06|output|    memory    value
+Delta|ijk06|output|00037643       25
+Delta|ijk06|output|00037647        5
+Delta|ijk06|output|00037651        5
+Delta|ijk06|memory|00037643|25
+Delta|ijk06|memory|00037647|5
+Delta|ijk06|memory|00037651|5
+Delta|ijk06|instruction|Change|of
+Delta|ijk06|instruction|Change|of
+Delta|ijk06|instruction|Change|of
+Delta|ijk06|instruction|6|loadI
+Delta|ijk06|instruction|5|storeAI
+Delta|ijk06|instruction|5|loadAI
+Delta|ijk06|instruction|3|addI
+Delta|ijk06|instruction|3|div
+Delta|ijk06|instruction|1|jumpI
+Delta|ijk06|instruction|1|nop
+Delta|ijk06|instruction|1|halt
+Delta|ijk07|stack|35226
+Delta|ijk07|data|17613
+Delta|ijk07|input|	loadI 1024 => rfp
+Delta|ijk07|input|	loadI 1024 => rsp
+Delta|ijk07|input|	loadI 21 => rbss
+Delta|ijk07|input|	jumpI  => L0
+Delta|ijk07|input|L0:	nop // main: 19 instructions
+Delta|ijk07|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk07|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk07|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk07|input|	loadI 15 => r0 
+Delta|ijk07|input|	storeAI r0 => rfp, 4 // store at Memory[rfp + 4] = r0: b = r0
+Delta|ijk07|input|	loadI 3 => r1 
+Delta|ijk07|input|	storeAI r1 => rfp, 8 // store at Memory[rfp + 8] = r1: c = r1
+Delta|ijk07|input|	loadAI rfp, 4 => r2 // load b into: r2 = Memory[rfp + 4]
+Delta|ijk07|input|	loadAI rfp, 8 => r3 // load c into: r3 = Memory[rfp + 8]
+Delta|ijk07|input|	mult r2, r3 => r4 
+Delta|ijk07|input|	storeAI r4 => rfp, 0 // store at Memory[rfp + 0] = r4: a = r4
+Delta|ijk07|input|	loadAI rfp, 0 => r5 // load a into: r5 = Memory[rfp + 0]
+Delta|ijk07|input|	loadAI rfp, 8 => r6 // load c into: r6 = Memory[rfp + 8]
+Delta|ijk07|input|	mult r5, r6 => r7 
+Delta|ijk07|input|	storeAI r7 => rfp, 4 // store at Memory[rfp + 4] = r7: b = r7
+Delta|ijk07|input|	loadAI rfp, 0 => r8 // load a into: r8 = Memory[rfp + 0]
+Delta|ijk07|input|	loadAI rfp, 4 => r9 // load b into: r9 = Memory[rfp + 4]
+Delta|ijk07|input|	mult r8, r9 => r10 
+Delta|ijk07|input|	storeAI r10 => rfp, 8 // store at Memory[rfp + 8] = r10: c = r10
+Delta|ijk07|input|	halt
+Delta|ijk07|input|
+Delta|ijk07|output|Change of rfp ignored (strict mode)
+Delta|ijk07|output|Change of rsp ignored (strict mode)
+Delta|ijk07|output|Change of rbss ignored (strict mode)
+Delta|ijk07|output|count	instruction
+Delta|ijk07|output|    6	loadAI
+Delta|ijk07|output|    5	loadI
+Delta|ijk07|output|    5	storeAI
+Delta|ijk07|output|    3	addI
+Delta|ijk07|output|    3	mult
+Delta|ijk07|output|    1	jumpI
+Delta|ijk07|output|    1	nop
+Delta|ijk07|output|    1	halt
+Delta|ijk07|output|
+Delta|ijk07|output|instructions executed:   25
+Delta|ijk07|output|register         read:   25 write:   39
+Delta|ijk07|output|memory           read:    6 write:    5
+Delta|ijk07|output|
+Delta|ijk07|output|  register    value
+Delta|ijk07|output|        r0       15
+Delta|ijk07|output|        r1        3
+Delta|ijk07|output|       r10     6075
+Delta|ijk07|output|        r2       15
+Delta|ijk07|output|        r3        3
+Delta|ijk07|output|        r4       45
+Delta|ijk07|output|        r5       45
+Delta|ijk07|output|        r6        3
+Delta|ijk07|output|        r7      135
+Delta|ijk07|output|        r8       45
+Delta|ijk07|output|        r9      135
+Delta|ijk07|output|      rbss    17613
+Delta|ijk07|output|       rfp    35226
+Delta|ijk07|output|       rpc       24
+Delta|ijk07|output|       rsp    35238
+Delta|ijk07|output|
+Delta|ijk07|output|    memory    value
+Delta|ijk07|output|00035226       45
+Delta|ijk07|output|00035230      135
+Delta|ijk07|output|00035234     6075
+Delta|ijk07|memory|00035226|45
+Delta|ijk07|memory|00035230|135
+Delta|ijk07|memory|00035234|6075
+Delta|ijk07|instruction|Change|of
+Delta|ijk07|instruction|Change|of
+Delta|ijk07|instruction|Change|of
+Delta|ijk07|instruction|6|loadAI
+Delta|ijk07|instruction|5|loadI
+Delta|ijk07|instruction|5|storeAI
+Delta|ijk07|instruction|3|addI
+Delta|ijk07|instruction|3|mult
+Delta|ijk07|instruction|1|jumpI
+Delta|ijk07|instruction|1|nop
+Delta|ijk07|instruction|1|halt
+Delta|ijk08|stack|36066
+Delta|ijk08|data|18033
+Delta|ijk08|input|	loadI 1024 => rfp
+Delta|ijk08|input|	loadI 1024 => rsp
+Delta|ijk08|input|	loadI 19 => rbss
+Delta|ijk08|input|	jumpI  => L0
+Delta|ijk08|input|L0:	nop // main: 17 instructions
+Delta|ijk08|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk08|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk08|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk08|input|	loadI 15 => r0 
+Delta|ijk08|input|	storeAI r0 => rfp, 4 // store at Memory[rfp + 4] = r0: b = r0
+Delta|ijk08|input|	loadI 3 => r1 
+Delta|ijk08|input|	storeAI r1 => rfp, 8 // store at Memory[rfp + 8] = r1: c = r1
+Delta|ijk08|input|	loadAI rfp, 4 => r2 // load b into: r2 = Memory[rfp + 4]
+Delta|ijk08|input|	loadAI rfp, 8 => r3 // load c into: r3 = Memory[rfp + 8]
+Delta|ijk08|input|	mult r2, r3 => r4 
+Delta|ijk08|input|	loadI 2 => r5 
+Delta|ijk08|input|	loadI 20 => r6 
+Delta|ijk08|input|	mult r5, r6 => r7 
+Delta|ijk08|input|	loadI 4 => r8 
+Delta|ijk08|input|	div r7, r8 => r9 
+Delta|ijk08|input|	add r4, r9 => r10 
+Delta|ijk08|input|	storeAI r10 => rfp, 0 // store at Memory[rfp + 0] = r10: a = r10
+Delta|ijk08|input|	halt
+Delta|ijk08|input|
+Delta|ijk08|output|Change of rfp ignored (strict mode)
+Delta|ijk08|output|Change of rsp ignored (strict mode)
+Delta|ijk08|output|Change of rbss ignored (strict mode)
+Delta|ijk08|output|count	instruction
+Delta|ijk08|output|    8	loadI
+Delta|ijk08|output|    3	addI
+Delta|ijk08|output|    3	storeAI
+Delta|ijk08|output|    2	loadAI
+Delta|ijk08|output|    2	mult
+Delta|ijk08|output|    1	jumpI
+Delta|ijk08|output|    1	nop
+Delta|ijk08|output|    1	div
+Delta|ijk08|output|    1	add
+Delta|ijk08|output|    1	halt
+Delta|ijk08|output|
+Delta|ijk08|output|instructions executed:   23
+Delta|ijk08|output|register         read:   19 write:   37
+Delta|ijk08|output|memory           read:    2 write:    3
+Delta|ijk08|output|
+Delta|ijk08|output|  register    value
+Delta|ijk08|output|        r0       15
+Delta|ijk08|output|        r1        3
+Delta|ijk08|output|       r10       55
+Delta|ijk08|output|        r2       15
+Delta|ijk08|output|        r3        3
+Delta|ijk08|output|        r4       45
+Delta|ijk08|output|        r5        2
+Delta|ijk08|output|        r6       20
+Delta|ijk08|output|        r7       40
+Delta|ijk08|output|        r8        4
+Delta|ijk08|output|        r9       10
+Delta|ijk08|output|      rbss    18033
+Delta|ijk08|output|       rfp    36066
+Delta|ijk08|output|       rpc       22
+Delta|ijk08|output|       rsp    36078
+Delta|ijk08|output|
+Delta|ijk08|output|    memory    value
+Delta|ijk08|output|00036066       55
+Delta|ijk08|output|00036070       15
+Delta|ijk08|output|00036074        3
+Delta|ijk08|memory|00036066|55
+Delta|ijk08|memory|00036070|15
+Delta|ijk08|memory|00036074|3
+Delta|ijk08|instruction|Change|of
+Delta|ijk08|instruction|Change|of
+Delta|ijk08|instruction|Change|of
+Delta|ijk08|instruction|8|loadI
+Delta|ijk08|instruction|3|addI
+Delta|ijk08|instruction|3|storeAI
+Delta|ijk08|instruction|2|loadAI
+Delta|ijk08|instruction|2|mult
+Delta|ijk08|instruction|1|jumpI
+Delta|ijk08|instruction|1|nop
+Delta|ijk08|instruction|1|div
+Delta|ijk08|instruction|1|add
+Delta|ijk08|instruction|1|halt
+Delta|ijk09|stack|30082
+Delta|ijk09|data|15041
+Delta|ijk09|input|	loadI 1024 => rfp
+Delta|ijk09|input|	loadI 1024 => rsp
+Delta|ijk09|input|	loadI 19 => rbss
+Delta|ijk09|input|	jumpI  => L0
+Delta|ijk09|input|L0:	nop // main: 17 instructions
+Delta|ijk09|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk09|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk09|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk09|input|	loadI 15 => r0 
+Delta|ijk09|input|	storeAI r0 => rfp, 4 // store at Memory[rfp + 4] = r0: b = r0
+Delta|ijk09|input|	loadI 3 => r1 
+Delta|ijk09|input|	storeAI r1 => rfp, 8 // store at Memory[rfp + 8] = r1: c = r1
+Delta|ijk09|input|	loadAI rfp, 4 => r2 // load b into: r2 = Memory[rfp + 4]
+Delta|ijk09|input|	loadAI rfp, 8 => r3 // load c into: r3 = Memory[rfp + 8]
+Delta|ijk09|input|	add r2, r3 => r4 
+Delta|ijk09|input|	loadAI rfp, 4 => r5 // load b into: r5 = Memory[rfp + 4]
+Delta|ijk09|input|	add r4, r5 => r6 
+Delta|ijk09|input|	loadAI rfp, 8 => r7 // load c into: r7 = Memory[rfp + 8]
+Delta|ijk09|input|	add r6, r7 => r8 
+Delta|ijk09|input|	loadI 10 => r9 
+Delta|ijk09|input|	add r8, r9 => r10 
+Delta|ijk09|input|	storeAI r10 => rfp, 0 // store at Memory[rfp + 0] = r10: a = r10
+Delta|ijk09|input|	halt
+Delta|ijk09|input|
+Delta|ijk09|output|Change of rfp ignored (strict mode)
+Delta|ijk09|output|Change of rsp ignored (strict mode)
+Delta|ijk09|output|Change of rbss ignored (strict mode)
+Delta|ijk09|output|count	instruction
+Delta|ijk09|output|    6	loadI
+Delta|ijk09|output|    4	loadAI
+Delta|ijk09|output|    4	add
+Delta|ijk09|output|    3	addI
+Delta|ijk09|output|    3	storeAI
+Delta|ijk09|output|    1	jumpI
+Delta|ijk09|output|    1	nop
+Delta|ijk09|output|    1	halt
+Delta|ijk09|output|
+Delta|ijk09|output|instructions executed:   23
+Delta|ijk09|output|register         read:   21 write:   37
+Delta|ijk09|output|memory           read:    4 write:    3
+Delta|ijk09|output|
+Delta|ijk09|output|  register    value
+Delta|ijk09|output|        r0       15
+Delta|ijk09|output|        r1        3
+Delta|ijk09|output|       r10       46
+Delta|ijk09|output|        r2       15
+Delta|ijk09|output|        r3        3
+Delta|ijk09|output|        r4       18
+Delta|ijk09|output|        r5       15
+Delta|ijk09|output|        r6       33
+Delta|ijk09|output|        r7        3
+Delta|ijk09|output|        r8       36
+Delta|ijk09|output|        r9       10
+Delta|ijk09|output|      rbss    15041
+Delta|ijk09|output|       rfp    30082
+Delta|ijk09|output|       rpc       22
+Delta|ijk09|output|       rsp    30094
+Delta|ijk09|output|
+Delta|ijk09|output|    memory    value
+Delta|ijk09|output|00030082       46
+Delta|ijk09|output|00030086       15
+Delta|ijk09|output|00030090        3
+Delta|ijk09|memory|00030082|46
+Delta|ijk09|memory|00030086|15
+Delta|ijk09|memory|00030090|3
+Delta|ijk09|instruction|Change|of
+Delta|ijk09|instruction|Change|of
+Delta|ijk09|instruction|Change|of
+Delta|ijk09|instruction|6|loadI
+Delta|ijk09|instruction|4|loadAI
+Delta|ijk09|instruction|4|add
+Delta|ijk09|instruction|3|addI
+Delta|ijk09|instruction|3|storeAI
+Delta|ijk09|instruction|1|jumpI
+Delta|ijk09|instruction|1|nop
+Delta|ijk09|instruction|1|halt
+Delta|ijk10|stack|21340
+Delta|ijk10|data|10670
+Delta|ijk10|input|	loadI 1024 => rfp
+Delta|ijk10|input|	loadI 1024 => rsp
+Delta|ijk10|input|	loadI 19 => rbss
+Delta|ijk10|input|	jumpI  => L0
+Delta|ijk10|input|L0:	nop // main: 17 instructions
+Delta|ijk10|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk10|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk10|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk10|input|	loadI 400 => r0 
+Delta|ijk10|input|	storeAI r0 => rfp, 4 // store at Memory[rfp + 4] = r0: b = r0
+Delta|ijk10|input|	loadI 2 => r1 
+Delta|ijk10|input|	storeAI r1 => rfp, 8 // store at Memory[rfp + 8] = r1: c = r1
+Delta|ijk10|input|	loadAI rfp, 4 => r2 // load b into: r2 = Memory[rfp + 4]
+Delta|ijk10|input|	loadAI rfp, 8 => r3 // load c into: r3 = Memory[rfp + 8]
+Delta|ijk10|input|	div r2, r3 => r4 
+Delta|ijk10|input|	loadAI rfp, 4 => r5 // load b into: r5 = Memory[rfp + 4]
+Delta|ijk10|input|	loadAI rfp, 8 => r6 // load c into: r6 = Memory[rfp + 8]
+Delta|ijk10|input|	div r5, r6 => r7 
+Delta|ijk10|input|	loadAI rfp, 8 => r8 // load c into: r8 = Memory[rfp + 8]
+Delta|ijk10|input|	div r7, r8 => r9 
+Delta|ijk10|input|	add r4, r9 => r10 
+Delta|ijk10|input|	storeAI r10 => rfp, 0 // store at Memory[rfp + 0] = r10: a = r10
+Delta|ijk10|input|	halt
+Delta|ijk10|input|
+Delta|ijk10|output|Change of rfp ignored (strict mode)
+Delta|ijk10|output|Change of rsp ignored (strict mode)
+Delta|ijk10|output|Change of rbss ignored (strict mode)
+Delta|ijk10|output|count	instruction
+Delta|ijk10|output|    5	loadI
+Delta|ijk10|output|    5	loadAI
+Delta|ijk10|output|    3	addI
+Delta|ijk10|output|    3	storeAI
+Delta|ijk10|output|    3	div
+Delta|ijk10|output|    1	jumpI
+Delta|ijk10|output|    1	nop
+Delta|ijk10|output|    1	add
+Delta|ijk10|output|    1	halt
+Delta|ijk10|output|
+Delta|ijk10|output|instructions executed:   23
+Delta|ijk10|output|register         read:   22 write:   37
+Delta|ijk10|output|memory           read:    5 write:    3
+Delta|ijk10|output|
+Delta|ijk10|output|  register    value
+Delta|ijk10|output|        r0      400
+Delta|ijk10|output|        r1        2
+Delta|ijk10|output|       r10      300
+Delta|ijk10|output|        r2      400
+Delta|ijk10|output|        r3        2
+Delta|ijk10|output|        r4      200
+Delta|ijk10|output|        r5      400
+Delta|ijk10|output|        r6        2
+Delta|ijk10|output|        r7      200
+Delta|ijk10|output|        r8        2
+Delta|ijk10|output|        r9      100
+Delta|ijk10|output|      rbss    10670
+Delta|ijk10|output|       rfp    21340
+Delta|ijk10|output|       rpc       22
+Delta|ijk10|output|       rsp    21352
+Delta|ijk10|output|
+Delta|ijk10|output|    memory    value
+Delta|ijk10|output|00021340      300
+Delta|ijk10|output|00021344      400
+Delta|ijk10|output|00021348        2
+Delta|ijk10|memory|00021340|300
+Delta|ijk10|memory|00021344|400
+Delta|ijk10|memory|00021348|2
+Delta|ijk10|instruction|Change|of
+Delta|ijk10|instruction|Change|of
+Delta|ijk10|instruction|Change|of
+Delta|ijk10|instruction|5|loadI
+Delta|ijk10|instruction|5|loadAI
+Delta|ijk10|instruction|3|addI
+Delta|ijk10|instruction|3|storeAI
+Delta|ijk10|instruction|3|div
+Delta|ijk10|instruction|1|jumpI
+Delta|ijk10|instruction|1|nop
+Delta|ijk10|instruction|1|add
+Delta|ijk10|instruction|1|halt
+Delta|ijk11|stack|25323
+Delta|ijk11|data|12661
+Delta|ijk11|input|	loadI 1024 => rfp
+Delta|ijk11|input|	loadI 1024 => rsp
+Delta|ijk11|input|	loadI 19 => rbss
+Delta|ijk11|input|	jumpI  => L0
+Delta|ijk11|input|L0:	nop // main: 17 instructions
+Delta|ijk11|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk11|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk11|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk11|input|	loadI 400 => r0 
+Delta|ijk11|input|	storeAI r0 => rfp, 4 // store at Memory[rfp + 4] = r0: b = r0
+Delta|ijk11|input|	loadI 2 => r1 
+Delta|ijk11|input|	storeAI r1 => rfp, 8 // store at Memory[rfp + 8] = r1: c = r1
+Delta|ijk11|input|	loadAI rfp, 4 => r2 // load b into: r2 = Memory[rfp + 4]
+Delta|ijk11|input|	loadAI rfp, 4 => r3 // load b into: r3 = Memory[rfp + 4]
+Delta|ijk11|input|	loadAI rfp, 8 => r4 // load c into: r4 = Memory[rfp + 8]
+Delta|ijk11|input|	div r3, r4 => r5 
+Delta|ijk11|input|	add r2, r5 => r6 
+Delta|ijk11|input|	loadAI rfp, 4 => r7 // load b into: r7 = Memory[rfp + 4]
+Delta|ijk11|input|	loadAI rfp, 8 => r8 // load c into: r8 = Memory[rfp + 8]
+Delta|ijk11|input|	div r7, r8 => r9 
+Delta|ijk11|input|	add r6, r9 => r10 
+Delta|ijk11|input|	storeAI r10 => rfp, 0 // store at Memory[rfp + 0] = r10: a = r10
+Delta|ijk11|input|	halt
+Delta|ijk11|input|
+Delta|ijk11|output|Change of rfp ignored (strict mode)
+Delta|ijk11|output|Change of rsp ignored (strict mode)
+Delta|ijk11|output|Change of rbss ignored (strict mode)
+Delta|ijk11|output|count	instruction
+Delta|ijk11|output|    5	loadI
+Delta|ijk11|output|    5	loadAI
+Delta|ijk11|output|    3	addI
+Delta|ijk11|output|    3	storeAI
+Delta|ijk11|output|    2	div
+Delta|ijk11|output|    2	add
+Delta|ijk11|output|    1	jumpI
+Delta|ijk11|output|    1	nop
+Delta|ijk11|output|    1	halt
+Delta|ijk11|output|
+Delta|ijk11|output|instructions executed:   23
+Delta|ijk11|output|register         read:   22 write:   37
+Delta|ijk11|output|memory           read:    5 write:    3
+Delta|ijk11|output|
+Delta|ijk11|output|  register    value
+Delta|ijk11|output|        r0      400
+Delta|ijk11|output|        r1        2
+Delta|ijk11|output|       r10      800
+Delta|ijk11|output|        r2      400
+Delta|ijk11|output|        r3      400
+Delta|ijk11|output|        r4        2
+Delta|ijk11|output|        r5      200
+Delta|ijk11|output|        r6      600
+Delta|ijk11|output|        r7      400
+Delta|ijk11|output|        r8        2
+Delta|ijk11|output|        r9      200
+Delta|ijk11|output|      rbss    12661
+Delta|ijk11|output|       rfp    25323
+Delta|ijk11|output|       rpc       22
+Delta|ijk11|output|       rsp    25335
+Delta|ijk11|output|
+Delta|ijk11|output|    memory    value
+Delta|ijk11|output|00025323      800
+Delta|ijk11|output|00025327      400
+Delta|ijk11|output|00025331        2
+Delta|ijk11|memory|00025323|800
+Delta|ijk11|memory|00025327|400
+Delta|ijk11|memory|00025331|2
+Delta|ijk11|instruction|Change|of
+Delta|ijk11|instruction|Change|of
+Delta|ijk11|instruction|Change|of
+Delta|ijk11|instruction|5|loadI
+Delta|ijk11|instruction|5|loadAI
+Delta|ijk11|instruction|3|addI
+Delta|ijk11|instruction|3|storeAI
+Delta|ijk11|instruction|2|div
+Delta|ijk11|instruction|2|add
+Delta|ijk11|instruction|1|jumpI
+Delta|ijk11|instruction|1|nop
+Delta|ijk11|instruction|1|halt
+Delta|ijk12|stack|20875
+Delta|ijk12|data|10437
+Delta|ijk12|input|	loadI 1024 => rfp
+Delta|ijk12|input|	loadI 1024 => rsp
+Delta|ijk12|input|	loadI 13 => rbss
+Delta|ijk12|input|	jumpI  => L0
+Delta|ijk12|input|L0:	nop // main: 11 instructions
+Delta|ijk12|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk12|input|	loadI 2 => r0 
+Delta|ijk12|input|	loadI 4 => r1 
+Delta|ijk12|input|	loadI 2 => r2 
+Delta|ijk12|input|	div r1, r2 => r3 
+Delta|ijk12|input|	add r0, r3 => r4 
+Delta|ijk12|input|	loadI 4 => r5 
+Delta|ijk12|input|	loadI 4 => r6 
+Delta|ijk12|input|	mult r5, r6 => r7 
+Delta|ijk12|input|	add r4, r7 => r8 
+Delta|ijk12|input|	storeAI r8 => rfp, 0 // store at Memory[rfp + 0] = r8: a = r8
+Delta|ijk12|input|	halt
+Delta|ijk12|input|
+Delta|ijk12|output|Change of rfp ignored (strict mode)
+Delta|ijk12|output|Change of rsp ignored (strict mode)
+Delta|ijk12|output|Change of rbss ignored (strict mode)
+Delta|ijk12|output|count	instruction
+Delta|ijk12|output|    8	loadI
+Delta|ijk12|output|    2	add
+Delta|ijk12|output|    1	jumpI
+Delta|ijk12|output|    1	nop
+Delta|ijk12|output|    1	addI
+Delta|ijk12|output|    1	div
+Delta|ijk12|output|    1	mult
+Delta|ijk12|output|    1	storeAI
+Delta|ijk12|output|    1	halt
+Delta|ijk12|output|
+Delta|ijk12|output|instructions executed:   17
+Delta|ijk12|output|register         read:   11 write:   27
+Delta|ijk12|output|memory           read:    0 write:    1
+Delta|ijk12|output|
+Delta|ijk12|output|  register    value
+Delta|ijk12|output|        r0        2
+Delta|ijk12|output|        r1        4
+Delta|ijk12|output|        r2        2
+Delta|ijk12|output|        r3        2
+Delta|ijk12|output|        r4        4
+Delta|ijk12|output|        r5        4
+Delta|ijk12|output|        r6        4
+Delta|ijk12|output|        r7       16
+Delta|ijk12|output|        r8       20
+Delta|ijk12|output|      rbss    10437
+Delta|ijk12|output|       rfp    20875
+Delta|ijk12|output|       rpc       16
+Delta|ijk12|output|       rsp    20879
+Delta|ijk12|output|
+Delta|ijk12|output|    memory    value
+Delta|ijk12|output|00020875       20
+Delta|ijk12|memory|00020875|20
+Delta|ijk12|instruction|Change|of
+Delta|ijk12|instruction|Change|of
+Delta|ijk12|instruction|Change|of
+Delta|ijk12|instruction|8|loadI
+Delta|ijk12|instruction|2|add
+Delta|ijk12|instruction|1|jumpI
+Delta|ijk12|instruction|1|nop
+Delta|ijk12|instruction|1|addI
+Delta|ijk12|instruction|1|div
+Delta|ijk12|instruction|1|mult
+Delta|ijk12|instruction|1|storeAI
+Delta|ijk12|instruction|1|halt
+Delta|ijk13|stack|17816
+Delta|ijk13|data|8908
+Delta|ijk13|input|	loadI 1024 => rfp
+Delta|ijk13|input|	loadI 1024 => rsp
+Delta|ijk13|input|	loadI 5 => rbss
+Delta|ijk13|input|	jumpI  => L0
+Delta|ijk13|input|L0:	nop // main: 3 instructions
+Delta|ijk13|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk13|input|	loadI 2 => r0 
+Delta|ijk13|input|	storeAI r0 => rfp, 0 // store at Memory[rfp + 0] = r0: a = r0
+Delta|ijk13|input|	halt
+Delta|ijk13|input|
+Delta|ijk13|output|Change of rfp ignored (strict mode)
+Delta|ijk13|output|Change of rsp ignored (strict mode)
+Delta|ijk13|output|Change of rbss ignored (strict mode)
+Delta|ijk13|output|count	instruction
+Delta|ijk13|output|    4	loadI
+Delta|ijk13|output|    1	jumpI
+Delta|ijk13|output|    1	nop
+Delta|ijk13|output|    1	addI
+Delta|ijk13|output|    1	storeAI
+Delta|ijk13|output|    1	halt
+Delta|ijk13|output|
+Delta|ijk13|output|instructions executed:    9
+Delta|ijk13|output|register         read:    3 write:   11
+Delta|ijk13|output|memory           read:    0 write:    1
+Delta|ijk13|output|
+Delta|ijk13|output|  register    value
+Delta|ijk13|output|        r0        2
+Delta|ijk13|output|      rbss     8908
+Delta|ijk13|output|       rfp    17816
+Delta|ijk13|output|       rpc        8
+Delta|ijk13|output|       rsp    17820
+Delta|ijk13|output|
+Delta|ijk13|output|    memory    value
+Delta|ijk13|output|00017816        2
+Delta|ijk13|memory|00017816|2
+Delta|ijk13|instruction|Change|of
+Delta|ijk13|instruction|Change|of
+Delta|ijk13|instruction|Change|of
+Delta|ijk13|instruction|4|loadI
+Delta|ijk13|instruction|1|jumpI
+Delta|ijk13|instruction|1|nop
+Delta|ijk13|instruction|1|addI
+Delta|ijk13|instruction|1|storeAI
+Delta|ijk13|instruction|1|halt
+Delta|ijk14|stack|13615
+Delta|ijk14|data|6807
+Delta|ijk14|input|	loadI 1024 => rfp
+Delta|ijk14|input|	loadI 1024 => rsp
+Delta|ijk14|input|	loadI 8 => rbss
+Delta|ijk14|input|	jumpI  => L0
+Delta|ijk14|input|L0:	nop // main: 6 instructions
+Delta|ijk14|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk14|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk14|input|	loadI 393 => r0 
+Delta|ijk14|input|	storeAI r0 => rfp, 4 // store at Memory[rfp + 4] = r0: b = r0
+Delta|ijk14|input|	loadAI rfp, 4 => r1 // load b into: r1 = Memory[rfp + 4]
+Delta|ijk14|input|	storeAI r1 => rfp, 0 // store at Memory[rfp + 0] = r1: a = r1
+Delta|ijk14|input|	halt
+Delta|ijk14|input|
+Delta|ijk14|output|Change of rfp ignored (strict mode)
+Delta|ijk14|output|Change of rsp ignored (strict mode)
+Delta|ijk14|output|Change of rbss ignored (strict mode)
+Delta|ijk14|output|count	instruction
+Delta|ijk14|output|    4	loadI
+Delta|ijk14|output|    2	addI
+Delta|ijk14|output|    2	storeAI
+Delta|ijk14|output|    1	jumpI
+Delta|ijk14|output|    1	nop
+Delta|ijk14|output|    1	loadAI
+Delta|ijk14|output|    1	halt
+Delta|ijk14|output|
+Delta|ijk14|output|instructions executed:   12
+Delta|ijk14|output|register         read:    7 write:   16
+Delta|ijk14|output|memory           read:    1 write:    2
+Delta|ijk14|output|
+Delta|ijk14|output|  register    value
+Delta|ijk14|output|        r0      393
+Delta|ijk14|output|        r1      393
+Delta|ijk14|output|      rbss     6807
+Delta|ijk14|output|       rfp    13615
+Delta|ijk14|output|       rpc       11
+Delta|ijk14|output|       rsp    13623
+Delta|ijk14|output|
+Delta|ijk14|output|    memory    value
+Delta|ijk14|output|00013615      393
+Delta|ijk14|output|00013619      393
+Delta|ijk14|memory|00013615|393
+Delta|ijk14|memory|00013619|393
+Delta|ijk14|instruction|Change|of
+Delta|ijk14|instruction|Change|of
+Delta|ijk14|instruction|Change|of
+Delta|ijk14|instruction|4|loadI
+Delta|ijk14|instruction|2|addI
+Delta|ijk14|instruction|2|storeAI
+Delta|ijk14|instruction|1|jumpI
+Delta|ijk14|instruction|1|nop
+Delta|ijk14|instruction|1|loadAI
+Delta|ijk14|instruction|1|halt
+Delta|ijk15|stack|26014
+Delta|ijk15|data|13007
+Delta|ijk15|input|	loadI 1024 => rfp
+Delta|ijk15|input|	loadI 1024 => rsp
+Delta|ijk15|input|	loadI 16 => rbss
+Delta|ijk15|input|	jumpI  => L5
+Delta|ijk15|input|L5:	nop // main: 14 instructions
+Delta|ijk15|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk15|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk15|input|	loadI 1 => r0 
+Delta|ijk15|input|	storeAI r0 => rfp, 0 // store at Memory[rfp + 0] = r0: a = r0
+Delta|ijk15|input|	loadI 234 => r1 
+Delta|ijk15|input|	storeAI r1 => rfp, 4 // store at Memory[rfp + 4] = r1: b = r1
+Delta|ijk15|input|L4:	loadAI rfp, 0 => r2 // load a into: r2 = Memory[rfp + 0]
+Delta|ijk15|input|L3:	loadI 0 => r3 
+Delta|ijk15|input|L2:	cmp_GT r2, r3 => r4 
+Delta|ijk15|input|	cbr r4 => L0, L1 
+Delta|ijk15|input|L0:	nop // 2 instructions
+Delta|ijk15|input|	loadI 393 => r5 
+Delta|ijk15|input|	storeAI r5 => rfp, 4 // store at Memory[rfp + 4] = r5: b = r5
+Delta|ijk15|input|L1:	nop 
+Delta|ijk15|input|	halt
+Delta|ijk15|input|
+Delta|ijk15|output|Change of rfp ignored (strict mode)
+Delta|ijk15|output|Change of rsp ignored (strict mode)
+Delta|ijk15|output|Change of rbss ignored (strict mode)
+Delta|ijk15|output|count	instruction
+Delta|ijk15|output|    7	loadI
+Delta|ijk15|output|    3	nop
+Delta|ijk15|output|    3	storeAI
+Delta|ijk15|output|    2	addI
+Delta|ijk15|output|    1	jumpI
+Delta|ijk15|output|    1	loadAI
+Delta|ijk15|output|    1	cmp_GT
+Delta|ijk15|output|    1	cbr
+Delta|ijk15|output|    1	halt
+Delta|ijk15|output|
+Delta|ijk15|output|instructions executed:   20
+Delta|ijk15|output|register         read:   12 write:   28
+Delta|ijk15|output|memory           read:    1 write:    3
+Delta|ijk15|output|
+Delta|ijk15|output|  register    value
+Delta|ijk15|output|        r0        1
+Delta|ijk15|output|        r1      234
+Delta|ijk15|output|        r2        1
+Delta|ijk15|output|        r3        0
+Delta|ijk15|output|        r4        1
+Delta|ijk15|output|        r5      393
+Delta|ijk15|output|      rbss    13007
+Delta|ijk15|output|       rfp    26014
+Delta|ijk15|output|       rpc       19
+Delta|ijk15|output|       rsp    26022
+Delta|ijk15|output|
+Delta|ijk15|output|    memory    value
+Delta|ijk15|output|00026014        1
+Delta|ijk15|output|00026018      393
+Delta|ijk15|memory|00026014|1
+Delta|ijk15|memory|00026018|393
+Delta|ijk15|instruction|Change|of
+Delta|ijk15|instruction|Change|of
+Delta|ijk15|instruction|Change|of
+Delta|ijk15|instruction|7|loadI
+Delta|ijk15|instruction|3|nop
+Delta|ijk15|instruction|3|storeAI
+Delta|ijk15|instruction|2|addI
+Delta|ijk15|instruction|1|jumpI
+Delta|ijk15|instruction|1|loadAI
+Delta|ijk15|instruction|1|cmp_GT
+Delta|ijk15|instruction|1|cbr
+Delta|ijk15|instruction|1|halt
+Delta|ijk16|stack|10964
+Delta|ijk16|data|5482
+Delta|ijk16|input|	loadI 1024 => rfp
+Delta|ijk16|input|	loadI 1024 => rsp
+Delta|ijk16|input|	loadI 18 => rbss
+Delta|ijk16|input|	jumpI  => L5
+Delta|ijk16|input|L5:	nop // main: 16 instructions
+Delta|ijk16|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk16|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk16|input|	loadI 1 => r0 
+Delta|ijk16|input|	storeAI r0 => rfp, 0 // store at Memory[rfp + 0] = r0: a = r0
+Delta|ijk16|input|	loadI 234 => r1 
+Delta|ijk16|input|	storeAI r1 => rfp, 4 // store at Memory[rfp + 4] = r1: b = r1
+Delta|ijk16|input|L4:	loadAI rfp, 0 => r2 // load a into: r2 = Memory[rfp + 0]
+Delta|ijk16|input|L3:	loadI 0 => r3 
+Delta|ijk16|input|L2:	cmp_GT r2, r3 => r4 
+Delta|ijk16|input|	cbr r4 => L0, L1 
+Delta|ijk16|input|L0:	nop // 2 instructions
+Delta|ijk16|input|	loadI 393 => r5 
+Delta|ijk16|input|	storeAI r5 => rfp, 4 // store at Memory[rfp + 4] = r5: b = r5
+Delta|ijk16|input|L1:	nop // 2 instructions
+Delta|ijk16|input|	loadI 432 => r6 
+Delta|ijk16|input|	storeAI r6 => rfp, 4 // store at Memory[rfp + 4] = r6: b = r6
+Delta|ijk16|input|	halt
+Delta|ijk16|input|
+Delta|ijk16|output|Change of rfp ignored (strict mode)
+Delta|ijk16|output|Change of rsp ignored (strict mode)
+Delta|ijk16|output|Change of rbss ignored (strict mode)
+Delta|ijk16|output|count	instruction
+Delta|ijk16|output|    8	loadI
+Delta|ijk16|output|    4	storeAI
+Delta|ijk16|output|    3	nop
+Delta|ijk16|output|    2	addI
+Delta|ijk16|output|    1	jumpI
+Delta|ijk16|output|    1	loadAI
+Delta|ijk16|output|    1	cmp_GT
+Delta|ijk16|output|    1	cbr
+Delta|ijk16|output|    1	halt
+Delta|ijk16|output|
+Delta|ijk16|output|instructions executed:   22
+Delta|ijk16|output|register         read:   14 write:   31
+Delta|ijk16|output|memory           read:    1 write:    4
+Delta|ijk16|output|
+Delta|ijk16|output|  register    value
+Delta|ijk16|output|        r0        1
+Delta|ijk16|output|        r1      234
+Delta|ijk16|output|        r2        1
+Delta|ijk16|output|        r3        0
+Delta|ijk16|output|        r4        1
+Delta|ijk16|output|        r5      393
+Delta|ijk16|output|        r6      432
+Delta|ijk16|output|      rbss     5482
+Delta|ijk16|output|       rfp    10964
+Delta|ijk16|output|       rpc       21
+Delta|ijk16|output|       rsp    10972
+Delta|ijk16|output|
+Delta|ijk16|output|    memory    value
+Delta|ijk16|output|00010964        1
+Delta|ijk16|output|00010968      432
+Delta|ijk16|memory|00010964|1
+Delta|ijk16|memory|00010968|432
+Delta|ijk16|instruction|Change|of
+Delta|ijk16|instruction|Change|of
+Delta|ijk16|instruction|Change|of
+Delta|ijk16|instruction|8|loadI
+Delta|ijk16|instruction|4|storeAI
+Delta|ijk16|instruction|3|nop
+Delta|ijk16|instruction|2|addI
+Delta|ijk16|instruction|1|jumpI
+Delta|ijk16|instruction|1|loadAI
+Delta|ijk16|instruction|1|cmp_GT
+Delta|ijk16|instruction|1|cbr
+Delta|ijk16|instruction|1|halt
+Delta|ijk17|stack|33280
+Delta|ijk17|data|16640
+Delta|ijk17|input|	loadI 1024 => rfp
+Delta|ijk17|input|	loadI 1024 => rsp
+Delta|ijk17|input|	loadI 25 => rbss
+Delta|ijk17|input|	jumpI  => L9
+Delta|ijk17|input|L9:	nop // main: 23 instructions
+Delta|ijk17|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk17|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk17|input|	loadI 10 => r0 
+Delta|ijk17|input|	storeAI r0 => rfp, 0 // store at Memory[rfp + 0] = r0: a = r0
+Delta|ijk17|input|	loadI 2 => r1 
+Delta|ijk17|input|	storeAI r1 => rfp, 4 // store at Memory[rfp + 4] = r1: b = r1
+Delta|ijk17|input|L8:	loadAI rfp, 4 => r2 // load b into: r2 = Memory[rfp + 4]
+Delta|ijk17|input|L7:	loadI 2 => r3 
+Delta|ijk17|input|L6:	cmp_EQ r2, r3 => r4 
+Delta|ijk17|input|	cbr r4 => L5, L1 
+Delta|ijk17|input|L5:	loadAI rfp, 0 => r5 // load a into: r5 = Memory[rfp + 0]
+Delta|ijk17|input|L4:	and r4, r5 => r6 
+Delta|ijk17|input|	cbr r6 => L3, L1 
+Delta|ijk17|input|L3:	loadI 5 => r7 
+Delta|ijk17|input|L2:	cmp_GT r6, r7 => r8 
+Delta|ijk17|input|	cbr r8 => L0, L1 
+Delta|ijk17|input|L0:	nop // 5 instructions
+Delta|ijk17|input|	loadAI rfp, 0 => r9 // load a into: r9 = Memory[rfp + 0]
+Delta|ijk17|input|	loadI 1 => r10 
+Delta|ijk17|input|	sub r9, r10 => r11 
+Delta|ijk17|input|	storeAI r11 => rfp, 0 // store at Memory[rfp + 0] = r11: a = r11
+Delta|ijk17|input|	jumpI => L8 // jump to L8
+Delta|ijk17|input|L1:	nop 
+Delta|ijk17|input|	halt
+Delta|ijk17|input|
+Delta|ijk17|output|Change of rfp ignored (strict mode)
+Delta|ijk17|output|Change of rsp ignored (strict mode)
+Delta|ijk17|output|Change of rbss ignored (strict mode)
+Delta|ijk17|output|count	instruction
+Delta|ijk17|output|    6	loadI
+Delta|ijk17|output|    2	nop
+Delta|ijk17|output|    2	addI
+Delta|ijk17|output|    2	storeAI
+Delta|ijk17|output|    2	loadAI
+Delta|ijk17|output|    2	cbr
+Delta|ijk17|output|    1	jumpI
+Delta|ijk17|output|    1	cmp_EQ
+Delta|ijk17|output|    1	and
+Delta|ijk17|output|    1	halt
+Delta|ijk17|output|
+Delta|ijk17|output|instructions executed:   20
+Delta|ijk17|output|register         read:   14 write:   29
+Delta|ijk17|output|memory           read:    2 write:    2
+Delta|ijk17|output|
+Delta|ijk17|output|  register    value
+Delta|ijk17|output|        r0       10
+Delta|ijk17|output|        r1        2
+Delta|ijk17|output|        r2        2
+Delta|ijk17|output|        r3        2
+Delta|ijk17|output|        r4        1
+Delta|ijk17|output|        r5       10
+Delta|ijk17|output|        r6        0
+Delta|ijk17|output|      rbss    16640
+Delta|ijk17|output|       rfp    33280
+Delta|ijk17|output|       rpc       28
+Delta|ijk17|output|       rsp    33288
+Delta|ijk17|output|
+Delta|ijk17|output|    memory    value
+Delta|ijk17|output|00033280       10
+Delta|ijk17|output|00033284        2
+Delta|ijk17|memory|00033280|10
+Delta|ijk17|memory|00033284|2
+Delta|ijk17|instruction|Change|of
+Delta|ijk17|instruction|Change|of
+Delta|ijk17|instruction|Change|of
+Delta|ijk17|instruction|6|loadI
+Delta|ijk17|instruction|2|nop
+Delta|ijk17|instruction|2|addI
+Delta|ijk17|instruction|2|storeAI
+Delta|ijk17|instruction|2|loadAI
+Delta|ijk17|instruction|2|cbr
+Delta|ijk17|instruction|1|jumpI
+Delta|ijk17|instruction|1|cmp_EQ
+Delta|ijk17|instruction|1|and
+Delta|ijk17|instruction|1|halt
+Delta|ijk18|stack|41241
+Delta|ijk18|data|20620
+Delta|ijk18|input|	loadI 1024 => rfp
+Delta|ijk18|input|	loadI 1024 => rsp
+Delta|ijk18|input|	loadI 16 => rbss
+Delta|ijk18|input|	jumpI  => L5
+Delta|ijk18|input|L5:	nop // main: 14 instructions
+Delta|ijk18|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk18|input|	loadI 10 => r0 
+Delta|ijk18|input|	storeAI r0 => rfp, 0 // store at Memory[rfp + 0] = r0: a = r0
+Delta|ijk18|input|L4:	loadAI rfp, 0 => r1 // load a into: r1 = Memory[rfp + 0]
+Delta|ijk18|input|L3:	loadI 5 => r2 
+Delta|ijk18|input|L2:	cmp_GT r1, r2 => r3 
+Delta|ijk18|input|	cbr r3 => L0, L1 
+Delta|ijk18|input|L0:	nop // 5 instructions
+Delta|ijk18|input|	loadAI rfp, 0 => r4 // load a into: r4 = Memory[rfp + 0]
+Delta|ijk18|input|	loadI 1 => r5 
+Delta|ijk18|input|	sub r4, r5 => r6 
+Delta|ijk18|input|	storeAI r6 => rfp, 0 // store at Memory[rfp + 0] = r6: a = r6
+Delta|ijk18|input|	jumpI => L4 // jump to L4
+Delta|ijk18|input|L1:	nop 
+Delta|ijk18|input|	halt
+Delta|ijk18|input|
+Delta|ijk18|output|Change of rfp ignored (strict mode)
+Delta|ijk18|output|Change of rsp ignored (strict mode)
+Delta|ijk18|output|Change of rbss ignored (strict mode)
+Delta|ijk18|output|count	instruction
+Delta|ijk18|output|   15	loadI
+Delta|ijk18|output|   11	loadAI
+Delta|ijk18|output|    7	nop
+Delta|ijk18|output|    6	jumpI
+Delta|ijk18|output|    6	storeAI
+Delta|ijk18|output|    6	cmp_GT
+Delta|ijk18|output|    6	cbr
+Delta|ijk18|output|    5	sub
+Delta|ijk18|output|    1	addI
+Delta|ijk18|output|    1	halt
+Delta|ijk18|output|
+Delta|ijk18|output|instructions executed:   64
+Delta|ijk18|output|register         read:   52 write:   99
+Delta|ijk18|output|memory           read:   11 write:    6
+Delta|ijk18|output|
+Delta|ijk18|output|  register    value
+Delta|ijk18|output|        r0       10
+Delta|ijk18|output|        r1        5
+Delta|ijk18|output|        r2        5
+Delta|ijk18|output|        r3        0
+Delta|ijk18|output|        r4        6
+Delta|ijk18|output|        r5        1
+Delta|ijk18|output|        r6        5
+Delta|ijk18|output|      rbss    20620
+Delta|ijk18|output|       rfp    41241
+Delta|ijk18|output|       rpc       19
+Delta|ijk18|output|       rsp    41245
+Delta|ijk18|output|
+Delta|ijk18|output|    memory    value
+Delta|ijk18|output|00041241        5
+Delta|ijk18|memory|00041241|5
+Delta|ijk18|instruction|Change|of
+Delta|ijk18|instruction|Change|of
+Delta|ijk18|instruction|Change|of
+Delta|ijk18|instruction|15|loadI
+Delta|ijk18|instruction|11|loadAI
+Delta|ijk18|instruction|7|nop
+Delta|ijk18|instruction|6|jumpI
+Delta|ijk18|instruction|6|storeAI
+Delta|ijk18|instruction|6|cmp_GT
+Delta|ijk18|instruction|6|cbr
+Delta|ijk18|instruction|5|sub
+Delta|ijk18|instruction|1|addI
+Delta|ijk18|instruction|1|halt
+Delta|ijk19|stack|17530
+Delta|ijk19|data|8765
+Delta|ijk19|input|	loadI 1024 => rfp
+Delta|ijk19|input|	loadI 1024 => rsp
+Delta|ijk19|input|	loadI 29 => rbss
+Delta|ijk19|input|	jumpI  => L9
+Delta|ijk19|input|L9:	nop // main: 27 instructions
+Delta|ijk19|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk19|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk19|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk19|input|	addI rsp, 4 => rsp // d, 4 bytes
+Delta|ijk19|input|	addI rsp, 4 => rsp // x, 4 bytes
+Delta|ijk19|input|	loadI 0 => r0 
+Delta|ijk19|input|	storeAI r0 => rfp, 0 // store at Memory[rfp + 0] = r0: a = r0
+Delta|ijk19|input|	loadI 1 => r1 
+Delta|ijk19|input|	storeAI r1 => rfp, 4 // store at Memory[rfp + 4] = r1: b = r1
+Delta|ijk19|input|	loadI 2 => r2 
+Delta|ijk19|input|	storeAI r2 => rfp, 8 // store at Memory[rfp + 8] = r2: c = r2
+Delta|ijk19|input|	loadI 3 => r3 
+Delta|ijk19|input|	storeAI r3 => rfp, 12 // store at Memory[rfp + 12] = r3: d = r3
+Delta|ijk19|input|L8:	loadAI rfp, 0 => r4 // load a into: r4 = Memory[rfp + 0]
+Delta|ijk19|input|L7:	loadAI rfp, 4 => r5 // load b into: r5 = Memory[rfp + 4]
+Delta|ijk19|input|L6:	cmp_LT r4, r5 => r6 
+Delta|ijk19|input|	cbr r6 => L0, L5 
+Delta|ijk19|input|L5:	loadAI rfp, 8 => r7 // load c into: r7 = Memory[rfp + 8]
+Delta|ijk19|input|L4:	or r6, r7 => r8 
+Delta|ijk19|input|	cbr r8 => L0, L3 
+Delta|ijk19|input|L3:	loadAI rfp, 12 => r9 // load d into: r9 = Memory[rfp + 12]
+Delta|ijk19|input|L2:	cmp_LT r8, r9 => r10 
+Delta|ijk19|input|	cbr r10 => L0, L1 
+Delta|ijk19|input|L0:	nop // 2 instructions
+Delta|ijk19|input|	loadI 293 => r11 
+Delta|ijk19|input|	storeAI r11 => rfp, 16 // store at Memory[rfp + 16] = r11: x = r11
+Delta|ijk19|input|L1:	nop 
+Delta|ijk19|input|	halt
+Delta|ijk19|input|
+Delta|ijk19|output|Change of rfp ignored (strict mode)
+Delta|ijk19|output|Change of rsp ignored (strict mode)
+Delta|ijk19|output|Change of rbss ignored (strict mode)
+Delta|ijk19|output|count	instruction
+Delta|ijk19|output|    8	loadI
+Delta|ijk19|output|    5	addI
+Delta|ijk19|output|    5	storeAI
+Delta|ijk19|output|    3	nop
+Delta|ijk19|output|    2	loadAI
+Delta|ijk19|output|    1	jumpI
+Delta|ijk19|output|    1	cmp_LT
+Delta|ijk19|output|    1	cbr
+Delta|ijk19|output|    1	halt
+Delta|ijk19|output|
+Delta|ijk19|output|instructions executed:   27
+Delta|ijk19|output|register         read:   20 write:   40
+Delta|ijk19|output|memory           read:    2 write:    5
+Delta|ijk19|output|
+Delta|ijk19|output|  register    value
+Delta|ijk19|output|        r0        0
+Delta|ijk19|output|        r1        1
+Delta|ijk19|output|       r11      293
+Delta|ijk19|output|        r2        2
+Delta|ijk19|output|        r3        3
+Delta|ijk19|output|        r4        0
+Delta|ijk19|output|        r5        1
+Delta|ijk19|output|        r6        1
+Delta|ijk19|output|      rbss     8765
+Delta|ijk19|output|       rfp    17530
+Delta|ijk19|output|       rpc       32
+Delta|ijk19|output|       rsp    17550
+Delta|ijk19|output|
+Delta|ijk19|output|    memory    value
+Delta|ijk19|output|00017530        0
+Delta|ijk19|output|00017534        1
+Delta|ijk19|output|00017538        2
+Delta|ijk19|output|00017542        3
+Delta|ijk19|output|00017546      293
+Delta|ijk19|memory|00017530|0
+Delta|ijk19|memory|00017534|1
+Delta|ijk19|memory|00017538|2
+Delta|ijk19|memory|00017542|3
+Delta|ijk19|memory|00017546|293
+Delta|ijk19|instruction|Change|of
+Delta|ijk19|instruction|Change|of
+Delta|ijk19|instruction|Change|of
+Delta|ijk19|instruction|8|loadI
+Delta|ijk19|instruction|5|addI
+Delta|ijk19|instruction|5|storeAI
+Delta|ijk19|instruction|3|nop
+Delta|ijk19|instruction|2|loadAI
+Delta|ijk19|instruction|1|jumpI
+Delta|ijk19|instruction|1|cmp_LT
+Delta|ijk19|instruction|1|cbr
+Delta|ijk19|instruction|1|halt
+Delta|ijk20|stack|21803
+Delta|ijk20|data|10901
+Delta|ijk20|input|	loadI 1024 => rfp
+Delta|ijk20|input|	loadI 1024 => rsp
+Delta|ijk20|input|	loadI 31 => rbss
+Delta|ijk20|input|	jumpI  => L9
+Delta|ijk20|input|L9:	nop // main: 29 instructions
+Delta|ijk20|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|ijk20|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|ijk20|input|	addI rsp, 4 => rsp // c, 4 bytes
+Delta|ijk20|input|	addI rsp, 4 => rsp // d, 4 bytes
+Delta|ijk20|input|	addI rsp, 4 => rsp // x, 4 bytes
+Delta|ijk20|input|	loadI 1 => r0 
+Delta|ijk20|input|	storeAI r0 => rfp, 0 // store at Memory[rfp + 0] = r0: a = r0
+Delta|ijk20|input|	loadI 0 => r1 
+Delta|ijk20|input|	storeAI r1 => rfp, 4 // store at Memory[rfp + 4] = r1: b = r1
+Delta|ijk20|input|	loadI 2 => r2 
+Delta|ijk20|input|	storeAI r2 => rfp, 8 // store at Memory[rfp + 8] = r2: c = r2
+Delta|ijk20|input|	loadI 3 => r3 
+Delta|ijk20|input|	storeAI r3 => rfp, 12 // store at Memory[rfp + 12] = r3: d = r3
+Delta|ijk20|input|L8:	loadAI rfp, 0 => r4 // load a into: r4 = Memory[rfp + 0]
+Delta|ijk20|input|L7:	loadAI rfp, 4 => r5 // load b into: r5 = Memory[rfp + 4]
+Delta|ijk20|input|L6:	cmp_LT r4, r5 => r6 
+Delta|ijk20|input|	cbr r6 => L5, L1 
+Delta|ijk20|input|L5:	loadAI rfp, 8 => r7 // load c into: r7 = Memory[rfp + 8]
+Delta|ijk20|input|L4:	and r6, r7 => r8 
+Delta|ijk20|input|	cbr r8 => L3, L1 
+Delta|ijk20|input|L3:	loadAI rfp, 12 => r9 // load d into: r9 = Memory[rfp + 12]
+Delta|ijk20|input|L2:	cmp_LT r8, r9 => r10 
+Delta|ijk20|input|	cbr r10 => L0, L1 
+Delta|ijk20|input|L0:	nop // 2 instructions
+Delta|ijk20|input|	loadI 293 => r11 
+Delta|ijk20|input|	storeAI r11 => rfp, 16 // store at Memory[rfp + 16] = r11: x = r11
+Delta|ijk20|input|L1:	nop // 2 instructions
+Delta|ijk20|input|	loadI 325 => r12 
+Delta|ijk20|input|	storeAI r12 => rfp, 16 // store at Memory[rfp + 16] = r12: x = r12
+Delta|ijk20|input|	halt
+Delta|ijk20|input|
+Delta|ijk20|output|Change of rfp ignored (strict mode)
+Delta|ijk20|output|Change of rsp ignored (strict mode)
+Delta|ijk20|output|Change of rbss ignored (strict mode)
+Delta|ijk20|output|count	instruction
+Delta|ijk20|output|    8	loadI
+Delta|ijk20|output|    5	addI
+Delta|ijk20|output|    5	storeAI
+Delta|ijk20|output|    2	nop
+Delta|ijk20|output|    2	loadAI
+Delta|ijk20|output|    1	jumpI
+Delta|ijk20|output|    1	cmp_LT
+Delta|ijk20|output|    1	cbr
+Delta|ijk20|output|    1	halt
+Delta|ijk20|output|
+Delta|ijk20|output|instructions executed:   26
+Delta|ijk20|output|register         read:   20 write:   39
+Delta|ijk20|output|memory           read:    2 write:    5
+Delta|ijk20|output|
+Delta|ijk20|output|  register    value
+Delta|ijk20|output|        r0        1
+Delta|ijk20|output|        r1        0
+Delta|ijk20|output|       r12      325
+Delta|ijk20|output|        r2        2
+Delta|ijk20|output|        r3        3
+Delta|ijk20|output|        r4        1
+Delta|ijk20|output|        r5        0
+Delta|ijk20|output|        r6        0
+Delta|ijk20|output|      rbss    10901
+Delta|ijk20|output|       rfp    21803
+Delta|ijk20|output|       rpc       34
+Delta|ijk20|output|       rsp    21823
+Delta|ijk20|output|
+Delta|ijk20|output|    memory    value
+Delta|ijk20|output|00021803        1
+Delta|ijk20|output|00021807        0
+Delta|ijk20|output|00021811        2
+Delta|ijk20|output|00021815        3
+Delta|ijk20|output|00021819      325
+Delta|ijk20|memory|00021803|1
+Delta|ijk20|memory|00021807|0
+Delta|ijk20|memory|00021811|2
+Delta|ijk20|memory|00021815|3
+Delta|ijk20|memory|00021819|325
+Delta|ijk20|instruction|Change|of
+Delta|ijk20|instruction|Change|of
+Delta|ijk20|instruction|Change|of
+Delta|ijk20|instruction|8|loadI
+Delta|ijk20|instruction|5|addI
+Delta|ijk20|instruction|5|storeAI
+Delta|ijk20|instruction|2|nop
+Delta|ijk20|instruction|2|loadAI
+Delta|ijk20|instruction|1|jumpI
+Delta|ijk20|instruction|1|cmp_LT
+Delta|ijk20|instruction|1|cbr
+Delta|ijk20|instruction|1|halt
