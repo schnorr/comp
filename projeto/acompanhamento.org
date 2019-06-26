@@ -1150,12 +1150,18 @@ Fizeram tudo.
 | Delta   | ???103 |
 | Alpha   | ???782 |
 
+** Grupos que entregaram até o prazo extra fornecido
+
+Até 30/06
+- Delta em 26/06
+
 ** Entregas até o prazo
 
 | Timestamp           | Grupo  |
 |---------------------+--------|
 | 2019-06-22 00:45:45 | Lambda |
 | 2019-06-24 22:20:35 | Beta   |
+
 ** Arquivos para testes                                             :ATTACH:
 :PROPERTIES:
 :Attachments: e6tests.tgz
@@ -1184,21 +1190,21 @@ do segmento de dados (=Data=).
 
 ** Log dos testes automáticos                                       :ATTACH:
 :PROPERTIES:
-:Attachments: e6v0.log
+:Attachments: e6v0.log e6v1.log
 :ID:       743408ae-6fab-47cf-ae1c-c9fd150b2859
 :END:
 
-Consulte [[./data/74/3408ae-6fab-47cf-ae1c-c9fd150b2859/e6v0.log][o arquivo de log]] para obter os resultados elementares (/raw/)
-dos testes automáticos. Cada linha começa pelo nome do grupo, sendo
-que o separador é a barra vertical. A segunda coluna é o identificador
-do teste, e a terceira coluna pode ser =stack=, =data=, =input=, =output=,
-=memory= e =instruction=. Quando for =stack= e =data=, a quarta coluna indica
-a base desses segmentos. Quando for =input=, a quarta coluna contém a
-entrada fornecida pelo grupo (a saída do processo de compilação) para
-o simulador ILOC. Quando for =output=, a quarta coluna contém a saída
-do simulador ILOC. Quando for =memory=, a quarta coluna contém
-endereços e valores da memória ao fim da simulação. E, enfim, quando
-for =instruction=, a quarta coluna conterá as estatísticas das
+Consulte [[./data/74/3408ae-6fab-47cf-ae1c-c9fd150b2859/e6v0.log][o arquivo de log]] e [[./data/74/3408ae-6fab-47cf-ae1c-c9fd150b2859/e6v1.log][o arquivo de log]] para obter os resultados
+elementares (/raw/) dos testes automáticos. Cada linha começa pelo nome
+do grupo, sendo que o separador é a barra vertical. A segunda coluna é
+o identificador do teste, e a terceira coluna pode ser =stack=, =data=,
+=input=, =output=, =memory= e =instruction=. Quando for =stack= e =data=, a quarta
+coluna indica a base desses segmentos. Quando for =input=, a quarta
+coluna contém a entrada fornecida pelo grupo (a saída do processo de
+compilação) para o simulador ILOC. Quando for =output=, a quarta coluna
+contém a saída do simulador ILOC. Quando for =memory=, a quarta coluna
+contém endereços e valores da memória ao fim da simulação. E, enfim,
+quando for =instruction=, a quarta coluna conterá as estatísticas das
 instruções executadas (quantidade, instrução). É a partir deste
 arquivo que é definida a tabela abaixo.
 ** Testes automáticos
@@ -1232,6 +1238,15 @@ solução do grupo fornece algum código ILOC válido na saída.
 | Lambda | e05  |   13211 |       7 |       7 | TRUE |
 | Lambda | e06  |   18313 |      52 |      52 | TRUE |
 | Lambda | e07  |   14575 |     352 |     352 | TRUE |
+| Delta  | e00  |   13567 |      99 |      99 | TRUE |
+| Delta  | e01  |    6616 |      98 |      98 | TRUE |
+| Delta  | e02  |   16224 |      49 |      49 | TRUE |
+| Delta  | e03  |   20196 |     720 |     720 | TRUE |
+| Delta  | e04  |   16714 |      58 |      58 | TRUE |
+| Delta  | e05  |   16891 |       7 |       7 | TRUE |
+| Delta  | e06  |   14963 |      52 |      52 | TRUE |
+| Delta  | e07  |    5482 |     352 |     352 | TRUE |
+
 ** Avaliação Subjetiva
 *** Instrumento de avaliação
 
@@ -1260,9 +1275,17 @@ solução do grupo fornece algum código ILOC válido na saída.
 | Lambda | Entrada/Saída padrão    |    1 |    10 |
 | Lambda | Inicialização regs.     |    1 |    10 |
 | Lambda | Opinião geral           |    4 |     9 |
+| Delta  | Informação ao professor |  0.5 |     0 |
+| Delta  | Projeto do RA           |    1 |     0 |
+| Delta  | Gerenciamento da Pilha  |    2 |    10 |
+| Delta  | Entrada/Saída padrão    |    1 |    10 |
+| Delta  | Inicialização regs.     |    1 |    10 |
+| Delta  | Opinião geral           |    4 |     7 |
+
 ** Notas Objetiva e Subjetiva
 
 | Grupo  | E6.O | E6.S |
 |--------+------+------|
 | Beta   |   10 |   10 |
+| Delta  |   10 | 7.16 |
 | Lambda |   10 | 8.53 |
