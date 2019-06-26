@@ -1,0 +1,1400 @@
+
+Delta
+
+Delta|e00|stack|27135
+Delta|e00|data|13567
+Delta|e00|input|	loadI 1024 => rfp
+Delta|e00|input|	loadI 1024 => rsp
+Delta|e00|input|	loadI 27 => rbss
+Delta|e00|input|	jumpI  => L1
+Delta|e00|input|L0:	nop // f: return address on rfp -4, 4 bytes: 9 instructions
+Delta|e00|input|	loadI 99 => r0 
+Delta|e00|input|	subI rfp, 8 => r1 // load of register with return value: r1
+Delta|e00|input|	store r0 => r1 // save return value on Memory(rfp - 8) = r0
+Delta|e00|input|	subI rfp, 4 => r2 // load return address to register r2
+Delta|e00|input|	load r2 => r3 
+Delta|e00|input|	jump => r3 
+Delta|e00|input|L1:	nop // main: 14 instructions
+Delta|e00|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e00|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e00|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e00|input|	addI rpc, 5 => r4 // save return address in r4
+Delta|e00|input|	storeAI r4 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e00|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e00|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e00|input|	jumpI => L0 // jump to function: f
+Delta|e00|input|	subI rfp, 8 => r5 // load return value address on r5
+Delta|e00|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e00|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e00|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e00|input|	load r5 => r6 
+Delta|e00|input|	storeAI r6 => rbss, 0 // store at Memory[rbss + 0] = r6: x = r6
+Delta|e00|input|	halt
+Delta|e00|input|
+Delta|e00|input|
+Delta|e00|output|count	instruction
+Delta|e00|output|    4	loadI
+Delta|e00|output|    4	addI
+Delta|e00|output|    4	subI
+Delta|e00|output|    3	storeAI
+Delta|e00|output|    2	jumpI
+Delta|e00|output|    2	nop
+Delta|e00|output|    2	store
+Delta|e00|output|    2	load
+Delta|e00|output|    2	loadAI
+Delta|e00|output|    1	jump
+Delta|e00|output|    1	halt
+Delta|e00|output|
+Delta|e00|output|instructions executed:   27
+Delta|e00|output|register         read:   23 write:   40
+Delta|e00|output|memory           read:    4 write:    5
+Delta|e00|output|
+Delta|e00|output|  register    value
+Delta|e00|output|        r0       99
+Delta|e00|output|        r1    27143
+Delta|e00|output|        r2    27147
+Delta|e00|output|        r3       20
+Delta|e00|output|        r4       20
+Delta|e00|output|        r5    27143
+Delta|e00|output|        r6       99
+Delta|e00|output|      rbss    13567
+Delta|e00|output|       rfp    27135
+Delta|e00|output|       rpc       26
+Delta|e00|output|       rsp    27135
+Delta|e00|output|
+Delta|e00|output|    memory    value
+Delta|e00|output|00013567       99
+Delta|e00|output|00027135    27135
+Delta|e00|output|00027139    27135
+Delta|e00|output|00027143       99
+Delta|e00|output|00027147       20
+Delta|
+Delta|e00|sixit|0
+Delta|e00|memory|00013567|99
+Delta|e00|memory|00027135|27135
+Delta|e00|memory|00027139|27135
+Delta|e00|memory|00027143|99
+Delta|e00|memory|00027147|20
+Delta|e00|instruction|4|loadI
+Delta|e00|instruction|4|addI
+Delta|e00|instruction|4|subI
+Delta|e00|instruction|3|storeAI
+Delta|e00|instruction|2|jumpI
+Delta|e00|instruction|2|nop
+Delta|e00|instruction|2|store
+Delta|e00|instruction|2|load
+Delta|e00|instruction|2|loadAI
+Delta|e00|instruction|1|jump
+Delta|e00|instruction|1|halt
+Delta|e01|stack|13233
+Delta|e01|data|6616
+Delta|e01|input|	loadI 1024 => rfp
+Delta|e01|input|	loadI 1024 => rsp
+Delta|e01|input|	loadI 30 => rbss
+Delta|e01|input|	jumpI  => L1
+Delta|e01|input|L0:	nop // f: return address on rfp -4, 4 bytes: 12 instructions
+Delta|e01|input|	addI rsp, 4 => rsp // x, 4 bytes
+Delta|e01|input|	loadI 98 => r0 
+Delta|e01|input|	storeAI r0 => rfp, 0 // store at Memory[rfp + 0] = r0: x = r0
+Delta|e01|input|	loadAI rfp, 0 => r1 // load x into: r1 = Memory[rfp + 0]
+Delta|e01|input|	subI rfp, 8 => r2 // load of register with return value: r2
+Delta|e01|input|	store r1 => r2 // save return value on Memory(rfp - 8) = r1
+Delta|e01|input|	subI rfp, 4 => r3 // load return address to register r3
+Delta|e01|input|	load r3 => r4 
+Delta|e01|input|	jump => r4 
+Delta|e01|input|L1:	nop // main: 14 instructions
+Delta|e01|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e01|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e01|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e01|input|	addI rpc, 5 => r5 // save return address in r5
+Delta|e01|input|	storeAI r5 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e01|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e01|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e01|input|	jumpI => L0 // jump to function: f
+Delta|e01|input|	subI rfp, 8 => r6 // load return value address on r6
+Delta|e01|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e01|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e01|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e01|input|	load r6 => r7 
+Delta|e01|input|	storeAI r7 => rbss, 0 // store at Memory[rbss + 0] = r7: y = r7
+Delta|e01|input|	halt
+Delta|e01|input|
+Delta|e01|input|
+Delta|e01|output|count	instruction
+Delta|e01|output|    5	addI
+Delta|e01|output|    4	loadI
+Delta|e01|output|    4	storeAI
+Delta|e01|output|    4	subI
+Delta|e01|output|    3	loadAI
+Delta|e01|output|    2	jumpI
+Delta|e01|output|    2	nop
+Delta|e01|output|    2	store
+Delta|e01|output|    2	load
+Delta|e01|output|    1	jump
+Delta|e01|output|    1	halt
+Delta|e01|output|
+Delta|e01|output|instructions executed:   30
+Delta|e01|output|register         read:   27 write:   45
+Delta|e01|output|memory           read:    5 write:    6
+Delta|e01|output|
+Delta|e01|output|  register    value
+Delta|e01|output|        r0       98
+Delta|e01|output|        r1       98
+Delta|e01|output|        r2    13241
+Delta|e01|output|        r3    13245
+Delta|e01|output|        r4       23
+Delta|e01|output|        r5       23
+Delta|e01|output|        r6    13241
+Delta|e01|output|        r7       98
+Delta|e01|output|      rbss     6616
+Delta|e01|output|       rfp    13233
+Delta|e01|output|       rpc       29
+Delta|e01|output|       rsp    13233
+Delta|e01|output|
+Delta|e01|output|    memory    value
+Delta|e01|output|00006616       98
+Delta|e01|output|00013233    13233
+Delta|e01|output|00013237    13233
+Delta|e01|output|00013241       98
+Delta|e01|output|00013245       23
+Delta|e01|output|00013249       98
+Delta|0
+Delta|e01|sixit|0
+Delta|e01|memory|00006616|98
+Delta|e01|memory|00013233|13233
+Delta|e01|memory|00013237|13233
+Delta|e01|memory|00013241|98
+Delta|e01|memory|00013245|23
+Delta|e01|memory|00013249|98
+Delta|e01|instruction|5|addI
+Delta|e01|instruction|4|loadI
+Delta|e01|instruction|4|storeAI
+Delta|e01|instruction|4|subI
+Delta|e01|instruction|3|loadAI
+Delta|e01|instruction|2|jumpI
+Delta|e01|instruction|2|nop
+Delta|e01|instruction|2|store
+Delta|e01|instruction|2|load
+Delta|e01|instruction|1|jump
+Delta|e01|instruction|1|halt
+Delta|e02|stack|32448
+Delta|e02|data|16224
+Delta|e02|input|	loadI 1024 => rfp
+Delta|e02|input|	loadI 1024 => rsp
+Delta|e02|input|	loadI 41 => rbss
+Delta|e02|input|	jumpI  => L1
+Delta|e02|input|L0:	nop // mult: return address on rfp -4, 4 bytes: 16 instructions
+Delta|e02|input|	addI rsp, 4 => rsp // w, 4 bytes
+Delta|e02|input|	addI rsp, 4 => rsp // z, 4 bytes
+Delta|e02|input|	addI rsp, 4 => rsp // x, 4 bytes
+Delta|e02|input|	loadAI rfp, 4 => r0 // load z into: r0 = Memory[rfp + 4]
+Delta|e02|input|	loadAI rfp, 0 => r1 // load w into: r1 = Memory[rfp + 0]
+Delta|e02|input|	mult r0, r1 => r2 
+Delta|e02|input|	storeAI r2 => rbss, 0 // store at Memory[rbss + 0] = r2: x = r2
+Delta|e02|input|	loadAI rbss, 0 => r3 // load GLOBAL x into: r3 = Memory[rfp + 0]
+Delta|e02|input|	subI rfp, 8 => r4 // load of register with return value: r4
+Delta|e02|input|	store r3 => r4 // save return value on Memory(rfp - 8) = r3
+Delta|e02|input|	subI rfp, 4 => r5 // load return address to register r5
+Delta|e02|input|	load r5 => r6 
+Delta|e02|input|	jump => r6 
+Delta|e02|input|L1:	nop // main: 21 instructions
+Delta|e02|input|	addI rsp, 4 => rsp // y, 4 bytes
+Delta|e02|input|	loadI 7 => r7 
+Delta|e02|input|	storeAI r7 => rfp, 0 // store at Memory[rfp + 0] = r7: y = r7
+Delta|e02|input|	loadAI rfp, 0 => r8 // load y into: r8 = Memory[rfp + 0]
+Delta|e02|input|	loadAI rfp, 0 => r9 // load y into: r9 = Memory[rfp + 0]
+Delta|e02|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e02|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e02|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e02|input|	addI rpc, 7 => r10 // save return address in r10
+Delta|e02|input|	storeAI r10 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e02|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e02|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e02|input|	storeAI r8 => rfp, 4 
+Delta|e02|input|	storeAI r9 => rfp, 0 
+Delta|e02|input|	jumpI => L0 // jump to function: mult
+Delta|e02|input|	subI rfp, 8 => r11 // load return value address on r11
+Delta|e02|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e02|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e02|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e02|input|	load r11 => r12 
+Delta|e02|input|	storeAI r12 => rbss, 0 // store at Memory[rbss + 0] = r12: x = r12
+Delta|e02|input|	halt
+Delta|e02|input|
+Delta|e02|input|
+Delta|e02|output|count	instruction
+Delta|e02|output|    8	addI
+Delta|e02|output|    7	storeAI
+Delta|e02|output|    7	loadAI
+Delta|e02|output|    4	loadI
+Delta|e02|output|    4	subI
+Delta|e02|output|    2	jumpI
+Delta|e02|output|    2	nop
+Delta|e02|output|    2	store
+Delta|e02|output|    2	load
+Delta|e02|output|    1	mult
+Delta|e02|output|    1	jump
+Delta|e02|output|    1	halt
+Delta|e02|output|
+Delta|e02|output|instructions executed:   41
+Delta|e02|output|register         read:   42 write:   64
+Delta|e02|output|memory           read:    9 write:    9
+Delta|e02|output|
+Delta|e02|output|  register    value
+Delta|e02|output|        r0        7
+Delta|e02|output|        r1        7
+Delta|e02|output|       r10       34
+Delta|e02|output|       r11    32460
+Delta|e02|output|       r12       49
+Delta|e02|output|        r2       49
+Delta|e02|output|        r3       49
+Delta|e02|output|        r4    32460
+Delta|e02|output|        r5    32464
+Delta|e02|output|        r6       34
+Delta|e02|output|        r7        7
+Delta|e02|output|        r8        7
+Delta|e02|output|        r9        7
+Delta|e02|output|      rbss    16224
+Delta|e02|output|       rfp    32448
+Delta|e02|output|       rpc       40
+Delta|e02|output|       rsp    32452
+Delta|e02|output|
+Delta|e02|output|    memory    value
+Delta|e02|output|00016224       49
+Delta|e02|output|00032448        7
+Delta|e02|output|00032452    32448
+Delta|e02|output|00032456    32452
+Delta|e02|output|00032460       49
+Delta|e02|output|00032464       34
+Delta|e02|output|00032468        7
+Delta|e02|output|00032472        7
+Delta|0
+Delta|e02|sixit|0
+Delta|e02|memory|00016224|49
+Delta|e02|memory|00032448|7
+Delta|e02|memory|00032452|32448
+Delta|e02|memory|00032456|32452
+Delta|e02|memory|00032460|49
+Delta|e02|memory|00032464|34
+Delta|e02|memory|00032468|7
+Delta|e02|memory|00032472|7
+Delta|e02|instruction|8|addI
+Delta|e02|instruction|7|storeAI
+Delta|e02|instruction|7|loadAI
+Delta|e02|instruction|4|loadI
+Delta|e02|instruction|4|subI
+Delta|e02|instruction|2|jumpI
+Delta|e02|instruction|2|nop
+Delta|e02|instruction|2|store
+Delta|e02|instruction|2|load
+Delta|e02|instruction|1|mult
+Delta|e02|instruction|1|jump
+Delta|e02|instruction|1|halt
+Delta|e03|stack|40392
+Delta|e03|data|20196
+Delta|e03|input|	loadI 1024 => rfp
+Delta|e03|input|	loadI 1024 => rsp
+Delta|e03|input|	loadI 66 => rbss
+Delta|e03|input|	jumpI  => L6
+Delta|e03|input|L5:	nop // fatorial: return address on rfp -4, 4 bytes: 43 instructions
+Delta|e03|input|	addI rsp, 4 => rsp // n, 4 bytes
+Delta|e03|input|	addI rsp, 4 => rsp // temp, 4 bytes
+Delta|e03|input|L4:	loadAI rfp, 0 => r0 // load n into: r0 = Memory[rfp + 0]
+Delta|e03|input|L3:	loadI 1 => r1 
+Delta|e03|input|L2:	cmp_EQ r0, r1 => r2 
+Delta|e03|input|	cbr r2 => L0, L1 
+Delta|e03|input|L0:	nop // 6 instructions
+Delta|e03|input|	loadAI rfp, 0 => r3 // load n into: r3 = Memory[rfp + 0]
+Delta|e03|input|	subI rfp, 8 => r4 // load of register with return value: r4
+Delta|e03|input|	store r3 => r4 // save return value on Memory(rfp - 8) = r3
+Delta|e03|input|	subI rfp, 4 => r5 // load return address to register r5
+Delta|e03|input|	load r5 => r6 
+Delta|e03|input|	jump => r6 
+Delta|e03|input|L1:	nop 
+Delta|e03|input|	loadAI rfp, 0 => r7 // load n into: r7 = Memory[rfp + 0]
+Delta|e03|input|	loadI 1 => r8 
+Delta|e03|input|	sub r7, r8 => r9 
+Delta|e03|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e03|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e03|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e03|input|	addI rpc, 6 => r10 // save return address in r10
+Delta|e03|input|	storeAI r10 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e03|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e03|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e03|input|	storeAI r9 => rfp, 0 
+Delta|e03|input|	jumpI => L5 // jump to function: fatorial
+Delta|e03|input|	subI rfp, 8 => r11 // load return value address on r11
+Delta|e03|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e03|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e03|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e03|input|	load r11 => r12 
+Delta|e03|input|	loadAI rfp, 0 => r13 // load n into: r13 = Memory[rfp + 0]
+Delta|e03|input|	mult r12, r13 => r14 
+Delta|e03|input|	storeAI r14 => rfp, 4 // store at Memory[rfp + 4] = r14: temp = r14
+Delta|e03|input|	loadAI rfp, 4 => r15 // load temp into: r15 = Memory[rfp + 4]
+Delta|e03|input|	subI rfp, 8 => r16 // load of register with return value: r16
+Delta|e03|input|	store r15 => r16 // save return value on Memory(rfp - 8) = r15
+Delta|e03|input|	subI rfp, 4 => r17 // load return address to register r17
+Delta|e03|input|	load r17 => r18 
+Delta|e03|input|	jump => r18 
+Delta|e03|input|L6:	nop // main: 19 instructions
+Delta|e03|input|	addI rsp, 4 => rsp // y, 4 bytes
+Delta|e03|input|	loadI 6 => r19 
+Delta|e03|input|	storeAI r19 => rfp, 0 // store at Memory[rfp + 0] = r19: y = r19
+Delta|e03|input|	loadAI rfp, 0 => r20 // load y into: r20 = Memory[rfp + 0]
+Delta|e03|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e03|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e03|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e03|input|	addI rpc, 6 => r21 // save return address in r21
+Delta|e03|input|	storeAI r21 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e03|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e03|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e03|input|	storeAI r20 => rfp, 0 
+Delta|e03|input|	jumpI => L5 // jump to function: fatorial
+Delta|e03|input|	subI rfp, 8 => r22 // load return value address on r22
+Delta|e03|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e03|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e03|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e03|input|	load r22 => r23 
+Delta|e03|input|	storeAI r23 => rbss, 0 // store at Memory[rbss + 0] = r23: x = r23
+Delta|e03|input|	halt
+Delta|e03|input|
+Delta|e03|input|
+Delta|e03|output|count	instruction
+Delta|e03|output|   37	addI
+Delta|e03|output|   35	loadAI
+Delta|e03|output|   25	storeAI
+Delta|e03|output|   24	subI
+Delta|e03|output|   15	loadI
+Delta|e03|output|   13	nop
+Delta|e03|output|   12	store
+Delta|e03|output|   12	load
+Delta|e03|output|    7	jumpI
+Delta|e03|output|    6	cmp_EQ
+Delta|e03|output|    6	cbr
+Delta|e03|output|    6	jump
+Delta|e03|output|    5	sub
+Delta|e03|output|    5	mult
+Delta|e03|output|    1	halt
+Delta|e03|output|
+Delta|e03|output|instructions executed:  209
+Delta|e03|output|register         read:  226 write:  345
+Delta|e03|output|memory           read:   47 write:   37
+Delta|e03|output|
+Delta|e03|output|  register    value
+Delta|e03|output|        r0        1
+Delta|e03|output|        r1        1
+Delta|e03|output|       r10       31
+Delta|e03|output|       r11    40428
+Delta|e03|output|       r12      120
+Delta|e03|output|       r13        6
+Delta|e03|output|       r14      720
+Delta|e03|output|       r15      720
+Delta|e03|output|       r16    40404
+Delta|e03|output|       r17    40408
+Delta|e03|output|       r18       59
+Delta|e03|output|       r19        6
+Delta|e03|output|        r2        1
+Delta|e03|output|       r20        6
+Delta|e03|output|       r21       59
+Delta|e03|output|       r22    40404
+Delta|e03|output|       r23      720
+Delta|e03|output|        r3        1
+Delta|e03|output|        r4    40524
+Delta|e03|output|        r5    40528
+Delta|e03|output|        r6       31
+Delta|e03|output|        r7        2
+Delta|e03|output|        r8        1
+Delta|e03|output|        r9        1
+Delta|e03|output|      rbss    20196
+Delta|e03|output|       rfp    40392
+Delta|e03|output|       rpc       65
+Delta|e03|output|       rsp    40396
+Delta|e03|output|
+Delta|e03|output|    memory    value
+Delta|e03|output|00020196      720
+Delta|e03|output|00040392        6
+Delta|e03|output|00040396    40392
+Delta|e03|output|00040400    40396
+Delta|e03|output|00040404      720
+Delta|e03|output|00040408       59
+Delta|e03|output|00040412        6
+Delta|e03|output|00040416      720
+Delta|e03|output|00040420    40412
+Delta|e03|output|00040424    40420
+Delta|e03|output|00040428      120
+Delta|e03|output|00040432       31
+Delta|e03|output|00040436        5
+Delta|e03|output|00040440      120
+Delta|e03|output|00040444    40436
+Delta|e03|output|00040448    40444
+Delta|e03|output|00040452       24
+Delta|e03|output|00040456       31
+Delta|e03|output|00040460        4
+Delta|e03|output|00040464       24
+Delta|e03|output|00040468    40460
+Delta|e03|output|00040472    40468
+Delta|e03|output|00040476        6
+Delta|e03|output|00040480       31
+Delta|e03|output|00040484        3
+Delta|e03|output|00040488        6
+Delta|e03|output|00040492    40484
+Delta|e03|output|00040496    40492
+Delta|e03|output|00040500        2
+Delta|e03|output|00040504       31
+Delta|e03|output|00040508        2
+Delta|e03|output|00040512        2
+Delta|e03|output|00040516    40508
+Delta|e03|output|00040520    40516
+Delta|e03|output|00040524        1
+Delta|e03|output|00040528       31
+Delta|e03|output|00040532        1
+Delta|0
+Delta|e03|sixit|0
+Delta|e03|memory|00020196|720
+Delta|e03|memory|00040392|6
+Delta|e03|memory|00040396|40392
+Delta|e03|memory|00040400|40396
+Delta|e03|memory|00040404|720
+Delta|e03|memory|00040408|59
+Delta|e03|memory|00040412|6
+Delta|e03|memory|00040416|720
+Delta|e03|memory|00040420|40412
+Delta|e03|memory|00040424|40420
+Delta|e03|memory|00040428|120
+Delta|e03|memory|00040432|31
+Delta|e03|memory|00040436|5
+Delta|e03|memory|00040440|120
+Delta|e03|memory|00040444|40436
+Delta|e03|memory|00040448|40444
+Delta|e03|memory|00040452|24
+Delta|e03|memory|00040456|31
+Delta|e03|memory|00040460|4
+Delta|e03|memory|00040464|24
+Delta|e03|instruction|37|addI
+Delta|e03|instruction|35|loadAI
+Delta|e03|instruction|25|storeAI
+Delta|e03|instruction|24|subI
+Delta|e03|instruction|15|loadI
+Delta|e03|instruction|13|nop
+Delta|e03|instruction|12|store
+Delta|e03|instruction|12|load
+Delta|e03|instruction|7|jumpI
+Delta|e03|instruction|6|cmp_EQ
+Delta|e03|instruction|6|cbr
+Delta|e03|instruction|6|jump
+Delta|e03|instruction|5|sub
+Delta|e03|instruction|5|mult
+Delta|e03|instruction|1|halt
+Delta|e04|stack|33428
+Delta|e04|data|16714
+Delta|e04|input|	loadI 1024 => rfp
+Delta|e04|input|	loadI 1024 => rsp
+Delta|e04|input|	loadI 114 => rbss
+Delta|e04|input|	jumpI  => L2
+Delta|e04|input|L0:	nop // f: return address on rfp -4, 4 bytes: 16 instructions
+Delta|e04|input|	addI rsp, 4 => rsp // w, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // z, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // temp, 4 bytes
+Delta|e04|input|	loadAI rfp, 4 => r0 // load z into: r0 = Memory[rfp + 4]
+Delta|e04|input|	loadAI rfp, 0 => r1 // load w into: r1 = Memory[rfp + 0]
+Delta|e04|input|	mult r0, r1 => r2 
+Delta|e04|input|	storeAI r2 => rfp, 8 // store at Memory[rfp + 8] = r2: temp = r2
+Delta|e04|input|	loadAI rfp, 8 => r3 // load temp into: r3 = Memory[rfp + 8]
+Delta|e04|input|	subI rfp, 8 => r4 // load of register with return value: r4
+Delta|e04|input|	store r3 => r4 // save return value on Memory(rfp - 8) = r3
+Delta|e04|input|	subI rfp, 4 => r5 // load return address to register r5
+Delta|e04|input|	load r5 => r6 
+Delta|e04|input|	jump => r6 
+Delta|e04|input|L1:	nop // mult: return address on rfp -4, 4 bytes: 68 instructions
+Delta|e04|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // w, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // z, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // m, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // n, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // o, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // p, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // r, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // s, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // t, 4 bytes
+Delta|e04|input|	loadAI rfp, 12 => r7 // load z into: r7 = Memory[rfp + 12]
+Delta|e04|input|	storeAI r7 => rfp, 16 // store at Memory[rfp + 16] = r7: m = r7
+Delta|e04|input|	loadAI rfp, 8 => r8 // load w into: r8 = Memory[rfp + 8]
+Delta|e04|input|	storeAI r8 => rfp, 20 // store at Memory[rfp + 20] = r8: n = r8
+Delta|e04|input|	loadAI rfp, 4 => r9 // load a into: r9 = Memory[rfp + 4]
+Delta|e04|input|	storeAI r9 => rfp, 24 // store at Memory[rfp + 24] = r9: o = r9
+Delta|e04|input|	loadAI rfp, 0 => r10 // load b into: r10 = Memory[rfp + 0]
+Delta|e04|input|	storeAI r10 => rfp, 28 // store at Memory[rfp + 28] = r10: p = r10
+Delta|e04|input|	loadAI rfp, 16 => r11 // load m into: r11 = Memory[rfp + 16]
+Delta|e04|input|	loadAI rfp, 20 => r12 // load n into: r12 = Memory[rfp + 20]
+Delta|e04|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e04|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e04|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e04|input|	addI rpc, 7 => r13 // save return address in r13
+Delta|e04|input|	storeAI r13 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e04|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e04|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e04|input|	storeAI r11 => rfp, 4 
+Delta|e04|input|	storeAI r12 => rfp, 0 
+Delta|e04|input|	jumpI => L0 // jump to function: f
+Delta|e04|input|	subI rfp, 8 => r14 // load return value address on r14
+Delta|e04|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e04|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e04|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e04|input|	load r14 => r15 
+Delta|e04|input|	storeAI r15 => rfp, 32 // store at Memory[rfp + 32] = r15: r = r15
+Delta|e04|input|	loadAI rfp, 24 => r16 // load o into: r16 = Memory[rfp + 24]
+Delta|e04|input|	loadAI rfp, 28 => r17 // load p into: r17 = Memory[rfp + 28]
+Delta|e04|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e04|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e04|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e04|input|	addI rpc, 7 => r18 // save return address in r18
+Delta|e04|input|	storeAI r18 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e04|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e04|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e04|input|	storeAI r16 => rfp, 4 
+Delta|e04|input|	storeAI r17 => rfp, 0 
+Delta|e04|input|	jumpI => L0 // jump to function: f
+Delta|e04|input|	subI rfp, 8 => r19 // load return value address on r19
+Delta|e04|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e04|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e04|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e04|input|	load r19 => r20 
+Delta|e04|input|	storeAI r20 => rfp, 36 // store at Memory[rfp + 36] = r20: s = r20
+Delta|e04|input|	loadAI rfp, 32 => r21 // load r into: r21 = Memory[rfp + 32]
+Delta|e04|input|	loadAI rfp, 36 => r22 // load s into: r22 = Memory[rfp + 36]
+Delta|e04|input|	add r21, r22 => r23 
+Delta|e04|input|	storeAI r23 => rfp, 40 // store at Memory[rfp + 40] = r23: t = r23
+Delta|e04|input|	loadAI rfp, 40 => r24 // load t into: r24 = Memory[rfp + 40]
+Delta|e04|input|	subI rfp, 8 => r25 // load of register with return value: r25
+Delta|e04|input|	store r24 => r25 // save return value on Memory(rfp - 8) = r24
+Delta|e04|input|	subI rfp, 4 => r26 // load return address to register r26
+Delta|e04|input|	load r26 => r27 
+Delta|e04|input|	jump => r27 
+Delta|e04|input|L2:	nop // main: 28 instructions
+Delta|e04|input|	addI rsp, 4 => rsp // y, 4 bytes
+Delta|e04|input|	addI rsp, 4 => rsp // z, 4 bytes
+Delta|e04|input|	loadI 7 => r28 
+Delta|e04|input|	storeAI r28 => rfp, 0 // store at Memory[rfp + 0] = r28: y = r28
+Delta|e04|input|	loadI 3 => r29 
+Delta|e04|input|	storeAI r29 => rfp, 4 // store at Memory[rfp + 4] = r29: z = r29
+Delta|e04|input|	loadAI rfp, 0 => r30 // load y into: r30 = Memory[rfp + 0]
+Delta|e04|input|	loadAI rfp, 0 => r31 // load y into: r31 = Memory[rfp + 0]
+Delta|e04|input|	loadAI rfp, 4 => r32 // load z into: r32 = Memory[rfp + 4]
+Delta|e04|input|	loadAI rfp, 4 => r33 // load z into: r33 = Memory[rfp + 4]
+Delta|e04|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e04|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e04|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e04|input|	addI rpc, 9 => r34 // save return address in r34
+Delta|e04|input|	storeAI r34 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e04|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e04|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e04|input|	storeAI r30 => rfp, 12 
+Delta|e04|input|	storeAI r31 => rfp, 8 
+Delta|e04|input|	storeAI r32 => rfp, 4 
+Delta|e04|input|	storeAI r33 => rfp, 0 
+Delta|e04|input|	jumpI => L1 // jump to function: mult
+Delta|e04|input|	subI rfp, 8 => r35 // load return value address on r35
+Delta|e04|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e04|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e04|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e04|input|	load r35 => r36 
+Delta|e04|input|	storeAI r36 => rbss, 0 // store at Memory[rbss + 0] = r36: x = r36
+Delta|e04|input|	halt
+Delta|e04|input|
+Delta|e04|input|
+Delta|e04|output|count	instruction
+Delta|e04|output|   31	addI
+Delta|e04|output|   27	loadAI
+Delta|e04|output|   26	storeAI
+Delta|e04|output|   12	subI
+Delta|e04|output|    6	store
+Delta|e04|output|    6	load
+Delta|e04|output|    5	loadI
+Delta|e04|output|    4	jumpI
+Delta|e04|output|    4	nop
+Delta|e04|output|    3	jump
+Delta|e04|output|    2	mult
+Delta|e04|output|    1	add
+Delta|e04|output|    1	halt
+Delta|e04|output|
+Delta|e04|output|instructions executed:  128
+Delta|e04|output|register         read:  149 write:  209
+Delta|e04|output|memory           read:   33 write:   32
+Delta|e04|output|
+Delta|e04|output|  register    value
+Delta|e04|output|        r0        3
+Delta|e04|output|        r1        3
+Delta|e04|output|       r10        3
+Delta|e04|output|       r11        7
+Delta|e04|output|       r12        7
+Delta|e04|output|       r13       50
+Delta|e04|output|       r14    33504
+Delta|e04|output|       r15       49
+Delta|e04|output|       r16        3
+Delta|e04|output|       r17        3
+Delta|e04|output|       r18       68
+Delta|e04|output|       r19    33504
+Delta|e04|output|        r2        9
+Delta|e04|output|       r20        9
+Delta|e04|output|       r21       49
+Delta|e04|output|       r22        9
+Delta|e04|output|       r23       58
+Delta|e04|output|       r24       58
+Delta|e04|output|       r25    33444
+Delta|e04|output|       r26    33448
+Delta|e04|output|       r27      107
+Delta|e04|output|       r28        7
+Delta|e04|output|       r29        3
+Delta|e04|output|        r3        9
+Delta|e04|output|       r30        7
+Delta|e04|output|       r31        7
+Delta|e04|output|       r32        3
+Delta|e04|output|       r33        3
+Delta|e04|output|       r34      107
+Delta|e04|output|       r35    33444
+Delta|e04|output|       r36       58
+Delta|e04|output|        r4    33504
+Delta|e04|output|        r5    33508
+Delta|e04|output|        r6       68
+Delta|e04|output|        r7        7
+Delta|e04|output|        r8        7
+Delta|e04|output|        r9        3
+Delta|e04|output|      rbss    16714
+Delta|e04|output|       rfp    33428
+Delta|e04|output|       rpc      113
+Delta|e04|output|       rsp    33436
+Delta|e04|output|
+Delta|e04|output|    memory    value
+Delta|e04|output|00016714       58
+Delta|e04|output|00033428        7
+Delta|e04|output|00033432        3
+Delta|e04|output|00033436    33428
+Delta|e04|output|00033440    33436
+Delta|e04|output|00033444       58
+Delta|e04|output|00033448      107
+Delta|e04|output|00033452        3
+Delta|e04|output|00033456        3
+Delta|e04|output|00033460        7
+Delta|e04|output|00033464        7
+Delta|e04|output|00033468        7
+Delta|e04|output|00033472        7
+Delta|e04|output|00033476        3
+Delta|e04|output|00033480        3
+Delta|e04|output|00033484       49
+Delta|e04|output|00033488        9
+Delta|e04|output|00033492       58
+Delta|e04|output|00033496    33452
+Delta|e04|output|00033500    33496
+Delta|e04|output|00033504        9
+Delta|e04|output|00033508       68
+Delta|e04|output|00033512        3
+Delta|e04|output|00033516        3
+Delta|e04|output|00033520        9
+Delta|0
+Delta|e04|sixit|0
+Delta|e04|memory|00016714|58
+Delta|e04|memory|00033428|7
+Delta|e04|memory|00033432|3
+Delta|e04|memory|00033436|33428
+Delta|e04|memory|00033440|33436
+Delta|e04|memory|00033444|58
+Delta|e04|memory|00033448|107
+Delta|e04|memory|00033452|3
+Delta|e04|memory|00033456|3
+Delta|e04|memory|00033460|7
+Delta|e04|memory|00033464|7
+Delta|e04|memory|00033468|7
+Delta|e04|memory|00033472|7
+Delta|e04|memory|00033476|3
+Delta|e04|memory|00033480|3
+Delta|e04|memory|00033484|49
+Delta|e04|memory|00033488|9
+Delta|e04|memory|00033492|58
+Delta|e04|memory|00033496|33452
+Delta|e04|memory|00033500|33496
+Delta|e04|instruction|31|addI
+Delta|e04|instruction|27|loadAI
+Delta|e04|instruction|26|storeAI
+Delta|e04|instruction|12|subI
+Delta|e04|instruction|6|store
+Delta|e04|instruction|6|load
+Delta|e04|instruction|5|loadI
+Delta|e04|instruction|4|jumpI
+Delta|e04|instruction|4|nop
+Delta|e04|instruction|3|jump
+Delta|e04|instruction|2|mult
+Delta|e04|instruction|1|add
+Delta|e04|instruction|1|halt
+Delta|e05|stack|33783
+Delta|e05|data|16891
+Delta|e05|input|	loadI 1024 => rfp
+Delta|e05|input|	loadI 1024 => rsp
+Delta|e05|input|	loadI 63 => rbss
+Delta|e05|input|	jumpI  => L6
+Delta|e05|input|L5:	nop // gis: return address on rfp -4, 4 bytes: 43 instructions
+Delta|e05|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|e05|input|	addI rsp, 4 => rsp // ret, 4 bytes
+Delta|e05|input|L4:	loadAI rfp, 0 => r0 // load a into: r0 = Memory[rfp + 0]
+Delta|e05|input|L3:	loadI 0 => r1 
+Delta|e05|input|L2:	cmp_EQ r0, r1 => r2 
+Delta|e05|input|	cbr r2 => L0, L1 
+Delta|e05|input|L0:	nop // 6 instructions
+Delta|e05|input|	loadI 1 => r3 
+Delta|e05|input|	subI rfp, 8 => r4 // load of register with return value: r4
+Delta|e05|input|	store r3 => r4 // save return value on Memory(rfp - 8) = r3
+Delta|e05|input|	subI rfp, 4 => r5 // load return address to register r5
+Delta|e05|input|	load r5 => r6 
+Delta|e05|input|	jump => r6 
+Delta|e05|input|L1:	nop 
+Delta|e05|input|	loadAI rfp, 0 => r7 // load a into: r7 = Memory[rfp + 0]
+Delta|e05|input|	loadI 1 => r8 
+Delta|e05|input|	sub r7, r8 => r9 
+Delta|e05|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e05|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e05|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e05|input|	addI rpc, 6 => r10 // save return address in r10
+Delta|e05|input|	storeAI r10 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e05|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e05|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e05|input|	storeAI r9 => rfp, 0 
+Delta|e05|input|	jumpI => L5 // jump to function: gis
+Delta|e05|input|	subI rfp, 8 => r11 // load return value address on r11
+Delta|e05|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e05|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e05|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e05|input|	load r11 => r12 
+Delta|e05|input|	loadAI rfp, 0 => r13 // load a into: r13 = Memory[rfp + 0]
+Delta|e05|input|	add r12, r13 => r14 
+Delta|e05|input|	storeAI r14 => rfp, 4 // store at Memory[rfp + 4] = r14: ret = r14
+Delta|e05|input|	loadAI rfp, 4 => r15 // load ret into: r15 = Memory[rfp + 4]
+Delta|e05|input|	subI rfp, 8 => r16 // load of register with return value: r16
+Delta|e05|input|	store r15 => r16 // save return value on Memory(rfp - 8) = r15
+Delta|e05|input|	subI rfp, 4 => r17 // load return address to register r17
+Delta|e05|input|	load r17 => r18 
+Delta|e05|input|	jump => r18 
+Delta|e05|input|L6:	nop // main: 16 instructions
+Delta|e05|input|	loadI 3 => r19 
+Delta|e05|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e05|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e05|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e05|input|	addI rpc, 6 => r20 // save return address in r20
+Delta|e05|input|	storeAI r20 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e05|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e05|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e05|input|	storeAI r19 => rfp, 0 
+Delta|e05|input|	jumpI => L5 // jump to function: gis
+Delta|e05|input|	subI rfp, 8 => r21 // load return value address on r21
+Delta|e05|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e05|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e05|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e05|input|	load r21 => r22 
+Delta|e05|input|	storeAI r22 => rbss, 0 // store at Memory[rbss + 0] = r22: K = r22
+Delta|e05|input|	halt
+Delta|e05|input|
+Delta|e05|input|
+Delta|e05|output|count	instruction
+Delta|e05|output|   24	addI
+Delta|e05|output|   21	loadAI
+Delta|e05|output|   16	storeAI
+Delta|e05|output|   16	subI
+Delta|e05|output|   12	loadI
+Delta|e05|output|    9	nop
+Delta|e05|output|    8	store
+Delta|e05|output|    8	load
+Delta|e05|output|    5	jumpI
+Delta|e05|output|    4	cmp_EQ
+Delta|e05|output|    4	cbr
+Delta|e05|output|    4	jump
+Delta|e05|output|    3	sub
+Delta|e05|output|    3	add
+Delta|e05|output|    1	halt
+Delta|e05|output|
+Delta|e05|output|instructions executed:  138
+Delta|e05|output|register         read:  145 write:  226
+Delta|e05|output|memory           read:   29 write:   24
+Delta|e05|output|
+Delta|e05|output|  register    value
+Delta|e05|output|        r0        0
+Delta|e05|output|        r1        0
+Delta|e05|output|       r10       31
+Delta|e05|output|       r11    33815
+Delta|e05|output|       r12        4
+Delta|e05|output|       r13        3
+Delta|e05|output|       r14        7
+Delta|e05|output|       r15        7
+Delta|e05|output|       r16    33791
+Delta|e05|output|       r17    33795
+Delta|e05|output|       r18       56
+Delta|e05|output|       r19        3
+Delta|e05|output|        r2        1
+Delta|e05|output|       r20       56
+Delta|e05|output|       r21    33791
+Delta|e05|output|       r22        7
+Delta|e05|output|        r3        1
+Delta|e05|output|        r4    33863
+Delta|e05|output|        r5    33867
+Delta|e05|output|        r6       31
+Delta|e05|output|        r7        1
+Delta|e05|output|        r8        1
+Delta|e05|output|        r9        0
+Delta|e05|output|      rbss    16891
+Delta|e05|output|       rfp    33783
+Delta|e05|output|       rpc       62
+Delta|e05|output|       rsp    33783
+Delta|e05|output|
+Delta|e05|output|    memory    value
+Delta|e05|output|00016891        7
+Delta|e05|output|00033783    33783
+Delta|e05|output|00033787    33783
+Delta|e05|output|00033791        7
+Delta|e05|output|00033795       56
+Delta|e05|output|00033799        3
+Delta|e05|output|00033803        7
+Delta|e05|output|00033807    33799
+Delta|e05|output|00033811    33807
+Delta|e05|output|00033815        4
+Delta|e05|output|00033819       31
+Delta|e05|output|00033823        2
+Delta|e05|output|00033827        4
+Delta|e05|output|00033831    33823
+Delta|e05|output|00033835    33831
+Delta|e05|output|00033839        2
+Delta|e05|output|00033843       31
+Delta|e05|output|00033847        1
+Delta|e05|output|00033851        2
+Delta|e05|output|00033855    33847
+Delta|e05|output|00033859    33855
+Delta|e05|output|00033863        1
+Delta|e05|output|00033867       31
+Delta|e05|output|00033871        0
+Delta|0
+Delta|e05|sixit|0
+Delta|e05|memory|00016891|7
+Delta|e05|memory|00033783|33783
+Delta|e05|memory|00033787|33783
+Delta|e05|memory|00033791|7
+Delta|e05|memory|00033795|56
+Delta|e05|memory|00033799|3
+Delta|e05|memory|00033803|7
+Delta|e05|memory|00033807|33799
+Delta|e05|memory|00033811|33807
+Delta|e05|memory|00033815|4
+Delta|e05|memory|00033819|31
+Delta|e05|memory|00033823|2
+Delta|e05|memory|00033827|4
+Delta|e05|memory|00033831|33823
+Delta|e05|memory|00033835|33831
+Delta|e05|memory|00033839|2
+Delta|e05|memory|00033843|31
+Delta|e05|memory|00033847|1
+Delta|e05|memory|00033851|2
+Delta|e05|memory|00033855|33847
+Delta|e05|instruction|24|addI
+Delta|e05|instruction|21|loadAI
+Delta|e05|instruction|16|storeAI
+Delta|e05|instruction|16|subI
+Delta|e05|instruction|12|loadI
+Delta|e05|instruction|9|nop
+Delta|e05|instruction|8|store
+Delta|e05|instruction|8|load
+Delta|e05|instruction|5|jumpI
+Delta|e05|instruction|4|cmp_EQ
+Delta|e05|instruction|4|cbr
+Delta|e05|instruction|4|jump
+Delta|e05|instruction|3|sub
+Delta|e05|instruction|3|add
+Delta|e05|instruction|1|halt
+Delta|e06|stack|29919
+Delta|e06|data|14959
+Delta|e06|input|	loadI 1024 => rfp
+Delta|e06|input|	loadI 1024 => rsp
+Delta|e06|input|	loadI 103 => rbss
+Delta|e06|input|	jumpI  => L2
+Delta|e06|input|L0:	nop // f: return address on rfp -4, 4 bytes: 13 instructions
+Delta|e06|input|	addI rsp, 4 => rsp // w, 4 bytes
+Delta|e06|input|	addI rsp, 4 => rsp // z, 4 bytes
+Delta|e06|input|	loadAI rfp, 4 => r0 // load z into: r0 = Memory[rfp + 4]
+Delta|e06|input|	loadAI rfp, 0 => r1 // load w into: r1 = Memory[rfp + 0]
+Delta|e06|input|	mult r0, r1 => r2 
+Delta|e06|input|	subI rfp, 8 => r3 // load of register with return value: r3
+Delta|e06|input|	store r2 => r3 // save return value on Memory(rfp - 8) = r2
+Delta|e06|input|	subI rfp, 4 => r4 // load return address to register r4
+Delta|e06|input|	load r4 => r5 
+Delta|e06|input|	jump => r5 
+Delta|e06|input|L1:	nop // mult: return address on rfp -4, 4 bytes: 50 instructions
+Delta|e06|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|e06|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|e06|input|	addI rsp, 4 => rsp // w, 4 bytes
+Delta|e06|input|	addI rsp, 4 => rsp // z, 4 bytes
+Delta|e06|input|	addI rsp, 4 => rsp // x, 4 bytes
+Delta|e06|input|	loadAI rfp, 4 => r6 // load a into: r6 = Memory[rfp + 4]
+Delta|e06|input|	loadAI rfp, 0 => r7 // load b into: r7 = Memory[rfp + 0]
+Delta|e06|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e06|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e06|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e06|input|	addI rpc, 7 => r8 // save return address in r8
+Delta|e06|input|	storeAI r8 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e06|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e06|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e06|input|	storeAI r6 => rfp, 4 
+Delta|e06|input|	storeAI r7 => rfp, 0 
+Delta|e06|input|	jumpI => L0 // jump to function: f
+Delta|e06|input|	subI rfp, 8 => r9 // load return value address on r9
+Delta|e06|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e06|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e06|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e06|input|	load r9 => r10 
+Delta|e06|input|	loadAI rfp, 12 => r11 // load z into: r11 = Memory[rfp + 12]
+Delta|e06|input|	loadAI rfp, 8 => r12 // load w into: r12 = Memory[rfp + 8]
+Delta|e06|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e06|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e06|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e06|input|	addI rpc, 7 => r13 // save return address in r13
+Delta|e06|input|	storeAI r13 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e06|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e06|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e06|input|	storeAI r11 => rfp, 4 
+Delta|e06|input|	storeAI r12 => rfp, 0 
+Delta|e06|input|	jumpI => L0 // jump to function: f
+Delta|e06|input|	subI rfp, 8 => r14 // load return value address on r14
+Delta|e06|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e06|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e06|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e06|input|	load r14 => r15 
+Delta|e06|input|	add r10, r15 => r16 
+Delta|e06|input|	storeAI r16 => rbss, 0 // store at Memory[rbss + 0] = r16: x = r16
+Delta|e06|input|	loadAI rbss, 0 => r17 // load GLOBAL x into: r17 = Memory[rfp + 0]
+Delta|e06|input|	subI rfp, 8 => r18 // load of register with return value: r18
+Delta|e06|input|	store r17 => r18 // save return value on Memory(rfp - 8) = r17
+Delta|e06|input|	subI rfp, 4 => r19 // load return address to register r19
+Delta|e06|input|	load r19 => r20 
+Delta|e06|input|	jump => r20 
+Delta|e06|input|L2:	nop // main: 38 instructions
+Delta|e06|input|	addI rsp, 4 => rsp // y, 4 bytes
+Delta|e06|input|	addI rsp, 4 => rsp // z, 4 bytes
+Delta|e06|input|	loadI 2018 => r21 
+Delta|e06|input|	storeAI r21 => rbss, 0 // store at Memory[rbss + 0] = r21: x = r21
+Delta|e06|input|	loadI 2 => r22 
+Delta|e06|input|	storeAI r22 => rfp, 0 // store at Memory[rfp + 0] = r22: y = r22
+Delta|e06|input|	loadI 2 => r23 
+Delta|e06|input|	storeAI r23 => rfp, 4 // store at Memory[rfp + 4] = r23: z = r23
+Delta|e06|input|	loadAI rfp, 0 => r24 // load y into: r24 = Memory[rfp + 0]
+Delta|e06|input|	loadI 3 => r25 
+Delta|e06|input|	mult r24, r25 => r26 
+Delta|e06|input|	loadAI rfp, 0 => r27 // load y into: r27 = Memory[rfp + 0]
+Delta|e06|input|	loadI 3 => r28 
+Delta|e06|input|	mult r27, r28 => r29 
+Delta|e06|input|	loadAI rfp, 4 => r30 // load z into: r30 = Memory[rfp + 4]
+Delta|e06|input|	loadI 2 => r31 
+Delta|e06|input|	mult r30, r31 => r32 
+Delta|e06|input|	loadAI rfp, 4 => r33 // load z into: r33 = Memory[rfp + 4]
+Delta|e06|input|	loadI 2 => r34 
+Delta|e06|input|	mult r33, r34 => r35 
+Delta|e06|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e06|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e06|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e06|input|	addI rpc, 9 => r36 // save return address in r36
+Delta|e06|input|	storeAI r36 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e06|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e06|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e06|input|	storeAI r26 => rfp, 12 
+Delta|e06|input|	storeAI r29 => rfp, 8 
+Delta|e06|input|	storeAI r32 => rfp, 4 
+Delta|e06|input|	storeAI r35 => rfp, 0 
+Delta|e06|input|	jumpI => L1 // jump to function: mult
+Delta|e06|input|	subI rfp, 8 => r37 // load return value address on r37
+Delta|e06|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e06|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e06|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e06|input|	load r37 => r38 
+Delta|e06|input|	storeAI r38 => rbss, 4 // store at Memory[rbss + 4] = r38: K = r38
+Delta|e06|input|	halt
+Delta|e06|input|
+Delta|e06|input|
+Delta|e06|output|count	instruction
+Delta|e06|output|   23	addI
+Delta|e06|output|   19	storeAI
+Delta|e06|output|   19	loadAI
+Delta|e06|output|   12	subI
+Delta|e06|output|   10	loadI
+Delta|e06|output|    6	mult
+Delta|e06|output|    6	store
+Delta|e06|output|    6	load
+Delta|e06|output|    4	jumpI
+Delta|e06|output|    4	nop
+Delta|e06|output|    3	jump
+Delta|e06|output|    1	add
+Delta|e06|output|    1	halt
+Delta|e06|output|
+Delta|e06|output|instructions executed:  114
+Delta|e06|output|register         read:  127 write:  188
+Delta|e06|output|memory           read:   25 write:   25
+Delta|e06|output|
+Delta|e06|output|  register    value
+Delta|e06|output|        r0        6
+Delta|e06|output|        r1        6
+Delta|e06|output|       r10       16
+Delta|e06|output|       r11        6
+Delta|e06|output|       r12        6
+Delta|e06|output|       r13       50
+Delta|e06|output|       r14    29971
+Delta|e06|output|       r15       36
+Delta|e06|output|       r16       52
+Delta|e06|output|       r17       52
+Delta|e06|output|       r18    29935
+Delta|e06|output|       r19    29939
+Delta|e06|output|        r2       36
+Delta|e06|output|       r20       96
+Delta|e06|output|       r21     2018
+Delta|e06|output|       r22        2
+Delta|e06|output|       r23        2
+Delta|e06|output|       r24        2
+Delta|e06|output|       r25        3
+Delta|e06|output|       r26        6
+Delta|e06|output|       r27        2
+Delta|e06|output|       r28        3
+Delta|e06|output|       r29        6
+Delta|e06|output|        r3    29971
+Delta|e06|output|       r30        2
+Delta|e06|output|       r31        2
+Delta|e06|output|       r32        4
+Delta|e06|output|       r33        2
+Delta|e06|output|       r34        2
+Delta|e06|output|       r35        4
+Delta|e06|output|       r36       96
+Delta|e06|output|       r37    29935
+Delta|e06|output|       r38       52
+Delta|e06|output|        r4    29975
+Delta|e06|output|        r5       50
+Delta|e06|output|        r6        4
+Delta|e06|output|        r7        4
+Delta|e06|output|        r8       33
+Delta|e06|output|        r9    29971
+Delta|e06|output|      rbss    14959
+Delta|e06|output|       rfp    29919
+Delta|e06|output|       rpc      102
+Delta|e06|output|       rsp    29927
+Delta|e06|output|
+Delta|e06|output|    memory    value
+Delta|e06|output|00014959       52
+Delta|e06|output|00014963       52
+Delta|e06|output|00029919        2
+Delta|e06|output|00029923        2
+Delta|e06|output|00029927    29919
+Delta|e06|output|00029931    29927
+Delta|e06|output|00029935       52
+Delta|e06|output|00029939       96
+Delta|e06|output|00029943        4
+Delta|e06|output|00029947        4
+Delta|e06|output|00029951        6
+Delta|e06|output|00029955        6
+Delta|e06|output|00029963    29943
+Delta|e06|output|00029967    29963
+Delta|e06|output|00029971       36
+Delta|e06|output|00029975       50
+Delta|e06|output|00029979        6
+Delta|e06|output|00029983        6
+Delta|0
+Delta|e06|sixit|0
+Delta|e06|memory|00014959|52
+Delta|e06|memory|00014963|52
+Delta|e06|memory|00029919|2
+Delta|e06|memory|00029923|2
+Delta|e06|memory|00029927|29919
+Delta|e06|memory|00029931|29927
+Delta|e06|memory|00029935|52
+Delta|e06|memory|00029939|96
+Delta|e06|memory|00029943|4
+Delta|e06|memory|00029947|4
+Delta|e06|memory|00029951|6
+Delta|e06|memory|00029955|6
+Delta|e06|memory|00029963|29943
+Delta|e06|memory|00029967|29963
+Delta|e06|memory|00029971|36
+Delta|e06|memory|00029975|50
+Delta|e06|memory|00029979|6
+Delta|e06|memory|00029983|6
+Delta|e06|instruction|23|addI
+Delta|e06|instruction|19|storeAI
+Delta|e06|instruction|19|loadAI
+Delta|e06|instruction|12|subI
+Delta|e06|instruction|10|loadI
+Delta|e06|instruction|6|mult
+Delta|e06|instruction|6|store
+Delta|e06|instruction|6|load
+Delta|e06|instruction|4|jumpI
+Delta|e06|instruction|4|nop
+Delta|e06|instruction|3|jump
+Delta|e06|instruction|1|add
+Delta|e06|instruction|1|halt
+Delta|e07|stack|10956
+Delta|e07|data|5478
+Delta|e07|input|	loadI 1024 => rfp
+Delta|e07|input|	loadI 1024 => rsp
+Delta|e07|input|	loadI 138 => rbss
+Delta|e07|input|	jumpI  => L2
+Delta|e07|input|L0:	nop // f: return address on rfp -4, 4 bytes: 16 instructions
+Delta|e07|input|	addI rsp, 4 => rsp // w, 4 bytes
+Delta|e07|input|	addI rsp, 4 => rsp // z, 4 bytes
+Delta|e07|input|	addI rsp, 4 => rsp // aux, 4 bytes
+Delta|e07|input|	loadAI rfp, 4 => r0 // load z into: r0 = Memory[rfp + 4]
+Delta|e07|input|	loadAI rfp, 0 => r1 // load w into: r1 = Memory[rfp + 0]
+Delta|e07|input|	mult r0, r1 => r2 
+Delta|e07|input|	storeAI r2 => rfp, 8 // store at Memory[rfp + 8] = r2: aux = r2
+Delta|e07|input|	loadAI rfp, 8 => r3 // load aux into: r3 = Memory[rfp + 8]
+Delta|e07|input|	subI rfp, 8 => r4 // load of register with return value: r4
+Delta|e07|input|	store r3 => r4 // save return value on Memory(rfp - 8) = r3
+Delta|e07|input|	subI rfp, 4 => r5 // load return address to register r5
+Delta|e07|input|	load r5 => r6 
+Delta|e07|input|	jump => r6 
+Delta|e07|input|L1:	nop // mult: return address on rfp -4, 4 bytes: 82 instructions
+Delta|e07|input|	addI rsp, 4 => rsp // b, 4 bytes
+Delta|e07|input|	addI rsp, 4 => rsp // a, 4 bytes
+Delta|e07|input|	addI rsp, 4 => rsp // w, 4 bytes
+Delta|e07|input|	addI rsp, 4 => rsp // z, 4 bytes
+Delta|e07|input|	addI rsp, 4 => rsp // x, 4 bytes
+Delta|e07|input|	loadAI rfp, 4 => r7 // load a into: r7 = Memory[rfp + 4]
+Delta|e07|input|	loadAI rfp, 0 => r8 // load b into: r8 = Memory[rfp + 0]
+Delta|e07|input|	loadAI rfp, 0 => r9 // load b into: r9 = Memory[rfp + 0]
+Delta|e07|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e07|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e07|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e07|input|	addI rpc, 7 => r10 // save return address in r10
+Delta|e07|input|	storeAI r10 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e07|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e07|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e07|input|	storeAI r8 => rfp, 4 
+Delta|e07|input|	storeAI r9 => rfp, 0 
+Delta|e07|input|	jumpI => L0 // jump to function: f
+Delta|e07|input|	subI rfp, 8 => r11 // load return value address on r11
+Delta|e07|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e07|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e07|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e07|input|	load r11 => r12 
+Delta|e07|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e07|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e07|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e07|input|	addI rpc, 7 => r13 // save return address in r13
+Delta|e07|input|	storeAI r13 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e07|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e07|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e07|input|	storeAI r7 => rfp, 4 
+Delta|e07|input|	storeAI r12 => rfp, 0 
+Delta|e07|input|	jumpI => L0 // jump to function: f
+Delta|e07|input|	subI rfp, 8 => r14 // load return value address on r14
+Delta|e07|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e07|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e07|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e07|input|	load r14 => r15 
+Delta|e07|input|	loadAI rfp, 12 => r16 // load z into: r16 = Memory[rfp + 12]
+Delta|e07|input|	loadAI rfp, 12 => r17 // load z into: r17 = Memory[rfp + 12]
+Delta|e07|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e07|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e07|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e07|input|	addI rpc, 7 => r18 // save return address in r18
+Delta|e07|input|	storeAI r18 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e07|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e07|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e07|input|	storeAI r16 => rfp, 4 
+Delta|e07|input|	storeAI r17 => rfp, 0 
+Delta|e07|input|	jumpI => L0 // jump to function: f
+Delta|e07|input|	subI rfp, 8 => r19 // load return value address on r19
+Delta|e07|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e07|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e07|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e07|input|	load r19 => r20 
+Delta|e07|input|	loadAI rfp, 8 => r21 // load w into: r21 = Memory[rfp + 8]
+Delta|e07|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e07|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e07|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e07|input|	addI rpc, 7 => r22 // save return address in r22
+Delta|e07|input|	storeAI r22 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e07|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e07|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e07|input|	storeAI r20 => rfp, 4 
+Delta|e07|input|	storeAI r21 => rfp, 0 
+Delta|e07|input|	jumpI => L0 // jump to function: f
+Delta|e07|input|	subI rfp, 8 => r23 // load return value address on r23
+Delta|e07|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e07|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e07|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e07|input|	load r23 => r24 
+Delta|e07|input|	add r15, r24 => r25 
+Delta|e07|input|	storeAI r25 => rbss, 0 // store at Memory[rbss + 0] = r25: x = r25
+Delta|e07|input|	loadAI rbss, 0 => r26 // load GLOBAL x into: r26 = Memory[rfp + 0]
+Delta|e07|input|	subI rfp, 8 => r27 // load of register with return value: r27
+Delta|e07|input|	store r26 => r27 // save return value on Memory(rfp - 8) = r26
+Delta|e07|input|	subI rfp, 4 => r28 // load return address to register r28
+Delta|e07|input|	load r28 => r29 
+Delta|e07|input|	jump => r29 
+Delta|e07|input|L2:	nop // main: 38 instructions
+Delta|e07|input|	addI rsp, 4 => rsp // y, 4 bytes
+Delta|e07|input|	addI rsp, 4 => rsp // z, 4 bytes
+Delta|e07|input|	loadI 2019 => r30 
+Delta|e07|input|	storeAI r30 => rbss, 0 // store at Memory[rbss + 0] = r30: x = r30
+Delta|e07|input|	loadI 2 => r31 
+Delta|e07|input|	storeAI r31 => rfp, 0 // store at Memory[rfp + 0] = r31: y = r31
+Delta|e07|input|	loadI 2 => r32 
+Delta|e07|input|	storeAI r32 => rfp, 4 // store at Memory[rfp + 4] = r32: z = r32
+Delta|e07|input|	loadAI rfp, 0 => r33 // load y into: r33 = Memory[rfp + 0]
+Delta|e07|input|	loadI 3 => r34 
+Delta|e07|input|	mult r33, r34 => r35 
+Delta|e07|input|	loadAI rfp, 0 => r36 // load y into: r36 = Memory[rfp + 0]
+Delta|e07|input|	loadI 4 => r37 
+Delta|e07|input|	mult r36, r37 => r38 
+Delta|e07|input|	loadAI rfp, 4 => r39 // load z into: r39 = Memory[rfp + 4]
+Delta|e07|input|	loadI 2 => r40 
+Delta|e07|input|	mult r39, r40 => r41 
+Delta|e07|input|	loadAI rfp, 4 => r42 // load z into: r42 = Memory[rfp + 4]
+Delta|e07|input|	loadI 2 => r43 
+Delta|e07|input|	mult r42, r43 => r44 
+Delta|e07|input|	store rfp => rsp // save RFP value to stack at: Memory[rsp + 0] = rfp
+Delta|e07|input|	storeAI rsp => rsp, 4 // save RSP value to stack at: Memory[rsp + 4] = rsp
+Delta|e07|input|	addI rsp, 0 => rfp // rfp = rsp
+Delta|e07|input|	addI rpc, 9 => r45 // save return address in r45
+Delta|e07|input|	storeAI r45 => rfp, 12 // load return address to activation registry on stack: Memory[rfp + 12]
+Delta|e07|input|	addI rfp, 16 => rfp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e07|input|	addI rsp, 16 => rsp // allocate space for [RFP, RSP, Return Value, Return Address]
+Delta|e07|input|	storeAI r35 => rfp, 12 
+Delta|e07|input|	storeAI r38 => rfp, 8 
+Delta|e07|input|	storeAI r41 => rfp, 4 
+Delta|e07|input|	storeAI r44 => rfp, 0 
+Delta|e07|input|	jumpI => L1 // jump to function: mult
+Delta|e07|input|	subI rfp, 8 => r46 // load return value address on r46
+Delta|e07|input|	subI rfp, 16 => rfp // unroll activation registry from rfp
+Delta|e07|input|	loadAI rfp, 4 => rsp // restore rsp first to avoid losing addresses
+Delta|e07|input|	loadAI rfp, 0 => rfp // and then restore rfp overriding its current value
+Delta|e07|input|	load r46 => r47 
+Delta|e07|input|	storeAI r47 => rbss, 4 // store at Memory[rbss + 4] = r47: K = r47
+Delta|e07|input|	halt
+Delta|e07|input|
+Delta|e07|input|
+Delta|e07|output|count	instruction
+Delta|e07|output|   39	addI
+Delta|e07|output|   33	loadAI
+Delta|e07|output|   31	storeAI
+Delta|e07|output|   20	subI
+Delta|e07|output|   10	loadI
+Delta|e07|output|   10	store
+Delta|e07|output|   10	load
+Delta|e07|output|    8	mult
+Delta|e07|output|    6	jumpI
+Delta|e07|output|    6	nop
+Delta|e07|output|    5	jump
+Delta|e07|output|    1	add
+Delta|e07|output|    1	halt
+Delta|e07|output|
+Delta|e07|output|instructions executed:  180
+Delta|e07|output|register         read:  207 write:  298
+Delta|e07|output|memory           read:   43 write:   41
+Delta|e07|output|
+Delta|e07|output|  register    value
+Delta|e07|output|        r0       36
+Delta|e07|output|        r1        8
+Delta|e07|output|       r10       37
+Delta|e07|output|       r11    11008
+Delta|e07|output|       r12       16
+Delta|e07|output|       r13       52
+Delta|e07|output|       r14    11008
+Delta|e07|output|       r15       64
+Delta|e07|output|       r16        6
+Delta|e07|output|       r17        6
+Delta|e07|output|       r18       69
+Delta|e07|output|       r19    11008
+Delta|e07|output|        r2      288
+Delta|e07|output|       r20       36
+Delta|e07|output|       r21        8
+Delta|e07|output|       r22       85
+Delta|e07|output|       r23    11008
+Delta|e07|output|       r24      288
+Delta|e07|output|       r25      352
+Delta|e07|output|       r26      352
+Delta|e07|output|       r27    10972
+Delta|e07|output|       r28    10976
+Delta|e07|output|       r29      131
+Delta|e07|output|        r3      288
+Delta|e07|output|       r30     2019
+Delta|e07|output|       r31        2
+Delta|e07|output|       r32        2
+Delta|e07|output|       r33        2
+Delta|e07|output|       r34        3
+Delta|e07|output|       r35        6
+Delta|e07|output|       r36        2
+Delta|e07|output|       r37        4
+Delta|e07|output|       r38        8
+Delta|e07|output|       r39        2
+Delta|e07|output|        r4    11008
+Delta|e07|output|       r40        2
+Delta|e07|output|       r41        4
+Delta|e07|output|       r42        2
+Delta|e07|output|       r43        2
+Delta|e07|output|       r44        4
+Delta|e07|output|       r45      131
+Delta|e07|output|       r46    10972
+Delta|e07|output|       r47      352
+Delta|e07|output|        r5    11012
+Delta|e07|output|        r6       85
+Delta|e07|output|        r7        4
+Delta|e07|output|        r8        4
+Delta|e07|output|        r9        4
+Delta|e07|output|      rbss     5478
+Delta|e07|output|       rfp    10956
+Delta|e07|output|       rpc      137
+Delta|e07|output|       rsp    10964
+Delta|e07|output|
+Delta|e07|output|    memory    value
+Delta|e07|output|00005478      352
+Delta|e07|output|00005482      352
+Delta|e07|output|00010956        2
+Delta|e07|output|00010960        2
+Delta|e07|output|00010964    10956
+Delta|e07|output|00010968    10964
+Delta|e07|output|00010972      352
+Delta|e07|output|00010976      131
+Delta|e07|output|00010980        4
+Delta|e07|output|00010984        4
+Delta|e07|output|00010988        8
+Delta|e07|output|00010992        6
+Delta|e07|output|00011000    10980
+Delta|e07|output|00011004    11000
+Delta|e07|output|00011008      288
+Delta|e07|output|00011012       85
+Delta|e07|output|00011016        8
+Delta|e07|output|00011020       36
+Delta|e07|output|00011024      288
+Delta|0
+Delta|e07|sixit|0
+Delta|e07|memory|00005478|352
+Delta|e07|memory|00005482|352
+Delta|e07|memory|00010956|2
+Delta|e07|memory|00010960|2
+Delta|e07|memory|00010964|10956
+Delta|e07|memory|00010968|10964
+Delta|e07|memory|00010972|352
+Delta|e07|memory|00010976|131
+Delta|e07|memory|00010980|4
+Delta|e07|memory|00010984|4
+Delta|e07|memory|00010988|8
+Delta|e07|memory|00010992|6
+Delta|e07|memory|00011000|10980
+Delta|e07|memory|00011004|11000
+Delta|e07|memory|00011008|288
+Delta|e07|memory|00011012|85
+Delta|e07|memory|00011016|8
+Delta|e07|memory|00011020|36
+Delta|e07|memory|00011024|288
+Delta|e07|instruction|39|addI
+Delta|e07|instruction|33|loadAI
+Delta|e07|instruction|31|storeAI
+Delta|e07|instruction|20|subI
+Delta|e07|instruction|10|loadI
+Delta|e07|instruction|10|store
+Delta|e07|instruction|10|load
+Delta|e07|instruction|8|mult
+Delta|e07|instruction|6|jumpI
+Delta|e07|instruction|6|nop
+Delta|e07|instruction|5|jump
+Delta|e07|instruction|1|add
+Delta|e07|instruction|1|halt
