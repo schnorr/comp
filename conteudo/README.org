@@ -98,6 +98,10 @@ PDF.
  |------------+----------------------------------+--------+-------+-------+--------|
  | Closure    | [[./aulas/geral/encerramento.org][Discussão (aka: What's now?)]]     |        |       |       |        |
 
+** Ferramentas auxiliares
+
+- https://godbolt.org/
+
 * Revisão P1 (2019/1)
 
 1. Utilizamos o autômato LR(0) do slide 13 em [[./lr0.org]]
