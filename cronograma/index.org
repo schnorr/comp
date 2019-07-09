@@ -92,7 +92,9 @@ ymd("2019-10-23"), # SEMAC
 ymd("2019-10-24"), # SEMAC
 ymd("2019-10-25"), # SEMAC
 ymd("2019-11-02"), # Mortos
-ymd("2019-11-15")  # República
+ymd("2019-11-15"), # República
+ymd("2019-11-23"), # Não Letivo
+ymd("2019-11-30")  # Não Letivo
 )
 
 dataDaRecuperação <- ymd("2019-07-01");
