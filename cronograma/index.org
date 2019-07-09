@@ -197,8 +197,8 @@ aulas %>%
 #+begin_src R :results output :session :exports both
 cronograma.modelo.filename = "data/be/43e1ff-0a91-4c3f-9e17-1fa62e6795ce/layout-cronograma.tex"
 cronograma.modelo = readChar(cronograma.modelo.filename, file.info(cronograma.modelo.filename)$size);
-turma = "B";
-semestre = "2019/1 -- Outono";
+turma = "A";
+semestre = "2019/2 -- Inverno/Primavera";
 cronograma.modelo <- gsub("TURMA", turma, cronograma.modelo);
 cronograma.modelo <- gsub("SEMESTRE", semestre, cronograma.modelo);
 cronograma.modelo <- gsub("TABELA", gsub("\\\\", "\\\\\\\\", cronograma), cronograma.modelo);
