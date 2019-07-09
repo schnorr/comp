@@ -211,7 +211,6 @@ system2("rubber", " --pdf cronograma.tex")
 #+RESULTS: modelo_cronograma
 : 
 : compiling cronograma.tex...
-: compiling cronograma.tex...
 
 * Cronograma
 
