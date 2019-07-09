@@ -85,12 +85,12 @@ ymd("2019-06-20"), # Religioso
 ymd("2019-09-07"), # Independência
 ymd("2019-09-20"), # Farroupilha
 ymd("2019-10-12"), # Religioso
-ymd("2019-10-14"), # SEMAC
-ymd("2019-10-15"), # SEMAC
-ymd("2019-10-16"), # SEMAC
-ymd("2019-10-17"), # SEMAC
-ymd("2019-10-18"), # SEMAC
 ymd("2019-10-20"), # Não Letivo
+ymd("2019-10-21"), # SEMAC
+ymd("2019-10-22"), # SEMAC
+ymd("2019-10-23"), # SEMAC
+ymd("2019-10-24"), # SEMAC
+ymd("2019-10-25"), # SEMAC
 ymd("2019-11-02"), # Mortos
 ymd("2019-11-15")  # República
 )
