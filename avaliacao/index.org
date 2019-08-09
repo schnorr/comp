@@ -23,13 +23,15 @@
 #+EXPORT_SELECT_TAGS: export
 #+TAGS: noexport(n) deprecated(d)
 
+Aguarde.
+
 * Ponderações gerais
 
 Para tomar conhecimento novamente das fórmulas utilizadas:
 - [[./plano/index.org][As ponderações gerais]]
 - [[./projeto/README.org][As ponderações das etapas do projeto]]
 
-* Conceitos e Notas Finais
+* Conceitos e Notas Finais                                         :noexport:
 
 Em 08/07, pós-recuperação.
 
@@ -41,7 +43,7 @@ Em 08/07, pós-recuperação.
 | ???782 | 8.33 | 5.68 |    0 | 6.99 |     7 |   96 | C        |
 | ???103 | 0.83 | 5.41 | 4.55 | 7.71 |  6.13 |   80 | C        |
 
-* Detalhamento Geral
+* Detalhamento Geral                                               :noexport:
 
 Situação em 08/07, pós-recuperação.
 
@@ -53,7 +55,7 @@ Situação em 08/07, pós-recuperação.
 | ???698 |  9.8 |   10 |  9.9 |   10 |   10 |   10 | 9.23 |    9 |   10 |   10 |   10 |   10 |      3 |   88 | 7.11 | 9.46 |    0 | 9.83 |
 | ???782 |   10 |   10 |  9.3 |  9.5 |   10 |  9.5 | 9.71 |    4 | 7.92 |    6 |    0 |    0 |      1 |   96 | 8.33 | 5.68 |    0 | 6.99 |
 
-* PR
+* PR                                                               :noexport:
 ** Gabarito
 
 PR espera 33 respostas, com o gabarito abaixo.
@@ -175,7 +177,7 @@ PR espera 33 respostas, com o gabarito abaixo.
 | ???103 | 18.N    | =2 4 1 0 0= | =2 1 1 0 0= | FALSE   |
 | ???103 | 18.O    | =C=         | =E=         | FALSE   |
 
-* P2
+* P2                                                               :noexport:
 ** Gabarito
 
 P2 espera 37 respostas, com o gabarito abaixo.
@@ -475,7 +477,7 @@ São listadas todas as ~184~ respostas com valores:
 | ???782 | 15.M    | B                                     | A                                  | FALSE   |
 | ???782 | 15.O    | C                                     | D                                  | FALSE   |
 
-* P1
+* P1                                                               :noexport:
 ** Gabarito
 
 |    E | Gabarito |
