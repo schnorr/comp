@@ -3,8 +3,11 @@
 #+STARTUP: overview indent
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
+#+TAGS: noexport(n) deprecated(d)
 
-* Avaliação das Etapas do Projeto de Compilador
+Aguarde.
+
+* Avaliação das Etapas do Projeto de Compilador                    :noexport:
 ** Sumário
 
 | Relatório de Avaliação |
@@ -29,7 +32,7 @@ Temos 5 grupos.
 | Epsilon | ???369 |
 | Alpha   | ???782 |
 
-* Avaliação da Etapa 1
+* Avaliação da Etapa 1                                             :noexport:
 ** Comentários por grupo
 *** Epsilon
 
@@ -91,7 +94,7 @@ OK Problema do + no literal inteiro e ponto flutuante
 | Epsilon | E1.O      |   10 |
 | Lambda  | E1.O      |   10 |
 
-* Avaliação da Etapa 2
+* Avaliação da Etapa 2                                             :noexport:
 ** Comentários por grupo
 *** Epsilon
 
@@ -177,7 +180,7 @@ Nenhum.
 | Epsilon | E2.O      |  9.3 |
 | Lambda  | E2.O      |   10 |
 
-* Avaliação da Etapa 3
+* Avaliação da Etapa 3                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
 | Grupo   |
@@ -486,7 +489,7 @@ O grupo ~Delta~ entregou com atraso.
 | Delta  |   10 |    0 |
 | Lambda |   10 |  9.5 |
 
-* Avaliação da Etapa 4
+* Avaliação da Etapa 4                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
 | Grupo |
@@ -764,7 +767,7 @@ Os grupos não listados na tabela abaixo não submeteram.
 | Delta  | 9.04 |    3 |
 | Lambda | 8.27 |    9 |
 
-* Avaliação da Etapa 5
+* Avaliação da Etapa 5                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
 | Grupo   | ID     |
@@ -1142,7 +1145,7 @@ Fizeram tudo.
 | Beta   |   10 |   10 |
 | Delta  | 9.58 |    7 |
 | Lambda |   10 |   10 |
-* Avaliação da Etapa 6
+* Avaliação da Etapa 6                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
 | Grupo   | ID     |
