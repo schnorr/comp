@@ -47,17 +47,17 @@
 | Semântica  | Implementação de Esquemas S e L-Atribuídos                       |           | Início E4 (Tipos)   |
 |            | Revisão                                                          |           |                     |
 |            | P1                                                               |           |                     |
-|            |                                                                  | 43413-104 | Avaliação E3        |
 | Código     | Declarações, Escopos e Atribuição                                |           |                     |
+|            |                                                                  | 43413-104 | Avaliação E3        |
 | Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |           |                     |
 | Código     | Endereçamento de Arranjos multidimensionais                      |           | Início E5 (Código)  |
-|            |                                                                  | 43413-104 | Avaliação E4        |
 | Código     | Controle de Fluxo                                                |           |                     |
+|            |                                                                  | 43413-104 | Avaliação E4        |
 | Código     | Controle de Fluxo                                                |           |                     |
 | Execução   | Introdução, Registro de Ativação                                 |           |                     |
 | Execução   | Chamada e retorno de Função, Passagem de parâmetros              |           | Início E6 (Chamada) |
-|            |                                                                  | 43413-104 | Avaliação E5        |
 | Otimização | Introdução, Janela e Grafos de Fluxo                             |           |                     |
+|            |                                                                  | 43413-103 | Avaliação E5        |
 | Otimização | Grafos de Fluxo e Redução de potência                            |           |                     |
 |            | Revisão                                                          |           |                     |
 |            | P2                                                               |           |                     |
@@ -241,17 +241,17 @@ aulas %>%
 | 13 | 2019-09-23 |           | Semântica  | Implementação de Esquemas S e L-Atribuídos                       | Início E4 (Tipos)   |
 | 14 | 2019-09-25 |           |            | Revisão                                                          |                     |
 | 15 | 2019-09-30 |           |            | P1                                                               |                     |
-| 16 | 2019-10-02 | 43413-104 |            |                                                                  | Avaliação E3        |
-| 17 | 2019-10-07 |           | Código     | Declarações, Escopos e Atribuição                                |                     |
+| 16 | 2019-10-02 |           | Código     | Declarações, Escopos e Atribuição                                |                     |
+| 17 | 2019-10-07 | 43413-104 |            |                                                                  | Avaliação E3        |
 | 18 | 2019-10-09 |           | Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |                     |
 | 19 | 2019-10-14 |           | Código     | Endereçamento de Arranjos multidimensionais                      | Início E5 (Código)  |
-| 20 | 2019-10-16 | 43413-104 |            |                                                                  | Avaliação E4        |
-| 21 | 2019-10-28 |           | Código     | Controle de Fluxo                                                |                     |
+| 20 | 2019-10-16 |           | Código     | Controle de Fluxo                                                |                     |
+| 21 | 2019-10-28 | 43413-104 |            |                                                                  | Avaliação E4        |
 | 22 | 2019-10-30 |           | Código     | Controle de Fluxo                                                |                     |
 | 23 | 2019-11-04 |           | Execução   | Introdução, Registro de Ativação                                 |                     |
 | 24 | 2019-11-06 |           | Execução   | Chamada e retorno de Função, Passagem de parâmetros              | Início E6 (Chamada) |
-| 25 | 2019-11-11 | 43413-104 |            |                                                                  | Avaliação E5        |
-| 26 | 2019-11-13 |           | Otimização | Introdução, Janela e Grafos de Fluxo                             |                     |
+| 25 | 2019-11-11 |           | Otimização | Introdução, Janela e Grafos de Fluxo                             |                     |
+| 26 | 2019-11-13 | 43413-103 |            |                                                                  | Avaliação E5        |
 | 27 | 2019-11-18 |           | Otimização | Grafos de Fluxo e Redução de potência                            |                     |
 | 28 | 2019-11-20 |           |            | Revisão                                                          |                     |
 | 29 | 2019-11-25 |           |            | P2                                                               |                     |
