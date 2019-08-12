@@ -245,6 +245,7 @@ Este arquivo será posterioremente substituído, não acrescente nada.
 #include <stdio.h>
 #include "tokens.h"
 extern int yylex(void);
+extern int yylex_destroy(void);
 
 extern FILE *yyin;
 extern char *yytext;
@@ -330,6 +331,7 @@ int main (int argc, char **argv)
     default: printf ("<Invalid Token with code %d>\n", token); return 1; break;
     }
   }
+  yylex_destroy();
   return 0;
 }
 #+END_SRC
