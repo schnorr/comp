@@ -50,9 +50,9 @@
 | Código     | Declarações, Escopos e Atribuição                                |           |                     |
 |            |                                                                  | 43413-104 | Avaliação E3        |
 | Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |           |                     |
-| Código     | Endereçamento de Arranjos multidimensionais                      |           | Início E5 (Código)  |
-| Código     | Controle de Fluxo                                                |           |                     |
-|            |                                                                  | 43413-104 | Avaliação E4        |
+| Código     | Endereçamento de Arranjos multidimensionais                      |           |                     |
+| Código     | Controle de Fluxo                                                |           | Início E5 (Código)  |
+|            |                                                                  | 43413-103 | Avaliação E4        |
 | Código     | Controle de Fluxo                                                |           |                     |
 | Execução   | Introdução, Registro de Ativação                                 |           |                     |
 | Execução   | Chamada e retorno de Função, Passagem de parâmetros              |           | Início E6 (Chamada) |
@@ -91,6 +91,7 @@ ymd("2019-10-22"), # SEMAC
 ymd("2019-10-23"), # SEMAC
 ymd("2019-10-24"), # SEMAC
 ymd("2019-10-25"), # SEMAC
+ymd("2019-10-28"), # Dia do Servidor Público
 ymd("2019-11-02"), # Mortos
 ymd("2019-11-15"), # República
 ymd("2019-11-23"), # Não Letivo
@@ -244,17 +245,17 @@ aulas %>%
 | 16 | 2019-10-02 |           | Código     | Declarações, Escopos e Atribuição                                |                     |
 | 17 | 2019-10-07 | 43413-104 |            |                                                                  | Avaliação E3        |
 | 18 | 2019-10-09 |           | Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |                     |
-| 19 | 2019-10-14 |           | Código     | Endereçamento de Arranjos multidimensionais                      | Início E5 (Código)  |
-| 20 | 2019-10-16 |           | Código     | Controle de Fluxo                                                |                     |
-| 21 | 2019-10-28 | 43413-104 |            |                                                                  | Avaliação E4        |
-| 22 | 2019-10-30 |           | Código     | Controle de Fluxo                                                |                     |
-| 23 | 2019-11-04 |           | Execução   | Introdução, Registro de Ativação                                 |                     |
-| 24 | 2019-11-06 |           | Execução   | Chamada e retorno de Função, Passagem de parâmetros              | Início E6 (Chamada) |
-| 25 | 2019-11-11 |           | Otimização | Introdução, Janela e Grafos de Fluxo                             |                     |
-| 26 | 2019-11-13 | 43413-103 |            |                                                                  | Avaliação E5        |
-| 27 | 2019-11-18 |           | Otimização | Grafos de Fluxo e Redução de potência                            |                     |
-| 28 | 2019-11-20 |           |            | Revisão                                                          |                     |
-| 29 | 2019-11-25 |           |            | P2                                                               |                     |
+| 19 | 2019-10-14 |           | Código     | Endereçamento de Arranjos multidimensionais                      |                     |
+| 20 | 2019-10-16 |           | Código     | Controle de Fluxo                                                | Início E5 (Código)  |
+| 21 | 2019-10-30 | 43413-103 |            |                                                                  | Avaliação E4        |
+| 22 | 2019-11-04 |           | Código     | Controle de Fluxo                                                |                     |
+| 23 | 2019-11-06 |           | Execução   | Introdução, Registro de Ativação                                 |                     |
+| 24 | 2019-11-11 |           | Execução   | Chamada e retorno de Função, Passagem de parâmetros              | Início E6 (Chamada) |
+| 25 | 2019-11-13 |           | Otimização | Introdução, Janela e Grafos de Fluxo                             |                     |
+| 26 | 2019-11-18 | 43413-103 |            |                                                                  | Avaliação E5        |
+| 27 | 2019-11-20 |           | Otimização | Grafos de Fluxo e Redução de potência                            |                     |
+| 28 | 2019-11-25 |           |            | Revisão                                                          |                     |
+| 29 | 2019-11-27 |           |            | P2                                                               |                     |
 | 30 | 2019-12-02 |           |            | PR                                                               |                     |
 
 
