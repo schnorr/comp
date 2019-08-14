@@ -35,7 +35,7 @@ Reconhecimento dos lexemas correspondentes aos tokens descritos na
 seção *Descrição dos Tokens* abaixo, unicamente através da definição de
 expressões regulares no arquivo da ferramenta =flex=. Cada expressão
 regular deve estar associada a pelo menos um tipo de
-token. Classificar os lexemas reconhecidos em tokens retornando-as
+token. Classificar os lexemas reconhecidos em tokens retornando as
 constantes definidas no arquivo =tokens.h= fornecido ou códigos ASCII
 para caracteres simples.
 
@@ -134,8 +134,8 @@ Os caracteres simples especiais empregados pela linguagem são listados
 abaixo separados apenas por espaços, e devem ser retornados com o
 próprio código =ASCII= convertido para inteiro. São eles:
 #+BEGIN_EXAMPLE
- ,   ;   :   (   )   [   ]   {   }   +   -   |   ?
- *   /   <   >   =   !   &   %   #   ^   .   $
+ ,   ;   :   (   )   [   ]   {   }   +   -   |   ?   @
+ *   /   <   >   =   !   &   %   #   ^   .   $   ~   `
 #+END_EXAMPLE
 
 ** Operadores Compostos
