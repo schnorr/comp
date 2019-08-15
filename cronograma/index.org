@@ -75,7 +75,6 @@ suppressMessages(library(xtable));
 aulas <- aulas %>% as_tibble();
 
 daysOff <- c(
-seq(ymd("2019-04-10"), ymd("2019-04-12"), by="days"), # ERAD
 ymd("2019-04-19"), # Religioso
 ymd("2019-04-20"), # Não letivo
 ymd("2019-04-21"), # Tiradentes
