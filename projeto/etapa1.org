@@ -125,7 +125,7 @@ As palavras reservadas da linguagem são:
 int float bool char string if then else
 while do input output return const static
 foreach for switch case break continue class
-private public protected
+private public protected end default
 #+END_EXAMPLE
 
 ** Caracteres Especiais
