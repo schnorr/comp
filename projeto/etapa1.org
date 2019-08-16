@@ -260,6 +260,9 @@ int main (int argc, char **argv)
   int token = 0;
   while (token = yylex()) {
     switch (token){
+    case '~':
+    case '@':
+    case '`':
     case ',':
     case ';':
     case ':':
