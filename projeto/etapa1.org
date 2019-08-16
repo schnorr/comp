@@ -232,6 +232,8 @@ caracteres isolados.
 #define TK_LIT_STRING      296
 #define TK_IDENTIFICADOR   297
 #define TOKEN_ERRO         298
+#define TK_PR_END          299
+#define TK_PR_DEFAULT      300
 #+END_SRC
 
 * Anexo - Arquivo =main.c=
