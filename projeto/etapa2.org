@@ -402,6 +402,8 @@ void yyerror (char const *s);
 %token TK_PR_PRIVATE
 %token TK_PR_PUBLIC
 %token TK_PR_PROTECTED
+%token TK_PR_END
+%token TK_PR_DEFAULT
 %token TK_OC_LE
 %token TK_OC_GE
 %token TK_OC_EQ
