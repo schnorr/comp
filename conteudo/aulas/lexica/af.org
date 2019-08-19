@@ -199,8 +199,6 @@ Construir um AFND que reconheça *(a|b)*abb*
 # #+ATTR_LATEX: :width \linewidth
 # [[./img/afnd_exercicio.png]]
 
-#+Latex: \pause
-
 * Qual o problema de AFND?
 Pontos positivos
 - Bastante poderoso para implementar ERs
