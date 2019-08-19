@@ -189,6 +189,9 @@ AFND que reconhece *a**
 #+ATTR_LATEX: :width \linewidth
 [[./img/afnd_fecho.png]]
 
+_Reflexão_: tem um equívoco de abstração excessiva nesta solução!
+- Qual é o equívoco?
+
 * Exercício
 #+BEGIN_CENTER
 Construir um AFND que reconheça *(a|b)*abb*
