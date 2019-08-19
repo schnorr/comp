@@ -99,10 +99,7 @@ definição de grupos é definitiva, válida do início ao fim do semestre.
 Uma vez formado, a dupla informa os seus membros ao professor por
 e-mail. O aluno deve utilizar obrigatoriamente a conta de e-mail do
 instituto de informática. Na mensagem, o aluno informa os nomes e
-códigos de aluno dos componentes do grupo e o *nome de usuário* no
-Instituto de Informática do componente em cuja página será
-disponibilizado o trabalho. O trabalho será acessado automaticamente
-através do servidor =http= do Instituto no diretório home desse usuário.
+códigos de aluno dos componentes do grupo.
 
 * Regras de desenvolvimento                                        :noexport:
 
