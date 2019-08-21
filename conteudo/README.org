@@ -18,6 +18,8 @@ recente de e-macs (25.*), uma versão recente de org-mode (9.*), e o
 programa =pdflatex= para compilação de arquivos TEX diretamente para
 PDF.
 
+Os PDFs já gerados estão [[http://www.inf.ufrgs.br/~schnorr/inf1147/][disponíveis aqui]].
+
 *** Primeira Parte
 
  | Setor       | Descrição                                              | Videos      | Apoio       | Lista | Aho    |
