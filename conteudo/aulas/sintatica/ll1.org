@@ -114,6 +114,28 @@ A tabela guia as ações de empilhamento da análise LL(1)
    | # | F  | F \rightarrow id  |                         |                     | F \rightarrow (E) |                         |                         |
    |---+----+-------------------+-------------------------+---------------------+-------------------+-------------------------+-------------------------|
    \normalsize
+* Resposta
+
+| Pilha    | Entrada    | Ação       |
+|----------+------------+------------|
+| E %      | id+id*id % | E -> TE'   |
+| TE' %    | id+id*id % | T -> FT'   |
+| FT'E' %  | id+id*id % | F -> id    |
+| idT'E' % | id+id*id % | casamento  |
+| T'E' %   | +id*id %   | T' -> \epsilon    |
+| E' %     | +id*id %   | E' -> +TE' |
+| +TE' %   | +id*id %   | casamento  |
+| TE' %    | id*id %    | T -> FT'   |
+| FT'E' %  | id*id %    | F -> id    |
+| idT'E' % | id*id %    | casamento  |
+| T'E' %   | *id %      | T' -> *FT' |
+| *FT'E' % | *id %      | casamento  |
+| FT'E' %  | id %       | F -> id    |
+| idT'E' % | id %       | casamento  |
+| T'E' %   | %          | T' -> \epsilon    |
+| E' %     | %          | E' -> \epsilon    |
+| %        | %          | aceita     |
+
 * Análise Preditiva Tabular -- Exemplo 2
    + Reconhecer \textbf{ibtibtaeaea}
    + Considerando a tabela preditiva
