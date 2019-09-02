@@ -155,3 +155,48 @@ A tabela guia as ações de empilhamento da análise LL(1)
    |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
 
 
+* Resposta
+
+| Pilha      | Entrada       | Ação        |
+|------------+---------------+-------------|
+| S %        | ibtibtaeaea % | S -> iEtSS' |
+| iEtSS' %   | ibtibtaeaea % | casamento   |
+| EtSS' %    | btibtaeaea %  | E -> b      |
+| btSS' %    | btibtaeaea %  | casamento   |
+| tSS' %     | tibtaeaea %   | casamento   |
+| SS' %      | ibtaeaea %    | S -> iEtSS' |
+| iEtSS'S' % | ibtaeaea %    | casamento   |
+| EtSS'S' %  | btaeaea %     | E -> b      |
+| btSS'S' %  | btaeaea %     | casamento   |
+| tSS'S' %   | taeaea %      | casamento   |
+| SS'S' %    | aeaea %       | S -> a      |
+| aS'S' %    | aeaea %       | casamento   |
+| S'S' %     | eaea %        |             |
+
+Escolhendo
+
+S' -> \epsilon
+
+(insucesso na análise)
+
+| Pilha  | Entrada | Ação    |
+|--------+---------+---------|
+| S'S' % | eaea %  | S -> \epsilon  |
+| S' %   | eaea %  | S -> \epsilon  |
+| %      | eaea %  | rejeita |
+
+Escolhendo
+
+S' -> eS
+
+| Pilha  | Entrada | Ação      |
+|--------+---------+-----------|
+| S'S' % | eaea %  | S' -> eS  |
+| eSS' % | eaea %  | casamento |
+| SS' %  | aea %   | S -> a    |
+| aS' %  | aea %   | casamento |
+| S' %   | ea %    | S' -> eS  |
+| eS %   | ea %    | casamento |
+| S %    | a %     | S -> a    |
+| a %    | a %     | casamento |
+| %      | %       | aceita    |
