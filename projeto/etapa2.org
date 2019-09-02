@@ -67,34 +67,14 @@ mais profunda de partes da gramática.
 
 * A Linguagem
 
-Um programa na linguagem é composto por três elementos, todos
+Um programa na linguagem é composto por dois elementos, todos
 opcionais: um conjunto de declarações de _variáveis globais_ e um
 conjunto de _funções_. Esses elementos podem aparecer intercaladamente e
 em qualquer ordem.
 
-** Declarações de Novos Tipos                                     :noexport:
-
-Novos tipos podem ser declarados apenas no escopo global através da
-palavra reservada =class=, seguida de um nome e enfim uma lista de
-campos não vazia fornecida entre colchetes onde os campos são
-separados por dois pontos (através do caractere especial ':'). Cada
-campo tem o encapsulamento, que é opcional, o tipo e um identificador
-do campo.  Existem três encapsulamentos possíveis, identificados pelas
-palavras reservadas: =protected=, =private=, e =public=. Declarações de
-novos tipos são terminadas por ponto-e-vírgula. O tipo de um campo que
-faz parte de uma declaração de novo tipo pode ser de qualquer tipo,
-salvo um tipo de usuário, ou seja, um tipo declarado com =class=.
-
-Os nomes de novos tipos podem ser utilizados em qualquer lugar onde um
-tipo normal aparece, salvo quando é explícita a proibição. Uma função,
-por exemplo, pode ser de um tipo novo, assim como seus parâmetros. O
-nome do novo tipo é o identificador do tipo, ou seja, a palavra
-reservada =class= serve unicamente para definir um novo tipo e não para
-utilizá-lo.
-
 ** Declarações de Variáveis Globais
 
-As variáveis são declaradas pelo seu nome, seguido do seu tipo. O tipo
+As variáveis são declaradas pelo tipo seguido de seu nome. O tipo
 pode estar precedido opcionalmente pela palavra reservada =static=. A
 linguagem inclui também a declaração de vetores, feita pela definição
 de seu tamanho inteiro positivo entre colchetes, colocada à direita do
@@ -194,8 +174,8 @@ A linguagem possui construções condicionais, iterativas e de seleção
 para controle estruturado de fluxo. As condicionais incluem o =if= com o
 =else= opcional, assim:
 #+BEGIN_EXAMPLE
-if (expressão) then bloco
-if (expressão) then bloco else bloco
+if (expressão) bloco
+if (expressão) bloco else bloco
 #+END_EXAMPLE
 As construções iterativas são as seguintes no formato:
 #+BEGIN_EXAMPLE
@@ -229,8 +209,8 @@ identificadores, opcionalmente seguidos de expressão inteira entre
 colchetes, para acesso a vetores; (b) literais numéricos como inteiro
 e ponto-flutuante; (c) chamada de função. As expressões aritméticas
 podem ser formadas recursivamente com operadores aritméticos, assim
-como permitem o uso de parênteses para forçar uma associatividade
-diferente daquela tradicional, à esquerda.
+como permitem o uso de parênteses para forçar uma associatividade ou precedência
+diferente daquela tradicional. A associatividade é à esquerda.
 
 Expressões lógicas podem ser formadas através dos operadores
 relacionais aplicados a expressões aritméticas, ou de operadores
