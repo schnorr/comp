@@ -35,7 +35,7 @@ as etapas encontra-se abaixo.
 | Etapa | Descrição e Especificação            | Peso (%) | Cumul. (%) |    Entrega |
 |-------+--------------------------------------+----------+------------+------------|
 | E1    | [[./etapa1.org][Análise Léxica]]                       |       10 |         10 | 2019-09-14 |
-| E2    | [[./etapa2.org][Análise Sintática]] (obsoleto)         |       15 |         25 | 2019-09-14 |
+| E2    | [[./etapa2.org][Análise Sintática]]                    |       15 |         25 | 2019-09-14 |
 | E3    | [[./etapa3.org][Árvore Sintática Abstrata]] (obsoleto) |       15 |         40 | 2019-10-05 |
 | E4    | [[./etapa4.org][Análise Semântica]] (obsoleto)         |       15 |         55 | 2019-10-28 |
 | E5    | [[./etapa5.org][Geração de Código]] (obsoleto)         |       20 |         75 | 2019-11-16 |
