@@ -224,7 +224,7 @@ projeto a tarefa de verificar a validade dos operandos e operadores.
 
 Os operadores são os seguintes (com uma possível semântica associada):
 
-- Unários
+- Unários (todos prefixados)
   - =+= sinal positivo explícito
   - =-= inverte o sinal
   - =!= negação lógica
