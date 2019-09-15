@@ -5,9 +5,7 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 #+TAGS: noexport(n) deprecated(d)
 
-Aguarde.
-
-* Avaliação das Etapas do Projeto de Compilador                    :noexport:
+* Avaliação das Etapas do Projeto de Compilador
 ** Sumário
 
 | Relatório de Avaliação |
@@ -21,164 +19,49 @@ Aguarde.
 
 ** Formação dos grupos
 
-Temos 5 grupos.
+Temos estes grupos.
 
 | Grupo   | ID     |
 |---------+--------|
-| Lambda  | ???552 |
-| Delta   | ???103 |
-| Beta    | ???701 |
-| Beta    | ???698 |
-| Epsilon | ???369 |
-| Alpha   | ???782 |
+| Tau     | ???638 |
+| Tau     | ???681 |
+| Sigma   | ???165 |
+| Sigma   | ???652 |
+| Omega   | ???612 |
+| Omega   | ???887 |
+| Kappa   | ???712 |
+| Kappa   | ???087 |
+| Gamma   | ???692 |
+| Gamma   | ???991 |
+| Omicron | ???726 |
+| Omicron | ???732 |
+| Psi     | ???162 |
+| Psi     | ???361 |
+| Alpha   | ???759 |
+| Alpha   | ???108 |
+| Zeta    | ???909 |
+| Zeta    | ???451 |
+| Rho     | ???253 |
+| Rho     | ???172 |
+| Beta    | ???110 |
+| Beta    | ???545 |
+| Theta   | ???502 |
+| Theta   | ???285 |
+| Iota    | ???490 |
 
-* Avaliação da Etapa 1                                             :noexport:
+* Avaliação da Etapa 1
 ** Comentários por grupo
-*** Epsilon
-
-- Cuidar nome do arquivo: "Makefile", ou "makefile"
-- Na hora do TGZ, cuidar para que os arquivos estejam na raiz
-
-*** Delta
-
-OK Inversão do shift right pelo left:
-3  Delta   54     NA
-4  Delta   55     NA
-
-OK Retorna dois tokens ao invés de um
-5  Delta   62     NA
-6  Delta   63     NA
-7  Delta   65     NA
-8  Delta   66     NA
-
-- [X] Problema dos comentários de uma linha e de múltiplas linhas
-  #+BEGIN_EXAMPLE
-9  Delta   74     NA
-10 Delta   75     NA
-  #+END_EXAMPLE
-
-- "Some diacritics"
-
-*** Alpha
-
-- Por que fez um identificador inválido?
-- História da string com aspas duplas no meio
-- Usou estados para detectar multilinha
-
-*** Beta
-
-OK Problema do + no literal inteiro e ponto flutuante
-1   Beta   63     NA
-2   Beta   66     NA
-
-- strings e caracteres complexos
-- contagem de linhas yylineno
-
-*** Lambda
-
-- Implementou autômato e converteu com ferramenta para ER
-  - Ferramenta de linguagens formais (JFLAP)
-
 ** Notas Objetiva e Subjetiva
 
 | Grupo   | Avaliacao | Nota |
 |---------+-----------+------|
-| Alpha   | E1.S      |   10 |
-| Beta    | E1.S      |   10 |
-| Delta   | E1.S      |  9.5 |
-| Epsilon | E1.S      |   10 |
-| Lambda  | E1.S      |   10 |
-| Alpha   | E1.O      |   10 |
-| Beta    | E1.O      |  9.8 |
-| Delta   | E1.O      |    9 |
-| Epsilon | E1.O      |   10 |
-| Lambda  | E1.O      |   10 |
 
-* Avaliação da Etapa 2                                             :noexport:
+* Avaliação da Etapa 2
 ** Comentários por grupo
-*** Epsilon
-
-- [X] Vetor:
-Epsilon|asl03|NOK|syntax error, unexpected '['
-Epsilon|asl04|NOK|syntax error, unexpected '['
-Epsilon|asl47|NOK|syntax error, unexpected '['
-Epsilon|asl48|NOK|syntax error, unexpected '[
-Epsilon|asl81|NOK|syntax error, unexpected '['
-
-- [ ] Problema do programa vazio com comentários
-Epsilon|asl114|NOK|syntax error, unexpected '/'
-  - %eof para terminar comentários de uma linha resolverá o problema
-
-- [ ] Problema da inicialização de variável local com expressão
-Epsilon|asl137|NOK|
-
-- [ ] Um comando tem que poder ser uma chamada de função
-Epsilon|asl53|NOK|syntax error, unexpected '(', expecting TK_OC_SL or TK_OC_SR or '[' or '='
-Epsilon|asl54|NOK|syntax error, unexpected '(', expecting TK_OC_SL or TK_OC_SR or '[' or '='
-
-- [ ] O comando case não faz parte da especificação da etapa 2
-Epsilon|asl61|NOK|
-
-*** Delta
-
-- [ ] Tem a ver com o problemas dos comentários
-: Delta|asl114|NOK|ERROR =>> Line 1: syntax error, Last token: /
-
-- [X] Não está tratando o const
-: Delta|asl41|NOK|ERROR =>> Line 3: syntax error, Last token: const
-
-- [X] Problemas relacionados a lista de comandos separados por ponto-e-vírgula
-: Delta|asl62|NOK|ERROR =>> Line 4: syntax error, Last token: ;
-: Delta|asl63|NOK| ERROR =>> Line 7: syntax error, Last token: ;
-: Delta|asl65|NOK|ERROR =>> Line 7: syntax error, Last token: ;
-: Delta|asl66|NOK|ERROR =>> Line 6: syntax error, Last token: ;
-: Delta|asl80|NOK|ERROR =>> Line 3: syntax error, Last token: ;
-
-
-: Delta|asl35|NOK|ERROR =>> Line 3: syntax error, Last token: int
-
-*** Alpha
-
-- [ ] Inicialização de variáveis locais
-: Alpha|asl137|NOK|
-
-- [ ] Problema de reconhecimento de bloco vazio
-: Alpha|asl31|NOK|
-: Alpha|asl32|NOK|
-
-- [ ] Comando If While For sem ; mas tem
-: Alpha|asl62|NOK|
-: Alpha|asl63|NOK|
-: Alpha|asl65|NOK|
-: Alpha|asl66|NOK|
-: Alpha|asl80|NOK|
-
-- [ ] Parâmetro faltante
-: Alpha|asl86|NOK|
-
-*** Beta
-
-- [ ] História do const na função
-: Beta|asl102|NOK|
-
-*** Lambda
-
-Nenhum.
-
 ** Notas Objetiva e Subjetiva
 
 | Grupo   | Avaliacao | Nota |
 |---------+-----------+------|
-| Alpha   | E2.S      |  9.5 |
-| Beta    | E2.S      |   10 |
-| Delta   | E2.S      |    9 |
-| Epsilon | E2.S      |  8.5 |
-| Lambda  | E2.S      |   10 |
-| Alpha   | E2.O      |  9.3 |
-| Beta    | E2.O      |  9.9 |
-| Delta   | E2.O      |  9.9 |
-| Epsilon | E2.O      |  9.3 |
-| Lambda  | E2.O      |   10 |
 
 * Avaliação da Etapa 3                                             :noexport:
 ** Grupos que não entregaram até o prazo
