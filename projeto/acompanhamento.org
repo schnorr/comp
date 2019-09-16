@@ -57,11 +57,52 @@ Temos estes grupos.
 |---------+-----------+------|
 
 * Avaliação da Etapa 2
-** Comentários por grupo
+** Arquivos para testes                                             :ATTACH:
+:PROPERTIES:
+:Attachments: e2tests.tgz
+:ID:       ac0f5346-3702-400c-8426-954a47c4a1a1
+:END:
+
+Veja [[./data/ac/0f5346-3702-400c-8426-954a47c4a1a1/e2tests.tgz][este arquivo]].
+
+** Log de execução dos testes                                       :ATTACH:
+:PROPERTIES:
+:Attachments: e2v1.log
+:ID:       c09e363d-82b8-4cec-a76d-53ba0b8da81e
+:END:
+
+Veja o [[./data/c0/9e363d-82b8-4cec-a76d-53ba0b8da81e/e2v1.log]].
+
 ** Notas Objetiva e Subjetiva
 
 | Grupo   | Avaliacao | Nota |
 |---------+-----------+------|
+| Omicron | E2.S      | 9.73 |
+| Zeta    | E2.S      |  9.7 |
+| Omega   | E2.S      |  9.5 |
+| Tau     | E2.S      |  9.5 |
+| Kappa   | E2.S      |  9.4 |
+| Alpha   | E2.S      |  9.2 |
+| Beta    | E2.S      |  9.2 |
+| Gamma   | E2.S      |  9.1 |
+| Theta   | E2.S      |  9.1 |
+| Sigma   | E2.S      |    9 |
+| Iota    | E2.S      |  8.1 |
+| Rho     | E2.S      |  7.9 |
+| Psi     | E2.S      |  7.5 |
+| Omicron | E2.O      |  9.8 |
+| Zeta    | E2.O      |  9.3 |
+| Omega   | E2.O      |  8.9 |
+| Tau     | E2.O      |  9.1 |
+| Kappa   | E2.O      |  7.5 |
+| Alpha   | E2.O      |  9.7 |
+| Beta    | E2.O      |  8.3 |
+| Gamma   | E2.O      |  9.1 |
+| Theta   | E2.O      |  9.5 |
+| Sigma   | E2.O      |  9.4 |
+| Iota    | E2.O      |  9.4 |
+| Rho     | E2.O      |  9.1 |
+| Psi     | E2.O      |  9.3 |
 
 * Avaliação da Etapa 3                                             :noexport:
 ** Grupos que não entregaram até o prazo
