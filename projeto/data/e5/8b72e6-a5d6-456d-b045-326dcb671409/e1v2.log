@@ -1,0 +1,4387 @@
+
+Alpha
+
+~/ensino/private/E1/Alpha ~/ensino/private
+Alpha |tests/e1/aval_001.tesh
+Alpha |Test suite `tests/e1/aval_001'
+Alpha |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Alpha |Test suite `tests/e1/aval_001' OK
+Alpha |tests/e1/aval_002.tesh
+Alpha |Test suite `tests/e1/aval_002'
+Alpha |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Alpha |Test suite `tests/e1/aval_002' OK
+Alpha |tests/e1/aval_003.tesh
+Alpha |Test suite `tests/e1/aval_003'
+Alpha |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Alpha |Test suite `tests/e1/aval_003' OK
+Alpha |tests/e1/aval_004.tesh
+Alpha |Test suite `tests/e1/aval_004'
+Alpha |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Alpha |Test suite `tests/e1/aval_004' OK
+Alpha |tests/e1/aval_005.tesh
+Alpha |Test suite `tests/e1/aval_005'
+Alpha |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Alpha |Test suite `tests/e1/aval_005' OK
+Alpha |tests/e1/aval_006.tesh
+Alpha |Test suite `tests/e1/aval_006'
+Alpha |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Alpha |Test suite `tests/e1/aval_006' OK
+Alpha |tests/e1/aval_007.tesh
+Alpha |Test suite `tests/e1/aval_007'
+Alpha |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Alpha |Test suite `tests/e1/aval_007' OK
+Alpha |tests/e1/aval_008.tesh
+Alpha |Test suite `tests/e1/aval_008'
+Alpha |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Alpha |Test suite `tests/e1/aval_008' OK
+Alpha |tests/e1/aval_009.tesh
+Alpha |Test suite `tests/e1/aval_009'
+Alpha |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Alpha |Test suite `tests/e1/aval_009' OK
+Alpha |tests/e1/aval_010.tesh
+Alpha |Test suite `tests/e1/aval_010'
+Alpha |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Alpha |Test suite `tests/e1/aval_010' OK
+Alpha |tests/e1/aval_011.tesh
+Alpha |Test suite `tests/e1/aval_011'
+Alpha |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Alpha |Test suite `tests/e1/aval_011' OK
+Alpha |tests/e1/aval_012.tesh
+Alpha |Test suite `tests/e1/aval_012'
+Alpha |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Alpha |Test suite `tests/e1/aval_012' OK
+Alpha |tests/e1/aval_013.tesh
+Alpha |Test suite `tests/e1/aval_013'
+Alpha |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Alpha |Test suite `tests/e1/aval_013' OK
+Alpha |tests/e1/aval_014.tesh
+Alpha |Test suite `tests/e1/aval_014'
+Alpha |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Alpha |Test suite `tests/e1/aval_014' OK
+Alpha |tests/e1/aval_015.tesh
+Alpha |Test suite `tests/e1/aval_015'
+Alpha |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Alpha |Test suite `tests/e1/aval_015' OK
+Alpha |tests/e1/aval_016.tesh
+Alpha |Test suite `tests/e1/aval_016'
+Alpha |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Alpha |Test suite `tests/e1/aval_016' OK
+Alpha |tests/e1/aval_017.tesh
+Alpha |Test suite `tests/e1/aval_017'
+Alpha |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Alpha |Test suite `tests/e1/aval_017' OK
+Alpha |tests/e1/aval_018.tesh
+Alpha |Test suite `tests/e1/aval_018'
+Alpha |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Alpha |Test suite `tests/e1/aval_018' OK
+Alpha |tests/e1/aval_019.tesh
+Alpha |Test suite `tests/e1/aval_019'
+Alpha |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Alpha |Test suite `tests/e1/aval_019' OK
+Alpha |tests/e1/aval_020.tesh
+Alpha |Test suite `tests/e1/aval_020'
+Alpha |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Alpha |Test suite `tests/e1/aval_020' OK
+Alpha |tests/e1/aval_021.tesh
+Alpha |Test suite `tests/e1/aval_021'
+Alpha |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Alpha |Test suite `tests/e1/aval_021' OK
+Alpha |tests/e1/aval_022.tesh
+Alpha |Test suite `tests/e1/aval_022'
+Alpha |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Alpha |Test suite `tests/e1/aval_022' OK
+Alpha |tests/e1/aval_023.tesh
+Alpha |Test suite `tests/e1/aval_023'
+Alpha |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Alpha |Test suite `tests/e1/aval_023' OK
+Alpha |tests/e1/aval_024.tesh
+Alpha |Test suite `tests/e1/aval_024'
+Alpha |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Alpha |Test suite `tests/e1/aval_024' OK
+Alpha |tests/e1/aval_025.tesh
+Alpha |Test suite `tests/e1/aval_025'
+Alpha |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Alpha |Test suite `tests/e1/aval_025' OK
+Alpha |tests/e1/aval_026.tesh
+Alpha |Test suite `tests/e1/aval_026'
+Alpha |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Alpha |Test suite `tests/e1/aval_026' OK
+Alpha |tests/e1/aval_027.tesh
+Alpha |Test suite `tests/e1/aval_027'
+Alpha |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Alpha |Test suite `tests/e1/aval_027' OK
+Alpha |tests/e1/aval_028.tesh
+Alpha |Test suite `tests/e1/aval_028'
+Alpha |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Alpha |Test suite `tests/e1/aval_028' OK
+Alpha |tests/e1/aval_029.tesh
+Alpha |Test suite `tests/e1/aval_029'
+Alpha |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Alpha |Test suite `tests/e1/aval_029' OK
+Alpha |tests/e1/aval_030.tesh
+Alpha |Test suite `tests/e1/aval_030'
+Alpha |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Alpha |Test suite `tests/e1/aval_030' OK
+Alpha |tests/e1/aval_031.tesh
+Alpha |Test suite `tests/e1/aval_031'
+Alpha |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Alpha |Test suite `tests/e1/aval_031' OK
+Alpha |tests/e1/aval_032.tesh
+Alpha |Test suite `tests/e1/aval_032'
+Alpha |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Alpha |Test suite `tests/e1/aval_032' OK
+Alpha |tests/e1/aval_033.tesh
+Alpha |Test suite `tests/e1/aval_033'
+Alpha |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Alpha |Test suite `tests/e1/aval_033' OK
+Alpha |tests/e1/aval_034.tesh
+Alpha |Test suite `tests/e1/aval_034'
+Alpha |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Alpha |Test suite `tests/e1/aval_034' OK
+Alpha |tests/e1/aval_035.tesh
+Alpha |Test suite `tests/e1/aval_035'
+Alpha |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Alpha |Test suite `tests/e1/aval_035' OK
+Alpha |tests/e1/aval_036.tesh
+Alpha |Test suite `tests/e1/aval_036'
+Alpha |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Alpha |Test suite `tests/e1/aval_036' OK
+Alpha |tests/e1/aval_037.tesh
+Alpha |Test suite `tests/e1/aval_037'
+Alpha |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Alpha |Test suite `tests/e1/aval_037' OK
+Alpha |tests/e1/aval_038.tesh
+Alpha |Test suite `tests/e1/aval_038'
+Alpha |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Alpha |Test suite `tests/e1/aval_038' OK
+Alpha |tests/e1/aval_039.tesh
+Alpha |Test suite `tests/e1/aval_039'
+Alpha |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Alpha |Test suite `tests/e1/aval_039' OK
+Alpha |tests/e1/aval_040.tesh
+Alpha |Test suite `tests/e1/aval_040'
+Alpha |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Alpha |Test suite `tests/e1/aval_040' OK
+Alpha |tests/e1/aval_041.tesh
+Alpha |Test suite `tests/e1/aval_041'
+Alpha |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Alpha |Test suite `tests/e1/aval_041' OK
+Alpha |tests/e1/aval_042.tesh
+Alpha |Test suite `tests/e1/aval_042'
+Alpha |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Alpha |Test suite `tests/e1/aval_042' OK
+Alpha |tests/e1/aval_043.tesh
+Alpha |Test suite `tests/e1/aval_043'
+Alpha |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Alpha |Test suite `tests/e1/aval_043' OK
+Alpha |tests/e1/aval_044.tesh
+Alpha |Test suite `tests/e1/aval_044'
+Alpha |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Alpha |Test suite `tests/e1/aval_044' OK
+Alpha |tests/e1/aval_045.tesh
+Alpha |Test suite `tests/e1/aval_045'
+Alpha |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Alpha |Test suite `tests/e1/aval_045' OK
+Alpha |tests/e1/aval_046.tesh
+Alpha |Test suite `tests/e1/aval_046'
+Alpha |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Alpha |Test suite `tests/e1/aval_046' OK
+Alpha |tests/e1/aval_047.tesh
+Alpha |Test suite `tests/e1/aval_047'
+Alpha |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Alpha |Test suite `tests/e1/aval_047' OK
+Alpha |tests/e1/aval_048.tesh
+Alpha |Test suite `tests/e1/aval_048'
+Alpha |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Alpha |Test suite `tests/e1/aval_048' OK
+Alpha |tests/e1/aval_049.tesh
+Alpha |Test suite `tests/e1/aval_049'
+Alpha |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Alpha |Test suite `tests/e1/aval_049' OK
+Alpha |tests/e1/aval_050.tesh
+Alpha |Test suite `tests/e1/aval_050'
+Alpha |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Alpha |Test suite `tests/e1/aval_050' OK
+Alpha |tests/e1/aval_051.tesh
+Alpha |Test suite `tests/e1/aval_051'
+Alpha |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Alpha |Test suite `tests/e1/aval_051' OK
+Alpha |tests/e1/aval_052.tesh
+Alpha |Test suite `tests/e1/aval_052'
+Alpha |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Alpha |Test suite `tests/e1/aval_052' OK
+Alpha |tests/e1/aval_053.tesh
+Alpha |Test suite `tests/e1/aval_053'
+Alpha |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Alpha |Test suite `tests/e1/aval_053' OK
+Alpha |tests/e1/aval_054.tesh
+Alpha |Test suite `tests/e1/aval_054'
+Alpha |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Alpha |Test suite `tests/e1/aval_054' OK
+Alpha |tests/e1/aval_055.tesh
+Alpha |Test suite `tests/e1/aval_055'
+Alpha |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Alpha |Test suite `tests/e1/aval_055' OK
+Alpha |tests/e1/aval_056.tesh
+Alpha |Test suite `tests/e1/aval_056'
+Alpha |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Alpha |Test suite `tests/e1/aval_056' OK
+Alpha |tests/e1/aval_057.tesh
+Alpha |Test suite `tests/e1/aval_057'
+Alpha |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Alpha |Test suite `tests/e1/aval_057' OK
+Alpha |tests/e1/aval_058.tesh
+Alpha |Test suite `tests/e1/aval_058'
+Alpha |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Alpha |Test suite `tests/e1/aval_058' OK
+Alpha |tests/e1/aval_059.tesh
+Alpha |Test suite `tests/e1/aval_059'
+Alpha |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Alpha |Test suite `tests/e1/aval_059' OK
+Alpha |tests/e1/aval_060.tesh
+Alpha |Test suite `tests/e1/aval_060'
+Alpha |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Alpha |Test suite `tests/e1/aval_060' OK
+Alpha |tests/e1/aval_061.tesh
+Alpha |Test suite `tests/e1/aval_061'
+Alpha |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Alpha |Test suite `tests/e1/aval_061' OK
+Alpha |tests/e1/aval_062.tesh
+Alpha |Test suite `tests/e1/aval_062'
+Alpha |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Alpha |Test suite `tests/e1/aval_062' OK
+Alpha |tests/e1/aval_063.tesh
+Alpha |Test suite `tests/e1/aval_063'
+Alpha |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Alpha |Test suite `tests/e1/aval_063' OK
+Alpha |tests/e1/aval_064.tesh
+Alpha |Test suite `tests/e1/aval_064'
+Alpha |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Alpha |Test suite `tests/e1/aval_064' OK
+Alpha |tests/e1/aval_065.tesh
+Alpha |Test suite `tests/e1/aval_065'
+Alpha |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Alpha |Test suite `tests/e1/aval_065' OK
+Alpha |tests/e1/aval_066.tesh
+Alpha |Test suite `tests/e1/aval_066'
+Alpha |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Alpha |Test suite `tests/e1/aval_066' OK
+Alpha |tests/e1/aval_067.tesh
+Alpha |Test suite `tests/e1/aval_067'
+Alpha |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Alpha |Test suite `tests/e1/aval_067' OK
+Alpha |tests/e1/aval_068.tesh
+Alpha |Test suite `tests/e1/aval_068'
+Alpha |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Alpha |Test suite `tests/e1/aval_068' OK
+Alpha |tests/e1/aval_069.tesh
+Alpha |Test suite `tests/e1/aval_069'
+Alpha |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Alpha |Test suite `tests/e1/aval_069' OK
+Alpha |tests/e1/aval_070.tesh
+Alpha |Test suite `tests/e1/aval_070'
+Alpha |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Alpha |Test suite `tests/e1/aval_070' OK
+Alpha |tests/e1/aval_071.tesh
+Alpha |Test suite `tests/e1/aval_071'
+Alpha |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Alpha |Test suite `tests/e1/aval_071' OK
+Alpha |tests/e1/aval_072.tesh
+Alpha |Test suite `tests/e1/aval_072'
+Alpha |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Alpha |Test suite `tests/e1/aval_072' OK
+Alpha |tests/e1/aval_073.tesh
+Alpha |Test suite `tests/e1/aval_073'
+Alpha |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Alpha |Test suite `tests/e1/aval_073' OK
+Alpha |tests/e1/aval_074.tesh
+Alpha |Test suite `tests/e1/aval_074'
+Alpha |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Alpha |Test suite `tests/e1/aval_074' OK
+Alpha |tests/e1/aval_075.tesh
+Alpha |Test suite `tests/e1/aval_075'
+Alpha |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Alpha |Test suite `tests/e1/aval_075' OK
+Alpha |tests/e1/aval_076.tesh
+Alpha |Test suite `tests/e1/aval_076'
+Alpha |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Alpha |Test suite `tests/e1/aval_076' OK
+Alpha |tests/e1/aval_077.tesh
+Alpha |Test suite `tests/e1/aval_077'
+Alpha |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Alpha |Test suite `tests/e1/aval_077' OK
+Alpha |tests/e1/aval_078.tesh
+Alpha |Test suite `tests/e1/aval_078'
+Alpha |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Alpha |Test suite `tests/e1/aval_078' OK
+Alpha |tests/e1/aval_079.tesh
+Alpha |Test suite `tests/e1/aval_079'
+Alpha |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Alpha |Test suite `tests/e1/aval_079' OK
+Alpha |tests/e1/aval_080.tesh
+Alpha |Test suite `tests/e1/aval_080'
+Alpha |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Alpha |Test suite `tests/e1/aval_080' OK
+Alpha |tests/e1/aval_081.tesh
+Alpha |Test suite `tests/e1/aval_081'
+Alpha |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Alpha |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Beta
+
+~/ensino/private/E1/Beta ~/ensino/private
+Beta |tests/e1/aval_001.tesh
+Beta |Test suite `tests/e1/aval_001'
+Beta |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Beta |Test suite `tests/e1/aval_001' OK
+Beta |tests/e1/aval_002.tesh
+Beta |Test suite `tests/e1/aval_002'
+Beta |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Beta |Test suite `tests/e1/aval_002' OK
+Beta |tests/e1/aval_003.tesh
+Beta |Test suite `tests/e1/aval_003'
+Beta |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Beta |Test suite `tests/e1/aval_003' OK
+Beta |tests/e1/aval_004.tesh
+Beta |Test suite `tests/e1/aval_004'
+Beta |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Beta |Test suite `tests/e1/aval_004' OK
+Beta |tests/e1/aval_005.tesh
+Beta |Test suite `tests/e1/aval_005'
+Beta |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Beta |Test suite `tests/e1/aval_005' OK
+Beta |tests/e1/aval_006.tesh
+Beta |Test suite `tests/e1/aval_006'
+Beta |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Beta |Test suite `tests/e1/aval_006' OK
+Beta |tests/e1/aval_007.tesh
+Beta |Test suite `tests/e1/aval_007'
+Beta |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Beta |Test suite `tests/e1/aval_007' OK
+Beta |tests/e1/aval_008.tesh
+Beta |Test suite `tests/e1/aval_008'
+Beta |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Beta |Test suite `tests/e1/aval_008' OK
+Beta |tests/e1/aval_009.tesh
+Beta |Test suite `tests/e1/aval_009'
+Beta |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Beta |Test suite `tests/e1/aval_009' OK
+Beta |tests/e1/aval_010.tesh
+Beta |Test suite `tests/e1/aval_010'
+Beta |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Beta |Test suite `tests/e1/aval_010' OK
+Beta |tests/e1/aval_011.tesh
+Beta |Test suite `tests/e1/aval_011'
+Beta |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Beta |Test suite `tests/e1/aval_011' OK
+Beta |tests/e1/aval_012.tesh
+Beta |Test suite `tests/e1/aval_012'
+Beta |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Beta |Test suite `tests/e1/aval_012' OK
+Beta |tests/e1/aval_013.tesh
+Beta |Test suite `tests/e1/aval_013'
+Beta |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Beta |Test suite `tests/e1/aval_013' OK
+Beta |tests/e1/aval_014.tesh
+Beta |Test suite `tests/e1/aval_014'
+Beta |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Beta |Test suite `tests/e1/aval_014' OK
+Beta |tests/e1/aval_015.tesh
+Beta |Test suite `tests/e1/aval_015'
+Beta |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Beta |Test suite `tests/e1/aval_015' OK
+Beta |tests/e1/aval_016.tesh
+Beta |Test suite `tests/e1/aval_016'
+Beta |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Beta |Test suite `tests/e1/aval_016' OK
+Beta |tests/e1/aval_017.tesh
+Beta |Test suite `tests/e1/aval_017'
+Beta |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Beta |Test suite `tests/e1/aval_017' OK
+Beta |tests/e1/aval_018.tesh
+Beta |Test suite `tests/e1/aval_018'
+Beta |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Beta |Test suite `tests/e1/aval_018' OK
+Beta |tests/e1/aval_019.tesh
+Beta |Test suite `tests/e1/aval_019'
+Beta |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Beta |Test suite `tests/e1/aval_019' OK
+Beta |tests/e1/aval_020.tesh
+Beta |Test suite `tests/e1/aval_020'
+Beta |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Beta |Test suite `tests/e1/aval_020' OK
+Beta |tests/e1/aval_021.tesh
+Beta |Test suite `tests/e1/aval_021'
+Beta |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Beta |Test suite `tests/e1/aval_021' OK
+Beta |tests/e1/aval_022.tesh
+Beta |Test suite `tests/e1/aval_022'
+Beta |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Beta |Test suite `tests/e1/aval_022' OK
+Beta |tests/e1/aval_023.tesh
+Beta |Test suite `tests/e1/aval_023'
+Beta |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Beta |Test suite `tests/e1/aval_023' OK
+Beta |tests/e1/aval_024.tesh
+Beta |Test suite `tests/e1/aval_024'
+Beta |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Beta |Test suite `tests/e1/aval_024' OK
+Beta |tests/e1/aval_025.tesh
+Beta |Test suite `tests/e1/aval_025'
+Beta |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Beta |Test suite `tests/e1/aval_025' OK
+Beta |tests/e1/aval_026.tesh
+Beta |Test suite `tests/e1/aval_026'
+Beta |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Beta |Test suite `tests/e1/aval_026' OK
+Beta |tests/e1/aval_027.tesh
+Beta |Test suite `tests/e1/aval_027'
+Beta |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Beta |Test suite `tests/e1/aval_027' OK
+Beta |tests/e1/aval_028.tesh
+Beta |Test suite `tests/e1/aval_028'
+Beta |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Beta |Test suite `tests/e1/aval_028' OK
+Beta |tests/e1/aval_029.tesh
+Beta |Test suite `tests/e1/aval_029'
+Beta |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Beta |Test suite `tests/e1/aval_029' OK
+Beta |tests/e1/aval_030.tesh
+Beta |Test suite `tests/e1/aval_030'
+Beta |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Beta |Test suite `tests/e1/aval_030' OK
+Beta |tests/e1/aval_031.tesh
+Beta |Test suite `tests/e1/aval_031'
+Beta |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Beta |Test suite `tests/e1/aval_031' OK
+Beta |tests/e1/aval_032.tesh
+Beta |Test suite `tests/e1/aval_032'
+Beta |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Beta |Test suite `tests/e1/aval_032' OK
+Beta |tests/e1/aval_033.tesh
+Beta |Test suite `tests/e1/aval_033'
+Beta |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Beta |Test suite `tests/e1/aval_033' OK
+Beta |tests/e1/aval_034.tesh
+Beta |Test suite `tests/e1/aval_034'
+Beta |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Beta |Test suite `tests/e1/aval_034' OK
+Beta |tests/e1/aval_035.tesh
+Beta |Test suite `tests/e1/aval_035'
+Beta |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Beta |Test suite `tests/e1/aval_035' OK
+Beta |tests/e1/aval_036.tesh
+Beta |Test suite `tests/e1/aval_036'
+Beta |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Beta |Test suite `tests/e1/aval_036' OK
+Beta |tests/e1/aval_037.tesh
+Beta |Test suite `tests/e1/aval_037'
+Beta |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Beta |Test suite `tests/e1/aval_037' OK
+Beta |tests/e1/aval_038.tesh
+Beta |Test suite `tests/e1/aval_038'
+Beta |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Beta |Test suite `tests/e1/aval_038' OK
+Beta |tests/e1/aval_039.tesh
+Beta |Test suite `tests/e1/aval_039'
+Beta |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Beta |Test suite `tests/e1/aval_039' OK
+Beta |tests/e1/aval_040.tesh
+Beta |Test suite `tests/e1/aval_040'
+Beta |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Beta |Test suite `tests/e1/aval_040' OK
+Beta |tests/e1/aval_041.tesh
+Beta |Test suite `tests/e1/aval_041'
+Beta |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Beta |Test suite `tests/e1/aval_041' OK
+Beta |tests/e1/aval_042.tesh
+Beta |Test suite `tests/e1/aval_042'
+Beta |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Beta |Test suite `tests/e1/aval_042' OK
+Beta |tests/e1/aval_043.tesh
+Beta |Test suite `tests/e1/aval_043'
+Beta |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Beta |Test suite `tests/e1/aval_043' OK
+Beta |tests/e1/aval_044.tesh
+Beta |Test suite `tests/e1/aval_044'
+Beta |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Beta |Test suite `tests/e1/aval_044' OK
+Beta |tests/e1/aval_045.tesh
+Beta |Test suite `tests/e1/aval_045'
+Beta |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Beta |Test suite `tests/e1/aval_045' OK
+Beta |tests/e1/aval_046.tesh
+Beta |Test suite `tests/e1/aval_046'
+Beta |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Beta |Test suite `tests/e1/aval_046' OK
+Beta |tests/e1/aval_047.tesh
+Beta |Test suite `tests/e1/aval_047'
+Beta |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Beta |Test suite `tests/e1/aval_047' OK
+Beta |tests/e1/aval_048.tesh
+Beta |Test suite `tests/e1/aval_048'
+Beta |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Beta |Test suite `tests/e1/aval_048' OK
+Beta |tests/e1/aval_049.tesh
+Beta |Test suite `tests/e1/aval_049'
+Beta |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Beta |Test suite `tests/e1/aval_049' OK
+Beta |tests/e1/aval_050.tesh
+Beta |Test suite `tests/e1/aval_050'
+Beta |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Beta |Test suite `tests/e1/aval_050' OK
+Beta |tests/e1/aval_051.tesh
+Beta |Test suite `tests/e1/aval_051'
+Beta |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Beta |Test suite `tests/e1/aval_051' OK
+Beta |tests/e1/aval_052.tesh
+Beta |Test suite `tests/e1/aval_052'
+Beta |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Beta |Test suite `tests/e1/aval_052' OK
+Beta |tests/e1/aval_053.tesh
+Beta |Test suite `tests/e1/aval_053'
+Beta |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Beta |Test suite `tests/e1/aval_053' OK
+Beta |tests/e1/aval_054.tesh
+Beta |Test suite `tests/e1/aval_054'
+Beta |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Beta |Test suite `tests/e1/aval_054' OK
+Beta |tests/e1/aval_055.tesh
+Beta |Test suite `tests/e1/aval_055'
+Beta |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Beta |Test suite `tests/e1/aval_055' OK
+Beta |tests/e1/aval_056.tesh
+Beta |Test suite `tests/e1/aval_056'
+Beta |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Beta |Test suite `tests/e1/aval_056' OK
+Beta |tests/e1/aval_057.tesh
+Beta |Test suite `tests/e1/aval_057'
+Beta |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Beta |Test suite `tests/e1/aval_057' OK
+Beta |tests/e1/aval_058.tesh
+Beta |Test suite `tests/e1/aval_058'
+Beta |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Beta |Test suite `tests/e1/aval_058' OK
+Beta |tests/e1/aval_059.tesh
+Beta |Test suite `tests/e1/aval_059'
+Beta |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Beta |Test suite `tests/e1/aval_059' OK
+Beta |tests/e1/aval_060.tesh
+Beta |Test suite `tests/e1/aval_060'
+Beta |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Beta |Test suite `tests/e1/aval_060' OK
+Beta |tests/e1/aval_061.tesh
+Beta |Test suite `tests/e1/aval_061'
+Beta |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Beta |Test suite `tests/e1/aval_061' OK
+Beta |tests/e1/aval_062.tesh
+Beta |Test suite `tests/e1/aval_062'
+Beta |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Beta |Test suite `tests/e1/aval_062' OK
+Beta |tests/e1/aval_063.tesh
+Beta |Test suite `tests/e1/aval_063'
+Beta |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Beta |Test suite `tests/e1/aval_063' OK
+Beta |tests/e1/aval_064.tesh
+Beta |Test suite `tests/e1/aval_064'
+Beta |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Beta |Test suite `tests/e1/aval_064' OK
+Beta |tests/e1/aval_065.tesh
+Beta |Test suite `tests/e1/aval_065'
+Beta |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Beta |Test suite `tests/e1/aval_065' OK
+Beta |tests/e1/aval_066.tesh
+Beta |Test suite `tests/e1/aval_066'
+Beta |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Beta |Test suite `tests/e1/aval_066' OK
+Beta |tests/e1/aval_067.tesh
+Beta |Test suite `tests/e1/aval_067'
+Beta |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Beta |Output of <tests/e1/aval_067.tesh:3> mismatch:
+Beta |- 1 TK_LIT_FALSE [false]
+Beta |+ 1 TK_IDENTIFICADOR [false]
+Beta |Test suite `tests/e1/aval_067.tesh': NOK (<tests/e1/aval_067.tesh:3> output mismatch)
+Beta |tests/e1/aval_068.tesh
+Beta |Test suite `tests/e1/aval_068'
+Beta |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Beta |Output of <tests/e1/aval_068.tesh:3> mismatch:
+Beta |- 1 TK_LIT_TRUE [true]
+Beta |+ 1 TK_IDENTIFICADOR [true]
+Beta |Test suite `tests/e1/aval_068.tesh': NOK (<tests/e1/aval_068.tesh:3> output mismatch)
+Beta |tests/e1/aval_069.tesh
+Beta |Test suite `tests/e1/aval_069'
+Beta |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Beta |Test suite `tests/e1/aval_069' OK
+Beta |tests/e1/aval_070.tesh
+Beta |Test suite `tests/e1/aval_070'
+Beta |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Beta |Output of <tests/e1/aval_070.tesh:3> mismatch:
+Beta |- 1 TK_LIT_CHAR ['=']
+Beta |+ 1 TOKEN_ERRO [']
+Beta |+ 1 TK_ESPECIAL [=]
+Beta |+ 1 TOKEN_ERRO [']
+Beta |Test suite `tests/e1/aval_070.tesh': NOK (<tests/e1/aval_070.tesh:3> output mismatch)
+Beta |tests/e1/aval_071.tesh
+Beta |Test suite `tests/e1/aval_071'
+Beta |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Beta |Output of <tests/e1/aval_071.tesh:3> mismatch:
+Beta |- 1 TK_LIT_CHAR ['+']
+Beta |+ 1 TOKEN_ERRO [']
+Beta |+ 1 TK_ESPECIAL [+]
+Beta |+ 1 TOKEN_ERRO [']
+Beta |Test suite `tests/e1/aval_071.tesh': NOK (<tests/e1/aval_071.tesh:3> output mismatch)
+Beta |tests/e1/aval_072.tesh
+Beta |Test suite `tests/e1/aval_072'
+Beta |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Beta |Output of <tests/e1/aval_072.tesh:3> mismatch:
+Beta |- 1 TK_LIT_STRING ["meu nome"]
+Beta |+ 1 TOKEN_ERRO ["]
+Beta |+ 1 TK_IDENTIFICADOR [meu]
+Beta |+ 1 TK_IDENTIFICADOR [nome]
+Beta |+ 1 TOKEN_ERRO ["]
+Beta |Test suite `tests/e1/aval_072.tesh': NOK (<tests/e1/aval_072.tesh:3> output mismatch)
+Beta |tests/e1/aval_073.tesh
+Beta |Test suite `tests/e1/aval_073'
+Beta |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Beta |Output of <tests/e1/aval_073.tesh:3> mismatch:
+Beta |- 1 TK_LIT_STRING ["x = 3"]
+Beta |+ 1 TOKEN_ERRO ["]
+Beta |+ 1 TK_IDENTIFICADOR [x]
+Beta |+ 1 TK_ESPECIAL [=]
+Beta |+ 1 TK_LIT_INT [3]
+Beta |+ 1 TOKEN_ERRO ["]
+Beta |Test suite `tests/e1/aval_073.tesh': NOK (<tests/e1/aval_073.tesh:3> output mismatch)
+Beta |tests/e1/aval_074.tesh
+Beta |Test suite `tests/e1/aval_074'
+Beta |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Beta |Test suite `tests/e1/aval_074' OK
+Beta |tests/e1/aval_075.tesh
+Beta |Test suite `tests/e1/aval_075'
+Beta |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Beta |Test suite `tests/e1/aval_075' OK
+Beta |tests/e1/aval_076.tesh
+Beta |Test suite `tests/e1/aval_076'
+Beta |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Beta |Test suite `tests/e1/aval_076' OK
+Beta |tests/e1/aval_077.tesh
+Beta |Test suite `tests/e1/aval_077'
+Beta |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Beta |Test suite `tests/e1/aval_077' OK
+Beta |tests/e1/aval_078.tesh
+Beta |Test suite `tests/e1/aval_078'
+Beta |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Beta |Test suite `tests/e1/aval_078' OK
+Beta |tests/e1/aval_079.tesh
+Beta |Test suite `tests/e1/aval_079'
+Beta |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Beta |Test suite `tests/e1/aval_079' OK
+Beta |tests/e1/aval_080.tesh
+Beta |Test suite `tests/e1/aval_080'
+Beta |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Beta |Test suite `tests/e1/aval_080' OK
+Beta |tests/e1/aval_081.tesh
+Beta |Test suite `tests/e1/aval_081'
+Beta |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Beta |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Gamma
+
+~/ensino/private/E1/Gamma ~/ensino/private
+Gamma |tests/e1/aval_001.tesh
+Gamma |Test suite `tests/e1/aval_001'
+Gamma |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Gamma |Test suite `tests/e1/aval_001' OK
+Gamma |tests/e1/aval_002.tesh
+Gamma |Test suite `tests/e1/aval_002'
+Gamma |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Gamma |Test suite `tests/e1/aval_002' OK
+Gamma |tests/e1/aval_003.tesh
+Gamma |Test suite `tests/e1/aval_003'
+Gamma |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Gamma |Test suite `tests/e1/aval_003' OK
+Gamma |tests/e1/aval_004.tesh
+Gamma |Test suite `tests/e1/aval_004'
+Gamma |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Gamma |Test suite `tests/e1/aval_004' OK
+Gamma |tests/e1/aval_005.tesh
+Gamma |Test suite `tests/e1/aval_005'
+Gamma |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Gamma |Test suite `tests/e1/aval_005' OK
+Gamma |tests/e1/aval_006.tesh
+Gamma |Test suite `tests/e1/aval_006'
+Gamma |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Gamma |Test suite `tests/e1/aval_006' OK
+Gamma |tests/e1/aval_007.tesh
+Gamma |Test suite `tests/e1/aval_007'
+Gamma |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Gamma |Test suite `tests/e1/aval_007' OK
+Gamma |tests/e1/aval_008.tesh
+Gamma |Test suite `tests/e1/aval_008'
+Gamma |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Gamma |Test suite `tests/e1/aval_008' OK
+Gamma |tests/e1/aval_009.tesh
+Gamma |Test suite `tests/e1/aval_009'
+Gamma |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Gamma |Test suite `tests/e1/aval_009' OK
+Gamma |tests/e1/aval_010.tesh
+Gamma |Test suite `tests/e1/aval_010'
+Gamma |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Gamma |Test suite `tests/e1/aval_010' OK
+Gamma |tests/e1/aval_011.tesh
+Gamma |Test suite `tests/e1/aval_011'
+Gamma |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Gamma |Test suite `tests/e1/aval_011' OK
+Gamma |tests/e1/aval_012.tesh
+Gamma |Test suite `tests/e1/aval_012'
+Gamma |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Gamma |Test suite `tests/e1/aval_012' OK
+Gamma |tests/e1/aval_013.tesh
+Gamma |Test suite `tests/e1/aval_013'
+Gamma |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Gamma |Test suite `tests/e1/aval_013' OK
+Gamma |tests/e1/aval_014.tesh
+Gamma |Test suite `tests/e1/aval_014'
+Gamma |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Gamma |Test suite `tests/e1/aval_014' OK
+Gamma |tests/e1/aval_015.tesh
+Gamma |Test suite `tests/e1/aval_015'
+Gamma |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Gamma |Test suite `tests/e1/aval_015' OK
+Gamma |tests/e1/aval_016.tesh
+Gamma |Test suite `tests/e1/aval_016'
+Gamma |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Gamma |Test suite `tests/e1/aval_016' OK
+Gamma |tests/e1/aval_017.tesh
+Gamma |Test suite `tests/e1/aval_017'
+Gamma |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Gamma |Test suite `tests/e1/aval_017' OK
+Gamma |tests/e1/aval_018.tesh
+Gamma |Test suite `tests/e1/aval_018'
+Gamma |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Gamma |Test suite `tests/e1/aval_018' OK
+Gamma |tests/e1/aval_019.tesh
+Gamma |Test suite `tests/e1/aval_019'
+Gamma |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Gamma |Test suite `tests/e1/aval_019' OK
+Gamma |tests/e1/aval_020.tesh
+Gamma |Test suite `tests/e1/aval_020'
+Gamma |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Gamma |Test suite `tests/e1/aval_020' OK
+Gamma |tests/e1/aval_021.tesh
+Gamma |Test suite `tests/e1/aval_021'
+Gamma |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Gamma |Test suite `tests/e1/aval_021' OK
+Gamma |tests/e1/aval_022.tesh
+Gamma |Test suite `tests/e1/aval_022'
+Gamma |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Gamma |Test suite `tests/e1/aval_022' OK
+Gamma |tests/e1/aval_023.tesh
+Gamma |Test suite `tests/e1/aval_023'
+Gamma |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Gamma |Test suite `tests/e1/aval_023' OK
+Gamma |tests/e1/aval_024.tesh
+Gamma |Test suite `tests/e1/aval_024'
+Gamma |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Gamma |Test suite `tests/e1/aval_024' OK
+Gamma |tests/e1/aval_025.tesh
+Gamma |Test suite `tests/e1/aval_025'
+Gamma |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Gamma |Test suite `tests/e1/aval_025' OK
+Gamma |tests/e1/aval_026.tesh
+Gamma |Test suite `tests/e1/aval_026'
+Gamma |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Gamma |Test suite `tests/e1/aval_026' OK
+Gamma |tests/e1/aval_027.tesh
+Gamma |Test suite `tests/e1/aval_027'
+Gamma |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Gamma |Test suite `tests/e1/aval_027' OK
+Gamma |tests/e1/aval_028.tesh
+Gamma |Test suite `tests/e1/aval_028'
+Gamma |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Gamma |Test suite `tests/e1/aval_028' OK
+Gamma |tests/e1/aval_029.tesh
+Gamma |Test suite `tests/e1/aval_029'
+Gamma |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Gamma |Test suite `tests/e1/aval_029' OK
+Gamma |tests/e1/aval_030.tesh
+Gamma |Test suite `tests/e1/aval_030'
+Gamma |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Gamma |Test suite `tests/e1/aval_030' OK
+Gamma |tests/e1/aval_031.tesh
+Gamma |Test suite `tests/e1/aval_031'
+Gamma |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Gamma |Test suite `tests/e1/aval_031' OK
+Gamma |tests/e1/aval_032.tesh
+Gamma |Test suite `tests/e1/aval_032'
+Gamma |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Gamma |Test suite `tests/e1/aval_032' OK
+Gamma |tests/e1/aval_033.tesh
+Gamma |Test suite `tests/e1/aval_033'
+Gamma |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Gamma |Test suite `tests/e1/aval_033' OK
+Gamma |tests/e1/aval_034.tesh
+Gamma |Test suite `tests/e1/aval_034'
+Gamma |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Gamma |Test suite `tests/e1/aval_034' OK
+Gamma |tests/e1/aval_035.tesh
+Gamma |Test suite `tests/e1/aval_035'
+Gamma |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Gamma |Test suite `tests/e1/aval_035' OK
+Gamma |tests/e1/aval_036.tesh
+Gamma |Test suite `tests/e1/aval_036'
+Gamma |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Gamma |Test suite `tests/e1/aval_036' OK
+Gamma |tests/e1/aval_037.tesh
+Gamma |Test suite `tests/e1/aval_037'
+Gamma |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Gamma |Test suite `tests/e1/aval_037' OK
+Gamma |tests/e1/aval_038.tesh
+Gamma |Test suite `tests/e1/aval_038'
+Gamma |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Gamma |Test suite `tests/e1/aval_038' OK
+Gamma |tests/e1/aval_039.tesh
+Gamma |Test suite `tests/e1/aval_039'
+Gamma |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Gamma |Test suite `tests/e1/aval_039' OK
+Gamma |tests/e1/aval_040.tesh
+Gamma |Test suite `tests/e1/aval_040'
+Gamma |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Gamma |Test suite `tests/e1/aval_040' OK
+Gamma |tests/e1/aval_041.tesh
+Gamma |Test suite `tests/e1/aval_041'
+Gamma |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Gamma |Test suite `tests/e1/aval_041' OK
+Gamma |tests/e1/aval_042.tesh
+Gamma |Test suite `tests/e1/aval_042'
+Gamma |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Gamma |Test suite `tests/e1/aval_042' OK
+Gamma |tests/e1/aval_043.tesh
+Gamma |Test suite `tests/e1/aval_043'
+Gamma |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Gamma |Test suite `tests/e1/aval_043' OK
+Gamma |tests/e1/aval_044.tesh
+Gamma |Test suite `tests/e1/aval_044'
+Gamma |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Gamma |Test suite `tests/e1/aval_044' OK
+Gamma |tests/e1/aval_045.tesh
+Gamma |Test suite `tests/e1/aval_045'
+Gamma |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Gamma |Test suite `tests/e1/aval_045' OK
+Gamma |tests/e1/aval_046.tesh
+Gamma |Test suite `tests/e1/aval_046'
+Gamma |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Gamma |Test suite `tests/e1/aval_046' OK
+Gamma |tests/e1/aval_047.tesh
+Gamma |Test suite `tests/e1/aval_047'
+Gamma |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Gamma |Test suite `tests/e1/aval_047' OK
+Gamma |tests/e1/aval_048.tesh
+Gamma |Test suite `tests/e1/aval_048'
+Gamma |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Gamma |Test suite `tests/e1/aval_048' OK
+Gamma |tests/e1/aval_049.tesh
+Gamma |Test suite `tests/e1/aval_049'
+Gamma |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Gamma |Test suite `tests/e1/aval_049' OK
+Gamma |tests/e1/aval_050.tesh
+Gamma |Test suite `tests/e1/aval_050'
+Gamma |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Gamma |Test suite `tests/e1/aval_050' OK
+Gamma |tests/e1/aval_051.tesh
+Gamma |Test suite `tests/e1/aval_051'
+Gamma |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Gamma |Test suite `tests/e1/aval_051' OK
+Gamma |tests/e1/aval_052.tesh
+Gamma |Test suite `tests/e1/aval_052'
+Gamma |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Gamma |Test suite `tests/e1/aval_052' OK
+Gamma |tests/e1/aval_053.tesh
+Gamma |Test suite `tests/e1/aval_053'
+Gamma |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Gamma |Test suite `tests/e1/aval_053' OK
+Gamma |tests/e1/aval_054.tesh
+Gamma |Test suite `tests/e1/aval_054'
+Gamma |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Gamma |Test suite `tests/e1/aval_054' OK
+Gamma |tests/e1/aval_055.tesh
+Gamma |Test suite `tests/e1/aval_055'
+Gamma |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Gamma |Test suite `tests/e1/aval_055' OK
+Gamma |tests/e1/aval_056.tesh
+Gamma |Test suite `tests/e1/aval_056'
+Gamma |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Gamma |Test suite `tests/e1/aval_056' OK
+Gamma |tests/e1/aval_057.tesh
+Gamma |Test suite `tests/e1/aval_057'
+Gamma |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Gamma |Test suite `tests/e1/aval_057' OK
+Gamma |tests/e1/aval_058.tesh
+Gamma |Test suite `tests/e1/aval_058'
+Gamma |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Gamma |Test suite `tests/e1/aval_058' OK
+Gamma |tests/e1/aval_059.tesh
+Gamma |Test suite `tests/e1/aval_059'
+Gamma |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Gamma |Test suite `tests/e1/aval_059' OK
+Gamma |tests/e1/aval_060.tesh
+Gamma |Test suite `tests/e1/aval_060'
+Gamma |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Gamma |Test suite `tests/e1/aval_060' OK
+Gamma |tests/e1/aval_061.tesh
+Gamma |Test suite `tests/e1/aval_061'
+Gamma |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Gamma |Test suite `tests/e1/aval_061' OK
+Gamma |tests/e1/aval_062.tesh
+Gamma |Test suite `tests/e1/aval_062'
+Gamma |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Gamma |Output of <tests/e1/aval_062.tesh:3> mismatch:
+Gamma |- 1 TK_LIT_INT [-12]
+Gamma |+ 1 TK_ESPECIAL [-]
+Gamma |+ 1 TK_LIT_INT [12]
+Gamma |Test suite `tests/e1/aval_062.tesh': NOK (<tests/e1/aval_062.tesh:3> output mismatch)
+Gamma |tests/e1/aval_063.tesh
+Gamma |Test suite `tests/e1/aval_063'
+Gamma |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Gamma |Output of <tests/e1/aval_063.tesh:3> mismatch:
+Gamma |- 1 TK_LIT_INT [+12]
+Gamma |+ 1 TK_ESPECIAL [+]
+Gamma |+ 1 TK_LIT_INT [12]
+Gamma |Test suite `tests/e1/aval_063.tesh': NOK (<tests/e1/aval_063.tesh:3> output mismatch)
+Gamma |tests/e1/aval_064.tesh
+Gamma |Test suite `tests/e1/aval_064'
+Gamma |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Gamma |Test suite `tests/e1/aval_064' OK
+Gamma |tests/e1/aval_065.tesh
+Gamma |Test suite `tests/e1/aval_065'
+Gamma |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Gamma |Output of <tests/e1/aval_065.tesh:3> mismatch:
+Gamma |- 1 TK_LIT_FLOAT [-12.34]
+Gamma |+ 1 TK_ESPECIAL [-]
+Gamma |+ 1 TK_LIT_FLOAT [12.34]
+Gamma |Test suite `tests/e1/aval_065.tesh': NOK (<tests/e1/aval_065.tesh:3> output mismatch)
+Gamma |tests/e1/aval_066.tesh
+Gamma |Test suite `tests/e1/aval_066'
+Gamma |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Gamma |Output of <tests/e1/aval_066.tesh:3> mismatch:
+Gamma |- 1 TK_LIT_FLOAT [+12.34]
+Gamma |+ 1 TK_ESPECIAL [+]
+Gamma |+ 1 TK_LIT_FLOAT [12.34]
+Gamma |Test suite `tests/e1/aval_066.tesh': NOK (<tests/e1/aval_066.tesh:3> output mismatch)
+Gamma |tests/e1/aval_067.tesh
+Gamma |Test suite `tests/e1/aval_067'
+Gamma |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Gamma |Test suite `tests/e1/aval_067' OK
+Gamma |tests/e1/aval_068.tesh
+Gamma |Test suite `tests/e1/aval_068'
+Gamma |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Gamma |Test suite `tests/e1/aval_068' OK
+Gamma |tests/e1/aval_069.tesh
+Gamma |Test suite `tests/e1/aval_069'
+Gamma |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Gamma |Test suite `tests/e1/aval_069' OK
+Gamma |tests/e1/aval_070.tesh
+Gamma |Test suite `tests/e1/aval_070'
+Gamma |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Gamma |Test suite `tests/e1/aval_070' OK
+Gamma |tests/e1/aval_071.tesh
+Gamma |Test suite `tests/e1/aval_071'
+Gamma |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Gamma |Test suite `tests/e1/aval_071' OK
+Gamma |tests/e1/aval_072.tesh
+Gamma |Test suite `tests/e1/aval_072'
+Gamma |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Gamma |Test suite `tests/e1/aval_072' OK
+Gamma |tests/e1/aval_073.tesh
+Gamma |Test suite `tests/e1/aval_073'
+Gamma |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Gamma |Test suite `tests/e1/aval_073' OK
+Gamma |tests/e1/aval_074.tesh
+Gamma |Test suite `tests/e1/aval_074'
+Gamma |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Gamma |Test suite `tests/e1/aval_074' OK
+Gamma |tests/e1/aval_075.tesh
+Gamma |Test suite `tests/e1/aval_075'
+Gamma |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Gamma |Test suite `tests/e1/aval_075' OK
+Gamma |tests/e1/aval_076.tesh
+Gamma |Test suite `tests/e1/aval_076'
+Gamma |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Gamma |Test suite `tests/e1/aval_076' OK
+Gamma |tests/e1/aval_077.tesh
+Gamma |Test suite `tests/e1/aval_077'
+Gamma |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Gamma |Test suite `tests/e1/aval_077' OK
+Gamma |tests/e1/aval_078.tesh
+Gamma |Test suite `tests/e1/aval_078'
+Gamma |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Gamma |Test suite `tests/e1/aval_078' OK
+Gamma |tests/e1/aval_079.tesh
+Gamma |Test suite `tests/e1/aval_079'
+Gamma |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Gamma |Test suite `tests/e1/aval_079' OK
+Gamma |tests/e1/aval_080.tesh
+Gamma |Test suite `tests/e1/aval_080'
+Gamma |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Gamma |Test suite `tests/e1/aval_080' OK
+Gamma |tests/e1/aval_081.tesh
+Gamma |Test suite `tests/e1/aval_081'
+Gamma |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Gamma |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Iota
+
+~/ensino/private/E1/Iota ~/ensino/private
+Iota |tests/e1/aval_001.tesh
+Iota |Test suite `tests/e1/aval_001'
+Iota |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Iota |Test suite `tests/e1/aval_001' OK
+Iota |tests/e1/aval_002.tesh
+Iota |Test suite `tests/e1/aval_002'
+Iota |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Iota |Test suite `tests/e1/aval_002' OK
+Iota |tests/e1/aval_003.tesh
+Iota |Test suite `tests/e1/aval_003'
+Iota |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Iota |Test suite `tests/e1/aval_003' OK
+Iota |tests/e1/aval_004.tesh
+Iota |Test suite `tests/e1/aval_004'
+Iota |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Iota |Test suite `tests/e1/aval_004' OK
+Iota |tests/e1/aval_005.tesh
+Iota |Test suite `tests/e1/aval_005'
+Iota |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Iota |Test suite `tests/e1/aval_005' OK
+Iota |tests/e1/aval_006.tesh
+Iota |Test suite `tests/e1/aval_006'
+Iota |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Iota |Test suite `tests/e1/aval_006' OK
+Iota |tests/e1/aval_007.tesh
+Iota |Test suite `tests/e1/aval_007'
+Iota |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Iota |Test suite `tests/e1/aval_007' OK
+Iota |tests/e1/aval_008.tesh
+Iota |Test suite `tests/e1/aval_008'
+Iota |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Iota |Test suite `tests/e1/aval_008' OK
+Iota |tests/e1/aval_009.tesh
+Iota |Test suite `tests/e1/aval_009'
+Iota |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Iota |Test suite `tests/e1/aval_009' OK
+Iota |tests/e1/aval_010.tesh
+Iota |Test suite `tests/e1/aval_010'
+Iota |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Iota |Test suite `tests/e1/aval_010' OK
+Iota |tests/e1/aval_011.tesh
+Iota |Test suite `tests/e1/aval_011'
+Iota |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Iota |Test suite `tests/e1/aval_011' OK
+Iota |tests/e1/aval_012.tesh
+Iota |Test suite `tests/e1/aval_012'
+Iota |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Iota |Test suite `tests/e1/aval_012' OK
+Iota |tests/e1/aval_013.tesh
+Iota |Test suite `tests/e1/aval_013'
+Iota |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Iota |Test suite `tests/e1/aval_013' OK
+Iota |tests/e1/aval_014.tesh
+Iota |Test suite `tests/e1/aval_014'
+Iota |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Iota |Test suite `tests/e1/aval_014' OK
+Iota |tests/e1/aval_015.tesh
+Iota |Test suite `tests/e1/aval_015'
+Iota |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Iota |Test suite `tests/e1/aval_015' OK
+Iota |tests/e1/aval_016.tesh
+Iota |Test suite `tests/e1/aval_016'
+Iota |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Iota |Test suite `tests/e1/aval_016' OK
+Iota |tests/e1/aval_017.tesh
+Iota |Test suite `tests/e1/aval_017'
+Iota |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Iota |Test suite `tests/e1/aval_017' OK
+Iota |tests/e1/aval_018.tesh
+Iota |Test suite `tests/e1/aval_018'
+Iota |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Iota |Test suite `tests/e1/aval_018' OK
+Iota |tests/e1/aval_019.tesh
+Iota |Test suite `tests/e1/aval_019'
+Iota |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Iota |Test suite `tests/e1/aval_019' OK
+Iota |tests/e1/aval_020.tesh
+Iota |Test suite `tests/e1/aval_020'
+Iota |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Iota |Test suite `tests/e1/aval_020' OK
+Iota |tests/e1/aval_021.tesh
+Iota |Test suite `tests/e1/aval_021'
+Iota |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Iota |Test suite `tests/e1/aval_021' OK
+Iota |tests/e1/aval_022.tesh
+Iota |Test suite `tests/e1/aval_022'
+Iota |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Iota |Test suite `tests/e1/aval_022' OK
+Iota |tests/e1/aval_023.tesh
+Iota |Test suite `tests/e1/aval_023'
+Iota |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Iota |Test suite `tests/e1/aval_023' OK
+Iota |tests/e1/aval_024.tesh
+Iota |Test suite `tests/e1/aval_024'
+Iota |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Iota |Test suite `tests/e1/aval_024' OK
+Iota |tests/e1/aval_025.tesh
+Iota |Test suite `tests/e1/aval_025'
+Iota |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Iota |Test suite `tests/e1/aval_025' OK
+Iota |tests/e1/aval_026.tesh
+Iota |Test suite `tests/e1/aval_026'
+Iota |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Iota |Test suite `tests/e1/aval_026' OK
+Iota |tests/e1/aval_027.tesh
+Iota |Test suite `tests/e1/aval_027'
+Iota |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Iota |Test suite `tests/e1/aval_027' OK
+Iota |tests/e1/aval_028.tesh
+Iota |Test suite `tests/e1/aval_028'
+Iota |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Iota |Test suite `tests/e1/aval_028' OK
+Iota |tests/e1/aval_029.tesh
+Iota |Test suite `tests/e1/aval_029'
+Iota |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Iota |Test suite `tests/e1/aval_029' OK
+Iota |tests/e1/aval_030.tesh
+Iota |Test suite `tests/e1/aval_030'
+Iota |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Iota |Test suite `tests/e1/aval_030' OK
+Iota |tests/e1/aval_031.tesh
+Iota |Test suite `tests/e1/aval_031'
+Iota |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Iota |Test suite `tests/e1/aval_031' OK
+Iota |tests/e1/aval_032.tesh
+Iota |Test suite `tests/e1/aval_032'
+Iota |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Iota |Test suite `tests/e1/aval_032' OK
+Iota |tests/e1/aval_033.tesh
+Iota |Test suite `tests/e1/aval_033'
+Iota |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Iota |Test suite `tests/e1/aval_033' OK
+Iota |tests/e1/aval_034.tesh
+Iota |Test suite `tests/e1/aval_034'
+Iota |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Iota |Test suite `tests/e1/aval_034' OK
+Iota |tests/e1/aval_035.tesh
+Iota |Test suite `tests/e1/aval_035'
+Iota |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Iota |Test suite `tests/e1/aval_035' OK
+Iota |tests/e1/aval_036.tesh
+Iota |Test suite `tests/e1/aval_036'
+Iota |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Iota |Test suite `tests/e1/aval_036' OK
+Iota |tests/e1/aval_037.tesh
+Iota |Test suite `tests/e1/aval_037'
+Iota |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Iota |Test suite `tests/e1/aval_037' OK
+Iota |tests/e1/aval_038.tesh
+Iota |Test suite `tests/e1/aval_038'
+Iota |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Iota |Test suite `tests/e1/aval_038' OK
+Iota |tests/e1/aval_039.tesh
+Iota |Test suite `tests/e1/aval_039'
+Iota |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Iota |Test suite `tests/e1/aval_039' OK
+Iota |tests/e1/aval_040.tesh
+Iota |Test suite `tests/e1/aval_040'
+Iota |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Iota |Test suite `tests/e1/aval_040' OK
+Iota |tests/e1/aval_041.tesh
+Iota |Test suite `tests/e1/aval_041'
+Iota |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Iota |Test suite `tests/e1/aval_041' OK
+Iota |tests/e1/aval_042.tesh
+Iota |Test suite `tests/e1/aval_042'
+Iota |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Iota |Test suite `tests/e1/aval_042' OK
+Iota |tests/e1/aval_043.tesh
+Iota |Test suite `tests/e1/aval_043'
+Iota |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Iota |Test suite `tests/e1/aval_043' OK
+Iota |tests/e1/aval_044.tesh
+Iota |Test suite `tests/e1/aval_044'
+Iota |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Iota |Test suite `tests/e1/aval_044' OK
+Iota |tests/e1/aval_045.tesh
+Iota |Test suite `tests/e1/aval_045'
+Iota |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Iota |Test suite `tests/e1/aval_045' OK
+Iota |tests/e1/aval_046.tesh
+Iota |Test suite `tests/e1/aval_046'
+Iota |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Iota |Test suite `tests/e1/aval_046' OK
+Iota |tests/e1/aval_047.tesh
+Iota |Test suite `tests/e1/aval_047'
+Iota |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Iota |Test suite `tests/e1/aval_047' OK
+Iota |tests/e1/aval_048.tesh
+Iota |Test suite `tests/e1/aval_048'
+Iota |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Iota |Test suite `tests/e1/aval_048' OK
+Iota |tests/e1/aval_049.tesh
+Iota |Test suite `tests/e1/aval_049'
+Iota |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Iota |Test suite `tests/e1/aval_049' OK
+Iota |tests/e1/aval_050.tesh
+Iota |Test suite `tests/e1/aval_050'
+Iota |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Iota |Test suite `tests/e1/aval_050' OK
+Iota |tests/e1/aval_051.tesh
+Iota |Test suite `tests/e1/aval_051'
+Iota |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Iota |Test suite `tests/e1/aval_051' OK
+Iota |tests/e1/aval_052.tesh
+Iota |Test suite `tests/e1/aval_052'
+Iota |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Iota |Test suite `tests/e1/aval_052' OK
+Iota |tests/e1/aval_053.tesh
+Iota |Test suite `tests/e1/aval_053'
+Iota |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Iota |Test suite `tests/e1/aval_053' OK
+Iota |tests/e1/aval_054.tesh
+Iota |Test suite `tests/e1/aval_054'
+Iota |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Iota |Test suite `tests/e1/aval_054' OK
+Iota |tests/e1/aval_055.tesh
+Iota |Test suite `tests/e1/aval_055'
+Iota |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Iota |Test suite `tests/e1/aval_055' OK
+Iota |tests/e1/aval_056.tesh
+Iota |Test suite `tests/e1/aval_056'
+Iota |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Iota |Test suite `tests/e1/aval_056' OK
+Iota |tests/e1/aval_057.tesh
+Iota |Test suite `tests/e1/aval_057'
+Iota |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Iota |Test suite `tests/e1/aval_057' OK
+Iota |tests/e1/aval_058.tesh
+Iota |Test suite `tests/e1/aval_058'
+Iota |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Iota |Output of <tests/e1/aval_058.tesh:3> mismatch:
+Iota |- 1 TK_IDENTIFICADOR [_id]
+Iota |+ 1 TOKEN_ERRO [_]
+Iota |+ 1 TK_IDENTIFICADOR [id]
+Iota |Test suite `tests/e1/aval_058.tesh': NOK (<tests/e1/aval_058.tesh:3> output mismatch)
+Iota |tests/e1/aval_059.tesh
+Iota |Test suite `tests/e1/aval_059'
+Iota |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Iota |Output of <tests/e1/aval_059.tesh:3> mismatch:
+Iota |- 1 TK_IDENTIFICADOR [_ID]
+Iota |+ 1 TOKEN_ERRO [_]
+Iota |+ 1 TK_IDENTIFICADOR [ID]
+Iota |Test suite `tests/e1/aval_059.tesh': NOK (<tests/e1/aval_059.tesh:3> output mismatch)
+Iota |tests/e1/aval_060.tesh
+Iota |Test suite `tests/e1/aval_060'
+Iota |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Iota |Output of <tests/e1/aval_060.tesh:3> mismatch:
+Iota |- 1 TK_IDENTIFICADOR [_01]
+Iota |+ 1 TOKEN_ERRO [_]
+Iota |+ 1 TK_LIT_INT [01]
+Iota |Test suite `tests/e1/aval_060.tesh': NOK (<tests/e1/aval_060.tesh:3> output mismatch)
+Iota |tests/e1/aval_061.tesh
+Iota |Test suite `tests/e1/aval_061'
+Iota |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Iota |Test suite `tests/e1/aval_061' OK
+Iota |tests/e1/aval_062.tesh
+Iota |Test suite `tests/e1/aval_062'
+Iota |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Iota |Output of <tests/e1/aval_062.tesh:3> mismatch:
+Iota |- 1 TK_LIT_INT [-12]
+Iota |+ 1 TK_ESPECIAL [-]
+Iota |+ 1 TK_LIT_INT [12]
+Iota |Test suite `tests/e1/aval_062.tesh': NOK (<tests/e1/aval_062.tesh:3> output mismatch)
+Iota |tests/e1/aval_063.tesh
+Iota |Test suite `tests/e1/aval_063'
+Iota |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Iota |Output of <tests/e1/aval_063.tesh:3> mismatch:
+Iota |- 1 TK_LIT_INT [+12]
+Iota |+ 1 TK_ESPECIAL [+]
+Iota |+ 1 TK_LIT_INT [12]
+Iota |Test suite `tests/e1/aval_063.tesh': NOK (<tests/e1/aval_063.tesh:3> output mismatch)
+Iota |tests/e1/aval_064.tesh
+Iota |Test suite `tests/e1/aval_064'
+Iota |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Iota |Test suite `tests/e1/aval_064' OK
+Iota |tests/e1/aval_065.tesh
+Iota |Test suite `tests/e1/aval_065'
+Iota |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Iota |Output of <tests/e1/aval_065.tesh:3> mismatch:
+Iota |- 1 TK_LIT_FLOAT [-12.34]
+Iota |+ 1 TK_ESPECIAL [-]
+Iota |+ 1 TK_LIT_FLOAT [12.34]
+Iota |Test suite `tests/e1/aval_065.tesh': NOK (<tests/e1/aval_065.tesh:3> output mismatch)
+Iota |tests/e1/aval_066.tesh
+Iota |Test suite `tests/e1/aval_066'
+Iota |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Iota |Output of <tests/e1/aval_066.tesh:3> mismatch:
+Iota |- 1 TK_LIT_FLOAT [+12.34]
+Iota |+ 1 TK_ESPECIAL [+]
+Iota |+ 1 TK_LIT_FLOAT [12.34]
+Iota |Test suite `tests/e1/aval_066.tesh': NOK (<tests/e1/aval_066.tesh:3> output mismatch)
+Iota |tests/e1/aval_067.tesh
+Iota |Test suite `tests/e1/aval_067'
+Iota |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Iota |Test suite `tests/e1/aval_067' OK
+Iota |tests/e1/aval_068.tesh
+Iota |Test suite `tests/e1/aval_068'
+Iota |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Iota |Test suite `tests/e1/aval_068' OK
+Iota |tests/e1/aval_069.tesh
+Iota |Test suite `tests/e1/aval_069'
+Iota |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Iota |Test suite `tests/e1/aval_069' OK
+Iota |tests/e1/aval_070.tesh
+Iota |Test suite `tests/e1/aval_070'
+Iota |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Iota |Test suite `tests/e1/aval_070' OK
+Iota |tests/e1/aval_071.tesh
+Iota |Test suite `tests/e1/aval_071'
+Iota |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Iota |Test suite `tests/e1/aval_071' OK
+Iota |tests/e1/aval_072.tesh
+Iota |Test suite `tests/e1/aval_072'
+Iota |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Iota |Test suite `tests/e1/aval_072' OK
+Iota |tests/e1/aval_073.tesh
+Iota |Test suite `tests/e1/aval_073'
+Iota |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Iota |Test suite `tests/e1/aval_073' OK
+Iota |tests/e1/aval_074.tesh
+Iota |Test suite `tests/e1/aval_074'
+Iota |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Iota |Test suite `tests/e1/aval_074' OK
+Iota |tests/e1/aval_075.tesh
+Iota |Test suite `tests/e1/aval_075'
+Iota |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Iota |Test suite `tests/e1/aval_075' OK
+Iota |tests/e1/aval_076.tesh
+Iota |Test suite `tests/e1/aval_076'
+Iota |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Iota |Test suite `tests/e1/aval_076' OK
+Iota |tests/e1/aval_077.tesh
+Iota |Test suite `tests/e1/aval_077'
+Iota |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Iota |Test suite `tests/e1/aval_077' OK
+Iota |tests/e1/aval_078.tesh
+Iota |Test suite `tests/e1/aval_078'
+Iota |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Iota |Test suite `tests/e1/aval_078' OK
+Iota |tests/e1/aval_079.tesh
+Iota |Test suite `tests/e1/aval_079'
+Iota |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Iota |Test suite `tests/e1/aval_079' OK
+Iota |tests/e1/aval_080.tesh
+Iota |Test suite `tests/e1/aval_080'
+Iota |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Iota |Test suite `tests/e1/aval_080' OK
+Iota |tests/e1/aval_081.tesh
+Iota |Test suite `tests/e1/aval_081'
+Iota |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Iota |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Kappa
+
+~/ensino/private/E1/Kappa ~/ensino/private
+Kappa |tests/e1/aval_001.tesh
+Kappa |Test suite `tests/e1/aval_001'
+Kappa |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Kappa |Test suite `tests/e1/aval_001' OK
+Kappa |tests/e1/aval_002.tesh
+Kappa |Test suite `tests/e1/aval_002'
+Kappa |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Kappa |Test suite `tests/e1/aval_002' OK
+Kappa |tests/e1/aval_003.tesh
+Kappa |Test suite `tests/e1/aval_003'
+Kappa |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Kappa |Test suite `tests/e1/aval_003' OK
+Kappa |tests/e1/aval_004.tesh
+Kappa |Test suite `tests/e1/aval_004'
+Kappa |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Kappa |Test suite `tests/e1/aval_004' OK
+Kappa |tests/e1/aval_005.tesh
+Kappa |Test suite `tests/e1/aval_005'
+Kappa |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Kappa |Test suite `tests/e1/aval_005' OK
+Kappa |tests/e1/aval_006.tesh
+Kappa |Test suite `tests/e1/aval_006'
+Kappa |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Kappa |Test suite `tests/e1/aval_006' OK
+Kappa |tests/e1/aval_007.tesh
+Kappa |Test suite `tests/e1/aval_007'
+Kappa |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Kappa |Test suite `tests/e1/aval_007' OK
+Kappa |tests/e1/aval_008.tesh
+Kappa |Test suite `tests/e1/aval_008'
+Kappa |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Kappa |Test suite `tests/e1/aval_008' OK
+Kappa |tests/e1/aval_009.tesh
+Kappa |Test suite `tests/e1/aval_009'
+Kappa |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Kappa |Test suite `tests/e1/aval_009' OK
+Kappa |tests/e1/aval_010.tesh
+Kappa |Test suite `tests/e1/aval_010'
+Kappa |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Kappa |Test suite `tests/e1/aval_010' OK
+Kappa |tests/e1/aval_011.tesh
+Kappa |Test suite `tests/e1/aval_011'
+Kappa |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Kappa |Test suite `tests/e1/aval_011' OK
+Kappa |tests/e1/aval_012.tesh
+Kappa |Test suite `tests/e1/aval_012'
+Kappa |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Kappa |Test suite `tests/e1/aval_012' OK
+Kappa |tests/e1/aval_013.tesh
+Kappa |Test suite `tests/e1/aval_013'
+Kappa |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Kappa |Test suite `tests/e1/aval_013' OK
+Kappa |tests/e1/aval_014.tesh
+Kappa |Test suite `tests/e1/aval_014'
+Kappa |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Kappa |Test suite `tests/e1/aval_014' OK
+Kappa |tests/e1/aval_015.tesh
+Kappa |Test suite `tests/e1/aval_015'
+Kappa |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Kappa |Test suite `tests/e1/aval_015' OK
+Kappa |tests/e1/aval_016.tesh
+Kappa |Test suite `tests/e1/aval_016'
+Kappa |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Kappa |Test suite `tests/e1/aval_016' OK
+Kappa |tests/e1/aval_017.tesh
+Kappa |Test suite `tests/e1/aval_017'
+Kappa |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Kappa |Test suite `tests/e1/aval_017' OK
+Kappa |tests/e1/aval_018.tesh
+Kappa |Test suite `tests/e1/aval_018'
+Kappa |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Kappa |Test suite `tests/e1/aval_018' OK
+Kappa |tests/e1/aval_019.tesh
+Kappa |Test suite `tests/e1/aval_019'
+Kappa |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Kappa |Test suite `tests/e1/aval_019' OK
+Kappa |tests/e1/aval_020.tesh
+Kappa |Test suite `tests/e1/aval_020'
+Kappa |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Kappa |Test suite `tests/e1/aval_020' OK
+Kappa |tests/e1/aval_021.tesh
+Kappa |Test suite `tests/e1/aval_021'
+Kappa |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Kappa |Test suite `tests/e1/aval_021' OK
+Kappa |tests/e1/aval_022.tesh
+Kappa |Test suite `tests/e1/aval_022'
+Kappa |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Kappa |Test suite `tests/e1/aval_022' OK
+Kappa |tests/e1/aval_023.tesh
+Kappa |Test suite `tests/e1/aval_023'
+Kappa |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Kappa |Test suite `tests/e1/aval_023' OK
+Kappa |tests/e1/aval_024.tesh
+Kappa |Test suite `tests/e1/aval_024'
+Kappa |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Kappa |Test suite `tests/e1/aval_024' OK
+Kappa |tests/e1/aval_025.tesh
+Kappa |Test suite `tests/e1/aval_025'
+Kappa |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Kappa |Test suite `tests/e1/aval_025' OK
+Kappa |tests/e1/aval_026.tesh
+Kappa |Test suite `tests/e1/aval_026'
+Kappa |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Kappa |Test suite `tests/e1/aval_026' OK
+Kappa |tests/e1/aval_027.tesh
+Kappa |Test suite `tests/e1/aval_027'
+Kappa |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Kappa |Test suite `tests/e1/aval_027' OK
+Kappa |tests/e1/aval_028.tesh
+Kappa |Test suite `tests/e1/aval_028'
+Kappa |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Kappa |Test suite `tests/e1/aval_028' OK
+Kappa |tests/e1/aval_029.tesh
+Kappa |Test suite `tests/e1/aval_029'
+Kappa |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Kappa |Test suite `tests/e1/aval_029' OK
+Kappa |tests/e1/aval_030.tesh
+Kappa |Test suite `tests/e1/aval_030'
+Kappa |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Kappa |Test suite `tests/e1/aval_030' OK
+Kappa |tests/e1/aval_031.tesh
+Kappa |Test suite `tests/e1/aval_031'
+Kappa |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Kappa |Test suite `tests/e1/aval_031' OK
+Kappa |tests/e1/aval_032.tesh
+Kappa |Test suite `tests/e1/aval_032'
+Kappa |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Kappa |Test suite `tests/e1/aval_032' OK
+Kappa |tests/e1/aval_033.tesh
+Kappa |Test suite `tests/e1/aval_033'
+Kappa |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Kappa |Test suite `tests/e1/aval_033' OK
+Kappa |tests/e1/aval_034.tesh
+Kappa |Test suite `tests/e1/aval_034'
+Kappa |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Kappa |Test suite `tests/e1/aval_034' OK
+Kappa |tests/e1/aval_035.tesh
+Kappa |Test suite `tests/e1/aval_035'
+Kappa |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Kappa |Test suite `tests/e1/aval_035' OK
+Kappa |tests/e1/aval_036.tesh
+Kappa |Test suite `tests/e1/aval_036'
+Kappa |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Kappa |Test suite `tests/e1/aval_036' OK
+Kappa |tests/e1/aval_037.tesh
+Kappa |Test suite `tests/e1/aval_037'
+Kappa |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Kappa |Test suite `tests/e1/aval_037' OK
+Kappa |tests/e1/aval_038.tesh
+Kappa |Test suite `tests/e1/aval_038'
+Kappa |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Kappa |Test suite `tests/e1/aval_038' OK
+Kappa |tests/e1/aval_039.tesh
+Kappa |Test suite `tests/e1/aval_039'
+Kappa |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Kappa |Test suite `tests/e1/aval_039' OK
+Kappa |tests/e1/aval_040.tesh
+Kappa |Test suite `tests/e1/aval_040'
+Kappa |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Kappa |Test suite `tests/e1/aval_040' OK
+Kappa |tests/e1/aval_041.tesh
+Kappa |Test suite `tests/e1/aval_041'
+Kappa |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Kappa |Test suite `tests/e1/aval_041' OK
+Kappa |tests/e1/aval_042.tesh
+Kappa |Test suite `tests/e1/aval_042'
+Kappa |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Kappa |Test suite `tests/e1/aval_042' OK
+Kappa |tests/e1/aval_043.tesh
+Kappa |Test suite `tests/e1/aval_043'
+Kappa |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Kappa |Test suite `tests/e1/aval_043' OK
+Kappa |tests/e1/aval_044.tesh
+Kappa |Test suite `tests/e1/aval_044'
+Kappa |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Kappa |Test suite `tests/e1/aval_044' OK
+Kappa |tests/e1/aval_045.tesh
+Kappa |Test suite `tests/e1/aval_045'
+Kappa |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Kappa |Test suite `tests/e1/aval_045' OK
+Kappa |tests/e1/aval_046.tesh
+Kappa |Test suite `tests/e1/aval_046'
+Kappa |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Kappa |Test suite `tests/e1/aval_046' OK
+Kappa |tests/e1/aval_047.tesh
+Kappa |Test suite `tests/e1/aval_047'
+Kappa |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Kappa |Test suite `tests/e1/aval_047' OK
+Kappa |tests/e1/aval_048.tesh
+Kappa |Test suite `tests/e1/aval_048'
+Kappa |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Kappa |Test suite `tests/e1/aval_048' OK
+Kappa |tests/e1/aval_049.tesh
+Kappa |Test suite `tests/e1/aval_049'
+Kappa |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Kappa |Test suite `tests/e1/aval_049' OK
+Kappa |tests/e1/aval_050.tesh
+Kappa |Test suite `tests/e1/aval_050'
+Kappa |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Kappa |Test suite `tests/e1/aval_050' OK
+Kappa |tests/e1/aval_051.tesh
+Kappa |Test suite `tests/e1/aval_051'
+Kappa |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Kappa |Test suite `tests/e1/aval_051' OK
+Kappa |tests/e1/aval_052.tesh
+Kappa |Test suite `tests/e1/aval_052'
+Kappa |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Kappa |Test suite `tests/e1/aval_052' OK
+Kappa |tests/e1/aval_053.tesh
+Kappa |Test suite `tests/e1/aval_053'
+Kappa |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Kappa |Test suite `tests/e1/aval_053' OK
+Kappa |tests/e1/aval_054.tesh
+Kappa |Test suite `tests/e1/aval_054'
+Kappa |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Kappa |Output of <tests/e1/aval_054.tesh:3> mismatch:
+Kappa |- 1 TK_OC_SR [>>]
+Kappa |+ 1 TK_OC_SL [>>]
+Kappa |Test suite `tests/e1/aval_054.tesh': NOK (<tests/e1/aval_054.tesh:3> output mismatch)
+Kappa |tests/e1/aval_055.tesh
+Kappa |Test suite `tests/e1/aval_055'
+Kappa |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Kappa |Output of <tests/e1/aval_055.tesh:3> mismatch:
+Kappa |- 1 TK_OC_SL [<<]
+Kappa |+ 1 TK_OC_SR [<<]
+Kappa |Test suite `tests/e1/aval_055.tesh': NOK (<tests/e1/aval_055.tesh:3> output mismatch)
+Kappa |tests/e1/aval_056.tesh
+Kappa |Test suite `tests/e1/aval_056'
+Kappa |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Kappa |Test suite `tests/e1/aval_056' OK
+Kappa |tests/e1/aval_057.tesh
+Kappa |Test suite `tests/e1/aval_057'
+Kappa |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Kappa |Test suite `tests/e1/aval_057' OK
+Kappa |tests/e1/aval_058.tesh
+Kappa |Test suite `tests/e1/aval_058'
+Kappa |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Kappa |Test suite `tests/e1/aval_058' OK
+Kappa |tests/e1/aval_059.tesh
+Kappa |Test suite `tests/e1/aval_059'
+Kappa |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Kappa |Test suite `tests/e1/aval_059' OK
+Kappa |tests/e1/aval_060.tesh
+Kappa |Test suite `tests/e1/aval_060'
+Kappa |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Kappa |Test suite `tests/e1/aval_060' OK
+Kappa |tests/e1/aval_061.tesh
+Kappa |Test suite `tests/e1/aval_061'
+Kappa |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Kappa |Test suite `tests/e1/aval_061' OK
+Kappa |tests/e1/aval_062.tesh
+Kappa |Test suite `tests/e1/aval_062'
+Kappa |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Kappa |Test suite `tests/e1/aval_062' OK
+Kappa |tests/e1/aval_063.tesh
+Kappa |Test suite `tests/e1/aval_063'
+Kappa |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Kappa |Test suite `tests/e1/aval_063' OK
+Kappa |tests/e1/aval_064.tesh
+Kappa |Test suite `tests/e1/aval_064'
+Kappa |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Kappa |Test suite `tests/e1/aval_064' OK
+Kappa |tests/e1/aval_065.tesh
+Kappa |Test suite `tests/e1/aval_065'
+Kappa |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Kappa |Test suite `tests/e1/aval_065' OK
+Kappa |tests/e1/aval_066.tesh
+Kappa |Test suite `tests/e1/aval_066'
+Kappa |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Kappa |Test suite `tests/e1/aval_066' OK
+Kappa |tests/e1/aval_067.tesh
+Kappa |Test suite `tests/e1/aval_067'
+Kappa |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Kappa |Test suite `tests/e1/aval_067' OK
+Kappa |tests/e1/aval_068.tesh
+Kappa |Test suite `tests/e1/aval_068'
+Kappa |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Kappa |Test suite `tests/e1/aval_068' OK
+Kappa |tests/e1/aval_069.tesh
+Kappa |Test suite `tests/e1/aval_069'
+Kappa |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Kappa |Test suite `tests/e1/aval_069' OK
+Kappa |tests/e1/aval_070.tesh
+Kappa |Test suite `tests/e1/aval_070'
+Kappa |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Kappa |Test suite `tests/e1/aval_070' OK
+Kappa |tests/e1/aval_071.tesh
+Kappa |Test suite `tests/e1/aval_071'
+Kappa |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Kappa |Test suite `tests/e1/aval_071' OK
+Kappa |tests/e1/aval_072.tesh
+Kappa |Test suite `tests/e1/aval_072'
+Kappa |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Kappa |Test suite `tests/e1/aval_072' OK
+Kappa |tests/e1/aval_073.tesh
+Kappa |Test suite `tests/e1/aval_073'
+Kappa |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Kappa |Test suite `tests/e1/aval_073' OK
+Kappa |tests/e1/aval_074.tesh
+Kappa |Test suite `tests/e1/aval_074'
+Kappa |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Kappa |Test suite `tests/e1/aval_074' OK
+Kappa |tests/e1/aval_075.tesh
+Kappa |Test suite `tests/e1/aval_075'
+Kappa |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Kappa |Test suite `tests/e1/aval_075' OK
+Kappa |tests/e1/aval_076.tesh
+Kappa |Test suite `tests/e1/aval_076'
+Kappa |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Kappa |Test suite `tests/e1/aval_076' OK
+Kappa |tests/e1/aval_077.tesh
+Kappa |Test suite `tests/e1/aval_077'
+Kappa |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Kappa |Test suite `tests/e1/aval_077' OK
+Kappa |tests/e1/aval_078.tesh
+Kappa |Test suite `tests/e1/aval_078'
+Kappa |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Kappa |Test suite `tests/e1/aval_078' OK
+Kappa |tests/e1/aval_079.tesh
+Kappa |Test suite `tests/e1/aval_079'
+Kappa |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Kappa |Test suite `tests/e1/aval_079' OK
+Kappa |tests/e1/aval_080.tesh
+Kappa |Test suite `tests/e1/aval_080'
+Kappa |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Kappa |Test suite `tests/e1/aval_080' OK
+Kappa |tests/e1/aval_081.tesh
+Kappa |Test suite `tests/e1/aval_081'
+Kappa |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Kappa |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Omega
+
+~/ensino/private/E1/Omega ~/ensino/private
+Omega |tests/e1/aval_001.tesh
+Omega |Test suite `tests/e1/aval_001'
+Omega |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Omega |Test suite `tests/e1/aval_001' OK
+Omega |tests/e1/aval_002.tesh
+Omega |Test suite `tests/e1/aval_002'
+Omega |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Omega |Test suite `tests/e1/aval_002' OK
+Omega |tests/e1/aval_003.tesh
+Omega |Test suite `tests/e1/aval_003'
+Omega |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Omega |Test suite `tests/e1/aval_003' OK
+Omega |tests/e1/aval_004.tesh
+Omega |Test suite `tests/e1/aval_004'
+Omega |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Omega |Test suite `tests/e1/aval_004' OK
+Omega |tests/e1/aval_005.tesh
+Omega |Test suite `tests/e1/aval_005'
+Omega |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Omega |Test suite `tests/e1/aval_005' OK
+Omega |tests/e1/aval_006.tesh
+Omega |Test suite `tests/e1/aval_006'
+Omega |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Omega |Test suite `tests/e1/aval_006' OK
+Omega |tests/e1/aval_007.tesh
+Omega |Test suite `tests/e1/aval_007'
+Omega |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Omega |Test suite `tests/e1/aval_007' OK
+Omega |tests/e1/aval_008.tesh
+Omega |Test suite `tests/e1/aval_008'
+Omega |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Omega |Test suite `tests/e1/aval_008' OK
+Omega |tests/e1/aval_009.tesh
+Omega |Test suite `tests/e1/aval_009'
+Omega |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Omega |Test suite `tests/e1/aval_009' OK
+Omega |tests/e1/aval_010.tesh
+Omega |Test suite `tests/e1/aval_010'
+Omega |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Omega |Test suite `tests/e1/aval_010' OK
+Omega |tests/e1/aval_011.tesh
+Omega |Test suite `tests/e1/aval_011'
+Omega |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Omega |Test suite `tests/e1/aval_011' OK
+Omega |tests/e1/aval_012.tesh
+Omega |Test suite `tests/e1/aval_012'
+Omega |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Omega |Test suite `tests/e1/aval_012' OK
+Omega |tests/e1/aval_013.tesh
+Omega |Test suite `tests/e1/aval_013'
+Omega |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Omega |Test suite `tests/e1/aval_013' OK
+Omega |tests/e1/aval_014.tesh
+Omega |Test suite `tests/e1/aval_014'
+Omega |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Omega |Test suite `tests/e1/aval_014' OK
+Omega |tests/e1/aval_015.tesh
+Omega |Test suite `tests/e1/aval_015'
+Omega |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Omega |Test suite `tests/e1/aval_015' OK
+Omega |tests/e1/aval_016.tesh
+Omega |Test suite `tests/e1/aval_016'
+Omega |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Omega |Test suite `tests/e1/aval_016' OK
+Omega |tests/e1/aval_017.tesh
+Omega |Test suite `tests/e1/aval_017'
+Omega |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Omega |Test suite `tests/e1/aval_017' OK
+Omega |tests/e1/aval_018.tesh
+Omega |Test suite `tests/e1/aval_018'
+Omega |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Omega |Test suite `tests/e1/aval_018' OK
+Omega |tests/e1/aval_019.tesh
+Omega |Test suite `tests/e1/aval_019'
+Omega |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Omega |Test suite `tests/e1/aval_019' OK
+Omega |tests/e1/aval_020.tesh
+Omega |Test suite `tests/e1/aval_020'
+Omega |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Omega |Test suite `tests/e1/aval_020' OK
+Omega |tests/e1/aval_021.tesh
+Omega |Test suite `tests/e1/aval_021'
+Omega |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Omega |Test suite `tests/e1/aval_021' OK
+Omega |tests/e1/aval_022.tesh
+Omega |Test suite `tests/e1/aval_022'
+Omega |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Omega |Test suite `tests/e1/aval_022' OK
+Omega |tests/e1/aval_023.tesh
+Omega |Test suite `tests/e1/aval_023'
+Omega |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Omega |Test suite `tests/e1/aval_023' OK
+Omega |tests/e1/aval_024.tesh
+Omega |Test suite `tests/e1/aval_024'
+Omega |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Omega |Test suite `tests/e1/aval_024' OK
+Omega |tests/e1/aval_025.tesh
+Omega |Test suite `tests/e1/aval_025'
+Omega |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Omega |Test suite `tests/e1/aval_025' OK
+Omega |tests/e1/aval_026.tesh
+Omega |Test suite `tests/e1/aval_026'
+Omega |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Omega |Test suite `tests/e1/aval_026' OK
+Omega |tests/e1/aval_027.tesh
+Omega |Test suite `tests/e1/aval_027'
+Omega |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Omega |Test suite `tests/e1/aval_027' OK
+Omega |tests/e1/aval_028.tesh
+Omega |Test suite `tests/e1/aval_028'
+Omega |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Omega |Test suite `tests/e1/aval_028' OK
+Omega |tests/e1/aval_029.tesh
+Omega |Test suite `tests/e1/aval_029'
+Omega |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Omega |Test suite `tests/e1/aval_029' OK
+Omega |tests/e1/aval_030.tesh
+Omega |Test suite `tests/e1/aval_030'
+Omega |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Omega |Test suite `tests/e1/aval_030' OK
+Omega |tests/e1/aval_031.tesh
+Omega |Test suite `tests/e1/aval_031'
+Omega |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Omega |Test suite `tests/e1/aval_031' OK
+Omega |tests/e1/aval_032.tesh
+Omega |Test suite `tests/e1/aval_032'
+Omega |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Omega |Test suite `tests/e1/aval_032' OK
+Omega |tests/e1/aval_033.tesh
+Omega |Test suite `tests/e1/aval_033'
+Omega |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Omega |Test suite `tests/e1/aval_033' OK
+Omega |tests/e1/aval_034.tesh
+Omega |Test suite `tests/e1/aval_034'
+Omega |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Omega |Test suite `tests/e1/aval_034' OK
+Omega |tests/e1/aval_035.tesh
+Omega |Test suite `tests/e1/aval_035'
+Omega |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Omega |Test suite `tests/e1/aval_035' OK
+Omega |tests/e1/aval_036.tesh
+Omega |Test suite `tests/e1/aval_036'
+Omega |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Omega |Test suite `tests/e1/aval_036' OK
+Omega |tests/e1/aval_037.tesh
+Omega |Test suite `tests/e1/aval_037'
+Omega |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Omega |Test suite `tests/e1/aval_037' OK
+Omega |tests/e1/aval_038.tesh
+Omega |Test suite `tests/e1/aval_038'
+Omega |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Omega |Test suite `tests/e1/aval_038' OK
+Omega |tests/e1/aval_039.tesh
+Omega |Test suite `tests/e1/aval_039'
+Omega |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Omega |Test suite `tests/e1/aval_039' OK
+Omega |tests/e1/aval_040.tesh
+Omega |Test suite `tests/e1/aval_040'
+Omega |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Omega |Test suite `tests/e1/aval_040' OK
+Omega |tests/e1/aval_041.tesh
+Omega |Test suite `tests/e1/aval_041'
+Omega |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Omega |Test suite `tests/e1/aval_041' OK
+Omega |tests/e1/aval_042.tesh
+Omega |Test suite `tests/e1/aval_042'
+Omega |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Omega |Test suite `tests/e1/aval_042' OK
+Omega |tests/e1/aval_043.tesh
+Omega |Test suite `tests/e1/aval_043'
+Omega |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Omega |Test suite `tests/e1/aval_043' OK
+Omega |tests/e1/aval_044.tesh
+Omega |Test suite `tests/e1/aval_044'
+Omega |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Omega |Test suite `tests/e1/aval_044' OK
+Omega |tests/e1/aval_045.tesh
+Omega |Test suite `tests/e1/aval_045'
+Omega |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Omega |Test suite `tests/e1/aval_045' OK
+Omega |tests/e1/aval_046.tesh
+Omega |Test suite `tests/e1/aval_046'
+Omega |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Omega |Test suite `tests/e1/aval_046' OK
+Omega |tests/e1/aval_047.tesh
+Omega |Test suite `tests/e1/aval_047'
+Omega |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Omega |Test suite `tests/e1/aval_047' OK
+Omega |tests/e1/aval_048.tesh
+Omega |Test suite `tests/e1/aval_048'
+Omega |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Omega |Test suite `tests/e1/aval_048' OK
+Omega |tests/e1/aval_049.tesh
+Omega |Test suite `tests/e1/aval_049'
+Omega |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Omega |Test suite `tests/e1/aval_049' OK
+Omega |tests/e1/aval_050.tesh
+Omega |Test suite `tests/e1/aval_050'
+Omega |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Omega |Test suite `tests/e1/aval_050' OK
+Omega |tests/e1/aval_051.tesh
+Omega |Test suite `tests/e1/aval_051'
+Omega |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Omega |Test suite `tests/e1/aval_051' OK
+Omega |tests/e1/aval_052.tesh
+Omega |Test suite `tests/e1/aval_052'
+Omega |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Omega |Test suite `tests/e1/aval_052' OK
+Omega |tests/e1/aval_053.tesh
+Omega |Test suite `tests/e1/aval_053'
+Omega |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Omega |Test suite `tests/e1/aval_053' OK
+Omega |tests/e1/aval_054.tesh
+Omega |Test suite `tests/e1/aval_054'
+Omega |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Omega |Test suite `tests/e1/aval_054' OK
+Omega |tests/e1/aval_055.tesh
+Omega |Test suite `tests/e1/aval_055'
+Omega |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Omega |Test suite `tests/e1/aval_055' OK
+Omega |tests/e1/aval_056.tesh
+Omega |Test suite `tests/e1/aval_056'
+Omega |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Omega |Test suite `tests/e1/aval_056' OK
+Omega |tests/e1/aval_057.tesh
+Omega |Test suite `tests/e1/aval_057'
+Omega |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Omega |Test suite `tests/e1/aval_057' OK
+Omega |tests/e1/aval_058.tesh
+Omega |Test suite `tests/e1/aval_058'
+Omega |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Omega |Test suite `tests/e1/aval_058' OK
+Omega |tests/e1/aval_059.tesh
+Omega |Test suite `tests/e1/aval_059'
+Omega |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Omega |Test suite `tests/e1/aval_059' OK
+Omega |tests/e1/aval_060.tesh
+Omega |Test suite `tests/e1/aval_060'
+Omega |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Omega |Test suite `tests/e1/aval_060' OK
+Omega |tests/e1/aval_061.tesh
+Omega |Test suite `tests/e1/aval_061'
+Omega |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Omega |Test suite `tests/e1/aval_061' OK
+Omega |tests/e1/aval_062.tesh
+Omega |Test suite `tests/e1/aval_062'
+Omega |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Omega |Test suite `tests/e1/aval_062' OK
+Omega |tests/e1/aval_063.tesh
+Omega |Test suite `tests/e1/aval_063'
+Omega |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Omega |Test suite `tests/e1/aval_063' OK
+Omega |tests/e1/aval_064.tesh
+Omega |Test suite `tests/e1/aval_064'
+Omega |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Omega |Test suite `tests/e1/aval_064' OK
+Omega |tests/e1/aval_065.tesh
+Omega |Test suite `tests/e1/aval_065'
+Omega |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Omega |Test suite `tests/e1/aval_065' OK
+Omega |tests/e1/aval_066.tesh
+Omega |Test suite `tests/e1/aval_066'
+Omega |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Omega |Test suite `tests/e1/aval_066' OK
+Omega |tests/e1/aval_067.tesh
+Omega |Test suite `tests/e1/aval_067'
+Omega |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Omega |Output of <tests/e1/aval_067.tesh:3> mismatch:
+Omega |- 1 TK_LIT_FALSE [false]
+Omega |+ 1 TK_IDENTIFICADOR [false]
+Omega |Test suite `tests/e1/aval_067.tesh': NOK (<tests/e1/aval_067.tesh:3> output mismatch)
+Omega |tests/e1/aval_068.tesh
+Omega |Test suite `tests/e1/aval_068'
+Omega |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Omega |Output of <tests/e1/aval_068.tesh:3> mismatch:
+Omega |- 1 TK_LIT_TRUE [true]
+Omega |+ 1 TK_IDENTIFICADOR [true]
+Omega |Test suite `tests/e1/aval_068.tesh': NOK (<tests/e1/aval_068.tesh:3> output mismatch)
+Omega |tests/e1/aval_069.tesh
+Omega |Test suite `tests/e1/aval_069'
+Omega |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Omega |Test suite `tests/e1/aval_069' OK
+Omega |tests/e1/aval_070.tesh
+Omega |Test suite `tests/e1/aval_070'
+Omega |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Omega |Test suite `tests/e1/aval_070' OK
+Omega |tests/e1/aval_071.tesh
+Omega |Test suite `tests/e1/aval_071'
+Omega |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Omega |Test suite `tests/e1/aval_071' OK
+Omega |tests/e1/aval_072.tesh
+Omega |Test suite `tests/e1/aval_072'
+Omega |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Omega |Test suite `tests/e1/aval_072' OK
+Omega |tests/e1/aval_073.tesh
+Omega |Test suite `tests/e1/aval_073'
+Omega |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Omega |Test suite `tests/e1/aval_073' OK
+Omega |tests/e1/aval_074.tesh
+Omega |Test suite `tests/e1/aval_074'
+Omega |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Omega |Test suite `tests/e1/aval_074' OK
+Omega |tests/e1/aval_075.tesh
+Omega |Test suite `tests/e1/aval_075'
+Omega |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Omega |Test suite `tests/e1/aval_075' OK
+Omega |tests/e1/aval_076.tesh
+Omega |Test suite `tests/e1/aval_076'
+Omega |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Omega |Test suite `tests/e1/aval_076' OK
+Omega |tests/e1/aval_077.tesh
+Omega |Test suite `tests/e1/aval_077'
+Omega |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Omega |Test suite `tests/e1/aval_077' OK
+Omega |tests/e1/aval_078.tesh
+Omega |Test suite `tests/e1/aval_078'
+Omega |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Omega |Test suite `tests/e1/aval_078' OK
+Omega |tests/e1/aval_079.tesh
+Omega |Test suite `tests/e1/aval_079'
+Omega |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Omega |Test suite `tests/e1/aval_079' OK
+Omega |tests/e1/aval_080.tesh
+Omega |Test suite `tests/e1/aval_080'
+Omega |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Omega |Test suite `tests/e1/aval_080' OK
+Omega |tests/e1/aval_081.tesh
+Omega |Test suite `tests/e1/aval_081'
+Omega |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Omega |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Omicron
+
+~/ensino/private/E1/Omicron ~/ensino/private
+Omicron |tests/e1/aval_001.tesh
+Omicron |Test suite `tests/e1/aval_001'
+Omicron |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Omicron |Test suite `tests/e1/aval_001' OK
+Omicron |tests/e1/aval_002.tesh
+Omicron |Test suite `tests/e1/aval_002'
+Omicron |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Omicron |Test suite `tests/e1/aval_002' OK
+Omicron |tests/e1/aval_003.tesh
+Omicron |Test suite `tests/e1/aval_003'
+Omicron |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Omicron |Test suite `tests/e1/aval_003' OK
+Omicron |tests/e1/aval_004.tesh
+Omicron |Test suite `tests/e1/aval_004'
+Omicron |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Omicron |Test suite `tests/e1/aval_004' OK
+Omicron |tests/e1/aval_005.tesh
+Omicron |Test suite `tests/e1/aval_005'
+Omicron |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Omicron |Test suite `tests/e1/aval_005' OK
+Omicron |tests/e1/aval_006.tesh
+Omicron |Test suite `tests/e1/aval_006'
+Omicron |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Omicron |Test suite `tests/e1/aval_006' OK
+Omicron |tests/e1/aval_007.tesh
+Omicron |Test suite `tests/e1/aval_007'
+Omicron |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Omicron |Test suite `tests/e1/aval_007' OK
+Omicron |tests/e1/aval_008.tesh
+Omicron |Test suite `tests/e1/aval_008'
+Omicron |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Omicron |Test suite `tests/e1/aval_008' OK
+Omicron |tests/e1/aval_009.tesh
+Omicron |Test suite `tests/e1/aval_009'
+Omicron |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Omicron |Test suite `tests/e1/aval_009' OK
+Omicron |tests/e1/aval_010.tesh
+Omicron |Test suite `tests/e1/aval_010'
+Omicron |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Omicron |Test suite `tests/e1/aval_010' OK
+Omicron |tests/e1/aval_011.tesh
+Omicron |Test suite `tests/e1/aval_011'
+Omicron |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Omicron |Test suite `tests/e1/aval_011' OK
+Omicron |tests/e1/aval_012.tesh
+Omicron |Test suite `tests/e1/aval_012'
+Omicron |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Omicron |Test suite `tests/e1/aval_012' OK
+Omicron |tests/e1/aval_013.tesh
+Omicron |Test suite `tests/e1/aval_013'
+Omicron |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Omicron |Test suite `tests/e1/aval_013' OK
+Omicron |tests/e1/aval_014.tesh
+Omicron |Test suite `tests/e1/aval_014'
+Omicron |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Omicron |Test suite `tests/e1/aval_014' OK
+Omicron |tests/e1/aval_015.tesh
+Omicron |Test suite `tests/e1/aval_015'
+Omicron |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Omicron |Test suite `tests/e1/aval_015' OK
+Omicron |tests/e1/aval_016.tesh
+Omicron |Test suite `tests/e1/aval_016'
+Omicron |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Omicron |Test suite `tests/e1/aval_016' OK
+Omicron |tests/e1/aval_017.tesh
+Omicron |Test suite `tests/e1/aval_017'
+Omicron |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Omicron |Test suite `tests/e1/aval_017' OK
+Omicron |tests/e1/aval_018.tesh
+Omicron |Test suite `tests/e1/aval_018'
+Omicron |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Omicron |Test suite `tests/e1/aval_018' OK
+Omicron |tests/e1/aval_019.tesh
+Omicron |Test suite `tests/e1/aval_019'
+Omicron |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Omicron |Test suite `tests/e1/aval_019' OK
+Omicron |tests/e1/aval_020.tesh
+Omicron |Test suite `tests/e1/aval_020'
+Omicron |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Omicron |Test suite `tests/e1/aval_020' OK
+Omicron |tests/e1/aval_021.tesh
+Omicron |Test suite `tests/e1/aval_021'
+Omicron |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Omicron |Test suite `tests/e1/aval_021' OK
+Omicron |tests/e1/aval_022.tesh
+Omicron |Test suite `tests/e1/aval_022'
+Omicron |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Omicron |Test suite `tests/e1/aval_022' OK
+Omicron |tests/e1/aval_023.tesh
+Omicron |Test suite `tests/e1/aval_023'
+Omicron |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Omicron |Test suite `tests/e1/aval_023' OK
+Omicron |tests/e1/aval_024.tesh
+Omicron |Test suite `tests/e1/aval_024'
+Omicron |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Omicron |Test suite `tests/e1/aval_024' OK
+Omicron |tests/e1/aval_025.tesh
+Omicron |Test suite `tests/e1/aval_025'
+Omicron |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Omicron |Test suite `tests/e1/aval_025' OK
+Omicron |tests/e1/aval_026.tesh
+Omicron |Test suite `tests/e1/aval_026'
+Omicron |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Omicron |Test suite `tests/e1/aval_026' OK
+Omicron |tests/e1/aval_027.tesh
+Omicron |Test suite `tests/e1/aval_027'
+Omicron |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Omicron |Test suite `tests/e1/aval_027' OK
+Omicron |tests/e1/aval_028.tesh
+Omicron |Test suite `tests/e1/aval_028'
+Omicron |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Omicron |Test suite `tests/e1/aval_028' OK
+Omicron |tests/e1/aval_029.tesh
+Omicron |Test suite `tests/e1/aval_029'
+Omicron |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Omicron |Test suite `tests/e1/aval_029' OK
+Omicron |tests/e1/aval_030.tesh
+Omicron |Test suite `tests/e1/aval_030'
+Omicron |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Omicron |Test suite `tests/e1/aval_030' OK
+Omicron |tests/e1/aval_031.tesh
+Omicron |Test suite `tests/e1/aval_031'
+Omicron |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Omicron |Test suite `tests/e1/aval_031' OK
+Omicron |tests/e1/aval_032.tesh
+Omicron |Test suite `tests/e1/aval_032'
+Omicron |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Omicron |Test suite `tests/e1/aval_032' OK
+Omicron |tests/e1/aval_033.tesh
+Omicron |Test suite `tests/e1/aval_033'
+Omicron |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Omicron |Test suite `tests/e1/aval_033' OK
+Omicron |tests/e1/aval_034.tesh
+Omicron |Test suite `tests/e1/aval_034'
+Omicron |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Omicron |Test suite `tests/e1/aval_034' OK
+Omicron |tests/e1/aval_035.tesh
+Omicron |Test suite `tests/e1/aval_035'
+Omicron |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Omicron |Test suite `tests/e1/aval_035' OK
+Omicron |tests/e1/aval_036.tesh
+Omicron |Test suite `tests/e1/aval_036'
+Omicron |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Omicron |Test suite `tests/e1/aval_036' OK
+Omicron |tests/e1/aval_037.tesh
+Omicron |Test suite `tests/e1/aval_037'
+Omicron |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Omicron |Test suite `tests/e1/aval_037' OK
+Omicron |tests/e1/aval_038.tesh
+Omicron |Test suite `tests/e1/aval_038'
+Omicron |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Omicron |Test suite `tests/e1/aval_038' OK
+Omicron |tests/e1/aval_039.tesh
+Omicron |Test suite `tests/e1/aval_039'
+Omicron |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Omicron |Test suite `tests/e1/aval_039' OK
+Omicron |tests/e1/aval_040.tesh
+Omicron |Test suite `tests/e1/aval_040'
+Omicron |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Omicron |Test suite `tests/e1/aval_040' OK
+Omicron |tests/e1/aval_041.tesh
+Omicron |Test suite `tests/e1/aval_041'
+Omicron |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Omicron |Test suite `tests/e1/aval_041' OK
+Omicron |tests/e1/aval_042.tesh
+Omicron |Test suite `tests/e1/aval_042'
+Omicron |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Omicron |Test suite `tests/e1/aval_042' OK
+Omicron |tests/e1/aval_043.tesh
+Omicron |Test suite `tests/e1/aval_043'
+Omicron |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Omicron |Test suite `tests/e1/aval_043' OK
+Omicron |tests/e1/aval_044.tesh
+Omicron |Test suite `tests/e1/aval_044'
+Omicron |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Omicron |Test suite `tests/e1/aval_044' OK
+Omicron |tests/e1/aval_045.tesh
+Omicron |Test suite `tests/e1/aval_045'
+Omicron |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Omicron |Test suite `tests/e1/aval_045' OK
+Omicron |tests/e1/aval_046.tesh
+Omicron |Test suite `tests/e1/aval_046'
+Omicron |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Omicron |Test suite `tests/e1/aval_046' OK
+Omicron |tests/e1/aval_047.tesh
+Omicron |Test suite `tests/e1/aval_047'
+Omicron |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Omicron |Test suite `tests/e1/aval_047' OK
+Omicron |tests/e1/aval_048.tesh
+Omicron |Test suite `tests/e1/aval_048'
+Omicron |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Omicron |Test suite `tests/e1/aval_048' OK
+Omicron |tests/e1/aval_049.tesh
+Omicron |Test suite `tests/e1/aval_049'
+Omicron |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Omicron |Test suite `tests/e1/aval_049' OK
+Omicron |tests/e1/aval_050.tesh
+Omicron |Test suite `tests/e1/aval_050'
+Omicron |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Omicron |Test suite `tests/e1/aval_050' OK
+Omicron |tests/e1/aval_051.tesh
+Omicron |Test suite `tests/e1/aval_051'
+Omicron |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Omicron |Test suite `tests/e1/aval_051' OK
+Omicron |tests/e1/aval_052.tesh
+Omicron |Test suite `tests/e1/aval_052'
+Omicron |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Omicron |Test suite `tests/e1/aval_052' OK
+Omicron |tests/e1/aval_053.tesh
+Omicron |Test suite `tests/e1/aval_053'
+Omicron |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Omicron |Test suite `tests/e1/aval_053' OK
+Omicron |tests/e1/aval_054.tesh
+Omicron |Test suite `tests/e1/aval_054'
+Omicron |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Omicron |Test suite `tests/e1/aval_054' OK
+Omicron |tests/e1/aval_055.tesh
+Omicron |Test suite `tests/e1/aval_055'
+Omicron |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Omicron |Test suite `tests/e1/aval_055' OK
+Omicron |tests/e1/aval_056.tesh
+Omicron |Test suite `tests/e1/aval_056'
+Omicron |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Omicron |Test suite `tests/e1/aval_056' OK
+Omicron |tests/e1/aval_057.tesh
+Omicron |Test suite `tests/e1/aval_057'
+Omicron |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Omicron |Test suite `tests/e1/aval_057' OK
+Omicron |tests/e1/aval_058.tesh
+Omicron |Test suite `tests/e1/aval_058'
+Omicron |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Omicron |Test suite `tests/e1/aval_058' OK
+Omicron |tests/e1/aval_059.tesh
+Omicron |Test suite `tests/e1/aval_059'
+Omicron |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Omicron |Test suite `tests/e1/aval_059' OK
+Omicron |tests/e1/aval_060.tesh
+Omicron |Test suite `tests/e1/aval_060'
+Omicron |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Omicron |Test suite `tests/e1/aval_060' OK
+Omicron |tests/e1/aval_061.tesh
+Omicron |Test suite `tests/e1/aval_061'
+Omicron |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Omicron |Test suite `tests/e1/aval_061' OK
+Omicron |tests/e1/aval_062.tesh
+Omicron |Test suite `tests/e1/aval_062'
+Omicron |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Omicron |Test suite `tests/e1/aval_062' OK
+Omicron |tests/e1/aval_063.tesh
+Omicron |Test suite `tests/e1/aval_063'
+Omicron |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Omicron |Test suite `tests/e1/aval_063' OK
+Omicron |tests/e1/aval_064.tesh
+Omicron |Test suite `tests/e1/aval_064'
+Omicron |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Omicron |Test suite `tests/e1/aval_064' OK
+Omicron |tests/e1/aval_065.tesh
+Omicron |Test suite `tests/e1/aval_065'
+Omicron |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Omicron |Test suite `tests/e1/aval_065' OK
+Omicron |tests/e1/aval_066.tesh
+Omicron |Test suite `tests/e1/aval_066'
+Omicron |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Omicron |Test suite `tests/e1/aval_066' OK
+Omicron |tests/e1/aval_067.tesh
+Omicron |Test suite `tests/e1/aval_067'
+Omicron |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Omicron |Test suite `tests/e1/aval_067' OK
+Omicron |tests/e1/aval_068.tesh
+Omicron |Test suite `tests/e1/aval_068'
+Omicron |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Omicron |Test suite `tests/e1/aval_068' OK
+Omicron |tests/e1/aval_069.tesh
+Omicron |Test suite `tests/e1/aval_069'
+Omicron |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Omicron |Test suite `tests/e1/aval_069' OK
+Omicron |tests/e1/aval_070.tesh
+Omicron |Test suite `tests/e1/aval_070'
+Omicron |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Omicron |Test suite `tests/e1/aval_070' OK
+Omicron |tests/e1/aval_071.tesh
+Omicron |Test suite `tests/e1/aval_071'
+Omicron |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Omicron |Test suite `tests/e1/aval_071' OK
+Omicron |tests/e1/aval_072.tesh
+Omicron |Test suite `tests/e1/aval_072'
+Omicron |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Omicron |Test suite `tests/e1/aval_072' OK
+Omicron |tests/e1/aval_073.tesh
+Omicron |Test suite `tests/e1/aval_073'
+Omicron |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Omicron |Test suite `tests/e1/aval_073' OK
+Omicron |tests/e1/aval_074.tesh
+Omicron |Test suite `tests/e1/aval_074'
+Omicron |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Omicron |Test suite `tests/e1/aval_074' OK
+Omicron |tests/e1/aval_075.tesh
+Omicron |Test suite `tests/e1/aval_075'
+Omicron |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Omicron |Test suite `tests/e1/aval_075' OK
+Omicron |tests/e1/aval_076.tesh
+Omicron |Test suite `tests/e1/aval_076'
+Omicron |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Omicron |Test suite `tests/e1/aval_076' OK
+Omicron |tests/e1/aval_077.tesh
+Omicron |Test suite `tests/e1/aval_077'
+Omicron |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Omicron |Test suite `tests/e1/aval_077' OK
+Omicron |tests/e1/aval_078.tesh
+Omicron |Test suite `tests/e1/aval_078'
+Omicron |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Omicron |Test suite `tests/e1/aval_078' OK
+Omicron |tests/e1/aval_079.tesh
+Omicron |Test suite `tests/e1/aval_079'
+Omicron |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Omicron |Test suite `tests/e1/aval_079' OK
+Omicron |tests/e1/aval_080.tesh
+Omicron |Test suite `tests/e1/aval_080'
+Omicron |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Omicron |Test suite `tests/e1/aval_080' OK
+Omicron |tests/e1/aval_081.tesh
+Omicron |Test suite `tests/e1/aval_081'
+Omicron |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Omicron |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Psi
+
+~/ensino/private/E1/Psi ~/ensino/private
+Psi |tests/e1/aval_001.tesh
+Psi |Test suite `tests/e1/aval_001'
+Psi |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Psi |Output of <tests/e1/aval_001.tesh:3> mismatch:
+Psi |- 1 TK_PR_INT [int]
+Psi |+ 1 TK_PR_INPUT [int]
+Psi |Test suite `tests/e1/aval_001.tesh': NOK (<tests/e1/aval_001.tesh:3> output mismatch)
+Psi |tests/e1/aval_002.tesh
+Psi |Test suite `tests/e1/aval_002'
+Psi |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Psi |Test suite `tests/e1/aval_002' OK
+Psi |tests/e1/aval_003.tesh
+Psi |Test suite `tests/e1/aval_003'
+Psi |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Psi |Test suite `tests/e1/aval_003' OK
+Psi |tests/e1/aval_004.tesh
+Psi |Test suite `tests/e1/aval_004'
+Psi |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Psi |Test suite `tests/e1/aval_004' OK
+Psi |tests/e1/aval_005.tesh
+Psi |Test suite `tests/e1/aval_005'
+Psi |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Psi |Test suite `tests/e1/aval_005' OK
+Psi |tests/e1/aval_006.tesh
+Psi |Test suite `tests/e1/aval_006'
+Psi |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Psi |Test suite `tests/e1/aval_006' OK
+Psi |tests/e1/aval_007.tesh
+Psi |Test suite `tests/e1/aval_007'
+Psi |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Psi |Test suite `tests/e1/aval_007' OK
+Psi |tests/e1/aval_008.tesh
+Psi |Test suite `tests/e1/aval_008'
+Psi |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Psi |Test suite `tests/e1/aval_008' OK
+Psi |tests/e1/aval_009.tesh
+Psi |Test suite `tests/e1/aval_009'
+Psi |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Psi |Test suite `tests/e1/aval_009' OK
+Psi |tests/e1/aval_010.tesh
+Psi |Test suite `tests/e1/aval_010'
+Psi |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Psi |Test suite `tests/e1/aval_010' OK
+Psi |tests/e1/aval_011.tesh
+Psi |Test suite `tests/e1/aval_011'
+Psi |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Psi |Test suite `tests/e1/aval_011' OK
+Psi |tests/e1/aval_012.tesh
+Psi |Test suite `tests/e1/aval_012'
+Psi |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Psi |Test suite `tests/e1/aval_012' OK
+Psi |tests/e1/aval_013.tesh
+Psi |Test suite `tests/e1/aval_013'
+Psi |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Psi |Test suite `tests/e1/aval_013' OK
+Psi |tests/e1/aval_014.tesh
+Psi |Test suite `tests/e1/aval_014'
+Psi |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Psi |Test suite `tests/e1/aval_014' OK
+Psi |tests/e1/aval_015.tesh
+Psi |Test suite `tests/e1/aval_015'
+Psi |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Psi |Test suite `tests/e1/aval_015' OK
+Psi |tests/e1/aval_016.tesh
+Psi |Test suite `tests/e1/aval_016'
+Psi |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Psi |Test suite `tests/e1/aval_016' OK
+Psi |tests/e1/aval_017.tesh
+Psi |Test suite `tests/e1/aval_017'
+Psi |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Psi |Test suite `tests/e1/aval_017' OK
+Psi |tests/e1/aval_018.tesh
+Psi |Test suite `tests/e1/aval_018'
+Psi |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Psi |Test suite `tests/e1/aval_018' OK
+Psi |tests/e1/aval_019.tesh
+Psi |Test suite `tests/e1/aval_019'
+Psi |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Psi |Test suite `tests/e1/aval_019' OK
+Psi |tests/e1/aval_020.tesh
+Psi |Test suite `tests/e1/aval_020'
+Psi |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Psi |Test suite `tests/e1/aval_020' OK
+Psi |tests/e1/aval_021.tesh
+Psi |Test suite `tests/e1/aval_021'
+Psi |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Psi |Test suite `tests/e1/aval_021' OK
+Psi |tests/e1/aval_022.tesh
+Psi |Test suite `tests/e1/aval_022'
+Psi |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Psi |Test suite `tests/e1/aval_022' OK
+Psi |tests/e1/aval_023.tesh
+Psi |Test suite `tests/e1/aval_023'
+Psi |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Psi |Test suite `tests/e1/aval_023' OK
+Psi |tests/e1/aval_024.tesh
+Psi |Test suite `tests/e1/aval_024'
+Psi |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Psi |Test suite `tests/e1/aval_024' OK
+Psi |tests/e1/aval_025.tesh
+Psi |Test suite `tests/e1/aval_025'
+Psi |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Psi |Test suite `tests/e1/aval_025' OK
+Psi |tests/e1/aval_026.tesh
+Psi |Test suite `tests/e1/aval_026'
+Psi |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Psi |Test suite `tests/e1/aval_026' OK
+Psi |tests/e1/aval_027.tesh
+Psi |Test suite `tests/e1/aval_027'
+Psi |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Psi |Test suite `tests/e1/aval_027' OK
+Psi |tests/e1/aval_028.tesh
+Psi |Test suite `tests/e1/aval_028'
+Psi |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Psi |Test suite `tests/e1/aval_028' OK
+Psi |tests/e1/aval_029.tesh
+Psi |Test suite `tests/e1/aval_029'
+Psi |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Psi |Test suite `tests/e1/aval_029' OK
+Psi |tests/e1/aval_030.tesh
+Psi |Test suite `tests/e1/aval_030'
+Psi |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Psi |Test suite `tests/e1/aval_030' OK
+Psi |tests/e1/aval_031.tesh
+Psi |Test suite `tests/e1/aval_031'
+Psi |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Psi |Test suite `tests/e1/aval_031' OK
+Psi |tests/e1/aval_032.tesh
+Psi |Test suite `tests/e1/aval_032'
+Psi |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Psi |Test suite `tests/e1/aval_032' OK
+Psi |tests/e1/aval_033.tesh
+Psi |Test suite `tests/e1/aval_033'
+Psi |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Psi |Test suite `tests/e1/aval_033' OK
+Psi |tests/e1/aval_034.tesh
+Psi |Test suite `tests/e1/aval_034'
+Psi |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Psi |Test suite `tests/e1/aval_034' OK
+Psi |tests/e1/aval_035.tesh
+Psi |Test suite `tests/e1/aval_035'
+Psi |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Psi |Test suite `tests/e1/aval_035' OK
+Psi |tests/e1/aval_036.tesh
+Psi |Test suite `tests/e1/aval_036'
+Psi |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Psi |Test suite `tests/e1/aval_036' OK
+Psi |tests/e1/aval_037.tesh
+Psi |Test suite `tests/e1/aval_037'
+Psi |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Psi |Test suite `tests/e1/aval_037' OK
+Psi |tests/e1/aval_038.tesh
+Psi |Test suite `tests/e1/aval_038'
+Psi |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Psi |Test suite `tests/e1/aval_038' OK
+Psi |tests/e1/aval_039.tesh
+Psi |Test suite `tests/e1/aval_039'
+Psi |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Psi |Test suite `tests/e1/aval_039' OK
+Psi |tests/e1/aval_040.tesh
+Psi |Test suite `tests/e1/aval_040'
+Psi |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Psi |Test suite `tests/e1/aval_040' OK
+Psi |tests/e1/aval_041.tesh
+Psi |Test suite `tests/e1/aval_041'
+Psi |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Psi |Test suite `tests/e1/aval_041' OK
+Psi |tests/e1/aval_042.tesh
+Psi |Test suite `tests/e1/aval_042'
+Psi |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Psi |Test suite `tests/e1/aval_042' OK
+Psi |tests/e1/aval_043.tesh
+Psi |Test suite `tests/e1/aval_043'
+Psi |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Psi |Test suite `tests/e1/aval_043' OK
+Psi |tests/e1/aval_044.tesh
+Psi |Test suite `tests/e1/aval_044'
+Psi |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Psi |Test suite `tests/e1/aval_044' OK
+Psi |tests/e1/aval_045.tesh
+Psi |Test suite `tests/e1/aval_045'
+Psi |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Psi |Test suite `tests/e1/aval_045' OK
+Psi |tests/e1/aval_046.tesh
+Psi |Test suite `tests/e1/aval_046'
+Psi |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Psi |Test suite `tests/e1/aval_046' OK
+Psi |tests/e1/aval_047.tesh
+Psi |Test suite `tests/e1/aval_047'
+Psi |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Psi |Test suite `tests/e1/aval_047' OK
+Psi |tests/e1/aval_048.tesh
+Psi |Test suite `tests/e1/aval_048'
+Psi |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Psi |Test suite `tests/e1/aval_048' OK
+Psi |tests/e1/aval_049.tesh
+Psi |Test suite `tests/e1/aval_049'
+Psi |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Psi |Test suite `tests/e1/aval_049' OK
+Psi |tests/e1/aval_050.tesh
+Psi |Test suite `tests/e1/aval_050'
+Psi |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Psi |Test suite `tests/e1/aval_050' OK
+Psi |tests/e1/aval_051.tesh
+Psi |Test suite `tests/e1/aval_051'
+Psi |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Psi |Test suite `tests/e1/aval_051' OK
+Psi |tests/e1/aval_052.tesh
+Psi |Test suite `tests/e1/aval_052'
+Psi |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Psi |Test suite `tests/e1/aval_052' OK
+Psi |tests/e1/aval_053.tesh
+Psi |Test suite `tests/e1/aval_053'
+Psi |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Psi |Test suite `tests/e1/aval_053' OK
+Psi |tests/e1/aval_054.tesh
+Psi |Test suite `tests/e1/aval_054'
+Psi |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Psi |Test suite `tests/e1/aval_054' OK
+Psi |tests/e1/aval_055.tesh
+Psi |Test suite `tests/e1/aval_055'
+Psi |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Psi |Test suite `tests/e1/aval_055' OK
+Psi |tests/e1/aval_056.tesh
+Psi |Test suite `tests/e1/aval_056'
+Psi |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Psi |Test suite `tests/e1/aval_056' OK
+Psi |tests/e1/aval_057.tesh
+Psi |Test suite `tests/e1/aval_057'
+Psi |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Psi |Test suite `tests/e1/aval_057' OK
+Psi |tests/e1/aval_058.tesh
+Psi |Test suite `tests/e1/aval_058'
+Psi |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Psi |Test suite `tests/e1/aval_058' OK
+Psi |tests/e1/aval_059.tesh
+Psi |Test suite `tests/e1/aval_059'
+Psi |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Psi |Test suite `tests/e1/aval_059' OK
+Psi |tests/e1/aval_060.tesh
+Psi |Test suite `tests/e1/aval_060'
+Psi |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Psi |Output of <tests/e1/aval_060.tesh:3> mismatch:
+Psi |- 1 TK_IDENTIFICADOR [_01]
+Psi |+ 1 TK_IDENTIFICADOR [_]
+Psi |+ 1 TK_LIT_INT [01]
+Psi |Test suite `tests/e1/aval_060.tesh': NOK (<tests/e1/aval_060.tesh:3> output mismatch)
+Psi |tests/e1/aval_061.tesh
+Psi |Test suite `tests/e1/aval_061'
+Psi |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Psi |Test suite `tests/e1/aval_061' OK
+Psi |tests/e1/aval_062.tesh
+Psi |Test suite `tests/e1/aval_062'
+Psi |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Psi |Test suite `tests/e1/aval_062' OK
+Psi |tests/e1/aval_063.tesh
+Psi |Test suite `tests/e1/aval_063'
+Psi |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Psi |Test suite `tests/e1/aval_063' OK
+Psi |tests/e1/aval_064.tesh
+Psi |Test suite `tests/e1/aval_064'
+Psi |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Psi |Test suite `tests/e1/aval_064' OK
+Psi |tests/e1/aval_065.tesh
+Psi |Test suite `tests/e1/aval_065'
+Psi |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Psi |Test suite `tests/e1/aval_065' OK
+Psi |tests/e1/aval_066.tesh
+Psi |Test suite `tests/e1/aval_066'
+Psi |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Psi |Test suite `tests/e1/aval_066' OK
+Psi |tests/e1/aval_067.tesh
+Psi |Test suite `tests/e1/aval_067'
+Psi |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Psi |Test suite `tests/e1/aval_067' OK
+Psi |tests/e1/aval_068.tesh
+Psi |Test suite `tests/e1/aval_068'
+Psi |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Psi |Test suite `tests/e1/aval_068' OK
+Psi |tests/e1/aval_069.tesh
+Psi |Test suite `tests/e1/aval_069'
+Psi |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Psi |Test suite `tests/e1/aval_069' OK
+Psi |tests/e1/aval_070.tesh
+Psi |Test suite `tests/e1/aval_070'
+Psi |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Psi |Test suite `tests/e1/aval_070' OK
+Psi |tests/e1/aval_071.tesh
+Psi |Test suite `tests/e1/aval_071'
+Psi |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Psi |Test suite `tests/e1/aval_071' OK
+Psi |tests/e1/aval_072.tesh
+Psi |Test suite `tests/e1/aval_072'
+Psi |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Psi |Test suite `tests/e1/aval_072' OK
+Psi |tests/e1/aval_073.tesh
+Psi |Test suite `tests/e1/aval_073'
+Psi |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Psi |Test suite `tests/e1/aval_073' OK
+Psi |tests/e1/aval_074.tesh
+Psi |Test suite `tests/e1/aval_074'
+Psi |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Psi |Test suite `tests/e1/aval_074' OK
+Psi |tests/e1/aval_075.tesh
+Psi |Test suite `tests/e1/aval_075'
+Psi |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Psi |Test suite `tests/e1/aval_075' OK
+Psi |tests/e1/aval_076.tesh
+Psi |Test suite `tests/e1/aval_076'
+Psi |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Psi |Output of <tests/e1/aval_076.tesh:3> mismatch:
+Psi |- 1 TK_IDENTIFICADOR [id12]
+Psi |+ 1 TK_IDENTIFICADOR [id]
+Psi |+ 1 TK_LIT_INT [12]
+Psi |  2 TK_LIT_INT [34]
+Psi |  3 TK_LIT_FLOAT [56.78]
+Psi |Test suite `tests/e1/aval_076.tesh': NOK (<tests/e1/aval_076.tesh:3> output mismatch)
+Psi |tests/e1/aval_077.tesh
+Psi |Test suite `tests/e1/aval_077'
+Psi |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Psi |Test suite `tests/e1/aval_077' OK
+Psi |tests/e1/aval_078.tesh
+Psi |Test suite `tests/e1/aval_078'
+Psi |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Psi |Test suite `tests/e1/aval_078' OK
+Psi |tests/e1/aval_079.tesh
+Psi |Test suite `tests/e1/aval_079'
+Psi |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Psi |Test suite `tests/e1/aval_079' OK
+Psi |tests/e1/aval_080.tesh
+Psi |Test suite `tests/e1/aval_080'
+Psi |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Psi |Test suite `tests/e1/aval_080' OK
+Psi |tests/e1/aval_081.tesh
+Psi |Test suite `tests/e1/aval_081'
+Psi |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Psi |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Rho
+
+~/ensino/private/E1/Rho ~/ensino/private
+Rho |tests/e1/aval_001.tesh
+Rho |Test suite `tests/e1/aval_001'
+Rho |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Rho |Test suite `tests/e1/aval_001' OK
+Rho |tests/e1/aval_002.tesh
+Rho |Test suite `tests/e1/aval_002'
+Rho |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Rho |Test suite `tests/e1/aval_002' OK
+Rho |tests/e1/aval_003.tesh
+Rho |Test suite `tests/e1/aval_003'
+Rho |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Rho |Test suite `tests/e1/aval_003' OK
+Rho |tests/e1/aval_004.tesh
+Rho |Test suite `tests/e1/aval_004'
+Rho |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Rho |Test suite `tests/e1/aval_004' OK
+Rho |tests/e1/aval_005.tesh
+Rho |Test suite `tests/e1/aval_005'
+Rho |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Rho |Test suite `tests/e1/aval_005' OK
+Rho |tests/e1/aval_006.tesh
+Rho |Test suite `tests/e1/aval_006'
+Rho |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Rho |Test suite `tests/e1/aval_006' OK
+Rho |tests/e1/aval_007.tesh
+Rho |Test suite `tests/e1/aval_007'
+Rho |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Rho |Test suite `tests/e1/aval_007' OK
+Rho |tests/e1/aval_008.tesh
+Rho |Test suite `tests/e1/aval_008'
+Rho |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Rho |Test suite `tests/e1/aval_008' OK
+Rho |tests/e1/aval_009.tesh
+Rho |Test suite `tests/e1/aval_009'
+Rho |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Rho |Test suite `tests/e1/aval_009' OK
+Rho |tests/e1/aval_010.tesh
+Rho |Test suite `tests/e1/aval_010'
+Rho |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Rho |Test suite `tests/e1/aval_010' OK
+Rho |tests/e1/aval_011.tesh
+Rho |Test suite `tests/e1/aval_011'
+Rho |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Rho |Test suite `tests/e1/aval_011' OK
+Rho |tests/e1/aval_012.tesh
+Rho |Test suite `tests/e1/aval_012'
+Rho |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Rho |Test suite `tests/e1/aval_012' OK
+Rho |tests/e1/aval_013.tesh
+Rho |Test suite `tests/e1/aval_013'
+Rho |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Rho |Test suite `tests/e1/aval_013' OK
+Rho |tests/e1/aval_014.tesh
+Rho |Test suite `tests/e1/aval_014'
+Rho |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Rho |Test suite `tests/e1/aval_014' OK
+Rho |tests/e1/aval_015.tesh
+Rho |Test suite `tests/e1/aval_015'
+Rho |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Rho |Test suite `tests/e1/aval_015' OK
+Rho |tests/e1/aval_016.tesh
+Rho |Test suite `tests/e1/aval_016'
+Rho |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Rho |Test suite `tests/e1/aval_016' OK
+Rho |tests/e1/aval_017.tesh
+Rho |Test suite `tests/e1/aval_017'
+Rho |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Rho |Test suite `tests/e1/aval_017' OK
+Rho |tests/e1/aval_018.tesh
+Rho |Test suite `tests/e1/aval_018'
+Rho |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Rho |Test suite `tests/e1/aval_018' OK
+Rho |tests/e1/aval_019.tesh
+Rho |Test suite `tests/e1/aval_019'
+Rho |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Rho |Test suite `tests/e1/aval_019' OK
+Rho |tests/e1/aval_020.tesh
+Rho |Test suite `tests/e1/aval_020'
+Rho |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Rho |Test suite `tests/e1/aval_020' OK
+Rho |tests/e1/aval_021.tesh
+Rho |Test suite `tests/e1/aval_021'
+Rho |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Rho |Test suite `tests/e1/aval_021' OK
+Rho |tests/e1/aval_022.tesh
+Rho |Test suite `tests/e1/aval_022'
+Rho |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Rho |Test suite `tests/e1/aval_022' OK
+Rho |tests/e1/aval_023.tesh
+Rho |Test suite `tests/e1/aval_023'
+Rho |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Rho |Test suite `tests/e1/aval_023' OK
+Rho |tests/e1/aval_024.tesh
+Rho |Test suite `tests/e1/aval_024'
+Rho |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Rho |Test suite `tests/e1/aval_024' OK
+Rho |tests/e1/aval_025.tesh
+Rho |Test suite `tests/e1/aval_025'
+Rho |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Rho |Test suite `tests/e1/aval_025' OK
+Rho |tests/e1/aval_026.tesh
+Rho |Test suite `tests/e1/aval_026'
+Rho |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Rho |Test suite `tests/e1/aval_026' OK
+Rho |tests/e1/aval_027.tesh
+Rho |Test suite `tests/e1/aval_027'
+Rho |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Rho |Test suite `tests/e1/aval_027' OK
+Rho |tests/e1/aval_028.tesh
+Rho |Test suite `tests/e1/aval_028'
+Rho |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Rho |Test suite `tests/e1/aval_028' OK
+Rho |tests/e1/aval_029.tesh
+Rho |Test suite `tests/e1/aval_029'
+Rho |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Rho |Test suite `tests/e1/aval_029' OK
+Rho |tests/e1/aval_030.tesh
+Rho |Test suite `tests/e1/aval_030'
+Rho |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Rho |Test suite `tests/e1/aval_030' OK
+Rho |tests/e1/aval_031.tesh
+Rho |Test suite `tests/e1/aval_031'
+Rho |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Rho |Test suite `tests/e1/aval_031' OK
+Rho |tests/e1/aval_032.tesh
+Rho |Test suite `tests/e1/aval_032'
+Rho |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Rho |Test suite `tests/e1/aval_032' OK
+Rho |tests/e1/aval_033.tesh
+Rho |Test suite `tests/e1/aval_033'
+Rho |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Rho |Test suite `tests/e1/aval_033' OK
+Rho |tests/e1/aval_034.tesh
+Rho |Test suite `tests/e1/aval_034'
+Rho |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Rho |Test suite `tests/e1/aval_034' OK
+Rho |tests/e1/aval_035.tesh
+Rho |Test suite `tests/e1/aval_035'
+Rho |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Rho |Test suite `tests/e1/aval_035' OK
+Rho |tests/e1/aval_036.tesh
+Rho |Test suite `tests/e1/aval_036'
+Rho |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Rho |Test suite `tests/e1/aval_036' OK
+Rho |tests/e1/aval_037.tesh
+Rho |Test suite `tests/e1/aval_037'
+Rho |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Rho |Test suite `tests/e1/aval_037' OK
+Rho |tests/e1/aval_038.tesh
+Rho |Test suite `tests/e1/aval_038'
+Rho |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Rho |Test suite `tests/e1/aval_038' OK
+Rho |tests/e1/aval_039.tesh
+Rho |Test suite `tests/e1/aval_039'
+Rho |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Rho |Test suite `tests/e1/aval_039' OK
+Rho |tests/e1/aval_040.tesh
+Rho |Test suite `tests/e1/aval_040'
+Rho |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Rho |Test suite `tests/e1/aval_040' OK
+Rho |tests/e1/aval_041.tesh
+Rho |Test suite `tests/e1/aval_041'
+Rho |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Rho |Test suite `tests/e1/aval_041' OK
+Rho |tests/e1/aval_042.tesh
+Rho |Test suite `tests/e1/aval_042'
+Rho |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Rho |Test suite `tests/e1/aval_042' OK
+Rho |tests/e1/aval_043.tesh
+Rho |Test suite `tests/e1/aval_043'
+Rho |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Rho |Test suite `tests/e1/aval_043' OK
+Rho |tests/e1/aval_044.tesh
+Rho |Test suite `tests/e1/aval_044'
+Rho |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Rho |Test suite `tests/e1/aval_044' OK
+Rho |tests/e1/aval_045.tesh
+Rho |Test suite `tests/e1/aval_045'
+Rho |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Rho |Test suite `tests/e1/aval_045' OK
+Rho |tests/e1/aval_046.tesh
+Rho |Test suite `tests/e1/aval_046'
+Rho |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Rho |Test suite `tests/e1/aval_046' OK
+Rho |tests/e1/aval_047.tesh
+Rho |Test suite `tests/e1/aval_047'
+Rho |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Rho |Test suite `tests/e1/aval_047' OK
+Rho |tests/e1/aval_048.tesh
+Rho |Test suite `tests/e1/aval_048'
+Rho |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Rho |Test suite `tests/e1/aval_048' OK
+Rho |tests/e1/aval_049.tesh
+Rho |Test suite `tests/e1/aval_049'
+Rho |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Rho |Test suite `tests/e1/aval_049' OK
+Rho |tests/e1/aval_050.tesh
+Rho |Test suite `tests/e1/aval_050'
+Rho |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Rho |Test suite `tests/e1/aval_050' OK
+Rho |tests/e1/aval_051.tesh
+Rho |Test suite `tests/e1/aval_051'
+Rho |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Rho |Test suite `tests/e1/aval_051' OK
+Rho |tests/e1/aval_052.tesh
+Rho |Test suite `tests/e1/aval_052'
+Rho |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Rho |Test suite `tests/e1/aval_052' OK
+Rho |tests/e1/aval_053.tesh
+Rho |Test suite `tests/e1/aval_053'
+Rho |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Rho |Test suite `tests/e1/aval_053' OK
+Rho |tests/e1/aval_054.tesh
+Rho |Test suite `tests/e1/aval_054'
+Rho |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Rho |Test suite `tests/e1/aval_054' OK
+Rho |tests/e1/aval_055.tesh
+Rho |Test suite `tests/e1/aval_055'
+Rho |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Rho |Test suite `tests/e1/aval_055' OK
+Rho |tests/e1/aval_056.tesh
+Rho |Test suite `tests/e1/aval_056'
+Rho |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Rho |Test suite `tests/e1/aval_056' OK
+Rho |tests/e1/aval_057.tesh
+Rho |Test suite `tests/e1/aval_057'
+Rho |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Rho |Test suite `tests/e1/aval_057' OK
+Rho |tests/e1/aval_058.tesh
+Rho |Test suite `tests/e1/aval_058'
+Rho |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Rho |Test suite `tests/e1/aval_058' OK
+Rho |tests/e1/aval_059.tesh
+Rho |Test suite `tests/e1/aval_059'
+Rho |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Rho |Test suite `tests/e1/aval_059' OK
+Rho |tests/e1/aval_060.tesh
+Rho |Test suite `tests/e1/aval_060'
+Rho |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Rho |Test suite `tests/e1/aval_060' OK
+Rho |tests/e1/aval_061.tesh
+Rho |Test suite `tests/e1/aval_061'
+Rho |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Rho |Test suite `tests/e1/aval_061' OK
+Rho |tests/e1/aval_062.tesh
+Rho |Test suite `tests/e1/aval_062'
+Rho |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Rho |Test suite `tests/e1/aval_062' OK
+Rho |tests/e1/aval_063.tesh
+Rho |Test suite `tests/e1/aval_063'
+Rho |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Rho |Test suite `tests/e1/aval_063' OK
+Rho |tests/e1/aval_064.tesh
+Rho |Test suite `tests/e1/aval_064'
+Rho |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Rho |Test suite `tests/e1/aval_064' OK
+Rho |tests/e1/aval_065.tesh
+Rho |Test suite `tests/e1/aval_065'
+Rho |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Rho |Test suite `tests/e1/aval_065' OK
+Rho |tests/e1/aval_066.tesh
+Rho |Test suite `tests/e1/aval_066'
+Rho |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Rho |Test suite `tests/e1/aval_066' OK
+Rho |tests/e1/aval_067.tesh
+Rho |Test suite `tests/e1/aval_067'
+Rho |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Rho |Test suite `tests/e1/aval_067' OK
+Rho |tests/e1/aval_068.tesh
+Rho |Test suite `tests/e1/aval_068'
+Rho |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Rho |Test suite `tests/e1/aval_068' OK
+Rho |tests/e1/aval_069.tesh
+Rho |Test suite `tests/e1/aval_069'
+Rho |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Rho |Test suite `tests/e1/aval_069' OK
+Rho |tests/e1/aval_070.tesh
+Rho |Test suite `tests/e1/aval_070'
+Rho |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Rho |Test suite `tests/e1/aval_070' OK
+Rho |tests/e1/aval_071.tesh
+Rho |Test suite `tests/e1/aval_071'
+Rho |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Rho |Test suite `tests/e1/aval_071' OK
+Rho |tests/e1/aval_072.tesh
+Rho |Test suite `tests/e1/aval_072'
+Rho |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Rho |Test suite `tests/e1/aval_072' OK
+Rho |tests/e1/aval_073.tesh
+Rho |Test suite `tests/e1/aval_073'
+Rho |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Rho |Test suite `tests/e1/aval_073' OK
+Rho |tests/e1/aval_074.tesh
+Rho |Test suite `tests/e1/aval_074'
+Rho |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Rho |Test suite `tests/e1/aval_074' OK
+Rho |tests/e1/aval_075.tesh
+Rho |Test suite `tests/e1/aval_075'
+Rho |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Rho |Test suite `tests/e1/aval_075' OK
+Rho |tests/e1/aval_076.tesh
+Rho |Test suite `tests/e1/aval_076'
+Rho |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Rho |Test suite `tests/e1/aval_076' OK
+Rho |tests/e1/aval_077.tesh
+Rho |Test suite `tests/e1/aval_077'
+Rho |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Rho |Test suite `tests/e1/aval_077' OK
+Rho |tests/e1/aval_078.tesh
+Rho |Test suite `tests/e1/aval_078'
+Rho |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Rho |Test suite `tests/e1/aval_078' OK
+Rho |tests/e1/aval_079.tesh
+Rho |Test suite `tests/e1/aval_079'
+Rho |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Rho |Test suite `tests/e1/aval_079' OK
+Rho |tests/e1/aval_080.tesh
+Rho |Test suite `tests/e1/aval_080'
+Rho |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Rho |Test suite `tests/e1/aval_080' OK
+Rho |tests/e1/aval_081.tesh
+Rho |Test suite `tests/e1/aval_081'
+Rho |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Rho |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Sigma
+
+~/ensino/private/E1/Sigma ~/ensino/private
+Sigma |tests/e1/aval_001.tesh
+Sigma |Test suite `tests/e1/aval_001'
+Sigma |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Sigma |Test suite `tests/e1/aval_001' OK
+Sigma |tests/e1/aval_002.tesh
+Sigma |Test suite `tests/e1/aval_002'
+Sigma |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Sigma |Test suite `tests/e1/aval_002' OK
+Sigma |tests/e1/aval_003.tesh
+Sigma |Test suite `tests/e1/aval_003'
+Sigma |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Sigma |Test suite `tests/e1/aval_003' OK
+Sigma |tests/e1/aval_004.tesh
+Sigma |Test suite `tests/e1/aval_004'
+Sigma |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Sigma |Test suite `tests/e1/aval_004' OK
+Sigma |tests/e1/aval_005.tesh
+Sigma |Test suite `tests/e1/aval_005'
+Sigma |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Sigma |Test suite `tests/e1/aval_005' OK
+Sigma |tests/e1/aval_006.tesh
+Sigma |Test suite `tests/e1/aval_006'
+Sigma |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Sigma |Test suite `tests/e1/aval_006' OK
+Sigma |tests/e1/aval_007.tesh
+Sigma |Test suite `tests/e1/aval_007'
+Sigma |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Sigma |Test suite `tests/e1/aval_007' OK
+Sigma |tests/e1/aval_008.tesh
+Sigma |Test suite `tests/e1/aval_008'
+Sigma |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Sigma |Test suite `tests/e1/aval_008' OK
+Sigma |tests/e1/aval_009.tesh
+Sigma |Test suite `tests/e1/aval_009'
+Sigma |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Sigma |Test suite `tests/e1/aval_009' OK
+Sigma |tests/e1/aval_010.tesh
+Sigma |Test suite `tests/e1/aval_010'
+Sigma |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Sigma |Test suite `tests/e1/aval_010' OK
+Sigma |tests/e1/aval_011.tesh
+Sigma |Test suite `tests/e1/aval_011'
+Sigma |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Sigma |Test suite `tests/e1/aval_011' OK
+Sigma |tests/e1/aval_012.tesh
+Sigma |Test suite `tests/e1/aval_012'
+Sigma |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Sigma |Test suite `tests/e1/aval_012' OK
+Sigma |tests/e1/aval_013.tesh
+Sigma |Test suite `tests/e1/aval_013'
+Sigma |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Sigma |Test suite `tests/e1/aval_013' OK
+Sigma |tests/e1/aval_014.tesh
+Sigma |Test suite `tests/e1/aval_014'
+Sigma |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Sigma |Test suite `tests/e1/aval_014' OK
+Sigma |tests/e1/aval_015.tesh
+Sigma |Test suite `tests/e1/aval_015'
+Sigma |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Sigma |Test suite `tests/e1/aval_015' OK
+Sigma |tests/e1/aval_016.tesh
+Sigma |Test suite `tests/e1/aval_016'
+Sigma |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Sigma |Test suite `tests/e1/aval_016' OK
+Sigma |tests/e1/aval_017.tesh
+Sigma |Test suite `tests/e1/aval_017'
+Sigma |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Sigma |Test suite `tests/e1/aval_017' OK
+Sigma |tests/e1/aval_018.tesh
+Sigma |Test suite `tests/e1/aval_018'
+Sigma |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Sigma |Test suite `tests/e1/aval_018' OK
+Sigma |tests/e1/aval_019.tesh
+Sigma |Test suite `tests/e1/aval_019'
+Sigma |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Sigma |Test suite `tests/e1/aval_019' OK
+Sigma |tests/e1/aval_020.tesh
+Sigma |Test suite `tests/e1/aval_020'
+Sigma |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Sigma |Test suite `tests/e1/aval_020' OK
+Sigma |tests/e1/aval_021.tesh
+Sigma |Test suite `tests/e1/aval_021'
+Sigma |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Sigma |Test suite `tests/e1/aval_021' OK
+Sigma |tests/e1/aval_022.tesh
+Sigma |Test suite `tests/e1/aval_022'
+Sigma |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Sigma |Test suite `tests/e1/aval_022' OK
+Sigma |tests/e1/aval_023.tesh
+Sigma |Test suite `tests/e1/aval_023'
+Sigma |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Sigma |Test suite `tests/e1/aval_023' OK
+Sigma |tests/e1/aval_024.tesh
+Sigma |Test suite `tests/e1/aval_024'
+Sigma |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Sigma |Test suite `tests/e1/aval_024' OK
+Sigma |tests/e1/aval_025.tesh
+Sigma |Test suite `tests/e1/aval_025'
+Sigma |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Sigma |Test suite `tests/e1/aval_025' OK
+Sigma |tests/e1/aval_026.tesh
+Sigma |Test suite `tests/e1/aval_026'
+Sigma |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Sigma |Test suite `tests/e1/aval_026' OK
+Sigma |tests/e1/aval_027.tesh
+Sigma |Test suite `tests/e1/aval_027'
+Sigma |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Sigma |Test suite `tests/e1/aval_027' OK
+Sigma |tests/e1/aval_028.tesh
+Sigma |Test suite `tests/e1/aval_028'
+Sigma |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Sigma |Test suite `tests/e1/aval_028' OK
+Sigma |tests/e1/aval_029.tesh
+Sigma |Test suite `tests/e1/aval_029'
+Sigma |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Sigma |Test suite `tests/e1/aval_029' OK
+Sigma |tests/e1/aval_030.tesh
+Sigma |Test suite `tests/e1/aval_030'
+Sigma |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Sigma |Test suite `tests/e1/aval_030' OK
+Sigma |tests/e1/aval_031.tesh
+Sigma |Test suite `tests/e1/aval_031'
+Sigma |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Sigma |Test suite `tests/e1/aval_031' OK
+Sigma |tests/e1/aval_032.tesh
+Sigma |Test suite `tests/e1/aval_032'
+Sigma |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Sigma |Test suite `tests/e1/aval_032' OK
+Sigma |tests/e1/aval_033.tesh
+Sigma |Test suite `tests/e1/aval_033'
+Sigma |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Sigma |Test suite `tests/e1/aval_033' OK
+Sigma |tests/e1/aval_034.tesh
+Sigma |Test suite `tests/e1/aval_034'
+Sigma |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Sigma |Test suite `tests/e1/aval_034' OK
+Sigma |tests/e1/aval_035.tesh
+Sigma |Test suite `tests/e1/aval_035'
+Sigma |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Sigma |Test suite `tests/e1/aval_035' OK
+Sigma |tests/e1/aval_036.tesh
+Sigma |Test suite `tests/e1/aval_036'
+Sigma |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Sigma |Test suite `tests/e1/aval_036' OK
+Sigma |tests/e1/aval_037.tesh
+Sigma |Test suite `tests/e1/aval_037'
+Sigma |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Sigma |Test suite `tests/e1/aval_037' OK
+Sigma |tests/e1/aval_038.tesh
+Sigma |Test suite `tests/e1/aval_038'
+Sigma |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Sigma |Test suite `tests/e1/aval_038' OK
+Sigma |tests/e1/aval_039.tesh
+Sigma |Test suite `tests/e1/aval_039'
+Sigma |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Sigma |Test suite `tests/e1/aval_039' OK
+Sigma |tests/e1/aval_040.tesh
+Sigma |Test suite `tests/e1/aval_040'
+Sigma |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Sigma |Test suite `tests/e1/aval_040' OK
+Sigma |tests/e1/aval_041.tesh
+Sigma |Test suite `tests/e1/aval_041'
+Sigma |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Sigma |Test suite `tests/e1/aval_041' OK
+Sigma |tests/e1/aval_042.tesh
+Sigma |Test suite `tests/e1/aval_042'
+Sigma |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Sigma |Test suite `tests/e1/aval_042' OK
+Sigma |tests/e1/aval_043.tesh
+Sigma |Test suite `tests/e1/aval_043'
+Sigma |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Sigma |Test suite `tests/e1/aval_043' OK
+Sigma |tests/e1/aval_044.tesh
+Sigma |Test suite `tests/e1/aval_044'
+Sigma |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Sigma |Test suite `tests/e1/aval_044' OK
+Sigma |tests/e1/aval_045.tesh
+Sigma |Test suite `tests/e1/aval_045'
+Sigma |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Sigma |Test suite `tests/e1/aval_045' OK
+Sigma |tests/e1/aval_046.tesh
+Sigma |Test suite `tests/e1/aval_046'
+Sigma |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Sigma |Test suite `tests/e1/aval_046' OK
+Sigma |tests/e1/aval_047.tesh
+Sigma |Test suite `tests/e1/aval_047'
+Sigma |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Sigma |Test suite `tests/e1/aval_047' OK
+Sigma |tests/e1/aval_048.tesh
+Sigma |Test suite `tests/e1/aval_048'
+Sigma |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Sigma |Test suite `tests/e1/aval_048' OK
+Sigma |tests/e1/aval_049.tesh
+Sigma |Test suite `tests/e1/aval_049'
+Sigma |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Sigma |Test suite `tests/e1/aval_049' OK
+Sigma |tests/e1/aval_050.tesh
+Sigma |Test suite `tests/e1/aval_050'
+Sigma |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Sigma |Test suite `tests/e1/aval_050' OK
+Sigma |tests/e1/aval_051.tesh
+Sigma |Test suite `tests/e1/aval_051'
+Sigma |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Sigma |Test suite `tests/e1/aval_051' OK
+Sigma |tests/e1/aval_052.tesh
+Sigma |Test suite `tests/e1/aval_052'
+Sigma |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Sigma |Test suite `tests/e1/aval_052' OK
+Sigma |tests/e1/aval_053.tesh
+Sigma |Test suite `tests/e1/aval_053'
+Sigma |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Sigma |Test suite `tests/e1/aval_053' OK
+Sigma |tests/e1/aval_054.tesh
+Sigma |Test suite `tests/e1/aval_054'
+Sigma |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Sigma |Output of <tests/e1/aval_054.tesh:3> mismatch:
+Sigma |- 1 TK_OC_SR [>>]
+Sigma |+ 1 TK_OC_SL [>>]
+Sigma |Test suite `tests/e1/aval_054.tesh': NOK (<tests/e1/aval_054.tesh:3> output mismatch)
+Sigma |tests/e1/aval_055.tesh
+Sigma |Test suite `tests/e1/aval_055'
+Sigma |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Sigma |Output of <tests/e1/aval_055.tesh:3> mismatch:
+Sigma |- 1 TK_OC_SL [<<]
+Sigma |+ 1 TK_OC_SR [<<]
+Sigma |Test suite `tests/e1/aval_055.tesh': NOK (<tests/e1/aval_055.tesh:3> output mismatch)
+Sigma |tests/e1/aval_056.tesh
+Sigma |Test suite `tests/e1/aval_056'
+Sigma |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Sigma |Test suite `tests/e1/aval_056' OK
+Sigma |tests/e1/aval_057.tesh
+Sigma |Test suite `tests/e1/aval_057'
+Sigma |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Sigma |Test suite `tests/e1/aval_057' OK
+Sigma |tests/e1/aval_058.tesh
+Sigma |Test suite `tests/e1/aval_058'
+Sigma |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Sigma |Test suite `tests/e1/aval_058' OK
+Sigma |tests/e1/aval_059.tesh
+Sigma |Test suite `tests/e1/aval_059'
+Sigma |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Sigma |Test suite `tests/e1/aval_059' OK
+Sigma |tests/e1/aval_060.tesh
+Sigma |Test suite `tests/e1/aval_060'
+Sigma |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Sigma |Test suite `tests/e1/aval_060' OK
+Sigma |tests/e1/aval_061.tesh
+Sigma |Test suite `tests/e1/aval_061'
+Sigma |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Sigma |Test suite `tests/e1/aval_061' OK
+Sigma |tests/e1/aval_062.tesh
+Sigma |Test suite `tests/e1/aval_062'
+Sigma |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Sigma |Test suite `tests/e1/aval_062' OK
+Sigma |tests/e1/aval_063.tesh
+Sigma |Test suite `tests/e1/aval_063'
+Sigma |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Sigma |Test suite `tests/e1/aval_063' OK
+Sigma |tests/e1/aval_064.tesh
+Sigma |Test suite `tests/e1/aval_064'
+Sigma |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Sigma |Test suite `tests/e1/aval_064' OK
+Sigma |tests/e1/aval_065.tesh
+Sigma |Test suite `tests/e1/aval_065'
+Sigma |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Sigma |Test suite `tests/e1/aval_065' OK
+Sigma |tests/e1/aval_066.tesh
+Sigma |Test suite `tests/e1/aval_066'
+Sigma |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Sigma |Test suite `tests/e1/aval_066' OK
+Sigma |tests/e1/aval_067.tesh
+Sigma |Test suite `tests/e1/aval_067'
+Sigma |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Sigma |Test suite `tests/e1/aval_067' OK
+Sigma |tests/e1/aval_068.tesh
+Sigma |Test suite `tests/e1/aval_068'
+Sigma |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Sigma |Test suite `tests/e1/aval_068' OK
+Sigma |tests/e1/aval_069.tesh
+Sigma |Test suite `tests/e1/aval_069'
+Sigma |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Sigma |Test suite `tests/e1/aval_069' OK
+Sigma |tests/e1/aval_070.tesh
+Sigma |Test suite `tests/e1/aval_070'
+Sigma |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Sigma |Test suite `tests/e1/aval_070' OK
+Sigma |tests/e1/aval_071.tesh
+Sigma |Test suite `tests/e1/aval_071'
+Sigma |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Sigma |Test suite `tests/e1/aval_071' OK
+Sigma |tests/e1/aval_072.tesh
+Sigma |Test suite `tests/e1/aval_072'
+Sigma |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Sigma |Test suite `tests/e1/aval_072' OK
+Sigma |tests/e1/aval_073.tesh
+Sigma |Test suite `tests/e1/aval_073'
+Sigma |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Sigma |Test suite `tests/e1/aval_073' OK
+Sigma |tests/e1/aval_074.tesh
+Sigma |Test suite `tests/e1/aval_074'
+Sigma |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Sigma |Test suite `tests/e1/aval_074' OK
+Sigma |tests/e1/aval_075.tesh
+Sigma |Test suite `tests/e1/aval_075'
+Sigma |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Sigma |Test suite `tests/e1/aval_075' OK
+Sigma |tests/e1/aval_076.tesh
+Sigma |Test suite `tests/e1/aval_076'
+Sigma |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Sigma |Test suite `tests/e1/aval_076' OK
+Sigma |tests/e1/aval_077.tesh
+Sigma |Test suite `tests/e1/aval_077'
+Sigma |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Sigma |Test suite `tests/e1/aval_077' OK
+Sigma |tests/e1/aval_078.tesh
+Sigma |Test suite `tests/e1/aval_078'
+Sigma |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Sigma |Test suite `tests/e1/aval_078' OK
+Sigma |tests/e1/aval_079.tesh
+Sigma |Test suite `tests/e1/aval_079'
+Sigma |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Sigma |Test suite `tests/e1/aval_079' OK
+Sigma |tests/e1/aval_080.tesh
+Sigma |Test suite `tests/e1/aval_080'
+Sigma |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Sigma |Test suite `tests/e1/aval_080' OK
+Sigma |tests/e1/aval_081.tesh
+Sigma |Test suite `tests/e1/aval_081'
+Sigma |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Sigma |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Tau
+
+~/ensino/private/E1/Tau ~/ensino/private
+Tau |tests/e1/aval_001.tesh
+Tau |Test suite `tests/e1/aval_001'
+Tau |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Tau |Test suite `tests/e1/aval_001' OK
+Tau |tests/e1/aval_002.tesh
+Tau |Test suite `tests/e1/aval_002'
+Tau |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Tau |Test suite `tests/e1/aval_002' OK
+Tau |tests/e1/aval_003.tesh
+Tau |Test suite `tests/e1/aval_003'
+Tau |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Tau |Test suite `tests/e1/aval_003' OK
+Tau |tests/e1/aval_004.tesh
+Tau |Test suite `tests/e1/aval_004'
+Tau |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Tau |Test suite `tests/e1/aval_004' OK
+Tau |tests/e1/aval_005.tesh
+Tau |Test suite `tests/e1/aval_005'
+Tau |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Tau |Test suite `tests/e1/aval_005' OK
+Tau |tests/e1/aval_006.tesh
+Tau |Test suite `tests/e1/aval_006'
+Tau |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Tau |Test suite `tests/e1/aval_006' OK
+Tau |tests/e1/aval_007.tesh
+Tau |Test suite `tests/e1/aval_007'
+Tau |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Tau |Test suite `tests/e1/aval_007' OK
+Tau |tests/e1/aval_008.tesh
+Tau |Test suite `tests/e1/aval_008'
+Tau |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Tau |Test suite `tests/e1/aval_008' OK
+Tau |tests/e1/aval_009.tesh
+Tau |Test suite `tests/e1/aval_009'
+Tau |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Tau |Test suite `tests/e1/aval_009' OK
+Tau |tests/e1/aval_010.tesh
+Tau |Test suite `tests/e1/aval_010'
+Tau |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Tau |Test suite `tests/e1/aval_010' OK
+Tau |tests/e1/aval_011.tesh
+Tau |Test suite `tests/e1/aval_011'
+Tau |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Tau |Test suite `tests/e1/aval_011' OK
+Tau |tests/e1/aval_012.tesh
+Tau |Test suite `tests/e1/aval_012'
+Tau |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Tau |Test suite `tests/e1/aval_012' OK
+Tau |tests/e1/aval_013.tesh
+Tau |Test suite `tests/e1/aval_013'
+Tau |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Tau |Test suite `tests/e1/aval_013' OK
+Tau |tests/e1/aval_014.tesh
+Tau |Test suite `tests/e1/aval_014'
+Tau |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Tau |Test suite `tests/e1/aval_014' OK
+Tau |tests/e1/aval_015.tesh
+Tau |Test suite `tests/e1/aval_015'
+Tau |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Tau |Test suite `tests/e1/aval_015' OK
+Tau |tests/e1/aval_016.tesh
+Tau |Test suite `tests/e1/aval_016'
+Tau |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Tau |Test suite `tests/e1/aval_016' OK
+Tau |tests/e1/aval_017.tesh
+Tau |Test suite `tests/e1/aval_017'
+Tau |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Tau |Test suite `tests/e1/aval_017' OK
+Tau |tests/e1/aval_018.tesh
+Tau |Test suite `tests/e1/aval_018'
+Tau |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Tau |Test suite `tests/e1/aval_018' OK
+Tau |tests/e1/aval_019.tesh
+Tau |Test suite `tests/e1/aval_019'
+Tau |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Tau |Test suite `tests/e1/aval_019' OK
+Tau |tests/e1/aval_020.tesh
+Tau |Test suite `tests/e1/aval_020'
+Tau |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Tau |Test suite `tests/e1/aval_020' OK
+Tau |tests/e1/aval_021.tesh
+Tau |Test suite `tests/e1/aval_021'
+Tau |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Tau |Test suite `tests/e1/aval_021' OK
+Tau |tests/e1/aval_022.tesh
+Tau |Test suite `tests/e1/aval_022'
+Tau |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Tau |Test suite `tests/e1/aval_022' OK
+Tau |tests/e1/aval_023.tesh
+Tau |Test suite `tests/e1/aval_023'
+Tau |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Tau |Test suite `tests/e1/aval_023' OK
+Tau |tests/e1/aval_024.tesh
+Tau |Test suite `tests/e1/aval_024'
+Tau |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Tau |Test suite `tests/e1/aval_024' OK
+Tau |tests/e1/aval_025.tesh
+Tau |Test suite `tests/e1/aval_025'
+Tau |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Tau |Test suite `tests/e1/aval_025' OK
+Tau |tests/e1/aval_026.tesh
+Tau |Test suite `tests/e1/aval_026'
+Tau |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Tau |Test suite `tests/e1/aval_026' OK
+Tau |tests/e1/aval_027.tesh
+Tau |Test suite `tests/e1/aval_027'
+Tau |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Tau |Test suite `tests/e1/aval_027' OK
+Tau |tests/e1/aval_028.tesh
+Tau |Test suite `tests/e1/aval_028'
+Tau |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Tau |Test suite `tests/e1/aval_028' OK
+Tau |tests/e1/aval_029.tesh
+Tau |Test suite `tests/e1/aval_029'
+Tau |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Tau |Test suite `tests/e1/aval_029' OK
+Tau |tests/e1/aval_030.tesh
+Tau |Test suite `tests/e1/aval_030'
+Tau |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Tau |Test suite `tests/e1/aval_030' OK
+Tau |tests/e1/aval_031.tesh
+Tau |Test suite `tests/e1/aval_031'
+Tau |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Tau |Test suite `tests/e1/aval_031' OK
+Tau |tests/e1/aval_032.tesh
+Tau |Test suite `tests/e1/aval_032'
+Tau |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Tau |Test suite `tests/e1/aval_032' OK
+Tau |tests/e1/aval_033.tesh
+Tau |Test suite `tests/e1/aval_033'
+Tau |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Tau |Test suite `tests/e1/aval_033' OK
+Tau |tests/e1/aval_034.tesh
+Tau |Test suite `tests/e1/aval_034'
+Tau |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Tau |Test suite `tests/e1/aval_034' OK
+Tau |tests/e1/aval_035.tesh
+Tau |Test suite `tests/e1/aval_035'
+Tau |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Tau |Test suite `tests/e1/aval_035' OK
+Tau |tests/e1/aval_036.tesh
+Tau |Test suite `tests/e1/aval_036'
+Tau |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Tau |Test suite `tests/e1/aval_036' OK
+Tau |tests/e1/aval_037.tesh
+Tau |Test suite `tests/e1/aval_037'
+Tau |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Tau |Test suite `tests/e1/aval_037' OK
+Tau |tests/e1/aval_038.tesh
+Tau |Test suite `tests/e1/aval_038'
+Tau |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Tau |Test suite `tests/e1/aval_038' OK
+Tau |tests/e1/aval_039.tesh
+Tau |Test suite `tests/e1/aval_039'
+Tau |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Tau |Test suite `tests/e1/aval_039' OK
+Tau |tests/e1/aval_040.tesh
+Tau |Test suite `tests/e1/aval_040'
+Tau |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Tau |Test suite `tests/e1/aval_040' OK
+Tau |tests/e1/aval_041.tesh
+Tau |Test suite `tests/e1/aval_041'
+Tau |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Tau |Test suite `tests/e1/aval_041' OK
+Tau |tests/e1/aval_042.tesh
+Tau |Test suite `tests/e1/aval_042'
+Tau |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Tau |Test suite `tests/e1/aval_042' OK
+Tau |tests/e1/aval_043.tesh
+Tau |Test suite `tests/e1/aval_043'
+Tau |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Tau |Test suite `tests/e1/aval_043' OK
+Tau |tests/e1/aval_044.tesh
+Tau |Test suite `tests/e1/aval_044'
+Tau |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Tau |Test suite `tests/e1/aval_044' OK
+Tau |tests/e1/aval_045.tesh
+Tau |Test suite `tests/e1/aval_045'
+Tau |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Tau |Test suite `tests/e1/aval_045' OK
+Tau |tests/e1/aval_046.tesh
+Tau |Test suite `tests/e1/aval_046'
+Tau |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Tau |Test suite `tests/e1/aval_046' OK
+Tau |tests/e1/aval_047.tesh
+Tau |Test suite `tests/e1/aval_047'
+Tau |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Tau |Test suite `tests/e1/aval_047' OK
+Tau |tests/e1/aval_048.tesh
+Tau |Test suite `tests/e1/aval_048'
+Tau |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Tau |Test suite `tests/e1/aval_048' OK
+Tau |tests/e1/aval_049.tesh
+Tau |Test suite `tests/e1/aval_049'
+Tau |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Tau |Test suite `tests/e1/aval_049' OK
+Tau |tests/e1/aval_050.tesh
+Tau |Test suite `tests/e1/aval_050'
+Tau |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Tau |Test suite `tests/e1/aval_050' OK
+Tau |tests/e1/aval_051.tesh
+Tau |Test suite `tests/e1/aval_051'
+Tau |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Tau |Test suite `tests/e1/aval_051' OK
+Tau |tests/e1/aval_052.tesh
+Tau |Test suite `tests/e1/aval_052'
+Tau |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Tau |Test suite `tests/e1/aval_052' OK
+Tau |tests/e1/aval_053.tesh
+Tau |Test suite `tests/e1/aval_053'
+Tau |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Tau |Test suite `tests/e1/aval_053' OK
+Tau |tests/e1/aval_054.tesh
+Tau |Test suite `tests/e1/aval_054'
+Tau |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Tau |Output of <tests/e1/aval_054.tesh:3> mismatch:
+Tau |- 1 TK_OC_SR [>>]
+Tau |+ 1 TK_OC_SL [>>]
+Tau |Test suite `tests/e1/aval_054.tesh': NOK (<tests/e1/aval_054.tesh:3> output mismatch)
+Tau |tests/e1/aval_055.tesh
+Tau |Test suite `tests/e1/aval_055'
+Tau |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Tau |Output of <tests/e1/aval_055.tesh:3> mismatch:
+Tau |- 1 TK_OC_SL [<<]
+Tau |+ 1 TK_OC_SR [<<]
+Tau |Test suite `tests/e1/aval_055.tesh': NOK (<tests/e1/aval_055.tesh:3> output mismatch)
+Tau |tests/e1/aval_056.tesh
+Tau |Test suite `tests/e1/aval_056'
+Tau |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Tau |Test suite `tests/e1/aval_056' OK
+Tau |tests/e1/aval_057.tesh
+Tau |Test suite `tests/e1/aval_057'
+Tau |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Tau |Test suite `tests/e1/aval_057' OK
+Tau |tests/e1/aval_058.tesh
+Tau |Test suite `tests/e1/aval_058'
+Tau |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Tau |Test suite `tests/e1/aval_058' OK
+Tau |tests/e1/aval_059.tesh
+Tau |Test suite `tests/e1/aval_059'
+Tau |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Tau |Test suite `tests/e1/aval_059' OK
+Tau |tests/e1/aval_060.tesh
+Tau |Test suite `tests/e1/aval_060'
+Tau |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Tau |Test suite `tests/e1/aval_060' OK
+Tau |tests/e1/aval_061.tesh
+Tau |Test suite `tests/e1/aval_061'
+Tau |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Tau |Test suite `tests/e1/aval_061' OK
+Tau |tests/e1/aval_062.tesh
+Tau |Test suite `tests/e1/aval_062'
+Tau |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Tau |Test suite `tests/e1/aval_062' OK
+Tau |tests/e1/aval_063.tesh
+Tau |Test suite `tests/e1/aval_063'
+Tau |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Tau |Test suite `tests/e1/aval_063' OK
+Tau |tests/e1/aval_064.tesh
+Tau |Test suite `tests/e1/aval_064'
+Tau |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Tau |Test suite `tests/e1/aval_064' OK
+Tau |tests/e1/aval_065.tesh
+Tau |Test suite `tests/e1/aval_065'
+Tau |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Tau |Test suite `tests/e1/aval_065' OK
+Tau |tests/e1/aval_066.tesh
+Tau |Test suite `tests/e1/aval_066'
+Tau |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Tau |Test suite `tests/e1/aval_066' OK
+Tau |tests/e1/aval_067.tesh
+Tau |Test suite `tests/e1/aval_067'
+Tau |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Tau |Test suite `tests/e1/aval_067' OK
+Tau |tests/e1/aval_068.tesh
+Tau |Test suite `tests/e1/aval_068'
+Tau |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Tau |Test suite `tests/e1/aval_068' OK
+Tau |tests/e1/aval_069.tesh
+Tau |Test suite `tests/e1/aval_069'
+Tau |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Tau |Test suite `tests/e1/aval_069' OK
+Tau |tests/e1/aval_070.tesh
+Tau |Test suite `tests/e1/aval_070'
+Tau |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Tau |Test suite `tests/e1/aval_070' OK
+Tau |tests/e1/aval_071.tesh
+Tau |Test suite `tests/e1/aval_071'
+Tau |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Tau |Test suite `tests/e1/aval_071' OK
+Tau |tests/e1/aval_072.tesh
+Tau |Test suite `tests/e1/aval_072'
+Tau |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Tau |Test suite `tests/e1/aval_072' OK
+Tau |tests/e1/aval_073.tesh
+Tau |Test suite `tests/e1/aval_073'
+Tau |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Tau |Test suite `tests/e1/aval_073' OK
+Tau |tests/e1/aval_074.tesh
+Tau |Test suite `tests/e1/aval_074'
+Tau |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Tau |Test suite `tests/e1/aval_074' OK
+Tau |tests/e1/aval_075.tesh
+Tau |Test suite `tests/e1/aval_075'
+Tau |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Tau |Test suite `tests/e1/aval_075' OK
+Tau |tests/e1/aval_076.tesh
+Tau |Test suite `tests/e1/aval_076'
+Tau |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Tau |Test suite `tests/e1/aval_076' OK
+Tau |tests/e1/aval_077.tesh
+Tau |Test suite `tests/e1/aval_077'
+Tau |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Tau |Test suite `tests/e1/aval_077' OK
+Tau |tests/e1/aval_078.tesh
+Tau |Test suite `tests/e1/aval_078'
+Tau |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Tau |Test suite `tests/e1/aval_078' OK
+Tau |tests/e1/aval_079.tesh
+Tau |Test suite `tests/e1/aval_079'
+Tau |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Tau |Test suite `tests/e1/aval_079' OK
+Tau |tests/e1/aval_080.tesh
+Tau |Test suite `tests/e1/aval_080'
+Tau |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Tau |Test suite `tests/e1/aval_080' OK
+Tau |tests/e1/aval_081.tesh
+Tau |Test suite `tests/e1/aval_081'
+Tau |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Tau |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Theta
+
+~/ensino/private/E1/Theta ~/ensino/private
+Theta |tests/e1/aval_001.tesh
+Theta |Test suite `tests/e1/aval_001'
+Theta |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Theta |Test suite `tests/e1/aval_001' OK
+Theta |tests/e1/aval_002.tesh
+Theta |Test suite `tests/e1/aval_002'
+Theta |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Theta |Test suite `tests/e1/aval_002' OK
+Theta |tests/e1/aval_003.tesh
+Theta |Test suite `tests/e1/aval_003'
+Theta |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Theta |Test suite `tests/e1/aval_003' OK
+Theta |tests/e1/aval_004.tesh
+Theta |Test suite `tests/e1/aval_004'
+Theta |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Theta |Test suite `tests/e1/aval_004' OK
+Theta |tests/e1/aval_005.tesh
+Theta |Test suite `tests/e1/aval_005'
+Theta |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Theta |Test suite `tests/e1/aval_005' OK
+Theta |tests/e1/aval_006.tesh
+Theta |Test suite `tests/e1/aval_006'
+Theta |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Theta |Test suite `tests/e1/aval_006' OK
+Theta |tests/e1/aval_007.tesh
+Theta |Test suite `tests/e1/aval_007'
+Theta |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Theta |Test suite `tests/e1/aval_007' OK
+Theta |tests/e1/aval_008.tesh
+Theta |Test suite `tests/e1/aval_008'
+Theta |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Theta |Test suite `tests/e1/aval_008' OK
+Theta |tests/e1/aval_009.tesh
+Theta |Test suite `tests/e1/aval_009'
+Theta |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Theta |Test suite `tests/e1/aval_009' OK
+Theta |tests/e1/aval_010.tesh
+Theta |Test suite `tests/e1/aval_010'
+Theta |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Theta |Test suite `tests/e1/aval_010' OK
+Theta |tests/e1/aval_011.tesh
+Theta |Test suite `tests/e1/aval_011'
+Theta |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Theta |Test suite `tests/e1/aval_011' OK
+Theta |tests/e1/aval_012.tesh
+Theta |Test suite `tests/e1/aval_012'
+Theta |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Theta |Test suite `tests/e1/aval_012' OK
+Theta |tests/e1/aval_013.tesh
+Theta |Test suite `tests/e1/aval_013'
+Theta |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Theta |Test suite `tests/e1/aval_013' OK
+Theta |tests/e1/aval_014.tesh
+Theta |Test suite `tests/e1/aval_014'
+Theta |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Theta |Test suite `tests/e1/aval_014' OK
+Theta |tests/e1/aval_015.tesh
+Theta |Test suite `tests/e1/aval_015'
+Theta |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Theta |Test suite `tests/e1/aval_015' OK
+Theta |tests/e1/aval_016.tesh
+Theta |Test suite `tests/e1/aval_016'
+Theta |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Theta |Test suite `tests/e1/aval_016' OK
+Theta |tests/e1/aval_017.tesh
+Theta |Test suite `tests/e1/aval_017'
+Theta |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Theta |Test suite `tests/e1/aval_017' OK
+Theta |tests/e1/aval_018.tesh
+Theta |Test suite `tests/e1/aval_018'
+Theta |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Theta |Test suite `tests/e1/aval_018' OK
+Theta |tests/e1/aval_019.tesh
+Theta |Test suite `tests/e1/aval_019'
+Theta |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Theta |Test suite `tests/e1/aval_019' OK
+Theta |tests/e1/aval_020.tesh
+Theta |Test suite `tests/e1/aval_020'
+Theta |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Theta |Test suite `tests/e1/aval_020' OK
+Theta |tests/e1/aval_021.tesh
+Theta |Test suite `tests/e1/aval_021'
+Theta |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Theta |Test suite `tests/e1/aval_021' OK
+Theta |tests/e1/aval_022.tesh
+Theta |Test suite `tests/e1/aval_022'
+Theta |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Theta |Test suite `tests/e1/aval_022' OK
+Theta |tests/e1/aval_023.tesh
+Theta |Test suite `tests/e1/aval_023'
+Theta |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Theta |Test suite `tests/e1/aval_023' OK
+Theta |tests/e1/aval_024.tesh
+Theta |Test suite `tests/e1/aval_024'
+Theta |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Theta |Test suite `tests/e1/aval_024' OK
+Theta |tests/e1/aval_025.tesh
+Theta |Test suite `tests/e1/aval_025'
+Theta |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Theta |Test suite `tests/e1/aval_025' OK
+Theta |tests/e1/aval_026.tesh
+Theta |Test suite `tests/e1/aval_026'
+Theta |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Theta |Test suite `tests/e1/aval_026' OK
+Theta |tests/e1/aval_027.tesh
+Theta |Test suite `tests/e1/aval_027'
+Theta |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Theta |Test suite `tests/e1/aval_027' OK
+Theta |tests/e1/aval_028.tesh
+Theta |Test suite `tests/e1/aval_028'
+Theta |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Theta |Test suite `tests/e1/aval_028' OK
+Theta |tests/e1/aval_029.tesh
+Theta |Test suite `tests/e1/aval_029'
+Theta |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Theta |Test suite `tests/e1/aval_029' OK
+Theta |tests/e1/aval_030.tesh
+Theta |Test suite `tests/e1/aval_030'
+Theta |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Theta |Test suite `tests/e1/aval_030' OK
+Theta |tests/e1/aval_031.tesh
+Theta |Test suite `tests/e1/aval_031'
+Theta |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Theta |Test suite `tests/e1/aval_031' OK
+Theta |tests/e1/aval_032.tesh
+Theta |Test suite `tests/e1/aval_032'
+Theta |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Theta |Test suite `tests/e1/aval_032' OK
+Theta |tests/e1/aval_033.tesh
+Theta |Test suite `tests/e1/aval_033'
+Theta |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Theta |Test suite `tests/e1/aval_033' OK
+Theta |tests/e1/aval_034.tesh
+Theta |Test suite `tests/e1/aval_034'
+Theta |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Theta |Test suite `tests/e1/aval_034' OK
+Theta |tests/e1/aval_035.tesh
+Theta |Test suite `tests/e1/aval_035'
+Theta |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Theta |Test suite `tests/e1/aval_035' OK
+Theta |tests/e1/aval_036.tesh
+Theta |Test suite `tests/e1/aval_036'
+Theta |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Theta |Test suite `tests/e1/aval_036' OK
+Theta |tests/e1/aval_037.tesh
+Theta |Test suite `tests/e1/aval_037'
+Theta |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Theta |Test suite `tests/e1/aval_037' OK
+Theta |tests/e1/aval_038.tesh
+Theta |Test suite `tests/e1/aval_038'
+Theta |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Theta |Test suite `tests/e1/aval_038' OK
+Theta |tests/e1/aval_039.tesh
+Theta |Test suite `tests/e1/aval_039'
+Theta |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Theta |Test suite `tests/e1/aval_039' OK
+Theta |tests/e1/aval_040.tesh
+Theta |Test suite `tests/e1/aval_040'
+Theta |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Theta |Test suite `tests/e1/aval_040' OK
+Theta |tests/e1/aval_041.tesh
+Theta |Test suite `tests/e1/aval_041'
+Theta |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Theta |Test suite `tests/e1/aval_041' OK
+Theta |tests/e1/aval_042.tesh
+Theta |Test suite `tests/e1/aval_042'
+Theta |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Theta |Test suite `tests/e1/aval_042' OK
+Theta |tests/e1/aval_043.tesh
+Theta |Test suite `tests/e1/aval_043'
+Theta |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Theta |Test suite `tests/e1/aval_043' OK
+Theta |tests/e1/aval_044.tesh
+Theta |Test suite `tests/e1/aval_044'
+Theta |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Theta |Test suite `tests/e1/aval_044' OK
+Theta |tests/e1/aval_045.tesh
+Theta |Test suite `tests/e1/aval_045'
+Theta |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Theta |Test suite `tests/e1/aval_045' OK
+Theta |tests/e1/aval_046.tesh
+Theta |Test suite `tests/e1/aval_046'
+Theta |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Theta |Test suite `tests/e1/aval_046' OK
+Theta |tests/e1/aval_047.tesh
+Theta |Test suite `tests/e1/aval_047'
+Theta |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Theta |Test suite `tests/e1/aval_047' OK
+Theta |tests/e1/aval_048.tesh
+Theta |Test suite `tests/e1/aval_048'
+Theta |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Theta |Test suite `tests/e1/aval_048' OK
+Theta |tests/e1/aval_049.tesh
+Theta |Test suite `tests/e1/aval_049'
+Theta |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Theta |Test suite `tests/e1/aval_049' OK
+Theta |tests/e1/aval_050.tesh
+Theta |Test suite `tests/e1/aval_050'
+Theta |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Theta |Test suite `tests/e1/aval_050' OK
+Theta |tests/e1/aval_051.tesh
+Theta |Test suite `tests/e1/aval_051'
+Theta |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Theta |Test suite `tests/e1/aval_051' OK
+Theta |tests/e1/aval_052.tesh
+Theta |Test suite `tests/e1/aval_052'
+Theta |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Theta |Test suite `tests/e1/aval_052' OK
+Theta |tests/e1/aval_053.tesh
+Theta |Test suite `tests/e1/aval_053'
+Theta |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Theta |Test suite `tests/e1/aval_053' OK
+Theta |tests/e1/aval_054.tesh
+Theta |Test suite `tests/e1/aval_054'
+Theta |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Theta |Test suite `tests/e1/aval_054' OK
+Theta |tests/e1/aval_055.tesh
+Theta |Test suite `tests/e1/aval_055'
+Theta |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Theta |Test suite `tests/e1/aval_055' OK
+Theta |tests/e1/aval_056.tesh
+Theta |Test suite `tests/e1/aval_056'
+Theta |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Theta |Test suite `tests/e1/aval_056' OK
+Theta |tests/e1/aval_057.tesh
+Theta |Test suite `tests/e1/aval_057'
+Theta |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Theta |Test suite `tests/e1/aval_057' OK
+Theta |tests/e1/aval_058.tesh
+Theta |Test suite `tests/e1/aval_058'
+Theta |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Theta |Test suite `tests/e1/aval_058' OK
+Theta |tests/e1/aval_059.tesh
+Theta |Test suite `tests/e1/aval_059'
+Theta |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Theta |Test suite `tests/e1/aval_059' OK
+Theta |tests/e1/aval_060.tesh
+Theta |Test suite `tests/e1/aval_060'
+Theta |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Theta |Test suite `tests/e1/aval_060' OK
+Theta |tests/e1/aval_061.tesh
+Theta |Test suite `tests/e1/aval_061'
+Theta |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Theta |Test suite `tests/e1/aval_061' OK
+Theta |tests/e1/aval_062.tesh
+Theta |Test suite `tests/e1/aval_062'
+Theta |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Theta |Test suite `tests/e1/aval_062' OK
+Theta |tests/e1/aval_063.tesh
+Theta |Test suite `tests/e1/aval_063'
+Theta |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Theta |Test suite `tests/e1/aval_063' OK
+Theta |tests/e1/aval_064.tesh
+Theta |Test suite `tests/e1/aval_064'
+Theta |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Theta |Test suite `tests/e1/aval_064' OK
+Theta |tests/e1/aval_065.tesh
+Theta |Test suite `tests/e1/aval_065'
+Theta |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Theta |Test suite `tests/e1/aval_065' OK
+Theta |tests/e1/aval_066.tesh
+Theta |Test suite `tests/e1/aval_066'
+Theta |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Theta |Test suite `tests/e1/aval_066' OK
+Theta |tests/e1/aval_067.tesh
+Theta |Test suite `tests/e1/aval_067'
+Theta |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Theta |Test suite `tests/e1/aval_067' OK
+Theta |tests/e1/aval_068.tesh
+Theta |Test suite `tests/e1/aval_068'
+Theta |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Theta |Test suite `tests/e1/aval_068' OK
+Theta |tests/e1/aval_069.tesh
+Theta |Test suite `tests/e1/aval_069'
+Theta |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Theta |Test suite `tests/e1/aval_069' OK
+Theta |tests/e1/aval_070.tesh
+Theta |Test suite `tests/e1/aval_070'
+Theta |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Theta |Test suite `tests/e1/aval_070' OK
+Theta |tests/e1/aval_071.tesh
+Theta |Test suite `tests/e1/aval_071'
+Theta |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Theta |Test suite `tests/e1/aval_071' OK
+Theta |tests/e1/aval_072.tesh
+Theta |Test suite `tests/e1/aval_072'
+Theta |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Theta |Test suite `tests/e1/aval_072' OK
+Theta |tests/e1/aval_073.tesh
+Theta |Test suite `tests/e1/aval_073'
+Theta |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Theta |Test suite `tests/e1/aval_073' OK
+Theta |tests/e1/aval_074.tesh
+Theta |Test suite `tests/e1/aval_074'
+Theta |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Theta |Test suite `tests/e1/aval_074' OK
+Theta |tests/e1/aval_075.tesh
+Theta |Test suite `tests/e1/aval_075'
+Theta |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Theta |Test suite `tests/e1/aval_075' OK
+Theta |tests/e1/aval_076.tesh
+Theta |Test suite `tests/e1/aval_076'
+Theta |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Theta |Test suite `tests/e1/aval_076' OK
+Theta |tests/e1/aval_077.tesh
+Theta |Test suite `tests/e1/aval_077'
+Theta |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Theta |Test suite `tests/e1/aval_077' OK
+Theta |tests/e1/aval_078.tesh
+Theta |Test suite `tests/e1/aval_078'
+Theta |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Theta |Test suite `tests/e1/aval_078' OK
+Theta |tests/e1/aval_079.tesh
+Theta |Test suite `tests/e1/aval_079'
+Theta |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Theta |Test suite `tests/e1/aval_079' OK
+Theta |tests/e1/aval_080.tesh
+Theta |Test suite `tests/e1/aval_080'
+Theta |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Theta |Test suite `tests/e1/aval_080' OK
+Theta |tests/e1/aval_081.tesh
+Theta |Test suite `tests/e1/aval_081'
+Theta |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Theta |Test suite `tests/e1/aval_081' OK
+~/ensino/private
+
+Zeta
+
+~/ensino/private/E1/Zeta ~/ensino/private
+Zeta |tests/e1/aval_001.tesh
+Zeta |Test suite `tests/e1/aval_001'
+Zeta |[tests/e1/aval_001:3] './main < tests/e1/entrada_001'
+Zeta |Test suite `tests/e1/aval_001' OK
+Zeta |tests/e1/aval_002.tesh
+Zeta |Test suite `tests/e1/aval_002'
+Zeta |[tests/e1/aval_002:3] './main < tests/e1/entrada_002'
+Zeta |Test suite `tests/e1/aval_002' OK
+Zeta |tests/e1/aval_003.tesh
+Zeta |Test suite `tests/e1/aval_003'
+Zeta |[tests/e1/aval_003:3] './main < tests/e1/entrada_003'
+Zeta |Test suite `tests/e1/aval_003' OK
+Zeta |tests/e1/aval_004.tesh
+Zeta |Test suite `tests/e1/aval_004'
+Zeta |[tests/e1/aval_004:3] './main < tests/e1/entrada_004'
+Zeta |Test suite `tests/e1/aval_004' OK
+Zeta |tests/e1/aval_005.tesh
+Zeta |Test suite `tests/e1/aval_005'
+Zeta |[tests/e1/aval_005:3] './main < tests/e1/entrada_005'
+Zeta |Test suite `tests/e1/aval_005' OK
+Zeta |tests/e1/aval_006.tesh
+Zeta |Test suite `tests/e1/aval_006'
+Zeta |[tests/e1/aval_006:3] './main < tests/e1/entrada_006'
+Zeta |Test suite `tests/e1/aval_006' OK
+Zeta |tests/e1/aval_007.tesh
+Zeta |Test suite `tests/e1/aval_007'
+Zeta |[tests/e1/aval_007:3] './main < tests/e1/entrada_007'
+Zeta |Test suite `tests/e1/aval_007' OK
+Zeta |tests/e1/aval_008.tesh
+Zeta |Test suite `tests/e1/aval_008'
+Zeta |[tests/e1/aval_008:3] './main < tests/e1/entrada_008'
+Zeta |Test suite `tests/e1/aval_008' OK
+Zeta |tests/e1/aval_009.tesh
+Zeta |Test suite `tests/e1/aval_009'
+Zeta |[tests/e1/aval_009:3] './main < tests/e1/entrada_009'
+Zeta |Test suite `tests/e1/aval_009' OK
+Zeta |tests/e1/aval_010.tesh
+Zeta |Test suite `tests/e1/aval_010'
+Zeta |[tests/e1/aval_010:3] './main < tests/e1/entrada_010'
+Zeta |Test suite `tests/e1/aval_010' OK
+Zeta |tests/e1/aval_011.tesh
+Zeta |Test suite `tests/e1/aval_011'
+Zeta |[tests/e1/aval_011:3] './main < tests/e1/entrada_011'
+Zeta |Test suite `tests/e1/aval_011' OK
+Zeta |tests/e1/aval_012.tesh
+Zeta |Test suite `tests/e1/aval_012'
+Zeta |[tests/e1/aval_012:3] './main < tests/e1/entrada_012'
+Zeta |Test suite `tests/e1/aval_012' OK
+Zeta |tests/e1/aval_013.tesh
+Zeta |Test suite `tests/e1/aval_013'
+Zeta |[tests/e1/aval_013:3] './main < tests/e1/entrada_013'
+Zeta |Test suite `tests/e1/aval_013' OK
+Zeta |tests/e1/aval_014.tesh
+Zeta |Test suite `tests/e1/aval_014'
+Zeta |[tests/e1/aval_014:3] './main < tests/e1/entrada_014'
+Zeta |Test suite `tests/e1/aval_014' OK
+Zeta |tests/e1/aval_015.tesh
+Zeta |Test suite `tests/e1/aval_015'
+Zeta |[tests/e1/aval_015:3] './main < tests/e1/entrada_015'
+Zeta |Test suite `tests/e1/aval_015' OK
+Zeta |tests/e1/aval_016.tesh
+Zeta |Test suite `tests/e1/aval_016'
+Zeta |[tests/e1/aval_016:3] './main < tests/e1/entrada_016'
+Zeta |Test suite `tests/e1/aval_016' OK
+Zeta |tests/e1/aval_017.tesh
+Zeta |Test suite `tests/e1/aval_017'
+Zeta |[tests/e1/aval_017:3] './main < tests/e1/entrada_017'
+Zeta |Test suite `tests/e1/aval_017' OK
+Zeta |tests/e1/aval_018.tesh
+Zeta |Test suite `tests/e1/aval_018'
+Zeta |[tests/e1/aval_018:3] './main < tests/e1/entrada_018'
+Zeta |Test suite `tests/e1/aval_018' OK
+Zeta |tests/e1/aval_019.tesh
+Zeta |Test suite `tests/e1/aval_019'
+Zeta |[tests/e1/aval_019:3] './main < tests/e1/entrada_019'
+Zeta |Test suite `tests/e1/aval_019' OK
+Zeta |tests/e1/aval_020.tesh
+Zeta |Test suite `tests/e1/aval_020'
+Zeta |[tests/e1/aval_020:3] './main < tests/e1/entrada_020'
+Zeta |Test suite `tests/e1/aval_020' OK
+Zeta |tests/e1/aval_021.tesh
+Zeta |Test suite `tests/e1/aval_021'
+Zeta |[tests/e1/aval_021:3] './main < tests/e1/entrada_021'
+Zeta |Test suite `tests/e1/aval_021' OK
+Zeta |tests/e1/aval_022.tesh
+Zeta |Test suite `tests/e1/aval_022'
+Zeta |[tests/e1/aval_022:3] './main < tests/e1/entrada_022'
+Zeta |Test suite `tests/e1/aval_022' OK
+Zeta |tests/e1/aval_023.tesh
+Zeta |Test suite `tests/e1/aval_023'
+Zeta |[tests/e1/aval_023:3] './main < tests/e1/entrada_023'
+Zeta |Test suite `tests/e1/aval_023' OK
+Zeta |tests/e1/aval_024.tesh
+Zeta |Test suite `tests/e1/aval_024'
+Zeta |[tests/e1/aval_024:3] './main < tests/e1/entrada_024'
+Zeta |Test suite `tests/e1/aval_024' OK
+Zeta |tests/e1/aval_025.tesh
+Zeta |Test suite `tests/e1/aval_025'
+Zeta |[tests/e1/aval_025:3] './main < tests/e1/entrada_025'
+Zeta |Test suite `tests/e1/aval_025' OK
+Zeta |tests/e1/aval_026.tesh
+Zeta |Test suite `tests/e1/aval_026'
+Zeta |[tests/e1/aval_026:3] './main < tests/e1/entrada_026'
+Zeta |Test suite `tests/e1/aval_026' OK
+Zeta |tests/e1/aval_027.tesh
+Zeta |Test suite `tests/e1/aval_027'
+Zeta |[tests/e1/aval_027:3] './main < tests/e1/entrada_027'
+Zeta |Test suite `tests/e1/aval_027' OK
+Zeta |tests/e1/aval_028.tesh
+Zeta |Test suite `tests/e1/aval_028'
+Zeta |[tests/e1/aval_028:3] './main < tests/e1/entrada_028'
+Zeta |Test suite `tests/e1/aval_028' OK
+Zeta |tests/e1/aval_029.tesh
+Zeta |Test suite `tests/e1/aval_029'
+Zeta |[tests/e1/aval_029:3] './main < tests/e1/entrada_029'
+Zeta |Test suite `tests/e1/aval_029' OK
+Zeta |tests/e1/aval_030.tesh
+Zeta |Test suite `tests/e1/aval_030'
+Zeta |[tests/e1/aval_030:3] './main < tests/e1/entrada_030'
+Zeta |Test suite `tests/e1/aval_030' OK
+Zeta |tests/e1/aval_031.tesh
+Zeta |Test suite `tests/e1/aval_031'
+Zeta |[tests/e1/aval_031:3] './main < tests/e1/entrada_031'
+Zeta |Test suite `tests/e1/aval_031' OK
+Zeta |tests/e1/aval_032.tesh
+Zeta |Test suite `tests/e1/aval_032'
+Zeta |[tests/e1/aval_032:3] './main < tests/e1/entrada_032'
+Zeta |Test suite `tests/e1/aval_032' OK
+Zeta |tests/e1/aval_033.tesh
+Zeta |Test suite `tests/e1/aval_033'
+Zeta |[tests/e1/aval_033:3] './main < tests/e1/entrada_033'
+Zeta |Test suite `tests/e1/aval_033' OK
+Zeta |tests/e1/aval_034.tesh
+Zeta |Test suite `tests/e1/aval_034'
+Zeta |[tests/e1/aval_034:3] './main < tests/e1/entrada_034'
+Zeta |Test suite `tests/e1/aval_034' OK
+Zeta |tests/e1/aval_035.tesh
+Zeta |Test suite `tests/e1/aval_035'
+Zeta |[tests/e1/aval_035:3] './main < tests/e1/entrada_035'
+Zeta |Test suite `tests/e1/aval_035' OK
+Zeta |tests/e1/aval_036.tesh
+Zeta |Test suite `tests/e1/aval_036'
+Zeta |[tests/e1/aval_036:3] './main < tests/e1/entrada_036'
+Zeta |Test suite `tests/e1/aval_036' OK
+Zeta |tests/e1/aval_037.tesh
+Zeta |Test suite `tests/e1/aval_037'
+Zeta |[tests/e1/aval_037:3] './main < tests/e1/entrada_037'
+Zeta |Test suite `tests/e1/aval_037' OK
+Zeta |tests/e1/aval_038.tesh
+Zeta |Test suite `tests/e1/aval_038'
+Zeta |[tests/e1/aval_038:3] './main < tests/e1/entrada_038'
+Zeta |Test suite `tests/e1/aval_038' OK
+Zeta |tests/e1/aval_039.tesh
+Zeta |Test suite `tests/e1/aval_039'
+Zeta |[tests/e1/aval_039:3] './main < tests/e1/entrada_039'
+Zeta |Test suite `tests/e1/aval_039' OK
+Zeta |tests/e1/aval_040.tesh
+Zeta |Test suite `tests/e1/aval_040'
+Zeta |[tests/e1/aval_040:3] './main < tests/e1/entrada_040'
+Zeta |Test suite `tests/e1/aval_040' OK
+Zeta |tests/e1/aval_041.tesh
+Zeta |Test suite `tests/e1/aval_041'
+Zeta |[tests/e1/aval_041:3] './main < tests/e1/entrada_041'
+Zeta |Test suite `tests/e1/aval_041' OK
+Zeta |tests/e1/aval_042.tesh
+Zeta |Test suite `tests/e1/aval_042'
+Zeta |[tests/e1/aval_042:3] './main < tests/e1/entrada_042'
+Zeta |Test suite `tests/e1/aval_042' OK
+Zeta |tests/e1/aval_043.tesh
+Zeta |Test suite `tests/e1/aval_043'
+Zeta |[tests/e1/aval_043:3] './main < tests/e1/entrada_043'
+Zeta |Test suite `tests/e1/aval_043' OK
+Zeta |tests/e1/aval_044.tesh
+Zeta |Test suite `tests/e1/aval_044'
+Zeta |[tests/e1/aval_044:3] './main < tests/e1/entrada_044'
+Zeta |Test suite `tests/e1/aval_044' OK
+Zeta |tests/e1/aval_045.tesh
+Zeta |Test suite `tests/e1/aval_045'
+Zeta |[tests/e1/aval_045:3] './main < tests/e1/entrada_045'
+Zeta |Test suite `tests/e1/aval_045' OK
+Zeta |tests/e1/aval_046.tesh
+Zeta |Test suite `tests/e1/aval_046'
+Zeta |[tests/e1/aval_046:3] './main < tests/e1/entrada_046'
+Zeta |Test suite `tests/e1/aval_046' OK
+Zeta |tests/e1/aval_047.tesh
+Zeta |Test suite `tests/e1/aval_047'
+Zeta |[tests/e1/aval_047:3] './main < tests/e1/entrada_047'
+Zeta |Test suite `tests/e1/aval_047' OK
+Zeta |tests/e1/aval_048.tesh
+Zeta |Test suite `tests/e1/aval_048'
+Zeta |[tests/e1/aval_048:3] './main < tests/e1/entrada_048'
+Zeta |Test suite `tests/e1/aval_048' OK
+Zeta |tests/e1/aval_049.tesh
+Zeta |Test suite `tests/e1/aval_049'
+Zeta |[tests/e1/aval_049:3] './main < tests/e1/entrada_049'
+Zeta |Test suite `tests/e1/aval_049' OK
+Zeta |tests/e1/aval_050.tesh
+Zeta |Test suite `tests/e1/aval_050'
+Zeta |[tests/e1/aval_050:3] './main < tests/e1/entrada_050'
+Zeta |Test suite `tests/e1/aval_050' OK
+Zeta |tests/e1/aval_051.tesh
+Zeta |Test suite `tests/e1/aval_051'
+Zeta |[tests/e1/aval_051:3] './main < tests/e1/entrada_051'
+Zeta |Test suite `tests/e1/aval_051' OK
+Zeta |tests/e1/aval_052.tesh
+Zeta |Test suite `tests/e1/aval_052'
+Zeta |[tests/e1/aval_052:3] './main < tests/e1/entrada_052'
+Zeta |Test suite `tests/e1/aval_052' OK
+Zeta |tests/e1/aval_053.tesh
+Zeta |Test suite `tests/e1/aval_053'
+Zeta |[tests/e1/aval_053:3] './main < tests/e1/entrada_053'
+Zeta |Test suite `tests/e1/aval_053' OK
+Zeta |tests/e1/aval_054.tesh
+Zeta |Test suite `tests/e1/aval_054'
+Zeta |[tests/e1/aval_054:3] './main < tests/e1/entrada_054'
+Zeta |Test suite `tests/e1/aval_054' OK
+Zeta |tests/e1/aval_055.tesh
+Zeta |Test suite `tests/e1/aval_055'
+Zeta |[tests/e1/aval_055:3] './main < tests/e1/entrada_055'
+Zeta |Test suite `tests/e1/aval_055' OK
+Zeta |tests/e1/aval_056.tesh
+Zeta |Test suite `tests/e1/aval_056'
+Zeta |[tests/e1/aval_056:3] './main < tests/e1/entrada_056'
+Zeta |Test suite `tests/e1/aval_056' OK
+Zeta |tests/e1/aval_057.tesh
+Zeta |Test suite `tests/e1/aval_057'
+Zeta |[tests/e1/aval_057:3] './main < tests/e1/entrada_057'
+Zeta |Test suite `tests/e1/aval_057' OK
+Zeta |tests/e1/aval_058.tesh
+Zeta |Test suite `tests/e1/aval_058'
+Zeta |[tests/e1/aval_058:3] './main < tests/e1/entrada_058'
+Zeta |Test suite `tests/e1/aval_058' OK
+Zeta |tests/e1/aval_059.tesh
+Zeta |Test suite `tests/e1/aval_059'
+Zeta |[tests/e1/aval_059:3] './main < tests/e1/entrada_059'
+Zeta |Test suite `tests/e1/aval_059' OK
+Zeta |tests/e1/aval_060.tesh
+Zeta |Test suite `tests/e1/aval_060'
+Zeta |[tests/e1/aval_060:3] './main < tests/e1/entrada_060'
+Zeta |Test suite `tests/e1/aval_060' OK
+Zeta |tests/e1/aval_061.tesh
+Zeta |Test suite `tests/e1/aval_061'
+Zeta |[tests/e1/aval_061:3] './main < tests/e1/entrada_061'
+Zeta |Test suite `tests/e1/aval_061' OK
+Zeta |tests/e1/aval_062.tesh
+Zeta |Test suite `tests/e1/aval_062'
+Zeta |[tests/e1/aval_062:3] './main < tests/e1/entrada_062'
+Zeta |Test suite `tests/e1/aval_062' OK
+Zeta |tests/e1/aval_063.tesh
+Zeta |Test suite `tests/e1/aval_063'
+Zeta |[tests/e1/aval_063:3] './main < tests/e1/entrada_063'
+Zeta |Test suite `tests/e1/aval_063' OK
+Zeta |tests/e1/aval_064.tesh
+Zeta |Test suite `tests/e1/aval_064'
+Zeta |[tests/e1/aval_064:3] './main < tests/e1/entrada_064'
+Zeta |Test suite `tests/e1/aval_064' OK
+Zeta |tests/e1/aval_065.tesh
+Zeta |Test suite `tests/e1/aval_065'
+Zeta |[tests/e1/aval_065:3] './main < tests/e1/entrada_065'
+Zeta |Test suite `tests/e1/aval_065' OK
+Zeta |tests/e1/aval_066.tesh
+Zeta |Test suite `tests/e1/aval_066'
+Zeta |[tests/e1/aval_066:3] './main < tests/e1/entrada_066'
+Zeta |Test suite `tests/e1/aval_066' OK
+Zeta |tests/e1/aval_067.tesh
+Zeta |Test suite `tests/e1/aval_067'
+Zeta |[tests/e1/aval_067:3] './main < tests/e1/entrada_067'
+Zeta |Test suite `tests/e1/aval_067' OK
+Zeta |tests/e1/aval_068.tesh
+Zeta |Test suite `tests/e1/aval_068'
+Zeta |[tests/e1/aval_068:3] './main < tests/e1/entrada_068'
+Zeta |Test suite `tests/e1/aval_068' OK
+Zeta |tests/e1/aval_069.tesh
+Zeta |Test suite `tests/e1/aval_069'
+Zeta |[tests/e1/aval_069:3] './main < tests/e1/entrada_069'
+Zeta |Test suite `tests/e1/aval_069' OK
+Zeta |tests/e1/aval_070.tesh
+Zeta |Test suite `tests/e1/aval_070'
+Zeta |[tests/e1/aval_070:3] './main < tests/e1/entrada_070'
+Zeta |Test suite `tests/e1/aval_070' OK
+Zeta |tests/e1/aval_071.tesh
+Zeta |Test suite `tests/e1/aval_071'
+Zeta |[tests/e1/aval_071:3] './main < tests/e1/entrada_071'
+Zeta |Test suite `tests/e1/aval_071' OK
+Zeta |tests/e1/aval_072.tesh
+Zeta |Test suite `tests/e1/aval_072'
+Zeta |[tests/e1/aval_072:3] './main < tests/e1/entrada_072'
+Zeta |Test suite `tests/e1/aval_072' OK
+Zeta |tests/e1/aval_073.tesh
+Zeta |Test suite `tests/e1/aval_073'
+Zeta |[tests/e1/aval_073:3] './main < tests/e1/entrada_073'
+Zeta |Test suite `tests/e1/aval_073' OK
+Zeta |tests/e1/aval_074.tesh
+Zeta |Test suite `tests/e1/aval_074'
+Zeta |[tests/e1/aval_074:3] './main < tests/e1/entrada_074'
+Zeta |Test suite `tests/e1/aval_074' OK
+Zeta |tests/e1/aval_075.tesh
+Zeta |Test suite `tests/e1/aval_075'
+Zeta |[tests/e1/aval_075:3] './main < tests/e1/entrada_075'
+Zeta |Test suite `tests/e1/aval_075' OK
+Zeta |tests/e1/aval_076.tesh
+Zeta |Test suite `tests/e1/aval_076'
+Zeta |[tests/e1/aval_076:3] './main < tests/e1/entrada_076'
+Zeta |Test suite `tests/e1/aval_076' OK
+Zeta |tests/e1/aval_077.tesh
+Zeta |Test suite `tests/e1/aval_077'
+Zeta |[tests/e1/aval_077:3] './main < tests/e1/entrada_077'
+Zeta |Test suite `tests/e1/aval_077' OK
+Zeta |tests/e1/aval_078.tesh
+Zeta |Test suite `tests/e1/aval_078'
+Zeta |[tests/e1/aval_078:3] './main < tests/e1/entrada_078'
+Zeta |Test suite `tests/e1/aval_078' OK
+Zeta |tests/e1/aval_079.tesh
+Zeta |Test suite `tests/e1/aval_079'
+Zeta |[tests/e1/aval_079:3] './main < tests/e1/entrada_079'
+Zeta |Test suite `tests/e1/aval_079' OK
+Zeta |tests/e1/aval_080.tesh
+Zeta |Test suite `tests/e1/aval_080'
+Zeta |[tests/e1/aval_080:3] './main < tests/e1/entrada_080'
+Zeta |Test suite `tests/e1/aval_080' OK
+Zeta |tests/e1/aval_081.tesh
+Zeta |Test suite `tests/e1/aval_081'
+Zeta |[tests/e1/aval_081:3] './main < tests/e1/entrada_081'
+Zeta |Test suite `tests/e1/aval_081' OK
+~/ensino/private
