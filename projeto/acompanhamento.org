@@ -50,11 +50,52 @@ Temos estes grupos.
 | Iota    | ???490 |
 
 * Avaliação da Etapa 1
-** Comentários por grupo
+** Arquivos para testes                                             :ATTACH:
+:PROPERTIES:
+:Attachments: e1tests.tgz
+:ID:       91e17909-686d-4174-a4be-d2e1eabcc8d6
+:END:
+
+Veja [[./data/91/e17909-686d-4174-a4be-d2e1eabcc8d6/e1tests.tgz][este arquivo]].
+
+** Log de execução dos testes                                       :ATTACH:
+:PROPERTIES:
+:Attachments: e1v2.log
+:ID:       e58b72e6-a5d6-456d-b045-326dcb671409
+:END:
+
+Veja o [[./data/e5/8b72e6-a5d6-456d-b045-326dcb671409/e1v2.log]].
+
 ** Notas Objetiva e Subjetiva
 
 | Grupo   | Avaliacao | Nota |
 |---------+-----------+------|
+| Iota    | E1.S      |    10 |
+| Omicron | E1.S      |    10 |
+| Tau     | E1.S      |    10 |
+| Theta   | E1.S      |    10 |
+| Zeta    | E1.S      |    10 |
+| Sigma   | E1.S      |   9.9 |
+| Kappa   | E1.S      | 9.855 |
+| Gamma   | E1.S      |  9.65 |
+| Rho     | E1.S      |   9.6 |
+| Alpha   | E1.S      |   9.2 |
+| Omega   | E1.S      |   9.2 |
+| Beta    | E1.S      |  8.75 |
+| Psi     | E1.S      |   8.7 |
+| Iota    | E1.O      |   9.1 |
+| Omicron | E1.O      |    10 |
+| Tau     | E1.O      |   9.8 |
+| Theta   | E1.O      |    10 |
+| Zeta    | E1.O      |    10 |
+| Sigma   | E1.O      |   9.8 |
+| Kappa   | E1.O      |   9.8 |
+| Gamma   | E1.O      |   9.5 |
+| Rho     | E1.O      |    10 |
+| Alpha   | E1.O      |    10 |
+| Omega   | E1.O      |   9.8 |
+| Beta    | E1.O      |   9.3 |
+| Psi     | E1.O      |   9.6 |
 
 * Avaliação da Etapa 2
 ** Arquivos para testes                                             :ATTACH:
