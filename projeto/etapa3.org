@@ -98,20 +98,39 @@ presentes para facilitar essa geração, como um nó ``bloco'',
 que gera a sequência de abertura de chuves, lista de comandos e
 fechamento chaves.
 
-** 5. Remoção de conflitos/ajustes gramaticais
+** 5. Exportar a árvore em formato CSV
+
+Implementar a função ~exporta~ (veja no anexo ~main.c~ abaixo). Esta
+função deverá percorrer a árvore gerada, a partir da raiz e de maneira
+recursiva, e imprimir os nós (vértices) e todas as relações entre os
+nós (arestas). Um nó deve ser identificado pelo seu endereço de
+memória (tipicamente impresso com o padrão ~%p~ da libc). Um exemplo de
+saída CSV válida é o seguinte, onde o nó ~0x8235930~ tem um filho
+~0x8235900~, que por sua vez tem também somente um filho ~0x82358e8~, que
+por sua vez tem dois filhos (~0x8235890~ e ~0x82358d0~):
+
+#+BEGIN_EXAMPLE
+0x8235930, 0x8235900
+0x8235900, 0x82358e8
+0x82358e8, 0x8235890
+0x82358e8, 0x82358d0
+#+END_EXAMPLE
+
+** 6. Remoção de conflitos/ajustes gramaticais
 
 Todos os conflitos /Reduce-Reduce/ e /Shift-Reduce/ devem ser removidos.
 
-** 6. Gerenciar corretamente a memória do compilador
+** 7. Gerenciar corretamente a memória do compilador
 
 Implementar a função =libera= (veja no anexo =main.c= abaixo), que deve
 liberar a memória de maneira recursiva (de baixo para cima). O
 programa =valgrind= será utilizado para averiguar a ausência de
 vazamentos de memória.
 
-* Testes da avaliação objetiva
+* Avaliação objetiva
+** Descompilação
 
-O executável gerado nessa deve fazer um laço de compilação e
+O executável gerado deve fazer um laço de compilação e
 descompilação. Ele deve receber o programa pela /entrada padrão/ (como
 habitualmente vinha se fazendo nas etapas anteriores), compilá-lo, e
 descompilá-lo (a partir da árvore) na /saída padrão/.  Como o arquivo
@@ -130,10 +149,29 @@ diff eq1.txt eq2.txt
 echo $?
 #+END_EXAMPLE
 
-O teste é avaliado como correto caso o valor impresso pelo comando
+Este teste é avaliado como correto caso o valor impresso pelo comando
 =echo= for 0 _e_ o conteúdo de =eq1.txt= e =eq2.txt= for diferente de vazio e
 semanticamente idêntico ao arquivo =source.txt=. Todas as entradas
 fornecidas pelo arquivo =source.txt= estarão sintaticamente corretas.
+
+** Geração da árvore
+
+Em qualquer execução, o executável implementado nesta etapa deve
+exportar a árvore em formato CSV no arquivo ~e3.csv~
+
+#+BEGIN_EXAMPLE
+# primeiro laço de compilação/descompilação
+./etapa3 < source.txt > eq1.txt
+# o arquivo e3.csv já deverá ter sido criado aqui
+cat e3.csv
+#+END_EXAMPLE
+
+O teste será avaliado como correto caso a árvore criada seja
+estruturalmente idêntica aquela de referência, seguindo os regramentos
+vistos em aula sobre construção de AST. O arquivo CSV pode ser
+visualizado, mediante alguma manipulação, através de ferramentas do
+pacote ~graphviz~, como por exemplo o programa ~dot~, ou códigos escritos
+em linguagens de mais alto nível tais como R/ggplot2.
 
 * Anexo - Arquivo =main.c=
 
@@ -160,11 +198,13 @@ extern int yylex_destroy(void);
 void *arvore = NULL;
 void descompila (void *arvore);
 void libera (void *arvore);
+void exporta (void *arvore);
 
 int main (int argc, char **argv)
 {
   int ret = yyparse(); 
   descompila (arvore);
+  exporta (arvore);
   libera(arvore);
   arvore = NULL;
   yylex_destroy();
