@@ -173,6 +173,33 @@ visualizado, mediante alguma manipulação, através de ferramentas do
 pacote ~graphviz~, como por exemplo o programa ~dot~, ou códigos escritos
 em linguagens de mais alto nível tais como R/ggplot2.
 
+** Gerenciamente da memória do compilador
+
+Um compilador deve gerenciar bem a memória alocada
+dinamicamente. Neste sentido, um teste automático consistirá em lançar
+a ferramenta ~valgrind~ para verificar se toda a memória alocada
+dinamicamente foi integralmente liberada antes do término do programa.
+Ao lançar o compilador com uma determinada entrada, assim:
+
+#+begin_src shell :results output
+valgrind ./etapa3 < uma_entrada_correta
+#+end_src
+
+Será observada esta saída do ~valgrind~:
+
+#+BEGIN_EXAMPLE
+==26684==    definitely lost: 0 bytes in 0 blocks
+==26684==    indirectly lost: 0 bytes in 0 blocks
+==26684==      possibly lost: 0 bytes in 0 blocks
+==26684==    still reachable: 0 bytes in 0 blocks
+==26684==         suppressed: 0 bytes in 0 blocks
+#+END_EXAMPLE
+
+Somente passará o teste em que todos os valores de bytes e blocos
+forem zero. Qualquer valor diferente de ~0 bytes in 0 blocks~ será
+interpretado como não liberação correta da memória alocada
+dinamicamente, e o teste será avaliado para falha.
+
 * Anexo - Arquivo =main.c=
 
 A função principal da E3 aparece abaixo. A variável global =arvore= de
