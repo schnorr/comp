@@ -128,7 +128,7 @@ programa =valgrind= será utilizado para averiguar a ausência de
 vazamentos de memória.
 
 * Avaliação objetiva
-** Descompilação
+** 1. Descompilação
 
 O executável gerado deve fazer um laço de compilação e
 descompilação. Ele deve receber o programa pela /entrada padrão/ (como
@@ -154,7 +154,7 @@ Este teste é avaliado como correto caso o valor impresso pelo comando
 semanticamente idêntico ao arquivo =source.txt=. Todas as entradas
 fornecidas pelo arquivo =source.txt= estarão sintaticamente corretas.
 
-** Geração da árvore
+** 2. Geração da árvore
 
 Em qualquer execução, o executável implementado nesta etapa deve
 exportar a árvore em formato CSV no arquivo ~e3.csv~
@@ -173,7 +173,7 @@ visualizado, mediante alguma manipulação, através de ferramentas do
 pacote ~graphviz~, como por exemplo o programa ~dot~, ou códigos escritos
 em linguagens de mais alto nível tais como R/ggplot2.
 
-** Gerenciamente da memória do compilador
+** 3. Gerenciamento da memória do compilador
 
 Um compilador deve gerenciar bem a memória alocada
 dinamicamente. Neste sentido, um teste automático consistirá em lançar
