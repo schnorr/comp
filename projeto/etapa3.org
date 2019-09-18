@@ -93,9 +93,10 @@ de forma que seja gerado um programa equivalente ao analisado.  Ele
 não será idêntico, pois caracteres como espaços e estruturas como
 comentários, entre outros, foram ignorados.  Mas a árvore deve ter as
 informações necessárias para gerar facilmente esse programa
-equivalente, e pode ter alguns nós específicos para facilitar essa
-geração, como um nó ``bloco'', que gera a sequência de abertura de
-chuves, lista de comandos e fechamento chaves. 
+semanticamente equivalente. Alguns nós específicos podem estar
+presentes para facilitar essa geração, como um nó ``bloco'',
+que gera a sequência de abertura de chuves, lista de comandos e
+fechamento chaves.
 
 ** 5. Remoção de conflitos/ajustes gramaticais
 
