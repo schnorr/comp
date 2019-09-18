@@ -82,23 +82,7 @@ já foram criados. Ao final do processo de análise sintática, um
 ponteiro para a estrutura de dados que guarda a raiz da árvore deve
 ser salvo na variável global =arvore=.
 
-** 4. Descompilar o programa de entrada
-
-Implementar a função =descompila= (veja no anexo =main.c= abaixo).
-O processo de geração de codigo fonte, ou /descompilação/, será
-percorrer a árvore gerada em ordem (ou na ordem apropriada a
-determinado nó), a partir da raiz, e imprimir os símbolos que
-representam esse nó, incluindo as chamadas recursivas às subárvores,
-de forma que seja gerado um programa equivalente ao analisado.  Ele
-não será idêntico, pois caracteres como espaços e estruturas como
-comentários, entre outros, foram ignorados.  Mas a árvore deve ter as
-informações necessárias para gerar facilmente esse programa
-semanticamente equivalente. Alguns nós específicos podem estar
-presentes para facilitar essa geração, como um nó ``bloco'',
-que gera a sequência de abertura de chuves, lista de comandos e
-fechamento chaves.
-
-** 5. Exportar a árvore em formato CSV
+** 4. Exportar a árvore em formato CSV
 
 Implementar a função ~exporta~ (veja no anexo ~main.c~ abaixo). Esta
 função deverá percorrer a árvore gerada, a partir da raiz e de maneira
@@ -116,11 +100,11 @@ por sua vez tem dois filhos (~0x8235890~ e ~0x82358d0~):
 0x82358e8, 0x82358d0
 #+END_EXAMPLE
 
-** 6. Remoção de conflitos/ajustes gramaticais
+** 5. Remoção de conflitos/ajustes gramaticais
 
 Todos os conflitos /Reduce-Reduce/ e /Shift-Reduce/ devem ser removidos.
 
-** 7. Gerenciar corretamente a memória do compilador
+** 6. Gerenciar corretamente a memória do compilador
 
 Implementar a função =libera= (veja no anexo =main.c= abaixo), que deve
 liberar a memória de maneira recursiva (de baixo para cima). O
@@ -128,33 +112,7 @@ programa =valgrind= será utilizado para averiguar a ausência de
 vazamentos de memória.
 
 * Avaliação objetiva
-** 1. Descompilação
-
-O executável gerado deve fazer um laço de compilação e
-descompilação. Ele deve receber o programa pela /entrada padrão/ (como
-habitualmente vinha se fazendo nas etapas anteriores), compilá-lo, e
-descompilá-lo (a partir da árvore) na /saída padrão/.  Como o arquivo
-gerado nunca será totalmente idêntico ao original, o laço
-compilação/descompilação será realizado duas vezes e seus resultados
-comparados, desta forma:
-
-#+BEGIN_EXAMPLE
-# primeiro laço de compilação/descompilação
-./etapa3 < source.txt > eq1.txt
-# segundo laço de compilação/descompilação
-./etapa3 < eq1.txt > eq2.txt
-# efetiva comparação (arquivos eq1.txt e eq2.txt devem ser idênticos)
-diff eq1.txt eq2.txt
-# verificação do resultado
-echo $?
-#+END_EXAMPLE
-
-Este teste é avaliado como correto caso o valor impresso pelo comando
-=echo= for 0 _e_ o conteúdo de =eq1.txt= e =eq2.txt= for diferente de vazio e
-semanticamente idêntico ao arquivo =source.txt=. Todas as entradas
-fornecidas pelo arquivo =source.txt= estarão sintaticamente corretas.
-
-** 2. Geração da árvore
+** 1. Geração da árvore
 
 Em qualquer execução, o executável implementado nesta etapa deve
 exportar a árvore em formato CSV no arquivo ~e3.csv~
@@ -173,7 +131,7 @@ visualizado, mediante alguma manipulação, através de ferramentas do
 pacote ~graphviz~, como por exemplo o programa ~dot~, ou códigos escritos
 em linguagens de mais alto nível tais como R/ggplot2.
 
-** 3. Gerenciamento da memória do compilador
+** 2. Gerenciamento da memória do compilador
 
 Um compilador deve gerenciar bem a memória alocada
 dinamicamente. Neste sentido, um teste automático consistirá em lançar
@@ -200,6 +158,15 @@ forem zero. Qualquer valor diferente de ~0 bytes in 0 blocks~ será
 interpretado como não liberação correta da memória alocada
 dinamicamente, e o teste será avaliado para falha.
 
+* Simplificação
+
+- Não precisa
+  - Declarações de qualquer tipo
+  - Comandos de entrada e saída
+- Precisa
+  - Declaração de variável local com inicialização é como se fosse uma atribuição
+  - Todas as demais construções restantes que podem ser objeto de geração de código
+
 * Anexo - Arquivo =main.c=
 
 A função principal da E3 aparece abaixo. A variável global =arvore= de
@@ -223,14 +190,12 @@ Este arquivo não pode ser modificado.
 extern int yylex_destroy(void);
 
 void *arvore = NULL;
-void descompila (void *arvore);
 void libera (void *arvore);
 void exporta (void *arvore);
 
 int main (int argc, char **argv)
 {
   int ret = yyparse(); 
-  descompila (arvore);
   exporta (arvore);
   libera(arvore);
   arvore = NULL;
