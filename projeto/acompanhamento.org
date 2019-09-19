@@ -267,10 +267,10 @@ o valor um).
 ** Log de execução dos testes                                       :ATTACH:
 :PROPERTIES:
 :ID:       c09e363d-82b8-4cec-a76d-53ba0b8da81e
-:Attachments: e2v3.log
+:Attachments: e2v4.log
 :END:
 
-Veja o [[./data/c0/9e363d-82b8-4cec-a76d-53ba0b8da81e/e2v1.log]].
+Veja o [[./data/c0/9e363d-82b8-4cec-a76d-53ba0b8da81e/e2v4.log]].
 
 Um sumário dos testes onde as respostas foram consideradas equivocadas
 está na tabela abaixo. Nos casos listados abaixo, existem duas
@@ -281,7 +281,6 @@ entrada estava correta quando na realidade estava incorreta.
 | Grupo   | Teste  |
 |---------+--------|
 | Alpha   | asl77  |
-| Alpha   | asl81  |
 | Alpha   | asl150 |
 | Beta    | asl01  |
 | Beta    | asl02  |
@@ -354,13 +353,11 @@ entrada estava correta quando na realidade estava incorreta.
 | Gamma   | asl76  |
 | Gamma   | asl77  |
 | Gamma   | asl80  |
-| Gamma   | asl81  |
 | Gamma   | asl86  |
 | Gamma   | asl129 |
 | Iota    | asl26  |
 | Iota    | asl53  |
 | Iota    | asl54  |
-| Iota    | asl81  |
 | Iota    | asl83  |
 | Iota    | asl87  |
 | Iota    | asl114 |
@@ -370,7 +367,6 @@ entrada estava correta quando na realidade estava incorreta.
 | Kappa   | asl65  |
 | Kappa   | asl66  |
 | Kappa   | asl80  |
-| Kappa   | asl81  |
 | Kappa   | asl129 |
 | Omega   | asl03  |
 | Omega   | asl04  |
@@ -388,7 +384,6 @@ entrada estava correta quando na realidade estava incorreta.
 | Omega   | asl80  |
 | Omega   | asl81  |
 | Omega   | asl150 |
-| Omicron | asl81  |
 | Omicron | asl114 |
 | Psi     | asl01  |
 | Psi     | asl02  |
@@ -410,7 +405,6 @@ entrada estava correta quando na realidade estava incorreta.
 | Rho     | asl65  |
 | Rho     | asl66  |
 | Rho     | asl80  |
-| Rho     | asl81  |
 | Rho     | asl86  |
 | Rho     | asl129 |
 | Rho     | asl150 |
@@ -419,7 +413,6 @@ entrada estava correta quando na realidade estava incorreta.
 | Sigma   | asl65  |
 | Sigma   | asl66  |
 | Sigma   | asl80  |
-| Sigma   | asl81  |
 | Sigma   | asl129 |
 | Sigma   | asl150 |
 | Tau     | asl31  |
@@ -431,7 +424,6 @@ entrada estava correta quando na realidade estava incorreta.
 | Tau     | asl65  |
 | Tau     | asl66  |
 | Tau     | asl80  |
-| Tau     | asl81  |
 | Tau     | asl129 |
 | Tau     | asl150 |
 | Theta   | asl62  |
@@ -439,7 +431,6 @@ entrada estava correta quando na realidade estava incorreta.
 | Theta   | asl65  |
 | Theta   | asl66  |
 | Theta   | asl80  |
-| Theta   | asl81  |
 | Theta   | asl129 |
 | Zeta    | asl31  |
 | Zeta    | asl32  |
@@ -448,7 +439,6 @@ entrada estava correta quando na realidade estava incorreta.
 | Zeta    | asl65  |
 | Zeta    | asl66  |
 | Zeta    | asl80  |
-| Zeta    | asl81  |
 | Zeta    | asl129 |
 
 ** Notas Objetiva e Subjetiva
@@ -469,17 +459,17 @@ entrada estava correta quando na realidade estava incorreta.
 | Rho     | E2.S      |  7.9 |
 | Psi     | E2.S      |  7.5 |
 | Omicron | E2.O      |  9.9 |
-| Zeta    | E2.O      |  9.4 |
+| Zeta    | E2.O      |  9.5 |
 | Omega   | E2.O      |  8.9 |
-| Tau     | E2.O      |  9.2 |
-| Kappa   | E2.O      |  9.5 |
-| Alpha   | E2.O      |  9.8 |
+| Tau     | E2.O      |  9.3 |
+| Kappa   | E2.O      |  9.6 |
+| Alpha   | E2.O      |  9.9 |
 | Beta    | E2.O      |  5.9 |
-| Gamma   | E2.O      |  9.1 |
-| Theta   | E2.O      |  9.5 |
+| Gamma   | E2.O      |  9.2 |
+| Theta   | E2.O      |  9.6 |
 | Sigma   | E2.O      |  9.5 |
 | Iota    | E2.O      |  9.5 |
-| Rho     | E2.O      |  9.1 |
+| Rho     | E2.O      |  9.2 |
 | Psi     | E2.O      |  9.3 |
 
 * Avaliação da Etapa 3                                             :noexport:
