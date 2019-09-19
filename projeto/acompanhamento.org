@@ -100,8 +100,8 @@ Veja o [[./data/e5/8b72e6-a5d6-456d-b045-326dcb671409/e1v2.log]].
 * Avaliação da Etapa 2
 ** Arquivos para testes                                             :ATTACH:
 :PROPERTIES:
-:Attachments: e2tests.tgz
 :ID:       ac0f5346-3702-400c-8426-954a47c4a1a1
+:Attachments: e2tests.tgz
 :END:
 
 Veja [[./data/ac/0f5346-3702-400c-8426-954a47c4a1a1/e2tests.tgz][este arquivo]].
