@@ -41,11 +41,11 @@
 | Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |           |                     |
 | Sintática  | Exercícios LR(0), SLR(1)                                         |           |                     |
 | Sintática  | Parser LR(1), LALR(1)                                            |           |                     |
-| Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 |           | Início E3 (Árvore)  |
+| Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 |           |                     |
 |            |                                                                  | 43413-104 | Avaliação E1, E2    |
-| Semântica  | Esquemas S e L-Atribuídos                                        |           |                     |
-| Semântica  | Implementação de Esquemas S e L-Atribuídos                       |           | Início E4 (Tipos)   |
-|            | Revisão                                                          |           |                     |
+| Semântica  | Esquemas S e L-Atribuídos                                        |           | Início E3 (Árvore)  |
+| Semântica  | Implementação de Esquemas S e L-Atribuídos                       |           |                     |
+|            | Revisão                                                          |           | Início E4 (Tipos)   |
 |            | P1                                                               |           |                     |
 | Código     | Declarações, Escopos e Atribuição                                |           |                     |
 |            |                                                                  | 43413-104 | Avaliação E3        |
@@ -235,11 +235,11 @@ aulas %>%
 |  7 | 2019-09-02 |           | Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |                     |
 |  8 | 2019-09-04 |           | Sintática  | Exercícios LR(0), SLR(1)                                         |                     |
 |  9 | 2019-09-09 |           | Sintática  | Parser LR(1), LALR(1)                                            |                     |
-| 10 | 2019-09-11 |           | Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 | Início E3 (Árvore)  |
+| 10 | 2019-09-11 |           | Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 |                     |
 | 11 | 2019-09-16 | 43413-104 |            |                                                                  | Avaliação E1, E2    |
-| 12 | 2019-09-18 |           | Semântica  | Esquemas S e L-Atribuídos                                        |                     |
-| 13 | 2019-09-23 |           | Semântica  | Implementação de Esquemas S e L-Atribuídos                       | Início E4 (Tipos)   |
-| 14 | 2019-09-25 |           |            | Revisão                                                          |                     |
+| 12 | 2019-09-18 |           | Semântica  | Esquemas S e L-Atribuídos                                        | Início E3 (Árvore)  |
+| 13 | 2019-09-23 |           | Semântica  | Implementação de Esquemas S e L-Atribuídos                       |                     |
+| 14 | 2019-09-25 |           |            | Revisão                                                          | Início E4 (Tipos)   |
 | 15 | 2019-09-30 |           |            | P1                                                               |                     |
 | 16 | 2019-10-02 |           | Código     | Declarações, Escopos e Atribuição                                |                     |
 | 17 | 2019-10-07 | 43413-104 |            |                                                                  | Avaliação E3        |
