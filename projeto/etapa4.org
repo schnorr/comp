@@ -160,29 +160,81 @@ submissão. Se não houverem erros (de qualquer natureza), o programa
 deve retornar o valor zero.
 
 #+BEGIN_SRC C :tangle errors.h
-/* Verificação de declarações */
-#define ERR_UNDECLARED  10 //identificador não declarado
-#define ERR_DECLARED    11 //identificador já declarado
+/*
+ * Um identificador não declarado é encontrado
+ */
 
-/* Uso correto de identificadores */
-#define ERR_VARIABLE    20 //identificador deve ser utilizado como variável
-#define ERR_VECTOR      21 //identificador deve ser utilizado como vetor
-#define ERR_FUNCTION    22 //identificador deve ser utilizado como função
+#define ERR_UNDECLARED  10
+/*
+ * Um identificador já declarado é encontrado
+ */
+#define ERR_DECLARED    11
 
-/* Tipos e tamanho de dados */
-#define ERR_WRONG_TYPE  30 //tipos incompatíveis
-#define ERR_STRING_TO_X 31 //coerção impossível de var do tipo string
-#define ERR_CHAR_TO_X   32 //coerção impossível de var do tipo char
+/*
+ * O identificador encontrado deve ser utilizado como uma variável, em
+ * situações onde este é encontrade sendo usado como função ou como vetor,
+ * ou algum outro cenário semelhante.
+ */
+#define ERR_VARIABLE    20
 
-/* Argumentos e parâmetros */
-#define ERR_MISSING_ARGS    40 //faltam argumentos 
-#define ERR_EXCESS_ARGS     41 //sobram argumentos 
+/*
+ * O identificador encontrado deve ser utilizado como um vetor, em
+ * situações onde este é encontrado sendo usado como variável ou função,
+ * ou algum outro cenário semelhante.
+ */
+#define ERR_VECTOR      21
+
+/*
+ * O identificador encontrado deve ser utilizado como uma função, em
+ * situações onde este é encontrado sendo usado como variável ou vetor,
+ * ou algum outro cenário semelhante.
+ */
+#define ERR_FUNCTION    22
+
+/*
+ * Os tipos (em atribuições e outras cenários) são incompatíveis.
+ */
+#define ERR_WRONG_TYPE  30
+
+/*
+ * Coerção impossível da variável do tipo string para outro tipo qualquer.
+ */
+#define ERR_STRING_TO_X 31
+
+/*
+ * Coerção impossível da variável do tipo char para outro tipo qualquer.
+ */
+#define ERR_CHAR_TO_X   32
+
+/*
+ * Faltam argumentos em uma chamada de função.
+ */
+#define ERR_MISSING_ARGS    40
+
+/*
+ * Sobram argumentos em uma chamada de função.
+ */
+#define ERR_EXCESS_ARGS     41
+
+/*
+ * Os parâmetros reais são de tipos incompatíveis com os correspondentes formais.
+ */
 #define ERR_WRONG_TYPE_ARGS 42 //argumentos incompatíveis
 
-/* Verificação de tipos em comandos */
+/*
+ * No caso específico do comando input, o parâmetro não é identificador.
+ */
 #define ERR_WRONG_PAR_INPUT  50 //parâmetro não é identificador
-#define ERR_WRONG_PAR_OUTPUT 51 //parâmetro não é literal string ou expressão
-#define ERR_WRONG_PAR_RETURN 52 //parâmetro não é expressão compatível com tipo do retorno
+
+/*
+ * No caso específico do comando output, os parâmetros não são literal string ou expressão
+ */
+#define ERR_WRONG_PAR_OUTPUT 51
+
+/*
+ * No caso específico do comando return, o parâmetro não é compatível com tipo do retorno
+ */
+#define ERR_WRONG_PAR_RETURN 52
 #+END_SRC
 
 * Melhoramentos                                                    :noexport:
