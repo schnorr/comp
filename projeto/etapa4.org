@@ -97,11 +97,7 @@ símbolos.
 ** 6. Verificação de tipos em comandos
 
 Todos os comandos simples da linguagem deve ser verificados
-semanticamente.  O comando =input= somente aceita identificadores de
-qualquer tipo como parâmetro (=ERR_WRONG_PAR_INPUT=); considerando que o
-comando =output= aceita uma lista de expressões, cada expressão pode ser
-somente um literal =string= ou uma expressão aritmética a ser impressa
-(=ERR_WRONG_PAR_OUTPUT=). O comando de retorno =return= deve ser seguido
+semanticamente.  O comando de retorno =return= deve ser seguido
 obrigatoriamente por uma expressão cujo tipo é compatível com o tipo
 de retorno da função (=ERR_WRONG_PAR_RETURN=). Prevalece o tipo do
 identificador em um comando de atribuição.
