@@ -1233,7 +1233,6 @@ fin.p1 %>%
 | ???110 | 3.29 |
 | ???162 | 1.57 |
 
-
 * Avaliação da disciplina
 
 #+BEGIN_CENTER
