@@ -186,7 +186,7 @@ Função principal para realização da E3.
 Este arquivo não pode ser modificado.
 ,*/
 #include <stdio.h>
-#include "parser.tab.h" //arquivo gerado com bison -d parser.y
+extern int yyparse(void);
 extern int yylex_destroy(void);
 
 void *arvore = NULL;
