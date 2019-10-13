@@ -472,21 +472,32 @@ entrada estava correta quando na realidade estava incorreta.
 | Rho     | E2.O      |  9.2 |
 | Psi     | E2.O      |  9.3 |
 
-* Avaliação da Etapa 3                                             :noexport:
+* Avaliação da Etapa 3
 ** Grupos que não entregaram até o prazo
 
-| Grupo   |
-|---------|
-| Delta   |
-| Epsilon |
+| Grupo | ID     |
+|-------+--------|
+| Omega | ???612 |
+| Psi   | ???162 |
+| Psi   | ???361 |
 
 ** Entregas até o prazo
 
-| Timestamp           | Grupo  |
-|---------------------+--------|
-| 2019-05-05 10:05:15 | Alpha  |
-| 2019-05-05 21:42:51 | Beta   |
-| 2019-05-06 00:58:01 | Lambda |
+| Timestamp           | Grupo   |
+|---------------------+---------|
+| 2019-10-03 23:51:18 | Epsilon |
+| 2019-10-04 13:25:43 | Tau     |
+| 2019-10-04 20:49:45 | Delta   |
+| 2019-10-05 14:18:30 | Alpha   |
+| 2019-10-05 15:45:32 | Zeta    |
+| 2019-10-05 17:18:28 | Gamma   |
+| 2019-10-05 17:32:02 | Kappa   |
+| 2019-10-05 19:52:37 | Sigma   |
+| 2019-10-05 20:33:58 | Iota    |
+| 2019-10-05 22:58:26 | Theta   |
+| 2019-10-05 23:38:35 | Rho     |
+| 2019-10-06 00:34:18 | Omicron |
+| 2019-10-06 02:07:04 | Beta    |
 
 ** Arquivos para testes                                             :ATTACH:
 :PROPERTIES:
@@ -496,290 +507,897 @@ entrada estava correta quando na realidade estava incorreta.
 
 Veja [[./data/ba/0a807b-4fbe-4439-b9bb-856ffedcf1bc/e3tests.tgz][este arquivo]].
 
-Todas as entradas estão sintaticamente corretas de acordo com E2. Os
-arquivos que tem a string =DECL= em um comentário C99 são aqueles que
-permitem que a saída de descompilação seja vazia.
+Todas as entradas /asl/ e /i_e3_/ estão sintaticamente corretas de acordo
+com E2. Os arquivos terminados com /lll/ tem a árvore correspondente
+esperada. Foi utilizada a distância de Zhang-Shasha, onde até uma
+diferença é tolerada.
 
-** Comentários por grupo
-*** Alpha
+Log de execução (tabela completa).
 
-- [X] 1. Associação de valor ao =token= (com o uso de =yylval=)
-  - Fez somente para literais e identificadores
-  - Deixou a criação dos nós da AST no bison
-  - Fez o esquema para lidar com os escapados (esquema da contrabarra
-    de coisa desconhecida)
-  - strdup de tokens identificadores
-- [X] 2. Implementação de uma estrutura de dados em árvore
-  - okay, com uma estrutura que segue a filosofia de classes
-  - com funções de alocação e de libera memória, com descompila
-- [X] 3. Ações /bison/ para construção da AST
-- [X] 4. Descompilar o programa de entrada
-- [X] 5. Remoção de conflitos/ajustes gramaticais
-- [X] 6. Gerenciar corretamente a memória do compilador
-  - Se preocupou pois as funções de libera, mas não executou valgrind
-  - Fizemos um teste em laboratório e apareceram inúmeros erros do valgrind
-  - *Se valgrind é desconsiderado, a nota objetiva fica em 9.8*
-    - Testes que falham com segfault: asl59 (continue) e asl60 (break)
-
-printf para imprimir a árvore
-- ast.c, em comandos simples, em expressão, na raiz
-
-- [ ] =local.tests/e2/input/asl01= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16461 0 )
-- [ ] =local.tests/e2/input/asl02= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16461 0 )
-- [ ] =local.tests/e2/input/asl03= NOK     
-  - Erro: valgrind leak report ( 11 0 0 16458 0 )
-- [ ] =local.tests/e2/input/asl04= NOK     
-  - Erro: valgrind leak report ( 11 0 0 16458 0 )
-- [ ] =local.tests/e2/input/asl05= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl06= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl07= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl08= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl25= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl27= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl28= NOK     
-  - Erro: valgrind leak report ( 12 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl30= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl31= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl32= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl33= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl35= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl36= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl37= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl38= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl39= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl41= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl42= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl43= NOK     
-  - Erro: valgrind leak report ( 12 0 0 16458 0 )
-- [ ] =local.tests/e2/input/asl44= NOK     
-  - Erro: valgrind leak report ( 14 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl46= NOK     
-  - Erro: valgrind leak report ( 14 0 0 16458 0 )
-- [ ] =local.tests/e2/input/asl47= NOK     
-  - Erro: valgrind leak report ( 22 0 0 16458 0 )
-- [ ] =local.tests/e2/input/asl48= NOK     
-  - Erro: valgrind leak report ( 30 0 0 16458 0 )
-- [ ] =local.tests/e2/input/asl50= NOK     
-  - Erro: valgrind leak report ( 12 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl51= NOK     
-  - Erro: valgrind leak report ( 16 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl52= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl53= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl54= NOK     
-  - Erro: valgrind leak report ( 22 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl56= NOK     
-  - Erro: valgrind leak report ( 14 0 0 16458 0 )
-- [ ] =local.tests/e2/input/asl57= NOK     
-  - Erro: valgrind leak report ( 14 0 0 16458 0 )
-- [ ] =local.tests/e2/input/asl58= NOK     
-  - Erro: valgrind leak report ( 12 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl59= NOK 
-  - Erro: descompilações são diferentes 
-  - Erro: primeiro descompila não funcionou (139)   
-  - Erro: valgrind leak report ( 0 0 0 20684 0 )
-- [ ] =local.tests/e2/input/asl60= NOK 
-  - Erro: descompilações são diferentes 
-  - Erro: primeiro descompila não funcionou (139)   
-  - Erro: valgrind leak report ( 0 0 0 20684 0 )
-- [ ] =local.tests/e2/input/asl62= NOK     
-  - Erro: valgrind leak report ( 12 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl63= NOK     
-  - Erro: valgrind leak report ( 12 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl65= NOK     
-  - Erro: valgrind leak report ( 26 0 0 16458 0 )
-- [ ] =local.tests/e2/input/asl66= NOK     
-  - Erro: valgrind leak report ( 16 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl76= NOK     
-  - Erro: valgrind leak report ( 22 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl77= NOK     
-  - Erro: valgrind leak report ( 16 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl78= NOK     
-  - Erro: valgrind leak report ( 18 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl79= NOK     
-  - Erro: valgrind leak report ( 16 0 0 16460 0 )
-- [ ] =local.tests/e2/input/asl80= NOK     
-  - Erro: valgrind leak report ( 16 0 0 16458 0 )
-- [ ] =local.tests/e2/input/asl81= NOK     
-  - Erro: valgrind leak report ( 47 0 0 16461 0 )
-- [ ] =local.tests/e3/i_e3_001.ptg= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_002.ptg= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16462 0 )
-- [ ] =local.tests/e3/i_e3_003.ptg= NOK     
-  - Erro: valgrind leak report ( 30 0 0 16461 0 )
-- [ ] =local.tests/e3/i_e3_004.ptg= NOK     
-  - Erro: valgrind leak report ( 8 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_005.ptg= NOK     
-  - Erro: valgrind leak report ( 14 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_006.ptg= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_008.ptg= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_009.ptg= NOK     
-  - Erro: valgrind leak report ( 12 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_010.ptg= NOK     
-  - Erro: valgrind leak report ( 14 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_011.ptg= NOK     
-  - Erro: valgrind leak report ( 14 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_012.ptg= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_013.ptg= NOK     
-  - Erro: valgrind leak report ( 10 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_014.ptg= NOK     
-  - Erro: valgrind leak report ( 60 0 0 16464 0 )
-- [ ] =local.tests/e3/i_e3_015.ptg= NOK     
-  - Erro: valgrind leak report ( 18 0 0 16464 0 )
-- [ ] =local.tests/e3/i_e3_016.ptg= NOK     
-  - Erro: valgrind leak report ( 18 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_017.ptg= NOK     
-  - Erro: valgrind leak report ( 18 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_018.ptg= NOK     
-  - Erro: valgrind leak report ( 28 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_019.ptg= NOK     
-  - Erro: valgrind leak report ( 14 0 4 16458 0 )
-- [ ] =local.tests/e3/i_e3_020.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_021.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_022.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_023.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_024.ptg= NOK     
-  - Erro: valgrind leak report ( 16 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_025.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_026.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_027.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_028.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_029.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_030.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_031.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_032.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_033.ptg= NOK     
-  - Erro: valgrind leak report ( 16 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_034.ptg= NOK     
-  - Erro: valgrind leak report ( 34 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_035.ptg= NOK     
-  - Erro: valgrind leak report ( 34 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_036.ptg= NOK     
-  - Erro: valgrind leak report ( 20 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_037.ptg= NOK     
-  - Erro: valgrind leak report ( 24 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_038.ptg= NOK     
-  - Erro: valgrind leak report ( 28 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_039.ptg= NOK     
-  - Erro: valgrind leak report ( 28 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_040.ptg= NOK     
-  - Erro: valgrind leak report ( 72 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_041.ptg= NOK     
-  - Erro: valgrind leak report ( 72 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_042.ptg= NOK     
-  - Erro: valgrind leak report ( 80 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_043.ptg= NOK     
-  - Erro: valgrind leak report ( 150 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_044.ptg= NOK     
-  - Erro: valgrind leak report ( 135 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_045.ptg= NOK     
-  - Erro: valgrind leak report ( 210 0 0 16460 0 )
-- [ ] =local.tests/e3/i_e3_046.ptg= NOK     
-  - Erro: valgrind leak report ( 179 0 0 16463 0 )
-- [ ] =local.tests/e3/i_e3_047.ptg= NOK     
-  - Erro: valgrind leak report ( 127 0 0 16465 0 )
-- [ ] =local.tests/e3/i_e3_048.ptg= NOK     
-  - Erro: valgrind leak report ( 102 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_049.ptg= NOK     
-  - Erro: valgrind leak report ( 441 0 0 16458 0 )
-- [ ] =local.tests/e3/i_e3_050.ptg= NOK     
-  - Erro: valgrind leak report ( 41 0 0 16458 0 )
-
-*Prazo para correção dos problemas do valgrind:*
-- 19/05
-- [X] Correções entregues no dia 20/05
-
-*** Lambda
-
-- [X] 1. Associação de valor ao =token= (com o uso de =yylval=)
-  - Fez somente para literais e identificador (os demais não faz
-    sentido fazer pois a AST não os usa na análise sintática)
-  - Tirou as aspas, aspinhas    
-- [X] 2. Implementação de uma estrutura de dados em árvore
-- [X] 3. Ações /bison/ para construção da AST
-  - Tem apenas duas funções para cria a árvore (~cria_nodo~ e ~concatena~)
-- [X] 4. Descompilar o programa de entrada
-- [X] 5. Remoção de conflitos/ajustes gramaticais
-- [ ] 6. Gerenciar corretamente a memória do compilador
-  - Implementou a função mas não testou com valgrind
-  - Fizemos um teste em laboratório e apareceram erros do valgrind
-
-*** Beta
-
-- [X] 1. Associação de valor ao =token= (com o uso de =yylval=)
-  - Fizeram uma estrutura de dados para todos os tokens
-  - Tira valores escapados (não todos, menos os bizarros do Escape Sequences in C)
-- [X] 2. Implementação de uma estrutura de dados em árvore
-  - tree.c, tree.h
-  - Solução elegante com enum, com funções de create e free
-- [X] 3. Ações /bison/ para construção da AST
-  - ~create_node_*~
-  - Colocou parenteses em tudo para verificar adequação da AST
-- [X] 4. Descompilar o programa de entrada
-  - ~print_node~ com separador
-- [X] 5. Remoção de conflitos/ajustes gramaticais
-- [X] 6. Gerenciar corretamente a memória do compilador
-
-# printf("%p -- %p;", no1, no2);
-
-*** Delta
-
-Não entregou até o prazo estabelecido.
-Entregará até o dia 19/05 conforme combinado em aula do dia 08/05.
-
-Entregou no dia 21/05.
-- Foi realizada apenas a avaliação automática.
-
-*** Epsilon
-
-Não entregou. Não veio na aula.
+| Grupo   | test         | TDM |    VG | Decision |
+|---------+--------------+-----+-------+----------|
+| Alpha   | ~asl01~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl25~        | 253 |     0 | FALSE    |
+| Alpha   | ~asl31~        | 253 |     0 | FALSE    |
+| Alpha   | ~asl32~        | 253 |     0 | FALSE    |
+| Alpha   | ~asl33~        | 253 |     0 | FALSE    |
+| Alpha   | ~asl43~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl44~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl46~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl47~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl48~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl53~        |   1 |     0 | FALSE    |
+| Alpha   | ~asl54~        |   1 |     0 | FALSE    |
+| Alpha   | ~asl56~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl57~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl58~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl59~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl60~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl62~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl63~        |   2 |     0 | FALSE    |
+| Alpha   | ~asl65~        |  13 |     0 | FALSE    |
+| Alpha   | ~asl66~        |   1 |     0 | FALSE    |
+| Alpha   | ~asl76~        |   8 |     0 | FALSE    |
+| Alpha   | ~asl77~        |  10 |     0 | FALSE    |
+| Alpha   | ~asl78~        |   1 |     0 | FALSE    |
+| Alpha   | ~asl79~        |   7 |     0 | FALSE    |
+| Alpha   | ~asl80~        |   3 |     0 | FALSE    |
+| Alpha   | ~asl81~        |   0 |     0 | TRUE     |
+| Alpha   | ~asl114~       |   0 |     0 | TRUE     |
+| Alpha   | ~asl138~       |   3 |     0 | FALSE    |
+| Alpha   | ~asl139~       |   3 |     0 | FALSE    |
+| Alpha   | ~asl140~       |   3 |     0 | FALSE    |
+| Alpha   | ~asl141~       |   3 |     0 | FALSE    |
+| Alpha   | ~asl142~       |   3 |     0 | FALSE    |
+| Alpha   | ~asl143~       |   3 |     0 | FALSE    |
+| Alpha   | ~asl144~       |   3 |     0 | FALSE    |
+| Alpha   | ~asl145~       |   4 |     0 | FALSE    |
+| Alpha   | ~asl146~       |   4 |     0 | FALSE    |
+| Alpha   | ~asl147~       |   4 |     0 | FALSE    |
+| Alpha   | ~asl148~       |   4 |     0 | FALSE    |
+| Alpha   | ~asl149~       |   4 |     0 | FALSE    |
+| Alpha   | ~asl150~       | 253 |   273 | FALSE    |
+| Alpha   | ~i_e3_000.ptg~ |   0 |     0 | TRUE     |
+| Alpha   | ~i_e3_003.ptg~ | 253 |     0 | FALSE    |
+| Alpha   | ~i_e3_004.ptg~ | 253 |     0 | FALSE    |
+| Alpha   | ~i_e3_005.ptg~ |   0 |     0 | TRUE     |
+| Alpha   | ~i_e3_006.ptg~ |   2 |     0 | FALSE    |
+| Alpha   | ~i_e3_008.ptg~ |   1 |     0 | FALSE    |
+| Alpha   | ~i_e3_013.ptg~ |   3 |     0 | FALSE    |
+| Alpha   | ~i_e3_014.ptg~ |   8 |     0 | FALSE    |
+| Alpha   | ~i_e3_015.ptg~ |   0 |     0 | TRUE     |
+| Alpha   | ~i_e3_020.ptg~ |   0 |     0 | TRUE     |
+| Alpha   | ~i_e3_021.ptg~ |   0 |     0 | TRUE     |
+| Alpha   | ~i_e3_022.ptg~ |   0 |     0 | TRUE     |
+| Alpha   | ~i_e3_023.ptg~ |   0 |     0 | TRUE     |
+| Alpha   | ~i_e3_024.ptg~ |   0 |     0 | TRUE     |
+| Alpha   | ~i_e3_025.ptg~ |   4 |     0 | FALSE    |
+| Alpha   | ~i_e3_026.ptg~ |   4 |     0 | FALSE    |
+| Alpha   | ~i_e3_027.ptg~ |   4 |     0 | FALSE    |
+| Alpha   | ~i_e3_028.ptg~ |   4 |     0 | FALSE    |
+| Alpha   | ~i_e3_029.ptg~ |   4 |     0 | FALSE    |
+| Alpha   | ~i_e3_030.ptg~ |   4 |     0 | FALSE    |
+| Alpha   | ~i_e3_031.ptg~ |   4 |     0 | FALSE    |
+| Alpha   | ~i_e3_032.ptg~ |   4 |     0 | FALSE    |
+| Alpha   | ~i_e3_034.ptg~ |   4 |     0 | FALSE    |
+| Alpha   | ~i_e3_036.ptg~ |   0 |     0 | TRUE     |
+| Alpha   | ~i_e3_037.ptg~ |   2 |     0 | FALSE    |
+| Alpha   | ~i_e3_038.ptg~ |   2 |     0 | FALSE    |
+| Alpha   | ~i_e3_039.ptg~ | 253 |   228 | FALSE    |
+| Alpha   | ~i_e3_040.ptg~ |  14 |     0 | FALSE    |
+| Alpha   | ~i_e3_041.ptg~ |  14 |     0 | FALSE    |
+| Alpha   | ~i_e3_042.ptg~ |  78 |     0 | FALSE    |
+| Alpha   | ~i_e3_050.ptg~ |   5 |     0 | FALSE    |
+| Beta    | ~asl01~        | 252 |     0 | FALSE    |
+| Beta    | ~asl25~        |   4 | 20800 | FALSE    |
+| Beta    | ~asl31~        | 253 |   166 | FALSE    |
+| Beta    | ~asl32~        | 253 |   166 | FALSE    |
+| Beta    | ~asl33~        |   8 |     0 | FALSE    |
+| Beta    | ~asl43~        |   6 |     0 | FALSE    |
+| Beta    | ~asl44~        |   7 |     0 | FALSE    |
+| Beta    | ~asl46~        |   8 |     0 | FALSE    |
+| Beta    | ~asl47~        |   5 |   250 | FALSE    |
+| Beta    | ~asl48~        | 253 |   988 | FALSE    |
+| Beta    | ~asl53~        | 253 |   248 | FALSE    |
+| Beta    | ~asl54~        | 253 |  1396 | FALSE    |
+| Beta    | ~asl56~        |   9 |     0 | FALSE    |
+| Beta    | ~asl57~        |   9 |     0 | FALSE    |
+| Beta    | ~asl58~        |   8 |     0 | FALSE    |
+| Beta    | ~asl59~        |   5 |     0 | FALSE    |
+| Beta    | ~asl60~        |   5 |     0 | FALSE    |
+| Beta    | ~asl62~        |   4 | 21131 | FALSE    |
+| Beta    | ~asl63~        | 254 | 21136 | FALSE    |
+| Beta    | ~asl65~        | 254 | 22592 | FALSE    |
+| Beta    | ~asl66~        | 253 |   995 | FALSE    |
+| Beta    | ~asl76~        |  22 |     0 | FALSE    |
+| Beta    | ~asl77~        |  11 |     0 | FALSE    |
+| Beta    | ~asl78~        | 253 |   819 | FALSE    |
+| Beta    | ~asl79~        |  14 |     0 | FALSE    |
+| Beta    | ~asl80~        | 253 |   251 | FALSE    |
+| Beta    | ~asl81~        |   0 |  1482 | FALSE    |
+| Beta    | ~asl114~       |   0 |     0 | TRUE     |
+| Beta    | ~asl138~       |  10 |     0 | FALSE    |
+| Beta    | ~asl139~       |  11 |     0 | FALSE    |
+| Beta    | ~asl140~       |  11 |     0 | FALSE    |
+| Beta    | ~asl141~       |  11 |     0 | FALSE    |
+| Beta    | ~asl142~       |  11 |     0 | FALSE    |
+| Beta    | ~asl143~       |  11 |     0 | FALSE    |
+| Beta    | ~asl144~       |  11 |     0 | FALSE    |
+| Beta    | ~asl145~       |  12 |     0 | FALSE    |
+| Beta    | ~asl146~       |  12 |     0 | FALSE    |
+| Beta    | ~asl147~       |  12 |     0 | FALSE    |
+| Beta    | ~asl148~       |  12 |     0 | FALSE    |
+| Beta    | ~asl149~       |  10 |     0 | FALSE    |
+| Beta    | ~asl150~       | 253 |   659 | FALSE    |
+| Beta    | ~i_e3_000.ptg~ |   0 |     0 | TRUE     |
+| Beta    | ~i_e3_003.ptg~ | 253 | 20801 | FALSE    |
+| Beta    | ~i_e3_004.ptg~ | 253 |   166 | FALSE    |
+| Beta    | ~i_e3_005.ptg~ | 253 |   897 | FALSE    |
+| Beta    | ~i_e3_006.ptg~ | 253 | 20888 | FALSE    |
+| Beta    | ~i_e3_008.ptg~ | 253 |   255 | FALSE    |
+| Beta    | ~i_e3_013.ptg~ | 253 |   413 | FALSE    |
+| Beta    | ~i_e3_014.ptg~ |  31 |     0 | FALSE    |
+| Beta    | ~i_e3_015.ptg~ |   8 |     8 | FALSE    |
+| Beta    | ~i_e3_020.ptg~ |  14 |     0 | FALSE    |
+| Beta    | ~i_e3_021.ptg~ |  14 |     0 | FALSE    |
+| Beta    | ~i_e3_022.ptg~ |  14 |     0 | FALSE    |
+| Beta    | ~i_e3_023.ptg~ |  14 |     0 | FALSE    |
+| Beta    | ~i_e3_024.ptg~ |  11 |     0 | FALSE    |
+| Beta    | ~i_e3_025.ptg~ | 253 |  1148 | FALSE    |
+| Beta    | ~i_e3_026.ptg~ | 253 |  1148 | FALSE    |
+| Beta    | ~i_e3_027.ptg~ | 253 |  1148 | FALSE    |
+| Beta    | ~i_e3_028.ptg~ | 253 |  1148 | FALSE    |
+| Beta    | ~i_e3_029.ptg~ | 253 |  1148 | FALSE    |
+| Beta    | ~i_e3_030.ptg~ | 253 |  1148 | FALSE    |
+| Beta    | ~i_e3_031.ptg~ | 253 |  1148 | FALSE    |
+| Beta    | ~i_e3_032.ptg~ | 253 |  1148 | FALSE    |
+| Beta    | ~i_e3_034.ptg~ |  10 |   254 | FALSE    |
+| Beta    | ~i_e3_036.ptg~ |   9 | 20800 | FALSE    |
+| Beta    | ~i_e3_037.ptg~ | 254 | 21046 | FALSE    |
+| Beta    | ~i_e3_038.ptg~ | 254 | 21538 | FALSE    |
+| Beta    | ~i_e3_039.ptg~ | 254 | 21538 | FALSE    |
+| Beta    | ~i_e3_040.ptg~ |  63 |     0 | FALSE    |
+| Beta    | ~i_e3_041.ptg~ | 253 |  4346 | FALSE    |
+| Beta    | ~i_e3_042.ptg~ |  63 |     0 | FALSE    |
+| Beta    | ~i_e3_050.ptg~ |  12 |     0 | FALSE    |
+| Delta   | ~asl01~        | 254 |     0 | FALSE    |
+| Delta   | ~asl25~        | 254 |     0 | FALSE    |
+| Delta   | ~asl31~        | 254 |     0 | FALSE    |
+| Delta   | ~asl32~        | 254 |     0 | FALSE    |
+| Delta   | ~asl33~        | 254 |     0 | FALSE    |
+| Delta   | ~asl43~        | 254 |     0 | FALSE    |
+| Delta   | ~asl44~        | 254 |     0 | FALSE    |
+| Delta   | ~asl46~        | 254 |     0 | FALSE    |
+| Delta   | ~asl47~        | 254 |     0 | FALSE    |
+| Delta   | ~asl48~        | 254 |     0 | FALSE    |
+| Delta   | ~asl53~        | 254 |     0 | FALSE    |
+| Delta   | ~asl54~        | 254 |     0 | FALSE    |
+| Delta   | ~asl56~        | 254 |     0 | FALSE    |
+| Delta   | ~asl57~        | 254 |     0 | FALSE    |
+| Delta   | ~asl58~        | 254 |     0 | FALSE    |
+| Delta   | ~asl59~        | 254 |     0 | FALSE    |
+| Delta   | ~asl60~        | 254 |     0 | FALSE    |
+| Delta   | ~asl62~        | 254 |     0 | FALSE    |
+| Delta   | ~asl63~        | 254 |     0 | FALSE    |
+| Delta   | ~asl65~        | 254 |     0 | FALSE    |
+| Delta   | ~asl66~        | 254 |     0 | FALSE    |
+| Delta   | ~asl76~        | 254 |     0 | FALSE    |
+| Delta   | ~asl77~        | 254 |     0 | FALSE    |
+| Delta   | ~asl78~        | 254 |     0 | FALSE    |
+| Delta   | ~asl79~        | 254 |     0 | FALSE    |
+| Delta   | ~asl80~        | 254 |     0 | FALSE    |
+| Delta   | ~asl81~        | 254 |     0 | FALSE    |
+| Delta   | ~asl114~       | 254 |     0 | FALSE    |
+| Delta   | ~asl138~       | 254 |     0 | FALSE    |
+| Delta   | ~asl139~       | 254 |     0 | FALSE    |
+| Delta   | ~asl140~       | 254 |     0 | FALSE    |
+| Delta   | ~asl141~       | 254 |     0 | FALSE    |
+| Delta   | ~asl142~       | 254 |     0 | FALSE    |
+| Delta   | ~asl143~       | 254 |     0 | FALSE    |
+| Delta   | ~asl144~       | 254 |     0 | FALSE    |
+| Delta   | ~asl145~       | 254 |     0 | FALSE    |
+| Delta   | ~asl146~       | 254 |     0 | FALSE    |
+| Delta   | ~asl147~       | 254 |     0 | FALSE    |
+| Delta   | ~asl148~       | 254 |     0 | FALSE    |
+| Delta   | ~asl149~       | 254 |     0 | FALSE    |
+| Delta   | ~asl150~       | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_000.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_003.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_004.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_005.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_006.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_008.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_013.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_014.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_015.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_020.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_021.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_022.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_023.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_024.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_025.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_026.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_027.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_028.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_029.ptg~ | 254 |   264 | FALSE    |
+| Delta   | ~i_e3_030.ptg~ | 254 |   264 | FALSE    |
+| Delta   | ~i_e3_031.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_032.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_034.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_036.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_037.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_038.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_039.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_040.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_041.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_042.ptg~ | 254 |     0 | FALSE    |
+| Delta   | ~i_e3_050.ptg~ | 254 |     0 | FALSE    |
+| Gamma   | ~asl01~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl25~        | 253 |     0 | FALSE    |
+| Gamma   | ~asl31~        | 253 |     2 | FALSE    |
+| Gamma   | ~asl32~        | 253 |     2 | FALSE    |
+| Gamma   | ~asl33~        | 253 |     0 | FALSE    |
+| Gamma   | ~asl43~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl44~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl46~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl47~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl48~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl53~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl54~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl56~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl57~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl58~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl59~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl60~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl62~        | 253 |   119 | FALSE    |
+| Gamma   | ~asl63~        | 253 |   127 | FALSE    |
+| Gamma   | ~asl65~        | 253 |   760 | FALSE    |
+| Gamma   | ~asl66~        | 253 |   122 | FALSE    |
+| Gamma   | ~asl76~        | 253 |     4 | FALSE    |
+| Gamma   | ~asl77~        | 253 |    54 | FALSE    |
+| Gamma   | ~asl78~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl79~        |   6 |     0 | FALSE    |
+| Gamma   | ~asl80~        | 253 |   234 | FALSE    |
+| Gamma   | ~asl81~        |   0 |     0 | TRUE     |
+| Gamma   | ~asl114~       |   0 |     0 | TRUE     |
+| Gamma   | ~asl138~       |   3 |     0 | FALSE    |
+| Gamma   | ~asl139~       |   3 |     0 | FALSE    |
+| Gamma   | ~asl140~       |   3 |     0 | FALSE    |
+| Gamma   | ~asl141~       |   3 |     0 | FALSE    |
+| Gamma   | ~asl142~       |   3 |     0 | FALSE    |
+| Gamma   | ~asl143~       |   3 |     0 | FALSE    |
+| Gamma   | ~asl144~       |   3 |     0 | FALSE    |
+| Gamma   | ~asl145~       |   4 |     0 | FALSE    |
+| Gamma   | ~asl146~       |   4 |     0 | FALSE    |
+| Gamma   | ~asl147~       |   4 |     0 | FALSE    |
+| Gamma   | ~asl148~       |   4 |     0 | FALSE    |
+| Gamma   | ~asl149~       |   4 |     0 | FALSE    |
+| Gamma   | ~asl150~       |   7 |     0 | FALSE    |
+| Gamma   | ~i_e3_000.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_003.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_004.ptg~ | 253 |     2 | FALSE    |
+| Gamma   | ~i_e3_005.ptg~ | 253 |   273 | FALSE    |
+| Gamma   | ~i_e3_006.ptg~ | 253 |   125 | FALSE    |
+| Gamma   | ~i_e3_008.ptg~ | 253 |   120 | FALSE    |
+| Gamma   | ~i_e3_013.ptg~ | 253 |   113 | FALSE    |
+| Gamma   | ~i_e3_014.ptg~ |   8 |     0 | FALSE    |
+| Gamma   | ~i_e3_015.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_020.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_021.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_022.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_023.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_024.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_025.ptg~ |   4 |     0 | FALSE    |
+| Gamma   | ~i_e3_026.ptg~ |   4 |     0 | FALSE    |
+| Gamma   | ~i_e3_027.ptg~ |   4 |     0 | FALSE    |
+| Gamma   | ~i_e3_028.ptg~ |   4 |     0 | FALSE    |
+| Gamma   | ~i_e3_029.ptg~ |   4 |     0 | FALSE    |
+| Gamma   | ~i_e3_030.ptg~ |   4 |     0 | FALSE    |
+| Gamma   | ~i_e3_031.ptg~ |   4 |     0 | FALSE    |
+| Gamma   | ~i_e3_032.ptg~ |   4 |     0 | FALSE    |
+| Gamma   | ~i_e3_034.ptg~ |   4 |     0 | FALSE    |
+| Gamma   | ~i_e3_036.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_037.ptg~ |   2 |     0 | FALSE    |
+| Gamma   | ~i_e3_038.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_039.ptg~ |   0 |     0 | TRUE     |
+| Gamma   | ~i_e3_040.ptg~ |  12 |     0 | FALSE    |
+| Gamma   | ~i_e3_041.ptg~ |  12 |     0 | FALSE    |
+| Gamma   | ~i_e3_042.ptg~ |  78 |     0 | FALSE    |
+| Gamma   | ~i_e3_050.ptg~ |   5 |     0 | FALSE    |
+| Iota    | ~asl01~        |   0 |    16 | FALSE    |
+| Iota    | ~asl25~        |   1 |    80 | FALSE    |
+| Iota    | ~asl31~        |   1 |   144 | FALSE    |
+| Iota    | ~asl32~        |   1 |   272 | FALSE    |
+| Iota    | ~asl33~        |   1 |    80 | FALSE    |
+| Iota    | ~asl43~        |   2 |   208 | FALSE    |
+| Iota    | ~asl44~        |   2 |   272 | FALSE    |
+| Iota    | ~asl46~        |   1 |   272 | FALSE    |
+| Iota    | ~asl47~        |   1 |   400 | FALSE    |
+| Iota    | ~asl48~        |   1 |   720 | FALSE    |
+| Iota    | ~asl53~        |   2 |   208 | FALSE    |
+| Iota    | ~asl54~        |   2 |   336 | FALSE    |
+| Iota    | ~asl56~        |   1 |   272 | FALSE    |
+| Iota    | ~asl57~        |   1 |   272 | FALSE    |
+| Iota    | ~asl58~        |   1 |   208 | FALSE    |
+| Iota    | ~asl59~        |   1 |   144 | FALSE    |
+| Iota    | ~asl60~        |   1 |   144 | FALSE    |
+| Iota    | ~asl62~        |   2 |   272 | FALSE    |
+| Iota    | ~asl63~        |   1 |   336 | FALSE    |
+| Iota    | ~asl65~        |  15 |  1040 | FALSE    |
+| Iota    | ~asl66~        |   1 |   272 | FALSE    |
+| Iota    | ~asl76~        |   9 |   656 | FALSE    |
+| Iota    | ~asl77~        |  11 |   784 | FALSE    |
+| Iota    | ~asl78~        |   2 |   784 | FALSE    |
+| Iota    | ~asl79~        |   7 |   528 | FALSE    |
+| Iota    | ~asl80~        |   1 |   848 | FALSE    |
+| Iota    | ~asl81~        | 252 |    80 | FALSE    |
+| Iota    | ~asl114~       |   0 |    16 | FALSE    |
+| Iota    | ~asl138~       |   4 |   336 | FALSE    |
+| Iota    | ~asl139~       |   4 |   336 | FALSE    |
+| Iota    | ~asl140~       |   4 |   336 | FALSE    |
+| Iota    | ~asl141~       |   4 |   336 | FALSE    |
+| Iota    | ~asl142~       |   4 |   336 | FALSE    |
+| Iota    | ~asl143~       |   4 |   336 | FALSE    |
+| Iota    | ~asl144~       |   4 |   336 | FALSE    |
+| Iota    | ~asl145~       |   5 |   400 | FALSE    |
+| Iota    | ~asl146~       |   5 |   400 | FALSE    |
+| Iota    | ~asl147~       |   5 |   400 | FALSE    |
+| Iota    | ~asl148~       |   5 |   400 | FALSE    |
+| Iota    | ~asl149~       |   5 |   400 | FALSE    |
+| Iota    | ~asl150~       | 253 |   192 | FALSE    |
+| Iota    | ~i_e3_000.ptg~ |   0 |    16 | FALSE    |
+| Iota    | ~i_e3_003.ptg~ |   1 |   208 | FALSE    |
+| Iota    | ~i_e3_004.ptg~ |   1 |   272 | FALSE    |
+| Iota    | ~i_e3_005.ptg~ |   2 |   464 | FALSE    |
+| Iota    | ~i_e3_006.ptg~ |   1 |   336 | FALSE    |
+| Iota    | ~i_e3_008.ptg~ |   1 |   272 | FALSE    |
+| Iota    | ~i_e3_013.ptg~ |   6 |   720 | FALSE    |
+| Iota    | ~i_e3_014.ptg~ | 253 |     0 | FALSE    |
+| Iota    | ~i_e3_015.ptg~ |   1 |   272 | FALSE    |
+| Iota    | ~i_e3_020.ptg~ |   1 |   400 | FALSE    |
+| Iota    | ~i_e3_021.ptg~ |   1 |   400 | FALSE    |
+| Iota    | ~i_e3_022.ptg~ |   1 |   400 | FALSE    |
+| Iota    | ~i_e3_023.ptg~ |   1 |   400 | FALSE    |
+| Iota    | ~i_e3_024.ptg~ |   1 |   336 | FALSE    |
+| Iota    | ~i_e3_025.ptg~ |   5 |   400 | FALSE    |
+| Iota    | ~i_e3_026.ptg~ |   5 |   400 | FALSE    |
+| Iota    | ~i_e3_027.ptg~ |   5 |   400 | FALSE    |
+| Iota    | ~i_e3_028.ptg~ |   5 |   400 | FALSE    |
+| Iota    | ~i_e3_029.ptg~ |   5 |   400 | FALSE    |
+| Iota    | ~i_e3_030.ptg~ |   5 |   400 | FALSE    |
+| Iota    | ~i_e3_031.ptg~ |   5 |   400 | FALSE    |
+| Iota    | ~i_e3_032.ptg~ |   5 |   400 | FALSE    |
+| Iota    | ~i_e3_034.ptg~ |   5 |   400 | FALSE    |
+| Iota    | ~i_e3_036.ptg~ |   2 |   272 | FALSE    |
+| Iota    | ~i_e3_037.ptg~ |   4 |   336 | FALSE    |
+| Iota    | ~i_e3_038.ptg~ |   2 |   464 | FALSE    |
+| Iota    | ~i_e3_039.ptg~ | 253 |   192 | FALSE    |
+| Iota    | ~i_e3_040.ptg~ |  13 |  1872 | FALSE    |
+| Iota    | ~i_e3_041.ptg~ |  13 |  1872 | FALSE    |
+| Iota    | ~i_e3_042.ptg~ |  79 |  2192 | FALSE    |
+| Iota    | ~i_e3_050.ptg~ |   6 |   464 | FALSE    |
+| Kappa   | ~asl01~        |   0 |   159 | FALSE    |
+| Kappa   | ~asl25~        | 253 |     0 | FALSE    |
+| Kappa   | ~asl31~        | 253 |     0 | FALSE    |
+| Kappa   | ~asl32~        | 253 |     0 | FALSE    |
+| Kappa   | ~asl33~        | 253 |     0 | FALSE    |
+| Kappa   | ~asl43~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl44~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl46~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl47~        |   1 |     0 | FALSE    |
+| Kappa   | ~asl48~        |   1 |     0 | FALSE    |
+| Kappa   | ~asl53~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl54~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl56~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl57~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl58~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl59~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl60~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl62~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl63~        |   2 |     0 | FALSE    |
+| Kappa   | ~asl65~        |  13 |     0 | FALSE    |
+| Kappa   | ~asl66~        |   1 |     0 | FALSE    |
+| Kappa   | ~asl76~        |   8 |     0 | FALSE    |
+| Kappa   | ~asl77~        |   8 |     0 | FALSE    |
+| Kappa   | ~asl78~        |   1 |     0 | FALSE    |
+| Kappa   | ~asl79~        |   6 |     0 | FALSE    |
+| Kappa   | ~asl80~        |   2 |     0 | FALSE    |
+| Kappa   | ~asl81~        |   0 |     0 | TRUE     |
+| Kappa   | ~asl114~       |   0 |     0 | TRUE     |
+| Kappa   | ~asl138~       |   3 |     0 | FALSE    |
+| Kappa   | ~asl139~       |   3 |     0 | FALSE    |
+| Kappa   | ~asl140~       |   3 |     0 | FALSE    |
+| Kappa   | ~asl141~       |   3 |     0 | FALSE    |
+| Kappa   | ~asl142~       |   3 |     0 | FALSE    |
+| Kappa   | ~asl143~       |   3 |     0 | FALSE    |
+| Kappa   | ~asl144~       |   3 |     0 | FALSE    |
+| Kappa   | ~asl145~       |   4 |     0 | FALSE    |
+| Kappa   | ~asl146~       |   4 |     0 | FALSE    |
+| Kappa   | ~asl147~       |   4 |     0 | FALSE    |
+| Kappa   | ~asl148~       |   4 |     0 | FALSE    |
+| Kappa   | ~asl149~       |   4 |     0 | FALSE    |
+| Kappa   | ~asl150~       |   7 |     0 | FALSE    |
+| Kappa   | ~i_e3_000.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_003.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_004.ptg~ | 253 |     0 | FALSE    |
+| Kappa   | ~i_e3_005.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_006.ptg~ |   2 |     0 | FALSE    |
+| Kappa   | ~i_e3_008.ptg~ |   1 |     0 | FALSE    |
+| Kappa   | ~i_e3_013.ptg~ | 253 |     0 | FALSE    |
+| Kappa   | ~i_e3_014.ptg~ |   8 |     0 | FALSE    |
+| Kappa   | ~i_e3_015.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_020.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_021.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_022.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_023.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_024.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_025.ptg~ |   4 |     0 | FALSE    |
+| Kappa   | ~i_e3_026.ptg~ |   4 |     0 | FALSE    |
+| Kappa   | ~i_e3_027.ptg~ |   4 |     0 | FALSE    |
+| Kappa   | ~i_e3_028.ptg~ |   4 |     0 | FALSE    |
+| Kappa   | ~i_e3_029.ptg~ |   4 |     0 | FALSE    |
+| Kappa   | ~i_e3_030.ptg~ |   4 |     0 | FALSE    |
+| Kappa   | ~i_e3_031.ptg~ |   4 |     0 | FALSE    |
+| Kappa   | ~i_e3_032.ptg~ |   4 |     0 | FALSE    |
+| Kappa   | ~i_e3_034.ptg~ |   3 |     0 | FALSE    |
+| Kappa   | ~i_e3_036.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_037.ptg~ |   2 |     0 | FALSE    |
+| Kappa   | ~i_e3_038.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_039.ptg~ |   0 |     0 | TRUE     |
+| Kappa   | ~i_e3_040.ptg~ |  12 |     0 | FALSE    |
+| Kappa   | ~i_e3_041.ptg~ |  12 |     0 | FALSE    |
+| Kappa   | ~i_e3_042.ptg~ |  78 |     0 | FALSE    |
+| Kappa   | ~i_e3_050.ptg~ |   5 |     0 | FALSE    |
+| Omicron | ~asl01~        |   0 |    32 | FALSE    |
+| Omicron | ~asl25~        | 253 |    32 | FALSE    |
+| Omicron | ~asl31~        | 253 |    32 | FALSE    |
+| Omicron | ~asl32~        | 253 |    32 | FALSE    |
+| Omicron | ~asl33~        | 253 |    64 | FALSE    |
+| Omicron | ~asl43~        |   1 |    32 | FALSE    |
+| Omicron | ~asl44~        |   4 |    32 | FALSE    |
+| Omicron | ~asl46~        |   1 |    64 | FALSE    |
+| Omicron | ~asl47~        |   2 |    64 | FALSE    |
+| Omicron | ~asl48~        |   8 |    96 | FALSE    |
+| Omicron | ~asl53~        | 253 |    64 | FALSE    |
+| Omicron | ~asl54~        |   3 |   192 | FALSE    |
+| Omicron | ~asl56~        |   1 |    64 | FALSE    |
+| Omicron | ~asl57~        |   1 |    64 | FALSE    |
+| Omicron | ~asl58~        |   1 |    64 | FALSE    |
+| Omicron | ~asl59~        | 253 |    32 | FALSE    |
+| Omicron | ~asl60~        | 253 |    32 | FALSE    |
+| Omicron | ~asl62~        |   1 |    64 | FALSE    |
+| Omicron | ~asl63~        |   3 |    64 | FALSE    |
+| Omicron | ~asl65~        |   9 |   224 | FALSE    |
+| Omicron | ~asl66~        |   2 |   128 | FALSE    |
+| Omicron | ~asl76~        |   7 |   128 | FALSE    |
+| Omicron | ~asl77~        |   7 |    32 | FALSE    |
+| Omicron | ~asl78~        |   2 |    96 | FALSE    |
+| Omicron | ~asl79~        |   5 |    64 | FALSE    |
+| Omicron | ~asl80~        |   9 |    32 | FALSE    |
+| Omicron | ~asl81~        |   0 |   224 | FALSE    |
+| Omicron | ~asl114~       |   0 |     0 | TRUE     |
+| Omicron | ~asl138~       |   2 |    64 | FALSE    |
+| Omicron | ~asl139~       |   2 |    64 | FALSE    |
+| Omicron | ~asl140~       |   2 |    64 | FALSE    |
+| Omicron | ~asl141~       |   2 |    64 | FALSE    |
+| Omicron | ~asl142~       |   2 |    64 | FALSE    |
+| Omicron | ~asl143~       |   2 |    64 | FALSE    |
+| Omicron | ~asl144~       |   2 |    64 | FALSE    |
+| Omicron | ~asl145~       |   3 |    64 | FALSE    |
+| Omicron | ~asl146~       |   3 |    64 | FALSE    |
+| Omicron | ~asl147~       |   3 |    64 | FALSE    |
+| Omicron | ~asl148~       |   3 |    64 | FALSE    |
+| Omicron | ~asl149~       |   3 |    64 | FALSE    |
+| Omicron | ~asl150~       |   5 |    96 | FALSE    |
+| Omicron | ~i_e3_000.ptg~ |   0 |     0 | TRUE     |
+| Omicron | ~i_e3_003.ptg~ | 253 |    96 | FALSE    |
+| Omicron | ~i_e3_004.ptg~ | 253 |    32 | FALSE    |
+| Omicron | ~i_e3_005.ptg~ |   1 |    64 | FALSE    |
+| Omicron | ~i_e3_006.ptg~ |   3 |    32 | FALSE    |
+| Omicron | ~i_e3_008.ptg~ |   2 |    32 | FALSE    |
+| Omicron | ~i_e3_013.ptg~ |   6 |    32 | FALSE    |
+| Omicron | ~i_e3_014.ptg~ |   1 |   224 | FALSE    |
+| Omicron | ~i_e3_015.ptg~ |   1 |    64 | FALSE    |
+| Omicron | ~i_e3_020.ptg~ |   1 |   128 | FALSE    |
+| Omicron | ~i_e3_021.ptg~ |   1 |   128 | FALSE    |
+| Omicron | ~i_e3_022.ptg~ |   1 |   128 | FALSE    |
+| Omicron | ~i_e3_023.ptg~ |   1 |   128 | FALSE    |
+| Omicron | ~i_e3_024.ptg~ |   1 |    96 | FALSE    |
+| Omicron | ~i_e3_025.ptg~ |   3 |   128 | FALSE    |
+| Omicron | ~i_e3_026.ptg~ |   3 |   128 | FALSE    |
+| Omicron | ~i_e3_027.ptg~ |   3 |   128 | FALSE    |
+| Omicron | ~i_e3_028.ptg~ |   3 |   128 | FALSE    |
+| Omicron | ~i_e3_029.ptg~ |   3 |   128 | FALSE    |
+| Omicron | ~i_e3_030.ptg~ |   3 |   128 | FALSE    |
+| Omicron | ~i_e3_031.ptg~ |   3 |   128 | FALSE    |
+| Omicron | ~i_e3_032.ptg~ |   3 |   128 | FALSE    |
+| Omicron | ~i_e3_034.ptg~ |   2 |    96 | FALSE    |
+| Omicron | ~i_e3_036.ptg~ | 253 |    96 | FALSE    |
+| Omicron | ~i_e3_037.ptg~ |   0 |   128 | FALSE    |
+| Omicron | ~i_e3_038.ptg~ |   6 |   192 | FALSE    |
+| Omicron | ~i_e3_039.ptg~ |   6 |   192 | FALSE    |
+| Omicron | ~i_e3_040.ptg~ |  18 |   544 | FALSE    |
+| Omicron | ~i_e3_041.ptg~ |  18 |   544 | FALSE    |
+| Omicron | ~i_e3_042.ptg~ |  93 |   608 | FALSE    |
+| Omicron | ~i_e3_050.ptg~ |   1 |    32 | FALSE    |
+| Rho     | ~asl01~        | 254 |     0 | FALSE    |
+| Rho     | ~asl25~        | 254 |    50 | FALSE    |
+| Rho     | ~asl31~        | 254 |    50 | FALSE    |
+| Rho     | ~asl32~        | 254 |    50 | FALSE    |
+| Rho     | ~asl33~        | 254 |    50 | FALSE    |
+| Rho     | ~asl43~        | 254 |    50 | FALSE    |
+| Rho     | ~asl44~        | 254 |    50 | FALSE    |
+| Rho     | ~asl46~        | 254 |    50 | FALSE    |
+| Rho     | ~asl47~        | 254 |   148 | FALSE    |
+| Rho     | ~asl48~        | 254 |   148 | FALSE    |
+| Rho     | ~asl53~        | 254 |    50 | FALSE    |
+| Rho     | ~asl54~        | 254 |     0 | FALSE    |
+| Rho     | ~asl56~        | 254 |    50 | FALSE    |
+| Rho     | ~asl57~        | 254 |    50 | FALSE    |
+| Rho     | ~asl58~        | 254 |    50 | FALSE    |
+| Rho     | ~asl59~        | 254 |    50 | FALSE    |
+| Rho     | ~asl60~        | 254 |    50 | FALSE    |
+| Rho     | ~asl62~        | 254 |    50 | FALSE    |
+| Rho     | ~asl63~        | 254 |    50 | FALSE    |
+| Rho     | ~asl65~        | 254 |    50 | FALSE    |
+| Rho     | ~asl66~        | 254 |    50 | FALSE    |
+| Rho     | ~asl76~        | 254 |    50 | FALSE    |
+| Rho     | ~asl77~        | 254 |    50 | FALSE    |
+| Rho     | ~asl78~        | 254 |     0 | FALSE    |
+| Rho     | ~asl79~        | 254 |    50 | FALSE    |
+| Rho     | ~asl80~        | 254 |    50 | FALSE    |
+| Rho     | ~asl81~        | 254 |   351 | FALSE    |
+| Rho     | ~asl114~       | 254 |     0 | FALSE    |
+| Rho     | ~asl138~       | 254 |    53 | FALSE    |
+| Rho     | ~asl139~       | 254 |    53 | FALSE    |
+| Rho     | ~asl140~       | 254 |    53 | FALSE    |
+| Rho     | ~asl141~       | 254 |    53 | FALSE    |
+| Rho     | ~asl142~       | 254 |    53 | FALSE    |
+| Rho     | ~asl143~       | 254 |    53 | FALSE    |
+| Rho     | ~asl144~       | 254 |    53 | FALSE    |
+| Rho     | ~asl145~       | 254 |    53 | FALSE    |
+| Rho     | ~asl146~       | 254 |    53 | FALSE    |
+| Rho     | ~asl147~       | 254 |    53 | FALSE    |
+| Rho     | ~asl148~       | 254 |    53 | FALSE    |
+| Rho     | ~asl149~       | 254 |    53 | FALSE    |
+| Rho     | ~asl150~       | 254 |    53 | FALSE    |
+| Rho     | ~i_e3_000.ptg~ | 254 |     0 | FALSE    |
+| Rho     | ~i_e3_003.ptg~ | 254 |    51 | FALSE    |
+| Rho     | ~i_e3_004.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_005.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_006.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_008.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_013.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_014.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_015.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_020.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_021.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_022.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_023.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_024.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_025.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_026.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_027.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_028.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_029.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_030.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_031.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_032.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_034.ptg~ | 254 |   152 | FALSE    |
+| Rho     | ~i_e3_036.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_037.ptg~ | 254 |   100 | FALSE    |
+| Rho     | ~i_e3_038.ptg~ | 254 |   200 | FALSE    |
+| Rho     | ~i_e3_039.ptg~ | 254 |   200 | FALSE    |
+| Rho     | ~i_e3_040.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_041.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_042.ptg~ | 254 |    50 | FALSE    |
+| Rho     | ~i_e3_050.ptg~ | 254 |    53 | FALSE    |
+| Sigma   | ~asl01~        | 252 |    16 | FALSE    |
+| Sigma   | ~asl25~        |   3 |     0 | FALSE    |
+| Sigma   | ~asl31~        |   3 |     0 | FALSE    |
+| Sigma   | ~asl32~        |   3 |     0 | FALSE    |
+| Sigma   | ~asl33~        |   4 |    16 | FALSE    |
+| Sigma   | ~asl43~        |   3 |    64 | FALSE    |
+| Sigma   | ~asl44~        |   3 |   128 | FALSE    |
+| Sigma   | ~asl46~        |   4 |    16 | FALSE    |
+| Sigma   | ~asl47~        |   4 |   608 | FALSE    |
+| Sigma   | ~asl48~        |   9 |  1008 | FALSE    |
+| Sigma   | ~asl53~        |   4 |     0 | FALSE    |
+| Sigma   | ~asl54~        |  13 |    32 | FALSE    |
+| Sigma   | ~asl56~        |   4 |    16 | FALSE    |
+| Sigma   | ~asl57~        |   4 |    16 | FALSE    |
+| Sigma   | ~asl58~        |   4 |    16 | FALSE    |
+| Sigma   | ~asl59~        |   3 |     0 | FALSE    |
+| Sigma   | ~asl60~        |   3 |     0 | FALSE    |
+| Sigma   | ~asl62~        |   5 |    16 | FALSE    |
+| Sigma   | ~asl63~        |   4 |    16 | FALSE    |
+| Sigma   | ~asl65~        |  20 |    48 | FALSE    |
+| Sigma   | ~asl66~        |   6 |    48 | FALSE    |
+| Sigma   | ~asl76~        |  14 |    48 | FALSE    |
+| Sigma   | ~asl77~        |  13 |     0 | FALSE    |
+| Sigma   | ~asl78~        |   7 |     0 | FALSE    |
+| Sigma   | ~asl79~        |  10 |    16 | FALSE    |
+| Sigma   | ~asl80~        |   3 |     0 | FALSE    |
+| Sigma   | ~asl81~        | 252 |   912 | FALSE    |
+| Sigma   | ~asl114~       |   0 |     0 | TRUE     |
+| Sigma   | ~asl138~       |   6 |    16 | FALSE    |
+| Sigma   | ~asl139~       |   7 |    16 | FALSE    |
+| Sigma   | ~asl140~       |   7 |    16 | FALSE    |
+| Sigma   | ~asl141~       |   7 |    16 | FALSE    |
+| Sigma   | ~asl142~       |   7 |    16 | FALSE    |
+| Sigma   | ~asl143~       |   7 |    16 | FALSE    |
+| Sigma   | ~asl144~       |   7 |    16 | FALSE    |
+| Sigma   | ~asl145~       |   8 |    16 | FALSE    |
+| Sigma   | ~asl146~       |   8 |    16 | FALSE    |
+| Sigma   | ~asl147~       |   8 |    16 | FALSE    |
+| Sigma   | ~asl148~       |   8 |    16 | FALSE    |
+| Sigma   | ~asl149~       |   8 |    16 | FALSE    |
+| Sigma   | ~asl150~       | 253 |   480 | FALSE    |
+| Sigma   | ~i_e3_000.ptg~ |   0 |     0 | TRUE     |
+| Sigma   | ~i_e3_003.ptg~ |   9 |     0 | FALSE    |
+| Sigma   | ~i_e3_004.ptg~ |   3 |     0 | FALSE    |
+| Sigma   | ~i_e3_005.ptg~ |   5 |    16 | FALSE    |
+| Sigma   | ~i_e3_006.ptg~ |   3 |     0 | FALSE    |
+| Sigma   | ~i_e3_008.ptg~ |   3 |     0 | FALSE    |
+| Sigma   | ~i_e3_013.ptg~ |   8 |     0 | FALSE    |
+| Sigma   | ~i_e3_014.ptg~ |  17 |    96 | FALSE    |
+| Sigma   | ~i_e3_015.ptg~ |   4 |    16 | FALSE    |
+| Sigma   | ~i_e3_020.ptg~ |   6 |    48 | FALSE    |
+| Sigma   | ~i_e3_021.ptg~ |   6 |    48 | FALSE    |
+| Sigma   | ~i_e3_022.ptg~ |   6 |    48 | FALSE    |
+| Sigma   | ~i_e3_023.ptg~ |   6 |    48 | FALSE    |
+| Sigma   | ~i_e3_024.ptg~ |   5 |    32 | FALSE    |
+| Sigma   | ~i_e3_025.ptg~ |  10 |    48 | FALSE    |
+| Sigma   | ~i_e3_026.ptg~ |  10 |    48 | FALSE    |
+| Sigma   | ~i_e3_027.ptg~ |  10 |    48 | FALSE    |
+| Sigma   | ~i_e3_028.ptg~ |  10 |    48 | FALSE    |
+| Sigma   | ~i_e3_029.ptg~ |  10 |    48 | FALSE    |
+| Sigma   | ~i_e3_030.ptg~ |  10 |    48 | FALSE    |
+| Sigma   | ~i_e3_031.ptg~ |  10 |    48 | FALSE    |
+| Sigma   | ~i_e3_032.ptg~ |  10 |    48 | FALSE    |
+| Sigma   | ~i_e3_034.ptg~ |   0 |   688 | FALSE    |
+| Sigma   | ~i_e3_036.ptg~ |   7 |     0 | FALSE    |
+| Sigma   | ~i_e3_037.ptg~ |  12 |     0 | FALSE    |
+| Sigma   | ~i_e3_038.ptg~ |  18 |     0 | FALSE    |
+| Sigma   | ~i_e3_039.ptg~ |  18 |     0 | FALSE    |
+| Sigma   | ~i_e3_040.ptg~ |  33 |   256 | FALSE    |
+| Sigma   | ~i_e3_041.ptg~ |  33 |   256 | FALSE    |
+| Sigma   | ~i_e3_042.ptg~ |  99 |   288 | FALSE    |
+| Sigma   | ~i_e3_050.ptg~ |   8 |     0 | FALSE    |
+| Tau     | ~asl01~        |   0 |     0 | TRUE     |
+| Tau     | ~asl25~        | 253 |     0 | FALSE    |
+| Tau     | ~asl31~        | 253 |     0 | FALSE    |
+| Tau     | ~asl32~        | 253 |     0 | FALSE    |
+| Tau     | ~asl33~        | 253 |     0 | FALSE    |
+| Tau     | ~asl43~        |   0 |     0 | TRUE     |
+| Tau     | ~asl44~        |   0 |     0 | TRUE     |
+| Tau     | ~asl46~        |   0 |     0 | TRUE     |
+| Tau     | ~asl47~        |   1 |     0 | FALSE    |
+| Tau     | ~asl48~        |   1 |     0 | FALSE    |
+| Tau     | ~asl53~        |   0 |     0 | TRUE     |
+| Tau     | ~asl54~        |   0 |     0 | TRUE     |
+| Tau     | ~asl56~        |   0 |     0 | TRUE     |
+| Tau     | ~asl57~        |   0 |     0 | TRUE     |
+| Tau     | ~asl58~        |   0 |     0 | TRUE     |
+| Tau     | ~asl59~        |   0 |     0 | TRUE     |
+| Tau     | ~asl60~        |   0 |     0 | TRUE     |
+| Tau     | ~asl62~        |   0 |     0 | TRUE     |
+| Tau     | ~asl63~        |   2 |     0 | FALSE    |
+| Tau     | ~asl65~        |  13 |     0 | FALSE    |
+| Tau     | ~asl66~        |   1 |     0 | FALSE    |
+| Tau     | ~asl76~        |   8 |     0 | FALSE    |
+| Tau     | ~asl77~        |   8 |     0 | FALSE    |
+| Tau     | ~asl78~        |   1 |     0 | FALSE    |
+| Tau     | ~asl79~        |   6 |     0 | FALSE    |
+| Tau     | ~asl80~        |   2 |     0 | FALSE    |
+| Tau     | ~asl81~        |   0 |     0 | TRUE     |
+| Tau     | ~asl114~       |   0 |     0 | TRUE     |
+| Tau     | ~asl138~       |   3 |     0 | FALSE    |
+| Tau     | ~asl139~       |   3 |     0 | FALSE    |
+| Tau     | ~asl140~       |   3 |     0 | FALSE    |
+| Tau     | ~asl141~       |   3 |     0 | FALSE    |
+| Tau     | ~asl142~       |   3 |     0 | FALSE    |
+| Tau     | ~asl143~       |   3 |     0 | FALSE    |
+| Tau     | ~asl144~       |   3 |     0 | FALSE    |
+| Tau     | ~asl145~       |   4 |     0 | FALSE    |
+| Tau     | ~asl146~       |   4 |     0 | FALSE    |
+| Tau     | ~asl147~       |   4 |     0 | FALSE    |
+| Tau     | ~asl148~       |   4 |     0 | FALSE    |
+| Tau     | ~asl149~       |   4 |     0 | FALSE    |
+| Tau     | ~asl150~       |   7 |     0 | FALSE    |
+| Tau     | ~i_e3_000.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_003.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_004.ptg~ | 253 |     0 | FALSE    |
+| Tau     | ~i_e3_005.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_006.ptg~ |   2 |     0 | FALSE    |
+| Tau     | ~i_e3_008.ptg~ |   1 |     0 | FALSE    |
+| Tau     | ~i_e3_013.ptg~ |   3 |     0 | FALSE    |
+| Tau     | ~i_e3_014.ptg~ |   8 |     0 | FALSE    |
+| Tau     | ~i_e3_015.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_020.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_021.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_022.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_023.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_024.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_025.ptg~ |   4 |     0 | FALSE    |
+| Tau     | ~i_e3_026.ptg~ |   4 |     0 | FALSE    |
+| Tau     | ~i_e3_027.ptg~ |   4 |     0 | FALSE    |
+| Tau     | ~i_e3_028.ptg~ |   4 |     0 | FALSE    |
+| Tau     | ~i_e3_029.ptg~ |   4 |     0 | FALSE    |
+| Tau     | ~i_e3_030.ptg~ |   4 |     0 | FALSE    |
+| Tau     | ~i_e3_031.ptg~ |   4 |     0 | FALSE    |
+| Tau     | ~i_e3_032.ptg~ |   4 |     0 | FALSE    |
+| Tau     | ~i_e3_034.ptg~ |   3 |     0 | FALSE    |
+| Tau     | ~i_e3_036.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_037.ptg~ |   2 |     0 | FALSE    |
+| Tau     | ~i_e3_038.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_039.ptg~ |   0 |     0 | TRUE     |
+| Tau     | ~i_e3_040.ptg~ |  12 |     0 | FALSE    |
+| Tau     | ~i_e3_041.ptg~ |  12 |     0 | FALSE    |
+| Tau     | ~i_e3_042.ptg~ |  78 |     0 | FALSE    |
+| Tau     | ~i_e3_050.ptg~ |   5 |     0 | FALSE    |
+| Theta   | ~asl01~        |   0 |     0 | TRUE     |
+| Theta   | ~asl25~        | 253 |     0 | FALSE    |
+| Theta   | ~asl31~        | 253 |     0 | FALSE    |
+| Theta   | ~asl32~        | 253 |     0 | FALSE    |
+| Theta   | ~asl33~        | 253 |     0 | FALSE    |
+| Theta   | ~asl43~        |   1 |     0 | FALSE    |
+| Theta   | ~asl44~        |   1 |     0 | FALSE    |
+| Theta   | ~asl46~        |   1 |     0 | FALSE    |
+| Theta   | ~asl47~        |   3 |     0 | FALSE    |
+| Theta   | ~asl48~        |   6 |     0 | FALSE    |
+| Theta   | ~asl53~        |   0 |     0 | TRUE     |
+| Theta   | ~asl54~        |   3 |     0 | FALSE    |
+| Theta   | ~asl56~        |   1 |     0 | FALSE    |
+| Theta   | ~asl57~        |   1 |     0 | FALSE    |
+| Theta   | ~asl58~        |   1 |     0 | FALSE    |
+| Theta   | ~asl59~        |   0 |     0 | TRUE     |
+| Theta   | ~asl60~        |   0 |     0 | TRUE     |
+| Theta   | ~asl62~        |   1 |     0 | FALSE    |
+| Theta   | ~asl63~        |   3 |     0 | FALSE    |
+| Theta   | ~asl65~        |   1 |     0 | FALSE    |
+| Theta   | ~asl66~        |   2 |     0 | FALSE    |
+| Theta   | ~asl76~        |   7 |     0 | FALSE    |
+| Theta   | ~asl77~        |   1 |     0 | FALSE    |
+| Theta   | ~asl78~        |   8 |     0 | FALSE    |
+| Theta   | ~asl79~        |   5 |     0 | FALSE    |
+| Theta   | ~asl80~        |  10 |     0 | FALSE    |
+| Theta   | ~asl81~        |   0 |     0 | TRUE     |
+| Theta   | ~asl114~       |   0 |     0 | TRUE     |
+| Theta   | ~asl138~       |   2 |     0 | FALSE    |
+| Theta   | ~asl139~       |   2 |     0 | FALSE    |
+| Theta   | ~asl140~       |   2 |     0 | FALSE    |
+| Theta   | ~asl141~       |   2 |     0 | FALSE    |
+| Theta   | ~asl142~       |   2 |     0 | FALSE    |
+| Theta   | ~asl143~       |   2 |     0 | FALSE    |
+| Theta   | ~asl144~       |   2 |     0 | FALSE    |
+| Theta   | ~asl145~       |   3 |     0 | FALSE    |
+| Theta   | ~asl146~       |   3 |     0 | FALSE    |
+| Theta   | ~asl147~       |   3 |     0 | FALSE    |
+| Theta   | ~asl148~       |   3 |     0 | FALSE    |
+| Theta   | ~asl149~       |   3 |     0 | FALSE    |
+| Theta   | ~asl150~       |   6 |     0 | FALSE    |
+| Theta   | ~i_e3_000.ptg~ |   0 |     0 | TRUE     |
+| Theta   | ~i_e3_003.ptg~ |   1 |     0 | FALSE    |
+| Theta   | ~i_e3_004.ptg~ | 253 |     0 | FALSE    |
+| Theta   | ~i_e3_005.ptg~ |   1 |     0 | FALSE    |
+| Theta   | ~i_e3_006.ptg~ |   3 |     0 | FALSE    |
+| Theta   | ~i_e3_008.ptg~ |   2 |     0 | FALSE    |
+| Theta   | ~i_e3_013.ptg~ |   2 |     0 | FALSE    |
+| Theta   | ~i_e3_014.ptg~ |   7 |     0 | FALSE    |
+| Theta   | ~i_e3_015.ptg~ | 253 |    70 | FALSE    |
+| Theta   | ~i_e3_020.ptg~ |   1 |     0 | FALSE    |
+| Theta   | ~i_e3_021.ptg~ |   1 |     0 | FALSE    |
+| Theta   | ~i_e3_022.ptg~ |   1 |     0 | FALSE    |
+| Theta   | ~i_e3_023.ptg~ |   1 |     0 | FALSE    |
+| Theta   | ~i_e3_024.ptg~ |   1 |     0 | FALSE    |
+| Theta   | ~i_e3_025.ptg~ |   3 |     0 | FALSE    |
+| Theta   | ~i_e3_026.ptg~ |   3 |     0 | FALSE    |
+| Theta   | ~i_e3_027.ptg~ |   3 |     0 | FALSE    |
+| Theta   | ~i_e3_028.ptg~ |   3 |     0 | FALSE    |
+| Theta   | ~i_e3_029.ptg~ |   3 |     0 | FALSE    |
+| Theta   | ~i_e3_030.ptg~ |   3 |     0 | FALSE    |
+| Theta   | ~i_e3_031.ptg~ |   3 |     0 | FALSE    |
+| Theta   | ~i_e3_032.ptg~ |   3 |     0 | FALSE    |
+| Theta   | ~i_e3_034.ptg~ |   3 |     0 | FALSE    |
+| Theta   | ~i_e3_036.ptg~ |   2 |     0 | FALSE    |
+| Theta   | ~i_e3_037.ptg~ |   0 |     0 | TRUE     |
+| Theta   | ~i_e3_038.ptg~ |   5 |     0 | FALSE    |
+| Theta   | ~i_e3_039.ptg~ |   9 |     0 | FALSE    |
+| Theta   | ~i_e3_040.ptg~ |  13 |     0 | FALSE    |
+| Theta   | ~i_e3_041.ptg~ |  13 |     0 | FALSE    |
+| Theta   | ~i_e3_042.ptg~ |  79 |     0 | FALSE    |
+| Theta   | ~i_e3_050.ptg~ |   4 |     0 | FALSE    |
+| Zeta    | ~asl01~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl25~        | 253 |     0 | FALSE    |
+| Zeta    | ~asl31~        | 253 |     0 | FALSE    |
+| Zeta    | ~asl32~        | 253 |     0 | FALSE    |
+| Zeta    | ~asl33~        | 253 |     0 | FALSE    |
+| Zeta    | ~asl43~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl44~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl46~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl47~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl48~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl53~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl54~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl56~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl57~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl58~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl59~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl60~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl62~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl63~        |   2 |     0 | FALSE    |
+| Zeta    | ~asl65~        |  13 |     0 | FALSE    |
+| Zeta    | ~asl66~        |   1 |     0 | FALSE    |
+| Zeta    | ~asl76~        |   8 |     0 | FALSE    |
+| Zeta    | ~asl77~        |  10 |     0 | FALSE    |
+| Zeta    | ~asl78~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl79~        |   6 |     0 | FALSE    |
+| Zeta    | ~asl80~        |   2 |     0 | FALSE    |
+| Zeta    | ~asl81~        |   0 |     0 | TRUE     |
+| Zeta    | ~asl114~       |   0 |     0 | TRUE     |
+| Zeta    | ~asl138~       |   3 |     0 | FALSE    |
+| Zeta    | ~asl139~       |   3 |     0 | FALSE    |
+| Zeta    | ~asl140~       |   3 |     0 | FALSE    |
+| Zeta    | ~asl141~       |   3 |     0 | FALSE    |
+| Zeta    | ~asl142~       |   3 |     0 | FALSE    |
+| Zeta    | ~asl143~       |   3 |     0 | FALSE    |
+| Zeta    | ~asl144~       |   3 |     0 | FALSE    |
+| Zeta    | ~asl145~       |   4 |     0 | FALSE    |
+| Zeta    | ~asl146~       |   4 |     0 | FALSE    |
+| Zeta    | ~asl147~       |   4 |     0 | FALSE    |
+| Zeta    | ~asl148~       |   4 |     0 | FALSE    |
+| Zeta    | ~asl149~       |   4 |     0 | FALSE    |
+| Zeta    | ~asl150~       |   7 |     0 | FALSE    |
+| Zeta    | ~i_e3_000.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_003.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_004.ptg~ | 253 |    79 | FALSE    |
+| Zeta    | ~i_e3_005.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_006.ptg~ |   2 |     0 | FALSE    |
+| Zeta    | ~i_e3_008.ptg~ |   1 |     0 | FALSE    |
+| Zeta    | ~i_e3_013.ptg~ | 253 |   248 | FALSE    |
+| Zeta    | ~i_e3_014.ptg~ |   8 |     0 | FALSE    |
+| Zeta    | ~i_e3_015.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_020.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_021.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_022.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_023.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_024.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_025.ptg~ | 253 |   454 | FALSE    |
+| Zeta    | ~i_e3_026.ptg~ | 253 |   454 | FALSE    |
+| Zeta    | ~i_e3_027.ptg~ |   4 |     0 | FALSE    |
+| Zeta    | ~i_e3_028.ptg~ |   4 |     0 | FALSE    |
+| Zeta    | ~i_e3_029.ptg~ |   4 |     0 | FALSE    |
+| Zeta    | ~i_e3_030.ptg~ |   4 |     0 | FALSE    |
+| Zeta    | ~i_e3_031.ptg~ |   4 |     0 | FALSE    |
+| Zeta    | ~i_e3_032.ptg~ |   4 |     0 | FALSE    |
+| Zeta    | ~i_e3_034.ptg~ |   4 |     0 | FALSE    |
+| Zeta    | ~i_e3_036.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_037.ptg~ |   2 |     0 | FALSE    |
+| Zeta    | ~i_e3_038.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_039.ptg~ |   0 |     0 | TRUE     |
+| Zeta    | ~i_e3_040.ptg~ |  12 |     0 | FALSE    |
+| Zeta    | ~i_e3_041.ptg~ | 253 |  1377 | FALSE    |
+| Zeta    | ~i_e3_042.ptg~ |  78 |     0 | FALSE    |
+| Zeta    | ~i_e3_050.ptg~ |   5 |     0 | FALSE    |
 
 ** Notas Objetiva e Subjetiva
 
-O grupo ~Delta~ entregou com atraso.
+O registro por aluno será visível no final, considerando a nota zero
+para aqueles membros que não participaram da solução proposta pelo
+grupo.
 
-| Grupo  | E3.O | E3.S |
-|--------+------+------|
-| Alpha  |   10 |  9.5 |
-| Beta   |   10 |   10 |
-| Delta  |   10 |    0 |
-| Lambda |   10 |  9.5 |
+| Grupo   | E3.O | E3.S |
+|---------+------+------|
+| Alpha   | 4.44 |   10 |
+| Beta    | 0.28 |  8.7 |
+| Gamma   | 3.89 |  9.8 |
+| Kappa   | 4.72 |  9.6 |
+| Omicron | 0.28 |  8.5 |
+| Sigma   | 0.28 | 8.75 |
+| Tau     | 4.86 |   10 |
+| Theta   | 4.86 |  9.5 |
+| Zeta    | 4.86 |    9 |
 
 * Avaliação da Etapa 4                                             :noexport:
 ** Grupos que não entregaram até o prazo
