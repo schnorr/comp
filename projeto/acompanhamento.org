@@ -1381,6 +1381,106 @@ Log de execução (tabela completa).
 | Zeta    | ~i_e3_042.ptg~ |  78 |     0 | FALSE    |
 | Zeta    | ~i_e3_050.ptg~ |   5 |     0 | FALSE    |
 
+** Script de comparação
+
+O script abaixo é invocado da seguinte forma para realizar o teste:
+
+#+begin_src shell :results output
+TDMTEXT=$($TDM_SCRIPT $CSV_GEN $CSV_REF)
+TDM=$?
+#+end_src
+
+Onde ~$CSV_GEN~ é a solução do grupo, ~$CSV_REF~ é a árvore de referência.
+
+Mais detalhes sobre as dependências do script abaixo em:
+- https://github.com/timtadh/zhang-shasha
+
+#+BEGIN_SRC python :tangle tdm.python :tangle-mode (identity #o755)
+#!/usr/bin/python
+import os.path
+import sys
+import pandas
+from zss import distance, simple_distance, Node
+
+def read_csv_to_tree (filename):
+    # Read the CSV using pandas
+    df = pandas.read_csv(filename, header=None, names=["Pai", "Filho"], skipinitialspace = True)
+    if len(df.index) == 0:
+        return None
+
+    # Create a set with all the nodes
+    N = set()
+    N.update(df.Pai.values)
+    N.update(df.Filho.values)
+
+    # define the name of the root node (the first one)
+    ROOTstr = df.Pai.values[0]
+
+    # Create all nodes and add them to a dictionary called "nodes"
+    nodes = {}
+    for node in N:
+        if node in nodes.keys():
+           a = nodes[node]
+        else:
+           a = Node("")
+           nodes[node] = a
+
+    # Add all edges
+    for index, row in df.iterrows():
+      paistr = row['Pai']
+      filhostr = row['Filho']
+      try:
+          pai = nodes[paistr]
+          filho = nodes[filhostr]
+          pai.addkid(filho)
+      except:
+          pass
+
+    # Get root node and return
+    ROOT = nodes[ROOTstr]
+    return ROOT
+
+def print_my_tree (tree):
+    print_my_tree_depth (tree, 0)
+
+def print_my_tree_depth (tree, depth):
+    l = 0
+    print depth, tree.get_label(tree)
+    for kid in tree.get_children(tree):
+    	print_my_tree_depth(kid, depth+1)
+
+if len(sys.argv) != 3:
+    print "Two CSV filenames must be provided."
+    sys.exit(255)
+if os.path.isfile(sys.argv[1]) is False:
+    print "File "+sys.argv[1]+" does not exist."
+    sys.exit(254)
+
+A = read_csv_to_tree (sys.argv[1])
+B = read_csv_to_tree (sys.argv[2])
+
+if A is None and B is None:
+    print "Both trees are None, so equal."
+    sys.exit(0)
+if (A is None and B is not None):
+    print "Informed Tree is None, while Reference Tree isn't."
+    sys.exit(253)
+if (A is not None and B is None):
+    print "Informed Tree isn't None, while Reference Tree is."
+    sys.exit(252)
+
+def cost_insert (a):
+    return 1
+def cost_remove (a):
+    return 1
+def cost_update (a,b):
+    return 0
+
+val = distance(A, B, Node.get_children, cost_insert, cost_remove, cost_update, return_operations=True)
+print val
+sys.exit(int(val[0]))
+#+END_SRC
+
 ** Notas Objetiva e Subjetiva
 
 O registro por aluno será visível no final, considerando a nota zero
