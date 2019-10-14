@@ -1381,6 +1381,49 @@ Log de execução (tabela completa).
 | Zeta    | ~i_e3_042.ptg~ |  78 |     0 | FALSE    |
 | Zeta    | ~i_e3_050.ptg~ |   5 |     0 | FALSE    |
 
+** Descrição dos códigos de resultados TDM
+
+Linhas onde ~TDMTEXT~ tem um número em ponto-flutuante indicam a
+distância em número de operações da árvore do grupo para a árvore de
+referência. Linhas onde ~TDMTEXT~ tem um texto em inglês indicam saída
+onde a distância TDM não pode ser calculada (no caso de 254, 253 e
+252), ou é 0 por definição pois o teste esperava que a árvore fosse
+vazia (código 0). O resultado ideal é quando o código TDM vale zero.
+
+| TDM | TDMTEXT                                            |
+|-----+----------------------------------------------------|
+| 254 | File does not exist.                               |
+| 253 | Informed Tree is None, while Reference Tree isn't. |
+| 252 | Informed Tree isn't None, while Reference Tree is. |
+|  99 | (99.0,  ...                                        |
+|  93 | (93.0,  ...                                        |
+|  79 | (79.0,  ...                                        |
+|  78 | (78.0,  ...                                        |
+|  63 | (63.0,  ...                                        |
+|  33 | (33.0,  ...                                        |
+|  31 | (31.0,  ...                                        |
+|  22 | (22.0,  ...                                        |
+|  20 | (20.0,  ...                                        |
+|  18 | (18.0,  ...                                        |
+|  17 | (17.0,  ...                                        |
+|  15 | (15.0,  ...                                        |
+|  14 | (14.0,  ...                                        |
+|  13 | (13.0,  ...                                        |
+|  12 | (12.0,  ...                                        |
+|  11 | (11.0,  ...                                        |
+|  10 | (10.0,  ...                                        |
+|   9 | (9.0,  ...                                         |
+|   8 | (8.0,  ...                                         |
+|   7 | (7.0,  ...                                         |
+|   6 | (6.0,  ...                                         |
+|   5 | (5.0,  ...                                         |
+|   4 | (4.0,  ...                                         |
+|   3 | (3.0,  ...                                         |
+|   2 | (2.0,  ...                                         |
+|   1 | (1.0,  ...                                         |
+|   0 | Both trees are None, so equal.                     |
+|   0 | (0.0,  ...                                         |
+
 ** Script de comparação
 
 O script abaixo é invocado da seguinte forma para realizar o teste:
