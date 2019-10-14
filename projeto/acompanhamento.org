@@ -499,7 +499,7 @@ entrada estava correta quando na realidade estava incorreta.
 | 2019-10-06 00:34:18 | Omicron |
 | 2019-10-06 02:07:04 | Beta    |
 
-** Arquivos para testes                                             :ATTACH:
+** Arquivos para testes e tabela detalhada de resultados            :ATTACH:
 :PROPERTIES:
 :Attachments: e3tests.tgz
 :ID:       ba0a807b-4fbe-4439-b9bb-856ffedcf1bc
