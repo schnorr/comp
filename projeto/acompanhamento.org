@@ -512,6 +512,30 @@ com E2. Os arquivos terminados com /lll/ tem a árvore correspondente
 esperada. Foi utilizada a distância de Zhang-Shasha, onde até uma
 diferença é tolerada.
 
+A coluna ~TDM~ indica a distância da árvore gerada pelo grupo da árvore
+de referência. Abaixo uma descrição mais completa da codificação. A
+coluna ~VG~ indica a quantidade de bytes de vazamento de memória (na
+variável ~VGCUTIN~), calculada da seguinte forma:
+
+#+begin_src shell :results output
+# Step #3: valgrind test
+rm -f valgrind.txt
+valgrind ./etapa3 < $test 2>&1 | grep -A5 LEAK\ SUMMARY > valgrind.txt
+VGRESULT=$(cat valgrind.txt | cut -d":" -f2| awk '{print $1}' | tr '\n' ' ' | sed "s/,//g")
+if [[ $VGRESULT = "" ]]; then
+    VGRESULT="no leaks are possible"
+    VGCUTIN=0
+else
+    VGCUTIN=$(echo $VGRESULT | tr ' ' '+' | bc)
+fi
+#+end_src
+
+A decisão de cada teste é tomada da seguinte forma:
+
+#+BEGIN_EXAMPLE
+TDM <= 2 && VG == 0
+#+END_EXAMPLE
+
 Log de execução (tabela completa).
 
 | Grupo   | test         | TDM |    VG | Decision |
