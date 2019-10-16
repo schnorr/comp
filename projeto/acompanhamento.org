@@ -1769,6 +1769,21 @@ O registro por aluno será visível no final, considerando a nota zero
 para aqueles membros que não participaram da solução proposta pelo
 grupo.
 
+| Grupo   | E3.O | E3.S |
+|---------+------+------|
+| Alpha   | 6.81 |   10 |
+| Beta    | 0.28 |  8.7 |
+| Delta   | 0.42 |  9.3 |
+| Gamma   |  7.5 |  9.8 |
+| Iota    |    0 | 9.45 |
+| Kappa   | 7.22 |  9.6 |
+| Omicron | 0.28 |  8.5 |
+| Rho     |    0 |  8.7 |
+| Sigma   | 0.28 | 8.75 |
+| Tau     | 7.36 |   10 |
+| Theta   | 0.97 |  9.5 |
+| Zeta    | 8.06 |    9 |
+
 * Avaliação da Etapa 4                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
