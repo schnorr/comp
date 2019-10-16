@@ -25,7 +25,7 @@ Testes poderão ser realizados através de um simulador simples escrito
 em Python3 e já disponível também no anexo.
 
 * Funcionalidades Necessárias
-** Arranjos Multidimensionais                                  :noexport:
+** 0. Arranjos Multidimensionais
 Altere a gramática para suportar arranjos multidimensionais. A forma
 =tipo nome[n1][n2]...[n]= deve ser utilizada na declaração. No acesso a
 elementos dos arranjos, utilize =id[n1][n2]...[n]= quando existem duas
@@ -101,6 +101,7 @@ que existe apenas o tipo =int=:
 - Os seguintes comandos de fluxo de controle
   - if com else opcional
   - while
+- Geração de código de arranjos multidimensionais
 
 *Simplificações* (ou seja, não precisa fazer):
 - Nada precisa ser feito referente aos outros tipos da linguagem:
