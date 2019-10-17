@@ -621,7 +621,7 @@ Resultados detalhados.
 | Alpha   | ~i_e3_041.ptg~ |    1 |     0 | FALSE    |
 | Alpha   | ~i_e3_042.ptg~ |    0 |     0 | TRUE     |
 | Alpha   | ~i_e3_050.ptg~ |    0 |     0 | TRUE     |
-| Beta    | ~asl01~        |    1 |     0 | FALSE    |
+| Beta    | ~asl01~        |    0 |     0 | TRUE     |
 | Beta    | ~asl25~        |    1 | 20800 | FALSE    |
 | Beta    | ~asl31~        |    1 |   166 | FALSE    |
 | Beta    | ~asl32~        |    1 |   166 | FALSE    |
@@ -909,7 +909,7 @@ Resultados detalhados.
 | Iota    | ~i_e3_041.ptg~ |    1 |  1872 | FALSE    |
 | Iota    | ~i_e3_042.ptg~ |    1 |  2192 | FALSE    |
 | Iota    | ~i_e3_050.ptg~ |    1 |   464 | FALSE    |
-| Kappa   | ~asl01~        |    0 |   159 | FALSE    |
+| Kappa   | ~asl01~        |    0 | 79822 | FALSE    |
 | Kappa   | ~asl25~        |    1 |     0 | FALSE    |
 | Kappa   | ~asl31~        |    1 |     0 | FALSE    |
 | Kappa   | ~asl32~        |    1 |     0 | FALSE    |
@@ -981,7 +981,6 @@ Resultados detalhados.
 | Kappa   | ~i_e3_041.ptg~ |    1 |     0 | FALSE    |
 | Kappa   | ~i_e3_042.ptg~ |    0 |     0 | TRUE     |
 | Kappa   | ~i_e3_050.ptg~ |    0 |     0 | TRUE     |
-| Omicron | ~asl01~        |    0 |    32 | FALSE    |
 | Omicron | ~asl25~        |    1 |    32 | FALSE    |
 | Omicron | ~asl31~        |    1 |    32 | FALSE    |
 | Omicron | ~asl32~        |    1 |    32 | FALSE    |
@@ -1125,7 +1124,7 @@ Resultados detalhados.
 | Rho     | ~i_e3_041.ptg~ |    1 |    50 | FALSE    |
 | Rho     | ~i_e3_042.ptg~ |    1 |    50 | FALSE    |
 | Rho     | ~i_e3_050.ptg~ |    1 |    53 | FALSE    |
-| Sigma   | ~asl01~        |    1 |    16 | FALSE    |
+| Sigma   | ~asl01~        |    0 |     0 | TRUE     |
 | Sigma   | ~asl25~        |    1 |     0 | FALSE    |
 | Sigma   | ~asl31~        |    1 |     0 | FALSE    |
 | Sigma   | ~asl32~        |    1 |     0 | FALSE    |
@@ -1341,7 +1340,6 @@ Resultados detalhados.
 | Theta   | ~i_e3_041.ptg~ |    1 |     0 | FALSE    |
 | Theta   | ~i_e3_042.ptg~ |    1 |     0 | FALSE    |
 | Theta   | ~i_e3_050.ptg~ |    1 |     0 | FALSE    |
-| Zeta    | ~asl01~        |    0 |     0 | TRUE     |
 | Zeta    | ~asl25~        |    1 |     0 | FALSE    |
 | Zeta    | ~asl31~        |    1 |     0 | FALSE    |
 | Zeta    | ~asl32~        |    1 |     0 | FALSE    |
@@ -1416,204 +1414,210 @@ Resultados detalhados.
 
 Saída dos programas (a saída do grupo Rho foi simplificada artificialmente).
 
-| Grupo   | test       | Output                                                                                      |
-|---------+------------+---------------------------------------------------------------------------------------------|
-| Alpha   | asl150     | ~Linha 3: syntax error, unexpected TK_LIT_INT, expecting ; ~                                  |
-| Alpha   | i_e3_039.ptg | ~Linha 3: syntax error, unexpected TK_LIT_INT, expecting ) or , ~                             |
-| Beta    | asl31      | ~Line 4 : syntax error, unexpected ;, expecting } ~                                         |
-| Beta    | asl32      | ~Line 8 : syntax error, unexpected ;, expecting } ~                                         |
-| Beta    | asl48      | ~Line 7 : syntax error, unexpected +, expecting TK_OC_SL or TK_OC_SR or = ~                     |
-| Beta    | asl53      | ~Line 5 : syntax error, unexpected ) ~                                                      |
-| Beta    | asl54      | ~Line 7 : syntax error, unexpected ) ~                                                      |
-| Beta    | asl56      | ~free(): double free detected in tcache 2 ~                                                 |
-| Beta    | asl57      | ~free(): double free detected in tcache 2 ~                                                 |
-| Beta    | asl66      | ~Line 7 : syntax error, unexpected TK_PR_DO ~                                                 |
-| Beta    | asl78      | ~Line 4 : syntax error, unexpected (, expecting ; ~                                         |
-| Beta    | asl80      | ~Line 6 : syntax error, unexpected TK_OC_EQ ~                                                 |
-| Beta    | asl81      | ~Line 7 : syntax error, unexpected TK_LIT_INT, expecting ; ~                                  |
-| Beta    | asl150     | ~Line 3 : syntax error, unexpected TK_LIT_INT, expecting ; ~                                  |
-| Beta    | i_e3_004.ptg | ~Line 3 : syntax error, unexpected ;, expecting } ~                                         |
-| Beta    | i_e3_005.ptg | ~Line 4 : syntax error, unexpected ;, expecting } ~                                         |
-| Beta    | i_e3_008.ptg | ~Line 3 : syntax error, unexpected TK_PR_DO ~                                                 |
-| Beta    | i_e3_013.ptg | ~Line 3 : syntax error, unexpected ;, expecting } ~                                         |
-| Beta    | i_e3_015.ptg | ~free(): invalid pointer ~                                                                  |
-| Beta    | i_e3_027.ptg | ~Line 5 : syntax error, unexpected TK_OC_NE, expecting ; ~                                    |
-| Beta    | i_e3_028.ptg | ~Line 6 : syntax error, unexpected TK_OC_EQ, expecting ; ~                                    |
-| Beta    | i_e3_029.ptg | ~Line 5 : syntax error, unexpected $undefined, expecting ; ~                                |
-| Beta    | i_e3_030.ptg | ~Line 5 : syntax error, unexpected $undefined, expecting ; ~                                |
-| Beta    | i_e3_031.ptg | ~Line 5 : syntax error, unexpected TK_OC_LE, expecting ; ~                                    |
-| Beta    | i_e3_032.ptg | ~Line 5 : syntax error, unexpected TK_OC_GE, expecting ; ~                                    |
-| Beta    | i_e3_050.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Delta   | asl146     | ~free(): double free detected in tcache 2 ~                                                 |
-| Delta   | asl147     | ~free(): double free detected in tcache 2 ~                                                 |
-| Delta   | asl149     | ~free(): double free detected in tcache 2 ~                                                 |
-| Delta   | i_e3_026.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Delta   | i_e3_029.ptg | ~ syntax error, unexpected $undefined, expecting ;  Erro  na linha de numero: 5             |
-| Delta   | i_e3_030.ptg | ~ syntax error, unexpected $undefined, expecting ;  Erro  na linha de numero: 5             |
-| Gamma   | asl31      | ~Linha 4: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | asl32      | ~Linha 8: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | asl62      | ~Linha 5: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | asl63      | ~Linha 8: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | asl65      | ~Linha 8: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | asl66      | ~Linha 7: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | asl76      | ~Linha 7: ---> syntax error, unexpected TOKEN_ERRO ~                                         |
-| Gamma   | asl77      | ~Linha 5: ---> syntax error, unexpected TOKEN_ERRO ~                                         |
-| Gamma   | asl80      | ~Linha 6: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | i_e3_004.ptg | ~Linha 3: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | i_e3_005.ptg | ~Linha 4: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | i_e3_006.ptg | ~Linha 3: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | i_e3_008.ptg | ~Linha 3: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Gamma   | i_e3_013.ptg | ~Linha 3: ---> syntax error, unexpected ;, expecting } ~                                    |
-| Iota    | asl150     | ~line 3: syntax error line 3: syntax error ~                                                |
-| Iota    | i_e3_014.ptg | ~line 7: syntax error line 7: syntax error ~                                                |
-| Iota    | i_e3_039.ptg | ~line 3: syntax error line 3: syntax error ~                                                |
-| Omicron | asl114     | ~Line 2: syntax error, unexpected /, expecting $end ~                                       |
-| Rho     | asl25      | ~syntax error, unexpected ) - line 6 (nil) ~                                                |
-| Rho     | asl31      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl32      | ~syntax error, unexpected ) - line 4 (nil) ~                                                |
-| Rho     | asl33      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl43      | ~syntax error, unexpected ) - line 4 (nil) ~                                                |
-| Rho     | asl44      | ~syntax error, unexpected ) - line 4 (nil) ~                                                |
-| Rho     | asl46      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl47      | ~syntax error, unexpected ) - line 3 (nil) ~                                                |
-| Rho     | asl48      | ~syntax error, unexpected ) - line 3 (nil) ~                                                |
-| Rho     | asl53      | ~syntax error, unexpected ) - line 3 (nil) ~                                                |
-| Rho     | asl54      | ~0x... 0x5631901d5590 ~                                                                     |
-| Rho     | asl56      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl57      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl58      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl59      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl60      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl62      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl63      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl65      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl66      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl76      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl77      | ~syntax error, unexpected ) - line 3 (nil) ~                                                |
-| Rho     | asl78      | ~0x... 0x56092c2ef5b0 ~                                                                     |
-| Rho     | asl79      | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | asl80      | ~syntax error, unexpected ) - line 4 (nil) ~                                                |
-| Rho     | asl114     | ~syntax error, unexpected $end - line 2 (nil) ~                                             |
-| Rho     | asl138     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl139     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl140     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl141     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl142     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl143     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl144     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl145     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl146     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl147     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl148     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl149     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | asl150     | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_000.ptg | ~syntax error, unexpected $end - line 2 (nil) ~                                             |
-| Rho     | i_e3_003.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_004.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_005.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_006.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_008.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_013.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_014.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_015.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_020.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_021.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_022.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_023.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_024.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_025.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_026.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_027.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_028.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_029.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_030.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_031.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_032.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_034.ptg | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Rho     | i_e3_036.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_037.ptg | ~syntax error, unexpected } - line 1 (nil) ~                                                |
-| Rho     | i_e3_038.ptg | ~syntax error, unexpected } - line 1 (nil) ~                                                |
-| Rho     | i_e3_039.ptg | ~syntax error, unexpected } - line 1 (nil) ~                                                |
-| Rho     | i_e3_040.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_041.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_042.ptg | ~syntax error, unexpected ) - line 1 (nil) ~                                                |
-| Rho     | i_e3_050.ptg | ~syntax error, unexpected ) - line 2 (nil) ~                                                |
-| Sigma   | asl01      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl25      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl31      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl32      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl33      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl43      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl44      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl46      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl47      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl48      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl53      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl54      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl56      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl57      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl58      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl59      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl60      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl62      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl63      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl65      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl66      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl76      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl77      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl78      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl79      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl80      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl81      | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl114     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl138     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl139     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl140     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl141     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl142     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl143     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl144     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl145     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl146     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl147     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl148     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl149     | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | asl150     | ~Line 3: syntax error, unexpected ?, expecting ; free(): double free detected in tcache 2 ~ |
-| Sigma   | i_e3_000.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_003.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_004.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_005.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_006.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_008.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_013.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_014.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_015.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_020.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_021.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_022.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_023.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_024.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_025.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_026.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_027.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_028.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_029.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_030.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_031.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_032.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_034.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_036.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_037.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_038.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_039.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_040.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_041.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_042.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Sigma   | i_e3_050.ptg | ~free(): double free detected in tcache 2 ~                                                 |
-| Theta   | i_e3_015.ptg | ~syntax error, unexpected TK_LIT_STRING on line 4 ~                                           |
-| Zeta    | i_e3_004.ptg | ~Error at line 4. syntax error, unexpected {, expecting } ~                                 |
-| Zeta    | i_e3_013.ptg | ~Error at line 4. syntax error, unexpected {, expecting } ~                                 |
-
+| Grupo   | test         | Output                                                                                               |                        |
+|---------+--------------+------------------------------------------------------------------------------------------------------+------------------------|
+| Alpha   | ~asl01~        | ~Linha 1: syntax error, unexpected TOKEN_ERRO~                                                         |                        |
+| Alpha   | ~asl150~       | ~Linha 3: syntax error, unexpected TK_LIT_INT, expecting ;~                                            |                        |
+| Alpha   | ~i_e3_039.ptg~ | ~Linha 3: syntax error, unexpected TK_LIT_INT, expecting ) or ,~                                       |                        |
+| Beta    | ~asl01~        | ~Line 1 : syntax error, unexpected TOKEN_ERRO, expecting $end~                                         |                        |
+| Beta    | ~asl31~        | ~Line 4 : syntax error, unexpected ;, expecting }~                                                     |                        |
+| Beta    | ~asl32~        | ~Line 8 : syntax error, unexpected ;, expecting }~                                                     |                        |
+| Beta    | ~asl48~        | ~Line 7 : syntax error, unexpected +, expecting TK_OC_SL or TK_OC_SR or =~                             |                        |
+| Beta    | ~asl53~        | ~Line 5 : syntax error, unexpected )~                                                                  |                        |
+| Beta    | ~asl54~        | ~Line 7 : syntax error, unexpected )~                                                                  |                        |
+| Beta    | ~asl56~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Beta    | ~asl57~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Beta    | ~asl66~        | ~Line 7 : syntax error, unexpected TK_PR_DO~                                                           |                        |
+| Beta    | ~asl78~        | ~Line 4 : syntax error, unexpected (, expecting ;~                                                     |                        |
+| Beta    | ~asl80~        | ~Line 6 : syntax error, unexpected TK_OC_EQ~                                                           |                        |
+| Beta    | ~asl81~        | ~Line 7 : syntax error, unexpected TK_LIT_INT, expecting ;~                                            |                        |
+| Beta    | ~asl150~       | ~Line 3 : syntax error, unexpected TK_LIT_INT, expecting ;~                                            |                        |
+| Beta    | ~i_e3_004.ptg~ | ~Line 3 : syntax error, unexpected ;, expecting }~                                                     |                        |
+| Beta    | ~i_e3_005.ptg~ | ~Line 4 : syntax error, unexpected ;, expecting }~                                                     |                        |
+| Beta    | ~i_e3_008.ptg~ | ~Line 3 : syntax error, unexpected TK_PR_DO~                                                           |                        |
+| Beta    | ~i_e3_013.ptg~ | ~Line 3 : syntax error, unexpected ;, expecting }~                                                     |                        |
+| Beta    | ~i_e3_015.ptg~ | ~free(): invalid pointer~                                                                              |                        |
+| Beta    | ~i_e3_027.ptg~ | ~Line 5 : syntax error, unexpected TK_OC_NE, expecting ;~                                              |                        |
+| Beta    | ~i_e3_028.ptg~ | ~Line 6 : syntax error, unexpected TK_OC_EQ, expecting ;~                                              |                        |
+| Beta    | ~i_e3_029.ptg~ | ~Line 5 : syntax error, unexpected $undefined, expecting ;~                                            |                        |
+| Beta    | ~i_e3_030.ptg~ | ~Line 5 : syntax error, unexpected $undefined, expecting ;~                                            |                        |
+| Beta    | ~i_e3_031.ptg~ | ~Line 5 : syntax error, unexpected TK_OC_LE, expecting ;~                                              |                        |
+| Beta    | ~i_e3_032.ptg~ | ~Line 5 : syntax error, unexpected TK_OC_GE, expecting ;~                                              |                        |
+| Beta    | ~i_e3_050.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Delta   | ~asl01~        | ~ syntax error, unexpected TOKEN_ERRO, expecting $end  Erro  na linha de numero: 1                    | ultimo token lido: ~ |
+| Delta   | ~asl146~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Delta   | ~asl147~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Delta   | ~asl149~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Delta   | ~i_e3_026.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Delta   | ~i_e3_029.ptg~ | ~ syntax error, unexpected $undefined, expecting ;  Erro  na linha de numero: 5                      | ultimo token lido: <~  |
+| Delta   | ~i_e3_030.ptg~ | ~ syntax error, unexpected $undefined, expecting ;  Erro  na linha de numero: 5                      | ultimo token lido: >~  |
+| Gamma   | ~asl01~        | ~Linha 1: ---> syntax error, unexpected TOKEN_ERRO, expecting $end~                                    |                        |
+| Gamma   | ~asl31~        | ~Linha 4: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~asl32~        | ~Linha 8: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~asl62~        | ~Linha 5: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~asl63~        | ~Linha 8: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~asl65~        | ~Linha 8: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~asl66~        | ~Linha 7: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~asl76~        | ~Linha 7: ---> syntax error, unexpected TOKEN_ERRO~                                                    |                        |
+| Gamma   | ~asl77~        | ~Linha 5: ---> syntax error, unexpected TOKEN_ERRO~                                                    |                        |
+| Gamma   | ~asl80~        | ~Linha 6: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~i_e3_004.ptg~ | ~Linha 3: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~i_e3_005.ptg~ | ~Linha 4: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~i_e3_006.ptg~ | ~Linha 3: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~i_e3_008.ptg~ | ~Linha 3: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Gamma   | ~i_e3_013.ptg~ | ~Linha 3: ---> syntax error, unexpected ;, expecting }~                                                |                        |
+| Iota    | ~asl150~       | ~line 3: syntax error line 3: syntax error~                                                            |                        |
+| Iota    | ~i_e3_014.ptg~ | ~line 7: syntax error line 7: syntax error~                                                            |                        |
+| Iota    | ~i_e3_039.ptg~ | ~line 3: syntax error line 3: syntax error~                                                            |                        |
+| Omicron | ~asl114~       | ~Line 2: syntax error, unexpected /, expecting $end~                                                   |                        |
+| Rho     | ~asl01~        | ~syntax error, unexpected TOKEN_ERRO - line 1 (nil)~                                                   |                        |
+| Rho     | ~asl25~        | ~syntax error, unexpected ) - line 6 (nil)~                                                            |                        |
+| Rho     | ~asl31~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl32~        | ~syntax error, unexpected ) - line 4 (nil)~                                                            |                        |
+| Rho     | ~asl33~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl43~        | ~syntax error, unexpected ) - line 4 (nil)~                                                            |                        |
+| Rho     | ~asl44~        | ~syntax error, unexpected ) - line 4 (nil)~                                                            |                        |
+| Rho     | ~asl46~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl47~        | ~syntax error, unexpected ) - line 3 (nil)~                                                            |                        |
+| Rho     | ~asl48~        | ~syntax error, unexpected ) - line 3 (nil)~                                                            |                        |
+| Rho     | ~asl53~        | ~syntax error, unexpected ) - line 3 (nil)~                                                            |                        |
+| Rho     | ~asl54~        | ~0x... 0x5622ae1ab590~                                                                                 |                        |
+| Rho     | ~asl56~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl57~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl58~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl59~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl60~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl62~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl63~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl65~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl66~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl76~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl77~        | ~syntax error, unexpected ) - line 3 (nil)~                                                            |                        |
+| Rho     | ~asl78~        | ~0x... 0x555ba8e045b0~                                                                                 |                        |
+| Rho     | ~asl79~        | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~asl80~        | ~syntax error, unexpected ) - line 4 (nil)~                                                            |                        |
+| Rho     | ~asl114~       | ~syntax error, unexpected $end - line 2 (nil)~                                                         |                        |
+| Rho     | ~asl138~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl139~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl140~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl141~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl142~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl143~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl144~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl145~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl146~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl147~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl148~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl149~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~asl150~       | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_000.ptg~ | ~syntax error, unexpected $end - line 2 (nil)~                                                         |                        |
+| Rho     | ~i_e3_003.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_004.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_005.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_006.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_008.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_013.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_014.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_015.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_020.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_021.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_022.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_023.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_024.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_025.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_026.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_027.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_028.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_029.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_030.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_031.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_032.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_034.ptg~ | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Rho     | ~i_e3_036.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_037.ptg~ | ~syntax error, unexpected } - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_038.ptg~ | ~syntax error, unexpected } - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_039.ptg~ | ~syntax error, unexpected } - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_040.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_041.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_042.ptg~ | ~syntax error, unexpected ) - line 1 (nil)~                                                            |                        |
+| Rho     | ~i_e3_050.ptg~ | ~syntax error, unexpected ) - line 2 (nil)~                                                            |                        |
+| Sigma   | ~asl01~        | ~Line 1: syntax error, unexpected TOKEN_ERRO, expecting $end free(): double free detected in tcache 2~ |                        |
+| Sigma   | ~asl25~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl31~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl32~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl33~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl43~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl44~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl46~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl47~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl48~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl53~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl54~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl56~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl57~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl58~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl59~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl60~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl62~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl63~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl65~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl66~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl76~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl77~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl78~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl79~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl80~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl81~        | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl114~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl138~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl139~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl140~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl141~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl142~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl143~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl144~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl145~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl146~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl147~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl148~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl149~       | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~asl150~       | ~Line 3: syntax error, unexpected ?, expecting ; free(): double free detected in tcache 2~             |                        |
+| Sigma   | ~i_e3_000.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_003.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_004.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_005.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_006.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_008.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_013.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_014.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_015.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_020.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_021.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_022.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_023.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_024.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_025.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_026.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_027.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_028.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_029.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_030.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_031.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_032.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_034.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_036.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_037.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_038.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_039.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_040.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_041.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_042.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Sigma   | ~i_e3_050.ptg~ | ~free(): double free detected in tcache 2~                                                             |                        |
+| Tau     | ~asl01~        | ~Error on line 1. syntax error~                                                                        |                        |
+| Theta   | ~asl01~        | ~syntax error, unexpected TOKEN_ERRO, expecting $end on line 1~                                        |                        |
+| Theta   | ~i_e3_015.ptg~ | ~syntax error, unexpected TK_LIT_STRING on line 4~                                                     |                        |
+| Zeta    | ~i_e3_004.ptg~ | ~Error at line 4. syntax error, unexpected {, expecting }~                                             |                        |
+| Zeta    | ~i_e3_013.ptg~ | ~Error at line 4. syntax error, unexpected {, expecting }~                                             |                        |
 
 ** Script de comparação
 
