@@ -26,6 +26,7 @@ em Python3 e já disponível também no anexo.
 
 * Funcionalidades Necessárias
 ** 0. Arranjos Multidimensionais
+
 Altere a gramática para suportar arranjos multidimensionais. A forma
 =tipo nome[n1][n2]...[n]= deve ser utilizada na declaração. No acesso a
 elementos dos arranjos, utilize =id[n1][n2]...[n]= quando existem duas
