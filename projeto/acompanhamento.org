@@ -1812,117 +1812,120 @@ grupo.
 Veja [[./data/85/c73ba8-bb05-4ee2-b0b9-0146bf9ec026/e4tests.tgz][este arquivo]].
 
 Todas as entradas estão sintaticamente corretas de acordo com E2. Os
-arquivos que contém um comentário que começa por =ERR_= são considerados
-errados. Na ausência, assume-se que a entrada está léxica, sintática e
-semanticamente correta e portanto o compilador deve retornar 0. Para
-saber quais os erros esperados por teste, consultar a tabela abaixo:
+arquivos que contém um código ~ERR~ na coluna ~Erro~ da tabela abaixo são
+considerados errados. Na ausência, assume-se que a entrada está
+léxica, sintática e semanticamente correta e portanto o compilador
+deve retornar 0. Use a tabela abaixo como referência (e não os
+comentários nos arquivos do TGZ):
 
-| Test    | Erro                 |
-|---------+----------------------|
-| poi01   |                      |
-| poi02   |                      |
-| poi03   |                      |
-| poi04   | ~ERR_UNDECLARED~       |
-| poi05   | ~ERR_UNDECLARED~       |
-| poi06   | ~ERR_UNDECLARED~       |
-| poi07   | ~ERR_DECLARED~         |
-| poi08   | ~ERR_DECLARED~         |
-| poi09   | ~ERR_DECLARED~         |
-| poi10   | ~ERR_DECLARED~         |
-| poi11   |                      |
-| poi12   | ~ERR_VARIABLE~         |
-| poi13   | ~ERR_VECTOR~           |
-| poi14   | ~ERR_FUNCTION~         |
-| poi15   |                      |
-| poi17   | ~ERR_STRING_TO_X~      |
-| poi18   | ~ERR_CHAR_TO_X~        |
-| poi21   | ~ERR_CHAR_TO_X~        |
-| poi22   | ~ERR_STRING_TO_X~      |
-| poi24   |                      |
-| poi25   | ~ERR_MISSING_ARGS~     |
-| poi26   | ~ERR_EXCESS_ARGS~      |
-| poi27   | ~ERR_WRONG_TYPE_ARGS~  |
-| poi28   | ~ERR_DECLARED~         |
-| poi29   |                      |
-| poi30   |                      |
-| poi31   |                      |
-| poi32   |                      |
-| poi33   |                      |
-| poi35   | ~ERR_WRONG_PAR_INPUT~  |
-| poi36   | ~ERR_WRONG_PAR_INPUT~  |
-| poi37   | ~ERR_WRONG_PAR_INPUT~  |
-| poi38   | ~ERR_WRONG_PAR_INPUT~  |
-| poi39   | ~ERR_WRONG_PAR_INPUT~  |
-| poi40   | ~ERR_WRONG_PAR_INPUT~  |
-| poi41   |                      |
-| poi42   | ~ERR_WRONG_PAR_OUTPUT~ |
-| poi43   |                      |
-| poi44   |                      |
-| poi45   |                      |
-| poi46   | ~ERR_FUNCTION~         |
-| poi47   |                      |
-| poi48   |                      |
-| poi49   |                      |
-| poi50   | ~ERR_WRONG_PAR_RETURN~ |
-| poi51   |                      |
-| qwe01   |                      |
-| qwe02   | ~ERR_UNDECLARED~       |
-| qwe03   |                      |
-| qwe04   |                      |
-| qwe05   |                      |
-| qwe06   | ~ERR_UNDECLARED~       |
-| qwe07   |                      |
-| qwe08   | ~ERR_DECLARED~         |
-| qwe09   | ~ERR_DECLARED~         |
-| qwe10   |                      |
-| qwe11   | ~ERR_VECTOR~           |
-| qwe12   | ~ERR_VARIABLE~         |
-| qwe13   | ~ERR_FUNCTION~         |
-| qwe14   | ~ERR_VARIABLE~         |
-| qwe15   | ~ERR_VECTOR~           |
-| qwe18   |                      |
-| qwe19   | ~ERR_MISSING_ARGS~     |
-| qwe20   | ~ERR_EXCESS_ARGS~      |
-| qwe21   | ~ERR_WRONG_TYPE_ARGS~  |
-| s00.iks | ~ERR_UNDECLARED~       |
-| s01.iks | ~ERR_UNDECLARED~       |
-| s02.iks | ~ERR_UNDECLARED~       |
-| s03.iks | ~ERR_DECLARED~         |
-| s04.iks | ~ERR_DECLARED~         |
-| s05.iks | ~ERR_VARIABLE~         |
-| s06.iks | ~ERR_VECTOR~           |
-| s07.iks | ~ERR_FUNCTION~         |
-| s08.iks | ~ERR_STRING_TO_X~      |
-| s09.iks | ~ERR_CHAR_TO_X~        |
-| s10.iks | ~ERR_MISSING_ARGS~     |
-| s11.iks | ~ERR_EXCESS_ARGS~      |
-| s12.iks | ~ERR_WRONG_TYPE_ARGS~  |
-| s13.iks | ~ERR_WRONG_TYPE_ARGS~  |
-| s14.iks | ~ERR_WRONG_PAR_INPUT~  |
-| s15.iks | ~ERR_WRONG_PAR_OUTPUT~ |
-| s16.iks | ~ERR_WRONG_PAR_RETURN~ |
-| s17.iks | ~ERR_STRING_TO_X~      |
-| s18.iks | ~ERR_CHAR_TO_X~        |
-| s19.iks | ~ERR_WRONG_TYPE~       |
-| s20.iks | ~ERR_WRONG_TYPE~       |
-| s21.iks | ~ERR_WRONG_TYPE~       |
-| s22.iks | ~ERR_WRONG_TYPE~       |
-| s23.iks | ~ERR_STRING_TO_X~      |
-| s24.iks | ~ERR_CHAR_TO_X~        |
-| s25.iks |                      |
-| s26.iks | ~ERR_CHAR_TO_X~        |
-| s27.iks | ~ERR_STRING_TO_X~      |
-| s28.iks | ~ERR_STRING_TO_X~      |
-| s29.iks | ~ERR_CHAR_TO_X~        |
-| s30.iks | ~ERR_WRONG_PAR_RETURN~ |
-| s31.iks |                      |
-| s32.iks | ~ERR_UNDECLARED~       |
-| s35.iks |                      |
-| s36.iks | ~ERR_DECLARED~         |
-| s37.iks |                      |
-| s38.iks | ~ERR_STRING_TO_X~      |
-| s39.iks | ~ERR_UNDECLARED~       |
-| s40.iks |                      |
+|   N | Test    | Erro                 |
+|-----+---------+----------------------|
+|   1 | poi01   |                      |
+|   2 | poi02   |                      |
+|   3 | poi03   |                      |
+|   4 | poi04   | ~ERR_UNDECLARED~       |
+|   5 | poi05   | ~ERR_UNDECLARED~       |
+|   6 | poi06   | ~ERR_UNDECLARED~       |
+|   7 | poi07   | ~ERR_DECLARED~         |
+|   8 | poi08   | ~ERR_DECLARED~         |
+|   9 | poi09   | ~ERR_DECLARED~         |
+|  10 | poi10   | ~ERR_DECLARED~         |
+|  11 | poi11   |                      |
+|  12 | poi12   | ~ERR_VARIABLE~         |
+|  13 | poi13   | ~ERR_VECTOR~           |
+|  14 | poi14   | ~ERR_FUNCTION~         |
+|  15 | poi15   |                      |
+|  16 | poi17   | ~ERR_STRING_TO_X~      |
+|  17 | poi18   | ~ERR_CHAR_TO_X~        |
+|  18 | poi21   | ~ERR_CHAR_TO_X~        |
+|  19 | poi22   | ~ERR_STRING_TO_X~      |
+|  20 | poi24   |                      |
+|  21 | poi25   | ~ERR_MISSING_ARGS~     |
+|  22 | poi26   | ~ERR_EXCESS_ARGS~      |
+|  23 | poi27   | ~ERR_WRONG_TYPE_ARGS~  |
+|  24 | poi28   | ~ERR_DECLARED~         |
+|  25 | poi29   |                      |
+|  26 | poi30   |                      |
+|  27 | poi31   |                      |
+|  28 | poi32   |                      |
+|  29 | poi33   |                      |
+|  30 | poi35   | ~ERR_WRONG_PAR_INPUT~  |
+|  31 | poi36   | ~ERR_WRONG_PAR_INPUT~  |
+|  32 | poi37   | ~ERR_WRONG_PAR_INPUT~  |
+|  33 | poi38   | ~ERR_WRONG_PAR_INPUT~  |
+|  34 | poi39   | ~ERR_WRONG_PAR_INPUT~  |
+|  35 | poi40   | ~ERR_WRONG_PAR_INPUT~  |
+|  36 | poi41   |                      |
+|  37 | poi42   | ~ERR_WRONG_PAR_OUTPUT~ |
+|  38 | poi43   |                      |
+|  39 | poi44   |                      |
+|  40 | poi45   |                      |
+|  41 | poi46   | ~ERR_FUNCTION~         |
+|  42 | poi47   |                      |
+|  43 | poi48   |                      |
+|  44 | poi49   |                      |
+|  45 | poi50   | ~ERR_WRONG_PAR_RETURN~ |
+|  46 | poi51   |                      |
+|  47 | qwe01   |                      |
+|  48 | qwe02   | ~ERR_UNDECLARED~       |
+|  49 | qwe03   |                      |
+|  50 | qwe04   |                      |
+|  51 | qwe05   |                      |
+|  52 | qwe06   | ~ERR_UNDECLARED~       |
+|  53 | qwe07   |                      |
+|  54 | qwe08   | ~ERR_DECLARED~         |
+|  55 | qwe09   | ~ERR_DECLARED~         |
+|  56 | qwe10   |                      |
+|  57 | qwe11   | ~ERR_VECTOR~           |
+|  58 | qwe12   | ~ERR_VARIABLE~         |
+|  59 | qwe13   | ~ERR_FUNCTION~         |
+|  60 | qwe14   | ~ERR_VARIABLE~         |
+|  61 | qwe15   | ~ERR_VECTOR~           |
+|  62 | qwe18   |                      |
+|  63 | qwe19   | ~ERR_MISSING_ARGS~     |
+|  64 | qwe20   | ~ERR_EXCESS_ARGS~      |
+|  65 | qwe21   | ~ERR_WRONG_TYPE_ARGS~  |
+|  66 | s00.iks | ~ERR_UNDECLARED~       |
+|  67 | s01.iks | ~ERR_UNDECLARED~       |
+|  68 | s02.iks | ~ERR_UNDECLARED~       |
+|  69 | s03.iks | ~ERR_DECLARED~         |
+|  70 | s04.iks | ~ERR_DECLARED~         |
+|  71 | s05.iks | ~ERR_VARIABLE~         |
+|  72 | s06.iks | ~ERR_VECTOR~           |
+|  73 | s07.iks | ~ERR_FUNCTION~         |
+|  74 | s08.iks | ~ERR_STRING_TO_X~      |
+|  75 | s09.iks | ~ERR_CHAR_TO_X~        |
+|  76 | s10.iks | ~ERR_MISSING_ARGS~     |
+|  77 | s11.iks | ~ERR_EXCESS_ARGS~      |
+|  78 | s12.iks | ~ERR_WRONG_TYPE_ARGS~  |
+|  79 | s13.iks | ~ERR_WRONG_TYPE_ARGS~  |
+|  80 | s14.iks | ~ERR_WRONG_PAR_INPUT~  |
+|  81 | s15.iks | ~ERR_WRONG_PAR_OUTPUT~ |
+|  82 | s16.iks | ~ERR_WRONG_PAR_RETURN~ |
+|  83 | s17.iks | ~ERR_STRING_TO_X~      |
+|  84 | s18.iks | ~ERR_CHAR_TO_X~        |
+|  85 | s19.iks | ~ERR_WRONG_TYPE~       |
+|  86 | s20.iks | ~ERR_WRONG_TYPE~       |
+|  87 | s21.iks | ~ERR_WRONG_TYPE~       |
+|  88 | s22.iks | ~ERR_WRONG_TYPE~       |
+|  89 | s23.iks | ~ERR_STRING_TO_X~      |
+|  90 | s24.iks | ~ERR_CHAR_TO_X~        |
+|  91 | s25.iks |                      |
+|  92 | s26.iks | ~ERR_CHAR_TO_X~        |
+|  93 | s27.iks | ~ERR_STRING_TO_X~      |
+|  94 | s28.iks | ~ERR_STRING_TO_X~      |
+|  95 | s29.iks | ~ERR_CHAR_TO_X~        |
+|  96 | s30.iks | ~ERR_WRONG_PAR_RETURN~ |
+|  97 | s31.iks |                      |
+|  98 | s32.iks | ~ERR_UNDECLARED~       |
+|  99 | s33.iks | ~ERR_UNDECLARED~       |
+| 100 | s34.iks | ~ERR_UNDECLARED~       |
+| 101 | s35.iks |                      |
+| 102 | s36.iks | ~ERR_DECLARED~         |
+| 103 | s37.iks |                      |
+| 104 | s38.iks | ~ERR_STRING_TO_X~      |
+| 105 | s39.iks | ~ERR_UNDECLARED~       |
+| 106 | s40.iks |                      |
 
 ** Log de execução dos testes                                       :ATTACH:
 :PROPERTIES:
