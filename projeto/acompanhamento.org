@@ -1788,7 +1788,7 @@ grupo.
 | Theta   |   10 |  9.5 |
 | Zeta    | 8.06 |    9 |
 
-* Avaliação da Etapa 4                                             :noexport:
+* Avaliação da Etapa 4
 ** Grupos que não entregaram até o prazo
 
 | Grupo | ID     |
@@ -1988,7 +1988,6 @@ não compila.
 | Theta   |    0 |    0 |
 | Xi      | 9.34 |    0 |
 | Zeta    | 8.77 |    0 |
-
 
 * Avaliação da Etapa 5                                             :noexport:
 ** Grupos que não entregaram até o prazo
