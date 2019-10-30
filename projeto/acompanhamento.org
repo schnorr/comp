@@ -2846,19 +2846,18 @@ não compila.
 
 | Grupo   | E4.O | E4.S |
 |---------+------+------|
-| Alpha   | 9.15 |    0 |
-| Beta    | 9.34 |    0 |
-| Delta   | 4.34 |    0 |
-| Gamma   | 7.45 |    0 |
-| Iota    | 9.43 |    0 |
-| Kappa   | 8.11 |    0 |
-| Omicron | 2.92 |    0 |
-| Rho     | 3.11 |    0 |
+| Alpha   |   10 |  9.3 |
+| Beta    |  9.2 |  8.9 |
+| Delta   | 4.32 |  8.7 |
+| Gamma   | 8.41 |    0 |
+| Iota    | 9.77 |  8.4 |
+| Kappa   | 8.07 |  8.5 |
+| Omicron | 2.61 |    0 |
+| Psi     |    0 |    0 |
+| Rho     | 3.75 |    0 |
 | Sigma   |    0 |    0 |
-| Tau     |    0 |    0 |
-| Theta   |    0 |    0 |
-| Xi      | 9.34 |    0 |
-| Zeta    | 8.77 |    0 |
+| Xi      |  9.2 |  9.9 |
+| Zeta    | 8.98 |    9 |
 
 * Avaliação da Etapa 5                                             :noexport:
 ** Grupos que não entregaram até o prazo
