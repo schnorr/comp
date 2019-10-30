@@ -1929,16 +1929,15 @@ comentários nos arquivos do TGZ):
 
 ** Log de execução dos testes                                       :ATTACH:
 :PROPERTIES:
-:Attachments: e4v0.log e4v1.log
 :ID:       4a7b2831-ec48-4877-900b-4365d8ea77df
+:Attachments: e4v0.log
 :END:
 
 Veja o [[./data/4a/7b2831-ec48-4877-900b-4365d8ea77df/e4v0.log]].
 
-Veja (recuperação) o [[./data/4a/7b2831-ec48-4877-900b-4365d8ea77df/e4v1.log]].
+# Veja (recuperação) o [[./data/4a/7b2831-ec48-4877-900b-4365d8ea77df/e4v1.log]].
 
-** Comentários por grupos
-*** Explicações sobre a saída valgrind
+** Explicações sobre a saída valgrind
 
 Quando o valgrind relata:
 
@@ -1953,121 +1952,31 @@ Quando o valgrind relata:
 gera-se uma chave =( 73480 0 0 163542 0 )=. Levando-se isso em conta,
 todos os testes foram verificados com o valgrind. Para aqueles onde
 nada é relatado (veja os comentários abaixo, por grupo), o somatório
-dos números foi 0. Uma exceção existe para os que não chamam
-=yy_destroy()=. Neste caso, o valor do somatório pode ser 16458 que o
-/warning/ do valgrind é omitido.
+dos números foi 0.
 
-*Nota:* O valgrind não foi utilizado nas resubmissões.
-*** Comentários
-**** Beta
-
-15:36
-
-- [X] 1. Implementar uma tabela de símbolos
-  - Pilha de escopos que são push/pop no abre { e fecha } (~scope_stack~)
-  - Tabela okay, mas é um vetor de ponteiros
-- [X] 2. Verificação de declarações
-  - Função ~identifier_in_scope~ (procura no próprio escopo)
-  - Função ~identifier_in_stack~ (procura na pilha de escopos)
-    #+BEGIN_SRC C
-    x string;
-    int main(){
-      int x;
-      x = 10;
-    }
-    #+END_SRC
-- [X] 3. Uso correto de identificadores
-  - Pela natureza do elemento
-- [X] 4. Verificação de tipos (na AST) e tamanho dos dados
-  - No nó ~node~ tem um campo ~val_type~
-  - Tem uma função ~type_infer~ para operações binárias
-- [X] 5. Argumentos e parâmetros de funções
-  - Não está pedindo para verificar ~const~
-  - Função ~match_decl_with_call~
-    - Chamada dupla no if da regra cuja cabeça é o ~c_call_func~.
-    - Faltou uma função para retonar a compatibilidade (sim ou não)
-      entre dois tipos
-  - Retorno da função ~c_return~ tem uma cópia do código
-- [X] 6. Verificação de tipos em comandos
-  - Usa o um ~NODE_TYPE_VAR_ACCESS~ (nó da AST)
-
-**** Lambda
-
-15:37
-
-Verificações semânticas são feitas sobre a AST,
-e não mais no bison (caracterizando duas passagens).
-
-- [X] 1. Implementar uma tabela de símbolos
-  - Ponteiro para o escopo superior (o englobando)
-  - Funciona para escopo aninhado sem funções
-- [X] 2. Verificação de declarações
-  - Análise da declaração
-  - ~busca_entrada_na_lista~ busca somente em um escopo
-  - ~consulta_tabela~ navega na lista de tabelas
-- [X] 3. Uso correto de identificadores
-- [X] 4. Verificação de tipos (na AST) e tamanho dos dados
-  - Função ~infere_tipo~
-- [X] 5. Argumentos e parâmetros de funções
-- [X] 6. Verificação de tipos em comandos
-  - Usa variável global ~tipo_retorno~
-
-Não está perseguindo valgrind.
-- Teste indicou várias leituras inválidas
-
-**** Alpha
-
-16:14
-
-Não entregou. Entregar até 31/05.
-
-- [X] 1. Implementar uma tabela de símbolos
-  - Tem um ~enum sym_type~ que é uma versão de natureza
-  - Campo ~siblings~ para guardar parâmetros formais de função
-  - Funções que operam com tabela e pilha de tabelas
-    - Chamadas efetuadas
-- [/] 2. Verificação de declarações
-- [/] 3. Uso correto de identificadores
-- [ ] 4. Verificação de tipos (na AST) e tamanho dos dados
-- [ ] 5. Argumentos e parâmetros de funções
-- [ ] 6. Verificação de tipos em comandos
-
-Disponibilidade para explicar fora do horário.
-
-Entregou em 28/05.
-
-**** Delta
-
-16:47
-
-Não entregou. Entregar até 27/05.
-
-- [/] 1. Implementar uma tabela de símbolos
-  - Só tem uma tabela global (declarado ou não declarado)
-  - Bem estruturada a questão da tabela e da pilha, mas a criação de
-    tabelas de símbolo por escopo ainda não realizada, mas por simples
-    falta de chamadas no local correto da gramática
-- [/] 2. Verificação de declarações
-  - Implementou escopo único
-- [ ] 3. Uso correto de identificadores
-- [ ] 4. Verificação de tipos (na AST) e tamanho dos dados
-- [ ] 5. Argumentos e parâmetros de funções
-  - Está guardando na tabela os parâmetros formais
-  - Nenhuma verificação com argumentos (parâmetros reais)
-- [ ] 6. Verificação de tipos em comandos
-
-Entregou em 10/06.
+*Nota:* O valgrind não foi considerado na nota da E4, sendo apenas indicativo.
 
 ** Notas Objetiva e Subjetiva
 
-Os grupos não listados na tabela abaixo não submeteram.
+Os grupos não listados na tabela abaixo não submeteram ou o programa
+não compila.
 
-| Grupo  | E4.O | E4.S |
-|--------+------+------|
-| Alpha  | 9.71 |    4 |
-| Beta   | 9.23 |    9 |
-| Delta  | 9.04 |    3 |
-| Lambda | 8.27 |    9 |
+| Grupo   | E4.O | E4.S |
+|---------+------+------|
+| Alpha   | 9.15 |    0 |
+| Beta    | 9.34 |    0 |
+| Delta   | 4.34 |    0 |
+| Gamma   | 7.45 |    0 |
+| Iota    | 9.43 |    0 |
+| Kappa   | 8.11 |    0 |
+| Omicron | 2.92 |    0 |
+| Rho     | 3.11 |    0 |
+| Sigma   |    0 |    0 |
+| Tau     |    0 |    0 |
+| Theta   |    0 |    0 |
+| Xi      | 9.34 |    0 |
+| Zeta    | 8.77 |    0 |
+
 
 * Avaliação da Etapa 5                                             :noexport:
 ** Grupos que não entregaram até o prazo
