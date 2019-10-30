@@ -1791,17 +1791,29 @@ grupo.
 * Avaliação da Etapa 4                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
-| Grupo |
-|-------|
-| Alpha |
-| Delta |
+| Grupo | ID     |
+|-------+--------|
+| Omega | ???612 |
+| Sigma | ???165 |
+| Sigma | ???652 |
+
+O grupo Psi entregou um programa que não compila.
 
 ** Entregas até o prazo
 
-| Grupo  |
-|--------|
-| Beta   |
-| Lambda |
+| Timestamp           | Grupo   |
+|---------------------+---------|
+| 2019-10-27 12:24:21 | Zeta    |
+| 2019-10-28 01:17:23 | Xi      |
+| 2019-10-28 18:09:28 | Iota    |
+| 2019-10-28 18:25:29 | Gamma   |
+| 2019-10-28 18:53:46 | Kappa   |
+| 2019-10-28 21:04:42 | Delta   |
+| 2019-10-28 21:07:59 | Alpha   |
+| 2019-10-28 21:58:19 | Omicron |
+| 2019-10-28 22:09:56 | Rho     |
+| 2019-10-28 23:23:30 | Beta    |
+| 2019-10-29 14:44:43 | Psi     |
 
 ** Arquivos para testes                                             :ATTACH:
 :PROPERTIES:
