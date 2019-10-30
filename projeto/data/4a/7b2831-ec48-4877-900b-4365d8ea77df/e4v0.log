@@ -1,0 +1,1232 @@
+
+Alpha
+
+~/ensino/private/E4/Alpha ~/ensino/private
+There are 106 tests
+Alpha |DEBUG local.tests/e4/input/2019_2/poi01 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi02 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi03 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi04 10 " 0 0 0 39494 0 " 39494
+Alpha |DEBUG local.tests/e4/input/2019_2/poi05 10 " 0 0 0 39558 0 " 39558
+Alpha |DEBUG local.tests/e4/input/2019_2/poi06 10 " 0 0 0 39480 0 " 39480
+Alpha |DEBUG local.tests/e4/input/2019_2/poi07 11 " 0 0 0 30654 0 " 30654
+Alpha |DEBUG local.tests/e4/input/2019_2/poi08 11 " 0 0 0 39480 0 " 39480
+Alpha |DEBUG local.tests/e4/input/2019_2/poi09 11 " 0 0 0 30654 0 " 30654
+Alpha |DEBUG local.tests/e4/input/2019_2/poi10 11 " 0 0 0 30816 0 " 30816
+Alpha |DEBUG local.tests/e4/input/2019_2/poi11 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi12 20 " 0 0 0 39611 0 " 39611
+Alpha |DEBUG local.tests/e4/input/2019_2/poi13 21 " 0 0 0 39597 0 " 39597
+Alpha |DEBUG local.tests/e4/input/2019_2/poi14 22 " 0 0 0 39759 0 " 39759
+Alpha |DEBUG local.tests/e4/input/2019_2/poi15 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi17 31 " 0 0 0 39579 0 " 39579
+Alpha |DEBUG local.tests/e4/input/2019_2/poi18 32 " 0 0 0 39575 0 " 39575
+Alpha |DEBUG local.tests/e4/input/2019_2/poi21 32 " 0 0 0 39815 0 " 39815
+Alpha |DEBUG local.tests/e4/input/2019_2/poi22 31 " 0 0 0 39815 0 " 39815
+Alpha |DEBUG local.tests/e4/input/2019_2/poi24 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi25 40 " 0 0 0 40159 0 " 40159
+Alpha |DEBUG local.tests/e4/input/2019_2/poi26 41 " 0 0 0 40315 0 " 40315
+Alpha |DEBUG local.tests/e4/input/2019_2/poi27 42 " 0 0 0 40249 0 " 40249
+Alpha |DEBUG local.tests/e4/input/2019_2/poi28 11 " 0 0 0 39920 0 " 39920
+Alpha |DEBUG local.tests/e4/input/2019_2/poi29 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi30 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi31 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi32 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi33 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi35 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi36 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi37 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi38 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi39 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi40 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi41 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi42 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi43 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi44 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi45 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi46 22 " 0 0 0 39774 0 " 39774
+Alpha |DEBUG local.tests/e4/input/2019_2/poi47 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi48 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi49 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/poi50 52 " 0 0 0 39483 0 " 39483
+Alpha |DEBUG local.tests/e4/input/2019_2/poi51 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe01 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe02 10 " 0 0 0 39494 0 " 39494
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe03 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe04 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe05 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe06 10 " 0 0 0 39430 0 " 39430
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe07 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe08 11 " 0 0 0 39480 0 " 39480
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe09 11 " 0 0 0 30814 0 " 30814
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe10 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe11 21 " 0 0 0 39544 0 " 39544
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe12 20 " 0 0 0 39608 0 " 39608
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe13 22 " 0 0 0 39704 0 " 39704
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe14 20 " 0 0 0 39480 0 " 39480
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe15 21 " 0 0 0 39480 0 " 39480
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe18 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe19 40 " 0 0 0 40336 0 " 40336
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe20 41 " 0 0 0 40520 0 " 40520
+Alpha |DEBUG local.tests/e4/input/2019_2/qwe21 42 " 0 0 0 40428 0 " 40428
+Alpha |DEBUG local.tests/e4/input/2019_2/s00.iks 10 " 0 0 0 39494 0 " 39494
+Alpha |DEBUG local.tests/e4/input/2019_2/s01.iks 10 " 0 0 0 39730 0 " 39730
+Alpha |DEBUG local.tests/e4/input/2019_2/s02.iks 10 " 0 0 0 39430 0 " 39430
+Alpha |DEBUG local.tests/e4/input/2019_2/s03.iks 11 " 0 0 0 39480 0 " 39480
+Alpha |DEBUG local.tests/e4/input/2019_2/s04.iks 11 " 0 0 0 30694 0 " 30694
+Alpha |DEBUG local.tests/e4/input/2019_2/s05.iks 20 " 0 0 0 39608 0 " 39608
+Alpha |DEBUG local.tests/e4/input/2019_2/s06.iks 21 " 0 0 0 39544 0 " 39544
+Alpha |DEBUG local.tests/e4/input/2019_2/s07.iks 22 " 0 0 0 39584 0 " 39584
+Alpha |DEBUG local.tests/e4/input/2019_2/s08.iks 31 " 0 0 0 39576 0 " 39576
+Alpha |DEBUG local.tests/e4/input/2019_2/s09.iks 32 " 0 0 0 39572 0 " 39572
+Alpha |DEBUG local.tests/e4/input/2019_2/s10.iks 40 " 0 0 0 39984 0 " 39984
+Alpha |DEBUG local.tests/e4/input/2019_2/s11.iks 41 " 0 0 0 40136 0 " 40136
+Alpha |DEBUG local.tests/e4/input/2019_2/s12.iks 42 " 0 0 0 40124 0 " 40124
+Alpha |DEBUG local.tests/e4/input/2019_2/s13.iks 42 " 0 0 0 40128 0 " 40128
+Alpha |DEBUG local.tests/e4/input/2019_2/s14.iks 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/s15.iks 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/s16.iks 52 " 0 0 0 39484 0 " 39484
+Alpha |DEBUG local.tests/e4/input/2019_2/s17.iks 31 " 0 0 0 39576 0 " 39576
+Alpha |DEBUG local.tests/e4/input/2019_2/s18.iks 32 " 0 0 0 39576 0 " 39576
+Alpha |DEBUG local.tests/e4/input/2019_2/s19.iks 30 " 0 0 0 39524 0 " 39524
+Alpha |DEBUG local.tests/e4/input/2019_2/s20.iks 30 " 0 0 0 39520 0 " 39520
+Alpha |DEBUG local.tests/e4/input/2019_2/s21.iks 30 " 0 0 0 39544 0 " 39544
+Alpha |DEBUG local.tests/e4/input/2019_2/s22.iks 30 " 0 0 0 39548 0 " 39548
+Alpha |DEBUG local.tests/e4/input/2019_2/s23.iks 31 " 0 0 0 39664 0 " 39664
+Alpha |DEBUG local.tests/e4/input/2019_2/s24.iks 32 " 0 0 0 39660 0 " 39660
+Alpha |DEBUG local.tests/e4/input/2019_2/s25.iks 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/s26.iks 32 " 0 0 0 39692 0 " 39692
+Alpha |DEBUG local.tests/e4/input/2019_2/s27.iks 31 " 0 0 0 39760 0 " 39760
+Alpha |DEBUG local.tests/e4/input/2019_2/s28.iks 31 " 0 0 0 39918 0 " 39918
+Alpha |DEBUG local.tests/e4/input/2019_2/s29.iks 32 " 0 0 0 39918 0 " 39918
+Alpha |DEBUG local.tests/e4/input/2019_2/s30.iks 52 " 0 0 0 39616 0 " 39616
+Alpha |DEBUG local.tests/e4/input/2019_2/s31.iks 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/s32.iks 10 " 0 0 0 39584 0 " 39584
+Alpha |DEBUG local.tests/e4/input/2019_2/s33.iks 10 " 0 0 0 39584 0 " 39584
+Alpha |DEBUG local.tests/e4/input/2019_2/s34.iks 10 " 0 0 0 39558 0 " 39558
+Alpha |DEBUG local.tests/e4/input/2019_2/s35.iks 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/s36.iks 11 " 0 0 0 39480 0 " 39480
+Alpha |DEBUG local.tests/e4/input/2019_2/s37.iks 0 "no leaks are possible" 0
+Alpha |DEBUG local.tests/e4/input/2019_2/s38.iks 31 " 0 0 0 39734 0 " 39734
+Alpha |DEBUG local.tests/e4/input/2019_2/s39.iks 10 " 0 0 0 118758 0 " 118758
+Alpha |DEBUG local.tests/e4/input/2019_2/s40.iks 0 "no leaks are possible" 0
+~/ensino/private
+
+Beta
+
+~/ensino/private/E4/Beta ~/ensino/private
+There are 106 tests
+Beta |DEBUG local.tests/e4/input/2019_2/poi01 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi02 1 " 0 0 0 17003 0 " 17003
+Beta |DEBUG local.tests/e4/input/2019_2/poi03 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi04 10 " 0 0 0 16800 0 " 16800
+Beta |DEBUG local.tests/e4/input/2019_2/poi05 10 " 0 0 0 16800 0 " 16800
+Beta |DEBUG local.tests/e4/input/2019_2/poi06 10 " 0 0 0 16772 0 " 16772
+Beta |DEBUG local.tests/e4/input/2019_2/poi07 11 " 0 0 0 16554 0 " 16554
+Beta |DEBUG local.tests/e4/input/2019_2/poi08 11 " 0 0 0 16642 0 " 16642
+Beta |DEBUG local.tests/e4/input/2019_2/poi09 11 " 0 0 0 16556 0 " 16556
+Beta |DEBUG local.tests/e4/input/2019_2/poi10 11 " 0 0 0 16755 0 " 16755
+Beta |DEBUG local.tests/e4/input/2019_2/poi11 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi12 20 " 0 0 0 16840 0 " 16840
+Beta |DEBUG local.tests/e4/input/2019_2/poi13 21 " 0 0 0 16906 0 " 16906
+Beta |DEBUG local.tests/e4/input/2019_2/poi14 22 " 0 0 0 17107 0 " 17107
+Beta |DEBUG local.tests/e4/input/2019_2/poi15 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi17 31 " 0 0 0 16912 0 " 16912
+Beta |DEBUG local.tests/e4/input/2019_2/poi18 32 " 0 0 0 16908 0 " 16908
+Beta |DEBUG local.tests/e4/input/2019_2/poi21 32 " 0 0 0 17172 0 " 17172
+Beta |DEBUG local.tests/e4/input/2019_2/poi22 31 " 0 0 0 17172 0 " 17172
+Beta |DEBUG local.tests/e4/input/2019_2/poi24 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi25 40 " 0 0 0 17095 0 " 17095
+Beta |DEBUG local.tests/e4/input/2019_2/poi26 41 " 0 0 0 17227 0 " 17227
+Beta |DEBUG local.tests/e4/input/2019_2/poi27 42 " 0 0 0 17161 0 " 17161
+Beta |DEBUG local.tests/e4/input/2019_2/poi28 11 " 0 0 0 16758 0 " 16758
+Beta |DEBUG local.tests/e4/input/2019_2/poi29 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi30 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi31 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi32 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi33 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi35 50 " 0 0 0 16718 0 " 16718
+Beta |DEBUG local.tests/e4/input/2019_2/poi36 50 " 0 0 0 16716 0 " 16716
+Beta |DEBUG local.tests/e4/input/2019_2/poi37 50 " 0 0 0 16716 0 " 16716
+Beta |DEBUG local.tests/e4/input/2019_2/poi38 50 " 0 0 0 16716 0 " 16716
+Beta |DEBUG local.tests/e4/input/2019_2/poi39 50 " 0 0 0 16716 0 " 16716
+Beta |DEBUG local.tests/e4/input/2019_2/poi40 50 " 0 0 0 16716 0 " 16716
+Beta |DEBUG local.tests/e4/input/2019_2/poi41 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi42 51 " 0 0 0 16717 0 " 16717
+Beta |DEBUG local.tests/e4/input/2019_2/poi43 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi44 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi45 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi46 22 " 0 0 0 16984 0 " 16984
+Beta |DEBUG local.tests/e4/input/2019_2/poi47 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi48 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi49 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/poi50 52 " 0 0 0 16756 0 " 16756
+Beta |DEBUG local.tests/e4/input/2019_2/poi51 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/qwe01 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/qwe02 10 " 0 0 0 16800 0 " 16800
+Beta |DEBUG local.tests/e4/input/2019_2/qwe03 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/qwe04 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/qwe05 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/qwe06 10 " 0 0 0 16738 0 " 16738
+Beta |DEBUG local.tests/e4/input/2019_2/qwe07 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/qwe08 11 " 0 0 0 16642 0 " 16642
+Beta |DEBUG local.tests/e4/input/2019_2/qwe09 11 " 0 0 0 16753 0 " 16753
+Beta |DEBUG local.tests/e4/input/2019_2/qwe10 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/qwe11 21 " 0 0 0 16866 0 " 16866
+Beta |DEBUG local.tests/e4/input/2019_2/qwe12 20 " 0 0 0 16834 0 " 16834
+Beta |DEBUG local.tests/e4/input/2019_2/qwe13 22 " 0 0 0 17065 0 " 17065
+Beta |DEBUG local.tests/e4/input/2019_2/qwe14 20 " 0 0 0 16772 0 " 16772
+Beta |DEBUG local.tests/e4/input/2019_2/qwe15 21 " 0 0 0 16804 0 " 16804
+Beta |DEBUG local.tests/e4/input/2019_2/qwe18 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/qwe19 40 " 0 0 0 17385 0 " 17385
+Beta |DEBUG local.tests/e4/input/2019_2/qwe20 41 " 0 0 0 17649 0 " 17649
+Beta |DEBUG local.tests/e4/input/2019_2/qwe21 42 " 0 0 0 17517 0 " 17517
+Beta |DEBUG local.tests/e4/input/2019_2/s00.iks 10 " 0 0 0 16800 0 " 16800
+Beta |DEBUG local.tests/e4/input/2019_2/s01.iks 10 " 0 0 0 17028 0 " 17028
+Beta |DEBUG local.tests/e4/input/2019_2/s02.iks 10 " 0 0 0 16738 0 " 16738
+Beta |DEBUG local.tests/e4/input/2019_2/s03.iks 11 " 0 0 0 16642 0 " 16642
+Beta |DEBUG local.tests/e4/input/2019_2/s04.iks 11 " 0 0 0 16554 0 " 16554
+Beta |DEBUG local.tests/e4/input/2019_2/s05.iks 20 " 0 0 0 16834 0 " 16834
+Beta |DEBUG local.tests/e4/input/2019_2/s06.iks 21 " 0 0 0 16866 0 " 16866
+Beta |DEBUG local.tests/e4/input/2019_2/s07.iks 22 " 0 0 0 16866 0 " 16866
+Beta |DEBUG local.tests/e4/input/2019_2/s08.iks 31 " 0 0 0 16938 0 " 16938
+Beta |DEBUG local.tests/e4/input/2019_2/s09.iks 32 " 0 0 0 16934 0 " 16934
+Beta |DEBUG local.tests/e4/input/2019_2/s10.iks 40 " 0 0 0 16854 0 " 16854
+Beta |DEBUG local.tests/e4/input/2019_2/s11.iks 41 " 0 0 0 16982 0 " 16982
+Beta |DEBUG local.tests/e4/input/2019_2/s12.iks 42 " 0 0 0 16954 0 " 16954
+Beta |DEBUG local.tests/e4/input/2019_2/s13.iks 42 " 0 0 0 16958 0 " 16958
+Beta |DEBUG local.tests/e4/input/2019_2/s14.iks 50 " 0 0 0 16681 0 " 16681
+Beta |DEBUG local.tests/e4/input/2019_2/s15.iks 51 " 0 0 0 16677 0 " 16677
+Beta |DEBUG local.tests/e4/input/2019_2/s16.iks 52 " 0 0 0 16753 0 " 16753
+Beta |DEBUG local.tests/e4/input/2019_2/s17.iks 30 " 0 0 0 16938 0 " 16938
+Beta |DEBUG local.tests/e4/input/2019_2/s18.iks 30 " 0 0 0 16938 0 " 16938
+Beta |DEBUG local.tests/e4/input/2019_2/s19.iks 30 " 0 0 0 16906 0 " 16906
+Beta |DEBUG local.tests/e4/input/2019_2/s20.iks 30 " 0 0 0 16902 0 " 16902
+Beta |DEBUG local.tests/e4/input/2019_2/s21.iks 30 " 0 0 0 16834 0 " 16834
+Beta |DEBUG local.tests/e4/input/2019_2/s22.iks 30 " 0 0 0 16838 0 " 16838
+Beta |DEBUG local.tests/e4/input/2019_2/s23.iks 1 " 0 0 0 16714 0 " 16714
+Beta |DEBUG local.tests/e4/input/2019_2/s24.iks 1 " 0 0 0 16710 0 " 16710
+Beta |DEBUG local.tests/e4/input/2019_2/s25.iks 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/s26.iks 32 " 0 0 0 16966 0 " 16966
+Beta |DEBUG local.tests/e4/input/2019_2/s27.iks 31 " 0 0 0 17034 0 " 17034
+Beta |DEBUG local.tests/e4/input/2019_2/s28.iks 31 " 0 0 0 17299 0 " 17299
+Beta |DEBUG local.tests/e4/input/2019_2/s29.iks 32 " 0 0 0 17299 0 " 17299
+Beta |DEBUG local.tests/e4/input/2019_2/s30.iks 52 " 0 0 0 17084 0 " 17084
+Beta |DEBUG local.tests/e4/input/2019_2/s31.iks 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/s32.iks 10 " 0 0 0 16866 0 " 16866
+Beta |DEBUG local.tests/e4/input/2019_2/s33.iks 10 " 0 0 0 16866 0 " 16866
+Beta |DEBUG local.tests/e4/input/2019_2/s34.iks 139 " 0 0 0 20794 0 " 20794
+Beta |DEBUG local.tests/e4/input/2019_2/s35.iks 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/s36.iks 11 " 0 0 0 16642 0 " 16642
+Beta |DEBUG local.tests/e4/input/2019_2/s37.iks 0 "no leaks are possible" 0
+Beta |DEBUG local.tests/e4/input/2019_2/s38.iks 31 " 0 0 0 17171 0 " 17171
+Beta |DEBUG local.tests/e4/input/2019_2/s39.iks 139 " 0 0 0 21242 0 " 21242
+Beta |DEBUG local.tests/e4/input/2019_2/s40.iks 0 "no leaks are possible" 0
+~/ensino/private
+
+Delta
+
+~/ensino/private/E4/Delta ~/ensino/private
+There are 106 tests
+Delta |DEBUG local.tests/e4/input/2019_2/poi01 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi02 22 " 0 0 0 18863 0 " 18863
+Delta |DEBUG local.tests/e4/input/2019_2/poi03 20 " 0 0 0 17796 0 " 17796
+Delta |DEBUG local.tests/e4/input/2019_2/poi04 10 " 0 0 0 18212 0 " 18212
+Delta |DEBUG local.tests/e4/input/2019_2/poi05 10 " 0 0 0 18545 0 " 18545
+Delta |DEBUG local.tests/e4/input/2019_2/poi06 10 " 0 0 0 18130 0 " 18130
+Delta |DEBUG local.tests/e4/input/2019_2/poi07 11 " 0 0 0 17448 0 " 17448
+Delta |DEBUG local.tests/e4/input/2019_2/poi08 11 " 0 0 0 18220 0 " 18220
+Delta |DEBUG local.tests/e4/input/2019_2/poi09 22 " 0 0 0 18034 0 " 18034
+Delta |DEBUG local.tests/e4/input/2019_2/poi10 11 " 0 0 0 17619 0 " 17619
+Delta |DEBUG local.tests/e4/input/2019_2/poi11 11 " 0 0 0 17650 0 " 17650
+Delta |DEBUG local.tests/e4/input/2019_2/poi12 22 " 0 0 0 18469 0 " 18469
+Delta |DEBUG local.tests/e4/input/2019_2/poi13 21 " 0 0 0 18692 0 " 18692
+Delta |DEBUG local.tests/e4/input/2019_2/poi14 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi15 20 " 0 0 0 19469 0 " 19469
+Delta |DEBUG local.tests/e4/input/2019_2/poi17 30 " 0 0 0 18458 0 " 18458
+Delta |DEBUG local.tests/e4/input/2019_2/poi18 30 " 0 0 0 18454 0 " 18454
+Delta |DEBUG local.tests/e4/input/2019_2/poi21 30 " 0 0 0 18898 0 " 18898
+Delta |DEBUG local.tests/e4/input/2019_2/poi22 30 " 0 0 0 18898 0 " 18898
+Delta |DEBUG local.tests/e4/input/2019_2/poi24 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi25 20 " 0 0 0 18623 0 " 18623
+Delta |DEBUG local.tests/e4/input/2019_2/poi26 20 " 0 0 0 18787 0 " 18787
+Delta |DEBUG local.tests/e4/input/2019_2/poi27 20 " 0 0 0 18705 0 " 18705
+Delta |DEBUG local.tests/e4/input/2019_2/poi28 11 " 0 0 0 17588 0 " 17588
+Delta |DEBUG local.tests/e4/input/2019_2/poi29 20 " 0 0 0 18773 0 " 18773
+Delta |DEBUG local.tests/e4/input/2019_2/poi30 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi31 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi32 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi33 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi35 10 " 0 0 0 18393 0 " 18393
+Delta |DEBUG local.tests/e4/input/2019_2/poi36 10 " 0 0 0 18390 0 " 18390
+Delta |DEBUG local.tests/e4/input/2019_2/poi37 10 " 0 0 0 18392 0 " 18392
+Delta |DEBUG local.tests/e4/input/2019_2/poi38 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi39 10 " 0 0 0 18393 0 " 18393
+Delta |DEBUG local.tests/e4/input/2019_2/poi40 10 " 0 0 0 18394 0 " 18394
+Delta |DEBUG local.tests/e4/input/2019_2/poi41 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi42 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi43 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi44 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi45 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi46 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/poi47 52 " 0 0 0 18223 0 " 18223
+Delta |DEBUG local.tests/e4/input/2019_2/poi48 52 " 0 0 0 18223 0 " 18223
+Delta |DEBUG local.tests/e4/input/2019_2/poi49 52 " 0 0 0 18223 0 " 18223
+Delta |DEBUG local.tests/e4/input/2019_2/poi50 52 " 0 0 0 18393 0 " 18393
+Delta |DEBUG local.tests/e4/input/2019_2/poi51 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/qwe01 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/qwe02 10 " 0 0 0 18212 0 " 18212
+Delta |DEBUG local.tests/e4/input/2019_2/qwe03 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/qwe04 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/qwe05 20 " 0 0 0 17789 0 " 17789
+Delta |DEBUG local.tests/e4/input/2019_2/qwe06 10 " 0 0 0 17400 0 " 17400
+Delta |DEBUG local.tests/e4/input/2019_2/qwe07 11 " 0 0 0 17644 0 " 17644
+Delta |DEBUG local.tests/e4/input/2019_2/qwe08 11 " 0 0 0 18220 0 " 18220
+Delta |DEBUG local.tests/e4/input/2019_2/qwe09 11 " 0 0 0 17619 0 " 17619
+Delta |DEBUG local.tests/e4/input/2019_2/qwe10 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/qwe11 21 " 0 0 0 17956 0 " 17956
+Delta |DEBUG local.tests/e4/input/2019_2/qwe12 22 " 0 0 0 18464 0 " 18464
+Delta |DEBUG local.tests/e4/input/2019_2/qwe13 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/qwe14 20 " 0 0 0 18130 0 " 18130
+Delta |DEBUG local.tests/e4/input/2019_2/qwe15 21 " 0 0 0 17954 0 " 17954
+Delta |DEBUG local.tests/e4/input/2019_2/qwe18 20 " 0 0 0 19367 0 " 19367
+Delta |DEBUG local.tests/e4/input/2019_2/qwe19 20 " 0 0 0 19131 0 " 19131
+Delta |DEBUG local.tests/e4/input/2019_2/qwe20 20 " 0 0 0 19603 0 " 19603
+Delta |DEBUG local.tests/e4/input/2019_2/qwe21 20 " 0 0 0 19367 0 " 19367
+Delta |DEBUG local.tests/e4/input/2019_2/s00.iks 10 " 0 0 0 18212 0 " 18212
+Delta |DEBUG local.tests/e4/input/2019_2/s01.iks 10 " 0 0 0 18764 0 " 18764
+Delta |DEBUG local.tests/e4/input/2019_2/s02.iks 10 " 0 0 0 17400 0 " 17400
+Delta |DEBUG local.tests/e4/input/2019_2/s03.iks 11 " 0 0 0 18220 0 " 18220
+Delta |DEBUG local.tests/e4/input/2019_2/s04.iks 11 " 0 0 0 17450 0 " 17450
+Delta |DEBUG local.tests/e4/input/2019_2/s05.iks 22 " 0 0 0 18464 0 " 18464
+Delta |DEBUG local.tests/e4/input/2019_2/s06.iks 21 " 0 0 0 17956 0 " 17956
+Delta |DEBUG local.tests/e4/input/2019_2/s07.iks 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/s08.iks 30 " 0 0 0 17876 0 " 17876
+Delta |DEBUG local.tests/e4/input/2019_2/s09.iks 30 " 0 0 0 17872 0 " 17872
+Delta |DEBUG local.tests/e4/input/2019_2/s10.iks 20 " 0 0 0 17718 0 " 17718
+Delta |DEBUG local.tests/e4/input/2019_2/s11.iks 20 " 0 0 0 18796 0 " 18796
+Delta |DEBUG local.tests/e4/input/2019_2/s12.iks 20 " 0 0 0 18530 0 " 18530
+Delta |DEBUG local.tests/e4/input/2019_2/s13.iks 20 " 0 0 0 18534 0 " 18534
+Delta |DEBUG local.tests/e4/input/2019_2/s14.iks 10 " 0 0 0 18236 0 " 18236
+Delta |DEBUG local.tests/e4/input/2019_2/s15.iks 0 "no leaks are possible" 0
+Delta |DEBUG local.tests/e4/input/2019_2/s16.iks 52 " 0 0 0 18221 0 " 18221
+Delta |DEBUG local.tests/e4/input/2019_2/s17.iks 30 " 0 0 0 17876 0 " 17876
+Delta |DEBUG local.tests/e4/input/2019_2/s18.iks 30 " 0 0 0 17876 0 " 17876
+Delta |DEBUG local.tests/e4/input/2019_2/s19.iks 20 " 0 0 0 18202 0 " 18202
+Delta |DEBUG local.tests/e4/input/2019_2/s20.iks 20 " 0 0 0 18198 0 " 18198
+Delta |DEBUG local.tests/e4/input/2019_2/s21.iks 30 " 0 0 0 18465 0 " 18465
+Delta |DEBUG local.tests/e4/input/2019_2/s22.iks 30 " 0 0 0 18469 0 " 18469
+Delta |DEBUG local.tests/e4/input/2019_2/s23.iks 22 " 0 0 0 18853 0 " 18853
+Delta |DEBUG local.tests/e4/input/2019_2/s24.iks 22 " 0 0 0 18849 0 " 18849
+Delta |DEBUG local.tests/e4/input/2019_2/s25.iks 20 " 0 0 0 17407 0 " 17407
+Delta |DEBUG local.tests/e4/input/2019_2/s26.iks 30 " 0 0 0 18685 0 " 18685
+Delta |DEBUG local.tests/e4/input/2019_2/s27.iks 30 " 0 0 0 18929 0 " 18929
+Delta |DEBUG local.tests/e4/input/2019_2/s28.iks 20 " 0 0 0 19064 0 " 19064
+Delta |DEBUG local.tests/e4/input/2019_2/s29.iks 20 " 0 0 0 19064 0 " 19064
+Delta |DEBUG local.tests/e4/input/2019_2/s30.iks 20 " 0 0 0 17796 0 " 17796
+Delta |DEBUG local.tests/e4/input/2019_2/s31.iks 52 " 0 0 0 18234 0 " 18234
+Delta |DEBUG local.tests/e4/input/2019_2/s32.iks 10 " 0 0 0 18432 0 " 18432
+Delta |DEBUG local.tests/e4/input/2019_2/s33.iks 10 " 0 0 0 18432 0 " 18432
+Delta |DEBUG local.tests/e4/input/2019_2/s34.iks 10 " 0 0 0 18212 0 " 18212
+Delta |DEBUG local.tests/e4/input/2019_2/s35.iks 11 " 0 0 0 18260 0 " 18260
+Delta |DEBUG local.tests/e4/input/2019_2/s36.iks 11 " 0 0 0 18220 0 " 18220
+Delta |DEBUG local.tests/e4/input/2019_2/s37.iks 11 " 0 0 0 18260 0 " 18260
+Delta |DEBUG local.tests/e4/input/2019_2/s38.iks 20 " 0 0 0 18589 0 " 18589
+Delta |DEBUG local.tests/e4/input/2019_2/s39.iks 10 " 0 0 0 18572 0 " 18572
+Delta |DEBUG local.tests/e4/input/2019_2/s40.iks 0 "no leaks are possible" 0
+~/ensino/private
+
+Gamma
+
+~/ensino/private/E4/Gamma ~/ensino/private
+There are 106 tests
+Gamma |DEBUG local.tests/e4/input/2019_2/poi01 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi02 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi03 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi04 10 " 0 0 0 17157 0 " 17157
+Gamma |DEBUG local.tests/e4/input/2019_2/poi05 10 " 0 0 0 17519 0 " 17519
+Gamma |DEBUG local.tests/e4/input/2019_2/poi06 10 " 0 0 0 17043 0 " 17043
+Gamma |DEBUG local.tests/e4/input/2019_2/poi07 11 " 0 0 0 17654 0 " 17654
+Gamma |DEBUG local.tests/e4/input/2019_2/poi08 11 " 0 0 0 17850 0 " 17850
+Gamma |DEBUG local.tests/e4/input/2019_2/poi09 11 " 0 0 0 17654 0 " 17654
+Gamma |DEBUG local.tests/e4/input/2019_2/poi10 11 " 0 0 0 17849 0 " 17849
+Gamma |DEBUG local.tests/e4/input/2019_2/poi11 52 " 0 0 0 17041 0 " 17041
+Gamma |DEBUG local.tests/e4/input/2019_2/poi12 20 " 0 0 0 17402 0 " 17402
+Gamma |DEBUG local.tests/e4/input/2019_2/poi13 21 " 0 0 0 17279 0 " 17279
+Gamma |DEBUG local.tests/e4/input/2019_2/poi14 22 " 0 0 0 17474 0 " 17474
+Gamma |DEBUG local.tests/e4/input/2019_2/poi15 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi17 30 " 0 0 0 17227 0 " 17227
+Gamma |DEBUG local.tests/e4/input/2019_2/poi18 30 " 0 0 0 17223 0 " 17223
+Gamma |DEBUG local.tests/e4/input/2019_2/poi21 32 " 0 0 0 17603 0 " 17603
+Gamma |DEBUG local.tests/e4/input/2019_2/poi22 31 " 0 0 0 17603 0 " 17603
+Gamma |DEBUG local.tests/e4/input/2019_2/poi24 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi25 40 " 0 0 0 17336 0 " 17336
+Gamma |DEBUG local.tests/e4/input/2019_2/poi26 41 " 0 0 0 17452 0 " 17452
+Gamma |DEBUG local.tests/e4/input/2019_2/poi27 42 " 0 0 0 17394 0 " 17394
+Gamma |DEBUG local.tests/e4/input/2019_2/poi28 11 " 0 0 0 17884 0 " 17884
+Gamma |DEBUG local.tests/e4/input/2019_2/poi29 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi30 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi31 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi32 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi33 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi35 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi36 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi37 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi38 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi39 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi40 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi41 1 " 53 10 0 0 0 " 63
+Gamma |DEBUG local.tests/e4/input/2019_2/poi42 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi43 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/poi44 1 " 53 12 0 0 0 " 65
+Gamma |DEBUG local.tests/e4/input/2019_2/poi45 1 " 53 20 0 0 0 " 73
+Gamma |DEBUG local.tests/e4/input/2019_2/poi46 1 " 53 20 0 0 0 " 73
+Gamma |DEBUG local.tests/e4/input/2019_2/poi47 52 " 0 0 0 16983 0 " 16983
+Gamma |DEBUG local.tests/e4/input/2019_2/poi48 52 " 0 0 0 16983 0 " 16983
+Gamma |DEBUG local.tests/e4/input/2019_2/poi49 52 " 0 0 0 16983 0 " 16983
+Gamma |DEBUG local.tests/e4/input/2019_2/poi50 52 " 0 0 0 17041 0 " 17041
+Gamma |DEBUG local.tests/e4/input/2019_2/poi51 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe01 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe02 10 " 0 0 0 17157 0 " 17157
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe03 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe04 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe05 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe06 10 " 0 0 0 17041 0 " 17041
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe07 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe08 11 " 0 0 0 17850 0 " 17850
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe09 11 " 0 0 0 17905 0 " 17905
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe10 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe11 21 " 0 0 0 17271 0 " 17271
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe12 20 " 0 0 0 17453 0 " 17453
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe13 22 " 0 0 0 17464 0 " 17464
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe14 20 " 0 0 0 17099 0 " 17099
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe15 21 " 0 0 0 17099 0 " 17099
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe18 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe19 40 " 0 0 0 17626 0 " 17626
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe20 41 " 0 0 0 17858 0 " 17858
+Gamma |DEBUG local.tests/e4/input/2019_2/qwe21 42 " 0 0 0 17742 0 " 17742
+Gamma |DEBUG local.tests/e4/input/2019_2/s00.iks 10 " 0 0 0 17028 0 " 17028
+Gamma |DEBUG local.tests/e4/input/2019_2/s01.iks 10 " 0 0 0 17266 0 " 17266
+Gamma |DEBUG local.tests/e4/input/2019_2/s02.iks 10 " 0 0 0 16856 0 " 16856
+Gamma |DEBUG local.tests/e4/input/2019_2/s03.iks 11 " 0 0 0 17850 0 " 17850
+Gamma |DEBUG local.tests/e4/input/2019_2/s04.iks 11 " 0 0 0 17720 0 " 17720
+Gamma |DEBUG local.tests/e4/input/2019_2/s05.iks 20 " 0 0 0 17268 0 " 17268
+Gamma |DEBUG local.tests/e4/input/2019_2/s06.iks 21 " 0 0 0 17086 0 " 17086
+Gamma |DEBUG local.tests/e4/input/2019_2/s07.iks 22 " 0 0 0 17152 0 " 17152
+Gamma |DEBUG local.tests/e4/input/2019_2/s08.iks 30 " 0 0 0 17092 0 " 17092
+Gamma |DEBUG local.tests/e4/input/2019_2/s09.iks 30 " 0 0 0 17088 0 " 17088
+Gamma |DEBUG local.tests/e4/input/2019_2/s10.iks 40 " 0 0 0 17014 0 " 17014
+Gamma |DEBUG local.tests/e4/input/2019_2/s11.iks 41 " 0 0 0 17244 0 " 17244
+Gamma |DEBUG local.tests/e4/input/2019_2/s12.iks 42 " 0 0 0 17130 0 " 17130
+Gamma |DEBUG local.tests/e4/input/2019_2/s13.iks 42 " 0 0 0 17134 0 " 17134
+Gamma |DEBUG local.tests/e4/input/2019_2/s14.iks 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/s15.iks 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/s16.iks 52 " 0 0 0 16981 0 " 16981
+Gamma |DEBUG local.tests/e4/input/2019_2/s17.iks 30 " 0 0 0 17092 0 " 17092
+Gamma |DEBUG local.tests/e4/input/2019_2/s18.iks 30 " 0 0 0 17092 0 " 17092
+Gamma |DEBUG local.tests/e4/input/2019_2/s19.iks 30 " 0 0 0 17042 0 " 17042
+Gamma |DEBUG local.tests/e4/input/2019_2/s20.iks 30 " 0 0 0 17038 0 " 17038
+Gamma |DEBUG local.tests/e4/input/2019_2/s21.iks 30 " 0 0 0 17094 0 " 17094
+Gamma |DEBUG local.tests/e4/input/2019_2/s22.iks 30 " 0 0 0 17098 0 " 17098
+Gamma |DEBUG local.tests/e4/input/2019_2/s23.iks 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/s24.iks 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/s25.iks 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/s26.iks 32 " 0 0 0 17277 0 " 17277
+Gamma |DEBUG local.tests/e4/input/2019_2/s27.iks 31 " 0 0 0 17671 0 " 17671
+Gamma |DEBUG local.tests/e4/input/2019_2/s28.iks 31 " 0 0 0 17872 0 " 17872
+Gamma |DEBUG local.tests/e4/input/2019_2/s29.iks 32 " 0 0 0 17872 0 " 17872
+Gamma |DEBUG local.tests/e4/input/2019_2/s30.iks 52 " 0 0 0 17180 0 " 17180
+Gamma |DEBUG local.tests/e4/input/2019_2/s31.iks 52 " 0 0 0 16983 0 " 16983
+Gamma |DEBUG local.tests/e4/input/2019_2/s32.iks 10 " 0 0 0 17152 0 " 17152
+Gamma |DEBUG local.tests/e4/input/2019_2/s33.iks 10 " 0 0 0 17152 0 " 17152
+Gamma |DEBUG local.tests/e4/input/2019_2/s34.iks 10 " 0 0 0 17087 0 " 17087
+Gamma |DEBUG local.tests/e4/input/2019_2/s35.iks 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/s36.iks 11 " 0 0 0 17850 0 " 17850
+Gamma |DEBUG local.tests/e4/input/2019_2/s37.iks 0 "no leaks are possible" 0
+Gamma |DEBUG local.tests/e4/input/2019_2/s38.iks 30 " 0 0 0 17293 0 " 17293
+Gamma |DEBUG local.tests/e4/input/2019_2/s39.iks 10 " 0 0 0 18370 0 " 18370
+Gamma |DEBUG local.tests/e4/input/2019_2/s40.iks 0 "no leaks are possible" 0
+~/ensino/private
+
+Iota
+
+~/ensino/private/E4/Iota ~/ensino/private
+There are 106 tests
+Iota |DEBUG local.tests/e4/input/2019_2/poi01 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi02 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi03 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi04 10 " 0 0 0 16458 0 " 16458
+Iota |DEBUG local.tests/e4/input/2019_2/poi05 10 " 0 0 0 16458 0 " 16458
+Iota |DEBUG local.tests/e4/input/2019_2/poi06 10 " 0 0 0 16458 0 " 16458
+Iota |DEBUG local.tests/e4/input/2019_2/poi07 11 " 0 0 0 16458 0 " 16458
+Iota |DEBUG local.tests/e4/input/2019_2/poi08 11 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/poi09 11 " 0 0 0 16458 0 " 16458
+Iota |DEBUG local.tests/e4/input/2019_2/poi10 11 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/poi11 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi12 20 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/poi13 21 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/poi14 22 " 0 0 0 16746 0 " 16746
+Iota |DEBUG local.tests/e4/input/2019_2/poi15 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi17 31 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/poi18 32 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/poi21 32 " 0 0 0 16818 0 " 16818
+Iota |DEBUG local.tests/e4/input/2019_2/poi22 31 " 0 0 0 16818 0 " 16818
+Iota |DEBUG local.tests/e4/input/2019_2/poi24 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi25 40 " 0 0 0 16818 0 " 16818
+Iota |DEBUG local.tests/e4/input/2019_2/poi26 41 " 0 0 0 16962 0 " 16962
+Iota |DEBUG local.tests/e4/input/2019_2/poi27 42 " 0 0 0 16890 0 " 16890
+Iota |DEBUG local.tests/e4/input/2019_2/poi28 11 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/poi29 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi30 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi31 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi32 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi33 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi35 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi36 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi37 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi38 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi39 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi40 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi41 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi42 51 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/poi43 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi44 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi45 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi46 22 " 0 0 0 16818 0 " 16818
+Iota |DEBUG local.tests/e4/input/2019_2/poi47 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi48 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi49 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/poi50 52 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/poi51 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/qwe01 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/qwe02 10 " 0 0 0 16458 0 " 16458
+Iota |DEBUG local.tests/e4/input/2019_2/qwe03 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/qwe04 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/qwe05 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/qwe06 10 " 0 0 0 16458 0 " 16458
+Iota |DEBUG local.tests/e4/input/2019_2/qwe07 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/qwe08 11 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/qwe09 11 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/qwe10 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/qwe11 21 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/qwe12 20 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/qwe13 22 " 0 0 0 16746 0 " 16746
+Iota |DEBUG local.tests/e4/input/2019_2/qwe14 20 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/qwe15 21 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/qwe18 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/qwe19 40 " 0 0 0 16962 0 " 16962
+Iota |DEBUG local.tests/e4/input/2019_2/qwe20 41 " 0 0 0 17106 0 " 17106
+Iota |DEBUG local.tests/e4/input/2019_2/qwe21 42 " 0 0 0 17034 0 " 17034
+Iota |DEBUG local.tests/e4/input/2019_2/s00.iks 10 " 0 0 0 16458 0 " 16458
+Iota |DEBUG local.tests/e4/input/2019_2/s01.iks 10 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s02.iks 10 " 0 0 0 16458 0 " 16458
+Iota |DEBUG local.tests/e4/input/2019_2/s03.iks 11 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/s04.iks 11 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/s05.iks 20 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s06.iks 21 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/s07.iks 22 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/s08.iks 31 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s09.iks 32 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s10.iks 40 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s11.iks 41 " 0 0 0 16818 0 " 16818
+Iota |DEBUG local.tests/e4/input/2019_2/s12.iks 42 " 0 0 0 16746 0 " 16746
+Iota |DEBUG local.tests/e4/input/2019_2/s13.iks 42 " 0 0 0 16746 0 " 16746
+Iota |DEBUG local.tests/e4/input/2019_2/s14.iks 50 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/s15.iks 51 " 0 0 0 16602 0 " 16602
+Iota |DEBUG local.tests/e4/input/2019_2/s16.iks 52 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/s17.iks 31 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s18.iks 32 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s19.iks 30 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s20.iks 30 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s21.iks 30 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s22.iks 30 " 0 0 0 16674 0 " 16674
+Iota |DEBUG local.tests/e4/input/2019_2/s23.iks 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/s24.iks 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/s25.iks 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/s26.iks 32 " 0 0 0 16746 0 " 16746
+Iota |DEBUG local.tests/e4/input/2019_2/s27.iks 31 " 0 0 0 16818 0 " 16818
+Iota |DEBUG local.tests/e4/input/2019_2/s28.iks 31 " 0 0 0 17034 0 " 17034
+Iota |DEBUG local.tests/e4/input/2019_2/s29.iks 32 " 0 0 0 17034 0 " 17034
+Iota |DEBUG local.tests/e4/input/2019_2/s30.iks 52 " 0 0 0 16746 0 " 16746
+Iota |DEBUG local.tests/e4/input/2019_2/s31.iks 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/s32.iks 10 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/s33.iks 10 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/s34.iks 10 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/s35.iks 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/s36.iks 11 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/s37.iks 0 "no leaks are possible" 0
+Iota |DEBUG local.tests/e4/input/2019_2/s38.iks 31 " 0 0 0 16890 0 " 16890
+Iota |DEBUG local.tests/e4/input/2019_2/s39.iks 10 " 0 0 0 16530 0 " 16530
+Iota |DEBUG local.tests/e4/input/2019_2/s40.iks 0 "no leaks are possible" 0
+~/ensino/private
+
+Kappa
+
+~/ensino/private/E4/Kappa ~/ensino/private
+There are 106 tests
+Kappa |DEBUG local.tests/e4/input/2019_2/poi01 0 " 2416 0 0 2500 0 " 4916
+Kappa |DEBUG local.tests/e4/input/2019_2/poi02 0 " 2416 0 0 2500 0 " 4916
+Kappa |DEBUG local.tests/e4/input/2019_2/poi03 0 " 4832 42 0 2500 0 " 7374
+Kappa |DEBUG local.tests/e4/input/2019_2/poi04 10 " 0 0 0 21916 0 " 21916
+Kappa |DEBUG local.tests/e4/input/2019_2/poi05 10 " 0 0 0 22118 0 " 22118
+Kappa |DEBUG local.tests/e4/input/2019_2/poi06 10 " 0 0 0 21930 0 " 21930
+Kappa |DEBUG local.tests/e4/input/2019_2/poi07 11 " 0 0 0 19232 0 " 19232
+Kappa |DEBUG local.tests/e4/input/2019_2/poi08 11 " 0 0 0 21886 0 " 21886
+Kappa |DEBUG local.tests/e4/input/2019_2/poi09 11 " 0 0 0 19512 0 " 19512
+Kappa |DEBUG local.tests/e4/input/2019_2/poi10 11 " 2416 42 0 22956 0 " 25414
+Kappa |DEBUG local.tests/e4/input/2019_2/poi11 0 " 2416 42 0 2503 0 " 4961
+Kappa |DEBUG local.tests/e4/input/2019_2/poi12 20 " 0 0 0 22321 0 " 22321
+Kappa |DEBUG local.tests/e4/input/2019_2/poi13 21 " 0 0 0 22458 0 " 22458
+Kappa |DEBUG local.tests/e4/input/2019_2/poi14 22 " 2416 42 0 22950 0 " 25408
+Kappa |DEBUG local.tests/e4/input/2019_2/poi15 10 " 0 0 0 22235 0 " 22235
+Kappa |DEBUG local.tests/e4/input/2019_2/poi17 31 " 0 0 0 22328 0 " 22328
+Kappa |DEBUG local.tests/e4/input/2019_2/poi18 32 " 0 0 0 22320 0 " 22320
+Kappa |DEBUG local.tests/e4/input/2019_2/poi21 30 " 0 0 0 22980 0 " 22980
+Kappa |DEBUG local.tests/e4/input/2019_2/poi22 30 " 0 0 0 22982 0 " 22982
+Kappa |DEBUG local.tests/e4/input/2019_2/poi24 0 " 2416 126 0 2461 0 " 5003
+Kappa |DEBUG local.tests/e4/input/2019_2/poi25 10 " 0 0 0 21887 0 " 21887
+Kappa |DEBUG local.tests/e4/input/2019_2/poi26 10 " 0 0 0 21887 0 " 21887
+Kappa |DEBUG local.tests/e4/input/2019_2/poi27 10 " 0 0 0 21887 0 " 21887
+Kappa |DEBUG local.tests/e4/input/2019_2/poi28 0 " 4848 84 0 2519 0 " 7451
+Kappa |DEBUG local.tests/e4/input/2019_2/poi29 10 " 0 0 0 21887 0 " 21887
+Kappa |DEBUG local.tests/e4/input/2019_2/poi30 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi31 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi32 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi33 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi35 50 " 0 0 0 21958 0 " 21958
+Kappa |DEBUG local.tests/e4/input/2019_2/poi36 50 " 0 0 0 21955 0 " 21955
+Kappa |DEBUG local.tests/e4/input/2019_2/poi37 50 " 0 0 0 21937 0 " 21937
+Kappa |DEBUG local.tests/e4/input/2019_2/poi38 50 " 0 0 0 21957 0 " 21957
+Kappa |DEBUG local.tests/e4/input/2019_2/poi39 50 " 0 0 0 21958 0 " 21958
+Kappa |DEBUG local.tests/e4/input/2019_2/poi40 50 " 0 0 0 21959 0 " 21959
+Kappa |DEBUG local.tests/e4/input/2019_2/poi41 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi42 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi43 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi44 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi45 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi46 10 " 0 0 0 22615 0 " 22615
+Kappa |DEBUG local.tests/e4/input/2019_2/poi47 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi48 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi49 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/poi50 52 " 0 0 0 22025 0 " 22025
+Kappa |DEBUG local.tests/e4/input/2019_2/poi51 0 " 2416 42 0 2461 0 " 4919
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe01 0 " 2416 0 0 2500 0 " 4916
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe02 10 " 0 0 0 21916 0 " 21916
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe03 0 " 2416 42 0 2458 0 " 4916
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe04 0 " 2416 0 0 2458 0 " 4874
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe05 0 " 4832 0 0 2500 0 " 7332
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe06 10 " 0 0 0 21730 0 " 21730
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe07 0 " 2416 42 0 2500 0 " 4958
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe08 11 " 0 0 0 21886 0 " 21886
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe09 11 " 2416 0 0 22594 0 " 25010
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe10 0 " 2416 42 0 2458 0 " 4916
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe11 21 " 0 0 0 22255 0 " 22255
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe12 20 " 0 0 0 22319 0 " 22319
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe13 22 " 2416 0 0 22589 0 " 25005
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe14 20 " 0 0 0 21930 0 " 21930
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe15 21 " 0 0 0 22069 0 " 22069
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe18 0 " 4848 200 0 2548 0 " 7596
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe19 40 " 2432 32 0 23569 0 " 26033
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe20 41 " 2432 32 0 24293 0 " 26757
+Kappa |DEBUG local.tests/e4/input/2019_2/qwe21 42 " 2432 32 0 23934 0 " 26398
+Kappa |DEBUG local.tests/e4/input/2019_2/s00.iks 10 " 0 0 0 21916 0 " 21916
+Kappa |DEBUG local.tests/e4/input/2019_2/s01.iks 10 " 0 0 0 22504 0 " 22504
+Kappa |DEBUG local.tests/e4/input/2019_2/s02.iks 10 " 0 0 0 21730 0 " 21730
+Kappa |DEBUG local.tests/e4/input/2019_2/s03.iks 11 " 0 0 0 21886 0 " 21886
+Kappa |DEBUG local.tests/e4/input/2019_2/s04.iks 11 " 0 0 0 19600 0 " 19600
+Kappa |DEBUG local.tests/e4/input/2019_2/s05.iks 20 " 0 0 0 22319 0 " 22319
+Kappa |DEBUG local.tests/e4/input/2019_2/s06.iks 21 " 0 0 0 22255 0 " 22255
+Kappa |DEBUG local.tests/e4/input/2019_2/s07.iks 22 " 0 0 0 22300 0 " 22300
+Kappa |DEBUG local.tests/e4/input/2019_2/s08.iks 31 " 0 0 0 22325 0 " 22325
+Kappa |DEBUG local.tests/e4/input/2019_2/s09.iks 32 " 0 0 0 22317 0 " 22317
+Kappa |DEBUG local.tests/e4/input/2019_2/s10.iks 40 " 16 0 0 22248 0 " 22264
+Kappa |DEBUG local.tests/e4/input/2019_2/s11.iks 41 " 16 0 0 22534 0 " 22550
+Kappa |DEBUG local.tests/e4/input/2019_2/s12.iks 42 " 16 0 0 22571 0 " 22587
+Kappa |DEBUG local.tests/e4/input/2019_2/s13.iks 42 " 16 0 0 22579 0 " 22595
+Kappa |DEBUG local.tests/e4/input/2019_2/s14.iks 50 " 0 0 0 21758 0 " 21758
+Kappa |DEBUG local.tests/e4/input/2019_2/s15.iks 0 " 2416 0 0 2458 0 " 4874
+Kappa |DEBUG local.tests/e4/input/2019_2/s16.iks 52 " 0 0 0 22026 0 " 22026
+Kappa |DEBUG local.tests/e4/input/2019_2/s17.iks 31 " 0 0 0 22326 0 " 22326
+Kappa |DEBUG local.tests/e4/input/2019_2/s18.iks 32 " 0 0 0 22326 0 " 22326
+Kappa |DEBUG local.tests/e4/input/2019_2/s19.iks 10 " 0 0 0 22037 0 " 22037
+Kappa |DEBUG local.tests/e4/input/2019_2/s20.iks 10 " 0 0 0 22029 0 " 22029
+Kappa |DEBUG local.tests/e4/input/2019_2/s21.iks 30 " 0 0 0 22099 0 " 22099
+Kappa |DEBUG local.tests/e4/input/2019_2/s22.iks 30 " 0 0 0 22107 0 " 22107
+Kappa |DEBUG local.tests/e4/input/2019_2/s23.iks 30 " 0 0 0 22666 0 " 22666
+Kappa |DEBUG local.tests/e4/input/2019_2/s24.iks 30 " 0 0 0 22658 0 " 22658
+Kappa |DEBUG local.tests/e4/input/2019_2/s25.iks 10 " 0 0 0 21794 0 " 21794
+Kappa |DEBUG local.tests/e4/input/2019_2/s26.iks 30 " 0 0 0 22416 0 " 22416
+Kappa |DEBUG local.tests/e4/input/2019_2/s27.iks 30 " 0 0 0 22568 0 " 22568
+Kappa |DEBUG local.tests/e4/input/2019_2/s28.iks 30 " 2416 44 0 23280 0 " 25740
+Kappa |DEBUG local.tests/e4/input/2019_2/s29.iks 30 " 2416 44 0 23276 0 " 25736
+Kappa |DEBUG local.tests/e4/input/2019_2/s30.iks 52 " 2416 42 0 22730 0 " 25188
+Kappa |DEBUG local.tests/e4/input/2019_2/s31.iks 0 " 4832 42 0 2500 0 " 7374
+Kappa |DEBUG local.tests/e4/input/2019_2/s32.iks 10 " 2416 42 0 22458 0 " 24916
+Kappa |DEBUG local.tests/e4/input/2019_2/s33.iks 10 " 2416 42 0 22458 0 " 24916
+Kappa |DEBUG local.tests/e4/input/2019_2/s34.iks 10 " 0 0 0 24652 0 " 24652
+Kappa |DEBUG local.tests/e4/input/2019_2/s35.iks 0 " 2416 2500 0 2458 0 " 7374
+Kappa |DEBUG local.tests/e4/input/2019_2/s36.iks 11 " 0 0 0 21888 0 " 21888
+Kappa |DEBUG local.tests/e4/input/2019_2/s37.iks 0 " 2416 2500 0 2458 0 " 7374
+Kappa |DEBUG local.tests/e4/input/2019_2/s38.iks 31 " 2416 44 0 23037 0 " 25497
+Kappa |DEBUG local.tests/e4/input/2019_2/s39.iks 10 " 2416 42 0 44298 0 " 46756
+Kappa |DEBUG local.tests/e4/input/2019_2/s40.iks 0 " 2416 21744 0 2500 0 " 26660
+~/ensino/private
+
+Omicron
+
+~/ensino/private/E4/Omicron ~/ensino/private
+There are 106 tests
+Omicron |DEBUG local.tests/e4/input/2019_2/poi01 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi02 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi03 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi04 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi05 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi06 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi07 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi08 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi09 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi10 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi11 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi12 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi13 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi14 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi15 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi17 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi18 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi21 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi22 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi24 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi25 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi26 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi27 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi28 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi29 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi30 0 " 32 18 0 0 0 " 50
+Omicron |DEBUG local.tests/e4/input/2019_2/poi31 0 " 32 18 0 0 0 " 50
+Omicron |DEBUG local.tests/e4/input/2019_2/poi32 0 " 32 18 0 0 0 " 50
+Omicron |DEBUG local.tests/e4/input/2019_2/poi33 0 " 32 18 0 0 0 " 50
+Omicron |DEBUG local.tests/e4/input/2019_2/poi35 0 " 32 21 0 0 0 " 53
+Omicron |DEBUG local.tests/e4/input/2019_2/poi36 0 " 32 16 0 0 0 " 48
+Omicron |DEBUG local.tests/e4/input/2019_2/poi37 0 " 32 16 0 0 0 " 48
+Omicron |DEBUG local.tests/e4/input/2019_2/poi38 0 " 32 16 0 0 0 " 48
+Omicron |DEBUG local.tests/e4/input/2019_2/poi39 0 " 32 16 0 0 0 " 48
+Omicron |DEBUG local.tests/e4/input/2019_2/poi40 0 " 32 16 0 0 0 " 48
+Omicron |DEBUG local.tests/e4/input/2019_2/poi41 0 " 32 68 0 0 0 " 100
+Omicron |DEBUG local.tests/e4/input/2019_2/poi42 0 " 32 16 0 0 0 " 48
+Omicron |DEBUG local.tests/e4/input/2019_2/poi43 0 " 32 20 0 0 0 " 52
+Omicron |DEBUG local.tests/e4/input/2019_2/poi44 0 " 32 72 0 0 0 " 104
+Omicron |DEBUG local.tests/e4/input/2019_2/poi45 0 " 32 172 0 0 0 " 204
+Omicron |DEBUG local.tests/e4/input/2019_2/poi46 0 " 32 225 0 0 0 " 257
+Omicron |DEBUG local.tests/e4/input/2019_2/poi47 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi48 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi49 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi50 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/poi51 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe01 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe02 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe03 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe04 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe05 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe06 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe07 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe08 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe09 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe10 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe11 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe12 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe13 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe14 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe15 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe18 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe19 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe20 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/qwe21 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s00.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s01.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s02.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s03.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s04.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s05.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s06.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s07.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s08.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s09.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s10.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s11.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s12.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s13.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s14.iks 0 " 32 0 0 24 0 " 56
+Omicron |DEBUG local.tests/e4/input/2019_2/s15.iks 0 " 32 0 0 16 0 " 48
+Omicron |DEBUG local.tests/e4/input/2019_2/s16.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s17.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s18.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s19.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s20.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s21.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s22.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s23.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s24.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s25.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s26.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s27.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s28.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s29.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s30.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s31.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s32.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s33.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s34.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s35.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s36.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s37.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s38.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s39.iks 0 "no leaks are possible" 0
+Omicron |DEBUG local.tests/e4/input/2019_2/s40.iks 0 "no leaks are possible" 0
+~/ensino/private
+
+Psi
+
+~/ensino/private/E4/Psi ~/ensino/private
+There are 106 tests
+Psi |DEBUG local.tests/e4/input/2019_2/poi01 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi02 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi03 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi04 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi05 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi06 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi07 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi08 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi09 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi10 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi11 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi12 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi13 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi14 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi15 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi17 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi18 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi21 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi22 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi24 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi25 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi26 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi27 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi28 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi29 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi30 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi31 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi32 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi33 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi35 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi36 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi37 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi38 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi39 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi40 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi41 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi42 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi43 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi44 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi45 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi46 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi47 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi48 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi49 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi50 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/poi51 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe01 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe02 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe03 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe04 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe05 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe06 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe07 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe08 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe09 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe10 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe11 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe12 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe13 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe14 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe15 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe18 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe19 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe20 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/qwe21 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s00.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s01.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s02.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s03.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s04.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s05.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s06.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s07.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s08.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s09.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s10.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s11.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s12.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s13.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s14.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s15.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s16.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s17.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s18.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s19.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s20.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s21.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s22.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s23.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s24.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s25.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s26.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s27.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s28.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s29.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s30.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s31.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s32.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s33.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s34.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s35.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s36.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s37.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s38.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s39.iks 127 "no leaks are possible" 0
+Psi |DEBUG local.tests/e4/input/2019_2/s40.iks 127 "no leaks are possible" 0
+~/ensino/private
+
+Rho
+
+~/ensino/private/E4/Rho ~/ensino/private
+There are 106 tests
+Rho |DEBUG local.tests/e4/input/2019_2/poi01 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi02 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi03 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi04 10 " 0 0 0 17186 0 " 17186
+Rho |DEBUG local.tests/e4/input/2019_2/poi05 10 " 0 0 0 17186 0 " 17186
+Rho |DEBUG local.tests/e4/input/2019_2/poi06 10 " 0 0 0 17278 0 " 17278
+Rho |DEBUG local.tests/e4/input/2019_2/poi07 11 " 0 0 0 17128 0 " 17128
+Rho |DEBUG local.tests/e4/input/2019_2/poi08 11 " 0 0 0 17278 0 " 17278
+Rho |DEBUG local.tests/e4/input/2019_2/poi09 11 " 0 0 0 17128 0 " 17128
+Rho |DEBUG local.tests/e4/input/2019_2/poi10 11 " 0 0 0 17399 0 " 17399
+Rho |DEBUG local.tests/e4/input/2019_2/poi11 11 " 0 0 0 17287 0 " 17287
+Rho |DEBUG local.tests/e4/input/2019_2/poi12 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi13 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi14 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi15 11 " 0 0 0 17742 0 " 17742
+Rho |DEBUG local.tests/e4/input/2019_2/poi17 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi18 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi21 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi22 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi24 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi25 11 " 0 0 0 17558 0 " 17558
+Rho |DEBUG local.tests/e4/input/2019_2/poi26 11 " 0 0 0 17558 0 " 17558
+Rho |DEBUG local.tests/e4/input/2019_2/poi27 11 " 0 0 0 17558 0 " 17558
+Rho |DEBUG local.tests/e4/input/2019_2/poi28 11 " 0 0 0 17278 0 " 17278
+Rho |DEBUG local.tests/e4/input/2019_2/poi29 11 " 0 0 0 17558 0 " 17558
+Rho |DEBUG local.tests/e4/input/2019_2/poi30 1 " 56 5 0 6 0 " 67
+Rho |DEBUG local.tests/e4/input/2019_2/poi31 1 " 56 5 0 6 0 " 67
+Rho |DEBUG local.tests/e4/input/2019_2/poi32 1 " 56 5 0 6 0 " 67
+Rho |DEBUG local.tests/e4/input/2019_2/poi33 1 " 56 5 0 6 0 " 67
+Rho |DEBUG local.tests/e4/input/2019_2/poi35 1 " 56 5 0 6 0 " 67
+Rho |DEBUG local.tests/e4/input/2019_2/poi36 1 " 56 5 0 6 0 " 67
+Rho |DEBUG local.tests/e4/input/2019_2/poi37 1 " 56 5 0 6 0 " 67
+Rho |DEBUG local.tests/e4/input/2019_2/poi38 1 " 56 5 0 6 0 " 67
+Rho |DEBUG local.tests/e4/input/2019_2/poi39 1 " 56 5 0 6 0 " 67
+Rho |DEBUG local.tests/e4/input/2019_2/poi40 1 " 56 5 0 6 0 " 67
+Rho |DEBUG local.tests/e4/input/2019_2/poi41 1 " 56 5 0 7 0 " 68
+Rho |DEBUG local.tests/e4/input/2019_2/poi42 1 " 56 5 0 7 0 " 68
+Rho |DEBUG local.tests/e4/input/2019_2/poi43 1 " 56 5 0 7 0 " 68
+Rho |DEBUG local.tests/e4/input/2019_2/poi44 1 " 56 5 0 7 0 " 68
+Rho |DEBUG local.tests/e4/input/2019_2/poi45 1 " 56 5 0 7 0 " 68
+Rho |DEBUG local.tests/e4/input/2019_2/poi46 1 " 56 5 0 7 0 " 68
+Rho |DEBUG local.tests/e4/input/2019_2/poi47 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi48 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi49 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/poi50 1 " 112 12 0 4 0 " 128
+Rho |DEBUG local.tests/e4/input/2019_2/poi51 1 " 112 12 0 4 0 " 128
+Rho |DEBUG local.tests/e4/input/2019_2/qwe01 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe02 10 " 0 0 0 17186 0 " 17186
+Rho |DEBUG local.tests/e4/input/2019_2/qwe03 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe04 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe05 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe06 10 " 0 0 0 17186 0 " 17186
+Rho |DEBUG local.tests/e4/input/2019_2/qwe07 11 " 0 0 0 17278 0 " 17278
+Rho |DEBUG local.tests/e4/input/2019_2/qwe08 11 " 0 0 0 17278 0 " 17278
+Rho |DEBUG local.tests/e4/input/2019_2/qwe09 11 " 0 0 0 17305 0 " 17305
+Rho |DEBUG local.tests/e4/input/2019_2/qwe10 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe11 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe12 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe13 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe14 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe15 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe18 11 " 0 0 0 17825 0 " 17825
+Rho |DEBUG local.tests/e4/input/2019_2/qwe19 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe20 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/qwe21 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s00.iks 10 " 0 0 0 17186 0 " 17186
+Rho |DEBUG local.tests/e4/input/2019_2/s01.iks 10 " 0 0 0 17448 0 " 17448
+Rho |DEBUG local.tests/e4/input/2019_2/s02.iks 10 " 0 0 0 17186 0 " 17186
+Rho |DEBUG local.tests/e4/input/2019_2/s03.iks 11 " 0 0 0 17278 0 " 17278
+Rho |DEBUG local.tests/e4/input/2019_2/s04.iks 11 " 0 0 0 17186 0 " 17186
+Rho |DEBUG local.tests/e4/input/2019_2/s05.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s06.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s07.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s08.iks 1 " 56 4 0 0 0 " 60
+Rho |DEBUG local.tests/e4/input/2019_2/s09.iks 1 " 56 2 0 0 0 " 58
+Rho |DEBUG local.tests/e4/input/2019_2/s10.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s11.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s12.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s13.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s14.iks 1 " 56 2 0 6 0 " 64
+Rho |DEBUG local.tests/e4/input/2019_2/s15.iks 1 " 56 2 0 7 0 " 65
+Rho |DEBUG local.tests/e4/input/2019_2/s16.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s17.iks 1 " 56 4 0 0 0 " 60
+Rho |DEBUG local.tests/e4/input/2019_2/s18.iks 1 " 56 4 0 0 0 " 60
+Rho |DEBUG local.tests/e4/input/2019_2/s19.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s20.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s21.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s22.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s23.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s24.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s25.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s26.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s27.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s28.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s29.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s30.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s31.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s32.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s33.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s34.iks 1 " 56 2 0 0 0 " 58
+Rho |DEBUG local.tests/e4/input/2019_2/s35.iks 11 " 0 0 0 17278 0 " 17278
+Rho |DEBUG local.tests/e4/input/2019_2/s36.iks 11 " 0 0 0 17278 0 " 17278
+Rho |DEBUG local.tests/e4/input/2019_2/s37.iks 11 " 0 0 0 17278 0 " 17278
+Rho |DEBUG local.tests/e4/input/2019_2/s38.iks 0 "no leaks are possible" 0
+Rho |DEBUG local.tests/e4/input/2019_2/s39.iks 1 " 56 2 0 0 0 " 58
+Rho |DEBUG local.tests/e4/input/2019_2/s40.iks 0 "no leaks are possible" 0
+~/ensino/private
+
+Xi
+
+~/ensino/private/E4/Xi ~/ensino/private
+There are 106 tests
+Xi |DEBUG local.tests/e4/input/2019_2/poi01 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi02 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi03 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi04 10 " 0 0 0 17106 0 " 17106
+Xi |DEBUG local.tests/e4/input/2019_2/poi05 10 " 0 0 0 17106 0 " 17106
+Xi |DEBUG local.tests/e4/input/2019_2/poi06 10 " 0 0 0 17182 0 " 17182
+Xi |DEBUG local.tests/e4/input/2019_2/poi07 11 " 0 0 0 16884 0 " 16884
+Xi |DEBUG local.tests/e4/input/2019_2/poi08 11 " 0 0 0 17218 0 " 17218
+Xi |DEBUG local.tests/e4/input/2019_2/poi09 11 " 0 0 0 16948 0 " 16948
+Xi |DEBUG local.tests/e4/input/2019_2/poi10 11 " 0 0 0 17103 0 " 17103
+Xi |DEBUG local.tests/e4/input/2019_2/poi11 0 " 2 0 0 0 0 " 2
+Xi |DEBUG local.tests/e4/input/2019_2/poi12 20 " 0 0 0 17311 0 " 17311
+Xi |DEBUG local.tests/e4/input/2019_2/poi13 21 " 0 0 0 17291 0 " 17291
+Xi |DEBUG local.tests/e4/input/2019_2/poi14 22 " 0 0 0 17510 0 " 17510
+Xi |DEBUG local.tests/e4/input/2019_2/poi15 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi17 31 " 0 0 0 17363 0 " 17363
+Xi |DEBUG local.tests/e4/input/2019_2/poi18 31 " 0 0 0 17357 0 " 17357
+Xi |DEBUG local.tests/e4/input/2019_2/poi21 31 " 0 0 0 17745 0 " 17745
+Xi |DEBUG local.tests/e4/input/2019_2/poi22 31 " 0 0 0 17745 0 " 17745
+Xi |DEBUG local.tests/e4/input/2019_2/poi24 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi25 40 " 0 0 0 17568 0 " 17568
+Xi |DEBUG local.tests/e4/input/2019_2/poi26 41 " 0 0 0 17716 0 " 17716
+Xi |DEBUG local.tests/e4/input/2019_2/poi27 42 " 0 0 0 17642 0 " 17642
+Xi |DEBUG local.tests/e4/input/2019_2/poi28 11 " 0 0 0 17300 0 " 17300
+Xi |DEBUG local.tests/e4/input/2019_2/poi29 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi30 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi31 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi32 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi33 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi35 50 " 0 0 0 17192 0 " 17192
+Xi |DEBUG local.tests/e4/input/2019_2/poi36 50 " 0 0 0 17189 0 " 17189
+Xi |DEBUG local.tests/e4/input/2019_2/poi37 50 " 0 0 0 17189 0 " 17189
+Xi |DEBUG local.tests/e4/input/2019_2/poi38 50 " 0 0 0 17189 0 " 17189
+Xi |DEBUG local.tests/e4/input/2019_2/poi39 50 " 0 0 0 17189 0 " 17189
+Xi |DEBUG local.tests/e4/input/2019_2/poi40 50 " 0 0 0 17189 0 " 17189
+Xi |DEBUG local.tests/e4/input/2019_2/poi41 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi42 51 " 0 0 0 17189 0 " 17189
+Xi |DEBUG local.tests/e4/input/2019_2/poi43 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi44 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi45 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/poi46 22 " 0 0 0 17458 0 " 17458
+Xi |DEBUG local.tests/e4/input/2019_2/poi47 0 " 2 0 0 0 0 " 2
+Xi |DEBUG local.tests/e4/input/2019_2/poi48 0 " 2 0 0 0 0 " 2
+Xi |DEBUG local.tests/e4/input/2019_2/poi49 0 " 2 0 0 0 0 " 2
+Xi |DEBUG local.tests/e4/input/2019_2/poi50 52 " 0 0 0 17270 0 " 17270
+Xi |DEBUG local.tests/e4/input/2019_2/poi51 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/qwe01 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/qwe02 10 " 0 0 0 17106 0 " 17106
+Xi |DEBUG local.tests/e4/input/2019_2/qwe03 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/qwe04 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/qwe05 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/qwe06 10 " 0 0 0 17106 0 " 17106
+Xi |DEBUG local.tests/e4/input/2019_2/qwe07 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/qwe08 11 " 0 0 0 17218 0 " 17218
+Xi |DEBUG local.tests/e4/input/2019_2/qwe09 11 " 0 0 0 17101 0 " 17101
+Xi |DEBUG local.tests/e4/input/2019_2/qwe10 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/qwe11 21 " 0 0 0 17206 0 " 17206
+Xi |DEBUG local.tests/e4/input/2019_2/qwe12 20 " 0 0 0 17302 0 " 17302
+Xi |DEBUG local.tests/e4/input/2019_2/qwe13 22 " 0 0 0 17423 0 " 17423
+Xi |DEBUG local.tests/e4/input/2019_2/qwe14 20 " 0 0 0 17182 0 " 17182
+Xi |DEBUG local.tests/e4/input/2019_2/qwe15 21 " 0 0 0 17182 0 " 17182
+Xi |DEBUG local.tests/e4/input/2019_2/qwe18 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/qwe19 40 " 0 0 0 17945 0 " 17945
+Xi |DEBUG local.tests/e4/input/2019_2/qwe20 41 " 0 0 0 18245 0 " 18245
+Xi |DEBUG local.tests/e4/input/2019_2/qwe21 42 " 0 0 0 18095 0 " 18095
+Xi |DEBUG local.tests/e4/input/2019_2/s00.iks 10 " 0 0 0 17106 0 " 17106
+Xi |DEBUG local.tests/e4/input/2019_2/s01.iks 10 " 0 0 0 17392 0 " 17392
+Xi |DEBUG local.tests/e4/input/2019_2/s02.iks 10 " 0 0 0 17106 0 " 17106
+Xi |DEBUG local.tests/e4/input/2019_2/s03.iks 11 " 0 0 0 17218 0 " 17218
+Xi |DEBUG local.tests/e4/input/2019_2/s04.iks 11 " 0 0 0 16950 0 " 16950
+Xi |DEBUG local.tests/e4/input/2019_2/s05.iks 20 " 0 0 0 17302 0 " 17302
+Xi |DEBUG local.tests/e4/input/2019_2/s06.iks 21 " 0 0 0 17206 0 " 17206
+Xi |DEBUG local.tests/e4/input/2019_2/s07.iks 22 " 0 0 0 17272 0 " 17272
+Xi |DEBUG local.tests/e4/input/2019_2/s08.iks 31 " 0 0 0 17354 0 " 17354
+Xi |DEBUG local.tests/e4/input/2019_2/s09.iks 31 " 0 0 0 17348 0 " 17348
+Xi |DEBUG local.tests/e4/input/2019_2/s10.iks 40 " 0 0 0 17330 0 " 17330
+Xi |DEBUG local.tests/e4/input/2019_2/s11.iks 41 " 0 0 0 17474 0 " 17474
+Xi |DEBUG local.tests/e4/input/2019_2/s12.iks 42 " 0 0 0 17480 0 " 17480
+Xi |DEBUG local.tests/e4/input/2019_2/s13.iks 42 " 0 0 0 17486 0 " 17486
+Xi |DEBUG local.tests/e4/input/2019_2/s14.iks 50 " 0 0 0 17110 0 " 17110
+Xi |DEBUG local.tests/e4/input/2019_2/s15.iks 51 " 0 0 0 17104 0 " 17104
+Xi |DEBUG local.tests/e4/input/2019_2/s16.iks 52 " 0 0 0 17267 0 " 17267
+Xi |DEBUG local.tests/e4/input/2019_2/s17.iks 31 " 0 0 0 17354 0 " 17354
+Xi |DEBUG local.tests/e4/input/2019_2/s18.iks 31 " 0 0 0 17354 0 " 17354
+Xi |DEBUG local.tests/e4/input/2019_2/s19.iks 30 " 0 0 0 17278 0 " 17278
+Xi |DEBUG local.tests/e4/input/2019_2/s20.iks 30 " 0 0 0 17272 0 " 17272
+Xi |DEBUG local.tests/e4/input/2019_2/s21.iks 30 " 0 0 0 17270 0 " 17270
+Xi |DEBUG local.tests/e4/input/2019_2/s22.iks 30 " 0 0 0 17276 0 " 17276
+Xi |DEBUG local.tests/e4/input/2019_2/s23.iks 31 " 0 0 0 17330 0 " 17330
+Xi |DEBUG local.tests/e4/input/2019_2/s24.iks 31 " 0 0 0 17324 0 " 17324
+Xi |DEBUG local.tests/e4/input/2019_2/s25.iks 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/s26.iks 31 " 0 0 0 17492 0 " 17492
+Xi |DEBUG local.tests/e4/input/2019_2/s27.iks 31 " 0 0 0 17610 0 " 17610
+Xi |DEBUG local.tests/e4/input/2019_2/s28.iks 31 " 0 0 0 17825 0 " 17825
+Xi |DEBUG local.tests/e4/input/2019_2/s29.iks 31 " 0 0 0 17825 0 " 17825
+Xi |DEBUG local.tests/e4/input/2019_2/s30.iks 52 " 0 0 0 17480 0 " 17480
+Xi |DEBUG local.tests/e4/input/2019_2/s31.iks 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/s32.iks 10 " 0 0 0 17248 0 " 17248
+Xi |DEBUG local.tests/e4/input/2019_2/s33.iks 10 " 0 0 0 17248 0 " 17248
+Xi |DEBUG local.tests/e4/input/2019_2/s34.iks 10 " 0 0 0 17146 0 " 17146
+Xi |DEBUG local.tests/e4/input/2019_2/s35.iks 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/s36.iks 11 " 0 0 0 17218 0 " 17218
+Xi |DEBUG local.tests/e4/input/2019_2/s37.iks 0 "no leaks are possible" 0
+Xi |DEBUG local.tests/e4/input/2019_2/s38.iks 31 " 0 0 0 17569 0 " 17569
+Xi |DEBUG local.tests/e4/input/2019_2/s39.iks 10 " 0 0 0 19234 0 " 19234
+Xi |DEBUG local.tests/e4/input/2019_2/s40.iks 0 "no leaks are possible" 0
+~/ensino/private
+
+Zeta
+
+~/ensino/private/E4/Zeta ~/ensino/private
+There are 106 tests
+Zeta |DEBUG local.tests/e4/input/2019_2/poi01 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi02 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi03 52 " 0 0 0 27427 0 " 27427
+Zeta |DEBUG local.tests/e4/input/2019_2/poi04 10 " 0 0 0 36688 0 " 36688
+Zeta |DEBUG local.tests/e4/input/2019_2/poi05 10 " 0 0 0 36688 0 " 36688
+Zeta |DEBUG local.tests/e4/input/2019_2/poi06 10 " 0 0 0 36859 0 " 36859
+Zeta |DEBUG local.tests/e4/input/2019_2/poi07 11 " 0 0 0 26701 0 " 26701
+Zeta |DEBUG local.tests/e4/input/2019_2/poi08 11 " 0 0 0 36783 0 " 36783
+Zeta |DEBUG local.tests/e4/input/2019_2/poi09 11 " 0 0 0 26705 0 " 26705
+Zeta |DEBUG local.tests/e4/input/2019_2/poi10 11 " 0 0 0 27520 0 " 27520
+Zeta |DEBUG local.tests/e4/input/2019_2/poi11 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi12 20 " 0 0 0 36860 0 " 36860
+Zeta |DEBUG local.tests/e4/input/2019_2/poi13 21 " 0 0 0 37027 0 " 37027
+Zeta |DEBUG local.tests/e4/input/2019_2/poi14 22 " 0 0 0 37397 0 " 37397
+Zeta |DEBUG local.tests/e4/input/2019_2/poi15 30 " 0 0 0 37802 0 " 37802
+Zeta |DEBUG local.tests/e4/input/2019_2/poi17 31 " 0 0 0 37215 0 " 37215
+Zeta |DEBUG local.tests/e4/input/2019_2/poi18 32 " 0 0 0 37211 0 " 37211
+Zeta |DEBUG local.tests/e4/input/2019_2/poi21 32 " 0 0 0 37628 0 " 37628
+Zeta |DEBUG local.tests/e4/input/2019_2/poi22 31 " 0 0 0 37628 0 " 37628
+Zeta |DEBUG local.tests/e4/input/2019_2/poi24 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi25 40 " 0 0 0 37322 0 " 37322
+Zeta |DEBUG local.tests/e4/input/2019_2/poi26 41 " 0 0 0 37536 0 " 37536
+Zeta |DEBUG local.tests/e4/input/2019_2/poi27 42 " 0 0 0 37430 0 " 37430
+Zeta |DEBUG local.tests/e4/input/2019_2/poi28 11 " 0 0 0 36720 0 " 36720
+Zeta |DEBUG local.tests/e4/input/2019_2/poi29 30 " 0 0 0 37594 0 " 37594
+Zeta |DEBUG local.tests/e4/input/2019_2/poi30 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi31 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi32 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi33 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi35 50 " 0 0 0 36867 0 " 36867
+Zeta |DEBUG local.tests/e4/input/2019_2/poi36 50 " 0 0 0 36862 0 " 36862
+Zeta |DEBUG local.tests/e4/input/2019_2/poi37 50 " 0 0 0 36862 0 " 36862
+Zeta |DEBUG local.tests/e4/input/2019_2/poi38 50 " 0 0 0 36866 0 " 36866
+Zeta |DEBUG local.tests/e4/input/2019_2/poi39 50 " 0 0 0 36862 0 " 36862
+Zeta |DEBUG local.tests/e4/input/2019_2/poi40 50 " 0 0 0 36862 0 " 36862
+Zeta |DEBUG local.tests/e4/input/2019_2/poi41 51 " 0 0 0 36941 0 " 36941
+Zeta |DEBUG local.tests/e4/input/2019_2/poi42 51 " 0 0 0 36867 0 " 36867
+Zeta |DEBUG local.tests/e4/input/2019_2/poi43 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi44 51 " 0 0 0 36945 0 " 36945
+Zeta |DEBUG local.tests/e4/input/2019_2/poi45 51 " 0 0 0 37097 0 " 37097
+Zeta |DEBUG local.tests/e4/input/2019_2/poi46 10 " 0 0 0 37104 0 " 37104
+Zeta |DEBUG local.tests/e4/input/2019_2/poi47 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi48 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi49 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/poi50 52 " 0 0 0 26988 0 " 26988
+Zeta |DEBUG local.tests/e4/input/2019_2/poi51 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe01 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe02 10 " 0 0 0 36688 0 " 36688
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe03 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe04 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe05 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe06 10 " 0 0 0 36690 0 " 36690
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe07 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe08 11 " 0 0 0 36783 0 " 36783
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe09 11 " 0 0 0 27330 0 " 27330
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe10 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe11 21 " 0 0 0 36855 0 " 36855
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe12 20 " 0 0 0 36857 0 " 36857
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe13 22 " 0 0 0 37130 0 " 37130
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe14 20 " 0 0 0 36859 0 " 36859
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe15 21 " 0 0 0 36857 0 " 36857
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe18 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe19 40 " 0 0 0 37732 0 " 37732
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe20 41 " 0 0 0 38282 0 " 38282
+Zeta |DEBUG local.tests/e4/input/2019_2/qwe21 42 " 0 0 0 38007 0 " 38007
+Zeta |DEBUG local.tests/e4/input/2019_2/s00.iks 10 " 0 0 0 36688 0 " 36688
+Zeta |DEBUG local.tests/e4/input/2019_2/s01.iks 10 " 0 0 0 37111 0 " 37111
+Zeta |DEBUG local.tests/e4/input/2019_2/s02.iks 10 " 0 0 0 36690 0 " 36690
+Zeta |DEBUG local.tests/e4/input/2019_2/s03.iks 11 " 0 0 0 36783 0 " 36783
+Zeta |DEBUG local.tests/e4/input/2019_2/s04.iks 11 " 0 0 0 26964 0 " 26964
+Zeta |DEBUG local.tests/e4/input/2019_2/s05.iks 20 " 0 0 0 36857 0 " 36857
+Zeta |DEBUG local.tests/e4/input/2019_2/s06.iks 21 " 0 0 0 36855 0 " 36855
+Zeta |DEBUG local.tests/e4/input/2019_2/s07.iks 22 " 0 0 0 36947 0 " 36947
+Zeta |DEBUG local.tests/e4/input/2019_2/s08.iks 31 " 0 0 0 37208 0 " 37208
+Zeta |DEBUG local.tests/e4/input/2019_2/s09.iks 32 " 0 0 0 37204 0 " 37204
+Zeta |DEBUG local.tests/e4/input/2019_2/s10.iks 40 " 0 0 0 36965 0 " 36965
+Zeta |DEBUG local.tests/e4/input/2019_2/s11.iks 41 " 0 0 0 37175 0 " 37175
+Zeta |DEBUG local.tests/e4/input/2019_2/s12.iks 42 " 0 0 0 37242 0 " 37242
+Zeta |DEBUG local.tests/e4/input/2019_2/s13.iks 42 " 0 0 0 37246 0 " 37246
+Zeta |DEBUG local.tests/e4/input/2019_2/s14.iks 50 " 0 0 0 36698 0 " 36698
+Zeta |DEBUG local.tests/e4/input/2019_2/s15.iks 51 " 0 0 0 36695 0 " 36695
+Zeta |DEBUG local.tests/e4/input/2019_2/s16.iks 52 " 0 0 0 26985 0 " 26985
+Zeta |DEBUG local.tests/e4/input/2019_2/s17.iks 31 " 0 0 0 37208 0 " 37208
+Zeta |DEBUG local.tests/e4/input/2019_2/s18.iks 32 " 0 0 0 37210 0 " 37210
+Zeta |DEBUG local.tests/e4/input/2019_2/s19.iks 10 " 0 0 0 36867 0 " 36867
+Zeta |DEBUG local.tests/e4/input/2019_2/s20.iks 10 " 0 0 0 36863 0 " 36863
+Zeta |DEBUG local.tests/e4/input/2019_2/s21.iks 30 " 0 0 0 37037 0 " 37037
+Zeta |DEBUG local.tests/e4/input/2019_2/s22.iks 30 " 0 0 0 37043 0 " 37043
+Zeta |DEBUG local.tests/e4/input/2019_2/s23.iks 31 " 0 0 0 37210 0 " 37210
+Zeta |DEBUG local.tests/e4/input/2019_2/s24.iks 32 " 0 0 0 37206 0 " 37206
+Zeta |DEBUG local.tests/e4/input/2019_2/s25.iks 10 " 0 0 0 36697 0 " 36697
+Zeta |DEBUG local.tests/e4/input/2019_2/s26.iks 32 " 0 0 0 37209 0 " 37209
+Zeta |DEBUG local.tests/e4/input/2019_2/s27.iks 31 " 0 0 0 37287 0 " 37287
+Zeta |DEBUG local.tests/e4/input/2019_2/s28.iks 32 " 0 0 0 37653 0 " 37653
+Zeta |DEBUG local.tests/e4/input/2019_2/s29.iks 32 " 0 0 0 37653 0 " 37653
+Zeta |DEBUG local.tests/e4/input/2019_2/s30.iks 52 " 0 0 0 27427 0 " 27427
+Zeta |DEBUG local.tests/e4/input/2019_2/s31.iks 32 " 0 0 0 37487 0 " 37487
+Zeta |DEBUG local.tests/e4/input/2019_2/s32.iks 10 " 0 0 0 37040 0 " 37040
+Zeta |DEBUG local.tests/e4/input/2019_2/s33.iks 10 " 0 0 0 37040 0 " 37040
+Zeta |DEBUG local.tests/e4/input/2019_2/s34.iks 10 " 0 0 0 36860 0 " 36860
+Zeta |DEBUG local.tests/e4/input/2019_2/s35.iks 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/s36.iks 11 " 0 0 0 36783 0 " 36783
+Zeta |DEBUG local.tests/e4/input/2019_2/s37.iks 0 "no leaks are possible" 0
+Zeta |DEBUG local.tests/e4/input/2019_2/s38.iks 30 " 0 0 0 37578 0 " 37578
+Zeta |DEBUG local.tests/e4/input/2019_2/s39.iks 10 " 0 0 0 127526 0 " 127526
+Zeta |DEBUG local.tests/e4/input/2019_2/s40.iks 0 "no leaks are possible" 0
+~/ensino/private
