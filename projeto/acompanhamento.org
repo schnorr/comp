@@ -1950,6 +1950,895 @@ dos números foi 0.
 
 *Nota:* O valgrind não foi considerado na nota da E4, sendo apenas indicativo.
 
+** Resultados de cada teste (por grupo)
+
+A Coluna ~Res~ indica o código de saída do programa, e a coluna ~Code~ o
+código esperado. Caso forem iguais, ~TEST.WORKED~ é definido para ~TRUE~ e
+o teste passa. Caso contrário, o teste não passa.
+
+| Grupo   | Test    | Res | VGRESULT              | VGCUTIN | Erro                 | Code | TEST.WORKED |
+|---------+---------+-----+-----------------------+---------+----------------------+------+-------------|
+| Alpha   | poi01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | poi02   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | poi03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | poi04   |  10 | 0 0 0 39494 0         |   39494 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | poi05   |  10 | 0 0 0 39558 0         |   39558 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | poi06   |  10 | 0 0 0 39480 0         |   39480 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | poi07   |  11 | 0 0 0 30654 0         |   30654 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Alpha   | poi08   |  11 | 0 0 0 39480 0         |   39480 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Alpha   | poi09   |  11 | 0 0 0 30654 0         |   30654 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Alpha   | poi10   |  11 | 0 0 0 30816 0         |   30816 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Alpha   | poi11   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | poi12   |  20 | 0 0 0 39611 0         |   39611 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Alpha   | poi13   |  21 | 0 0 0 39597 0         |   39597 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Alpha   | poi14   |  22 | 0 0 0 39759 0         |   39759 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Alpha   | poi15   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | poi17   |  31 | 0 0 0 39579 0         |   39579 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Alpha   | poi18   |  32 | 0 0 0 39575 0         |   39575 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Alpha   | poi21   |  32 | 0 0 0 39815 0         |   39815 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Alpha   | poi22   |  31 | 0 0 0 39815 0         |   39815 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Alpha   | poi24   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | poi25   |  40 | 0 0 0 40159 0         |   40159 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Alpha   | poi26   |  41 | 0 0 0 40315 0         |   40315 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Alpha   | poi27   |  42 | 0 0 0 40249 0         |   40249 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Alpha   | poi28   |  11 | 0 0 0 39920 0         |   39920 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Alpha   | poi29   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | poi47   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | poi48   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | poi49   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | poi50   |  52 | 0 0 0 39483 0         |   39483 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Alpha   | poi51   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | qwe01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | qwe02   |  10 | 0 0 0 39494 0         |   39494 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | qwe03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | qwe04   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | qwe05   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | qwe06   |  10 | 0 0 0 39430 0         |   39430 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | qwe07   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | qwe08   |  11 | 0 0 0 39480 0         |   39480 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Alpha   | qwe09   |  11 | 0 0 0 30814 0         |   30814 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Alpha   | qwe10   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | qwe11   |  21 | 0 0 0 39544 0         |   39544 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Alpha   | qwe12   |  20 | 0 0 0 39608 0         |   39608 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Alpha   | qwe13   |  22 | 0 0 0 39704 0         |   39704 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Alpha   | qwe14   |  20 | 0 0 0 39480 0         |   39480 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Alpha   | qwe15   |  21 | 0 0 0 39480 0         |   39480 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Alpha   | qwe18   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | qwe19   |  40 | 0 0 0 40336 0         |   40336 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Alpha   | qwe20   |  41 | 0 0 0 40520 0         |   40520 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Alpha   | qwe21   |  42 | 0 0 0 40428 0         |   40428 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Alpha   | s00.iks |  10 | 0 0 0 39494 0         |   39494 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | s01.iks |  10 | 0 0 0 39730 0         |   39730 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | s02.iks |  10 | 0 0 0 39430 0         |   39430 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | s03.iks |  11 | 0 0 0 39480 0         |   39480 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Alpha   | s04.iks |  11 | 0 0 0 30694 0         |   30694 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Alpha   | s05.iks |  20 | 0 0 0 39608 0         |   39608 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Alpha   | s06.iks |  21 | 0 0 0 39544 0         |   39544 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Alpha   | s07.iks |  22 | 0 0 0 39584 0         |   39584 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Alpha   | s08.iks |  31 | 0 0 0 39576 0         |   39576 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Alpha   | s09.iks |  32 | 0 0 0 39572 0         |   39572 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Alpha   | s10.iks |  40 | 0 0 0 39984 0         |   39984 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Alpha   | s11.iks |  41 | 0 0 0 40136 0         |   40136 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Alpha   | s12.iks |  42 | 0 0 0 40124 0         |   40124 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Alpha   | s13.iks |  42 | 0 0 0 40128 0         |   40128 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Alpha   | s16.iks |  52 | 0 0 0 39484 0         |   39484 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Alpha   | s17.iks |  31 | 0 0 0 39576 0         |   39576 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Alpha   | s18.iks |  32 | 0 0 0 39576 0         |   39576 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Alpha   | s19.iks |  30 | 0 0 0 39524 0         |   39524 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Alpha   | s20.iks |  30 | 0 0 0 39520 0         |   39520 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Alpha   | s21.iks |  30 | 0 0 0 39544 0         |   39544 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Alpha   | s22.iks |  30 | 0 0 0 39548 0         |   39548 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Alpha   | s23.iks |  31 | 0 0 0 39664 0         |   39664 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Alpha   | s24.iks |  32 | 0 0 0 39660 0         |   39660 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Alpha   | s25.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | s26.iks |  32 | 0 0 0 39692 0         |   39692 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Alpha   | s27.iks |  31 | 0 0 0 39760 0         |   39760 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Alpha   | s28.iks |  31 | 0 0 0 39918 0         |   39918 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Alpha   | s29.iks |  32 | 0 0 0 39918 0         |   39918 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Alpha   | s30.iks |  52 | 0 0 0 39616 0         |   39616 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Alpha   | s31.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | s32.iks |  10 | 0 0 0 39584 0         |   39584 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | s33.iks |  10 | 0 0 0 39584 0         |   39584 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | s34.iks |  10 | 0 0 0 39558 0         |   39558 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | s35.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | s36.iks |  11 | 0 0 0 39480 0         |   39480 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Alpha   | s37.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Alpha   | s38.iks |  31 | 0 0 0 39734 0         |   39734 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Alpha   | s39.iks |  10 | 0 0 0 118758 0        |  118758 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Alpha   | s40.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | poi01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | poi02   |   1 | 0 0 0 17003 0         |   17003 |                      |    0 | FALSE       |
+| Beta    | poi03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | poi04   |  10 | 0 0 0 16800 0         |   16800 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Beta    | poi05   |  10 | 0 0 0 16800 0         |   16800 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Beta    | poi06   |  10 | 0 0 0 16772 0         |   16772 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Beta    | poi07   |  11 | 0 0 0 16554 0         |   16554 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Beta    | poi08   |  11 | 0 0 0 16642 0         |   16642 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Beta    | poi09   |  11 | 0 0 0 16556 0         |   16556 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Beta    | poi10   |  11 | 0 0 0 16755 0         |   16755 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Beta    | poi11   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | poi12   |  20 | 0 0 0 16840 0         |   16840 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Beta    | poi13   |  21 | 0 0 0 16906 0         |   16906 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Beta    | poi14   |  22 | 0 0 0 17107 0         |   17107 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Beta    | poi15   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | poi17   |  31 | 0 0 0 16912 0         |   16912 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Beta    | poi18   |  32 | 0 0 0 16908 0         |   16908 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Beta    | poi21   |  32 | 0 0 0 17172 0         |   17172 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Beta    | poi22   |  31 | 0 0 0 17172 0         |   17172 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Beta    | poi24   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | poi25   |  40 | 0 0 0 17095 0         |   17095 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Beta    | poi26   |  41 | 0 0 0 17227 0         |   17227 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Beta    | poi27   |  42 | 0 0 0 17161 0         |   17161 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Beta    | poi28   |  11 | 0 0 0 16758 0         |   16758 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Beta    | poi29   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | poi47   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | poi48   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | poi49   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | poi50   |  52 | 0 0 0 16756 0         |   16756 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Beta    | poi51   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | qwe01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | qwe02   |  10 | 0 0 0 16800 0         |   16800 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Beta    | qwe03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | qwe04   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | qwe05   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | qwe06   |  10 | 0 0 0 16738 0         |   16738 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Beta    | qwe07   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | qwe08   |  11 | 0 0 0 16642 0         |   16642 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Beta    | qwe09   |  11 | 0 0 0 16753 0         |   16753 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Beta    | qwe10   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | qwe11   |  21 | 0 0 0 16866 0         |   16866 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Beta    | qwe12   |  20 | 0 0 0 16834 0         |   16834 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Beta    | qwe13   |  22 | 0 0 0 17065 0         |   17065 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Beta    | qwe14   |  20 | 0 0 0 16772 0         |   16772 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Beta    | qwe15   |  21 | 0 0 0 16804 0         |   16804 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Beta    | qwe18   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | qwe19   |  40 | 0 0 0 17385 0         |   17385 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Beta    | qwe20   |  41 | 0 0 0 17649 0         |   17649 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Beta    | qwe21   |  42 | 0 0 0 17517 0         |   17517 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Beta    | s00.iks |  10 | 0 0 0 16800 0         |   16800 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Beta    | s01.iks |  10 | 0 0 0 17028 0         |   17028 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Beta    | s02.iks |  10 | 0 0 0 16738 0         |   16738 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Beta    | s03.iks |  11 | 0 0 0 16642 0         |   16642 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Beta    | s04.iks |  11 | 0 0 0 16554 0         |   16554 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Beta    | s05.iks |  20 | 0 0 0 16834 0         |   16834 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Beta    | s06.iks |  21 | 0 0 0 16866 0         |   16866 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Beta    | s07.iks |  22 | 0 0 0 16866 0         |   16866 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Beta    | s08.iks |  31 | 0 0 0 16938 0         |   16938 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Beta    | s09.iks |  32 | 0 0 0 16934 0         |   16934 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Beta    | s10.iks |  40 | 0 0 0 16854 0         |   16854 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Beta    | s11.iks |  41 | 0 0 0 16982 0         |   16982 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Beta    | s12.iks |  42 | 0 0 0 16954 0         |   16954 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Beta    | s13.iks |  42 | 0 0 0 16958 0         |   16958 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Beta    | s16.iks |  52 | 0 0 0 16753 0         |   16753 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Beta    | s17.iks |  30 | 0 0 0 16938 0         |   16938 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Beta    | s18.iks |  30 | 0 0 0 16938 0         |   16938 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Beta    | s19.iks |  30 | 0 0 0 16906 0         |   16906 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Beta    | s20.iks |  30 | 0 0 0 16902 0         |   16902 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Beta    | s21.iks |  30 | 0 0 0 16834 0         |   16834 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Beta    | s22.iks |  30 | 0 0 0 16838 0         |   16838 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Beta    | s23.iks |   1 | 0 0 0 16714 0         |   16714 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Beta    | s24.iks |   1 | 0 0 0 16710 0         |   16710 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Beta    | s25.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | s26.iks |  32 | 0 0 0 16966 0         |   16966 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Beta    | s27.iks |  31 | 0 0 0 17034 0         |   17034 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Beta    | s28.iks |  31 | 0 0 0 17299 0         |   17299 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Beta    | s29.iks |  32 | 0 0 0 17299 0         |   17299 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Beta    | s30.iks |  52 | 0 0 0 17084 0         |   17084 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Beta    | s31.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | s32.iks |  10 | 0 0 0 16866 0         |   16866 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Beta    | s33.iks |  10 | 0 0 0 16866 0         |   16866 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Beta    | s34.iks | 139 | 0 0 0 20794 0         |   20794 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Beta    | s35.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | s36.iks |  11 | 0 0 0 16642 0         |   16642 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Beta    | s37.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Beta    | s38.iks |  31 | 0 0 0 17171 0         |   17171 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Beta    | s39.iks | 139 | 0 0 0 21242 0         |   21242 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Beta    | s40.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Delta   | poi01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Delta   | poi02   |  22 | 0 0 0 18863 0         |   18863 |                      |    0 | FALSE       |
+| Delta   | poi03   |  20 | 0 0 0 17796 0         |   17796 |                      |    0 | FALSE       |
+| Delta   | poi04   |  10 | 0 0 0 18212 0         |   18212 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | poi05   |  10 | 0 0 0 18545 0         |   18545 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | poi06   |  10 | 0 0 0 18130 0         |   18130 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | poi07   |  11 | 0 0 0 17448 0         |   17448 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Delta   | poi08   |  11 | 0 0 0 18220 0         |   18220 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Delta   | poi09   |  22 | 0 0 0 18034 0         |   18034 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Delta   | poi10   |  11 | 0 0 0 17619 0         |   17619 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Delta   | poi11   |  11 | 0 0 0 17650 0         |   17650 |                      |    0 | FALSE       |
+| Delta   | poi12   |  22 | 0 0 0 18469 0         |   18469 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Delta   | poi13   |  21 | 0 0 0 18692 0         |   18692 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Delta   | poi14   |   0 | no leaks are possible |       0 | ~ERR_FUNCTION~         |   22 | FALSE       |
+| Delta   | poi15   |  20 | 0 0 0 19469 0         |   19469 |                      |    0 | FALSE       |
+| Delta   | poi17   |  30 | 0 0 0 18458 0         |   18458 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Delta   | poi18   |  30 | 0 0 0 18454 0         |   18454 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Delta   | poi21   |  30 | 0 0 0 18898 0         |   18898 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Delta   | poi22   |  30 | 0 0 0 18898 0         |   18898 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Delta   | poi24   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Delta   | poi25   |  20 | 0 0 0 18623 0         |   18623 | ~ERR_MISSING_ARGS~     |   40 | FALSE       |
+| Delta   | poi26   |  20 | 0 0 0 18787 0         |   18787 | ~ERR_EXCESS_ARGS~      |   41 | FALSE       |
+| Delta   | poi27   |  20 | 0 0 0 18705 0         |   18705 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Delta   | poi28   |  11 | 0 0 0 17588 0         |   17588 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Delta   | poi29   |  20 | 0 0 0 18773 0         |   18773 |                      |    0 | FALSE       |
+| Delta   | poi47   |  52 | 0 0 0 18223 0         |   18223 |                      |    0 | FALSE       |
+| Delta   | poi48   |  52 | 0 0 0 18223 0         |   18223 |                      |    0 | FALSE       |
+| Delta   | poi49   |  52 | 0 0 0 18223 0         |   18223 |                      |    0 | FALSE       |
+| Delta   | poi50   |  52 | 0 0 0 18393 0         |   18393 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Delta   | poi51   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Delta   | qwe01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Delta   | qwe02   |  10 | 0 0 0 18212 0         |   18212 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | qwe03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Delta   | qwe04   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Delta   | qwe05   |  20 | 0 0 0 17789 0         |   17789 |                      |    0 | FALSE       |
+| Delta   | qwe06   |  10 | 0 0 0 17400 0         |   17400 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | qwe07   |  11 | 0 0 0 17644 0         |   17644 |                      |    0 | FALSE       |
+| Delta   | qwe08   |  11 | 0 0 0 18220 0         |   18220 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Delta   | qwe09   |  11 | 0 0 0 17619 0         |   17619 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Delta   | qwe10   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Delta   | qwe11   |  21 | 0 0 0 17956 0         |   17956 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Delta   | qwe12   |  22 | 0 0 0 18464 0         |   18464 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Delta   | qwe13   |   0 | no leaks are possible |       0 | ~ERR_FUNCTION~         |   22 | FALSE       |
+| Delta   | qwe14   |  20 | 0 0 0 18130 0         |   18130 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Delta   | qwe15   |  21 | 0 0 0 17954 0         |   17954 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Delta   | qwe18   |  20 | 0 0 0 19367 0         |   19367 |                      |    0 | FALSE       |
+| Delta   | qwe19   |  20 | 0 0 0 19131 0         |   19131 | ~ERR_MISSING_ARGS~     |   40 | FALSE       |
+| Delta   | qwe20   |  20 | 0 0 0 19603 0         |   19603 | ~ERR_EXCESS_ARGS~      |   41 | FALSE       |
+| Delta   | qwe21   |  20 | 0 0 0 19367 0         |   19367 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Delta   | s00.iks |  10 | 0 0 0 18212 0         |   18212 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | s01.iks |  10 | 0 0 0 18764 0         |   18764 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | s02.iks |  10 | 0 0 0 17400 0         |   17400 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | s03.iks |  11 | 0 0 0 18220 0         |   18220 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Delta   | s04.iks |  11 | 0 0 0 17450 0         |   17450 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Delta   | s05.iks |  22 | 0 0 0 18464 0         |   18464 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Delta   | s06.iks |  21 | 0 0 0 17956 0         |   17956 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Delta   | s07.iks |   0 | no leaks are possible |       0 | ~ERR_FUNCTION~         |   22 | FALSE       |
+| Delta   | s08.iks |  30 | 0 0 0 17876 0         |   17876 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Delta   | s09.iks |  30 | 0 0 0 17872 0         |   17872 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Delta   | s10.iks |  20 | 0 0 0 17718 0         |   17718 | ~ERR_MISSING_ARGS~     |   40 | FALSE       |
+| Delta   | s11.iks |  20 | 0 0 0 18796 0         |   18796 | ~ERR_EXCESS_ARGS~      |   41 | FALSE       |
+| Delta   | s12.iks |  20 | 0 0 0 18530 0         |   18530 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Delta   | s13.iks |  20 | 0 0 0 18534 0         |   18534 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Delta   | s16.iks |  52 | 0 0 0 18221 0         |   18221 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Delta   | s17.iks |  30 | 0 0 0 17876 0         |   17876 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Delta   | s18.iks |  30 | 0 0 0 17876 0         |   17876 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Delta   | s19.iks |  20 | 0 0 0 18202 0         |   18202 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Delta   | s20.iks |  20 | 0 0 0 18198 0         |   18198 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Delta   | s21.iks |  30 | 0 0 0 18465 0         |   18465 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Delta   | s22.iks |  30 | 0 0 0 18469 0         |   18469 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Delta   | s23.iks |  22 | 0 0 0 18853 0         |   18853 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Delta   | s24.iks |  22 | 0 0 0 18849 0         |   18849 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Delta   | s25.iks |  20 | 0 0 0 17407 0         |   17407 |                      |    0 | FALSE       |
+| Delta   | s26.iks |  30 | 0 0 0 18685 0         |   18685 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Delta   | s27.iks |  30 | 0 0 0 18929 0         |   18929 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Delta   | s28.iks |  20 | 0 0 0 19064 0         |   19064 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Delta   | s29.iks |  20 | 0 0 0 19064 0         |   19064 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Delta   | s30.iks |  20 | 0 0 0 17796 0         |   17796 | ~ERR_WRONG_PAR_RETURN~ |   52 | FALSE       |
+| Delta   | s31.iks |  52 | 0 0 0 18234 0         |   18234 |                      |    0 | FALSE       |
+| Delta   | s32.iks |  10 | 0 0 0 18432 0         |   18432 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | s33.iks |  10 | 0 0 0 18432 0         |   18432 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | s34.iks |  10 | 0 0 0 18212 0         |   18212 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | s35.iks |  11 | 0 0 0 18260 0         |   18260 |                      |    0 | FALSE       |
+| Delta   | s36.iks |  11 | 0 0 0 18220 0         |   18220 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Delta   | s37.iks |  11 | 0 0 0 18260 0         |   18260 |                      |    0 | FALSE       |
+| Delta   | s38.iks |  20 | 0 0 0 18589 0         |   18589 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Delta   | s39.iks |  10 | 0 0 0 18572 0         |   18572 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Delta   | s40.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | poi01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | poi02   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | poi03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | poi04   |  10 | 0 0 0 17157 0         |   17157 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | poi05   |  10 | 0 0 0 17519 0         |   17519 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | poi06   |  10 | 0 0 0 17043 0         |   17043 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | poi07   |  11 | 0 0 0 17654 0         |   17654 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Gamma   | poi08   |  11 | 0 0 0 17850 0         |   17850 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Gamma   | poi09   |  11 | 0 0 0 17654 0         |   17654 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Gamma   | poi10   |  11 | 0 0 0 17849 0         |   17849 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Gamma   | poi11   |  52 | 0 0 0 17041 0         |   17041 |                      |    0 | FALSE       |
+| Gamma   | poi12   |  20 | 0 0 0 17402 0         |   17402 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Gamma   | poi13   |  21 | 0 0 0 17279 0         |   17279 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Gamma   | poi14   |  22 | 0 0 0 17474 0         |   17474 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Gamma   | poi15   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | poi17   |  30 | 0 0 0 17227 0         |   17227 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Gamma   | poi18   |  30 | 0 0 0 17223 0         |   17223 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Gamma   | poi21   |  32 | 0 0 0 17603 0         |   17603 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Gamma   | poi22   |  31 | 0 0 0 17603 0         |   17603 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Gamma   | poi24   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | poi25   |  40 | 0 0 0 17336 0         |   17336 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Gamma   | poi26   |  41 | 0 0 0 17452 0         |   17452 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Gamma   | poi27   |  42 | 0 0 0 17394 0         |   17394 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Gamma   | poi28   |  11 | 0 0 0 17884 0         |   17884 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Gamma   | poi29   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | poi47   |  52 | 0 0 0 16983 0         |   16983 |                      |    0 | FALSE       |
+| Gamma   | poi48   |  52 | 0 0 0 16983 0         |   16983 |                      |    0 | FALSE       |
+| Gamma   | poi49   |  52 | 0 0 0 16983 0         |   16983 |                      |    0 | FALSE       |
+| Gamma   | poi50   |  52 | 0 0 0 17041 0         |   17041 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Gamma   | poi51   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | qwe01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | qwe02   |  10 | 0 0 0 17157 0         |   17157 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | qwe03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | qwe04   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | qwe05   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | qwe06   |  10 | 0 0 0 17041 0         |   17041 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | qwe07   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | qwe08   |  11 | 0 0 0 17850 0         |   17850 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Gamma   | qwe09   |  11 | 0 0 0 17905 0         |   17905 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Gamma   | qwe10   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | qwe11   |  21 | 0 0 0 17271 0         |   17271 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Gamma   | qwe12   |  20 | 0 0 0 17453 0         |   17453 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Gamma   | qwe13   |  22 | 0 0 0 17464 0         |   17464 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Gamma   | qwe14   |  20 | 0 0 0 17099 0         |   17099 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Gamma   | qwe15   |  21 | 0 0 0 17099 0         |   17099 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Gamma   | qwe18   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | qwe19   |  40 | 0 0 0 17626 0         |   17626 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Gamma   | qwe20   |  41 | 0 0 0 17858 0         |   17858 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Gamma   | qwe21   |  42 | 0 0 0 17742 0         |   17742 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Gamma   | s00.iks |  10 | 0 0 0 17028 0         |   17028 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | s01.iks |  10 | 0 0 0 17266 0         |   17266 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | s02.iks |  10 | 0 0 0 16856 0         |   16856 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | s03.iks |  11 | 0 0 0 17850 0         |   17850 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Gamma   | s04.iks |  11 | 0 0 0 17720 0         |   17720 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Gamma   | s05.iks |  20 | 0 0 0 17268 0         |   17268 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Gamma   | s06.iks |  21 | 0 0 0 17086 0         |   17086 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Gamma   | s07.iks |  22 | 0 0 0 17152 0         |   17152 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Gamma   | s08.iks |  30 | 0 0 0 17092 0         |   17092 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Gamma   | s09.iks |  30 | 0 0 0 17088 0         |   17088 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Gamma   | s10.iks |  40 | 0 0 0 17014 0         |   17014 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Gamma   | s11.iks |  41 | 0 0 0 17244 0         |   17244 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Gamma   | s12.iks |  42 | 0 0 0 17130 0         |   17130 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Gamma   | s13.iks |  42 | 0 0 0 17134 0         |   17134 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Gamma   | s16.iks |  52 | 0 0 0 16981 0         |   16981 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Gamma   | s17.iks |  30 | 0 0 0 17092 0         |   17092 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Gamma   | s18.iks |  30 | 0 0 0 17092 0         |   17092 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Gamma   | s19.iks |  30 | 0 0 0 17042 0         |   17042 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Gamma   | s20.iks |  30 | 0 0 0 17038 0         |   17038 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Gamma   | s21.iks |  30 | 0 0 0 17094 0         |   17094 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Gamma   | s22.iks |  30 | 0 0 0 17098 0         |   17098 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Gamma   | s23.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Gamma   | s24.iks |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Gamma   | s25.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | s26.iks |  32 | 0 0 0 17277 0         |   17277 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Gamma   | s27.iks |  31 | 0 0 0 17671 0         |   17671 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Gamma   | s28.iks |  31 | 0 0 0 17872 0         |   17872 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Gamma   | s29.iks |  32 | 0 0 0 17872 0         |   17872 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Gamma   | s30.iks |  52 | 0 0 0 17180 0         |   17180 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Gamma   | s31.iks |  52 | 0 0 0 16983 0         |   16983 |                      |    0 | FALSE       |
+| Gamma   | s32.iks |  10 | 0 0 0 17152 0         |   17152 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | s33.iks |  10 | 0 0 0 17152 0         |   17152 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | s34.iks |  10 | 0 0 0 17087 0         |   17087 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | s35.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | s36.iks |  11 | 0 0 0 17850 0         |   17850 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Gamma   | s37.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Gamma   | s38.iks |  30 | 0 0 0 17293 0         |   17293 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Gamma   | s39.iks |  10 | 0 0 0 18370 0         |   18370 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Gamma   | s40.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi02   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi04   |  10 | 0 0 0 16458 0         |   16458 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | poi05   |  10 | 0 0 0 16458 0         |   16458 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | poi06   |  10 | 0 0 0 16458 0         |   16458 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | poi07   |  11 | 0 0 0 16458 0         |   16458 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Iota    | poi08   |  11 | 0 0 0 16530 0         |   16530 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Iota    | poi09   |  11 | 0 0 0 16458 0         |   16458 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Iota    | poi10   |  11 | 0 0 0 16674 0         |   16674 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Iota    | poi11   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi12   |  20 | 0 0 0 16674 0         |   16674 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Iota    | poi13   |  21 | 0 0 0 16530 0         |   16530 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Iota    | poi14   |  22 | 0 0 0 16746 0         |   16746 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Iota    | poi15   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi17   |  31 | 0 0 0 16674 0         |   16674 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Iota    | poi18   |  32 | 0 0 0 16674 0         |   16674 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Iota    | poi21   |  32 | 0 0 0 16818 0         |   16818 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Iota    | poi22   |  31 | 0 0 0 16818 0         |   16818 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Iota    | poi24   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi25   |  40 | 0 0 0 16818 0         |   16818 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Iota    | poi26   |  41 | 0 0 0 16962 0         |   16962 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Iota    | poi27   |  42 | 0 0 0 16890 0         |   16890 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Iota    | poi28   |  11 | 0 0 0 16530 0         |   16530 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Iota    | poi29   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi47   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi48   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi49   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | poi50   |  52 | 0 0 0 16530 0         |   16530 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Iota    | poi51   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | qwe01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | qwe02   |  10 | 0 0 0 16458 0         |   16458 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | qwe03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | qwe04   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | qwe05   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | qwe06   |  10 | 0 0 0 16458 0         |   16458 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | qwe07   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | qwe08   |  11 | 0 0 0 16530 0         |   16530 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Iota    | qwe09   |  11 | 0 0 0 16674 0         |   16674 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Iota    | qwe10   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | qwe11   |  21 | 0 0 0 16530 0         |   16530 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Iota    | qwe12   |  20 | 0 0 0 16674 0         |   16674 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Iota    | qwe13   |  22 | 0 0 0 16746 0         |   16746 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Iota    | qwe14   |  20 | 0 0 0 16602 0         |   16602 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Iota    | qwe15   |  21 | 0 0 0 16602 0         |   16602 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Iota    | qwe18   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | qwe19   |  40 | 0 0 0 16962 0         |   16962 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Iota    | qwe20   |  41 | 0 0 0 17106 0         |   17106 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Iota    | qwe21   |  42 | 0 0 0 17034 0         |   17034 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Iota    | s00.iks |  10 | 0 0 0 16458 0         |   16458 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | s01.iks |  10 | 0 0 0 16674 0         |   16674 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | s02.iks |  10 | 0 0 0 16458 0         |   16458 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | s03.iks |  11 | 0 0 0 16530 0         |   16530 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Iota    | s04.iks |  11 | 0 0 0 16530 0         |   16530 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Iota    | s05.iks |  20 | 0 0 0 16674 0         |   16674 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Iota    | s06.iks |  21 | 0 0 0 16530 0         |   16530 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Iota    | s07.iks |  22 | 0 0 0 16602 0         |   16602 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Iota    | s08.iks |  31 | 0 0 0 16674 0         |   16674 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Iota    | s09.iks |  32 | 0 0 0 16674 0         |   16674 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Iota    | s10.iks |  40 | 0 0 0 16674 0         |   16674 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Iota    | s11.iks |  41 | 0 0 0 16818 0         |   16818 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Iota    | s12.iks |  42 | 0 0 0 16746 0         |   16746 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Iota    | s13.iks |  42 | 0 0 0 16746 0         |   16746 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Iota    | s16.iks |  52 | 0 0 0 16530 0         |   16530 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Iota    | s17.iks |  31 | 0 0 0 16674 0         |   16674 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Iota    | s18.iks |  32 | 0 0 0 16674 0         |   16674 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Iota    | s19.iks |  30 | 0 0 0 16674 0         |   16674 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Iota    | s20.iks |  30 | 0 0 0 16674 0         |   16674 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Iota    | s21.iks |  30 | 0 0 0 16674 0         |   16674 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Iota    | s22.iks |  30 | 0 0 0 16674 0         |   16674 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Iota    | s23.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Iota    | s24.iks |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Iota    | s25.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | s26.iks |  32 | 0 0 0 16746 0         |   16746 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Iota    | s27.iks |  31 | 0 0 0 16818 0         |   16818 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Iota    | s28.iks |  31 | 0 0 0 17034 0         |   17034 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Iota    | s29.iks |  32 | 0 0 0 17034 0         |   17034 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Iota    | s30.iks |  52 | 0 0 0 16746 0         |   16746 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Iota    | s31.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | s32.iks |  10 | 0 0 0 16530 0         |   16530 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | s33.iks |  10 | 0 0 0 16530 0         |   16530 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | s34.iks |  10 | 0 0 0 16530 0         |   16530 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | s35.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | s36.iks |  11 | 0 0 0 16530 0         |   16530 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Iota    | s37.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Iota    | s38.iks |  31 | 0 0 0 16890 0         |   16890 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Iota    | s39.iks |  10 | 0 0 0 16530 0         |   16530 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Iota    | s40.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Kappa   | poi01   |   0 | 2416 0 0 2500 0       |    4916 |                      |    0 | TRUE        |
+| Kappa   | poi02   |   0 | 2416 0 0 2500 0       |    4916 |                      |    0 | TRUE        |
+| Kappa   | poi03   |   0 | 4832 42 0 2500 0      |    7374 |                      |    0 | TRUE        |
+| Kappa   | poi04   |  10 | 0 0 0 21916 0         |   21916 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | poi05   |  10 | 0 0 0 22118 0         |   22118 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | poi06   |  10 | 0 0 0 21930 0         |   21930 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | poi07   |  11 | 0 0 0 19232 0         |   19232 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Kappa   | poi08   |  11 | 0 0 0 21886 0         |   21886 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Kappa   | poi09   |  11 | 0 0 0 19512 0         |   19512 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Kappa   | poi10   |  11 | 2416 42 0 22956 0     |   25414 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Kappa   | poi11   |   0 | 2416 42 0 2503 0      |    4961 |                      |    0 | TRUE        |
+| Kappa   | poi12   |  20 | 0 0 0 22321 0         |   22321 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Kappa   | poi13   |  21 | 0 0 0 22458 0         |   22458 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Kappa   | poi14   |  22 | 2416 42 0 22950 0     |   25408 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Kappa   | poi15   |  10 | 0 0 0 22235 0         |   22235 |                      |    0 | FALSE       |
+| Kappa   | poi17   |  31 | 0 0 0 22328 0         |   22328 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Kappa   | poi18   |  32 | 0 0 0 22320 0         |   22320 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Kappa   | poi21   |  30 | 0 0 0 22980 0         |   22980 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Kappa   | poi22   |  30 | 0 0 0 22982 0         |   22982 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Kappa   | poi24   |   0 | 2416 126 0 2461 0     |    5003 |                      |    0 | TRUE        |
+| Kappa   | poi25   |  10 | 0 0 0 21887 0         |   21887 | ~ERR_MISSING_ARGS~     |   40 | FALSE       |
+| Kappa   | poi26   |  10 | 0 0 0 21887 0         |   21887 | ~ERR_EXCESS_ARGS~      |   41 | FALSE       |
+| Kappa   | poi27   |  10 | 0 0 0 21887 0         |   21887 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Kappa   | poi28   |   0 | 4848 84 0 2519 0      |    7451 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Kappa   | poi29   |  10 | 0 0 0 21887 0         |   21887 |                      |    0 | FALSE       |
+| Kappa   | poi47   |   0 | 2416 42 0 2461 0      |    4919 |                      |    0 | TRUE        |
+| Kappa   | poi48   |   0 | 2416 42 0 2461 0      |    4919 |                      |    0 | TRUE        |
+| Kappa   | poi49   |   0 | 2416 42 0 2461 0      |    4919 |                      |    0 | TRUE        |
+| Kappa   | poi50   |  52 | 0 0 0 22025 0         |   22025 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Kappa   | poi51   |   0 | 2416 42 0 2461 0      |    4919 |                      |    0 | TRUE        |
+| Kappa   | qwe01   |   0 | 2416 0 0 2500 0       |    4916 |                      |    0 | TRUE        |
+| Kappa   | qwe02   |  10 | 0 0 0 21916 0         |   21916 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | qwe03   |   0 | 2416 42 0 2458 0      |    4916 |                      |    0 | TRUE        |
+| Kappa   | qwe04   |   0 | 2416 0 0 2458 0       |    4874 |                      |    0 | TRUE        |
+| Kappa   | qwe05   |   0 | 4832 0 0 2500 0       |    7332 |                      |    0 | TRUE        |
+| Kappa   | qwe06   |  10 | 0 0 0 21730 0         |   21730 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | qwe07   |   0 | 2416 42 0 2500 0      |    4958 |                      |    0 | TRUE        |
+| Kappa   | qwe08   |  11 | 0 0 0 21886 0         |   21886 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Kappa   | qwe09   |  11 | 2416 0 0 22594 0      |   25010 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Kappa   | qwe10   |   0 | 2416 42 0 2458 0      |    4916 |                      |    0 | TRUE        |
+| Kappa   | qwe11   |  21 | 0 0 0 22255 0         |   22255 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Kappa   | qwe12   |  20 | 0 0 0 22319 0         |   22319 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Kappa   | qwe13   |  22 | 2416 0 0 22589 0      |   25005 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Kappa   | qwe14   |  20 | 0 0 0 21930 0         |   21930 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Kappa   | qwe15   |  21 | 0 0 0 22069 0         |   22069 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Kappa   | qwe18   |   0 | 4848 200 0 2548 0     |    7596 |                      |    0 | TRUE        |
+| Kappa   | qwe19   |  40 | 2432 32 0 23569 0     |   26033 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Kappa   | qwe20   |  41 | 2432 32 0 24293 0     |   26757 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Kappa   | qwe21   |  42 | 2432 32 0 23934 0     |   26398 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Kappa   | s00.iks |  10 | 0 0 0 21916 0         |   21916 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | s01.iks |  10 | 0 0 0 22504 0         |   22504 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | s02.iks |  10 | 0 0 0 21730 0         |   21730 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | s03.iks |  11 | 0 0 0 21886 0         |   21886 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Kappa   | s04.iks |  11 | 0 0 0 19600 0         |   19600 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Kappa   | s05.iks |  20 | 0 0 0 22319 0         |   22319 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Kappa   | s06.iks |  21 | 0 0 0 22255 0         |   22255 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Kappa   | s07.iks |  22 | 0 0 0 22300 0         |   22300 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Kappa   | s08.iks |  31 | 0 0 0 22325 0         |   22325 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Kappa   | s09.iks |  32 | 0 0 0 22317 0         |   22317 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Kappa   | s10.iks |  40 | 16 0 0 22248 0        |   22264 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Kappa   | s11.iks |  41 | 16 0 0 22534 0        |   22550 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Kappa   | s12.iks |  42 | 16 0 0 22571 0        |   22587 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Kappa   | s13.iks |  42 | 16 0 0 22579 0        |   22595 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Kappa   | s16.iks |  52 | 0 0 0 22026 0         |   22026 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Kappa   | s17.iks |  31 | 0 0 0 22326 0         |   22326 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Kappa   | s18.iks |  32 | 0 0 0 22326 0         |   22326 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Kappa   | s19.iks |  10 | 0 0 0 22037 0         |   22037 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Kappa   | s20.iks |  10 | 0 0 0 22029 0         |   22029 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Kappa   | s21.iks |  30 | 0 0 0 22099 0         |   22099 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Kappa   | s22.iks |  30 | 0 0 0 22107 0         |   22107 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Kappa   | s23.iks |  30 | 0 0 0 22666 0         |   22666 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Kappa   | s24.iks |  30 | 0 0 0 22658 0         |   22658 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Kappa   | s25.iks |  10 | 0 0 0 21794 0         |   21794 |                      |    0 | FALSE       |
+| Kappa   | s26.iks |  30 | 0 0 0 22416 0         |   22416 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Kappa   | s27.iks |  30 | 0 0 0 22568 0         |   22568 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Kappa   | s28.iks |  30 | 2416 44 0 23280 0     |   25740 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Kappa   | s29.iks |  30 | 2416 44 0 23276 0     |   25736 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Kappa   | s30.iks |  52 | 2416 42 0 22730 0     |   25188 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Kappa   | s31.iks |   0 | 4832 42 0 2500 0      |    7374 |                      |    0 | TRUE        |
+| Kappa   | s32.iks |  10 | 2416 42 0 22458 0     |   24916 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | s33.iks |  10 | 2416 42 0 22458 0     |   24916 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | s34.iks |  10 | 0 0 0 24652 0         |   24652 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | s35.iks |   0 | 2416 2500 0 2458 0    |    7374 |                      |    0 | TRUE        |
+| Kappa   | s36.iks |  11 | 0 0 0 21888 0         |   21888 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Kappa   | s37.iks |   0 | 2416 2500 0 2458 0    |    7374 |                      |    0 | TRUE        |
+| Kappa   | s38.iks |  31 | 2416 44 0 23037 0     |   25497 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Kappa   | s39.iks |  10 | 2416 42 0 44298 0     |   46756 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Kappa   | s40.iks |   0 | 2416 21744 0 2500 0   |   26660 |                      |    0 | TRUE        |
+| Omicron | poi01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | poi02   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | poi03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | poi04   |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | poi05   |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | poi06   |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | poi07   |   0 | no leaks are possible |       0 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Omicron | poi08   |   0 | no leaks are possible |       0 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Omicron | poi09   |   0 | no leaks are possible |       0 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Omicron | poi10   |   0 | no leaks are possible |       0 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Omicron | poi11   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | poi12   |   0 | no leaks are possible |       0 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Omicron | poi13   |   0 | no leaks are possible |       0 | ~ERR_VECTOR~           |   21 | FALSE       |
+| Omicron | poi14   |   0 | no leaks are possible |       0 | ~ERR_FUNCTION~         |   22 | FALSE       |
+| Omicron | poi15   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | poi17   |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Omicron | poi18   |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Omicron | poi21   |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Omicron | poi22   |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Omicron | poi24   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | poi25   |   0 | no leaks are possible |       0 | ~ERR_MISSING_ARGS~     |   40 | FALSE       |
+| Omicron | poi26   |   0 | no leaks are possible |       0 | ~ERR_EXCESS_ARGS~      |   41 | FALSE       |
+| Omicron | poi27   |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Omicron | poi28   |   0 | no leaks are possible |       0 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Omicron | poi29   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | poi47   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | poi48   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | poi49   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | poi50   |   0 | no leaks are possible |       0 | ~ERR_WRONG_PAR_RETURN~ |   52 | FALSE       |
+| Omicron | poi51   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | qwe01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | qwe02   |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | qwe03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | qwe04   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | qwe05   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | qwe06   |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | qwe07   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | qwe08   |   0 | no leaks are possible |       0 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Omicron | qwe09   |   0 | no leaks are possible |       0 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Omicron | qwe10   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | qwe11   |   0 | no leaks are possible |       0 | ~ERR_VECTOR~           |   21 | FALSE       |
+| Omicron | qwe12   |   0 | no leaks are possible |       0 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Omicron | qwe13   |   0 | no leaks are possible |       0 | ~ERR_FUNCTION~         |   22 | FALSE       |
+| Omicron | qwe14   |   0 | no leaks are possible |       0 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Omicron | qwe15   |   0 | no leaks are possible |       0 | ~ERR_VECTOR~           |   21 | FALSE       |
+| Omicron | qwe18   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | qwe19   |   0 | no leaks are possible |       0 | ~ERR_MISSING_ARGS~     |   40 | FALSE       |
+| Omicron | qwe20   |   0 | no leaks are possible |       0 | ~ERR_EXCESS_ARGS~      |   41 | FALSE       |
+| Omicron | qwe21   |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Omicron | s00.iks |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | s01.iks |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | s02.iks |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | s03.iks |   0 | no leaks are possible |       0 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Omicron | s04.iks |   0 | no leaks are possible |       0 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Omicron | s05.iks |   0 | no leaks are possible |       0 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Omicron | s06.iks |   0 | no leaks are possible |       0 | ~ERR_VECTOR~           |   21 | FALSE       |
+| Omicron | s07.iks |   0 | no leaks are possible |       0 | ~ERR_FUNCTION~         |   22 | FALSE       |
+| Omicron | s08.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Omicron | s09.iks |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Omicron | s10.iks |   0 | no leaks are possible |       0 | ~ERR_MISSING_ARGS~     |   40 | FALSE       |
+| Omicron | s11.iks |   0 | no leaks are possible |       0 | ~ERR_EXCESS_ARGS~      |   41 | FALSE       |
+| Omicron | s12.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Omicron | s13.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Omicron | s16.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_PAR_RETURN~ |   52 | FALSE       |
+| Omicron | s17.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Omicron | s18.iks |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Omicron | s19.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Omicron | s20.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Omicron | s21.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Omicron | s22.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Omicron | s23.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Omicron | s24.iks |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Omicron | s25.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | s26.iks |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Omicron | s27.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Omicron | s28.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Omicron | s29.iks |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Omicron | s30.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_PAR_RETURN~ |   52 | FALSE       |
+| Omicron | s31.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | s32.iks |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | s33.iks |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | s34.iks |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | s35.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | s36.iks |   0 | no leaks are possible |       0 | ~ERR_DECLARED~         |   11 | FALSE       |
+| Omicron | s37.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Omicron | s38.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Omicron | s39.iks |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Omicron | s40.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | poi01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | poi02   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | poi03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | poi04   |  10 | 0 0 0 17186 0         |   17186 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Rho     | poi05   |  10 | 0 0 0 17186 0         |   17186 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Rho     | poi06   |  10 | 0 0 0 17278 0         |   17278 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Rho     | poi07   |  11 | 0 0 0 17128 0         |   17128 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Rho     | poi08   |  11 | 0 0 0 17278 0         |   17278 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Rho     | poi09   |  11 | 0 0 0 17128 0         |   17128 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Rho     | poi10   |  11 | 0 0 0 17399 0         |   17399 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Rho     | poi11   |  11 | 0 0 0 17287 0         |   17287 |                      |    0 | FALSE       |
+| Rho     | poi12   |   0 | no leaks are possible |       0 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Rho     | poi13   |   0 | no leaks are possible |       0 | ~ERR_VECTOR~           |   21 | FALSE       |
+| Rho     | poi14   |   0 | no leaks are possible |       0 | ~ERR_FUNCTION~         |   22 | FALSE       |
+| Rho     | poi15   |  11 | 0 0 0 17742 0         |   17742 |                      |    0 | FALSE       |
+| Rho     | poi17   |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Rho     | poi18   |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Rho     | poi21   |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Rho     | poi22   |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Rho     | poi24   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | poi25   |  11 | 0 0 0 17558 0         |   17558 | ~ERR_MISSING_ARGS~     |   40 | FALSE       |
+| Rho     | poi26   |  11 | 0 0 0 17558 0         |   17558 | ~ERR_EXCESS_ARGS~      |   41 | FALSE       |
+| Rho     | poi27   |  11 | 0 0 0 17558 0         |   17558 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Rho     | poi28   |  11 | 0 0 0 17278 0         |   17278 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Rho     | poi29   |  11 | 0 0 0 17558 0         |   17558 |                      |    0 | FALSE       |
+| Rho     | poi47   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | poi48   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | poi49   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | poi50   |   1 | 112 12 0 4 0          |     128 | ~ERR_WRONG_PAR_RETURN~ |   52 | FALSE       |
+| Rho     | poi51   |   1 | 112 12 0 4 0          |     128 |                      |    0 | FALSE       |
+| Rho     | qwe01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | qwe02   |  10 | 0 0 0 17186 0         |   17186 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Rho     | qwe03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | qwe04   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | qwe05   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | qwe06   |  10 | 0 0 0 17186 0         |   17186 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Rho     | qwe07   |  11 | 0 0 0 17278 0         |   17278 |                      |    0 | FALSE       |
+| Rho     | qwe08   |  11 | 0 0 0 17278 0         |   17278 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Rho     | qwe09   |  11 | 0 0 0 17305 0         |   17305 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Rho     | qwe10   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | qwe11   |   0 | no leaks are possible |       0 | ~ERR_VECTOR~           |   21 | FALSE       |
+| Rho     | qwe12   |   0 | no leaks are possible |       0 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Rho     | qwe13   |   0 | no leaks are possible |       0 | ~ERR_FUNCTION~         |   22 | FALSE       |
+| Rho     | qwe14   |   0 | no leaks are possible |       0 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Rho     | qwe15   |   0 | no leaks are possible |       0 | ~ERR_VECTOR~           |   21 | FALSE       |
+| Rho     | qwe18   |  11 | 0 0 0 17825 0         |   17825 |                      |    0 | FALSE       |
+| Rho     | qwe19   |   0 | no leaks are possible |       0 | ~ERR_MISSING_ARGS~     |   40 | FALSE       |
+| Rho     | qwe20   |   0 | no leaks are possible |       0 | ~ERR_EXCESS_ARGS~      |   41 | FALSE       |
+| Rho     | qwe21   |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Rho     | s00.iks |  10 | 0 0 0 17186 0         |   17186 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Rho     | s01.iks |  10 | 0 0 0 17448 0         |   17448 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Rho     | s02.iks |  10 | 0 0 0 17186 0         |   17186 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Rho     | s03.iks |  11 | 0 0 0 17278 0         |   17278 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Rho     | s04.iks |  11 | 0 0 0 17186 0         |   17186 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Rho     | s05.iks |   0 | no leaks are possible |       0 | ~ERR_VARIABLE~         |   20 | FALSE       |
+| Rho     | s06.iks |   0 | no leaks are possible |       0 | ~ERR_VECTOR~           |   21 | FALSE       |
+| Rho     | s07.iks |   0 | no leaks are possible |       0 | ~ERR_FUNCTION~         |   22 | FALSE       |
+| Rho     | s08.iks |   1 | 56 4 0 0 0            |      60 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Rho     | s09.iks |   1 | 56 2 0 0 0            |      58 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Rho     | s10.iks |   0 | no leaks are possible |       0 | ~ERR_MISSING_ARGS~     |   40 | FALSE       |
+| Rho     | s11.iks |   0 | no leaks are possible |       0 | ~ERR_EXCESS_ARGS~      |   41 | FALSE       |
+| Rho     | s12.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Rho     | s13.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE_ARGS~  |   42 | FALSE       |
+| Rho     | s16.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_PAR_RETURN~ |   52 | FALSE       |
+| Rho     | s17.iks |   1 | 56 4 0 0 0            |      60 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Rho     | s18.iks |   1 | 56 4 0 0 0            |      60 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Rho     | s19.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Rho     | s20.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Rho     | s21.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Rho     | s22.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Rho     | s23.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Rho     | s24.iks |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Rho     | s25.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | s26.iks |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Rho     | s27.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Rho     | s28.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Rho     | s29.iks |   0 | no leaks are possible |       0 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Rho     | s30.iks |   0 | no leaks are possible |       0 | ~ERR_WRONG_PAR_RETURN~ |   52 | FALSE       |
+| Rho     | s31.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Rho     | s32.iks |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Rho     | s33.iks |   0 | no leaks are possible |       0 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Rho     | s34.iks |   1 | 56 2 0 0 0            |      58 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Rho     | s35.iks |  11 | 0 0 0 17278 0         |   17278 |                      |    0 | FALSE       |
+| Rho     | s36.iks |  11 | 0 0 0 17278 0         |   17278 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Rho     | s37.iks |  11 | 0 0 0 17278 0         |   17278 |                      |    0 | FALSE       |
+| Rho     | s38.iks |   0 | no leaks are possible |       0 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Rho     | s39.iks |   1 | 56 2 0 0 0            |      58 | ~ERR_UNDECLARED~       |   10 | FALSE       |
+| Rho     | s40.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | poi01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | poi02   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | poi03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | poi04   |  10 | 0 0 0 17106 0         |   17106 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | poi05   |  10 | 0 0 0 17106 0         |   17106 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | poi06   |  10 | 0 0 0 17182 0         |   17182 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | poi07   |  11 | 0 0 0 16884 0         |   16884 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Xi      | poi08   |  11 | 0 0 0 17218 0         |   17218 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Xi      | poi09   |  11 | 0 0 0 16948 0         |   16948 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Xi      | poi10   |  11 | 0 0 0 17103 0         |   17103 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Xi      | poi11   |   0 | 2 0 0 0 0             |       2 |                      |    0 | TRUE        |
+| Xi      | poi12   |  20 | 0 0 0 17311 0         |   17311 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Xi      | poi13   |  21 | 0 0 0 17291 0         |   17291 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Xi      | poi14   |  22 | 0 0 0 17510 0         |   17510 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Xi      | poi15   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | poi17   |  31 | 0 0 0 17363 0         |   17363 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Xi      | poi18   |  31 | 0 0 0 17357 0         |   17357 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Xi      | poi21   |  31 | 0 0 0 17745 0         |   17745 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Xi      | poi22   |  31 | 0 0 0 17745 0         |   17745 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Xi      | poi24   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | poi25   |  40 | 0 0 0 17568 0         |   17568 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Xi      | poi26   |  41 | 0 0 0 17716 0         |   17716 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Xi      | poi27   |  42 | 0 0 0 17642 0         |   17642 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Xi      | poi28   |  11 | 0 0 0 17300 0         |   17300 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Xi      | poi29   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | poi47   |   0 | 2 0 0 0 0             |       2 |                      |    0 | TRUE        |
+| Xi      | poi48   |   0 | 2 0 0 0 0             |       2 |                      |    0 | TRUE        |
+| Xi      | poi49   |   0 | 2 0 0 0 0             |       2 |                      |    0 | TRUE        |
+| Xi      | poi50   |  52 | 0 0 0 17270 0         |   17270 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Xi      | poi51   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | qwe01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | qwe02   |  10 | 0 0 0 17106 0         |   17106 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | qwe03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | qwe04   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | qwe05   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | qwe06   |  10 | 0 0 0 17106 0         |   17106 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | qwe07   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | qwe08   |  11 | 0 0 0 17218 0         |   17218 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Xi      | qwe09   |  11 | 0 0 0 17101 0         |   17101 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Xi      | qwe10   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | qwe11   |  21 | 0 0 0 17206 0         |   17206 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Xi      | qwe12   |  20 | 0 0 0 17302 0         |   17302 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Xi      | qwe13   |  22 | 0 0 0 17423 0         |   17423 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Xi      | qwe14   |  20 | 0 0 0 17182 0         |   17182 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Xi      | qwe15   |  21 | 0 0 0 17182 0         |   17182 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Xi      | qwe18   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | qwe19   |  40 | 0 0 0 17945 0         |   17945 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Xi      | qwe20   |  41 | 0 0 0 18245 0         |   18245 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Xi      | qwe21   |  42 | 0 0 0 18095 0         |   18095 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Xi      | s00.iks |  10 | 0 0 0 17106 0         |   17106 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | s01.iks |  10 | 0 0 0 17392 0         |   17392 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | s02.iks |  10 | 0 0 0 17106 0         |   17106 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | s03.iks |  11 | 0 0 0 17218 0         |   17218 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Xi      | s04.iks |  11 | 0 0 0 16950 0         |   16950 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Xi      | s05.iks |  20 | 0 0 0 17302 0         |   17302 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Xi      | s06.iks |  21 | 0 0 0 17206 0         |   17206 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Xi      | s07.iks |  22 | 0 0 0 17272 0         |   17272 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Xi      | s08.iks |  31 | 0 0 0 17354 0         |   17354 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Xi      | s09.iks |  31 | 0 0 0 17348 0         |   17348 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Xi      | s10.iks |  40 | 0 0 0 17330 0         |   17330 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Xi      | s11.iks |  41 | 0 0 0 17474 0         |   17474 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Xi      | s12.iks |  42 | 0 0 0 17480 0         |   17480 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Xi      | s13.iks |  42 | 0 0 0 17486 0         |   17486 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Xi      | s16.iks |  52 | 0 0 0 17267 0         |   17267 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Xi      | s17.iks |  31 | 0 0 0 17354 0         |   17354 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Xi      | s18.iks |  31 | 0 0 0 17354 0         |   17354 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Xi      | s19.iks |  30 | 0 0 0 17278 0         |   17278 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Xi      | s20.iks |  30 | 0 0 0 17272 0         |   17272 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Xi      | s21.iks |  30 | 0 0 0 17270 0         |   17270 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Xi      | s22.iks |  30 | 0 0 0 17276 0         |   17276 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Xi      | s23.iks |  31 | 0 0 0 17330 0         |   17330 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Xi      | s24.iks |  31 | 0 0 0 17324 0         |   17324 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Xi      | s25.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | s26.iks |  31 | 0 0 0 17492 0         |   17492 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Xi      | s27.iks |  31 | 0 0 0 17610 0         |   17610 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Xi      | s28.iks |  31 | 0 0 0 17825 0         |   17825 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Xi      | s29.iks |  31 | 0 0 0 17825 0         |   17825 | ~ERR_CHAR_TO_X~        |   32 | FALSE       |
+| Xi      | s30.iks |  52 | 0 0 0 17480 0         |   17480 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Xi      | s31.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | s32.iks |  10 | 0 0 0 17248 0         |   17248 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | s33.iks |  10 | 0 0 0 17248 0         |   17248 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | s34.iks |  10 | 0 0 0 17146 0         |   17146 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | s35.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | s36.iks |  11 | 0 0 0 17218 0         |   17218 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Xi      | s37.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Xi      | s38.iks |  31 | 0 0 0 17569 0         |   17569 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Xi      | s39.iks |  10 | 0 0 0 19234 0         |   19234 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Xi      | s40.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | poi01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | poi02   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | poi03   |  52 | 0 0 0 27427 0         |   27427 |                      |    0 | FALSE       |
+| Zeta    | poi04   |  10 | 0 0 0 36688 0         |   36688 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | poi05   |  10 | 0 0 0 36688 0         |   36688 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | poi06   |  10 | 0 0 0 36859 0         |   36859 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | poi07   |  11 | 0 0 0 26701 0         |   26701 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Zeta    | poi08   |  11 | 0 0 0 36783 0         |   36783 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Zeta    | poi09   |  11 | 0 0 0 26705 0         |   26705 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Zeta    | poi10   |  11 | 0 0 0 27520 0         |   27520 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Zeta    | poi11   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | poi12   |  20 | 0 0 0 36860 0         |   36860 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Zeta    | poi13   |  21 | 0 0 0 37027 0         |   37027 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Zeta    | poi14   |  22 | 0 0 0 37397 0         |   37397 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Zeta    | poi15   |  30 | 0 0 0 37802 0         |   37802 |                      |    0 | FALSE       |
+| Zeta    | poi17   |  31 | 0 0 0 37215 0         |   37215 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Zeta    | poi18   |  32 | 0 0 0 37211 0         |   37211 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Zeta    | poi21   |  32 | 0 0 0 37628 0         |   37628 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Zeta    | poi22   |  31 | 0 0 0 37628 0         |   37628 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Zeta    | poi24   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | poi25   |  40 | 0 0 0 37322 0         |   37322 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Zeta    | poi26   |  41 | 0 0 0 37536 0         |   37536 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Zeta    | poi27   |  42 | 0 0 0 37430 0         |   37430 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Zeta    | poi28   |  11 | 0 0 0 36720 0         |   36720 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Zeta    | poi29   |  30 | 0 0 0 37594 0         |   37594 |                      |    0 | FALSE       |
+| Zeta    | poi47   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | poi48   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | poi49   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | poi50   |  52 | 0 0 0 26988 0         |   26988 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Zeta    | poi51   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | qwe01   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | qwe02   |  10 | 0 0 0 36688 0         |   36688 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | qwe03   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | qwe04   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | qwe05   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | qwe06   |  10 | 0 0 0 36690 0         |   36690 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | qwe07   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | qwe08   |  11 | 0 0 0 36783 0         |   36783 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Zeta    | qwe09   |  11 | 0 0 0 27330 0         |   27330 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Zeta    | qwe10   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | qwe11   |  21 | 0 0 0 36855 0         |   36855 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Zeta    | qwe12   |  20 | 0 0 0 36857 0         |   36857 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Zeta    | qwe13   |  22 | 0 0 0 37130 0         |   37130 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Zeta    | qwe14   |  20 | 0 0 0 36859 0         |   36859 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Zeta    | qwe15   |  21 | 0 0 0 36857 0         |   36857 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Zeta    | qwe18   |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | qwe19   |  40 | 0 0 0 37732 0         |   37732 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Zeta    | qwe20   |  41 | 0 0 0 38282 0         |   38282 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Zeta    | qwe21   |  42 | 0 0 0 38007 0         |   38007 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Zeta    | s00.iks |  10 | 0 0 0 36688 0         |   36688 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | s01.iks |  10 | 0 0 0 37111 0         |   37111 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | s02.iks |  10 | 0 0 0 36690 0         |   36690 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | s03.iks |  11 | 0 0 0 36783 0         |   36783 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Zeta    | s04.iks |  11 | 0 0 0 26964 0         |   26964 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Zeta    | s05.iks |  20 | 0 0 0 36857 0         |   36857 | ~ERR_VARIABLE~         |   20 | TRUE        |
+| Zeta    | s06.iks |  21 | 0 0 0 36855 0         |   36855 | ~ERR_VECTOR~           |   21 | TRUE        |
+| Zeta    | s07.iks |  22 | 0 0 0 36947 0         |   36947 | ~ERR_FUNCTION~         |   22 | TRUE        |
+| Zeta    | s08.iks |  31 | 0 0 0 37208 0         |   37208 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Zeta    | s09.iks |  32 | 0 0 0 37204 0         |   37204 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Zeta    | s10.iks |  40 | 0 0 0 36965 0         |   36965 | ~ERR_MISSING_ARGS~     |   40 | TRUE        |
+| Zeta    | s11.iks |  41 | 0 0 0 37175 0         |   37175 | ~ERR_EXCESS_ARGS~      |   41 | TRUE        |
+| Zeta    | s12.iks |  42 | 0 0 0 37242 0         |   37242 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Zeta    | s13.iks |  42 | 0 0 0 37246 0         |   37246 | ~ERR_WRONG_TYPE_ARGS~  |   42 | TRUE        |
+| Zeta    | s16.iks |  52 | 0 0 0 26985 0         |   26985 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Zeta    | s17.iks |  31 | 0 0 0 37208 0         |   37208 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Zeta    | s18.iks |  32 | 0 0 0 37210 0         |   37210 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Zeta    | s19.iks |  10 | 0 0 0 36867 0         |   36867 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Zeta    | s20.iks |  10 | 0 0 0 36863 0         |   36863 | ~ERR_WRONG_TYPE~       |   30 | FALSE       |
+| Zeta    | s21.iks |  30 | 0 0 0 37037 0         |   37037 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Zeta    | s22.iks |  30 | 0 0 0 37043 0         |   37043 | ~ERR_WRONG_TYPE~       |   30 | TRUE        |
+| Zeta    | s23.iks |  31 | 0 0 0 37210 0         |   37210 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Zeta    | s24.iks |  32 | 0 0 0 37206 0         |   37206 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Zeta    | s25.iks |  10 | 0 0 0 36697 0         |   36697 |                      |    0 | FALSE       |
+| Zeta    | s26.iks |  32 | 0 0 0 37209 0         |   37209 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Zeta    | s27.iks |  31 | 0 0 0 37287 0         |   37287 | ~ERR_STRING_TO_X~      |   31 | TRUE        |
+| Zeta    | s28.iks |  32 | 0 0 0 37653 0         |   37653 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Zeta    | s29.iks |  32 | 0 0 0 37653 0         |   37653 | ~ERR_CHAR_TO_X~        |   32 | TRUE        |
+| Zeta    | s30.iks |  52 | 0 0 0 27427 0         |   27427 | ~ERR_WRONG_PAR_RETURN~ |   52 | TRUE        |
+| Zeta    | s31.iks |  32 | 0 0 0 37487 0         |   37487 |                      |    0 | FALSE       |
+| Zeta    | s32.iks |  10 | 0 0 0 37040 0         |   37040 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | s33.iks |  10 | 0 0 0 37040 0         |   37040 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | s34.iks |  10 | 0 0 0 36860 0         |   36860 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | s35.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | s36.iks |  11 | 0 0 0 36783 0         |   36783 | ~ERR_DECLARED~         |   11 | TRUE        |
+| Zeta    | s37.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+| Zeta    | s38.iks |  30 | 0 0 0 37578 0         |   37578 | ~ERR_STRING_TO_X~      |   31 | FALSE       |
+| Zeta    | s39.iks |  10 | 0 0 0 127526 0        |  127526 | ~ERR_UNDECLARED~       |   10 | TRUE        |
+| Zeta    | s40.iks |   0 | no leaks are possible |       0 |                      |    0 | TRUE        |
+
 ** Notas Objetiva e Subjetiva
 
 Os grupos não listados na tabela abaixo não submeteram ou o programa
