@@ -17,6 +17,7 @@
 
 * Expressões Booleanas
 Servem para calcular valores lógicos
+
 Usadas frequentemente em expressões condicionais
 + while
 + if
