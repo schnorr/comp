@@ -106,7 +106,6 @@ que existe apenas o tipo =int=:
 
 *Simplificações* (ou seja, não precisa fazer):
 - Nada precisa ser feito referente aos outros tipos da linguagem:
-  - vetores
   - strings
   - char
   - float
