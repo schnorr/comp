@@ -98,6 +98,7 @@ que existe apenas o tipo =int=:
   - soma, subtração, divisão e multiplicação
 - Expressões booleanas por controle de fluxo com curto-circuito
   - todos os operadores relacionais
+  - todos os operadores lógicos (adote =&&= para o e lógico, =||= para o ou lógico)
 - O comando de atribuição
 - Os seguintes comandos de fluxo de controle
   - if com else opcional
