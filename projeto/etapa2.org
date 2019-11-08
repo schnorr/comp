@@ -242,6 +242,7 @@ Os operadores são os seguintes (com uma possível semântica associada):
   - =&= bitwise AND
   - =^= exponenciação
   - todos os comparadores relacionais
+  - todos os operadores lógicos (=&&= para o e lógico, =||= para o ou lógico)
 - Ternários
   - =?= seguido de =:=, conforme a sintaxe =expressão ? expressão : expressão=
 
