@@ -43,7 +43,9 @@ Deve ser definida uma ordem dos dados dentro de um registro de
 ativação. Esta ordem deve ser obedecida no momento de criar o registro
 de ativação de cada função da linguagem. Cada função deve ter o seu
 padrão de registro de ativação, de acordo com seus parâmetros formais
-e variáveis locais.
+e variáveis locais. A ordem dos dados no registro de ativação deve ser
+informado ao professor através do arquivo ~Registro.txt~ na raiz da
+submissão.
 
 ** 2. Gerenciamento da Pilha
 
@@ -65,8 +67,9 @@ retorno deve ser capaz de atualizar a pilha e retornar o fluxo de
 execução para a função chamadora, no ponto imediatamente após a
 instrução de chamada do subprograma. Utilize o registrador especial
 ~rpc~ (registrador que contém o /program counter/) para o cálculo do
-endereço de retorno. Cada subprograma deve ter um rótulo específico
-indicando a sua primeira instrução.
+endereço de retorno, assumindo que cada instrução conta como 1 no
+~rpc~. Cada subprograma deve ter um rótulo específico indicando a sua
+primeira instrução.
 
 ** 4. Passagem de Parâmetros
 
