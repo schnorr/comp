@@ -403,10 +403,10 @@ As operações de armazenamento são semelhantes, conforme a tabela abaixo.
 #+BEGIN_EXAMPLE
 store    r1 => r2        // Memoria(r2) = r1
 storeAI  r1 => r2, c3    // Memoria(r2 + c3) = r1
-storeA0  r1 => r2, r3    // Memoria(r2 + r3) = r1
+storeAO  r1 => r2, r3    // Memoria(r2 + r3) = r1
 cstore   r1 => r2        // caractere store
 cstoreAI r1 => r2, c3    // caractere storeAI
-cstoreA0 r1 => r2, r3    // caractere storeA0
+cstoreAO r1 => r2, r3    // caractere storeAO
 #+END_EXAMPLE
 
 Não há nenhuma operação de armazenamento imediato.
@@ -493,10 +493,10 @@ cloadAI  r1, c2   =>  r3     // caractere loadAI
 cloadA0  r1, r2   =>  r3     // caractere loadA0
 store    r1       =>  r2     // Memoria(r2) = r1
 storeAI  r1       =>  r2, c3 // Memoria(r2 + c3) = r1
-storeA0  r1       =>  r2, r3 // Memoria(r2 + r3) = r1
+storeAO  r1       =>  r2, r3 // Memoria(r2 + r3) = r1
 cstore   r1       =>  r2     // caractere store
 cstoreAI r1       =>  r2, c3 // caractere storeAI
-cstoreA0 r1       =>  r2, r3 // caractere storeA0
+cstoreAO r1       =>  r2, r3 // caractere storeAO
 i2i      r1       =>  r2     // r2 = r1 para inteiros
 c2c      r1       =>  r2     // r2 = r1 para caracteres
 c2i      r1       =>  r2     // converte um caractere para um inteiro
