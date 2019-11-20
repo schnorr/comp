@@ -97,7 +97,7 @@ ymd("2019-11-23"), # Não Letivo
 ymd("2019-11-30")  # Não Letivo
 )
 
-dataDaRecuperação <- ymd("2019-12-02");
+dataDaRecuperação <- ymd("2019-12-09");
 
 dates <- tibble(Dia=seq(ymd("2019-08-12"), ymd("2020-01-11"), by="days")) %>%
     # Define o dia da semana
@@ -211,6 +211,7 @@ system2("rubber", " --pdf cronograma.tex")
 #+RESULTS: modelo_cronograma
 : 
 : compiling cronograma.tex...
+: compiling cronograma.tex...
 
 * Cronograma
 
@@ -255,6 +256,6 @@ aulas %>%
 | 27 | 2019-11-20 |           | Otimização | Grafos de Fluxo e Redução de potência                            |                     |
 | 28 | 2019-11-25 |           |            | Revisão                                                          |                     |
 | 29 | 2019-11-27 |           |            | P2                                                               |                     |
-| 30 | 2019-12-02 |           |            | PR                                                               |                     |
+| 30 | 2019-12-09 |           |            | PR                                                               |                     |
 
 
