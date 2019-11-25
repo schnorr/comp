@@ -2859,7 +2859,7 @@ não compila.
 | Xi      |  9.2 |  9.9 |
 | Zeta    | 8.98 |    9 |
 
-* Avaliação da Etapa 5                                             :noexport:
+* Avaliação da Etapa 5
 ** Entregas até o prazo
 
 | Timestamp           | Grupo   |
