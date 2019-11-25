@@ -2860,26 +2860,32 @@ não compila.
 | Zeta    | 8.98 |    9 |
 
 * Avaliação da Etapa 5                                             :noexport:
+** Entregas até o prazo
+
+| Timestamp           | Grupo   |
+|---------------------+---------|
+| 2019-09-13 16:54:43 | Omega   |
+| 2019-11-15 17:24:14 | Gamma   |
+| 2019-11-16 15:59:16 | Iota    |
+| 2019-11-16 17:58:29 | Zeta    |
+| 2019-11-16 18:16:47 | Alpha   |
+| 2019-11-16 19:16:59 | Xi      |
+| 2019-11-16 20:26:26 | Delta   |
+| 2019-11-16 23:18:23 | Kappa   |
+| 2019-11-16 23:34:21 | Omicron |
+| 2019-11-18 01:25:57 | Sigma   |
+| 2019-11-18 13:29:05 | Beta    |
+
 ** Grupos que não entregaram até o prazo
 
 | Grupo   | ID     |
 |---------+--------|
-| Delta   | ???103 |
-| Epsilon | ???369 |
-| Alpha   | ???782 |
-
-** Entregas até o prazo
-
-| Timestamp           | Grupo  |
-|---------------------+--------|
-| 2019-06-09 16:23:31 | Lambda |
-| 2019-06-09 23:56:28 | Beta   |
-
-** Entregas em recuperação/atraso
-
-Entregas até 23/06
-- Delta
-- Alpha
+| Phi     | ???108 |
+| Psi     | ???162 |
+| Psi     | ???361 |
+| Rho     | ???253 |
+| Rho     | ???172 |
+| Upsilon | ???991 |
 
 ** Arquivos para testes                                             :ATTACH:
 :PROPERTIES:
@@ -2949,10 +2955,10 @@ do segmento de dados (=Data=).
 ** Log dos testes automáticos                                       :ATTACH:
 :PROPERTIES:
 :ID:       9dfd58b9-fec8-4d82-acd9-dfafbd178328
-:Attachments: e5v0.log e5v1.log
+:Attachments: e5v1.log
 :END:
 
-Consulte [[./data/9d/fd58b9-fec8-4d82-acd9-dfafbd178328/e5v0.log][o arquivo de log e5v0]] e [[./data/9d/fd58b9-fec8-4d82-acd9-dfafbd178328/e5v1.log][o arquivo de log e5v1]]
+Consulte [[./data/9d/fd58b9-fec8-4d82-acd9-dfafbd178328/e5v1.log][o arquivo de log e5v1]]
 para obter os resultados elementares (/raw/)
 dos testes automáticos. Cada linha começa pelo nome do grupo, sendo
 que o separador é a barra vertical. A segunda coluna é o identificador
@@ -2980,263 +2986,344 @@ em =Value.y= esperado. Os endereços da pilha e da base foram definidos
 de maneira aleatória por teste. Somente aparecem aqueles testes onde a
 solução do grupo fornece algum código ILOC válido na saída.
 
-| Group  | Test  | Address | Value.x | Value.y | Eval  |
-|--------+-------+---------+---------+---------+-------|
-| Beta   | ijk00 |   28080 |     923 |     923 | TRUE  |
-| Beta   | ijk01 |   28244 |     923 |     923 | TRUE  |
-| Beta   | ijk02 |   16290 |     923 |     923 | TRUE  |
-| Beta   | ijk03 |   19320 |     923 |     923 | TRUE  |
-| Beta   | ijk04 |   21706 |      30 |      30 | TRUE  |
-| Beta   | ijk04 |   21710 |      46 |      46 | TRUE  |
-| Beta   | ijk04 |   21714 |      76 |      76 | TRUE  |
-| Beta   | ijk05 |   13847 |      -2 |      -2 | TRUE  |
-| Beta   | ijk05 |   13851 |     -18 |     -18 | TRUE  |
-| Beta   | ijk05 |   13855 |      16 |      16 | TRUE  |
-| Beta   | ijk06 |   28955 |      25 |      25 | TRUE  |
-| Beta   | ijk06 |   28959 |       5 |       5 | TRUE  |
-| Beta   | ijk06 |   28963 |       5 |       5 | TRUE  |
-| Beta   | ijk07 |   21886 |      45 |      45 | TRUE  |
-| Beta   | ijk07 |   21890 |     135 |     135 | TRUE  |
-| Beta   | ijk07 |   21894 |    6075 |    6075 | TRUE  |
-| Beta   | ijk08 |   24742 |      55 |      55 | TRUE  |
-| Beta   | ijk08 |   24746 |      15 |      15 | TRUE  |
-| Beta   | ijk08 |   24750 |       3 |       3 | TRUE  |
-| Beta   | ijk09 |   34934 |      46 |      46 | TRUE  |
-| Beta   | ijk09 |   34938 |      15 |      15 | TRUE  |
-| Beta   | ijk09 |   34942 |       3 |       3 | TRUE  |
-| Beta   | ijk10 |   11505 |     300 |     300 | TRUE  |
-| Beta   | ijk10 |   11509 |     400 |     400 | TRUE  |
-| Beta   | ijk10 |   11513 |       2 |       2 | TRUE  |
-| Beta   | ijk11 |   14130 |     800 |     800 | TRUE  |
-| Beta   | ijk11 |   14134 |     400 |     400 | TRUE  |
-| Beta   | ijk11 |   14138 |       2 |       2 | TRUE  |
-| Beta   | ijk12 |   26794 |      20 |      20 | TRUE  |
-| Beta   | ijk13 |   17436 |       2 |       2 | TRUE  |
-| Beta   | ijk14 |   22975 |     393 |     393 | TRUE  |
-| Beta   | ijk14 |   22979 |     393 |     393 | TRUE  |
-| Beta   | ijk15 |   12596 |       1 |       1 | TRUE  |
-| Beta   | ijk15 |   12600 |     393 |     393 | TRUE  |
-| Beta   | ijk16 |   32737 |       1 |       1 | TRUE  |
-| Beta   | ijk16 |   32741 |     393 |     393 | TRUE  |
-| Beta   | ijk17 |   20666 |       5 |       5 | TRUE  |
-| Beta   | ijk18 |   40839 |       5 |       5 | TRUE  |
-| Beta   | ijk19 |   12498 |       0 |       0 | TRUE  |
-| Beta   | ijk19 |   12502 |       1 |       1 | TRUE  |
-| Beta   | ijk19 |   12506 |       2 |       2 | TRUE  |
-| Beta   | ijk19 |   12510 |       3 |       3 | TRUE  |
-| Beta   | ijk19 |   12514 |     293 |     293 | TRUE  |
-| Beta   | ijk20 |   28261 |       1 |       1 | TRUE  |
-| Beta   | ijk20 |   28265 |       0 |       0 | TRUE  |
-| Beta   | ijk20 |   28269 |       2 |       2 | TRUE  |
-| Beta   | ijk20 |   28273 |       3 |       3 | TRUE  |
-| Beta   | ijk20 |   28277 |     325 |     325 | TRUE  |
-| Lambda | ijk00 |   35303 |     923 |     923 | TRUE  |
-| Lambda | ijk01 |   30330 |     923 |     923 | TRUE  |
-| Lambda | ijk02 |   12576 |     923 |     923 | TRUE  |
-| Lambda | ijk03 |   20419 |     923 |     923 | TRUE  |
-| Lambda | ijk04 |   41613 |      30 |      30 | TRUE  |
-| Lambda | ijk04 |   41617 |      46 |      46 | TRUE  |
-| Lambda | ijk04 |   41621 |      76 |      76 | TRUE  |
-| Lambda | ijk05 |   38499 |      -2 |      -2 | TRUE  |
-| Lambda | ijk05 |   38503 |     -18 |     -18 | TRUE  |
-| Lambda | ijk05 |   38507 |      16 |      16 | TRUE  |
-| Lambda | ijk06 |   23368 |      25 |      25 | TRUE  |
-| Lambda | ijk06 |   23372 |       5 |       5 | TRUE  |
-| Lambda | ijk06 |   23376 |       5 |       5 | TRUE  |
-| Lambda | ijk07 |   10138 |      45 |      45 | TRUE  |
-| Lambda | ijk07 |   10142 |     135 |     135 | TRUE  |
-| Lambda | ijk07 |   10146 |    6075 |    6075 | TRUE  |
-| Lambda | ijk08 |   19423 |      55 |      55 | TRUE  |
-| Lambda | ijk08 |   19427 |      15 |      15 | TRUE  |
-| Lambda | ijk08 |   19431 |       3 |       3 | TRUE  |
-| Lambda | ijk09 |   26060 |      46 |      46 | TRUE  |
-| Lambda | ijk09 |   26064 |      15 |      15 | TRUE  |
-| Lambda | ijk09 |   26068 |       3 |       3 | TRUE  |
-| Lambda | ijk10 |   30236 |     300 |     300 | TRUE  |
-| Lambda | ijk10 |   30240 |     400 |     400 | TRUE  |
-| Lambda | ijk10 |   30244 |       2 |       2 | TRUE  |
-| Lambda | ijk11 |   22985 |     800 |     800 | TRUE  |
-| Lambda | ijk11 |   22989 |     400 |     400 | TRUE  |
-| Lambda | ijk11 |   22993 |       2 |       2 | TRUE  |
-| Lambda | ijk12 |   26454 |      20 |      20 | TRUE  |
-| Lambda | ijk13 |   30378 |       2 |       2 | TRUE  |
-| Lambda | ijk14 |   27041 |     393 |     393 | TRUE  |
-| Lambda | ijk14 |   27045 |     393 |     393 | TRUE  |
-| Lambda | ijk15 |   42555 |       1 |       1 | TRUE  |
-| Lambda | ijk15 |   42559 |     393 |     393 | TRUE  |
-| Lambda | ijk16 |   13059 |       1 |       1 | TRUE  |
-| Lambda | ijk16 |   13063 |     393 |     393 | TRUE  |
-| Lambda | ijk17 |   11126 |       5 |       5 | TRUE  |
-| Lambda | ijk18 |   34464 |       5 |       5 | TRUE  |
-| Lambda | ijk19 |   18607 |       0 |       0 | TRUE  |
-| Lambda | ijk19 |   18611 |       1 |       1 | TRUE  |
-| Lambda | ijk19 |   18615 |       2 |       2 | TRUE  |
-| Lambda | ijk19 |   18619 |       3 |       3 | TRUE  |
-| Lambda | ijk19 |   18623 |     293 |     293 | TRUE  |
-| Lambda | ijk20 |   10693 |       1 |       1 | TRUE  |
-| Lambda | ijk20 |   10697 |       0 |       0 | TRUE  |
-| Lambda | ijk20 |   10701 |       2 |       2 | TRUE  |
-| Lambda | ijk20 |   10705 |       3 |       3 | TRUE  |
-| Lambda | ijk20 |   10709 |     325 |     325 | TRUE  |
-| Alpha  | ijk00 |   34351 |     923 |     923 | TRUE  |
-| Alpha  | ijk01 |   20783 |     923 |     923 | TRUE  |
-| Alpha  | ijk02 |   15141 |     923 |     923 | TRUE  |
-| Alpha  | ijk03 |   11489 |     923 |     923 | TRUE  |
-| Alpha  | ijk04 |   20318 |      30 |      30 | TRUE  |
-| Alpha  | ijk04 |   20322 |      46 |      46 | TRUE  |
-| Alpha  | ijk04 |   20326 |      76 |      76 | TRUE  |
-| Alpha  | ijk05 |   24086 |      -2 |      -2 | TRUE  |
-| Alpha  | ijk05 |   24090 |     -18 |     -18 | TRUE  |
-| Alpha  | ijk05 |   24094 |      16 |      16 | TRUE  |
-| Alpha  | ijk06 |   37812 |      25 |      25 | TRUE  |
-| Alpha  | ijk06 |   37816 |       5 |       5 | TRUE  |
-| Alpha  | ijk06 |   37820 |       5 |       5 | TRUE  |
-| Alpha  | ijk07 |   19070 |      45 |      45 | TRUE  |
-| Alpha  | ijk07 |   19074 |     135 |     135 | TRUE  |
-| Alpha  | ijk07 |   19078 |    6075 |    6075 | TRUE  |
-| Alpha  | ijk08 |   12897 |     235 |      55 | FALSE |
-| Alpha  | ijk08 |   12901 |      15 |      15 | TRUE  |
-| Alpha  | ijk08 |   12905 |       3 |       3 | TRUE  |
-| Alpha  | ijk09 |   42299 |      46 |      46 | TRUE  |
-| Alpha  | ijk09 |   42303 |      15 |      15 | TRUE  |
-| Alpha  | ijk09 |   42307 |       3 |       3 | TRUE  |
-| Alpha  | ijk10 |   33390 |     150 |     300 | FALSE |
-| Alpha  | ijk10 |   33394 |     400 |     400 | TRUE  |
-| Alpha  | ijk10 |   33398 |       2 |       2 | TRUE  |
-| Alpha  | ijk11 |   42492 |     400 |     800 | FALSE |
-| Alpha  | ijk11 |   42496 |     400 |     400 | TRUE  |
-| Alpha  | ijk11 |   42500 |       2 |       2 | TRUE  |
-| Alpha  | ijk12 |   32298 |      28 |      20 | FALSE |
-| Alpha  | ijk13 |   40882 |       2 |       2 | TRUE  |
-| Alpha  | ijk14 |   12712 |     393 |     393 | TRUE  |
-| Alpha  | ijk14 |   12716 |     393 |     393 | TRUE  |
-| Alpha  | ijk15 |   11133 |       1 |       1 | TRUE  |
-| Alpha  | ijk15 |   11137 |     234 |     393 | FALSE |
-| Alpha  | ijk16 |   15612 |       1 |       1 | TRUE  |
-| Alpha  | ijk16 |   15616 |     234 |     393 | FALSE |
-| Alpha  | ijk17 |   28613 |      10 |       5 | FALSE |
-| Alpha  | ijk18 |   36150 |      10 |       5 | FALSE |
-| Alpha  | ijk19 |   12232 |       0 |       0 | TRUE  |
-| Alpha  | ijk19 |   12236 |       1 |       1 | TRUE  |
-| Alpha  | ijk19 |   12240 |       2 |       2 | TRUE  |
-| Alpha  | ijk19 |   12244 |       3 |       3 | TRUE  |
-| Alpha  | ijk20 |   14215 |       1 |       1 | TRUE  |
-| Alpha  | ijk20 |   14219 |       0 |       0 | TRUE  |
-| Alpha  | ijk20 |   14223 |       2 |       2 | TRUE  |
-| Alpha  | ijk20 |   14227 |       3 |       3 | TRUE  |
-| Delta  | ijk00 |   23119 |     923 |     923 | TRUE  |
-| Delta  | ijk01 |   21198 |     923 |     923 | TRUE  |
-| Delta  | ijk02 |   12555 |     923 |     923 | TRUE  |
-| Delta  | ijk03 |   16161 |     923 |     923 | TRUE  |
-| Delta  | ijk04 |   24927 |      30 |      30 | TRUE  |
-| Delta  | ijk04 |   24931 |      46 |      46 | TRUE  |
-| Delta  | ijk04 |   24935 |      76 |      76 | TRUE  |
-| Delta  | ijk05 |   21413 |      -2 |      -2 | TRUE  |
-| Delta  | ijk05 |   21417 |     -18 |     -18 | TRUE  |
-| Delta  | ijk05 |   21421 |      16 |      16 | TRUE  |
-| Delta  | ijk06 |   37643 |      25 |      25 | TRUE  |
-| Delta  | ijk06 |   37647 |       5 |       5 | TRUE  |
-| Delta  | ijk06 |   37651 |       5 |       5 | TRUE  |
-| Delta  | ijk07 |   35226 |      45 |      45 | TRUE  |
-| Delta  | ijk07 |   35230 |     135 |     135 | TRUE  |
-| Delta  | ijk07 |   35234 |    6075 |    6075 | TRUE  |
-| Delta  | ijk08 |   36066 |      55 |      55 | TRUE  |
-| Delta  | ijk08 |   36070 |      15 |      15 | TRUE  |
-| Delta  | ijk08 |   36074 |       3 |       3 | TRUE  |
-| Delta  | ijk09 |   30082 |      46 |      46 | TRUE  |
-| Delta  | ijk09 |   30086 |      15 |      15 | TRUE  |
-| Delta  | ijk09 |   30090 |       3 |       3 | TRUE  |
-| Delta  | ijk10 |   21340 |     300 |     300 | TRUE  |
-| Delta  | ijk10 |   21344 |     400 |     400 | TRUE  |
-| Delta  | ijk10 |   21348 |       2 |       2 | TRUE  |
-| Delta  | ijk11 |   25323 |     800 |     800 | TRUE  |
-| Delta  | ijk11 |   25327 |     400 |     400 | TRUE  |
-| Delta  | ijk11 |   25331 |       2 |       2 | TRUE  |
-| Delta  | ijk12 |   20875 |      20 |      20 | TRUE  |
-| Delta  | ijk13 |   17816 |       2 |       2 | TRUE  |
-| Delta  | ijk14 |   13615 |     393 |     393 | TRUE  |
-| Delta  | ijk14 |   13619 |     393 |     393 | TRUE  |
-| Delta  | ijk15 |   26014 |       1 |       1 | TRUE  |
-| Delta  | ijk15 |   26018 |     393 |     393 | TRUE  |
-| Delta  | ijk16 |   10964 |       1 |       1 | TRUE  |
-| Delta  | ijk16 |   10968 |     432 |     393 | FALSE |
-| Delta  | ijk17 |   33280 |      10 |       5 | FALSE |
-| Delta  | ijk18 |   41241 |       5 |       5 | TRUE  |
-| Delta  | ijk19 |   17530 |       0 |       0 | TRUE  |
-| Delta  | ijk19 |   17534 |       1 |       1 | TRUE  |
-| Delta  | ijk19 |   17538 |       2 |       2 | TRUE  |
-| Delta  | ijk19 |   17542 |       3 |       3 | TRUE  |
-| Delta  | ijk19 |   17546 |     293 |     293 | TRUE  |
-| Delta  | ijk20 |   21803 |       1 |       1 | TRUE  |
-| Delta  | ijk20 |   21807 |       0 |       0 | TRUE  |
-| Delta  | ijk20 |   21811 |       2 |       2 | TRUE  |
-| Delta  | ijk20 |   21815 |       3 |       3 | TRUE  |
-| Delta  | ijk20 |   21819 |     325 |     325 | TRUE  |
+| Group | Test  | Address | Value.x | Value.y | Eval  |
+|-------+-------+---------+---------+---------+-------|
+| Alpha | ijk00 |   25283 |     923 |     923 | TRUE  |
+| Alpha | ijk01 |   38824 |     923 |     923 | TRUE  |
+| Alpha | ijk02 |    7744 |     923 |     923 | TRUE  |
+| Alpha | ijk03 |   18671 |     923 |     923 | TRUE  |
+| Alpha | ijk04 |   18912 |      30 |      30 | TRUE  |
+| Alpha | ijk04 |   18916 |      46 |      46 | TRUE  |
+| Alpha | ijk04 |   18920 |      76 |      76 | TRUE  |
+| Alpha | ijk05 |   12072 |      -2 |      -2 | TRUE  |
+| Alpha | ijk05 |   12076 |     -18 |     -18 | TRUE  |
+| Alpha | ijk05 |   12080 |      16 |      16 | TRUE  |
+| Alpha | ijk06 |   11573 |      25 |      25 | TRUE  |
+| Alpha | ijk06 |   11577 |       5 |       5 | TRUE  |
+| Alpha | ijk06 |   11581 |       5 |       5 | TRUE  |
+| Alpha | ijk07 |   16513 |      45 |      45 | TRUE  |
+| Alpha | ijk07 |   16517 |     135 |     135 | TRUE  |
+| Alpha | ijk07 |   16521 |    6075 |    6075 | TRUE  |
+| Alpha | ijk08 |   31053 |      55 |      55 | TRUE  |
+| Alpha | ijk08 |   31057 |      15 |      15 | TRUE  |
+| Alpha | ijk08 |   31061 |       3 |       3 | TRUE  |
+| Alpha | ijk09 |   31259 |      46 |      46 | TRUE  |
+| Alpha | ijk09 |   31263 |      15 |      15 | TRUE  |
+| Alpha | ijk09 |   31267 |       3 |       3 | TRUE  |
+| Alpha | ijk10 |   12685 |     300 |     300 | TRUE  |
+| Alpha | ijk10 |   12689 |     400 |     400 | TRUE  |
+| Alpha | ijk10 |   12693 |       2 |       2 | TRUE  |
+| Alpha | ijk11 |   29796 |     800 |     800 | TRUE  |
+| Alpha | ijk11 |   29800 |     400 |     400 | TRUE  |
+| Alpha | ijk11 |   29804 |       2 |       2 | TRUE  |
+| Alpha | ijk12 |   38883 |      20 |      20 | TRUE  |
+| Alpha | ijk13 |   36557 |       2 |       2 | TRUE  |
+| Alpha | ijk14 |   32866 |     393 |     393 | TRUE  |
+| Alpha | ijk14 |   32870 |     393 |     393 | TRUE  |
+| Alpha | ijk15 |   22554 |       1 |       1 | TRUE  |
+| Alpha | ijk15 |   22558 |     393 |     393 | TRUE  |
+| Alpha | ijk16 |   24283 |       1 |       1 | TRUE  |
+| Alpha | ijk16 |   24287 |     393 |     393 | TRUE  |
+| Alpha | ijk17 |   16319 |       5 |       5 | TRUE  |
+| Alpha | ijk18 |   25124 |       5 |       5 | TRUE  |
+| Alpha | ijk19 |   33573 |       0 |       0 | TRUE  |
+| Alpha | ijk19 |   33577 |       1 |       1 | TRUE  |
+| Alpha | ijk19 |   33581 |       2 |       2 | TRUE  |
+| Alpha | ijk19 |   33585 |       3 |       3 | TRUE  |
+| Alpha | ijk19 |   33589 |     293 |     293 | TRUE  |
+| Alpha | ijk20 |   17483 |       1 |       1 | TRUE  |
+| Alpha | ijk20 |   17487 |       0 |       0 | TRUE  |
+| Alpha | ijk20 |   17491 |       2 |       2 | TRUE  |
+| Alpha | ijk20 |   17495 |       3 |       3 | TRUE  |
+| Alpha | ijk20 |   17499 |     325 |     325 | TRUE  |
+| Beta  | ijk00 |   35820 |     923 |     923 | TRUE  |
+| Beta  | ijk01 |   36433 |     923 |     923 | TRUE  |
+| Beta  | ijk02 |   16543 |     923 |     923 | TRUE  |
+| Beta  | ijk03 |    7849 |     923 |     923 | TRUE  |
+| Beta  | ijk04 |   25642 |      30 |      30 | TRUE  |
+| Beta  | ijk04 |   25646 |      46 |      46 | TRUE  |
+| Beta  | ijk04 |   25650 |      76 |      76 | TRUE  |
+| Beta  | ijk05 |   16096 |      -2 |      -2 | TRUE  |
+| Beta  | ijk05 |   16100 |     -18 |     -18 | TRUE  |
+| Beta  | ijk05 |   16104 |      16 |      16 | TRUE  |
+| Beta  | ijk06 |   40910 |      25 |      25 | TRUE  |
+| Beta  | ijk06 |   40914 |       5 |       5 | TRUE  |
+| Beta  | ijk06 |   40918 |       5 |       5 | TRUE  |
+| Beta  | ijk07 |   11805 |      45 |      45 | TRUE  |
+| Beta  | ijk07 |   11809 |     135 |     135 | TRUE  |
+| Beta  | ijk07 |   11813 |    6075 |    6075 | TRUE  |
+| Beta  | ijk08 |   38485 |      55 |      55 | TRUE  |
+| Beta  | ijk08 |   38489 |      15 |      15 | TRUE  |
+| Beta  | ijk08 |   38493 |       3 |       3 | TRUE  |
+| Beta  | ijk09 |   19362 |      46 |      46 | TRUE  |
+| Beta  | ijk09 |   19366 |      15 |      15 | TRUE  |
+| Beta  | ijk09 |   19370 |       3 |       3 | TRUE  |
+| Beta  | ijk10 |   14743 |     300 |     300 | TRUE  |
+| Beta  | ijk10 |   14747 |     400 |     400 | TRUE  |
+| Beta  | ijk10 |   14751 |       2 |       2 | TRUE  |
+| Beta  | ijk11 |   34700 |     800 |     800 | TRUE  |
+| Beta  | ijk11 |   34704 |     400 |     400 | TRUE  |
+| Beta  | ijk11 |   34708 |       2 |       2 | TRUE  |
+| Beta  | ijk12 |   19043 |      20 |      20 | TRUE  |
+| Beta  | ijk13 |   20401 |       2 |       2 | TRUE  |
+| Beta  | ijk14 |   13018 |     393 |     393 | TRUE  |
+| Beta  | ijk14 |   13022 |     393 |     393 | TRUE  |
+| Gamma | ijk00 |   17185 |     923 |     923 | TRUE  |
+| Gamma | ijk01 |   18953 |     923 |     923 | TRUE  |
+| Gamma | ijk02 |    6045 |     923 |     923 | TRUE  |
+| Gamma | ijk03 |   18100 |     923 |     923 | TRUE  |
+| Gamma | ijk04 |   32299 |      30 |      30 | TRUE  |
+| Gamma | ijk04 |   32303 |      46 |      46 | TRUE  |
+| Gamma | ijk04 |   32307 |      76 |      76 | TRUE  |
+| Gamma | ijk05 |   33421 |      -2 |      -2 | TRUE  |
+| Gamma | ijk05 |   33425 |     -18 |     -18 | TRUE  |
+| Gamma | ijk05 |   33429 |      16 |      16 | TRUE  |
+| Gamma | ijk06 |   17592 |      25 |      25 | TRUE  |
+| Gamma | ijk06 |   17596 |       5 |       5 | TRUE  |
+| Gamma | ijk06 |   17600 |       5 |       5 | TRUE  |
+| Gamma | ijk07 |   15497 |      45 |      45 | TRUE  |
+| Gamma | ijk07 |   15501 |     135 |     135 | TRUE  |
+| Gamma | ijk07 |   15505 |    6075 |    6075 | TRUE  |
+| Gamma | ijk08 |   35109 |      55 |      55 | TRUE  |
+| Gamma | ijk08 |   35113 |      15 |      15 | TRUE  |
+| Gamma | ijk08 |   35117 |       3 |       3 | TRUE  |
+| Gamma | ijk09 |   11278 |      46 |      46 | TRUE  |
+| Gamma | ijk09 |   11282 |      15 |      15 | TRUE  |
+| Gamma | ijk09 |   11286 |       3 |       3 | TRUE  |
+| Gamma | ijk10 |   32628 |     300 |     300 | TRUE  |
+| Gamma | ijk10 |   32632 |     400 |     400 | TRUE  |
+| Gamma | ijk10 |   32636 |       2 |       2 | TRUE  |
+| Gamma | ijk11 |   24118 |     800 |     800 | TRUE  |
+| Gamma | ijk11 |   24122 |     400 |     400 | TRUE  |
+| Gamma | ijk11 |   24126 |       2 |       2 | TRUE  |
+| Gamma | ijk12 |   26347 |      20 |      20 | TRUE  |
+| Gamma | ijk13 |   10943 |       2 |       2 | TRUE  |
+| Gamma | ijk14 |   12459 |     393 |     393 | TRUE  |
+| Gamma | ijk14 |   12463 |     393 |     393 | TRUE  |
+| Gamma | ijk15 |   30393 |       1 |       1 | TRUE  |
+| Gamma | ijk15 |   30397 |     393 |     393 | TRUE  |
+| Gamma | ijk16 |   11486 |       1 |       1 | TRUE  |
+| Gamma | ijk16 |   11490 |     393 |     393 | TRUE  |
+| Gamma | ijk17 |   27136 |       5 |       5 | TRUE  |
+| Gamma | ijk18 |   19135 |       5 |       5 | TRUE  |
+| Gamma | ijk19 |   39351 |       0 |       0 | TRUE  |
+| Gamma | ijk19 |   39355 |       1 |       1 | TRUE  |
+| Gamma | ijk19 |   39359 |       2 |       2 | TRUE  |
+| Gamma | ijk19 |   39363 |       3 |       3 | TRUE  |
+| Gamma | ijk19 |   39367 |     293 |     293 | TRUE  |
+| Gamma | ijk20 |   24037 |       1 |       1 | TRUE  |
+| Gamma | ijk20 |   24041 |       0 |       0 | TRUE  |
+| Gamma | ijk20 |   24045 |       2 |       2 | TRUE  |
+| Gamma | ijk20 |   24049 |       3 |       3 | TRUE  |
+| Gamma | ijk20 |   24053 |     325 |     325 | TRUE  |
+| Iota  | ijk00 |   22841 |     923 |     923 | TRUE  |
+| Iota  | ijk01 |   29646 |     923 |     923 | TRUE  |
+| Iota  | ijk02 |   19075 |     923 |     923 | TRUE  |
+| Iota  | ijk03 |    6562 |     923 |     923 | TRUE  |
+| Iota  | ijk04 |   24584 |      30 |      30 | TRUE  |
+| Iota  | ijk04 |   24588 |      46 |      46 | TRUE  |
+| Iota  | ijk04 |   24592 |      76 |      76 | TRUE  |
+| Iota  | ijk05 |   32592 |      -2 |      -2 | TRUE  |
+| Iota  | ijk05 |   32596 |     -18 |     -18 | TRUE  |
+| Iota  | ijk05 |   32600 |      16 |      16 | TRUE  |
+| Iota  | ijk06 |   31877 |      25 |      25 | TRUE  |
+| Iota  | ijk06 |   31881 |       5 |       5 | TRUE  |
+| Iota  | ijk06 |   31885 |       5 |       5 | TRUE  |
+| Iota  | ijk07 |   40759 |      45 |      45 | TRUE  |
+| Iota  | ijk07 |   40763 |     135 |     135 | TRUE  |
+| Iota  | ijk07 |   40767 |    6075 |    6075 | TRUE  |
+| Iota  | ijk08 |   38572 |      55 |      55 | TRUE  |
+| Iota  | ijk08 |   38576 |      15 |      15 | TRUE  |
+| Iota  | ijk08 |   38580 |       3 |       3 | TRUE  |
+| Iota  | ijk09 |   19133 |      46 |      46 | TRUE  |
+| Iota  | ijk09 |   19137 |      15 |      15 | TRUE  |
+| Iota  | ijk09 |   19141 |       3 |       3 | TRUE  |
+| Iota  | ijk10 |   34084 |     300 |     300 | TRUE  |
+| Iota  | ijk10 |   34088 |     400 |     400 | TRUE  |
+| Iota  | ijk10 |   34092 |       2 |       2 | TRUE  |
+| Iota  | ijk11 |   16244 |     800 |     800 | TRUE  |
+| Iota  | ijk11 |   16248 |     400 |     400 | TRUE  |
+| Iota  | ijk11 |   16252 |       2 |       2 | TRUE  |
+| Iota  | ijk12 |   10635 |      20 |      20 | TRUE  |
+| Iota  | ijk13 |   39117 |       2 |       2 | TRUE  |
+| Iota  | ijk14 |   28297 |     393 |     393 | TRUE  |
+| Iota  | ijk14 |   28301 |     393 |     393 | TRUE  |
+| Iota  | ijk15 |   13146 |       1 |       1 | TRUE  |
+| Iota  | ijk15 |   13150 |     393 |     393 | TRUE  |
+| Iota  | ijk16 |   10621 |       1 |       1 | TRUE  |
+| Iota  | ijk16 |   10625 |     393 |     393 | TRUE  |
+| Iota  | ijk17 |   36286 |       5 |       5 | TRUE  |
+| Iota  | ijk18 |   31893 |       5 |       5 | TRUE  |
+| Iota  | ijk19 |   18423 |       0 |       0 | TRUE  |
+| Iota  | ijk19 |   18427 |       1 |       1 | TRUE  |
+| Iota  | ijk19 |   18431 |       2 |       2 | TRUE  |
+| Iota  | ijk19 |   18435 |       3 |       3 | TRUE  |
+| Iota  | ijk19 |   18439 |     293 |     293 | TRUE  |
+| Iota  | ijk20 |   18421 |       1 |       1 | TRUE  |
+| Iota  | ijk20 |   18425 |       0 |       0 | TRUE  |
+| Iota  | ijk20 |   18429 |       2 |       2 | TRUE  |
+| Iota  | ijk20 |   18433 |       3 |       3 | TRUE  |
+| Iota  | ijk20 |   18437 |     325 |     325 | TRUE  |
+| Kappa | ijk00 |   11778 |     923 |     923 | TRUE  |
+| Kappa | ijk01 |   12031 |     923 |     923 | TRUE  |
+| Kappa | ijk02 |   18887 |     923 |     923 | TRUE  |
+| Kappa | ijk03 |   13933 |     923 |     923 | TRUE  |
+| Kappa | ijk04 |   29561 |      30 |      30 | TRUE  |
+| Kappa | ijk04 |   29565 |      46 |      46 | TRUE  |
+| Kappa | ijk04 |   29569 |      76 |      76 | TRUE  |
+| Kappa | ijk05 |   16607 |      -2 |      -2 | TRUE  |
+| Kappa | ijk05 |   16611 |     -18 |     -18 | TRUE  |
+| Kappa | ijk05 |   16615 |      16 |      16 | TRUE  |
+| Kappa | ijk06 |   12500 |      25 |      25 | TRUE  |
+| Kappa | ijk06 |   12504 |       5 |       5 | TRUE  |
+| Kappa | ijk06 |   12508 |       5 |       5 | TRUE  |
+| Kappa | ijk07 |   22474 |      45 |      45 | TRUE  |
+| Kappa | ijk07 |   22478 |     135 |     135 | TRUE  |
+| Kappa | ijk07 |   22482 |    6075 |    6075 | TRUE  |
+| Kappa | ijk08 |   12850 |      55 |      55 | TRUE  |
+| Kappa | ijk08 |   12854 |      15 |      15 | TRUE  |
+| Kappa | ijk08 |   12858 |       3 |       3 | TRUE  |
+| Kappa | ijk09 |   37292 |      46 |      46 | TRUE  |
+| Kappa | ijk09 |   37296 |      15 |      15 | TRUE  |
+| Kappa | ijk09 |   37300 |       3 |       3 | TRUE  |
+| Kappa | ijk10 |   33203 |     300 |     300 | TRUE  |
+| Kappa | ijk10 |   33207 |     400 |     400 | TRUE  |
+| Kappa | ijk10 |   33211 |       2 |       2 | TRUE  |
+| Kappa | ijk11 |   18994 |     800 |     800 | TRUE  |
+| Kappa | ijk11 |   18998 |     400 |     400 | TRUE  |
+| Kappa | ijk11 |   19002 |       2 |       2 | TRUE  |
+| Kappa | ijk12 |   14587 |      20 |      20 | TRUE  |
+| Kappa | ijk13 |   15216 |       2 |       2 | TRUE  |
+| Kappa | ijk14 |   34116 |     393 |     393 | TRUE  |
+| Kappa | ijk14 |   34120 |     393 |     393 | TRUE  |
+| Kappa | ijk15 |   30723 |       1 |       1 | TRUE  |
+| Kappa | ijk15 |   30727 |     393 |     393 | TRUE  |
+| Kappa | ijk16 |   10809 |       1 |       1 | TRUE  |
+| Kappa | ijk16 |   10813 |     393 |     393 | TRUE  |
+| Kappa | ijk17 |   16396 |      10 |       5 | FALSE |
+| Kappa | ijk18 |   32297 |       5 |       5 | TRUE  |
+| Kappa | ijk19 |   21807 |       0 |       0 | TRUE  |
+| Kappa | ijk19 |   21811 |       1 |       1 | TRUE  |
+| Kappa | ijk19 |   21815 |       2 |       2 | TRUE  |
+| Kappa | ijk19 |   21819 |       3 |       3 | TRUE  |
+| Kappa | ijk19 |   21823 |     293 |     293 | TRUE  |
+| Kappa | ijk20 |   15588 |       1 |       1 | TRUE  |
+| Kappa | ijk20 |   15592 |       0 |       0 | TRUE  |
+| Kappa | ijk20 |   15596 |       2 |       2 | TRUE  |
+| Kappa | ijk20 |   15600 |       3 |       3 | TRUE  |
+| Kappa | ijk20 |   15604 |     293 |     325 | FALSE |
+| Xi    | ijk00 |   37908 |     923 |     923 | TRUE  |
+| Xi    | ijk01 |   34543 |     923 |     923 | TRUE  |
+| Xi    | ijk02 |   16510 |     923 |     923 | TRUE  |
+| Xi    | ijk03 |    9980 |     923 |     923 | TRUE  |
+| Xi    | ijk04 |   18471 |      30 |      30 | TRUE  |
+| Xi    | ijk04 |   18475 |      46 |      46 | TRUE  |
+| Xi    | ijk04 |   18479 |      76 |      76 | TRUE  |
+| Xi    | ijk05 |   42459 |      -2 |      -2 | TRUE  |
+| Xi    | ijk05 |   42463 |     -18 |     -18 | TRUE  |
+| Xi    | ijk05 |   42467 |      16 |      16 | TRUE  |
+| Xi    | ijk06 |   34164 |      25 |      25 | TRUE  |
+| Xi    | ijk06 |   34168 |       5 |       5 | TRUE  |
+| Xi    | ijk06 |   34172 |       5 |       5 | TRUE  |
+| Xi    | ijk07 |   42575 |      45 |      45 | TRUE  |
+| Xi    | ijk07 |   42579 |     135 |     135 | TRUE  |
+| Xi    | ijk07 |   42583 |    6075 |    6075 | TRUE  |
+| Xi    | ijk08 |   19834 |      55 |      55 | TRUE  |
+| Xi    | ijk08 |   19838 |      15 |      15 | TRUE  |
+| Xi    | ijk08 |   19842 |       3 |       3 | TRUE  |
+| Xi    | ijk09 |   11336 |      46 |      46 | TRUE  |
+| Xi    | ijk09 |   11340 |      15 |      15 | TRUE  |
+| Xi    | ijk09 |   11344 |       3 |       3 | TRUE  |
+| Xi    | ijk10 |   24009 |     300 |     300 | TRUE  |
+| Xi    | ijk10 |   24013 |     400 |     400 | TRUE  |
+| Xi    | ijk10 |   24017 |       2 |       2 | TRUE  |
+| Xi    | ijk11 |   37270 |     800 |     800 | TRUE  |
+| Xi    | ijk11 |   37274 |     400 |     400 | TRUE  |
+| Xi    | ijk11 |   37278 |       2 |       2 | TRUE  |
+| Xi    | ijk12 |   23561 |      20 |      20 | TRUE  |
+| Xi    | ijk13 |   28555 |       2 |       2 | TRUE  |
+| Xi    | ijk14 |   12527 |     393 |     393 | TRUE  |
+| Xi    | ijk14 |   12531 |     393 |     393 | TRUE  |
+| Xi    | ijk15 |   20460 |       1 |       1 | TRUE  |
+| Xi    | ijk15 |   20464 |     393 |     393 | TRUE  |
+| Xi    | ijk16 |   16704 |       1 |       1 | TRUE  |
+| Xi    | ijk16 |   16708 |     393 |     393 | TRUE  |
+| Xi    | ijk17 |   34732 |       5 |       5 | TRUE  |
+| Xi    | ijk18 |   34604 |       5 |       5 | TRUE  |
+| Xi    | ijk19 |   36438 |       0 |       0 | TRUE  |
+| Xi    | ijk19 |   36442 |       1 |       1 | TRUE  |
+| Xi    | ijk19 |   36446 |       2 |       2 | TRUE  |
+| Xi    | ijk19 |   36450 |       3 |       3 | TRUE  |
+| Xi    | ijk19 |   36454 |     293 |     293 | TRUE  |
+| Xi    | ijk20 |   20485 |       1 |       1 | TRUE  |
+| Xi    | ijk20 |   20489 |       0 |       0 | TRUE  |
+| Xi    | ijk20 |   20493 |       2 |       2 | TRUE  |
+| Xi    | ijk20 |   20497 |       3 |       3 | TRUE  |
+| Xi    | ijk20 |   20501 |     325 |     325 | TRUE  |
+| Zeta  | ijk00 |   35092 |     923 |     923 | TRUE  |
+| Zeta  | ijk01 |   21899 |     923 |     923 | TRUE  |
+| Zeta  | ijk02 |   10220 |     923 |     923 | TRUE  |
+| Zeta  | ijk03 |    5276 |     923 |     923 | TRUE  |
+| Zeta  | ijk04 |   39083 |      30 |      30 | TRUE  |
+| Zeta  | ijk04 |   39087 |      46 |      46 | TRUE  |
+| Zeta  | ijk04 |   39091 |      76 |      76 | TRUE  |
+| Zeta  | ijk05 |   13976 |      -2 |      -2 | TRUE  |
+| Zeta  | ijk05 |   13980 |     -18 |     -18 | TRUE  |
+| Zeta  | ijk05 |   13984 |      16 |      16 | TRUE  |
+| Zeta  | ijk06 |   30120 |      25 |      25 | TRUE  |
+| Zeta  | ijk06 |   30124 |       5 |       5 | TRUE  |
+| Zeta  | ijk06 |   30128 |       5 |       5 | TRUE  |
+| Zeta  | ijk07 |   16028 |      45 |      45 | TRUE  |
+| Zeta  | ijk07 |   16032 |     135 |     135 | TRUE  |
+| Zeta  | ijk07 |   16036 |    6075 |    6075 | TRUE  |
+| Zeta  | ijk08 |   18871 |      55 |      55 | TRUE  |
+| Zeta  | ijk08 |   18875 |      15 |      15 | TRUE  |
+| Zeta  | ijk08 |   18879 |       3 |       3 | TRUE  |
+| Zeta  | ijk09 |   16198 |      46 |      46 | TRUE  |
+| Zeta  | ijk09 |   16202 |      15 |      15 | TRUE  |
+| Zeta  | ijk09 |   16206 |       3 |       3 | TRUE  |
+| Zeta  | ijk10 |   11192 |     300 |     300 | TRUE  |
+| Zeta  | ijk10 |   11196 |     400 |     400 | TRUE  |
+| Zeta  | ijk10 |   11200 |       2 |       2 | TRUE  |
+| Zeta  | ijk11 |   25193 |     800 |     800 | TRUE  |
+| Zeta  | ijk11 |   25197 |     400 |     400 | TRUE  |
+| Zeta  | ijk11 |   25201 |       2 |       2 | TRUE  |
+| Zeta  | ijk12 |   40905 |      20 |      20 | TRUE  |
+| Zeta  | ijk13 |   26761 |       2 |       2 | TRUE  |
+| Zeta  | ijk14 |   12888 |     393 |     393 | TRUE  |
+| Zeta  | ijk14 |   12892 |     393 |     393 | TRUE  |
+| Zeta  | ijk15 |   28219 |       1 |       1 | TRUE  |
+| Zeta  | ijk15 |   28223 |     393 |     393 | TRUE  |
+| Zeta  | ijk16 |   37914 |       1 |       1 | TRUE  |
+| Zeta  | ijk16 |   37918 |     393 |     393 | TRUE  |
+| Zeta  | ijk17 |   23161 |       5 |       5 | TRUE  |
+| Zeta  | ijk18 |   27708 |       5 |       5 | TRUE  |
+| Zeta  | ijk19 |   36776 |       0 |       0 | TRUE  |
+| Zeta  | ijk19 |   36780 |       1 |       1 | TRUE  |
+| Zeta  | ijk19 |   36784 |       2 |       2 | TRUE  |
+| Zeta  | ijk19 |   36788 |       3 |       3 | TRUE  |
+| Zeta  | ijk19 |   36792 |     293 |     293 | TRUE  |
+| Zeta  | ijk20 |   11937 |       1 |       1 | TRUE  |
+| Zeta  | ijk20 |   11941 |       0 |       0 | TRUE  |
+| Zeta  | ijk20 |   11945 |       2 |       2 | TRUE  |
+| Zeta  | ijk20 |   11949 |       3 |       3 | TRUE  |
+| Zeta  | ijk20 |   11953 |     325 |     325 | TRUE  |
 
-** Comentários por grupos
-*** Lambda
-- [X] Modulo ILOC.[ch]
-  - Enum para os códigos das instruções
-  - ~struct codigo_iloc~, ou ~codigo_iloc~
-    - char* e estruturas com enum
-- [X] Rótulos e registradores
-  - Geração de código, funções auxiliares
-  - ~gera_rotulo()~ e ~gera_registrador()~
-- [X] Geração de código
-  - A partir da AST, com ~gera_codigo_op_bin~
-    - > 1 passagem (três passagens)
-      - Léxica, sintática + semântica + gera código
-  - Usou função de aridade indefinida para concatenar
-  - Expressões aritméticas, com operações binárias
-    - soma, subtração, divisão e multiplicação
-  - Expressões booleanas por controle de fluxo com curto-circuito
-    - todos os operadores relacionais
-  - O comando de atribuição
-  - Os seguintes comandos de fluxo de controle
-    - if com else opcional
-    - while
-- [X] Coisas a mais
-  - Somente a inicialização foi feita a mais, que é idêntica à atribuição
-  - Operações básicas bitwise and e or pois tem instruções equivalentes em ILOC
-- Valgrind Check!!!
-*** Beta
-
-Fizeram tudo.
-
-- [X] Estruturas de dados ILOC
-  - ~iloc.h~, ~strucut iloc_instruction~
-  - vetor de ponteiros (/aka/ array list)
-- [X] Label ~new_label~
-  - Máximo de 16 caracteres, de acordo com o máximo inteiro que pode
-    ser guardado em um int
-- [X] Registrador é uma string ~new_register~
-- [X] Geração de código em uma única passagem
-  - [X] Cálculo de endereço na declaração de variáveis
-  - [X] Curto circuito
-  - [X] While
-- [X] Valgrind não estava na spec
-- [X] Testes automatizados que rodam no make
-*** Alpha
-- [X] Novo deadline para a E5: 23/06 às 23h59
-
-- [X] Estrutura de dados ILOC
-  - Módulo ILOC.h ILOC.c
-- [X] Geração de registradores e labels
-- [0/0] Geração de código, falta bastante
-  - Atribuição, somas, aritmética
-  - Falta o ~if~, ~while~, expressões booleanas e relacionais
-    - Curto circuito
-  - Escopo aninhado (offset das tabelas de símbolos) não implementado
-*** Delta
-- [X] Novo deadline para a E5: 23/06 às 23h59
 ** Notas Objetiva e Subjetiva
 
-| Grupo  | E5.O | E5.S |
-|--------+------+------|
-| Alpha  | 7.92 |    6 |
-| Beta   |   10 |   10 |
-| Delta  | 9.58 |    7 |
-| Lambda |   10 |   10 |
+| Grupo   | E5.O | E5.S |
+|---------+------+------|
+| Alpha   |   10 |    9 |
+| Beta    | 6.67 | 7.05 |
+| Delta   |    0 | 5.21 |
+| Gamma   |   10 | 9.47 |
+| Iota    |   10 | 9.58 |
+| Kappa   | 9.58 | 8.95 |
+| Omicron |    0 | 1.47 |
+| Sigma   |    0 | 4.47 |
+| Xi      |   10 |   10 |
+| Zeta    |   10 | 9.05 |
+
 * Avaliação da Etapa 6                                             :noexport:
 ** Grupos que não entregaram até o prazo
 
