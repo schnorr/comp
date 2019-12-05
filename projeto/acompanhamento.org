@@ -3324,25 +3324,37 @@ solução do grupo fornece algum código ILOC válido na saída.
 | Xi      |   10 |   10 |
 | Zeta    |   10 | 9.05 |
 
-* Avaliação da Etapa 6                                             :noexport:
+* Avaliação da Etapa 6
 ** Grupos que não entregaram até o prazo
 
 | Grupo   | ID     |
 |---------+--------|
-| Delta   | ???103 |
-| Alpha   | ???782 |
-
-** Grupos que entregaram até o prazo extra fornecido
-
-Até 30/06
-- Delta em 26/06
+| Alpha   | ???759 |
+| Delta   | ???887 |
+| Iota    | ???490 |
+| Kappa   | ???712 |
+| Kappa   | ???087 |
+| Omega   | ???612 |
+| Omicron | ???726 |
+| Omicron | ???732 |
+| Phi     | ???108 |
+| Psi     | ???162 |
+| Psi     | ???361 |
+| Rho     | ???253 |
+| Rho     | ???172 |
+| Sigma   | ???165 |
+| Sigma   | ???652 |
+| Upsilon | ???991 |
+| Zeta    | ???909 |
+| Zeta    | ???451 |
 
 ** Entregas até o prazo
 
-| Timestamp           | Grupo  |
-|---------------------+--------|
-| 2019-06-22 00:45:45 | Lambda |
-| 2019-06-24 22:20:35 | Beta   |
+| Timestamp           | Grupo |
+|---------------------+-------|
+| 2019-12-03 18:35:25 | Gamma |
+| 2019-12-03 20:59:07 | Beta  |
+| 2019-12-03 21:02:35 | Xi    |
 
 ** Arquivos para testes                                             :ATTACH:
 :PROPERTIES:
@@ -3372,11 +3384,11 @@ do segmento de dados (=Data=).
 
 ** Log dos testes automáticos                                       :ATTACH:
 :PROPERTIES:
-:Attachments: e6v0.log e6v1.log
 :ID:       743408ae-6fab-47cf-ae1c-c9fd150b2859
+:Attachments: e6v0.log
 :END:
 
-Consulte [[./data/74/3408ae-6fab-47cf-ae1c-c9fd150b2859/e6v0.log][o arquivo de log]] e [[./data/74/3408ae-6fab-47cf-ae1c-c9fd150b2859/e6v1.log][o arquivo de log]] para obter os resultados
+Consulte [[./data/74/3408ae-6fab-47cf-ae1c-c9fd150b2859/e6v0.log][o arquivo de log]] para obter os resultados
 elementares (/raw/) dos testes automáticos. Cada linha começa pelo nome
 do grupo, sendo que o separador é a barra vertical. A segunda coluna é
 o identificador do teste, e a terceira coluna pode ser =stack=, =data=,
@@ -3399,35 +3411,34 @@ ser registrado para o teste ser considerado certo. A coluna =Eval= é
 assinalada =TRUE= (correta) quando o valor da coluna =Value.x=, registrado
 no endereço pelo código ILOC emitido pelo grupo, for idêntico ao valor
 em =Value.y= esperado. Os endereços da pilha e da base foram definidos
-de maneira aleatória por teste. Somente aparecem aqueles testes onde a
-solução do grupo fornece algum código ILOC válido na saída.
+de maneira aleatória por teste.
 
-| Group  | Test | Address | Value.x | Value.y | Eval |
-|--------+------+---------+---------+---------+------|
-| Beta   | e00  |   17404 |      99 |      99 | TRUE |
-| Beta   | e01  |   19878 |      98 |      98 | TRUE |
-| Beta   | e02  |   14628 |      49 |      49 | TRUE |
-| Beta   | e03  |   19258 |     720 |     720 | TRUE |
-| Beta   | e04  |    9632 |      58 |      58 | TRUE |
-| Beta   | e05  |   18193 |       7 |       7 | TRUE |
-| Beta   | e06  |   20816 |      52 |      52 | TRUE |
-| Beta   | e07  |   15519 |     352 |     352 | TRUE |
-| Lambda | e00  |   11732 |      99 |      99 | TRUE |
-| Lambda | e01  |   13609 |      98 |      98 | TRUE |
-| Lambda | e02  |    9495 |      49 |      49 | TRUE |
-| Lambda | e03  |   14263 |     720 |     720 | TRUE |
-| Lambda | e04  |    6173 |      58 |      58 | TRUE |
-| Lambda | e05  |   13211 |       7 |       7 | TRUE |
-| Lambda | e06  |   18313 |      52 |      52 | TRUE |
-| Lambda | e07  |   14575 |     352 |     352 | TRUE |
-| Delta  | e00  |   13567 |      99 |      99 | TRUE |
-| Delta  | e01  |    6616 |      98 |      98 | TRUE |
-| Delta  | e02  |   16224 |      49 |      49 | TRUE |
-| Delta  | e03  |   20196 |     720 |     720 | TRUE |
-| Delta  | e04  |   16714 |      58 |      58 | TRUE |
-| Delta  | e05  |   16891 |       7 |       7 | TRUE |
-| Delta  | e06  |   14963 |      52 |      52 | TRUE |
-| Delta  | e07  |    5482 |     352 |     352 | TRUE |
+Somente aparecem aqueles testes onde a solução do grupo fornece algum
+código ILOC válido na saída ou que o simulador ILOC é capaz de
+terminar sem laços infinitos.
+
+| Group | Test | Address | Value.x | Value.y | Eval  |
+|-------+------+---------+---------+---------+-------|
+| Beta  | e00  |   20897 |      99 |      99 | TRUE  |
+| Beta  | e01  |   18548 |      98 |      98 | TRUE  |
+| Beta  | e02  |   18191 |      49 |      49 | TRUE  |
+| Beta  | e04  |   20705 | 2070750 |      58 | FALSE |
+| Gamma | e00  |   19328 |      99 |      99 | TRUE  |
+| Gamma | e01  |    7501 |      98 |      98 | TRUE  |
+| Gamma | e02  |   17437 |      49 |      49 | TRUE  |
+| Gamma | e03  |   15870 |     720 |     720 | TRUE  |
+| Gamma | e04  |    9540 |      58 |      58 | TRUE  |
+| Gamma | e05  |   18176 |       7 |       7 | TRUE  |
+| Gamma | e06  |   21036 |      52 |      52 | TRUE  |
+| Gamma | e07  |   20548 |     352 |     352 | TRUE  |
+| Xi    | e00  |   14174 |      99 |      99 | TRUE  |
+| Xi    | e01  |   10598 |      98 |      98 | TRUE  |
+| Xi    | e02  |   13922 |      49 |      49 | TRUE  |
+| Xi    | e03  |   20376 |     720 |     720 | TRUE  |
+| Xi    | e04  |   18768 |      58 |      58 | TRUE  |
+| Xi    | e05  |   10362 |       7 |       7 | TRUE  |
+| Xi    | e06  |   12865 |      52 |      52 | TRUE  |
+| Xi    | e07  |   10084 |     352 |     352 | TRUE  |
 
 ** Avaliação Subjetiva
 *** Instrumento de avaliação
@@ -3443,31 +3454,31 @@ solução do grupo fornece algum código ILOC válido na saída.
 
 *** Tabela subjetiva
 
-| Grupo  | Critério                | Peso | Valor |
-|--------+-------------------------+------+-------|
-| Beta   | Informação ao professor |  0.5 |    10 |
-| Beta   | Projeto do RA           |    1 |    10 |
-| Beta   | Gerenciamento da Pilha  |    2 |    10 |
-| Beta   | Entrada/Saída padrão    |    1 |    10 |
-| Beta   | Inicialização regs.     |    1 |    10 |
-| Beta   | Opinião geral           |    4 |    10 |
-| Lambda | Informação ao professor |  0.5 |     0 |
-| Lambda | Projeto do RA           |    1 |     5 |
-| Lambda | Gerenciamento da Pilha  |    2 |    10 |
-| Lambda | Entrada/Saída padrão    |    1 |    10 |
-| Lambda | Inicialização regs.     |    1 |    10 |
-| Lambda | Opinião geral           |    4 |     9 |
-| Delta  | Informação ao professor |  0.5 |     0 |
-| Delta  | Projeto do RA           |    1 |     0 |
-| Delta  | Gerenciamento da Pilha  |    2 |    10 |
-| Delta  | Entrada/Saída padrão    |    1 |    10 |
-| Delta  | Inicialização regs.     |    1 |    10 |
-| Delta  | Opinião geral           |    4 |     7 |
+| Grupo | Critério                | Peso | Valor |
+|-------+-------------------------+------+-------|
+| Beta  | Informação ao professor |  0.5 |    10 |
+| Beta  | Projeto do RA           |    1 |     5 |
+| Beta  | Gerenciamento da Pilha  |    2 |     4 |
+| Beta  | Entrada/Saída padrão    |    1 |    10 |
+| Beta  | Inicialização regs.     |    1 |    10 |
+| Beta  | Opinião geral           |    4 |     6 |
+| Gamma | Informação ao professor |  0.5 |    10 |
+| Gamma | Projeto do RA           |    1 |    10 |
+| Gamma | Gerenciamento da Pilha  |    2 |    10 |
+| Gamma | Entrada/Saída padrão    |    1 |    10 |
+| Gamma | Inicialização regs.     |    1 |    10 |
+| Gamma | Opinião geral           |    4 |    10 |
+| Xi    | Informação ao professor |  0.5 |    10 |
+| Xi    | Projeto do RA           |    1 |    10 |
+| Xi    | Gerenciamento da Pilha  |    2 |    10 |
+| Xi    | Entrada/Saída padrão    |    1 |    10 |
+| Xi    | Inicialização regs.     |    1 |    10 |
+| Xi    | Opinião geral           |    4 |    10 |
 
 ** Notas Objetiva e Subjetiva
 
-| Grupo  | E6.O | E6.S |
-|--------+------+------|
-| Beta   |   10 |   10 |
-| Delta  |   10 | 7.16 |
-| Lambda |   10 | 8.53 |
+| Grupo | E6.O | E6.S |
+|-------+------+------|
+| Gamma |   10 |   10 |
+| Xi    |   10 |   10 |
+| Beta  | 3.75 | 6.53 |
