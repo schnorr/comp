@@ -1,0 +1,4294 @@
+
+Beta
+
+Beta|e00|stack|41794
+Beta|e00|data|20897
+Beta|e00|input|loadI 1024 => rfp
+Beta|e00|input|loadI 1024 => rsp
+Beta|e00|input|loadI 24 => rbss
+Beta|e00|input|jumpI -> L1
+Beta|e00|input|L0: i2i rsp => rfp
+Beta|e00|input|addI rsp, 16 => rsp
+Beta|e00|input|loadI 99 => r0
+Beta|e00|input|storeAI r0 => rfp, 12 
+Beta|e00|input|loadAI rfp, 0 => r1
+Beta|e00|input|loadAI rfp, 4 => r2
+Beta|e00|input|loadAI rfp, 8 => r3
+Beta|e00|input|i2i r2 => rsp
+Beta|e00|input|i2i r3 => rfp
+Beta|e00|input|jump => r1
+Beta|e00|input|L1:  addI rsp, 4 => rsp
+Beta|e00|input|addI rpc, 5 => r4
+Beta|e00|input|storeAI   r4 => rsp, 0 
+Beta|e00|input|storeAI   rsp => rsp, 4 
+Beta|e00|input|storeAI   rfp => rsp, 8 
+Beta|e00|input|jumpI => L0
+Beta|e00|input|loadAI rsp, 12 => r5
+Beta|e00|input|storeAI r5 => rbss, 0 
+Beta|e00|input|halt
+Beta|e00|input|
+Beta|e00|output|count	instruction
+Beta|e00|output|    5	storeAI
+Beta|e00|output|    4	loadI
+Beta|e00|output|    4	loadAI
+Beta|e00|output|    3	addI
+Beta|e00|output|    3	i2i
+Beta|e00|output|    2	jumpI
+Beta|e00|output|    1	jump
+Beta|e00|output|    1	halt
+Beta|e00|output|
+Beta|e00|output|instructions executed:   23
+Beta|e00|output|register         read:   21 write:   34
+Beta|e00|output|memory           read:    4 write:    5
+Beta|e00|output|
+Beta|e00|output|  register    value
+Beta|e00|output|        r0       99
+Beta|e00|output|        r1       20
+Beta|e00|output|        r2    41798
+Beta|e00|output|        r3    41794
+Beta|e00|output|        r4       20
+Beta|e00|output|        r5       99
+Beta|e00|output|      rbss    20897
+Beta|e00|output|       rfp    41794
+Beta|e00|output|       rpc       22
+Beta|e00|output|       rsp    41798
+Beta|e00|output|
+Beta|e00|output|    memory    value
+Beta|e00|output|00020897       99
+Beta|e00|output|00041798       20
+Beta|e00|output|00041802    41798
+Beta|e00|output|00041806    41794
+Beta|e00|output|00041810       99
+Beta|
+Beta|e00|sixit|0
+Beta|e00|memory|00020897|99
+Beta|e00|memory|00041798|20
+Beta|e00|memory|00041802|41798
+Beta|e00|memory|00041806|41794
+Beta|e00|memory|00041810|99
+Beta|e00|instruction|5|storeAI
+Beta|e00|instruction|4|loadI
+Beta|e00|instruction|4|loadAI
+Beta|e00|instruction|3|addI
+Beta|e00|instruction|3|i2i
+Beta|e00|instruction|2|jumpI
+Beta|e00|instruction|1|jump
+Beta|e00|instruction|1|halt
+Beta|e01|stack|37096
+Beta|e01|data|18548
+Beta|e01|input|loadI 1024 => rfp
+Beta|e01|input|loadI 1024 => rsp
+Beta|e01|input|loadI 26 => rbss
+Beta|e01|input|jumpI -> L1
+Beta|e01|input|L0: i2i rsp => rfp
+Beta|e01|input|addI rsp, 16 => rsp
+Beta|e01|input|loadI 98 => r0
+Beta|e01|input|storeAI r0 => rfp, 16 
+Beta|e01|input|loadAI rfp, 16 => r1  
+Beta|e01|input|storeAI r1 => rfp, 12 
+Beta|e01|input|loadAI rfp, 0 => r2
+Beta|e01|input|loadAI rfp, 4 => r3
+Beta|e01|input|loadAI rfp, 8 => r4
+Beta|e01|input|i2i r3 => rsp
+Beta|e01|input|i2i r4 => rfp
+Beta|e01|input|jump => r2
+Beta|e01|input|L1:  addI rsp, 4 => rsp
+Beta|e01|input|addI rpc, 5 => r5
+Beta|e01|input|storeAI   r5 => rsp, 0 
+Beta|e01|input|storeAI   rsp => rsp, 4 
+Beta|e01|input|storeAI   rfp => rsp, 8 
+Beta|e01|input|jumpI => L0
+Beta|e01|input|loadAI rsp, 12 => r6
+Beta|e01|input|storeAI r6 => rbss, 0 
+Beta|e01|input|halt
+Beta|e01|input|
+Beta|e01|output|count	instruction
+Beta|e01|output|    6	storeAI
+Beta|e01|output|    5	loadAI
+Beta|e01|output|    4	loadI
+Beta|e01|output|    3	addI
+Beta|e01|output|    3	i2i
+Beta|e01|output|    2	jumpI
+Beta|e01|output|    1	jump
+Beta|e01|output|    1	halt
+Beta|e01|output|
+Beta|e01|output|instructions executed:   25
+Beta|e01|output|register         read:   24 write:   37
+Beta|e01|output|memory           read:    5 write:    6
+Beta|e01|output|
+Beta|e01|output|  register    value
+Beta|e01|output|        r0       98
+Beta|e01|output|        r1       98
+Beta|e01|output|        r2       22
+Beta|e01|output|        r3    37100
+Beta|e01|output|        r4    37096
+Beta|e01|output|        r5       22
+Beta|e01|output|        r6       98
+Beta|e01|output|      rbss    18548
+Beta|e01|output|       rfp    37096
+Beta|e01|output|       rpc       24
+Beta|e01|output|       rsp    37100
+Beta|e01|output|
+Beta|e01|output|    memory    value
+Beta|e01|output|00018548       98
+Beta|e01|output|00037100       22
+Beta|e01|output|00037104    37100
+Beta|e01|output|00037108    37096
+Beta|e01|output|00037112       98
+Beta|e01|output|00037116       98
+Beta|0
+Beta|e01|sixit|0
+Beta|e01|memory|00018548|98
+Beta|e01|memory|00037100|22
+Beta|e01|memory|00037104|37100
+Beta|e01|memory|00037108|37096
+Beta|e01|memory|00037112|98
+Beta|e01|memory|00037116|98
+Beta|e01|instruction|6|storeAI
+Beta|e01|instruction|5|loadAI
+Beta|e01|instruction|4|loadI
+Beta|e01|instruction|3|addI
+Beta|e01|instruction|3|i2i
+Beta|e01|instruction|2|jumpI
+Beta|e01|instruction|1|jump
+Beta|e01|instruction|1|halt
+Beta|e02|stack|36383
+Beta|e02|data|18191
+Beta|e02|input|loadI 1024 => rfp
+Beta|e02|input|loadI 1024 => rsp
+Beta|e02|input|loadI 34 => rbss
+Beta|e02|input|jumpI -> L1
+Beta|e02|input|L0: i2i rsp => rfp
+Beta|e02|input|addI rsp, 24 => rsp
+Beta|e02|input|loadAI rfp, 16 => r0  
+Beta|e02|input|loadAI rfp, 20 => r1  
+Beta|e02|input|mult r0, r1 => r2
+Beta|e02|input|storeAI r2 => rfp, 24 
+Beta|e02|input|loadAI rfp, 24 => r3  
+Beta|e02|input|storeAI r3 => rfp, 12 
+Beta|e02|input|loadAI rfp, 0 => r4
+Beta|e02|input|loadAI rfp, 4 => r5
+Beta|e02|input|loadAI rfp, 8 => r6
+Beta|e02|input|i2i r5 => rsp
+Beta|e02|input|i2i r6 => rfp
+Beta|e02|input|jump => r4
+Beta|e02|input|L1:  addI rsp, 4 => rsp
+Beta|e02|input|loadI 7 => r7
+Beta|e02|input|storeAI r7 => rfp, 0 
+Beta|e02|input|addI rpc, 9 => r10
+Beta|e02|input|loadAI rfp, 0 => r9  
+Beta|e02|input|loadAI rfp, 0 => r8  
+Beta|e02|input|storeAI   r10 => rsp, 0 
+Beta|e02|input|storeAI   rsp => rsp, 4 
+Beta|e02|input|storeAI   rfp => rsp, 8 
+Beta|e02|input|storeAI   r8 => rsp, 16 
+Beta|e02|input|storeAI   r9 => rsp, 20 
+Beta|e02|input|jumpI => L0
+Beta|e02|input|loadAI rsp, 12 => r11
+Beta|e02|input|storeAI r11 => rbss, 0 
+Beta|e02|input|halt
+Beta|e02|input|
+Beta|e02|output|count	instruction
+Beta|e02|output|    9	storeAI
+Beta|e02|output|    9	loadAI
+Beta|e02|output|    4	loadI
+Beta|e02|output|    3	addI
+Beta|e02|output|    3	i2i
+Beta|e02|output|    2	jumpI
+Beta|e02|output|    1	mult
+Beta|e02|output|    1	jump
+Beta|e02|output|    1	halt
+Beta|e02|output|
+Beta|e02|output|instructions executed:   33
+Beta|e02|output|register         read:   36 write:   50
+Beta|e02|output|memory           read:    9 write:    9
+Beta|e02|output|
+Beta|e02|output|  register    value
+Beta|e02|output|        r0        7
+Beta|e02|output|        r1        7
+Beta|e02|output|       r10       30
+Beta|e02|output|       r11       49
+Beta|e02|output|        r2       49
+Beta|e02|output|        r3       49
+Beta|e02|output|        r4       30
+Beta|e02|output|        r5    36387
+Beta|e02|output|        r6    36383
+Beta|e02|output|        r7        7
+Beta|e02|output|        r8        7
+Beta|e02|output|        r9        7
+Beta|e02|output|      rbss    18191
+Beta|e02|output|       rfp    36383
+Beta|e02|output|       rpc       32
+Beta|e02|output|       rsp    36387
+Beta|e02|output|
+Beta|e02|output|    memory    value
+Beta|e02|output|00018191       49
+Beta|e02|output|00036383        7
+Beta|e02|output|00036387       30
+Beta|e02|output|00036391    36387
+Beta|e02|output|00036395    36383
+Beta|e02|output|00036399       49
+Beta|e02|output|00036403        7
+Beta|e02|output|00036407        7
+Beta|e02|output|00036411       49
+Beta|0
+Beta|e02|sixit|0
+Beta|e02|memory|00018191|49
+Beta|e02|memory|00036383|7
+Beta|e02|memory|00036387|30
+Beta|e02|memory|00036391|36387
+Beta|e02|memory|00036395|36383
+Beta|e02|memory|00036399|49
+Beta|e02|memory|00036403|7
+Beta|e02|memory|00036407|7
+Beta|e02|memory|00036411|49
+Beta|e02|instruction|9|storeAI
+Beta|e02|instruction|9|loadAI
+Beta|e02|instruction|4|loadI
+Beta|e02|instruction|3|addI
+Beta|e02|instruction|3|i2i
+Beta|e02|instruction|2|jumpI
+Beta|e02|instruction|1|mult
+Beta|e02|instruction|1|jump
+Beta|e02|instruction|1|halt
+Beta|e03|stack|21424
+Beta|e03|data|10712
+Beta|e03|input|
+Beta|e03|output|count	instruction
+Beta|e03|output|
+Beta|e03|output|instructions executed:    0
+Beta|e03|output|register         read:    0 write:    0
+Beta|e03|output|memory           read:    0 write:    0
+Beta|e03|output|
+Beta|e03|output|  register    value
+Beta|e03|output|      rbss    10712
+Beta|e03|output|       rfp    21424
+Beta|e03|output|       rpc        0
+Beta|e03|output|       rsp    21424
+Beta|e03|output|
+Beta|e03|output|    memory    value
+Beta|0
+Beta|e03|sixit|0
+Beta|e04|stack|41411
+Beta|e04|data|20705
+Beta|e04|input|loadI 1024 => rfp
+Beta|e04|input|loadI 1024 => rsp
+Beta|e04|input|loadI 84 => rbss
+Beta|e04|input|jumpI -> L2
+Beta|e04|input|L0: i2i rsp => rfp
+Beta|e04|input|addI rsp, 24 => rsp
+Beta|e04|input|loadAI rfp, 16 => r0  
+Beta|e04|input|loadAI rfp, 20 => r1  
+Beta|e04|input|mult r0, r1 => r2
+Beta|e04|input|storeAI r2 => rfp, 24 
+Beta|e04|input|loadAI rfp, 24 => r3  
+Beta|e04|input|storeAI r3 => rfp, 12 
+Beta|e04|input|loadAI rfp, 0 => r4
+Beta|e04|input|loadAI rfp, 4 => r5
+Beta|e04|input|loadAI rfp, 8 => r6
+Beta|e04|input|i2i r5 => rsp
+Beta|e04|input|i2i r6 => rfp
+Beta|e04|input|jump => r4
+Beta|e04|input|L1: i2i rsp => rfp
+Beta|e04|input|addI rsp, 32 => rsp
+Beta|e04|input|loadAI rfp, 16 => r7  
+Beta|e04|input|storeAI r7 => rfp, 32 
+Beta|e04|input|loadAI rfp, 20 => r8  
+Beta|e04|input|storeAI r8 => rfp, 36 
+Beta|e04|input|loadAI rfp, 24 => r9  
+Beta|e04|input|storeAI r9 => rfp, 40 
+Beta|e04|input|loadAI rfp, 28 => r10  
+Beta|e04|input|storeAI r10 => rfp, 44 
+Beta|e04|input|addI rpc, 9 => r13
+Beta|e04|input|loadAI rfp, 36 => r12  
+Beta|e04|input|loadAI rfp, 32 => r11  
+Beta|e04|input|storeAI   r13 => rsp, 0 
+Beta|e04|input|storeAI   rsp => rsp, 4 
+Beta|e04|input|storeAI   rfp => rsp, 8 
+Beta|e04|input|storeAI   r11 => rsp, 16 
+Beta|e04|input|storeAI   r12 => rsp, 20 
+Beta|e04|input|jumpI => L0
+Beta|e04|input|loadAI rsp, 12 => r14
+Beta|e04|input|storeAI r14 => rfp, 48 
+Beta|e04|input|addI rpc, 9 => r17
+Beta|e04|input|loadAI rfp, 44 => r16  
+Beta|e04|input|loadAI rfp, 40 => r15  
+Beta|e04|input|storeAI   r17 => rsp, 0 
+Beta|e04|input|storeAI   rsp => rsp, 4 
+Beta|e04|input|storeAI   rfp => rsp, 8 
+Beta|e04|input|storeAI   r15 => rsp, 16 
+Beta|e04|input|storeAI   r16 => rsp, 20 
+Beta|e04|input|jumpI => L0
+Beta|e04|input|loadAI rsp, 12 => r18
+Beta|e04|input|storeAI r18 => rfp, 52 
+Beta|e04|input|loadAI rfp, 48 => r19  
+Beta|e04|input|loadAI rfp, 52 => r20  
+Beta|e04|input|add r19, r20 => r21
+Beta|e04|input|storeAI r21 => rfp, 56 
+Beta|e04|input|loadAI rfp, 56 => r22  
+Beta|e04|input|storeAI r22 => rfp, 12 
+Beta|e04|input|loadAI rfp, 0 => r23
+Beta|e04|input|loadAI rfp, 4 => r24
+Beta|e04|input|loadAI rfp, 8 => r25
+Beta|e04|input|i2i r24 => rsp
+Beta|e04|input|i2i r25 => rfp
+Beta|e04|input|jump => r23
+Beta|e04|input|L2:  addI rsp, 4 => rsp
+Beta|e04|input|loadI 7 => r26
+Beta|e04|input|storeAI r26 => rfp, 0 
+Beta|e04|input|loadI 3 => r27
+Beta|e04|input|storeAI r27 => rfp, 4 
+Beta|e04|input|addI rpc, 13 => r32
+Beta|e04|input|loadAI rfp, 4 => r31  
+Beta|e04|input|loadAI rfp, 4 => r30  
+Beta|e04|input|loadAI rfp, 0 => r29  
+Beta|e04|input|loadAI rfp, 0 => r28  
+Beta|e04|input|storeAI   r32 => rsp, 0 
+Beta|e04|input|storeAI   rsp => rsp, 4 
+Beta|e04|input|storeAI   rfp => rsp, 8 
+Beta|e04|input|storeAI   r28 => rsp, 16 
+Beta|e04|input|storeAI   r29 => rsp, 20 
+Beta|e04|input|storeAI   r30 => rsp, 24 
+Beta|e04|input|storeAI   r31 => rsp, 28 
+Beta|e04|input|jumpI => L1
+Beta|e04|input|loadAI rsp, 12 => r33
+Beta|e04|input|storeAI r33 => rbss, 0 
+Beta|e04|input|halt
+Beta|e04|input|
+Beta|e04|output|count	instruction
+Beta|e04|output|   33	loadAI
+Beta|e04|output|   32	storeAI
+Beta|e04|output|    9	i2i
+Beta|e04|output|    7	addI
+Beta|e04|output|    5	loadI
+Beta|e04|output|    4	jumpI
+Beta|e04|output|    3	jump
+Beta|e04|output|    2	mult
+Beta|e04|output|    1	add
+Beta|e04|output|    1	halt
+Beta|e04|output|
+Beta|e04|output|instructions executed:   97
+Beta|e04|output|register         read:  122 write:  151
+Beta|e04|output|memory           read:   33 write:   32
+Beta|e04|output|
+Beta|e04|output|  register    value
+Beta|e04|output|        r0    41415
+Beta|e04|output|        r1       49
+Beta|e04|output|       r10        3
+Beta|e04|output|       r11        7
+Beta|e04|output|       r12        7
+Beta|e04|output|       r13       37
+Beta|e04|output|       r14       49
+Beta|e04|output|       r15    41415
+Beta|e04|output|       r16       49
+Beta|e04|output|       r17       48
+Beta|e04|output|       r18  2029335
+Beta|e04|output|       r19    41415
+Beta|e04|output|        r2  2029335
+Beta|e04|output|       r20  2029335
+Beta|e04|output|       r21  2070750
+Beta|e04|output|       r22  2070750
+Beta|e04|output|       r23       80
+Beta|e04|output|       r24    41415
+Beta|e04|output|       r25    41411
+Beta|e04|output|       r26        7
+Beta|e04|output|       r27        3
+Beta|e04|output|       r28        7
+Beta|e04|output|       r29        7
+Beta|e04|output|        r3  2029335
+Beta|e04|output|       r30        3
+Beta|e04|output|       r31        3
+Beta|e04|output|       r32       80
+Beta|e04|output|       r33  2070750
+Beta|e04|output|        r4       48
+Beta|e04|output|        r5    41447
+Beta|e04|output|        r6    41415
+Beta|e04|output|        r7        7
+Beta|e04|output|        r8        7
+Beta|e04|output|        r9        3
+Beta|e04|output|      rbss    20705
+Beta|e04|output|       rfp    41411
+Beta|e04|output|       rpc       82
+Beta|e04|output|       rsp    41415
+Beta|e04|output|
+Beta|e04|output|    memory    value
+Beta|e04|output|00020705  2070750
+Beta|e04|output|00041411        7
+Beta|e04|output|00041415       80
+Beta|e04|output|00041419    41415
+Beta|e04|output|00041423    41411
+Beta|e04|output|00041427  2070750
+Beta|e04|output|00041431        7
+Beta|e04|output|00041435        7
+Beta|e04|output|00041439        3
+Beta|e04|output|00041443        3
+Beta|e04|output|00041447       48
+Beta|e04|output|00041451    41447
+Beta|e04|output|00041455    41415
+Beta|e04|output|00041459  2029335
+Beta|e04|output|00041463    41415
+Beta|e04|output|00041467  2029335
+Beta|e04|output|00041471  2070750
+Beta|0
+Beta|e04|sixit|0
+Beta|e04|memory|00020705|2070750
+Beta|e04|memory|00041411|7
+Beta|e04|memory|00041415|80
+Beta|e04|memory|00041419|41415
+Beta|e04|memory|00041423|41411
+Beta|e04|memory|00041427|2070750
+Beta|e04|memory|00041431|7
+Beta|e04|memory|00041435|7
+Beta|e04|memory|00041439|3
+Beta|e04|memory|00041443|3
+Beta|e04|memory|00041447|48
+Beta|e04|memory|00041451|41447
+Beta|e04|memory|00041455|41415
+Beta|e04|memory|00041459|2029335
+Beta|e04|memory|00041463|41415
+Beta|e04|memory|00041467|2029335
+Beta|e04|memory|00041471|2070750
+Beta|e04|instruction|33|loadAI
+Beta|e04|instruction|32|storeAI
+Beta|e04|instruction|9|i2i
+Beta|e04|instruction|7|addI
+Beta|e04|instruction|5|loadI
+Beta|e04|instruction|4|jumpI
+Beta|e04|instruction|3|jump
+Beta|e04|instruction|2|mult
+Beta|e04|instruction|1|add
+Beta|e04|instruction|1|halt
+Beta|e05|stack|16221
+Beta|e05|data|8110
+Beta|e05|input|
+Beta|e05|output|count	instruction
+Beta|e05|output|
+Beta|e05|output|instructions executed:    0
+Beta|e05|output|register         read:    0 write:    0
+Beta|e05|output|memory           read:    0 write:    0
+Beta|e05|output|
+Beta|e05|output|  register    value
+Beta|e05|output|      rbss     8110
+Beta|e05|output|       rfp    16221
+Beta|e05|output|       rpc        0
+Beta|e05|output|       rsp    16221
+Beta|e05|output|
+Beta|e05|output|    memory    value
+Beta|0
+Beta|e05|sixit|0
+Beta|e06|stack|39552
+Beta|e06|data|19776
+Beta|e06|input|loadI 1024 => rfp
+Beta|e06|input|loadI 1024 => rsp
+Beta|e06|input|loadI 80 => rbss
+Beta|e06|input|jumpI -> L2
+Beta|e06|input|L0: i2i rsp => rfp
+Beta|e06|input|addI rsp, 24 => rsp
+Beta|e06|input|loadAI rfp, 16 => r0  
+Beta|e06|input|loadAI rfp, 20 => r1  
+Beta|e06|input|mult r0, r1 => r2
+Beta|e06|input|storeAI r2 => rfp, 12 
+Beta|e06|input|loadAI rfp, 0 => r3
+Beta|e06|input|loadAI rfp, 4 => r4
+Beta|e06|input|loadAI rfp, 8 => r5
+Beta|e06|input|i2i r4 => rsp
+Beta|e06|input|i2i r5 => rfp
+Beta|e06|input|jump => r3
+Beta|e06|input|L1: i2i rsp => rfp
+Beta|e06|input|addI rsp, 32 => rsp
+Beta|e06|input|addI rpc, 9 => r8
+Beta|e06|input|loadAI rfp, 20 => r7  
+Beta|e06|input|loadAI rfp, 16 => r6  
+Beta|e06|input|storeAI   r8 => rsp, 0 
+Beta|e06|input|storeAI   rsp => rsp, 4 
+Beta|e06|input|storeAI   rfp => rsp, 8 
+Beta|e06|input|storeAI   r6 => rsp, 16 
+Beta|e06|input|storeAI   r7 => rsp, 20 
+Beta|e06|input|jumpI => L0
+Beta|e06|input|loadAI rsp, 12 => r9
+Beta|e06|input|addI rpc, 9 => r12
+Beta|e06|input|loadAI rfp, 28 => r11  
+Beta|e06|input|loadAI rfp, 24 => r10  
+Beta|e06|input|storeAI   r12 => rsp, 0 
+Beta|e06|input|storeAI   rsp => rsp, 4 
+Beta|e06|input|storeAI   rfp => rsp, 8 
+Beta|e06|input|storeAI   r10 => rsp, 16 
+Beta|e06|input|storeAI   r11 => rsp, 20 
+Beta|e06|input|jumpI => L0
+Beta|e06|input|loadAI rsp, 12 => r13
+Beta|e06|input|add r9, r13 => r14
+Beta|e06|input|storeAI r14 => rfp, 32 
+Beta|e06|input|loadAI rfp, 32 => r15  
+Beta|e06|input|storeAI r15 => rfp, 12 
+Beta|e06|input|loadAI rfp, 0 => r16
+Beta|e06|input|loadAI rfp, 4 => r17
+Beta|e06|input|loadAI rfp, 8 => r18
+Beta|e06|input|i2i r17 => rsp
+Beta|e06|input|i2i r18 => rfp
+Beta|e06|input|jump => r16
+Beta|e06|input|L2:  addI rsp, 4 => rsp
+Beta|e06|input|loadI 2018 => r19
+Beta|e06|input|storeAI r19 => rbss, 0 
+Beta|e06|input|loadI 2 => r20
+Beta|e06|input|storeAI r20 => rfp, 0 
+Beta|e06|input|loadI 2 => r21
+Beta|e06|input|storeAI r21 => rfp, 4 
+Beta|e06|input|addI rpc, 29 => r34
+Beta|e06|input|loadAI rfp, 4 => r31  
+Beta|e06|input|loadI 2 => r32
+Beta|e06|input|mult r31, r32 => r33
+Beta|e06|input|loadAI rfp, 4 => r28  
+Beta|e06|input|loadI 2 => r29
+Beta|e06|input|mult r28, r29 => r30
+Beta|e06|input|loadAI rfp, 0 => r25  
+Beta|e06|input|loadI 3 => r26
+Beta|e06|input|mult r25, r26 => r27
+Beta|e06|input|loadAI rfp, 0 => r22  
+Beta|e06|input|loadI 3 => r23
+Beta|e06|input|mult r22, r23 => r24
+Beta|e06|input|storeAI   r34 => rsp, 0 
+Beta|e06|input|storeAI   rsp => rsp, 4 
+Beta|e06|input|storeAI   rfp => rsp, 8 
+Beta|e06|input|storeAI   r24 => rsp, 16 
+Beta|e06|input|storeAI   r27 => rsp, 20 
+Beta|e06|input|storeAI   r30 => rsp, 24 
+Beta|e06|input|storeAI   r33 => rsp, 28 
+Beta|e06|input|jumpI => L1
+Beta|e06|input|loadAI rsp, 12 => r35
+Beta|e06|input|storeAI r35 => rbss, 4 
+Beta|e06|input|halt
+Beta|e06|input|
+Beta|e06|output|count	instruction
+Beta|e06|output|   24	storeAI
+Beta|e06|output|   24	loadAI
+Beta|e06|output|   10	loadI
+Beta|e06|output|    9	i2i
+Beta|e06|output|    7	addI
+Beta|e06|output|    6	mult
+Beta|e06|output|    4	jumpI
+Beta|e06|output|    3	jump
+Beta|e06|output|    1	add
+Beta|e06|output|
+Beta|e06|output|instructions executed:   88
+Beta|e06|output|register         read:  105 write:  142
+Beta|e06|output|memory           read:   24 write:   24
+Beta|e06|output|
+Beta|e06|output|  register    value
+Beta|e06|output|        r0        4
+Beta|e06|output|        r1        4
+Beta|e06|output|       r10        4
+Beta|e06|output|       r11        4
+Beta|e06|output|       r12       37
+Beta|e06|output|       r13       16
+Beta|e06|output|       r14       52
+Beta|e06|output|       r15       52
+Beta|e06|output|       r16       84
+Beta|e06|output|       r17    39556
+Beta|e06|output|       r18    39552
+Beta|e06|output|       r19     2018
+Beta|e06|output|        r2       16
+Beta|e06|output|       r20        2
+Beta|e06|output|       r21        2
+Beta|e06|output|       r22        2
+Beta|e06|output|       r23        3
+Beta|e06|output|       r24        6
+Beta|e06|output|       r25        2
+Beta|e06|output|       r26        3
+Beta|e06|output|       r27        6
+Beta|e06|output|       r28        2
+Beta|e06|output|       r29        2
+Beta|e06|output|        r3       37
+Beta|e06|output|       r30        4
+Beta|e06|output|       r31        2
+Beta|e06|output|       r32        2
+Beta|e06|output|       r33        4
+Beta|e06|output|       r34       84
+Beta|e06|output|        r4    39588
+Beta|e06|output|        r5    39556
+Beta|e06|output|        r6        6
+Beta|e06|output|        r7        6
+Beta|e06|output|        r8       27
+Beta|e06|output|        r9       36
+Beta|e06|output|      rbss    19776
+Beta|e06|output|       rfp    39552
+Beta|e06|output|       rpc       47
+Beta|e06|output|       rsp    39556
+Beta|e06|output|
+Beta|e06|output|    memory    value
+Beta|e06|output|00019776     2018
+Beta|e06|output|00039552        2
+Beta|e06|output|00039556       84
+Beta|e06|output|00039560    39556
+Beta|e06|output|00039564    39552
+Beta|e06|output|00039568       52
+Beta|e06|output|00039572        6
+Beta|e06|output|00039576        6
+Beta|e06|output|00039580        4
+Beta|e06|output|00039584        4
+Beta|e06|output|00039588       52
+Beta|e06|output|00039592    39588
+Beta|e06|output|00039596    39556
+Beta|e06|output|00039600       16
+Beta|e06|output|00039604        4
+Beta|e06|output|00039608        4
+Beta|0
+Beta|e06|sixit|0
+Beta|e06|memory|00019776|2018
+Beta|e06|memory|00039552|2
+Beta|e06|memory|00039556|84
+Beta|e06|memory|00039560|39556
+Beta|e06|memory|00039564|39552
+Beta|e06|memory|00039568|52
+Beta|e06|memory|00039572|6
+Beta|e06|memory|00039576|6
+Beta|e06|memory|00039580|4
+Beta|e06|memory|00039584|4
+Beta|e06|memory|00039588|52
+Beta|e06|memory|00039592|39588
+Beta|e06|memory|00039596|39556
+Beta|e06|memory|00039600|16
+Beta|e06|memory|00039604|4
+Beta|e06|memory|00039608|4
+Beta|e07|stack|33607
+Beta|e07|data|16803
+Beta|e07|input|loadI 1024 => rfp
+Beta|e07|input|loadI 1024 => rsp
+Beta|e07|input|loadI 100 => rbss
+Beta|e07|input|jumpI -> L2
+Beta|e07|input|L0: i2i rsp => rfp
+Beta|e07|input|addI rsp, 24 => rsp
+Beta|e07|input|loadAI rfp, 16 => r0  
+Beta|e07|input|loadAI rfp, 20 => r1  
+Beta|e07|input|mult r0, r1 => r2
+Beta|e07|input|storeAI r2 => rfp, 24 
+Beta|e07|input|loadAI rfp, 24 => r3  
+Beta|e07|input|storeAI r3 => rfp, 12 
+Beta|e07|input|loadAI rfp, 0 => r4
+Beta|e07|input|loadAI rfp, 4 => r5
+Beta|e07|input|loadAI rfp, 8 => r6
+Beta|e07|input|i2i r5 => rsp
+Beta|e07|input|i2i r6 => rfp
+Beta|e07|input|jump => r4
+Beta|e07|input|L1: i2i rsp => rfp
+Beta|e07|input|addI rsp, 32 => rsp
+Beta|e07|input|addI rpc, 27 => r12
+Beta|e07|input|loadAI rfp, 20 => r11  
+Beta|e07|input|addI rpc, 9 => r9
+Beta|e07|input|loadAI rfp, 16 => r8  
+Beta|e07|input|loadAI rfp, 16 => r7  
+Beta|e07|input|storeAI   r9 => rsp, 0 
+Beta|e07|input|storeAI   rsp => rsp, 4 
+Beta|e07|input|storeAI   rfp => rsp, 8 
+Beta|e07|input|storeAI   r7 => rsp, 16 
+Beta|e07|input|storeAI   r8 => rsp, 20 
+Beta|e07|input|jumpI => L0
+Beta|e07|input|loadAI rsp, 12 => r10
+Beta|e07|input|storeAI   r12 => rsp, 0 
+Beta|e07|input|storeAI   rsp => rsp, 4 
+Beta|e07|input|storeAI   rfp => rsp, 8 
+Beta|e07|input|storeAI   r10 => rsp, 16 
+Beta|e07|input|storeAI   r11 => rsp, 20 
+Beta|e07|input|jumpI => L0
+Beta|e07|input|loadAI rsp, 12 => r13
+Beta|e07|input|addI rpc, 27 => r19
+Beta|e07|input|addI rpc, 9 => r17
+Beta|e07|input|loadAI rfp, 28 => r16  
+Beta|e07|input|loadAI rfp, 28 => r15  
+Beta|e07|input|storeAI   r17 => rsp, 0 
+Beta|e07|input|storeAI   rsp => rsp, 4 
+Beta|e07|input|storeAI   rfp => rsp, 8 
+Beta|e07|input|storeAI   r15 => rsp, 16 
+Beta|e07|input|storeAI   r16 => rsp, 20 
+Beta|e07|input|jumpI => L0
+Beta|e07|input|loadAI rsp, 12 => r18
+Beta|e07|input|loadAI rfp, 24 => r14  
+Beta|e07|input|storeAI   r19 => rsp, 0 
+Beta|e07|input|storeAI   rsp => rsp, 4 
+Beta|e07|input|storeAI   rfp => rsp, 8 
+Beta|e07|input|storeAI   r14 => rsp, 16 
+Beta|e07|input|storeAI   r18 => rsp, 20 
+Beta|e07|input|jumpI => L0
+Beta|e07|input|loadAI rsp, 12 => r20
+Beta|e07|input|add r13, r20 => r21
+Beta|e07|input|storeAI r21 => rfp, 32 
+Beta|e07|input|loadAI rfp, 32 => r22  
+Beta|e07|input|storeAI r22 => rfp, 12 
+Beta|e07|input|loadAI rfp, 0 => r23
+Beta|e07|input|loadAI rfp, 4 => r24
+Beta|e07|input|loadAI rfp, 8 => r25
+Beta|e07|input|i2i r24 => rsp
+Beta|e07|input|i2i r25 => rfp
+Beta|e07|input|jump => r23
+Beta|e07|input|L2:  addI rsp, 4 => rsp
+Beta|e07|input|loadI 2019 => r26
+Beta|e07|input|storeAI r26 => rbss, 0 
+Beta|e07|input|loadI 2 => r27
+Beta|e07|input|storeAI r27 => rfp, 0 
+Beta|e07|input|loadI 2 => r28
+Beta|e07|input|storeAI r28 => rfp, 4 
+Beta|e07|input|addI rpc, 29 => r41
+Beta|e07|input|loadAI rfp, 4 => r38  
+Beta|e07|input|loadI 2 => r39
+Beta|e07|input|mult r38, r39 => r40
+Beta|e07|input|loadAI rfp, 4 => r35  
+Beta|e07|input|loadI 2 => r36
+Beta|e07|input|mult r35, r36 => r37
+Beta|e07|input|loadAI rfp, 0 => r32  
+Beta|e07|input|loadI 4 => r33
+Beta|e07|input|mult r32, r33 => r34
+Beta|e07|input|loadAI rfp, 0 => r29  
+Beta|e07|input|loadI 3 => r30
+Beta|e07|input|mult r29, r30 => r31
+Beta|e07|input|storeAI   r41 => rsp, 0 
+Beta|e07|input|storeAI   rsp => rsp, 4 
+Beta|e07|input|storeAI   rfp => rsp, 8 
+Beta|e07|input|storeAI   r31 => rsp, 16 
+Beta|e07|input|storeAI   r34 => rsp, 20 
+Beta|e07|input|storeAI   r37 => rsp, 24 
+Beta|e07|input|storeAI   r40 => rsp, 28 
+Beta|e07|input|jumpI => L1
+Beta|e07|input|loadAI rsp, 12 => r42
+Beta|e07|input|storeAI r42 => rbss, 4 
+Beta|e07|input|halt
+Beta|e07|input|
+Beta|e07|sixit|124
+
+Gamma
+
+Gamma|e00|stack|38656
+Gamma|e00|data|19328
+Gamma|e00|input|loadI 4 => rbss
+Gamma|e00|input|loadI 8 => rfp
+Gamma|e00|input|loadI 28 => rsp
+Gamma|e00|input|storeAI rfp => rsp, 0
+Gamma|e00|input|storeAI rpc => rsp, 4
+Gamma|e00|input|i2i rsp => rfp
+Gamma|e00|input|jumpI -> Lmain
+Gamma|e00|input|loadAI rsp, 8 => r8
+Gamma|e00|input|loadI 0 => r9
+Gamma|e00|input|store r8 => r9
+Gamma|e00|input|halt
+Gamma|e00|input|Lf: addI rsp, 20 => rsp
+Gamma|e00|input|loadI 99 => r1
+Gamma|e00|input|storeAI r1 => rfp, 8
+Gamma|e00|input|i2i rfp => rsp
+Gamma|e00|input|loadAI rfp, 0 => rfp
+Gamma|e00|input|loadAI rsp, 4 => r2
+Gamma|e00|input|addI r2, 3 => r2
+Gamma|e00|input|jump -> r2
+Gamma|e00|input|loadI 0 => r4
+Gamma|e00|input|storeAI r4 => rfp, 8
+Gamma|e00|input|i2i rfp => rsp
+Gamma|e00|input|loadAI rfp, 0 => rfp
+Gamma|e00|input|loadAI rsp, 4 => r5
+Gamma|e00|input|addI r5, 3 => r5
+Gamma|e00|input|jump -> r5
+Gamma|e00|input|Lmain: addI rsp, 20 => rsp
+Gamma|e00|input|storeAI rfp => rsp, 0
+Gamma|e00|input|storeAI rpc => rsp, 4
+Gamma|e00|input|i2i rsp => rfp
+Gamma|e00|input|jumpI -> Lf
+Gamma|e00|input|loadAI rsp, 8 => r3
+Gamma|e00|input|subI rsp, 0 => rsp
+Gamma|e00|input|storeAI r3 => rbss, 0
+Gamma|e00|input|loadI 0 => r6
+Gamma|e00|input|storeAI r6 => rfp, 8
+Gamma|e00|input|i2i rfp => rsp
+Gamma|e00|input|loadAI rfp, 0 => rfp
+Gamma|e00|input|loadAI rsp, 4 => r7
+Gamma|e00|input|addI r7, 3 => r7
+Gamma|e00|input|jump -> r7
+Gamma|e00|input|
+Gamma|e00|output|count	instruction
+Gamma|e00|output|    7	storeAI
+Gamma|e00|output|    6	loadI
+Gamma|e00|output|    6	loadAI
+Gamma|e00|output|    4	i2i
+Gamma|e00|output|    4	addI
+Gamma|e00|output|    2	jumpI
+Gamma|e00|output|    2	jump
+Gamma|e00|output|    1	subI
+Gamma|e00|output|    1	store
+Gamma|e00|output|    1	halt
+Gamma|e00|output|
+Gamma|e00|output|instructions executed:   34
+Gamma|e00|output|register         read:   33 write:   52
+Gamma|e00|output|memory           read:    6 write:    8
+Gamma|e00|output|
+Gamma|e00|output|  register    value
+Gamma|e00|output|        r1       99
+Gamma|e00|output|        r2       31
+Gamma|e00|output|        r3       99
+Gamma|e00|output|        r6        0
+Gamma|e00|output|        r7        7
+Gamma|e00|output|        r8        0
+Gamma|e00|output|        r9        0
+Gamma|e00|output|      rbss    19328
+Gamma|e00|output|       rfp    38656
+Gamma|e00|output|       rpc       10
+Gamma|e00|output|       rsp    38656
+Gamma|e00|output|
+Gamma|e00|output|    memory    value
+Gamma|e00|output|00000000        0
+Gamma|e00|output|00019328       99
+Gamma|e00|output|00038656    38656
+Gamma|e00|output|00038660        4
+Gamma|e00|output|00038664        0
+Gamma|e00|output|00038676    38656
+Gamma|e00|output|00038680       28
+Gamma|e00|output|00038684       99
+Gamma|
+Gamma|e00|sixit|0
+Gamma|e00|memory|00000000|0
+Gamma|e00|memory|00019328|99
+Gamma|e00|memory|00038656|38656
+Gamma|e00|memory|00038660|4
+Gamma|e00|memory|00038664|0
+Gamma|e00|memory|00038676|38656
+Gamma|e00|memory|00038680|28
+Gamma|e00|memory|00038684|99
+Gamma|e00|instruction|7|storeAI
+Gamma|e00|instruction|6|loadI
+Gamma|e00|instruction|6|loadAI
+Gamma|e00|instruction|4|i2i
+Gamma|e00|instruction|4|addI
+Gamma|e00|instruction|2|jumpI
+Gamma|e00|instruction|2|jump
+Gamma|e00|instruction|1|subI
+Gamma|e00|instruction|1|store
+Gamma|e00|instruction|1|halt
+Gamma|e01|stack|15002
+Gamma|e01|data|7501
+Gamma|e01|input|loadI 4 => rbss
+Gamma|e01|input|loadI 8 => rfp
+Gamma|e01|input|loadI 28 => rsp
+Gamma|e01|input|storeAI rfp => rsp, 0
+Gamma|e01|input|storeAI rpc => rsp, 4
+Gamma|e01|input|i2i rsp => rfp
+Gamma|e01|input|jumpI -> Lmain
+Gamma|e01|input|loadAI rsp, 8 => r9
+Gamma|e01|input|loadI 0 => r10
+Gamma|e01|input|store r9 => r10
+Gamma|e01|input|halt
+Gamma|e01|input|Lf: addI rsp, 24 => rsp
+Gamma|e01|input|loadI 98 => r1
+Gamma|e01|input|storeAI r1 => rfp, 20
+Gamma|e01|input|loadAI rfp, 20 => r2
+Gamma|e01|input|storeAI r2 => rfp, 8
+Gamma|e01|input|i2i rfp => rsp
+Gamma|e01|input|loadAI rfp, 0 => rfp
+Gamma|e01|input|loadAI rsp, 4 => r3
+Gamma|e01|input|addI r3, 3 => r3
+Gamma|e01|input|jump -> r3
+Gamma|e01|input|loadI 0 => r5
+Gamma|e01|input|storeAI r5 => rfp, 8
+Gamma|e01|input|i2i rfp => rsp
+Gamma|e01|input|loadAI rfp, 0 => rfp
+Gamma|e01|input|loadAI rsp, 4 => r6
+Gamma|e01|input|addI r6, 3 => r6
+Gamma|e01|input|jump -> r6
+Gamma|e01|input|Lmain: addI rsp, 20 => rsp
+Gamma|e01|input|storeAI rfp => rsp, 0
+Gamma|e01|input|storeAI rpc => rsp, 4
+Gamma|e01|input|i2i rsp => rfp
+Gamma|e01|input|jumpI -> Lf
+Gamma|e01|input|loadAI rsp, 8 => r4
+Gamma|e01|input|subI rsp, 0 => rsp
+Gamma|e01|input|storeAI r4 => rbss, 0
+Gamma|e01|input|loadI 0 => r7
+Gamma|e01|input|storeAI r7 => rfp, 8
+Gamma|e01|input|i2i rfp => rsp
+Gamma|e01|input|loadAI rfp, 0 => rfp
+Gamma|e01|input|loadAI rsp, 4 => r8
+Gamma|e01|input|addI r8, 3 => r8
+Gamma|e01|input|jump -> r8
+Gamma|e01|input|
+Gamma|e01|output|count	instruction
+Gamma|e01|output|    8	storeAI
+Gamma|e01|output|    7	loadAI
+Gamma|e01|output|    6	loadI
+Gamma|e01|output|    4	i2i
+Gamma|e01|output|    4	addI
+Gamma|e01|output|    2	jumpI
+Gamma|e01|output|    2	jump
+Gamma|e01|output|    1	subI
+Gamma|e01|output|    1	store
+Gamma|e01|output|    1	halt
+Gamma|e01|output|
+Gamma|e01|output|instructions executed:   36
+Gamma|e01|output|register         read:   36 write:   55
+Gamma|e01|output|memory           read:    7 write:    9
+Gamma|e01|output|
+Gamma|e01|output|  register    value
+Gamma|e01|output|        r1       98
+Gamma|e01|output|       r10        0
+Gamma|e01|output|        r2       98
+Gamma|e01|output|        r3       33
+Gamma|e01|output|        r4       98
+Gamma|e01|output|        r7        0
+Gamma|e01|output|        r8        7
+Gamma|e01|output|        r9        0
+Gamma|e01|output|      rbss     7501
+Gamma|e01|output|       rfp    15002
+Gamma|e01|output|       rpc       10
+Gamma|e01|output|       rsp    15002
+Gamma|e01|output|
+Gamma|e01|output|    memory    value
+Gamma|e01|output|00000000        0
+Gamma|e01|output|00007501       98
+Gamma|e01|output|00015002    15002
+Gamma|e01|output|00015006        4
+Gamma|e01|output|00015010        0
+Gamma|e01|output|00015022    15002
+Gamma|e01|output|00015026       30
+Gamma|e01|output|00015030       98
+Gamma|e01|output|00015042       98
+Gamma|0
+Gamma|e01|sixit|0
+Gamma|e01|memory|00000000|0
+Gamma|e01|memory|00007501|98
+Gamma|e01|memory|00015002|15002
+Gamma|e01|memory|00015006|4
+Gamma|e01|memory|00015010|0
+Gamma|e01|memory|00015022|15002
+Gamma|e01|memory|00015026|30
+Gamma|e01|memory|00015030|98
+Gamma|e01|memory|00015042|98
+Gamma|e01|instruction|8|storeAI
+Gamma|e01|instruction|7|loadAI
+Gamma|e01|instruction|6|loadI
+Gamma|e01|instruction|4|i2i
+Gamma|e01|instruction|4|addI
+Gamma|e01|instruction|2|jumpI
+Gamma|e01|instruction|2|jump
+Gamma|e01|instruction|1|subI
+Gamma|e01|instruction|1|store
+Gamma|e01|instruction|1|halt
+Gamma|e02|stack|34875
+Gamma|e02|data|17437
+Gamma|e02|input|loadI 4 => rbss
+Gamma|e02|input|loadI 8 => rfp
+Gamma|e02|input|loadI 28 => rsp
+Gamma|e02|input|storeAI rfp => rsp, 0
+Gamma|e02|input|storeAI rpc => rsp, 4
+Gamma|e02|input|i2i rsp => rfp
+Gamma|e02|input|jumpI -> Lmain
+Gamma|e02|input|loadAI rsp, 8 => r14
+Gamma|e02|input|loadI 0 => r15
+Gamma|e02|input|store r14 => r15
+Gamma|e02|input|halt
+Gamma|e02|input|Lmult: addI rsp, 32 => rsp
+Gamma|e02|input|loadAI rfp, 20 => r1
+Gamma|e02|input|loadAI rfp, 24 => r2
+Gamma|e02|input|mult r1, r2 => r3
+Gamma|e02|input|storeAI r3 => rfp, 28
+Gamma|e02|input|loadAI rfp, 28 => r4
+Gamma|e02|input|storeAI r4 => rfp, 8
+Gamma|e02|input|i2i rfp => rsp
+Gamma|e02|input|loadAI rfp, 0 => rfp
+Gamma|e02|input|loadAI rsp, 4 => r5
+Gamma|e02|input|addI r5, 3 => r5
+Gamma|e02|input|jump -> r5
+Gamma|e02|input|loadI 0 => r10
+Gamma|e02|input|storeAI r10 => rfp, 8
+Gamma|e02|input|i2i rfp => rsp
+Gamma|e02|input|loadAI rfp, 0 => rfp
+Gamma|e02|input|loadAI rsp, 4 => r11
+Gamma|e02|input|addI r11, 3 => r11
+Gamma|e02|input|jump -> r11
+Gamma|e02|input|Lmain: addI rsp, 24 => rsp
+Gamma|e02|input|loadI 7 => r6
+Gamma|e02|input|storeAI r6 => rfp, 20
+Gamma|e02|input|loadAI rfp, 20 => r7
+Gamma|e02|input|loadAI rfp, 20 => r8
+Gamma|e02|input|storeAI r6 => rsp, 0
+Gamma|e02|input|storeAI r7 => rsp, 4
+Gamma|e02|input|storeAI r8 => rsp, 8
+Gamma|e02|input|addI rsp, 12 => rsp
+Gamma|e02|input|storeAI r7 => rsp, 20
+Gamma|e02|input|storeAI r8 => rsp, 24
+Gamma|e02|input|storeAI rfp => rsp, 0
+Gamma|e02|input|storeAI rpc => rsp, 4
+Gamma|e02|input|i2i rsp => rfp
+Gamma|e02|input|jumpI -> Lmult
+Gamma|e02|input|loadAI rsp, 8 => r9
+Gamma|e02|input|subI rsp, 12 => rsp
+Gamma|e02|input|loadAI rsp, 0 => r6
+Gamma|e02|input|loadAI rsp, 4 => r7
+Gamma|e02|input|loadAI rsp, 8 => r8
+Gamma|e02|input|storeAI r9 => rbss, 0
+Gamma|e02|input|loadI 0 => r12
+Gamma|e02|input|storeAI r12 => rfp, 8
+Gamma|e02|input|i2i rfp => rsp
+Gamma|e02|input|loadAI rfp, 0 => rfp
+Gamma|e02|input|loadAI rsp, 4 => r13
+Gamma|e02|input|addI r13, 3 => r13
+Gamma|e02|input|jump -> r13
+Gamma|e02|input|
+Gamma|e02|output|count	instruction
+Gamma|e02|output|   14	storeAI
+Gamma|e02|output|   14	loadAI
+Gamma|e02|output|    6	loadI
+Gamma|e02|output|    5	addI
+Gamma|e02|output|    4	i2i
+Gamma|e02|output|    2	jumpI
+Gamma|e02|output|    2	jump
+Gamma|e02|output|    1	mult
+Gamma|e02|output|    1	subI
+Gamma|e02|output|    1	store
+Gamma|e02|output|    1	halt
+Gamma|e02|output|
+Gamma|e02|output|instructions executed:   51
+Gamma|e02|output|register         read:   58 write:   79
+Gamma|e02|output|memory           read:   14 write:   15
+Gamma|e02|output|
+Gamma|e02|output|  register    value
+Gamma|e02|output|        r1        7
+Gamma|e02|output|       r12        0
+Gamma|e02|output|       r13        7
+Gamma|e02|output|       r14        0
+Gamma|e02|output|       r15        0
+Gamma|e02|output|        r2        7
+Gamma|e02|output|        r3       49
+Gamma|e02|output|        r4       49
+Gamma|e02|output|        r5       45
+Gamma|e02|output|        r6        7
+Gamma|e02|output|        r7        7
+Gamma|e02|output|        r8        7
+Gamma|e02|output|        r9       49
+Gamma|e02|output|      rbss    17437
+Gamma|e02|output|       rfp    34875
+Gamma|e02|output|       rpc       10
+Gamma|e02|output|       rsp    34875
+Gamma|e02|output|
+Gamma|e02|output|    memory    value
+Gamma|e02|output|00000000        0
+Gamma|e02|output|00017437       49
+Gamma|e02|output|00034875    34875
+Gamma|e02|output|00034879        4
+Gamma|e02|output|00034883        0
+Gamma|e02|output|00034895        7
+Gamma|e02|output|00034899        7
+Gamma|e02|output|00034903        7
+Gamma|e02|output|00034907        7
+Gamma|e02|output|00034911    34875
+Gamma|e02|output|00034915       42
+Gamma|e02|output|00034919       49
+Gamma|e02|output|00034931        7
+Gamma|e02|output|00034935        7
+Gamma|e02|output|00034939       49
+Gamma|0
+Gamma|e02|sixit|0
+Gamma|e02|memory|00000000|0
+Gamma|e02|memory|00017437|49
+Gamma|e02|memory|00034875|34875
+Gamma|e02|memory|00034879|4
+Gamma|e02|memory|00034883|0
+Gamma|e02|memory|00034895|7
+Gamma|e02|memory|00034899|7
+Gamma|e02|memory|00034903|7
+Gamma|e02|memory|00034907|7
+Gamma|e02|memory|00034911|34875
+Gamma|e02|memory|00034915|42
+Gamma|e02|memory|00034919|49
+Gamma|e02|memory|00034931|7
+Gamma|e02|memory|00034935|7
+Gamma|e02|memory|00034939|49
+Gamma|e02|instruction|14|storeAI
+Gamma|e02|instruction|14|loadAI
+Gamma|e02|instruction|6|loadI
+Gamma|e02|instruction|5|addI
+Gamma|e02|instruction|4|i2i
+Gamma|e02|instruction|2|jumpI
+Gamma|e02|instruction|2|jump
+Gamma|e02|instruction|1|mult
+Gamma|e02|instruction|1|subI
+Gamma|e02|instruction|1|store
+Gamma|e02|instruction|1|halt
+Gamma|e03|stack|31741
+Gamma|e03|data|15870
+Gamma|e03|input|loadI 4 => rbss
+Gamma|e03|input|loadI 8 => rfp
+Gamma|e03|input|loadI 28 => rsp
+Gamma|e03|input|storeAI rfp => rsp, 0
+Gamma|e03|input|storeAI rpc => rsp, 4
+Gamma|e03|input|i2i rsp => rfp
+Gamma|e03|input|jumpI -> Lmain
+Gamma|e03|input|loadAI rsp, 8 => r21
+Gamma|e03|input|loadI 0 => r22
+Gamma|e03|input|store r21 => r22
+Gamma|e03|input|halt
+Gamma|e03|input|Lfatorial: addI rsp, 28 => rsp
+Gamma|e03|input|loadAI rfp, 20 => r3
+Gamma|e03|input|loadI 1 => r4
+Gamma|e03|input|cmp_EQ r3, r4 -> r5
+Gamma|e03|input|cbr r5 -> L1, L2
+Gamma|e03|input|L1: loadAI rfp, 20 => r1
+Gamma|e03|input|storeAI r1 => rfp, 8
+Gamma|e03|input|i2i rfp => rsp
+Gamma|e03|input|loadAI rfp, 0 => rfp
+Gamma|e03|input|loadAI rsp, 4 => r2
+Gamma|e03|input|addI r2, 3 => r2
+Gamma|e03|input|jump -> r2
+Gamma|e03|input|L2: loadAI rfp, 20 => r6
+Gamma|e03|input|loadI 1 => r7
+Gamma|e03|input|sub r6, r7 => r8
+Gamma|e03|input|storeAI r3 => rsp, 0
+Gamma|e03|input|storeAI r4 => rsp, 4
+Gamma|e03|input|storeAI r1 => rsp, 8
+Gamma|e03|input|storeAI r2 => rsp, 12
+Gamma|e03|input|storeAI r6 => rsp, 16
+Gamma|e03|input|storeAI r7 => rsp, 20
+Gamma|e03|input|storeAI r8 => rsp, 24
+Gamma|e03|input|addI rsp, 28 => rsp
+Gamma|e03|input|storeAI r8 => rsp, 20
+Gamma|e03|input|storeAI rfp => rsp, 0
+Gamma|e03|input|storeAI rpc => rsp, 4
+Gamma|e03|input|i2i rsp => rfp
+Gamma|e03|input|jumpI -> Lfatorial
+Gamma|e03|input|loadAI rsp, 8 => r9
+Gamma|e03|input|subI rsp, 28 => rsp
+Gamma|e03|input|loadAI rsp, 0 => r3
+Gamma|e03|input|loadAI rsp, 4 => r4
+Gamma|e03|input|loadAI rsp, 8 => r1
+Gamma|e03|input|loadAI rsp, 12 => r2
+Gamma|e03|input|loadAI rsp, 16 => r6
+Gamma|e03|input|loadAI rsp, 20 => r7
+Gamma|e03|input|loadAI rsp, 24 => r8
+Gamma|e03|input|loadAI rfp, 20 => r10
+Gamma|e03|input|mult r9, r10 => r11
+Gamma|e03|input|storeAI r11 => rfp, 24
+Gamma|e03|input|loadAI rfp, 24 => r12
+Gamma|e03|input|storeAI r12 => rfp, 8
+Gamma|e03|input|i2i rfp => rsp
+Gamma|e03|input|loadAI rfp, 0 => rfp
+Gamma|e03|input|loadAI rsp, 4 => r13
+Gamma|e03|input|addI r13, 3 => r13
+Gamma|e03|input|jump -> r13
+Gamma|e03|input|loadI 0 => r17
+Gamma|e03|input|storeAI r17 => rfp, 8
+Gamma|e03|input|i2i rfp => rsp
+Gamma|e03|input|loadAI rfp, 0 => rfp
+Gamma|e03|input|loadAI rsp, 4 => r18
+Gamma|e03|input|addI r18, 3 => r18
+Gamma|e03|input|jump -> r18
+Gamma|e03|input|Lmain: addI rsp, 24 => rsp
+Gamma|e03|input|loadI 6 => r14
+Gamma|e03|input|storeAI r14 => rfp, 20
+Gamma|e03|input|loadAI rfp, 20 => r15
+Gamma|e03|input|storeAI r14 => rsp, 0
+Gamma|e03|input|storeAI r15 => rsp, 4
+Gamma|e03|input|addI rsp, 8 => rsp
+Gamma|e03|input|storeAI r15 => rsp, 20
+Gamma|e03|input|storeAI rfp => rsp, 0
+Gamma|e03|input|storeAI rpc => rsp, 4
+Gamma|e03|input|i2i rsp => rfp
+Gamma|e03|input|jumpI -> Lfatorial
+Gamma|e03|input|loadAI rsp, 8 => r16
+Gamma|e03|input|subI rsp, 8 => rsp
+Gamma|e03|input|loadAI rsp, 0 => r14
+Gamma|e03|input|loadAI rsp, 4 => r15
+Gamma|e03|input|storeAI r16 => rbss, 0
+Gamma|e03|input|loadI 0 => r19
+Gamma|e03|input|storeAI r19 => rfp, 8
+Gamma|e03|input|i2i rfp => rsp
+Gamma|e03|input|loadAI rfp, 0 => rfp
+Gamma|e03|input|loadAI rsp, 4 => r20
+Gamma|e03|input|addI r20, 3 => r20
+Gamma|e03|input|jump -> r20
+Gamma|e03|input|
+Gamma|e03|output|count	instruction
+Gamma|e03|output|   81	loadAI
+Gamma|e03|output|   71	storeAI
+Gamma|e03|output|   20	addI
+Gamma|e03|output|   17	loadI
+Gamma|e03|output|   14	i2i
+Gamma|e03|output|    7	jumpI
+Gamma|e03|output|    7	jump
+Gamma|e03|output|    6	cmp_EQ
+Gamma|e03|output|    6	cbr
+Gamma|e03|output|    6	subI
+Gamma|e03|output|    5	sub
+Gamma|e03|output|    5	mult
+Gamma|e03|output|    1	store
+Gamma|e03|output|    1	halt
+Gamma|e03|output|
+Gamma|e03|output|instructions executed:  247
+Gamma|e03|output|register         read:  310 write:  398
+Gamma|e03|output|memory           read:   81 write:   72
+Gamma|e03|output|
+Gamma|e03|output|  register    value
+Gamma|e03|output|        r1        0
+Gamma|e03|output|       r10        6
+Gamma|e03|output|       r11      720
+Gamma|e03|output|       r12      720
+Gamma|e03|output|       r13       77
+Gamma|e03|output|       r14        6
+Gamma|e03|output|       r15        6
+Gamma|e03|output|       r16      720
+Gamma|e03|output|       r19        0
+Gamma|e03|output|        r2        0
+Gamma|e03|output|       r20        7
+Gamma|e03|output|       r21        0
+Gamma|e03|output|       r22        0
+Gamma|e03|output|        r3        6
+Gamma|e03|output|        r4        1
+Gamma|e03|output|        r5        1
+Gamma|e03|output|        r6        6
+Gamma|e03|output|        r7        1
+Gamma|e03|output|        r8        5
+Gamma|e03|output|        r9      120
+Gamma|e03|output|      rbss    15870
+Gamma|e03|output|       rfp    31741
+Gamma|e03|output|       rpc       10
+Gamma|e03|output|       rsp    31741
+Gamma|e03|output|
+Gamma|e03|output|    memory    value
+Gamma|e03|output|00000000        0
+Gamma|e03|output|00015870      720
+Gamma|e03|output|00031741    31741
+Gamma|e03|output|00031745        4
+Gamma|e03|output|00031749        0
+Gamma|e03|output|00031761        6
+Gamma|e03|output|00031765        6
+Gamma|e03|output|00031769        6
+Gamma|e03|output|00031773    31741
+Gamma|e03|output|00031777       74
+Gamma|e03|output|00031781      720
+Gamma|e03|output|00031793        6
+Gamma|e03|output|00031797      720
+Gamma|e03|output|00031801        6
+Gamma|e03|output|00031805        1
+Gamma|e03|output|00031809        0
+Gamma|e03|output|00031813        0
+Gamma|e03|output|00031817        6
+Gamma|e03|output|00031821        1
+Gamma|e03|output|00031825        5
+Gamma|e03|output|00031829    31773
+Gamma|e03|output|00031833       36
+Gamma|e03|output|00031837      120
+Gamma|e03|output|00031849        5
+Gamma|e03|output|00031853      120
+Gamma|e03|output|00031857        5
+Gamma|e03|output|00031861        1
+Gamma|e03|output|00031865        0
+Gamma|e03|output|00031869        0
+Gamma|e03|output|00031873        5
+Gamma|e03|output|00031877        1
+Gamma|e03|output|00031881        4
+Gamma|e03|output|00031885    31829
+Gamma|e03|output|00031889       36
+Gamma|e03|output|00031893       24
+Gamma|e03|output|00031905        4
+Gamma|e03|output|00031909       24
+Gamma|e03|output|00031913        4
+Gamma|e03|output|00031917        1
+Gamma|e03|output|00031921        0
+Gamma|e03|output|00031925        0
+Gamma|e03|output|00031929        4
+Gamma|e03|output|00031933        1
+Gamma|e03|output|00031937        3
+Gamma|e03|output|00031941    31885
+Gamma|e03|output|00031945       36
+Gamma|e03|output|00031949        6
+Gamma|e03|output|00031961        3
+Gamma|e03|output|00031965        6
+Gamma|e03|output|00031969        3
+Gamma|e03|output|00031973        1
+Gamma|e03|output|00031977        0
+Gamma|e03|output|00031981        0
+Gamma|e03|output|00031985        3
+Gamma|e03|output|00031989        1
+Gamma|e03|output|00031993        2
+Gamma|e03|output|00031997    31941
+Gamma|e03|output|00032001       36
+Gamma|e03|output|00032005        2
+Gamma|e03|output|00032017        2
+Gamma|e03|output|00032021        2
+Gamma|e03|output|00032025        2
+Gamma|e03|output|00032029        1
+Gamma|e03|output|00032033        0
+Gamma|e03|output|00032037        0
+Gamma|e03|output|00032041        2
+Gamma|e03|output|00032045        1
+Gamma|e03|output|00032049        1
+Gamma|e03|output|00032053    31997
+Gamma|e03|output|00032057       36
+Gamma|e03|output|00032061        1
+Gamma|e03|output|00032073        1
+Gamma|0
+Gamma|e03|sixit|0
+Gamma|e03|memory|00000000|0
+Gamma|e03|memory|00015870|720
+Gamma|e03|memory|00031741|31741
+Gamma|e03|memory|00031745|4
+Gamma|e03|memory|00031749|0
+Gamma|e03|memory|00031761|6
+Gamma|e03|memory|00031765|6
+Gamma|e03|memory|00031769|6
+Gamma|e03|memory|00031773|31741
+Gamma|e03|memory|00031777|74
+Gamma|e03|memory|00031781|720
+Gamma|e03|memory|00031793|6
+Gamma|e03|memory|00031797|720
+Gamma|e03|memory|00031801|6
+Gamma|e03|memory|00031805|1
+Gamma|e03|memory|00031809|0
+Gamma|e03|memory|00031813|0
+Gamma|e03|memory|00031817|6
+Gamma|e03|memory|00031821|1
+Gamma|e03|memory|00031825|5
+Gamma|e03|instruction|81|loadAI
+Gamma|e03|instruction|71|storeAI
+Gamma|e03|instruction|20|addI
+Gamma|e03|instruction|17|loadI
+Gamma|e03|instruction|14|i2i
+Gamma|e03|instruction|7|jumpI
+Gamma|e03|instruction|7|jump
+Gamma|e03|instruction|6|cmp_EQ
+Gamma|e03|instruction|6|cbr
+Gamma|e03|instruction|6|subI
+Gamma|e03|instruction|5|sub
+Gamma|e03|instruction|5|mult
+Gamma|e03|instruction|1|store
+Gamma|e03|instruction|1|halt
+Gamma|e04|stack|19081
+Gamma|e04|data|9540
+Gamma|e04|input|loadI 4 => rbss
+Gamma|e04|input|loadI 8 => rfp
+Gamma|e04|input|loadI 28 => rsp
+Gamma|e04|input|storeAI rfp => rsp, 0
+Gamma|e04|input|storeAI rpc => rsp, 4
+Gamma|e04|input|i2i rsp => rfp
+Gamma|e04|input|jumpI -> Lmain
+Gamma|e04|input|loadAI rsp, 8 => r34
+Gamma|e04|input|loadI 0 => r35
+Gamma|e04|input|store r34 => r35
+Gamma|e04|input|halt
+Gamma|e04|input|Lf: addI rsp, 32 => rsp
+Gamma|e04|input|loadAI rfp, 20 => r1
+Gamma|e04|input|loadAI rfp, 24 => r2
+Gamma|e04|input|mult r1, r2 => r3
+Gamma|e04|input|storeAI r3 => rfp, 28
+Gamma|e04|input|loadAI rfp, 28 => r4
+Gamma|e04|input|storeAI r4 => rfp, 8
+Gamma|e04|input|i2i rfp => rsp
+Gamma|e04|input|loadAI rfp, 0 => rfp
+Gamma|e04|input|loadAI rsp, 4 => r5
+Gamma|e04|input|addI r5, 3 => r5
+Gamma|e04|input|jump -> r5
+Gamma|e04|input|loadI 0 => r28
+Gamma|e04|input|storeAI r28 => rfp, 8
+Gamma|e04|input|i2i rfp => rsp
+Gamma|e04|input|loadAI rfp, 0 => rfp
+Gamma|e04|input|loadAI rsp, 4 => r29
+Gamma|e04|input|addI r29, 3 => r29
+Gamma|e04|input|jump -> r29
+Gamma|e04|input|Lmult: addI rsp, 64 => rsp
+Gamma|e04|input|loadAI rfp, 20 => r6
+Gamma|e04|input|storeAI r6 => rfp, 36
+Gamma|e04|input|loadAI rfp, 24 => r7
+Gamma|e04|input|storeAI r7 => rfp, 40
+Gamma|e04|input|loadAI rfp, 28 => r8
+Gamma|e04|input|storeAI r8 => rfp, 44
+Gamma|e04|input|loadAI rfp, 32 => r9
+Gamma|e04|input|storeAI r9 => rfp, 48
+Gamma|e04|input|loadAI rfp, 36 => r10
+Gamma|e04|input|loadAI rfp, 40 => r11
+Gamma|e04|input|storeAI r6 => rsp, 0
+Gamma|e04|input|storeAI r7 => rsp, 4
+Gamma|e04|input|storeAI r8 => rsp, 8
+Gamma|e04|input|storeAI r9 => rsp, 12
+Gamma|e04|input|storeAI r10 => rsp, 16
+Gamma|e04|input|storeAI r11 => rsp, 20
+Gamma|e04|input|addI rsp, 24 => rsp
+Gamma|e04|input|storeAI r10 => rsp, 20
+Gamma|e04|input|storeAI r11 => rsp, 24
+Gamma|e04|input|storeAI rfp => rsp, 0
+Gamma|e04|input|storeAI rpc => rsp, 4
+Gamma|e04|input|i2i rsp => rfp
+Gamma|e04|input|jumpI -> Lf
+Gamma|e04|input|loadAI rsp, 8 => r12
+Gamma|e04|input|subI rsp, 24 => rsp
+Gamma|e04|input|loadAI rsp, 0 => r6
+Gamma|e04|input|loadAI rsp, 4 => r7
+Gamma|e04|input|loadAI rsp, 8 => r8
+Gamma|e04|input|loadAI rsp, 12 => r9
+Gamma|e04|input|loadAI rsp, 16 => r10
+Gamma|e04|input|loadAI rsp, 20 => r11
+Gamma|e04|input|storeAI r12 => rfp, 52
+Gamma|e04|input|loadAI rfp, 44 => r13
+Gamma|e04|input|loadAI rfp, 48 => r14
+Gamma|e04|input|storeAI r6 => rsp, 0
+Gamma|e04|input|storeAI r7 => rsp, 4
+Gamma|e04|input|storeAI r8 => rsp, 8
+Gamma|e04|input|storeAI r9 => rsp, 12
+Gamma|e04|input|storeAI r10 => rsp, 16
+Gamma|e04|input|storeAI r11 => rsp, 20
+Gamma|e04|input|storeAI r12 => rsp, 24
+Gamma|e04|input|storeAI r13 => rsp, 28
+Gamma|e04|input|storeAI r14 => rsp, 32
+Gamma|e04|input|addI rsp, 36 => rsp
+Gamma|e04|input|storeAI r13 => rsp, 20
+Gamma|e04|input|storeAI r14 => rsp, 24
+Gamma|e04|input|storeAI rfp => rsp, 0
+Gamma|e04|input|storeAI rpc => rsp, 4
+Gamma|e04|input|i2i rsp => rfp
+Gamma|e04|input|jumpI -> Lf
+Gamma|e04|input|loadAI rsp, 8 => r15
+Gamma|e04|input|subI rsp, 36 => rsp
+Gamma|e04|input|loadAI rsp, 0 => r6
+Gamma|e04|input|loadAI rsp, 4 => r7
+Gamma|e04|input|loadAI rsp, 8 => r8
+Gamma|e04|input|loadAI rsp, 12 => r9
+Gamma|e04|input|loadAI rsp, 16 => r10
+Gamma|e04|input|loadAI rsp, 20 => r11
+Gamma|e04|input|loadAI rsp, 24 => r12
+Gamma|e04|input|loadAI rsp, 28 => r13
+Gamma|e04|input|loadAI rsp, 32 => r14
+Gamma|e04|input|storeAI r15 => rfp, 56
+Gamma|e04|input|loadAI rfp, 52 => r16
+Gamma|e04|input|loadAI rfp, 56 => r17
+Gamma|e04|input|add r16, r17 => r18
+Gamma|e04|input|storeAI r18 => rfp, 60
+Gamma|e04|input|loadAI rfp, 60 => r19
+Gamma|e04|input|storeAI r19 => rfp, 8
+Gamma|e04|input|i2i rfp => rsp
+Gamma|e04|input|loadAI rfp, 0 => rfp
+Gamma|e04|input|loadAI rsp, 4 => r20
+Gamma|e04|input|addI r20, 3 => r20
+Gamma|e04|input|jump -> r20
+Gamma|e04|input|loadI 0 => r30
+Gamma|e04|input|storeAI r30 => rfp, 8
+Gamma|e04|input|i2i rfp => rsp
+Gamma|e04|input|loadAI rfp, 0 => rfp
+Gamma|e04|input|loadAI rsp, 4 => r31
+Gamma|e04|input|addI r31, 3 => r31
+Gamma|e04|input|jump -> r31
+Gamma|e04|input|Lmain: addI rsp, 28 => rsp
+Gamma|e04|input|loadI 7 => r21
+Gamma|e04|input|storeAI r21 => rfp, 20
+Gamma|e04|input|loadI 3 => r22
+Gamma|e04|input|storeAI r22 => rfp, 24
+Gamma|e04|input|loadAI rfp, 20 => r23
+Gamma|e04|input|loadAI rfp, 20 => r24
+Gamma|e04|input|loadAI rfp, 24 => r25
+Gamma|e04|input|loadAI rfp, 24 => r26
+Gamma|e04|input|storeAI r21 => rsp, 0
+Gamma|e04|input|storeAI r22 => rsp, 4
+Gamma|e04|input|storeAI r23 => rsp, 8
+Gamma|e04|input|storeAI r24 => rsp, 12
+Gamma|e04|input|storeAI r25 => rsp, 16
+Gamma|e04|input|storeAI r26 => rsp, 20
+Gamma|e04|input|addI rsp, 24 => rsp
+Gamma|e04|input|storeAI r23 => rsp, 20
+Gamma|e04|input|storeAI r24 => rsp, 24
+Gamma|e04|input|storeAI r25 => rsp, 28
+Gamma|e04|input|storeAI r26 => rsp, 32
+Gamma|e04|input|storeAI rfp => rsp, 0
+Gamma|e04|input|storeAI rpc => rsp, 4
+Gamma|e04|input|i2i rsp => rfp
+Gamma|e04|input|jumpI -> Lmult
+Gamma|e04|input|loadAI rsp, 8 => r27
+Gamma|e04|input|subI rsp, 24 => rsp
+Gamma|e04|input|loadAI rsp, 0 => r21
+Gamma|e04|input|loadAI rsp, 4 => r22
+Gamma|e04|input|loadAI rsp, 8 => r23
+Gamma|e04|input|loadAI rsp, 12 => r24
+Gamma|e04|input|loadAI rsp, 16 => r25
+Gamma|e04|input|loadAI rsp, 20 => r26
+Gamma|e04|input|storeAI r27 => rbss, 0
+Gamma|e04|input|loadI 0 => r32
+Gamma|e04|input|storeAI r32 => rfp, 8
+Gamma|e04|input|i2i rfp => rsp
+Gamma|e04|input|loadAI rfp, 0 => rfp
+Gamma|e04|input|loadAI rsp, 4 => r33
+Gamma|e04|input|addI r33, 3 => r33
+Gamma|e04|input|jump -> r33
+Gamma|e04|input|
+Gamma|e04|output|count	instruction
+Gamma|e04|output|   54	loadAI
+Gamma|e04|output|   53	storeAI
+Gamma|e04|output|   11	addI
+Gamma|e04|output|    8	i2i
+Gamma|e04|output|    7	loadI
+Gamma|e04|output|    4	jumpI
+Gamma|e04|output|    4	jump
+Gamma|e04|output|    3	subI
+Gamma|e04|output|    2	mult
+Gamma|e04|output|    1	add
+Gamma|e04|output|    1	store
+Gamma|e04|output|    1	halt
+Gamma|e04|output|
+Gamma|e04|output|instructions executed:  149
+Gamma|e04|output|register         read:  194 write:  232
+Gamma|e04|output|memory           read:   54 write:   54
+Gamma|e04|output|
+Gamma|e04|output|  register    value
+Gamma|e04|output|        r1        3
+Gamma|e04|output|       r10        7
+Gamma|e04|output|       r11        7
+Gamma|e04|output|       r12       49
+Gamma|e04|output|       r13        3
+Gamma|e04|output|       r14        3
+Gamma|e04|output|       r15        9
+Gamma|e04|output|       r16       49
+Gamma|e04|output|       r17        9
+Gamma|e04|output|       r18       58
+Gamma|e04|output|       r19       58
+Gamma|e04|output|        r2        3
+Gamma|e04|output|       r20      135
+Gamma|e04|output|       r21        7
+Gamma|e04|output|       r22        3
+Gamma|e04|output|       r23        7
+Gamma|e04|output|       r24        7
+Gamma|e04|output|       r25        3
+Gamma|e04|output|       r26        3
+Gamma|e04|output|       r27       58
+Gamma|e04|output|        r3        9
+Gamma|e04|output|       r32        0
+Gamma|e04|output|       r33        7
+Gamma|e04|output|       r34        0
+Gamma|e04|output|       r35        0
+Gamma|e04|output|        r4        9
+Gamma|e04|output|        r5       81
+Gamma|e04|output|        r6        7
+Gamma|e04|output|        r7        7
+Gamma|e04|output|        r8        3
+Gamma|e04|output|        r9        3
+Gamma|e04|output|      rbss     9540
+Gamma|e04|output|       rfp    19081
+Gamma|e04|output|       rpc       10
+Gamma|e04|output|       rsp    19081
+Gamma|e04|output|
+Gamma|e04|output|    memory    value
+Gamma|e04|output|00000000        0
+Gamma|e04|output|00009540       58
+Gamma|e04|output|00019081    19081
+Gamma|e04|output|00019085        4
+Gamma|e04|output|00019089        0
+Gamma|e04|output|00019101        7
+Gamma|e04|output|00019105        3
+Gamma|e04|output|00019109        7
+Gamma|e04|output|00019113        3
+Gamma|e04|output|00019117        7
+Gamma|e04|output|00019121        7
+Gamma|e04|output|00019125        3
+Gamma|e04|output|00019129        3
+Gamma|e04|output|00019133    19081
+Gamma|e04|output|00019137      132
+Gamma|e04|output|00019141       58
+Gamma|e04|output|00019153        7
+Gamma|e04|output|00019157        7
+Gamma|e04|output|00019161        3
+Gamma|e04|output|00019165        3
+Gamma|e04|output|00019169        7
+Gamma|e04|output|00019173        7
+Gamma|e04|output|00019177        3
+Gamma|e04|output|00019181        3
+Gamma|e04|output|00019185       49
+Gamma|e04|output|00019189        9
+Gamma|e04|output|00019193       58
+Gamma|e04|output|00019197        7
+Gamma|e04|output|00019201        7
+Gamma|e04|output|00019205        3
+Gamma|e04|output|00019209        3
+Gamma|e04|output|00019213        7
+Gamma|e04|output|00019217        7
+Gamma|e04|output|00019221       49
+Gamma|e04|output|00019225        3
+Gamma|e04|output|00019229        3
+Gamma|e04|output|00019233    19133
+Gamma|e04|output|00019237       78
+Gamma|e04|output|00019241        9
+Gamma|e04|output|00019245        7
+Gamma|e04|output|00019249       49
+Gamma|e04|output|00019253        3
+Gamma|e04|output|00019257        3
+Gamma|e04|output|00019261        9
+Gamma|0
+Gamma|e04|sixit|0
+Gamma|e04|memory|00000000|0
+Gamma|e04|memory|00009540|58
+Gamma|e04|memory|00019081|19081
+Gamma|e04|memory|00019085|4
+Gamma|e04|memory|00019089|0
+Gamma|e04|memory|00019101|7
+Gamma|e04|memory|00019105|3
+Gamma|e04|memory|00019109|7
+Gamma|e04|memory|00019113|3
+Gamma|e04|memory|00019117|7
+Gamma|e04|memory|00019121|7
+Gamma|e04|memory|00019125|3
+Gamma|e04|memory|00019129|3
+Gamma|e04|memory|00019133|19081
+Gamma|e04|memory|00019137|132
+Gamma|e04|memory|00019141|58
+Gamma|e04|memory|00019153|7
+Gamma|e04|memory|00019157|7
+Gamma|e04|memory|00019161|3
+Gamma|e04|memory|00019165|3
+Gamma|e04|instruction|54|loadAI
+Gamma|e04|instruction|53|storeAI
+Gamma|e04|instruction|11|addI
+Gamma|e04|instruction|8|i2i
+Gamma|e04|instruction|7|loadI
+Gamma|e04|instruction|4|jumpI
+Gamma|e04|instruction|4|jump
+Gamma|e04|instruction|3|subI
+Gamma|e04|instruction|2|mult
+Gamma|e04|instruction|1|add
+Gamma|e04|instruction|1|store
+Gamma|e04|instruction|1|halt
+Gamma|e05|stack|36353
+Gamma|e05|data|18176
+Gamma|e05|input|loadI 4 => rbss
+Gamma|e05|input|loadI 8 => rfp
+Gamma|e05|input|loadI 28 => rsp
+Gamma|e05|input|storeAI rfp => rsp, 0
+Gamma|e05|input|storeAI rpc => rsp, 4
+Gamma|e05|input|i2i rsp => rfp
+Gamma|e05|input|jumpI -> Lmain
+Gamma|e05|input|loadAI rsp, 8 => r20
+Gamma|e05|input|loadI 0 => r21
+Gamma|e05|input|store r20 => r21
+Gamma|e05|input|halt
+Gamma|e05|input|Lgis: addI rsp, 28 => rsp
+Gamma|e05|input|loadAI rfp, 20 => r3
+Gamma|e05|input|loadI 0 => r4
+Gamma|e05|input|cmp_EQ r3, r4 -> r5
+Gamma|e05|input|cbr r5 -> L1, L2
+Gamma|e05|input|L1: loadI 1 => r1
+Gamma|e05|input|storeAI r1 => rfp, 8
+Gamma|e05|input|i2i rfp => rsp
+Gamma|e05|input|loadAI rfp, 0 => rfp
+Gamma|e05|input|loadAI rsp, 4 => r2
+Gamma|e05|input|addI r2, 3 => r2
+Gamma|e05|input|jump -> r2
+Gamma|e05|input|L2: loadAI rfp, 20 => r6
+Gamma|e05|input|loadAI rfp, 20 => r7
+Gamma|e05|input|loadI 1 => r8
+Gamma|e05|input|sub r7, r8 => r9
+Gamma|e05|input|storeAI r3 => rsp, 0
+Gamma|e05|input|storeAI r4 => rsp, 4
+Gamma|e05|input|storeAI r1 => rsp, 8
+Gamma|e05|input|storeAI r2 => rsp, 12
+Gamma|e05|input|storeAI r6 => rsp, 16
+Gamma|e05|input|storeAI r7 => rsp, 20
+Gamma|e05|input|storeAI r8 => rsp, 24
+Gamma|e05|input|storeAI r9 => rsp, 28
+Gamma|e05|input|addI rsp, 32 => rsp
+Gamma|e05|input|storeAI r9 => rsp, 20
+Gamma|e05|input|storeAI rfp => rsp, 0
+Gamma|e05|input|storeAI rpc => rsp, 4
+Gamma|e05|input|i2i rsp => rfp
+Gamma|e05|input|jumpI -> Lgis
+Gamma|e05|input|loadAI rsp, 8 => r10
+Gamma|e05|input|subI rsp, 32 => rsp
+Gamma|e05|input|loadAI rsp, 0 => r3
+Gamma|e05|input|loadAI rsp, 4 => r4
+Gamma|e05|input|loadAI rsp, 8 => r1
+Gamma|e05|input|loadAI rsp, 12 => r2
+Gamma|e05|input|loadAI rsp, 16 => r6
+Gamma|e05|input|loadAI rsp, 20 => r7
+Gamma|e05|input|loadAI rsp, 24 => r8
+Gamma|e05|input|loadAI rsp, 28 => r9
+Gamma|e05|input|add r6, r10 => r11
+Gamma|e05|input|storeAI r11 => rfp, 24
+Gamma|e05|input|loadAI rfp, 24 => r12
+Gamma|e05|input|storeAI r12 => rfp, 8
+Gamma|e05|input|i2i rfp => rsp
+Gamma|e05|input|loadAI rfp, 0 => rfp
+Gamma|e05|input|loadAI rsp, 4 => r13
+Gamma|e05|input|addI r13, 3 => r13
+Gamma|e05|input|jump -> r13
+Gamma|e05|input|loadI 0 => r16
+Gamma|e05|input|storeAI r16 => rfp, 8
+Gamma|e05|input|i2i rfp => rsp
+Gamma|e05|input|loadAI rfp, 0 => rfp
+Gamma|e05|input|loadAI rsp, 4 => r17
+Gamma|e05|input|addI r17, 3 => r17
+Gamma|e05|input|jump -> r17
+Gamma|e05|input|Lmain: addI rsp, 20 => rsp
+Gamma|e05|input|loadI 3 => r14
+Gamma|e05|input|storeAI r14 => rsp, 0
+Gamma|e05|input|addI rsp, 4 => rsp
+Gamma|e05|input|storeAI r14 => rsp, 20
+Gamma|e05|input|storeAI rfp => rsp, 0
+Gamma|e05|input|storeAI rpc => rsp, 4
+Gamma|e05|input|i2i rsp => rfp
+Gamma|e05|input|jumpI -> Lgis
+Gamma|e05|input|loadAI rsp, 8 => r15
+Gamma|e05|input|subI rsp, 4 => rsp
+Gamma|e05|input|loadAI rsp, 0 => r14
+Gamma|e05|input|storeAI r15 => rbss, 0
+Gamma|e05|input|loadI 0 => r18
+Gamma|e05|input|storeAI r18 => rfp, 8
+Gamma|e05|input|i2i rfp => rsp
+Gamma|e05|input|loadAI rfp, 0 => rfp
+Gamma|e05|input|loadAI rsp, 4 => r19
+Gamma|e05|input|addI r19, 3 => r19
+Gamma|e05|input|jump -> r19
+Gamma|e05|input|
+Gamma|e05|output|count	instruction
+Gamma|e05|output|   53	loadAI
+Gamma|e05|output|   48	storeAI
+Gamma|e05|output|   14	loadI
+Gamma|e05|output|   14	addI
+Gamma|e05|output|   10	i2i
+Gamma|e05|output|    5	jumpI
+Gamma|e05|output|    5	jump
+Gamma|e05|output|    4	cmp_EQ
+Gamma|e05|output|    4	cbr
+Gamma|e05|output|    4	subI
+Gamma|e05|output|    3	sub
+Gamma|e05|output|    3	add
+Gamma|e05|output|    1	store
+Gamma|e05|output|    1	halt
+Gamma|e05|output|
+Gamma|e05|output|instructions executed:  169
+Gamma|e05|output|register         read:  208 write:  271
+Gamma|e05|output|memory           read:   53 write:   49
+Gamma|e05|output|
+Gamma|e05|output|  register    value
+Gamma|e05|output|        r1        0
+Gamma|e05|output|       r10        4
+Gamma|e05|output|       r11        7
+Gamma|e05|output|       r12        7
+Gamma|e05|output|       r13       76
+Gamma|e05|output|       r14        3
+Gamma|e05|output|       r15        7
+Gamma|e05|output|       r18        0
+Gamma|e05|output|       r19        7
+Gamma|e05|output|        r2        0
+Gamma|e05|output|       r20        0
+Gamma|e05|output|       r21        0
+Gamma|e05|output|        r3        3
+Gamma|e05|output|        r4        0
+Gamma|e05|output|        r5        1
+Gamma|e05|output|        r6        3
+Gamma|e05|output|        r7        3
+Gamma|e05|output|        r8        1
+Gamma|e05|output|        r9        2
+Gamma|e05|output|      rbss    18176
+Gamma|e05|output|       rfp    36353
+Gamma|e05|output|       rpc       10
+Gamma|e05|output|       rsp    36353
+Gamma|e05|output|
+Gamma|e05|output|    memory    value
+Gamma|e05|output|00000000        0
+Gamma|e05|output|00018176        7
+Gamma|e05|output|00036353    36353
+Gamma|e05|output|00036357        4
+Gamma|e05|output|00036361        0
+Gamma|e05|output|00036373        3
+Gamma|e05|output|00036377    36353
+Gamma|e05|output|00036381       73
+Gamma|e05|output|00036385        7
+Gamma|e05|output|00036397        3
+Gamma|e05|output|00036401        7
+Gamma|e05|output|00036405        3
+Gamma|e05|output|00036409        0
+Gamma|e05|output|00036413        0
+Gamma|e05|output|00036417        0
+Gamma|e05|output|00036421        3
+Gamma|e05|output|00036425        3
+Gamma|e05|output|00036429        1
+Gamma|e05|output|00036433        2
+Gamma|e05|output|00036437    36377
+Gamma|e05|output|00036441       38
+Gamma|e05|output|00036445        4
+Gamma|e05|output|00036457        2
+Gamma|e05|output|00036461        4
+Gamma|e05|output|00036465        2
+Gamma|e05|output|00036469        0
+Gamma|e05|output|00036473        0
+Gamma|e05|output|00036477        0
+Gamma|e05|output|00036481        2
+Gamma|e05|output|00036485        2
+Gamma|e05|output|00036489        1
+Gamma|e05|output|00036493        1
+Gamma|e05|output|00036497    36437
+Gamma|e05|output|00036501       38
+Gamma|e05|output|00036505        2
+Gamma|e05|output|00036517        1
+Gamma|e05|output|00036521        2
+Gamma|e05|output|00036525        1
+Gamma|e05|output|00036529        0
+Gamma|e05|output|00036533        0
+Gamma|e05|output|00036537        0
+Gamma|e05|output|00036541        1
+Gamma|e05|output|00036545        1
+Gamma|e05|output|00036549        1
+Gamma|e05|output|00036553        0
+Gamma|e05|output|00036557    36497
+Gamma|e05|output|00036561       38
+Gamma|e05|output|00036565        1
+Gamma|e05|output|00036577        0
+Gamma|0
+Gamma|e05|sixit|0
+Gamma|e05|memory|00000000|0
+Gamma|e05|memory|00018176|7
+Gamma|e05|memory|00036353|36353
+Gamma|e05|memory|00036357|4
+Gamma|e05|memory|00036361|0
+Gamma|e05|memory|00036373|3
+Gamma|e05|memory|00036377|36353
+Gamma|e05|memory|00036381|73
+Gamma|e05|memory|00036385|7
+Gamma|e05|memory|00036397|3
+Gamma|e05|memory|00036401|7
+Gamma|e05|memory|00036405|3
+Gamma|e05|memory|00036409|0
+Gamma|e05|memory|00036413|0
+Gamma|e05|memory|00036417|0
+Gamma|e05|memory|00036421|3
+Gamma|e05|memory|00036425|3
+Gamma|e05|memory|00036429|1
+Gamma|e05|memory|00036433|2
+Gamma|e05|memory|00036437|36377
+Gamma|e05|instruction|53|loadAI
+Gamma|e05|instruction|48|storeAI
+Gamma|e05|instruction|14|loadI
+Gamma|e05|instruction|14|addI
+Gamma|e05|instruction|10|i2i
+Gamma|e05|instruction|5|jumpI
+Gamma|e05|instruction|5|jump
+Gamma|e05|instruction|4|cmp_EQ
+Gamma|e05|instruction|4|cbr
+Gamma|e05|instruction|4|subI
+Gamma|e05|instruction|3|sub
+Gamma|e05|instruction|3|add
+Gamma|e05|instruction|1|store
+Gamma|e05|instruction|1|halt
+Gamma|e06|stack|42064
+Gamma|e06|data|21032
+Gamma|e06|input|loadI 4 => rbss
+Gamma|e06|input|loadI 12 => rfp
+Gamma|e06|input|loadI 32 => rsp
+Gamma|e06|input|storeAI rfp => rsp, 0
+Gamma|e06|input|storeAI rpc => rsp, 4
+Gamma|e06|input|i2i rsp => rfp
+Gamma|e06|input|jumpI -> Lmain
+Gamma|e06|input|loadAI rsp, 8 => r36
+Gamma|e06|input|loadI 0 => r37
+Gamma|e06|input|store r36 => r37
+Gamma|e06|input|halt
+Gamma|e06|input|Lf: addI rsp, 28 => rsp
+Gamma|e06|input|loadAI rfp, 20 => r1
+Gamma|e06|input|loadAI rfp, 24 => r2
+Gamma|e06|input|mult r1, r2 => r3
+Gamma|e06|input|storeAI r3 => rfp, 8
+Gamma|e06|input|i2i rfp => rsp
+Gamma|e06|input|loadAI rfp, 0 => rfp
+Gamma|e06|input|loadAI rsp, 4 => r4
+Gamma|e06|input|addI r4, 3 => r4
+Gamma|e06|input|jump -> r4
+Gamma|e06|input|loadI 0 => r30
+Gamma|e06|input|storeAI r30 => rfp, 8
+Gamma|e06|input|i2i rfp => rsp
+Gamma|e06|input|loadAI rfp, 0 => rfp
+Gamma|e06|input|loadAI rsp, 4 => r31
+Gamma|e06|input|addI r31, 3 => r31
+Gamma|e06|input|jump -> r31
+Gamma|e06|input|Lmult: addI rsp, 40 => rsp
+Gamma|e06|input|loadAI rfp, 20 => r5
+Gamma|e06|input|loadAI rfp, 24 => r6
+Gamma|e06|input|storeAI r5 => rsp, 0
+Gamma|e06|input|storeAI r6 => rsp, 4
+Gamma|e06|input|addI rsp, 8 => rsp
+Gamma|e06|input|storeAI r5 => rsp, 20
+Gamma|e06|input|storeAI r6 => rsp, 24
+Gamma|e06|input|storeAI rfp => rsp, 0
+Gamma|e06|input|storeAI rpc => rsp, 4
+Gamma|e06|input|i2i rsp => rfp
+Gamma|e06|input|jumpI -> Lf
+Gamma|e06|input|loadAI rsp, 8 => r7
+Gamma|e06|input|subI rsp, 8 => rsp
+Gamma|e06|input|loadAI rsp, 0 => r5
+Gamma|e06|input|loadAI rsp, 4 => r6
+Gamma|e06|input|loadAI rfp, 28 => r8
+Gamma|e06|input|loadAI rfp, 32 => r9
+Gamma|e06|input|storeAI r5 => rsp, 0
+Gamma|e06|input|storeAI r6 => rsp, 4
+Gamma|e06|input|storeAI r7 => rsp, 8
+Gamma|e06|input|storeAI r8 => rsp, 12
+Gamma|e06|input|storeAI r9 => rsp, 16
+Gamma|e06|input|addI rsp, 20 => rsp
+Gamma|e06|input|storeAI r8 => rsp, 20
+Gamma|e06|input|storeAI r9 => rsp, 24
+Gamma|e06|input|storeAI rfp => rsp, 0
+Gamma|e06|input|storeAI rpc => rsp, 4
+Gamma|e06|input|i2i rsp => rfp
+Gamma|e06|input|jumpI -> Lf
+Gamma|e06|input|loadAI rsp, 8 => r10
+Gamma|e06|input|subI rsp, 20 => rsp
+Gamma|e06|input|loadAI rsp, 0 => r5
+Gamma|e06|input|loadAI rsp, 4 => r6
+Gamma|e06|input|loadAI rsp, 8 => r7
+Gamma|e06|input|loadAI rsp, 12 => r8
+Gamma|e06|input|loadAI rsp, 16 => r9
+Gamma|e06|input|add r7, r10 => r11
+Gamma|e06|input|storeAI r11 => rfp, 36
+Gamma|e06|input|loadAI rfp, 36 => r12
+Gamma|e06|input|storeAI r12 => rfp, 8
+Gamma|e06|input|i2i rfp => rsp
+Gamma|e06|input|loadAI rfp, 0 => rfp
+Gamma|e06|input|loadAI rsp, 4 => r13
+Gamma|e06|input|addI r13, 3 => r13
+Gamma|e06|input|jump -> r13
+Gamma|e06|input|loadI 0 => r32
+Gamma|e06|input|storeAI r32 => rfp, 8
+Gamma|e06|input|i2i rfp => rsp
+Gamma|e06|input|loadAI rfp, 0 => rfp
+Gamma|e06|input|loadAI rsp, 4 => r33
+Gamma|e06|input|addI r33, 3 => r33
+Gamma|e06|input|jump -> r33
+Gamma|e06|input|Lmain: addI rsp, 28 => rsp
+Gamma|e06|input|loadI 2018 => r14
+Gamma|e06|input|storeAI r14 => rbss, 0
+Gamma|e06|input|loadI 2 => r15
+Gamma|e06|input|storeAI r15 => rfp, 20
+Gamma|e06|input|loadI 2 => r16
+Gamma|e06|input|storeAI r16 => rfp, 24
+Gamma|e06|input|loadAI rfp, 20 => r17
+Gamma|e06|input|loadI 3 => r18
+Gamma|e06|input|mult r17, r18 => r19
+Gamma|e06|input|loadAI rfp, 20 => r20
+Gamma|e06|input|loadI 3 => r21
+Gamma|e06|input|mult r20, r21 => r22
+Gamma|e06|input|loadAI rfp, 24 => r23
+Gamma|e06|input|loadI 2 => r24
+Gamma|e06|input|mult r23, r24 => r25
+Gamma|e06|input|loadAI rfp, 24 => r26
+Gamma|e06|input|loadI 2 => r27
+Gamma|e06|input|mult r26, r27 => r28
+Gamma|e06|input|storeAI r14 => rsp, 0
+Gamma|e06|input|storeAI r15 => rsp, 4
+Gamma|e06|input|storeAI r16 => rsp, 8
+Gamma|e06|input|storeAI r17 => rsp, 12
+Gamma|e06|input|storeAI r18 => rsp, 16
+Gamma|e06|input|storeAI r19 => rsp, 20
+Gamma|e06|input|storeAI r20 => rsp, 24
+Gamma|e06|input|storeAI r21 => rsp, 28
+Gamma|e06|input|storeAI r22 => rsp, 32
+Gamma|e06|input|storeAI r23 => rsp, 36
+Gamma|e06|input|storeAI r24 => rsp, 40
+Gamma|e06|input|storeAI r25 => rsp, 44
+Gamma|e06|input|storeAI r26 => rsp, 48
+Gamma|e06|input|storeAI r27 => rsp, 52
+Gamma|e06|input|storeAI r28 => rsp, 56
+Gamma|e06|input|addI rsp, 60 => rsp
+Gamma|e06|input|storeAI r19 => rsp, 20
+Gamma|e06|input|storeAI r22 => rsp, 24
+Gamma|e06|input|storeAI r25 => rsp, 28
+Gamma|e06|input|storeAI r28 => rsp, 32
+Gamma|e06|input|storeAI rfp => rsp, 0
+Gamma|e06|input|storeAI rpc => rsp, 4
+Gamma|e06|input|i2i rsp => rfp
+Gamma|e06|input|jumpI -> Lmult
+Gamma|e06|input|loadAI rsp, 8 => r29
+Gamma|e06|input|subI rsp, 60 => rsp
+Gamma|e06|input|loadAI rsp, 0 => r14
+Gamma|e06|input|loadAI rsp, 4 => r15
+Gamma|e06|input|loadAI rsp, 8 => r16
+Gamma|e06|input|loadAI rsp, 12 => r17
+Gamma|e06|input|loadAI rsp, 16 => r18
+Gamma|e06|input|loadAI rsp, 20 => r19
+Gamma|e06|input|loadAI rsp, 24 => r20
+Gamma|e06|input|loadAI rsp, 28 => r21
+Gamma|e06|input|loadAI rsp, 32 => r22
+Gamma|e06|input|loadAI rsp, 36 => r23
+Gamma|e06|input|loadAI rsp, 40 => r24
+Gamma|e06|input|loadAI rsp, 44 => r25
+Gamma|e06|input|loadAI rsp, 48 => r26
+Gamma|e06|input|loadAI rsp, 52 => r27
+Gamma|e06|input|loadAI rsp, 56 => r28
+Gamma|e06|input|storeAI r29 => rbss, 4
+Gamma|e06|input|loadI 0 => r34
+Gamma|e06|input|storeAI r34 => rfp, 8
+Gamma|e06|input|i2i rfp => rsp
+Gamma|e06|input|loadAI rfp, 0 => rfp
+Gamma|e06|input|loadAI rsp, 4 => r35
+Gamma|e06|input|addI r35, 3 => r35
+Gamma|e06|input|jump -> r35
+Gamma|e06|input|
+Gamma|e06|output|count	instruction
+Gamma|e06|output|   47	storeAI
+Gamma|e06|output|   47	loadAI
+Gamma|e06|output|   12	loadI
+Gamma|e06|output|   11	addI
+Gamma|e06|output|    8	i2i
+Gamma|e06|output|    6	mult
+Gamma|e06|output|    4	jumpI
+Gamma|e06|output|    4	jump
+Gamma|e06|output|    3	subI
+Gamma|e06|output|    1	add
+Gamma|e06|output|    1	store
+Gamma|e06|output|    1	halt
+Gamma|e06|output|
+Gamma|e06|output|instructions executed:  145
+Gamma|e06|output|register         read:  183 write:  230
+Gamma|e06|output|memory           read:   47 write:   48
+Gamma|e06|output|
+Gamma|e06|output|  register    value
+Gamma|e06|output|        r1        4
+Gamma|e06|output|       r10       16
+Gamma|e06|output|       r11       52
+Gamma|e06|output|       r12       52
+Gamma|e06|output|       r13      124
+Gamma|e06|output|       r14     2018
+Gamma|e06|output|       r15        2
+Gamma|e06|output|       r16        2
+Gamma|e06|output|       r17        2
+Gamma|e06|output|       r18        3
+Gamma|e06|output|       r19        6
+Gamma|e06|output|        r2        4
+Gamma|e06|output|       r20        2
+Gamma|e06|output|       r21        3
+Gamma|e06|output|       r22        6
+Gamma|e06|output|       r23        2
+Gamma|e06|output|       r24        2
+Gamma|e06|output|       r25        4
+Gamma|e06|output|       r26        2
+Gamma|e06|output|       r27        2
+Gamma|e06|output|       r28        4
+Gamma|e06|output|       r29       52
+Gamma|e06|output|        r3       16
+Gamma|e06|output|       r34        0
+Gamma|e06|output|       r35        7
+Gamma|e06|output|       r36        0
+Gamma|e06|output|       r37        0
+Gamma|e06|output|        r4       58
+Gamma|e06|output|        r5        6
+Gamma|e06|output|        r6        6
+Gamma|e06|output|        r7       36
+Gamma|e06|output|        r8        4
+Gamma|e06|output|        r9        4
+Gamma|e06|output|      rbss    21032
+Gamma|e06|output|       rfp    42064
+Gamma|e06|output|       rpc       10
+Gamma|e06|output|       rsp    42064
+Gamma|e06|output|
+Gamma|e06|output|    memory    value
+Gamma|e06|output|00000000        0
+Gamma|e06|output|00021032     2018
+Gamma|e06|output|00021036       52
+Gamma|e06|output|00042064    42064
+Gamma|e06|output|00042068        4
+Gamma|e06|output|00042072        0
+Gamma|e06|output|00042084        2
+Gamma|e06|output|00042088        2
+Gamma|e06|output|00042092     2018
+Gamma|e06|output|00042096        2
+Gamma|e06|output|00042100        2
+Gamma|e06|output|00042104        2
+Gamma|e06|output|00042108        3
+Gamma|e06|output|00042112        6
+Gamma|e06|output|00042116        2
+Gamma|e06|output|00042120        3
+Gamma|e06|output|00042124        6
+Gamma|e06|output|00042128        2
+Gamma|e06|output|00042132        2
+Gamma|e06|output|00042136        4
+Gamma|e06|output|00042140        2
+Gamma|e06|output|00042144        2
+Gamma|e06|output|00042148        4
+Gamma|e06|output|00042152    42064
+Gamma|e06|output|00042156      121
+Gamma|e06|output|00042160       52
+Gamma|e06|output|00042172        6
+Gamma|e06|output|00042176        6
+Gamma|e06|output|00042180        4
+Gamma|e06|output|00042184        4
+Gamma|e06|output|00042188       52
+Gamma|e06|output|00042192        6
+Gamma|e06|output|00042196        6
+Gamma|e06|output|00042200       36
+Gamma|e06|output|00042204        4
+Gamma|e06|output|00042208        4
+Gamma|e06|output|00042212    42152
+Gamma|e06|output|00042216       55
+Gamma|e06|output|00042220       16
+Gamma|e06|output|00042224        6
+Gamma|e06|output|00042232        4
+Gamma|e06|output|00042236        4
+Gamma|0
+Gamma|e06|sixit|0
+Gamma|e06|memory|00000000|0
+Gamma|e06|memory|00021032|2018
+Gamma|e06|memory|00021036|52
+Gamma|e06|memory|00042064|42064
+Gamma|e06|memory|00042068|4
+Gamma|e06|memory|00042072|0
+Gamma|e06|memory|00042084|2
+Gamma|e06|memory|00042088|2
+Gamma|e06|memory|00042092|2018
+Gamma|e06|memory|00042096|2
+Gamma|e06|memory|00042100|2
+Gamma|e06|memory|00042104|2
+Gamma|e06|memory|00042108|3
+Gamma|e06|memory|00042112|6
+Gamma|e06|memory|00042116|2
+Gamma|e06|memory|00042120|3
+Gamma|e06|memory|00042124|6
+Gamma|e06|memory|00042128|2
+Gamma|e06|memory|00042132|2
+Gamma|e06|memory|00042136|4
+Gamma|e06|instruction|47|storeAI
+Gamma|e06|instruction|47|loadAI
+Gamma|e06|instruction|12|loadI
+Gamma|e06|instruction|11|addI
+Gamma|e06|instruction|8|i2i
+Gamma|e06|instruction|6|mult
+Gamma|e06|instruction|4|jumpI
+Gamma|e06|instruction|4|jump
+Gamma|e06|instruction|3|subI
+Gamma|e06|instruction|1|add
+Gamma|e06|instruction|1|store
+Gamma|e06|instruction|1|halt
+Gamma|e07|stack|41089
+Gamma|e07|data|20544
+Gamma|e07|input|loadI 4 => rbss
+Gamma|e07|input|loadI 12 => rfp
+Gamma|e07|input|loadI 32 => rsp
+Gamma|e07|input|storeAI rfp => rsp, 0
+Gamma|e07|input|storeAI rpc => rsp, 4
+Gamma|e07|input|i2i rsp => rfp
+Gamma|e07|input|jumpI -> Lmain
+Gamma|e07|input|loadAI rsp, 8 => r41
+Gamma|e07|input|loadI 0 => r42
+Gamma|e07|input|store r41 => r42
+Gamma|e07|input|halt
+Gamma|e07|input|Lf: addI rsp, 32 => rsp
+Gamma|e07|input|loadAI rfp, 20 => r1
+Gamma|e07|input|loadAI rfp, 24 => r2
+Gamma|e07|input|mult r1, r2 => r3
+Gamma|e07|input|storeAI r3 => rfp, 28
+Gamma|e07|input|loadAI rfp, 28 => r4
+Gamma|e07|input|storeAI r4 => rfp, 8
+Gamma|e07|input|i2i rfp => rsp
+Gamma|e07|input|loadAI rfp, 0 => rfp
+Gamma|e07|input|loadAI rsp, 4 => r5
+Gamma|e07|input|addI r5, 3 => r5
+Gamma|e07|input|jump -> r5
+Gamma|e07|input|loadI 0 => r35
+Gamma|e07|input|storeAI r35 => rfp, 8
+Gamma|e07|input|i2i rfp => rsp
+Gamma|e07|input|loadAI rfp, 0 => rfp
+Gamma|e07|input|loadAI rsp, 4 => r36
+Gamma|e07|input|addI r36, 3 => r36
+Gamma|e07|input|jump -> r36
+Gamma|e07|input|Lmult: addI rsp, 40 => rsp
+Gamma|e07|input|loadAI rfp, 20 => r6
+Gamma|e07|input|loadAI rfp, 20 => r7
+Gamma|e07|input|storeAI r6 => rsp, 0
+Gamma|e07|input|storeAI r7 => rsp, 4
+Gamma|e07|input|addI rsp, 8 => rsp
+Gamma|e07|input|storeAI r6 => rsp, 20
+Gamma|e07|input|storeAI r7 => rsp, 24
+Gamma|e07|input|storeAI rfp => rsp, 0
+Gamma|e07|input|storeAI rpc => rsp, 4
+Gamma|e07|input|i2i rsp => rfp
+Gamma|e07|input|jumpI -> Lf
+Gamma|e07|input|loadAI rsp, 8 => r8
+Gamma|e07|input|subI rsp, 8 => rsp
+Gamma|e07|input|loadAI rsp, 0 => r6
+Gamma|e07|input|loadAI rsp, 4 => r7
+Gamma|e07|input|loadAI rfp, 24 => r9
+Gamma|e07|input|storeAI r6 => rsp, 0
+Gamma|e07|input|storeAI r7 => rsp, 4
+Gamma|e07|input|storeAI r8 => rsp, 8
+Gamma|e07|input|storeAI r9 => rsp, 12
+Gamma|e07|input|addI rsp, 16 => rsp
+Gamma|e07|input|storeAI r8 => rsp, 20
+Gamma|e07|input|storeAI r9 => rsp, 24
+Gamma|e07|input|storeAI rfp => rsp, 0
+Gamma|e07|input|storeAI rpc => rsp, 4
+Gamma|e07|input|i2i rsp => rfp
+Gamma|e07|input|jumpI -> Lf
+Gamma|e07|input|loadAI rsp, 8 => r10
+Gamma|e07|input|subI rsp, 16 => rsp
+Gamma|e07|input|loadAI rsp, 0 => r6
+Gamma|e07|input|loadAI rsp, 4 => r7
+Gamma|e07|input|loadAI rsp, 8 => r8
+Gamma|e07|input|loadAI rsp, 12 => r9
+Gamma|e07|input|loadAI rfp, 28 => r11
+Gamma|e07|input|loadAI rfp, 32 => r12
+Gamma|e07|input|loadAI rfp, 32 => r13
+Gamma|e07|input|storeAI r6 => rsp, 0
+Gamma|e07|input|storeAI r7 => rsp, 4
+Gamma|e07|input|storeAI r8 => rsp, 8
+Gamma|e07|input|storeAI r9 => rsp, 12
+Gamma|e07|input|storeAI r10 => rsp, 16
+Gamma|e07|input|storeAI r11 => rsp, 20
+Gamma|e07|input|storeAI r12 => rsp, 24
+Gamma|e07|input|storeAI r13 => rsp, 28
+Gamma|e07|input|addI rsp, 32 => rsp
+Gamma|e07|input|storeAI r12 => rsp, 20
+Gamma|e07|input|storeAI r13 => rsp, 24
+Gamma|e07|input|storeAI rfp => rsp, 0
+Gamma|e07|input|storeAI rpc => rsp, 4
+Gamma|e07|input|i2i rsp => rfp
+Gamma|e07|input|jumpI -> Lf
+Gamma|e07|input|loadAI rsp, 8 => r14
+Gamma|e07|input|subI rsp, 32 => rsp
+Gamma|e07|input|loadAI rsp, 0 => r6
+Gamma|e07|input|loadAI rsp, 4 => r7
+Gamma|e07|input|loadAI rsp, 8 => r8
+Gamma|e07|input|loadAI rsp, 12 => r9
+Gamma|e07|input|loadAI rsp, 16 => r10
+Gamma|e07|input|loadAI rsp, 20 => r11
+Gamma|e07|input|loadAI rsp, 24 => r12
+Gamma|e07|input|loadAI rsp, 28 => r13
+Gamma|e07|input|storeAI r6 => rsp, 0
+Gamma|e07|input|storeAI r7 => rsp, 4
+Gamma|e07|input|storeAI r8 => rsp, 8
+Gamma|e07|input|storeAI r9 => rsp, 12
+Gamma|e07|input|storeAI r10 => rsp, 16
+Gamma|e07|input|storeAI r11 => rsp, 20
+Gamma|e07|input|storeAI r12 => rsp, 24
+Gamma|e07|input|storeAI r13 => rsp, 28
+Gamma|e07|input|storeAI r14 => rsp, 32
+Gamma|e07|input|addI rsp, 36 => rsp
+Gamma|e07|input|storeAI r11 => rsp, 20
+Gamma|e07|input|storeAI r14 => rsp, 24
+Gamma|e07|input|storeAI rfp => rsp, 0
+Gamma|e07|input|storeAI rpc => rsp, 4
+Gamma|e07|input|i2i rsp => rfp
+Gamma|e07|input|jumpI -> Lf
+Gamma|e07|input|loadAI rsp, 8 => r15
+Gamma|e07|input|subI rsp, 36 => rsp
+Gamma|e07|input|loadAI rsp, 0 => r6
+Gamma|e07|input|loadAI rsp, 4 => r7
+Gamma|e07|input|loadAI rsp, 8 => r8
+Gamma|e07|input|loadAI rsp, 12 => r9
+Gamma|e07|input|loadAI rsp, 16 => r10
+Gamma|e07|input|loadAI rsp, 20 => r11
+Gamma|e07|input|loadAI rsp, 24 => r12
+Gamma|e07|input|loadAI rsp, 28 => r13
+Gamma|e07|input|loadAI rsp, 32 => r14
+Gamma|e07|input|add r10, r15 => r16
+Gamma|e07|input|storeAI r16 => rfp, 36
+Gamma|e07|input|loadAI rfp, 36 => r17
+Gamma|e07|input|storeAI r17 => rfp, 8
+Gamma|e07|input|i2i rfp => rsp
+Gamma|e07|input|loadAI rfp, 0 => rfp
+Gamma|e07|input|loadAI rsp, 4 => r18
+Gamma|e07|input|addI r18, 3 => r18
+Gamma|e07|input|jump -> r18
+Gamma|e07|input|loadI 0 => r37
+Gamma|e07|input|storeAI r37 => rfp, 8
+Gamma|e07|input|i2i rfp => rsp
+Gamma|e07|input|loadAI rfp, 0 => rfp
+Gamma|e07|input|loadAI rsp, 4 => r38
+Gamma|e07|input|addI r38, 3 => r38
+Gamma|e07|input|jump -> r38
+Gamma|e07|input|Lmain: addI rsp, 28 => rsp
+Gamma|e07|input|loadI 2019 => r19
+Gamma|e07|input|storeAI r19 => rbss, 0
+Gamma|e07|input|loadI 2 => r20
+Gamma|e07|input|storeAI r20 => rfp, 20
+Gamma|e07|input|loadI 2 => r21
+Gamma|e07|input|storeAI r21 => rfp, 24
+Gamma|e07|input|loadAI rfp, 20 => r22
+Gamma|e07|input|loadI 3 => r23
+Gamma|e07|input|mult r22, r23 => r24
+Gamma|e07|input|loadAI rfp, 20 => r25
+Gamma|e07|input|loadI 4 => r26
+Gamma|e07|input|mult r25, r26 => r27
+Gamma|e07|input|loadAI rfp, 24 => r28
+Gamma|e07|input|loadI 2 => r29
+Gamma|e07|input|mult r28, r29 => r30
+Gamma|e07|input|loadAI rfp, 24 => r31
+Gamma|e07|input|loadI 2 => r32
+Gamma|e07|input|mult r31, r32 => r33
+Gamma|e07|input|storeAI r19 => rsp, 0
+Gamma|e07|input|storeAI r20 => rsp, 4
+Gamma|e07|input|storeAI r21 => rsp, 8
+Gamma|e07|input|storeAI r22 => rsp, 12
+Gamma|e07|input|storeAI r23 => rsp, 16
+Gamma|e07|input|storeAI r24 => rsp, 20
+Gamma|e07|input|storeAI r25 => rsp, 24
+Gamma|e07|input|storeAI r26 => rsp, 28
+Gamma|e07|input|storeAI r27 => rsp, 32
+Gamma|e07|input|storeAI r28 => rsp, 36
+Gamma|e07|input|storeAI r29 => rsp, 40
+Gamma|e07|input|storeAI r30 => rsp, 44
+Gamma|e07|input|storeAI r31 => rsp, 48
+Gamma|e07|input|storeAI r32 => rsp, 52
+Gamma|e07|input|storeAI r33 => rsp, 56
+Gamma|e07|input|addI rsp, 60 => rsp
+Gamma|e07|input|storeAI r24 => rsp, 20
+Gamma|e07|input|storeAI r27 => rsp, 24
+Gamma|e07|input|storeAI r30 => rsp, 28
+Gamma|e07|input|storeAI r33 => rsp, 32
+Gamma|e07|input|storeAI rfp => rsp, 0
+Gamma|e07|input|storeAI rpc => rsp, 4
+Gamma|e07|input|i2i rsp => rfp
+Gamma|e07|input|jumpI -> Lmult
+Gamma|e07|input|loadAI rsp, 8 => r34
+Gamma|e07|input|subI rsp, 60 => rsp
+Gamma|e07|input|loadAI rsp, 0 => r19
+Gamma|e07|input|loadAI rsp, 4 => r20
+Gamma|e07|input|loadAI rsp, 8 => r21
+Gamma|e07|input|loadAI rsp, 12 => r22
+Gamma|e07|input|loadAI rsp, 16 => r23
+Gamma|e07|input|loadAI rsp, 20 => r24
+Gamma|e07|input|loadAI rsp, 24 => r25
+Gamma|e07|input|loadAI rsp, 28 => r26
+Gamma|e07|input|loadAI rsp, 32 => r27
+Gamma|e07|input|loadAI rsp, 36 => r28
+Gamma|e07|input|loadAI rsp, 40 => r29
+Gamma|e07|input|loadAI rsp, 44 => r30
+Gamma|e07|input|loadAI rsp, 48 => r31
+Gamma|e07|input|loadAI rsp, 52 => r32
+Gamma|e07|input|loadAI rsp, 56 => r33
+Gamma|e07|input|storeAI r34 => rbss, 4
+Gamma|e07|input|loadI 0 => r39
+Gamma|e07|input|storeAI r39 => rfp, 8
+Gamma|e07|input|i2i rfp => rsp
+Gamma|e07|input|loadAI rfp, 0 => rfp
+Gamma|e07|input|loadAI rsp, 4 => r40
+Gamma|e07|input|addI r40, 3 => r40
+Gamma|e07|input|jump -> r40
+Gamma|e07|input|
+Gamma|e07|output|count	instruction
+Gamma|e07|output|   79	loadAI
+Gamma|e07|output|   77	storeAI
+Gamma|e07|output|   17	addI
+Gamma|e07|output|   12	loadI
+Gamma|e07|output|   12	i2i
+Gamma|e07|output|    8	mult
+Gamma|e07|output|    6	jumpI
+Gamma|e07|output|    6	jump
+Gamma|e07|output|    5	subI
+Gamma|e07|output|    1	add
+Gamma|e07|output|    1	store
+Gamma|e07|output|    1	halt
+Gamma|e07|output|
+Gamma|e07|output|instructions executed:  225
+Gamma|e07|output|register         read:  293 write:  356
+Gamma|e07|output|memory           read:   79 write:   78
+Gamma|e07|output|
+Gamma|e07|output|  register    value
+Gamma|e07|output|        r1        4
+Gamma|e07|output|       r10      288
+Gamma|e07|output|       r11        4
+Gamma|e07|output|       r12        4
+Gamma|e07|output|       r13        4
+Gamma|e07|output|       r14       16
+Gamma|e07|output|       r15       64
+Gamma|e07|output|       r16      352
+Gamma|e07|output|       r17      352
+Gamma|e07|output|       r18      178
+Gamma|e07|output|       r19     2019
+Gamma|e07|output|        r2       16
+Gamma|e07|output|       r20        2
+Gamma|e07|output|       r21        2
+Gamma|e07|output|       r22        2
+Gamma|e07|output|       r23        3
+Gamma|e07|output|       r24        6
+Gamma|e07|output|       r25        2
+Gamma|e07|output|       r26        4
+Gamma|e07|output|       r27        8
+Gamma|e07|output|       r28        2
+Gamma|e07|output|       r29        2
+Gamma|e07|output|        r3       64
+Gamma|e07|output|       r30        4
+Gamma|e07|output|       r31        2
+Gamma|e07|output|       r32        2
+Gamma|e07|output|       r33        4
+Gamma|e07|output|       r34      352
+Gamma|e07|output|       r39        0
+Gamma|e07|output|        r4       64
+Gamma|e07|output|       r40        7
+Gamma|e07|output|       r41        0
+Gamma|e07|output|       r42        0
+Gamma|e07|output|        r5      108
+Gamma|e07|output|        r6        6
+Gamma|e07|output|        r7        6
+Gamma|e07|output|        r8       36
+Gamma|e07|output|        r9        8
+Gamma|e07|output|      rbss    20544
+Gamma|e07|output|       rfp    41089
+Gamma|e07|output|       rpc       10
+Gamma|e07|output|       rsp    41089
+Gamma|e07|output|
+Gamma|e07|output|    memory    value
+Gamma|e07|output|00000000        0
+Gamma|e07|output|00020544     2019
+Gamma|e07|output|00020548      352
+Gamma|e07|output|00041089    41089
+Gamma|e07|output|00041093        4
+Gamma|e07|output|00041097        0
+Gamma|e07|output|00041109        2
+Gamma|e07|output|00041113        2
+Gamma|e07|output|00041117     2019
+Gamma|e07|output|00041121        2
+Gamma|e07|output|00041125        2
+Gamma|e07|output|00041129        2
+Gamma|e07|output|00041133        3
+Gamma|e07|output|00041137        6
+Gamma|e07|output|00041141        2
+Gamma|e07|output|00041145        4
+Gamma|e07|output|00041149        8
+Gamma|e07|output|00041153        2
+Gamma|e07|output|00041157        2
+Gamma|e07|output|00041161        4
+Gamma|e07|output|00041165        2
+Gamma|e07|output|00041169        2
+Gamma|e07|output|00041173        4
+Gamma|e07|output|00041177    41089
+Gamma|e07|output|00041181      175
+Gamma|e07|output|00041185      352
+Gamma|e07|output|00041197        6
+Gamma|e07|output|00041201        8
+Gamma|e07|output|00041205        4
+Gamma|e07|output|00041209        4
+Gamma|e07|output|00041213      352
+Gamma|e07|output|00041217        6
+Gamma|e07|output|00041221        6
+Gamma|e07|output|00041225       36
+Gamma|e07|output|00041229        8
+Gamma|e07|output|00041233      288
+Gamma|e07|output|00041237        4
+Gamma|e07|output|00041241        4
+Gamma|e07|output|00041245        4
+Gamma|e07|output|00041249       16
+Gamma|e07|output|00041253    41177
+Gamma|e07|output|00041257      105
+Gamma|e07|output|00041261       64
+Gamma|e07|output|00041269        4
+Gamma|e07|output|00041273        4
+Gamma|e07|output|00041277       16
+Gamma|e07|output|00041281       64
+Gamma|0
+Gamma|e07|sixit|0
+Gamma|e07|memory|00000000|0
+Gamma|e07|memory|00020544|2019
+Gamma|e07|memory|00020548|352
+Gamma|e07|memory|00041089|41089
+Gamma|e07|memory|00041093|4
+Gamma|e07|memory|00041097|0
+Gamma|e07|memory|00041109|2
+Gamma|e07|memory|00041113|2
+Gamma|e07|memory|00041117|2019
+Gamma|e07|memory|00041121|2
+Gamma|e07|memory|00041125|2
+Gamma|e07|memory|00041129|2
+Gamma|e07|memory|00041133|3
+Gamma|e07|memory|00041137|6
+Gamma|e07|memory|00041141|2
+Gamma|e07|memory|00041145|4
+Gamma|e07|memory|00041149|8
+Gamma|e07|memory|00041153|2
+Gamma|e07|memory|00041157|2
+Gamma|e07|memory|00041161|4
+Gamma|e07|instruction|79|loadAI
+Gamma|e07|instruction|77|storeAI
+Gamma|e07|instruction|17|addI
+Gamma|e07|instruction|12|loadI
+Gamma|e07|instruction|12|i2i
+Gamma|e07|instruction|8|mult
+Gamma|e07|instruction|6|jumpI
+Gamma|e07|instruction|6|jump
+Gamma|e07|instruction|5|subI
+Gamma|e07|instruction|1|add
+Gamma|e07|instruction|1|store
+Gamma|e07|instruction|1|halt
+
+Xi
+
+Xi|e00|stack|28348
+Xi|e00|data|14174
+Xi|e00|input|loadI 2048 => rfp
+Xi|e00|input|loadI 2048 => rsp
+Xi|e00|input|loadI 1024 => rbss
+Xi|e00|input|jumpI -> L1
+Xi|e00|input|L0: nop
+Xi|e00|input|storeAI rfp => rsp, 4
+Xi|e00|input|i2i rsp => rfp
+Xi|e00|input|addI rsp, 24 => rsp
+Xi|e00|input|loadI 99 => r0
+Xi|e00|input|storeAI r0 => rfp, 0
+Xi|e00|input|loadAI rfp, 12 => r1
+Xi|e00|input|loadAI rfp, 4 => r2
+Xi|e00|input|i2i rfp => rsp
+Xi|e00|input|i2i r2 => rfp
+Xi|e00|input|jump -> r1
+Xi|e00|input|L1: nop
+Xi|e00|input|addI rsp, 24 => rsp
+Xi|e00|input|loadI 0 => r3
+Xi|e00|input|storeAI r3 => rsp, 8
+Xi|e00|input|storeAI r0 => rsp, 16
+Xi|e00|input|storeAI r1 => rsp, 20
+Xi|e00|input|storeAI r2 => rsp, 24
+Xi|e00|input|addI rpc, 3 => r4
+Xi|e00|input|storeAI r4 => rsp, 12
+Xi|e00|input|jumpI -> L0
+Xi|e00|input|loadAI rsp, 16 => r0
+Xi|e00|input|loadAI rsp, 20 => r1
+Xi|e00|input|loadAI rsp, 24 => r2
+Xi|e00|input|loadAI rsp, 0 => r5
+Xi|e00|input|storeAI r5 => rbss, 0
+Xi|e00|input|halt
+Xi|e00|input|
+Xi|e00|output|count	instruction
+Xi|e00|output|    8	storeAI
+Xi|e00|output|    6	loadAI
+Xi|e00|output|    5	loadI
+Xi|e00|output|    3	addI
+Xi|e00|output|    3	i2i
+Xi|e00|output|    2	jumpI
+Xi|e00|output|    2	nop
+Xi|e00|output|    1	jump
+Xi|e00|output|    1	halt
+Xi|e00|output|
+Xi|e00|output|instructions executed:   31
+Xi|e00|output|register         read:   29 write:   45
+Xi|e00|output|memory           read:    6 write:    8
+Xi|e00|output|
+Xi|e00|output|  register    value
+Xi|e00|output|        r0        0
+Xi|e00|output|        r1        0
+Xi|e00|output|        r2        0
+Xi|e00|output|        r3        0
+Xi|e00|output|        r4       25
+Xi|e00|output|        r5       99
+Xi|e00|output|      rbss    14174
+Xi|e00|output|       rfp    28348
+Xi|e00|output|       rpc       30
+Xi|e00|output|       rsp    28372
+Xi|e00|output|
+Xi|e00|output|    memory    value
+Xi|e00|output|00014174       99
+Xi|e00|output|00028372       99
+Xi|e00|output|00028376    28348
+Xi|e00|output|00028380        0
+Xi|e00|output|00028384       25
+Xi|e00|output|00028388        0
+Xi|e00|output|00028392        0
+Xi|e00|output|00028396        0
+Xi|
+Xi|e00|sixit|0
+Xi|e00|memory|00014174|99
+Xi|e00|memory|00028372|99
+Xi|e00|memory|00028376|28348
+Xi|e00|memory|00028380|0
+Xi|e00|memory|00028384|25
+Xi|e00|memory|00028388|0
+Xi|e00|memory|00028392|0
+Xi|e00|memory|00028396|0
+Xi|e00|instruction|8|storeAI
+Xi|e00|instruction|6|loadAI
+Xi|e00|instruction|5|loadI
+Xi|e00|instruction|3|addI
+Xi|e00|instruction|3|i2i
+Xi|e00|instruction|2|jumpI
+Xi|e00|instruction|2|nop
+Xi|e00|instruction|1|jump
+Xi|e00|instruction|1|halt
+Xi|e01|stack|21196
+Xi|e01|data|10598
+Xi|e01|input|loadI 2048 => rfp
+Xi|e01|input|loadI 2048 => rsp
+Xi|e01|input|loadI 1024 => rbss
+Xi|e01|input|jumpI -> L1
+Xi|e01|input|L0: nop
+Xi|e01|input|storeAI rfp => rsp, 4
+Xi|e01|input|i2i rsp => rfp
+Xi|e01|input|addI rsp, 32 => rsp
+Xi|e01|input|loadI 98 => r0
+Xi|e01|input|storeAI r0 => rsp, -4
+Xi|e01|input|loadAI rsp, -4 => r1
+Xi|e01|input|storeAI r1 => rfp, 0
+Xi|e01|input|loadAI rfp, 12 => r2
+Xi|e01|input|loadAI rfp, 4 => r3
+Xi|e01|input|i2i rfp => rsp
+Xi|e01|input|i2i r3 => rfp
+Xi|e01|input|jump -> r2
+Xi|e01|input|L1: nop
+Xi|e01|input|addI rsp, 24 => rsp
+Xi|e01|input|loadI 0 => r4
+Xi|e01|input|storeAI r4 => rsp, 8
+Xi|e01|input|storeAI r0 => rsp, 16
+Xi|e01|input|storeAI r1 => rsp, 20
+Xi|e01|input|storeAI r2 => rsp, 24
+Xi|e01|input|storeAI r3 => rsp, 28
+Xi|e01|input|addI rpc, 3 => r5
+Xi|e01|input|storeAI r5 => rsp, 12
+Xi|e01|input|jumpI -> L0
+Xi|e01|input|loadAI rsp, 16 => r0
+Xi|e01|input|loadAI rsp, 20 => r1
+Xi|e01|input|loadAI rsp, 24 => r2
+Xi|e01|input|loadAI rsp, 28 => r3
+Xi|e01|input|loadAI rsp, 0 => r6
+Xi|e01|input|storeAI r6 => rbss, 0
+Xi|e01|input|halt
+Xi|e01|input|
+Xi|e01|output|count	instruction
+Xi|e01|output|   10	storeAI
+Xi|e01|output|    8	loadAI
+Xi|e01|output|    5	loadI
+Xi|e01|output|    3	addI
+Xi|e01|output|    3	i2i
+Xi|e01|output|    2	jumpI
+Xi|e01|output|    2	nop
+Xi|e01|output|    1	jump
+Xi|e01|output|    1	halt
+Xi|e01|output|
+Xi|e01|output|instructions executed:   35
+Xi|e01|output|register         read:   35 write:   51
+Xi|e01|output|memory           read:    8 write:   10
+Xi|e01|output|
+Xi|e01|output|  register    value
+Xi|e01|output|        r0        0
+Xi|e01|output|        r1        0
+Xi|e01|output|        r2        0
+Xi|e01|output|        r3       98
+Xi|e01|output|        r4        0
+Xi|e01|output|        r5       28
+Xi|e01|output|        r6       98
+Xi|e01|output|      rbss    10598
+Xi|e01|output|       rfp    21196
+Xi|e01|output|       rpc       34
+Xi|e01|output|       rsp    21220
+Xi|e01|output|
+Xi|e01|output|    memory    value
+Xi|e01|output|00010598       98
+Xi|e01|output|00021220       98
+Xi|e01|output|00021224    21196
+Xi|e01|output|00021228        0
+Xi|e01|output|00021232       28
+Xi|e01|output|00021236        0
+Xi|e01|output|00021240        0
+Xi|e01|output|00021244        0
+Xi|e01|output|00021248       98
+Xi|0
+Xi|e01|sixit|0
+Xi|e01|memory|00010598|98
+Xi|e01|memory|00021220|98
+Xi|e01|memory|00021224|21196
+Xi|e01|memory|00021228|0
+Xi|e01|memory|00021232|28
+Xi|e01|memory|00021236|0
+Xi|e01|memory|00021240|0
+Xi|e01|memory|00021244|0
+Xi|e01|memory|00021248|98
+Xi|e01|instruction|10|storeAI
+Xi|e01|instruction|8|loadAI
+Xi|e01|instruction|5|loadI
+Xi|e01|instruction|3|addI
+Xi|e01|instruction|3|i2i
+Xi|e01|instruction|2|jumpI
+Xi|e01|instruction|2|nop
+Xi|e01|instruction|1|jump
+Xi|e01|instruction|1|halt
+Xi|e02|stack|27845
+Xi|e02|data|13922
+Xi|e02|input|loadI 2048 => rfp
+Xi|e02|input|loadI 2048 => rsp
+Xi|e02|input|loadI 1024 => rbss
+Xi|e02|input|jumpI -> L1
+Xi|e02|input|L0: nop
+Xi|e02|input|storeAI rfp => rsp, 12
+Xi|e02|input|i2i rsp => rfp
+Xi|e02|input|addI rsp, 56 => rsp
+Xi|e02|input|loadAI rfp, 0 => r0
+Xi|e02|input|loadAI rfp, 4 => r1
+Xi|e02|input|mult r0, r1 => r2
+Xi|e02|input|storeAI r2 => rsp, -4
+Xi|e02|input|loadAI rsp, -4 => r3
+Xi|e02|input|storeAI r3 => rfp, 8
+Xi|e02|input|loadAI rfp, 20 => r4
+Xi|e02|input|loadAI rfp, 12 => r5
+Xi|e02|input|i2i rfp => rsp
+Xi|e02|input|i2i r5 => rfp
+Xi|e02|input|jump -> r4
+Xi|e02|input|L1: nop
+Xi|e02|input|addI rsp, 40 => rsp
+Xi|e02|input|loadI 7 => r6
+Xi|e02|input|storeAI r6 => rsp, -4
+Xi|e02|input|loadAI rsp, -4 => r7
+Xi|e02|input|storeAI r7 => rsp, 0
+Xi|e02|input|loadAI rsp, -4 => r8
+Xi|e02|input|storeAI r8 => rsp, 4
+Xi|e02|input|loadI 0 => r9
+Xi|e02|input|storeAI r9 => rsp, 16
+Xi|e02|input|storeAI r0 => rsp, 24
+Xi|e02|input|storeAI r1 => rsp, 28
+Xi|e02|input|storeAI r2 => rsp, 32
+Xi|e02|input|storeAI r3 => rsp, 36
+Xi|e02|input|storeAI r4 => rsp, 40
+Xi|e02|input|storeAI r5 => rsp, 44
+Xi|e02|input|addI rpc, 3 => r10
+Xi|e02|input|storeAI r10 => rsp, 20
+Xi|e02|input|jumpI -> L0
+Xi|e02|input|loadAI rsp, 24 => r0
+Xi|e02|input|loadAI rsp, 28 => r1
+Xi|e02|input|loadAI rsp, 32 => r2
+Xi|e02|input|loadAI rsp, 36 => r3
+Xi|e02|input|loadAI rsp, 40 => r4
+Xi|e02|input|loadAI rsp, 44 => r5
+Xi|e02|input|loadAI rsp, 8 => r11
+Xi|e02|input|storeAI r11 => rbss, 0
+Xi|e02|input|halt
+Xi|e02|input|
+Xi|e02|output|count	instruction
+Xi|e02|output|   15	storeAI
+Xi|e02|output|   14	loadAI
+Xi|e02|output|    5	loadI
+Xi|e02|output|    3	addI
+Xi|e02|output|    3	i2i
+Xi|e02|output|    2	jumpI
+Xi|e02|output|    2	nop
+Xi|e02|output|    1	mult
+Xi|e02|output|    1	jump
+Xi|e02|output|    1	halt
+Xi|e02|output|
+Xi|e02|output|instructions executed:   47
+Xi|e02|output|register         read:   53 write:   70
+Xi|e02|output|memory           read:   14 write:   15
+Xi|e02|output|
+Xi|e02|output|  register    value
+Xi|e02|output|        r0        0
+Xi|e02|output|        r1        0
+Xi|e02|output|       r10       38
+Xi|e02|output|       r11       49
+Xi|e02|output|        r2        0
+Xi|e02|output|        r3        0
+Xi|e02|output|        r4        0
+Xi|e02|output|        r5        0
+Xi|e02|output|        r6        7
+Xi|e02|output|        r7        7
+Xi|e02|output|        r8        7
+Xi|e02|output|        r9        0
+Xi|e02|output|      rbss    13922
+Xi|e02|output|       rfp    27845
+Xi|e02|output|       rpc       46
+Xi|e02|output|       rsp    27885
+Xi|e02|output|
+Xi|e02|output|    memory    value
+Xi|e02|output|00013922       49
+Xi|e02|output|00027881        7
+Xi|e02|output|00027885        7
+Xi|e02|output|00027889        7
+Xi|e02|output|00027893       49
+Xi|e02|output|00027897    27845
+Xi|e02|output|00027901        0
+Xi|e02|output|00027905       38
+Xi|e02|output|00027909        0
+Xi|e02|output|00027913        0
+Xi|e02|output|00027917        0
+Xi|e02|output|00027921        0
+Xi|e02|output|00027925        0
+Xi|e02|output|00027929        0
+Xi|e02|output|00027937       49
+Xi|0
+Xi|e02|sixit|0
+Xi|e02|memory|00013922|49
+Xi|e02|memory|00027881|7
+Xi|e02|memory|00027885|7
+Xi|e02|memory|00027889|7
+Xi|e02|memory|00027893|49
+Xi|e02|memory|00027897|27845
+Xi|e02|memory|00027901|0
+Xi|e02|memory|00027905|38
+Xi|e02|memory|00027909|0
+Xi|e02|memory|00027913|0
+Xi|e02|memory|00027917|0
+Xi|e02|memory|00027921|0
+Xi|e02|memory|00027925|0
+Xi|e02|memory|00027929|0
+Xi|e02|memory|00027937|49
+Xi|e02|instruction|15|storeAI
+Xi|e02|instruction|14|loadAI
+Xi|e02|instruction|5|loadI
+Xi|e02|instruction|3|addI
+Xi|e02|instruction|3|i2i
+Xi|e02|instruction|2|jumpI
+Xi|e02|instruction|2|nop
+Xi|e02|instruction|1|mult
+Xi|e02|instruction|1|jump
+Xi|e02|instruction|1|halt
+Xi|e03|stack|40753
+Xi|e03|data|20376
+Xi|e03|input|loadI 2048 => rfp
+Xi|e03|input|loadI 2048 => rsp
+Xi|e03|input|loadI 1024 => rbss
+Xi|e03|input|jumpI -> L3
+Xi|e03|input|L0: nop
+Xi|e03|input|storeAI rfp => rsp, 8
+Xi|e03|input|i2i rsp => rfp
+Xi|e03|input|addI rsp, 92 => rsp
+Xi|e03|input|loadAI rfp, 0 => r0
+Xi|e03|input|loadI 1 => r1
+Xi|e03|input|cmp_EQ r0, r1 -> r2
+Xi|e03|input|cbr r2 -> L1, L2
+Xi|e03|input|L1: nop
+Xi|e03|input|loadAI rfp, 0 => r3
+Xi|e03|input|storeAI r3 => rfp, 4
+Xi|e03|input|loadAI rfp, 16 => r4
+Xi|e03|input|loadAI rfp, 8 => r5
+Xi|e03|input|i2i rfp => rsp
+Xi|e03|input|i2i r5 => rfp
+Xi|e03|input|jump -> r4
+Xi|e03|input|L2: nop
+Xi|e03|input|nop
+Xi|e03|input|loadAI rfp, 0 => r6
+Xi|e03|input|loadI 1 => r7
+Xi|e03|input|sub r6, r7 => r8
+Xi|e03|input|storeAI r8 => rsp, 0
+Xi|e03|input|loadI 0 => r9
+Xi|e03|input|storeAI r9 => rsp, 12
+Xi|e03|input|storeAI r0 => rsp, 20
+Xi|e03|input|storeAI r1 => rsp, 24
+Xi|e03|input|storeAI r2 => rsp, 28
+Xi|e03|input|storeAI r3 => rsp, 32
+Xi|e03|input|storeAI r4 => rsp, 36
+Xi|e03|input|storeAI r5 => rsp, 40
+Xi|e03|input|storeAI r6 => rsp, 44
+Xi|e03|input|storeAI r7 => rsp, 48
+Xi|e03|input|storeAI r8 => rsp, 52
+Xi|e03|input|storeAI r9 => rsp, 56
+Xi|e03|input|addI rpc, 3 => r10
+Xi|e03|input|storeAI r10 => rsp, 16
+Xi|e03|input|jumpI -> L0
+Xi|e03|input|loadAI rsp, 20 => r0
+Xi|e03|input|loadAI rsp, 24 => r1
+Xi|e03|input|loadAI rsp, 28 => r2
+Xi|e03|input|loadAI rsp, 32 => r3
+Xi|e03|input|loadAI rsp, 36 => r4
+Xi|e03|input|loadAI rsp, 40 => r5
+Xi|e03|input|loadAI rsp, 44 => r6
+Xi|e03|input|loadAI rsp, 48 => r7
+Xi|e03|input|loadAI rsp, 52 => r8
+Xi|e03|input|loadAI rsp, 56 => r9
+Xi|e03|input|loadAI rsp, 60 => r10
+Xi|e03|input|loadAI rsp, 4 => r11
+Xi|e03|input|loadAI rfp, 0 => r12
+Xi|e03|input|mult r11, r12 => r13
+Xi|e03|input|storeAI r13 => rsp, -4
+Xi|e03|input|loadAI rsp, -4 => r14
+Xi|e03|input|storeAI r14 => rfp, 4
+Xi|e03|input|loadAI rfp, 16 => r15
+Xi|e03|input|loadAI rfp, 8 => r16
+Xi|e03|input|i2i rfp => rsp
+Xi|e03|input|i2i r16 => rfp
+Xi|e03|input|jump -> r15
+Xi|e03|input|L3: nop
+Xi|e03|input|addI rsp, 36 => rsp
+Xi|e03|input|loadI 6 => r17
+Xi|e03|input|storeAI r17 => rsp, -4
+Xi|e03|input|loadAI rsp, -4 => r18
+Xi|e03|input|storeAI r18 => rsp, 0
+Xi|e03|input|loadI 0 => r19
+Xi|e03|input|storeAI r19 => rsp, 12
+Xi|e03|input|storeAI r0 => rsp, 20
+Xi|e03|input|storeAI r1 => rsp, 24
+Xi|e03|input|storeAI r2 => rsp, 28
+Xi|e03|input|storeAI r3 => rsp, 32
+Xi|e03|input|storeAI r4 => rsp, 36
+Xi|e03|input|storeAI r5 => rsp, 40
+Xi|e03|input|storeAI r6 => rsp, 44
+Xi|e03|input|storeAI r7 => rsp, 48
+Xi|e03|input|storeAI r8 => rsp, 52
+Xi|e03|input|storeAI r9 => rsp, 56
+Xi|e03|input|storeAI r10 => rsp, 60
+Xi|e03|input|storeAI r11 => rsp, 64
+Xi|e03|input|storeAI r12 => rsp, 68
+Xi|e03|input|storeAI r13 => rsp, 72
+Xi|e03|input|storeAI r14 => rsp, 76
+Xi|e03|input|storeAI r15 => rsp, 80
+Xi|e03|input|storeAI r16 => rsp, 84
+Xi|e03|input|addI rpc, 3 => r20
+Xi|e03|input|storeAI r20 => rsp, 16
+Xi|e03|input|jumpI -> L0
+Xi|e03|input|loadAI rsp, 20 => r0
+Xi|e03|input|loadAI rsp, 24 => r1
+Xi|e03|input|loadAI rsp, 28 => r2
+Xi|e03|input|loadAI rsp, 32 => r3
+Xi|e03|input|loadAI rsp, 36 => r4
+Xi|e03|input|loadAI rsp, 40 => r5
+Xi|e03|input|loadAI rsp, 44 => r6
+Xi|e03|input|loadAI rsp, 48 => r7
+Xi|e03|input|loadAI rsp, 52 => r8
+Xi|e03|input|loadAI rsp, 56 => r9
+Xi|e03|input|loadAI rsp, 60 => r10
+Xi|e03|input|loadAI rsp, 64 => r11
+Xi|e03|input|loadAI rsp, 68 => r12
+Xi|e03|input|loadAI rsp, 72 => r13
+Xi|e03|input|loadAI rsp, 76 => r14
+Xi|e03|input|loadAI rsp, 80 => r15
+Xi|e03|input|loadAI rsp, 84 => r16
+Xi|e03|input|loadAI rsp, 4 => r21
+Xi|e03|input|storeAI r21 => rbss, 0
+Xi|e03|input|halt
+Xi|e03|input|
+Xi|e03|output|count	instruction
+Xi|e03|output|  113	loadAI
+Xi|e03|output|  104	storeAI
+Xi|e03|output|   21	loadI
+Xi|e03|output|   18	nop
+Xi|e03|output|   18	i2i
+Xi|e03|output|   13	addI
+Xi|e03|output|    7	jumpI
+Xi|e03|output|    6	cmp_EQ
+Xi|e03|output|    6	cbr
+Xi|e03|output|    6	jump
+Xi|e03|output|    5	sub
+Xi|e03|output|    5	mult
+Xi|e03|output|    1	halt
+Xi|e03|output|
+Xi|e03|output|instructions executed:  323
+Xi|e03|output|register         read:  396 write:  501
+Xi|e03|output|memory           read:  113 write:  104
+Xi|e03|output|
+Xi|e03|output|  register    value
+Xi|e03|output|        r0        0
+Xi|e03|output|        r1        0
+Xi|e03|output|       r10        0
+Xi|e03|output|       r11        0
+Xi|e03|output|       r12        0
+Xi|e03|output|       r13        0
+Xi|e03|output|       r14        0
+Xi|e03|output|       r15        0
+Xi|e03|output|       r16        0
+Xi|e03|output|       r17        6
+Xi|e03|output|       r18        6
+Xi|e03|output|       r19        0
+Xi|e03|output|        r2        0
+Xi|e03|output|       r20       91
+Xi|e03|output|       r21      720
+Xi|e03|output|        r3        0
+Xi|e03|output|        r4        0
+Xi|e03|output|        r5        0
+Xi|e03|output|        r6        0
+Xi|e03|output|        r7        0
+Xi|e03|output|        r8        0
+Xi|e03|output|        r9        0
+Xi|e03|output|      rbss    20376
+Xi|e03|output|       rfp    40753
+Xi|e03|output|       rpc      110
+Xi|e03|output|       rsp    40789
+Xi|e03|output|
+Xi|e03|output|    memory    value
+Xi|e03|output|00020376      720
+Xi|e03|output|00040785        6
+Xi|e03|output|00040789        6
+Xi|e03|output|00040793      720
+Xi|e03|output|00040797    40753
+Xi|e03|output|00040801        0
+Xi|e03|output|00040805       91
+Xi|e03|output|00040809        0
+Xi|e03|output|00040813        0
+Xi|e03|output|00040817        0
+Xi|e03|output|00040821        0
+Xi|e03|output|00040825        0
+Xi|e03|output|00040829        0
+Xi|e03|output|00040833        0
+Xi|e03|output|00040837        0
+Xi|e03|output|00040841        0
+Xi|e03|output|00040845        0
+Xi|e03|output|00040849        0
+Xi|e03|output|00040853        0
+Xi|e03|output|00040857        0
+Xi|e03|output|00040861        0
+Xi|e03|output|00040865        0
+Xi|e03|output|00040869        0
+Xi|e03|output|00040873        0
+Xi|e03|output|00040877      720
+Xi|e03|output|00040881        5
+Xi|e03|output|00040885      120
+Xi|e03|output|00040889    40789
+Xi|e03|output|00040893        0
+Xi|e03|output|00040897       41
+Xi|e03|output|00040901        6
+Xi|e03|output|00040905        1
+Xi|e03|output|00040909        0
+Xi|e03|output|00040913        0
+Xi|e03|output|00040917        0
+Xi|e03|output|00040921        0
+Xi|e03|output|00040925        6
+Xi|e03|output|00040929        1
+Xi|e03|output|00040933        5
+Xi|e03|output|00040937        0
+Xi|e03|output|00040969      120
+Xi|e03|output|00040973        4
+Xi|e03|output|00040977       24
+Xi|e03|output|00040981    40881
+Xi|e03|output|00040985        0
+Xi|e03|output|00040989       41
+Xi|e03|output|00040993        5
+Xi|e03|output|00040997        1
+Xi|e03|output|00041001        0
+Xi|e03|output|00041005        0
+Xi|e03|output|00041009        0
+Xi|e03|output|00041013        0
+Xi|e03|output|00041017        5
+Xi|e03|output|00041021        1
+Xi|e03|output|00041025        4
+Xi|e03|output|00041029        0
+Xi|e03|output|00041061       24
+Xi|e03|output|00041065        3
+Xi|e03|output|00041069        6
+Xi|e03|output|00041073    40973
+Xi|e03|output|00041077        0
+Xi|e03|output|00041081       41
+Xi|e03|output|00041085        4
+Xi|e03|output|00041089        1
+Xi|e03|output|00041093        0
+Xi|e03|output|00041097        0
+Xi|e03|output|00041101        0
+Xi|e03|output|00041105        0
+Xi|e03|output|00041109        4
+Xi|e03|output|00041113        1
+Xi|e03|output|00041117        3
+Xi|e03|output|00041121        0
+Xi|e03|output|00041153        6
+Xi|e03|output|00041157        2
+Xi|e03|output|00041161        2
+Xi|e03|output|00041165    41065
+Xi|e03|output|00041169        0
+Xi|e03|output|00041173       41
+Xi|e03|output|00041177        3
+Xi|e03|output|00041181        1
+Xi|e03|output|00041185        0
+Xi|e03|output|00041189        0
+Xi|e03|output|00041193        0
+Xi|e03|output|00041197        0
+Xi|e03|output|00041201        3
+Xi|e03|output|00041205        1
+Xi|e03|output|00041209        2
+Xi|e03|output|00041213        0
+Xi|e03|output|00041245        2
+Xi|e03|output|00041249        1
+Xi|e03|output|00041253        1
+Xi|e03|output|00041257    41157
+Xi|e03|output|00041261        0
+Xi|e03|output|00041265       41
+Xi|e03|output|00041269        2
+Xi|e03|output|00041273        1
+Xi|e03|output|00041277        0
+Xi|e03|output|00041281        0
+Xi|e03|output|00041285        0
+Xi|e03|output|00041289        0
+Xi|e03|output|00041293        2
+Xi|e03|output|00041297        1
+Xi|e03|output|00041301        1
+Xi|e03|output|00041305        0
+Xi|0
+Xi|e03|sixit|0
+Xi|e03|memory|00020376|720
+Xi|e03|memory|00040785|6
+Xi|e03|memory|00040789|6
+Xi|e03|memory|00040793|720
+Xi|e03|memory|00040797|40753
+Xi|e03|memory|00040801|0
+Xi|e03|memory|00040805|91
+Xi|e03|memory|00040809|0
+Xi|e03|memory|00040813|0
+Xi|e03|memory|00040817|0
+Xi|e03|memory|00040821|0
+Xi|e03|memory|00040825|0
+Xi|e03|memory|00040829|0
+Xi|e03|memory|00040833|0
+Xi|e03|memory|00040837|0
+Xi|e03|memory|00040841|0
+Xi|e03|memory|00040845|0
+Xi|e03|memory|00040849|0
+Xi|e03|memory|00040853|0
+Xi|e03|memory|00040857|0
+Xi|e03|instruction|113|loadAI
+Xi|e03|instruction|104|storeAI
+Xi|e03|instruction|21|loadI
+Xi|e03|instruction|18|nop
+Xi|e03|instruction|18|i2i
+Xi|e03|instruction|13|addI
+Xi|e03|instruction|7|jumpI
+Xi|e03|instruction|6|cmp_EQ
+Xi|e03|instruction|6|cbr
+Xi|e03|instruction|6|jump
+Xi|e03|instruction|5|sub
+Xi|e03|instruction|5|mult
+Xi|e03|instruction|1|halt
+Xi|e04|stack|37537
+Xi|e04|data|18768
+Xi|e04|input|loadI 2048 => rfp
+Xi|e04|input|loadI 2048 => rsp
+Xi|e04|input|loadI 1024 => rbss
+Xi|e04|input|jumpI -> L2
+Xi|e04|input|L0: nop
+Xi|e04|input|storeAI rfp => rsp, 12
+Xi|e04|input|i2i rsp => rfp
+Xi|e04|input|addI rsp, 56 => rsp
+Xi|e04|input|loadAI rfp, 0 => r0
+Xi|e04|input|loadAI rfp, 4 => r1
+Xi|e04|input|mult r0, r1 => r2
+Xi|e04|input|storeAI r2 => rsp, -4
+Xi|e04|input|loadAI rsp, -4 => r3
+Xi|e04|input|storeAI r3 => rfp, 8
+Xi|e04|input|loadAI rfp, 20 => r4
+Xi|e04|input|loadAI rfp, 12 => r5
+Xi|e04|input|i2i rfp => rsp
+Xi|e04|input|i2i r5 => rfp
+Xi|e04|input|jump -> r4
+Xi|e04|input|L1: nop
+Xi|e04|input|storeAI rfp => rsp, 20
+Xi|e04|input|i2i rsp => rfp
+Xi|e04|input|addI rsp, 152 => rsp
+Xi|e04|input|loadAI rfp, 0 => r6
+Xi|e04|input|storeAI r6 => rsp, -4
+Xi|e04|input|loadAI rfp, 4 => r7
+Xi|e04|input|storeAI r7 => rsp, -8
+Xi|e04|input|loadAI rfp, 8 => r8
+Xi|e04|input|storeAI r8 => rsp, -12
+Xi|e04|input|loadAI rfp, 12 => r9
+Xi|e04|input|storeAI r9 => rsp, -16
+Xi|e04|input|loadAI rsp, -4 => r10
+Xi|e04|input|storeAI r10 => rsp, 0
+Xi|e04|input|loadAI rsp, -8 => r11
+Xi|e04|input|storeAI r11 => rsp, 4
+Xi|e04|input|loadI 0 => r12
+Xi|e04|input|storeAI r12 => rsp, 16
+Xi|e04|input|storeAI r0 => rsp, 24
+Xi|e04|input|storeAI r1 => rsp, 28
+Xi|e04|input|storeAI r2 => rsp, 32
+Xi|e04|input|storeAI r3 => rsp, 36
+Xi|e04|input|storeAI r4 => rsp, 40
+Xi|e04|input|storeAI r5 => rsp, 44
+Xi|e04|input|addI rpc, 3 => r13
+Xi|e04|input|storeAI r13 => rsp, 20
+Xi|e04|input|jumpI -> L0
+Xi|e04|input|loadAI rsp, 24 => r0
+Xi|e04|input|loadAI rsp, 28 => r1
+Xi|e04|input|loadAI rsp, 32 => r2
+Xi|e04|input|loadAI rsp, 36 => r3
+Xi|e04|input|loadAI rsp, 40 => r4
+Xi|e04|input|loadAI rsp, 44 => r5
+Xi|e04|input|loadAI rsp, 8 => r14
+Xi|e04|input|storeAI r14 => rsp, -20
+Xi|e04|input|loadAI rsp, -12 => r15
+Xi|e04|input|storeAI r15 => rsp, 0
+Xi|e04|input|loadAI rsp, -16 => r16
+Xi|e04|input|storeAI r16 => rsp, 4
+Xi|e04|input|loadI 0 => r17
+Xi|e04|input|storeAI r17 => rsp, 16
+Xi|e04|input|storeAI r0 => rsp, 24
+Xi|e04|input|storeAI r1 => rsp, 28
+Xi|e04|input|storeAI r2 => rsp, 32
+Xi|e04|input|storeAI r3 => rsp, 36
+Xi|e04|input|storeAI r4 => rsp, 40
+Xi|e04|input|storeAI r5 => rsp, 44
+Xi|e04|input|addI rpc, 3 => r18
+Xi|e04|input|storeAI r18 => rsp, 20
+Xi|e04|input|jumpI -> L0
+Xi|e04|input|loadAI rsp, 24 => r0
+Xi|e04|input|loadAI rsp, 28 => r1
+Xi|e04|input|loadAI rsp, 32 => r2
+Xi|e04|input|loadAI rsp, 36 => r3
+Xi|e04|input|loadAI rsp, 40 => r4
+Xi|e04|input|loadAI rsp, 44 => r5
+Xi|e04|input|loadAI rsp, 8 => r19
+Xi|e04|input|storeAI r19 => rsp, -24
+Xi|e04|input|loadAI rsp, -20 => r20
+Xi|e04|input|loadAI rsp, -24 => r21
+Xi|e04|input|add r20, r21 => r22
+Xi|e04|input|storeAI r22 => rsp, -28
+Xi|e04|input|loadAI rsp, -28 => r23
+Xi|e04|input|storeAI r23 => rfp, 16
+Xi|e04|input|loadAI rfp, 28 => r24
+Xi|e04|input|loadAI rfp, 20 => r25
+Xi|e04|input|i2i rfp => rsp
+Xi|e04|input|i2i r25 => rfp
+Xi|e04|input|jump -> r24
+Xi|e04|input|L2: nop
+Xi|e04|input|addI rsp, 56 => rsp
+Xi|e04|input|loadI 7 => r26
+Xi|e04|input|storeAI r26 => rsp, -4
+Xi|e04|input|loadI 3 => r27
+Xi|e04|input|storeAI r27 => rsp, -8
+Xi|e04|input|loadAI rsp, -4 => r28
+Xi|e04|input|storeAI r28 => rsp, 0
+Xi|e04|input|loadAI rsp, -4 => r29
+Xi|e04|input|storeAI r29 => rsp, 4
+Xi|e04|input|loadAI rsp, -8 => r30
+Xi|e04|input|storeAI r30 => rsp, 8
+Xi|e04|input|loadAI rsp, -8 => r31
+Xi|e04|input|storeAI r31 => rsp, 12
+Xi|e04|input|loadI 0 => r32
+Xi|e04|input|storeAI r32 => rsp, 24
+Xi|e04|input|storeAI r6 => rsp, 32
+Xi|e04|input|storeAI r7 => rsp, 36
+Xi|e04|input|storeAI r8 => rsp, 40
+Xi|e04|input|storeAI r9 => rsp, 44
+Xi|e04|input|storeAI r10 => rsp, 48
+Xi|e04|input|storeAI r11 => rsp, 52
+Xi|e04|input|storeAI r12 => rsp, 56
+Xi|e04|input|storeAI r13 => rsp, 60
+Xi|e04|input|storeAI r14 => rsp, 64
+Xi|e04|input|storeAI r15 => rsp, 68
+Xi|e04|input|storeAI r16 => rsp, 72
+Xi|e04|input|storeAI r17 => rsp, 76
+Xi|e04|input|storeAI r18 => rsp, 80
+Xi|e04|input|storeAI r19 => rsp, 84
+Xi|e04|input|storeAI r20 => rsp, 88
+Xi|e04|input|storeAI r21 => rsp, 92
+Xi|e04|input|storeAI r22 => rsp, 96
+Xi|e04|input|storeAI r23 => rsp, 100
+Xi|e04|input|storeAI r24 => rsp, 104
+Xi|e04|input|storeAI r25 => rsp, 108
+Xi|e04|input|addI rpc, 3 => r33
+Xi|e04|input|storeAI r33 => rsp, 28
+Xi|e04|input|jumpI -> L1
+Xi|e04|input|loadAI rsp, 32 => r6
+Xi|e04|input|loadAI rsp, 36 => r7
+Xi|e04|input|loadAI rsp, 40 => r8
+Xi|e04|input|loadAI rsp, 44 => r9
+Xi|e04|input|loadAI rsp, 48 => r10
+Xi|e04|input|loadAI rsp, 52 => r11
+Xi|e04|input|loadAI rsp, 56 => r12
+Xi|e04|input|loadAI rsp, 60 => r13
+Xi|e04|input|loadAI rsp, 64 => r14
+Xi|e04|input|loadAI rsp, 68 => r15
+Xi|e04|input|loadAI rsp, 72 => r16
+Xi|e04|input|loadAI rsp, 76 => r17
+Xi|e04|input|loadAI rsp, 80 => r18
+Xi|e04|input|loadAI rsp, 84 => r19
+Xi|e04|input|loadAI rsp, 88 => r20
+Xi|e04|input|loadAI rsp, 92 => r21
+Xi|e04|input|loadAI rsp, 96 => r22
+Xi|e04|input|loadAI rsp, 100 => r23
+Xi|e04|input|loadAI rsp, 104 => r24
+Xi|e04|input|loadAI rsp, 108 => r25
+Xi|e04|input|loadAI rsp, 16 => r34
+Xi|e04|input|storeAI r34 => rbss, 0
+Xi|e04|input|halt
+Xi|e04|input|
+Xi|e04|output|count	instruction
+Xi|e04|output|   64	storeAI
+Xi|e04|output|   62	loadAI
+Xi|e04|output|    9	i2i
+Xi|e04|output|    8	loadI
+Xi|e04|output|    7	addI
+Xi|e04|output|    4	jumpI
+Xi|e04|output|    4	nop
+Xi|e04|output|    3	jump
+Xi|e04|output|    2	mult
+Xi|e04|output|    1	add
+Xi|e04|output|    1	halt
+Xi|e04|output|
+Xi|e04|output|instructions executed:  165
+Xi|e04|output|register         read:  215 write:  251
+Xi|e04|output|memory           read:   62 write:   64
+Xi|e04|output|
+Xi|e04|output|  register    value
+Xi|e04|output|        r0        0
+Xi|e04|output|        r1        0
+Xi|e04|output|       r10        0
+Xi|e04|output|       r11        0
+Xi|e04|output|       r12        0
+Xi|e04|output|       r13        0
+Xi|e04|output|       r14        0
+Xi|e04|output|       r15        0
+Xi|e04|output|       r16        0
+Xi|e04|output|       r17        0
+Xi|e04|output|       r18        0
+Xi|e04|output|       r19        0
+Xi|e04|output|        r2        0
+Xi|e04|output|       r20        0
+Xi|e04|output|       r21        0
+Xi|e04|output|       r22        0
+Xi|e04|output|       r23        0
+Xi|e04|output|       r24        0
+Xi|e04|output|       r25        0
+Xi|e04|output|       r26        7
+Xi|e04|output|       r27        3
+Xi|e04|output|       r28        7
+Xi|e04|output|       r29        7
+Xi|e04|output|        r3        0
+Xi|e04|output|       r30        3
+Xi|e04|output|       r31        3
+Xi|e04|output|       r32        0
+Xi|e04|output|       r33      127
+Xi|e04|output|       r34       58
+Xi|e04|output|        r4        0
+Xi|e04|output|        r5        0
+Xi|e04|output|        r6        0
+Xi|e04|output|        r7        0
+Xi|e04|output|        r8        0
+Xi|e04|output|        r9        0
+Xi|e04|output|      rbss    18768
+Xi|e04|output|       rfp    37537
+Xi|e04|output|       rpc      149
+Xi|e04|output|       rsp    37593
+Xi|e04|output|
+Xi|e04|output|    memory    value
+Xi|e04|output|00018768       58
+Xi|e04|output|00037585        3
+Xi|e04|output|00037589        7
+Xi|e04|output|00037593        7
+Xi|e04|output|00037597        7
+Xi|e04|output|00037601        3
+Xi|e04|output|00037605        3
+Xi|e04|output|00037609       58
+Xi|e04|output|00037613    37537
+Xi|e04|output|00037617        0
+Xi|e04|output|00037621      127
+Xi|e04|output|00037625        0
+Xi|e04|output|00037629        0
+Xi|e04|output|00037633        0
+Xi|e04|output|00037637        0
+Xi|e04|output|00037641        0
+Xi|e04|output|00037645        0
+Xi|e04|output|00037649        0
+Xi|e04|output|00037653        0
+Xi|e04|output|00037657        0
+Xi|e04|output|00037661        0
+Xi|e04|output|00037665        0
+Xi|e04|output|00037669        0
+Xi|e04|output|00037673        0
+Xi|e04|output|00037677        0
+Xi|e04|output|00037681        0
+Xi|e04|output|00037685        0
+Xi|e04|output|00037689        0
+Xi|e04|output|00037693        0
+Xi|e04|output|00037697        0
+Xi|e04|output|00037701        0
+Xi|e04|output|00037717       58
+Xi|e04|output|00037721        9
+Xi|e04|output|00037725       49
+Xi|e04|output|00037729        3
+Xi|e04|output|00037733        3
+Xi|e04|output|00037737        7
+Xi|e04|output|00037741        7
+Xi|e04|output|00037745        3
+Xi|e04|output|00037749        3
+Xi|e04|output|00037753        9
+Xi|e04|output|00037757    37593
+Xi|e04|output|00037761        0
+Xi|e04|output|00037765       69
+Xi|e04|output|00037769        0
+Xi|e04|output|00037773        0
+Xi|e04|output|00037777        0
+Xi|e04|output|00037781        0
+Xi|e04|output|00037785        0
+Xi|e04|output|00037789        0
+Xi|e04|output|00037797        9
+Xi|0
+Xi|e04|sixit|0
+Xi|e04|memory|00018768|58
+Xi|e04|memory|00037585|3
+Xi|e04|memory|00037589|7
+Xi|e04|memory|00037593|7
+Xi|e04|memory|00037597|7
+Xi|e04|memory|00037601|3
+Xi|e04|memory|00037605|3
+Xi|e04|memory|00037609|58
+Xi|e04|memory|00037613|37537
+Xi|e04|memory|00037617|0
+Xi|e04|memory|00037621|127
+Xi|e04|memory|00037625|0
+Xi|e04|memory|00037629|0
+Xi|e04|memory|00037633|0
+Xi|e04|memory|00037637|0
+Xi|e04|memory|00037641|0
+Xi|e04|memory|00037645|0
+Xi|e04|memory|00037649|0
+Xi|e04|memory|00037653|0
+Xi|e04|memory|00037657|0
+Xi|e04|instruction|64|storeAI
+Xi|e04|instruction|62|loadAI
+Xi|e04|instruction|9|i2i
+Xi|e04|instruction|8|loadI
+Xi|e04|instruction|7|addI
+Xi|e04|instruction|4|jumpI
+Xi|e04|instruction|4|nop
+Xi|e04|instruction|3|jump
+Xi|e04|instruction|2|mult
+Xi|e04|instruction|1|add
+Xi|e04|instruction|1|halt
+Xi|e05|stack|20724
+Xi|e05|data|10362
+Xi|e05|input|loadI 2048 => rfp
+Xi|e05|input|loadI 2048 => rsp
+Xi|e05|input|loadI 1024 => rbss
+Xi|e05|input|jumpI -> L3
+Xi|e05|input|L0: nop
+Xi|e05|input|storeAI rfp => rsp, 8
+Xi|e05|input|i2i rsp => rfp
+Xi|e05|input|addI rsp, 92 => rsp
+Xi|e05|input|loadAI rfp, 0 => r0
+Xi|e05|input|loadI 0 => r1
+Xi|e05|input|cmp_EQ r0, r1 -> r2
+Xi|e05|input|cbr r2 -> L1, L2
+Xi|e05|input|L1: nop
+Xi|e05|input|loadI 1 => r3
+Xi|e05|input|storeAI r3 => rfp, 4
+Xi|e05|input|loadAI rfp, 16 => r4
+Xi|e05|input|loadAI rfp, 8 => r5
+Xi|e05|input|i2i rfp => rsp
+Xi|e05|input|i2i r5 => rfp
+Xi|e05|input|jump -> r4
+Xi|e05|input|L2: nop
+Xi|e05|input|nop
+Xi|e05|input|loadAI rfp, 0 => r6
+Xi|e05|input|loadAI rfp, 0 => r7
+Xi|e05|input|loadI 1 => r8
+Xi|e05|input|sub r7, r8 => r9
+Xi|e05|input|storeAI r9 => rsp, 0
+Xi|e05|input|loadI 0 => r10
+Xi|e05|input|storeAI r10 => rsp, 12
+Xi|e05|input|storeAI r0 => rsp, 20
+Xi|e05|input|storeAI r1 => rsp, 24
+Xi|e05|input|storeAI r2 => rsp, 28
+Xi|e05|input|storeAI r3 => rsp, 32
+Xi|e05|input|storeAI r4 => rsp, 36
+Xi|e05|input|storeAI r5 => rsp, 40
+Xi|e05|input|storeAI r6 => rsp, 44
+Xi|e05|input|storeAI r7 => rsp, 48
+Xi|e05|input|storeAI r8 => rsp, 52
+Xi|e05|input|storeAI r9 => rsp, 56
+Xi|e05|input|storeAI r10 => rsp, 60
+Xi|e05|input|addI rpc, 3 => r11
+Xi|e05|input|storeAI r11 => rsp, 16
+Xi|e05|input|jumpI -> L0
+Xi|e05|input|loadAI rsp, 20 => r0
+Xi|e05|input|loadAI rsp, 24 => r1
+Xi|e05|input|loadAI rsp, 28 => r2
+Xi|e05|input|loadAI rsp, 32 => r3
+Xi|e05|input|loadAI rsp, 36 => r4
+Xi|e05|input|loadAI rsp, 40 => r5
+Xi|e05|input|loadAI rsp, 44 => r6
+Xi|e05|input|loadAI rsp, 48 => r7
+Xi|e05|input|loadAI rsp, 52 => r8
+Xi|e05|input|loadAI rsp, 56 => r9
+Xi|e05|input|loadAI rsp, 60 => r10
+Xi|e05|input|loadAI rsp, 64 => r11
+Xi|e05|input|loadAI rsp, 4 => r12
+Xi|e05|input|add r6, r12 => r13
+Xi|e05|input|storeAI r13 => rsp, -4
+Xi|e05|input|loadAI rsp, -4 => r14
+Xi|e05|input|storeAI r14 => rfp, 4
+Xi|e05|input|loadAI rfp, 16 => r15
+Xi|e05|input|loadAI rfp, 8 => r16
+Xi|e05|input|i2i rfp => rsp
+Xi|e05|input|i2i r16 => rfp
+Xi|e05|input|jump -> r15
+Xi|e05|input|L3: nop
+Xi|e05|input|addI rsp, 28 => rsp
+Xi|e05|input|loadI 3 => r17
+Xi|e05|input|storeAI r17 => rsp, 0
+Xi|e05|input|loadI 0 => r18
+Xi|e05|input|storeAI r18 => rsp, 12
+Xi|e05|input|storeAI r0 => rsp, 20
+Xi|e05|input|storeAI r1 => rsp, 24
+Xi|e05|input|storeAI r2 => rsp, 28
+Xi|e05|input|storeAI r3 => rsp, 32
+Xi|e05|input|storeAI r4 => rsp, 36
+Xi|e05|input|storeAI r5 => rsp, 40
+Xi|e05|input|storeAI r6 => rsp, 44
+Xi|e05|input|storeAI r7 => rsp, 48
+Xi|e05|input|storeAI r8 => rsp, 52
+Xi|e05|input|storeAI r9 => rsp, 56
+Xi|e05|input|storeAI r10 => rsp, 60
+Xi|e05|input|storeAI r11 => rsp, 64
+Xi|e05|input|storeAI r12 => rsp, 68
+Xi|e05|input|storeAI r13 => rsp, 72
+Xi|e05|input|storeAI r14 => rsp, 76
+Xi|e05|input|storeAI r15 => rsp, 80
+Xi|e05|input|storeAI r16 => rsp, 84
+Xi|e05|input|addI rpc, 3 => r19
+Xi|e05|input|storeAI r19 => rsp, 16
+Xi|e05|input|jumpI -> L0
+Xi|e05|input|loadAI rsp, 20 => r0
+Xi|e05|input|loadAI rsp, 24 => r1
+Xi|e05|input|loadAI rsp, 28 => r2
+Xi|e05|input|loadAI rsp, 32 => r3
+Xi|e05|input|loadAI rsp, 36 => r4
+Xi|e05|input|loadAI rsp, 40 => r5
+Xi|e05|input|loadAI rsp, 44 => r6
+Xi|e05|input|loadAI rsp, 48 => r7
+Xi|e05|input|loadAI rsp, 52 => r8
+Xi|e05|input|loadAI rsp, 56 => r9
+Xi|e05|input|loadAI rsp, 60 => r10
+Xi|e05|input|loadAI rsp, 64 => r11
+Xi|e05|input|loadAI rsp, 68 => r12
+Xi|e05|input|loadAI rsp, 72 => r13
+Xi|e05|input|loadAI rsp, 76 => r14
+Xi|e05|input|loadAI rsp, 80 => r15
+Xi|e05|input|loadAI rsp, 84 => r16
+Xi|e05|input|loadAI rsp, 4 => r20
+Xi|e05|input|storeAI r20 => rbss, 0
+Xi|e05|input|halt
+Xi|e05|input|
+Xi|e05|output|count	instruction
+Xi|e05|output|   78	loadAI
+Xi|e05|output|   74	storeAI
+Xi|e05|output|   16	loadI
+Xi|e05|output|   12	nop
+Xi|e05|output|   12	i2i
+Xi|e05|output|    9	addI
+Xi|e05|output|    5	jumpI
+Xi|e05|output|    4	cmp_EQ
+Xi|e05|output|    4	cbr
+Xi|e05|output|    4	jump
+Xi|e05|output|    3	sub
+Xi|e05|output|    3	add
+Xi|e05|output|    1	halt
+Xi|e05|output|
+Xi|e05|output|instructions executed:  225
+Xi|e05|output|register         read:  275 write:  347
+Xi|e05|output|memory           read:   78 write:   74
+Xi|e05|output|
+Xi|e05|output|  register    value
+Xi|e05|output|        r0        0
+Xi|e05|output|        r1        0
+Xi|e05|output|       r10        0
+Xi|e05|output|       r11        0
+Xi|e05|output|       r12        0
+Xi|e05|output|       r13        0
+Xi|e05|output|       r14        0
+Xi|e05|output|       r15        0
+Xi|e05|output|       r16        0
+Xi|e05|output|       r17        3
+Xi|e05|output|       r18        0
+Xi|e05|output|       r19       91
+Xi|e05|output|        r2        0
+Xi|e05|output|       r20        7
+Xi|e05|output|        r3        0
+Xi|e05|output|        r4        0
+Xi|e05|output|        r5        0
+Xi|e05|output|        r6        0
+Xi|e05|output|        r7        0
+Xi|e05|output|        r8        0
+Xi|e05|output|        r9        0
+Xi|e05|output|      rbss    10362
+Xi|e05|output|       rfp    20724
+Xi|e05|output|       rpc      110
+Xi|e05|output|       rsp    20752
+Xi|e05|output|
+Xi|e05|output|    memory    value
+Xi|e05|output|00010362        7
+Xi|e05|output|00020752        3
+Xi|e05|output|00020756        7
+Xi|e05|output|00020760    20724
+Xi|e05|output|00020764        0
+Xi|e05|output|00020768       91
+Xi|e05|output|00020772        0
+Xi|e05|output|00020776        0
+Xi|e05|output|00020780        0
+Xi|e05|output|00020784        0
+Xi|e05|output|00020788        0
+Xi|e05|output|00020792        0
+Xi|e05|output|00020796        0
+Xi|e05|output|00020800        0
+Xi|e05|output|00020804        0
+Xi|e05|output|00020808        0
+Xi|e05|output|00020812        0
+Xi|e05|output|00020816        0
+Xi|e05|output|00020820        0
+Xi|e05|output|00020824        0
+Xi|e05|output|00020828        0
+Xi|e05|output|00020832        0
+Xi|e05|output|00020836        0
+Xi|e05|output|00020840        7
+Xi|e05|output|00020844        2
+Xi|e05|output|00020848        4
+Xi|e05|output|00020852    20752
+Xi|e05|output|00020856        0
+Xi|e05|output|00020860       43
+Xi|e05|output|00020864        3
+Xi|e05|output|00020868        0
+Xi|e05|output|00020872        0
+Xi|e05|output|00020876        0
+Xi|e05|output|00020880        0
+Xi|e05|output|00020884        0
+Xi|e05|output|00020888        3
+Xi|e05|output|00020892        3
+Xi|e05|output|00020896        1
+Xi|e05|output|00020900        2
+Xi|e05|output|00020904        0
+Xi|e05|output|00020932        4
+Xi|e05|output|00020936        1
+Xi|e05|output|00020940        2
+Xi|e05|output|00020944    20844
+Xi|e05|output|00020948        0
+Xi|e05|output|00020952       43
+Xi|e05|output|00020956        2
+Xi|e05|output|00020960        0
+Xi|e05|output|00020964        0
+Xi|e05|output|00020968        0
+Xi|e05|output|00020972        0
+Xi|e05|output|00020976        0
+Xi|e05|output|00020980        2
+Xi|e05|output|00020984        2
+Xi|e05|output|00020988        1
+Xi|e05|output|00020992        1
+Xi|e05|output|00020996        0
+Xi|e05|output|00021024        2
+Xi|e05|output|00021028        0
+Xi|e05|output|00021032        1
+Xi|e05|output|00021036    20936
+Xi|e05|output|00021040        0
+Xi|e05|output|00021044       43
+Xi|e05|output|00021048        1
+Xi|e05|output|00021052        0
+Xi|e05|output|00021056        0
+Xi|e05|output|00021060        0
+Xi|e05|output|00021064        0
+Xi|e05|output|00021068        0
+Xi|e05|output|00021072        1
+Xi|e05|output|00021076        1
+Xi|e05|output|00021080        1
+Xi|e05|output|00021084        0
+Xi|e05|output|00021088        0
+Xi|0
+Xi|e05|sixit|0
+Xi|e05|memory|00010362|7
+Xi|e05|memory|00020752|3
+Xi|e05|memory|00020756|7
+Xi|e05|memory|00020760|20724
+Xi|e05|memory|00020764|0
+Xi|e05|memory|00020768|91
+Xi|e05|memory|00020772|0
+Xi|e05|memory|00020776|0
+Xi|e05|memory|00020780|0
+Xi|e05|memory|00020784|0
+Xi|e05|memory|00020788|0
+Xi|e05|memory|00020792|0
+Xi|e05|memory|00020796|0
+Xi|e05|memory|00020800|0
+Xi|e05|memory|00020804|0
+Xi|e05|memory|00020808|0
+Xi|e05|memory|00020812|0
+Xi|e05|memory|00020816|0
+Xi|e05|memory|00020820|0
+Xi|e05|memory|00020824|0
+Xi|e05|instruction|78|loadAI
+Xi|e05|instruction|74|storeAI
+Xi|e05|instruction|16|loadI
+Xi|e05|instruction|12|nop
+Xi|e05|instruction|12|i2i
+Xi|e05|instruction|9|addI
+Xi|e05|instruction|5|jumpI
+Xi|e05|instruction|4|cmp_EQ
+Xi|e05|instruction|4|cbr
+Xi|e05|instruction|4|jump
+Xi|e05|instruction|3|sub
+Xi|e05|instruction|3|add
+Xi|e05|instruction|1|halt
+Xi|e06|stack|25722
+Xi|e06|data|12861
+Xi|e06|input|loadI 2048 => rfp
+Xi|e06|input|loadI 2048 => rsp
+Xi|e06|input|loadI 1024 => rbss
+Xi|e06|input|jumpI -> L2
+Xi|e06|input|L0: nop
+Xi|e06|input|storeAI rfp => rsp, 12
+Xi|e06|input|i2i rsp => rfp
+Xi|e06|input|addI rsp, 48 => rsp
+Xi|e06|input|loadAI rfp, 0 => r0
+Xi|e06|input|loadAI rfp, 4 => r1
+Xi|e06|input|mult r0, r1 => r2
+Xi|e06|input|storeAI r2 => rfp, 8
+Xi|e06|input|loadAI rfp, 20 => r3
+Xi|e06|input|loadAI rfp, 12 => r4
+Xi|e06|input|i2i rfp => rsp
+Xi|e06|input|i2i r4 => rfp
+Xi|e06|input|jump -> r3
+Xi|e06|input|L1: nop
+Xi|e06|input|storeAI rfp => rsp, 20
+Xi|e06|input|i2i rsp => rfp
+Xi|e06|input|addI rsp, 104 => rsp
+Xi|e06|input|loadAI rfp, 0 => r5
+Xi|e06|input|storeAI r5 => rsp, 0
+Xi|e06|input|loadAI rfp, 4 => r6
+Xi|e06|input|storeAI r6 => rsp, 4
+Xi|e06|input|loadI 0 => r7
+Xi|e06|input|storeAI r7 => rsp, 16
+Xi|e06|input|storeAI r0 => rsp, 24
+Xi|e06|input|storeAI r1 => rsp, 28
+Xi|e06|input|storeAI r2 => rsp, 32
+Xi|e06|input|storeAI r3 => rsp, 36
+Xi|e06|input|storeAI r4 => rsp, 40
+Xi|e06|input|addI rpc, 3 => r8
+Xi|e06|input|storeAI r8 => rsp, 20
+Xi|e06|input|jumpI -> L0
+Xi|e06|input|loadAI rsp, 24 => r0
+Xi|e06|input|loadAI rsp, 28 => r1
+Xi|e06|input|loadAI rsp, 32 => r2
+Xi|e06|input|loadAI rsp, 36 => r3
+Xi|e06|input|loadAI rsp, 40 => r4
+Xi|e06|input|loadAI rsp, 8 => r9
+Xi|e06|input|loadAI rfp, 8 => r10
+Xi|e06|input|storeAI r10 => rsp, 0
+Xi|e06|input|loadAI rfp, 12 => r11
+Xi|e06|input|storeAI r11 => rsp, 4
+Xi|e06|input|loadI 0 => r12
+Xi|e06|input|storeAI r12 => rsp, 16
+Xi|e06|input|storeAI r0 => rsp, 24
+Xi|e06|input|storeAI r1 => rsp, 28
+Xi|e06|input|storeAI r2 => rsp, 32
+Xi|e06|input|storeAI r3 => rsp, 36
+Xi|e06|input|storeAI r4 => rsp, 40
+Xi|e06|input|addI rpc, 3 => r13
+Xi|e06|input|storeAI r13 => rsp, 20
+Xi|e06|input|jumpI -> L0
+Xi|e06|input|loadAI rsp, 24 => r0
+Xi|e06|input|loadAI rsp, 28 => r1
+Xi|e06|input|loadAI rsp, 32 => r2
+Xi|e06|input|loadAI rsp, 36 => r3
+Xi|e06|input|loadAI rsp, 40 => r4
+Xi|e06|input|loadAI rsp, 8 => r14
+Xi|e06|input|add r9, r14 => r15
+Xi|e06|input|storeAI r15 => rsp, -4
+Xi|e06|input|loadAI rsp, -4 => r16
+Xi|e06|input|storeAI r16 => rfp, 16
+Xi|e06|input|loadAI rfp, 28 => r17
+Xi|e06|input|loadAI rfp, 20 => r18
+Xi|e06|input|i2i rfp => rsp
+Xi|e06|input|i2i r18 => rfp
+Xi|e06|input|jump -> r17
+Xi|e06|input|L2: nop
+Xi|e06|input|addI rsp, 92 => rsp
+Xi|e06|input|loadI 2018 => r19
+Xi|e06|input|storeAI r19 => rbss, 0
+Xi|e06|input|loadI 2 => r20
+Xi|e06|input|storeAI r20 => rsp, -4
+Xi|e06|input|loadI 2 => r21
+Xi|e06|input|storeAI r21 => rsp, -8
+Xi|e06|input|loadAI rsp, -4 => r22
+Xi|e06|input|loadI 3 => r23
+Xi|e06|input|mult r22, r23 => r24
+Xi|e06|input|storeAI r24 => rsp, 0
+Xi|e06|input|loadAI rsp, -4 => r25
+Xi|e06|input|loadI 3 => r26
+Xi|e06|input|mult r25, r26 => r27
+Xi|e06|input|storeAI r27 => rsp, 4
+Xi|e06|input|loadAI rsp, -8 => r28
+Xi|e06|input|loadI 2 => r29
+Xi|e06|input|mult r28, r29 => r30
+Xi|e06|input|storeAI r30 => rsp, 8
+Xi|e06|input|loadAI rsp, -8 => r31
+Xi|e06|input|loadI 2 => r32
+Xi|e06|input|mult r31, r32 => r33
+Xi|e06|input|storeAI r33 => rsp, 12
+Xi|e06|input|loadI 0 => r34
+Xi|e06|input|storeAI r34 => rsp, 24
+Xi|e06|input|storeAI r5 => rsp, 32
+Xi|e06|input|storeAI r6 => rsp, 36
+Xi|e06|input|storeAI r7 => rsp, 40
+Xi|e06|input|storeAI r8 => rsp, 44
+Xi|e06|input|storeAI r9 => rsp, 48
+Xi|e06|input|storeAI r10 => rsp, 52
+Xi|e06|input|storeAI r11 => rsp, 56
+Xi|e06|input|storeAI r12 => rsp, 60
+Xi|e06|input|storeAI r13 => rsp, 64
+Xi|e06|input|storeAI r14 => rsp, 68
+Xi|e06|input|storeAI r15 => rsp, 72
+Xi|e06|input|storeAI r16 => rsp, 76
+Xi|e06|input|storeAI r17 => rsp, 80
+Xi|e06|input|storeAI r18 => rsp, 84
+Xi|e06|input|addI rpc, 3 => r35
+Xi|e06|input|storeAI r35 => rsp, 28
+Xi|e06|input|jumpI -> L1
+Xi|e06|input|loadAI rsp, 32 => r5
+Xi|e06|input|loadAI rsp, 36 => r6
+Xi|e06|input|loadAI rsp, 40 => r7
+Xi|e06|input|loadAI rsp, 44 => r8
+Xi|e06|input|loadAI rsp, 48 => r9
+Xi|e06|input|loadAI rsp, 52 => r10
+Xi|e06|input|loadAI rsp, 56 => r11
+Xi|e06|input|loadAI rsp, 60 => r12
+Xi|e06|input|loadAI rsp, 64 => r13
+Xi|e06|input|loadAI rsp, 68 => r14
+Xi|e06|input|loadAI rsp, 72 => r15
+Xi|e06|input|loadAI rsp, 76 => r16
+Xi|e06|input|loadAI rsp, 80 => r17
+Xi|e06|input|loadAI rsp, 84 => r18
+Xi|e06|input|loadAI rsp, 16 => r36
+Xi|e06|input|storeAI r36 => rbss, 4
+Xi|e06|input|halt
+Xi|e06|input|
+Xi|e06|output|count	instruction
+Xi|e06|output|   49	storeAI
+Xi|e06|output|   46	loadAI
+Xi|e06|output|   13	loadI
+Xi|e06|output|    9	i2i
+Xi|e06|output|    7	addI
+Xi|e06|output|    6	mult
+Xi|e06|output|    4	jumpI
+Xi|e06|output|    4	nop
+Xi|e06|output|    3	jump
+Xi|e06|output|    1	add
+Xi|e06|output|    1	halt
+Xi|e06|output|
+Xi|e06|output|instructions executed:  143
+Xi|e06|output|register         read:  177 write:  222
+Xi|e06|output|memory           read:   46 write:   49
+Xi|e06|output|
+Xi|e06|output|  register    value
+Xi|e06|output|        r0        0
+Xi|e06|output|        r1        0
+Xi|e06|output|       r10        0
+Xi|e06|output|       r11        0
+Xi|e06|output|       r12        0
+Xi|e06|output|       r13        0
+Xi|e06|output|       r14        0
+Xi|e06|output|       r15        0
+Xi|e06|output|       r16        0
+Xi|e06|output|       r17        0
+Xi|e06|output|       r18        0
+Xi|e06|output|       r19     2018
+Xi|e06|output|        r2        0
+Xi|e06|output|       r20        2
+Xi|e06|output|       r21        2
+Xi|e06|output|       r22        2
+Xi|e06|output|       r23        3
+Xi|e06|output|       r24        6
+Xi|e06|output|       r25        2
+Xi|e06|output|       r26        3
+Xi|e06|output|       r27        6
+Xi|e06|output|       r28        2
+Xi|e06|output|       r29        2
+Xi|e06|output|        r3        0
+Xi|e06|output|       r30        4
+Xi|e06|output|       r31        2
+Xi|e06|output|       r32        2
+Xi|e06|output|       r33        4
+Xi|e06|output|       r34        0
+Xi|e06|output|       r35      113
+Xi|e06|output|       r36       52
+Xi|e06|output|        r4        0
+Xi|e06|output|        r5        0
+Xi|e06|output|        r6        0
+Xi|e06|output|        r7        0
+Xi|e06|output|        r8        0
+Xi|e06|output|        r9        0
+Xi|e06|output|      rbss    12861
+Xi|e06|output|       rfp    25722
+Xi|e06|output|       rpc      129
+Xi|e06|output|       rsp    25814
+Xi|e06|output|
+Xi|e06|output|    memory    value
+Xi|e06|output|00012861     2018
+Xi|e06|output|00012865       52
+Xi|e06|output|00025806        2
+Xi|e06|output|00025810        2
+Xi|e06|output|00025814        6
+Xi|e06|output|00025818        6
+Xi|e06|output|00025822        4
+Xi|e06|output|00025826        4
+Xi|e06|output|00025830       52
+Xi|e06|output|00025834    25722
+Xi|e06|output|00025838        0
+Xi|e06|output|00025842      113
+Xi|e06|output|00025846        0
+Xi|e06|output|00025850        0
+Xi|e06|output|00025854        0
+Xi|e06|output|00025858        0
+Xi|e06|output|00025862        0
+Xi|e06|output|00025866        0
+Xi|e06|output|00025870        0
+Xi|e06|output|00025874        0
+Xi|e06|output|00025878        0
+Xi|e06|output|00025882        0
+Xi|e06|output|00025886        0
+Xi|e06|output|00025890        0
+Xi|e06|output|00025894        0
+Xi|e06|output|00025898        0
+Xi|e06|output|00025914       52
+Xi|e06|output|00025918        4
+Xi|e06|output|00025922        4
+Xi|e06|output|00025926       16
+Xi|e06|output|00025930    25814
+Xi|e06|output|00025934        0
+Xi|e06|output|00025938       55
+Xi|e06|output|00025942        0
+Xi|e06|output|00025946        0
+Xi|e06|output|00025950        0
+Xi|e06|output|00025954        0
+Xi|e06|output|00025958        0
+Xi|0
+Xi|e06|sixit|0
+Xi|e06|memory|00012861|2018
+Xi|e06|memory|00012865|52
+Xi|e06|memory|00025806|2
+Xi|e06|memory|00025810|2
+Xi|e06|memory|00025814|6
+Xi|e06|memory|00025818|6
+Xi|e06|memory|00025822|4
+Xi|e06|memory|00025826|4
+Xi|e06|memory|00025830|52
+Xi|e06|memory|00025834|25722
+Xi|e06|memory|00025838|0
+Xi|e06|memory|00025842|113
+Xi|e06|memory|00025846|0
+Xi|e06|memory|00025850|0
+Xi|e06|memory|00025854|0
+Xi|e06|memory|00025858|0
+Xi|e06|memory|00025862|0
+Xi|e06|memory|00025866|0
+Xi|e06|memory|00025870|0
+Xi|e06|memory|00025874|0
+Xi|e06|instruction|49|storeAI
+Xi|e06|instruction|46|loadAI
+Xi|e06|instruction|13|loadI
+Xi|e06|instruction|9|i2i
+Xi|e06|instruction|7|addI
+Xi|e06|instruction|6|mult
+Xi|e06|instruction|4|jumpI
+Xi|e06|instruction|4|nop
+Xi|e06|instruction|3|jump
+Xi|e06|instruction|1|add
+Xi|e06|instruction|1|halt
+Xi|e07|stack|20160
+Xi|e07|data|10080
+Xi|e07|input|loadI 2048 => rfp
+Xi|e07|input|loadI 2048 => rsp
+Xi|e07|input|loadI 1024 => rbss
+Xi|e07|input|jumpI -> L2
+Xi|e07|input|L0: nop
+Xi|e07|input|storeAI rfp => rsp, 12
+Xi|e07|input|i2i rsp => rfp
+Xi|e07|input|addI rsp, 56 => rsp
+Xi|e07|input|loadAI rfp, 0 => r0
+Xi|e07|input|loadAI rfp, 4 => r1
+Xi|e07|input|mult r0, r1 => r2
+Xi|e07|input|storeAI r2 => rsp, -4
+Xi|e07|input|loadAI rsp, -4 => r3
+Xi|e07|input|storeAI r3 => rfp, 8
+Xi|e07|input|loadAI rfp, 20 => r4
+Xi|e07|input|loadAI rfp, 12 => r5
+Xi|e07|input|i2i rfp => rsp
+Xi|e07|input|i2i r5 => rfp
+Xi|e07|input|jump -> r4
+Xi|e07|input|L1: nop
+Xi|e07|input|storeAI rfp => rsp, 20
+Xi|e07|input|i2i rsp => rfp
+Xi|e07|input|addI rsp, 136 => rsp
+Xi|e07|input|loadAI rfp, 0 => r6
+Xi|e07|input|storeAI r6 => rsp, 0
+Xi|e07|input|loadAI rfp, 0 => r7
+Xi|e07|input|storeAI r7 => rsp, 4
+Xi|e07|input|loadI 0 => r8
+Xi|e07|input|storeAI r8 => rsp, 16
+Xi|e07|input|storeAI r0 => rsp, 24
+Xi|e07|input|storeAI r1 => rsp, 28
+Xi|e07|input|storeAI r2 => rsp, 32
+Xi|e07|input|storeAI r3 => rsp, 36
+Xi|e07|input|storeAI r4 => rsp, 40
+Xi|e07|input|storeAI r5 => rsp, 44
+Xi|e07|input|addI rpc, 3 => r9
+Xi|e07|input|storeAI r9 => rsp, 20
+Xi|e07|input|jumpI -> L0
+Xi|e07|input|loadAI rsp, 24 => r0
+Xi|e07|input|loadAI rsp, 28 => r1
+Xi|e07|input|loadAI rsp, 32 => r2
+Xi|e07|input|loadAI rsp, 36 => r3
+Xi|e07|input|loadAI rsp, 40 => r4
+Xi|e07|input|loadAI rsp, 44 => r5
+Xi|e07|input|loadAI rsp, 8 => r10
+Xi|e07|input|storeAI r10 => rsp, 0
+Xi|e07|input|loadAI rfp, 4 => r11
+Xi|e07|input|storeAI r11 => rsp, 4
+Xi|e07|input|loadI 0 => r12
+Xi|e07|input|storeAI r12 => rsp, 16
+Xi|e07|input|storeAI r0 => rsp, 24
+Xi|e07|input|storeAI r1 => rsp, 28
+Xi|e07|input|storeAI r2 => rsp, 32
+Xi|e07|input|storeAI r3 => rsp, 36
+Xi|e07|input|storeAI r4 => rsp, 40
+Xi|e07|input|storeAI r5 => rsp, 44
+Xi|e07|input|addI rpc, 3 => r13
+Xi|e07|input|storeAI r13 => rsp, 20
+Xi|e07|input|jumpI -> L0
+Xi|e07|input|loadAI rsp, 24 => r0
+Xi|e07|input|loadAI rsp, 28 => r1
+Xi|e07|input|loadAI rsp, 32 => r2
+Xi|e07|input|loadAI rsp, 36 => r3
+Xi|e07|input|loadAI rsp, 40 => r4
+Xi|e07|input|loadAI rsp, 44 => r5
+Xi|e07|input|loadAI rsp, 8 => r14
+Xi|e07|input|loadAI rfp, 8 => r15
+Xi|e07|input|storeAI r15 => rsp, 0
+Xi|e07|input|loadAI rfp, 12 => r16
+Xi|e07|input|storeAI r16 => rsp, 0
+Xi|e07|input|loadAI rfp, 12 => r17
+Xi|e07|input|storeAI r17 => rsp, 4
+Xi|e07|input|loadI 0 => r18
+Xi|e07|input|storeAI r18 => rsp, 16
+Xi|e07|input|storeAI r0 => rsp, 24
+Xi|e07|input|storeAI r1 => rsp, 28
+Xi|e07|input|storeAI r2 => rsp, 32
+Xi|e07|input|storeAI r3 => rsp, 36
+Xi|e07|input|storeAI r4 => rsp, 40
+Xi|e07|input|storeAI r5 => rsp, 44
+Xi|e07|input|addI rpc, 3 => r19
+Xi|e07|input|storeAI r19 => rsp, 20
+Xi|e07|input|jumpI -> L0
+Xi|e07|input|loadAI rsp, 24 => r0
+Xi|e07|input|loadAI rsp, 28 => r1
+Xi|e07|input|loadAI rsp, 32 => r2
+Xi|e07|input|loadAI rsp, 36 => r3
+Xi|e07|input|loadAI rsp, 40 => r4
+Xi|e07|input|loadAI rsp, 44 => r5
+Xi|e07|input|loadAI rsp, 8 => r20
+Xi|e07|input|storeAI r20 => rsp, 4
+Xi|e07|input|loadI 0 => r21
+Xi|e07|input|storeAI r21 => rsp, 16
+Xi|e07|input|storeAI r0 => rsp, 24
+Xi|e07|input|storeAI r1 => rsp, 28
+Xi|e07|input|storeAI r2 => rsp, 32
+Xi|e07|input|storeAI r3 => rsp, 36
+Xi|e07|input|storeAI r4 => rsp, 40
+Xi|e07|input|storeAI r5 => rsp, 44
+Xi|e07|input|addI rpc, 3 => r22
+Xi|e07|input|storeAI r22 => rsp, 20
+Xi|e07|input|jumpI -> L0
+Xi|e07|input|loadAI rsp, 24 => r0
+Xi|e07|input|loadAI rsp, 28 => r1
+Xi|e07|input|loadAI rsp, 32 => r2
+Xi|e07|input|loadAI rsp, 36 => r3
+Xi|e07|input|loadAI rsp, 40 => r4
+Xi|e07|input|loadAI rsp, 44 => r5
+Xi|e07|input|loadAI rsp, 8 => r23
+Xi|e07|input|add r14, r23 => r24
+Xi|e07|input|storeAI r24 => rsp, -4
+Xi|e07|input|loadAI rsp, -4 => r25
+Xi|e07|input|storeAI r25 => rfp, 16
+Xi|e07|input|loadAI rfp, 28 => r26
+Xi|e07|input|loadAI rfp, 20 => r27
+Xi|e07|input|i2i rfp => rsp
+Xi|e07|input|i2i r27 => rfp
+Xi|e07|input|jump -> r26
+Xi|e07|input|L2: nop
+Xi|e07|input|addI rsp, 92 => rsp
+Xi|e07|input|loadI 2019 => r28
+Xi|e07|input|storeAI r28 => rbss, 0
+Xi|e07|input|loadI 2 => r29
+Xi|e07|input|storeAI r29 => rsp, -4
+Xi|e07|input|loadI 2 => r30
+Xi|e07|input|storeAI r30 => rsp, -8
+Xi|e07|input|loadAI rsp, -4 => r31
+Xi|e07|input|loadI 3 => r32
+Xi|e07|input|mult r31, r32 => r33
+Xi|e07|input|storeAI r33 => rsp, 0
+Xi|e07|input|loadAI rsp, -4 => r34
+Xi|e07|input|loadI 4 => r35
+Xi|e07|input|mult r34, r35 => r36
+Xi|e07|input|storeAI r36 => rsp, 4
+Xi|e07|input|loadAI rsp, -8 => r37
+Xi|e07|input|loadI 2 => r38
+Xi|e07|input|mult r37, r38 => r39
+Xi|e07|input|storeAI r39 => rsp, 8
+Xi|e07|input|loadAI rsp, -8 => r40
+Xi|e07|input|loadI 2 => r41
+Xi|e07|input|mult r40, r41 => r42
+Xi|e07|input|storeAI r42 => rsp, 12
+Xi|e07|input|loadI 0 => r43
+Xi|e07|input|storeAI r43 => rsp, 24
+Xi|e07|input|storeAI r6 => rsp, 32
+Xi|e07|input|storeAI r7 => rsp, 36
+Xi|e07|input|storeAI r8 => rsp, 40
+Xi|e07|input|storeAI r9 => rsp, 44
+Xi|e07|input|storeAI r10 => rsp, 48
+Xi|e07|input|storeAI r11 => rsp, 52
+Xi|e07|input|storeAI r12 => rsp, 56
+Xi|e07|input|storeAI r13 => rsp, 60
+Xi|e07|input|storeAI r14 => rsp, 64
+Xi|e07|input|storeAI r15 => rsp, 68
+Xi|e07|input|storeAI r16 => rsp, 72
+Xi|e07|input|storeAI r17 => rsp, 76
+Xi|e07|input|storeAI r18 => rsp, 80
+Xi|e07|input|storeAI r19 => rsp, 84
+Xi|e07|input|storeAI r20 => rsp, 88
+Xi|e07|input|storeAI r21 => rsp, 92
+Xi|e07|input|storeAI r22 => rsp, 96
+Xi|e07|input|storeAI r23 => rsp, 100
+Xi|e07|input|storeAI r24 => rsp, 104
+Xi|e07|input|storeAI r25 => rsp, 108
+Xi|e07|input|storeAI r26 => rsp, 112
+Xi|e07|input|storeAI r27 => rsp, 116
+Xi|e07|input|addI rpc, 3 => r44
+Xi|e07|input|storeAI r44 => rsp, 28
+Xi|e07|input|jumpI -> L1
+Xi|e07|input|loadAI rsp, 32 => r6
+Xi|e07|input|loadAI rsp, 36 => r7
+Xi|e07|input|loadAI rsp, 40 => r8
+Xi|e07|input|loadAI rsp, 44 => r9
+Xi|e07|input|loadAI rsp, 48 => r10
+Xi|e07|input|loadAI rsp, 52 => r11
+Xi|e07|input|loadAI rsp, 56 => r12
+Xi|e07|input|loadAI rsp, 60 => r13
+Xi|e07|input|loadAI rsp, 64 => r14
+Xi|e07|input|loadAI rsp, 68 => r15
+Xi|e07|input|loadAI rsp, 72 => r16
+Xi|e07|input|loadAI rsp, 76 => r17
+Xi|e07|input|loadAI rsp, 80 => r18
+Xi|e07|input|loadAI rsp, 84 => r19
+Xi|e07|input|loadAI rsp, 88 => r20
+Xi|e07|input|loadAI rsp, 92 => r21
+Xi|e07|input|loadAI rsp, 96 => r22
+Xi|e07|input|loadAI rsp, 100 => r23
+Xi|e07|input|loadAI rsp, 104 => r24
+Xi|e07|input|loadAI rsp, 108 => r25
+Xi|e07|input|loadAI rsp, 112 => r26
+Xi|e07|input|loadAI rsp, 116 => r27
+Xi|e07|input|loadAI rsp, 16 => r45
+Xi|e07|input|storeAI r45 => rbss, 4
+Xi|e07|input|halt
+Xi|e07|input|
+Xi|e07|output|count	instruction
+Xi|e07|output|   87	storeAI
+Xi|e07|output|   84	loadAI
+Xi|e07|output|   15	loadI
+Xi|e07|output|   15	i2i
+Xi|e07|output|   11	addI
+Xi|e07|output|    8	mult
+Xi|e07|output|    6	jumpI
+Xi|e07|output|    6	nop
+Xi|e07|output|    5	jump
+Xi|e07|output|    1	add
+Xi|e07|output|    1	halt
+Xi|e07|output|
+Xi|e07|output|instructions executed:  239
+Xi|e07|output|register         read:  307 write:  370
+Xi|e07|output|memory           read:   84 write:   87
+Xi|e07|output|
+Xi|e07|output|  register    value
+Xi|e07|output|        r0        0
+Xi|e07|output|        r1        0
+Xi|e07|output|       r10        0
+Xi|e07|output|       r11        0
+Xi|e07|output|       r12        0
+Xi|e07|output|       r13        0
+Xi|e07|output|       r14        0
+Xi|e07|output|       r15        0
+Xi|e07|output|       r16        0
+Xi|e07|output|       r17        0
+Xi|e07|output|       r18        0
+Xi|e07|output|       r19        0
+Xi|e07|output|        r2        0
+Xi|e07|output|       r20        0
+Xi|e07|output|       r21        0
+Xi|e07|output|       r22        0
+Xi|e07|output|       r23        0
+Xi|e07|output|       r24        0
+Xi|e07|output|       r25        0
+Xi|e07|output|       r26        0
+Xi|e07|output|       r27        0
+Xi|e07|output|       r28     2019
+Xi|e07|output|       r29        2
+Xi|e07|output|        r3        0
+Xi|e07|output|       r30        2
+Xi|e07|output|       r31        2
+Xi|e07|output|       r32        3
+Xi|e07|output|       r33        6
+Xi|e07|output|       r34        2
+Xi|e07|output|       r35        4
+Xi|e07|output|       r36        8
+Xi|e07|output|       r37        2
+Xi|e07|output|       r38        2
+Xi|e07|output|       r39        4
+Xi|e07|output|        r4        0
+Xi|e07|output|       r40        2
+Xi|e07|output|       r41        2
+Xi|e07|output|       r42        4
+Xi|e07|output|       r43        0
+Xi|e07|output|       r44      169
+Xi|e07|output|       r45      352
+Xi|e07|output|        r5        0
+Xi|e07|output|        r6        0
+Xi|e07|output|        r7        0
+Xi|e07|output|        r8        0
+Xi|e07|output|        r9        0
+Xi|e07|output|      rbss    10080
+Xi|e07|output|       rfp    20160
+Xi|e07|output|       rpc      193
+Xi|e07|output|       rsp    20252
+Xi|e07|output|
+Xi|e07|output|    memory    value
+Xi|e07|output|00010080     2019
+Xi|e07|output|00010084      352
+Xi|e07|output|00020244        2
+Xi|e07|output|00020248        2
+Xi|e07|output|00020252        6
+Xi|e07|output|00020256        8
+Xi|e07|output|00020260        4
+Xi|e07|output|00020264        4
+Xi|e07|output|00020268      352
+Xi|e07|output|00020272    20160
+Xi|e07|output|00020276        0
+Xi|e07|output|00020280      169
+Xi|e07|output|00020284        0
+Xi|e07|output|00020288        0
+Xi|e07|output|00020292        0
+Xi|e07|output|00020296        0
+Xi|e07|output|00020300        0
+Xi|e07|output|00020304        0
+Xi|e07|output|00020308        0
+Xi|e07|output|00020312        0
+Xi|e07|output|00020316        0
+Xi|e07|output|00020320        0
+Xi|e07|output|00020324        0
+Xi|e07|output|00020328        0
+Xi|e07|output|00020332        0
+Xi|e07|output|00020336        0
+Xi|e07|output|00020340        0
+Xi|e07|output|00020344        0
+Xi|e07|output|00020348        0
+Xi|e07|output|00020352        0
+Xi|e07|output|00020356        0
+Xi|e07|output|00020360        0
+Xi|e07|output|00020364        0
+Xi|e07|output|00020368        0
+Xi|e07|output|00020384      352
+Xi|e07|output|00020388        4
+Xi|e07|output|00020392       16
+Xi|e07|output|00020396       64
+Xi|e07|output|00020400    20252
+Xi|e07|output|00020404        0
+Xi|e07|output|00020408      102
+Xi|e07|output|00020412        0
+Xi|e07|output|00020416        0
+Xi|e07|output|00020420        0
+Xi|e07|output|00020424        0
+Xi|e07|output|00020428        0
+Xi|e07|output|00020432        0
+Xi|e07|output|00020440       64
+Xi|0
+Xi|e07|sixit|0
+Xi|e07|memory|00010080|2019
+Xi|e07|memory|00010084|352
+Xi|e07|memory|00020244|2
+Xi|e07|memory|00020248|2
+Xi|e07|memory|00020252|6
+Xi|e07|memory|00020256|8
+Xi|e07|memory|00020260|4
+Xi|e07|memory|00020264|4
+Xi|e07|memory|00020268|352
+Xi|e07|memory|00020272|20160
+Xi|e07|memory|00020276|0
+Xi|e07|memory|00020280|169
+Xi|e07|memory|00020284|0
+Xi|e07|memory|00020288|0
+Xi|e07|memory|00020292|0
+Xi|e07|memory|00020296|0
+Xi|e07|memory|00020300|0
+Xi|e07|memory|00020304|0
+Xi|e07|memory|00020308|0
+Xi|e07|memory|00020312|0
+Xi|e07|instruction|87|storeAI
+Xi|e07|instruction|84|loadAI
+Xi|e07|instruction|15|loadI
+Xi|e07|instruction|15|i2i
+Xi|e07|instruction|11|addI
+Xi|e07|instruction|8|mult
+Xi|e07|instruction|6|jumpI
+Xi|e07|instruction|6|nop
+Xi|e07|instruction|5|jump
+Xi|e07|instruction|1|add
+Xi|e07|instruction|1|halt
