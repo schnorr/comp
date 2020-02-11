@@ -23,7 +23,10 @@ etapas.
 
 * Especificação, pesos, e prazos de entrega
 
-A entrega sempre é até as 23:59 do dia.
+A entrega sempre é até as 23:59 de dois dia antes da aula de
+avaliação. Exemplo: se a data de avaliação é uma terça-feira, dia
+2020-04-28, a entrega deve ser feita até as 23:59 de domingo
+2020-04-26.
 
 O link para o formulário único que permite realizar a entrega de todas
 as etapas encontra-se abaixo.
@@ -32,14 +35,14 @@ as etapas encontra-se abaixo.
 
 *** Planejamento para este semestre
 
-| Etapa | Descrição e Especificação            | Peso (%) | Cumul. (%) |    Entrega |
-|-------+--------------------------------------+----------+------------+------------|
-| E1    | [[./etapa1.org][Análise Léxica]] (obsoleto)            |       10 |         10 | 2020-04-18 |
-| E2    | [[./etapa2.org][Análise Sintática]] (obsoleto)         |       15 |         25 | 2020-04-18 |
-| E3    | [[./etapa3.org][Árvore Sintática Abstrata]] (obsoleto) |       15 |         40 | 2020-05-11 |
-| E4    | [[./etapa4.org][Análise Semântica]] (obsoleto)         |       15 |         55 | 2020-05-25 |
-| E5    | [[./etapa5.org][Geração de Código]] (obsoleto)         |       20 |         75 | 2020-06-13 |
-| E6    | [[./etapa6.org][Suporte de Execução]] (obsoleto)       |       15 |         90 | 2020-06-27 |
+| Etapa | Descrição e Especificação            | Peso (%) | Cumul. (%) |
+|-------+--------------------------------------+----------+------------|
+| E1    | [[./etapa1.org][Análise Léxica]] (obsoleto)            |       10 |         10 |
+| E2    | [[./etapa2.org][Análise Sintática]] (obsoleto)         |       15 |         25 |
+| E3    | [[./etapa3.org][Árvore Sintática Abstrata]] (obsoleto) |       15 |         40 |
+| E4    | [[./etapa4.org][Análise Semântica]] (obsoleto)         |       15 |         55 |
+| E5    | [[./etapa5.org][Geração de Código]] (obsoleto)         |       20 |         75 |
+| E6    | [[./etapa6.org][Suporte de Execução]] (obsoleto)       |       15 |         90 |
 
 *** E7 desativada                                                :noexport:
 
