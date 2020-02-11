@@ -34,12 +34,12 @@ as etapas encontra-se abaixo.
 
 | Etapa | Descrição e Especificação | Peso (%) | Cumul. (%) |    Entrega |
 |-------+---------------------------+----------+------------+------------|
-| E1    | [[./etapa1.org][Análise Léxica]]            |       10 |         10 | 2019-09-14 |
-| E2    | [[./etapa2.org][Análise Sintática]]         |       15 |         25 | 2019-09-14 |
-| E3    | [[./etapa3.org][Árvore Sintática Abstrata]] |       15 |         40 | 2019-10-05 |
-| E4    | [[./etapa4.org][Análise Semântica]]         |       15 |         55 | 2019-10-28 |
-| E5    | [[./etapa5.org][Geração de Código]]         |       20 |         75 | 2019-11-16 |
-| E6    | [[./etapa6.org][Suporte de Execução]]       |       15 |         90 | 2019-12-04 |
+| E1    | [[./etapa1.org][Análise Léxica]]            |       10 |         10 | 2020-04-18 |
+| E2    | [[./etapa2.org][Análise Sintática]]         |       15 |         25 | 2020-04-18 |
+| E3    | [[./etapa3.org][Árvore Sintática Abstrata]] |       15 |         40 | 2020-05-11 |
+| E4    | [[./etapa4.org][Análise Semântica]]         |       15 |         55 | 2020-05-25 |
+| E5    | [[./etapa5.org][Geração de Código]]         |       20 |         75 | 2020-06-13 |
+| E6    | [[./etapa6.org][Suporte de Execução]]       |       15 |         90 | 2020-06-27 |
 
 *** E7 desativada                                                :noexport:
 
