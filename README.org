@@ -46,7 +46,7 @@ estratégias pedagógicas alternativas:
 * Plano e Cronograma
 
 - [[./plano/index.org][Plano da disciplina]] (permanente)
-- [[./cronograma/index.org][Cronograma Edição 2020/2]] (Turma A, Terças e Quintas, 13:30 – 15:10)
+- [[./cronograma/index.org][Cronograma Edição 2020/1]] (Turma A, Terças e Quintas, 13:30 – 15:10)
 
 * Conteúdo e Avaliação
 
