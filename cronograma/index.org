@@ -98,7 +98,7 @@ ymd("2020-11-02"), # Mortos
 ymd("2020-11-15"), # República
 )
 
-dataDaRecuperação <- ymd("2020-07-06");
+dataDaRecuperação <- ymd("2020-07-14");
 
 #dates <- tibble(Dia=seq(ymd("2020-08-06"), ymd("2020-12-23"), by="days")) %>% # 2020/2
 dates <- tibble(Dia=seq(ymd("2020-03-05"), ymd("2020-07-15"), by="days")) %>% # 2020/1
@@ -239,7 +239,7 @@ aulas %>%
 | 28 | 2020-07-02 |       |            | Revisão                                                          |                     |
 | 29 | 2020-07-07 |       |            | P2                                                               |                     |
 | 30 | 2020-07-09 |       |            | Considerações Finais e Fechamento                                |                     |
-| 31 | 2020-07-06 |       |            | PR                                                               |                     |
+| 31 | 2020-07-14 |       |            | PR                                                               |                     |
 
 
 
