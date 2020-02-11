@@ -23,10 +23,11 @@ etapas.
 
 * Especificação, pesos, e prazos de entrega
 
-A entrega sempre é até as 23:59 de dois dia antes da aula de
-avaliação. Exemplo: se a data de avaliação é uma terça-feira, dia
-2020-04-28, a entrega deve ser feita até as 23:59 de domingo
-2020-04-26.
+A entrega sempre é até as 23:59 de dois dias antes da aula de
+avaliação, com exceção da última etapa cuja data de entrega fica
+definida para o último dia de aula efetiva. Exemplo: se a data de
+avaliação de uma data etapa é uma terça-feira, dia 2020-04-28, a
+entrega desta etapa deve ser feita até as 23:59 de domingo 2020-04-26.
 
 O link para o formulário único que permite realizar a entrega de todas
 as etapas encontra-se abaixo.
