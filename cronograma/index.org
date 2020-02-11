@@ -137,25 +137,6 @@ aulas %>%
     filter(!is.na(Local))
 #+end_src
 
-#+RESULTS:
-#+begin_example
-
-# A tibble: 30 x 8
-   Setor  Descrição         Local Projeto  Dia        DiaDaSemana Encontro     N
-   <chr>  <chr>             <chr> <chr>    <date>           <dbl> <chr>    <int>
- 1 ""     Definições, requ… ""    Definiç… 2019-08-12           2 2019-08…     1
- 2 Léxica Introdução, Expr… ""    Início … 2019-08-14           4 2019-08…     2
- 3 Léxica Autômato Finito … ""    ""       2019-08-19           2 2019-08…     3
- 4 Sintá… Intro., Gramátic… ""    ""       2019-08-21           4 2019-08…     4
- 5 Sintá… Desc., com Retro… ""    ""       2019-08-26           2 2019-08…     5
- 6 Sintá… Parser e tabela … ""    Início … 2019-08-28           4 2019-08…     6
- 7 Sintá… Ascendente, Pars… ""    ""       2019-09-02           2 2019-09…     7
- 8 Sintá… Exercícios LR(0)… ""    ""       2019-09-04           4 2019-09…     8
- 9 Sintá… Parser LR(1), LA… ""    ""       2019-09-09           2 2019-09…     9
-10 Sintá… Exercícios LR(1)… ""    Início … 2019-09-11           4 2019-09…    10
-# … with 20 more rows
-#+end_example
-
 ** Dias por etapa do projeto (em R)
 
 #+name: dias_por_etapa
