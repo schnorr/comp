@@ -105,7 +105,7 @@ dates <- tibble(Dia=seq(ymd("2020-03-05"), ymd("2020-07-15"), by="days")) %>% # 
     # Define o dia da semana
     mutate(DiaDaSemana = wday(Dia)) %>%
     # Aulas de Compiladores em quais dias da semana (segunda = 2, terca = 3, ...)
-    filter(DiaDaSemana %in% c(2, 4)) %>%
+    filter(DiaDaSemana %in% c(3, 5)) %>%
     # Remove dias onde não haverá aula
     filter(!(Dia %in% daysOff));
 
@@ -209,36 +209,36 @@ aulas %>%
 #+RESULTS:
 |  N |   Encontro | Local | Setor      | Descrição                                                        | Projeto             |
 |----+------------+-------+------------+------------------------------------------------------------------+---------------------|
-|  1 | 2020-03-16 |       |            | Definições, requisitos e posicionamento da disciplina            | Definições iniciais |
-|  2 | 2020-03-18 |       | Léxica     | Introdução, Expressões Regulares, =flex=                           | Início E1 (flex)    |
-|  3 | 2020-03-23 |       | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD, =flex= (demo) |                     |
-|  4 | 2020-03-25 |       | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações            |                     |
-|  5 | 2020-03-30 |       | Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)           |                     |
-|  6 | 2020-04-01 |       | Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=                    | Início E2 (bison)   |
-|  7 | 2020-04-06 |       | Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |                     |
-|  8 | 2020-04-08 |       | Sintática  | Exercícios LR(0), SLR(1)                                         |                     |
-|  9 | 2020-04-13 |       | Sintática  | Parser LR(1), LALR(1)                                            |                     |
-| 10 | 2020-04-20 | TBD   |            |                                                                  | Avaliação E1, E2    |
-| 11 | 2020-04-22 |       | Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 | Início E3 (Árvore)  |
-| 12 | 2020-04-27 |       | Semântica  | Esquemas S e L-Atribuídos                                        |                     |
-| 13 | 2020-04-29 |       | Semântica  | Implementação de Esquemas S e L-Atribuídos                       |                     |
-| 14 | 2020-05-04 |       |            | Revisão                                                          | Início E4 (Tipos)   |
-| 15 | 2020-05-06 |       |            | P1                                                               |                     |
-| 16 | 2020-05-11 |       | Código     | Declarações, Escopos e Atribuição                                |                     |
-| 17 | 2020-05-13 | TBD   |            |                                                                  | Avaliação E3        |
-| 18 | 2020-05-18 |       | Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |                     |
-| 19 | 2020-05-20 |       | Código     | Endereçamento de Arranjos multidimensionais                      |                     |
-| 20 | 2020-05-25 |       | Código     | Controle de Fluxo                                                | Início E5 (Código)  |
-| 21 | 2020-05-27 | TBD   |            |                                                                  | Avaliação E4        |
-| 22 | 2020-06-01 |       | Código     | Controle de Fluxo                                                |                     |
-| 23 | 2020-06-03 |       | Execução   | Introdução, Registro de Ativação                                 |                     |
-| 24 | 2020-06-08 |       | Execução   | Chamada e retorno de Função, Passagem de parâmetros              | Início E6 (Chamada) |
-| 25 | 2020-06-10 |       | Otimização | Introdução, Janela e Grafos de Fluxo                             |                     |
-| 26 | 2020-06-15 | TBD   |            |                                                                  | Avaliação E5        |
-| 27 | 2020-06-17 |       | Otimização | Grafos de Fluxo e Redução de potência                            |                     |
-| 28 | 2020-06-22 |       |            | Revisão                                                          |                     |
-| 29 | 2020-06-24 |       |            | P2                                                               |                     |
-| 30 | 2020-06-29 |       |            | Considerações Finais e Fechamento                                |                     |
+|  1 | 2020-03-17 |       |            | Definições, requisitos e posicionamento da disciplina            | Definições iniciais |
+|  2 | 2020-03-19 |       | Léxica     | Introdução, Expressões Regulares, =flex=                           | Início E1 (flex)    |
+|  3 | 2020-03-24 |       | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD, =flex= (demo) |                     |
+|  4 | 2020-03-26 |       | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações            |                     |
+|  5 | 2020-03-31 |       | Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)           |                     |
+|  6 | 2020-04-02 |       | Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=                    | Início E2 (bison)   |
+|  7 | 2020-04-09 |       | Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |                     |
+|  8 | 2020-04-14 |       | Sintática  | Exercícios LR(0), SLR(1)                                         |                     |
+|  9 | 2020-04-23 |       | Sintática  | Parser LR(1), LALR(1)                                            |                     |
+| 10 | 2020-04-28 | TBD   |            |                                                                  | Avaliação E1, E2    |
+| 11 | 2020-04-30 |       | Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 | Início E3 (Árvore)  |
+| 12 | 2020-05-05 |       | Semântica  | Esquemas S e L-Atribuídos                                        |                     |
+| 13 | 2020-05-07 |       | Semântica  | Implementação de Esquemas S e L-Atribuídos                       |                     |
+| 14 | 2020-05-12 |       |            | Revisão                                                          | Início E4 (Tipos)   |
+| 15 | 2020-05-14 |       |            | P1                                                               |                     |
+| 16 | 2020-05-19 |       | Código     | Declarações, Escopos e Atribuição                                |                     |
+| 17 | 2020-05-21 | TBD   |            |                                                                  | Avaliação E3        |
+| 18 | 2020-05-26 |       | Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |                     |
+| 19 | 2020-05-28 |       | Código     | Endereçamento de Arranjos multidimensionais                      |                     |
+| 20 | 2020-06-02 |       | Código     | Controle de Fluxo                                                | Início E5 (Código)  |
+| 21 | 2020-06-04 | TBD   |            |                                                                  | Avaliação E4        |
+| 22 | 2020-06-09 |       | Código     | Controle de Fluxo                                                |                     |
+| 23 | 2020-06-16 |       | Execução   | Introdução, Registro de Ativação                                 |                     |
+| 24 | 2020-06-18 |       | Execução   | Chamada e retorno de Função, Passagem de parâmetros              | Início E6 (Chamada) |
+| 25 | 2020-06-23 |       | Otimização | Introdução, Janela e Grafos de Fluxo                             |                     |
+| 26 | 2020-06-25 | TBD   |            |                                                                  | Avaliação E5        |
+| 27 | 2020-06-30 |       | Otimização | Grafos de Fluxo e Redução de potência                            |                     |
+| 28 | 2020-07-02 |       |            | Revisão                                                          |                     |
+| 29 | 2020-07-07 |       |            | P2                                                               |                     |
+| 30 | 2020-07-09 |       |            | Considerações Finais e Fechamento                                |                     |
 | 31 | 2020-07-06 |       |            | PR                                                               |                     |
 
 
