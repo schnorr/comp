@@ -78,12 +78,13 @@ aulas <- aulas %>% as_tibble();
 daysOff <- c(
 # /1
 seq(ymd("2020-03-05"), ymd("2020-03-15"), by="days"), # (Grenoble)
-ymd("2020-04-07"), # (Seminário Geofísica)
+seq(ymd("2020-03-16"), ymd("2020-03-22"), by="days"), # (Recover)
+#ymd("2020-04-07"), # (Seminário Geofísica)
 ymd("2020-04-10"), # Religioso
 ymd("2020-04-11"), # Não letivo
-ymd("2020-04-15"), # (ERAD/RS)
-ymd("2020-04-16"), # (ERAD/RS)
-ymd("2020-04-17"), # (ERAD/RS)
+#ymd("2020-04-15"), # (ERAD/RS)
+#ymd("2020-04-16"), # (ERAD/RS)
+#ymd("2020-04-17"), # (ERAD/RS)
 ymd("2020-04-21"), # Tiradentes
 ymd("2020-05-01"), # Trabalho
 ymd("2020-05-16"), # Portas Abert
@@ -92,10 +93,10 @@ ymd("2020-06-11"), # Religioso
 ymd("2020-09-07"), # Independência
 seq(ymd("2020-09-14"), ymd("2020-09-18"), by="days"), # (SEMAC)
 ymd("2020-09-20"), # Farroupilha
-ymd("2020-10-12"), # Religioso
-ymd("2020-10-28"), # Dia do Servidor Público
+#ymd("2020-10-12"), # Religioso
+#ymd("2020-10-28"), # Dia do Servidor Público
 ymd("2020-11-02"), # Mortos
-ymd("2020-11-15"), # República
+ymd("2020-11-15") # República
 )
 
 dataDaRecuperação <- ymd("2020-07-14");
@@ -194,6 +195,7 @@ system2("rubber", " --pdf cronograma.tex")
 #+RESULTS: modelo_cronograma
 : 
 : compiling cronograma.tex...
+: compiling cronograma.tex...
 
 * Cronograma
 
@@ -209,14 +211,14 @@ aulas %>%
 #+RESULTS:
 |  N |   Encontro | Local | Setor      | Descrição                                                        | Projeto             |
 |----+------------+-------+------------+------------------------------------------------------------------+---------------------|
-|  1 | 2020-03-17 |       |            | Definições, requisitos e posicionamento da disciplina            | Definições iniciais |
-|  2 | 2020-03-19 |       | Léxica     | Introdução, Expressões Regulares, =flex=                           | Início E1 (flex)    |
-|  3 | 2020-03-24 |       | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD, =flex= (demo) |                     |
-|  4 | 2020-03-26 |       | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações            |                     |
-|  5 | 2020-03-31 |       | Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)           |                     |
-|  6 | 2020-04-02 |       | Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=                    | Início E2 (bison)   |
-|  7 | 2020-04-09 |       | Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |                     |
-|  8 | 2020-04-14 |       | Sintática  | Exercícios LR(0), SLR(1)                                         |                     |
+|  1 | 2020-03-24 |       |            | Definições, requisitos e posicionamento da disciplina            | Definições iniciais |
+|  2 | 2020-03-26 |       | Léxica     | Introdução, Expressões Regulares, =flex=                           | Início E1 (flex)    |
+|  3 | 2020-03-31 |       | Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD, =flex= (demo) |                     |
+|  4 | 2020-04-02 |       | Sintática  | Intro., Gramáticas Livres de Contexto, Transformações            |                     |
+|  5 | 2020-04-07 |       | Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)           |                     |
+|  6 | 2020-04-09 |       | Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=                    | Início E2 (bison)   |
+|  7 | 2020-04-14 |       | Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |                     |
+|  8 | 2020-04-16 |       | Sintática  | Exercícios LR(0), SLR(1)                                         |                     |
 |  9 | 2020-04-23 |       | Sintática  | Parser LR(1), LALR(1)                                            |                     |
 | 10 | 2020-04-28 | TBD   |            |                                                                  | Avaliação E1, E2    |
 | 11 | 2020-04-30 |       | Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 | Início E3 (Árvore)  |
@@ -240,6 +242,10 @@ aulas %>%
 | 29 | 2020-07-07 |       |            | P2                                                               |                     |
 | 30 | 2020-07-09 |       |            | Considerações Finais e Fechamento                                |                     |
 | 31 | 2020-07-14 |       |            | PR                                                               |                     |
+
+
+
+
 
 
 
