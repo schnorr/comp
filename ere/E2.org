@@ -272,8 +272,8 @@ temos as seguintes regras de associatividade:
 - Associativos à direita
   - =&=, =*= (acesso ao valor do ponteiro), =#=
 
-#+latex: \onecolumn
-* Anexo - Arquivo =main.c=
+#+latex: \onecolumn\appendix
+* Arquivo =main.c=
 
 #+BEGIN_SRC C :tangle main.c
 /*
@@ -293,7 +293,7 @@ int main (int argc, char **argv)
 }
 #+END_SRC
 
-* Anexo - Arquivo =parser.y= inicial
+* Arquivo =parser.y= inicial
 
 #+BEGIN_SRC txt :tangle parser.y
 %{

@@ -191,8 +191,8 @@ entre aspas simples como por exemplo:
 "x = 3;"
 #+END_EXAMPLE
 
-#+latex: \onecolumn
-* Anexo - Arquivo =tokens.h=
+#+latex: \onecolumn\appendix
+* Arquivo =tokens.h=
 
 #+BEGIN_SRC text :tangle tokens.h
 /*
@@ -251,7 +251,7 @@ caracteres isolados.
 #define TK_PR_DEFAULT      300
 #+END_SRC
 
-* Anexo - Arquivo =main.c=
+* Arquivo =main.c=
 
 #+BEGIN_SRC C :tangle main.c
 /*
