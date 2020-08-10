@@ -1,0 +1,170 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador: *Etapa 6 de Suporte à Execução*
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+#+Language: pt-br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil title:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+
+#+latex: {\Large
+#+latex: \noindent
+Projeto de Compilador
+
+#+latex: \noindent
+E6 de *Suporte à Execução*
+#+latex: }
+#+latex: \bigskip
+
+#+latex: \noindent
+Prof. Lucas Mello Schnorr
+
+#+latex: \noindent
+schnorr@inf.ufrgs.br
+
+* Introdução
+
+A sexta etapa do trabalho de implementação de um compilador para a
+Linguagem consiste na geração de código intermediário para o suporte à
+execução. A parte principal consiste no código para gerenciar o fluxo
+de controle através da pilha de ativação e os seus registros de
+ativação. Utilizaremos como representação intermediária a *Linguagem
+ILOC*, descrita em detalhes no apêndice A do livro /Engineering a
+Compiler/ de Keith, mas com o essencial descrito na definição da
+quinta etapa do projeto de compiladores. Os registros de ativação
+deverão conter pelo menos as seguintes informações (em ordem
+arbitrária):
+
+- Temporários (caso necessários)
+- Variáveis locais
+- Estado da Máquina
+- Vínculo estático
+- Vínculo dinâmico
+- Valor retornado
+- Parâmetros formais (argumentos)
+- Endereço de retorno
+
+* Funcionalidades Necessárias
+** Registros de Ativação
+
+Deve ser definida uma ordem dos dados dentro de um registro de
+ativação. Esta ordem deve ser obedecida no momento de criar o registro
+de ativação de cada função da linguagem. Cada função deve ter o seu
+padrão de registro de ativação, de acordo com seus parâmetros formais
+e variáveis locais. A ordem dos dados no registro de ativação deve ser
+informado ao professor através do arquivo ~Registro.txt~ na raiz da
+submissão.
+
+** Gerenciamento da Pilha
+
+O código a ser embutido no programa para o suporte ao ambiente de
+execução deve ser capaz de gerenciar o fluxo de controle do programa
+através da pilha de ativação. Assuma que existam registradores
+específicos para tal: como o /stack pointer/ =rsp= e o /frame pointer/ =rfp=.
+Os endereços de vínculo estático e dinâmico de cada registro de
+ativação devem ser corretamente calculados.
+
+** Chamada e Retorno de Função
+
+O programa deve ter código específico para a chamada e o retorno de
+cada subprograma da linguagem. O código de chamada deve ser capaz de
+criar corretamente, na pilha, uma instância do registro de ativação de
+um subprograma apontando o fluxo de execução para o código da função
+chamada no segmento de código.  De maneira equivalente, o código de
+retorno deve ser capaz de atualizar a pilha e retornar o fluxo de
+execução para a função chamadora, no ponto imediatamente após a
+instrução de chamada do subprograma. Utilize o registrador especial
+~rpc~ (registrador que contém o /program counter/) para o cálculo do
+endereço de retorno, assumindo que cada instrução conta como 1 no
+~rpc~. Cada subprograma deve ter um rótulo específico indicando a sua
+primeira instrução.
+
+** Passagem de Parâmetros
+
+A linguagem possui apenas passagem de parâmetro por valor com
+semântica de entrada, que pode ser implementado realizando uma cópia
+do parâmetro real para o parâmetro formal. Lembre-se que a linguagem
+não aceita passagem de arranjos como parâmetros, somente variáveis de
+tipo simples.
+
+* Dicas de Desenvolvimento
+** Entrada e Saída Padrão
+
+Organize a sua solução para que o compilador leia o programa da
+entrada padrão e gere o programa em ILOC na saída padrão. Dessa forma,
+pode-se realizar o seguinte comando (considerando que =main= é o binário
+do compilador):
+#+BEGIN_EXAMPLE
+./main < entrada.poa > saida.iloc
+#+END_EXAMPLE
+
+Onde =entrada.poa= contém um programa, e =saida.iloc= contém em ILOC traduzido.
+
+** Notas importantes
+
+É interessante enfatizar que a execução do programa começa sempre pela
+função cujo nome é =main=, que pode eventualmente não ser a primeira
+função do código de entrada na linguagem.  Outro ponto bastante
+relevante é que tanto =rfp= (ponteiro do RA), =rsp= (ponteiro do topo da
+pilha) e =rbss= (ponteiro do segmento de dados) devem ser
+obrigatoriamente inicializados antes do início da execução da função
+principal do programa. Portanto as primeiras instruções no código de
+saída devem ser algo como, em ILOC:
+
+#+BEGIN_EXAMPLE
+loadI 2048 => rfp
+loadI 2048 => rsp
+loadI 1024 => rbss
+#+END_EXAMPLE
+
+Onde os endereços =rfp= e =rsp= são normalmente 0, mas o =rsp= deve
+obrigatoriamente ser depois definido com o tamanho do registro de
+ativação da função principal. Quanto ao =rbss=, pode-se assumir que o
+segmento de dados de variáveis globais começa em um endereço baixo.
+
+* Testes automáticos
+
+O grupo deve utilizar o simulador =ilocsim= para verificar o bom
+funcionamento do código gerado de suporte à execução. Um programa
+simples que pode ser utilizado para testes desta etapa é o seguinte:
+
+#+BEGIN_SRC C
+int mult (int z, int w)
+{
+  int x;
+  x = z * w;
+  return x;
+}
+
+int main()
+{
+  int x;
+  int y;
+  x = 2;
+  y = mult(x, x);
+}
+#+END_SRC
+
+#+latex: \bibliographystyle{plain}
+#+latex: \bibliography{biblio}
+
+* Bib                                                              :noexport:
+#+BEGIN_SRC bibtex :tangle biblio.bib
+@book{keith,
+author = {{Keith D. Cooper and Linda Torczon}},
+title = {{Engineering a Compiler}},
+publisher = {{Morgan Kaufmann}},
+year = {{2012}},
+edition = {{2nd}}
+}
+#+END_SRC
