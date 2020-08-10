@@ -133,3 +133,11 @@ recebida após a data limite inicialmente estabelecida receberá nota
 zero. Caso a nota de uma etapa entregue e avaliada seja inferior a 6,
 o professor acordará um prazo com os alunos para que eles possam
 recuperá-la em até 80% do valor integral daquela etapa.
+
+* Moodle
+
+Link do Moodle onde tudo acontece:
+
+#+latex: \noindent{\small
+https://moodle.ufrgs.br/course/view.php?id=77440
+#+latex: }
