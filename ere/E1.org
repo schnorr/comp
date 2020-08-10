@@ -1,0 +1,658 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador: Etapa 1 de *Análise Léxica*
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil title:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+#+latex: {\Large
+#+latex: \noindent
+Projeto de Compilador
+
+#+latex: \noindent
+E1 de *Análise Léxica*
+#+latex: }
+#+latex: \bigskip
+
+#+latex: \noindent
+Prof. Lucas Mello Schnorr
+
+#+latex: \noindent
+schnorr@inf.ufrgs.br
+
+* Introdução
+
+A primeira etapa consiste em fazer um analisador léxico utilizando a
+ferramenta de geração de reconhecedores =flex=. Tu deves manter o
+arquivo =tokens.h= (fornecido) sem modificações. A função principal deve
+estar em um arquivo =main.c= separado do arquivo =scanner.l=. Isso é
+necessário para facilitar os testes automáticos, que utilizará uma
+função principal especial escrita pelo professor (muito parecida com a
+fornecida em anexo), substituindo a que você escreveu para testes e
+desenvolvimento. Tu deves usar essa estrutura de organização, mantendo
+os nomes de arquivo =tokens.h= e =scanner.l=.
+
+* Funcionalidades Necessárias
+** Definir expressões regulares
+
+Reconhecimento dos lexemas correspondentes aos tokens descritos na
+seção *Descrição dos Tokens* abaixo, unicamente através da definição de
+expressões regulares no arquivo da ferramenta =flex=. Cada expressão
+regular deve estar associada a pelo menos um tipo de
+token. Classificar os lexemas reconhecidos em tokens retornando as
+constantes definidas no arquivo =tokens.h= fornecido ou códigos ASCII
+para caracteres simples.
+
+** Implementar uma tabela de símbolos                             :noexport:
+
+Implementar uma estrutura de dados que será a tabela de símbolos do
+compilador. Esta tabela deve ser implementada como uma estrutura na
+forma de um dicionário onde cada entrada é representada por uma chave
+e um conteúdo. A chave, única no dicionário, deve ser uma cadeia de
+caracteres do tipo =char*= enquanto que o conteúdo correspondente deve
+ser uma =struct= com diferentes campos que mudam ao longo das etapas do
+projeto de compilador. Na etapa um, o conteúdo das entradas na tabela
+de símbolos está especificado na Subseção~\ref{subsec.preencher}. Para
+facilitar a codificação da tabela de símbolos, o nome do tipo de dado
+do dicionário deve ser =comp_dict_t=, enquanto que as entradas no
+dicionário devem ser do tipo cujo nome é =comp_dict_item_t=.  Esses
+novos tipos de dados devem vir acompanhados de funções para
+gerenciá-los, tais como funções de criação, alteração, adição de uma
+nova entrada, etc. *Deve-se prever a existência de várias tabelas de
+símbolos no projeto de compilador*.
+
+** Contagem de linhas
+
+Controlar o número de linha do arquivo de entrada. Uma função cujo
+protótipo é =int get_line_number(void)= deve ser implementada e deve
+retornar o número da linha atual no processo de reconhecimento de
+=tokens=. Ela é utilizada nos testes automáticos. Lembre-se que a
+primeira linha de qualquer arquivo dado como é entrada é a linha
+número um.
+
+** Preencher a tabela de símbolos                                 :noexport:
+
+A tabela de símbolos deve ser preenchida com os tokens:
+- identificadores
+- literais (inteiros, flutuantes, caracteres, cadeia de caracteres)
+
+Qualquer outro token deve estar ausentes da tabela de símbolos. A
+_chave_ de cada entrada na tabela deve ser o *lexema* do token
+encontrado. O _conteúdo_ de cada entrada na tabela de símbolos deve ser
+o número da linha onde o último lexema correspondente foi encontrado.
+Na ocorrência de múltiplos lexemas idênticos na entrada, somente o
+número da linha da última ocorrência deve estar registrado na entrada
+correspondente.
+
+** Ignorar comentários
+
+Ignorar comentários no formato C99: tudo o que segue a partir de =//= e
+tudo que está compreendido entre =/*= e =*/=. As linhas devem ser
+contabilizadas mesmo dentro de comentários do segundo tipo. Espaços
+devem ser igualmente ignorados.
+
+** Lançar erros léxicos
+
+Lançar erros léxicos ao encontrar caracteres inválidos na entrada,
+retornando o token de erro.
+
+** Listar o conteúdo tabela de símbolos                           :noexport:
+
+Implementar a função =comp_print_table=, em =cc_misc.c= de forma a listar
+todas as entradas da tabela de símbolos. Deve-se utilizar
+obrigatoriamente a função =void cc_dict_etapa_1_print_entrada (char
+*key, int line)= para imprimir uma entrada. Esta função será utilizada
+na avaliação automática para averiguar se a solução insere somente os
+tokens que devem ser inseridos na tabela de símbolos.
+
+* Descrição dos Tokens
+
+Existem tokens que correspondem a caracteres particulares, como
+vírgula, ponto-e-vírgula, parênteses, para os quais é mais conveniente
+usar seu próprio código =ASCII=, convertido para inteiro, como valor de
+retorno que os identifica. Para os tokens compostos, como palavras
+reservadas e identificadores, utiliza-se uma constante, conforme o
+arquivo =tokens.h= fornecido (mais tarde utilizaremos recursos do =bison=)
+com um código maior do que 255 para representá-los. Os tokens se
+enquadram em diferentes categorias:
+
+1. palavras reservadas da linguagem
+2. caracteres especiais
+3. operadores compostos
+4. identificadores
+5. literais.
+
+** Palavras Reservadas da Linguagem
+
+As palavras reservadas da linguagem são:
+#+BEGIN_EXAMPLE
+int float bool char string if then else
+while do input output return const static
+foreach for switch case break continue class
+private public protected end default
+#+END_EXAMPLE
+
+** Caracteres Especiais
+
+Os caracteres simples especiais empregados pela linguagem são listados
+abaixo separados apenas por espaços, e devem ser retornados com o
+próprio código =ASCII= convertido para inteiro. São eles:
+#+BEGIN_EXAMPLE
+ ,   ;   :   (   )   [   ]   {   }   +   -   |   ?   @
+ *   /   <   >   =   !   &   %   #   ^   .   $   ~   `
+#+END_EXAMPLE
+
+** Operadores Compostos
+
+A linguagem possui operadores compostos, além dos operadores
+representados por alguns dos caracteres da seção anterior.  Os
+operadores compostos são:
+#+BEGIN_EXAMPLE
+<=    >=    ==     !=    &&    ||    >>     <<     %>%    %|%
+#+END_EXAMPLE
+
+** Identificadores
+
+Os identificadores da linguagem são formados por um caractere
+alfabético seguido de zero ou mais caracteres alfanuméricos, onde
+considera-se caractere alfabético como letras maiúsculas ou minúsculas
+ou o caractere sublinhado e onde dígitos são =0=, =1=, =2=, ..., =9=.
+
+** Literais
+
+Literais são formas de descrever constantes no código fonte. Literais
+do tipo =int= são representados como repetições de um ou mais dígitos
+precedidos opcionalmente pelo sinal de negativo ou positivo. Literais
+em =float= são formados como um inteiro seguido de ponto decimal e uma
+sequência de dígitos. A notação científica é possível para números
+ponto flutuantes utilizando um =E= ou =e= seguindo de um número positivo
+ou negativo inteiro.  Literais do tipo =bool= podem ser =false= ou =true=.
+Literais do tipo =char= são representados por um único caractere entre
+entre aspas simples como por exemplo:
+
+#+BEGIN_EXAMPLE
+'a'
+' '
+'+'
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+"meu nome"
+"x = 3;"
+#+END_EXAMPLE
+
+#+latex: \onecolumn
+* Anexo - Arquivo =tokens.h=
+
+#+BEGIN_SRC text :tangle tokens.h
+/*
+Lista dos tokens, com valores constantes associados.  Este arquivo
+será posterioremente substituído, não acrescente nada.  Os valores das
+constantes sao arbitrários, mas não podem ser alterados.  Cada valor
+deve ser distinto e fora da escala ASCII.  Assim, não conflitam entre
+si e com os tokens representados pelo próprio valor ASCII de
+caracteres isolados.
+*/
+
+#define TK_PR_INT          256
+#define TK_PR_FLOAT        257
+#define TK_PR_BOOL         258
+#define TK_PR_CHAR         259
+#define TK_PR_STRING       260
+#define TK_PR_IF           261
+#define TK_PR_THEN         262
+#define TK_PR_ELSE         263
+#define TK_PR_WHILE        264
+#define TK_PR_DO           265
+#define TK_PR_INPUT        266
+#define TK_PR_OUTPUT       267
+#define TK_PR_RETURN       268
+#define TK_PR_CONST        269
+#define TK_PR_STATIC       270
+#define TK_PR_FOREACH      271
+#define TK_PR_FOR          272
+#define TK_PR_SWITCH       273
+#define TK_PR_CASE         274
+#define TK_PR_BREAK        275
+#define TK_PR_CONTINUE     276
+#define TK_PR_CLASS        277
+#define TK_PR_PRIVATE      278
+#define TK_PR_PUBLIC       279
+#define TK_PR_PROTECTED    280
+#define TK_OC_LE           281
+#define TK_OC_GE           282
+#define TK_OC_EQ           283
+#define TK_OC_NE           284
+#define TK_OC_AND          285
+#define TK_OC_OR           286
+#define TK_OC_SL           287
+#define TK_OC_SR           288
+#define TK_OC_FORWARD_PIPE 289
+#define TK_OC_BASH_PIPE    290
+#define TK_LIT_INT         291
+#define TK_LIT_FLOAT       292
+#define TK_LIT_FALSE       293
+#define TK_LIT_TRUE        294
+#define TK_LIT_CHAR        295
+#define TK_LIT_STRING      296
+#define TK_IDENTIFICADOR   297
+#define TOKEN_ERRO         298
+#define TK_PR_END          299
+#define TK_PR_DEFAULT      300
+#+END_SRC
+
+* Anexo - Arquivo =main.c=
+
+#+BEGIN_SRC C :tangle main.c
+/*
+Função principal para impressão de tokens.
+
+Este arquivo será posterioremente substituído, não acrescente nada.
+*/
+#include <stdio.h>
+#include "tokens.h"
+extern int yylex(void);
+extern int yylex_destroy(void);
+
+extern FILE *yyin;
+extern char *yytext;
+extern int get_line_number (void);
+#define print_nome(TOKEN) \
+    printf("%d " #TOKEN " [%s]\n", get_line_number(), yytext);
+#define print_nome2(TOKEN) \
+    printf("%d TK_ESPECIAL [%c]\n", get_line_number(), TOKEN);
+
+int main (int argc, char **argv)
+{
+  int token = 0;
+  while (token = yylex()) {
+    switch (token){
+    case '~':
+    case '@':
+    case '`':
+    case ',':
+    case ';':
+    case ':':
+    case '(':
+    case ')':
+    case '[':
+    case ']':
+    case '{':
+    case '}':
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+    case '<':
+    case '>':
+    case '=':
+    case '!':
+    case '&':
+    case '.':
+    case '%':
+    case '#':
+    case '^':
+    case '|':
+    case '$':
+    case '?': print_nome2 (token); break;
+    case TK_PR_INT: print_nome(TK_PR_INT); break;
+    case TK_PR_FLOAT: print_nome(TK_PR_FLOAT); break;
+    case TK_PR_BOOL: print_nome (TK_PR_BOOL); break;
+    case TK_PR_CHAR: print_nome (TK_PR_CHAR); break;
+    case TK_PR_STRING: print_nome (TK_PR_STRING); break;
+    case TK_PR_IF: print_nome (TK_PR_IF); break;
+    case TK_PR_THEN: print_nome (TK_PR_THEN); break;
+    case TK_PR_ELSE: print_nome (TK_PR_ELSE); break;
+    case TK_PR_WHILE: print_nome (TK_PR_WHILE); break;
+    case TK_PR_DO: print_nome (TK_PR_DO); break;
+    case TK_PR_INPUT: print_nome (TK_PR_INPUT); break;
+    case TK_PR_OUTPUT: print_nome (TK_PR_OUTPUT); break;
+    case TK_PR_RETURN: print_nome (TK_PR_RETURN); break;
+    case TK_PR_CONST: print_nome (TK_PR_CONST); break;
+    case TK_PR_STATIC: print_nome (TK_PR_STATIC); break;
+    case TK_PR_FOREACH: print_nome (TK_PR_FOREACH); break;
+    case TK_PR_FOR: print_nome (TK_PR_FOR); break;
+    case TK_PR_SWITCH: print_nome (TK_PR_SWITCH); break;
+    case TK_PR_CASE: print_nome (TK_PR_CASE); break;
+    case TK_PR_BREAK: print_nome (TK_PR_BREAK); break;
+    case TK_PR_CONTINUE: print_nome (TK_PR_CONTINUE); break;
+    case TK_PR_CLASS: print_nome (TK_PR_CLASS); break;
+    case TK_PR_PRIVATE: print_nome (TK_PR_PRIVATE); break;
+    case TK_PR_PUBLIC: print_nome (TK_PR_PUBLIC); break;
+    case TK_PR_PROTECTED: print_nome (TK_PR_PROTECTED); break;
+    case TK_PR_END: print_nome (TK_PR_END); break;
+    case TK_PR_DEFAULT: print_nome (TK_PR_DEFAULT); break;
+    case TK_OC_LE: print_nome (TK_OC_LE); break;
+    case TK_OC_GE: print_nome (TK_OC_GE); break;
+    case TK_OC_EQ: print_nome (TK_OC_EQ); break;
+    case TK_OC_NE: print_nome (TK_OC_NE); break;
+    case TK_OC_AND: print_nome (TK_OC_AND); break;
+    case TK_OC_OR: print_nome (TK_OC_OR); break;
+    case TK_OC_SL: print_nome (TK_OC_SL); break;
+    case TK_OC_SR: print_nome (TK_OC_SR); break;
+    case TK_OC_FORWARD_PIPE: print_nome (TK_OC_FORWARD_PIPE); break;
+    case TK_OC_BASH_PIPE: print_nome (TK_OC_BASH_PIPE); break;
+    case TK_LIT_INT: print_nome (TK_LIT_INT); break;
+    case TK_LIT_FLOAT: print_nome (TK_LIT_FLOAT); break;
+    case TK_LIT_FALSE: print_nome (TK_LIT_FALSE); break;
+    case TK_LIT_TRUE: print_nome (TK_LIT_TRUE); break;
+    case TK_LIT_CHAR: print_nome (TK_LIT_CHAR); break;
+    case TK_LIT_STRING: print_nome (TK_LIT_STRING); break;
+    case TK_IDENTIFICADOR: print_nome (TK_IDENTIFICADOR); break;
+    case TOKEN_ERRO:  print_nome (TOKEN_ERRO); break;
+    default: printf ("<Invalid Token with code %d>\n", token); return 1; break;
+    }
+  }
+  yylex_destroy();
+  return 0;
+}
+#+END_SRC
+
+* 2016-05-21 Gerador de tokens para testes                         :noexport:
+
+Tokens desta especificação:
+
+#+begin_src txt :tangle tokens.input
+//palavras reservadas
+TK_PR_INT int
+TK_PR_FLOAT float
+TK_PR_BOOL bool
+TK_PR_CHAR char
+TK_PR_STRING string
+TK_PR_IF if
+TK_PR_THEN then
+TK_PR_ELSE else
+TK_PR_WHILE while
+TK_PR_DO do
+TK_PR_INPUT input
+TK_PR_OUTPUT output
+TK_PR_RETURN return
+TK_PR_CONST const
+TK_PR_STATIC static
+TK_PR_FOREACH foreach
+TK_PR_FOR for
+TK_PR_SWITCH switch
+TK_PR_CASE case
+TK_PR_BREAK break
+TK_PR_CONTINUE continue
+TK_PR_CLASS class
+TK_PR_PRIVATE private
+TK_PR_PUBLIC public
+TK_PR_PROTECTED protected
+//caracteres especiais
+TK_ESPECIAL ,
+TK_ESPECIAL ;
+TK_ESPECIAL :
+TK_ESPECIAL (
+TK_ESPECIAL ) 
+TK_ESPECIAL [
+TK_ESPECIAL ]
+TK_ESPECIAL {
+TK_ESPECIAL }
+TK_ESPECIAL +
+TK_ESPECIAL - 
+TK_ESPECIAL *
+TK_ESPECIAL /
+TK_ESPECIAL <
+TK_ESPECIAL >
+TK_ESPECIAL =
+TK_ESPECIAL !
+TK_ESPECIAL &
+TK_ESPECIAL $
+TK_ESPECIAL %
+TK_ESPECIAL #
+TK_ESPECIAL ^
+//operadores compostos
+TK_OC_LE <=
+TK_OC_GE >=
+TK_OC_EQ ==
+TK_OC_NE !=
+TK_OC_AND &&
+TK_OC_OR ||
+TK_OC_SR >>
+TK_OC_SL <<
+//identificadores
+TK_IDENTIFICADOR id
+TK_IDENTIFICADOR ID
+TK_IDENTIFICADOR _id
+TK_IDENTIFICADOR _ID
+TK_IDENTIFICADOR _01
+//literais
+TK_LIT_INT 12
+TK_LIT_INT -12
+TK_LIT_INT +12
+TK_LIT_FLOAT 12.34
+TK_LIT_FLOAT -12.34
+TK_LIT_FLOAT +12.34
+TK_LIT_FALSE false
+TK_LIT_TRUE true
+TK_LIT_CHAR 'a'
+TK_LIT_CHAR '='
+TK_LIT_CHAR '+'
+TK_LIT_STRING "meu nome"
+TK_LIT_STRING "x = 3"
+#+end_src
+
+Extras:
+
+#+begin_src txt :tangle extra_00.input
+12
+ //34  56
+78
+INF47: 1 TK_LIT_INT [12]
+INF47: 3 TK_LIT_INT [78]
+INF47TABLE: [12] 1
+INF47TABLE: [78] 3
+#+end_src
+
+#+begin_src txt :tangle extra_01.input
+12 /*
+   34  56
+*/78
+INF47: 1 TK_LIT_INT [12]
+INF47: 3 TK_LIT_INT [78]
+INF47TABLE: [12] 1
+INF47TABLE: [78] 3
+#+end_src
+
+#+begin_src txt :tangle extra_02.input
+id12
+34
+56.78
+INF47: 1 TK_IDENTIFICADOR [id12]
+INF47: 2 TK_LIT_INT [34]
+INF47: 3 TK_LIT_FLOAT [56.78]
+INF47TABLE: [id12] 1
+INF47TABLE: [34] 2
+INF47TABLE: [56.78] 3
+#+end_src
+
+Gerador de testes para esta especificação:
+
+#+begin_src sh :results output :session :exports both
+sed "/^\/\/.*/d" tokens.input > tokens_aux.input
+CONTADOR=1
+DIR=saida
+mkdir -p $DIR
+rm -rf $DIR/*
+while read -r line; do
+  #unique identifier
+  TOKEN=`echo "$line" | cut -d" " -f2-`
+  TIPO=`echo "$line" | cut -d" " -f1`
+
+  UNIQUE=$(echo 00000$CONTADOR | tail -c 4)
+  ENTRADATEST="entrada_$UNIQUE"
+  ENTRADA="$DIR/$ENTRADATEST"
+  TESH="$DIR/aval_$UNIQUE.tesh"
+  TESHV="$DIR/valg_$UNIQUE.tesh"
+
+  #generate input
+  echo "$TOKEN" > $ENTRADA
+
+  #generate tesh
+  echo "#! ./tesh" > $TESH
+  echo "! timeout 5" >> $TESH
+  echo "$ ./main tests/e1/$ENTRADATEST" >> $TESH
+  echo "> 1 $TIPO [$TOKEN]" >> $TESH
+  #the following four lines do not work
+  #echo "! setenv INF47_TABLE=True" >> $TESH
+  #echo "$ ./main tests/e1/$ENTRADATEST" >> $TESH
+  #TK=`echo "$TOKEN" | sed "s/\"//g"`
+  #echo "> Etapa 1 Tabela: $TK 1" >> $TESH
+
+  #generate tesh for valgrind
+  echo "#! ./tesh" > $TESHV
+  echo "! timeout 15" >> $TESHV
+  echo "! output ignore" >> $TESHV
+  echo "$ ./tests/scripts/valgrindtest ./main tests/e1/$ENTRADATEST" >> $TESHV
+
+  CONTADOR=$(($CONTADOR + 1))
+done < "tokens_aux.input"
+
+for file in extra_*.input; do
+  UNIQUE=$(echo 00000$CONTADOR | tail -c 4)
+  ENTRADATEST="entrada_$UNIQUE"
+  ENTRADA="$DIR/$ENTRADATEST"
+  TESH="$DIR/aval_$UNIQUE.tesh"
+  TESHV="$DIR/valg_$UNIQUE.tesh"
+
+  #define input
+  cat $file | sed "/^INF47/d" > $ENTRADA
+
+  #generate tesh
+  echo "#! ./tesh" > $TESH
+  echo "! timeout 5" >> $TESH
+  echo "$ ./main tests/e1/$ENTRADATEST" >> $TESH
+  cat $file | grep INF47 | sed -e "s/INF47:/>/" -e "/INF47TABLE:/d" >> $TESH
+  echo "! setenv INF47_TABLE=True" >> $TESH
+  echo "$ ./main tests/e1/$ENTRADATEST" >> $TESH
+  cat $file | grep INF47TABLE: | sed -e "s/INF47TABLE:/>/" >> $TESH
+
+  #generate tesh for valgrind
+  echo "#! ./tesh" > $TESHV
+  echo "! timeout 15" >> $TESHV
+  echo "! output ignore" >> $TESHV
+  echo "$ ./tests/scripts/valgrindtest ./main tests/e1/$ENTRADATEST" >> $TESHV
+
+  CONTADOR=$(($CONTADOR + 1))
+done
+
+echo "$(($CONTADOR)) testes gerados."
+
+#+end_src
+
+#+RESULTS:
+: 77 testes gerados.
+
+* 2016-05-21 Entrega Etapa 1                                       :noexport:
+
+#+TBLNAME:etapa1tags
+|----+----------+--------------+--------------------------------------------------------------+---------------|
+|----+----------+--------------+--------------------------------------------------------------+---------------|
+
+Call `org-table-export' command in the table, export to file =etapa1.csv=.
+
+#+begin_src sh :results output :session :exports both
+TESTSDIR=`pwd`/saida/
+FILE=etapa1.csv
+DIR=results/etapa1/
+mkdir -p $DIR
+rm -rf $DIR/*
+cp $FILE $DIR
+cd $DIR
+
+# prepare reference empty repository
+git clone git@bitbucket.org:schnorr/compil-2016-1.git ref
+MAIN="`pwd`/ref/src/main.c"
+
+# loop over solutions
+while read -r line; do
+   UNIQUE=`echo "$line" | cut -d, -f1`
+   GITREF=`echo "$line" | cut -d, -f4`
+   TAGREF=`echo "$line" | cut -d, -f5`
+
+   if [ -z $TAGREF ]; then
+      continue
+   fi
+   echo $UNIQUE $GITREF $TAGREF
+
+   # clone the repository
+   git clone $GITREF $UNIQUE
+
+   # let's customize it
+   cd $UNIQUE
+   git checkout $TAGREF
+   rm -rf `find | grep CMakeCache.txt`
+   rm -rf `find | grep build`
+
+   # copy main.c
+   cp $MAIN src/main.c
+
+   # erase existing tests
+   rm -rf tests/e[123456]/
+   # use new set of tests
+   mkdir -p tests/e1/
+   cp $TESTSDIR/* tests/e1
+
+   cd ..
+
+   # preparing the out-of-source build dir
+   BUILDIR=b-$UNIQUE
+   mkdir -p $BUILDIR; cd $BUILDIR;
+   cmake -DETAPA_1=ON ../$UNIQUE/; make;
+   cd ..
+done < $FILE
+#+end_src
+
+* 2016-05-23 Execução da Avaliação                                 :noexport:
+
+#+begin_src sh :results output :session :exports both
+  cd results/etapa1/
+  for group in `ls -1d b-*`; do
+    echo $group
+    cd $group
+    ctest
+    cd ..
+  done > etapa1.log
+  cp etapa1.log ../../
+#+end_src
+
+#+RESULTS:
+
+* 2016-05-24 Interpretação da Avaliação                            :noexport:
+
+#+begin_src sh :results output :session :exports both
+cat etapa1.log | sed "/^b-../d" | awk -v RS="Test project" '{ print $0 > "temp"(NR-1) }'
+TOTALTESTS=`cat temp1  | grep Test\ \# | tail -n1 | cut -d"/" -f1`
+DIR=etapa1
+mkdir -p $DIR/
+rm -rf $DIR/*
+mkdir -p $DIR/testes/
+SAIDACSV=$DIR/etapa1.csv
+echo "grupo,total,falhos,nota" > $SAIDACSV
+for i in `seq 1 9`; do
+   FILE=temp${i}
+   echo "== $i =="
+   cat $FILE | grep \(Failed\)
+   FAILEDTESTS=`cat $FILE | grep \(Failed\) | wc -l`
+   SUCCESSRATE=`echo "($TOTALTESTS-$FAILEDTESTS)/$TOTALTESTS*10" | bc -l`
+   echo "Group $i obtained $SUCCESSRATE success rate."
+   echo "$i,$TOTALTESTS,$FAILEDTESTS,$SUCCESSRATE" >> $SAIDACSV
+done > $DIR/etapa1-eval.log
+cp etapa1.log $DIR
+cp -prf saida/* $DIR/testes/
+tar cfz etapa1.tar.gz etapa1
+#+end_src
+
+#+RESULTS:
+
