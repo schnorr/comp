@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador: *Etapa 6 de Otimização*
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+#+Language: pt-br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil title:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+
+#+latex: {\Large
+#+latex: \noindent
+Projeto de Compilador
+
+#+latex: \noindent
+E7 de *Otimização*
+#+latex: }
+#+latex: \bigskip
+
+#+latex: \noindent
+Prof. Lucas Mello Schnorr
+
+#+latex: \noindent
+schnorr@inf.ufrgs.br
+
+* Introdução
+
+A sétima e última etapa do trabalho de implementação de um compilador
+para a Linguagem consiste na implementação de técnicas de otimização
+de código. Tais otimizações devem ser feitas no contexto da
+representação intermediária da *Linguagem ILOC*, descrita em detalhes no
+apêndice A do livro /Engineering a Compiler/ de Keith, mas com o
+essencial descrito na definição da quinta etapa do projeto de
+compiladores.
+
+* Funcionalidades Necessárias
+
+Por ser definido.
