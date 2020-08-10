@@ -45,13 +45,13 @@ cada etapa é sempre o mesmo.
 
 | Etapa | Descrição e Especificação | Peso |
 |-------+---------------------------+------|
-| E1    | [[./etapa1.org][Análise Léxica]]            |   10 |
-| E2    | [[./etapa2.org][Análise Sintática]]         |   10 |
-| E3    | [[./etapa3.org][Árvore Sintática Abstrata]] |   10 |
-| E4    | [[./etapa4.org][Análise Semântica]]         |   10 |
-| E5    | [[./etapa5.org][Geração de Código]]         |   10 |
-| E6    | [[./etapa6.org][Suporte de Execução]]       |   10 |
-| E7    | [[./etapa7.org][Otimização]]                |   10 |
+| E1    | [[./E1.org][Análise Léxica]]            |   10 |
+| E2    | [[./E2.org][Análise Sintática]]         |   10 |
+| E3    | [[./E3.org][Árvore Sintática Abstrata]] |   10 |
+| E4    | [[./E4.org][Análise Semântica]]         |   10 |
+| E5    | [[./E5.org][Geração de Código]]         |   10 |
+| E6    | [[./E6.org][Suporte de Execução]]       |   10 |
+| E7    | [[./E7.org][Otimização]]                |   10 |
 
 A nota máxima do projeto de compilador é 70. Esta será utilizada para
 integralizar a nota final da disciplina conforme regramentos do PEA.
