@@ -1,0 +1,265 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador: Etapa 4 para Análise Semântica
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+#+Language: pt-br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil title:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+#+latex: {\Large
+#+latex: \noindent
+Projeto de Compilador
+
+#+latex: \noindent
+E4 para *Análise Semântica*
+#+latex: }
+#+latex: \bigskip
+
+#+latex: \noindent
+Prof. Lucas Mello Schnorr
+
+#+latex: \noindent
+schnorr@inf.ufrgs.br
+
+* Introdução
+
+A quarta etapa do trabalho de implementação de um compilador para a
+linguagem consiste em verificações semânticas durante o processo de
+compilação. Estas verificações fazem parte do sistema de tipos da
+linguagem com um conjunto de regras detalhado a seguir.  Toda a
+verificação de tipos é feita de forma estática, em tempo de
+compilação.
+
+Finalmente, todos os nós da Árvore Sintática Abstrata (AST), gerada na
+etapa anterior, terão agora um novo campo que indica o seu tipo. O tipo de
+um determinado nó da AST pode, em algumas situações, não ser definido
+diretamente. Nestes casos, seu tipo deve ser inferido de acordo com as
+regras de inferência da linguagem. Uma série de testes de coerência
+comportamental das construções sintáticas reconhecidas e representadas
+na AST devem ser feitas nesta etapa.
+
+* Funcionalidades Necessárias
+** Implementar uma tabela de símbolos
+
+A tabela de símbolos serve para guardar todas as informações a
+respeito dos símbolos encontrados na entrada. Várias tabelas de
+símbolos podem co-existir, uma para cada escopo. Cada entrada na
+tabela de símbolos é representada por uma chave e um conteúdo. A chave
+identifica unicamente o símbolo, e o conteúdo correspondente deve ter
+diferentes campos. Os campos registram as seguintes informações:
+
+- localização (linha e opcional coluna) da sua definição/declaração
+- natureza (literal, variável, função, etc)
+- tipo (qual o tipo de dado deste símbolo)
+- tamanho (derivado do tipo)
+- argumentos e seus tipos (no caso de funções)
+- demais informações do valor do token pelo =yylval= (veja [[./etapa3.org][E3]])
+
+** Verificação de declarações
+
+Todos os identificadores devem ter sido declarados no momento do seu
+uso, seja como variável, como vetor ou como função. Essa verificação
+de declaração prévia deve considerar o escopo da linguagem, que pode
+ser o escopo global, o escopo local da função e o escopo de um bloco,
+sendo que este pode ser recursivamente aninhado. Uma forma de se
+implementar estas regras de escopo é através de uma pilha de tabelas
+de símbolos. Todas as entradas na tabela de símbolos devem ter um tipo
+associado conforme a declaração, verificando-se se não houve dupla
+declaração (=ERR_DECLARED=) ou se o símbolo não foi declarado
+(=ERR_UNDECLARED=). Variáveis com o mesmo nome podem co-existir em
+escopos diferentes.
+
+** Uso correto de identificadores
+
+O uso de identificadores deve ser compatível com sua declaração e com
+seu tipo. Variáveis somente podem ser usadas sem indexação
+(=ERR_VARIABLE=), vetores somente podem ser utilizados com indexação
+(=ERR_VECTOR=), e funções apenas devem ser usadas como chamada de função
+(=ERR_FUNCTION=), isto é, seguidas da lista de argumentos entre
+parênteses.
+
+** Verificação de tipos (na AST) e tamanho dos dados
+
+Uma declaração de variável deve permitir ao compilador definir o tipo
+e o tamanho da variável na sua entrada na tabela de símbolos. Com o
+auxílio dessa informação, quando necessário, os tipos de dados
+corretos devem ser inferidos onde forem usados, em expressões
+aritméticas, relacionais, lógicas, ou para índices de vetores.
+(=ERR_WRONG_TYPE=, =ERR_STRING_TO_X=, =ERR_CHAR_TO_X=). Isso implica que
+todos os nós da AST são candidatos a terem um tipo definido de acordo
+com as regras de inferência de tipos. Um nó da AST deve ter portanto
+um novo campo que registra o seu tipo de dado. O processo de
+inferência está descrito abaixo.
+
+** Argumentos e parâmetros de funções
+
+A lista de argumentos fornecidos em uma chamada de função deve ser
+verificada contra a lista de parâmetros formais na declaração da mesma
+função. Cada chamada de função deve prover um argumento para cada
+parâmetro (=ERR_MISSING_ARGS= e =ERR_EXCESS_ARGS=), e ter o seu tipo
+compatível (=ERR_WRONG_TYPE_ARGS=). Tais verificações devem ser
+realizadas levando-se em conta as informações registradas na tabela de
+símbolos.
+
+** Verificação de tipos em comandos
+
+Todos os comandos simples da linguagem deve ser verificados
+semanticamente.  O comando de retorno =return= deve ser seguido
+obrigatoriamente por uma expressão cujo tipo é compatível com o tipo
+de retorno da função (=ERR_WRONG_PAR_RETURN=). Prevalece o tipo do
+identificador em um comando de atribuição.
+
+#+latex: \onecolumn\appendix
+
+* Anexo - Natureza
+
+#+BEGIN_EXAMPLE
+#define NATUREZA_LITERAL_INT        1
+#define NATUREZA_LITERAL_FLOAT      2
+#define NATUREZA_LITERAL_CHAR       3
+#define NATUREZA_LITERAL_STRING     4
+#define NATUREZA_LITERAL_BOOL       5
+#define NATUREZA_IDENTIFICADOR      6
+#+END_EXAMPLE
+
+* Anexo - Sistema de tipos da Linguagem
+** Conversão implícita
+
+As regras de coerção de tipos da Linguagem são as seguintes:
+- Não há conversão implícita para os tipos =string= e =char=
+- Um tipo =int= pode ser convertido implicitamente para =float= e para =bool=
+- Um tipo =bool= pode ser convertido implicitamente para =float= e para =int=
+- Um tipo =float= pode ser convertido implicitamente para =int= e para
+  =bool=, perdendo precisão
+
+** Inferência
+
+As regras de inferência de tipos da linguagem são as seguintes:
+- A partir de =int= e =int=, infere-se =int=
+- A partir de =float= e =float=, infere-se =float=
+- A partir de =bool= e =bool=, infere-se =bool=
+- A partir de =float= e =int=, infere-se =float=
+- A partir de =bool= e =int=, infere-se =int=
+- A partir de =bool= e =float=, infere-se =float=
+
+** Tamanho
+
+O tamanho dos tipos da linguagem é definido da seguinte forma:
+
+- Um =char= ocupa 1 byte
+- Um =string= ocupa 1 byte para cada caractere
+- Um =int= ocupa 4 bytes
+- Um =float= ocupa 8 bytes
+- Um =bool= ocupa 1 byte
+- Um vetor ocupa o seu tamanho vezes o seu tipo
+
+* Anexo - Códigos de retorno para erros semântico
+
+A lista abaixo apresenta os códigos de retorno que devem ser
+utilizados quando o compilador encontrar erros semânticos. O programa
+deve chamar =exit= utilizando esses códigos imediamente após a impressão
+da linha que descreve o erro encontrado. Outros erros podem ser
+criados pelo grupo, bastante para tal adicioná-los ao final desta
+lista, informando o professor da existência deles no momento da
+submissão. Se não houverem erros (de qualquer natureza), o programa
+deve retornar o valor zero.
+
+#+BEGIN_SRC C :tangle errors.h
+/*
+ * Um identificador não declarado é encontrado
+ */
+
+#define ERR_UNDECLARED  10
+/*
+ * Um identificador já declarado é encontrado
+ */
+#define ERR_DECLARED    11
+
+/*
+ * O identificador encontrado deve ser utilizado como uma variável, em
+ * situações onde este é encontrade sendo usado como função ou como vetor,
+ * ou algum outro cenário semelhante.
+ */
+#define ERR_VARIABLE    20
+
+/*
+ * O identificador encontrado deve ser utilizado como um vetor, em
+ * situações onde este é encontrado sendo usado como variável ou função,
+ * ou algum outro cenário semelhante.
+ */
+#define ERR_VECTOR      21
+
+/*
+ * O identificador encontrado deve ser utilizado como uma função, em
+ * situações onde este é encontrado sendo usado como variável ou vetor,
+ * ou algum outro cenário semelhante.
+ */
+#define ERR_FUNCTION    22
+
+/*
+ * Os tipos (em atribuições e outras cenários) são incompatíveis.
+ */
+#define ERR_WRONG_TYPE  30
+
+/*
+ * Coerção impossível da variável do tipo string
+ * para outro tipo qualquer.
+ */
+#define ERR_STRING_TO_X 31
+
+/*
+ * Coerção impossível da variável do tipo
+ * char para outro tipo qualquer.
+ */
+#define ERR_CHAR_TO_X   32
+
+/*
+ * Faltam argumentos em uma chamada de função.
+ */
+#define ERR_MISSING_ARGS    40
+
+/*
+ * Sobram argumentos em uma chamada de função.
+ */
+#define ERR_EXCESS_ARGS     41
+
+/*
+ * Os parâmetros reais são de tipos incompatíveis
+ * com os correspondentes formais.
+ */
+#define ERR_WRONG_TYPE_ARGS 42 //argumentos incompatíveis
+
+/*
+ * No caso específico do comando input,
+ * o parâmetro não é identificador.
+ */
+#define ERR_WRONG_PAR_INPUT  50 //parâmetro não é identificador
+
+/*
+ * No caso específico do comando output, os parâmetros não
+ * são literal string ou expressão
+ */
+#define ERR_WRONG_PAR_OUTPUT 51
+
+/*
+ * No caso específico do comando return, o parâmetro não é
+ * compatível com tipo do retorno
+ */
+#define ERR_WRONG_PAR_RETURN 52
+#+END_SRC
+
+* Melhoramentos                                                    :noexport:
+
+1. Colocar alguns exemplos para cada um dos códigos de erro
+   - Com explicações para evitar interpretação errada
+2. 

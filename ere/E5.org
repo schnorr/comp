@@ -1,0 +1,2335 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador: *Etapa 5 de Geração de Código*
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+#+Language: pt-br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil title:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+#+latex: {\Large
+#+latex: \noindent
+Projeto de Compilador
+
+#+latex: \noindent
+E5 de *Geração de Código*
+#+latex: }
+#+latex: \bigskip
+
+#+latex: \noindent
+Prof. Lucas Mello Schnorr
+
+#+latex: \noindent
+schnorr@inf.ufrgs.br
+
+* Introdução
+
+A quinta etapa do trabalho de implementação de um compilador para a
+Linguagem consiste na geração de código intermediário a partir da
+árvore sintática abstrata (AST). Utilizaremos como representação
+intermediária a Linguagem ILOC, descrita em detalhes no apêndice A de
+/Engineering a Compiler/, mas com o essencial no anexo deste documento.
+Testes poderão ser realizados através de um simulador simples escrito
+em Python3 e já disponível também no anexo.
+
+* Funcionalidades Necessárias
+** Arranjos Multidimensionais
+
+Altere a gramática para suportar arranjos multidimensionais. A forma
+=tipo nome[n1][n2]...[n]= deve ser utilizada na declaração. No acesso a
+elementos dos arranjos, utilize =id[n1][n2]...[n]= quando existem duas
+dimensões, sendo que =num= deve ser um inteiro positivo. O valor de =num=
+no acesso pode ser oriundo de uma expressão aritmética. Arranjos
+aparecem em qualquer escopo, mas jamais são parâmetros. Veja:
+
+#+BEGIN_EXAMPLE
+float arranjo[10][40][30];
+int funcao_com_arranjos ()
+{
+   int a;
+   int b;
+   float c;
+   arranjo[a+b][b+c][10*a] = 3;
+   a = arranjo[a+b][b+c][10*a];
+}
+#+END_EXAMPLE
+
+** Estrutura de Dados para ILOC
+
+Implementa uma estrutura de dados para conter o código da operação e
+os argumentos necessários para cada operação. Note que os argumentos
+das operações são nomes de registradores, valores constantes, ou nomes
+de rótulos. _Além disso_, deve-se implementar uma estrutura de dados
+para manter uma lista de instruções ILOC. Dentre as várias forma de
+implementar, utilize aquela que mais se adequa ao uso em um
+compilador.
+
+** Rótulos e Registradores
+
+Uma função deve ser adicionada ao projeto de compilador para fornecer
+nomes de rótulos a serem utilizados na geração de código. Os nomes são
+utilizados para marcar os pontos de desvio no fluxo de execução. Todas
+as instruções ILOC devem ser realizadas sobre valores que estão em
+registradores. Sendo assim, uma função deve ser adicionada ao projeto
+de compilador para gerenciar a criação de nomes de registradores. Os
+nomes de rótulos e registradores devem seguir a convenção de nomes
+especificada na descrição da linguagem ILOC. Os registradores podem
+ser vistos como variáveis temporárias auxiliares.
+
+** Geração de Código
+
+Os programas deverão conter _apenas uma função_ (que pode se chamar
+=main=).  Existem pelo menos duas possibilidades de implementação
+válidas:
+
+1. *Em uma passagem*: realizar eventuais alterações gramaticais para
+   realizar a geração de código em uma única passagem (juntamente com
+   a análise léxica, sintática e semântica).
+
+2. *Em duas passagens*: Outra é optar por fazer o processo de geração de
+   código em uma segunda passagem sobre a AST, através da
+   implementação de uma função que faça o percorrimento.
+
+Informe o professor da sua escolha. Em ambos os casos, ao final da
+execução, o compilador deve ter na raiz da árvore AST um ponteiro para
+todo o código intermediário ILOC do programa de entrada.  A geração de
+código consiste na criação de uma ou mais instruções ILOC juntamente
+com a união de trechos das sub-árvores, com a criação de novos
+símbolos intermediários e rótulos conforme necessário. Nesta etapa,
+deve-se traduzir as seguintes construções da linguagem considerando
+que existe apenas o tipo =int=:
+
+- Cálculo de endereço na declaração de variáveis
+  - Endereço de variáveis locais são um deslocamento em relação ao registrador especial =rfp=
+  - Endereço de variáveis globais são um deslocamento em relação ao registrador especial =rbss=
+- Expressões aritméticas, com operações binárias
+  - soma, subtração, divisão e multiplicação
+- Expressões booleanas por controle de fluxo com curto-circuito
+  - todos os operadores relacionais
+  - todos os operadores lógicos (adote =&&= para o e lógico, =||= para o ou lógico)
+- O comando de atribuição
+- Os seguintes comandos de fluxo de controle
+  - if com else opcional
+  - while
+- Geração de código de arranjos multidimensionais
+
+*Simplificações* (ou seja, não precisa fazer):
+- Nada precisa ser feito referente aos outros tipos da linguagem:
+  - strings
+  - char
+  - float
+- Não é obrigatório implementar tradução de código para os elementos
+  que não estão listados acima, tais como:
+  - comandos de entrada e saída
+  - operações de shift
+  - comandos de retorno
+  - break
+  - continue
+  - case
+  - os comandos for e foreach
+  - o comando switch
+  - comandos com pipes
+  - expressões com pipes
+  - operadores ternários
+  - operadores de acesso ao endereço da variável ou valor do ponteiro
+  - operador ?
+  - operadores binários tais como
+    - resto da divisão
+    - bitwise
+    - e exponenciação
+  - qualquer outro elemento da linguagem não explicitado acima
+
+** Endereçamento de variáveis
+
+Na tradução para ILOC, deve-se considerar que o conteúdo de cada
+variável da Linguagem está em um endereço de memória. Este endereço
+deve ser calculado no momento da declaração da variável considerando o
+escopo atual e seu endereço base. Antes de realizar qualquer operação
+sobre uma variável, deve-se antes de tudo carregar o seu conteúdo (a
+partir de um endereço de memória) para um registrador (utilizando a
+operação =load=, por exemplo), para só então realizar a operação sobre a
+variável. Ao final desta operação, o valor resultante estará
+obrigatoriamente em um registrador. Este valor final deve ser
+transferido para o endereço da variável na memória (utilizando a
+operação =store=, por exemplo) caso necessário.
+
+* Dicas de Desenvolvimento
+
+Abaixo listam-se algumas dicas de desenvolvimento que podem ser úteis.
+
+** Instruções
+
+As instruções em código intermediário servem para isolar as tarefas de
+geração da sequência básica de instruções dos detalhes e formato
+específicos de uma arquitetura alvo. Além disso, a geração usada nesse
+trabalho emprega técnicas genéricas de forma funcional, didática, mas
+pode ser otimizada de várias formas antes da geração de código
+assembly. Dois exemplos de otimização são a reutilização de símbolos
+temporários em expressões e o uso de registradores. Entretanto, essas
+otimizações não fazem parte desta etapa do trabalho e são portanto
+opcionais.
+
+** Geração de Código
+
+A geração de código será feita de baixo para cima e da esquerda para a
+direita, na árvore. O modo mais simples de encadear novas instruções é
+representar os trechos de código como listas encadeadas invertidas,
+isto é, com um ponteiro para a última instrução de um trecho, e cada
+instrução apontando para a anterior. Ao final da geração, escreva uma
+função que percorre o código completo e inverte a lista de forma que
+se possa escrever o código na ordem em que deve ser executado.
+
+** Funções Auxiliares
+
+Para a geração de código, além das rotinas utilitárias de TACs e da
+rotina recursiva principal que percorre a AST, utilize outras funções
+auxiliares. Isto tem dois motivos: primeiro, a semelhança na geração
+de código em vários nós da árvore, especialmente nas expressões
+aritméticas e relacionais. Segundo, evitar o tamanho da função de
+geração. Ela deve realizar um \texttt{switch(node->type)} e chamar a
+função auxiliar de geração de código apropriada para o tipo deste nó
+da AST.
+
+** Entrada e Saída Padrão
+
+Organize a sua solução para que o compilador leia o programa da
+entrada padrão e gere o programa em ILOC na saída padrão. Dessa forma,
+pode-se realizar o seguinte comando (considerando que \texttt{main} é
+o binário do compilador):
+
+#+BEGIN_EXAMPLE
+./main < entrada.poa > saida.iloc
+#+END_EXAMPLE
+
+Onde =entrada.poa= contém um programa na linguagem sendo compilada, e
+=saida.iloc= contém em ILOC traduzido.
+
+** Avaliação automática
+
+Os testes automáticos utilizarão sistematicamente o simulador =ilocsim=
+(veja abaixo) para verificar se o código sintetizado pela solução do
+grupo realiza o que o programa na entrada diz que tem que ser
+feito. Vários mecanismos são empregados para isso, mas o principal é o
+estado da memória (valores que estão na pilha e segmento de dados) no
+final do programa.
+
+#+latex: \onecolumn\appendix
+
+* A Linguagem ILOC
+** Introdução
+
+ILOC é uma representação intermediária parecida com assembly para uma
+máquina RISC abstrata. A máquina abstrata que executa ILOC (veja o
+simulador abaixo escrito em Python) tem um número ilimitado de
+registradores. ILOC é um código de três endereços com operações de
+registrador a registrador, operações de carga (=load=) e armazenamento
+(=store=), comparações e desvios. Suporta apenas modos de endereçamento
+simples, tais como -- direto, endereço + offset, endereço + imediato,
+e imediato. Os operandos são lidos no início do ciclo que uma operação
+começa a ser executada. Os operandos resultantes da operação se tornam
+definidos no final do ciclo no qual a operação se completa.
+
+*Nota*: Este texto é uma tradução simplificada do apêndice A do livro do
+Keith com adaptação para a disciplina de compiladores na UFRGS.
+
+** Gramática da Linguagem ILOC
+
+Um programa ILOC consiste em uma lista sequencial de instruções. Cada
+instrução pode ser precedida por um rótulo. Um rótulo é apenas uma
+cadeia de caracteres sendo separada da instrução por dois pontos. Por
+convenção, limita-se o formato dos rótulos com a expressão regular
+=[a-z]([a-z]|[0-9]|-)*=. Se alguma instrução precisa de mais de
+um rótulo, deve ser inserido uma instrução que contém apenas um
+operação =nop= antes dela, colocando o rótulo adicional na
+instrução =nop=. Um programa ILOC é definido mais formalmente:
+
+| ProgramaILOC    | \rightarrow | ListaInstrucoes                                           |
+| ListaInstrucoes | \rightarrow | Instrucao \vert =label:= Instrucao \vert  Instrucao ListaInstrucoes |
+
+Cada instrução pode conter uma ou mais operações. Uma instrução com
+uma única operação é escrita em uma linha própria, enquanto que uma
+instrução com múltiplas operações pode ser escrita em várias
+linhas. Para agrupar operações em uma instrução única, nós envolvemos
+a lista de operações entre colchetes e separamos cada operações com
+ponto e vírgulas. Mais formalmente:
+
+| Instrucao      | \rightarrow | Operacao \vert =[= ListaOperacoes =]=        |
+| ListaOperacoes | \rightarrow | Operacao \vert Operacao =;= ListaOperacoes |
+
+Uma operação ILOC corresponde a uma instrução em nível de máquina que
+pode ser executada por uma única unidade funcional em um único
+ciclo. Ela tem um código de operação (=opcode=), uma sequência de
+operandos fontes separados por vírgulas, e uma sequência de operandos
+alvo separados também por vírgulas. Os operandos fonte são separados
+dos operandos alvo pelo símbolo ``=>'', que significa
+``em''. Formalmente:
+
+| Operacao       | \rightarrow | OperacaoNormal \vert OperacaoFluxoControle                   |
+| OperacaoNormal | \rightarrow | CodigoOperacao ListaOperandos \texttt{=>} ListaOperandos |
+| ListaOperandos | \rightarrow | Operando \vert Operando \texttt{,} ListaOperandos            |
+| Operando       | \rightarrow | =registrador= \vert =numero= \vert =rotulo=                            |
+
+
+O não-terminal /CodigoOperacao/ pode ser qualquer operação ILOC, exceto
+=cbr=, =jump=, e =jumpI=. As tabelas do sumário abaixo mostram o número de
+operandos e seus tipos para cada operação da Linguagem ILOC.
+
+Um /Operando/ pode ser um de três tipos: =registrador=, =numero= e =rotulo=. O
+tipo de cada operando é determinado pelo código da operação e a
+posição que o operando aparece na operação. Por convenção, os
+registradores começam pela letra =r= (minúscula) e são seguidos por um
+número inteiro ou uma cadeia de caracteres qualquer. Ainda por
+convenção, rótulos sempre começam pela letra =L= (maiúscula).
+
+A maioria das operações tem um único operando alvo; algumas operações
+de armazenamento (\emph{store}) tem operandos alvos múltiplos, assim
+como saltos. Por exemplo, =storeAI= tem um único operando fonte
+e dois operandos alvo. A fonte deve ser um registrador, e os alvos
+devem ser um registrador e uma constante imediata. Então, a operação
+da linguagem ILOC:
+
+=storeAI ri => rj,4= 
+
+calcula o endereço adicionando =4= ao conteúdo de =rj= e
+armazena o valor encontrado no registrador =ri= na localização da
+memória especificada pelo endereço calculado. Em outras palavras:
+
+/Memória/ (=rj + 4=) \leftarrow /Conteúdo/ (=ri=)
+
+Operações de fluxo de controle tem sintática diferente. Uma vez que
+estas operações não definem seus alvos, elas são escritas com uma
+flecha simples =->= ao invés da flecha dupla ==>=. Formalmente:
+
+| OperacaoFluxoControle | \rightarrow | =cbr register -> label, label= |
+|                       | \vert | =jumpI -> label=               |
+|                       | \vert | =jumpI -> register=            |
+
+A primeira operação, =cbr=, implementa um desvio condicional. As outras
+duas operações são desvios incondicionais.
+
+** Convenções de Nome
+
+O código ILOC usa um conjunto simples de convenções de nome.
+
+1. Existe um número ilimitado de registradores. Eles são nomeados com
+   um =r= seguido de um número inteiro positivo.
+
+2. Existe um número ilimitado de rótulos. Eles são nomeados com um =L=
+   seguido de um número inteiro positivo.
+
+3. O registrador =rfp= é reservado como um ponteiro para a base do
+   registro de ativação atual (o registro do topo da pilha).
+
+4. O registrador =rsp= é reservado como um ponteiro para o topo da pilha.
+
+5. O registrador =rbss= é reservado para apontar para a base do segmento
+   de dados do programa.
+
+6. O registrador =rpc= é reservado para manter o contador do programa
+   (/program counter/).
+
+7. Comentários em ILOC começam com =//= e continuam até o final da
+   linha.
+
+** Operações Individuais
+*** Aritmética
+
+A Linguagem ILOC tem operações de três endereços de registrador para
+registrador. Todas estas operações realizam a leitura dos operandos
+origem de registradores ou constantes e escrevem o resultado de volta
+para um registrador. Qualquer registrador pode servir como um operando
+origem ou destino.
+
+#+BEGIN_EXAMPLE
+add     r1, r2  =>  r3    // r3 = r1 + r2
+sub     r1, r2  =>  r3    // r3 = r1 - r2
+mult    r1, r2  =>  r3    // r3 = r1 * r2
+div     r1, r2  =>  r3    // r3 = r1 / r2
+addI    r1, c2  =>  r3    // r3 = r1 + c2
+subI    r1, c2  =>  r3    // r3 = r1 - c2
+rsubI   r1, c2  =>  r3    // r3 = c2 - r1
+multI   r1, c2  =>  r3    // r3 = r1 * c2
+divI    r1, c2  =>  r3    // r3 = r1 / c2
+rdivI   r1, c2  =>  r3    // r3 = c2 / r1
+#+END_EXAMPLE
+
+As primeiras quatro operações da tabela são operações registrador para
+registrador clássicas. As próximas seis especificam um operando
+imediato. As operações não comutativas, =sub= e =div=, tem duas formas
+imediatas alternativas para permitir o operando imediato em qualquer
+lado do operador. As formas imediatas são úteis para expressar
+resultados de certas otimizações, para escrever exemplos de forma mais
+concisa, e para registrar jeitos óbvios de reduzir a demanda por
+registradores.
+
+*** Shifts
+
+ILOC suporta um conjunto de operações aritméticas de \emph{shift},
+para a esquerda e para a direita, em ambas as formas, com
+registradores e imediata.
+
+#+BEGIN_EXAMPLE
+lshift   r1, r2  =>  r3     // r3 = r1 << r2
+lshiftI  r1, c2  =>  r3     // r3 = r1 << c2
+rshift   r1, r2  =>  r3     // r3 = r1 >> r2
+rshiftI  r1, c2  =>  r3     // r3 = r1 >> c2
+#+END_EXAMPLE
+
+*** Operações sobre a Memória
+
+ILOC suporta um conjunto de operadores de carga e armazenamento para
+mover valores entre a memória e registradores. As operações =load=
+e =cload= movem dados da memória para os registradores.
+
+#+BEGIN_EXAMPLE
+load    r1       =>   r2    // r2 = Memoria(r1)
+loadAI  r1, c2   =>   r3    // r3 = Memoria(r1 + c2)
+loadA0  r1, r2   =>   r3    // r3 = Memoria(r1 + r2)
+cload   r1       =>   r2    // caractere load
+cloadAI r1, c2   =>   r3    // caractere loadAI
+cloadA0 r1, r2   =>   r3    // caractere loadA0
+#+END_EXAMPLE
+
+As operações diferem nos modos de endereçamento que elas suportam. As
+operações =load= e =cload= assumem um endereço direto na forma de um único
+operando registrador. As operações =loadAI= e =cloadAI= adicionam um valor
+imediato ao conteúdo do registrador para formar um endereço
+imediatamente antes de realizar a carga. Nós chamamos estas de
+operações de \emph{endereçamento imediato}. As operações =loadA0= e
+=cloadA0= adicionam o conteúdo de dois registradores para calcular o
+endereço efetivo imediatamente antes de realizar a carga. Estas
+operações são chamadas de /endereçamento por deslocamento/.
+
+Uma outra forma de carga que a Linguagem ILOC suporta é uma operação
+=loadI= de carga imediata. Ela recebe um inteiro como argumento e coloca
+este inteiro dentro do registrador alvo.
+
+#+BEGIN_EXAMPLE
+loadI c1 => r2 // r2 = c1
+#+END_EXAMPLE
+
+As operações de armazenamento são semelhantes, conforme a tabela abaixo.
+
+#+BEGIN_EXAMPLE
+store    r1 => r2        // Memoria(r2) = r1
+storeAI  r1 => r2, c3    // Memoria(r2 + c3) = r1
+storeAO  r1 => r2, r3    // Memoria(r2 + r3) = r1
+cstore   r1 => r2        // caractere store
+cstoreAI r1 => r2, c3    // caractere storeAI
+cstoreAO r1 => r2, r3    // caractere storeAO
+#+END_EXAMPLE
+
+Não há nenhuma operação de armazenamento imediato.
+
+*** Operações de Cópia entre Registradores
+
+A Linguagem ILOC tem um conjunto de operações para mover valores entre
+registradores, sem passar pela memória. Na listagem abaixo, as
+primeiras duas operações, =i2i= e =c2c=, copiam um valor de um registrador
+para outro, sem conversão. As duas últimas operações realizam
+conversões considerando a codificação de caracteres ASCII.
+
+#+BEGIN_EXAMPLE
+i2i r1 => r2 // r2 = r1 para inteiros
+c2c r1 => r2 // r2 = r1 para caracteres
+c2i r1 => r2 // converte um caractere para um inteiro
+i2c r1 => r2 // converte um inteiro para caractere
+#+END_EXAMPLE
+
+** Operações de Fluxo de Controle
+*** Visão Geral
+
+Em geral, operações de comparação na Linguagem ILOC recebem dois
+valores e retornam um valor booleano. A operação condicional =cbr=
+recebe um booleano como argumento e transfere o controle para um de
+dois rótulos alvo. Os dois rótulos alvo não precisam estar definidos
+previamente (pode-se saltar para um código mais a frente do programa).
+
+#+BEGIN_EXAMPLE
+cmp_LT r1, r2 -> r3        // r3 = true se r1 < r2, senão r3 = false
+cmp_LE r1, r2 -> r3        // r3 = true se r1 <= r2, senão r3 = false
+cmp_EQ r1, r2 -> r3        // r3 = true se r1 = r2, senão r3 = false
+cmp_GE r1, r2 -> r3        // r3 = true se r1 >= r2, senão r3 = false
+cmp_GT r1, r2 -> r3        // r3 = true se r1 > r2, senão r3 = false
+cmp_NE r1, r2 -> r3        // r3 = true se r1 != r2, senão r3 = false
+cbr     r1    -> l2, l3    // PC = endereço(l2) se r1 = true, senão PC = endereço(l3)
+#+END_EXAMPLE
+
+*** Saltos
+
+A Linguagem ILOC tem duas formas de operações de salto. A primeira é
+um salto incondicional e imediato que transfere o controle para um a
+primeira instrução após um rótulo. A segunda recebe um registrador
+como argumento. O conteúdo do registrador é interpretado como um
+endereço de código, transferindo o controle incondicionalmente e
+imediatamente para este endereço.
+
+#+BEGIN_EXAMPLE
+jumpI -> l1 // PC = endereço(l1)
+jump  -> r1 // PC = r1
+#+END_EXAMPLE
+
+** Sumário de Operações ILOC
+*** Sumários de Operações ILOC Individuais
+
+#+BEGIN_EXAMPLE
+nop                          // não faz nada 
+add      r1, r2   =>  r3     // r3 = r1 + r2
+sub      r1, r2   =>  r3     // r3 = r1 - r2
+mult     r1, r2   =>  r3     // r3 = r1 * r2
+div      r1, r2   =>  r3     // r3 = r1 / r2
+addI     r1, c2   =>  r3     // r3 = r1 + c2
+subI     r1, c2   =>  r3     // r3 = r1 - c2
+rsubI    r1, c2   =>  r3     // r3 = c2 - r1
+multI    r1, c2   =>  r3     // r3 = r1 * c2
+divI     r1, c2   =>  r3     // r3 = r1 / c2
+rdivI    r1, c2   =>  r3     // r3 = c2 / r1
+lshift   r1, r2   =>  r3     // r3 = r1 << r2
+lshiftI  r1, c2   =>  r3     // r3 = r1 << c2
+rshift   r1, r2   =>  r3     // r3 = r1 >> r2
+rshiftI  r1, c2   =>  r3     // r3 = r1 >> c2
+and      r1, r2   =>  r3     // r3 = r1 && r2
+andI     r1, c2   =>  r3     // r3 = r1 && c2
+or       r1, r2   =>  r3     // r3 = r1 || r2
+orI      r1, c2   =>  r3     // r3 = r1 || c2
+xor      r1, r2   =>  r3     // r3 = r1 xor r2
+xorI     r1, c2   =>  r3     // r3 = r1 xor c2
+loadI    c1       =>  r2     // r2 = c1
+load     r1       =>  r2     // r2 = Memoria(r1)
+loadAI   r1, c2   =>  r3     // r3 = Memoria(r1 + c2)
+loadA0   r1, r2   =>  r3     // r3 = Memoria(r1 + r2)
+cload    r1       =>  r2     // caractere load
+cloadAI  r1, c2   =>  r3     // caractere loadAI
+cloadA0  r1, r2   =>  r3     // caractere loadA0
+store    r1       =>  r2     // Memoria(r2) = r1
+storeAI  r1       =>  r2, c3 // Memoria(r2 + c3) = r1
+storeAO  r1       =>  r2, r3 // Memoria(r2 + r3) = r1
+cstore   r1       =>  r2     // caractere store
+cstoreAI r1       =>  r2, c3 // caractere storeAI
+cstoreAO r1       =>  r2, r3 // caractere storeAO
+i2i      r1       =>  r2     // r2 = r1 para inteiros
+c2c      r1       =>  r2     // r2 = r1 para caracteres
+c2i      r1       =>  r2     // converte um caractere para um inteiro
+i2c      r1       =>  r2     // converte um inteiro para caractere
+#+END_EXAMPLE
+
+*** Sumários de Operações ILOC de Fluxo de Controle
+
+#+BEGIN_EXAMPLE
+jumpI          ->  l1        // PC = endereço(l1)
+jump           ->  r1        // PC = r1
+cbr    r1      ->  l2, l3    // PC = endereço(l2) se r1 = true, senão PC = endereço(l3)
+cmp_LT r1, r2  ->  r3        // r3 = true se r1 < r2, senão r3 = false
+cmp_LE r1, r2  ->  r3        // r3 = true se r1 \leq r2, senão r3 = false
+cmp_EQ r1, r2  ->  r3        // r3 = true se r1 = r2, senão r3 = false
+cmp_GE r1, r2  ->  r3        // r3 = true se r1 \geq r2, senão r3 = false
+cmp_GT r1, r2  ->  r3        // r3 = true se r1 > r2, senão r3 = false
+cmp_NE r1, r2  ->  r3        // r3 = true se r1 \ne r2, senão r3 = false
+#+END_EXAMPLE
+
+* Simulador ILOC (=ilocsim=)
+
+#+begin_src shell :results output
+cat x.txt | ./main | ./ilocsim.py
+#+end_src
+
+#+BEGIN_SRC python :tangle ilocsim.py
+#!/usr/bin/env python3
+
+import sys
+import re
+import argparse
+
+def eprint(*s):
+   print(*s,file=sys.stdout)
+
+class Operation:
+   def __init__(self, s, patterns=[]):
+      if not patterns:
+         self.build_patterns(patterns)
+      for p in patterns:
+         m = re.match(p, s)
+         if m: break
+      self.op = None if m is None else [int(x) if re.match('^(-?[0-9]+)$',x) else x for x in m.groups()]
+
+   def pattern(self,ops,operandsLeft,operandsRight,arrow='=>'):
+      if type(ops) in (list,set):
+         ops = '(' + ('|'.join(['(?:%s)'%(x) for x in ops])) + ')'
+      else:
+         ops = '('+ops+')'
+      if type(operandsLeft) in (list,set):
+         operandsLeft = r'\s*,\s*'.join(operandsLeft)
+      if type(operandsRight) in (list,set):
+         operandsRight = r'\s*,\s*'.join(operandsRight)
+      if not operandsLeft and not operandsRight:
+         return ops
+      arrow = '[=-]>' # accept any arrow
+      arrow = r'\s*'+arrow+r'\s*'
+      return (
+         r'^\s*' +
+         ops +
+         r'\s+' +
+         operandsLeft +
+         arrow +
+         operandsRight +
+         r'\s*$')
+
+   def build_patterns(self, patterns):
+      register = r'([Rr]\w+)'
+      const    = r'((?:-?[0-9]+)|(?:@\w+))'
+      label    = r'([Ll]\w+)' # do labels really MUST start with L?
+      l = []
+      # op
+      l.append(('nop',None,None))
+      # halt
+      l.append(('halt',None,None))
+      # op => l
+      l.append(('jumpI','',label,'->'))
+      # op => r
+      l.append(('jump','',register,'->'))
+      # op c => r
+      l.append(('loadI',const,register))
+      # op r => r
+      ops = ['load','cload','store','cstore','i2i','c2c','c2i','i2c']
+      l.append((ops, register, register))
+      # op r => r c
+      ops = ['storeAI','cstoreAI']
+      l.append((ops,register,[register,const]))
+      # op r => l l
+      l.append(('cbr',register,[label,label],'->'))
+      # op r => r r
+      ops = ['storeAO','cstoreAO']
+      l.append((ops,register,[register,register]))
+      # op r, c => r
+      ops = ['addI','subI','rsubI','multI','divI','rdivI','lshiftI','rshiftI',
+      'andI','orI','xorI','loadAI','cloadAI']
+      l.append((ops, [register,const], register) )
+      # op r, r => r
+      ops = ['add','sub','mult','div','lshift','rshift','and','or','xor',
+      'loadAO','cloadAO']
+      l.append((ops, [register,register], register))
+      ops = ['cmp_LT','cmp_LE','cmp_EQ','cmp_GE','cmp_GT','cmp_NE']
+      l.append((ops, [register,register], register,'->'))
+
+      [patterns.append(re.compile(self.pattern(*x))) for x in l]
+
+#
+# Classe que guarda os valores
+#
+class Storage:
+   def __init__(self, values=None, default_f=lambda: 0xdeadbeef):
+      self.rfpFirstUpdate = 0
+      self.rspFirstUpdate = 0
+      self.stats = {'read':0,'write':0}
+      self.value = {}
+      if values:
+         for x in values:
+            self.value[x] = values[x]
+      self.default_f = default_f
+      self.default_f = lambda: 0
+   def get(self,x):
+      return self.value[x] if x in self.value else self.default_f()
+   def __str__(self):
+      return self.value.__str__()
+   def __len__(self):
+      return self.value.__len__()
+   def __iter__(self):
+      return self.value.__iter__()
+   def __getitem__(self, x):
+      self.stats['read'] += 1
+      return self.get(x)
+   def __setitem__(self, x, y):
+      update = 1
+      if (strict):
+         if (x == "rbss"):
+            update = 0
+         if (x == "rfp" and self.rfpFirstUpdate == 0):
+            update = 0
+            self.rfpFirstUpdate = 1
+         if (x == "rsp" and self.rspFirstUpdate == 0):
+            update = 0
+            self.rspFirstUpdate = 1
+
+      if (update):
+         self.stats['write'] += 1
+         self.value[x] = y
+      else:
+         eprint("Change of", x, "ignored (strict mode)");
+
+#
+# Classe do Simulador ILOC
+#
+class Sim:
+   def __init__(self, program, bss, fp, trace=False):
+      self.reg = Storage({'rbss':bss, 'rfp':fp, 'rpc':0})
+      self.mem = Storage()
+      self.labels = {}
+      self.ip = 0
+      self.stats = {'instructions':0}
+      self.varmap = {}
+      self.trace = trace
+      self.code = self.program_load(program)
+
+   def show_stats(self):
+      l = [x for x in self.stats if x != 'instructions']
+      l.sort(key=lambda x:-self.stats[x])
+      eprint('count\tinstruction')
+      for x in l:
+         eprint('%5d\t%s'%(self.stats[x],x))
+      eprint('\ninstructions executed: %4d'%(self.stats['instructions']))
+      eprint('register         read: %4d write: %4d'%(self.reg.stats['read'],self.reg.stats['write']))
+      eprint('memory           read: %4d write: %4d'%(self.mem.stats['read'],self.mem.stats['write']))
+      eprint('\n%10s %8s'%('register','value'))
+      l = [x for x in self.reg]
+      l.sort()
+      for x in l:
+         eprint('%10s %8d'%(x,self.reg.get(x)))
+      eprint('\n%10s %8s'%('memory','value'))
+      l = [x for x in self.mem]
+      l.sort()
+      for x in l:
+         eprint('%.8d %8d'%(x,self.mem.get(x)))
+
+   def show_instructions_executed_counting(self):
+      l = [x for x in self.stats if x != 'instructions']
+      l.sort(key=lambda x:-self.stats[x])
+      for x in l:
+         eprint('%d %s'%(self.stats[x],x))
+
+   def show_memory(self):
+      l = [x for x in self.mem]
+      l.sort()
+      for x in l:
+         eprint('%.8d %d'%(x,self.mem.get(x)))
+
+
+   def map_vars(self, code, varmap=None):
+      if type(code) not in (list,set):
+         code = [code]
+      if not varmap:
+         varmap = {}
+      n = max([varmap[x] for x in varmap]) if varmap else 0
+      ops1 = set(('loadI',))
+      ops2 = set(('addI','subI','rsubI','multI','divI','rdivI','lshiftI','rshiftI',
+                  'andI','orI','xorI','loadAI','cloadAI'))
+      ops3 = set(('storeAI','cstoreAI'))
+      ops = set().union(ops1,ops2,ops3)
+      pos = dict()
+      for x in ops1: pos[x] = 1
+      for x in ops2: pos[x] = 2
+      for x in ops3: pos[x] = 3
+      for ip in range(len(code)):
+         op = code[ip]
+         if op[0] in ops:
+            p = pos[op[0]]
+            if type(op[p]) != str or re.match('^([0-9]+)$',op[p]): continue
+            if op[p] not in varmap:
+               varmap[op[p]] = n
+               n += 1
+            op[p] = varmap[op[p]]
+
+   def map_labels(self, code, labels):
+      for op in code:
+         if 'cbr' == op[0]:
+            op[2] = labels[op[2]]
+            op[3] = labels[op[3]]
+         elif 'jumpI' == op[0]:
+            op[1] = labels[op[1]]
+
+   def program_load(self, program):
+      varmap = {}
+      labelmap = {}
+      l = []
+      for linha, s in enumerate(program.split('\n')):
+         if '//' in s:
+            s = s[:s.find('//')]
+         s = s.replace('\t',' ').replace('\r','').strip(' ')
+#         if s:
+#            eprint(len(l),s)
+         while 1:
+            # Procura por labels
+            m = re.match(r'^\s*(\w+)\s*:.*',s)
+            if not m: break
+            s = s[s.find(':')+1:].strip(' ')
+            self.labels[m.group(1)] = len(l)
+         if not s: continue
+        #  print(s)
+         o = Operation(s).op
+         if o is None:
+             print("Erro sintático na linha", linha+1, "com a instrução (", s, ")")
+             sys.exit(1)
+         else:
+             l.append( Operation(s).op )
+      self.map_labels(l,self.labels)
+      self.map_vars(l)
+#      eprint('---')
+#      for i in range(len(l)):
+#         eprint(i,l[i])
+#      eprint('---')
+      return l
+   def run(self):
+      while len(self.code) > self.ip:
+         self.step()
+   def step(self):
+      if self.trace:
+         eprint('%d %s'%(self.ip, self.code[self.ip]))
+#         eprint(self.reg['r0'],self.reg['r1'],self.reg['r2'],self.reg['r3'],self.reg['r4'])
+      self.stats['instructions'] += 1
+      op = self.code[self.ip]
+      self.reg['rpc'] = self.ip;
+      self.ip += 1
+#      print(self.ip-1,op,self.reg.get('r1'),self.reg.get('r2'),self.reg.get('r3'),self.reg.get('r4'))
+      if op[0] not in self.stats:
+         self.stats[op[0]] = 0
+      self.stats[op[0]] += 1
+      Sim.__dict__[ 'op_' + op[0] ](self, op[1:])
+#      eprint('r',self.reg['r0'],self.reg['r1'],self.reg['r2'],self.reg['r3'],self.reg['r4'])
+#      eprint('m',self.mem[0x100001],self.mem[0x100003])
+
+   def op_nop    (self,op): pass
+   def op_halt   (self,op): self.ip = len(self.code)+1
+
+   def op_add    (self,op): self.reg[op[2]] = self.reg[op[0]]  + self.reg[op[1]]
+   def op_sub    (self,op): self.reg[op[2]] = self.reg[op[0]]  - self.reg[op[1]]
+   def op_mult   (self,op): self.reg[op[2]] = self.reg[op[0]]  * self.reg[op[1]]
+   def op_div    (self,op): self.reg[op[2]] = self.reg[op[0]] // self.reg[op[1]]
+   def op_lshift (self,op): self.reg[op[2]] = self.reg[op[0]] << self.reg[op[1]]
+   def op_rshift (self,op): self.reg[op[2]] = self.reg[op[0]] >> self.reg[op[1]]
+   def op_and    (self,op): self.reg[op[2]] = self.reg[op[0]]  & self.reg[op[1]]
+   def op_or     (self,op): self.reg[op[2]] = self.reg[op[0]]  | self.reg[op[1]]
+   def op_xor    (self,op): self.reg[op[2]] = self.reg[op[0]]  ^ self.reg[op[1]]
+   def op_cmp_LT (self,op): self.reg[op[2]] = 1 if (self.reg[op[0]] <  self.reg[op[1]]) else 0
+   def op_cmp_LE (self,op): self.reg[op[2]] = 1 if (self.reg[op[0]] <= self.reg[op[1]]) else 0
+   def op_cmp_EQ (self,op): self.reg[op[2]] = 1 if (self.reg[op[0]] == self.reg[op[1]]) else 0
+   def op_cmp_GE (self,op): self.reg[op[2]] = 1 if (self.reg[op[0]] >= self.reg[op[1]]) else 0
+   def op_cmp_GT (self,op): self.reg[op[2]] = 1 if (self.reg[op[0]] >  self.reg[op[1]]) else 0
+   def op_cmp_NE (self,op): self.reg[op[2]] = 1 if (self.reg[op[0]] != self.reg[op[1]]) else 0
+
+   def op_addI   (self,op): self.reg[op[2]] = self.reg[op[0]]  + op[1]
+   def op_subI   (self,op): self.reg[op[2]] = self.reg[op[0]]  - op[1]
+   def op_rsubI  (self,op): self.reg[op[2]] = op[1] - self.reg[op[0]]
+   def op_multI  (self,op): self.reg[op[2]] = self.reg[op[0]]  * op[1]
+   def op_divI   (self,op): self.reg[op[2]] = self.reg[op[0]] // op[1]
+   def op_rdivI  (self,op): self.reg[op[2]] = op[1] // self.reg[op[0]]
+   def op_lshiftI(self,op): self.reg[op[2]] = self.reg[op[0]] << op[1]
+   def op_rshiftI(self,op): self.reg[op[2]] = self.reg[op[0]] >> op[1]
+   def op_andI   (self,op): self.reg[op[2]] = self.reg[op[0]]  & op[1]
+   def op_orI    (self,op): self.reg[op[2]] = self.reg[op[0]]  | op[1]
+   def op_xorI   (self,op): self.reg[op[2]] = self.reg[op[0]]  ^ op[1]
+
+   def op_load   (self,op): self.reg[op[1]] = self.mem[self.reg[op[0]]]
+   def op_loadI  (self,op): self.reg[op[1]] = op[0] #if (op[1] != "rbss") else self.reg[op[1]]
+   def op_loadAI (self,op): self.reg[op[2]] = self.mem[self.reg[op[0]]+op[1]]
+   def op_loadAO (self,op): self.reg[op[2]] = self.mem[self.reg[op[0]]+self.reg[op[1]]]
+#   def op_cload
+#   def op_cloadAI
+#   def op_cloadAO
+
+   def op_store  (self,op): self.mem[self.reg[op[1]]                ] = self.reg[op[0]]
+   def op_storeAI(self,op): self.mem[self.reg[op[1]]+op[2]          ] = self.reg[op[0]]
+   def op_storeAO(self,op): self.mem[self.reg[op[1]]+self.reg[op[2]]] = self.reg[op[0]]
+#   def op_cload
+#   def op_cloadAI
+
+   def op_i2i    (self,op): self.reg[op[1]] = self.reg[op[0]]
+#   def op_c2c
+#   def op_c2i
+#   def op_i2c
+
+   def op_jump   (self,op): self.ip = self.reg[op[0]]
+   def op_jumpI  (self,op): self.ip = op[0]
+   def op_cbr    (self,op): self.ip = op[1] if self.reg[op[0]] else op[2]
+
+   def op_print  (self,op): print(self.reg[op[0]])
+   def op_printI (self,op): print(op[0])
+
+   def test(self, code, beforeReg=None, afterReg=None, beforeMem=None, afterMem=None):
+      if not beforeReg: beforeReg = {}
+      if not afterReg: afterReg = {}
+      if not beforeMem: beforeMem = {}
+      if not afterMem: afterMem = {}
+      s = Sim(code)
+      if 'rbss' not in beforeReg:
+         beforeReg['rbss'] = self.reg.get('rbss')
+      if 'rbss' not in afterReg:
+         afterReg['rbss'] = self.reg.get('rbss')
+      s.mem = Storage(beforeMem)
+      s.reg = Storage(beforeReg)
+      s.step()
+      assert(len(s.reg)==len(afterReg))
+      print(s.reg)
+      print(afterReg)
+      for x in s.reg:
+         assert(s.reg[x] == afterReg[x])
+      assert(len(s.mem)==len(afterMem))
+      print(s.mem)
+      print(afterMem)
+      for x in s.mem:
+         assert(s.mem[x] == afterMem[x])
+   def test_all(self):
+      rbss = self.reg.get('rbss')
+      tests =[
+      ('nop',),
+      ('halt',),
+      ('add r1, r2 => r3',{'r1':1,'r2':3},{'r1':1,'r2':3,'r3':4}),
+      ('sub r1, r2 => r3',{'r1':1,'r2':3},{'r1':1,'r2':3,'r3':-2}),
+      ('mult r1, r2 => r3',{'r1':1,'r2':3},{'r1':1,'r2':3,'r3':3}),
+      ('div r1, r2 => r3',{'r1':7,'r2':2},{'r1':7,'r2':2,'r3':3}),
+      ('lshift r1, r2 => r3',{'r1':8,'r2':1},{'r1':8,'r2':1,'r3':16}),
+      ('rshift r1, r2 => r3',{'r1':8,'r2':1},{'r1':8,'r2':1,'r3':4}),
+      ('and r1, r2 => r3',{'r1':1,'r2':1},{'r1':1,'r2':1,'r3':1}),
+      ('and r1, r2 => r3',{'r1':1,'r2':0},{'r1':1,'r2':0,'r3':0}),
+      ('or r1, r2 => r3',{'r1':0,'r2':1},{'r1':0,'r2':1,'r3':1}),
+      ('or r1, r2 => r3',{'r1':0,'r2':0},{'r1':0,'r2':0,'r3':0}),
+      ('xor r1, r2 => r3',{'r1':0,'r2':1},{'r1':0,'r2':1,'r3':1}),
+      ('xor r1, r2 => r3',{'r1':0,'r2':0},{'r1':0,'r2':0,'r3':0}),
+      ('cmp_LT r1, r2 => r3',{'r1':1,'r2':2},{'r1':1,'r2':2,'r3':1}),
+      ('cmp_LE r1, r2 => r3',{'r1':1,'r2':2},{'r1':1,'r2':2,'r3':1}),
+      ('cmp_EQ r1, r2 => r3',{'r1':1,'r2':2},{'r1':1,'r2':2,'r3':0}),
+      ('cmp_GE r1, r2 => r3',{'r1':1,'r2':2},{'r1':1,'r2':2,'r3':0}),
+      ('cmp_GT r1, r2 => r3',{'r1':1,'r2':2},{'r1':1,'r2':2,'r3':0}),
+      ('cmp_NE r1, r2 => r3',{'r1':1,'r2':2},{'r1':1,'r2':2,'r3':1}),
+      ('addI r1, 7 => r2',{'r1':1},{'r1':1,'r2':8}),
+      ('subI r1, 7 => r2',{'r1':1},{'r1':1,'r2':-6}),
+      ('rsubI r1, 7 => r2',{'r1':1},{'r1':1,'r2':6}),
+      ('multI r1, 7 => r2',{'r1':2},{'r1':2,'r2':14}),
+      ('divI r1, 7 => r2',{'r1':22},{'r1':22,'r2':3}),
+      ('rdivI r1, 7 => r2',{'r1':2},{'r1':2,'r2':3}),
+      ('lshiftI r1, 1 => r2',{'r1':8},{'r1':8,'r2':16}),
+      ('rshiftI r1, 1 => r2',{'r1':8},{'r1':8,'r2':4}),
+      ('andI r1, 1 => r2',{'r1':1},{'r1':1,'r2':1}),
+      ('andI r1, 0 => r2',{'r1':1},{'r1':1,'r2':0}),
+      ('orI r1, 1 => r2',{'r1':0},{'r1':0,'r2':1}),
+      ('orI r1, 0 => r2',{'r1':0},{'r1':0,'r2':0}),
+      ('xorI r1, 1 => r2',{'r1':1},{'r1':1,'r2':0}),
+      ('xorI r1, 0 => r2',{'r1':1},{'r1':1,'r2':1}),
+      ('load r1 => r1',{'r1':1},{'r1':3},{1:3},{1:3}),
+      ('loadAI rbss, @x => r1',{},{'r1':3},{rbss:3},{rbss:3}),
+      ('loadAI rbss, 1 => r1',{},{'r1':3},{(rbss+1):3},{(rbss+1):3}),
+      ('loadAO rbss, r1 => r1',{'r1':0},{'r1':3},{rbss:3},{rbss:3}),
+      ('store r1 => r2',{'r1':1,'r2':2},{'r1':1,'r2':2},{},{2:1}),
+      ('storeAI r1 => rbss, @x',{'r1':3},{'r1':3},{},{rbss:3}),
+      ('storeAO r1 => rbss, r1',{'r1':1},{'r1':1},{},{(rbss+1):1}),
+      ('i2i r1 => r2',{'r1':1,'r2':2},{'r1':1,'r2':1}),
+      ]
+      for x in tests:
+         self.test(*x)
+
+def main():
+   # Os argumentos são os seguintes
+   parser = argparse.ArgumentParser(description='ILOC Simulator')
+   # See https://stackoverflow.com/questions/8259001/python-argparse-command-line-flags-without-arguments
+   parser.add_argument('-i', '--instructions', action='store_true')
+   parser.add_argument('-m', '--memory', action='store_true')
+   parser.add_argument('-s', '--stats', action='store_true')
+   parser.add_argument('-t', '--trace', action='store_true')
+   parser.add_argument('--data', type=int, default=0)
+   parser.add_argument('--stack', type=int, default=1024)
+   # If active (default), strict makes impossible
+   # - any update of bss
+   # - the first definition of stack (rfp/rsp)
+   parser.add_argument('-x', '--strict', action='store_true')
+   parser.add_argument('ILOCFILE', nargs='?')
+   args = parser.parse_args()
+
+   # Update the global strict
+   global strict
+   strict = args.strict
+
+   # Ler do ILOCFILE, ou ler da entrada padrão (stdin)
+   if args.ILOCFILE:
+      with open(args.ILOCFILE) as f:
+         program = f.read()
+   else:
+      program = sys.stdin.read()
+
+   # Criar o simulador com o código do program (em program)
+   sim = Sim(program, args.data, args.stack, args.trace)
+
+   # Enquanto o tamanho do código do simulador for maior que o PC
+   while len(sim.code) > sim.ip:
+      # Realiza um passo de simulação
+      sim.step()
+
+   # Relata contagem de instruções executadas
+   if (args.instructions):
+     sim.show_instructions_executed_counting()
+
+   # Relata estatísticas
+   if (args.stats):
+     sim.show_stats()
+
+   # Relata o estado da memória
+   if (args.memory):
+     sim.show_memory()
+
+if __name__ == '__main__': main()
+
+#+END_SRC
+
+* Bib                                                              :noexport:
+#+BEGIN_SRC bibtex :tangle biblio.bib
+@book{keith,
+author = {{Keith D. Cooper and Linda Torczon}},
+title = {{Engineering a Compiler}},
+publisher = {{Morgan Kaufmann}},
+year = {{2012}},
+edition = {{2nd}}
+}
+#+END_SRC
+* 2016-06-25 Entrega                                               :noexport:
+
+#+TBLNAME:etapa5tags
+|----+----------+--------------+---+-----------------|
+|----+----------+--------------+---+-----------------|
+
+Call `org-table-export' command in the table, export to file =etapa5.csv=.
+
+#+begin_src sh :results output :session :exports both
+  FILE=etapa5.csv
+  DIR=results/etapa5/
+  mkdir -p $DIR
+  rm -rf $DIR/*
+  cp $FILE $DIR
+  cd $DIR
+
+  # prepare reference empty repository
+  git clone XXX ref
+
+  # loop over solutions
+  while read -r line; do
+     UNIQUE=`echo "$line" | cut -d, -f1`
+     GITREF=`echo "$line" | cut -d, -f4`
+     TAGREF=`echo "$line" | cut -d, -f5`
+
+     if [ -z $TAGREF ]; then
+        continue
+     fi
+     echo $UNIQUE $GITREF $TAGREF
+
+     # clone the repository
+     mkdir -p $UNIQUE; cd $UNIQUE
+     git clone $GITREF .
+     # let's customize it
+     git checkout $TAGREF
+     rm -rf `find | grep CMakeCache.txt`
+     rm -rf `find | grep build`
+     rm -rf tests/e[123456]/
+     cd ..
+     #copy my tests
+     cp -prfv ref/tests/e5/ $UNIQUE/tests/
+
+     # preparing the out-of-source build dir
+     BUILDIR=b-$UNIQUE
+     mkdir -p $BUILDIR
+     cd $BUILDIR
+     cmake -DETAPA_1=OFF -DETAPA_2=OFF -DETAPA_3=OFF -DETAPA_4=OFF -DETAPA_5=ON ../$UNIQUE/; make;
+     cd ..
+  done < $FILE
+#+end_src
+
+#+RESULTS:
+#+begin_example
+01 git@bitbucket.org:wbombardellis/grupo01-compil-2016-1.git etapa5
+‘ref/tests/e5/’ -> ‘01/tests/e5’
+‘ref/tests/e5/avaliacao_00_0.tesh’ -> ‘01/tests/e5/avaliacao_00_0.tesh’
+‘ref/tests/e5/avaliacao_00_1.tesh’ -> ‘01/tests/e5/avaliacao_00_1.tesh’
+‘ref/tests/e5/avaliacao_01_0.tesh’ -> ‘01/tests/e5/avaliacao_01_0.tesh’
+‘ref/tests/e5/avaliacao_01_1.tesh’ -> ‘01/tests/e5/avaliacao_01_1.tesh’
+‘ref/tests/e5/avaliacao_02_0.tesh’ -> ‘01/tests/e5/avaliacao_02_0.tesh’
+‘ref/tests/e5/avaliacao_02_1.tesh’ -> ‘01/tests/e5/avaliacao_02_1.tesh’
+‘ref/tests/e5/avaliacao_03_0.tesh’ -> ‘01/tests/e5/avaliacao_03_0.tesh’
+‘ref/tests/e5/avaliacao_03_1.tesh’ -> ‘01/tests/e5/avaliacao_03_1.tesh’
+‘ref/tests/e5/avaliacao_04_0.tesh’ -> ‘01/tests/e5/avaliacao_04_0.tesh’
+‘ref/tests/e5/avaliacao_04_1.tesh’ -> ‘01/tests/e5/avaliacao_04_1.tesh’
+‘ref/tests/e5/avaliacao_05_0.tesh’ -> ‘01/tests/e5/avaliacao_05_0.tesh’
+‘ref/tests/e5/avaliacao_05_1.tesh’ -> ‘01/tests/e5/avaliacao_05_1.tesh’
+‘ref/tests/e5/avaliacao_06_0.tesh’ -> ‘01/tests/e5/avaliacao_06_0.tesh’
+‘ref/tests/e5/avaliacao_06_1.tesh’ -> ‘01/tests/e5/avaliacao_06_1.tesh’
+‘ref/tests/e5/avaliacao_07_0.tesh’ -> ‘01/tests/e5/avaliacao_07_0.tesh’
+‘ref/tests/e5/avaliacao_07_1.tesh’ -> ‘01/tests/e5/avaliacao_07_1.tesh’
+‘ref/tests/e5/avaliacao_08_0.tesh’ -> ‘01/tests/e5/avaliacao_08_0.tesh’
+‘ref/tests/e5/avaliacao_08_1.tesh’ -> ‘01/tests/e5/avaliacao_08_1.tesh’
+‘ref/tests/e5/avaliacao_09_0.tesh’ -> ‘01/tests/e5/avaliacao_09_0.tesh’
+‘ref/tests/e5/avaliacao_09_1.tesh’ -> ‘01/tests/e5/avaliacao_09_1.tesh’
+‘ref/tests/e5/avaliacao_10_0.tesh’ -> ‘01/tests/e5/avaliacao_10_0.tesh’
+‘ref/tests/e5/avaliacao_10_1.tesh’ -> ‘01/tests/e5/avaliacao_10_1.tesh’
+‘ref/tests/e5/avaliacao_11_0.tesh’ -> ‘01/tests/e5/avaliacao_11_0.tesh’
+‘ref/tests/e5/avaliacao_11_1.tesh’ -> ‘01/tests/e5/avaliacao_11_1.tesh’
+‘ref/tests/e5/avaliacao_12_0.tesh’ -> ‘01/tests/e5/avaliacao_12_0.tesh’
+‘ref/tests/e5/avaliacao_12_1.tesh’ -> ‘01/tests/e5/avaliacao_12_1.tesh’
+‘ref/tests/e5/avaliacao_13_0.tesh’ -> ‘01/tests/e5/avaliacao_13_0.tesh’
+‘ref/tests/e5/avaliacao_13_1.tesh’ -> ‘01/tests/e5/avaliacao_13_1.tesh’
+‘ref/tests/e5/avaliacao_14_0.tesh’ -> ‘01/tests/e5/avaliacao_14_0.tesh’
+‘ref/tests/e5/avaliacao_14_1.tesh’ -> ‘01/tests/e5/avaliacao_14_1.tesh’
+‘ref/tests/e5/avaliacao_15_0.tesh’ -> ‘01/tests/e5/avaliacao_15_0.tesh’
+‘ref/tests/e5/avaliacao_15_1.tesh’ -> ‘01/tests/e5/avaliacao_15_1.tesh’
+‘ref/tests/e5/avaliacao_16_0.tesh’ -> ‘01/tests/e5/avaliacao_16_0.tesh’
+‘ref/tests/e5/avaliacao_16_1.tesh’ -> ‘01/tests/e5/avaliacao_16_1.tesh’
+‘ref/tests/e5/avaliacao_17_0.tesh’ -> ‘01/tests/e5/avaliacao_17_0.tesh’
+‘ref/tests/e5/avaliacao_17_1.tesh’ -> ‘01/tests/e5/avaliacao_17_1.tesh’
+‘ref/tests/e5/avaliacao_18_0.tesh’ -> ‘01/tests/e5/avaliacao_18_0.tesh’
+‘ref/tests/e5/avaliacao_18_1.tesh’ -> ‘01/tests/e5/avaliacao_18_1.tesh’
+‘ref/tests/e5/execute.sh’ -> ‘01/tests/e5/execute.sh’
+‘ref/tests/e5/valgrind_00_0.tesh’ -> ‘01/tests/e5/valgrind_00_0.tesh’
+‘ref/tests/e5/valgrind_00_1.tesh’ -> ‘01/tests/e5/valgrind_00_1.tesh’
+‘ref/tests/e5/valgrind_01_0.tesh’ -> ‘01/tests/e5/valgrind_01_0.tesh’
+‘ref/tests/e5/valgrind_01_1.tesh’ -> ‘01/tests/e5/valgrind_01_1.tesh’
+‘ref/tests/e5/valgrind_02_0.tesh’ -> ‘01/tests/e5/valgrind_02_0.tesh’
+‘ref/tests/e5/valgrind_02_1.tesh’ -> ‘01/tests/e5/valgrind_02_1.tesh’
+‘ref/tests/e5/valgrind_03_0.tesh’ -> ‘01/tests/e5/valgrind_03_0.tesh’
+‘ref/tests/e5/valgrind_03_1.tesh’ -> ‘01/tests/e5/valgrind_03_1.tesh’
+‘ref/tests/e5/valgrind_04_0.tesh’ -> ‘01/tests/e5/valgrind_04_0.tesh’
+‘ref/tests/e5/valgrind_04_1.tesh’ -> ‘01/tests/e5/valgrind_04_1.tesh’
+‘ref/tests/e5/valgrind_05_0.tesh’ -> ‘01/tests/e5/valgrind_05_0.tesh’
+‘ref/tests/e5/valgrind_05_1.tesh’ -> ‘01/tests/e5/valgrind_05_1.tesh’
+‘ref/tests/e5/valgrind_06_0.tesh’ -> ‘01/tests/e5/valgrind_06_0.tesh’
+‘ref/tests/e5/valgrind_06_1.tesh’ -> ‘01/tests/e5/valgrind_06_1.tesh’
+‘ref/tests/e5/valgrind_07_0.tesh’ -> ‘01/tests/e5/valgrind_07_0.tesh’
+‘ref/tests/e5/valgrind_07_1.tesh’ -> ‘01/tests/e5/valgrind_07_1.tesh’
+‘ref/tests/e5/valgrind_08_0.tesh’ -> ‘01/tests/e5/valgrind_08_0.tesh’
+‘ref/tests/e5/valgrind_08_1.tesh’ -> ‘01/tests/e5/valgrind_08_1.tesh’
+‘ref/tests/e5/valgrind_09_0.tesh’ -> ‘01/tests/e5/valgrind_09_0.tesh’
+‘ref/tests/e5/valgrind_09_1.tesh’ -> ‘01/tests/e5/valgrind_09_1.tesh’
+‘ref/tests/e5/valgrind_10_0.tesh’ -> ‘01/tests/e5/valgrind_10_0.tesh’
+‘ref/tests/e5/valgrind_10_1.tesh’ -> ‘01/tests/e5/valgrind_10_1.tesh’
+‘ref/tests/e5/valgrind_11_0.tesh’ -> ‘01/tests/e5/valgrind_11_0.tesh’
+‘ref/tests/e5/valgrind_11_1.tesh’ -> ‘01/tests/e5/valgrind_11_1.tesh’
+‘ref/tests/e5/valgrind_12_0.tesh’ -> ‘01/tests/e5/valgrind_12_0.tesh’
+‘ref/tests/e5/valgrind_12_1.tesh’ -> ‘01/tests/e5/valgrind_12_1.tesh’
+‘ref/tests/e5/valgrind_13_0.tesh’ -> ‘01/tests/e5/valgrind_13_0.tesh’
+‘ref/tests/e5/valgrind_13_1.tesh’ -> ‘01/tests/e5/valgrind_13_1.tesh’
+‘ref/tests/e5/valgrind_14_0.tesh’ -> ‘01/tests/e5/valgrind_14_0.tesh’
+‘ref/tests/e5/valgrind_14_1.tesh’ -> ‘01/tests/e5/valgrind_14_1.tesh’
+‘ref/tests/e5/valgrind_15_0.tesh’ -> ‘01/tests/e5/valgrind_15_0.tesh’
+‘ref/tests/e5/valgrind_15_1.tesh’ -> ‘01/tests/e5/valgrind_15_1.tesh’
+‘ref/tests/e5/valgrind_16_0.tesh’ -> ‘01/tests/e5/valgrind_16_0.tesh’
+‘ref/tests/e5/valgrind_16_1.tesh’ -> ‘01/tests/e5/valgrind_16_1.tesh’
+‘ref/tests/e5/valgrind_17_0.tesh’ -> ‘01/tests/e5/valgrind_17_0.tesh’
+‘ref/tests/e5/valgrind_17_1.tesh’ -> ‘01/tests/e5/valgrind_17_1.tesh’
+‘ref/tests/e5/valgrind_18_0.tesh’ -> ‘01/tests/e5/valgrind_18_0.tesh’
+‘ref/tests/e5/valgrind_18_1.tesh’ -> ‘01/tests/e5/valgrind_18_1.tesh’
+‘ref/tests/e5/verify’ -> ‘01/tests/e5/verify’
+‘ref/tests/e5/verify-new’ -> ‘01/tests/e5/verify-new’
+‘ref/tests/e5/expected’ -> ‘01/tests/e5/expected’
+‘ref/tests/e5/expected/00.out’ -> ‘01/tests/e5/expected/00.out’
+‘ref/tests/e5/expected/01.out’ -> ‘01/tests/e5/expected/01.out’
+‘ref/tests/e5/expected/02.out’ -> ‘01/tests/e5/expected/02.out’
+‘ref/tests/e5/expected/03.out’ -> ‘01/tests/e5/expected/03.out’
+‘ref/tests/e5/expected/04.out’ -> ‘01/tests/e5/expected/04.out’
+‘ref/tests/e5/expected/05.out’ -> ‘01/tests/e5/expected/05.out’
+‘ref/tests/e5/expected/06.out’ -> ‘01/tests/e5/expected/06.out’
+‘ref/tests/e5/expected/07.out’ -> ‘01/tests/e5/expected/07.out’
+‘ref/tests/e5/expected/08.out’ -> ‘01/tests/e5/expected/08.out’
+‘ref/tests/e5/input’ -> ‘01/tests/e5/input’
+‘ref/tests/e5/input/e00_0.amarela’ -> ‘01/tests/e5/input/e00_0.amarela’
+‘ref/tests/e5/input/e00_1.amarela’ -> ‘01/tests/e5/input/e00_1.amarela’
+‘ref/tests/e5/input/e01_0.amarela’ -> ‘01/tests/e5/input/e01_0.amarela’
+‘ref/tests/e5/input/e01_1.amarela’ -> ‘01/tests/e5/input/e01_1.amarela’
+‘ref/tests/e5/input/e02_0.amarela’ -> ‘01/tests/e5/input/e02_0.amarela’
+‘ref/tests/e5/input/e02_1.amarela’ -> ‘01/tests/e5/input/e02_1.amarela’
+‘ref/tests/e5/input/e03_0.amarela’ -> ‘01/tests/e5/input/e03_0.amarela’
+‘ref/tests/e5/input/e03_1.amarela’ -> ‘01/tests/e5/input/e03_1.amarela’
+‘ref/tests/e5/input/e04_0.amarela’ -> ‘01/tests/e5/input/e04_0.amarela’
+‘ref/tests/e5/input/e04_1.amarela’ -> ‘01/tests/e5/input/e04_1.amarela’
+‘ref/tests/e5/input/e05_0.amarela’ -> ‘01/tests/e5/input/e05_0.amarela’
+‘ref/tests/e5/input/e05_1.amarela’ -> ‘01/tests/e5/input/e05_1.amarela’
+‘ref/tests/e5/input/e06_0.amarela’ -> ‘01/tests/e5/input/e06_0.amarela’
+‘ref/tests/e5/input/e06_1.amarela’ -> ‘01/tests/e5/input/e06_1.amarela’
+‘ref/tests/e5/input/e07_0.amarela’ -> ‘01/tests/e5/input/e07_0.amarela’
+‘ref/tests/e5/input/e07_1.amarela’ -> ‘01/tests/e5/input/e07_1.amarela’
+‘ref/tests/e5/input/e08_0.amarela’ -> ‘01/tests/e5/input/e08_0.amarela’
+‘ref/tests/e5/input/e08_1.amarela’ -> ‘01/tests/e5/input/e08_1.amarela’
+‘ref/tests/e5/input/e09_0.amarela’ -> ‘01/tests/e5/input/e09_0.amarela’
+‘ref/tests/e5/input/e09_1.amarela’ -> ‘01/tests/e5/input/e09_1.amarela’
+‘ref/tests/e5/input/e10_0.amarela’ -> ‘01/tests/e5/input/e10_0.amarela’
+‘ref/tests/e5/input/e10_1.amarela’ -> ‘01/tests/e5/input/e10_1.amarela’
+‘ref/tests/e5/input/e11_0.amarela’ -> ‘01/tests/e5/input/e11_0.amarela’
+‘ref/tests/e5/input/e11_1.amarela’ -> ‘01/tests/e5/input/e11_1.amarela’
+‘ref/tests/e5/input/e12_0.amarela’ -> ‘01/tests/e5/input/e12_0.amarela’
+‘ref/tests/e5/input/e12_1.amarela’ -> ‘01/tests/e5/input/e12_1.amarela’
+‘ref/tests/e5/input/e13_0.amarela’ -> ‘01/tests/e5/input/e13_0.amarela’
+‘ref/tests/e5/input/e13_1.amarela’ -> ‘01/tests/e5/input/e13_1.amarela’
+‘ref/tests/e5/input/e14_0.amarela’ -> ‘01/tests/e5/input/e14_0.amarela’
+‘ref/tests/e5/input/e14_1.amarela’ -> ‘01/tests/e5/input/e14_1.amarela’
+‘ref/tests/e5/input/e15_0.amarela’ -> ‘01/tests/e5/input/e15_0.amarela’
+‘ref/tests/e5/input/e15_1.amarela’ -> ‘01/tests/e5/input/e15_1.amarela’
+‘ref/tests/e5/input/e16_0.amarela’ -> ‘01/tests/e5/input/e16_0.amarela’
+‘ref/tests/e5/input/e16_1.amarela’ -> ‘01/tests/e5/input/e16_1.amarela’
+‘ref/tests/e5/input/e17_0.amarela’ -> ‘01/tests/e5/input/e17_0.amarela’
+‘ref/tests/e5/input/e17_1.amarela’ -> ‘01/tests/e5/input/e17_1.amarela’
+‘ref/tests/e5/input/e18_0.amarela’ -> ‘01/tests/e5/input/e18_0.amarela’
+‘ref/tests/e5/input/e18_1.amarela’ -> ‘01/tests/e5/input/e18_1.amarela’
+-- The C compiler identification is GNU 4.9.2
+-- The CXX compiler identification is GNU 4.9.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Found FLEX: /usr/bin/flex (found version "2.5.39") 
+-- Found BISON: /usr/bin/bison (found version "3.0.2") 
+-- Setting build type to 'Debug' as none was specified.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/schnorr/ensino/inf01147-compiladores/projeto/results/etapa5/b-01
+[  6%] [BISON][parser] Building parser with bison 3.0.2
+[ 13%] [FLEX][scanner] Building scanner with flex 2.5.39
+Scanning dependencies of target main
+[ 20%] Building C object CMakeFiles/main.dir/scanner.c.o
+[ 26%] Building C object CMakeFiles/main.dir/parser.c.o
+[ 33%] Building C object CMakeFiles/main.dir/src/main.c.o
+[ 40%] Building C object CMakeFiles/main.dir/src/cc_misc.c.o
+[ 46%] Building C object CMakeFiles/main.dir/src/cc_gv.c.o
+[ 53%] Building C object CMakeFiles/main.dir/src/cc_dict.c.o
+[ 60%] Building C object CMakeFiles/main.dir/src/cc_list.c.o
+[ 66%] Building C object CMakeFiles/main.dir/src/cc_tree.c.o
+[ 73%] Building C object CMakeFiles/main.dir/src/cc_ast.c.o
+[ 80%] Building C object CMakeFiles/main.dir/src/cc_stack.c.o
+[ 86%] Building C object CMakeFiles/main.dir/src/cc_SymbolTable.c.o
+[ 93%] Building C object CMakeFiles/main.dir/src/cc_SemanticType.c.o
+[100%] Building C object CMakeFiles/main.dir/src/cc_iloc.c.o
+Linking C executable main
+[100%] Built target main
+02 git@bitbucket.org:mateusriad/compil-2016-1.git ETAPA5_2
+‘ref/tests/e5/’ -> ‘02/tests/e5’
+‘ref/tests/e5/avaliacao_00_0.tesh’ -> ‘02/tests/e5/avaliacao_00_0.tesh’
+‘ref/tests/e5/avaliacao_00_1.tesh’ -> ‘02/tests/e5/avaliacao_00_1.tesh’
+‘ref/tests/e5/avaliacao_01_0.tesh’ -> ‘02/tests/e5/avaliacao_01_0.tesh’
+‘ref/tests/e5/avaliacao_01_1.tesh’ -> ‘02/tests/e5/avaliacao_01_1.tesh’
+‘ref/tests/e5/avaliacao_02_0.tesh’ -> ‘02/tests/e5/avaliacao_02_0.tesh’
+‘ref/tests/e5/avaliacao_02_1.tesh’ -> ‘02/tests/e5/avaliacao_02_1.tesh’
+‘ref/tests/e5/avaliacao_03_0.tesh’ -> ‘02/tests/e5/avaliacao_03_0.tesh’
+‘ref/tests/e5/avaliacao_03_1.tesh’ -> ‘02/tests/e5/avaliacao_03_1.tesh’
+‘ref/tests/e5/avaliacao_04_0.tesh’ -> ‘02/tests/e5/avaliacao_04_0.tesh’
+‘ref/tests/e5/avaliacao_04_1.tesh’ -> ‘02/tests/e5/avaliacao_04_1.tesh’
+‘ref/tests/e5/avaliacao_05_0.tesh’ -> ‘02/tests/e5/avaliacao_05_0.tesh’
+‘ref/tests/e5/avaliacao_05_1.tesh’ -> ‘02/tests/e5/avaliacao_05_1.tesh’
+‘ref/tests/e5/avaliacao_06_0.tesh’ -> ‘02/tests/e5/avaliacao_06_0.tesh’
+‘ref/tests/e5/avaliacao_06_1.tesh’ -> ‘02/tests/e5/avaliacao_06_1.tesh’
+‘ref/tests/e5/avaliacao_07_0.tesh’ -> ‘02/tests/e5/avaliacao_07_0.tesh’
+‘ref/tests/e5/avaliacao_07_1.tesh’ -> ‘02/tests/e5/avaliacao_07_1.tesh’
+‘ref/tests/e5/avaliacao_08_0.tesh’ -> ‘02/tests/e5/avaliacao_08_0.tesh’
+‘ref/tests/e5/avaliacao_08_1.tesh’ -> ‘02/tests/e5/avaliacao_08_1.tesh’
+‘ref/tests/e5/avaliacao_09_0.tesh’ -> ‘02/tests/e5/avaliacao_09_0.tesh’
+‘ref/tests/e5/avaliacao_09_1.tesh’ -> ‘02/tests/e5/avaliacao_09_1.tesh’
+‘ref/tests/e5/avaliacao_10_0.tesh’ -> ‘02/tests/e5/avaliacao_10_0.tesh’
+‘ref/tests/e5/avaliacao_10_1.tesh’ -> ‘02/tests/e5/avaliacao_10_1.tesh’
+‘ref/tests/e5/avaliacao_11_0.tesh’ -> ‘02/tests/e5/avaliacao_11_0.tesh’
+‘ref/tests/e5/avaliacao_11_1.tesh’ -> ‘02/tests/e5/avaliacao_11_1.tesh’
+‘ref/tests/e5/avaliacao_12_0.tesh’ -> ‘02/tests/e5/avaliacao_12_0.tesh’
+‘ref/tests/e5/avaliacao_12_1.tesh’ -> ‘02/tests/e5/avaliacao_12_1.tesh’
+‘ref/tests/e5/avaliacao_13_0.tesh’ -> ‘02/tests/e5/avaliacao_13_0.tesh’
+‘ref/tests/e5/avaliacao_13_1.tesh’ -> ‘02/tests/e5/avaliacao_13_1.tesh’
+‘ref/tests/e5/avaliacao_14_0.tesh’ -> ‘02/tests/e5/avaliacao_14_0.tesh’
+‘ref/tests/e5/avaliacao_14_1.tesh’ -> ‘02/tests/e5/avaliacao_14_1.tesh’
+‘ref/tests/e5/avaliacao_15_0.tesh’ -> ‘02/tests/e5/avaliacao_15_0.tesh’
+‘ref/tests/e5/avaliacao_15_1.tesh’ -> ‘02/tests/e5/avaliacao_15_1.tesh’
+‘ref/tests/e5/avaliacao_16_0.tesh’ -> ‘02/tests/e5/avaliacao_16_0.tesh’
+‘ref/tests/e5/avaliacao_16_1.tesh’ -> ‘02/tests/e5/avaliacao_16_1.tesh’
+‘ref/tests/e5/avaliacao_17_0.tesh’ -> ‘02/tests/e5/avaliacao_17_0.tesh’
+‘ref/tests/e5/avaliacao_17_1.tesh’ -> ‘02/tests/e5/avaliacao_17_1.tesh’
+‘ref/tests/e5/avaliacao_18_0.tesh’ -> ‘02/tests/e5/avaliacao_18_0.tesh’
+‘ref/tests/e5/avaliacao_18_1.tesh’ -> ‘02/tests/e5/avaliacao_18_1.tesh’
+‘ref/tests/e5/execute.sh’ -> ‘02/tests/e5/execute.sh’
+‘ref/tests/e5/valgrind_00_0.tesh’ -> ‘02/tests/e5/valgrind_00_0.tesh’
+‘ref/tests/e5/valgrind_00_1.tesh’ -> ‘02/tests/e5/valgrind_00_1.tesh’
+‘ref/tests/e5/valgrind_01_0.tesh’ -> ‘02/tests/e5/valgrind_01_0.tesh’
+‘ref/tests/e5/valgrind_01_1.tesh’ -> ‘02/tests/e5/valgrind_01_1.tesh’
+‘ref/tests/e5/valgrind_02_0.tesh’ -> ‘02/tests/e5/valgrind_02_0.tesh’
+‘ref/tests/e5/valgrind_02_1.tesh’ -> ‘02/tests/e5/valgrind_02_1.tesh’
+‘ref/tests/e5/valgrind_03_0.tesh’ -> ‘02/tests/e5/valgrind_03_0.tesh’
+‘ref/tests/e5/valgrind_03_1.tesh’ -> ‘02/tests/e5/valgrind_03_1.tesh’
+‘ref/tests/e5/valgrind_04_0.tesh’ -> ‘02/tests/e5/valgrind_04_0.tesh’
+‘ref/tests/e5/valgrind_04_1.tesh’ -> ‘02/tests/e5/valgrind_04_1.tesh’
+‘ref/tests/e5/valgrind_05_0.tesh’ -> ‘02/tests/e5/valgrind_05_0.tesh’
+‘ref/tests/e5/valgrind_05_1.tesh’ -> ‘02/tests/e5/valgrind_05_1.tesh’
+‘ref/tests/e5/valgrind_06_0.tesh’ -> ‘02/tests/e5/valgrind_06_0.tesh’
+‘ref/tests/e5/valgrind_06_1.tesh’ -> ‘02/tests/e5/valgrind_06_1.tesh’
+‘ref/tests/e5/valgrind_07_0.tesh’ -> ‘02/tests/e5/valgrind_07_0.tesh’
+‘ref/tests/e5/valgrind_07_1.tesh’ -> ‘02/tests/e5/valgrind_07_1.tesh’
+‘ref/tests/e5/valgrind_08_0.tesh’ -> ‘02/tests/e5/valgrind_08_0.tesh’
+‘ref/tests/e5/valgrind_08_1.tesh’ -> ‘02/tests/e5/valgrind_08_1.tesh’
+‘ref/tests/e5/valgrind_09_0.tesh’ -> ‘02/tests/e5/valgrind_09_0.tesh’
+‘ref/tests/e5/valgrind_09_1.tesh’ -> ‘02/tests/e5/valgrind_09_1.tesh’
+‘ref/tests/e5/valgrind_10_0.tesh’ -> ‘02/tests/e5/valgrind_10_0.tesh’
+‘ref/tests/e5/valgrind_10_1.tesh’ -> ‘02/tests/e5/valgrind_10_1.tesh’
+‘ref/tests/e5/valgrind_11_0.tesh’ -> ‘02/tests/e5/valgrind_11_0.tesh’
+‘ref/tests/e5/valgrind_11_1.tesh’ -> ‘02/tests/e5/valgrind_11_1.tesh’
+‘ref/tests/e5/valgrind_12_0.tesh’ -> ‘02/tests/e5/valgrind_12_0.tesh’
+‘ref/tests/e5/valgrind_12_1.tesh’ -> ‘02/tests/e5/valgrind_12_1.tesh’
+‘ref/tests/e5/valgrind_13_0.tesh’ -> ‘02/tests/e5/valgrind_13_0.tesh’
+‘ref/tests/e5/valgrind_13_1.tesh’ -> ‘02/tests/e5/valgrind_13_1.tesh’
+‘ref/tests/e5/valgrind_14_0.tesh’ -> ‘02/tests/e5/valgrind_14_0.tesh’
+‘ref/tests/e5/valgrind_14_1.tesh’ -> ‘02/tests/e5/valgrind_14_1.tesh’
+‘ref/tests/e5/valgrind_15_0.tesh’ -> ‘02/tests/e5/valgrind_15_0.tesh’
+‘ref/tests/e5/valgrind_15_1.tesh’ -> ‘02/tests/e5/valgrind_15_1.tesh’
+‘ref/tests/e5/valgrind_16_0.tesh’ -> ‘02/tests/e5/valgrind_16_0.tesh’
+‘ref/tests/e5/valgrind_16_1.tesh’ -> ‘02/tests/e5/valgrind_16_1.tesh’
+‘ref/tests/e5/valgrind_17_0.tesh’ -> ‘02/tests/e5/valgrind_17_0.tesh’
+‘ref/tests/e5/valgrind_17_1.tesh’ -> ‘02/tests/e5/valgrind_17_1.tesh’
+‘ref/tests/e5/valgrind_18_0.tesh’ -> ‘02/tests/e5/valgrind_18_0.tesh’
+‘ref/tests/e5/valgrind_18_1.tesh’ -> ‘02/tests/e5/valgrind_18_1.tesh’
+‘ref/tests/e5/verify’ -> ‘02/tests/e5/verify’
+‘ref/tests/e5/verify-new’ -> ‘02/tests/e5/verify-new’
+‘ref/tests/e5/expected’ -> ‘02/tests/e5/expected’
+‘ref/tests/e5/expected/00.out’ -> ‘02/tests/e5/expected/00.out’
+‘ref/tests/e5/expected/01.out’ -> ‘02/tests/e5/expected/01.out’
+‘ref/tests/e5/expected/02.out’ -> ‘02/tests/e5/expected/02.out’
+‘ref/tests/e5/expected/03.out’ -> ‘02/tests/e5/expected/03.out’
+‘ref/tests/e5/expected/04.out’ -> ‘02/tests/e5/expected/04.out’
+‘ref/tests/e5/expected/05.out’ -> ‘02/tests/e5/expected/05.out’
+‘ref/tests/e5/expected/06.out’ -> ‘02/tests/e5/expected/06.out’
+‘ref/tests/e5/expected/07.out’ -> ‘02/tests/e5/expected/07.out’
+‘ref/tests/e5/expected/08.out’ -> ‘02/tests/e5/expected/08.out’
+‘ref/tests/e5/input’ -> ‘02/tests/e5/input’
+‘ref/tests/e5/input/e00_0.amarela’ -> ‘02/tests/e5/input/e00_0.amarela’
+‘ref/tests/e5/input/e00_1.amarela’ -> ‘02/tests/e5/input/e00_1.amarela’
+‘ref/tests/e5/input/e01_0.amarela’ -> ‘02/tests/e5/input/e01_0.amarela’
+‘ref/tests/e5/input/e01_1.amarela’ -> ‘02/tests/e5/input/e01_1.amarela’
+‘ref/tests/e5/input/e02_0.amarela’ -> ‘02/tests/e5/input/e02_0.amarela’
+‘ref/tests/e5/input/e02_1.amarela’ -> ‘02/tests/e5/input/e02_1.amarela’
+‘ref/tests/e5/input/e03_0.amarela’ -> ‘02/tests/e5/input/e03_0.amarela’
+‘ref/tests/e5/input/e03_1.amarela’ -> ‘02/tests/e5/input/e03_1.amarela’
+‘ref/tests/e5/input/e04_0.amarela’ -> ‘02/tests/e5/input/e04_0.amarela’
+‘ref/tests/e5/input/e04_1.amarela’ -> ‘02/tests/e5/input/e04_1.amarela’
+‘ref/tests/e5/input/e05_0.amarela’ -> ‘02/tests/e5/input/e05_0.amarela’
+‘ref/tests/e5/input/e05_1.amarela’ -> ‘02/tests/e5/input/e05_1.amarela’
+‘ref/tests/e5/input/e06_0.amarela’ -> ‘02/tests/e5/input/e06_0.amarela’
+‘ref/tests/e5/input/e06_1.amarela’ -> ‘02/tests/e5/input/e06_1.amarela’
+‘ref/tests/e5/input/e07_0.amarela’ -> ‘02/tests/e5/input/e07_0.amarela’
+‘ref/tests/e5/input/e07_1.amarela’ -> ‘02/tests/e5/input/e07_1.amarela’
+‘ref/tests/e5/input/e08_0.amarela’ -> ‘02/tests/e5/input/e08_0.amarela’
+‘ref/tests/e5/input/e08_1.amarela’ -> ‘02/tests/e5/input/e08_1.amarela’
+‘ref/tests/e5/input/e09_0.amarela’ -> ‘02/tests/e5/input/e09_0.amarela’
+‘ref/tests/e5/input/e09_1.amarela’ -> ‘02/tests/e5/input/e09_1.amarela’
+‘ref/tests/e5/input/e10_0.amarela’ -> ‘02/tests/e5/input/e10_0.amarela’
+‘ref/tests/e5/input/e10_1.amarela’ -> ‘02/tests/e5/input/e10_1.amarela’
+‘ref/tests/e5/input/e11_0.amarela’ -> ‘02/tests/e5/input/e11_0.amarela’
+‘ref/tests/e5/input/e11_1.amarela’ -> ‘02/tests/e5/input/e11_1.amarela’
+‘ref/tests/e5/input/e12_0.amarela’ -> ‘02/tests/e5/input/e12_0.amarela’
+‘ref/tests/e5/input/e12_1.amarela’ -> ‘02/tests/e5/input/e12_1.amarela’
+‘ref/tests/e5/input/e13_0.amarela’ -> ‘02/tests/e5/input/e13_0.amarela’
+‘ref/tests/e5/input/e13_1.amarela’ -> ‘02/tests/e5/input/e13_1.amarela’
+‘ref/tests/e5/input/e14_0.amarela’ -> ‘02/tests/e5/input/e14_0.amarela’
+‘ref/tests/e5/input/e14_1.amarela’ -> ‘02/tests/e5/input/e14_1.amarela’
+‘ref/tests/e5/input/e15_0.amarela’ -> ‘02/tests/e5/input/e15_0.amarela’
+‘ref/tests/e5/input/e15_1.amarela’ -> ‘02/tests/e5/input/e15_1.amarela’
+‘ref/tests/e5/input/e16_0.amarela’ -> ‘02/tests/e5/input/e16_0.amarela’
+‘ref/tests/e5/input/e16_1.amarela’ -> ‘02/tests/e5/input/e16_1.amarela’
+‘ref/tests/e5/input/e17_0.amarela’ -> ‘02/tests/e5/input/e17_0.amarela’
+‘ref/tests/e5/input/e17_1.amarela’ -> ‘02/tests/e5/input/e17_1.amarela’
+‘ref/tests/e5/input/e18_0.amarela’ -> ‘02/tests/e5/input/e18_0.amarela’
+‘ref/tests/e5/input/e18_1.amarela’ -> ‘02/tests/e5/input/e18_1.amarela’
+-- The C compiler identification is GNU 4.9.2
+-- The CXX compiler identification is GNU 4.9.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Found FLEX: /usr/bin/flex (found version "2.5.39") 
+-- Found BISON: /usr/bin/bison (found version "3.0.2") 
+-- Setting build type to 'Debug' as none was specified.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/schnorr/ensino/inf01147-compiladores/projeto/results/etapa5/b-02
+Scanning dependencies of target cc_dict_main_example
+[  7%] Building C object CMakeFiles/cc_dict_main_example.dir/src/cc_dict.c.o
+[ 14%] Building C object CMakeFiles/cc_dict_main_example.dir/src/cc_dict_main_example.c.o
+Linking C executable cc_dict_main_example
+[ 14%] Built target cc_dict_main_example
+[ 21%] [BISON][parser] Building parser with bison 3.0.2
+[ 28%] [FLEX][scanner] Building scanner with flex 2.5.39
+Scanning dependencies of target main
+[ 35%] Building C object CMakeFiles/main.dir/scanner.c.o
+[ 42%] Building C object CMakeFiles/main.dir/parser.c.o
+[ 50%] Building C object CMakeFiles/main.dir/src/main.c.o
+[ 57%] Building C object CMakeFiles/main.dir/src/cc_misc.c.o
+[ 64%] Building C object CMakeFiles/main.dir/src/cc_gv.c.o
+[ 71%] Building C object CMakeFiles/main.dir/src/cc_dict.c.o
+[ 78%] Building C object CMakeFiles/main.dir/src/cc_list.c.o
+[ 85%] Building C object CMakeFiles/main.dir/src/cc_tree.c.o
+[ 92%] Building C object CMakeFiles/main.dir/src/cc_stack.c.o
+[100%] Building C object CMakeFiles/main.dir/src/cc_code.c.o
+Linking C executable main
+[100%] Built target main
+03 git@bitbucket.org:MT_hs/tres.git Entrega_Etapa_5
+‘ref/tests/e5/’ -> ‘03/tests/e5’
+‘ref/tests/e5/avaliacao_00_0.tesh’ -> ‘03/tests/e5/avaliacao_00_0.tesh’
+‘ref/tests/e5/avaliacao_00_1.tesh’ -> ‘03/tests/e5/avaliacao_00_1.tesh’
+‘ref/tests/e5/avaliacao_01_0.tesh’ -> ‘03/tests/e5/avaliacao_01_0.tesh’
+‘ref/tests/e5/avaliacao_01_1.tesh’ -> ‘03/tests/e5/avaliacao_01_1.tesh’
+‘ref/tests/e5/avaliacao_02_0.tesh’ -> ‘03/tests/e5/avaliacao_02_0.tesh’
+‘ref/tests/e5/avaliacao_02_1.tesh’ -> ‘03/tests/e5/avaliacao_02_1.tesh’
+‘ref/tests/e5/avaliacao_03_0.tesh’ -> ‘03/tests/e5/avaliacao_03_0.tesh’
+‘ref/tests/e5/avaliacao_03_1.tesh’ -> ‘03/tests/e5/avaliacao_03_1.tesh’
+‘ref/tests/e5/avaliacao_04_0.tesh’ -> ‘03/tests/e5/avaliacao_04_0.tesh’
+‘ref/tests/e5/avaliacao_04_1.tesh’ -> ‘03/tests/e5/avaliacao_04_1.tesh’
+‘ref/tests/e5/avaliacao_05_0.tesh’ -> ‘03/tests/e5/avaliacao_05_0.tesh’
+‘ref/tests/e5/avaliacao_05_1.tesh’ -> ‘03/tests/e5/avaliacao_05_1.tesh’
+‘ref/tests/e5/avaliacao_06_0.tesh’ -> ‘03/tests/e5/avaliacao_06_0.tesh’
+‘ref/tests/e5/avaliacao_06_1.tesh’ -> ‘03/tests/e5/avaliacao_06_1.tesh’
+‘ref/tests/e5/avaliacao_07_0.tesh’ -> ‘03/tests/e5/avaliacao_07_0.tesh’
+‘ref/tests/e5/avaliacao_07_1.tesh’ -> ‘03/tests/e5/avaliacao_07_1.tesh’
+‘ref/tests/e5/avaliacao_08_0.tesh’ -> ‘03/tests/e5/avaliacao_08_0.tesh’
+‘ref/tests/e5/avaliacao_08_1.tesh’ -> ‘03/tests/e5/avaliacao_08_1.tesh’
+‘ref/tests/e5/avaliacao_09_0.tesh’ -> ‘03/tests/e5/avaliacao_09_0.tesh’
+‘ref/tests/e5/avaliacao_09_1.tesh’ -> ‘03/tests/e5/avaliacao_09_1.tesh’
+‘ref/tests/e5/avaliacao_10_0.tesh’ -> ‘03/tests/e5/avaliacao_10_0.tesh’
+‘ref/tests/e5/avaliacao_10_1.tesh’ -> ‘03/tests/e5/avaliacao_10_1.tesh’
+‘ref/tests/e5/avaliacao_11_0.tesh’ -> ‘03/tests/e5/avaliacao_11_0.tesh’
+‘ref/tests/e5/avaliacao_11_1.tesh’ -> ‘03/tests/e5/avaliacao_11_1.tesh’
+‘ref/tests/e5/avaliacao_12_0.tesh’ -> ‘03/tests/e5/avaliacao_12_0.tesh’
+‘ref/tests/e5/avaliacao_12_1.tesh’ -> ‘03/tests/e5/avaliacao_12_1.tesh’
+‘ref/tests/e5/avaliacao_13_0.tesh’ -> ‘03/tests/e5/avaliacao_13_0.tesh’
+‘ref/tests/e5/avaliacao_13_1.tesh’ -> ‘03/tests/e5/avaliacao_13_1.tesh’
+‘ref/tests/e5/avaliacao_14_0.tesh’ -> ‘03/tests/e5/avaliacao_14_0.tesh’
+‘ref/tests/e5/avaliacao_14_1.tesh’ -> ‘03/tests/e5/avaliacao_14_1.tesh’
+‘ref/tests/e5/avaliacao_15_0.tesh’ -> ‘03/tests/e5/avaliacao_15_0.tesh’
+‘ref/tests/e5/avaliacao_15_1.tesh’ -> ‘03/tests/e5/avaliacao_15_1.tesh’
+‘ref/tests/e5/avaliacao_16_0.tesh’ -> ‘03/tests/e5/avaliacao_16_0.tesh’
+‘ref/tests/e5/avaliacao_16_1.tesh’ -> ‘03/tests/e5/avaliacao_16_1.tesh’
+‘ref/tests/e5/avaliacao_17_0.tesh’ -> ‘03/tests/e5/avaliacao_17_0.tesh’
+‘ref/tests/e5/avaliacao_17_1.tesh’ -> ‘03/tests/e5/avaliacao_17_1.tesh’
+‘ref/tests/e5/avaliacao_18_0.tesh’ -> ‘03/tests/e5/avaliacao_18_0.tesh’
+‘ref/tests/e5/avaliacao_18_1.tesh’ -> ‘03/tests/e5/avaliacao_18_1.tesh’
+‘ref/tests/e5/execute.sh’ -> ‘03/tests/e5/execute.sh’
+‘ref/tests/e5/valgrind_00_0.tesh’ -> ‘03/tests/e5/valgrind_00_0.tesh’
+‘ref/tests/e5/valgrind_00_1.tesh’ -> ‘03/tests/e5/valgrind_00_1.tesh’
+‘ref/tests/e5/valgrind_01_0.tesh’ -> ‘03/tests/e5/valgrind_01_0.tesh’
+‘ref/tests/e5/valgrind_01_1.tesh’ -> ‘03/tests/e5/valgrind_01_1.tesh’
+‘ref/tests/e5/valgrind_02_0.tesh’ -> ‘03/tests/e5/valgrind_02_0.tesh’
+‘ref/tests/e5/valgrind_02_1.tesh’ -> ‘03/tests/e5/valgrind_02_1.tesh’
+‘ref/tests/e5/valgrind_03_0.tesh’ -> ‘03/tests/e5/valgrind_03_0.tesh’
+‘ref/tests/e5/valgrind_03_1.tesh’ -> ‘03/tests/e5/valgrind_03_1.tesh’
+‘ref/tests/e5/valgrind_04_0.tesh’ -> ‘03/tests/e5/valgrind_04_0.tesh’
+‘ref/tests/e5/valgrind_04_1.tesh’ -> ‘03/tests/e5/valgrind_04_1.tesh’
+‘ref/tests/e5/valgrind_05_0.tesh’ -> ‘03/tests/e5/valgrind_05_0.tesh’
+‘ref/tests/e5/valgrind_05_1.tesh’ -> ‘03/tests/e5/valgrind_05_1.tesh’
+‘ref/tests/e5/valgrind_06_0.tesh’ -> ‘03/tests/e5/valgrind_06_0.tesh’
+‘ref/tests/e5/valgrind_06_1.tesh’ -> ‘03/tests/e5/valgrind_06_1.tesh’
+‘ref/tests/e5/valgrind_07_0.tesh’ -> ‘03/tests/e5/valgrind_07_0.tesh’
+‘ref/tests/e5/valgrind_07_1.tesh’ -> ‘03/tests/e5/valgrind_07_1.tesh’
+‘ref/tests/e5/valgrind_08_0.tesh’ -> ‘03/tests/e5/valgrind_08_0.tesh’
+‘ref/tests/e5/valgrind_08_1.tesh’ -> ‘03/tests/e5/valgrind_08_1.tesh’
+‘ref/tests/e5/valgrind_09_0.tesh’ -> ‘03/tests/e5/valgrind_09_0.tesh’
+‘ref/tests/e5/valgrind_09_1.tesh’ -> ‘03/tests/e5/valgrind_09_1.tesh’
+‘ref/tests/e5/valgrind_10_0.tesh’ -> ‘03/tests/e5/valgrind_10_0.tesh’
+‘ref/tests/e5/valgrind_10_1.tesh’ -> ‘03/tests/e5/valgrind_10_1.tesh’
+‘ref/tests/e5/valgrind_11_0.tesh’ -> ‘03/tests/e5/valgrind_11_0.tesh’
+‘ref/tests/e5/valgrind_11_1.tesh’ -> ‘03/tests/e5/valgrind_11_1.tesh’
+‘ref/tests/e5/valgrind_12_0.tesh’ -> ‘03/tests/e5/valgrind_12_0.tesh’
+‘ref/tests/e5/valgrind_12_1.tesh’ -> ‘03/tests/e5/valgrind_12_1.tesh’
+‘ref/tests/e5/valgrind_13_0.tesh’ -> ‘03/tests/e5/valgrind_13_0.tesh’
+‘ref/tests/e5/valgrind_13_1.tesh’ -> ‘03/tests/e5/valgrind_13_1.tesh’
+‘ref/tests/e5/valgrind_14_0.tesh’ -> ‘03/tests/e5/valgrind_14_0.tesh’
+‘ref/tests/e5/valgrind_14_1.tesh’ -> ‘03/tests/e5/valgrind_14_1.tesh’
+‘ref/tests/e5/valgrind_15_0.tesh’ -> ‘03/tests/e5/valgrind_15_0.tesh’
+‘ref/tests/e5/valgrind_15_1.tesh’ -> ‘03/tests/e5/valgrind_15_1.tesh’
+‘ref/tests/e5/valgrind_16_0.tesh’ -> ‘03/tests/e5/valgrind_16_0.tesh’
+‘ref/tests/e5/valgrind_16_1.tesh’ -> ‘03/tests/e5/valgrind_16_1.tesh’
+‘ref/tests/e5/valgrind_17_0.tesh’ -> ‘03/tests/e5/valgrind_17_0.tesh’
+‘ref/tests/e5/valgrind_17_1.tesh’ -> ‘03/tests/e5/valgrind_17_1.tesh’
+‘ref/tests/e5/valgrind_18_0.tesh’ -> ‘03/tests/e5/valgrind_18_0.tesh’
+‘ref/tests/e5/valgrind_18_1.tesh’ -> ‘03/tests/e5/valgrind_18_1.tesh’
+‘ref/tests/e5/verify’ -> ‘03/tests/e5/verify’
+‘ref/tests/e5/verify-new’ -> ‘03/tests/e5/verify-new’
+‘ref/tests/e5/expected’ -> ‘03/tests/e5/expected’
+‘ref/tests/e5/expected/00.out’ -> ‘03/tests/e5/expected/00.out’
+‘ref/tests/e5/expected/01.out’ -> ‘03/tests/e5/expected/01.out’
+‘ref/tests/e5/expected/02.out’ -> ‘03/tests/e5/expected/02.out’
+‘ref/tests/e5/expected/03.out’ -> ‘03/tests/e5/expected/03.out’
+‘ref/tests/e5/expected/04.out’ -> ‘03/tests/e5/expected/04.out’
+‘ref/tests/e5/expected/05.out’ -> ‘03/tests/e5/expected/05.out’
+‘ref/tests/e5/expected/06.out’ -> ‘03/tests/e5/expected/06.out’
+‘ref/tests/e5/expected/07.out’ -> ‘03/tests/e5/expected/07.out’
+‘ref/tests/e5/expected/08.out’ -> ‘03/tests/e5/expected/08.out’
+‘ref/tests/e5/input’ -> ‘03/tests/e5/input’
+‘ref/tests/e5/input/e00_0.amarela’ -> ‘03/tests/e5/input/e00_0.amarela’
+‘ref/tests/e5/input/e00_1.amarela’ -> ‘03/tests/e5/input/e00_1.amarela’
+‘ref/tests/e5/input/e01_0.amarela’ -> ‘03/tests/e5/input/e01_0.amarela’
+‘ref/tests/e5/input/e01_1.amarela’ -> ‘03/tests/e5/input/e01_1.amarela’
+‘ref/tests/e5/input/e02_0.amarela’ -> ‘03/tests/e5/input/e02_0.amarela’
+‘ref/tests/e5/input/e02_1.amarela’ -> ‘03/tests/e5/input/e02_1.amarela’
+‘ref/tests/e5/input/e03_0.amarela’ -> ‘03/tests/e5/input/e03_0.amarela’
+‘ref/tests/e5/input/e03_1.amarela’ -> ‘03/tests/e5/input/e03_1.amarela’
+‘ref/tests/e5/input/e04_0.amarela’ -> ‘03/tests/e5/input/e04_0.amarela’
+‘ref/tests/e5/input/e04_1.amarela’ -> ‘03/tests/e5/input/e04_1.amarela’
+‘ref/tests/e5/input/e05_0.amarela’ -> ‘03/tests/e5/input/e05_0.amarela’
+‘ref/tests/e5/input/e05_1.amarela’ -> ‘03/tests/e5/input/e05_1.amarela’
+‘ref/tests/e5/input/e06_0.amarela’ -> ‘03/tests/e5/input/e06_0.amarela’
+‘ref/tests/e5/input/e06_1.amarela’ -> ‘03/tests/e5/input/e06_1.amarela’
+‘ref/tests/e5/input/e07_0.amarela’ -> ‘03/tests/e5/input/e07_0.amarela’
+‘ref/tests/e5/input/e07_1.amarela’ -> ‘03/tests/e5/input/e07_1.amarela’
+‘ref/tests/e5/input/e08_0.amarela’ -> ‘03/tests/e5/input/e08_0.amarela’
+‘ref/tests/e5/input/e08_1.amarela’ -> ‘03/tests/e5/input/e08_1.amarela’
+‘ref/tests/e5/input/e09_0.amarela’ -> ‘03/tests/e5/input/e09_0.amarela’
+‘ref/tests/e5/input/e09_1.amarela’ -> ‘03/tests/e5/input/e09_1.amarela’
+‘ref/tests/e5/input/e10_0.amarela’ -> ‘03/tests/e5/input/e10_0.amarela’
+‘ref/tests/e5/input/e10_1.amarela’ -> ‘03/tests/e5/input/e10_1.amarela’
+‘ref/tests/e5/input/e11_0.amarela’ -> ‘03/tests/e5/input/e11_0.amarela’
+‘ref/tests/e5/input/e11_1.amarela’ -> ‘03/tests/e5/input/e11_1.amarela’
+‘ref/tests/e5/input/e12_0.amarela’ -> ‘03/tests/e5/input/e12_0.amarela’
+‘ref/tests/e5/input/e12_1.amarela’ -> ‘03/tests/e5/input/e12_1.amarela’
+‘ref/tests/e5/input/e13_0.amarela’ -> ‘03/tests/e5/input/e13_0.amarela’
+‘ref/tests/e5/input/e13_1.amarela’ -> ‘03/tests/e5/input/e13_1.amarela’
+‘ref/tests/e5/input/e14_0.amarela’ -> ‘03/tests/e5/input/e14_0.amarela’
+‘ref/tests/e5/input/e14_1.amarela’ -> ‘03/tests/e5/input/e14_1.amarela’
+‘ref/tests/e5/input/e15_0.amarela’ -> ‘03/tests/e5/input/e15_0.amarela’
+‘ref/tests/e5/input/e15_1.amarela’ -> ‘03/tests/e5/input/e15_1.amarela’
+‘ref/tests/e5/input/e16_0.amarela’ -> ‘03/tests/e5/input/e16_0.amarela’
+‘ref/tests/e5/input/e16_1.amarela’ -> ‘03/tests/e5/input/e16_1.amarela’
+‘ref/tests/e5/input/e17_0.amarela’ -> ‘03/tests/e5/input/e17_0.amarela’
+‘ref/tests/e5/input/e17_1.amarela’ -> ‘03/tests/e5/input/e17_1.amarela’
+‘ref/tests/e5/input/e18_0.amarela’ -> ‘03/tests/e5/input/e18_0.amarela’
+‘ref/tests/e5/input/e18_1.amarela’ -> ‘03/tests/e5/input/e18_1.amarela’
+-- The C compiler identification is GNU 4.9.2
+-- The CXX compiler identification is GNU 4.9.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Found FLEX: /usr/bin/flex (found version "2.5.39") 
+-- Found BISON: /usr/bin/bison (found version "3.0.2") 
+-- Setting build type to 'Debug' as none was specified.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/schnorr/ensino/inf01147-compiladores/projeto/results/etapa5/b-03
+Scanning dependencies of target cc_dict_main_example
+[  8%] Building C object CMakeFiles/cc_dict_main_example.dir/src/cc_dict.c.o
+[ 16%] Building C object CMakeFiles/cc_dict_main_example.dir/src/cc_dict_main_example.c.o
+Linking C executable cc_dict_main_example
+[ 16%] Built target cc_dict_main_example
+[ 25%] [BISON][parser] Building parser with bison 3.0.2
+[ 33%] [FLEX][scanner] Building scanner with flex 2.5.39
+Scanning dependencies of target main
+[ 41%] Building C object CMakeFiles/main.dir/scanner.c.o
+[ 50%] Building C object CMakeFiles/main.dir/parser.c.o
+[ 58%] Building C object CMakeFiles/main.dir/src/main.c.o
+[ 66%] Building C object CMakeFiles/main.dir/src/cc_misc.c.o
+[ 75%] Building C object CMakeFiles/main.dir/src/cc_gv.c.o
+[ 83%] Building C object CMakeFiles/main.dir/src/cc_dict.c.o
+[ 91%] Building C object CMakeFiles/main.dir/src/cc_list.c.o
+[100%] Building C object CMakeFiles/main.dir/src/cc_tree.c.o
+Linking C executable main
+[100%] Built target main
+04 git@bitbucket.org:rsboos/compil-2016-1-etapa1.git etapa5
+‘ref/tests/e5/’ -> ‘04/tests/e5’
+‘ref/tests/e5/avaliacao_00_0.tesh’ -> ‘04/tests/e5/avaliacao_00_0.tesh’
+‘ref/tests/e5/avaliacao_00_1.tesh’ -> ‘04/tests/e5/avaliacao_00_1.tesh’
+‘ref/tests/e5/avaliacao_01_0.tesh’ -> ‘04/tests/e5/avaliacao_01_0.tesh’
+‘ref/tests/e5/avaliacao_01_1.tesh’ -> ‘04/tests/e5/avaliacao_01_1.tesh’
+‘ref/tests/e5/avaliacao_02_0.tesh’ -> ‘04/tests/e5/avaliacao_02_0.tesh’
+‘ref/tests/e5/avaliacao_02_1.tesh’ -> ‘04/tests/e5/avaliacao_02_1.tesh’
+‘ref/tests/e5/avaliacao_03_0.tesh’ -> ‘04/tests/e5/avaliacao_03_0.tesh’
+‘ref/tests/e5/avaliacao_03_1.tesh’ -> ‘04/tests/e5/avaliacao_03_1.tesh’
+‘ref/tests/e5/avaliacao_04_0.tesh’ -> ‘04/tests/e5/avaliacao_04_0.tesh’
+‘ref/tests/e5/avaliacao_04_1.tesh’ -> ‘04/tests/e5/avaliacao_04_1.tesh’
+‘ref/tests/e5/avaliacao_05_0.tesh’ -> ‘04/tests/e5/avaliacao_05_0.tesh’
+‘ref/tests/e5/avaliacao_05_1.tesh’ -> ‘04/tests/e5/avaliacao_05_1.tesh’
+‘ref/tests/e5/avaliacao_06_0.tesh’ -> ‘04/tests/e5/avaliacao_06_0.tesh’
+‘ref/tests/e5/avaliacao_06_1.tesh’ -> ‘04/tests/e5/avaliacao_06_1.tesh’
+‘ref/tests/e5/avaliacao_07_0.tesh’ -> ‘04/tests/e5/avaliacao_07_0.tesh’
+‘ref/tests/e5/avaliacao_07_1.tesh’ -> ‘04/tests/e5/avaliacao_07_1.tesh’
+‘ref/tests/e5/avaliacao_08_0.tesh’ -> ‘04/tests/e5/avaliacao_08_0.tesh’
+‘ref/tests/e5/avaliacao_08_1.tesh’ -> ‘04/tests/e5/avaliacao_08_1.tesh’
+‘ref/tests/e5/avaliacao_09_0.tesh’ -> ‘04/tests/e5/avaliacao_09_0.tesh’
+‘ref/tests/e5/avaliacao_09_1.tesh’ -> ‘04/tests/e5/avaliacao_09_1.tesh’
+‘ref/tests/e5/avaliacao_10_0.tesh’ -> ‘04/tests/e5/avaliacao_10_0.tesh’
+‘ref/tests/e5/avaliacao_10_1.tesh’ -> ‘04/tests/e5/avaliacao_10_1.tesh’
+‘ref/tests/e5/avaliacao_11_0.tesh’ -> ‘04/tests/e5/avaliacao_11_0.tesh’
+‘ref/tests/e5/avaliacao_11_1.tesh’ -> ‘04/tests/e5/avaliacao_11_1.tesh’
+‘ref/tests/e5/avaliacao_12_0.tesh’ -> ‘04/tests/e5/avaliacao_12_0.tesh’
+‘ref/tests/e5/avaliacao_12_1.tesh’ -> ‘04/tests/e5/avaliacao_12_1.tesh’
+‘ref/tests/e5/avaliacao_13_0.tesh’ -> ‘04/tests/e5/avaliacao_13_0.tesh’
+‘ref/tests/e5/avaliacao_13_1.tesh’ -> ‘04/tests/e5/avaliacao_13_1.tesh’
+‘ref/tests/e5/avaliacao_14_0.tesh’ -> ‘04/tests/e5/avaliacao_14_0.tesh’
+‘ref/tests/e5/avaliacao_14_1.tesh’ -> ‘04/tests/e5/avaliacao_14_1.tesh’
+‘ref/tests/e5/avaliacao_15_0.tesh’ -> ‘04/tests/e5/avaliacao_15_0.tesh’
+‘ref/tests/e5/avaliacao_15_1.tesh’ -> ‘04/tests/e5/avaliacao_15_1.tesh’
+‘ref/tests/e5/avaliacao_16_0.tesh’ -> ‘04/tests/e5/avaliacao_16_0.tesh’
+‘ref/tests/e5/avaliacao_16_1.tesh’ -> ‘04/tests/e5/avaliacao_16_1.tesh’
+‘ref/tests/e5/avaliacao_17_0.tesh’ -> ‘04/tests/e5/avaliacao_17_0.tesh’
+‘ref/tests/e5/avaliacao_17_1.tesh’ -> ‘04/tests/e5/avaliacao_17_1.tesh’
+‘ref/tests/e5/avaliacao_18_0.tesh’ -> ‘04/tests/e5/avaliacao_18_0.tesh’
+‘ref/tests/e5/avaliacao_18_1.tesh’ -> ‘04/tests/e5/avaliacao_18_1.tesh’
+‘ref/tests/e5/execute.sh’ -> ‘04/tests/e5/execute.sh’
+‘ref/tests/e5/valgrind_00_0.tesh’ -> ‘04/tests/e5/valgrind_00_0.tesh’
+‘ref/tests/e5/valgrind_00_1.tesh’ -> ‘04/tests/e5/valgrind_00_1.tesh’
+‘ref/tests/e5/valgrind_01_0.tesh’ -> ‘04/tests/e5/valgrind_01_0.tesh’
+‘ref/tests/e5/valgrind_01_1.tesh’ -> ‘04/tests/e5/valgrind_01_1.tesh’
+‘ref/tests/e5/valgrind_02_0.tesh’ -> ‘04/tests/e5/valgrind_02_0.tesh’
+‘ref/tests/e5/valgrind_02_1.tesh’ -> ‘04/tests/e5/valgrind_02_1.tesh’
+‘ref/tests/e5/valgrind_03_0.tesh’ -> ‘04/tests/e5/valgrind_03_0.tesh’
+‘ref/tests/e5/valgrind_03_1.tesh’ -> ‘04/tests/e5/valgrind_03_1.tesh’
+‘ref/tests/e5/valgrind_04_0.tesh’ -> ‘04/tests/e5/valgrind_04_0.tesh’
+‘ref/tests/e5/valgrind_04_1.tesh’ -> ‘04/tests/e5/valgrind_04_1.tesh’
+‘ref/tests/e5/valgrind_05_0.tesh’ -> ‘04/tests/e5/valgrind_05_0.tesh’
+‘ref/tests/e5/valgrind_05_1.tesh’ -> ‘04/tests/e5/valgrind_05_1.tesh’
+‘ref/tests/e5/valgrind_06_0.tesh’ -> ‘04/tests/e5/valgrind_06_0.tesh’
+‘ref/tests/e5/valgrind_06_1.tesh’ -> ‘04/tests/e5/valgrind_06_1.tesh’
+‘ref/tests/e5/valgrind_07_0.tesh’ -> ‘04/tests/e5/valgrind_07_0.tesh’
+‘ref/tests/e5/valgrind_07_1.tesh’ -> ‘04/tests/e5/valgrind_07_1.tesh’
+‘ref/tests/e5/valgrind_08_0.tesh’ -> ‘04/tests/e5/valgrind_08_0.tesh’
+‘ref/tests/e5/valgrind_08_1.tesh’ -> ‘04/tests/e5/valgrind_08_1.tesh’
+‘ref/tests/e5/valgrind_09_0.tesh’ -> ‘04/tests/e5/valgrind_09_0.tesh’
+‘ref/tests/e5/valgrind_09_1.tesh’ -> ‘04/tests/e5/valgrind_09_1.tesh’
+‘ref/tests/e5/valgrind_10_0.tesh’ -> ‘04/tests/e5/valgrind_10_0.tesh’
+‘ref/tests/e5/valgrind_10_1.tesh’ -> ‘04/tests/e5/valgrind_10_1.tesh’
+‘ref/tests/e5/valgrind_11_0.tesh’ -> ‘04/tests/e5/valgrind_11_0.tesh’
+‘ref/tests/e5/valgrind_11_1.tesh’ -> ‘04/tests/e5/valgrind_11_1.tesh’
+‘ref/tests/e5/valgrind_12_0.tesh’ -> ‘04/tests/e5/valgrind_12_0.tesh’
+‘ref/tests/e5/valgrind_12_1.tesh’ -> ‘04/tests/e5/valgrind_12_1.tesh’
+‘ref/tests/e5/valgrind_13_0.tesh’ -> ‘04/tests/e5/valgrind_13_0.tesh’
+‘ref/tests/e5/valgrind_13_1.tesh’ -> ‘04/tests/e5/valgrind_13_1.tesh’
+‘ref/tests/e5/valgrind_14_0.tesh’ -> ‘04/tests/e5/valgrind_14_0.tesh’
+‘ref/tests/e5/valgrind_14_1.tesh’ -> ‘04/tests/e5/valgrind_14_1.tesh’
+‘ref/tests/e5/valgrind_15_0.tesh’ -> ‘04/tests/e5/valgrind_15_0.tesh’
+‘ref/tests/e5/valgrind_15_1.tesh’ -> ‘04/tests/e5/valgrind_15_1.tesh’
+‘ref/tests/e5/valgrind_16_0.tesh’ -> ‘04/tests/e5/valgrind_16_0.tesh’
+‘ref/tests/e5/valgrind_16_1.tesh’ -> ‘04/tests/e5/valgrind_16_1.tesh’
+‘ref/tests/e5/valgrind_17_0.tesh’ -> ‘04/tests/e5/valgrind_17_0.tesh’
+‘ref/tests/e5/valgrind_17_1.tesh’ -> ‘04/tests/e5/valgrind_17_1.tesh’
+‘ref/tests/e5/valgrind_18_0.tesh’ -> ‘04/tests/e5/valgrind_18_0.tesh’
+‘ref/tests/e5/valgrind_18_1.tesh’ -> ‘04/tests/e5/valgrind_18_1.tesh’
+‘ref/tests/e5/verify’ -> ‘04/tests/e5/verify’
+‘ref/tests/e5/verify-new’ -> ‘04/tests/e5/verify-new’
+‘ref/tests/e5/expected’ -> ‘04/tests/e5/expected’
+‘ref/tests/e5/expected/00.out’ -> ‘04/tests/e5/expected/00.out’
+‘ref/tests/e5/expected/01.out’ -> ‘04/tests/e5/expected/01.out’
+‘ref/tests/e5/expected/02.out’ -> ‘04/tests/e5/expected/02.out’
+‘ref/tests/e5/expected/03.out’ -> ‘04/tests/e5/expected/03.out’
+‘ref/tests/e5/expected/04.out’ -> ‘04/tests/e5/expected/04.out’
+‘ref/tests/e5/expected/05.out’ -> ‘04/tests/e5/expected/05.out’
+‘ref/tests/e5/expected/06.out’ -> ‘04/tests/e5/expected/06.out’
+‘ref/tests/e5/expected/07.out’ -> ‘04/tests/e5/expected/07.out’
+‘ref/tests/e5/expected/08.out’ -> ‘04/tests/e5/expected/08.out’
+‘ref/tests/e5/input’ -> ‘04/tests/e5/input’
+‘ref/tests/e5/input/e00_0.amarela’ -> ‘04/tests/e5/input/e00_0.amarela’
+‘ref/tests/e5/input/e00_1.amarela’ -> ‘04/tests/e5/input/e00_1.amarela’
+‘ref/tests/e5/input/e01_0.amarela’ -> ‘04/tests/e5/input/e01_0.amarela’
+‘ref/tests/e5/input/e01_1.amarela’ -> ‘04/tests/e5/input/e01_1.amarela’
+‘ref/tests/e5/input/e02_0.amarela’ -> ‘04/tests/e5/input/e02_0.amarela’
+‘ref/tests/e5/input/e02_1.amarela’ -> ‘04/tests/e5/input/e02_1.amarela’
+‘ref/tests/e5/input/e03_0.amarela’ -> ‘04/tests/e5/input/e03_0.amarela’
+‘ref/tests/e5/input/e03_1.amarela’ -> ‘04/tests/e5/input/e03_1.amarela’
+‘ref/tests/e5/input/e04_0.amarela’ -> ‘04/tests/e5/input/e04_0.amarela’
+‘ref/tests/e5/input/e04_1.amarela’ -> ‘04/tests/e5/input/e04_1.amarela’
+‘ref/tests/e5/input/e05_0.amarela’ -> ‘04/tests/e5/input/e05_0.amarela’
+‘ref/tests/e5/input/e05_1.amarela’ -> ‘04/tests/e5/input/e05_1.amarela’
+‘ref/tests/e5/input/e06_0.amarela’ -> ‘04/tests/e5/input/e06_0.amarela’
+‘ref/tests/e5/input/e06_1.amarela’ -> ‘04/tests/e5/input/e06_1.amarela’
+‘ref/tests/e5/input/e07_0.amarela’ -> ‘04/tests/e5/input/e07_0.amarela’
+‘ref/tests/e5/input/e07_1.amarela’ -> ‘04/tests/e5/input/e07_1.amarela’
+‘ref/tests/e5/input/e08_0.amarela’ -> ‘04/tests/e5/input/e08_0.amarela’
+‘ref/tests/e5/input/e08_1.amarela’ -> ‘04/tests/e5/input/e08_1.amarela’
+‘ref/tests/e5/input/e09_0.amarela’ -> ‘04/tests/e5/input/e09_0.amarela’
+‘ref/tests/e5/input/e09_1.amarela’ -> ‘04/tests/e5/input/e09_1.amarela’
+‘ref/tests/e5/input/e10_0.amarela’ -> ‘04/tests/e5/input/e10_0.amarela’
+‘ref/tests/e5/input/e10_1.amarela’ -> ‘04/tests/e5/input/e10_1.amarela’
+‘ref/tests/e5/input/e11_0.amarela’ -> ‘04/tests/e5/input/e11_0.amarela’
+‘ref/tests/e5/input/e11_1.amarela’ -> ‘04/tests/e5/input/e11_1.amarela’
+‘ref/tests/e5/input/e12_0.amarela’ -> ‘04/tests/e5/input/e12_0.amarela’
+‘ref/tests/e5/input/e12_1.amarela’ -> ‘04/tests/e5/input/e12_1.amarela’
+‘ref/tests/e5/input/e13_0.amarela’ -> ‘04/tests/e5/input/e13_0.amarela’
+‘ref/tests/e5/input/e13_1.amarela’ -> ‘04/tests/e5/input/e13_1.amarela’
+‘ref/tests/e5/input/e14_0.amarela’ -> ‘04/tests/e5/input/e14_0.amarela’
+‘ref/tests/e5/input/e14_1.amarela’ -> ‘04/tests/e5/input/e14_1.amarela’
+‘ref/tests/e5/input/e15_0.amarela’ -> ‘04/tests/e5/input/e15_0.amarela’
+‘ref/tests/e5/input/e15_1.amarela’ -> ‘04/tests/e5/input/e15_1.amarela’
+‘ref/tests/e5/input/e16_0.amarela’ -> ‘04/tests/e5/input/e16_0.amarela’
+‘ref/tests/e5/input/e16_1.amarela’ -> ‘04/tests/e5/input/e16_1.amarela’
+‘ref/tests/e5/input/e17_0.amarela’ -> ‘04/tests/e5/input/e17_0.amarela’
+‘ref/tests/e5/input/e17_1.amarela’ -> ‘04/tests/e5/input/e17_1.amarela’
+‘ref/tests/e5/input/e18_0.amarela’ -> ‘04/tests/e5/input/e18_0.amarela’
+‘ref/tests/e5/input/e18_1.amarela’ -> ‘04/tests/e5/input/e18_1.amarela’
+-- The C compiler identification is GNU 4.9.2
+-- The CXX compiler identification is GNU 4.9.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Found FLEX: /usr/bin/flex (found version "2.5.39") 
+-- Found BISON: /usr/bin/bison (found version "3.0.2") 
+-- Setting build type to 'Debug' as none was specified.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/schnorr/ensino/inf01147-compiladores/projeto/results/etapa5/b-04
+[  9%] [BISON][parser] Building parser with bison 3.0.2
+[ 18%] [FLEX][scanner] Building scanner with flex 2.5.39
+Scanning dependencies of target main
+[ 27%] Building C object CMakeFiles/main.dir/scanner.c.o
+[ 36%] Building C object CMakeFiles/main.dir/parser.c.o
+[ 45%] Building C object CMakeFiles/main.dir/src/main.c.o
+[ 54%] Building C object CMakeFiles/main.dir/src/cc_misc.c.o
+[ 63%] Building C object CMakeFiles/main.dir/src/cc_gv.c.o
+[ 72%] Building C object CMakeFiles/main.dir/src/cc_dict.c.o
+[ 81%] Building C object CMakeFiles/main.dir/src/cc_list.c.o
+[ 90%] Building C object CMakeFiles/main.dir/src/cc_tree.c.o
+[100%] Building C object CMakeFiles/main.dir/src/cc_stack.c.o
+Linking C executable main
+[100%] Built target main
+06 git@bitbucket.org:luvlic/grupo-6-compil-2016-1.git solucao_etapa_5
+‘ref/tests/e5/’ -> ‘06/tests/e5’
+‘ref/tests/e5/avaliacao_00_0.tesh’ -> ‘06/tests/e5/avaliacao_00_0.tesh’
+‘ref/tests/e5/avaliacao_00_1.tesh’ -> ‘06/tests/e5/avaliacao_00_1.tesh’
+‘ref/tests/e5/avaliacao_01_0.tesh’ -> ‘06/tests/e5/avaliacao_01_0.tesh’
+‘ref/tests/e5/avaliacao_01_1.tesh’ -> ‘06/tests/e5/avaliacao_01_1.tesh’
+‘ref/tests/e5/avaliacao_02_0.tesh’ -> ‘06/tests/e5/avaliacao_02_0.tesh’
+‘ref/tests/e5/avaliacao_02_1.tesh’ -> ‘06/tests/e5/avaliacao_02_1.tesh’
+‘ref/tests/e5/avaliacao_03_0.tesh’ -> ‘06/tests/e5/avaliacao_03_0.tesh’
+‘ref/tests/e5/avaliacao_03_1.tesh’ -> ‘06/tests/e5/avaliacao_03_1.tesh’
+‘ref/tests/e5/avaliacao_04_0.tesh’ -> ‘06/tests/e5/avaliacao_04_0.tesh’
+‘ref/tests/e5/avaliacao_04_1.tesh’ -> ‘06/tests/e5/avaliacao_04_1.tesh’
+‘ref/tests/e5/avaliacao_05_0.tesh’ -> ‘06/tests/e5/avaliacao_05_0.tesh’
+‘ref/tests/e5/avaliacao_05_1.tesh’ -> ‘06/tests/e5/avaliacao_05_1.tesh’
+‘ref/tests/e5/avaliacao_06_0.tesh’ -> ‘06/tests/e5/avaliacao_06_0.tesh’
+‘ref/tests/e5/avaliacao_06_1.tesh’ -> ‘06/tests/e5/avaliacao_06_1.tesh’
+‘ref/tests/e5/avaliacao_07_0.tesh’ -> ‘06/tests/e5/avaliacao_07_0.tesh’
+‘ref/tests/e5/avaliacao_07_1.tesh’ -> ‘06/tests/e5/avaliacao_07_1.tesh’
+‘ref/tests/e5/avaliacao_08_0.tesh’ -> ‘06/tests/e5/avaliacao_08_0.tesh’
+‘ref/tests/e5/avaliacao_08_1.tesh’ -> ‘06/tests/e5/avaliacao_08_1.tesh’
+‘ref/tests/e5/avaliacao_09_0.tesh’ -> ‘06/tests/e5/avaliacao_09_0.tesh’
+‘ref/tests/e5/avaliacao_09_1.tesh’ -> ‘06/tests/e5/avaliacao_09_1.tesh’
+‘ref/tests/e5/avaliacao_10_0.tesh’ -> ‘06/tests/e5/avaliacao_10_0.tesh’
+‘ref/tests/e5/avaliacao_10_1.tesh’ -> ‘06/tests/e5/avaliacao_10_1.tesh’
+‘ref/tests/e5/avaliacao_11_0.tesh’ -> ‘06/tests/e5/avaliacao_11_0.tesh’
+‘ref/tests/e5/avaliacao_11_1.tesh’ -> ‘06/tests/e5/avaliacao_11_1.tesh’
+‘ref/tests/e5/avaliacao_12_0.tesh’ -> ‘06/tests/e5/avaliacao_12_0.tesh’
+‘ref/tests/e5/avaliacao_12_1.tesh’ -> ‘06/tests/e5/avaliacao_12_1.tesh’
+‘ref/tests/e5/avaliacao_13_0.tesh’ -> ‘06/tests/e5/avaliacao_13_0.tesh’
+‘ref/tests/e5/avaliacao_13_1.tesh’ -> ‘06/tests/e5/avaliacao_13_1.tesh’
+‘ref/tests/e5/avaliacao_14_0.tesh’ -> ‘06/tests/e5/avaliacao_14_0.tesh’
+‘ref/tests/e5/avaliacao_14_1.tesh’ -> ‘06/tests/e5/avaliacao_14_1.tesh’
+‘ref/tests/e5/avaliacao_15_0.tesh’ -> ‘06/tests/e5/avaliacao_15_0.tesh’
+‘ref/tests/e5/avaliacao_15_1.tesh’ -> ‘06/tests/e5/avaliacao_15_1.tesh’
+‘ref/tests/e5/avaliacao_16_0.tesh’ -> ‘06/tests/e5/avaliacao_16_0.tesh’
+‘ref/tests/e5/avaliacao_16_1.tesh’ -> ‘06/tests/e5/avaliacao_16_1.tesh’
+‘ref/tests/e5/avaliacao_17_0.tesh’ -> ‘06/tests/e5/avaliacao_17_0.tesh’
+‘ref/tests/e5/avaliacao_17_1.tesh’ -> ‘06/tests/e5/avaliacao_17_1.tesh’
+‘ref/tests/e5/avaliacao_18_0.tesh’ -> ‘06/tests/e5/avaliacao_18_0.tesh’
+‘ref/tests/e5/avaliacao_18_1.tesh’ -> ‘06/tests/e5/avaliacao_18_1.tesh’
+‘ref/tests/e5/execute.sh’ -> ‘06/tests/e5/execute.sh’
+‘ref/tests/e5/valgrind_00_0.tesh’ -> ‘06/tests/e5/valgrind_00_0.tesh’
+‘ref/tests/e5/valgrind_00_1.tesh’ -> ‘06/tests/e5/valgrind_00_1.tesh’
+‘ref/tests/e5/valgrind_01_0.tesh’ -> ‘06/tests/e5/valgrind_01_0.tesh’
+‘ref/tests/e5/valgrind_01_1.tesh’ -> ‘06/tests/e5/valgrind_01_1.tesh’
+‘ref/tests/e5/valgrind_02_0.tesh’ -> ‘06/tests/e5/valgrind_02_0.tesh’
+‘ref/tests/e5/valgrind_02_1.tesh’ -> ‘06/tests/e5/valgrind_02_1.tesh’
+‘ref/tests/e5/valgrind_03_0.tesh’ -> ‘06/tests/e5/valgrind_03_0.tesh’
+‘ref/tests/e5/valgrind_03_1.tesh’ -> ‘06/tests/e5/valgrind_03_1.tesh’
+‘ref/tests/e5/valgrind_04_0.tesh’ -> ‘06/tests/e5/valgrind_04_0.tesh’
+‘ref/tests/e5/valgrind_04_1.tesh’ -> ‘06/tests/e5/valgrind_04_1.tesh’
+‘ref/tests/e5/valgrind_05_0.tesh’ -> ‘06/tests/e5/valgrind_05_0.tesh’
+‘ref/tests/e5/valgrind_05_1.tesh’ -> ‘06/tests/e5/valgrind_05_1.tesh’
+‘ref/tests/e5/valgrind_06_0.tesh’ -> ‘06/tests/e5/valgrind_06_0.tesh’
+‘ref/tests/e5/valgrind_06_1.tesh’ -> ‘06/tests/e5/valgrind_06_1.tesh’
+‘ref/tests/e5/valgrind_07_0.tesh’ -> ‘06/tests/e5/valgrind_07_0.tesh’
+‘ref/tests/e5/valgrind_07_1.tesh’ -> ‘06/tests/e5/valgrind_07_1.tesh’
+‘ref/tests/e5/valgrind_08_0.tesh’ -> ‘06/tests/e5/valgrind_08_0.tesh’
+‘ref/tests/e5/valgrind_08_1.tesh’ -> ‘06/tests/e5/valgrind_08_1.tesh’
+‘ref/tests/e5/valgrind_09_0.tesh’ -> ‘06/tests/e5/valgrind_09_0.tesh’
+‘ref/tests/e5/valgrind_09_1.tesh’ -> ‘06/tests/e5/valgrind_09_1.tesh’
+‘ref/tests/e5/valgrind_10_0.tesh’ -> ‘06/tests/e5/valgrind_10_0.tesh’
+‘ref/tests/e5/valgrind_10_1.tesh’ -> ‘06/tests/e5/valgrind_10_1.tesh’
+‘ref/tests/e5/valgrind_11_0.tesh’ -> ‘06/tests/e5/valgrind_11_0.tesh’
+‘ref/tests/e5/valgrind_11_1.tesh’ -> ‘06/tests/e5/valgrind_11_1.tesh’
+‘ref/tests/e5/valgrind_12_0.tesh’ -> ‘06/tests/e5/valgrind_12_0.tesh’
+‘ref/tests/e5/valgrind_12_1.tesh’ -> ‘06/tests/e5/valgrind_12_1.tesh’
+‘ref/tests/e5/valgrind_13_0.tesh’ -> ‘06/tests/e5/valgrind_13_0.tesh’
+‘ref/tests/e5/valgrind_13_1.tesh’ -> ‘06/tests/e5/valgrind_13_1.tesh’
+‘ref/tests/e5/valgrind_14_0.tesh’ -> ‘06/tests/e5/valgrind_14_0.tesh’
+‘ref/tests/e5/valgrind_14_1.tesh’ -> ‘06/tests/e5/valgrind_14_1.tesh’
+‘ref/tests/e5/valgrind_15_0.tesh’ -> ‘06/tests/e5/valgrind_15_0.tesh’
+‘ref/tests/e5/valgrind_15_1.tesh’ -> ‘06/tests/e5/valgrind_15_1.tesh’
+‘ref/tests/e5/valgrind_16_0.tesh’ -> ‘06/tests/e5/valgrind_16_0.tesh’
+‘ref/tests/e5/valgrind_16_1.tesh’ -> ‘06/tests/e5/valgrind_16_1.tesh’
+‘ref/tests/e5/valgrind_17_0.tesh’ -> ‘06/tests/e5/valgrind_17_0.tesh’
+‘ref/tests/e5/valgrind_17_1.tesh’ -> ‘06/tests/e5/valgrind_17_1.tesh’
+‘ref/tests/e5/valgrind_18_0.tesh’ -> ‘06/tests/e5/valgrind_18_0.tesh’
+‘ref/tests/e5/valgrind_18_1.tesh’ -> ‘06/tests/e5/valgrind_18_1.tesh’
+‘ref/tests/e5/verify’ -> ‘06/tests/e5/verify’
+‘ref/tests/e5/verify-new’ -> ‘06/tests/e5/verify-new’
+‘ref/tests/e5/expected’ -> ‘06/tests/e5/expected’
+‘ref/tests/e5/expected/00.out’ -> ‘06/tests/e5/expected/00.out’
+‘ref/tests/e5/expected/01.out’ -> ‘06/tests/e5/expected/01.out’
+‘ref/tests/e5/expected/02.out’ -> ‘06/tests/e5/expected/02.out’
+‘ref/tests/e5/expected/03.out’ -> ‘06/tests/e5/expected/03.out’
+‘ref/tests/e5/expected/04.out’ -> ‘06/tests/e5/expected/04.out’
+‘ref/tests/e5/expected/05.out’ -> ‘06/tests/e5/expected/05.out’
+‘ref/tests/e5/expected/06.out’ -> ‘06/tests/e5/expected/06.out’
+‘ref/tests/e5/expected/07.out’ -> ‘06/tests/e5/expected/07.out’
+‘ref/tests/e5/expected/08.out’ -> ‘06/tests/e5/expected/08.out’
+‘ref/tests/e5/input’ -> ‘06/tests/e5/input’
+‘ref/tests/e5/input/e00_0.amarela’ -> ‘06/tests/e5/input/e00_0.amarela’
+‘ref/tests/e5/input/e00_1.amarela’ -> ‘06/tests/e5/input/e00_1.amarela’
+‘ref/tests/e5/input/e01_0.amarela’ -> ‘06/tests/e5/input/e01_0.amarela’
+‘ref/tests/e5/input/e01_1.amarela’ -> ‘06/tests/e5/input/e01_1.amarela’
+‘ref/tests/e5/input/e02_0.amarela’ -> ‘06/tests/e5/input/e02_0.amarela’
+‘ref/tests/e5/input/e02_1.amarela’ -> ‘06/tests/e5/input/e02_1.amarela’
+‘ref/tests/e5/input/e03_0.amarela’ -> ‘06/tests/e5/input/e03_0.amarela’
+‘ref/tests/e5/input/e03_1.amarela’ -> ‘06/tests/e5/input/e03_1.amarela’
+‘ref/tests/e5/input/e04_0.amarela’ -> ‘06/tests/e5/input/e04_0.amarela’
+‘ref/tests/e5/input/e04_1.amarela’ -> ‘06/tests/e5/input/e04_1.amarela’
+‘ref/tests/e5/input/e05_0.amarela’ -> ‘06/tests/e5/input/e05_0.amarela’
+‘ref/tests/e5/input/e05_1.amarela’ -> ‘06/tests/e5/input/e05_1.amarela’
+‘ref/tests/e5/input/e06_0.amarela’ -> ‘06/tests/e5/input/e06_0.amarela’
+‘ref/tests/e5/input/e06_1.amarela’ -> ‘06/tests/e5/input/e06_1.amarela’
+‘ref/tests/e5/input/e07_0.amarela’ -> ‘06/tests/e5/input/e07_0.amarela’
+‘ref/tests/e5/input/e07_1.amarela’ -> ‘06/tests/e5/input/e07_1.amarela’
+‘ref/tests/e5/input/e08_0.amarela’ -> ‘06/tests/e5/input/e08_0.amarela’
+‘ref/tests/e5/input/e08_1.amarela’ -> ‘06/tests/e5/input/e08_1.amarela’
+‘ref/tests/e5/input/e09_0.amarela’ -> ‘06/tests/e5/input/e09_0.amarela’
+‘ref/tests/e5/input/e09_1.amarela’ -> ‘06/tests/e5/input/e09_1.amarela’
+‘ref/tests/e5/input/e10_0.amarela’ -> ‘06/tests/e5/input/e10_0.amarela’
+‘ref/tests/e5/input/e10_1.amarela’ -> ‘06/tests/e5/input/e10_1.amarela’
+‘ref/tests/e5/input/e11_0.amarela’ -> ‘06/tests/e5/input/e11_0.amarela’
+‘ref/tests/e5/input/e11_1.amarela’ -> ‘06/tests/e5/input/e11_1.amarela’
+‘ref/tests/e5/input/e12_0.amarela’ -> ‘06/tests/e5/input/e12_0.amarela’
+‘ref/tests/e5/input/e12_1.amarela’ -> ‘06/tests/e5/input/e12_1.amarela’
+‘ref/tests/e5/input/e13_0.amarela’ -> ‘06/tests/e5/input/e13_0.amarela’
+‘ref/tests/e5/input/e13_1.amarela’ -> ‘06/tests/e5/input/e13_1.amarela’
+‘ref/tests/e5/input/e14_0.amarela’ -> ‘06/tests/e5/input/e14_0.amarela’
+‘ref/tests/e5/input/e14_1.amarela’ -> ‘06/tests/e5/input/e14_1.amarela’
+‘ref/tests/e5/input/e15_0.amarela’ -> ‘06/tests/e5/input/e15_0.amarela’
+‘ref/tests/e5/input/e15_1.amarela’ -> ‘06/tests/e5/input/e15_1.amarela’
+‘ref/tests/e5/input/e16_0.amarela’ -> ‘06/tests/e5/input/e16_0.amarela’
+‘ref/tests/e5/input/e16_1.amarela’ -> ‘06/tests/e5/input/e16_1.amarela’
+‘ref/tests/e5/input/e17_0.amarela’ -> ‘06/tests/e5/input/e17_0.amarela’
+‘ref/tests/e5/input/e17_1.amarela’ -> ‘06/tests/e5/input/e17_1.amarela’
+‘ref/tests/e5/input/e18_0.amarela’ -> ‘06/tests/e5/input/e18_0.amarela’
+‘ref/tests/e5/input/e18_1.amarela’ -> ‘06/tests/e5/input/e18_1.amarela’
+-- The C compiler identification is GNU 4.9.2
+-- The CXX compiler identification is GNU 4.9.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Found FLEX: /usr/bin/flex (found version "2.5.39") 
+-- Found BISON: /usr/bin/bison (found version "3.0.2") 
+-- Setting build type to 'Debug' as none was specified.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/schnorr/ensino/inf01147-compiladores/projeto/results/etapa5/b-06
+[  9%] [BISON][parser] Building parser with bison 3.0.2
+[ 18%] [FLEX][scanner] Building scanner with flex 2.5.39
+Scanning dependencies of target main
+[ 27%] Building C object CMakeFiles/main.dir/scanner.c.o
+[ 36%] Building C object CMakeFiles/main.dir/parser.c.o
+[ 45%] Building C object CMakeFiles/main.dir/src/main.c.o
+[ 54%] Building C object CMakeFiles/main.dir/src/cc_misc.c.o
+[ 63%] Building C object CMakeFiles/main.dir/src/cc_gv.c.o
+[ 72%] Building C object CMakeFiles/main.dir/src/cc_dict.c.o
+[ 81%] Building C object CMakeFiles/main.dir/src/cc_list.c.o
+[ 90%] Building C object CMakeFiles/main.dir/src/cc_tree.c.o
+[100%] Building C object CMakeFiles/main.dir/src/cc_codigo.c.o
+Linking C executable main
+[100%] Built target main
+08 git@bitbucket.org:guga581/trab1_compiladores.git etapa5_concluida
+‘ref/tests/e5/’ -> ‘08/tests/e5’
+‘ref/tests/e5/avaliacao_00_0.tesh’ -> ‘08/tests/e5/avaliacao_00_0.tesh’
+‘ref/tests/e5/avaliacao_00_1.tesh’ -> ‘08/tests/e5/avaliacao_00_1.tesh’
+‘ref/tests/e5/avaliacao_01_0.tesh’ -> ‘08/tests/e5/avaliacao_01_0.tesh’
+‘ref/tests/e5/avaliacao_01_1.tesh’ -> ‘08/tests/e5/avaliacao_01_1.tesh’
+‘ref/tests/e5/avaliacao_02_0.tesh’ -> ‘08/tests/e5/avaliacao_02_0.tesh’
+‘ref/tests/e5/avaliacao_02_1.tesh’ -> ‘08/tests/e5/avaliacao_02_1.tesh’
+‘ref/tests/e5/avaliacao_03_0.tesh’ -> ‘08/tests/e5/avaliacao_03_0.tesh’
+‘ref/tests/e5/avaliacao_03_1.tesh’ -> ‘08/tests/e5/avaliacao_03_1.tesh’
+‘ref/tests/e5/avaliacao_04_0.tesh’ -> ‘08/tests/e5/avaliacao_04_0.tesh’
+‘ref/tests/e5/avaliacao_04_1.tesh’ -> ‘08/tests/e5/avaliacao_04_1.tesh’
+‘ref/tests/e5/avaliacao_05_0.tesh’ -> ‘08/tests/e5/avaliacao_05_0.tesh’
+‘ref/tests/e5/avaliacao_05_1.tesh’ -> ‘08/tests/e5/avaliacao_05_1.tesh’
+‘ref/tests/e5/avaliacao_06_0.tesh’ -> ‘08/tests/e5/avaliacao_06_0.tesh’
+‘ref/tests/e5/avaliacao_06_1.tesh’ -> ‘08/tests/e5/avaliacao_06_1.tesh’
+‘ref/tests/e5/avaliacao_07_0.tesh’ -> ‘08/tests/e5/avaliacao_07_0.tesh’
+‘ref/tests/e5/avaliacao_07_1.tesh’ -> ‘08/tests/e5/avaliacao_07_1.tesh’
+‘ref/tests/e5/avaliacao_08_0.tesh’ -> ‘08/tests/e5/avaliacao_08_0.tesh’
+‘ref/tests/e5/avaliacao_08_1.tesh’ -> ‘08/tests/e5/avaliacao_08_1.tesh’
+‘ref/tests/e5/avaliacao_09_0.tesh’ -> ‘08/tests/e5/avaliacao_09_0.tesh’
+‘ref/tests/e5/avaliacao_09_1.tesh’ -> ‘08/tests/e5/avaliacao_09_1.tesh’
+‘ref/tests/e5/avaliacao_10_0.tesh’ -> ‘08/tests/e5/avaliacao_10_0.tesh’
+‘ref/tests/e5/avaliacao_10_1.tesh’ -> ‘08/tests/e5/avaliacao_10_1.tesh’
+‘ref/tests/e5/avaliacao_11_0.tesh’ -> ‘08/tests/e5/avaliacao_11_0.tesh’
+‘ref/tests/e5/avaliacao_11_1.tesh’ -> ‘08/tests/e5/avaliacao_11_1.tesh’
+‘ref/tests/e5/avaliacao_12_0.tesh’ -> ‘08/tests/e5/avaliacao_12_0.tesh’
+‘ref/tests/e5/avaliacao_12_1.tesh’ -> ‘08/tests/e5/avaliacao_12_1.tesh’
+‘ref/tests/e5/avaliacao_13_0.tesh’ -> ‘08/tests/e5/avaliacao_13_0.tesh’
+‘ref/tests/e5/avaliacao_13_1.tesh’ -> ‘08/tests/e5/avaliacao_13_1.tesh’
+‘ref/tests/e5/avaliacao_14_0.tesh’ -> ‘08/tests/e5/avaliacao_14_0.tesh’
+‘ref/tests/e5/avaliacao_14_1.tesh’ -> ‘08/tests/e5/avaliacao_14_1.tesh’
+‘ref/tests/e5/avaliacao_15_0.tesh’ -> ‘08/tests/e5/avaliacao_15_0.tesh’
+‘ref/tests/e5/avaliacao_15_1.tesh’ -> ‘08/tests/e5/avaliacao_15_1.tesh’
+‘ref/tests/e5/avaliacao_16_0.tesh’ -> ‘08/tests/e5/avaliacao_16_0.tesh’
+‘ref/tests/e5/avaliacao_16_1.tesh’ -> ‘08/tests/e5/avaliacao_16_1.tesh’
+‘ref/tests/e5/avaliacao_17_0.tesh’ -> ‘08/tests/e5/avaliacao_17_0.tesh’
+‘ref/tests/e5/avaliacao_17_1.tesh’ -> ‘08/tests/e5/avaliacao_17_1.tesh’
+‘ref/tests/e5/avaliacao_18_0.tesh’ -> ‘08/tests/e5/avaliacao_18_0.tesh’
+‘ref/tests/e5/avaliacao_18_1.tesh’ -> ‘08/tests/e5/avaliacao_18_1.tesh’
+‘ref/tests/e5/execute.sh’ -> ‘08/tests/e5/execute.sh’
+‘ref/tests/e5/valgrind_00_0.tesh’ -> ‘08/tests/e5/valgrind_00_0.tesh’
+‘ref/tests/e5/valgrind_00_1.tesh’ -> ‘08/tests/e5/valgrind_00_1.tesh’
+‘ref/tests/e5/valgrind_01_0.tesh’ -> ‘08/tests/e5/valgrind_01_0.tesh’
+‘ref/tests/e5/valgrind_01_1.tesh’ -> ‘08/tests/e5/valgrind_01_1.tesh’
+‘ref/tests/e5/valgrind_02_0.tesh’ -> ‘08/tests/e5/valgrind_02_0.tesh’
+‘ref/tests/e5/valgrind_02_1.tesh’ -> ‘08/tests/e5/valgrind_02_1.tesh’
+‘ref/tests/e5/valgrind_03_0.tesh’ -> ‘08/tests/e5/valgrind_03_0.tesh’
+‘ref/tests/e5/valgrind_03_1.tesh’ -> ‘08/tests/e5/valgrind_03_1.tesh’
+‘ref/tests/e5/valgrind_04_0.tesh’ -> ‘08/tests/e5/valgrind_04_0.tesh’
+‘ref/tests/e5/valgrind_04_1.tesh’ -> ‘08/tests/e5/valgrind_04_1.tesh’
+‘ref/tests/e5/valgrind_05_0.tesh’ -> ‘08/tests/e5/valgrind_05_0.tesh’
+‘ref/tests/e5/valgrind_05_1.tesh’ -> ‘08/tests/e5/valgrind_05_1.tesh’
+‘ref/tests/e5/valgrind_06_0.tesh’ -> ‘08/tests/e5/valgrind_06_0.tesh’
+‘ref/tests/e5/valgrind_06_1.tesh’ -> ‘08/tests/e5/valgrind_06_1.tesh’
+‘ref/tests/e5/valgrind_07_0.tesh’ -> ‘08/tests/e5/valgrind_07_0.tesh’
+‘ref/tests/e5/valgrind_07_1.tesh’ -> ‘08/tests/e5/valgrind_07_1.tesh’
+‘ref/tests/e5/valgrind_08_0.tesh’ -> ‘08/tests/e5/valgrind_08_0.tesh’
+‘ref/tests/e5/valgrind_08_1.tesh’ -> ‘08/tests/e5/valgrind_08_1.tesh’
+‘ref/tests/e5/valgrind_09_0.tesh’ -> ‘08/tests/e5/valgrind_09_0.tesh’
+‘ref/tests/e5/valgrind_09_1.tesh’ -> ‘08/tests/e5/valgrind_09_1.tesh’
+‘ref/tests/e5/valgrind_10_0.tesh’ -> ‘08/tests/e5/valgrind_10_0.tesh’
+‘ref/tests/e5/valgrind_10_1.tesh’ -> ‘08/tests/e5/valgrind_10_1.tesh’
+‘ref/tests/e5/valgrind_11_0.tesh’ -> ‘08/tests/e5/valgrind_11_0.tesh’
+‘ref/tests/e5/valgrind_11_1.tesh’ -> ‘08/tests/e5/valgrind_11_1.tesh’
+‘ref/tests/e5/valgrind_12_0.tesh’ -> ‘08/tests/e5/valgrind_12_0.tesh’
+‘ref/tests/e5/valgrind_12_1.tesh’ -> ‘08/tests/e5/valgrind_12_1.tesh’
+‘ref/tests/e5/valgrind_13_0.tesh’ -> ‘08/tests/e5/valgrind_13_0.tesh’
+‘ref/tests/e5/valgrind_13_1.tesh’ -> ‘08/tests/e5/valgrind_13_1.tesh’
+‘ref/tests/e5/valgrind_14_0.tesh’ -> ‘08/tests/e5/valgrind_14_0.tesh’
+‘ref/tests/e5/valgrind_14_1.tesh’ -> ‘08/tests/e5/valgrind_14_1.tesh’
+‘ref/tests/e5/valgrind_15_0.tesh’ -> ‘08/tests/e5/valgrind_15_0.tesh’
+‘ref/tests/e5/valgrind_15_1.tesh’ -> ‘08/tests/e5/valgrind_15_1.tesh’
+‘ref/tests/e5/valgrind_16_0.tesh’ -> ‘08/tests/e5/valgrind_16_0.tesh’
+‘ref/tests/e5/valgrind_16_1.tesh’ -> ‘08/tests/e5/valgrind_16_1.tesh’
+‘ref/tests/e5/valgrind_17_0.tesh’ -> ‘08/tests/e5/valgrind_17_0.tesh’
+‘ref/tests/e5/valgrind_17_1.tesh’ -> ‘08/tests/e5/valgrind_17_1.tesh’
+‘ref/tests/e5/valgrind_18_0.tesh’ -> ‘08/tests/e5/valgrind_18_0.tesh’
+‘ref/tests/e5/valgrind_18_1.tesh’ -> ‘08/tests/e5/valgrind_18_1.tesh’
+‘ref/tests/e5/verify’ -> ‘08/tests/e5/verify’
+‘ref/tests/e5/verify-new’ -> ‘08/tests/e5/verify-new’
+‘ref/tests/e5/expected’ -> ‘08/tests/e5/expected’
+‘ref/tests/e5/expected/00.out’ -> ‘08/tests/e5/expected/00.out’
+‘ref/tests/e5/expected/01.out’ -> ‘08/tests/e5/expected/01.out’
+‘ref/tests/e5/expected/02.out’ -> ‘08/tests/e5/expected/02.out’
+‘ref/tests/e5/expected/03.out’ -> ‘08/tests/e5/expected/03.out’
+‘ref/tests/e5/expected/04.out’ -> ‘08/tests/e5/expected/04.out’
+‘ref/tests/e5/expected/05.out’ -> ‘08/tests/e5/expected/05.out’
+‘ref/tests/e5/expected/06.out’ -> ‘08/tests/e5/expected/06.out’
+‘ref/tests/e5/expected/07.out’ -> ‘08/tests/e5/expected/07.out’
+‘ref/tests/e5/expected/08.out’ -> ‘08/tests/e5/expected/08.out’
+‘ref/tests/e5/input’ -> ‘08/tests/e5/input’
+‘ref/tests/e5/input/e00_0.amarela’ -> ‘08/tests/e5/input/e00_0.amarela’
+‘ref/tests/e5/input/e00_1.amarela’ -> ‘08/tests/e5/input/e00_1.amarela’
+‘ref/tests/e5/input/e01_0.amarela’ -> ‘08/tests/e5/input/e01_0.amarela’
+‘ref/tests/e5/input/e01_1.amarela’ -> ‘08/tests/e5/input/e01_1.amarela’
+‘ref/tests/e5/input/e02_0.amarela’ -> ‘08/tests/e5/input/e02_0.amarela’
+‘ref/tests/e5/input/e02_1.amarela’ -> ‘08/tests/e5/input/e02_1.amarela’
+‘ref/tests/e5/input/e03_0.amarela’ -> ‘08/tests/e5/input/e03_0.amarela’
+‘ref/tests/e5/input/e03_1.amarela’ -> ‘08/tests/e5/input/e03_1.amarela’
+‘ref/tests/e5/input/e04_0.amarela’ -> ‘08/tests/e5/input/e04_0.amarela’
+‘ref/tests/e5/input/e04_1.amarela’ -> ‘08/tests/e5/input/e04_1.amarela’
+‘ref/tests/e5/input/e05_0.amarela’ -> ‘08/tests/e5/input/e05_0.amarela’
+‘ref/tests/e5/input/e05_1.amarela’ -> ‘08/tests/e5/input/e05_1.amarela’
+‘ref/tests/e5/input/e06_0.amarela’ -> ‘08/tests/e5/input/e06_0.amarela’
+‘ref/tests/e5/input/e06_1.amarela’ -> ‘08/tests/e5/input/e06_1.amarela’
+‘ref/tests/e5/input/e07_0.amarela’ -> ‘08/tests/e5/input/e07_0.amarela’
+‘ref/tests/e5/input/e07_1.amarela’ -> ‘08/tests/e5/input/e07_1.amarela’
+‘ref/tests/e5/input/e08_0.amarela’ -> ‘08/tests/e5/input/e08_0.amarela’
+‘ref/tests/e5/input/e08_1.amarela’ -> ‘08/tests/e5/input/e08_1.amarela’
+‘ref/tests/e5/input/e09_0.amarela’ -> ‘08/tests/e5/input/e09_0.amarela’
+‘ref/tests/e5/input/e09_1.amarela’ -> ‘08/tests/e5/input/e09_1.amarela’
+‘ref/tests/e5/input/e10_0.amarela’ -> ‘08/tests/e5/input/e10_0.amarela’
+‘ref/tests/e5/input/e10_1.amarela’ -> ‘08/tests/e5/input/e10_1.amarela’
+‘ref/tests/e5/input/e11_0.amarela’ -> ‘08/tests/e5/input/e11_0.amarela’
+‘ref/tests/e5/input/e11_1.amarela’ -> ‘08/tests/e5/input/e11_1.amarela’
+‘ref/tests/e5/input/e12_0.amarela’ -> ‘08/tests/e5/input/e12_0.amarela’
+‘ref/tests/e5/input/e12_1.amarela’ -> ‘08/tests/e5/input/e12_1.amarela’
+‘ref/tests/e5/input/e13_0.amarela’ -> ‘08/tests/e5/input/e13_0.amarela’
+‘ref/tests/e5/input/e13_1.amarela’ -> ‘08/tests/e5/input/e13_1.amarela’
+‘ref/tests/e5/input/e14_0.amarela’ -> ‘08/tests/e5/input/e14_0.amarela’
+‘ref/tests/e5/input/e14_1.amarela’ -> ‘08/tests/e5/input/e14_1.amarela’
+‘ref/tests/e5/input/e15_0.amarela’ -> ‘08/tests/e5/input/e15_0.amarela’
+‘ref/tests/e5/input/e15_1.amarela’ -> ‘08/tests/e5/input/e15_1.amarela’
+‘ref/tests/e5/input/e16_0.amarela’ -> ‘08/tests/e5/input/e16_0.amarela’
+‘ref/tests/e5/input/e16_1.amarela’ -> ‘08/tests/e5/input/e16_1.amarela’
+‘ref/tests/e5/input/e17_0.amarela’ -> ‘08/tests/e5/input/e17_0.amarela’
+‘ref/tests/e5/input/e17_1.amarela’ -> ‘08/tests/e5/input/e17_1.amarela’
+‘ref/tests/e5/input/e18_0.amarela’ -> ‘08/tests/e5/input/e18_0.amarela’
+‘ref/tests/e5/input/e18_1.amarela’ -> ‘08/tests/e5/input/e18_1.amarela’
+-- The C compiler identification is GNU 4.9.2
+-- The CXX compiler identification is GNU 4.9.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Found FLEX: /usr/bin/flex (found version "2.5.39") 
+-- Found BISON: /usr/bin/bison (found version "3.0.2") 
+-- Setting build type to 'Debug' as none was specified.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/schnorr/ensino/inf01147-compiladores/projeto/results/etapa5/b-08
+Scanning dependencies of target cc_dict_main_example
+[  8%] Building C object CMakeFiles/cc_dict_main_example.dir/src/cc_dict.c.o
+[ 16%] Building C object CMakeFiles/cc_dict_main_example.dir/src/cc_dict_main_example.c.o
+Linking C executable cc_dict_main_example
+[ 16%] Built target cc_dict_main_example
+[ 25%] [BISON][parser] Building parser with bison 3.0.2
+[ 33%] [FLEX][scanner] Building scanner with flex 2.5.39
+Scanning dependencies of target main
+[ 41%] Building C object CMakeFiles/main.dir/scanner.c.o
+[ 50%] Building C object CMakeFiles/main.dir/parser.c.o
+[ 58%] Building C object CMakeFiles/main.dir/src/main.c.o
+[ 66%] Building C object CMakeFiles/main.dir/src/cc_misc.c.o
+[ 75%] Building C object CMakeFiles/main.dir/src/cc_gv.c.o
+[ 83%] Building C object CMakeFiles/main.dir/src/cc_dict.c.o
+[ 91%] Building C object CMakeFiles/main.dir/src/cc_list.c.o
+[100%] Building C object CMakeFiles/main.dir/src/cc_tree.c.o
+Linking C executable main
+[100%] Built target main
+09 git@bitbucket.org:gianei/compiladoresgianeigustavoforked.git Etapa_5
+‘ref/tests/e5/’ -> ‘09/tests/e5’
+‘ref/tests/e5/avaliacao_00_0.tesh’ -> ‘09/tests/e5/avaliacao_00_0.tesh’
+‘ref/tests/e5/avaliacao_00_1.tesh’ -> ‘09/tests/e5/avaliacao_00_1.tesh’
+‘ref/tests/e5/avaliacao_01_0.tesh’ -> ‘09/tests/e5/avaliacao_01_0.tesh’
+‘ref/tests/e5/avaliacao_01_1.tesh’ -> ‘09/tests/e5/avaliacao_01_1.tesh’
+‘ref/tests/e5/avaliacao_02_0.tesh’ -> ‘09/tests/e5/avaliacao_02_0.tesh’
+‘ref/tests/e5/avaliacao_02_1.tesh’ -> ‘09/tests/e5/avaliacao_02_1.tesh’
+‘ref/tests/e5/avaliacao_03_0.tesh’ -> ‘09/tests/e5/avaliacao_03_0.tesh’
+‘ref/tests/e5/avaliacao_03_1.tesh’ -> ‘09/tests/e5/avaliacao_03_1.tesh’
+‘ref/tests/e5/avaliacao_04_0.tesh’ -> ‘09/tests/e5/avaliacao_04_0.tesh’
+‘ref/tests/e5/avaliacao_04_1.tesh’ -> ‘09/tests/e5/avaliacao_04_1.tesh’
+‘ref/tests/e5/avaliacao_05_0.tesh’ -> ‘09/tests/e5/avaliacao_05_0.tesh’
+‘ref/tests/e5/avaliacao_05_1.tesh’ -> ‘09/tests/e5/avaliacao_05_1.tesh’
+‘ref/tests/e5/avaliacao_06_0.tesh’ -> ‘09/tests/e5/avaliacao_06_0.tesh’
+‘ref/tests/e5/avaliacao_06_1.tesh’ -> ‘09/tests/e5/avaliacao_06_1.tesh’
+‘ref/tests/e5/avaliacao_07_0.tesh’ -> ‘09/tests/e5/avaliacao_07_0.tesh’
+‘ref/tests/e5/avaliacao_07_1.tesh’ -> ‘09/tests/e5/avaliacao_07_1.tesh’
+‘ref/tests/e5/avaliacao_08_0.tesh’ -> ‘09/tests/e5/avaliacao_08_0.tesh’
+‘ref/tests/e5/avaliacao_08_1.tesh’ -> ‘09/tests/e5/avaliacao_08_1.tesh’
+‘ref/tests/e5/avaliacao_09_0.tesh’ -> ‘09/tests/e5/avaliacao_09_0.tesh’
+‘ref/tests/e5/avaliacao_09_1.tesh’ -> ‘09/tests/e5/avaliacao_09_1.tesh’
+‘ref/tests/e5/avaliacao_10_0.tesh’ -> ‘09/tests/e5/avaliacao_10_0.tesh’
+‘ref/tests/e5/avaliacao_10_1.tesh’ -> ‘09/tests/e5/avaliacao_10_1.tesh’
+‘ref/tests/e5/avaliacao_11_0.tesh’ -> ‘09/tests/e5/avaliacao_11_0.tesh’
+‘ref/tests/e5/avaliacao_11_1.tesh’ -> ‘09/tests/e5/avaliacao_11_1.tesh’
+‘ref/tests/e5/avaliacao_12_0.tesh’ -> ‘09/tests/e5/avaliacao_12_0.tesh’
+‘ref/tests/e5/avaliacao_12_1.tesh’ -> ‘09/tests/e5/avaliacao_12_1.tesh’
+‘ref/tests/e5/avaliacao_13_0.tesh’ -> ‘09/tests/e5/avaliacao_13_0.tesh’
+‘ref/tests/e5/avaliacao_13_1.tesh’ -> ‘09/tests/e5/avaliacao_13_1.tesh’
+‘ref/tests/e5/avaliacao_14_0.tesh’ -> ‘09/tests/e5/avaliacao_14_0.tesh’
+‘ref/tests/e5/avaliacao_14_1.tesh’ -> ‘09/tests/e5/avaliacao_14_1.tesh’
+‘ref/tests/e5/avaliacao_15_0.tesh’ -> ‘09/tests/e5/avaliacao_15_0.tesh’
+‘ref/tests/e5/avaliacao_15_1.tesh’ -> ‘09/tests/e5/avaliacao_15_1.tesh’
+‘ref/tests/e5/avaliacao_16_0.tesh’ -> ‘09/tests/e5/avaliacao_16_0.tesh’
+‘ref/tests/e5/avaliacao_16_1.tesh’ -> ‘09/tests/e5/avaliacao_16_1.tesh’
+‘ref/tests/e5/avaliacao_17_0.tesh’ -> ‘09/tests/e5/avaliacao_17_0.tesh’
+‘ref/tests/e5/avaliacao_17_1.tesh’ -> ‘09/tests/e5/avaliacao_17_1.tesh’
+‘ref/tests/e5/avaliacao_18_0.tesh’ -> ‘09/tests/e5/avaliacao_18_0.tesh’
+‘ref/tests/e5/avaliacao_18_1.tesh’ -> ‘09/tests/e5/avaliacao_18_1.tesh’
+‘ref/tests/e5/execute.sh’ -> ‘09/tests/e5/execute.sh’
+‘ref/tests/e5/valgrind_00_0.tesh’ -> ‘09/tests/e5/valgrind_00_0.tesh’
+‘ref/tests/e5/valgrind_00_1.tesh’ -> ‘09/tests/e5/valgrind_00_1.tesh’
+‘ref/tests/e5/valgrind_01_0.tesh’ -> ‘09/tests/e5/valgrind_01_0.tesh’
+‘ref/tests/e5/valgrind_01_1.tesh’ -> ‘09/tests/e5/valgrind_01_1.tesh’
+‘ref/tests/e5/valgrind_02_0.tesh’ -> ‘09/tests/e5/valgrind_02_0.tesh’
+‘ref/tests/e5/valgrind_02_1.tesh’ -> ‘09/tests/e5/valgrind_02_1.tesh’
+‘ref/tests/e5/valgrind_03_0.tesh’ -> ‘09/tests/e5/valgrind_03_0.tesh’
+‘ref/tests/e5/valgrind_03_1.tesh’ -> ‘09/tests/e5/valgrind_03_1.tesh’
+‘ref/tests/e5/valgrind_04_0.tesh’ -> ‘09/tests/e5/valgrind_04_0.tesh’
+‘ref/tests/e5/valgrind_04_1.tesh’ -> ‘09/tests/e5/valgrind_04_1.tesh’
+‘ref/tests/e5/valgrind_05_0.tesh’ -> ‘09/tests/e5/valgrind_05_0.tesh’
+‘ref/tests/e5/valgrind_05_1.tesh’ -> ‘09/tests/e5/valgrind_05_1.tesh’
+‘ref/tests/e5/valgrind_06_0.tesh’ -> ‘09/tests/e5/valgrind_06_0.tesh’
+‘ref/tests/e5/valgrind_06_1.tesh’ -> ‘09/tests/e5/valgrind_06_1.tesh’
+‘ref/tests/e5/valgrind_07_0.tesh’ -> ‘09/tests/e5/valgrind_07_0.tesh’
+‘ref/tests/e5/valgrind_07_1.tesh’ -> ‘09/tests/e5/valgrind_07_1.tesh’
+‘ref/tests/e5/valgrind_08_0.tesh’ -> ‘09/tests/e5/valgrind_08_0.tesh’
+‘ref/tests/e5/valgrind_08_1.tesh’ -> ‘09/tests/e5/valgrind_08_1.tesh’
+‘ref/tests/e5/valgrind_09_0.tesh’ -> ‘09/tests/e5/valgrind_09_0.tesh’
+‘ref/tests/e5/valgrind_09_1.tesh’ -> ‘09/tests/e5/valgrind_09_1.tesh’
+‘ref/tests/e5/valgrind_10_0.tesh’ -> ‘09/tests/e5/valgrind_10_0.tesh’
+‘ref/tests/e5/valgrind_10_1.tesh’ -> ‘09/tests/e5/valgrind_10_1.tesh’
+‘ref/tests/e5/valgrind_11_0.tesh’ -> ‘09/tests/e5/valgrind_11_0.tesh’
+‘ref/tests/e5/valgrind_11_1.tesh’ -> ‘09/tests/e5/valgrind_11_1.tesh’
+‘ref/tests/e5/valgrind_12_0.tesh’ -> ‘09/tests/e5/valgrind_12_0.tesh’
+‘ref/tests/e5/valgrind_12_1.tesh’ -> ‘09/tests/e5/valgrind_12_1.tesh’
+‘ref/tests/e5/valgrind_13_0.tesh’ -> ‘09/tests/e5/valgrind_13_0.tesh’
+‘ref/tests/e5/valgrind_13_1.tesh’ -> ‘09/tests/e5/valgrind_13_1.tesh’
+‘ref/tests/e5/valgrind_14_0.tesh’ -> ‘09/tests/e5/valgrind_14_0.tesh’
+‘ref/tests/e5/valgrind_14_1.tesh’ -> ‘09/tests/e5/valgrind_14_1.tesh’
+‘ref/tests/e5/valgrind_15_0.tesh’ -> ‘09/tests/e5/valgrind_15_0.tesh’
+‘ref/tests/e5/valgrind_15_1.tesh’ -> ‘09/tests/e5/valgrind_15_1.tesh’
+‘ref/tests/e5/valgrind_16_0.tesh’ -> ‘09/tests/e5/valgrind_16_0.tesh’
+‘ref/tests/e5/valgrind_16_1.tesh’ -> ‘09/tests/e5/valgrind_16_1.tesh’
+‘ref/tests/e5/valgrind_17_0.tesh’ -> ‘09/tests/e5/valgrind_17_0.tesh’
+‘ref/tests/e5/valgrind_17_1.tesh’ -> ‘09/tests/e5/valgrind_17_1.tesh’
+‘ref/tests/e5/valgrind_18_0.tesh’ -> ‘09/tests/e5/valgrind_18_0.tesh’
+‘ref/tests/e5/valgrind_18_1.tesh’ -> ‘09/tests/e5/valgrind_18_1.tesh’
+‘ref/tests/e5/verify’ -> ‘09/tests/e5/verify’
+‘ref/tests/e5/verify-new’ -> ‘09/tests/e5/verify-new’
+‘ref/tests/e5/expected’ -> ‘09/tests/e5/expected’
+‘ref/tests/e5/expected/00.out’ -> ‘09/tests/e5/expected/00.out’
+‘ref/tests/e5/expected/01.out’ -> ‘09/tests/e5/expected/01.out’
+‘ref/tests/e5/expected/02.out’ -> ‘09/tests/e5/expected/02.out’
+‘ref/tests/e5/expected/03.out’ -> ‘09/tests/e5/expected/03.out’
+‘ref/tests/e5/expected/04.out’ -> ‘09/tests/e5/expected/04.out’
+‘ref/tests/e5/expected/05.out’ -> ‘09/tests/e5/expected/05.out’
+‘ref/tests/e5/expected/06.out’ -> ‘09/tests/e5/expected/06.out’
+‘ref/tests/e5/expected/07.out’ -> ‘09/tests/e5/expected/07.out’
+‘ref/tests/e5/expected/08.out’ -> ‘09/tests/e5/expected/08.out’
+‘ref/tests/e5/input’ -> ‘09/tests/e5/input’
+‘ref/tests/e5/input/e00_0.amarela’ -> ‘09/tests/e5/input/e00_0.amarela’
+‘ref/tests/e5/input/e00_1.amarela’ -> ‘09/tests/e5/input/e00_1.amarela’
+‘ref/tests/e5/input/e01_0.amarela’ -> ‘09/tests/e5/input/e01_0.amarela’
+‘ref/tests/e5/input/e01_1.amarela’ -> ‘09/tests/e5/input/e01_1.amarela’
+‘ref/tests/e5/input/e02_0.amarela’ -> ‘09/tests/e5/input/e02_0.amarela’
+‘ref/tests/e5/input/e02_1.amarela’ -> ‘09/tests/e5/input/e02_1.amarela’
+‘ref/tests/e5/input/e03_0.amarela’ -> ‘09/tests/e5/input/e03_0.amarela’
+‘ref/tests/e5/input/e03_1.amarela’ -> ‘09/tests/e5/input/e03_1.amarela’
+‘ref/tests/e5/input/e04_0.amarela’ -> ‘09/tests/e5/input/e04_0.amarela’
+‘ref/tests/e5/input/e04_1.amarela’ -> ‘09/tests/e5/input/e04_1.amarela’
+‘ref/tests/e5/input/e05_0.amarela’ -> ‘09/tests/e5/input/e05_0.amarela’
+‘ref/tests/e5/input/e05_1.amarela’ -> ‘09/tests/e5/input/e05_1.amarela’
+‘ref/tests/e5/input/e06_0.amarela’ -> ‘09/tests/e5/input/e06_0.amarela’
+‘ref/tests/e5/input/e06_1.amarela’ -> ‘09/tests/e5/input/e06_1.amarela’
+‘ref/tests/e5/input/e07_0.amarela’ -> ‘09/tests/e5/input/e07_0.amarela’
+‘ref/tests/e5/input/e07_1.amarela’ -> ‘09/tests/e5/input/e07_1.amarela’
+‘ref/tests/e5/input/e08_0.amarela’ -> ‘09/tests/e5/input/e08_0.amarela’
+‘ref/tests/e5/input/e08_1.amarela’ -> ‘09/tests/e5/input/e08_1.amarela’
+‘ref/tests/e5/input/e09_0.amarela’ -> ‘09/tests/e5/input/e09_0.amarela’
+‘ref/tests/e5/input/e09_1.amarela’ -> ‘09/tests/e5/input/e09_1.amarela’
+‘ref/tests/e5/input/e10_0.amarela’ -> ‘09/tests/e5/input/e10_0.amarela’
+‘ref/tests/e5/input/e10_1.amarela’ -> ‘09/tests/e5/input/e10_1.amarela’
+‘ref/tests/e5/input/e11_0.amarela’ -> ‘09/tests/e5/input/e11_0.amarela’
+‘ref/tests/e5/input/e11_1.amarela’ -> ‘09/tests/e5/input/e11_1.amarela’
+‘ref/tests/e5/input/e12_0.amarela’ -> ‘09/tests/e5/input/e12_0.amarela’
+‘ref/tests/e5/input/e12_1.amarela’ -> ‘09/tests/e5/input/e12_1.amarela’
+‘ref/tests/e5/input/e13_0.amarela’ -> ‘09/tests/e5/input/e13_0.amarela’
+‘ref/tests/e5/input/e13_1.amarela’ -> ‘09/tests/e5/input/e13_1.amarela’
+‘ref/tests/e5/input/e14_0.amarela’ -> ‘09/tests/e5/input/e14_0.amarela’
+‘ref/tests/e5/input/e14_1.amarela’ -> ‘09/tests/e5/input/e14_1.amarela’
+‘ref/tests/e5/input/e15_0.amarela’ -> ‘09/tests/e5/input/e15_0.amarela’
+‘ref/tests/e5/input/e15_1.amarela’ -> ‘09/tests/e5/input/e15_1.amarela’
+‘ref/tests/e5/input/e16_0.amarela’ -> ‘09/tests/e5/input/e16_0.amarela’
+‘ref/tests/e5/input/e16_1.amarela’ -> ‘09/tests/e5/input/e16_1.amarela’
+‘ref/tests/e5/input/e17_0.amarela’ -> ‘09/tests/e5/input/e17_0.amarela’
+‘ref/tests/e5/input/e17_1.amarela’ -> ‘09/tests/e5/input/e17_1.amarela’
+‘ref/tests/e5/input/e18_0.amarela’ -> ‘09/tests/e5/input/e18_0.amarela’
+‘ref/tests/e5/input/e18_1.amarela’ -> ‘09/tests/e5/input/e18_1.amarela’
+-- The C compiler identification is GNU 4.9.2
+-- The CXX compiler identification is GNU 4.9.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Found FLEX: /usr/bin/flex (found version "2.5.39") 
+-- Found BISON: /usr/bin/bison (found version "3.0.2") 
+-- Setting build type to 'Debug' as none was specified.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/schnorr/ensino/inf01147-compiladores/projeto/results/etapa5/b-09
+[  8%] [BISON][parser] Building parser with bison 3.0.2
+[ 16%] [FLEX][scanner] Building scanner with flex 2.5.39
+Scanning dependencies of target main
+[ 25%] Building C object CMakeFiles/main.dir/scanner.c.o
+[ 33%] Building C object CMakeFiles/main.dir/parser.c.o
+[ 41%] Building C object CMakeFiles/main.dir/src/main.c.o
+[ 50%] Building C object CMakeFiles/main.dir/src/cc_misc.c.o
+[ 58%] Building C object CMakeFiles/main.dir/src/cc_gv.c.o
+[ 66%] Building C object CMakeFiles/main.dir/src/cc_dict.c.o
+[ 75%] Building C object CMakeFiles/main.dir/src/cc_list.c.o
+[ 83%] Building C object CMakeFiles/main.dir/src/cc_tree.c.o
+[ 91%] Building C object CMakeFiles/main.dir/src/cc_stack.c.o
+[100%] Building C object CMakeFiles/main.dir/src/cc_gerador.c.o
+Linking C executable main
+[100%] Built target main
+#+end_example
+* 2016-06-25 Execução                                              :noexport:
+
+#+begin_src sh :results output :session :exports both
+  cd results/etapa5/
+  for group in `ls -1d b-*`; do
+    echo $group
+    FILE="${group}_results.log"
+    cd $group
+    ctest -R aval -V > ../$FILE
+    cat ../$FILE
+    cd ..
+  done > etapa5.log
+cp etapa5.log ../../
+#+end_src
+
+#+RESULTS:
+
+* 2016-06-25 Interpretação                                         :noexport:
+
+#+begin_src sh :results output :session :exports both
+  ET=etapa5
+  cat ${ET}.log | sed "/^b-../d" |  csplit -z -f 'temp' -b '%02d.txt' - /Test\ project/ {*}
+  TOTALTESTS=`cat temp01.txt | grep -e "#" | wc -l`
+  rm temp00.txt
+  DIR=${ET}
+  mkdir -p $DIR/
+  rm -rf $DIR/*
+  mkdir -p $DIR/testes/
+  SAIDACSV=$DIR/${ET}.csv
+  echo "grupo,total,falhos,nota" > $SAIDACSV
+  for i in temp*.txt; do
+     FILE=$i
+     GROUP=$(basename `cat $FILE | grep "Test project" | cut -d" " -f3-`)
+     echo "== $GROUP == (total tests is $TOTALTESTS)"
+     cat $FILE | sed "/^b-..$/d" | grep \(Failed\)
+     #check existance of tests
+     if [ `cat $FILE | grep "Total Test time" | wc -l` -eq 0 ]; then
+       continue
+     fi
+     FAILEDTESTS=`cat $FILE | grep \(Failed\) | grep aval | wc -l`
+     SUCCESSRATE=`echo "($TOTALTESTS-$FAILEDTESTS)/$TOTALTESTS*10" | bc -l`
+     echo "Group $GROUP obtained $SUCCESSRATE success rate."
+     echo "$GROUP,$TOTALTESTS,$FAILEDTESTS,$SUCCESSRATE" >> $SAIDACSV
+  done > $DIR/${ET}-eval.log
+  cp ${ET}.log $DIR
+  cp -prf saida/* $DIR/testes/
+  tar cfz ${ET}.tar.gz ${ET}
+  cat ${ET}/${ET}.csv
+#+end_src
+
+#+RESULTS:
+#+begin_example
+250
+27310
+27207
+28479
+26471
+29733
+29617
+36712
+grupo,total,falhos,nota
+b-01,38,4,8.94736842105263157890
+b-02,38,6,8.42105263157894736840
+b-03,38,7,8.15789473684210526310
+b-04,38,0,10.00000000000000000000
+b-06,38,18,5.26315789473684210520
+b-08,38,9,7.63157894736842105260
+b-09,38,6,8.42105263157894736840
+b-09,38,2,9.47368421052631578940
+#+end_example
+
+3rd
+- with my tests
+#+BEGIN_EXAMPLE
+b-01,38,4,8.94736842105263157890
+b-02,38,6,8.42105263157894736840
+b-03,38,7,8.15789473684210526310
+b-04,38,0,10.00000000000000000000
+b-06,38,18,5.26315789473684210520
+b-08,38,9,7.63157894736842105260
+b-09,38,6,8.42105263157894736840
+b-09,38,2,9.47368421052631578940
+#+END_EXAMPLE
+
+2nd
+- their own tests
+
+#+BEGIN_EXAMPLE
+b-01,38,6,8.42105263157894736840
+b-02,38,0,10.00000000000000000000
+b-03,38,9,7.63157894736842105260
+b-04,38,14,6.31578947368421052630
+b-06,38,30,2.10526315789473684210
+b-08,38,9,7.63157894736842105260
+b-09,38,6,8.42105263157894736840
+b-09,38,2,9.47368421052631578940
+#+END_EXAMPLE
+
+1st
+
+#+BEGIN_EXAMPLE
+b-01,38,6,8.42105263157894736840
+b-02,38,0,10.00000000000000000000
+b-04,38,14,6.31578947368421052630
+b-06,38,30,2.10526315789473684210
+b-09,38,6,8.42105263157894736840
+#+END_EXAMPLE
+* 2016-07-03 Nova interpretação                                    :noexport:
+
+#+begin_src sh :results output :session :exports both
+cd results/etapa5
+for i in `ls *results.log`
+do
+echo -n "$i ===> "
+cat $i | grep "out of"
+done
+#+end_src
+
+#+RESULTS:
+: b-01_results.log ===> 89% tests passed, 4 tests failed out of 38
+: b-02_results.log ===> 84% tests passed, 6 tests failed out of 38
+: b-03_results.log ===> 82% tests passed, 7 tests failed out of 38
+: b-04_results.log ===> 100% tests passed, 0 tests failed out of 38
+: b-06_results.log ===> 53% tests passed, 18 tests failed out of 38
+: b-08_results.log ===> 76% tests passed, 9 tests failed out of 38
+: b-09_results.log ===> 84% tests passed, 6 tests failed out of 38
+
+3rd
+- with my tests
+
+#+BEGIN_EXAMPLE
+b-01,38,4,8.94736842105263157890
+b-02,38,6,8.42105263157894736840
+b-03,38,7,8.15789473684210526310
+b-04,38,0,10.00000000000000000000
+b-06,38,18,5.26315789473684210520
+b-08,38,9,7.63157894736842105260
+b-09,38,6,8.42105263157894736840
+b-09,38,2,9.47368421052631578940
+#+END_EXAMPLE
+
+2nd
+- their own tests
+
+#+BEGIN_EXAMPLE
+b-01,38,6,8.42105263157894736840
+b-02,38,0,10.00000000000000000000
+b-03,38,9,7.63157894736842105260
+b-04,38,14,6.31578947368421052630
+b-06,38,30,2.10526315789473684210
+b-08,38,9,7.63157894736842105260
+b-09,38,6,8.42105263157894736840
+b-09,38,2,9.47368421052631578940
+#+END_EXAMPLE
