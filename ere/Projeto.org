@@ -1,0 +1,135 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Projeto de Compilador -- Entrega, Avaliação, Regras
+#+Subtitle: ERE 2020/1
+#+Author: Lucas Mello Schnorr (schnorr@inf.ufrgs.br)
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, twocolumn, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil title:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+#+latex: {\Large
+#+latex: \noindent
+Projeto de Compilador
+
+#+latex: \noindent
+Entrega, Avaliação, Regras
+#+latex: }
+#+latex: \bigskip
+
+#+latex: \noindent
+Prof. Lucas Mello Schnorr
+
+#+latex: \noindent
+schnorr@inf.ufrgs.br
+
+#+latex: %\tableofcontents
+
+* Introdução
+
+O trabalho consiste no projeto e implementação de um compilador para
+uma determinada gramática de linguagem de programação especificada em
+cada semestre. Este documento estabelece as regras gerais do projeto
+de compilador, com links para especificação das etapas.  A entrega é
+realizada através de link específico no Moodle, pela submissão de um
+arquivo em formato ~tgz~ conforme detalhamentos abaixo.  O projeto
+compreende sete etapas (conforme tabela abaixo), sendo que o peso de
+cada etapa é sempre o mesmo.
+
+| Etapa | Descrição e Especificação | Peso |
+|-------+---------------------------+------|
+| E1    | [[./etapa1.org][Análise Léxica]]            |   10 |
+| E2    | [[./etapa2.org][Análise Sintática]]         |   10 |
+| E3    | [[./etapa3.org][Árvore Sintática Abstrata]] |   10 |
+| E4    | [[./etapa4.org][Análise Semântica]]         |   10 |
+| E5    | [[./etapa5.org][Geração de Código]]         |   10 |
+| E6    | [[./etapa6.org][Suporte de Execução]]       |   10 |
+| E7    | [[./etapa7.org][Otimização]]                |   10 |
+
+A nota máxima do projeto de compilador é 70. Esta será utilizada para
+integralizar a nota final da disciplina conforme regramentos do PEA.
+
+* Procedimento de Entrega
+
+O seu diretório de trabalho deve conter um arquivo =Makefile= com todos
+os comandos necessários à compilação do seu programa, automatizados
+através da chamada make, incluindo a invocação de flex, bison e gcc. A
+execução de make deve gerar um executável no mesmo diretório de
+trabalho chamado exatamente =etapaX= (onde X é o dígito identificador da
+etapa). Exemplo: para a E4, o arquivo binário a ser executado após
+compilação deve ser ~etapa4~.
+
+Cada grupo deve compactar o conteúdo do seu diretório de trabalho
+executando o comando =tar cvzf etapaX.tgz .= (onde X é o dígito
+identificador da etapa) *dentro do mesmo diretório*. Não utilizem outros
+programas, formatos, comandos, nomes ou organizações de diretórios
+para esse operação. Será gerado um arquivo chamado =etapaX.tgz=.  O
+arquivo =etapaX.tgz= deve ser enviado por e-mail, *com tamanho máximo de
+100KBytes*.
+
+Ao submeter solução para qualquer tarefa desta disciplina, tu
+declaras: (1) que a submissão reflete a solução de sua própria autoria
+para o problema proposto; (2) que a mesma não foi copiada ou extraída,
+seja parcial ou integralmente, de nenhuma fonte além daquelas públicas
+consultadas e corretamente referenciadas no trabalho; e (3) estar
+ciente de que o plágio é uma infração grave segundo o [[http://www.ufrgs.br/prae/sae/legislacao/codigo-disciplinar-discente][Código
+Disciplinar Discente da UFRGS]]. Caso concordes com esta declaração,
+utilize o link disponibilizado no moodle para realizar a entrega do arquivo.
+
+* Formação dos Grupos
+
+Os trabalhos devem ser realizados em grupos de *dois alunos*. Não serão
+aceitos grupos de três alunos ou trabalhos individuais, exceto para
+acomodar número ímpar de alunos na turma. A definição de grupos é
+definitiva, válida do início ao fim do semestre.
+
+Uma vez formado, a dupla informa os seus membros ao professor por
+e-mail. O aluno deve utilizar obrigatoriamente a conta de e-mail do
+instituto de informática. Na mensagem, o aluno informa os nomes e
+códigos de aluno dos componentes do grupo.
+
+* Regras de desenvolvimento
+
+Existe uma certa flexibilidade na organização do código fonte, mas
+existem regras que devem ser observadas para permitir que testes
+automáticos possam ser realizados corretamente.
+
+Remova todos os comandos =printf= e afins antes da submissão, pois o
+compilador deve ser silencioso salvo quando indicado o contrário na
+especificação individual de cada etapa. Utilize somente as ferramentas
+padrão, como =make=, =flex=, =bison= e =gcc=. Os arquivos fornecidos em cada
+uma das especificações (por exemplo, =tokens.h=) não devem ser
+modificados. Não use nenhuma estrutura hierárquica de
+diretórios. Todos os seus arquivos, incluindo fontes, teste, Makefile,
+executável, devem estar no mesmo diretório de trabalho. Eles serão
+compactados pelo seu comando tar e descompactados por um comando
+correspondente dentro de um único diretório onde serão testados.
+
+* Avaliação das Etapas
+
+Cada etapa do projeto de compiladores é avaliada objetiva e
+subjetivamente, com pesos iguais. A *nota objetiva* é definida por
+testes automáticos (quando possível) que verificam as soluções dos
+alunos. A *nota subjetiva* é definida pelo professor, mediante revisão
+do código pelo professor. Esta nota subjetiva compreende a
+originalidade, a qualidade do cógigo, a legibilidade, os comentários
+assim como a organização do código e os recursos apresentados. A nota
+final pode ser diferente para cada membro do grupo.
+
+* Política de Atraso
+
+Todas as etapas do projeto de compilador tem a mesma política de
+atraso. As soluções de cada etapa devem ser enviadas até as datas de
+entrega especificadas neste local. As soluções recebidas antes da data
+limite serão avaliadas normalmente, até 100%. Qualquer solução
+recebida após a data limite inicialmente estabelecida receberá nota
+zero. Caso a nota de uma etapa entregue e avaliada seja inferior a 6,
+o professor acordará um prazo com os alunos para que eles possam
+recuperá-la em até 80% do valor integral daquela etapa.
