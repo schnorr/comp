@@ -1,0 +1,235 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Apresentação da Disciplina
+#+subtitle: ERE 2020/1
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* O professor
+Prof. Lucas M. Schnorr
++ Prédio 43425, Sala 202
++ [[http://www.inf.ufrgs.br/~schnorr][http://www.inf.ufrgs.br/~schnorr]]
++ schnorr@inf.ufrgs.br
++ [[http://twitter.com/lucasschnorr/][@lucasschnorr]] =#COMP_UFRGS=
+
+\vfill
+
+Áreas de interesse para pesquisa
++ High Performance Computing (HPC)
++ Performance Analysis
++ Data Visualization
++ Reproducibility
+    
+* Motivação
++ O que faz um compilador?
++ Por que estudar compiladores?
++ Como é organizado um compilador?
+* Como fazer a tradução?
+** Código Fonte C                                                    :BMCOL:
+    :PROPERTIES:
+    :BEAMER_envargs: C[t]
+    :BEAMER_col: 0.35
+    :END:
+\small
+#+BEGIN_SRC C
+int i;
+double x;
+i = 0;
+x = 1.0;
+while (i <= 10) {
+  x = x * 2.0;
+  i = i + 1;
+}
+#+END_SRC
+** Código Assembly                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_envargs: C[t]
+    :BEAMER_col: 0.65
+    :END:
+\scriptsize
+#+BEGIN_SRC assembly
+        movl    $0, -12(%ebp)   ;; i = 0
+        fld1
+        fstpl   -24(%ebp)       ;; x = 1.0;
+        jmp     .L2
+.L3:
+        fldl    -24(%ebp)
+        fadd    %st(0), %st     ;; x = 2 * x;
+        fstpl   -24(%ebp)
+        addl    $1, -12(%ebp)    ;; i+1
+.L2:
+        cmpl    $10, -12(%ebp)  ;; i <= ? 10
+        jle     .L3             ;; SIM, goto L3
+        movl    $0, %eax        
+        ;; NAO, encerra...
+#+END_SRC
+
+* Integrando conhecimentos
++ Programação (Linguagem C, Scripts)
++ Linguagens Formais (gramáticas, autômatos)
++ Estruturas de Dados (pilhas, grafos, árvores, tabelas)
++ Sistemas Operacionais (memória, formato binário)
++ Organização de Computadores (processador, registros)
+
+#+latex: \vfill\pause
+
++ É uma disciplina complexa
+  + Forte background teórico/prático
+* Aspectos interessantes
++ Quem trabalha com compiladores?
+  + Todos os fabricantes de processadores
+  + IBM/Intel/Cray/...
+#+latex: \vfill\pause
+
++ Principais compiladores para a família C/C++
+  + gcc -- http://gcc.gnu.org/
+  + LLVM/clang -- http://www.llvm.org/
+  + Intel (icc) \pause
++ Novas arquiteturas: Celulares, Raspberry Pi, ARM, ... \pause
++ Disciplina interessante sob vários aspectos
+  + Compreender a implementação de uma linguagem
+  + Usa técnicas e ferramentas avançadas de desenvolvimento
+  + Técnicas de compiladores são aplicáveis em outras áreas
+
+* Objetivos
++ Entender o funcionamento de um compilador
+  + Teórico: algoritmos e estruturas de dados
+  + Prático: projeto e implementação
+
+#+latex: \pause
+
++ Projetar e implementar um compilador
+  + Adquirir experiência de programação na linguagem C/C++
+
+* Plano, cronograma, bibliografia, projeto
+
++ Súmula, conteúdo programático, bibliografia e cronograma
++ Procedimentos didáticos
++ Avaliação
+  
+#+BEGIN_CENTER
+Consulte no Portal do Aluno da UFRGS (ERE 2020/1).
+#+END_CENTER
+
+Vamos revisar juntos alguns elementos.
+
+* Bibliografia Básica Essencial
+- Aho, Alfred V.; Sethi, Ravi; Ullman, Jeffrey D.. Compiladores :princípios, técnicas e ferramentas. Rio de Janeiro: LTC,
+c1995. ISBN 8521610572.
+- Grune, Dick. Projeto moderno de compiladores :implementação e aplicações. Rio de Janeiro: Campus, 2001. ISBN
+8535208763.
+- Levine, John R.; Mason, Tony; Brown, D.. Lex. USA: O'Reilly, 1992. ISBN 9781565920002.
+* Bibliografia Básica
+- Keith D. Cooper e Linda Torczon. Engineering a Compiler. Elsevier, 2012. ISBN 978-0-12-088478-0.
+* Bibliografia Complementar
+- Kernighan, Brian W.; Ritchie, Dennis M.. The C programming language. Prentice Hall, ISBN 0131103628.
+* Material Público
+- http://dinosaur.compilertools.net/
+- http://dinosaur.compilertools.net/flex/manpage.html
+- http://dinosaur.compilertools.net/bison/
+- https://www.gnu.org/software/bison/manual/
+- https://www.gnu.org/software/flex/manual/
+* Experiências de Aprendizagem
+
+- O conteúdo programático previsto para cada semana será apresentado
+  na forma de *vídeos gravados previamente*, com listas de exercícios ou
+  oriundas do material didático ou propostas pelo professor, a serem
+  realizadas de maneira assíncrona pelos alunos.
+- Projeto de um compilador
+  1. programar um analisador léxico, ou com a ferramenta flex/lex, ou pela implementação de qualquer outro algoritmo;
+  2. programar um analisador sintático, por exemplo com a ferramenta
+     tradicional bison/yacc, ou pela implementação de qualquer outro
+     algoritmo;
+  3. programar ações semânticas para gerar código, simplificado ou não;
+  4. implementar um gerador de código abstrato no formato assembly.
+
+* Critérios de avaliação
+
+A avaliação será feita da seguinte forma:
+- Provas Escritas Assíncronas (P1, P2), peso 1
+- Projeto do Compilador (T), peso 1
+  - Sete etapas, com pesos idênticos entre elas
+
+#+latex: \pause
+
+Média Final (MF) = (P+T)/2
+
+#+latex: \pause
+
+Conversão
+
+| MF >= 9,0       | Conceito A                    |
+| 9.0 > MF >= 7,5 | Conceito B                    |
+| 7,5 > MF >= 6,0 | Conceito C                    |
+| MF < 6,0        | ver Atividades de Recuperação |
+
+#+latex: \pause
+
+Detalhamentos
+- FF é inaplicável (Parágrafo 2o, do Artigo 44, da Resolução no 11/2013 do CEPE) 
+- Se estudante deixar de participar, conceito será NI (Não Informado)
+  com a justificativa ``COVID-19'', tratado até o fim de 2020/2, após
+  o fim da pandemia
+
+* Atividades de Recuperação Previstas
+
+Cada nota parcial compondo a nota T poderá ser recuperada até o valor
+máximo de 80% do valor original pela entrega de uma nova versão do
+trabalho corrigindo os eventuais defeitos, em um prazo estipulado pelo
+professor.
+
+#+latex: \pause
+
+Ao final do semestre, os alunos que não tiverem atingido desempenho
+suficiente para a aprovação (MF >= 6.0), poderão realizar uma
+atividade avaliativa geral de recuperação, que versará sobre todo o
+conteúdo da disciplina. Para ser aprovado na disciplina, o discente
+deverá atingir uma nota mínima na atividade avaliativa de recuperação
+(Nota Mínina de Recuperação - NMR) determinada pela seguinte
+expressão:
+
+NMR = 12 - MF
+
+com NMR limitado ao valor máximo igual a 10 (dez) e MF sendo a Média
+Final obtida pelo discente e descrita na seção "Critérios de
+Avaliação". O discente em recuperação que atingir a nota mínima de
+recuperação (NMR >= 6.0), será aprovado com conceito "C", caso
+contrário, será reprovado (conceito "D").
+
+* Ferramenta AVA
+
+#+BEGIN_CENTER
+Sempre consulte o Moodle Institucional da UFRGS
+
+https://moodle.ufrgs.br/course/view.php?id=77440
+#+END_CENTER
+
+* Cronograma
+** Texto
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+
+Disponível no Moodle.
+
+Vamos revisá-lo juntos.
+
+** Esquerda
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
+
+#+attr_latex: :width 1.3\textwidth
+[[../../../cronograma/cronograma.pdf]]
+
