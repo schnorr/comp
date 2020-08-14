@@ -124,13 +124,9 @@ retorno que os identifica. Para os tokens compostos, como palavras
 reservadas e identificadores, utiliza-se uma constante, conforme o
 arquivo =tokens.h= fornecido (mais tarde utilizaremos recursos do =bison=)
 com um código maior do que 255 para representá-los. Os tokens se
-enquadram em diferentes categorias:
-
-1. palavras reservadas da linguagem
-2. caracteres especiais
-3. operadores compostos
-4. identificadores
-5. literais.
+enquadram em diferentes categorias: (1) palavras reservadas da
+linguagem; (2) caracteres especiais; (3) operadores compostos; (4)
+identificadores; e (5) literais.
 
 ** Palavras Reservadas da Linguagem
 
