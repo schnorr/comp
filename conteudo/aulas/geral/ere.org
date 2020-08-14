@@ -125,13 +125,16 @@ Consulte no Portal do Aluno da UFRGS (ERE 2020/1).
 Vamos revisar juntos alguns elementos.
 
 * Bibliografia Básica Essencial
-- Aho, Alfred V.; Sethi, Ravi; Ullman, Jeffrey D.. Compiladores :princípios, técnicas e ferramentas. Rio de Janeiro: LTC,
-c1995. ISBN 8521610572.
-- Grune, Dick. Projeto moderno de compiladores :implementação e aplicações. Rio de Janeiro: Campus, 2001. ISBN
-8535208763.
-- Levine, John R.; Mason, Tony; Brown, D.. Lex. USA: O'Reilly, 1992. ISBN 9781565920002.
+- Aho, Alfred V.; Sethi, Ravi; Ullman, Jeffrey D.. Compiladores,
+  princípios, técnicas e ferramentas. Rio de Janeiro: LTC,
+  c1995. ISBN 8521610572.
+- Grune, Dick. Projeto moderno de compiladores :implementação e
+  aplicações. Rio de Janeiro: Campus, 2001. ISBN 8535208763.
+- Levine, John R.; Mason, Tony; Brown, D.. Lex. USA:
+  O'Reilly, 1992. ISBN 9781565920002.
 * Bibliografia Básica
-- Keith D. Cooper e Linda Torczon. Engineering a Compiler. Elsevier, 2012. ISBN 978-0-12-088478-0.
+- Keith D. Cooper e Linda Torczon. Engineering a
+  Compiler. Elsevier, 2012. ISBN 978-0-12-088478-0.
 * Bibliografia Complementar
 - Kernighan, Brian W.; Ritchie, Dennis M.. The C programming language. Prentice Hall, ISBN 0131103628.
 * Material Público
