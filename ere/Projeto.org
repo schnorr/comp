@@ -71,8 +71,8 @@ executando o comando =tar cvzf etapaX.tgz .= (onde X é o dígito
 identificador da etapa) *dentro do mesmo diretório*. Não utilizem outros
 programas, formatos, comandos, nomes ou organizações de diretórios
 para esse operação. Será gerado um arquivo chamado =etapaX.tgz=.  O
-arquivo =etapaX.tgz= deve ser enviado por e-mail, *com tamanho máximo de
-100KBytes*.
+arquivo =etapaX.tgz= deve ser enviado pelo Moodle (no link referente à
+etapa), *com tamanho máximo de 100KBytes*.
 
 Ao submeter solução para qualquer tarefa desta disciplina, tu
 declaras: (1) que a submissão reflete a solução de sua própria autoria
