@@ -1,20 +1,25 @@
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[portuguese]{babel}
+\usepackage{textcomp}
 \usepackage{graphics}
-\usepackage{ulem}
-\usepackage[paper=a4paper,top=1.5cm,bottom=1.5cm,left=1.5cm,right=1.5cm]{geometry}
-\graphicspath{{img/}}
-\usepackage{titling}
-\usepackage{palatino}
 \usepackage{tikz}
-\usepackage{multicol}
 \usepackage{booktabs}
-\usetikzlibrary{automata,positioning}
-\usepackage[blocks]{authblk}
-\renewcommand\Authfont{\small}
-\renewcommand\Affilfont{\itshape\small}
-\setlength{\affilsep}{0.5cm}
-\usepackage{ifthen,xspace}
-\newcommand{\et}[1]{\texttt{#1}}
-\newcommand{\ARROW}{\texttt{=>}}
-\newcommand{\ARROWs}{\texttt{->}}
+\usepackage{listings}
+\usepackage{lmodern}
+\graphicspath{{../img/}{./img/}}
+\newcommand{\copyleft}{\includegraphics[width=0.5cm]{cc_cc_30.pdf}\hspace{0.2cm}\includegraphics[width=0.5cm]{cc_by_30.pdf}\hspace{0.2cm}\includegraphics[width=0.5cm]{cc_sa_30.pdf}}
+\newcommand{\infufrgs}{\includegraphics[width=1cm]{inf-ufrgs-bw.pdf}}
+\usepackage{tabularx}
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{titlelike}{fg=black}
+\setbeamercolor{itemize item}{fg=black}
+\setbeamercolor{itemize subitem}{fg=black}
+\setbeamercolor{itemize subsubitem}{fg=black}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=.5cm}
+\setbeamersize{text margin right=.5cm}
+\newcommand{\murl}[2]{{#1://#2}}
+\newcommand{\et}[1]{{\scriptsize\texttt{#1}}}
+\newcommand{\etn}[1]{{\texttt{#1}}}
