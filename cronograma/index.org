@@ -199,20 +199,20 @@ cronograma.1 %>%
 #+RESULTS:
 #+begin_example
 
-# A tibble: 30 x 8
+[90m# A tibble: 30 x 8[39m
    Setor   Descrição          Dia        DiaDaSemana Encontro     N     O Semana
-   <chr>   <chr>              <date>     <chr>       <chr>    <int> <int>  <int>
- 1 ""      Definições, requi… 2020-08-20 Thursday    2020-08…     1     1      1
- 2 "Léxic… Introdução, Expre… 2020-08-25 Tuesday     2020-08…     2     1      2
- 3 "Léxic… Autômato Finito D… 2020-08-27 Thursday    2020-08…     3     2      2
- 4 "Sintá… Análise Sintática… 2020-09-01 Tuesday     2020-09…     4     1      3
- 5 "Sintá… Descendente, com … 2020-09-03 Thursday    2020-09…     5     2      3
- 6 "Sintá… Parser e tabela L… 2020-09-08 Tuesday     2020-09…     6     3      4
- 7 "Sintá… Ascendente, Parse… 2020-09-10 Thursday    2020-09…     7     4      4
- 8 "Sintá… Exercícios LR(0),… 2020-09-15 Tuesday     2020-09…     8     5      5
- 9 "Sintá… Parser LR(1)       2020-09-17 Thursday    2020-09…     9     6      5
-10 "Sintá… Parser LALR(1), A… 2020-09-22 Tuesday     2020-09…    10     7      6
-# … with 20 more rows
+   [3m[90m<chr>[39m[23m   [3m[90m<chr>[39m[23m              [3m[90m<date>[39m[23m     [3m[90m<chr>[39m[23m       [3m[90m<chr>[39m[23m    [3m[90m<int>[39m[23m [3m[90m<int>[39m[23m  [3m[90m<int>[39m[23m
+[90m 1[39m [90m"[39m[90m"[39m      Definições, requi… 2020-08-20 Thursday    2020-08…     1     1      1
+[90m 2[39m [90m"[39mLéxic… Introdução, Expre… 2020-08-25 Tuesday     2020-08…     2     1      2
+[90m 3[39m [90m"[39mLéxic… Autômato Finito D… 2020-08-27 Thursday    2020-08…     3     2      2
+[90m 4[39m [90m"[39mSintá… Análise Sintática… 2020-09-01 Tuesday     2020-09…     4     1      3
+[90m 5[39m [90m"[39mSintá… Descendente, com … 2020-09-03 Thursday    2020-09…     5     2      3
+[90m 6[39m [90m"[39mSintá… Parser e tabela L… 2020-09-08 Tuesday     2020-09…     6     3      4
+[90m 7[39m [90m"[39mSintá… Ascendente, Parse… 2020-09-10 Thursday    2020-09…     7     4      4
+[90m 8[39m [90m"[39mSintá… Exercícios LR(0),… 2020-09-15 Tuesday     2020-09…     8     5      5
+[90m 9[39m [90m"[39mSintá… Parser LR(1)       2020-09-17 Thursday    2020-09…     9     6      5
+[90m10[39m [90m"[39mSintá… Parser LALR(1), A… 2020-09-22 Tuesday     2020-09…    10     7      6
+[90m# … with 20 more rows[39m
 #+end_example
 
 **** Associa projetos às semanas
@@ -246,9 +246,70 @@ cronograma.output %>%
 #+end_src
 
 #+RESULTS: def_cronograma_tex
+
+** Dia das provas -> TEX
+
+#+begin_src R :results output :session :exports both
+cronograma.3 %>%
+    filter(Descrição %in% c("P1", "P2")) %>%
+    select(N, Semana, Descrição, Dia, DiaDaSemana) %>%
+    mutate(Dia = as.character(Dia)) %>%
+    select(N, Semana, Descrição, Dia) %>%
+    as.data.frame() %>%
+    print %>%
+    xtable(., align = "rrrll") %>%
+    print (print.results=FALSE,
+           booktabs = TRUE,
+           include.rownames=FALSE,
+           tabular.environment = 'longtable',
+           floating = FALSE) %>%
+    as.character -> provas.tex;
+#+end_src
+
+#+RESULTS:
 : 
-: Error in `align<-.xtable`(`*tmp*`, value = switch(1 + is.null(align),  : 
-:   "align" must have length equal to 5 ( ncol(x) + 1 )
+:    N Semana Descrição        Dia
+: 1 15      8        P1 2020-10-08
+: 2 28     15        P2 2020-11-24
+
+** Datas Projeto -> TEX
+
+#+begin_src R :results output :session :exports both
+cronograma.3 %>%
+    filter(Projeto != "Kickoff") %>%
+    select(N, Semana, Dia, DiaDaSemana, Projeto) %>%
+    group_by(Projeto) %>%
+    summarize(Começa.Dia = min(Dia) - days(4),
+              Termina.Dia = max(Dia), .groups="drop") %>%
+    mutate(Termina.Dia = case_when(Projeto == "E7" ~ Termina.Dia - days(4),
+                                 TRUE ~ Termina.Dia + days(1))) %>%
+#    mutate(Final.Dia.Semana = weekdays(Final.Dia)) %>%
+#    mutate(Start.Dia.Semana = weekdays(Start.Dia)) %>%
+    mutate(Duração = as.integer(Termina.Dia - Começa.Dia)) %>%
+    mutate(Começa = as.character(Começa.Dia)) %>%
+    mutate(Termina = as.character(Termina.Dia)) %>%
+    select(Projeto, Começa, Termina, Duração) %>%
+    as.data.frame() %>%
+    print %>%
+    xtable(., align = "rrrll") %>%
+    print (print.results=FALSE,
+           booktabs = TRUE,
+           include.rownames=FALSE,
+           tabular.environment = 'longtable',
+           floating = FALSE) %>%
+    as.character -> etapas.tex;
+#+end_src
+
+#+RESULTS:
+: 
+:   Projeto     Começa    Termina Duração
+: 1      E1 2020-08-21 2020-09-04      14
+: 2      E2 2020-09-04 2020-09-18      14
+: 3      E3 2020-09-18 2020-10-02      14
+: 4      E4 2020-10-02 2020-10-16      14
+: 5      E5 2020-10-16 2020-11-06      21
+: 6      E6 2020-11-06 2020-11-20      14
+: 7      E7 2020-11-20 2020-11-27       7
 
 ** Cronograma (em PDF)
 
@@ -262,7 +323,9 @@ semestre = "ERE 2020/1";
 cronograma.modelo <- gsub("TURMA", turma, cronograma.modelo);
 cronograma.modelo <- gsub("SEMESTRE", semestre, cronograma.modelo);
 cronograma.modelo <- gsub("TABELA", gsub("\\\\", "\\\\\\\\", cronograma.tex), cronograma.modelo);
-cronograma.modelo <- gsub("DIASPORETAPA", "", cronograma.modelo);
+#cronograma.modelo <- gsub("DIASPORETAPA", "", cronograma.modelo);
+cronograma.modelo <- gsub("DIASDASPROVAS", gsub("\\\\", "\\\\\\\\", provas.tex), cronograma.modelo);
+cronograma.modelo <- gsub("DIASDASETAPAS", gsub("\\\\", "\\\\\\\\", etapas.tex), cronograma.modelo);
 write(cronograma.modelo, "cronograma.tex");
 system2("rm", "-f cronograma.pdf")
 system2("rubber", " --pdf cronograma.tex")
@@ -270,6 +333,7 @@ system2("rubber", " --pdf cronograma.tex")
 
 #+RESULTS: modelo_cronograma
 : 
+: compiling cronograma.tex...
 : compiling cronograma.tex...
 
 * Cronograma
@@ -320,3 +384,5 @@ cronograma.output %>%
 * Cronograma
 
 Aguardando novo calendário acadêmico para 2020/1.
+
+
