@@ -1,0 +1,162 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Apresentação da Disciplina
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* O professor
+Prof. Lucas M. Schnorr
++ Prédio 43425, Sala 202
++ [[http://www.inf.ufrgs.br/~schnorr][http://www.inf.ufrgs.br/~schnorr]]
++ schnorr@inf.ufrgs.br
++ [[http://twitter.com/lucasschnorr/][@lucasschnorr]] =#COMP_UFRGS=
+
+\vfill
+
+Áreas de interesse para pesquisa
++ High Performance Computing (HPC)
++ Performance Analysis
++ Data Visualization
++ Reproducibility
+    
+* Motivação
++ O que faz um compilador?
++ Por que estudar compiladores?
++ Como é organizado um compilador?
+* Como fazer a tradução?
+** Código Fonte C                                                    :BMCOL:
+    :PROPERTIES:
+    :BEAMER_envargs: C[t]
+    :BEAMER_col: 0.35
+    :END:
+\small
+#+BEGIN_SRC C
+int i;
+double x;
+i = 0;
+x = 1.0;
+while (i <= 10) {
+  x = x * 2.0;
+  i = i + 1;
+}
+#+END_SRC
+** Código Assembly                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_envargs: C[t]
+    :BEAMER_col: 0.65
+    :END:
+\scriptsize
+#+BEGIN_SRC assembly
+        movl    $0, -12(%ebp)   ;; i = 0
+        fld1
+        fstpl   -24(%ebp)       ;; x = 1.0;
+        jmp     .L2
+.L3:
+        fldl    -24(%ebp)
+        fadd    %st(0), %st     ;; x = 2 * x;
+        fstpl   -24(%ebp)
+        addl    $1, -12(%ebp)    ;; i+1
+.L2:
+        cmpl    $10, -12(%ebp)  ;; i <= ? 10
+        jle     .L3             ;; SIM, goto L3
+        movl    $0, %eax        
+        ;; NAO, encerra...
+#+END_SRC
+
+* Integrando conhecimentos
++ Programação (Linguagem C, Scripts)
++ Linguagens Formais (gramáticas, autômatos)
++ Estruturas de Dados (pilhas, grafos, árvores, tabelas)
++ Sistemas Operacionais (memória, formato binário)
++ Organização de Computadores (processador, registros)
+
+\vfill
+
++ <2->É uma disciplina complexa
+  + Forte background teórico/prático
+* Aspectos interessantes
++ <1->Quem trabalha com compiladores?
+  + Todos os fabricantes de processadores
+  + IBM/Intel/Cray/...
+\vfill
+
++ <2-> Principais compiladores para a família C/C++
+  + gcc -- http://gcc.gnu.org/
+  + LLVM/clang -- http://www.llvm.org/
+  + Intel (icc)
++ <2->Novas arquiteturas: Celulares, Raspberry Pi, ARM, ...
++ <3->Disciplina interessante sob vários aspectos
+  + Compreender a implementação de uma linguagem
+  + Usa técnicas e ferramentas avançadas de desenvolvimento
+  + Técnicas de compiladores são aplicáveis em outras áreas
+
+* Objetivos
++ Entender o funcionamento de um compilador
+  + Teórico: algoritmos e estruturas de dados
+  + Prático: projeto e implementação
++ <2->Projetar e implementar um compilador
+  + Adquirir experiência de programação na linguagem C/C++
+* Plano, cronograma, bibliografia, projeto
++ Súmula, conteúdo programático, bibliografia e cronograma
++ Procedimentos didáticos, laboratórios
++ Trabalhos, provas e avaliação
+
+\vfill
+
+#+BEGIN_CENTER
+``One /link/ [sic] to rule them all''
+
+https://gitlab.com/schnorr/comp/
+#+END_CENTER
+     
+* Bibliografia                                                     :noexport:
++ Compilers: Principles, Techniques and Tools. \linebreak
+  Aho, A.; Sethi, R.; Ullman, J. D. \\
+  (Dragão roxo ou vermelho)
++ Engineering a Compiler. \\
+  Cooper & Torczon \\
+  2nd edition
++ <2->Impl. de Linguagens de Programação: Compiladores. \linebreak
+  Ana Price & Simão Toscani.
++ <2->Lex & Yacc. \linebreak Tony Mason and Doug Brown.
++ <2->Projeto moderno de compiladores. \linebreak D. Grune, H. Bal e K. Langendoen.
+* Funcionamento
+Em aula
+- A presença será aferida (75% de frequência evita FF)
+- Realizar exercícios propostos em aula
+- Perguntar em caso de dúvida
+
+Em campo
+- https://gitlab.com/schnorr/comp/
+- [[https://www.youtube.com/playlist?list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V][Playlist no Youtube]]: videos sobre os conceitos da disciplina
+- Material de apoio
+- Lista de exercícios
+
+Em dúvidas
+- [[https://gitlab.com/schnorr/comp/issues][Abra uma Issue no GitLab]]
+- Envie um e-mail para o professor
+* Avaliação
+*Duas provas* (P1 e P2), 25% de peso cada
++ Testará os aspectos teóricos da disciplina
++ Recuperação possível no final do semestre
+
+*Projeto de Compilador* (T), 50% de peso
++ Duplas, avaliação com entrevista em laboratório
++ Respeito das especificações, linguagem C
++ Testes automáticos com cmake/ctest
+
+\vfill
+
++ <2->Nota final: P1 \times 0.25 + P2 \times 0.25 + T \times 0.50 \rightarrow Conceito
+
