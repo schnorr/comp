@@ -1,0 +1,126 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Endereçamento de Variáveis
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Atribuição
+
+Para atribuir o valor a uma variável \\
+precisamos saber seu endereço
+
+#+BEGIN_EXAMPLE
+storeAI r0 => r1,4
+#+END_EXAMPLE
+
+Que significa
+
+#+BEGIN_EXAMPLE
+Memória(r1 + 4) = Conteúdo(r0)
+#+END_EXAMPLE
+
+#+latex: \pause
+
+Como saber o valor de =r1= e o deslocamento =4=?
+- Precisamos saber como endereçar variáveis!
+
+* Endereçamento de variáveis
+Endereços de variáveis \rightarrow cálculo de *deslocamento*
++ Referente a =rbss= (variáveis globais)
++ Referente a =rfp= (variáveis locais)
+
+#+latex: \vfill\pause
+
+Escopo simples (único)
++ Todas as variáveis são ``globais''
+    + Alocadas estaticamente, impossibilidade de recursão
++ Endereços: sempre deslocamento em relação a =rbss=
+
+#+latex: \pause
+
+Escopo local/global (dois)
++ Endereços: desloc. para =rbss= (global) e para =rfp= (local)
+
+#+Latex: \pause
+Escopo aninhado (múltiplos)
++ Cálculo de endereços idêntico ao local/global
++ Mas e a _declaração de variáveis aninhadas_?
+    + Diferença entre escopo anônimo e nomeado
+* Como calcular o endereçamento?
+Devemos definir um *esquema de tradução*
+#+latex: \vfill
+Exemplo de gramática para declarações
+  | P | \rightarrow | D                 |
+  | D | \rightarrow | D ; D             |
+  | D | \rightarrow | T ident           |
+  | T | \rightarrow | int               |
+#+latex: \vfill
+\pause  *Resposta:*
++ Definir o cálculo do _deslocamento_ no próprio esquema
+    + Considerar qual o tipo de escopo que é implementado
+* Endereçamento com escopo único
+Uma variável global =desloc= inicializada para zero
+
+Endereços são um deslocamento com em relação a =rbss=
+
+| P | \rightarrow | D     |                                              |
+| D | \rightarrow | D ; D |                                              |
+| D | \rightarrow | T id  | declara(id.nome, T.tipo, T.tamanho, desloc); |
+|   |             |       | desloc = desloc + T.tamanho;                 |
+| T | \rightarrow | int   | T.tipo = int; T.tamanho = 4;                 |
+
+\pause Testar com exemplo
+  #+BEGIN_SRC c
+  int a;
+  int b;
+  int c;
+
+  b = 3; //obter endereço de a (gerar um store)
+  #+END_SRC
+* Endereçamento com *escopo aninhado* nomeado
+Como fazer, considerando escopo nomeado (função)?
+  | P | \rightarrow | D        |
+  | D | \rightarrow | D ; D    |
+  | D | \rightarrow | T id     |
+  | D | \rightarrow | F        |
+  | T | \rightarrow | int      |
+  | F | \rightarrow | fun id D |
+#+latex: \vfill
+\pause  Implementar com uma pilha de tabela de símbolos
++ Cada posição na pilha teu seu deslocamento
+\pause  No início do novo escopo nomeado
++ Criar nova tabela de símbolo, zerar deslocamento
++ No final, desempilhar
+\pause  Endereços em relação a =rfp=
++ Com exceção do escopo global e variáveis estáticas
+* Endereçamento com escopo aninhado *sem nome*
+Qual o endereço das variáveis abaixo?
+  #+BEGIN_SRC c
+int fun ()
+{
+   int a;
+   int b;
+   {
+      int c;
+      int d;
+   }
+}
+#+END_SRC
+\pause  *Resposta*
++ Todas são um deslocamento em relação ao =rfp= de =fun= \\
+  (implementação alternativa: dar ao bloco um registro)
+#+latex: \vfill
+\pause  Implementação
++ Sempre com pilha de tabela de símbolos
++ Deslocamento é zerado somente em escopos nomeados

@@ -1,0 +1,216 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Otimização de Janela
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+
+Maioria dos compiladores
++ Cuidadosa seleção, alocação e atribuição de registradores
+\pause Uma estratégia alternativa
++ Gerar código simples, ingênuo
++ Aplicar transformações ao código gerado
+#+latex: \vfill\pause
+
+*Otimização de Janela*
++ Observa-se poucas instruções por vez
++ Substituindo a sequência por uma menor ou mais rápida
+
+#+latex: \pause
+
+Características
++ Cada melhoria gera novas oportunidades
++ Várias passagens pelo código (janelas de tamanho diferentes)
+
+* Lista de estratégias
+
+Eliminação de instrução redundante
+
+Otimizações de fluxo de controle
+
+Simplificações algébricas
+
+Uso de idiomas de máquina
+
+Avaliação de constantes
+
+Propagação de cópias
+
+* Eliminação de Instrução Redundante
+
+Dada esta sequência
+  | LD | a   | R0 |
+  | ST | R0  | a  |
+Podemos remover a instrução de armazenamento
+
+#+latex: \vfill\pause
+
+O que aconteceria se houvesse um rótulo na instrução ST?
+* Eliminando código inacessível
+
+Remoção de instruções inacessíveis (código morto)
+#+latex:
+\small
+  |    | ADD  | r1 | r2 | r3 |
+  |    | JUMP | r1 |    |    |
+  |    | SUB  | r2 | r3 | r5 |
+  |    | DIV  | r2 | r3 | r5 |
+  | R: | MULT | r3 | r2 | r1 |
+
+#+latex: \pause
+
+Remover instruções não-rotuladas
++ Imediatamente depois de desvios incondicionais
++ Repetir para remover uma sequência de instruções
+
+* Eliminando código inacessível
+
+Caso da variável global =debug=
+  |     | if       debug == 1  goto L1    |
+  |     | goto L2                         |
+  | L1: | imprime informação de depuração |
+  | L2: |                                 |
+\pause Eliminar um desvio
+
+\pause Testar valor de debug na tabela de símbolos
+
+* Eliminando código inacessível
+Instruções TAC definem um nome que não é utilizado
++ $a = b\ op\ c$ é morto se *a* não é utilizado
+Caso
+   | b = 4 - 2   |
+   | t1 = b / 2  |
+   | t2 = a * t1 |
+   | t3 = t2 * b |
+   | t4 = t3 + c |
+   | t5 = t3     |
+   | t6 = t4     |
+   | d = t4 * t4 |
+
+* Otimizações de Fluxo de Controle
+Código intermediário frequentemente tem
++ Desvios para desvios
++ Desvios para desvios condicionais
++ Desvios condicionais para desvios
+
+Todos podem ser eliminados
+
+#+latex: \vfill\pause
+
+Qual transformação?
+  |     | goto L1 |
+  |     | ...     |
+  | L1: | goto L2 |
+
+\pause Podemos remover a instrução rotulada L1?
++ \pause Sim, se houver um desvio incondicional antes dela
+
+* Otimizações de Fluxo de Controle
+
+Vamos supor
++ Existe apenas um desvio para L1
++ L1 é precedido por um desvio incondicional
+Então
+  |     | goto L1          |
+  |     | ...              |
+  | L1: | if a < b goto L2 |
+  | L3: |                  | 
+
+\pause Pode ser transformada em
+
+  |     | if a < b goto L2 |
+  |     | goto L3          |
+  |     | ...              |
+  | L3: |                  |
+
+#+latex: \vfill\pause
+
+Qual a diferença entre as duas versões?
++ Número de instruções é o mesmo
++ \pause Às vezes saltamos um desvio na versão otimizada
+    + Nunca na primeira versão
+
+* Simplificação Algébrica
+
+Vários casos ingênuos
+
+  | a: | s1 = ld(x)    |
+  | b: | s2 = s1 + 0   |
+  | c: | s3 = s1 * 8   |
+  | d: | s4 = s1 - s1  |
+  | e: | s5 = s1 / s3  |
+  | f: | s6 = s2 * 1   |
+  | g: | s7 = s4 - s5  |
+  | h: | s8 = s6 * s7  |
+  | i: | s9 = s2 * s1  |
+  | j: | s10 = s4 * s9 |
+  | k: | st(s10)       |
+
+* Simplificação Algébrica
+
+Aplicação de fórmulas algébricas simples
++ Transformar em expressões equivalentes
+    + Simplicidade/Desempenho
+
+#+latex: \vfill
+
+Alguns exemplos
+  | x + 0     | 0 + x     | x      |
+  | 1 * x     | x * 1     | x      |
+  | 2 * x     | x * 2     | x + x  |
+  | x**2      | pow(x,2)  | x * x  |
+  | a * (1/b) | (1/b) * a | a/b    |
+  | x > y     |           | x-y >0 |
+
+* Avaliação de Constantes
+
+Expressões aritméticas avaliadas em tempo de compilação
+  | ADD |  1 |  2 | t3 |
+  | MUL | t6 | t3 | t6 |
+
+  | SET |  1 |    | t2 |
+  | SUB |  3 | t2 | t4 |
+#+latex: \vfill
+Tarefas do compilador
++ Calcular o resultado
++ Emitir código usando o resultado calculado
+
+* Uso de Idiomas de Máquina
+
+Saber quais as instruções que estão disponíveis
++ Escolher a mais apropriada (menor custo em tempo)
+Exemplo
+  | x = x + 1 |
+Qual instrução usar se houver as seguintes possibilidades?
+  | ADD |
+  | INC |
+
+* Propagação de cópias
+Procura-se por construções =a = b=
++ Trocar todas as ocorrências de a por b enquanto não houver
+    mudança em nenhum dos dois
+** Exemplo							      :BMCOL:
+ :PROPERTIES:
+ :BEAMER_col: 0.5
+ :END:
+   | b = 4 - 2     |
+   | t1 = b / 2    |
+   | t2 = a * t1   |
+   | t3 = t2 * b   |
+   | t4 = t3 + c   |
+   | _t5 = t3_     |
+   | t6 = t5 + c   |
+   | d = t4 * t6   |
+

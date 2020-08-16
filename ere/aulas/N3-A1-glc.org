@@ -1,0 +1,166 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Gramáticas Livres de Contexto
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Definição
+- *Terminais* (T) \\
+  são os símbolos básicos da linguagem \\
+  \scriptsize todos os tipos de tokens (palavras-chave, identificador, caracteres especiais, ...)  \normalsize
+
+- *Não-terminais* (NT) \\
+  variáveis sintáticas, representam conjuntos de cadeias \\
+  \rightarrow Impõem uma *estrutura hierárquica*
+
+- *Símbolo inicial*  (que é um não-terminal) \\
+  por convenção, listado primeiro
+
+- *Produções*
+  - Cabeça (lado esquerdo) -- sempre é um NT
+  - Um símbolo ``\rightarrow'' (ou \texttt{::=} utilizando a notação original BNF) 
+  - Corpo (lado direito) -- sequência de T e NT
+  
+* Exemplo para Expressões Aritméticas
+- Símbolos terminais \\
+  \texttt{id - - * / ( )}
+- Não-terminais \\
+  S, expressão, termo, fator
+#+Latex: \pause\vfill
+- Regras de Produção
+  #+begin_latex
+  \begin{center}
+  \begin{tabular}{rcl}
+  &&\\
+  {\bf S}         & \rightarrow & expressão \\
+  expressão & \rightarrow & expressão \texttt{+} termo \\
+  expressão & \rightarrow & expressão \texttt{-} termo \\
+  expressão & \rightarrow & termo \\
+  termo     & \rightarrow & termo \texttt{*} fator \\
+  termo     & \rightarrow & termo \texttt{/} fator \\
+  termo     & \rightarrow & fator \\
+  fator     & \rightarrow & \texttt{(} expressão \texttt{)} \\
+  fator     & \rightarrow & \texttt{ id } \\
+  \end{tabular}
+  \end{center}
+  #+end_latex
+
+* Sequência de Derivações
+- Começa no símbolo inicial
+- Passos: substitui-se um NT pelo corpo de uma de suas produções
+- O símbolo ``\Rightarrow'' representa um passo
+
+#+Latex: \vfill\pause
+
+Exemplo: derivar *-(id*id)* com a gramática \\
+$E \rightarrow E - E\ |\ E * E\ |\ -E\ |\ ( E )\ |\ id$
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+| @@latex: $\Rightarrow^*$ @@  | deriva em zero ou mais passos |
+| @@latex: $\Rightarrow^+$ @@ | deriva em um ou mais passos   |
+| @@latex: $\Rightarrow^n$ @@  | deriva em n passos            |
+#+END_CENTER
+
+
+#+Latex: \vfill\pause
+
+Extras
+- Forma sentencial $versus$ sentença
+- Definição de *Linguagem Gerada*
+  - Conjunto de todas as sentenças a partir do símbolo inicial
+
+* Várias possibilidades de derivação
+Exemplo: derivar *-(id*id)* com a gramática \\
+$E \rightarrow E - E\ |\ E * E\ |\ -E\ |\ ( E )\ |\ id$
+
+#+latex:\vfill\pause
+
+- Qual não-terminal substituir?
+  - Derivação *mais a esquerda*, com o símbolo @@latex: $\Rightarrow_{me}$ @@
+  - Derivação *mais a direita*, com o símbolo @@latex: $\Rightarrow_{md}$ @@
+- Qual produção do não-terminal escolher
+
+* Árvores de Derivação
+Representação gráfica do processo de derivação \\
+\rightarrow Mostra a ordem na qual as produções são aplicadas
+
+#+Latex: \vfill\pause  
+
+Sua estrutura hierárquica origina uma sentença
+- Raiz é o símbolo inicial da gramática
+- Vértices intermediários são não-terminais
+- Folhas são os terminais e palavras vazias ($\epsilon$)
+
+#+Latex: \vfill
+
+Exemplo de *-(id+id)* com a gramática \\
+  $E \rightarrow E - E\ |\ E * E\ |\ -E\ |\ ( E )\ |\ id$
+\vfill
+* Gramáticas Ambíguas
+Mais de uma árvore de derivação para a mesma sentença
+- Somente com um tipo de derivação
+
+#+Latex: \vfill\pause
+
+Exemplo de *id - id * id* com a gramática \\
+$E \rightarrow E - E\ |\ E * E\ |\ -E\ |\ ( E )\ |\ id$
+
+#+Latex: \vfill\pause
+
+Regra geral: *ambiguidade é indesejada*
+- Não há um método estabelecido para removê-la
+- Algumas vezes a linguagem é inerentemente ambígua
+  
+* Estratégias de Análise
+Existem três estratégias
+- Universal -- pode analisar qualquer gramática \\
+  Algoritmos de Cocke-Younger-Kasami e Earley
+- *Descendente* /top-down/
+- *Ascendente* /bottom-up/
+
+#+Latex: \vfill\pause
+
+Exemplo para a entrada *ccbca* e a gramática \\
+#+BEGIN_CENTER
+  $S \rightarrow A B$ \\
+  $A \rightarrow c | \epsilon$ \\
+  $B \rightarrow cbB | ca$
+#+END_CENTER
+
+#+Latex: \vfill\pause
+
+Descendente parte de $S$ e tenta chegar a *ccbca* \\
+    S \Rightarrow AB \Rightarrow cB \Rightarrow ccbB \Rightarrow ccbca
+
+Ascendente parte de *ccbca* e tenta chegar a $S$ \\
+    ccbca ... ccbB ... cB ... AB ... S
+
+* Outras Definições
+- Gramática *sem ciclos* -- inexistência de produções tipo \\
+  $A \Rightarrow^- A$ para algum $A \in NT$
+- Gramática *\epsilon-Livre* -- inexistência de produções tipo \\
+  $A \rightarrow \epsilon$, salvo $S \rightarrow \epsilon$ onde $S$ é o símbolo inicial
+
+#+Latex: \pause\vfill
+- Gramática *Fatorada à Esquerda* -- sem produções tipo \\
+  $A \rightarrow {\alpha}{\beta_1} | {\alpha}{\beta_2}$, sendo $\alpha$ uma forma sentencial
+- Gramática *Recursiva à Esquerda* -- com a produção \\
+ @@latex: $A \Rightarrow^- A{\alpha}$ @@para algum $A \in NT$
+  - Recursão direta ou indireta
+  - Impossibilita uma análise descendente (/top-down/)
+    - Consumo do /token/ é feito após a escolha da produção
+    - Exemplo: $A \rightarrow Aa\ | b$ e a entrada *ba*
+

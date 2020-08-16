@@ -1,0 +1,196 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Conjunto Sequência
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Motivar a necessidade do Conjunto Sequência
+
+| S \rightarrow ACE       |
+| A \rightarrow a \vert b \vert \epsilon |
+| C \rightarrow c \vert d \vert \epsilon |
+| E \rightarrow e         |
+
+Implementação possível para o não-terminal A()
+
+#+BEGIN_SRC C
+A() {
+  switch {
+    case 'a': Consome('a'); break;
+    case 'b': Consome('b'); break;
+    case ???: ???
+    default: abortar ("Erro Sintático"); }
+#+END_SRC
+
+#+BEGIN_CENTER
+O que fazer para detectar o \epsilon?
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+Precisamos saber o que pode vir depois do não-terminal A
+- *Conjunto Sequência(A)*
+
+* Conjunto Sequência
+#+BEGIN_CENTER
+Seja A um _não-terminal_ pertecente a gramática
+
+Sequência (A)
+
+Conjunto de *terminais* que aparecem imediatamente _após_ o A
+#+END_CENTER
+
+#+Latex: \vfill\pause
+
+Definição formal
+- Conjunto de terminais *a*, tal que exista uma derivação\\
+  $S \Rightarrow^* {\alpha}A{\bf a}{\beta}$, para qualquer forma sentencial \alpha e \beta
+
+#+Latex: \vfill\pause
+
+| S \rightarrow *a* \vert *[* L *]*  |
+| L \rightarrow S *;* L  \vert S |
+* Calcular o *Sequência(A)* de A
+
+#+BEGIN_CENTER
+A é qualquer não-terminal
+
+\alpha e \beta a seguir são formas sentenciais válidas
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+Se A é o NT inicial, acrescente $
+
+#+latex: \vfill\pause
+
+Se houver $X \rightarrow {\alpha}A{\beta}$, acrescente Primeiro(\beta) exceto o \epsilon \\
+  (note que \epsilon nunca fará parte de conjuntos Sequência)
+
+#+latex: \vfill\pause
+
+Se houver $X \rightarrow {\alpha}A$, acrescente Sequência(X)
+
+#+latex: \vfill\pause
+
+Se houver $X \rightarrow {\alpha}A{\beta}$ _e_ Primeiro(\beta) contém \epsilon, acrescente Sequência(X)
+
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+*Aplicar todas estas regras iterativamente*
+
+Até que nenhum conjunto Sequência aumente de tamanho
+#+END_CENTER
+
+* 1: Calcule o conjunto Sequência de cada não-terminal
+
+| exp   | \rightarrow | exp soma termo \vert termo   |
+| soma  | \rightarrow | *SUM* \vert *SUB*         |
+| termo | \rightarrow | termo mult fator \vert fator |
+| mult  | \rightarrow | *MULT* \vert *DIV*           |
+| fator | \rightarrow | *(* exp *)* \vert *NUM*            |
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+_Resposta_
+#+END_CENTER
+
+|       | Primeiro | Sequência            |
+|-------+----------+----------------------|
+| exp   | ( NUM    | $ SUM SUB )          |
+| termo | ( NUM    | $ SUM SUB MULT DIV ) |
+| fator | ( NUM    | $ SUM SUB MULT DIV ) |
+| soma  | SUM SUB  | ( NUM                |
+| mult  | MULT DIV | ( NUM                |
+* 2: Calcule o conjunto Sequência de cada não-terminal
+| declaração | \rightarrow | if-decl \vert *outra*                  |
+| if-decl    | \rightarrow | *if (* exp *)* declaração else-parte |
+| else-parte | \rightarrow | *else* declaração \vert \epsilon              |
+| exp        | \rightarrow | *0* \vert *1*                            |
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+_Resposta_
+#+END_CENTER
+
+|            | Primeiro | Sequência |
+|------------+----------+-----------|
+| declaração | if outra | $ else    |
+| if-decl    | if       | $ else    |
+| else-parte | else \epsilon   | $ else    |
+| exp        | 0 1      | )         |
+* 3: Calcule o conjunto Sequência de cada não-terminal
+| Regra |     |   |       |
+|-------+-----+---+-------|
+| #1    | DS  | \rightarrow | D DS' |
+| #2    | DS' | \rightarrow | ; DS  |
+| #3    | DS' | \rightarrow | \epsilon     |
+| #4    | D   | \rightarrow | s     |
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+_Resposta_
+#+END_CENTER
+
+|     | PRI | SEQ |
+|-----+-----+-----|
+| DS  | s   | $   |
+| DS' | ; \epsilon | $   |
+| D   | s   | ; $ |
+
+Explicações
+- ; \in SEQ(D) porque pela regra #1 temos D DS'
+- $ \in SEQ(D) porque DS' pode virar \epsilon
+- $ \in SEQ(DS) porque DS é NT inicial em #1
+- $ \in SEQ(DS') porque em #1 ele aparece no final da produção
+
+* Fechamento Primeiro/Sequência(A)
+
+| S \rightarrow ACE       |
+| A \rightarrow a \vert b \vert \epsilon |
+| C \rightarrow c \vert d \vert \epsilon |
+| E \rightarrow e         |
+
+Implementação possível para o não-terminal A()
+
+#+BEGIN_SRC C
+A() {
+  switch {
+    //Tratando o Primeiro(A)
+    case 'a': Consome('a'); break;
+    case 'b': Consome('b'); break;
+
+    //Tratando o Sequência(A)
+    case 'c': 
+    case 'd':
+    case 'e':
+         break;
+    default: abortar ("Erro Sintático");
+ }
+#+END_SRC
+* Exercício final
+
+#+BEGIN_CENTER
+Calcule os conjuntos primeiro e sequência
+#+END_CENTER
+
+| S \rightarrow XYZ       |
+| X \rightarrow aXb \vert \epsilon   |
+| Y \rightarrow cYZcX \vert d |
+| Z \rightarrow eZYe \vert f  |
+

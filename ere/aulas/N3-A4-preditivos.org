@@ -1,0 +1,130 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Analisadores Preditivos
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Analisadores Descendentes Preditivos
+Sem retrocesso (custo linear com a entrada)
+
+/Lookahead/ de um único símbolo
+
+#+BEGIN_CENTER
+Os primeiros terminais deriváveis devem identificar a
+
+produção a ser escolhida de forma única e direta
+#+END_CENTER
+
+#+Latex: \pause
+
+Com *a* na entrada e o não-terminal *A* a ser derivado
++ Determinar qual das produções $A \rightarrow \beta_1\ |\ \beta_2\ |\ ...\ |\ \beta_n$ inicia por *a*
+
+#+Latex: \vfill\pause
+
+Ou seja, a gramática -- *LL(1)* -- deve ser
+1. Sem recursão à esquerda
+2. Totalmente fatorada à esquerda
+3. Não-terminais com mais de uma produção ($B \rightarrow bB\ |\ ca$)
+   - Um único símbolo na entrada permite escolher a derivação
+
+* Verificando a compreensão
+#+BEGIN_CENTER
+Estamos tratando o não-terminal =Comando=
+#+END_CENTER
+
+#+latex: \vfill
+
+#+BEGIN_EXPORT latex
+\begin{center}
+\begin{tabular}{rcl}
+Comando & $\rightarrow$ & {\bf if} Expr {\bf then} Comando | \\
+        && {\bf while} Expr {\bf do} Comando | \\
+        && {\bf repeat} Lista {\bf until} Expr | \\
+        && {\bf id :=} Expr
+\end{tabular}
+\end{center}
+#+END_EXPORT
+
+#+latex: \vfill
+
+#+BEGIN_CENTER
+É possível escolher qual produção com um único token?
+
+SIM ou NÃO
+#+END_CENTER
+
+* Verificando a compreensão novamente
+
+#+BEGIN_CENTER
+Estamos tratando o não-terminal =Comando=
+#+END_CENTER
+
+#+latex: \vfill
+
+#+BEGIN_EXPORT latex
+\begin{center}
+\begin{tabular}{rcl}
+Comando & $\rightarrow$ & Condicional |\\
+        && Iterativo |\\
+        && Atribuição \\
+Condicional & $\rightarrow$ &  {\bf if} Expr {\bf then} Comando \\
+Iterativo & $\rightarrow$ & {\bf while} Expr {\bf do} Comando | \\
+        && {\bf repeat} Lista {\bf until} Expr \\
+Atribuição & $\rightarrow$ & {\bf id :=} Expr
+\end{tabular}
+\end{center}
+#+END_EXPORT
+
+#+latex: \vfill
+
+#+BEGIN_CENTER
+Ainda é possível fazer a escolha com um único token?
+
+SIM ou NÃO
+#+END_CENTER
+
+* Sumário
+
+Sim e Sim (para os slides anteriores).
+
+#+latex: \vfill
+
+#+BEGIN_CENTER
+Mas precisamos determinar o conjunto de terminais deriváveis
+
+a partir de =Condicional=, =Iterativo= e =Atribuição=
+#+END_CENTER
+
+#+BEGIN_EXPORT latex
+\begin{center}
+\begin{tabular}{rcl}
+Comando & $\rightarrow$ & Condicional |\\
+        && Iterativo |\\
+        && Atribuição \\
+Condicional & $\rightarrow$ &  {\bf if} Expr {\bf then} Comando \\
+Iterativo & $\rightarrow$ & {\bf while} Expr {\bf do} Comando | \\
+        && {\bf repeat} Lista {\bf until} Expr \\
+Atribuição & $\rightarrow$ & {\bf id :=} Expr
+\end{tabular}
+\end{center}
+#+END_EXPORT
+
+#+latex: \vfill
+
+#+BEGIN_CENTER
+Definir o *Conjunto Primeiro* dessas produções.
+#+END_CENTER
+
+

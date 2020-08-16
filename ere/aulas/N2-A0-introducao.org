@@ -1,0 +1,178 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Análise Léxica
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Revisão                                                          :noexport:
+- O que são linguagens de programação de alto nível?
+- O que é um compilador?
+- Qual a diferença entre compilador e interpretador?
+- Porque programas compilados são mais rápidos?
+- Quais as duas etapas principais na compilação?
+- Essas duas etapas estão presentes em um interpretador?
+* Revisão -- Estrutura de um *Compilador*                            :noexport:
+
+[[../geral/img/fases_compilacao.png]]
+
+* Análise Lexical
+- Identificar sequências significativas na entrada: \alert{lexemas}
+- Quando um lexema é identificado, gera um \alert{token}
+- Funções adicionais
+  - Começa a construção da tabela de símbolos
+  - Detecção de erros léxicos, gerando mensagens de erro
+
+[[../geral/img/analisa_lexica.png]]
+
+* Por que uma Análise Léxica?
+- *Simplicidade de Projeto*
+  - Simplifica o analisar sintático
+  - Projeto de Linguagem mais limpo
+
+- <2-> *Eficiência*
+  - Aplicação de técnicas especializadas
+  - /Buffering/ \rightarrow melhora o desempenho
+
+- <3-> *Portabilidade*
+  - Peculiaridades isoladas: formato, codificação
+
+* Análise Léxica -- Vocabulário Básico
+- *Token*: composto de: *<nome-token, valor-atributo>*
+  - *nome-token* \rightarrow representa \alert{tipo} de unidade léxica
+  - *valor-atributo* \rightarrow valor ou referência a tabela de símbolos
+  - Exemplos
+    #+BEGIN_CENTER
+    Palavras-chave, 
+    Operadores,
+    Identificadores, \linebreak
+    Constantes,
+    Literais,
+    Símbolos    
+    #+END_CENTER
+
+#+Latex: \vfill
+
+- <2-> *Padrão*
+  - Descrição da forma da instância de um token
+
+#+Latex: \vfill
+
+- <3-> *Lexema*
+  - Caracteres na entrada que casam com um padrão de token
+  - Instância de um token
+
+* Exemplos de Token, Padrão e Lexema
+
+| Token         | Padrão                   | Exemplos de Lexema |
+|---------------+--------------------------+--------------------|
+| =if=            | caracteres i,f           | if                 |
+| =else=          | caracteres e,l,s,e       | else               |
+| =comparação=    | <,<=,=,>,>=              | < ou <= ou =       |
+| =identificador= | letras e dígitos         | pi, score, D2      |
+| =número=        | constante numérica       | 3.14159            |
+| =literal=       | cercada por aspas duplas | "core dumped"      |
+
+* Visão da Implementação
+- Utilização de um par de buffers na entrada
+  - Cada um do tamanho de um bloco de disco
+  - Dois apontadores
+    - $lexemeBegin$
+    - $forward$
+  - Uso de \alert{sentinelas} -- *eof*
+    - Fim do buffer
+    - Fim da entrada
+
+#+Latex: \vfill
+
+- Exemplo de entrada
+  #+BEGIN_EXAMPLE
+  |p|o|s| |=| |i| |-| |r| |*| |6|0|
+  #+END_EXAMPLE
+  - Tamanho de buffer: 4, com sentinelas (representadas pelo símbolo $)
+    #+BEGIN_EXAMPLE
+    | | | | |$| | | | |$|
+    #+END_EXAMPLE
+
+#+Latex: \vfill
+
+- <2-> *Como reconhecer padrões?*
+
+* Como definir padrões?
+
+- Enumerar os valores possíveis: $<, <=, =, >=, >$ \\
+  \rightarrow Complexo e não eficaz
+
+#+latex: \vfill\pause
+
+- Usar conceitos de linguagens formais
+- Hierarquia de linguagens (Noam Chomsky)
+  - *Regulares* (Tipo 3) \rightarrow Autômatos de Estados Finitos
+  - Livres de Contexto (2) \rightarrow Autômato com pilha
+    - Quando determinista; base da teoria de LPs
+  - Sensíveis ao Contexto (1) \rightarrow Máquina de Turing restrita
+  - Recursivamente Enumeráveis (0) \rightarrow Máquina de Turing
+
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+Resposta
+
+Usar _Expressões Regulares_ para definir padrões
+#+END_CENTER
+
+* Definições de Linguagens Formais
+
+- *Símbolo*: entidade abstrata \linebreak
+  Letras, Dígitos, Caracteres Especiais
+
+#+latex: \vfill
+
+- *Alfabeto ($\Sigma$)* -- sigma: um conjunto finito de símbolos \\
+  Exemplo de alfabeto para a linguagem binária:  $\Sigma = \{ 0, 1 \}$
+
+#+latex: \vfill
+
+- *String (palavra)*: sequência finita de símbolos
+  - String Vazia ($\epsilon$) -- epsilon: sequência vazia (nenhum símbolo)
+
+#+latex: \vfill
+
+- *Linguagen Formal ($\Sigma^*$)*: todas as frases de um alfabeto
+
+* Como construir um analisador léxico (conceitualmente)
+
+Na ordem, de cima para baixo
+- Em parênteses: técnica de conversão
+
+#+BEGIN_CENTER
+*Várias definições de ER*
+
+(Algoritmo de Thompson) \linebreak
+
+*Vários AFND*
+
+(Concatenção com ligações vazias) \linebreak
+
+*Um único AFND*
+
+(Algoritmo de Subconjuntos) \linebreak
+
+*Um único AFD*
+
+(Gerador de código) \linebreak
+
+Função em uma linguagem de usuário
+#+END_CENTER
+
+

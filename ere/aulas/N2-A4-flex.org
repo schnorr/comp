@@ -1,0 +1,127 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: FLEX
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* (F)LEX
++ Lex: Ferramenta Unix para gerar analisadores léxicos
++ *Flex*: Versão GNU (Fast Lex) \linebreak
+  http://www.gnu.org/software/flex/
+
+#+Latex: \vfill
+
++ Funcionamento Geral
+  + Especificação LEX (arquivo fonte com extensão .l) \\
+    \rightarrow Declarações, Padrões, Regras para ações
+
+  + Compilação flex \\
+    \rightarrow Obtenção de um código em C
+
+  + Compilação do programa C \\
+    \rightarrow Obtenção de um analisador léxico na forma de uma função
+    #+BEGIN_EXAMPLE
+    int token = yylex();
+    #+END_EXAMPLE
+
+* Compilação Típica com Flex
++ Edição da especificação em um arquivo -- *scanner.l*
+
++ =flex scanner.l=
+  + Código em C no arquivo *lex.yy.c*
+  + Exporta a função =yylex()= que retorna un token
+  + =man flex=
++ <2-> =gcc lex.yy.c -o analisador -lfl=
+  + Compila e amarra o analisador com a biblioteca *libfl*
+  + A função *main* deve estar implementada em algum lugar
+    #+BEGIN_EXAMPLE
+  int main (int argc, char **argv)
+  {
+    int token;
+    while ((token = yylex())){
+      // do something with token
+
+    }
+  }
+  #+END_EXAMPLE
+
+* Especificação de Entrada Flex
++ Contém três seções
+  + Definições (em C, incluído no início da saída)
+  + Regras (Expressões Regulares) e Ações (em C)
+  + Código (em C, incluído no fim da saída)
++ Sintaxe
+  #+BEGIN_SRC Flex
+  Definições
+  %%
+  Regras e Ações
+  %%
+  Funções Opcionais
+  #+END_SRC
++ Variáveis globais definidas por flex
+  + =char *yytext= -- último lexema reconhecido \linebreak
+    *Importante*: sempre faça um strdup caso queira guardar
+  + =int yyleng= -- seu tamanho
+
+* Seção de Definições
++ Opcional
++ Código em C, incluído no início do arquivo C de saída
+  + Declaração de tokens que serão reconhecidos
+  + Diretivas de =#include=
+  + Variáveis globais necessárias ao analisador léxico
+    + Contagem de linhas e colunas (caso a contagem seja manual)
+  + Deve estar na forma
+    #+BEGIN_EXAMPLE
+     %{ ... %}
+    #+END_EXAMPLE
++ Contém também a declaração de ERs nomeadas
+
+* Seção de Regras e Ações
++ Obrigatória
++ Cada linha desta seção é da seguinte forma \\
+  #+BEGIN_EXAMPLE
+  regra { ação }
+  #+END_EXAMPLE
++ Onde *regra* é uma expressão regular
+  + Operadores de base (de Kleene)
+  + E expressões regulares estendidas -- =man grep=
+  + Usa-se =xxx= para distinguir uma variável xxx da ER 'xxx'
++ E onde *ação* é um código escrito em C
+  + ={ }= é a ação nula
+    + Ou seja, o lexema é ignorado
+    + Usado para detectar os brancos da entrada
+  + ={ printf ("oi"); }= é a ação de imprimir oi na tela
+  + Tem acesso ao escopo global
+
+* Seção de Funções Opcionais
++ Opcional
++ Código em C, incluído no fim da saída
+  + Definir funções para ações complexas da seção anterior
++ Pode conter uma função =main=
+
+* Alguns Detalhes
++ Ação padrão \rightarrow Copia para a saída o texto da entrada
+  + Para evitar, pode-se utilizar uma regra *.* após todas as ERs
+    + Pode ser visto como um erro léxico
++ <2-> No caso de ambiguidade entre regras
+  + Flex usa a regra que provê o maior lexema
++ <3-> Regra *a/b*: reconhecer a somente se b aparece após
+  + Se ab é encontrado
+    + Reconhece a
+    + b é mantido no buffer de entrada
+
+* Exemplos
+- Uma calculadora usando flex/bison: [[https://bitbucket.org/schnorr/calc][calc]]
+- Um leitor de rastros usando flex/bison: [[https://github.com/schnorr/pajeng/tree/master/src/libpaje][PajeNG's libpaje]]
+  - Procure pelos arquivos =.y= e =.l=

@@ -1,0 +1,84 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Análise Sintática Descendente @@latex:\linebreak@@ Recursivo com Retrocesso (Força Bruta)
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+
+#+BEGIN_CENTER
+Como reconhecer se a sentença pertence a gramática?
+#+END_CENTER
+
+#+Latex: \vfill\pause
+
+Características gerais
+- Ler da esquerda para a direita
+- Derivação mais à esquerda de não-terminais
+
+#+Latex: \vfill
+
+Estratégias descendentes
+- Recursivo com retrocesso (força bruta)
+- Preditivo: LL(1), com noção de /lookahead/
+  - Recursivo
+  - Tabular (autômato com pilha)
+
+* Recursivo com retrocesso (força bruta)
+
++ Considerando a gramática \\
+  $S \rightarrow A\ B$ \\
+  $A \rightarrow c\ |\ {\epsilon}$ \\
+  $B \rightarrow cbB\ |\ ca$
++ Ela gera $S \Rightarrow^* cbca$ ?
++ <2->Solução
+  #+BEGIN_EXPORT latex
+  {\scriptsize
+  \begin{tabularx}{\textwidth}{llX}
+  S     & cbca &  escolhe $S \rightarrow AB$ \\
+  AB    & cbca &  escolhe $A \rightarrow c$ \\
+  cB    & cbca &  consome c \\
+  B     &  bca &  sem saída, retrocede para a última escolha \\
+  AB    & cbca &  escolhe $A \rightarrow \epsilon$ \\
+  B     & cbca &  escolhe $B \rightarrow cbB$ \\
+  cbB   & cbca &  consome c \\
+  bB    & bca  &  consome b \\
+  B     & ca   &  escolhe $B \rightarrow cbB$ \\
+  cbB   & ca   &  consome c \\
+  bB    & ca   &  sem saída, retrocede para a última escolha \\
+  B     & ca   &  escolhe $B \rightarrow ca$ \\
+  ca    & ca   &  consome c \\
+  a     & a    &  consome a \\
+  $\emptyset$ & $\emptyset$ & entrada reconhecida \\
+  \end{tabularx}
+  }
+  #+END_EXPORT
+
+* Reflexão
+
+Fácil de implementar
++ Cada não-terminal é implementado como uma função
++ Mas é ineficiente, custo exponencial com o tamanho da entrada
+
+#+latex: \vfill\pause
+
+Qual o requisito fundamental?
++ Gramática não pode ser recursiva à esquerda \linebreak
+  $A \rightarrow Aa \vert b$ \\
+  + Considerando a entrada *ba* que pertence a essa gramática
+
+#+latex: \vfill\pause
+
+A gramática precisa ser fatorada a esquerda?
++ Ambiguidade na escolha da derivação influencia?

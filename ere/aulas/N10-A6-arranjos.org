@@ -1,0 +1,211 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Arranjos Multidimensionais
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+
+Arranjos
+- começam em $0$
+- terminam em $n-1$
+- $n$ o tamanho do arranjo
+
+#+latex: \pause\vfill
+
+Qual o TAC para $A[i_1][i_2] = u$?
+
+#+latex: \pause\vfill
+
+Mais genérico: qual o TAC para $A[i_1][i_2]...[i_k] = u$?
+
+* Arranjos 1D \small vetores
+
+Memória pode ser vista como um vetor virtual infinito
+
+Endereçamento é um *mapeamento* (arranjo \rightarrow memória)
++ Nome alternativo: serialização
+#+latex: \vfill
+
+#+ATTR_LATEX: :width .9\linewidth
+[[./img/1d.pdf]]
+
+#+latex: \vfill
+\pause Questões
++ Qual o endereço de memória $A[2]$?
++ Qual o conteúdo dessa posição?
+
+* Arranjos 1D \small vetores
+
+#+begin_center
+matriz A, tamanho n \\
+$A[i]$ \\
+$e = base + i$
+#+end_center
+
+base: endereço relativo do arranjo na memória
+
+i: deslocamento do elemento em relação à base
+
+#+latex: \vfill\pause
+
+Deve-se levar em conta o tipo de dado
++ int é 4 bytes
++ double é 8 bytes
+
+#+latex: \pause
+
+Tamanho $w$ deve aparecer na equação
+  #+begin_center
+  matriz A, tamanho n \\
+  $A[i]$ \\
+  $e = base + i * w$
+  #+end_center
+
+* Arranjos 2D
+Arranjo multidimensional requer mais trabalho
++ Por _linha_, por _coluna_, por vetor de indireção
+#+latex: \vfill
+\pause  Exemplo considerando A[1..2,1..4]
+  |-----+-----+-----+-----|
+  | 1,1 | 1,2 | 1,3 | 1,4 |
+  |-----+-----+-----+-----|
+  | 2,1 | 2,2 | 2,3 | 2,4 |
+  |-----+-----+-----+-----|
+\pause  Memória é linear: mapeamento por linha
+  |-----+-----+-----+-----+-----+-----+-----+-----|
+  | 1,1 | 1,2 | 1,3 | 1,4 | 2,1 | 2,2 | 2,3 | 2,4 |
+  |-----+-----+-----+-----+-----+-----+-----+-----|
+\pause  Código alto nível
+  #+BEGIN_SRC algo
+  for i <- 1 to 2
+    for j <- 1 to 4
+      A[i,j] <- A[i,j] + 1
+  #+END_SRC
+\pause  Outro mapeamento na memória: por coluna
+  |-----+-----+-----+-----+-----+-----+-----+-----|
+  | 1,1 | 2,1 | 1,2 | 2,2 | 1,3 | 2,3 | 1,4 | 2,4 |
+  |-----+-----+-----+-----+-----+-----+-----+-----|
+
+* Arranjos 2D \small matrizes, tabelas
+Equação de endereçamento
+  #+begin_center
+  matriz A, tamanho $n_1 * n_2$ \\
+  $A[i_1][i_2]$ \\
+  $e = base + (i_1 * n_2 + i_2) * w$
+  #+end_center
++ $base$: endereço relativo do arranjo na memória
++ $i_1 * n_2$ seleciona a linha
++ $i_2$ seleciona a coluna
++ $(i_1 * n_2 + i_2)$ define o deslocamento
++ $w$ tamanho do dado
+#+latex: \vfill
+\pause  Exemplo considerando A[1..2,1..4]
+  |-----+-----+-----+-----|
+  | 1,1 | 1,2 | 1,3 | 1,4 |
+  |-----+-----+-----+-----|
+  | 2,1 | 2,2 | 2,3 | 2,4 |
+  |-----+-----+-----+-----|
+
+* Arranjos 3D \small cubos
+Matriz A, tamanho $n_1 * n_2 * n_3$   $(3 * 3 * 4)$
+
+#+attr_latex: :width .8\linewidth
+[[./img/3d.pdf]]
+
+#+latex: \vfill\pause
+
+Qual o endereço de $A[i_1][i_2][i_3]$?
+
+  #+begin_center
+  $e = base + ((i_1 * n_2 + i_2) * n_3 + i_3) * w$
+  #+end_center
+
+* Motivação para qualquer arranjo
+Equações para as diferentes formas de endereçamento
+  | A[i_1]             | $base + i_1 * w$                                     |
+  | A[i_1][i_2]         | $base + (i_1 * n_2 + i_2) * w$                         |
+  | A[i_1][i_2][i_3]     | $base + ((i_1 * n_2 + i_2) * n_3 + i_3) * w$             |
+  | A[i_1][i_2][i_3][i_4] | $base + (((i_1 * n_2 + i_2) * n_3 + i_3) * n_4 + i_4) * w$ |
+\pause Forma simplificada
+  
+  | A[i_1]             | $base + d_1 * w$ | sendo | $d_1 = i_1$             |
+  | A[i_1][i_2]         | $base + d_2 * w$ | sendo | $d_2 = (d_1 * n_2 + i_2)$ |
+  | A[i_1][i_2][i_3]     | $base + d_3 * w$ | sendo | $d_3 = (d_2 * n_3 + i_3)$ |
+  | A[i_1][i_2][i_3][i_4] | $base + d_4 * w$ | sendo  | $d_4 = (d_3 * n_4 + i_4)$ |
+
+\pause Forma geral com *recursividade*
+  | A[i_1]...[i_k] | $base + d_k * w$ | sendo | $d_k = (d_{k-1} * n_k + i_k)$ |
+* Regra geral de endereçamento de arranjos
+Considerando k dimensões
+#+latex: \vfill
+
+$A[n_1][n_2]...[n_k]$ \\
+#+latex: \vfill
+$e = base + d_k * w$ \\
+#+latex: \vfill
+
+#+BEGIN_EXPORT latex
+\begin{equation}
+d_k = \left\{ 
+\begin{array}{l l}
+ d_{k-1} * n_k + i_k & \quad \text{se $k \geq 2$}\\
+ i_k & \quad \text{se $k = 1$}
+\end{array} \right.
+\end{equation}
+#+END_EXPORT
+* Observações sobre limites mínimo e máximo
+
+Nem sempre os limites do arranjo são de 0 até n-1
++ C -- 0 até n-1
++ Pascal -- 1 até n
++ Fortran -- /low/ até /high/ (programador decide)
+
+#+latex: \vfill\pause
+
+Forma geral considerando /low/ e /high/
++ $low_k$ indica o início da dimensão $k$ do arranjo
++ $high_k$ indica o final da dimensão $k$ do arranjo
+
+* Endereçamento para arranjos kD com limites
+
+Declaração
+
+$A[low_1 ... high_1][low_2 ... high_2]...[low_k ... high_k]$ \\
+
+Acesso
+
+A[i_1][i_2][i_3]...[i_k]
+
+#+latex: \vfill
+
+$e = base + d_k * w$ \\
+
+#+latex: \vfill
+
+
+
+#+BEGIN_EXPORT latex
+\begin{equation}
+d_k = \left\{ 
+\begin{array}{l l}
+ d_{k-1} * n_k + (i_k - low_k) & \quad \text{se $k \geq 2$}\\
+ i_k - low_k & \quad \text{se $k = 1$}
+\end{array} \right.
+\end{equation}
+\begin{equation}
+n_k = | high_k - low_k |
+\end{equation}
+#+END_EXPORT
+

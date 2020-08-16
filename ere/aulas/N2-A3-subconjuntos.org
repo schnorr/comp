@@ -1,0 +1,101 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: O algoritmo de subconjuntos
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Visão Geral
+Considerando um AFND *N* e um AFD *D*
+- Cada estado de D equivale a um conjunto de estados de N
+
+#+Latex: \vfill
+
+[[./img/afnd_afd_exemplo.png]]
+ 
+* Fechamento-\epsilon(s), sendo *s* um estado
+#+BEGIN_CENTER
+estados alcançados somente com transições \epsilon
+#+END_CENTER
+
+#+Latex: \vfill
+
+Para o AFND de =(a|b)*abb=
+
+[[./img/afnd_exemplo_3-34.png]]
+
+Qual é:
+- Fechamento-\epsilon(1)
+- Fechamento-\epsilon(7)
+- Fechamento-\epsilon(3)
+
+* Fechamento-\epsilon(T), sendo *T* um _conjunto_ de estados
+#+BEGIN_CENTER
+estados alcançados somente com transições \epsilon
+#+END_CENTER
+
+#+Latex: \vfill
+
+Para o AFND de =(a|b)*abb=
+
+[[./img/afnd_exemplo_3-34.png]]
+
+Qual é:
+- Fechamento-\epsilon({6, 1})
+- Fechamento-\epsilon({6, 7})
+- Fechamento-\epsilon({0, 3})
+
+
+* Movimento(T,a), sendo *T* um conjunto, *a* um símbolo
+
+#+BEGIN_CENTER
+estados alcançados utilizando somente transições com o símbolo *a*
+#+END_CENTER
+
+#+Latex: \vfill
+
+*Atenção:* Calcula-se _sempre_ o *Fechamento-\epsilon (Movimento(T,a))*
+- _Após_ a transição com *a*, ainda é possível realizar transições \epsilon
+
+#+Latex: \vfill
+
+Para o AFND de =(a|b)*abb=
+
+[[./img/afnd_exemplo_3-34.png]]
+ 
+
+* Exercício: converter AFND para AFD -- ER: =(a|b)*abb=
+
+[[./img/afnd_exemplo_3-34.png]]
+
+#+Latex: \vfill
+
+#+BEGIN_EXPORT latex
+\begin{tabularx}{\textwidth}{XXcc}\toprule
+Estados do AFND & Estado AFD & a & b \\\toprule
+\ & \ & \ & \ \\\midrule
+\ & \ & \ & \ \\\midrule
+\ & \ & \ & \ \\\midrule
+\ & \ & \ & \ \\\midrule
+\ & \ & \ & \ \\\midrule
+\ & \ & \ & \ \\\midrule
+\ & \ & \ & \ \\\midrule
+\ & \ & \ & \ \\\bottomrule
+\end{tabularx}
+#+END_EXPORT
+
+* Resposta: AFD construído do AFND para =(a|b)^*abb=
+
+[[./img/afd_exemplo_3-36.png]]
+
+

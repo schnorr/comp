@@ -1,0 +1,146 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: SLR(1)
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+Funciona sobre o autômato LR(0)
+
+Utiliza um token de /lookahead/ de duas formas
+  + Garantir a exitência de uma transição válida no autômato
+  + Utiliza o _Sequência(A)_ para decidir sobre as reduções
+#+latex: \vfill\pause
+Algoritmo para Análise SLR(1)
+  + Se um estado tem [A \rightarrow \alpha \bullet X \beta] e *lookahead = X*
+    + A ação é de empilhar o estado que contém [A \rightarrow \alpha X \bullet \beta] 
+  + Se um estado tem [A \rightarrow \gamma \bullet] e *lookahead $\in$ Sequencia(A)*
+    + A ação é de reduzir pela regra A \rightarrow \gamma
+#+latex: \vfill
+#+BEGIN_CENTER
+Gramática é SLR(1) se não houver ambiguidades
+#+END_CENTER
+* Tabela SLR(1)
+Tabela do autômato LR(0) com alterações SLR(1)
+#+latex: \vfill
+Regras de construção da parte Ação
+  + Se [A \rightarrow \alpha \bullet a \beta] \in \et{E0} e Transição(\et{E0}, a) = \et{E1}
+    + defina Ação(\et{E0}, a) como ``Empilha \et{E1}''
+  + Se [A \rightarrow \alpha \bullet] \in \et{E0}
+    + defina Ação(\et{E0}, a)  como ``Reduz A \rightarrow \alpha'' \alert{$\forall$  a $\in$ Sequencia(A)}
+  + Se [S' \rightarrow S \bullet] \in \et{E0}
+    + defina Ação(\et{E0}, $) como ``Aceita''
+  + Para todos os não-terminais A, se Transição(\et{E0}, A) = \et{E1}
+    + defina Transição(\et{E0}, A) = \et{E1}
+#+latex: \vfill
+#+BEGIN_CENTER
+Estado inicial é aquele construído a partir de [S' \rightarrow \bullet S]
+#+END_CENTER
+* Exemplo
+Gramática de expressões aritméticas rudimentares
+| /   | < |   |       |
+| (1) | E | \rightarrow | E + n |
+| (2) | E | \rightarrow | n     |
+Utilizando as funções de fechamento e transição
+  + Construa o autômato finito determinístico LR(0)
+  + Defina a tabela SLR(1)
+
+Analise *n + n + n* com a tabela recém criada
+
+#+latex: \vfill\pause
+
+Tabela SLR(1) correspondente
+  |   | n | +    | $    | E |
+  | / | < |      |      | < |
+  |---+---+------+------+---|
+  | 0 | 2 |      |      | 1 |
+  | 1 |   | 3    | *Ac.*  |   |
+  | 2 |   | R(2) | R(2) |   |
+  | 3 | 4 |      |      |   |
+  | 4 |   | R(1) | R(1) |   |
+* Exercício de aplicação do método SLR(1)
+Gramática de parênteses balanceados
+  | (1) S \rightarrow ( S ) S |
+  | (2) S \rightarrow \epsilon       |
+Utilizando as funções de fechamento e transição
+  + Construa o autômato finito determinístico LR(0)
+  + Defina a tabela SLR(1)
+
+Analise *()()* com a tabela recém criada
+#+latex: \vfill\pause
+
+Tabela SLR(1) correspondente
+  |   | ( | )    | $    | S |
+  | / | < |      |      | < |
+  |---+---+------+------+---|
+  | 0 | 2 | R(2) | R(2) | 1 |
+  | 1 |   |      | *Ac.*  |   |
+  | 2 | 2 | R(2) | R(2) | 3 |
+  | 3 |   | 4    |      |   |
+  | 4 | 2 | R(2) | R(2) | 5 |
+  | 5 |   | R(1) | R(1) |   |
+* Gramáticas LR(0) /versus/ Gramáticas SLR(1)
+Gramáticas LR(0)
+  + Se um estado tem [A \rightarrow \alpha \bullet], não pode conter outros itens
+  + Traduzindo: ou o estado é de empilhar, ou de reduzir
+#+latex: \vfill\pause
+Gramáticas SLR(1)
+  + Se um estado contém [A \rightarrow \alpha \bullet X \beta] (X é terminal)
+    + Não há nesse estado um item [C \rightarrow \gamma \bullet] X \in Sequência(C)
+  + Se um estado contém dois items [A \rightarrow \alpha \bullet] e [B \rightarrow \beta \bullet]
+    + Sequência(A) $\cap$ Sequência(B) = \epsilon
+* Conflitos
+Empilha-Reduz
+  + Estado com os itens abaixo e X $\in$ Sequência(B)
+    | A | \rightarrow | \alpha \bullet X \beta |
+    | B | \rightarrow | \alpha \bullet     |
+
+#+latex: \pause
+Reduz-Reduz
+  + Estado com os itens abaixo e Sequência(A) $\cap$ Sequência(B) $\neq$ \epsilon
+    | A | \rightarrow | \alpha \bullet |
+    | B | \rightarrow | \beta \bullet |
+* Conflito em evidência
+Gramática do *else* opcional
+  | S  | \rightarrow | IF \vert *a*             |
+  | IF | \rightarrow | *if* S \vert *if* S *else* S |
+Utilizando as funções de fechamento e transição
+  + Construa o autômato finito determinístico LR(0)
+  + Defina a tabela SLR(1)
+* Limitações
+SLR(1) é simples e eficaz, mas com limitações
+#+latex: \vfill
+
+#+latex:  \scriptsize
+  | declaração | \rightarrow | ativação               |
+  | declaração | \rightarrow | atribuição             |
+  | ativação   | \rightarrow | *identificador*          |
+  | atribuição | \rightarrow | variável *=* expressão   |
+  | variável   | \rightarrow | variável *[* expressão *]* |
+  | variável   | \rightarrow | *identificador*          |
+  | expressão  | \rightarrow | variável \vert *número*      |
+#+latex: \normalsize\pause
+Simplificando esta gramática
+
+  | S | \rightarrow | *id* \vert V = E |
+  | V | \rightarrow | *id*         |
+  | E | \rightarrow | V \vert *n*      |
+
+  + Veja o estado inicial do autômato LR(0) e transição com *id*
+  + Perceber o conflito Reduz-Reduz
+
+#+latex: \pause
+
+  + A redução por V \rightarrow id /nunca/ deveria ser efetuada com *$*
+  + V /nunca/ pode ocorrer no final antes de *=* ser visto e empilhado

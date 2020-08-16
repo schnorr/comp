@@ -1,0 +1,118 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: IR Lineares
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* IR Lineares
+Consiste em uma sequência de operações
+
+Impõe ordem clara e útil
+
+Codifica fluxo de controle
++ Operações de salto e desvios
+#+latex: \vfill
+
+Muitos tipos existem
++ Código de um endereço
++ Notação Pós-fixada e Pré-fixada
++ Código de dois endereços
++ *Código de três endereços (TAC)*
+* Código de um endereço
+
+Modela máquinas de acumulação e de pilha
+
+Código é bem compacto
+
+#+latex: \vfill\pause
+
+*Código de Máquina-Pilha*
++ Assume a presença de uma pilha de operandos
++ Parâmetros dos operandos está no topo da pilha
++ \pause Exemplo para a entrada $a-2*b$
+    #+begin_src C
+    push 2
+    push b
+    multiply
+    push a
+    subtract
+    #+end_src
+    + Todos os resultados e argumentos são transitórios
++ \pause Exemplo prático similar: Bytecodes do Java       
+* Notação Pós e Pré-fixada
+Conceito
+
+  | Infixada |   | Pré-fixada | Pós-fixada |
+  |----------+---+------------+------------|
+  | $a+b*c$  |   | $+a*bc$    | $abc*+$    |
+  | $a*b+c$  |   | $+*abc$    | $ab*c+$    |
+  | $a+b+c$  |   | $++abc$    | $ab+c+$    |
+#+latex: \vfill\pause
+
+Esquema de tradução para gerar uma IR pós-fixada
+  | E | \rightarrow | $E_1 + T$ | E.cod = $E_1$.cod $\vert\vert$ T.cod $\vert\vert$ "+" |
+  | E | \rightarrow | $T$      | E.cod = T.cod                        |
+  | T | \rightarrow | $T_1 * F$ | T.cod = $T_1$.cod $\vert\vert$ F.cod $\vert\vert$ "*" |
+  | T | \rightarrow | $F$      | T.cod = F.cod                        |
+  | F | \rightarrow | *id*       | F.cod = id.nome                      |
+
+* Código de Três Endereços \small (TAC)
+
+Forma da maioria das operações possíveis
+  | i \leftarrow j op k |
+Algumas operações não precisam de todos os argumentos
+
+#+Latex: \pause
+
+Exemplo para a expressão $a-2*b$
+
+  | $t_1$ | \leftarrow | 2           |
+  | $t_2$ | \leftarrow | b           |
+  | $t_3$ | \leftarrow | $t_1 * t_2$ |
+  | $t_4$ | \leftarrow | a           |
+  | $t_5$ | \leftarrow | $t_4 + t_3$ |
+#+latex: \vfill\pause
+
+Vantagens
++ Razoavelmente compacto, *sem operações destrutivas*
++ Importância da escolha do espaço de nomes
+
+#+Latex: \pause
+
+Nível de abstração é controlável
++ TAC de baixo nível (LIR) \rightarrow Assembly
++ \pause TAC de médio nível (MIR) \\
+    \Rightarrow =mvcl source dest count \# move characters long=
+    + Permite abstrair a complexidade da operação
+* Implementando TACs
+
+Como manter o código TAC em memória?
+
+Considerando
++ Renomear variáveis temporárias
++ Trocar a ordem de operações
++ Otimizações
+
+#+latex: \vfill
+
+Três abordagens
++ Tabela (ou matriz)
++ Vetor de ponteiros
++ Lista encadeada
+
+* IR -- Projeto de Compiladores
+
+Etapa 3: Gerar uma IR Gráfica -- AST
+
+Etapa 5: Gerar uma IR Linear -- TAC

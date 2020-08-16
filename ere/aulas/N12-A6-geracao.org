@@ -1,0 +1,136 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Geração de Código
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+
+Última fase do compilador
+
+Recebe como entrada uma representação intermediária
++ Livre de erros sintáticos e semânticos
++ Está pronta toda a verificação de tipos
+\pause Tarefas
++ Seleção de instruções
++ Gerenciamento de memória \\
+    \rightarrow Mapear nomes para endereços
++ Alocação de registradores \\
+    \rightarrow Minimizar uso de registradores \\
+    \rightarrow Maximizar instruções com registradores
+#+latex: \vfill
+\pause Código gerado deve obedecer os seguintes *requisitos*
++ Correto e de alta qualidade
++ Explorar ao máximo os recursos da máquina
++ Execução eficiente (em tempo e espaço)
+* Gerenciamento de Memória
+Mapear nomes para endereços de memória de execução
+
+Tabela de símbolos usadas para determinar
++ Tamanhos
++ Posições relativas
+Converter rótulos para endereços
+
+Tratamento de registros de ativação (RA) e pilha
++ Parâmetros
++ Resultados
++ Estado da máquina
++ Dados locais e temporários
+* Questões de Projeto
+
+*Forma do código objeto* a ser gerado \\
+  \rightarrow Absoluta, relocável ou /assembly/
+
+*Seleção das instruções* de máquina
++ Sequência apropriada \rightarrow Código mais curto e rápido
+
+*Alocação de registradores*
+
+*Ordem de avaliação* das instruções \\
+  \rightarrow Achar o ótimo é um problema insolúvel
+
+* Forma do Código Objeto
+
+*Linguagem absoluta* -- Uso acadêmico
++ Programa é armazenado em uma área de memória fixa
++ Imediatamente executado (/load and go compilers/)
+
+#+latex: \pause
+
+Linguagem de máquina relocável
++ Compilação separada de subprogramas ou pacotes
++ Ligados no final da etapa de compilação
++ Flexibilidade
+
+#+latex: \pause
+
+Tradução para /assembly/
++ Instruções simbólicas, usando recursos de macro
++ Necessita um passo adicional \rightarrow Linguagem de máquina
+
+* Seleção de Instruções
+
+Mapeamento IR \rightarrow Instruções da máquina alvo
+
+Complexidade do mapeamento varia de acordo com
++ O nível de abstração da IR
++ A natureza da arquitetura do conjunto de instruções
++ A qualidade desejada do código gerado
+
+#+latex: \vfill\pause
+
+Exemplo para =x = y + z= (IR com variáveis estáticas)
+  \small
+  #+begin_src A
+  LD  R0, y     //R0 = y
+  ADD R0, R0, z //R0 = R0 + z
+  ST  x,  R0    //x = R0
+  #+end_src
+\pause Usando como entrada =(a = b + c)= seguida de =(d = a + e)=
+  \small
+  #+begin_src A
+  LD  R0, b     //R0 = b
+  ADD R0, R0, c //R0 = R0 + c
+  ST  a,  R0    //a = R0
+  LD  R0, a     //R0 = a
+  ADD R0, R0, e //R0 = R0 + e
+  ST  d,  R0    //d = R0
+  #+end_src
+* Alocação de Registradores
+Devemos decidir
++ Quais valores residirão em registradores
++ Quais os registradores serão utilizados
+*Registrador*
++ Unidade computacional mais rápida da máquina alvo
++ Número controlado, operações restritas
+#+latex: \vfill
+\pause Uso de registradores é subdividido em dois subproblemas
++ *Alocação de Registradores* \\
+    \rightarrow Quais variáveis ficarão em registradores
++ *Atribuição de Registradores* \\
+    \rightarrow Associar um registrador a uma variável
+#+latex: \vfill
+\pause Encontrar uma atribuição ótima é NP-completo
++ Registradores devem obedecer convenções específicas
+* Ordem de Avaliação
+A ordem de avaliação pode afetar uma série de fatores
++ A eficiência do código
++ Quantidade de registradores utilizados
+#+latex: \vfill
+\pause Encontrar a ordem ótima é NP-completo
++ Evitamos portanto o problema
++ Adotamos a mesma ordem da IR
+#+latex: \vfill
+\pause Processadores com pipeline
++ *Escalonamento de código*

@@ -1,0 +1,122 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Análise LR
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Análise ascendente _Empilha-Reduz_                                 :noexport:
+Todos os ascendentes usam *Empilha-Reduz* (/shift-reduce/)
+
+#+BEGIN_CENTER
+Várias formas de detectar /handles/
+
+LR(0) -- SLR(1) -- LR(1) -- LALR(1)
+#+END_CENTER
+
+#+Latex: \pause\vfill
+
+Uma _pilha_ e um _buffer de entrada_
+- *Empilha* (/shift/): empilha um token da entrada
+- *Reduz* (/reduce/): realiza a poda do handle sempre no topo da pilha
+- *Aceita*: reconhece a sentença de entrada
+- *Erro*: ativa o tratamento de erros sintáticos
+
+* Análise LR
+- Entrada lida da esquerda para a direita: *L* de /left-to-right/
+- Aplica-se uma derivação mais à direita: *R* de /rightmost/
+
+#+Latex: \vfill\pause
+
+#+BEGIN_CENTER
+Análise LR
+(Empilha-Reduz)
+
+Um *autômato de estados finitos* com _pilha_
+#+END_CENTER
+
+#+Latex: \vfill\pause
+
+Componentes
+- Buffer de entrada com símbolos terminais
+- Pilha contém *estados* (ao invés de símbolos como no descendente)
+- Tabela de ações/transições (com terminais e não-terminais)
+
+* Tabela de ações/transições
+
+| Estado | Símbolos terminais | Símbolos Não-terminais |
+|--------+--------------------+------------------------|
+| /      | <                  | <                      |
+| <l>    | <c>                | <c>                    |
+| 0      |                    |                        |
+| 1      |                    |                        |
+| 2      |                    |                        |
+| 3      | Ações              | Transições             |
+| 4      |                    |                        |
+| ...    |                    |                        |
+| N      |                    |                        |
+|--------+--------------------+------------------------|
+
+#+Latex: \vfill\pause
+
+Ação[ *s*, t ] pode indicar
++ (Empilha *e*), onde *e* é um estado para empilhar
++ (Reduz *p*), onde *p* é a regra de produção para a redução
+  + ou (Aceita)
+Transição[ *s*, X ] pode indicar
++ (Move para *e*), onde *e* é um estado
+
+* Exemplo de Análise LR com entrada =id*id+id=
+
+Após uma ação de redução, há uma transição
+- Se reduziu para o não-terminal X, utiliza-se transição com X
+
+** Gramática                                                         :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.2
+:END:
+
+| /   | <       |
+| (1) | E \rightarrow E+T |
+| (2) | E \rightarrow T   |
+| (3) | T \rightarrow T*F |
+| (4) | T \rightarrow F   |
+| (5) | F \rightarrow (E) |
+| (6) | F \rightarrow id  |
+
+#+BEGIN_EXPORT latex
+\vrule{}
+#+END_EXPORT
+
+** Tabela                                                            :BNCOL:
+:PROPERTIES:
+:BEAMER_col: 0.85
+:END:
+
+|   |     | id  | +    | $*$  | (   | )    | $    | E   | T   | F   |
+|---+-----+-----+------+------+-----+------+------+-----+-----+-----|
+| / | <   | <   |      |      |     |      |      | <   |     |     |
+|   | <c> | <c> | <c>  | <c>  | <c> | <c>  | <c>  | <c> | <c> | <c> |
+|   | 0   | 5   |      |      | 4   |      |      | 1   | 2   | 3   |
+|   | 1   |     | 6    |      |     |      | *Ac.*  |     |     |     |
+|   | 2   |     | R(2) | 7    |     | R(2) | R(2) |     |     |     |
+|   | 3   |     | R(4) | R(4) |     | R(4) | R(4) |     |     |     |
+|   | 4   | 5   |      |      | 4   |      |      | 8   | 2   | 3   |
+|   | 5   |     | R(6) | R(6) |     | R(6) | R(6) |     |     |     |
+|   | 6   | 5   |      |      | 4   |      |      |     | 9   | 3   |
+|   | 7   | 5   |      |      | 4   |      |      |     |     | 10  |
+|   | 8   |     | 6    |      |     | 11   |      |     |     |     |
+|   | 9   |     | R(1) | 7    |     | R(1) | R(1) |     |     |     |
+|   | 10  |     | R(3) | R(3) |     | R(3) | R(3) |     |     |     |
+|   | 11  |     | R(5) | R(5) |     | R(5) | R(5) |     |     |     |
+

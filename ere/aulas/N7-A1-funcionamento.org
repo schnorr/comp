@@ -1,0 +1,84 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Funcionamento da Análise Semântica
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Funcionamento
+Ações semânticas são associadas às regras de produção
++ Executadas no momento da derivação ou redução
++ \pause Ações possíveis
+    + Gerar código
+    + Armazenar informações na tabela de símbolos
+    + Emitir mensagens de erro
+#+latex: \vfill
+
+\pause Principal: *Associar atributos* aos símbolos da gramática
++ Armazenam valores durante a tradução
++ São perenes durante a análise
+\pause Definindo *atributos* para um símbolo
+  | T | \rightarrow | int { T.tipo = inteiro }     |
+  | D | \rightarrow | T { L.in = T.tipo } L       |
+* Exemplo
+Gramática para declarar uma variável \scriptsize (mais ações semânticas) \normalsize
+  | D | \rightarrow | T Id  | { adTabSimb (Id.nome, T.tipo); }   |
+  | T | \rightarrow | float | { T.tipo = TipoFlutuante;      }            |
+  | T | \rightarrow | int   | { T.tipo = TipoInteiro;        }            |
+Com a entrada *float pi*
+
+#+latex: \vfill
+\pause *Anotação da árvore de derivação*
++ Propagar os atributos que definem a semântica
+    + Das folhas (tokens) para cima
++ Exemplos
+    + Cada não-terminal tem um ou mais atributos associados
+    + Cada terminal (token) tem um atributo definido pelo léxico
++ \pause Podem ser comunicados durante a criação da árvore \linebreak
+    \scriptsize (ou depois, se a análise semântica for independente)
+* Exercício
+Considerando a gramática com ações semânticas
+  | L | \rightarrow | E *n*   | { L.val = E.val   }         |
+  | E | \rightarrow | E_1 + T | { E.val = $E_1$.val + T.val } |
+  | E | \rightarrow | T       | { E.val = T.val          }  |
+  | T | \rightarrow | T_1 * F | { T.val = $T_1$.val * F.val } |
+  | T | \rightarrow | F       | { T.val = F.val           } |
+  | F | \rightarrow | ( E )   | { F.val = E.val          }  |
+  | F | \rightarrow | *digit* | { F.val = atoi(digit.lexema)    } |
+Crie a árvore de derivação anotada para
++ $(3+4)*(5+6)n$
+O que faz este compilador?
+* Tipos de Atributos
+Atributos Sintetizados \\
+  \rightarrow Depende somente de atributos dos filhos \\
+
+#+ATTR_LATEX: :width .3\linewidth
+[[./img/atributo_sintetizado.png]]
+
+\pause Atributos Herdados \\
+  \rightarrow Depende de atributos do pai ou dos irmãos
+
+
+#+ATTR_LATEX: :width .3\linewidth
+[[./img/atributo_herdado.png]]
+
+* Atributos herdados
+Considerando a gramática com ações semânticas
+  | T  | \rightarrow | FT'        | \texttt{ T'.h = F.val }                  |
+  |    |             |            | \texttt{ T.val = T'.s }                  |
+  | T' | \rightarrow | $*FT'_1$   | \texttt{ $T'_1$.h = T'.h * F.val }       |
+  |    |             |            | \texttt{ T'.s = $T'_1$.s }               |
+  | T' | \rightarrow | $\epsilon$ | \texttt{ T'.s = T'.h }                   |
+  | F  | \rightarrow | *digit*    | \texttt{ F.val = atoi(digit.lexema) } |
+Crie a árvore de derivação anotada para
++ $3 * 5$

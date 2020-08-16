@@ -1,0 +1,52 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Sequência de Chamada
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Sequência de Chamada
+Responsável pelo gerenciamento de registro de ativação
+
+#+latex: \vfill
+
+Podemos quebrá-la em duas partes
++ *Sequência de chamada*
+  - Parte no chamador
+  - Parte na função invocada
++ *Sequência de retorno*
+  - Normalmente na chamado
+
+#+latex: \vfill
+Discussão sobre tamanho do binário
+
+* Sequência de Chamada (sugestão)
+
+Sequência de chamada (chamador e chamado)
+  1. Cria um novo registro de ativação
+  2. Calcula o vínculo estático
+  4. Passa os parâmetros (organizando-os na pilha)
+  5. Passa o endereço de retorno para o chamado
+  6. Transfere o controle para o chamado
+  3. Salva o estado de execução atual (registradores)
+  7. Salva o antigo =fp= na pilha (como vínculo dinâmico)
+  8. Aloca variáveis locais
+
+#+latex: \pause
+
+Sequência de retorno (chamado, no final)
+  1. Prepara os parâmetros de retorno
+  2. Disponibiliza o valor de retorno para o chamador
+  3. Atualiza o =fp= e o =sp=
+  4. Atualiza o estado de execução do chamador
+  5. Transfere o controle

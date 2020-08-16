@@ -1,0 +1,276 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Expressões Lógicas
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Expressões Booleanas
+Servem para calcular valores lógicos
+
+Usadas frequentemente em expressões condicionais
++ while
++ if
++ for
+#+latex: \vfill
+\pause Compostas por
++ Operadores Booleanos (and, or, not)
++ Variáveis e constantes booleanas
++ Operadores Relacionais (entre expressões aritméticas)
+#+latex: \vfill
+\pause Exemplo
+  #+begin_src C
+  (2*x >= y) or (x == false)
+  #+end_src
+* Expressões Booleanas
+Um exemplo de gramática para expressões booleanas \linebreak
+  \rightarrow Faltam regras de precedência e associatividade
+  | B | \rightarrow | B or B    |
+  | B | \rightarrow | B and B   |
+  | B | \rightarrow | not B     |
+  | B | \rightarrow | (B)       |
+  | B | \rightarrow | E relop E |
+  | B | \rightarrow | true      |
+  | B | \rightarrow | false     |
+\pause Dois métodos de tradução
++ *Numérico* \rightarrow tratamento como expressões aritméticas
+    + Falso é 0, Verdadeiro é diferente de 0
++ \pause *Fluxo de controle* \rightarrow tratamento por desvios
+    + Também conhecido por avaliação de curto-circuito
+* Exemplo de tradução numérica (básico)
+Expressão booleana (supondo valores em registradores)
+  #+BEGIN_CENTER
+  b or c and not d
+  #+END_CENTER
+\pause Tradução em TAC
+  #+BEGIN_SRC C
+  not rd     => r1
+  and rc, r1 => r2
+  or  rb, r2 => r3
+  #+END_SRC
+* Exemplo de tradução numérica (atribuição)
+Expressão lógica a ser utilizada em uma atribuição
+  #+BEGIN_CENTER
+  x = a < b
+  #+END_CENTER
+#+latex: \vfill
+\pause  Alvo suporta operação de comparação que retorna valor
+  #+BEGIN_SRC C
+  cmp_LT ra, rb => r1
+  #+END_SRC
+#+latex: \vfill
+\pause  Alvo não suporta, trabalhar com condição
+  #+BEGIN_SRC C
+      comp ra, rb => cc1
+      cbr_LT cc1  -> L1, L2
+  L1: loadI 1  => r1
+      jumpI       -> L3
+  L2: loadI 0 => r1
+      jumpI       -> L3
+  L3: nop
+  #+END_SRC
+* Gramática para expressões booleanas                             :noexport:
+Como fica o esquema de tradução?
++ Considerando avaliação numérica
+#+BEGIN_CENTER
+\small
+| E | \rightarrow | E_1 or E_2  |
+| E | \rightarrow | E_1 and E_2 |
+| E | \rightarrow | not E_1    |
+| E | \rightarrow | (E_1)      |
+| E | \rightarrow | E_1 op E_2  |
+| E | \rightarrow | true      |
+| E | \rightarrow | false     |
+#+END_CENTER
+* Esquema para avaliação numérica                                 :noexport:
+#+BEGIN_CENTER
+\small
+| E | \rightarrow | E_1 or E_2  | E.nome = temp();                                     |
+|   |   |           | gera(E.nome = $E_1$.nome or $E_2$.nome                 |
+| E | \rightarrow | E_1 and E_2 | E.nome = temp();                                     |
+|   |   |           | gera(E.nome = $E_1$.nome and $E_2$.nome                |
+| E | \rightarrow | not E_1    | E.nome = temp();                                     |
+|   |   |           | gera(E.nome = not $E_1$.nome                          |
+| E | \rightarrow | (E_1)      | E.nome = $E_1$.nome                                   |
+| E | \rightarrow | E_1 op E_2  | E.nome = temp();                                     |
+|   |   |           | gera(if $E_1$.nome op.simb $E_2$.nome goto proxq+3);   |
+|   |   |           | gera(E.nome = 0);                                    |
+|   |   |           | gera(goto proxq+2);                                  |
+|   |   |           | gera(E.nome = 1);                                    |
+| E | \rightarrow | true      | E.nome = temp();                                     |
+|   |   |           | gera(E.nome = 1);                                    |
+| E | \rightarrow | false     | E.nome = temp();                                     |
+|   |   |           | gera(E.nome = 0);                                    |
+#+END_CENTER
+* Exercício de tradução por avaliação numérica
+Traduza para ILOC
+  #+BEGIN_CENTER
+  x = a < b or c < d and e < f
+  #+END_CENTER
+Suponha que valores já estão em registradores
+
+Instruções disponíveis (idênticas ao slide anterior)
+  #+BEGIN_SRC C
+  comp
+  cbr_LT
+  loadI
+  jumpI
+  and
+  or
+  #+END_SRC
+* Solução do exercício
+\scriptsize
+#+BEGIN_SRC C
+    comp ra, rb => cc1    // a<b
+    cbr_LT cc1  -> L1, L2
+L1: loadI true  => r1
+    jumpI       -> L3
+L2: loadI false => r1
+    jumpI       -> L3
+
+L3: comp rc, rd => cc2    // c<d
+    cbr_LT cc2  -> L4, L5
+L4: loadI true  => r2
+    jumpI       -> L6
+L5: loadI false => r2
+    jumpI       -> L6
+
+L6: comp re, rf => cc3    // e<f
+    cbr_LT cc3  -> L7, L8
+L7: loadI true  => r3
+    jumpI       -> L9
+L8: loadI false => r3
+    jumpI       -> L9
+
+L9: and  r2, r3 => r4
+    or   r1, r4 => r5 
+#+END_SRC
+* Motivação da avaliação por controle de fluxo
+Vejam o código da solução anterior
+  \tiny
+  #+BEGIN_SRC C
+    comp ra, rb => cc1    // a<b
+    cbr_LT cc1  -> L1, L2
+L1: loadI true  => r1
+    jumpI       -> L3
+L2: loadI false => r1
+    jumpI       -> L3
+
+L3: comp rc, rd => cc2    // c<d
+    cbr_LT cc2  -> L4, L5
+L4: loadI true  => r2
+    jumpI       -> L6
+L5: loadI false => r2
+    jumpI       -> L6
+
+L6: comp re, rf => cc3    // e<f
+    cbr_LT cc3  -> L7, L8
+L7: loadI true  => r3
+    jumpI       -> L9
+L8: loadI false => r3
+    jumpI       -> L9
+
+L9: and  r2, r3 => r4
+    or   r1, r4 => r5    
+#+END_SRC
+\normalsize
+Número de operações é sempre o mesmo
++ Vários desvios condicionais e incondicionais
+* Avaliação por controle de fluxo
+Eliminar a complexidade da avaliação numérica
++ Remover geração de valores para subexpressões
++ Atalhar a avaliação quando possível
+\pause  Mesma expressão anterior
+  #+BEGIN_CENTER
+  a < b or c < d and e < f
+  #+END_CENTER
+\pause  Código traduzido
+  \small
+  #+BEGIN_SRC C
+      comp   ra, rb => cc1 //a<b
+      cbr_LT cc1    -> L3, L1
+  L1: comp   rc, rd => cc2 //c<d
+      cbr_LT cc2    -> L2, L4
+  L2: comp   re, rf => cc3 //e<f
+      cbr_LT cc3    -> L3, L4
+  L3: loadI  true   => r5
+      jumpI         -> L5
+  L4: loadI  false  => r5
+      jumpI         -> L5
+  L5: nop
+  #+END_SRC
+* Avaliação por controle de fluxo
+Só faz sentido se o valor não for guardado
++ Várias situações onde não faz sentido guardar
++ Único propósito é escolher entre os comandos
+    #+BEGIN_SRC C
+    if (a<b)
+      then comando1
+      else comando2
+    #+END_SRC
+\pause  Colocar o código desses comandos no lugar apropriado
+  #+BEGIN_SRC C
+      comp   ra, rb => cc1  //a<b
+      cbr_LT cc1    -> L1, L2
+  L1: //código para o comando1
+      jumpI         -> L6
+  L2: //código para o comando2
+      jumpI         -> L6
+  L6: nop
+  #+END_SRC
+* Exercício de tradução por controle de fluxo
+Traduza para ILOC
+
+1. a < b and c < d and e < f
+
+2. a < b or  c < d or  e < f
+
+#+latex: \vfill
+
+Suponha que valores já estão em registradores
+
+Instruções disponíveis (idênticas ao slide anterior)
+  #+BEGIN_SRC C
+  comp
+  cbr_LT
+  loadI
+  jumpI
+  #+END_SRC
+
+* Old                                                             :noexport:
+#+latex: \vfill
+\pause  Tradução em TAC pelo esquema
+  | 100 | if a < b goto 103  |   | 107 | t2 = 1            |
+  | 101 | t1 = 0             |   | 108 | if e < f goto 111 |
+  | 102 | goto 104           |   | 109 | t3 = 0            |
+  | 103 | t1 = 1             |   | 110 | goto 112          |
+  | 104 |  if c < d goto 107 |   | 111 | t3 = 1            |
+  | 105 | t2 = 0             |   | 112 | t4 = t2 and t3    |
+  | 106 | goto 108           |   | 113 | t5 = t1 or t4     |
+* Avaliação por fluxo de controle                                 :noexport:
+Avaliação por fluxo de controle
++ Tradução em TAC sob a forma de desvios
++ *Curto-circuito*
+#+latex: \vfill
+\pause Exemplo
+  #+begin_src C
+  if (x < 100 || x > 200 && x != y) x = 0;
+  #+end_src
+* Old                                                             :noexport:
+\pause Tradução em TAC (com curto-circuito)
+
+  |       | if x < 100 goto $L_2$      |
+  |       | ifFalse x > 200 goto $L_1$ |
+  |       | ifFalse x != y goto $L_1$  |
+  | $L_2$: | x = 0                     |
+  | $L_1$: |                           |

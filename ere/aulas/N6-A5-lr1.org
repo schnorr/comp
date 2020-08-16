@@ -1,0 +1,256 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: LR(1)
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* LR(1)
+
+Donald Knuth propõem LR(1) (em 1965) -- *LR Canônico*
++ Primeiro algoritmo ascendente
+
+#+latex: \vfill\pause
+
+Aumento substancial da complexidade
++ Pouco utilizado na prática
+
+#+latex: \pause
+
+LALR(1)
++ Preserva vantagens do LR(1)
++ Utiliza o autômato LR(0)
+
+#+latex: \vfill
+
+#+BEGIN_CENTER
+*Autômado LR(1)*
+
+Composto de Itens LR(1)
+#+END_CENTER
+
+* Itens LR(0) @@latex:\small@@ Lembrete
+Definição de Item LR(0) de uma gramática
++ É uma produção com um $\bullet$ em alguma posição no corpo
++ Indica o quanto já foi visto de uma produção
+
+#+Latex: \vfill
+
+Para a produção A \rightarrow \beta\gamma
++ A \rightarrow \bullet \beta\gamma
++ A \rightarrow \beta \bullet \gamma
++ A \rightarrow \beta\gamma \bullet
+
+#+Latex: \vfill
+
+A produção $A \rightarrow \epsilon$ gera um item A \rightarrow \bullet
+* Itens LR(1)
+Item LR(1)
++ Produção com o ponto \bullet
++ Símbolo de /lookhead/
+
+#+latex: \vfill\pause
+
+Para a produção A \rightarrow \beta\gamma, e um token a de /lookahead/
+
+Três itens são possíveis
++ [A \rightarrow \bullet \beta\gamma, a]
++ [A \rightarrow \beta \bullet \gamma, a]
++ [A \rightarrow \beta\gamma \bullet, a] \\
+  \beta\gamma estão empilhados, podemos reduzir se a = lookahead
+
+* Itens LR(1) importantes
+
+Considerando a gramática de listas de parênteses balanceados
+| *S* | \rightarrow | L           |
+| L | \rightarrow | L P \vert P     |
+| P | \rightarrow | ( P ) \vert ( ) |
+
+#+latex: \vfill\pause
+
+#+BEGIN_CENTER
+*Estado inicial*
+#+END_CENTER
+
+| [S \rightarrow \bullet L, $] |
+
+#+BEGIN_CENTER
+*Estado Final*
+#+END_CENTER
+
+| [S \rightarrow L \bullet,  $] |
+
+* Autômato de Itens LR(1)
+
+#+BEGIN_CENTER
+Começa no estado inicial do analisador
+#+END_CENTER
+
+| [S \rightarrow \bullet L, $] |
+
+#+BEGIN_CENTER
+Constrói um modelo de todas as transições possíveis
+#+END_CENTER
+
+#+latex: \vfill
+
++ Cada estado é representado por um conjunto de itens
++ Transições entre estados definidas por duas operações
+  + *Fechamento* e *Transição*
+
+* Transição LR(1)
+
+#+BEGIN_CENTER
+Dado um item LR(1)
+#+END_CENTER
+
+| [A \rightarrow \alpha \bullet X \gamma, a] |
+
+#+Latex: \vfill
+
+#+BEGIN_CENTER
+Existe uma transição em X (terminal ou não) para
+#+END_CENTER
+
+| [A \rightarrow \alpha X \bullet \gamma, a] |
+
+* Fechamento LR(1)
+
+#+BEGIN_CENTER
+Dado um item LR(1) onde B é não-terminal
+#+END_CENTER
+
+| [A \rightarrow \alpha \bullet B \gamma, a] |
+
+#+BEGIN_CENTER
+Todos os itens [B \rightarrow \bullet \beta, b] onde
+
+para cada b em *Primeiro(\gamma a)*
+#+END_CENTER
+
+* Fechamento LR(1) -- Análise
+
+Fechamento-\epsilon em LR(1) leva o contexto de B junto a si
+| [A \rightarrow \alpha \bullet B \gamma, a] |
++ Reconhecer B \alert{apenas se} lookahead \in Primeiro(\gamma a)
+
+#+latex: \vfill\pause
+
+Contraponto com SLR(1)
++ Primeiro(\gamma a) \subset Sequência(B)
+
+#+latex: \vfill\pause
+
+Caso especial quando \gamma é \epsilon
+  | [A \rightarrow \alpha \bullet B, a] |
++ Como Primeiro(a) = a, teremos somente o Fechamento-\epsilon para
+  | [B \rightarrow \bullet \beta, a] |
+
+* Fechamento LR(1) -- Exemplo
+
+#+BEGIN_CENTER
+Calcular o fechamento de [S \rightarrow \bullet L, $]
+#+END_CENTER
+
+| *S* \rightarrow | L     |
+| L \rightarrow | L P   |
+| L \rightarrow | P     |
+| P \rightarrow | ( P ) |
+| P \rightarrow | ( )   | 
+
+#+latex: \vfill\pause
+
+** Left                                                              :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+
+[S \rightarrow \bullet L, $]
+
+[L \rightarrow \bullet L P, $]
+
+[L \rightarrow \bullet P, $]
+
+[L \rightarrow \bullet L P, (]
+
+[L \rightarrow \bullet P, (]
+
+** Right                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+
+[P \rightarrow \bullet ( P ), $]
+
+[P \rightarrow \bullet ( ), $]
+
+[P \rightarrow \bullet ( P ), (]
+
+[P \rightarrow \bullet ( ), (]
+
+* Transição LR(1) -- Exemplo
+
+#+BEGIN_CENTER
+Calcular a transição com o símbolo *(*
+#+END_CENTER
+
+[S \rightarrow \bullet L, $ ]     
+
+[L \rightarrow \bullet L P, $ ]   
+
+[L \rightarrow \bullet P, $ ]     
+
+[L \rightarrow \bullet L P, ( ]   
+
+[L \rightarrow \bullet P, ( ]     
+
+[P \rightarrow \bullet ( P ), $ ] 
+
+[P \rightarrow \bullet ( ), $ ]   
+
+[P \rightarrow \bullet ( P ), ( ] 
+
+[P \rightarrow \bullet ( ), ( ]   
+
+#+latex: \pause
+
+Solução
+
+#+latex: \scriptsize
+
+[P \rightarrow ( \bullet P ), $ ]
+
+[P \rightarrow ( \bullet ), $ ]  
+
+[P \rightarrow ( \bullet P ), ( ]
+
+[P \rightarrow ( \bullet ), ( ]  
+
+[P \rightarrow \bullet ( P ), ) ]
+
+[P \rightarrow \bullet ( ), ) ]  
+
+* Exemplo de construção do autômato LR(1)
+
+#+BEGIN_CENTER
+Calcule o autômato LR(1)
+#+END_CENTER
+
+| A  \rightarrow | ( A ) |
+| A  \rightarrow | a     |
+
+#+BEGIN_CENTER
+Construa a tabela LR(1) baseada no autômato
+#+END_CENTER
+
+

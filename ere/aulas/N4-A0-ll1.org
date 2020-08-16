@@ -1,0 +1,202 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: LL(1): Introdução e Gramática
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Videos                                                           :noexport:
+
+- Análise LL(1): https://www.youtube.com/watch?v=6DeJtQJzTf0&index=17&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
+  - https://www.youtube.com/watch?v=1QeP9cSeDD4&index=32&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
+- Tabela LL(1): https://www.youtube.com/watch?v=oQawGigbVk4&index=18&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
+- Exemplos
+  - https://www.youtube.com/watch?v=AyLzlrBZ0hA&index=33&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
+  - https://www.youtube.com/watch?v=87VbeBEP8ZU&index=34&list=PLkXSpNly5xMrKVqNR7ST3kePc0-JkoH7V
+
+* Definição Formal de Gramáticas LL(1)
+Considerando A $\rightarrow$ $\alpha$ $\vert$ $\beta$
+
+#+Latex:\vfill
+
+1. Para um terminal *a*, somente uma produção começa por *a*
+   + Primeiro(\alpha) $\bigcap$ Primeiro(\beta) = \emptyset
+2. Somente uma produção pode derivar para \epsilon
+3. Se uma produção deriva pra vazio, a outra não deve iniciar com o
+   que vem depois de A, ou seja
+   - Se \alpha \Rightarrow^* \epsilon, Primeiro(\beta) $\bigcap$ Sequência(A) = \emptyset 
+   - Se \beta \Rightarrow^* \epsilon, Primeiro(\alpha) $\bigcap$ Sequência(A) = \emptyset
+
+#+latex:\vfill\pause
+São LL(1)?
+  | S  | \rightarrow | iEtSS' \vert a |   | \hspace{2cm} |   | A | \rightarrow | a \vert B  |
+  | S' | \rightarrow | eS \vert \epsilon     |   |              |   | B | \rightarrow | aA \vert b |
+  | E  | \rightarrow | b          |   |              |   |   |   |        |
+
+* Como funciona a Análise LL(1)
+Utiliza uma *pilha explícita* (ao invés de recursão)
++ Três tipos de ações: empilhamento, casamento e aceita
+
+
+Sendo a gramática de cadeias de parênteses balanceados
+| S | \rightarrow ( S ) S \vert \epsilon |
+
+#+latex: \vfill\pause
+Análise da entrada *()*
+
+Pilha com $, Tokens da entrada e $, _Tabela com ações_
+
+| Pilha de análise sintática | Entrada | Ação        |
+|----------------------------+---------+-------------|
+| $ S                        | () $    | S \rightarrow ( S ) S |
+| $ S ) S (                  | () $    | casamento   |
+| $ S ) S                    | ) $     | S \rightarrow \epsilon       |
+| $ S )                      | ) $     | casamento   |
+| $ S                        | $       | S \rightarrow \epsilon       |
+| $                          | $       | aceita      |
+
++ Relação com passos de *derivação à esquerda* da cadeia
++ Decisões guiadas pela *Tabela de Análise Sintática LL(1)*
+* Regras elementares da análise
+Seja
++ X um símbolo no topo da pilha
++ *a* um token no buffer de entrada
+
+Etapas
++ <2->Se X \equal\equal $ e a \equal\equal $ $\leadsto$ Reconheceu a sentença
++ <3->Se X \equal\equal a e a != $ $\leadsto$ Desempilha e avança
++ <4->Se X é um não-terminal $\leadsto$ Consulta a tabela M[X,a]
+  + Se contém X \rightarrow UVW $\leadsto$ Empilha WVU
+  + <5->Se for vazia $\leadsto$ tratamento de erros
+* Tabela de Análise Sintática LL(1)
+Correlaciona cada não-terminal com cada terminal \Rightarrow \alert{M[NT,T]}
++ Controla as ações de empilhamento (e substituição por \epsilon)
+
+#+latex:\vfill\pause
+
++ Sendo a gramática que gera cadeias de parênteses balanceados
+| S       | \rightarrow ( S ) S \vert \epsilon |
+
+#+Latex:\vfill\pause
+
+*Tabela de Análise Sintática LL(1)* para esta gramática
+  | M[NT, T] | (                     | )                      | $                      |
+  | /       | <>                    | >                      |                        |
+  |---------+-----------------------+------------------------+------------------------|
+  | S       | S \rightarrow ( S ) S | S \rightarrow \epsilon | S \rightarrow \epsilon |
+
+#+Latex:\vfill\pause
+
+A tabela guia as ações de empilhamento da análise LL(1)
++ *Exemplo* com a entrada *()()*
+* Análise Preditiva Tabular -- Exemplo 1
+   + Reconhecer \textbf{id+id*id}
+   + Considerando a tabela preditiva
+   + A pilha começa com *E*
+   \small
+   |   |    | id                | +                       | *                   | (                 | )                       | $                       |
+   |---+----+-------------------+-------------------------+---------------------+-------------------+-------------------------+-------------------------|
+   | / | <> | <>                | <>                      | <>                  | <>                | <>                      | <>                      |
+   | # | E  | E \rightarrow TE' |                         |                     | E \rightarrow TE' |                         |                         |
+   | # | E' |                   | E' \rightarrow +TE'     |                     |                   | E' \rightarrow \epsilon | E' \rightarrow \epsilon |
+   | # | T  | T \rightarrow FT' |                         |                     | T \rightarrow FT' |                         |                         |
+   | # | T' |                   | T' \rightarrow \epsilon | T' \rightarrow *FT' |                   | T' \rightarrow \epsilon | T' \rightarrow \epsilon |
+   | # | F  | F \rightarrow id  |                         |                     | F \rightarrow (E) |                         |                         |
+   |---+----+-------------------+-------------------------+---------------------+-------------------+-------------------------+-------------------------|
+   \normalsize
+* Resposta
+
+| Pilha    | Entrada    | Ação       |
+|----------+------------+------------|
+| E %      | id+id*id % | E -> TE'   |
+| TE' %    | id+id*id % | T -> FT'   |
+| FT'E' %  | id+id*id % | F -> id    |
+| idT'E' % | id+id*id % | casamento  |
+| T'E' %   | +id*id %   | T' -> \epsilon    |
+| E' %     | +id*id %   | E' -> +TE' |
+| +TE' %   | +id*id %   | casamento  |
+| TE' %    | id*id %    | T -> FT'   |
+| FT'E' %  | id*id %    | F -> id    |
+| idT'E' % | id*id %    | casamento  |
+| T'E' %   | *id %      | T' -> *FT' |
+| *FT'E' % | *id %      | casamento  |
+| FT'E' %  | id %       | F -> id    |
+| idT'E' % | id %       | casamento  |
+| T'E' %   | %          | T' -> \epsilon    |
+| E' %     | %          | E' -> \epsilon    |
+| %        | %          | aceita     |
+
+* Análise Preditiva Tabular -- Exemplo 2
+   + Reconhecer \textbf{ibtibtaeaea}
+   + Considerando a tabela preditiva
+   + A pilha começa com *S*
+   + Devemos tratar a \alert{ambiguidade} em M[S',e]
+     + Faça desconsiderando S' \rightarrow \epsilon
+     + O que acontece se desconsiderarmos S' \rightarrow eS?
+   |   |    | a               | b               | e                       | i                    | t            | $                       |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+   | / | <> | <>              | <>              | <>                      | <>                   | <>           | <>                      |
+   | # | S  | S \rightarrow a |                 |                         | S \rightarrow iEtSS' | \hspace{1cm} |                         |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+   | # | S' |                 |                 | S' \rightarrow eS       |                      |              | S' \rightarrow \epsilon |
+   | # |    |                 |                 | S' \rightarrow \epsilon |                      |              |                         |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+   | # | E  |                 | E \rightarrow b |                         |                      |              |                         |
+   |---+----+-----------------+-----------------+-------------------------+----------------------+--------------+-------------------------|
+
+
+* Resposta
+
+| Pilha      | Entrada       | Ação        |
+|------------+---------------+-------------|
+| S %        | ibtibtaeaea % | S -> iEtSS' |
+| iEtSS' %   | ibtibtaeaea % | casamento   |
+| EtSS' %    | btibtaeaea %  | E -> b      |
+| btSS' %    | btibtaeaea %  | casamento   |
+| tSS' %     | tibtaeaea %   | casamento   |
+| SS' %      | ibtaeaea %    | S -> iEtSS' |
+| iEtSS'S' % | ibtaeaea %    | casamento   |
+| EtSS'S' %  | btaeaea %     | E -> b      |
+| btSS'S' %  | btaeaea %     | casamento   |
+| tSS'S' %   | taeaea %      | casamento   |
+| SS'S' %    | aeaea %       | S -> a      |
+| aS'S' %    | aeaea %       | casamento   |
+| S'S' %     | eaea %        |             |
+
+Escolhendo
+
+S' -> \epsilon
+
+(insucesso na análise)
+
+| Pilha  | Entrada | Ação    |
+|--------+---------+---------|
+| S'S' % | eaea %  | S -> \epsilon  |
+| S' %   | eaea %  | S -> \epsilon  |
+| %      | eaea %  | rejeita |
+
+Escolhendo
+
+S' -> eS
+
+| Pilha  | Entrada | Ação      |
+|--------+---------+-----------|
+| S'S' % | eaea %  | S' -> eS  |
+| eSS' % | eaea %  | casamento |
+| SS' %  | aea %   | S -> a    |
+| aS' %  | aea %   | casamento |
+| S' %   | ea %    | S' -> eS  |
+| eS %   | ea %    | casamento |
+| S %    | a %     | S -> a    |
+| a %    | a %     | casamento |
+| %      | %       | aceita    |

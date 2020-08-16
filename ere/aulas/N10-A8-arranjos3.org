@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Esquemas para Arranjos
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Esquemas de Tradução (Declaração)
+Gramática para declaração de arranjos multidimensionais
+  | decl | \rightarrow | T *id* [ L ] |
+  | T    | \rightarrow | *float*      |
+  | L    | \rightarrow | L , D        |
+  | L    | \rightarrow | D            |
+  | D    | \rightarrow | N..N         |
+  | N    | \rightarrow | *num*        |
+\pause Precisamos um esquema de tradução para definir $C_A$ \\
+  (repetindo o cálculo recursivo que permite obtê-lo)
+
+#+BEGIN_EXPORT latex
+  \begin{equation}
+  C_A = base - r_k * w
+  \end{equation}
+  \begin{equation}
+  r_k = \left\{ 
+  \begin{array}{l l}
+  low_k & \quad \text{se $k = 0$} \\
+  r_{k-1} \times (|high_k-low_k|+1) + low_k & \quad \text{se $k \geq 1$}
+  \end{array} \right.
+  \end{equation}
+
+#+END_EXPORT
+\pause Exemplo com a declaração: *float cubo[3..5, -2..3, -4..10]*
+
+* Esquema de Tradução (Acesso)
+Gramática de acesso em arranjos multidimensionais
+  | acesso | \rightarrow | *id* [ L ] |
+  | L      | \rightarrow | L , D      |
+  | L      | \rightarrow | D          |
+  | D      | \rightarrow | *num*      |
+\pause Esquema de tradução para calcular o endereço \\
+  (repetindo o cálculo recursivo que permite obtê-lo)
+
+#+BEGIN_EXPORT latex
+  \begin{equation}
+  endereco = C_A + d_k * w
+  \end{equation}
+  \begin{equation}
+  d_k = \left\{ 
+  \begin{array}{l l}
+  i_k & \quad \text{se $k = 0$} \\
+  d_{k-1} * |high_k-low_k| + i_k & \quad \text{se $k \geq 1$}
+  \end{array} \right.
+  \end{equation}
+#+END_EXPORT
+\pause Exemplo com o acesso: *cubo[4, -1, 0]*
+
+* Esquema de Tradução (Acesso e expr.)
+
+Uma gramática de acesso em arranjos multidimensionais
+  | acesso | \rightarrow | *id* [ L ]       |
+  | L      | \rightarrow | L , E            |
+  | L      | \rightarrow | E                |
+  | E      | \rightarrow | E + N            |
+  | E      | \rightarrow | N                |
+  | N      | \rightarrow | *num* \vert *id* |
+\pause Esquema de tradução para calcular o endereço \\
+  (repetindo o cálculo recursivo que permite obtê-lo)
+
+#+BEGIN_EXPORT latex
+
+  \begin{equation}
+  endereco = C_A + d_k * w
+  \end{equation}
+  \begin{equation}
+  d_k = \left\{ 
+  \begin{array}{l l}
+  i_k & \quad \text{se $k = 0$} \\
+  d_{k-1} * |high_k-low_k| + i_k & \quad \text{se $k \geq 1$}
+  \end{array} \right.
+  \end{equation}
+#+END_EXPORT
+\pause Exemplo com o acesso: *cubo[a+b, c+d, e+4]*
+

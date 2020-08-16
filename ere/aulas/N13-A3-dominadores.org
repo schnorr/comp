@@ -1,0 +1,165 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Laços e Dominadores
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \input{./c_style.tex}
+
+* Otimização de Laços
+   + Laços constituem um local importante para otimização
+     + Laços internos ainda mais importantes
+   \vfill
+   + <2->Objetivo
+     + Reduzir a quantidade de instruções dentro do laço
+     + Reduzir o custo de instruções dentro do laço
+   + <3->Estratégias
+     + Movimentação de código
+     + Remover variáveis de indução
+     + Reduzir poder de instruções
+* Movimentação de Código
+   + Movimentar código para fora do laço
+   + Exemplo
+     #+begin_src C
+     while (i <= limit-2)
+     #+end_src
+   + <2->Exemplo
+     #+begin_src C
+     for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+           a[n*i + j] = b[j];    
+     #+end_src
+* Definição de laço?
+   #+BEGIN_CENTER
+   \includegraphics[width=.37\linewidth]{./grafo-exemplo.pdf}
+   #+END_CENTER
+* Dominadores
+   + Usados para encontrar laços no grafo de fluxo de controle
+   \vfill
+   + Um nó $n$ domina $m$ se
+     + Todos os caminhos na direção de $m$ passam por $n$
+       + A partir de um nó dito inicial do grafo
+     + $m$ = $n$ (um nó se domina)
+   + Árvore de dominadores
+* Calculando a Árvore de Dominadores
+   #+BEGIN_CENTER
+   \includegraphics[width=.37\linewidth]{./grafo-exemplo.pdf}
+   #+END_CENTER
+* Definindo laços
+   + Um laço deve ter um \alert{único ponto de entrada} (/header/)
+     + O nó correspondente domina todos os nós do laço
+   + Deve existir pelo menos uma forma de iterar o laço
+     + Através de um arco de retorno no grafo de fluxo (/back edge/)
+   \vfill
+   + Algoritmo para encontrar laços
+     + Buscar no grafo de fluxo arestas $a \rightarrow b$ \\ cujo nó
+       destino $b$ \alert{domina} o nó origem $a$
+* Encontrando laços
+   #+BEGIN_CENTER
+   \includegraphics[width=\linewidth]{./encontrando-lacos.pdf}
+   #+END_CENTER
+* Movimentação de código
+   + \alert{Comando invariante}: podem ser movidos para um bloco
+     anterior ao laço porque seu valor não muda durante o laço
+   \vfill
+   + Seja um comando invariante \\
+     \texttt{s: x = y + z}
+   + Movimentação de \texttt{s} para fora do laço \texttt{L} é dita \alert{válida} se
+     1. O bloco B que contém \texttt{s} domina todas as saídas de \texttt{L}
+     2. Nenhum outro comando no laço atribui um valor a \texttt{x}
+     3. Todos os usos de \texttt{x} dentro de \texttt{L} são feitos na definição em \texttt{s}
+* Movimentação ilegal de código
+   + O bloco B que contém \texttt{s} domina todas as saídas de \texttt{L}
+** Original                                                          :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+    #+BEGIN_CENTER
+    \includegraphics[width=\linewidth]{./movimentacao-ilegal-1.pdf}
+    #+END_CENTER
+** <2->Modificado                                                    :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+    #+BEGIN_CENTER
+    \includegraphics[width=\linewidth]{./movimentacao-ilegal-1b.pdf}
+    #+END_CENTER
+* Movimentação ilegal de código
+   + Nenhum outro comando no laço atribui um valor a \texttt{x}
+** Original                                                          :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+    #+BEGIN_CENTER
+    \includegraphics[width=\linewidth]{./movimentacao-ilegal-2.pdf}
+    #+END_CENTER
+** <2->Modificado                                                    :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+    #+BEGIN_CENTER
+    \includegraphics[width=\linewidth]{./movimentacao-ilegal-2b.pdf}
+    #+END_CENTER
+* Movimentação ilegal de código
+   + Todos os usos de \texttt{x} dentro de \texttt{L} são feitos na definição em \texttt{s}
+** Original                                                          :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+    #+BEGIN_CENTER
+    \includegraphics[width=\linewidth]{./movimentacao-ilegal-3.pdf}
+    #+END_CENTER
+** <2->Modificado                                                    :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+    #+BEGIN_CENTER
+    \includegraphics[width=\linewidth]{./movimentacao-ilegal-3b.pdf}
+    #+END_CENTER
+* Variáveis de Indução
+   + São incrementadas/decrementadas por uma constante
+   \vfill
+   #+BEGIN_CENTER
+   \includegraphics[width=\linewidth]{./reducao-forca.pdf}
+   #+END_CENTER
+* Remover variáveis de indução -- Redução de Força
+   + Elimina-se todas menos uma variável de indução
+   + Reduzir força \rightarrow substituir operador por um mais barato
+   #+BEGIN_CENTER
+   \includegraphics[width=\linewidth]{./reducao-forca-2.pdf}
+   #+END_CENTER
+* Exercício de Otimização de Laços
+   \vspace{-0.2cm}
+   \small
+   |  1 | n = 12            |   | 19 | t12 = t9 + t11       |
+   |  2 | m = 80            |   | 20 | if t4 >= t12 goto 33 |
+   |  3 | j = 1             |   | 21 | t13 = 4 * j          |
+   |  4 | if j > n goto 37  |   | 22 | t14 = weight[t13]    |
+   |  5 | i = 1             |   | 23 | t15 = i - t14        |
+   |  6 | if i > m goto 35  |   | 24 | t16 = t15 * 4        |
+   |  7 | t1 = 4 * j        |   | 25 | t17 = cost[t16]      |
+   |  8 | t2 = weight[t1]   |   | 26 | t18 = 4 * j          |
+   |  9 | if i < t2 goto 33 |   | 27 | t19 = val[t18]       |
+   | 10 | t3 = 4 * i        |   | 28 | t20 = t17 + t19      |
+   | 11 | t4 = cost[t3]     |   | 29 | t21 = 4 * i          |
+   | 12 | t5 = 4 * j        |   | 30 | cost[t21] = t20      |
+   | 13 | t6 = weight[t5]   |   | 31 | t22 = 4 * i          |
+   | 14 | t7 = i - t6       |   | 32 | best[t22] = j        |
+   | 15 | t8 = t7 * 4       |   | 33 | i = i + 1            |
+   | 16 | t9 = cost[t8]     |   | 34 | goto 6               |
+   | 17 | t10 = 4 * j       |   | 35 | j = j + 1            |
+   | 18 | t11 = val[t10]    |   | 36 | goto 4               |
+   |    |                   |   | 37 | nop                  |
+
+

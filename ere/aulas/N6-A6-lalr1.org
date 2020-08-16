@@ -1,0 +1,111 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: LALR(1)
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Introdução
+LALR é uma abreviação de /Look-Ahead LR/
++ Versão simplificada do LR canônico
++ Proposta por Frank DeRemer (1969)
+    + Tese: /Practical Translators for LR(k) languages/
++ Yacc/Bison a implementam
+#+latex: \vfill
+\pause Inspiração para o LALR(1)
++ LR(1) possui muitos estados com os mesmos itens
+    + Somente os /lookaheads/ são diferentes
++ Construção sobre o LR(0) \rightarrow LA(1)LR(0)
+    + Forma genérica é LR(k)LR(0)
+* Exemplo
+LR(1) possui muitos estados com os mesmos itens
++ Somente os /lookaheads/ são diferentes
++ Exemplos no LR(1) abaixo: 2 e 5, 4 e 8, 7 e 9, 3 e 6
+\pause *LALR(1)*: identificar esses estados e combinar os /lookaheads/
++ Segunda parte do item se torna um conjunto de /lookaheads/
+** LR(1)                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+
+#+ATTR_LATEX: :width \textwidth
+[[./A-lr1.png]]
+
+** LR(0)                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+
+#+ATTR_LATEX: :width \textwidth
+[[./A-lr0.png]]
+
+* Primeiro princípio
+
+#+BEGIN_CENTER
+Núcleo de um estado de itens LR(1) é um estado de itens LR(0)
+#+END_CENTER
+
+** LR(1)                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+
+#+ATTR_LATEX: :width \textwidth
+[[./A-lr1.png]]
+
+** LR(0)                                                             :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+
+#+ATTR_LATEX: :width \linewidth
+[[./A-lr0.png]]
+
+* Segundo princípio
+
+Considerando s_1, s_2, t_1 e t_2 são estados
+
+#+latex: \vfill
+
+Os estados s_1 e s_2 de itens LR(1) com núcleo igual
++ Supor que existe uma transição no símbolo X de s_1 para t_1
++ Portanto, existe também uma transição em X de s_2 para t_2
++ E t_1 e t_2 tem o mesmo núcleo
+
+#+latex: \vfill
+
+#+ATTR_LATEX: :width .6\textwidth
+[[./A-lr1.png]]
+
+* Construção (algoritmo informal)
+
+Começar com o autômato LR(0)
+
+*Propagação de verificação à frente*
++ Propagar /lookaheads/ durante o fechamento e transição
+#+latex: \vfill
+
+#+ATTR_LATEX: :width .7\textwidth
+[[./A-lr0.png]]
+
+* Exercício
+
+Esta gramática é LALR(1)?
++ E é LR(1)?
+
+| S | \rightarrow | a E c |
+|   | \rightarrow | a F d |
+|   | \rightarrow | b F c |
+|   | \rightarrow | b E d |
+| E | \rightarrow | e     |
+| F | \rightarrow | e     |

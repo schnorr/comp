@@ -1,0 +1,75 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Análise Semântica
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Motivação
+A análise sintática é o suficiente?
+
+\pause Faltam uma série de informações
++ Quais são os valores representados
++ Onde eles residem dentro do programa
++ Como eles fluem de nome em nome
+
+\pause Um compilador precisa entender a *estrutura do programa* \\
+#+latex: \vfill
+\pause Através de uma *Análise Sensível ao Contexto*
++ \small ``Elaboração Semântica''
++ \small ``Análise Semântica''
++ \small ``Tradução Dirigida pela Sintaxe''
+* Visão Geral
+Considerando um nome *x*, no código fonte
+
+Antes da geração de código, o compilador precisa saber
++ \pause Qual o *tipo* do valor estocado em *x*? \\
+    \scriptsize inteiro, caractere, boleano, ponteiro, conjunto, vetor, _estrutura_, cadeia, ...
++ \pause Qual o *tamanho* de *x*? \\
+    \scriptsize inteiro: 4 bytes, caractere: 1 byte, ponteiro: 4 bytes, cadeia: ?
++ \pause Se *x* é uma função, quais são seus *argumentos/retorno*?\\
+    \scriptsize tipo dos argumentos, tipo do retorno, onde o valor de retorno será guardado, ...
++ \pause Por *quanto tempo* o valor de *x* tem que ser mantido? \\
+    \scriptsize qual o escopo, qual o tempo de vida do nome
++ \pause Quem é responsável por *alocar espaço* para *x*? \\
+    \scriptsize vinculação de estocagem é estática ou dinâmica (explícita ou implícita)
+
+#+latex: \vfill
+
+\pause Respostas para estas questões
++ No código fonte
++ Regras do projeto da LP
+
+Obtidas no processo de *Análise Sensível ao Contexto*
+* Alguns usos
+Associa um *significado* ao código de entrada
+
+#+latex: \vfill
+
+Algumas associações possíveis
++ \pause Associar uma representação abstrata
+    + Criar a AST \\
+      \scriptsize Base para a geração de código
+    + \pause  *Etapa 3 do Projeto de Compiladores*
++ \pause Associar tipos
+    + Permitir a verificação de tipos (de variáveis, de instruções) \\
+      \scriptsize Em tempo de compilação (vinculação de tipos estática) \\
+    + \pause  *Etapa 4 do Projeto de Compiladores*
++ \pause Associar código executável à estrutura sintática
+    + Etapa de Geração de Código \\
+      \scriptsize (Será o assunto chave desta disciplina)
+    + \pause  *Etapa 5 do Projeto de Compiladores*
+
+#+latex: \vfill
+\pause Tradução Dirigida pela Sintaxe
++ Código intermediário é gerado durante a análise sintática

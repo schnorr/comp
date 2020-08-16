@@ -1,0 +1,89 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Passagem de Parâmetros e Acesso a Dados
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Passagem de Parâmetros
+
+*Por valor*
++ Método mais simples trivial (maioria das linguagens o tem)
++ Cria-se uma cópia do parâmetro real \rightarrow parâmetro formal
+    + Usa-se o parâmetro formal como uma variável local
+
+#+latex: \bigskip\pause
+
+*Por referência*
++ Chamadora passa o endereço de cada parâmetro real \\
+    \rightarrow Independe do tamanho, menos ocupação de espaço
++ Parâmetro real for
+    + Um identificador (endereço é fornecido) \\
+	 \rightarrow Endereço pode ser na pilha, monte, segmento de dados
+    + Uma expressão \\
+	 \rightarrow Avalia-se a expressão \\
+	 \rightarrow Coloca-se seu resultado em um temporário \\
+	 \rightarrow Endereço do temporário é fornecido \\
++ Uso dos parâmetros formais é feito através de indireção
+ 
+* Acesso a dados com escopo estático simples
+
+Compilador deve definir *endereçamento de variáveis*
++ Consta na tabela de símbolos
+
+#+latex:\pause
+
+*Escopo Estático*
++ *Sem* procedimentos aninhados
+    + Variáveis estáticas alocadas no segmento de dados \\
+      \rightarrow Endereçamento absoluto (deslocamento em relação ao =bss=)
+    + Variáveis locais alocadas na pilha de ativação \\
+      \rightarrow Endereçamento referente ao =fp= (/frame pointer/)
+
+* Acesso a dados com procedimentos aninhados
+
+Escopo Estático *com* procedimentos aninhados
++ Árvore de tabela de símbolos
++ Na declaração da variável \\
+    \rightarrow registra-se seu nível de profundidade
+#+latex: \pause
++ No acesso
+    1. Procura-se na árvore de tabela de símbolos a declaração
+    2. Calcula-se a diferença do escopo atual para o da declaração
+    3. Gera código de acesso considerando uma tupla \\
+       \rightarrow Endereçamento é =(diferença_escopo, desloc_fp)=
+
+#+latex: \vfill
+
+\pause *Escopo Dinâmico* (bonus)
+
+* Acesso a dados
+
+Considerando escopo estático, *durante a execução*
++ Deve-se dereferenciar =diferença_escopo= vezes \\
+    \rightarrow ``Perda de tempo'' se aninhamento profundo \\
+    \rightarrow Principalmente para acessar variáveis globais
+
+#+latex: \bigskip\pause
+
+Possível solução (em tempo de execução) com /display/
++ Manter um arranjo com RA associado a cada escopo
++ Cada variável tem associado a si seu escopo \\
+  \rightarrow calculado em tempo de compilação (profundidade)
+
++ No acesso ao conteúdo de uma variável
+    + Consultar a posição no arranjo referente a profundidade da
+      variável \\
+	 \rightarrow Endereçamento =(escopo, desloc_fp)= \\
+      (onde escopo é o índice do arranjo)
+

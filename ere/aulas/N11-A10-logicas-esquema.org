@@ -1,0 +1,119 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Esquema de Tradução para Expressões Lógicas
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Esquema L-Atribuído e funções auxiliares
+Funções auxiliares
++ gera()
++ rot() -- cria um novo rótulo simbólico
+Atributos herdados para cada expressão booleana B
++ B.t -- contém o rótulo alvo caso a expressão for verdade
++ B.f -- contém o rótulo alvo caso a expressão for falsa
+* Gramática para expressões booleanas
+Como deve ficar o esquema de tradução para cada regra?
+#+BEGIN_CENTER
+| B | \rightarrow | B_1 and B_2   |
+| B | \rightarrow | B_1 or B_2    |
+| B | \rightarrow | not B_1      |
+| B | \rightarrow | true        |
+| B | \rightarrow | false       |
+| B | \rightarrow | E_1 relop E_2 |
+#+END_CENTER
+* Expressões Booleanas -- Fluxo de Controle
+#+BEGIN_CENTER
+\small
+| B | \rightarrow | { $B_1$.t=B.t; $B_1$.f=rot(); } B_1 or { $B_2$.t=B.t; $B_2$.f=B.f; } B_2    |
+|   |   | { B.code=$B_1$.code \vert\vert "$B_1$.f:" \vert\vert $B_2$.code  }                       |
+| B | \rightarrow | { $B_1$.t=rot(); $B_1$.f=B.f; } B_1 and {  $B_2$.t=B.t; $B_2$.f=B.f; }  B_2 |
+|   |   | B.code=$B_1$.code \vert\vert "$B_1$.t" \vert\vert $B_2$.code                             |
+| B | \rightarrow | not { $B_1$.t=B.f; $B_1$.f=B.t; }  B_1 { B.code=$B_1$.code;    }          |
+| B | \rightarrow | true { B.code="jumpI B.t";  }                                         |
+| B | \rightarrow | false { B.code="jumpI B.f"; }                                         |
+| B | \rightarrow | E_1 < E_2 { B.cond=cond(); B.code=                                      |
+|   |   | "comp $E_1$.local < $E_2$.local => B.cond"                              |
+|   |   | "cbrLT B.cond -> B.t, B.f" }                                          |
+#+END_CENTER
+
+Gerar código baseado no esquema
+
+#+BEGIN_CENTER
+a < b or c < d and e < f
+#+END_CENTER
+
+* Remendos
+Casamento da instrução de desvio com o rótulo alvo
++ Abordagem até agora: uso de atributos herdados
+    + Impossibilita geração em uma passagem
+#+latex: \vfill
+\pause  Remendos
++ Passadas listas de desvios como atributos sintetizados
++ Na geração do desvio, rótulos destino ficam "em aberto"
++ Quando o rótulo for gerado, preenche-se adequadamente
+* Remendos em ação
+Funções auxiliares
++ remendo ()
++ concat (lista1, lista2)
++ remenda (lista, rotulo)
+    + Todos os remendos da lista serem resolvidos com o rótulo
+
+Atributos sintetizados
++ =B.tl= (lista de remendos caso verdadeiro)
++ =B.fl= (lista de remendos caso falso)
+#+latex: \vfill
+#+BEGIN_CENTER
+| B | \rightarrow | B_1 and B_2   |
+| B | \rightarrow | B_1 or B_2    |
+| B | \rightarrow | not B_1      |
+| B | \rightarrow | true        |
+| B | \rightarrow | false       |
+| B | \rightarrow | E_1 relop E_2 |
+#+END_CENTER
+* Remendos
+| B | \rightarrow | E_1 relop E_2 |
+\scriptsize
+#+BEGIN_EXAMPLE
+x = remendo()
+y = remendo()
+B.code = E1.code || E2.code ||
+         "cmp_LT E1.temp, E2.temp => r1" || "cbr r1 -> x, y"
+B.tl = lista(x) //cria uma lista com apenas um remendo
+B.fl = lista(y)
+#+END_EXAMPLE
+\normalsize
+| B | \rightarrow | B_1 and B_2 |
+\scriptsize
+#+BEGIN_EXAMPLE
+x = rot();
+remenda (B1.tl, x);
+B.tl = B2.tl;
+B.fl = concat(B1.fl, B2.fl)
+B.code = B1.code || "x: " || B2.code
+#+END_EXAMPLE
+\normalsize
+| B | \rightarrow | B_1 or B_2 |
+\scriptsize
+#+BEGIN_EXAMPLE
+x = rot();
+remenda (B1.fl, x);
+B.fl = B2.fl;
+B.tl = concat(B1.tl, B2.tl)
+B.code = B1.code || "x: " || B2.code   
+#+END_EXAMPLE
+* Ilustrar funcionamento usando remendos
+#+BEGIN_CENTER
+a < b or c < d and e<f
+#+END_CENTER   
+

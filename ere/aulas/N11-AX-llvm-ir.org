@@ -1,0 +1,530 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: A Representação Intermediária da \linebreak Infraestrutura do Compilador LLVM
+#+Author: Slides preparados por Gabriel Freytag \linebreak  Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Design Clássico de Compiladores
+
+Compiladores estáticos tradicionalmente são divididos em 3 fases principais:
+- Front-end
+- Middle-end (também conhecido como otimizador)
+- Back-end (também conhecido como gerador de código)
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width .6\linewidth
+[[./img/SimpleCompiler.png]]
+#+END_CENTER
+
+Esse modelo se aplica igualmente bem a interpretadores e compiladores JIT (Just-In-Time)
+
+
+* Design Clássico de Compiladores
+
+*Front-end:*
+- Analisa o código fonte
+- Verifica se existem erros
+- Constrói uma árvore de sintaxe abstrata (AST) para representar o código de entrada
+- Opcionalmente converte a AST para uma nova representação para posterior otimização e geração de código de máquina nas fases de otimização e geração
+
+
+* Design Clássico de Compiladores
+
+*Middle-end* ou *Otimizador*
+- Realiza transformações para tentar melhorar o tempo de execução do código
+- Geralmente é mais ou menos independente da linguagem alvo
+
+*Back-end* ou *Gerador*
+- Mapeia o código para o conjunto de instruções de destino
+- Aproveita recursos suportados pela arquitetura
+- Partes comuns de um back-end incluem seleção de instruções, alocação de registros e programação de instruções
+
+
+* Design Clássico de Compiladores
+
+Possibilita o suporte a múltiplas linguagens e arquiteturas alvo:
+- A utilização de uma representação intermediária na fase de otimização possibilita a escrita de diferentes front e back-ends
+- O front-end compila determinada linguagem para a representação intermediária
+- O back-end compila a partir da representação intermediária para a arquitetura alvo
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width .6\linewidth
+[[./img/RetargetableCompiler.png]]
+#+END_CENTER
+
+
+* Infraestrutura LLVM
+
+O que é o LLVM?
+- Uma infraestrutura (/framework/) /open source/ para a contrução de ferramentas
+- LLVM inicialmente era um acrônimo para /Low Level Virtual Machine/, mas atualmente é o nome completo do projeto
+- Atualmente é utilizada para a implementação de uma ampla variedade de linguagens compiladas tanto estaticamente quanto em tempo de execução
+- Linguagens como GCC, Java, .NET, Python, Ruby, Scheme, Haskell, D são apenas alguns exemplos
+- Substituiu vários compiladores de propósito específico como o compilador para OpenGL da Apple e o Adobe After Effects
+- Utilizada também para criar novos produtos, sendo um dos mais conhecidos a linguagem para GPU OpenCL
+
+
+* Infraestrutura LLVM
+
+Motivação para sua criação:
+- Na época (em 2000) implementações de linguagens de programação /open source/ eram projetadas como ferramentas de propósito especial, usualmente *monilíticas*
+- Era *muito difícil reutilizar partes* de compiladores estáticos (e.g. parser do compilador GCC) para realizar *análises ou refatorações estáticas*
+- Havia *pouco compartilhamento* entre diferentes implementações de linguagens
+- LLVM foi desenvolvido como um *conjunto de bibliotecas reutilizáveis* com interfaces bem definidas
+- Para tal, foi criada uma *Representação Intermediária* (/Intermediate Representation - IR/) 
+# para o interfaceamento das bibliotecas
+
+
+* Infraestrutura LLVM
+
+*Front-end*
+- Analisa, valida e diagnostica erros no código e, em seguida, traduz o código para a Representação Intermediária (IR) do LLVM
+
+*Optimizer*
+- O IR é opcionalmente submetido a uma série de passagens de análise e otimização que melhoram o código
+
+*Back-end*
+- O IR é então enviado ao gerador de código que produz código de máquina nativo
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width .6\linewidth
+[[./img/LLVMCompiler1.png]]
+#+END_CENTER
+
+
+* Representação Intermediária do LLVM
+
+- A IR é o aspecto mais importante da infraestrutura LLVM
+- É a forma utilizada para *representar código* no compilador
+- Foi desenvolvida para hospedar *análises e transformações* na fase de otimização
+- Foi projetada com vários objetivos específicos em mente, como: 
+  - Suporte a otimizações leves em tempo de execução
+  - Otimizações entre funções e interprocedurais (cross-function/interprocedural)
+  - Análise completa do programa
+  - Transformações reestruturais agressivas, entre outras
+
+
+* Representação Intermediária do LLVM
+
+Algumas características da IR do LLVM:
+- Conjunto reduzido de instruções de computação (/Reduced Instruction Set Computing/ - RISC)
+- Fortemente tipada
+- Fluxo de controle explícito
+- Utiliza um conjunto de registradores compartilhados com um conjunto infinito de temporários (%)
+- Atribuições estáticas únicas (/Static Single Assignment/ - SSA)
+- Abstrai detalhes de máquina como convenções de chamada e referência de pilha
+- Além disso, ela mesma é definida como uma *linguagem de primeira classe com semântica bem definida*
+
+
+* Hierarquia da Linguagem
+
+A IR é organizada em módulos, funções, blocos básicos e instruções
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width .5\linewidth
+[[./img/llvm-containers.pdf]]
+#+END_CENTER
+
+Com exceção dos módulos, todos descendem de uma classe base C++ onívara denominada *Value*
+
+
+* Hierarquia da Linguagem
+
+*Módulos:*
+- Representam o código fonte ou uma unidade de tradução
+- Hospedam funções
+
+*Funções:*
+- Pedaços nomeados de código executável
+- Tanto funções quanto métodos em C++ são funções LLVM
+- São recipientes de blocos básicos
+
+*Blocos Básicos:*
+- Um pedaço contiguo de instruções
+
+*Instruções:*
+- Uma única operação de código
+# - A abstração é basicamente a mesma que código de máquina RISC
+
+**Valores:**
+- Qualquer dado que pode ser utilização em alguma computação (números, endereços de algum código e inclusive variáveis e constantes globais)
+
+
+* Tipos
+
+- Não existem conversões implícitas no IR, todos os valores devem ser *convertidos explicitamente*
+- Todos os valores possuem um tipo estático
+- Inteiros são especificados em larguras de bit arbitrárias
+  - ~i1~, ~i2~, ~i3~, ..., ~i32~, ..., ~i398~
+  - Não existem inteiros /signed/ ou /unsigned/
+  - Operações são interpretadas como /signed/ ou /unsigned/ baseado em suas instruções
+- Ponto flutuante
+- Tipos derivados especificam matrizes, vetores, funções, ponteiros, estruturas
+  - Estruturas possuem tipos como {~i32~, ~i32~, ~i8~}
+  - Ponteiros possuem tipos como "pointer to ~i32~"
+
+
+* Locais
+
+- Local é como uma variável
+- Locais são denotados com um símbulo de ~%~
+- Como o nome já sugere, são locais às funções nas quais são definidas
+- Portanto, não podem ser modificados/referenciados fora das funções em que são declaradas
+
+
+* Instruções
+
+Algumas das instruções mais utilizadas são:
+- ~alloca~
+- ~store~
+- ~load~
+- ~add~
+- ~fadd~
+- ~sub~
+- ~mul~
+- ~udiv~
+- ~zext~
+- ~ret~
+
+
+* Instruções
+
+*~alloca~*
+
+- Aloca memória na pilha
+- Após o retorno da função, a memória alocada é liberada
+- Retorna um valor que deve ser associado a um local
+- Valor retornado é um ponteiro para a memória alocada
+
+Sintaxe:
+#+LATEX: {\footnotesize
+#+BEGIN_SRC C
+<result> = alloca <type> [, <ty> <NumElements>] [, align <alignment>]
+#+END_SRC
+#+LATEX: }
+
+Exemplos:
+#+BEGIN_SRC C
+%a = alloca i32
+%a = alloca i32, align 1024
+%a = alloca i32, i32 4, align 1024
+#+END_SRC
+
+
+* Instruções
+
+*~store~*
+
+- Escreve na memória
+- Modifica o valor referenciado por um ponteiro na memória
+
+Sintaxe:
+#+BEGIN_SRC C
+store <type> <value>, <type>* <pointer>
+#+END_SRC
+
+Exemplos:
+#+BEGIN_SRC C
+%ptr = alloca i32
+store i32 3, i32* %ptr
+#+END_SRC
+
+
+* Instruções
+
+*~load~*
+
+- Lê da memória
+- Retorna o valor lido da memória do tipo especificado
+
+Sintaxe:
+#+LATEX: {\small
+#+BEGIN_SRC C
+<result> = load <type>, <type>* <pointer>[, align <alignment>]
+#+END_SRC
+#+LATEX: }
+
+Exemplos:
+#+BEGIN_SRC C
+%ptr = alloca i32
+store i32 3, i32* %ptr
+%val = load i32, i32* %ptr
+#+END_SRC
+
+
+* Instruções
+
+*~add~* e *~fadd~*
+
+- Soma dois operandos
+- Ambos devem ser do mesmo tipo
+- Somente inteiros (~add~), ponto flutuante (~fadd~) e vetores (~add~ e ~fadd~)
+
+Sintaxe:
+#+BEGIN_SRC C
+<result> = add <type> <op1>, <op2>
+#+END_SRC
+
+Exemplos:
+#+BEGIN_SRC C
+%var = alloca i32
+store i32 3, i32* %var
+%a = add i32 4, %var
+#+END_SRC
+
+
+* Instruções
+
+*~sub~* e *~fsub~*
+
+- Subtrai dois operandos
+- Ambos devem ser do mesmo tipo
+- Somente inteiros (~sub~), ponto flutuante (~fsub~) e vetores (~sub~ e ~fsub~)
+
+Sintaxe:
+#+BEGIN_SRC C
+<result> = sub <type> <op1>, <op2>
+#+END_SRC
+
+Exemplos:
+#+BEGIN_SRC C
+%var = alloca i32
+store i32 3, i32* %var
+%a = sub i32 1, %var
+#+END_SRC
+
+
+* Instruções
+
+*~mul~* e *~fmul~*
+
+- Produto de dois operandos
+- Ambos devem ser do mesmo tipo
+- Somente inteiros (~mul~), ponto flutuante (~fmul~) e vetores (~mul~ e ~fmul~)
+
+Sintaxe:
+#+BEGIN_SRC C
+<result> = mul <type> <op1>, <op2>
+#+END_SRC
+
+Exemplos:
+#+BEGIN_SRC C
+%var = alloca i32
+store i32 3, i32* %var
+%a = mul i32 4, %var
+#+END_SRC
+
+
+* Instruções
+
+*~udiv~* e *~fdiv~*
+
+- Quociente de dois operandos
+- Ambos devem ser do mesmo tipo
+- Somente inteiros (~udiv~), ponto flutuante (~fdiv~) e vetores (~udiv~ e ~fdiv~)
+
+Sintaxe:
+#+BEGIN_SRC C
+<result> = udiv <type> <op1>, <op2>
+#+END_SRC
+
+Exemplos:
+#+BEGIN_SRC 
+%var = alloca i32
+store i32 3, i32* %var
+%a = udiv i32 1, %var
+#+END_SRC
+
+
+* Instruções
+
+*~zext~*
+
+- Extende o operando para outro tipo
+- A conversão necessita do valor e do tipo pretendido
+- Ambos devem ser do tipo inteiro ou de vetores com o mesmo número de inteiros
+
+Sintaxe:
+#+BEGIN_SRC C
+<result> = zext <type> <value> to <type2>
+#+END_SRC
+
+Exemplos:
+#+BEGIN_SRC C
+%x = zext i32 257 to i64
+%y = zext i1 true to i32
+#+END_SRC
+
+
+* Instruções
+
+*~ret~*
+
+- Retorna o controle do fluxo (e opcionalmente um valor) de uma função de volta à origem
+- Pode retornar um valor e então o controle do fluxo
+- Ou somente o controle do fluxo
+
+Sintaxe:
+#+BEGIN_SRC C
+ret <type> <value>
+ret void
+#+END_SRC
+
+Exemplos:
+#+BEGIN_SRC C
+ret i32 5
+ret void
+ret { i32, i8 } { i32 4, i8 2 }
+#+END_SRC
+
+
+
+* Exemplo
+
+~clang main.c -S -emit-llvm -O0 -o main.ll~
+
+#+LATEX: \begin{minipage}[t]{0.3\linewidth}
+*Código em C*
+#+BEGIN_SRC C
+int x = 7;
+int main() {
+  int n = 0;
+  if (x != 0) n++;
+  return n;
+}
+#+END_SRC
+#+LATEX: \end{minipage}
+#+LATEX: \begin{minipage}[t]{0.6\linewidth}
+#+LATEX: \scriptsize
+*Código LLVM IR*
+#+BEGIN_SRC C
+@x = dso_local global i32 7, align 4
+
+define dso_local i32 @main() #0 {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store i32 0, i32* %2, align 4
+  %3 = load i32, i32* @x, align 4
+  %4 = icmp ne i32 %3, 0
+  br i1 %4, label %5, label %8
+
+; <label>:5:                          ; preds = %0
+  %6 = load i32, i32* %2, align 4
+  %7 = add nsw i32 %6, 1
+  store i32 %7, i32* %2, align 4
+  br label %8
+
+; <label>:8:                          ; preds = %5, %0
+  %9 = load i32, i32* %2, align 4
+  ret i32 %9
+}
+#+END_SRC
+#+LATEX: \end{minipage}
+
+
+* Exemplo
+
+Definição da variável global ~x~
+
+#+LATEX: \begin{minipage}[t]{0.3\linewidth}
+*Código em C*
+#+BEGIN_SRC C
+int x = 7;
+#+END_SRC
+#+LATEX: \end{minipage}
+#+LATEX: \begin{minipage}[t]{0.6\linewidth}
+*Código LLVM IR*
+#+BEGIN_SRC C
+@x = dso_local global i32 7, align 4
+#+END_SRC
+#+LATEX: \end{minipage}
+
+
+* Exemplo
+
+Função main
+
+#+LATEX: \begin{minipage}[t]{0.3\linewidth}
+*Código em C*
+#+BEGIN_SRC C
+int main() {
+  .
+  .
+  .
+}
+#+END_SRC
+#+LATEX: \end{minipage}
+#+LATEX: \begin{minipage}[t]{0.6\linewidth}
+*Código LLVM IR*
+#+BEGIN_SRC C
+define dso_local i32 @main() #0 {
+  .
+  .
+  .
+}
+#+END_SRC
+#+LATEX: \end{minipage}
+
+
+* Exemplo
+
+Declaração da variável local ~n~
+
+#+LATEX: \begin{minipage}[t]{0.3\linewidth}
+*Código em C*
+#+BEGIN_SRC C
+int n = 0;
+#+END_SRC
+#+LATEX: \end{minipage}
+#+LATEX: \begin{minipage}[t]{0.6\linewidth}
+*Código LLVM IR*
+#+BEGIN_SRC C
+%1 = alloca i32, align 4
+store i32 0, i32* %1, align 4
+#+END_SRC
+#+LATEX: \end{minipage}
+
+
+* Exemplo
+
+Condição ~if~ constituído por três blocos básicos (neste exemplo separados por espaços)
+
+#+LATEX: \begin{minipage}[t]{0.3\linewidth}
+*Código em C*
+#+BEGIN_SRC C
+if (x != 0) n++;
+return n;
+#+END_SRC
+#+LATEX: \end{minipage}
+#+LATEX: \begin{minipage}[t]{0.6\linewidth}
+#+LATEX: \scriptsize
+*Código LLVM IR*
+#+BEGIN_SRC C
+%3 = load i32, i32* @x, align 4
+%4 = icmp ne i32 %3, 0
+br i1 %4, label %5, label %8
+
+; <label>:5:                          ; preds = %0
+  %6 = load i32, i32* %2, align 4
+  %7 = add nsw i32 %6, 1
+  store i32 %7, i32* %2, align 4
+  br label %8
+
+; <label>:8:                          ; preds = %5, %0
+  %9 = load i32, i32* %2, align 4
+  ret i32 %9
+#+END_SRC
+#+LATEX: \end{minipage}
+

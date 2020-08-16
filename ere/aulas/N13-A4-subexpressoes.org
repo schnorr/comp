@@ -1,0 +1,160 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Otimização de Subexpressões Comuns
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames]
+#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+* Otimização de Código
+Melhor se considerarmos um grafo de blocos básicos
++ É a escolha da maioria dos compiladores
+#+latex: \vfill
+\pause  Existem dois tipos de otimização
++ Local /versus/ Global
+#+latex: \vfill
+\pause  *Local*
++ Transformações que preservem a funcionalidade
+    + Todas aquelas vistas em Otimização de Janela \\
+	 \rightarrow mas limitadas as instruções do bloco
+    + *Eliminação de sub-expressões comuns*
+\pause  *Global*
++ Movimentação de código
++ Variáveis de indução
++ Redução de força
+* Eliminação de sub-expressões comuns
+Duas operações são comuns se produzem o mesmo resultado
++ Calcular uma única vez
++ Reutilizar nas próximas vezes, referenciando o resultado
+#+latex: \vfill
+\pause  Expressão é
++ *Viva*
+    + Operandos usados para calcular a expressão não mudaram
++ *Morta*
+    + Caso contrário
+#+latex: \vfill
+\pause  Local e Global
+* Eliminação de sub-expressões comuns
+** Código fonte 						  :B_ignoreheading:BMCOL:
+ :PROPERTIES:
+ :BEAMER_col: 0.5
+ :END:
+ #+BEGIN_SRC C
+ int main ()
+ {
+   int x, y, z;
+   ...
+   x = (1+20) * -x;
+   x = x*x+(x/y);
+   y = z = (x/y)/(x*x);
+   ...
+ }
+ #+END_SRC
+** TAC								  :B_ignoreheading:BMCOL:
+ :PROPERTIES:
+ :BEAMER_col: 0.4
+ :END:
+ | t1 = 1 + 20 |
+ | t2 = -x     |
+ | x = t1 * t2 |
+ | t3 = x * x  |
+ | t4 = x / y  |
+ | y = t3 + t4 |
+ | t5 = x / y  |
+ | t6 = x * x  |
+ | z = t5 / t6 |
+ | y = z       |
+* Eliminação de sub-expressões comuns
+** TAC original						      :BMCOL:
+ :PROPERTIES:
+ :BEAMER_col: 0.5
+ :END:
+ | t1 = 1 + 20 |
+ | t2 = -x     |
+ | x = t1 * t2 |
+ | t3 = x * x  |
+ | t4 = x / y  |
+ | y = t3 + t4 |
+ | t5 = x / y  |
+ | t6 = x * x  |
+ | z = t5 / t6 |
+ | y = z       |
+** TAC melhorado						      :BMCOL:
+ :PROPERTIES:
+ :BEAMER_col: 0.5
+ :BEAMER_args: \pause 
+ :END:
+ | t2 = -x     |
+ | x = 21 * t2 |
+ | t3 = x * x  |
+ | t4 = x / y  |
+ | y = t3 + t4 |
+ | z = t4 / t3 |
+ | y = z       |
+* Exemplo considerando o pedaço do TAC quicksort
+** TAC original						      :BMCOL:
+ :PROPERTIES:
+ :BEAMER_col: 0.5
+ :END:
+ | 14 | t6 = 4 * i  |
+ | 15 | x = a[t6]   |
+ | 16 | t7 = 4 * i  |
+ | 17 | t8 = 4 * j  |
+ | 18 | t9 = a[t8]  |
+ | 19 | a[t7] = t9  |
+ | 20 | t10 = 4 * j |
+ | 21 | a[t10] = x  |
+ | 22 | goto (5)    | 
+** TAC melhorado						      :BMCOL:
+ :PROPERTIES:
+ :BEAMER_col: 0.5
+ :END:
+ | 14 | t6 = 4 * i |
+ | 15 | x = a[t6]  |
+ | 16 | t8 = 4 * j |
+ | 17 | t9 = a[t8] |
+ | 18 | a[t6] = t9 |
+ | 19 | a[t8] = x  |
+ | 20 | goto B2    |
+* Eliminação de sub-expressões comuns
+Como implementar a eliminação de sub-expressões comums?
++ \pause Representar expressões com um DAG
+#+latex: \vfill
+\pause *Folhas* são identificadores e constantes
++ Valores iniciais da computação efetuado no bloco
+
+\pause *Nós interiores*: operadores às folhas; lista de identificadores
++ Cálculos efetuados no bloco básico
++ Nomes de variáveis que assumem os valores calculados
+* Exemplo
+| t1 = 4 * i          |
+| t2 = a[t1]          |
+| t3 = 4 * i          |
+| t4 = b[t3]          |
+| t5 = t2 * t4        |
+| t6 = prod + t5      |
+| prod = t6           |
+| t7 = i + 1          |
+| i = t7              |
+| if i <= 20 goto (3) |
+* Uso do DAG (de expressões)
+Sub-expressões são detectadas automaticamente
++ Caso do $4 * i$
+#+latex: \vfill
+\pause Identificadores utilizados no bloco são os presentes nas folhas
+  do DAG
++ Caso do $prod$, $a$ e $i$
+#+latex: \vfill
+\pause Quando um nó n associado a um TAC do tipo ‘x := ... op ...’ ainda
+  contém x em seu rótulo no final da construção, é que o TAC
+  calcula alguma coisa que pode ser usado fora do bloco básico
+
