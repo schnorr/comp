@@ -3,4 +3,4 @@ all: N1-A0-inaugural.pdf N1-A1-introducao_geral.pdf N2-A0-introducao.pdf N2-A1-e
 	emacs -batch $^ --funcall org-babel-tangle
 	emacs -batch $^ --funcall org-beamer-export-to-pdf
 clean:
-	rm *.tex* *.pdf*
+	rm *.tex*
