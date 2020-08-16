@@ -1,0 +1,65 @@
+#
+# AFND -> AFD (exemplo)
+#
+digraph exemplo_de_conversor {
+  rankdir=TD;
+  margin=0;
+  compound=true;
+
+  subgraph clusterN {
+    label="AFND N";
+    color=lightgray;
+  start [shape = point];
+  node [shape = circle];
+  ES_0 [label = "ES_0"];
+  ES_3 [label = "ES_3"];
+  ES_4 [label = "ES_4"];
+
+  subgraph cluster0 {
+    label="";
+    color=black;
+    node [shape = circle];
+    ES_1 [label = "ES_1"];
+    ES_2 [label = "ES_2"];
+  }
+
+  }
+
+  start -> ES_0;
+  ES_0 -> ES_1 [label = "a", fontsize = "20pt"];
+  ES_0 -> ES_2 [label = "a", fontsize = "20pt"];
+  ES_1 -> ES_3 [label = "c", fontsize = "20pt"];
+  ES_2 -> ES_4 [label = "b", fontsize = "20pt"];
+
+  subgraph clusterD{
+    label="AFD D";
+    color=lightgray;
+
+  startx [shape = point];
+  node [shape = circle];
+  ES_0x [label = ES_0];
+  ES_3x [label = ES_3];
+  ES_4x [label = ES_4];
+
+  subgraph cluster1 {
+    label="";
+    color=black;
+    node [shape = circle];
+    ES_1x [label = "ES_1'"];
+  }
+
+  }
+
+
+  rank=same;
+  ES_1x;
+  ES_1;
+
+  startx -> ES_0x;
+  ES_0x -> ES_1x [label = "a", fontsize = "20pt"];
+  ES_1x -> ES_3x [label = "c", fontsize = "20pt"];
+  ES_1x -> ES_4x [label = "b", fontsize = "20pt"];
+
+
+  ES_2 -> ES_1x [ltail=cluster0,lhead=cluster1,constraint=false,color=red,label="se torna",minlen=10];
+}

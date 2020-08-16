@@ -1,0 +1,26 @@
+#
+# AFND para reconhecer a*
+#
+digraph reconhecer_fecho {
+  rankdir=LR;
+  margin=0;
+
+  ES_0 [shape = circle];
+  start [shape = point];
+  ES_3 [shape = doublecircle];  
+
+  subgraph cluster_a {
+    bgcolor = lightgrey;
+    color=black;
+    ES_1 [shape = circle, style=filled, fillcolor=white];
+    ES_2 [shape = doublecircle, style=filled, fillcolor=white];
+    ES_1 -> ES_2 [label = "a", fontsize = "20pt"];
+    ES_2 -> ES_1 [ label = "&epsilon;", fontsize = "20pt" ];
+  };
+
+
+  start -> ES_0;
+  ES_0 -> ES_1 [ label = "&epsilon;", fontsize = "20pt" ];
+  ES_0 -> ES_3 [ label = "&epsilon;", fontsize = "20pt" ];
+  ES_2 -> ES_3 [ label = "&epsilon;", fontsize = "20pt" ];
+}

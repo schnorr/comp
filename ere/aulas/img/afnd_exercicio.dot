@@ -1,0 +1,24 @@
+#
+# AFND para reconhecer (a|b)*abb
+#
+digraph reconhecer_exercicio {
+  rankdir=LR;
+  margin=0;
+
+  start [shape = point];
+  node [shape = circle];
+  ES_0;
+  ES_1;
+  ES_2;
+  ES_3;
+  ES_4 [shape = doublecircle];  
+
+  start -> ES_0;
+  ES_0 -> ES_1 [label = "a", fontsize = "20pt"];
+  ES_0 -> ES_1 [label = "b", fontsize = "20pt"];
+  ES_0 -> ES_1 [ label = "&epsilon;", fontsize = "20pt" ];
+  ES_1 -> ES_0 [ label = "&epsilon;", fontsize = "20pt" ];
+  ES_1 -> ES_2 [label = "a", fontsize = "20pt"];
+  ES_2 -> ES_3 [label = "b", fontsize = "20pt"];
+  ES_3 -> ES_4 [label = "b", fontsize = "20pt"];
+}
