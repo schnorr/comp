@@ -24,7 +24,7 @@
 - Essas duas etapas estão presentes em um interpretador?
 * Revisão -- Estrutura de um *Compilador*                            :noexport:
 
-[[../geral/img/fases_compilacao.png]]
+[[./img/fases_compilacao.png]]
 
 * Análise Lexical
 - Identificar sequências significativas na entrada: \alert{lexemas}
@@ -33,7 +33,7 @@
   - Começa a construção da tabela de símbolos
   - Detecção de erros léxicos, gerando mensagens de erro
 
-[[../geral/img/analisa_lexica.png]]
+[[./img/analisa_lexica.png]]
 
 * Por que uma Análise Léxica?
 - *Simplicidade de Projeto*
