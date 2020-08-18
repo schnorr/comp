@@ -6,14 +6,20 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 #+EXPORT_SELECT_TAGS: export
 
-#+Title: Expressões Regulares
+#+Title: Compiladores
 #+Author: Prof. Lucas M. Schnorr (UFRGS)
 #+Date: \copyleft
 
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames, aspectratio=169, presentation]
-#+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
+
+* Expressões Regulares
+
+Prof. Lucas Mello Schnorr
+
+#+latex: \vfill\copyleft
 
 * Expressão Regular (ER)
 - Como definir uma ER?
