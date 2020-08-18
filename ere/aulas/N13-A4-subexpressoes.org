@@ -6,7 +6,7 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 #+EXPORT_SELECT_TAGS: export
 
-#+Title: Otimização de Subexpressões Comuns
+#+Title: Compiladores
 #+Author: Prof. Lucas M. Schnorr (UFRGS)
 #+Date: \copyleft
 
