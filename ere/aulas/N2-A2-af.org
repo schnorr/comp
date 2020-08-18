@@ -46,7 +46,6 @@ Função em uma linguagem de usuário
 
 
 
-
 * Diagramas de Transição
 - Coleção de nós que representam estados
 - Arestas entre estados, rotulada por um ou mais símbolos
@@ -193,18 +192,10 @@ AFND que reconhece *a**
 #+ATTR_LATEX: :width \linewidth
 [[./img/afnd_fecho.png]]
 
-_Reflexão_: tem um equívoco de abstração excessiva nesta solução!
-- Qual é o equívoco?
-
 * Exercício
 #+BEGIN_CENTER
 Construir um AFND que reconheça *(a|b)*abb*
 #+END_CENTER
-
-#+Latex: \pause
-
-# #+ATTR_LATEX: :width \linewidth
-# [[./img/afnd_exercicio.png]]
 
 * Qual o problema de AFND?
 Pontos positivos
