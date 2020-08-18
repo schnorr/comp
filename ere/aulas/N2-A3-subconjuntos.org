@@ -18,12 +18,39 @@
 #+latex: \newcommand{\mytitle}{O algoritmo de subconjuntos}
 #+latex: \mytitleslide
 
+* Construindo um analisador léxico
+
+Na ordem, de cima para baixo
+- Em parênteses: técnica de conversão
+
+#+BEGIN_CENTER
+*Várias definições de ER*
+
+(Algoritmo de Thompson) \linebreak
+
+*Vários AFND*
+
+(Concatenção com ligações vazias) \linebreak
+
+*Um único AFND*
+
+(Algoritmo de Subconjuntos) \linebreak
+
+*Um único AFD*
+
+(Gerador de código) \linebreak
+
+Função em uma linguagem de usuário
+#+END_CENTER
+
+
 * Visão Geral
 Considerando um AFND *N* e um AFD *D*
 - Cada estado de D equivale a um conjunto de estados de N
 
 #+Latex: \vfill
 
+#+attr_latex: :width 0.7\linewidth
 [[./img/afnd_afd_exemplo.png]]
  
 * Fechamento-\epsilon(s), sendo *s* um estado
