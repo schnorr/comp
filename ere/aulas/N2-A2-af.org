@@ -72,15 +72,16 @@ Autômato finito M sobre alfabeto \Sigma é (K, \Sigma, \delta, e0, F)
 
 #+Latex: \vfill
 
-K é um conjunto finito de estados
+K é um conjunto finito de estados (kappa)
 
-\Sigma é o alfabeto de símbolos da linguagem
+\Sigma é o alfabeto de símbolos da linguagem (sigma)
 
-\delta : K \times \Sigma \rightarrow K é a função de transição de estados, *parcial*
+\delta : K \times \Sigma \rightarrow K é a função de transição de estados, *parcial* (delta)
 
 e0 é o estado inicial
 
 F é o conjunto de estados finais
+
 * Exemplo de Autômato Finito
 #+BEGIN_CENTER
 Autômato que reconhece números reais e inteiros
