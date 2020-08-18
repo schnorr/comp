@@ -124,7 +124,7 @@ Estados do AFND & Estado AFD & a & b \\\toprule
 \end{tabularx}
 #+END_EXPORT
 
-* Resposta: AFD construído do AFND para =(a|b)^*abb=
+* Resposta: AFD construído do AFND para =(a|b)*abb=
 
 [[./img/afd_exemplo_3-36.png]]
 
