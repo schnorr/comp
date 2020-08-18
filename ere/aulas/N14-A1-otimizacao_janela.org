@@ -17,6 +17,9 @@
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \input{./c_style.tex}
 
+#+latex: \newcommand{\mytitle}{Otimização de Janela}
+#+latex: \mytitleslide
+
 * Otimização de Janela
 
 - Otimização de Janela (/peephole/) verifica um número específico de

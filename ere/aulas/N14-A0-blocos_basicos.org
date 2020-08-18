@@ -17,6 +17,9 @@
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \input{./c_style.tex}
 
+#+latex: \newcommand{\mytitle}{Otimização de blocos básicos}
+#+latex: \mytitleslide
+
 * Otimização de blocos básicos
 Melhora o desempenho realizando otimizações locais dentro dos
   blocos básicos.

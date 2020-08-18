@@ -17,6 +17,9 @@
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \input{./c_style.tex}
 
+#+latex: \newcommand{\mytitle}{Otimizações GCC}
+#+latex: \mytitleslide
+
 * Otimizações GCC
 - Habilitado pelas flags O0, O, O2, O3, Os, Og, Ofast
   - O0: Desliga a otimização

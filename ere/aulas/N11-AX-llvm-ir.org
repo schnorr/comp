@@ -15,6 +15,9 @@
 #+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
+#+latex: \newcommand{\mytitle}{A Representação Intermediária da linebreak Infraestrutura do Compilador LLVM}
+#+latex: \mytitleslide
+
 * Design Clássico de Compiladores
 
 Compiladores estáticos tradicionalmente são divididos em 3 fases principais:

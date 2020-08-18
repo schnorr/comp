@@ -15,11 +15,8 @@
 #+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
-* Expressões Regulares
-
-Prof. Lucas Mello Schnorr
-
-#+latex: \vfill\copyleft
+#+latex: \newcommand{\mytitle}{Expressões Regulares}
+#+latex: \mytitleslide
 
 * Expressão Regular (ER)
 - Como definir uma ER?

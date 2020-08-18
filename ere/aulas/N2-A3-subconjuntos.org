@@ -15,6 +15,9 @@
 #+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
+#+latex: \newcommand{\mytitle}{O algoritmo de subconjuntos}
+#+latex: \mytitleslide
+
 * Visão Geral
 Considerando um AFND *N* e um AFD *D*
 - Cada estado de D equivale a um conjunto de estados de N

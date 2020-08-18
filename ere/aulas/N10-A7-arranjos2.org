@@ -15,6 +15,9 @@
 #+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
+#+latex: \newcommand{\mytitle}{Endereçando Arranjos Multidimensionais}
+#+latex: \mytitleslide
+
 * Arranjos de $n-1$ dimensões com $low_k$ / $high_k$
 
 Declaração na forma: $A[low_0..high_0][low_1..high_1]..[low_{n-1}..high_{n-1}]$

@@ -17,6 +17,9 @@
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \input{./c_style.tex}
 
+#+latex: \newcommand{\mytitle}{Laços e Dominadores}
+#+latex: \mytitleslide
+
 * Otimização de Laços
    + Laços constituem um local importante para otimização
      + Laços internos ainda mais importantes

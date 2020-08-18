@@ -15,6 +15,15 @@
 #+OPTIONS:   title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
+#+latex: \newcommand{\mytitle}{Compiladores}
+#+latex: \mytitleslide
+
+* Análise Léxica
+
+Prof. Lucas Mello Schnorr
+
+#+latex: \vfill\copyleft
+
 * Revisão                                                          :noexport:
 - O que são linguagens de programação de alto nível?
 - O que é um compilador?

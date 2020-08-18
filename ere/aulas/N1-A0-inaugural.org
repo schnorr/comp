@@ -15,6 +15,9 @@
 #+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
+#+latex: \newcommand{\mytitle}{Apresentação da Disciplina}
+#+latex: \mytitleslide
+
 * O professor
 Prof. Lucas M. Schnorr
 + Prédio 43425, Sala 202

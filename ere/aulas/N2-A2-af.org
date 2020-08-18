@@ -15,6 +15,9 @@
 #+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
+#+latex: \newcommand{\mytitle}{Autômatos Finitos (Deterministas ou não)}
+#+latex: \mytitleslide
+
 * Construindo um analisador léxico
 
 Na ordem, de cima para baixo

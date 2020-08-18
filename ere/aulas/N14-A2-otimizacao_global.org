@@ -17,6 +17,9 @@
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \input{./c_style.tex}
 
+#+latex: \newcommand{\mytitle}{Otimizações Independentes de Arquitetura Globais}
+#+latex: \mytitleslide
+
 * Otimizações Independentes de Arquitetura Globais
 Otimizações que dependem de análise da interação entre os blocos
 básicos

@@ -15,6 +15,9 @@
 #+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
+#+latex: \newcommand{\mytitle}{Exercício para Código de Fluxo de Controle}
+#+latex: \mytitleslide
+
 * Esquema L-atribuído para Exercício
 
 | S | \rightarrow | attr { S.code=gera(attr.lexval) $\vert\vert$ gera(goto S.next)  }             |
