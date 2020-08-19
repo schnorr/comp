@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # -*- mode: org -*-
 
-#+Title: Projeto de Compilador: Etapa 4 para Análise Semântica
+#+Title: Projeto de Compilador
 #+Author: Lucas Mello Schnorr
 #+Date: schnorr@inf.ufrgs.br
 #+Language: pt-br
