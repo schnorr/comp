@@ -35,12 +35,9 @@ schnorr@inf.ufrgs.br
 A primeira etapa consiste em fazer um analisador léxico utilizando a
 ferramenta de geração de reconhecedores =flex=. Tu deves manter o
 arquivo =tokens.h= (fornecido) sem modificações. A função principal deve
-estar em um arquivo =main.c= separado do arquivo =scanner.l=. Isso é
-necessário para facilitar os testes automáticos, que utilizará uma
-função principal especial escrita pelo professor (muito parecida com a
-fornecida em anexo), substituindo a que você escreveu para testes e
-desenvolvimento. Tu deves usar essa estrutura de organização, mantendo
-os nomes de arquivo =tokens.h= e =scanner.l=.
+estar em um arquivo =main.c= separado do arquivo =scanner.l= para
+facilitar testes automáticos que utilizam uma função principal
+parecida com a fornecida em anexo.
 
 * Funcionalidades Necessárias
 ** Definir expressões regulares
