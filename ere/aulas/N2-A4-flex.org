@@ -86,7 +86,9 @@
     + Contagem de linhas e colunas (caso a contagem seja manual)
   + Deve estar na forma
     #+BEGIN_EXAMPLE
-     %{ ... %}
+    %{
+    ...
+    %}
     #+END_EXAMPLE
 + Contém também a declaração de ERs nomeadas
 
