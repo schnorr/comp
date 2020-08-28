@@ -1,0 +1,34 @@
+* Seção de Dúvidas da E1
+
+1) A descrição do padrão de identificadores é a seguinte:
+
+Os identificadores da linguagem são formados por um caractere
+alfabético seguido de zero ou mais caracteres alfanuméricos, onde
+considera-se caractere alfabético como letras maiúsculas ou minúsculas
+ou o caractere sublinhado e onde dígitos são 0, 1, 2, ..., 9.
+
+Sendo assim, uma sequência de caracteres sublinhada de qualquer
+tamanho sem nenhuma letra ou dígito é um identificador válido?
+Exemplo: __
+
+2) Na forma de notação científica do float tem um número positivo ou
+   negativo depois do (e|E). Quando o número é positivo é obrigatório
+   que ele tenha o sinal +? Ou pode não ter?
+
+3) O conteúdo de um char pode ser qualquer caracter? Em termos de
+   regex, podemos usar o ponto para definir o conteúdo de um char?
+
+4) O conteúdo de uma string pode ser qualquer caracter? E devemos nos
+   preocupar em escapar aspas dentro da string? E com outros
+   caracteres especiais, como \n e \t?
+
+5) Quais caracteres devem ser ignorados? Somente espaço, \n e \t?
+
+6) Ao testar o input inválido "1nv4l1d0" (que é inválido porque seria
+   um identificador começando com número), o nosso trabalho não
+   retornou o token de erro, mas sim dois tokens: ~TK_LIT_INT~ [1] e
+   ~TK_IDENTIFICADOR~ [nv4l1d0]. Esse comportamento é aceitável? Ou
+   devemos incrementar as regras para delimitar limites entre os
+   tokens? Se tivermos que delimitar limites entre os tokens, quais
+   são os padrões que encerram um token? Caracteres em branco e
+   especiais? Ou mais alguma outra coisa?
