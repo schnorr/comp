@@ -1,34 +1,134 @@
-* Seção de Dúvidas da E1
+#+TITLE: Dúvidas Projeto de Compilador
+* E1
+** DONE 2020-08-26
 
-1) A descrição do padrão de identificadores é a seguinte:
+ 1) A descrição do padrão de identificadores é a seguinte:
 
-Os identificadores da linguagem são formados por um caractere
-alfabético seguido de zero ou mais caracteres alfanuméricos, onde
-considera-se caractere alfabético como letras maiúsculas ou minúsculas
-ou o caractere sublinhado e onde dígitos são 0, 1, 2, ..., 9.
+ Os identificadores da linguagem são formados por um caractere
+ alfabético seguido de zero ou mais caracteres alfanuméricos, onde
+ considera-se caractere alfabético como letras maiúsculas ou minúsculas
+ ou o caractere sublinhado e onde dígitos são 0, 1, 2, ..., 9.
 
-Sendo assim, uma sequência de caracteres sublinhada de qualquer
-tamanho sem nenhuma letra ou dígito é um identificador válido?
-Exemplo: __
+ Sendo assim, uma sequência de caracteres sublinhada de qualquer
+ tamanho sem nenhuma letra ou dígito é um identificador válido?
+ Exemplo: __
 
-2) Na forma de notação científica do float tem um número positivo ou
-   negativo depois do (e|E). Quando o número é positivo é obrigatório
-   que ele tenha o sinal +? Ou pode não ter?
+ 2) Na forma de notação científica do float tem um número positivo ou
+    negativo depois do (e|E). Quando o número é positivo é obrigatório
+    que ele tenha o sinal +? Ou pode não ter?
 
-3) O conteúdo de um char pode ser qualquer caracter? Em termos de
-   regex, podemos usar o ponto para definir o conteúdo de um char?
+ 3) O conteúdo de um char pode ser qualquer caracter? Em termos de
+    regex, podemos usar o ponto para definir o conteúdo de um char?
 
-4) O conteúdo de uma string pode ser qualquer caracter? E devemos nos
-   preocupar em escapar aspas dentro da string? E com outros
-   caracteres especiais, como \n e \t?
+ 4) O conteúdo de uma string pode ser qualquer caracter? E devemos nos
+    preocupar em escapar aspas dentro da string? E com outros
+    caracteres especiais, como \n e \t?
 
-5) Quais caracteres devem ser ignorados? Somente espaço, \n e \t?
+ 5) Quais caracteres devem ser ignorados? Somente espaço, \n e \t?
 
-6) Ao testar o input inválido "1nv4l1d0" (que é inválido porque seria
-   um identificador começando com número), o nosso trabalho não
-   retornou o token de erro, mas sim dois tokens: ~TK_LIT_INT~ [1] e
-   ~TK_IDENTIFICADOR~ [nv4l1d0]. Esse comportamento é aceitável? Ou
-   devemos incrementar as regras para delimitar limites entre os
-   tokens? Se tivermos que delimitar limites entre os tokens, quais
-   são os padrões que encerram um token? Caracteres em branco e
-   especiais? Ou mais alguma outra coisa?
+ 6) Ao testar o input inválido "1nv4l1d0" (que é inválido porque seria
+    um identificador começando com número), o nosso trabalho não
+    retornou o token de erro, mas sim dois tokens: ~TK_LIT_INT~ [1] e
+    ~TK_IDENTIFICADOR~ [nv4l1d0]. Esse comportamento é aceitável? Ou
+    devemos incrementar as regras para delimitar limites entre os
+    tokens? Se tivermos que delimitar limites entre os tokens, quais
+    são os padrões que encerram um token? Caracteres em branco e
+    especiais? Ou mais alguma outra coisa?
+
+** DONE 2020-08-28
+*** Pergunta #1
+ mas um comportamento do analisador no terminal nos deixou com uma dúvida.
+
+ O problema ocorre quando acontece um comentário do tipo composto
+ #+BEGIN_EXAMPLE
+/* Comentario */
+ #+END_EXAMPLE
+ No terminal o comportamento é o seguinte:
+
+ #+BEGIN_EXAMPLE
+$ ./etapa1
+// lucas
+float
+2 TK_PR_FLOAT [float]
+int
+3 TK_PR_INT [int]
+x = 3 ;
+4 TK_IDENTIFICADOR [x]
+4 TK_ESPECIAL [=]
+4 TK_LIT_INT [3]
+4 TK_ESPECIAL [;]
+/* Lucas */
+float
+int
+x = 3;
+ #+END_EXAMPLE
+
+ Note que após o uso do comentário o programa não responde mais em
+ tempo real os tokens, finalizado o programa com Ctrl + D aparece os
+ valores:
+
+ #+BEGIN_EXAMPLE
+6 TK_PR_FLOAT [float]
+7 TK_PR_INT [int]
+8 TK_IDENTIFICADOR [x]
+8 TK_ESPECIAL [=]
+8 TK_LIT_INT [3]
+8 TK_ESPECIAL [;]
+ #+END_EXAMPLE
+
+ Acontece que quando esse mesma simulação é feita com um arquivo txt
+ esse comportamento é ocultado visto que a resposta só é dada no fim do
+ arquivo.
+
+ Gostaríamos de saber se esse comportamento é esperado, ou estamos com
+ um erro no nosso Trabalho.
+*** Pergunta #2
+
+Quais caracteres representam esses tokens?
+#define ~TK_OC_FORWARD_PIPE~ 289
+#define ~TK_OC_BASH_PIPE~    290
+
+*** Pergunta #3
+
+Tenho uma dúvida que para mim não ficou clara na especificação do E1.
+Para identificar tokens literais do tipo string, é permitido que essa
+string tenha o par de aspas em linhas diferentes?
+
+Por exemplo:
+"essa string
+eh valida"
+
+deve ser um token válido?
+
+*** Pergunta #4
+
+Em relação ao retorno de erro. Fica um tanto confuso o que exatamente
+tratar como erro. Exemplo que foi abordado no video de dúvidas:
+
+12nome;
+
+É correto retornar o ~TK_LIT_INT[12]~ e ~TOKEN_ERRO [nome]~,
+ou teria que se retornar um erro só?
+
+Não seria melhor retornar dois tokens válidos (~TK_LIT_INT[12]~ e
+~TK_IDENTIFICADOR[nome]~) que deixar para a análise sintática retornar
+um erro de sintaxe?
+
+PS: É preferível que eu mande as minhas dúvidas por email ou no forum
+do moodle?
+
+*** Pergunta #5
+
+1. Sobre a parte de notação científica de float, devemos considerar um
+   caso como 25E-4 Float ou para a notação precisamos que exista um
+   ponto '.' pra descrever ele, como -2.5e-3?
+
+2. Em relação a Strings, devemos tratar strings sem aspas finais ("ex
+   string aberta) como um erro total de string ou se podemos apontar
+   que as aspas iniciais correspondem ao erro (e que o restante dessa
+   string aberta corresponda a outras coisas)?
+
+*** Pergunta #6
+sobre a etapa 1 do projeto de compiladores, eu queria saber se é
+necessário retornar erro quando se abre aspas, mas não fecha, tipo
+"teste ou 't
