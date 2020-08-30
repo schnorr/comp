@@ -44,26 +44,26 @@ Estratégias descendentes
   $S \rightarrow A\ B$ \\
   $A \rightarrow c\ |\ {\epsilon}$ \\
   $B \rightarrow cbB\ |\ ca$
-+ Ela gera $S \Rightarrow^* cbca$ ?
-+ <2->Solução
++ Ela gera $S \Rightarrow^* cbca$ ? @@latex:\pause@@ Vejamos...
   #+BEGIN_EXPORT latex
-  {\scriptsize
+  {\medskip\scriptsize
   \begin{tabularx}{\textwidth}{llX}
-  S     & cbca &  escolhe $S \rightarrow AB$ \\
-  AB    & cbca &  escolhe $A \rightarrow c$ \\
+  S     & cbca &  $S \rightarrow AB$ \\
+  AB    & cbca &  $A \rightarrow c$ \\
   cB    & cbca &  consome c \\
-  B     &  bca &  sem saída, retrocede para a última escolha \\
-  AB    & cbca &  escolhe $A \rightarrow \epsilon$ \\
-  B     & cbca &  escolhe $B \rightarrow cbB$ \\
-  cbB   & cbca &  consome c \\
-  bB    & bca  &  consome b \\
-  B     & ca   &  escolhe $B \rightarrow cbB$ \\
-  cbB   & ca   &  consome c \\
-  bB    & ca   &  sem saída, retrocede para a última escolha \\
-  B     & ca   &  escolhe $B \rightarrow ca$ \\
-  ca    & ca   &  consome c \\
-  a     & a    &  consome a \\
-  $\emptyset$ & $\emptyset$ & entrada reconhecida \\
+  B     &  bca &  $B \rightarrow cbB$ \\
+  cbB   &  bca &  retrocesso \\
+  B     &  bca &  $B \rightarrow ca$ \\
+  ca    &  bca &  retrocesso \\
+  AB    & cbca &  $A \rightarrow \epsilon$ \\
+  B     & cbca &  $B \rightarrow cbB$ \\
+  cbB   & cbca &  consome c e b \\
+  B     &   ca &  $B \rightarrow cbB$ \\
+  cbB   &   ca &  consome c \\
+  bB    &    a &  retrocesso \\
+  B     &   ca &  $B \rightarrow ca$ \\
+  ca    &   ca &  consome c e a \\
+  $\empty$   & $\empty$  &  entrada reconhecida
   \end{tabularx}
   }
   #+END_EXPORT
@@ -72,7 +72,7 @@ Estratégias descendentes
 
 Fácil de implementar
 + Cada não-terminal é implementado como uma função
-+ Mas é ineficiente, custo exponencial com o tamanho da entrada
++ Mas é ineficiente, custo aumenta com o tamanho da entrada
 
 #+latex: \vfill\pause
 
