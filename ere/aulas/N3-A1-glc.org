@@ -37,7 +37,7 @@
   
 * Exemplo para Expressões Aritméticas
 - Símbolos terminais \\
-  \texttt{id - - * / ( )}
+  #+latex: \texttt{id + - * / ( )}
 - Não-terminais \\
   S, expressão, termo, fator
 #+Latex: \pause\vfill
