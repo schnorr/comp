@@ -132,3 +132,79 @@ do moodle?
 sobre a etapa 1 do projeto de compiladores, eu queria saber se é
 necessário retornar erro quando se abre aspas, mas não fecha, tipo
 "teste ou 't
+** TODO 2020-08-30
+*** Pergunta #1
+
+Apesar dos diversos testes que estamos fazendo para assegurar o
+correto funcionamento do scanner, pensei que seria interessante para
+todos se você fornecesse um arquivo de teste e o correspondente output
+esperado com alguns "corner cases". Acho que diversas dúvidas de
+interpretação da especificação seriam resolvidas assim. Seria
+apropriado? Seria possível?
+
+*** Pergunta #2
+
+Estou com algumas dúvidas sobre o trabalho de compiladores:
+
+1) Conforme os vídeos de dúvidas anteriores, as sequências "10." e
+   "10.e" não podem ser reconhecidas como float. Assim, elas devem ser
+   tratadas como erro, ou o analisador pode reconhecer ~TK_LIT_INT[10]~
+   ~TK_ESPECIAL[.]~ e ~TK_LIT_INT[10]~ ~TK_ESPECIAL[.]~ ~TK_IDENTIFICADOR[e]~,
+   e tratar esses erros em etapas futuras?
+
+2) Os caracteres especiais que o analisador deve reconhecer são apenas
+   os 24 listados na especificação, ou devemos incluir também os
+   caracteres que aparecem no switch da função main e não estão na
+   seção 3.2?
+
+*** Pergunta #3
+
+   Qual é exatamente o lexema da string e charater? Pelo o que entendi,
+   não fariam parte deles seus delimitadores, isto é, " e ', e assim eu
+   deveria retornar como match somente a sessão de caracteres entre
+   esses delimitadores.
+
+   Além disso, sobre esses literais, tenho dúvidas sobre o critério de
+   erro definido no último vídeo. Nele você comenta sobre como, ao
+   encontrar uma string aberta, deveríamos retornar o ponto do erro como
+   a primeira aspa dupla, o que implicaria que continuaríamos
+   reconhecendo as próximas palavras como quaisquer outros possíveis
+   tokens. Enquanto, de fato, ambos clang e gcc retornem como ponto do
+   erro a primeira aspa dupla, eles não reclamam sobre a falta de
+   sentido sobre os próximos tokens, o que me leva a crer que eles
+   reconhecem todos os caracteres desde a aspa dupla até o final da
+   linha como um token de erro. Não seria uma melhor escolha
+   implementarmos o comportamento dessa maneira?
+
+*** Pergunta #4
+
+   Não me ficaram muito claros os detalhes sobre componentes finais da
+   nossa entrega. Isto é, entendi que precisamos entregar um diretório
+   com um Makefile pronto para construir o executável que será testado,
+   mas onde esse executável precisa ser criado (na raiz ou numa pasta
+   build ou release ou entrega)? E qual deve ser o nome dele? Precisamos
+   fornecer alguma documentação adicional junto a esse diretório, fora a
+   documentação do código?
+*** Pergunta #5
+
+enquanto fazia o trabalho surgiram algumas dúvidas sobre o uso de +/-
+na sinalização de inteiros/floats.
+
+Ao digitar algo do tipo "1+2" (sem espaço algum) existem duas formas
+de retornar os tokens:
+
+~TK_LIT_INT[1]~
+~TK_LIT_INT[+2]~
+
+ou então
+~TK_LIT_INT[1]~
+~TK_ESPECIAL[+]~
+~TK_LIT_INT[2]~
+
+Qual das maneiras seria a forma correta de separar esta entrada?
+
+*** Pergunta #6
+
+Para o exemplo 123-123 nosso analisador esta identificando
+~TK_LIT_INT[123]~ e ~TK_LIT_INT[-123]~. Esse comportamento está correto, ou o
+esperado seriam três tokens: ~TK_LIT_INT[123]~ ~TK_ESPECIAL[-]~ ~TK_LIT_INT[123]~?
