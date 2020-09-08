@@ -132,7 +132,7 @@ do moodle?
 sobre a etapa 1 do projeto de compiladores, eu queria saber se é
 necessário retornar erro quando se abre aspas, mas não fecha, tipo
 "teste ou 't
-** TODO 2020-08-30
+** DONE 2020-08-30
 *** Pergunta #1
 
 Apesar dos diversos testes que estamos fazendo para assegurar o
@@ -185,6 +185,7 @@ Estou com algumas dúvidas sobre o trabalho de compiladores:
    build ou release ou entrega)? E qual deve ser o nome dele? Precisamos
    fornecer alguma documentação adicional junto a esse diretório, fora a
    documentação do código?
+
 *** Pergunta #5
 
 enquanto fazia o trabalho surgiram algumas dúvidas sobre o uso de +/-
@@ -208,3 +209,14 @@ Qual das maneiras seria a forma correta de separar esta entrada?
 Para o exemplo 123-123 nosso analisador esta identificando
 ~TK_LIT_INT[123]~ e ~TK_LIT_INT[-123]~. Esse comportamento está correto, ou o
 esperado seriam três tokens: ~TK_LIT_INT[123]~ ~TK_ESPECIAL[-]~ ~TK_LIT_INT[123]~?
+** TODO 2020-08-31
+*** Pergunta #1
+
+Professor, no vídeo respondeste uma pergunta sobre os caracteres
+especiais, explicando que haviam na verdade 28 caracteres (e até
+mostrou uma definição com 2, mas na definição que temos disponível no
+moodle existem de fato apenas 24 caraceteres listados (os caracteres
+'?', '~', '@' e '`' não estão presentes). Qual das definições é a
+válida ?
+
+*** Comentário sobre a questão do ~TOKEN_ERRO~
