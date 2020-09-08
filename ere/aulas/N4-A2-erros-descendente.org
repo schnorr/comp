@@ -24,9 +24,9 @@ Descarte a entrada até achar um *token de sincronismo*
 - Uma possível: utilizar o conjunto Sequência(A)
 #+latex: \pause\vfill
 
-Exemplo para a gramática de operadores aritméticos
-
 #+latex: \scriptsize
+
+Exemplo para a gramática de operadores aritméticos
 |   |    | id      | +         | *        | (       | )      | $      |
 |---+----+---------+-----------+----------+---------+--------+--------|
 | / | <> | <>      | <>        | <>       | <>      | <>     | <>     |
