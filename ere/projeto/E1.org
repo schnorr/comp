@@ -141,8 +141,8 @@ Os caracteres simples especiais empregados pela linguagem são listados
 abaixo separados apenas por espaços, e devem ser retornados com o
 próprio código =ASCII= convertido para inteiro. São eles:
 #+BEGIN_EXAMPLE
- ,   ;   :   (   )   [   ]   {   }   +   -   |   ?   @
- *   /   <   >   =   !   &   %   #   ^   .   $   ~   `
+ ,   ;   :   (   )   [   ]   {   }   +   -   |
+ *   /   <   >   =   !   &   %   #   ^   .   $
 #+END_EXAMPLE
 
 ** Operadores Compostos
