@@ -52,21 +52,22 @@ Utiliza uma *pilha explícita* (ao invés de recursão)
 
 
 Sendo a gramática de cadeias de parênteses balanceados
-| S | \rightarrow ( S ) S \vert \epsilon |
+| S | \rightarrow (S)S \vert \epsilon |
 
 #+latex: \vfill\pause
 Análise da entrada *()*
 
 Pilha com $, Tokens da entrada e $, _Tabela com ações_
 
-| Pilha de análise sintática | Entrada | Ação        |
-|----------------------------+---------+-------------|
-| $ S                        | () $    | S \rightarrow ( S ) S |
-| $ S ) S (                  | () $    | casamento   |
-| $ S ) S                    | ) $     | S \rightarrow \epsilon       |
-| $ S )                      | ) $     | casamento   |
-| $ S                        | $       | S \rightarrow \epsilon       |
-| $                          | $       | aceita      |
+#+attr_latex: :align rrl
+| Pilha       | Entrada | Ação              |
+|-------------+---------+-------------------|
+| S         $ | () $    | S \rightarrow (S)S  \pause  |
+| (S)S     $  | () $    | casamento \pause  |
+| S)S     $   | ) $     | S \rightarrow \epsilon     \pause  |
+| )S     $    | ) $     | casamento  \pause |
+| S     $     | $       | S \rightarrow \epsilon     \pause  |
+| $           | $       | aceita            |
 
 + Relação com passos de *derivação à esquerda* da cadeia
 + Decisões guiadas pela *Tabela de Análise Sintática LL(1)*
@@ -79,7 +80,7 @@ Etapas
 + <2->Se X \equal\equal $ e a \equal\equal $ $\leadsto$ Reconheceu a sentença
 + <3->Se X \equal\equal a e a != $ $\leadsto$ Desempilha e avança
 + <4->Se X é um não-terminal $\leadsto$ Consulta a tabela M[X,a]
-  + Se contém X \rightarrow UVW $\leadsto$ Empilha WVU
+  + Se contém X \rightarrow UVW $\leadsto$ Empilha o corpo
   + <5->Se for vazia $\leadsto$ tratamento de erros
 * Tabela de Análise Sintática LL(1)
 Correlaciona cada não-terminal com cada terminal \Rightarrow \alert{M[NT,T]}
@@ -119,6 +120,7 @@ A tabela guia as ações de empilhamento da análise LL(1)
    \normalsize
 * Resposta
 
+#+latex: {\scriptsize
 | Pilha    | Entrada    | Ação       |
 |----------+------------+------------|
 | E %      | id+id*id % | E -> TE'   |
@@ -138,6 +140,7 @@ A tabela guia as ações de empilhamento da análise LL(1)
 | T'E' %   | %          | T' -> \epsilon    |
 | E' %     | %          | E' -> \epsilon    |
 | %        | %          | aceita     |
+#+latex: }
 
 * Análise Preditiva Tabular -- Exemplo 2
    + Reconhecer \textbf{ibtibtaeaea}
@@ -160,6 +163,7 @@ A tabela guia as ações de empilhamento da análise LL(1)
 
 * Resposta
 
+#+latex: {\scriptsize
 | Pilha      | Entrada       | Ação        |
 |------------+---------------+-------------|
 | S %        | ibtibtaeaea % | S -> iEtSS' |
@@ -175,6 +179,7 @@ A tabela guia as ações de empilhamento da análise LL(1)
 | SS'S' %    | aeaea %       | S -> a      |
 | aS'S' %    | aeaea %       | casamento   |
 | S'S' %     | eaea %        |             |
+#+latex: }
 
 Escolhendo
 

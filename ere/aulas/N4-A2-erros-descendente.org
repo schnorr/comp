@@ -45,4 +45,4 @@ Funcionamento
 
 #+latex: \vfill
 
-Teste as entradas erradas: \textbf{+ id * + id} \hfill \textbf{) id * + id}
+Teste as entradas erradas: \textbf{+ id * + id} \hfill \textbf{id + + id}
