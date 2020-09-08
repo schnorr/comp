@@ -73,15 +73,16 @@ utilizados durante a avaliação automática.
 ** Remoção de conflitos gramaticais
 
 Deve-se realizar a remoção de conflitos [[http://www.gnu.org/software/bison/manual/html_node/Reduce_002fReduce.html][Reduce/Reduce]] e [[http://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html][Shift/Reduce]]
-de todas as regras gramaticais. Estes conflitos devem ser tratados
-através do uso de configurações para o bison (veja a documentação
-sobre =%left=, =%right= ou =%nonassoc=). Os mesmos podem ser observados
-através de uma análise cuidadosa do arquivo =parser.output= gerado
-automaticamente quando o bison é compilado com a opção =--report-file=.
-Sugere-se um processo construtivo da especificação em passos,
-verificando em cada passo a inexistência de conflitos. Por vezes, a
-remoção de conflitos pode ser feita somente através de uma revisão
-mais profunda de partes da gramática.
+de todas as regras gramaticais. Estes conflitos podem ser tratados de
+duas formas. Reescrevendo a gramática de maneira a evitar os conflitos
+(recomendada) ou através do uso de configurações para o bison (veja a
+documentação sobre =%left=, =%right= ou =%nonassoc=). Os conflitos podem ser
+compreendidos através de uma análise cuidadosa do arquivo
+=parser.output= gerado automaticamente quando o bison é compilado com a
+opção =--report-file=.  Sugere-se fortemente um processo construtivo da
+especificação em passos, verificando em cada passo a inexistência de
+conflitos. Por vezes, a remoção de conflitos pode ser feita somente
+através de uma revisão mais profunda de partes da gramática.
 
 * A Linguagem
 
@@ -92,13 +93,15 @@ em qualquer ordem.
 
 ** Declarações de Variáveis Globais
 
-As variáveis são declaradas pelo tipo seguido de seu nome. O tipo
-pode estar precedido opcionalmente pela palavra reservada =static=. A
-linguagem inclui também a declaração de vetores, feita pela definição
-de seu tamanho inteiro positivo entre colchetes, colocada à direita do
-nome.  Variáveis podem ser dos tipos primitivos =int=, =float=, =char=, =bool=
-e =string=.  As declarações de variáveis globais são terminadas por
-ponto-e-vírgula, e não podem receber valores de inicialização.
+As variáveis são declaradas pelo tipo seguido de uma lista composta de
+pelo menos um nome de variável (identificador) separadas por
+vírgula. O tipo pode estar precedido opcionalmente pela palavra
+reservada =static=. A linguagem inclui também a declaração de vetores,
+feita pela definição de seu tamanho inteiro positivo entre colchetes,
+colocada à direita do nome.  Variáveis podem ser dos tipos primitivos
+=int=, =float=, =char=, =bool= e =string=.  As declarações de variáveis globais
+são terminadas por ponto-e-vírgula, e não podem receber valores de
+inicialização.
 
 ** Definição de Funções
 
@@ -143,9 +146,10 @@ operador composto <= e de um identificador ou literal.
 #+BEGIN_CENTER
 *Comando de Atribuição*
 #+END_CENTER
-Existe apenas uma forma de atribuição para identificadores cujo tipo é
-primitivo. Identificadores de tipos primitivos simples podem receber
-valores assim:
+Existe apenas uma forma de atribuição para
+identificadores. Identificadores podem receber valores assim
+(primeiro caso de um identificador simples; segundo caso de um
+identificador que é um vetor):
 #+BEGIN_EXAMPLE
 identificador = expressão
 identificador[expressão] = expressão
@@ -154,10 +158,10 @@ identificador[expressão] = expressão
 #+BEGIN_CENTER
 *Comandos de Entrada e Saída*
 #+END_CENTER
-Identificado pela palavra reservada =input=, seguida de uma expressão.
-O comando de saída é identificado pela palavra reservada =output=,
-seguida de uma lista obrigatória de expressões separadas por vírgulas,
-onde cada expressão não pode ser vazia.
+Para entrada de dados, o comando tem a palavra reservada =input=,
+seguida de um identificador.  O comando de saída é identificado pela
+palavra reservada =output=, seguida de um identificador ou de um
+literal.
 
 #+BEGIN_CENTER
 *Chamada de Função*
@@ -171,8 +175,8 @@ ser uma expressão.
 #+END_CENTER
 Sendo número um literal inteiro positivo, temos os exemplos válidos
 abaixo. Os exemplos são dados com =<<=, mas as entradas são
-sintaticamente válidas também para =>>=. Os exemplos são dados com =número=, mas
-são válidas com =expressão=.
+sintaticamente válidas também para =>>=. O ~número~ deve ser representado
+por um literal inteiro.
 #+BEGIN_EXAMPLE
 identificador << número
 identificador[expressão] << número
@@ -197,19 +201,14 @@ if (expressão) bloco else bloco
 #+END_EXAMPLE
 As construções iterativas são as seguintes no formato:
 #+BEGIN_EXAMPLE
-for (lista: expressão: lista) bloco
+for (atrib: expressão: atrib) bloco
 while (expressão) do bloco
 #+END_EXAMPLE
 
-Os dois marcadores =lista= do comando =for= são listas de comandos
-separados por vírgula. Como os marcadores =lista= do comando =for= não são
-blocos de comandos, os comandos simples destas listas não devem ser
-terminados por ponto-e-vírgula.  Estas listas não podem ser
-vazias. Nas duas listas dentro do =for= não podem aparecer comandos
-simples que contenham vírgulas.
-
-Em todas as construções de controle de fluxo, o termo =bloco= indica um
-bloco de comandos. Este não tem ponto-e-vírgula nestas situações.
+Os dois marcadores =atrib= do comando =for= representa o comando de
+atribuição, único aceito nestas posições.  Em todas as construções de
+controle de fluxo, o termo =bloco= indica um bloco de comandos. Este não
+tem ponto-e-vírgula nestas situações.
 
 # =foreach=
 # =switch= / =case=
@@ -240,7 +239,7 @@ deve aceitar qualquer operadores e subexpressão de um desses tipos
 como válidos, deixando para a análise semântica das próximas etapas do
 projeto a tarefa de verificar a validade dos operandos e operadores.
 
-Os operadores são os seguintes (com uma possível semântica associada):
+Os operadores são os seguintes:
 
 - Unários (todos prefixados)
   - =+= sinal positivo explícito
