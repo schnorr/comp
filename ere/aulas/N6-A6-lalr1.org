@@ -41,16 +41,16 @@ LR(1) possui muitos estados com os mesmos itens
 :BEAMER_col: 0.5
 :END:
 
-#+ATTR_LATEX: :width \textwidth
-[[./A-lr1.png]]
+#+ATTR_LATEX: :width .8\linewidth
+[[./img/A-lr1.png]]
 
 ** LR(0)                                                             :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.5
 :END:
 
-#+ATTR_LATEX: :width \textwidth
-[[./A-lr0.png]]
+#+ATTR_LATEX: :width .8\linewidth
+[[./img/A-lr0.png]]
 
 * Primeiro princípio
 
@@ -64,7 +64,7 @@ Núcleo de um estado de itens LR(1) é um estado de itens LR(0)
 :END:
 
 #+ATTR_LATEX: :width \textwidth
-[[./A-lr1.png]]
+[[./img/A-lr1.png]]
 
 ** LR(0)                                                             :BMCOL:
 :PROPERTIES:
@@ -72,7 +72,7 @@ Núcleo de um estado de itens LR(1) é um estado de itens LR(0)
 :END:
 
 #+ATTR_LATEX: :width \linewidth
-[[./A-lr0.png]]
+[[./img/A-lr0.png]]
 
 * Segundo princípio
 
@@ -87,8 +87,8 @@ Os estados s_1 e s_2 de itens LR(1) com núcleo igual
 
 #+latex: \vfill
 
-#+ATTR_LATEX: :width .6\textwidth
-[[./A-lr1.png]]
+#+ATTR_LATEX: :width .4\textwidth
+[[./img/A-lr1.png]]
 
 * Construção (algoritmo informal)
 
@@ -98,8 +98,8 @@ Começar com o autômato LR(0)
 + Propagar /lookaheads/ durante o fechamento e transição
 #+latex: \vfill
 
-#+ATTR_LATEX: :width .7\textwidth
-[[./A-lr0.png]]
+#+ATTR_LATEX: :width .5\textwidth
+[[./img/A-lr0.png]]
 
 * Exercício
 
