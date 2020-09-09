@@ -25,21 +25,17 @@ Entrada: =ccbca=
 | A | \rightarrow | c \vert \epsilon    |
 | B | \rightarrow | cbB \vert ca |
 
-#+BEGIN_CENTER
 Análise Descendente
 
 *S* \Rightarrow_{S \rightarrow AB} AB \Rightarrow_{A \rightarrow c} cB \Rightarrow_{B \rightarrow cbB} ccbB \Rightarrow_{B \rightarrow ca} *ccbca*
-#+END_CENTER
 
 #+latex: \pause
 
-#+BEGIN_CENTER
 Análise Ascendente
 
 *ccbca* \Rightarrow_{A \rightarrow c} Acbca \Rightarrow_{B \rightarrow ca} AcbB \Rightarrow_{B \rightarrow cbB} AB \Rightarrow_{S \rightarrow AB} *S*
-#+END_CENTER
 
-#+latex: \vfill
+#+latex: \vfill\pause
 
 Análise Ascendente
 - Mais sofisticada (aceita recursão à esquerda)
@@ -94,7 +90,6 @@ Observações
 - Subcadeia que casa com o corpo de uma produção
 - Sua redução garante a derivação mais à direita
 
-#+BEGIN_CENTER
 *Definição formal* \\
 #+Latex: \scriptsize
 (considerando derivações mais à direita)
@@ -104,18 +99,15 @@ S \Rightarrow^{*} \alpha A \omega \Rightarrow \alpha \beta \omega
 
 Então, \beta é um /handle/ de \alpha \beta \omega \\
 (sendo que \omega contém apenas símbolos terminais)
-#+END_CENTER
 
 #+Latex: \pause
 
-#+BEGIN_CENTER
 *Poda do Handle*
 
 Permite reverter um passo de uma derivação mais à direita
 
 S = \gamma_0 \Rightarrow \gamma_1 \Rightarrow ... \Rightarrow \gamma_{n-1} \Rightarrow \gamma_n = \mu \\
 Localiza-se \beta_n em \gamma_n, escolhe-se uma A_n \rightarrow \beta_n para obter \gamma_{n-1}
-#+END_CENTER
 
 #+Latex: \vfill\pause
 
@@ -206,9 +198,13 @@ Duas situações onde não funciona
 |      |   | *if* expr *then* stmt *else* stmt |
 |      |   | *other*                       |
 
-O que fazer?
+#+latex: \pause
 
-| Pilha                   |    Entrada |
-|-------------------------+------------|
-| <l>                     |        <r> |
-| $ ... *if* expr *then* stmt | *else* ... $ |
+O que fazer neste exemplo de conflito *Empilha-Reduz*?
+
+
+| / | >                       | <          |
+|   | Pilha                   |    Entrada |
+|---+-------------------------+------------|
+|   | <l>                     |        <r> |
+|   | $ ... *if* expr *then* stmt | *else* ... $ |

@@ -84,13 +84,13 @@ factor : '(' expr ')'  | ID | NUM;
      #+BEGIN_SRC bash
 bison -d parser.y
 flex scanner.l
-gcc -c lex.yy.c y.tab.c
-gcc -o parser lex.yy.o y.tab.o -lfl     
+gcc -c lex.yy.c parser.tab.c
+gcc -o parser lex.yy.o parser.tab.o -lfl     
      #+END_SRC
    \vfill
    + *scanner.l* deve incluir na seção de definições
      #+BEGIN_SRC C
-     #include "y.tab.h"
+     #include "parser.tab.h"
      #+END_SRC
 * Miscelânea
    + As regras da gramática
@@ -105,10 +105,10 @@ gcc -o parser lex.yy.o y.tab.o -lfl
    + Não pode olhar mais que um token de /lookahead/
    + =bison -v parser.y= gera a tabela de estados
 * Exemplo (Lex) -- arquivo \texttt{scanner.l}
-   #+begin_src LEX
+   #+begin_src LEX :tangle scanner.l
 %{
 #include <stdio.h>
-#include "y.tab.h"
+#include "parser.tab.h"
 %}
 id [_a-zA-Z][_a-zA-Z0-9]*
 wspc [ \t\n]+
@@ -124,20 +124,27 @@ float { return FLOAT; }
 {wspc} {;}
    #+end_src
 * Exemplo (Bison) -- arquivo \texttt{parser.y}
-#+begin_src YACC
+#+begin_src YACC :tangle parser.y
 %{
 #include <stdio.h>
 #include <stdlib.h>
 %}
-%start line
-%token CHAR, COMMA, FLOAT, ID, INT, SEMI
+%start decl
+%token CHAR COMMA FLOAT ID INT SEMI
 %%
-decl : type ID list { printf("Success!\n"); } ;
+decl : type ID list;
 list : COMMA ID list | SEMI;
 type : INT | CHAR | FLOAT;
 %%
 #+end_src
-+ Notem uma ação para a regra \texttt{decl}
+* Ações simples
+Cada regra pode ter *ações* (código em C)
+
+Exemplo
+#+BEGIN_SRC YACC
+decl : type ID list { printf ("Sucesso!\n"); };
+#+END_SRC
+
 * Ações e Atributos
    + Cada regra pode ter \alert{ações} (semânticas)
    + Exemplo

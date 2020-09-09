@@ -67,10 +67,12 @@ Definição de Item LR(0) de uma gramática
 
 Supondo a produção A \rightarrow \beta\gamma, três itens possíveis
 + A \rightarrow \bullet \beta\gamma \\
-  Um item que é uma *possibilidade*
+  Um item que é uma *possibilidade* 
+#+latex: \pause
 + A \rightarrow \beta \bullet \gamma \\
   (Progredimos reconhecendo \beta)\\
   Um item *parcialmente completo*
+#+latex: \pause
 + A \rightarrow \beta\gamma \bullet \\
   \beta\gamma estão empilhados \\
   Um item *completo*
@@ -121,14 +123,20 @@ Construir o autômato a partir de S' \rightarrow \bullet S
 #+Latex: \vfill\pause
 
 #+BEGIN_CENTER
-Qual o problema deste autômato? E qual a solução?
+Okay, temos um autômato com estado inicial e final.
+
+#+latex: \pause
+
+Mas qual o problema deste autômato?
 #+END_CENTER
 
 #+Latex: \pause
 
 #+BEGIN_CENTER
-_Indeterminismo_ e _Ausência de Estado Inicial_
+_Indeterminismo_
 #+END_CENTER
+
+#+latex: \pause
 
 #+BEGIN_CENTER
 Algoritmo de Subconjuntos
@@ -137,7 +145,6 @@ Algoritmo de Subconjuntos
 Fechamento-\epsilon(T) e Fechamento-\epsilon(Movimento(T,a))
 #+latex: \normalsize
 
-Estender a gramática
 #+END_CENTER
 * Discussão sobre LR(0)
 Estender a gramática é simples
@@ -164,9 +171,11 @@ Será que não há uma forma mais rápida?
 #+latex: \pause
 
 #+BEGIN_CENTER
-Solução: aplicar o algoritmo de subconjuntos interativamente
+Solução: aplicar o algoritmo de
 
-Fechamento e Transição
+subconjuntos instantaneamente
+
+*Fechamento* e *Transição*
 #+END_CENTER
 
 * Função de Fechamento
@@ -238,8 +247,26 @@ Se =I= = { [E' \rightarrow E\bullet], [E \rightarrow E\bullet + T] }
   |---+-------------+---------------|
 + Transição(=I=, $) leva para *Aceita*
   
-* Autômato completo para a gramática anterior
-#+ATTR_LATEX: :width .57\linewidth
+* Autômato completo
+** Gramática                                                         :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+
+| E' \rightarrow E  |
+| E \rightarrow E+T |
+| E \rightarrow T   |
+| T \rightarrow T*F |
+| T \rightarrow F   |
+| F \rightarrow (E) |
+| F \rightarrow id  |
+
+** Autômato
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+
+#+ATTR_LATEX: :width .8\linewidth
 [[./img/lr0-4-31.png]]
 
 * Construindo um exemplo completo
@@ -249,6 +276,36 @@ Gramática de parênteses balanceados com um *a* no meio
 
 Utilizando as funções de fechamento e transição
 - Construa o autômato finito determinístico LR(0)
+* Construindo a tabela (Exemplo)
+
+| 0 | A' \rightarrow A  |
+| 1 | A \rightarrow (A) |
+| 2 | A \rightarrow a   |
+
+#+BEGIN_CENTER
+Transforme o autômato LR(0) em formato tabular
+#+END_CENTER
+
+#+latex: \vfill\pause
+
+|        | <c>  | <c>  | <c>  | <c> | <c> |
+| Estado | (    | a    | )    | $   | A   |
+|      / | <    |      |      | >   |     |
+|--------+------+------+------+-----+-----|
+|      0 | 3    | 2    |      |     | 1   |
+|      1 |      |      |      | a   |     |
+|      2 | R(2) | R(2) | R(2) |     |     |
+|      3 | 3    | 2    |      |     | 4   |
+|      4 |      |      | 5    |     |     |
+|      5 | R(1) | R(1) | R(1) |     |     |
+
+#+latex: \vfill
+
+#+BEGIN_CENTER
+Analisando a entrada *((a))*
+#+END_CENTER
+
+
 * Representação tabular do autômato LR(0)
 #+latex: \vfill
 _Ação_: empilha ou reduz
@@ -269,34 +326,3 @@ _Transição_: empilha
 #+BEGIN_CENTER
 Estado inicial é aquele construído a partir de [S' \rightarrow \bullet S] \\
 #+END_CENTER
-
-* Construindo a tabela (Exemplo)
-
-| 0 | A' \rightarrow A  |
-| 1 | A \rightarrow (A) |
-| 2 | A \rightarrow a   |
-
-#+BEGIN_CENTER
-Transforme o autômato LR(0) em formato tabular
-#+END_CENTER
-
-#+latex: \vfill\pause
-
-|        | <c>  | <c>  | <c>  | <c> | <c> |
-| Estado | (    | a    | )    | $   | A   |
-|      / | <    |      |      | >   |     |
-|--------+------+------+------+-----+-----|
-|      0 | 3    | 2    |      |     | 1   |
-|      1 | R(0) | R(0) | R(0) | a   |     |
-|      2 | R(2) | R(2) | R(2) |     |     |
-|      3 | 3    | 2    |      |     | 4   |
-|      4 |      |      | 5    |     |     |
-|      5 | R(1) | R(1) | R(1) |     |     |
-
-#+latex: \vfill
-
-#+BEGIN_CENTER
-Analisando a entrada *((a))*
-#+END_CENTER
-
-

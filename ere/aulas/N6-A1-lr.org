@@ -86,16 +86,21 @@ Após uma ação de redução, há uma transição
 
 ** Gramática                                                         :BMCOL:
 :PROPERTIES:
-:BEAMER_col: 0.2
+:BEAMER_col: 0.1
 :END:
 
-| /   | <       |
-| (1) | E \rightarrow E+T |
-| (2) | E \rightarrow T   |
-| (3) | T \rightarrow T*F |
-| (4) | T \rightarrow F   |
-| (5) | F \rightarrow (E) |
-| (6) | F \rightarrow id  |
+| (1)     |
+| E \rightarrow E+T |
+| (2)     |
+| E \rightarrow T   |
+| (3)     |
+| T \rightarrow T*F |
+| (4)     |
+| T \rightarrow F   |
+| (5)     |
+| F \rightarrow (E) |
+| (6)     |
+| F \rightarrow id  |
 
 #+BEGIN_EXPORT latex
 \vrule{}
@@ -103,7 +108,7 @@ Após uma ação de redução, há uma transição
 
 ** Tabela                                                            :BNCOL:
 :PROPERTIES:
-:BEAMER_col: 0.85
+:BEAMER_col: 0.6
 :END:
 
 |   |     | id  | +    | $*$  | (   | )    | $    | E   | T   | F   |
@@ -123,3 +128,7 @@ Após uma ação de redução, há uma transição
 |   | 10  |     | R(3) | R(3) |     | R(3) | R(3) |     |     |     |
 |   | 11  |     | R(5) | R(5) |     | R(5) | R(5) |     |     |     |
 
+** Fake Column
+:PROPERTIES:
+:BEAMER_col: 0.2
+:END:
