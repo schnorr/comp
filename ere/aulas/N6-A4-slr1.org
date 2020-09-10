@@ -21,7 +21,9 @@
 * Introdução
 Funciona sobre o autômato LR(0)
 
-Utiliza um token de /lookahead/ de duas formas
+#+latex: \pause
+
+Algoritmo SLR(1) utiliza um token de /lookahead/ de duas formas
   + Garantir a exitência de uma transição válida no autômato
   + Utiliza o _Sequência(A)_ para decidir sobre as reduções
 #+latex: \vfill\pause
