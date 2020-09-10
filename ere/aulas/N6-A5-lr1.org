@@ -67,14 +67,16 @@ Item LR(1)
 Para a produção A \rightarrow \beta\gamma, e um token a de /lookahead/
 
 Três itens são possíveis
-+ [A \rightarrow \bullet \beta\gamma, a]
++ [A \rightarrow \bullet \beta\gamma, a] 
+#+latex: \pause
 + [A \rightarrow \beta \bullet \gamma, a]
+#+latex: \pause
 + [A \rightarrow \beta\gamma \bullet, a] \\
   \beta\gamma estão empilhados, podemos reduzir se a = lookahead
 
 * Itens LR(1) importantes
 
-Considerando a gramática de listas de parênteses balanceados
+Considerando a gramática de listas de parênteses balanceados, já estendida
 | *S* | \rightarrow | L           |
 | L | \rightarrow | L P \vert P     |
 | P | \rightarrow | ( P ) \vert ( ) |
@@ -86,6 +88,8 @@ Considerando a gramática de listas de parênteses balanceados
 #+END_CENTER
 
 | [S \rightarrow \bullet L, $] |
+
+#+latex: \pause
 
 #+BEGIN_CENTER
 *Estado Final*
