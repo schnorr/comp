@@ -1,0 +1,1262 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Compiladores
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames, aspectratio=169, presentation]
+#+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+#+latex: \newcommand{\mytitle}{\texttt{ellerre} - An LR automata generator}
+#+latex: \mytitleslide
+
+* ~ellerre~ - An LR automata generator
+
+Motivação
+- Várias listas de exercícios de análise sintática
+  - Frequentes demandas para resolução
+- Existência de algoritmos estabelecidos para resolução
+- Possibilidade de automatizar a correção de exercícios
+
+#+latex: \vfill\pause
+
+Ferramenta ~ellerre~ \rightarrow Um gerador de autômatos LR
+- Início em Outubro de 2015
+  - Em hibernação por 4 anos
+- Em Setembro de 2019
+  - Reativação com o pós-graduando Marcelo Miletto
+    - Atividade didática durante seu mestrado
+#+latex: \pause
+- Implementação em ~C++11~, compilação por ~CMake~
+  - Código regrado pela licença GPLv3
+#+latex: \pause
+- Funcionalidades em Setembro de 2020
+  - Cálculo dos conjuntos Primeiro e Sequência
+  - Geração dos autômatos LR(0), LR(1) e LALR(1)
+
+* Obter os fontes e compilar
+
+Disponível no GitHub, em:
+https://github.com/schnorr/ellerre.git
+
+Clone do repositório, compilação
+
+#+BEGIN_SRC bash
+git clone https://github.com/schnorr/ellerre.git
+mkdir -p ellerre/build
+cmake ..
+#+END_SRC
+
+#+latex: \pause
+
+Quatro ferramentas
+- ~firstfollow~ -- Cálculo dos conjuntos Primeiro e Sequência
+- ~lr0~ -- Autômato LR(0)
+- ~lr1~ -- Autômato LR(1)
+- ~lalr1~ -- Autômato LALR(1)
+
+#+latex: \pause
+
+Todas tem um funcionamento similar
+- *Na entrada padrão*, texto com a especificação da gramática
+- Saída pode ser textual, ou gráfica
+
+* Formato para especificação de gramática
+
+Exemplo com a gramática do exercício de N3 A6
+
+|---------------|
+| S \rightarrow XYZ       |
+| X \rightarrow aXb \vert \epsilon   |
+| Y \rightarrow cYZcX \vert d |
+| Z \rightarrow eZYe \vert f  |
+|---------------|
+
+#+latex: \pause
+
+#+latex: {\small
+#+BEGIN_EXAMPLE
+S => X Y Z ;
+X => a X b | ;
+Y => c Y Z c X | d ;
+Z => e Z Y e | f;
+#+END_EXAMPLE
+#+latex: }
+
+#+latex: \vfill{\scriptsize
+
+Especificação da gramática
+- Separação entre cabeça e corpo representada por ~=>~
+- Finalização de cada produção com ~;~
+- Alternativa com ~|~
+- Não-terminais em maiúscula, terminas em minúscula
+- Separação entre símbolos com o caracter espaço
+- O \epsilon (vazio) deve ser representado pela ausência de símbolos
+- Não-terminal inicial da gramática é a cabeça da primeira produção
+#+latex: \pause
+/Frontend/ das ferramentas ~ellerre~ \rightarrow *detecta erros sintáticos com /bison/*
+
+#+latex: }
+
+* ~firstfollow~ -- Calcula Primeiro/Sequência
+** Entrada
+:PROPERTIES:
+:BEAMER_col: 0.2
+:BEAMER_opt: [t]
+:END:
+
+#+latex: {\scriptsize
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+cat n3a6.ee
+#+END_SRC
+
+#+RESULTS:
+: S => X Y Z ;
+: X => a X b | ;
+: Y => c Y Z c X | d ;
+: Z => e Z Y e | f;
+
+#+latex: }
+
+** Utilização
+:PROPERTIES:
+:BEAMER_col: 0.3
+:BEAMER_opt: [t]
+:END:
+
+#+latex: {\tiny
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+./firstfollow < n3a6.ee
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+Grammar with 7 rules and 10 symbols (4 non-terminals):
+S ⇒ X Y Z 
+X ⇒ a X b 
+X ⇒ ε 
+Y ⇒ c Y Z c X 
+Y ⇒ d 
+Z ⇒ e Z Y e 
+Z ⇒ f 
+
+First sets:
+S -- a c d 
+X -- ε a 
+Z -- e f 
+Y -- c d 
+
+Follow sets:
+S -- $ 
+X -- b c d e f 
+Z -- $ c d 
+Y -- e f 
+#+end_example
+
+#+latex: }
+
+** Resto
+:PROPERTIES:
+:BEAMER_col: 0.3
+:BEAMER_opt: [t]
+:END:
+* ~lr0~ -- Autômato LR(0)
+** Entrada
+:PROPERTIES:
+:BEAMER_col: 0.2
+:BEAMER_opt: [t]
+:END:
+
+#+latex: {\scriptsize
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+cat n3a6.ee
+#+END_SRC
+
+#+RESULTS:
+: S => X Y Z ;
+: X => a X b | ;
+: Y => c Y Z c X | d ;
+: Z => e Z Y e | f;
+
+#+latex: }
+
+** Utilização
+:PROPERTIES:
+:BEAMER_col: 0.3
+:BEAMER_opt: [t]
+:END:
+
+#+latex: {\tiny
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+./lr0 < n3a6.ee
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+Grammar with 8 rules and 10 symbols (4 non-terminals):
+S' ⇒ S 
+S ⇒ X Y Z 
+X ⇒ a X b 
+X ⇒ ε 
+Y ⇒ c Y Z c X 
+Y ⇒ d 
+Z ⇒ e Z Y e 
+Z ⇒ f 
+
+LR0 item set:
+S' ⇒ • S 
+S' ⇒ S • 
+S ⇒ • X Y Z 
+S ⇒ X • Y Z 
+S ⇒ X Y • Z 
+S ⇒ X Y Z • 
+X ⇒ • a X b 
+X ⇒ a • X b 
+X ⇒ a X • b 
+X ⇒ a X b • 
+X ⇒ • 
+Y ⇒ • c Y Z c X 
+Y ⇒ c • Y Z c X 
+Y ⇒ c Y • Z c X 
+Y ⇒ c Y Z • c X 
+Y ⇒ c Y Z c • X 
+Y ⇒ c Y Z c X • 
+Y ⇒ • d 
+Y ⇒ d • 
+Z ⇒ • e Z Y e 
+Z ⇒ e • Z Y e 
+Z ⇒ e Z • Y e 
+Z ⇒ e Z Y • e 
+Z ⇒ e Z Y e • 
+Z ⇒ • f 
+Z ⇒ f • 
+
+LR0 automata:
+State 0:
+S' ⇒ • S 
+---------------
+S ⇒ • X Y Z 
+X ⇒ • a X b 
+X ⇒ • 
+Transitions: 
+S ---> 1
+X ---> 2
+a ---> 3
+
+State 1:
+S' ⇒ S • 
+---------------
+S ⇒ • X Y Z 
+X ⇒ • a X b 
+X ⇒ • 
+Transitions: 
+X ---> 2
+a ---> 3
+
+State 2:
+S ⇒ X • Y Z 
+---------------
+Y ⇒ • c Y Z c X 
+Y ⇒ • d 
+Transitions: 
+Y ---> 4
+c ---> 5
+d ---> 6
+
+State 3:
+X ⇒ a • X b 
+---------------
+X ⇒ • a X b 
+X ⇒ • 
+Transitions: 
+X ---> 7
+a ---> 3
+
+State 4:
+S ⇒ X Y • Z 
+---------------
+Z ⇒ • e Z Y e 
+Z ⇒ • f 
+Transitions: 
+Z ---> 8
+e ---> 9
+f ---> 10
+
+State 5:
+Y ⇒ c • Y Z c X 
+---------------
+Y ⇒ • c Y Z c X 
+Y ⇒ • d 
+Transitions: 
+Y ---> 11
+c ---> 5
+d ---> 6
+
+State 6:
+Y ⇒ d • 
+---------------
+
+State 7:
+X ⇒ a X • b 
+---------------
+Transitions: 
+b ---> 12
+
+State 8:
+S ⇒ X Y Z • 
+---------------
+Z ⇒ • e Z Y e 
+Z ⇒ • f 
+Transitions: 
+e ---> 9
+f ---> 10
+
+State 9:
+Z ⇒ e • Z Y e 
+---------------
+Z ⇒ • e Z Y e 
+Z ⇒ • f 
+Transitions: 
+Z ---> 13
+e ---> 9
+f ---> 10
+
+State 10:
+Z ⇒ f • 
+---------------
+
+State 11:
+Y ⇒ c Y • Z c X 
+---------------
+Z ⇒ • e Z Y e 
+Z ⇒ • f 
+Transitions: 
+Z ---> 14
+e ---> 9
+f ---> 10
+
+State 12:
+X ⇒ a X b • 
+---------------
+
+State 13:
+Z ⇒ e Z • Y e 
+---------------
+Y ⇒ • c Y Z c X 
+Y ⇒ • d 
+Transitions: 
+Y ---> 15
+c ---> 5
+d ---> 6
+
+State 14:
+Y ⇒ c Y Z • c X 
+---------------
+Transitions: 
+c ---> 16
+
+State 15:
+Z ⇒ e Z Y • e 
+---------------
+Transitions: 
+e ---> 17
+
+State 16:
+Y ⇒ c Y Z c • X 
+---------------
+X ⇒ • a X b 
+X ⇒ • 
+Transitions: 
+X ---> 18
+a ---> 3
+
+State 17:
+Z ⇒ e Z Y e • 
+---------------
+
+State 18:
+Y ⇒ c Y Z c X • 
+---------------
+X ⇒ • a X b 
+X ⇒ • 
+Transitions: 
+a ---> 3
+
+#+end_example
+
+#+latex: }
+
+** Resto
+:PROPERTIES:
+:BEAMER_col: 0.3
+:BEAMER_opt: [t]
+:END:
+
+* ~lr1~ -- Autômato LR(1)
+** Entrada
+:PROPERTIES:
+:BEAMER_col: 0.2
+:BEAMER_opt: [t]
+:END:
+
+#+latex: {\scriptsize
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+cat n3a6.ee
+#+END_SRC
+
+#+RESULTS:
+: S => X Y Z ;
+: X => a X b | ;
+: Y => c Y Z c X | d ;
+: Z => e Z Y e | f;
+
+#+latex: }
+
+** Utilização
+:PROPERTIES:
+:BEAMER_col: 0.3
+:BEAMER_opt: [t]
+:END:
+
+#+latex: {\tiny
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+./lr1 < n3a6.ee
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+Grammar with 8 rules and 10 symbols (4 non-terminals):
+S' ⇒ S 
+S ⇒ X Y Z 
+X ⇒ a X b 
+X ⇒ ε 
+Y ⇒ c Y Z c X 
+Y ⇒ d 
+Z ⇒ e Z Y e 
+Z ⇒ f 
+
+First set: 
+S -- a c d 
+X -- ε a 
+Z -- e f 
+Y -- c d 
+S' -- a c d 
+
+Follow set: 
+S -- $ 
+X -- b c d e f 
+Z -- $ c d 
+Y -- e f 
+S' -- $ 
+
+LR1 item set:
+S' ⇒ • S , $
+S' ⇒ S • , $
+S ⇒ • X Y Z , $
+S ⇒ X • Y Z , $
+S ⇒ X Y • Z , $
+S ⇒ X Y Z • , $
+X ⇒ • a X b , b
+X ⇒ • a X b , c
+X ⇒ • a X b , d
+X ⇒ • a X b , e
+X ⇒ • a X b , f
+X ⇒ a • X b , b
+X ⇒ a • X b , c
+X ⇒ a • X b , d
+X ⇒ a • X b , e
+X ⇒ a • X b , f
+X ⇒ a X • b , b
+X ⇒ a X • b , c
+X ⇒ a X • b , d
+X ⇒ a X • b , e
+X ⇒ a X • b , f
+X ⇒ a X b • , b
+X ⇒ a X b • , c
+X ⇒ a X b • , d
+X ⇒ a X b • , e
+X ⇒ a X b • , f
+X ⇒ • , b
+X ⇒ • , c
+X ⇒ • , d
+X ⇒ • , e
+X ⇒ • , f
+Y ⇒ • c Y Z c X , e
+Y ⇒ • c Y Z c X , f
+Y ⇒ c • Y Z c X , e
+Y ⇒ c • Y Z c X , f
+Y ⇒ c Y • Z c X , e
+Y ⇒ c Y • Z c X , f
+Y ⇒ c Y Z • c X , e
+Y ⇒ c Y Z • c X , f
+Y ⇒ c Y Z c • X , e
+Y ⇒ c Y Z c • X , f
+Y ⇒ c Y Z c X • , e
+Y ⇒ c Y Z c X • , f
+Y ⇒ • d , e
+Y ⇒ • d , f
+Y ⇒ d • , e
+Y ⇒ d • , f
+Z ⇒ • e Z Y e , $
+Z ⇒ • e Z Y e , c
+Z ⇒ • e Z Y e , d
+Z ⇒ e • Z Y e , $
+Z ⇒ e • Z Y e , c
+Z ⇒ e • Z Y e , d
+Z ⇒ e Z • Y e , $
+Z ⇒ e Z • Y e , c
+Z ⇒ e Z • Y e , d
+Z ⇒ e Z Y • e , $
+Z ⇒ e Z Y • e , c
+Z ⇒ e Z Y • e , d
+Z ⇒ e Z Y e • , $
+Z ⇒ e Z Y e • , c
+Z ⇒ e Z Y e • , d
+Z ⇒ • f , $
+Z ⇒ • f , c
+Z ⇒ • f , d
+Z ⇒ f • , $
+Z ⇒ f • , c
+Z ⇒ f • , d
+
+LR1 automata:
+State 0:
+S' ⇒ • S , $
+---------------
+S ⇒ • X Y Z , $
+X ⇒ • a X b , c
+X ⇒ • a X b , d
+X ⇒ • , c
+X ⇒ • , d
+Transitions: 
+S ---> 1
+X ---> 2
+a ---> 3
+
+State 1:
+S' ⇒ S • , $
+---------------
+
+State 2:
+S ⇒ X • Y Z , $
+---------------
+Y ⇒ • c Y Z c X , e
+Y ⇒ • c Y Z c X , f
+Y ⇒ • d , e
+Y ⇒ • d , f
+Transitions: 
+Y ---> 4
+c ---> 5
+d ---> 6
+
+State 3:
+X ⇒ a • X b , c
+X ⇒ a • X b , d
+---------------
+X ⇒ • a X b , b
+X ⇒ • , b
+Transitions: 
+X ---> 7
+a ---> 8
+
+State 4:
+S ⇒ X Y • Z , $
+---------------
+Z ⇒ • e Z Y e , $
+Z ⇒ • f , $
+Transitions: 
+Z ---> 9
+e ---> 10
+f ---> 11
+
+State 5:
+Y ⇒ c • Y Z c X , e
+Y ⇒ c • Y Z c X , f
+---------------
+Y ⇒ • c Y Z c X , e
+Y ⇒ • c Y Z c X , f
+Y ⇒ • d , e
+Y ⇒ • d , f
+Transitions: 
+Y ---> 12
+c ---> 5
+d ---> 6
+
+State 6:
+Y ⇒ d • , e
+Y ⇒ d • , f
+---------------
+
+State 7:
+X ⇒ a X • b , c
+X ⇒ a X • b , d
+---------------
+Transitions: 
+b ---> 13
+
+State 8:
+X ⇒ a • X b , b
+---------------
+X ⇒ • a X b , b
+X ⇒ • , b
+Transitions: 
+X ---> 14
+a ---> 8
+
+State 9:
+S ⇒ X Y Z • , $
+---------------
+
+State 10:
+Z ⇒ e • Z Y e , $
+---------------
+Z ⇒ • e Z Y e , c
+Z ⇒ • e Z Y e , d
+Z ⇒ • f , c
+Z ⇒ • f , d
+Transitions: 
+Z ---> 15
+e ---> 16
+f ---> 17
+
+State 11:
+Z ⇒ f • , $
+---------------
+
+State 12:
+Y ⇒ c Y • Z c X , e
+Y ⇒ c Y • Z c X , f
+---------------
+Z ⇒ • e Z Y e , c
+Z ⇒ • f , c
+Transitions: 
+Z ---> 18
+e ---> 19
+f ---> 20
+
+State 13:
+X ⇒ a X b • , c
+X ⇒ a X b • , d
+---------------
+
+State 14:
+X ⇒ a X • b , b
+---------------
+Transitions: 
+b ---> 21
+
+State 15:
+Z ⇒ e Z • Y e , $
+---------------
+Y ⇒ • c Y Z c X , e
+Y ⇒ • d , e
+Transitions: 
+Y ---> 22
+c ---> 23
+d ---> 24
+
+State 16:
+Z ⇒ e • Z Y e , c
+Z ⇒ e • Z Y e , d
+---------------
+Z ⇒ • e Z Y e , c
+Z ⇒ • e Z Y e , d
+Z ⇒ • f , c
+Z ⇒ • f , d
+Transitions: 
+Z ---> 25
+e ---> 16
+f ---> 17
+
+State 17:
+Z ⇒ f • , c
+Z ⇒ f • , d
+---------------
+
+State 18:
+Y ⇒ c Y Z • c X , e
+Y ⇒ c Y Z • c X , f
+---------------
+Transitions: 
+c ---> 26
+
+State 19:
+Z ⇒ e • Z Y e , c
+---------------
+Z ⇒ • e Z Y e , c
+Z ⇒ • e Z Y e , d
+Z ⇒ • f , c
+Z ⇒ • f , d
+Transitions: 
+Z ---> 27
+e ---> 16
+f ---> 17
+
+State 20:
+Z ⇒ f • , c
+---------------
+
+State 21:
+X ⇒ a X b • , b
+---------------
+
+State 22:
+Z ⇒ e Z Y • e , $
+---------------
+Transitions: 
+e ---> 28
+
+State 23:
+Y ⇒ c • Y Z c X , e
+---------------
+Y ⇒ • c Y Z c X , e
+Y ⇒ • c Y Z c X , f
+Y ⇒ • d , e
+Y ⇒ • d , f
+Transitions: 
+Y ---> 29
+c ---> 5
+d ---> 6
+
+State 24:
+Y ⇒ d • , e
+---------------
+
+State 25:
+Z ⇒ e Z • Y e , c
+Z ⇒ e Z • Y e , d
+---------------
+Y ⇒ • c Y Z c X , e
+Y ⇒ • d , e
+Transitions: 
+Y ---> 30
+c ---> 23
+d ---> 24
+
+State 26:
+Y ⇒ c Y Z c • X , e
+Y ⇒ c Y Z c • X , f
+---------------
+X ⇒ • a X b , e
+X ⇒ • a X b , f
+X ⇒ • , e
+X ⇒ • , f
+Transitions: 
+X ---> 31
+a ---> 32
+
+State 27:
+Z ⇒ e Z • Y e , c
+---------------
+Y ⇒ • c Y Z c X , e
+Y ⇒ • d , e
+Transitions: 
+Y ---> 33
+c ---> 23
+d ---> 24
+
+State 28:
+Z ⇒ e Z Y e • , $
+---------------
+
+State 29:
+Y ⇒ c Y • Z c X , e
+---------------
+Z ⇒ • e Z Y e , c
+Z ⇒ • f , c
+Transitions: 
+Z ---> 34
+e ---> 19
+f ---> 20
+
+State 30:
+Z ⇒ e Z Y • e , c
+Z ⇒ e Z Y • e , d
+---------------
+Transitions: 
+e ---> 35
+
+State 31:
+Y ⇒ c Y Z c X • , e
+Y ⇒ c Y Z c X • , f
+---------------
+
+State 32:
+X ⇒ a • X b , e
+X ⇒ a • X b , f
+---------------
+X ⇒ • a X b , b
+X ⇒ • , b
+Transitions: 
+X ---> 36
+a ---> 8
+
+State 33:
+Z ⇒ e Z Y • e , c
+---------------
+Transitions: 
+e ---> 37
+
+State 34:
+Y ⇒ c Y Z • c X , e
+---------------
+Transitions: 
+c ---> 38
+
+State 35:
+Z ⇒ e Z Y e • , c
+Z ⇒ e Z Y e • , d
+---------------
+
+State 36:
+X ⇒ a X • b , e
+X ⇒ a X • b , f
+---------------
+Transitions: 
+b ---> 39
+
+State 37:
+Z ⇒ e Z Y e • , c
+---------------
+
+State 38:
+Y ⇒ c Y Z c • X , e
+---------------
+X ⇒ • a X b , e
+X ⇒ • , e
+Transitions: 
+X ---> 40
+a ---> 41
+
+State 39:
+X ⇒ a X b • , e
+X ⇒ a X b • , f
+---------------
+
+State 40:
+Y ⇒ c Y Z c X • , e
+---------------
+
+State 41:
+X ⇒ a • X b , e
+---------------
+X ⇒ • a X b , b
+X ⇒ • , b
+Transitions: 
+X ---> 42
+a ---> 8
+
+State 42:
+X ⇒ a X • b , e
+---------------
+Transitions: 
+b ---> 43
+
+State 43:
+X ⇒ a X b • , e
+---------------
+
+#+end_example
+
+#+latex: }
+
+** Resto
+:PROPERTIES:
+:BEAMER_col: 0.3
+:BEAMER_opt: [t]
+:END:
+
+* ~lalr1~ -- Autômato LALR(1)
+** Entrada
+:PROPERTIES:
+:BEAMER_col: 0.2
+:BEAMER_opt: [t]
+:END:
+
+#+latex: {\scriptsize
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+cat n3a6.ee
+#+END_SRC
+
+#+RESULTS:
+: S => X Y Z ;
+: X => a X b | ;
+: Y => c Y Z c X | d ;
+: Z => e Z Y e | f;
+
+#+latex: }
+
+** Utilização
+:PROPERTIES:
+:BEAMER_col: 0.3
+:BEAMER_opt: [t]
+:END:
+
+#+latex: {\tiny
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+./lalr1 < n3a6.ee
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+Grammar with 8 rules and 10 symbols (4 non-terminals):
+S' ⇒ S 
+S ⇒ X Y Z 
+X ⇒ a X b 
+X ⇒ ε 
+Y ⇒ c Y Z c X 
+Y ⇒ d 
+Z ⇒ e Z Y e 
+Z ⇒ f 
+
+First set: 
+S -- a c d 
+X -- ε a 
+Z -- e f 
+Y -- c d 
+S' -- a c d 
+
+Follow set: 
+S -- $ 
+X -- b c d e f 
+Z -- $ c d 
+Y -- e f 
+S' -- $ 
+
+LALR1 item set:
+S' ⇒ • S , $
+S' ⇒ S • , $
+S ⇒ • X Y Z , $
+S ⇒ X • Y Z , $
+S ⇒ X Y • Z , $
+S ⇒ X Y Z • , $
+X ⇒ • a X b , b
+X ⇒ • a X b , c
+X ⇒ • a X b , d
+X ⇒ • a X b , e
+X ⇒ • a X b , f
+X ⇒ a • X b , b
+X ⇒ a • X b , c
+X ⇒ a • X b , d
+X ⇒ a • X b , e
+X ⇒ a • X b , f
+X ⇒ a X • b , b
+X ⇒ a X • b , c
+X ⇒ a X • b , d
+X ⇒ a X • b , e
+X ⇒ a X • b , f
+X ⇒ a X b • , b
+X ⇒ a X b • , c
+X ⇒ a X b • , d
+X ⇒ a X b • , e
+X ⇒ a X b • , f
+X ⇒ • , b
+X ⇒ • , c
+X ⇒ • , d
+X ⇒ • , e
+X ⇒ • , f
+Y ⇒ • c Y Z c X , e
+Y ⇒ • c Y Z c X , f
+Y ⇒ c • Y Z c X , e
+Y ⇒ c • Y Z c X , f
+Y ⇒ c Y • Z c X , e
+Y ⇒ c Y • Z c X , f
+Y ⇒ c Y Z • c X , e
+Y ⇒ c Y Z • c X , f
+Y ⇒ c Y Z c • X , e
+Y ⇒ c Y Z c • X , f
+Y ⇒ c Y Z c X • , e
+Y ⇒ c Y Z c X • , f
+Y ⇒ • d , e
+Y ⇒ • d , f
+Y ⇒ d • , e
+Y ⇒ d • , f
+Z ⇒ • e Z Y e , $
+Z ⇒ • e Z Y e , c
+Z ⇒ • e Z Y e , d
+Z ⇒ e • Z Y e , $
+Z ⇒ e • Z Y e , c
+Z ⇒ e • Z Y e , d
+Z ⇒ e Z • Y e , $
+Z ⇒ e Z • Y e , c
+Z ⇒ e Z • Y e , d
+Z ⇒ e Z Y • e , $
+Z ⇒ e Z Y • e , c
+Z ⇒ e Z Y • e , d
+Z ⇒ e Z Y e • , $
+Z ⇒ e Z Y e • , c
+Z ⇒ e Z Y e • , d
+Z ⇒ • f , $
+Z ⇒ • f , c
+Z ⇒ • f , d
+Z ⇒ f • , $
+Z ⇒ f • , c
+Z ⇒ f • , d
+
+LALR1 automata:
+State 0:
+S' ⇒ • S , $ 
+---------------
+S ⇒ • X Y Z , $ 
+X ⇒ • a X b , c d 
+X ⇒ • , c d 
+Transitions: 
+S ---> 1
+X ---> 2
+a ---> 3
+
+State 1:
+S' ⇒ S • , $ 
+---------------
+
+State 2:
+S ⇒ X • Y Z , $ 
+---------------
+Y ⇒ • c Y Z c X , e f 
+Y ⇒ • d , e f 
+Transitions: 
+Y ---> 4
+c ---> 5
+d ---> 6
+
+State 3:
+X ⇒ a • X b , b c d e f 
+---------------
+X ⇒ • a X b , b 
+X ⇒ • , b 
+Transitions: 
+X ---> 7
+a ---> 3
+
+State 4:
+S ⇒ X Y • Z , $ 
+---------------
+Z ⇒ • e Z Y e , $ 
+Z ⇒ • f , $ 
+Transitions: 
+Z ---> 8
+e ---> 9
+f ---> 10
+
+State 5:
+Y ⇒ c • Y Z c X , e f 
+---------------
+Y ⇒ • c Y Z c X , e f 
+Y ⇒ • d , e f 
+Transitions: 
+Y ---> 11
+c ---> 5
+d ---> 6
+
+State 6:
+Y ⇒ d • , e f 
+---------------
+
+State 7:
+X ⇒ a X • b , b c d e f 
+---------------
+Transitions: 
+b ---> 12
+
+State 8:
+S ⇒ X Y Z • , $ 
+---------------
+
+State 9:
+Z ⇒ e • Z Y e , $ c d 
+---------------
+Z ⇒ • e Z Y e , c d 
+Z ⇒ • f , c d 
+Transitions: 
+Z ---> 13
+e ---> 9
+f ---> 10
+
+State 10:
+Z ⇒ f • , $ c d 
+---------------
+
+State 11:
+Y ⇒ c Y • Z c X , e f 
+---------------
+Z ⇒ • e Z Y e , c 
+Z ⇒ • f , c 
+Transitions: 
+Z ---> 14
+e ---> 9
+f ---> 10
+
+State 12:
+X ⇒ a X b • , b c d e f 
+---------------
+
+State 13:
+Z ⇒ e Z • Y e , $ c d 
+---------------
+Y ⇒ • c Y Z c X , e 
+Y ⇒ • d , e 
+Transitions: 
+Y ---> 15
+c ---> 5
+d ---> 6
+
+State 14:
+Y ⇒ c Y Z • c X , e f 
+---------------
+Transitions: 
+c ---> 16
+
+State 15:
+Z ⇒ e Z Y • e , $ c d 
+---------------
+Transitions: 
+e ---> 17
+
+State 16:
+Y ⇒ c Y Z c • X , e f 
+---------------
+X ⇒ • a X b , e f 
+X ⇒ • , e f 
+Transitions: 
+X ---> 18
+a ---> 3
+
+State 17:
+Z ⇒ e Z Y e • , $ c d 
+---------------
+
+State 18:
+Y ⇒ c Y Z c X • , e f 
+---------------
+
+#+end_example
+
+#+latex: }
+
+** Resto
+:PROPERTIES:
+:BEAMER_col: 0.3
+:BEAMER_opt: [t]
+:END:
+
+* Diagramas de transição
+
+Requerimento de /software/ auxiliar: ~graphviz~
+- Precisamos do comando ~dot~ deste pacote
+
+#+latex: \pause\vfill
+
+Geração de autômatos cria arquivos no formato ~dot~
+- Contém o grafo do autômato
+#+attr_latex: :center nil
+  | *Comando*                        | *Arquivo de saída* |
+  |--------------------------------+------------------|
+  | =./lr0 < n3a6.ee >> /dev/null=   | ~LR0.dot~          |
+  | ~./lr1 < n3a6.ee >> /dev/null~   | ~LR1.dot~          |
+  | ~./lalr1 < n3a6.ee >> /dev/null~ | ~LALR1.dot~        |
+
+* Exemplo de ilustração (Autômato LR0)
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+./lr0 < n3a6.ee >> /dev/null
+dot -Tpng LR0.dot -o n3a6_LR0_output.png
+#+END_SRC
+
+#+RESULTS:
+
+#+latex: \vfill\pause
+
+Vejamos o arquivo ~n3a6_LR0_output.png~
+
+#+attr_latex: :width 0.76\linewidth :center nil
+[[./n3a6_LR0_output.png]]
+
+* Exemplo de ilustração (Autômato LR1)
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+./lr1 < n3a6.ee >> /dev/null
+dot -Tpng LR1.dot -o n3a6_LR1_output.png
+#+END_SRC
+
+#+RESULTS:
+
+#+latex: \vfill\pause
+
+Vejamos o arquivo ~n3a6_LR1_output.png~
+
+#+attr_latex: :width 0.76\linewidth :center nil
+[[./n3a6_LR1_output.png]]
+
+* Exemplo de ilustração (Autômato LALR1)
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+./lalr1 < n3a6.ee >> /dev/null
+dot -Tpng LALR1.dot -o n3a6_LALR1_output.png
+#+END_SRC
+
+#+RESULTS:
+
+#+latex: \vfill\pause
+
+Vejamos o arquivo ~n3a6_LALR1_output.png~
+
+#+attr_latex: :width 0.76\linewidth :center nil
+[[./n3a6_LALR1_output.png]]
+
+* Estudo de caso 1/2
+
+#+attr_latex: :center nil
+| S | \rightarrow | a E c \vert  a F d \vert  b F c \vert  b E d |
+| E | \rightarrow | e                                |
+| F | \rightarrow | e                                |
+*Pergunta*: É LALR(1)?
+
+#+latex: \pause
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+./lalr1 < n6a6.ee >> /dev/null
+dot -Tpng LALR1.dot -o n6a6_LALR1_output.png
+#+END_SRC
+
+#+RESULTS:
+
+#+latex: \pause
+
+#+attr_latex: :width 0.54\linewidth :center nil
+[[./n6a6_LALR1_output.png]]
+
+* Estudo de caso 2/2
+
+#+attr_latex: :center nil
+| S | \rightarrow | a E c \vert  a F d \vert  b F c \vert  b E d |
+| E | \rightarrow | e                                |
+| F | \rightarrow | e                                |
+*Pergunta*: É LR(1)?
+
+#+BEGIN_SRC bash :results output :dir ~/ellerre/build/
+./lr1 < n6a6.ee >> /dev/null
+dot -Tpng LR1.dot -o n6a6_LR1_output.png
+#+END_SRC
+
+#+RESULTS:
+
+#+latex: \pause
+
+#+attr_latex: :width 0.54\linewidth :center nil
+[[./n6a6_LR1_output.png]]
