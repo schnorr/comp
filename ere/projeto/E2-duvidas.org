@@ -1,0 +1,38 @@
+#+TITLE: Dúvidas da E1 do Projeto de Compilador
+* E2
+** TODO 2020-09-14
+*** Pergunta #1
+
+  1. Na declaração de variáveis locais (internas às funções) não está
+     explicitamente dito que podem haver múltiplas variáveis
+     declaradas em apenas uma linha lógica, como em:
+
+  int x,y,z;
+
+  porém este comportamento é permitido para variáveis globais
+  (externas às funções) . Devemos aceitar isto em variáveis locais?
+
+*** Pergunta #2
+
+  2. A forma como as expressões estão definidas me parece um pouco
+     contraditória:
+
+  No primeiro parágrafo da seção 3.5 expressões aritméticas são
+  definidas como contendo operadores aritméticos, e as expressões
+  lógicas como contendo operadores relacionais e lógicos, porém, logo
+  após é dito que "Nesta etapa do trabalho não há distinção entre
+  expressões aritméticas, inteiras ou lógicas".
+
+  Devemos forçar então que as expressões aritméticas contenham apenas
+  operadores aritméticos e expressões lógicas apenas relacionais e
+  lógicos, ou devemos aceitar quaisquer operadores na formação dessas
+  expressões?
+
+*** Pergunta #3
+
+  3. Na declaração de vetores (nas variávies gloais) e comandos do
+     tipo shift é mencionado que certos valores devem ser "inteiros
+     positivos". Se temos apenas o tipo do token recebido (Neste caso
+     ~TK_LIT_INT~) como podemos forçar que este valor seja positivo?
+
+
