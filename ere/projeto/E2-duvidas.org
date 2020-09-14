@@ -3,6 +3,9 @@
 ** TODO 2020-09-14
 *** Pergunta #1
 
+  Por gentileza poderia me informar se nas variáveis locais também é
+  possível receber uma lista composta de nomes de variáveis?
+
   1. Na declaração de variáveis locais (internas às funções) não está
      explicitamente dito que podem haver múltiplas variáveis
      declaradas em apenas uma linha lógica, como em:
