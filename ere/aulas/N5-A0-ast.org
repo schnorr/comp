@@ -30,9 +30,7 @@ Estrutura hierárquica
 + Folhas são os terminais e palavras vazias ($\epsilon$)
 * Árvores de Derivação
 
-#+BEGIN_CENTER
 Como fica a árvore de derivação para *(34 - 3) \times 42*
-#+END_CENTER
 
 | exp | \rightarrow | exp op exp |
 | exp | \rightarrow | *(* exp *)*    |
@@ -40,19 +38,27 @@ Como fica a árvore de derivação para *(34 - 3) \times 42*
 | op  | \rightarrow | *+* \vert *-* \vert *\times*  |
 
 #+latex: \vfill\pause
+
 Podemos simplificar a árvore de derivação?
 + Mantendo a semântica (geração de código)
 * Árvore Sintática Abstrata (AST)
 #+BEGIN_CENTER
-Análise sintática é o centro do compilador
+AST \rightarrow /Abstract Syntax Tree/
 
-Simplificação da árvore de derivação, com semântica idêntica
+https://en.wikipedia.org/wiki/Abstract_syntax_tree
+
+#+latex: \bigskip
+
+*Análise sintática, com a AST, é o centro do compilador*
+
+AST é uma simplificação da árvore de derivação, com semântica idêntica
 #+END_CENTER
 
 #+latex: \vfill\pause
 
 Princípio da tradução direcionada por sintaxe
-+ Significado da entrada deve ter relação direta com a sintaxe
+- Geração de código é realizada sobre a árvore
+  - /na medida que a árvore vai sendo criada/
 
 * AST -- Exemplo 1
 Supondo a gramática de expr. ariméticas com atribuição
@@ -65,30 +71,76 @@ Supondo a gramática de expr. ariméticas com atribuição
 Como fica a AST para *var = (34 - 3) \times 42* ?
 * AST -- Exemplo 2
 Supondo a gramática para o comando *if*
-  | stmt    | \rightarrow | if-stmt \vert *outra*           |
-  | if-stmt | \rightarrow | *if (* exp *)* stmt             |
-  | if-stmt | \rightarrow | *if (* exp *)* stmt *else* stmt |
-  | exp     | \rightarrow | *false* \vert *true*            |
-AST para *if (false) if (true) outra else outra* ?
+  | S | \rightarrow | C \vert *a*             |
+  | C | \rightarrow | *if (* E *)* S        |
+  | C | \rightarrow | *if (* E *)* S *else* S |
+  | E | \rightarrow | *f* \vert *t*             |
+
+Qual a AST para esta entrada?
+#+BEGIN_SRC 
+if (f)
+   if (t)
+      a
+   else
+      a
+#+END_SRC
+
 * AST -- Exemplo 3
+
 Supondo a gramática para os comandos *do while* e *if*
-  | stmt       | \rightarrow | while-stmt \vert if-stmt \vert *outra* |
-  | while-stmt | \rightarrow | *do* stmt *while (* exp *)*            |
-  | if-stmt    | \rightarrow | *if (* exp *)* stmt                    |
-  | if-stmt    | \rightarrow | *if (* exp *)* stmt *else* stmt        |
-  | exp        | \rightarrow | *false* \vert *true*                   |
-*if (false) if (true) outra else do outra while (true)* ?
+
+  | S | \rightarrow | W \vert C \vert *a*         |
+  | W | \rightarrow | *do* S *while (* E *)*  |
+  | C | \rightarrow | *if (* E *)* S        |
+  | C | \rightarrow | *if (* E *)* S *else* S |
+  | E | \rightarrow | *f* \vert *t*             |
+
+Qual a AST para esta entrada?
+
+#+BEGIN_SRC 
+if (f)
+   if (t)
+      a
+   else
+      do
+         a
+      while (t)
+#+END_SRC
+
 * AST -- Exemplo 4
+
 Supondo gramática de seq. de comandos separados por *;*
-  | seq-stmt | \rightarrow | stmt *;* seq-stmt \vert stmt *;* |
-  | stmt     | \rightarrow | *comando*                  |
-Qual a AST para *comando;comando;comando;* ?  
+
+  | SS | \rightarrow | S *;* SS \vert S *;* |
+  | S  | \rightarrow | *comando*      |
+
+Qual a AST para esta entrada?
+
+#+BEGIN_SRC 
+comando;
+comando;
+comando;
+#+END_SRC
+
 * AST -- Exemplo 5
 Supondo a gramática
-  | seq-stmt   | \rightarrow | stmt *;* seq-stmt \vert stmt *;*     |
-  | stmt       | \rightarrow | while-stmt \vert if-stmt \vert *outra* |
-  | while-stmt | \rightarrow | *do* stmt *while (* exp *)*        |
-  | if-stmt    | \rightarrow | *if (* exp *)* stmt              |
-  | if-stmt    | \rightarrow | *if (* exp *)* stmt *else* stmt    |
-  | exp        | \rightarrow | *false* \vert *true*                 |
-*do if (true) outra while (false); if(false) outra;* ?
+
+  | SS | \rightarrow | S *;* SS \vert S *;*      |
+  | S  | \rightarrow | W \vert C \vert *a*         |
+  | W  | \rightarrow | *do* S *while (* E *)*  |
+  | C  | \rightarrow | *if (* E *)* S        |
+  | C  | \rightarrow | *if (* E *)* S *else* S |
+  | E  | \rightarrow | *f* \vert *t*             |
+
+Qual a AST para esta entrada?
+
+#+BEGIN_SRC 
+do
+   if (t)
+      a
+while (f);
+if (f)
+   a
+;
+#+END_SRC
+

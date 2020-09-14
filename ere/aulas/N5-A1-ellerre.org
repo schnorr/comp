@@ -45,7 +45,7 @@ Ferramenta ~ellerre~ \rightarrow Um gerador de autômatos LR
 * Obter os fontes e compilar
 
 Disponível no GitHub, em:
-https://github.com/schnorr/ellerre.git
+https://github.com/schnorr/ellerre
 
 Clone do repositório, compilação
 
