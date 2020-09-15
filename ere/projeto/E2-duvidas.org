@@ -1,7 +1,7 @@
-#+TITLE: Dúvidas da E1 do Projeto de Compilador
+#+TITLE: Dúvidas da E2 do Projeto de Compilador
 * E2
 ** DONE 2020-09-14
-*** Pergunta #1
+*** DONE Pergunta #1 \times 2
 
   Por gentileza poderia me informar se nas variáveis locais também é
   possível receber uma lista composta de nomes de variáveis?
@@ -33,7 +33,7 @@
 
 *** Pergunta #3
 
-  3. Na declaração de vetores (nas variávies gloais) e comandos do
+  3. Na declaração de vetores (nas variávies globais) e comandos do
      tipo shift é mencionado que certos valores devem ser "inteiros
      positivos". Se temos apenas o tipo do token recebido (Neste caso
      ~TK_LIT_INT~) como podemos forçar que este valor seja positivo?
