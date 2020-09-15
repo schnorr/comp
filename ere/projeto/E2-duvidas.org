@@ -1,6 +1,6 @@
 #+TITLE: Dúvidas da E1 do Projeto de Compilador
 * E2
-** TODO 2020-09-14
+** DONE 2020-09-14
 *** Pergunta #1
 
   Por gentileza poderia me informar se nas variáveis locais também é
@@ -38,4 +38,18 @@
      positivos". Se temos apenas o tipo do token recebido (Neste caso
      ~TK_LIT_INT~) como podemos forçar que este valor seja positivo?
 
+** TODO 2020-09-15
+*** Pergunta #1
 
+Na especificação você comenta que não devemos ter conflitos tanto
+Reduce/Reduce, quando Shift/Reduce. Isso estamos verificando com a
+própria ferramenta Bison. Queria saber se precisamos garantir que a
+gramática é LR(0). Testando com aquela gramática de "Expressões
+Regulares Rudimentares" (E -> E + n | n), por exemplo, o bison não
+aponta conflito, mesmo ela não sendo LR(0). Precisariamos alterar a
+gramática nesse caso ou ainda podemos deixar assim?
+
+*** Pergunta #2 
+
+Podemos ter transições vazias em nossa gramática (considerando o mesmo
+comentado na pergunta acima)?
