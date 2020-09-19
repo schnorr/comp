@@ -38,7 +38,7 @@
      positivos". Se temos apenas o tipo do token recebido (Neste caso
      ~TK_LIT_INT~) como podemos forçar que este valor seja positivo?
 
-** TODO 2020-09-15
+** DONE 2020-09-15
 *** Pergunta #1
 
 Na especificação você comenta que não devemos ter conflitos tanto
@@ -53,3 +53,9 @@ gramática nesse caso ou ainda podemos deixar assim?
 
 Podemos ter transições vazias em nossa gramática (considerando o mesmo
 comentado na pergunta acima)?
+** DONE 2020-09-18
+*** Pergunta #1
+
+Gostaria de saber se quando fazemos a detecção de erros precisamos
+aderir ao modo pânico ou fazer o programa terminar a execução (como é
+feita pela função do yyerror)?
