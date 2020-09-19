@@ -1,3 +1,4 @@
+#+STARTUP: overview indent
 #+TITLE: Dúvidas da E2 do Projeto de Compilador
 * E2
 ** DONE 2020-09-14
@@ -53,9 +54,29 @@ gramática nesse caso ou ainda podemos deixar assim?
 
 Podemos ter transições vazias em nossa gramática (considerando o mesmo
 comentado na pergunta acima)?
-** DONE 2020-09-18
+** TODO 2020-09-18
 *** Pergunta #1
 
 Gostaria de saber se quando fazemos a detecção de erros precisamos
 aderir ao modo pânico ou fazer o programa terminar a execução (como é
 feita pela função do yyerror)?
+** TODO 2020-09-19
+*** Pergunta #1
+Não ficou claro para mim se as regras de associatividade e precedência
+dos operadores da nossa gramática são relevantes para esta
+etapa. Devemos, por algum motivo, considerá-las na criação das regras
+ou elas serão utilizadas apenas em etapas futuras?
+*** Pergunta #2
+Alguns tokens definidos não estão sendo utilizados, como por exemplo
+~TK_PR_THEN~, ~TK_OC_FORWARD_PIPE~ e ~TK_PR_CLASS~. Devemos retirar esses tokens do
+parser.y e/ou scanner.l?
+*** Pergunta #3
+Ao encontrar um erro sintático, a execução deve terminar ou continuar
+para analisar o resto da entrada?
+*** Pergunta #4
+Existe alguma forma de utilizar o ~TOKEN_ERRO~ para identificar erros
+e/ou criar mensagens de erros mais informativas?
+*** Pergunta #5
+E só pra confirmar, todos pontos do enunciado que referenciam
+"expressão" fazem menção ao conjunto de expressões definidas em 3.5,
+certo?
