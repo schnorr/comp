@@ -54,13 +54,13 @@ gramática nesse caso ou ainda podemos deixar assim?
 
 Podemos ter transições vazias em nossa gramática (considerando o mesmo
 comentado na pergunta acima)?
-** TODO 2020-09-18
+** DONE 2020-09-18
 *** Pergunta #1
 
 Gostaria de saber se quando fazemos a detecção de erros precisamos
 aderir ao modo pânico ou fazer o programa terminar a execução (como é
 feita pela função do yyerror)?
-** TODO 2020-09-19
+** DONE 2020-09-19 P1
 *** Pergunta #1
 Não ficou claro para mim se as regras de associatividade e precedência
 dos operadores da nossa gramática são relevantes para esta
@@ -80,3 +80,63 @@ e/ou criar mensagens de erros mais informativas?
 E só pra confirmar, todos pontos do enunciado que referenciam
 "expressão" fazem menção ao conjunto de expressões definidas em 3.5,
 certo?
+** TODO 2020-09-19 P2
+*** Pergunta #0
+
+Na etapa1 havia aqueles símbolos que não estavam no pdf da
+especificação, mas que nas suas anotações você mostrava como
+válidas. Depois de outros vídeos você as removeu. Queria saber se
+esses símbolos que inicialmente estavam previstos pra linguagem e que
+depois você os retirou foram considerados como ERRO na etapa1?  Nosso
+grupo adicionou eles achando que estavam previstos, e que se manteriam
+no mínimo válidos na linguagem, o que foi marcado como erro na
+avaliação de etapa1.
+
+*** Pergunta #1
+
+Na montagem da função de erro está nos causando erro na compilação em
+um dos nossos computadores.  Seguimos a documentação em :
+https://www.gnu.org/software/bison/manual/html_node/Syntax-Error-Reporting-Function.html
+Mas só estamos conseguindo executar com o bison na versão mais recente
+(3.7.+) em uma máquina Manjaro, enquanto em outro computador do grupo
+com a versão 3.5.+ está dando erro com a definição de parse.error como
+custom.  Queria saber se funcionando na versão 3.7 é suficiente para a
+avaliação desta etapa?
+
+*** Pergunta #2
+
+Na seção de expressões está escrito que identificadores são operandos
+de expressões. Creio que seja o caso, mas, apenas para confirmar,
+seriam expressões também apenas identificadores?
+
+*** Pergunta #3
+
+Por que, na declaração de variáveis locais, diz que é aceito como
+inicialização apenas literais e identificadores? É permitido aceitar
+inicialização com uma expressão qualquer, assim como na atribuição?
+Caso essa proposta seja rejeitada, ainda restaria a dúvida se os
+identificadores poderiam ser arrays e, nesse caso, se o conteúdo entre
+colchetes poderia ser uma expressão qualquer também.
+
+Assim como na dúvida acima, é permitido que input¹ e output também
+recebam uma expressão qualquer? A remoção de restrições desse tipo
+torna a linguagem mais simples e um pouco mais expressiva. ¹Para
+input, expressões seriam utilizadas apenas no conteúdo entre
+colchetes, após um identificador.
+
+Blocos de comando devem acabar com ponto e vírgula quando forem um
+comando simples dentro de outro bloco (ou seja, quando não forem
+criados devido a uma construção de controle de fluxo)?
+
+*** Pergunta #4
+
+A respeito das variáveis locais, deve ser possível inicializar mais de
+uma variável simultaneamente?
+
+Exemplo: int a, b, c  <=  0;
+
+*** Pergunta #5
+
+Uma duvida sobre a entrega da etapa2: Notei que faz parte da entrega
+apenas os arquivos scanner.l e parser.y. Isso quer dizer que nao
+devemos incluir o main.c no nosso makefile?
