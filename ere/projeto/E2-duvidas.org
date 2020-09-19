@@ -80,7 +80,7 @@ e/ou criar mensagens de erros mais informativas?
 E só pra confirmar, todos pontos do enunciado que referenciam
 "expressão" fazem menção ao conjunto de expressões definidas em 3.5,
 certo?
-** TODO 2020-09-19 P2
+** DONE 2020-09-19 P2
 *** Pergunta #0
 
 Na etapa1 havia aqueles símbolos que não estavam no pdf da
