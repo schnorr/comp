@@ -141,7 +141,7 @@ contrário das globais, não permitem vetores e podem permitir o uso da
 palavra reservada =const= antes do tipo (após a palavra reservada =static=
 caso esta aparecer). Uma variável local pode ser opcionalmente
 inicializada com um valor válido caso sua declaração seja seguida do
-operador composto <= e de um identificador ou literal.
+operador composto ~<=~ e de um identificador ou literal.
 
 #+BEGIN_CENTER
 *Comando de Atribuição*
