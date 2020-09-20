@@ -139,7 +139,7 @@ Exemplo: int a, b, c  <=  0;
 Uma duvida sobre a entrega da etapa2: Notei que faz parte da entrega
 apenas os arquivos scanner.l e parser.y. Isso quer dizer que nao
 devemos incluir o main.c no nosso makefile?
-** TODO 2020-09-19 (E2 D4)
+** DONE 2020-09-19 (E2 D4)
 *** Pergunta #0
 
 Depois de assistir o ultimo vídeo de dúvidas, percebi uma diferença
@@ -173,3 +173,38 @@ Ref Video: E2 D2
   informações nessa etapa?
 
 
+** TODO 2020-09-20
+*** Pergunta #0
+
+Sobre a pergunta de blocos de comando acabarem por ponto e vírgula,
+foi mencionado no último vídeo que estes devem ser terminados por
+ponto e vírgula por serem comandos simples, todavia a especificação
+explicitamente diz, na seção de controle de fluxo, que o ponto e
+vírgula não é utilizado nessas construções. Por isso minha pergunta
+foi específica apenas para blocos que não fazem parte destas
+construções.
+
+*** Pergunta #1
+
+É permitido o uso de sucessivos operadores unários, como o lógico
+!!!false (que avalia para true), operações de ponteiro ***ptr,
+&&&value, e como sequências de sinais negativos e positivos, sem o uso
+de parênteses delimitadores ?
+
+Mais genericamente, pode haver combinações mistas de unários, como
+?!false, *&value, efetivamente uma relação recursiva na regra dos
+unários ?
+
+*** Pergunta #2
+
+Devemos prever comandos vazios, como vários ponto-vírgula sucessivos
+avaliando para NOP, ou como em C quando se usa for(;;) para loop
+infinito Devemos prever pares de parênteses vazios () sem efeito, de
+forma semelhante ao bloco vazio {} ?
+
+*** Pergunta #3
+
+Como informação de erro, está de bom tamanho indicar a linha de código
+e o output verboso do bison ?
+
+ 
