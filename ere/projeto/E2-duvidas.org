@@ -173,7 +173,7 @@ Ref Video: E2 D2
   informações nessa etapa?
 
 
-** TODO 2020-09-20
+** TODO 2020-09-20 (E2 D5)
 *** Pergunta #0
 
 Sobre a pergunta de blocos de comando acabarem por ponto e vírgula,
