@@ -2,7 +2,7 @@
 #+TITLE: Dúvidas da E2 do Projeto de Compilador
 * E2
 ** DONE 2020-09-14
-*** DONE Pergunta #1 \times 2
+*** Pergunta #1 \times 2
 
   Por gentileza poderia me informar se nas variáveis locais também é
   possível receber uma lista composta de nomes de variáveis?
@@ -56,7 +56,6 @@ Podemos ter transições vazias em nossa gramática (considerando o mesmo
 comentado na pergunta acima)?
 ** DONE 2020-09-18
 *** Pergunta #1
-
 Gostaria de saber se quando fazemos a detecção de erros precisamos
 aderir ao modo pânico ou fazer o programa terminar a execução (como é
 feita pela função do yyerror)?
@@ -140,3 +139,23 @@ Exemplo: int a, b, c  <=  0;
 Uma duvida sobre a entrega da etapa2: Notei que faz parte da entrega
 apenas os arquivos scanner.l e parser.y. Isso quer dizer que nao
 devemos incluir o main.c no nosso makefile?
+** TODO 2020-09-19 (E2 D4)
+*** Pergunta #1
+
+Como podemos elaborar as regras gramaticais para reconhecer a
+gramática de acordo com uma determinada associatividade/precedência?
+
+*** Pergunta #2
+
+- Qual a influência dessas informações de associatividade/precedência
+  no processo de reconhecimento sintático da gramática?
+
+Ref Video: E2 D2
+
+- Qual a relevância dessas informações para determinar se uma entrada
+  é sintaticamente válida ou não? Pela resposta dada no vídeo me
+  parece que vamos utilizar as regras da gramática como apoio para
+  próximas análises... seria apenas essa a importância dessas
+  informações nessa etapa?
+
+
