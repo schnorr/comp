@@ -140,6 +140,20 @@ Uma duvida sobre a entrega da etapa2: Notei que faz parte da entrega
 apenas os arquivos scanner.l e parser.y. Isso quer dizer que nao
 devemos incluir o main.c no nosso makefile?
 ** TODO 2020-09-19 (E2 D4)
+*** Pergunta #0
+
+Depois de assistir o ultimo vídeo de dúvidas, percebi uma diferença
+entre a renderização do pdf e o seu arquivo .org no que diz respeito à
+inicialização de variáveis locais.
+
+Enquanto seu arquivo utiliza o operador composto <=, o pdf exibe o
+operador ¡=, conforme print abaixo.
+
+Obs.: Estou utilizando o Adobe Acrobat Pro DC no Windows
+
+Qual dos operadores devemos utilizar? Caso seja ¡=, Podemos definir um
+novo token para ele?
+
 *** Pergunta #1
 
 Como podemos elaborar as regras gramaticais para reconhecer a
