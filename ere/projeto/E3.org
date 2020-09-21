@@ -21,7 +21,7 @@
 Projeto de Compilador
 
 #+latex: \noindent
-E3 de *Árvore Sintática Abstrata*
+E3 de *Árvore Sintática Abstrata* (AST)
 #+latex: }
 #+latex: \bigskip
 
@@ -74,7 +74,7 @@ duplicados com =strdup=). Uma forma de implementar o /valor do token/ para
 literais é utilizar dois campos: um /tipo de literal/ e o valor
 associado a ele através de uma construção =union= da linguagem C.
 
-** Implementar estrutura de dados em árvore
+** Estrutura de dados em árvore
 
 Implementar uma estrutura de dados para representar uma árvore em
 memória, com funções habituais tais como criação de nó, remoção,
@@ -94,29 +94,49 @@ composta de chamadas para o procedimento de criação de um nó da
 árvore, e associação desta com seus filhos na árvore de derivação que
 já foram criados. Ao final do processo de análise sintática, um
 ponteiro para a estrutura de dados que guarda a raiz da árvore deve
-ser salvo na variável global =arvore=.
+ser salvo na variável global =arvore=. A raiz da árvore é o nó que
+representa a primeira função do arquivo de entrada.
+Devem fazer parte da AST:
 
-Devem fazer parte da AST *(1)* todos os comandos simples da linguagem,
-salvo o bloco de comando e a declaração de variáveis sem
-inicialização, *(2)* todas as expressões ariméticas e lógicas obedecendo
-as regras de associatividade e precedência já estabelecidas na E2, *(3)*
-listas de comandos (um comando deve ter um filho que é o próximo
-comando), *(4)* listas de expressões (uma expressão deve ter um filho
-que é a próxima expressão) naqueles comandos onde isso se faz
-necessário, tais como chamada de função, *(5)* listas de funções (uma
-função deve ter dois filhos, um que é o seu primeiro comando e outro
-que é a próxima função), e *(6)* o indexador de vetor ~[]~ que deve ter
-dois filhos (identificador e a expressão de indexação).
+1. Listas de funções, onde cada função tem dois filhos, um que é o seu
+   primeiro comando e outro que é a próxima função;
+2. Listas de comandos, onde cada comando tem pelo menos um filho, que
+   é o próximo comando;
+3. Listas de expressões, onde cada expressão tem pelo menos um filho,
+   que é a próxima expressão, naqueles comandos onde isso se faz
+   necessário, tais como na chamada de função;
+4. Todos os comandos simples da linguagem, salvo o bloco de comando e
+   a declaração de variáveis sem inicialização. O comando de
+   inicialização de variável e de atribuição deve ter pelo menos dois
+   filhos, um que é o identificador (ou identificador com indexação de
+   vetor -- veja abaixo) e outro que é o valor da inicialização. Os
+   comandos de entrada e saída tem pelo menos um filho. O comando
+   chamada de função tem pelo menos um filho, que é a primeira
+   expressão na lista de seus argumentos. Os comandos de shift tem
+   pelo menos dois filhos, um identificador (ou identificador com
+   indexação de vetor -- veja abaixo) e um literal inteiro. Os
+   comandos de retorno, break e continue não tem filhos. O comando if
+   com else opcional deve ter pelo menos três filhos, um para a
+   expressão, outro para o primeiro comando quando verdade, e o último
+   -- opcional -- para o primeiro comando quando falso. O comando for
+   deve ter pelo menos quatro filhos, um para a atribuição de
+   inicialização, um para a expressão, outro para a atribuição de
+   incremento/decremento e um para o primeiro comando do laço. O
+   comando while deve ter pelo menos dois filhos, um para expressão e
+   outro para o primeiro comando do laço.
+5. Todas as expressões ariméticas e lógicas devem obedecer as regras de
+   associatividade e precedência já estabelecidas na E2, incluindo
+   identificadores e literais. Os operadores unários devem ter pelo
+   menos um filho, os operadores binários devem ter pelo menos dois
+   filhos e o operador ternário deve ter pelo menos três filhos. O
+   indexador de vetor ~[]~ deve ter pelo menos dois filhos
+   (identificador e a expressão de indexação).
 
-No caso das expressões aritméticas e lógicas, os operadores unários
-devem ter pelo menos um filho, os operadores binários devem ter pelo
-menos dois filhos e o operador ternário deve ter pelo menos três
-filhos. Nestes casos, o "pelo menos" é explicitado pois estas
-expressões podem aparecer em listas de expressões, sendo necessário
-mais um filho que indica qual a próxima expressão, conforme detalhado
-no parágrafo anterior.
+Explicita-se o "pelo menos" pois os nós da árvore podem aparecer em
+listas, sendo necessário mais um filho que indica qual o próximo
+elemento da lista, conforme detalhado acima.
 
-** Exportar a árvore em formato CSV
+** Exportar a árvore em formato específico
 
 Implementar a função ~exporta~ (veja no anexo ~main.c~ abaixo). Esta
 função deverá percorrer a árvore gerada, a partir da raiz e de maneira
@@ -169,19 +189,6 @@ ternário, deve ser utilizado o nome ~?:~. Enfim, para os
 identificadores e literas, deve-se utilizar o próprio lexema sem aspas
 (simples ou duplas) quando for o caso.
 
-No processo de avaliação automática (onde será comparada a estrutura
-da árvore da solução com aquela de referência), será considerada como
-raiz o primeiro nó que não tenha um pai. A ordem dos filhos de um nó
-da árvore não importa. O programa será executado da seguinte forma no
-processo de avaliação automática:
-
-#+BEGIN_EXAMPLE
-./etapa3 < entrada > saida
-#+END_EXAMPLE
-
-#+latex: \noindent
-O conteúdo de ~saida~ contém a árvore da solução.
-
 ** Remoção de conflitos/ajustes gramaticais
 
 Todos os conflitos /Reduce-Reduce/ e /Shift-Reduce/ devem ser removidos,
@@ -197,53 +204,6 @@ vazamentos de memória.
 
 #+latex: %\onecolumn
 #+latex: \appendix
-
-* Avaliação objetiva                                               :noexport:
-** 1. Geração da árvore
-
-Em qualquer execução, o executável implementado nesta etapa deve
-exportar a árvore em formato CSV no arquivo ~e3.csv~
-
-#+BEGIN_EXAMPLE
-# primeiro laço de compilação/descompilação
-./etapa3 < source.txt > eq1.txt
-# o arquivo e3.csv já deverá ter sido criado aqui
-cat e3.csv
-#+END_EXAMPLE
-
-O teste será avaliado como correto caso a árvore criada seja
-estruturalmente idêntica aquela de referência, seguindo os regramentos
-vistos em aula sobre construção de AST. O arquivo CSV pode ser
-visualizado, mediante alguma manipulação, através de ferramentas do
-pacote ~graphviz~, como por exemplo o programa ~dot~, ou códigos escritos
-em linguagens de mais alto nível tais como R/ggplot2.
-
-** 2. Gerenciamento da memória do compilador
-
-Um compilador deve gerenciar bem a memória alocada
-dinamicamente. Neste sentido, um teste automático consistirá em lançar
-a ferramenta ~valgrind~ para verificar se toda a memória alocada
-dinamicamente foi integralmente liberada antes do término do programa.
-Ao lançar o compilador com uma determinada entrada, assim:
-
-#+begin_src shell :results output
-valgrind ./etapa3 < uma_entrada_correta
-#+end_src
-
-Será observada esta saída do ~valgrind~:
-
-#+BEGIN_EXAMPLE
-==26684==    definitely lost: 0 bytes in 0 blocks
-==26684==    indirectly lost: 0 bytes in 0 blocks
-==26684==      possibly lost: 0 bytes in 0 blocks
-==26684==    still reachable: 0 bytes in 0 blocks
-==26684==         suppressed: 0 bytes in 0 blocks
-#+END_EXAMPLE
-
-Somente passará o teste em que todos os valores de bytes e blocos
-forem zero. Qualquer valor diferente de ~0 bytes in 0 blocks~ será
-interpretado como não liberação correta da memória alocada
-dinamicamente, e o teste será avaliado para falha.
 
 * Arquivo =main.c=
 
@@ -285,28 +245,74 @@ Utilize o comando =extern void *arvore= nos outros arquivos que fazem
 parte da implementação (como no =parser.y=) para ter acesso a variável
 global =arvore= declarada no arquivo =main.c=.
 
-* Sobre a Árvore Sintática Abstrata                                :noexport:
+* Avaliação objetiva
+
+No processo de avaliação automática, será considerada como raiz o
+primeiro nó que não tenha um pai.  A ordem dos filhos de um nó da
+árvore não importa na avaliação objetiva. O programa será executado da
+seguinte forma no processo de avaliação automática:
+
+#+BEGIN_EXAMPLE
+./etapa3 < entrada > saida
+#+END_EXAMPLE
+
+#+latex: \noindent
+O conteúdo de ~saida~ contém a árvore da solução. Uma vez reconstituído
+em memória, a estrutura da árvore da solução será comparada com aquela
+de referência. Cada teste unitário será avaliado como correto caso a
+árvore criada seja estruturalmente idêntica aquela de referência, com
+a mesma quantidade de nós, arestas e nomes de nós.
+
+A memória alocada dinamicamente deve ser bem gerenciada. Neste
+sentido, um teste automático consistirá em lançar a ferramenta
+~valgrind~ para verificar se toda a memória alocada dinamicamente foi
+integralmente liberada antes do término do programa.  Ao lançar o
+compilador com uma determinada entrada, assim:
+
+#+begin_src shell :results output
+valgrind ./etapa3 < uma_entrada_correta
+#+end_src
+
+Será observada esta saída do ~valgrind~:
+
+#+latex: {\scriptsize
+#+BEGIN_EXAMPLE
+==26684==    definitely lost: 0 bytes in 0 blocks
+==26684==    indirectly lost: 0 bytes in 0 blocks
+==26684==      possibly lost: 0 bytes in 0 blocks
+==26684==    still reachable: 0 bytes in 0 blocks
+==26684==         suppressed: 0 bytes in 0 blocks
+#+END_EXAMPLE
+#+latex: }
+
+Somente passará o teste em que todos os valores de bytes e blocos
+forem zero. Qualquer valor diferente de ~0 bytes in 0 blocks~ será
+interpretado como não liberação correta da memória alocada
+dinamicamente, e o teste será avaliado para falha.
+
+* Sobre a Árvore Sintática Abstrata
 
 A árvore sintática abstrata, do inglês /Abstract Syntax Tree/ (AST), é
 uma árvore n-ária onde os nós folha representam os tokens presentes no
 programa fonte, os nós intermediários são utilizados para criar uma
 hierarquia que condiz com as regras sintáticas, e a raiz representa o
-programa inteiro.  Essa árvore se inspira nas derivações do analisador
-sintático, tornando mais fáceis as etapas posteriores de verificação e
-síntese.
+programa inteiro, ou a primeira função do programa.  Essa árvore se
+inspira nas derivações do analisador sintático, tornando mais fáceis
+as etapas posteriores de verificação semântica e síntese de código.
 
 A árvore é abstrata (quando comparada a árvore de derivação gramatical
-completa) porque não precisa representar detalhadamente todas as
-derivações gramaticais para uma entrada dada.  Tipicamente serão
-omitidas derivações intermediárias onde um símbolo não terminal gera
-somente um outro símbolo terminal, tokens que são palavras reservadas,
-e todos os símbolos de sincronismo ou identificação do código, os
-quais estão implícitos na estrutura hierárquica criada. São mantidos
-somente os nós fundamentais para manter a semântica da entrada.
+completa) porque não detalha todas as derivações gramaticais para uma
+entrada dada.  Tipicamente são omitidas derivações intermediárias onde
+um símbolo não terminal gera somente um outro símbolo terminal, tokens
+que são palavras reservadas, e todos os símbolos de sincronismo ou
+identificação do código, os quais estão implícitos na estrutura
+hierárquica criada. São mantidos somente os nós fundamentais para
+manter a semântica da entrada. A estrutura do nível de detalhamento de
+uma AST pode depender das escolhas de projeto de um compilador.
 
-Os nós da árvore serão de =tipos= relacionados aos símbolos não
-terminais, ou a nós que representam operações diferentes, no caso das
-expressões. É importante notar que normalmente as declarações de tipos
-e variáveis podem ser omitidas da AST, pois estas construções
+Os nós da árvore são frequentemente de =tipos= relacionados aos símbolos
+não terminais, ou a nós que representam operações diferentes, no caso
+das expressões. É importante notar que normalmente as declarações de
+tipos e variáveis são omitidas da AST, pois estas construções
 linguísticas não geram código, salvo nas situações onde as variáveis
 declaradas devem ser inicializadas.
