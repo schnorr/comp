@@ -45,34 +45,33 @@ sintática, ou seja, quando =yyparse= retornar.
 * Funcionalidades Necessárias
 ** Associação de valor ao =token= (=yylval=)
 
-Nesta etapa, deve-se associar um _valor_ ao =token= correspondente. Esta
-associação deve ser feita pelo analisador léxico, ou seja, no arquivo
+Nesta etapa, deve-se associar um _valor_ para alguns =tokens=. Esta
+associação deve ser feita no analisador léxico, ou seja, no arquivo
 =scanner.l=. Ela é realizada através do [[http://www.gnu.org/software/bison/manual/html_node/Token-Values.html][uso da variável global =yylval=]]
-[1] que é usada pelo =flex= para dar um ``valor'' ao =token=, além da
-constante inteira (como aquelas listadas no arquivo =tokens.h= na etapa
-1 e no arquivo =parser.y= a partir da etapa 2) que é habitualmente
-retornada pelo analisador léxico. Como esta variável global pode ser
-configurada com a diretiva =%union=, sugere-se o uso do campo com o nome
-=valor_lexico= para a associação. Portanto, a associação deverá ser
-feita através de uma atribuição para a variável =yylval.valor_lexico=. O
-tipo do =valor_lexico= (e por consequência o valor que será retido) deve
-ser uma estrutura de dados que contém os seguintes campos: (a) número
-da linha onde apareceu o lexema; (b) tipo do token (palavras
-reservadas, caracteres especiais, operadores compostos,
-identificadores, e literais); (c) valor do token.
+[1] que é usada pelo =flex= para dar um ``valor'' ao =token= em
+complemento ao uso das constantes de identificação (comando
+~%token~). Como esta variável global pode ser configurada com a diretiva
+=%union=, sugere-se o uso do campo com o nome =valor_lexico= para a
+associação. Portanto, a associação deverá ser feita através de uma
+atribuição para a variável =yylval.valor_lexico=. O tipo do =valor_lexico=
+(e por consequência o valor que será retido) deve ser uma estrutura de
+dados que contém os seguintes campos: (a) número da linha onde
+apareceu o lexema; (b) tipo do token (caracteres especiais, operadores
+compostos, identificadores e literais); (c) valor do token. Não há
+necessidade de lidar com palavras-reservadas.
 
 O valor do token deve ser uma cadeia de caracteres (duplicada com
-=strdup= a partir de =yytext=) para todos os tipos de tokens salvo para os
-literais, que devem ter um tratamento especial. No caso dos literais,
-o /valor do token/ deve ser convertido para o tipo apropriado (inteiro
-=int=, ponto-flutuante =float=, caractere =char=, booleano =bool= (ou =int=) ou
-cadeia de caracteres =char*=).  A conversão deve ser feita utilizando
-funções tais como =atoi=, no caso de números inteiros, e =atof=, no caso
-de ponto-flutuantes. Os tipos caractere e cadeia de caracteres não
-devem conter aspas (simples ou duplas) no campo valor (e devem ser
-duplicados com =strdup=). Uma forma de implementar o /valor do token/ para
-literais é utilizar dois campos: um /tipo de literal/ e o valor
-associado a ele através de uma construção =union= da linguagem C.
+=strdup= a partir de =yytext=) para os tokens de caracteres especiais,
+operadores compostos, identificadores. Os tokens de valores literais
+devem ter um tratamento especial, pois o /valor do token/ deve ser
+convertido para o tipo apropriado (inteiro =int=, ponto-flutuante =float=,
+caractere =char=, booleano =bool= (ou =int=) ou cadeia de caracteres =char*=).
+A conversão é feita com funções tais como =atoi= e =atof=.  Os tipos
+caractere e cadeia de caracteres não devem conter aspas (simples ou
+duplas) no campo valor (e devem ser duplicados com =strdup=). Uma forma
+de implementar o /valor do token/ para literais é utilizar dois campos:
+um /tipo de literal/ e o valor associado a ele através de uma construção
+=union= da linguagem C.
 
 ** Estrutura de dados em árvore
 
