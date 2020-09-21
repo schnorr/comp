@@ -146,7 +146,7 @@ ponto-e-vírgula. Veja o exemplo:
 0x8235900 [label="minha_funcao"];
 0x82358e8 [label="="];
 0x8235890 [label="minha_var"];
-0x82358d0 [label="3.4"];
+0x82358d0 [label="um literal string"];
 #+END_EXAMPLE
 
 O nome que deve ser utilizado no campo ~label~ deve seguir o seguinte
@@ -155,21 +155,32 @@ da função). Para declaração de variável com inicialização, o nome deve
 ser ~<=~ (o operador composto menor igual). Para o comando de
 atribuição, o nome deve ser ~=~ (o operador igual). Para o indexador de
 vetor, o nome deve ser ~[]~ (abre e fecha colchetes). Para a chamada de
-função, o nome deve ser ~call~ seguinte do nome da função a ser chamado,
+função, o nome deve ser ~call~ seguinte do nome da função chamada,
 separado por espaço. Para os comandos de shift, o nome deve ser o
-operador menor menor ou maior maior, sem espaço (por exemplo ~>>~). Para
-os comandos de retorno, break e continue, devem ser utilizados os
-lexemas correspondentes. Para os comandos de controle de fluxo,
-deve-se utilizar o nome ~if~ para o comando if com else opcional, o nome
-~for~ para o comando for, e ~while~ para o comando while. Para as
+operador composto, menor menor ou maior maior, sem espaço (por exemplo
+~>>~). Para os comandos de retorno, break e continue, devem ser
+utilizados os lexemas correspondentes. Para os comandos de controle de
+fluxo, deve-se utilizar o nome ~if~ para o comando if com else opcional,
+o nome ~for~ para o comando for, e ~while~ para o comando while. Para as
 expressões aritméticas, devem ser utilizados os próprios operadores
 unários ou binários como nomes. Para as expressões lógicas, deve-se
 utilizar ~&&~ para o e lógico e ~||~ para o ou lógico. No caso do operador
-ternário, deve ser utilizado o nome ~?:~.
+ternário, deve ser utilizado o nome ~?:~. Enfim, para os
+identificadores e literas, deve-se utilizar o próprio lexema sem aspas
+(simples ou duplas) quando for o caso.
 
-No processo de avaliação automática (onde será comparada a árvore da
-solução com aquela de referência), será considerada como raiz o
-primeiro nó do arquivo que não tenha um pai.
+No processo de avaliação automática (onde será comparada a estrutura
+da árvore da solução com aquela de referência), será considerada como
+raiz o primeiro nó que não tenha um pai. A ordem dos filhos de um nó
+da árvore não importa. O programa será executado da seguinte forma no
+processo de avaliação automática:
+
+#+BEGIN_EXAMPLE
+./etapa3 < entrada > saida
+#+END_EXAMPLE
+
+#+latex: \noindent
+O conteúdo de ~saida~ contém a árvore da solução.
 
 ** Remoção de conflitos/ajustes gramaticais
 
@@ -244,19 +255,19 @@ na saída padrão. A função =libera=, cujo protótipo também é dado, deve
 ser implementada para liberar toda a memória que foi alocada para
 manter a árvore.
 
+#+latex: {\scriptsize
 #+BEGIN_SRC C :tangle main.c
 /*
-Função principal para realização da E3.
-
-Este arquivo não pode ser modificado.
+  Função principal para realização da E3.
+  Não modifique este arquivo.
 */
 #include <stdio.h>
 extern int yyparse(void);
 extern int yylex_destroy(void);
 
 void *arvore = NULL;
-void libera (void *arvore);
 void exporta (void *arvore);
+void libera (void *arvore);
 
 int main (int argc, char **argv)
 {
@@ -268,12 +279,13 @@ int main (int argc, char **argv)
   return ret;
 }
 #+END_SRC
+#+latex: }
 
 Utilize o comando =extern void *arvore= nos outros arquivos que fazem
 parte da implementação (como no =parser.y=) para ter acesso a variável
 global =arvore= declarada no arquivo =main.c=.
 
-* Sobre a Árvore Sintática Abstrata
+* Sobre a Árvore Sintática Abstrata                                :noexport:
 
 A árvore sintática abstrata, do inglês /Abstract Syntax Tree/ (AST), é
 uma árvore n-ária onde os nós folha representam os tokens presentes no
