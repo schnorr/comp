@@ -30,17 +30,17 @@ Prof. Lucas Mello Schnorr
 
 #+latex: \noindent
 schnorr@inf.ufrgs.br
-
 * Introdução
 
 A terceira etapa do projeto de compilador para a linguagem consiste na
 criação da árvore sintática abstrata (/Abstract Syntax Tree/
 -- AST) baseada no programa de entrada. A árvore deve ser
-obrigatoriamente criada a medida que as regras semânticas são
+obrigatoriamente criada na medida que as regras semânticas são
 executadas e deve ser mantida em memória mesmo após o fim da análise
-sintática, ou seja, quando =yyparse= retornar. A árvore deve ser
-impressa na tela após a análise sintática. O conteúdo impresso deve ser
-semanticamente idêntico ao programa fornecido na entrada do compilador.
+sintática, ou seja, quando =yyparse= retornar.
+#  A árvore deve ser impressa na tela após a análise sintática. O
+#  conteúdo impresso deve ser semanticamente idêntico ao programa
+#  fornecido na entrada do compilador.
 
 * Funcionalidades Necessárias
 ** Associação de valor ao =token= (=yylval=)
@@ -57,9 +57,9 @@ configurada com a diretiva =%union=, sugere-se o uso do campo com o nome
 feita através de uma atribuição para a variável =yylval.valor_lexico=. O
 tipo do =valor_lexico= (e por consequência o valor que será retido) deve
 ser uma estrutura de dados que contém os seguintes campos: (a) número
-da linha (e coluna, caso exista) onde apareceu o lexema; (b) tipo do
-token (um dentre as [[./etapa1.org][cinco categorias definidas na E1]]); (c) valor do
-token.
+da linha onde apareceu o lexema; (b) tipo do token (palavras
+reservadas, caracteres especiais, operadores compostos,
+identificadores, e literais); (c) valor do token.
 
 O valor do token deve ser uma cadeia de caracteres (duplicada com
 =strdup= a partir de =yytext=) para todos os tipos de tokens salvo para os
@@ -74,16 +74,14 @@ duplicados com =strdup=). Uma forma de implementar o /valor do token/ para
 literais é utilizar dois campos: um /tipo de literal/ e o valor
 associado a ele através de uma construção =union= da linguagem C.
 
-
-
 ** Implementar estrutura de dados em árvore
 
 Implementar uma estrutura de dados para representar uma árvore em
 memória, com funções habituais tais como criação de nó, remoção,
 alteração e impressão recursiva da árvore através de um percurso em
-profundidade. Qualquer outra função que o grupo achar pertinente
-implementar são também bem vistas. Salienta-se o fato de que cada nó
-deve ter um número arbitrário de filhos que também são nós da árvore.
+profundidade. Qualquer outra função que o grupo achar pertinente pode
+também ser implementada. Salienta-se o fato de que cada nó pode ter
+um número arbitrário de filhos, que também serão nós da árvore.
 
 ** Ações /bison/ para construção da AST
 
@@ -98,41 +96,96 @@ já foram criados. Ao final do processo de análise sintática, um
 ponteiro para a estrutura de dados que guarda a raiz da árvore deve
 ser salvo na variável global =arvore=.
 
-Não precisa incorporar à árvore declarações de qualquer tipo ou
-comandos de entrada e saída. Por outro lado, uma declaração de
-variável local com inicialização é como se fosse uma atribuição,
-portanto deve fazer parte da árvore.
+Devem fazer parte da AST *(1)* todos os comandos simples da linguagem,
+salvo o bloco de comando e a declaração de variáveis sem
+inicialização, *(2)* todas as expressões ariméticas e lógicas obedecendo
+as regras de associatividade e precedência já estabelecidas na E2, *(3)*
+listas de comandos (um comando deve ter um filho que é o próximo
+comando), *(4)* listas de expressões (uma expressão deve ter um filho
+que é a próxima expressão) naqueles comandos onde isso se faz
+necessário, tais como chamada de função, *(5)* listas de funções (uma
+função deve ter dois filhos, um que é o seu primeiro comando e outro
+que é a próxima função), e *(6)* o indexador de vetor ~[]~ que deve ter
+dois filhos (identificador e a expressão de indexação).
+
+No caso das expressões aritméticas e lógicas, os operadores unários
+devem ter pelo menos um filho, os operadores binários devem ter pelo
+menos dois filhos e o operador ternário deve ter pelo menos três
+filhos. Nestes casos, o "pelo menos" é explicitado pois estas
+expressões podem aparecer em listas de expressões, sendo necessário
+mais um filho que indica qual a próxima expressão, conforme detalhado
+no parágrafo anterior.
 
 ** Exportar a árvore em formato CSV
 
 Implementar a função ~exporta~ (veja no anexo ~main.c~ abaixo). Esta
 função deverá percorrer a árvore gerada, a partir da raiz e de maneira
-recursiva, e imprimir os nós (vértices) e todas as relações entre os
-nós (arestas). Um nó deve ser identificado pelo seu endereço de
-memória (tipicamente impresso com o padrão ~%p~ da libc). Um exemplo de
-saída CSV válida é o seguinte, onde o nó ~0x8235930~ tem um filho
-~0x8235900~, que por sua vez tem também somente um filho ~0x82358e8~, que
-por sua vez tem dois filhos (~0x8235890~ e ~0x82358d0~):
+recursiva, imprimindo todos os nós (vértices) e todas as relações
+entre os nós (arestas). A impressão deve acontecer na saída padrão
+(stdout, tipicamente com uso de ~printf~). Um nó deve ser identificado
+pelo seu endereço de memória (impresso com o padrão ~%p~ da libc). Um
+exemplo de saída CSV válida é o seguinte, onde o nó ~0x8235900~ tem
+somente um filho ~0x82358e8~, que por sua vez tem dois filhos (~0x8235890~
+e ~0x82358d0~):
 
 #+BEGIN_EXAMPLE
-0x8235930, 0x8235900
 0x8235900, 0x82358e8
 0x82358e8, 0x8235890
 0x82358e8, 0x82358d0
 #+END_EXAMPLE
 
+#+latex: \noindent
+
+Todos os nós devem ser nomeados, usando uma linha por nó, da seguinte
+forma: o identificador do nó (endereço de memória impresso com o
+padrão ~%p~ da lib) seguido de espaço e abre colchetes, ~label=~ e o nome
+entre aspas duplas, terminando-se por fecha colchetes e
+ponto-e-vírgula. Veja o exemplo:
+
+#+BEGIN_EXAMPLE
+0x8235900 [label="minha_funcao"];
+0x82358e8 [label="="];
+0x8235890 [label="minha_var"];
+0x82358d0 [label="3.4"];
+#+END_EXAMPLE
+
+O nome que deve ser utilizado no campo ~label~ deve seguir o seguinte
+regramento. Para funções, deve-se utilizar seu identificador (o nome
+da função). Para declaração de variável com inicialização, o nome deve
+ser ~<=~ (o operador composto menor igual). Para o comando de
+atribuição, o nome deve ser ~=~ (o operador igual). Para o indexador de
+vetor, o nome deve ser ~[]~ (abre e fecha colchetes). Para a chamada de
+função, o nome deve ser ~call~ seguinte do nome da função a ser chamado,
+separado por espaço. Para os comandos de shift, o nome deve ser o
+operador menor menor ou maior maior, sem espaço (por exemplo ~>>~). Para
+os comandos de retorno, break e continue, devem ser utilizados os
+lexemas correspondentes. Para os comandos de controle de fluxo,
+deve-se utilizar o nome ~if~ para o comando if com else opcional, o nome
+~for~ para o comando for, e ~while~ para o comando while. Para as
+expressões aritméticas, devem ser utilizados os próprios operadores
+unários ou binários como nomes. Para as expressões lógicas, deve-se
+utilizar ~&&~ para o e lógico e ~||~ para o ou lógico. No caso do operador
+ternário, deve ser utilizado o nome ~?:~.
+
+No processo de avaliação automática (onde será comparada a árvore da
+solução com aquela de referência), será considerada como raiz o
+primeiro nó do arquivo que não tenha um pai.
+
 ** Remoção de conflitos/ajustes gramaticais
 
-Todos os conflitos /Reduce-Reduce/ e /Shift-Reduce/ devem ser removidos.
+Todos os conflitos /Reduce-Reduce/ e /Shift-Reduce/ devem ser removidos,
+caso estes se tornem presentes com eventuais modificações feitas na
+gramática.
 
-#+latex: \onecolumn\appendix
-
-** Gerenciar corretamente a memória do compilador                 :noexport:
+** Gerenciar corretamente a memória
 
 Implementar a função =libera= (veja no anexo =main.c= abaixo), que deve
 liberar a memória de maneira recursiva (de baixo para cima). O
 programa =valgrind= será utilizado para averiguar a ausência de
 vazamentos de memória.
+
+#+latex: %\onecolumn
+#+latex: \appendix
 
 * Avaliação objetiva                                               :noexport:
 ** 1. Geração da árvore
@@ -185,20 +238,18 @@ dinamicamente, e o teste será avaliado para falha.
 
 A função principal da E3 aparece abaixo. A variável global =arvore= de
 tipo =void*= é um ponteiro para a estrutura de dados que contém a raiz
-da árvore de derivação do programa. A função =descompila=, cujo
-protótipo é dado, deve ser implementada de maneira recursiva para
-imprimir toda a árvore, de cima para baixo, da esquerda para a
-direita. Isso na prática faz com que o programa da entrada seja
-reobtido. A função =libera=, cujo protótipo também é dado, deve ser
-implementada para liberar toda a memória que foi alocada para manter a
-árvore.
+da árvore de derivação do programa. A função =exporta=, cujo protótipo é
+dado, deve ser implementada de maneira recursiva para exportar a AST
+na saída padrão. A função =libera=, cujo protótipo também é dado, deve
+ser implementada para liberar toda a memória que foi alocada para
+manter a árvore.
 
 #+BEGIN_SRC C :tangle main.c
 /*
 Função principal para realização da E3.
 
 Este arquivo não pode ser modificado.
-,*/
+*/
 #include <stdio.h>
 extern int yyparse(void);
 extern int yylex_destroy(void);
@@ -223,26 +274,23 @@ parte da implementação (como no =parser.y=) para ter acesso a variável
 global =arvore= declarada no arquivo =main.c=.
 
 * Sobre a Árvore Sintática Abstrata
-** Apresentação
 
 A árvore sintática abstrata, do inglês /Abstract Syntax Tree/ (AST), é
 uma árvore n-ária onde os nós folha representam os tokens presentes no
 programa fonte, os nós intermediários são utilizados para criar uma
 hierarquia que condiz com as regras sintáticas, e a raiz representa o
-programa inteiro.  Essa árvore registra as derivações reconhecidas
-pelo analisador sintático, tornando mais fáceis as etapas posteriores
-de verificação e síntese.
+programa inteiro.  Essa árvore se inspira nas derivações do analisador
+sintático, tornando mais fáceis as etapas posteriores de verificação e
+síntese.
 
 A árvore é abstrata (quando comparada a árvore de derivação gramatical
 completa) porque não precisa representar detalhadamente todas as
 derivações gramaticais para uma entrada dada.  Tipicamente serão
 omitidas derivações intermediárias onde um símbolo não terminal gera
 somente um outro símbolo terminal, tokens que são palavras reservadas,
-e todos os símbolos ``de sincronismo'' ou identificação do código, os
+e todos os símbolos de sincronismo ou identificação do código, os
 quais estão implícitos na estrutura hierárquica criada. São mantidos
 somente os nós fundamentais para manter a semântica da entrada.
-
-** Os nós da árvore
 
 Os nós da árvore serão de =tipos= relacionados aos símbolos não
 terminais, ou a nós que representam operações diferentes, no caso das
