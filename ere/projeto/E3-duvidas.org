@@ -1,0 +1,51 @@
+#+STARTUP: overview indent
+#+TITLE: Dúvidas da E2 do Projeto de Compilador
+
+* E3
+** 2020-09-23 D0
+*** Pergunta #1
+
+... depois de ver os vídeos sobre o Bison e a especificação ...
+... gostaria de validar se é de fato isso que deve ser feito;
+
+Defini 3 estruturas de dados em um arquivo separado:
+
+- Uma union em C com campos como "int inteiro", "float
+  ~ponto_flutuante~", "char* nome", para guardar o valor dos tokens
+  lidos
+
+- Uma struct que guarda a linha de ocorrencia, valor (a union acima) e
+  tipo do token (Aqueles usados nas outras etapas como ~TK_LIT_INT~,
+  etc.)
+
+- Struct para os nodos da AST que guarda uma variavel do tipo
+  ~valor_lexico~ e ponteiros para os nodos filhos e nodos irmaos desse
+  nodo
+
+No arquivo parser.y defini uma union do bison:
+
+#+BEGIN_EXAMPLE
+%union {
+   node_t* nodo;
+   valor_lexico_t* valor_lexico;
+}
+#+END_EXAMPLE
+
+e nas declarações de tokens usei construções como
+
+#+BEGIN_EXAMPLE
+%token <valor_lexico->valor.inteiro> TK_LIT_INT
+%type <nodo> operador_binario
+#+END_EXAMPLE
+
+É desta forma que devem ser organizados estes dados, ou estou fazendo
+algum erro/redundância?
+
+*** Pergunta #2
+
+... não me parece claro como, no arquivo parser.y, teremos acesso à
+variável "arvore" declarada no arquivo main.c, para que possamos
+construí-la usando as ações do parser. Ela não deveria ser passada
+para a função yyparse() de alguma forma?
+
+
