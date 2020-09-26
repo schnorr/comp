@@ -1,7 +1,7 @@
 #+STARTUP: overview indent
 #+TITLE: Dúvidas da E3 do Projeto de Compilador
 * E3
-** 2020-09-23 D0
+** DONE 2020-09-23 D0
 *** Pergunta #1
 
 ... depois de ver os vídeos sobre o Bison e a especificação ...
