@@ -47,5 +47,72 @@ variável "arvore" declarada no arquivo main.c, para que possamos
 construí-la usando as ações do parser. Ela não deveria ser passada
 para a função yyparse() de alguma forma?
 
-** TODO 2020-09-23 Nota
+** DONE 2020-09-23 Nota
 - Falar sobre a especificação
+  - Nó ~return~ da AST tem um filho, que é uma expressão
+** TODO 2020-09-25 D1
+*** Pergunta #1
+
+Estamos tentando seguir a especificação e tentando ir de acordo com os
+comentários no primeiro vídeo de dúvida para essa etapa, e criamos uma
+struct da seguinte forma:
+
+#+BEGIN_EXAMPLE
+struct valor_lexico_t {
+    int linha;
+    union {
+        int val_int;
+        float val_float;
+        char *val_str;
+        char val_char;
+    } valor;
+};
+#+END_EXAMPLE
+
+
+Se declaramos ela em outro arquivo ou na parte de código C no arquivo
+~parser.y~, precisamos, no ~%union~, definir ela da seguinte forma
+"~valor_lexico_t *valor_lexico;~" (com ponteiro), mas isso está causando
+segmentation fault sempre que tentamos adicionar algum valor nela no
+~scanner.l~.
+
+A adição sendo feita da seguinte forma:
+"~yylval.valor_lexico->valor.val_int = atoi(yytext);~"
+
+Porém, fazendo a declaração dessa estrutura da forma:
+
+#+BEGIN_EXAMPLE
+%code requires {
+    // struct acima
+}
+#+END_EXAMPLE
+
+conseguimos só definir o ~valor_lexico~ na union (sem ponteiro) e os
+erros de segmentation param. Está certo deixar assim?
+
+*** Pergunta #2
+
+Não entendi como deve ser o campo "tipo do token" para a estrutura
+~valor_lexico~. Devemos pegar os próprios tokens, (e.g. ~TK_LIT_TRUE~,
+~TK_IDENTIFICADOR~) e colocar em um campo tipo int?
+
+*** Pergunta #3
+
+Você pede pra que os valores dos tokens sejam tratados de forma
+correta em relação ao seu tipo, int como inteiro, caractere como
+char.., mas tem um caso que queria saber como tratar. Na etapa 1
+permitimos char no formato '\t', por exemplo, mas não sabemos agora
+como transformar o conteúdo do ~yytext~ em 1 único char, quando houver
+esse caso.
+
+*** Pergunta #3
+
+... como nos casos do char, genericamente seria apenas 1
+caracter, ainda precisaríamos passar o ~yytext~ pelo ~strdup~? ele retorna
+uma cadeia de caracteres, mas se pegássemos o conteúdo direto de
+~yytext[1]~ já teríamos o valor dele, já sem as aspas.
+
+
+
+
+
