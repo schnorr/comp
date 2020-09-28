@@ -36,12 +36,15 @@ Cálculo de Atributos
 + Têm restrições para criar o grafo de dependência
 * Exemplo
 Considerando a gramática com ações semânticas
-  | T  | \rightarrow | FT'        | \texttt{ T'.h = F.val }                  |
-  |    |             |            | \texttt{ T.val = T'.s }                  |
-  | T' | \rightarrow | $*FT'_1$   | \texttt{ $T'_1$.h = T'.h * F.val }       |
-  |    |             |            | \texttt{ T'.s = $T'_1$.s }               |
-  | T' | \rightarrow | $\epsilon$ | \texttt{ T'.s = T'.h }                   |
-  | F  | \rightarrow | *digit*    | \texttt{ F.val = atoi(digit.lexema) } |
+
+  | T  | \rightarrow | F ~{ T'.h = F.val }~ T' ~{ T.val = T'.s }~                    |
+  |    |   |                                                           |
+  | T' | \rightarrow | *F ~{~ $T'_1$ ~.h = T'.h * F.val }~   T'_1  ~{ T'.s =~ $T'_1$ ~.s }~ |
+  |    |   |                                                           |
+  | T' | \rightarrow | $\epsilon$ ~{ T'.s = T'.h }~                                       |
+  |    |   |                                                           |
+  | F  | \rightarrow | *digit* ~{ F.val = atoi(digit.lexema) }~                      |
+
 Calcular o grafo de dependências para $3*5$
 * *S-Atribuído*
 Requisitos

@@ -65,23 +65,23 @@ O que faz este compilador?
 Atributos Sintetizados \\
   \rightarrow Depende somente de atributos dos filhos \\
 
-#+ATTR_LATEX: :width .3\linewidth
+#+ATTR_LATEX: :width .2\linewidth
 [[./img/atributo_sintetizado.png]]
 
 \pause Atributos Herdados \\
   \rightarrow Depende de atributos do pai ou dos irmãos
 
-
-#+ATTR_LATEX: :width .3\linewidth
+#+ATTR_LATEX: :width .2\linewidth
 [[./img/atributo_herdado.png]]
 
 * Atributos herdados
 Considerando a gramática com ações semânticas
-  | T  | \rightarrow | FT'        | \texttt{ T'.h = F.val }                  |
-  |    |             |            | \texttt{ T.val = T'.s }                  |
-  | T' | \rightarrow | $*FT'_1$   | \texttt{ $T'_1$.h = T'.h * F.val }       |
-  |    |             |            | \texttt{ T'.s = $T'_1$.s }               |
-  | T' | \rightarrow | $\epsilon$ | \texttt{ T'.s = T'.h }                   |
-  | F  | \rightarrow | *digit*    | \texttt{ F.val = atoi(digit.lexema) } |
+  | T  | \rightarrow | F ~{ T'.h = F.val }~ T' ~{ T.val = T'.s }~                    |
+  |    |   |                                                           |
+  | T' | \rightarrow | *F ~{~ $T'_1$ ~.h = T'.h * F.val }~   T'_1  ~{ T'.s =~ $T'_1$ ~.s }~ |
+  |    |   |                                                           |
+  | T' | \rightarrow | $\epsilon$ ~{ T'.s = T'.h }~                                       |
+  |    |   |                                                           |
+  | F  | \rightarrow | *digit* ~{ F.val = atoi(digit.lexema) }~                      |
 Crie a árvore de derivação anotada para
 + $3 * 5$
