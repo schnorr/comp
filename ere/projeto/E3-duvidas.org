@@ -50,7 +50,7 @@ para a função yyparse() de alguma forma?
 ** DONE 2020-09-23 Nota
 - Falar sobre a especificação
   - Nó ~return~ da AST tem um filho, que é uma expressão
-** TODO 2020-09-25 D1
+** DONE 2020-09-25 D1
 *** Pergunta #1
 
 Estamos tentando seguir a especificação e tentando ir de acordo com os
@@ -114,5 +114,78 @@ uma cadeia de caracteres, mas se pegássemos o conteúdo direto de
 
 
 
+** TODO 2020-09-29 D2
+*** Dúvida #1
 
+É possível acessar a variável yylval de um arquivo .h? Tentei usar o
+comando extern, mas sempre ocorre algum erro na compilação.
 
+*** Dúvida #2
+
+Na seção 2.3, item 1, é dito que as declarações de funções devem ter
+dois filhos: O primeiro comando e a próxima função.
+
+1. Isto significa, então, que não devemos salvar a assinatura da
+   função (os parâmetros que pode receber) como seus filhos?
+
+2. Da mesma forma, não precisamos, então, salvar a declaração de
+   variáveis globais na AST, visto que as funções apontam apenas para
+   a próxima função?
+
+3. Também relacionado a variáveis, nas variáveis locais precisamos
+   colocar na AST apenas aquelas que são inicializadas (e.x. int x <=
+   5;) e ignorar aquelas que não são (e.x. int x;)?
+
+*** Dúvida #3
+
+1. Na parte que fala sobre a exportação (impressão) da Árvore, você
+   não fala nada sobre os comandos de "input" e "output". Não devemos
+   printar eles?  Na parte de chamar uma função, devemos printar cada
+   parametro sendo passado? e se sim, como que fazemos a impressao
+   deles na tela (indenficamos que serão separados por vírgula ou algo
+   assim) ?
+
+*** Dúvida #4
+
+2. Na parte de montar a arvore, diz que não devemos colocar o bloco de
+   comandos como um comando simples na arvore (2.3 - item 4.). Isso
+   significa que iremos ignorar essa parte completamente?
+
+*** Dúvida #5
+
+3. Uma dúvida em relação a montagem da ast, por exemplo na criação de
+   um nodo para a declaração de função, na especificação diz que deve
+   ter pelo menos dois filhos (primeiro comando e a próxima
+   função). Sobre isso, estamos criando um nodo de função que tem só
+   um filho (sendo a primeiro comando), mas tem um nodo acima que
+   aponta para essa declaração e depois para a próxima função. Queria
+   entender se está correto fazer desta maneira, e se tem alguma
+   implicação na parte de exportar a árvore (se teria problema em
+   relação aos ponteiros na correção).
+*** Dúvida #6
+
+4. Na associação dos tokens no yylval, pensando nos caracteres
+   especiais, não entendi como fazemos a relação deles com os valores
+   do parser, sendo que no parser definimos esses símbolos ('+' e '-')
+   manualmente nas expressões.
+
+*** Dúvida #7
+
+Acho que tinha me confundido nessa parte do chamar a função.
+
+Nós vamos imprimir toda a estrutura da árvore em ponteiros (com suas
+relações) e depois vamos identificá-los com os labels, certo?
+
+Então nesse caso da chamada de função teremos o ponteiro da chamada e
+depois x outros ponteiros que serão os parâmetros sendo passados? 
+
+*** Dúvida #8
+
+A impressão do "proximo" de um comando é feita da mesma forma que para
+um filho?
+
+*** Dúvida #9
+
+Gostaria de pedir também se tens um exemplo um pouco maior de saída?
+Algumas coisas parecem um pouco abstratas e poder ter uma base pra
+compararmos nossa execução seria de grande ajuda.
