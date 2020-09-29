@@ -113,8 +113,7 @@ uma cadeia de caracteres, mas se pegássemos o conteúdo direto de
 ~yytext[1]~ já teríamos o valor dele, já sem as aspas.
 
 
-
-** TODO 2020-09-29 D2
+** DONE 2020-09-29 D2
 *** Dúvida #1
 
 É possível acessar a variável yylval de um arquivo .h? Tentei usar o
@@ -140,10 +139,13 @@ dois filhos: O primeiro comando e a próxima função.
 
 1. Na parte que fala sobre a exportação (impressão) da Árvore, você
    não fala nada sobre os comandos de "input" e "output". Não devemos
-   printar eles?  Na parte de chamar uma função, devemos printar cada
-   parametro sendo passado? e se sim, como que fazemos a impressao
-   deles na tela (indenficamos que serão separados por vírgula ou algo
-   assim) ?
+   printar eles?
+
+   Na parte de chamar uma função, devemos printar cada parametro sendo
+   passado?
+   
+   e se sim, como que fazemos a impressao deles na tela (indenficamos
+   que serão separados por vírgula ou algo assim) ?
 
 *** Dúvida #4
 
@@ -156,12 +158,15 @@ dois filhos: O primeiro comando e a próxima função.
 3. Uma dúvida em relação a montagem da ast, por exemplo na criação de
    um nodo para a declaração de função, na especificação diz que deve
    ter pelo menos dois filhos (primeiro comando e a próxima
-   função). Sobre isso, estamos criando um nodo de função que tem só
-   um filho (sendo a primeiro comando), mas tem um nodo acima que
-   aponta para essa declaração e depois para a próxima função. Queria
-   entender se está correto fazer desta maneira, e se tem alguma
-   implicação na parte de exportar a árvore (se teria problema em
-   relação aos ponteiros na correção).
+   função).
+
+   Sobre isso, estamos criando um nodo de função que tem só um filho
+   (sendo a primeiro comando), mas tem um nodo acima que aponta para
+   essa declaração e depois para a próxima função. Queria entender se
+   está correto fazer desta maneira, e se tem alguma implicação na
+   parte de exportar a árvore (se teria problema em relação aos
+   ponteiros na correção).
+
 *** Dúvida #6
 
 4. Na associação dos tokens no yylval, pensando nos caracteres
@@ -189,3 +194,15 @@ um filho?
 Gostaria de pedir também se tens um exemplo um pouco maior de saída?
 Algumas coisas parecem um pouco abstratas e poder ter uma base pra
 compararmos nossa execução seria de grande ajuda.
+
+#+BEGIN_SRC dot :tangle exemplo.dot
+digraph {
+  0xAA -> 0xBB;
+  0xAA [ label = "func" ];
+  0xBB [ label = "func2" ];
+}
+#+END_SRC
+
+#+begin_src shell :results output
+dot exemplo.dot -Tpdf -o exemplo.pdf
+#+end_src
