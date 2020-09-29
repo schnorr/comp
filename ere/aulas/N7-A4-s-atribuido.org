@@ -29,8 +29,8 @@ Especialmente para analisadores *ascendentes*, _com atributos sintetizados_
 Uma implementação possível
 + Atributos são mantidos na pilha de análise
 + No momento da redução 
-    + Atributos sintetizados para aa cabeça da produção são calculados
-      a partir dos atributos que estão na pilha, o corpo da produção
+    + Atributos sintetizados para a cabeça da produção são calculados \\
+      a partir dos atributos que estão na pilha, do corpo da produção
 
 #+latex: \vfill\pause
 
@@ -102,9 +102,9 @@ Testar com a entrada =2*3+4n=
 
 * Exercício 1: tradução simples, impressão na tela
 
-Consideramos o esquema de tradução dirigida pela sintaxe que traduz
-uma linguagem com terminais a, b, c e d em uma linguagem cujos
-terminais são 1, 2, 3, 4, 5 e 6.
+Consideramos o esquema de tradução dirigida pela sintaxe que \\
+traduz uma linguagem com terminais a, b, c e d em uma \\
+linguagem cujos terminais são 1, 2, 3, 4, 5 e 6.
 
 | /   | >  |           |
 | S \rightarrow | AB | print "1" |
@@ -114,18 +114,18 @@ terminais são 1, 2, 3, 4, 5 e 6.
 | B \rightarrow | dB | print "5" |
 | C \rightarrow | c  | print "6" |
 
-Usando um _analisador ascendente_ que executa as ações semânticas
-imediatamente após reduzir a regra correspondente, diga o resultado da
-tradução da entrada =aadbc=?
+Usando um _analisador ascendente_ que executa as ações semânticas \\
+imediatamente após reduzir a regra correspondente, diga o \\
+resultado da tradução da entrada =aadbc=?
 
 1. Construa a árvore de derivação
 2. Execute as reduções na ordem correta
 
 * Exercício 2: criação de uma árvore
 
-Consideramos o esquema de tradução dirigida pela sintaxe que traduz
-uma linguagem com terminais a, b, c e d em uma representação
-hierárquica (árvore) em memória.
+Consideramos o esquema de tradução dirigida pela sintaxe \\
+que traduz uma linguagem com terminais a, b, c e d em uma \\
+representação hierárquica (árvore) em memória.
 
 | /   | >   |                              |
 | S \rightarrow | AB  | =S.n = new node (A.n, B.n);=   |
@@ -135,21 +135,21 @@ hierárquica (árvore) em memória.
 | C \rightarrow | c   | =C.n = new node ("c");=        |
 | B \rightarrow | dB  | =B.n = new node ("d", B.n);=   |
 
-Usando um _analisador ascendente_ que executa as ações semânticas
-imediatamente após reduzir a regra correspondente, diga o resultado da
-tradução da entrada =aadbc=?
+Usando um _analisador ascendente_ que executa as ações semânticas \\
+imediatamente após reduzir a regra correspondente, diga o \\
+resultado da tradução da entrada =aadbc=?
 
 1. Construa a árvore de derivação
 2. Execute as reduções na ordem correta
 * Exercício 3: definição do valor inteiro
 
-O esquema abaixo reconhece uma sequência de dígitos e calcula a soma
-deles em um atributo =val= que fica, no final do reconhecimento,
-definido na raiz.
+O esquema abaixo reconhece uma sequência de dígitos e \\
+calcula a soma deles em um atributo =val= que fica, no \\
+final do reconhecimento, definido na raiz.
 
 | /   | >        |                               |
 | A \rightarrow | A_1 digit | A.val = A_{1}.val + digit.lexval |
 | A \rightarrow | digit    | A.val = digit.lexval          |
 
-Modifique o esquema de forma que suas ações calculem o valor inteiro
-correspondente àquela sequência de dígitos.
+Modifique o esquema de forma que suas ações calculem o \\
+valor inteiro correspondente àquela sequência de dígitos.
