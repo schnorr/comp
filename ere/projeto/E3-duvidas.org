@@ -205,20 +205,64 @@ digraph {
 #+begin_src shell :results output
 dot exemplo.dot -Tpdf -o exemplo.pdf
 #+end_src
-** TODO 2020-09-30 D3
+** DONE 2020-09-30 D3
+*** Dúvida #5
+
+Para mim, a questão do input e output ficou mais confusa após ter sido
+dito que não é necessário imprimir o nó desses comandos se a
+especificação não diz nada a respeito. Mas a especificação diz que
+eles devem ter pelo menos um filho: a variável a ser lida ou
+escrita. Gostaria de saber se esses comandos não devem mais fazer
+parte da árvore ou não.
+
+Resposta: output e input devem fazer parte da AST!
+- Ver Dúvida #1 abaixo
+
+Acredito que a pergunta anterior sobre isso se referia à ausência de
+labels para esses comandos na especificação. Meu pensamento inicial é
+que seriam "input" e "output", da mesma forma que return, break e
+continue.
+
+Anotação Prof.
+- Ver "Dúvida #3"
+
 *** Dúvida #1
 
 Queria só confirmar sobre a exportação para os comandos "input" e
 "output". No vídeo de dúvidas anterior você disse que como não é
 falado no enunciado sobre a exportação deles não precisamos
-trata-los. Quando diz que "não precisamos", ainda seria válido
-exportar eles? Como fazemos a construção deles na árvore seria mais
-simples exportar junto, especialmente na impressão da estrutura com os
-ponteiros dos nodos.
+trata-los. 
+
+Resposta Prof.: Sim, precisamos tratá-los.
+
+Quando diz que "não precisamos", ainda seria válido exportar eles?
+
+Resposta Prof.: Totalmente válido!
+
+Como fazemos a construção deles na árvore seria mais simples exportar
+junto, especialmente na impressão da estrutura com os ponteiros dos
+nodos.
+
+--
+
+Resposta Prof.:
+
+- Da E2: Para entrada de dados, o comando tem a palavra reservada
+  =input=, seguida de um identificador.  O comando de saída é
+  identificado pela palavra reservada =output=, seguida de um
+  identificador ou de um literal.
+
+- Então, na E3:
+  - Nó da AST =input= (label "input") tem pelo menos um filho
+    - Um nó identificador
+  - Nó da AST ~output~ (label "output") tem pelo menos um filho
+    - Um nó identificador OU um nó literal
 
 *** Dúvida #2 / Compartilhamento
 
 "Script python para converter saída para o formato esperado pelo dot"
+
+Google "Graphviz dot file format"
 
 Boa noite professor, nós do grupo J fizemos um pequeno script que faz
 a "tradução" para o formato que o dot espera. Isso facilita bastante a
@@ -230,8 +274,8 @@ Para utilizar basta rodar a etapa3 e direcionar a saída para um
 arquivo (e.g. out.txt)::
 
 #+begin_src shell :results output
-python txt_to_diag.py out.txt diag.txt
-dot diag.txt -Tpng > diag.png
+python txt_to_diag.py out.txt diag.dot
+dot diag.dot -Tpng > diag.png
 #+end_src
 
 Um detalhe é que utilizando os endereços originais o dot não
@@ -245,9 +289,10 @@ riscos 😅
 1. Como mudamos o scanner da etapa1 para deixar os inteiros apenas
    como "positivos sem sinal", já que seria necessário na etapa
    anterior, queria saber se um inteiro -10, pode ser montado na
-   arvore como uma expressão unária '-' que tem o filho "int 10", ou
-   se é necessário tentar "conectar" o int com o sinal em um caso
-   desse tipo, deixando um nodo da arvore apenas com "-10".
+   arvore como uma expressão unária '-' que tem o filho "int 10",
+
+   +ou se é necessário tentar "conectar" o int com o sinal em um caso+
+   +desse tipo, deixando um nodo da arvore apenas com "-10".+
 
 *** Dúvida #4
 
@@ -261,19 +306,11 @@ completamente, fazendo a ligação entre nodos ...).
 
 Queria saber como que seria uma forma de corrigir isso? (armazenar
 passos intermediários da arvore e mandar liberar explicitamente em
-casos de erro?)  Como que compiladores costumam abordar isso?
+casos de erro?)
 
-*** Dúvida #5
+Como que compiladores costumam abordar isso?
 
-Para mim, a questão do input e output ficou mais confusa após ter sido
-dito que não é necessário imprimir o nó desses comandos se a
-especificação não diz nada a respeito. Mas a especificação diz que
-eles devem ter pelo menos um filho: a variável a ser lida ou
-escrita. Gostaria de saber se esses comandos não devem mais fazer
-parte da árvore ou não. Acredito que a pergunta anterior sobre isso se
-referia à ausência de labels para esses comandos na especificação. Meu
-pensamento inicial é que seriam "input" e "output", da mesma forma que
-return, break e continue.
+*** Dúvida #6
 
 Se alguma expressão do for possuir o operador unário interrogação (?)
 ou o ternário (?:), poderia isso gerar problemas de precedência não
