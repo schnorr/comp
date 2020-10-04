@@ -229,4 +229,4 @@ retornar o valor zero.
 #define ERR_WRONG_PAR_SHIFT  53
 #+END_SRC
 #+latex: }\noindent
-Estes valores são utilizados na avaliacação objetiva.
+Estes valores são utilizados na avaliação objetiva.
