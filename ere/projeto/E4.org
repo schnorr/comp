@@ -54,8 +54,8 @@ linguagem.
 A tabela de símbolos guarda informações a respeito dos símbolos
 (identificadores e literais) encontrados na entrada.  Cada entrada na
 tabela de símbolos tem uma chave e um conteúdo. A chave única
-identifica o símbolo, e o conteúdo deve ter as seguintes informações:
-- localização (linha/coluna) da sua declaração
+identifica o símbolo, e o conteúdo deve ter os campos:
+- localização (linha e coluna, esta opcional)
 - natureza (literal, variável, função, etc)
 - tipo (qual o tipo de dado deste símbolo)
 - tamanho (derivado do tipo e se vetor)
@@ -209,7 +209,6 @@ compilador encontrar erros semânticos. O programa deve chamar =exit=
 utilizando esses códigos imediamente após a impressão da linha que
 descreve o erro.  Na ausência de qualquer erro, o programa deve
 retornar o valor zero.
-
 #+latex: {\tiny
 #+BEGIN_SRC C :tangle errors.h
 #define ERR_UNDECLARED       10
@@ -229,4 +228,5 @@ retornar o valor zero.
 #define ERR_WRONG_PAR_RETURN 52
 #define ERR_WRONG_PAR_SHIFT  53
 #+END_SRC
-#+latex: }
+#+latex: }\noindent
+Estes valores são utilizados na avaliacação objetiva.
