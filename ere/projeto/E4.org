@@ -210,7 +210,7 @@ utilizando esses códigos imediamente após a impressão da linha que
 descreve o erro.  Na ausência de qualquer erro, o programa deve
 retornar o valor zero.
 #+latex: {\tiny
-#+BEGIN_SRC C :tangle errors.h
+#+BEGIN_SRC C :tangle errors.h :main no
 #define ERR_UNDECLARED       10
 #define ERR_DECLARED         11
 #define ERR_VARIABLE         20
