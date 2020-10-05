@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Compiladores
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames, aspectratio=169, presentation]
+#+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+#+latex: \newcommand{\mytitle}{Prova #1}
+#+latex: \mytitleslide
+
+* Revisão
+
+#+BEGIN_EXPORT latex
+\begin{minipage}{.65\textwidth}
+#+END_EXPORT
+A revisão será sob demanda e acontecerá da seguinte forma. Os alunos
+são motivados a identificarem as lacunas de compreensão que tiveram ao
+longo desta metade de semestre, através de contra-exemplos ou dúvidas
+na realização dos exercícios propostos. Estas dúvidas podem ser
+enviadas para o professor até às 8hs da quarta-feira, 07/10. Na medida
+que as dúvidas sobre o conteúdo da disciplina forem surgindo, o
+professor fará um ou mais vídeos respondendo as dúvidas e levantando
+reflexões. Estes videos serão disponibilizados no moodle na Semana 8.
+#+BEGIN_EXPORT latex
+\end{minipage}
+#+END_EXPORT
+
+* Acesso ao conteúdo da prova
+
+Serão enviadas por intermédio do \\
+sistema de ``Mensagens'' do Moodle
+- Até quinta-feira 08/10 às 9hs
+
+#+latex: \vfill
+
+Como acessar a prova
+- Utilizar a URL no formato \\
+  http://www.inf.ufrgs.br/~schnorr/ere/CHAVE.pdf \\
+  onde CHAVE é um identificador único que \\
+  será enviado por mensagem individual
+
+#+latex: \pause\bigskip
+
+A URL é única por aluno
+- Não deve ser compartilhada
+
+* Realização da prova
+
+A prova será realizada entre
+- das 9h00 do dia 08/10
+- até às 23h59 do dia 09/10
+
+#+latex: \vfill\bigskip
+
+Durante o período da prova
+- Realização individual, sem consulta
+- Evitar discutir o assunto das questões com colegas
+- Pode ser feita em papel ou digital (texto e figuras)
+- Identificação do aluno deve estar presente
+  - Nome completo, cartão UFRGS (em todas as páginas)
+
+* Entregar a prova realizada
+
+O link está no moodle na "Semana 8"
+- Envio é único e definitivo
+  - Até às 23h59 da sexta-feira dia 09/10
+    - Não deixe para o último minuto
+
+#+latex: \pause\bigskip
+
+- Se em papel
+  - Folhas escaneadas ou fotografadas em boa qualidade
+- Envio no formato PDF com geometria da página A4
+  - Tamanho máximo do PDF é de 16MBytes
+    - Se necessário, /ghostscript/ (~gs~) é capaz de reduzir tamanho
+- Sem limite de páginas no PDF
+  - *Número razoável é de até cinco páginas*
+- Resposta de cada questão deve estar bem identificada
+
+#+latex: \pause
+
+
+
