@@ -1,7 +1,7 @@
 #+STARTUP: overview indent
 #+TITLE: Dúvidas da E4 do Projeto de Compilador
 * E4
-** TODO 2020-10-06 D0
+** DONE 2020-10-06 D0
 *** Dúvida #1
 
 Estou agora refazendo as ações semânticas feitas na etapa 3, de
@@ -14,7 +14,7 @@ var_global: tipo_estatico lista_identificadores_globais ';' ;
 lista_identificadores_globais:  identificador_global
          | identificador_global ',' lista_identificadores_globais ;
 
-identificador_global:    TK_IDENTIFICADOR
+identificador_global:    TK_IDENTIFICADOR 
          | TK_IDENTIFICADOR '[' TK_LIT_INT ']' ;
 #+END_EXAMPLE
 
