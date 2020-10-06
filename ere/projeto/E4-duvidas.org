@@ -1,0 +1,56 @@
+#+STARTUP: overview indent
+#+TITLE: Dúvidas da E4 do Projeto de Compilador
+* E4
+** TODO 2020-10-06 D0
+*** Dúvida #1
+
+Estou agora refazendo as ações semânticas feitas na etapa 3, de
+forma a criar as entradas na tabela de símbolos, e me deparo com a
+forma gramatical através da qual identifico variáveis globais:
+
+#+BEGIN_EXAMPLE
+var_global: tipo_estatico lista_identificadores_globais ';' ;
+
+lista_identificadores_globais:  identificador_global
+         | identificador_global ',' lista_identificadores_globais ;
+
+identificador_global:    TK_IDENTIFICADOR
+         | TK_IDENTIFICADOR '[' TK_LIT_INT ']' ;
+#+END_EXAMPLE
+
+Dado que o reconhecimento da entrada é ascendente e da esquerda para a
+direita, como posso definir o tipo do nodo dos identificadores globais
+pertencentes à lista se apenas terei essa informação após toda a lista
+ser processada na entrada?
+
+Em outras palavras, a ordem na qual estas regras são processadas para
+a entrada "int x,y;", por exemplo, é primeiro o reconhecimendo do tipo
+"int", e depois os identificadores "x" e "y". Ao meu ver, isto requer
+o uso de um atributo herdado da lista de identificadores, o que
+levaria a um esquema L-atribuído, requerindo regras internas, como na
+possível solução:
+
+#+BEGIN_EXAMPLE
+var_global: tipo_estatico {lista_identificadores_globais->tipo = tipo_estatico->tipo}
+            lista_identificadores_globais {/*Insere na tabela de simbolos*/}';'
+#+END_EXAMPLE
+
+Esta interpretação é correta ou estou realizando algum equívoco? Caso
+a interpretação esteja correta, isto é permitido no contexto do
+trabalho?
+
+*** Dúvida #2
+
+Notei que nesta etapa não foi dado um arquivo "main.c" para que sejam
+realizados os testes. Podemos então usar (e inclusive realizar a
+entrega desta etapa com ele) o mesmo arquivo da etapa 3?
+
+*** Dúvida #3
+
+Enquanto atribuia os tipos correspondentes às palavras reservadas int,
+float, etc. fiquei com dúvida quanto aos especificadores de tipo, isto
+é, "const" e "static". Esta informação deve ser guardada em algum
+lugar, ou devemos realizar algum tratamento especial nestes casos?
+
+
+
