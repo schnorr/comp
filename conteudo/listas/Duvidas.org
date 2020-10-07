@@ -87,7 +87,7 @@ Realmente, não é trivial. Em português, algo assim:
   - (a * a) a
   - a * ( a + a )
   - a ( a * a )
-- Talvez algo assim: Operadores binários de soma e subtração,
+- Talvez algo assim: Operadores binários de soma e multiplicação,
   potencialmente entre parênteses para forçar uma certa precedência,
   onde antes e depois dos parênteses o operador binário pode ser
   omitido.
