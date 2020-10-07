@@ -1,0 +1,93 @@
+#+TITLE: Dúvidas das listas
+* Lista 03
+** Exercício 1, Subitem 4
+
+#+BEGIN_QUOTE
+Na lista 3, exercicio 1, subitem 4, precisamos fatorar / remover
+recursão à esquerda da gramática. Estou meio perdido nesse exercício,
+você poderia realiza-lo?
+#+END_QUOTE
+
+#+BEGIN_EXAMPLE
+S -> S + S
+S -> S S
+S -> ( S )
+S -> S *
+S -> a
+#+END_EXAMPLE
+
+_Remoção da recursão à esquerda_
+
+Passos
+1. Identificar todas as produções com recursão à esquerda
+   #+BEGIN_EXAMPLE
+   S -> S + S
+   S -> S S
+   S -> S *   
+   #+END_EXAMPLE
+
+2. Identificar todas as produções que não começam por S
+   #+BEGIN_EXAMPLE
+   S -> ( S )
+   S -> a
+   #+END_EXAMPLE
+
+3. Reescrever a gramática, com recursão à direita
+   #+BEGIN_EXAMPLE
+   S -> ( S ) X
+   S -> a X
+   X -> + S X
+   X -> S X
+   X -> * X
+   X -> \epsilon
+   #+END_EXAMPLE
+
+4. Se necessário, remover as produções vazias
+
+_Exemplos_
+
+"depois realize os passos de derivações necessários para o
+reconhecimento das cadeias especificadas em cada item"
+
+Cadeias: " ~(a+a)*a~ " e " ~(a*a)a~ "
+
+1.
+
+S => ( S ) X => ( a X ) X => ( a + S X ) X => ( a + a X X ) X
+  => ( a + a X ) X => ( a + a ) X => ( a + a ) * X => ( a + a ) * S X
+  => ( a + a ) * a X X => ( a + a ) * a X => ( a + a ) * a 
+
+2.
+
+S => ( S ) X => ( a X ) X => ( a * X ) X => ( a * S X ) X
+  => ( a * a X X ) X => ( a * a X ) X => ( a * a ) X
+  => ( a * a ) S X => ( a * a ) a X X => ( a * a ) a X 
+  => ( a * a ) a
+
+* Lista 02
+** Exercício 5, Subitem 4
+
+#+BEGIN_QUOTE
+Sobre esse item ainda, temos na lista 2 (ex 5,subitem 4) a mesma
+gramática e é pedido para descrevê-la, como poderíamos descrever essa
+gramática? ela não me parece nada "trivial" para descrever.
+#+END_QUOTE
+
+#+BEGIN_EXAMPLE
+S -> S + S
+S -> S S
+S -> ( S )
+S -> S *
+S -> a
+#+END_EXAMPLE
+
+Realmente, não é trivial. Em português, algo assim:
+- Partir de alguns exemplos de entradas válidas. Exemplos
+  - (a + a) * a
+  - (a * a) a
+  - a * ( a + a )
+  - a ( a * a )
+- Talvez algo assim: Operadores binários de soma e subtração,
+  potencialmente entre parênteses para forçar uma certa precedência,
+  onde antes e depois dos parênteses o operador binário pode ser
+  omitido.
