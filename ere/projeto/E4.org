@@ -127,7 +127,7 @@ realizadas levando-se em conta as informações registradas na tabela de
 símbolos, registradas no momento da declaração/definição da função. Na
 hora da chamada da função, caso houver um número menor de argumentos
 que o necessário, deve-se lançar o erro =ERR_MISSING_ARGS=. Caso houver
-um númerio maior de argumentos que o necessário, deve-se lançar o erro
+um número maior de argumentos que o necessário, deve-se lançar o erro
 =ERR_EXCESS_ARGS=. Enfim, quando o número de argumentos é correto, mas
 os tipos dos argumentos são incompatíveis com os tipos registrados na
 tabela de símbolo, deve-se lançar o erro =ERR_WRONG_TYPE_ARGS=.
@@ -175,7 +175,7 @@ verifica-se primeiramente no escopo atual (topo da pilha) e enquanto
 não encontrar, deve-se descer na pilha até chegar no escopo global
 (base da pilha, sempre presente). Caso o identificador não seja
 encontrado, isso indica que ele não foi declarado. Para se "declarar"
-um escopo, basta inserí-lo na tabela de símbolos do escopo que
+um símbolo, basta inserí-lo na tabela de símbolos do escopo que
 encontra-se no topo da pilha.
 
 *Conversão implícita.*
