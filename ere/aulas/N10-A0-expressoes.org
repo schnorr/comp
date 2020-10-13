@@ -20,44 +20,54 @@
 
 * Geração -- Expressões
 Considerando a gramática aritmética simplificada
-  | S | \rightarrow | *nome* = E;       |
-  | E | \rightarrow | E + E             |
-  | E | \rightarrow | E * E             |
-  | E | \rightarrow | ( E ) \vert *id*  |
-Supondo que temos a entrada $var = x + y * z;$
+  | S | \rightarrow | *nome* = E;   |
+  | E | \rightarrow | E + E       |
+  | E | \rightarrow | E * E       |
+  | E | \rightarrow | ( E ) \vert *num* |
+Supondo que temos a entrada $var = 2 + 3 * 4;$
 + O código TAC correspondente terá três operações
-  | $t_1 = y * z$   |
-  | $t_2 = x + t_1$ |
-  | $var = t_2$     |
-* Implementação
-Dois mecanismos
-#+latex: \vfill
+  | $t_1 = 3 * 4$  |
+  | $t_2 = 2 + t_1$ |
+  | $var = t_2$    |
+
+* Recursos para a implementação
+
 Atributos *sintetizados*
-+ Atributo /local/ armazena o nome da variável -- t_1 ou t_2
++ Atributo /local/ armazena um valor -- t_1 ou t_2
 + Atributo /codigo/ armazena o código TAC sintetizado
 Funções auxiliares
 + Função /gera()/ escreve o código
 + Símbolo \vert\vert significa concatenação
 + A função /temp()/ retorna um nome de temporário -- t_x
+
+#+latex: \vfill\pause
+
+Uso das seguintes instruções de três endereços
+- ~loadI~ (carga de valor imediato)
+- ~add~ (soma)
+- ~mult~ (subtração)
+
 * Esquema de Tradução
 
-| S | \rightarrow | *nome* = E; | S.codigo = E.codigo; $\vert\vert$                              |
-|   |             |             | gera(nome.local = E.local);                                    |
-|---+-------------+-------------+----------------------------------------------------------------|
-| E | \rightarrow | $E_1 + E_2$ | E.local = temp();                                              |
-|   |             |             | E.codigo = $E_1$.codigo $\vert\vert$ $E_2$.codigo $\vert\vert$ |
-|   |             |             | gera(E.local = $E_1$.local + $E_2$.local);                     |
-|---+-------------+-------------+----------------------------------------------------------------|
-| E | \rightarrow | $E_1 * E_2$ | E.local = temp();                                              |
-|   |             |             | E.codigo = $E_1$.codigo $\vert\vert$ $E_2$.codigo $\vert\vert$ |
-|   |             |             | gera(E.local = $E_1$.local $*$ $E_2$.local);                   |
-|---+-------------+-------------+----------------------------------------------------------------|
-| E | \rightarrow | ( $E_1$ )   | E.local = $E_1$.local;                                         |
-|   |             |             | E.codigo = $E_1$.codigo                                        |
-|---+-------------+-------------+----------------------------------------------------------------|
-| E | \rightarrow | *id*        | E.local = id.lexval;                                           |
-|   |             |             | E.codigo = "";                                                 |
 
-Testar com o exemplo $var = x + y * z;$
+| / |   |   |           |        <r> | <l>                                            |
+|   | S | \rightarrow | *nome* = E; | S.codigo = | E.codigo $\vert\vert$                                  |
+|   |   |   |           |            | gera("store", E.local, NULL, nome);            |
+|---+---+---+-----------+------------+------------------------------------------------|
+|   | E | \rightarrow | $E_1 + E_2$ |  E.local = | temp();                                        |
+|   |   |   |           | E.codigo = | $E_1$.codigo $\vert\vert$ $E_2$.codigo $\vert\vert$              |
+|   |   |   |           |            | gera("~add~", $E_1$.local, $E_2$.local, E.local);  |
+|---+---+---+-----------+------------+------------------------------------------------|
+|   | E | \rightarrow | $E_1 * E_2$ |  E.local = | temp();                                        |
+|   |   |   |           | E.codigo = | $E_1$.codigo $\vert\vert$ $E_2$.codigo $\vert\vert$              |
+|   |   |   |           |            | gera("~mult~', $E_1$.local, $E_2$.local, E.local); |
+|---+---+---+-----------+------------+------------------------------------------------|
+|   | E | \rightarrow | ( $E_1$ )  |  E.local = | $E_1$.local;                                    |
+|   |   |   |           | E.codigo = | $E_1$.codigo;                                   |
+|---+---+---+-----------+------------+------------------------------------------------|
+|   | E | \rightarrow | *num*       |  E.local = | temp();                                        |
+|   |   |   |           | E.codigo = | gera("~loadI~", num.lexval, NULL, E.local);      |
+
+Testar com o exemplo $var = 2 + 3 * 4;$
 + Gerar árvore de derivação ou *AST*
 + Executar as ações semânticas de tradução
