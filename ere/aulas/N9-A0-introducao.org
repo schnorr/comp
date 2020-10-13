@@ -20,8 +20,8 @@
 
 * Estrutura de um Compilador em fases
 
-#+ATTR_LATEX: :width .6\linewidth
-[[../geral/img/fases_compilacao_pratica.png]]
+#+ATTR_LATEX: :width .4\linewidth :center nil
+[[../img/fases_compilacao_pratica.png]]
 
 * Transformações em Passos -- Vantagens
 
