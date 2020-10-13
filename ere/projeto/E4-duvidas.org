@@ -54,3 +54,22 @@ lugar, ou devemos realizar algum tratamento especial nestes casos?
 
 
 
+** TODO 2020-10-13 D1
+
+Boa noite professor, surgiram algumas dúvidas rápidas de se responder
+sobre a etapa 4, se for mais conveniente nem precisa fazer um vídeo
+sobre elas:
+
+1) Os operadores unários "*"(Resolução de ponteiro) e "#"(Acesso a
+   tabela hash) esperam qual tipo de identificador operando?
+
+2) O operador ternário (exp ? exp : exp) requer que as expressões
+   resultantes tenham o mesmo tipo (ou pelo menos tipos compatíveis)?
+
+3) Funções podem ser recursivas? Em termos mais técnicos, devo inserir
+   a declaração da função tanto na tabela de símbolos do seu escopo
+   quanto na do escopo global?
+
+4) Para realizar a transferência dos tipos entre variáveis estou
+   usando um novo campo na union dos tokens, que contém o tipo das
+   palavras reservadas "int", "float", etc. Isto é permitido?
