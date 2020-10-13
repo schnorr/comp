@@ -80,11 +80,11 @@ Algumas operações não precisam de todos os argumentos
 
 Exemplo para a expressão $a-2*b$
 
-  | $t_1$ | \leftarrow | 2           |
-  | $t_2$ | \leftarrow | b           |
+  | $t_1$ | \leftarrow | 2         |
+  | $t_2$ | \leftarrow | b         |
   | $t_3$ | \leftarrow | $t_1 * t_2$ |
-  | $t_4$ | \leftarrow | a           |
-  | $t_5$ | \leftarrow | $t_4 + t_3$ |
+  | $t_4$ | \leftarrow | a         |
+  | $t_5$ | \leftarrow | $t_4 - t_3$ |
 #+latex: \vfill\pause
 
 Vantagens
