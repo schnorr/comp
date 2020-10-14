@@ -72,3 +72,12 @@ sobre elas:
 4) Para realizar a transferência dos tipos entre variáveis estou
    usando um novo campo na union dos tokens, que contém o tipo das
    palavras reservadas "int", "float", etc. Isto é permitido?
+** TODO 2020-10-14 D2
+*** Dúvida #1
+
+1) Podemos usar C++ ou o flex/bison suportam apenas C?
+
+*** Dúvida #2
+
+2) Segundo o enunciado, precisamos guardar literais na tabela de
+   símbolos. Por que isso é necessário?
