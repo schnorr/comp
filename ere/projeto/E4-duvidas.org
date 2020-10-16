@@ -72,7 +72,7 @@ sobre elas:
 4) Para realizar a transferência dos tipos entre variáveis estou
    usando um novo campo na union dos tokens, que contém o tipo das
    palavras reservadas "int", "float", etc. Isto é permitido?
-** TODO 2020-10-14 D2
+** DONE 2020-10-14 D2
 *** Dúvida #1
 
 1) Podemos usar C++ ou o flex/bison suportam apenas C?
@@ -81,3 +81,54 @@ sobre elas:
 
 2) Segundo o enunciado, precisamos guardar literais na tabela de
    símbolos. Por que isso é necessário?
+** TODO 2020-10-16 D3
+*** Dúvida #1
+
+Sobre a etapa 4, retornando na questão dos literais na tabela de
+símbolos: o que não ficou muito claro pra mim é como lidar com
+múltiplas ocorrências de um mesmo literal? Digamos que na passagem
+pelo código fonte eu encontre o literal 2 e adicione ele na tabela
+hash, e mais adiante eu encontre outro literal 2. Essa ocorrência é
+adicionada na tabela hash (com alguma informação adicional, como
+número da linha, para distinção) ou eu simplesmente ignoro e mantenho
+sempre a primeira ocorrência?
+
+*** Dúvida #2
+
+Como dito no ultimo vídeo de dúvidas, devemos adicionar literais na
+tabela. Como tratamos literais iguais? devemos adicionar multiplas
+vezes? ou deixar apenas a que já temos? se for manter a anterior,
+devemos alterar algo nos dados dela?
+
+*** Dúvida #3
+
+Como poderemos aceitar expressão de (string + string), adicionei na
+gramática a possibilidade de char e string dentro das expressões, para
+que esse caso seja permitido enquanto outras operações, e
+transformações com esses tipos causem erro. Gostaria de saber para
+casos como (string * string), por exemplo, que tipo de erro devemos
+retornar? (dizer que está sendo feita alguma conversão da string e
+utilizar o ~ERR_STRING_TO_X~?)
+
+*** Dúvida #4
+
+Na parte de conversão explicita, quando diz que "a conversão de um
+float para int perde sua parte fracionária", é só uma explicação do
+que será feito eventualmente no desenvolvimento do compilador?, não
+devemos tentar alterar esse valor na tabela de nenhuma forma agora,
+correto?
+
+*** Dúvida #5
+
+Para funções que tem retorno string, temos que definir o tamanho desta
+com a maior string de retorno encontrada no corpo de uma função? Se
+sim, se houver uma função recursiva com retorno string, isso pode
+causar problemas por possivelmente não ter o valor "máximo" de retorno
+até um determinado momento?
+
+*** Dúvida #6
+
+No caso de vetores de string, como tratamos o tamanho para os
+elementos strings?
+
+
