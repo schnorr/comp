@@ -81,7 +81,7 @@ sobre elas:
 
 2) Segundo o enunciado, precisamos guardar literais na tabela de
    símbolos. Por que isso é necessário?
-** TODO 2020-10-16 D3
+** DONE 2020-10-16 D3
 *** Dúvida #1
 
 Sobre a etapa 4, retornando na questão dos literais na tabela de
@@ -132,3 +132,50 @@ No caso de vetores de string, como tratamos o tamanho para os
 elementos strings?
 
 
+** TODO 2020-10-17 D4
+*** Dúvida #1
+
+(...) teria mais um questionamento sobre strings. Strings vazias ("")
+teriam um tamanho 0. Se a inicialização de uma variavel do tipo string
+for com uma string vazia, deveriamos trancar o tamanho das strings em
+0 também?  Não sabia como definir isso, e estou atribuindo tamanho -1
+às strings sem inicialização, para que não tenha conflito em saber se
+ela não foi inicializada ou FOI inicializada com uma string vazia,
+isso estaria certo, ou a string deve ter seu tamanho > 0 quando algo
+seja atribuido à ela?
+
+*** Dúvida #2
+
+O que é esperado para um caso de declaração local da seguinte forma:
+
+int a <= a; (em que a não foi declarado anteriormente), isso seria
+valido na linguagem? Um outro caso parecido:
+
+int a <= 0, b <= a; este caso deveria ser valido, correto? 
+
+*** Dúvida #3
+
+Sobre aquele caso de um vetor de strings, você comentou no vídeo de
+dúvida anterior que para cada elemento string teriamos um tamanho (o
+que concordo), mas estou em dúvida quanto a implementação disso. Havia
+falado com um colega e pensamos em definir um elemento a mais na
+tabela de símbolo para esse caso específico, que manteria a informação
+de tamanho para cada posição.
+
+Porém, vetores, em atribuições, por exemplo, podem ser indexados a
+partir de uma expressão, a qual não sabemos nessa etapa qual indice
+corresponderia no vetor. Com isso, não sabendo o indice do vetor, como
+que seria avaliada uma atribuição para um elemento string desse vetor?
+
+*** Dúvida #4
+
+Na mesma linha da pergunta do vídeo anterior sobre como proceder
+quando o retorno da função é do tipo string, o que devemos fazer
+quando houver um argumento do tipo string, visto que só saberemos seu
+tamanho no momento da chamada da função?
+
+*** Dúvida #5
+
+Uma variável pode ter o mesmo nome de uma função, já que é possível
+verificar a natureza do identificador pelo contexto (se é seguido por
+() ou não)?
