@@ -9,6 +9,8 @@
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [11pt, twocolumn, a4paper]
 #+LATEX_HEADER: \input{org-babel.tex}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setlist{nolistsep}
 
 #+OPTIONS: toc:nil title:nil
 #+STARTUP: overview indent
@@ -42,7 +44,7 @@ Testes poderão ser realizados através de um simulador simples escrito
 em Python3 e já disponível também no anexo.
 
 * Funcionalidades Necessárias
-** Arranjos Multidimensionais
+** Arranjos Multidimensionais                                     :noexport:
 
 Altere a gramática para suportar arranjos multidimensionais. A forma
 =tipo nome[n1][n2]...[n]= deve ser utilizada na declaração. No acesso a
@@ -69,49 +71,41 @@ Implementa uma estrutura de dados para conter o código da operação e
 os argumentos necessários para cada operação. Note que os argumentos
 das operações são nomes de registradores, valores constantes, ou nomes
 de rótulos. _Além disso_, deve-se implementar uma estrutura de dados
-para manter uma lista de instruções ILOC. Dentre as várias forma de
-implementar, utilize aquela que mais se adequa ao uso em um
-compilador.
+para manter uma lista de instruções ILOC. Utilize a implementação mais
+adequada ao uso em um compilador.
 
 ** Rótulos e Registradores
 
-Uma função deve ser adicionada ao projeto de compilador para fornecer
-nomes de rótulos a serem utilizados na geração de código. Os nomes são
-utilizados para marcar os pontos de desvio no fluxo de execução. Todas
-as instruções ILOC devem ser realizadas sobre valores que estão em
-registradores. Sendo assim, uma função deve ser adicionada ao projeto
-de compilador para gerenciar a criação de nomes de registradores. Os
-nomes de rótulos e registradores devem seguir a convenção de nomes
-especificada na descrição da linguagem ILOC. Os registradores podem
-ser vistos como variáveis temporárias auxiliares.
+Implemente uma função para fornecer nomes de rótulos a serem
+utilizados na geração de código. Os rótulos são utilizados para marcar
+os pontos de desvio no fluxo de execução. Implemente uma função para
+gerar nomes de registradores. Os nomes de rótulos e registradores
+devem seguir a convenção de nomes especificada na descrição da
+Linguagem ILOC. Os registradores podem ser vistos como variáveis
+temporárias auxiliares.
 
 ** Geração de Código
 
-Os programas deverão conter _apenas uma função_ (que pode se chamar
-=main=).  Existem pelo menos duas possibilidades de implementação
-válidas:
-
-1. *Em uma passagem*: realizar eventuais alterações gramaticais para
-   realizar a geração de código em uma única passagem (juntamente com
-   a análise léxica, sintática e semântica).
-
-2. *Em duas passagens*: Outra é optar por fazer o processo de geração de
-   código em uma segunda passagem sobre a AST, através da
-   implementação de uma função que faça o percorrimento.
-
-Informe o professor da sua escolha. Em ambos os casos, ao final da
-execução, o compilador deve ter na raiz da árvore AST um ponteiro para
-todo o código intermediário ILOC do programa de entrada.  A geração de
-código consiste na criação de uma ou mais instruções ILOC juntamente
-com a união de trechos das sub-árvores, com a criação de novos
-símbolos intermediários e rótulos conforme necessário. Nesta etapa,
-deve-se traduzir as seguintes construções da linguagem considerando
-que existe apenas o tipo =int=:
+Os programas devem conter pelo menos a função =main=. Ela deverá ser a
+primeira a ser executada.  Existem pelo menos duas possibilidades de
+implementação válidas. *Em uma passagem*: realizar eventuais alterações
+gramaticais para realizar a geração de código em uma única passagem
+(juntamente com a análise léxica, sintática e semântica).  *Em duas
+passagens*: Outra é optar por fazer o processo de geração de código em
+uma segunda passagem sobre a AST, através da implementação de uma
+função que faça o percorrimento. Informe o professor da sua
+escolha. Em ambos os casos, ao final da execução, o compilador deve
+ter na raiz da árvore AST um ponteiro para todo o código intermediário
+ILOC do programa de entrada.  A geração de código consiste na criação
+de uma ou mais instruções ILOC juntamente com a união de trechos das
+sub-árvores, com a criação de novos símbolos intermediários e rótulos
+conforme necessário. Nesta etapa, deve-se traduzir as seguintes
+construções da linguagem, considerando que existe apenas o tipo =int=:
 
 - Cálculo de endereço na declaração de variáveis
   - Endereço de variáveis locais são um deslocamento em relação ao registrador especial =rfp=
   - Endereço de variáveis globais são um deslocamento em relação ao registrador especial =rbss=
-- Expressões aritméticas, com operações binárias
+- Expressões aritméticas, com operações binárias e ternária
   - soma, subtração, divisão e multiplicação
 - Expressões booleanas por controle de fluxo com curto-circuito
   - todos os operadores relacionais
@@ -120,33 +114,15 @@ que existe apenas o tipo =int=:
 - Os seguintes comandos de fluxo de controle
   - if com else opcional
   - while
-- Geração de código de arranjos multidimensionais
+  - for
+- Chamada de função (com ~jumpI~ para um label)
 
-*Simplificações* (ou seja, não precisa fazer):
-- Nada precisa ser feito referente aos outros tipos da linguagem:
-  - strings
-  - char
-  - float
-- Não é obrigatório implementar tradução de código para os elementos
-  que não estão listados acima, tais como:
-  - comandos de entrada e saída
-  - operações de shift
-  - comandos de retorno
-  - break
-  - continue
-  - case
-  - os comandos for e foreach
-  - o comando switch
-  - comandos com pipes
-  - expressões com pipes
-  - operadores ternários
-  - operadores de acesso ao endereço da variável ou valor do ponteiro
-  - operador ?
-  - operadores binários tais como
-    - resto da divisão
-    - bitwise
-    - e exponenciação
-  - qualquer outro elemento da linguagem não explicitado acima
+#+latex: \medskip\noindent
+*Simplificações para a Geração de Código*:
+Não é obrigatório implementar tradução de código para qualquer outro
+elemento da linguagem que tenha sido definido anteriormente
+(principalmente na E2), mas que não esteja listado acima.  Nada
+precisa ser feito referente aos tipos diferentes de ~int~.
 
 ** Endereçamento de variáveis
 
@@ -162,11 +138,10 @@ obrigatoriamente em um registrador. Este valor final deve ser
 transferido para o endereço da variável na memória (utilizando a
 operação =store=, por exemplo) caso necessário.
 
-* Dicas de Desenvolvimento
+#+latex: %\onecolumn
+#+latex: \appendix
 
-Abaixo listam-se algumas dicas de desenvolvimento que podem ser úteis.
-
-** Instruções
+* Instruções
 
 As instruções em código intermediário servem para isolar as tarefas de
 geração da sequência básica de instruções dos detalhes e formato
@@ -178,17 +153,19 @@ temporários em expressões e o uso de registradores. Entretanto, essas
 otimizações não fazem parte desta etapa do trabalho e são portanto
 opcionais.
 
-** Geração de Código
+* Geração de Código
 
 A geração de código será feita de baixo para cima e da esquerda para a
 direita, na árvore. O modo mais simples de encadear novas instruções é
 representar os trechos de código como listas encadeadas invertidas,
 isto é, com um ponteiro para a última instrução de um trecho, e cada
-instrução apontando para a anterior. Ao final da geração, escreva uma
-função que percorre o código completo e inverte a lista de forma que
-se possa escrever o código na ordem em que deve ser executado.
+instrução apontando para a anterior. Ao final da geração, tu podes
+escrever uma função que percorre o código completo e inverte a lista
+de forma que se possa escrever o código na ordem em que deve ser
+executado. Isso pode não ser necessário dependendo da forma como se
+gera o código.
 
-** Funções Auxiliares
+* Funções Auxiliares
 
 Para a geração de código, além das rotinas utilitárias de TACs e da
 rotina recursiva principal que percorre a AST, utilize outras funções
@@ -199,21 +176,21 @@ geração. Ela deve realizar um \texttt{switch(node->type)} e chamar a
 função auxiliar de geração de código apropriada para o tipo deste nó
 da AST.
 
-** Entrada e Saída Padrão
+* Entrada e Saída Padrão
 
 Organize a sua solução para que o compilador leia o programa da
 entrada padrão e gere o programa em ILOC na saída padrão. Dessa forma,
-pode-se realizar o seguinte comando (considerando que \texttt{main} é
-o binário do compilador):
+pode-se realizar o seguinte comando (considerando que ~etapa5~ é o
+binário do compilador):
 
 #+BEGIN_EXAMPLE
-./main < entrada.poa > saida.iloc
+./etapa5 < entrada > saida
 #+END_EXAMPLE
 
-Onde =entrada.poa= contém um programa na linguagem sendo compilada, e
-=saida.iloc= contém em ILOC traduzido.
+Onde =entrada= contém um programa na linguagem sendo compilada, e
+=saida= contém em ILOC traduzido.
 
-** Avaliação automática
+* Avaliação automática
 
 Os testes automáticos utilizarão sistematicamente o simulador =ilocsim=
 (veja abaixo) para verificar se o código sintetizado pela solução do
@@ -222,9 +199,16 @@ feito. Vários mecanismos são empregados para isso, mas o principal é o
 estado da memória (valores que estão na pilha e segmento de dados) no
 final do programa.
 
-#+latex: \onecolumn\appendix
+* Arquivo =main.c=
 
-* A Linguagem ILOC
+Utilize uma função ~main.c~ semelhante aquela da E3. O grupo está
+autorizado a modificá-la para que a geração de código reflita as
+decisões de implementação do grupo. Não esqueça de liberar a memória
+corretamente.
+
+#+latex: \onecolumn
+
+* Linguagem ILOC
 ** Introdução
 
 ILOC é uma representação intermediária parecida com assembly para uma
@@ -536,7 +520,7 @@ cmp_GT r1, r2  ->  r3        // r3 = true se r1 > r2, senão r3 = false
 cmp_NE r1, r2  ->  r3        // r3 = true se r1 \ne r2, senão r3 = false
 #+END_EXAMPLE
 
-* Simulador ILOC (=ilocsim=)
+* Simulador ILOC (=ilocsim=)                                         :noexport:
 
 #+begin_src shell :results output
 cat x.txt | ./main | ./ilocsim.py
