@@ -179,3 +179,12 @@ tamanho no momento da chamada da função?
 Uma variável pode ter o mesmo nome de uma função, já que é possível
 verificar a natureza do identificador pelo contexto (se é seguido por
 () ou não)?
+*** Dúvida #6
+
+Pelo que entendi, se estiver em uma atribuição/inicialização e tiver
+um tipo string recebendo outro tipo que diferente de string, temos um
+erro ~ERR_WRONG_TYPE~. E, se estiver em uma operação cujos operandos são
+do tipo string e int, por exemplo, temos um erro
+~ERR_STRING_TO_X~. Correto? Com isso, se houver uma operação com uma
+string e um char, qual erro deve ser dado ~ERR_CHAR_TO_X~ ou
+~ERR_STRING_TO_X~?
