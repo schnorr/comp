@@ -1,0 +1,87 @@
+* Possível solução (declaração)                                    :noexport:
+
+Assumindo que tab é um ponteiro para a tabela de símbolos do escopo corrente.
+
+decl \rightarrow T *id* [ L ] { ca = tab.desloc - L.r * T.w;
+                    declara(id.lexval, T.w * L.n, T.tipo, ca);
+                    tab.desloc += L.n; }
+
+T    \rightarrow *float*      { T.w = 4; T.tipo = FLOAT; }
+
+L    \rightarrow L_1 , D     { L.r = L_{1}.r * (D.n + 1) + D.lo;
+                    L.n = L_{1}.n * D.n; }
+
+L    \rightarrow D          { L.r = D.low;
+                    L.n = D.n; } 
+
+D    \rightarrow N_{1}..N_{2}     { D.low = N_{1}.val;
+                    D.high = N_{2}.val;
+                    D.n = abs(N_{2}.val - N_{1}.val); }
+
+N    \rightarrow *num*        { N.val = atoi(num.lexval); }
+
+* Possível solução (acesso com expressões)                         :noexport:
+** Funções auxiliares
+
+- char *geraTemp() \to função que gera um temporário
+- char *tac(char *format, ...) \to função que gera uma instrução
+- int tamDim(char *nome, int dim) \to retorna o tamanho da dimensão
+- int obtemW (char *nome) \to retorna o tamanho do dado w
+- int obtemCA (char *nome) \to retorna a constante CA
+
+** Operadores especiais
+
+- || \to indica concatenação
+
+** Dígitos ao lado dos não terminais
+
+- Somente para diferenciar os não-terminais. Exemplo:
+
+#+BEGIN_EXAMPLE
+L      \rightarrow L1 , E { ... L1.atributo L.atributo } 
+#+END_EXAMPLE
+
+** Variáveis globais auxiliares
+
+- ident \to Identificador corrente no reconhecimento de um acesso
+- tab \to Aponta para a tabela de símbolos do escopo corrente
+
+** Esquema de tradução
+
+E -> acesso {
+             E.temp = geraTemp();
+             E.code = acesso.code ||
+                 tac("load acesso.temp => E.temp"); }
+
+acesso \rightarrow V [ L ]   { 
+                w = obtemW (ident);
+                ca = obtemCA (ident);
+                x = geraTemp();
+                acesso.temp = geraTemp();
+                acesso.code = L.code ||
+                          tac("mult L.temp w => x") ||
+                          tac("add x ca => acesso.temp"); }
+
+    ident = NULL; }
+V      \to *id*        { ident = id.lexval; }
+
+L      \rightarrow L1 , E     { L.dim = L1.dim + 1;
+                      x = geraTemp();
+                      t = tamDim(ident, L.dim)
+                      L.temp = geraTemp();
+                      L.code = L1.code || E.code ||
+                                  tac("mult L1.temp t => x") ||
+                                  tac("add x E.temp => L.temp"); }
+
+L      \rightarrow E         {  L.temp = E.temp;
+                      L.code = E.code;
+                      L.dim = 0; }
+
+E      \rightarrow E1 + N     { E.temp = geraTemp();
+                      E.code = E1.code || N.code ||
+                               tac("add E1.temp N.temp => E.temp"); }
+E      \rightarrow N         {  E.temp = N.temp;
+                      E.code = N.code; }
+N      \to *id*        { e = endereco(tab, id.lexval);
+                     N.temp = geraTemp();
+                     N.code = tac("load e => N.temp"); }
