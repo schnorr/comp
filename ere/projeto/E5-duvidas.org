@@ -1,0 +1,57 @@
+#+STARTUP: overview indent
+#+TITLE: Dúvidas da E5 do Projeto de Compilador
+* E5
+** TODO 2020-10-23 D0
+
+Foi mencionado em um dos vídeos de dúvidas da etapa 4 que os literais
+deveriam ser guardados na tabela de símbolos, pois acabariam na área
+de dados do programa. Naquele vídeo, foi dito que esta inserção pode
+ser feita na tabela de símbolos do escopo onde ele é encontrado, e foi
+assim que implementei a etapa 4. Agora com o conhecimento sobre a
+geração do código, refleti sobre este posicionamento, e acredito que
+para que o literal acabe no segmento de dados ele deve ser inserido na
+tabela de símbolos global, contabilizando seu tamanho também na
+geração de endereços da mesma.
+
+#+BEGIN_EXAMPLE
+int y;
+
+int main()
+{
+    int x <= 5;
+}
+#+END_EXAMPLE
+
+Na forma que implementei na etapa 4 tenho as tabelas:
+
+GLOBAL  (Endereço corrente ao final do reconhecimento = 8. )
+| Nome | Tamanho | Endereco |
+|------+---------+----------|
+| y    |       4 |        0 |
+| main |       4 |        4 |
+
+MAIN (Endereço corrente ao final do reconhecimento = 8. )
+| Nome | Tamanho | Endereco |
+|------+---------+----------|
+| x    |       4 |        0 |
+| "5"  |       4 |        4 |
+
+Porém após a reflexão, imagino que o correto seria:
+
+GLOBAL (Endereço corrente ao final do reconhecimento = 12)
+| Nome | Tamanho | Endereco |
+|------+---------+----------|
+| y    |       4 |        0 |
+| main |       4 |        4 |
+| "5"  |       4 |        8 |
+
+MAIN (Endereço corrente ao final do reconhecimento = 4)
+| Nome | Tamanho | Endereco |
+|------+---------+----------|
+| x    |       4 |        0 |
+
+Para que o literal "5" acabe no data segment.
+
+Qual das duas está correta? Em outras palavras, devo inserir o literal
+no frame da função onde aparece ou no data segment do programa como um
+todo?
