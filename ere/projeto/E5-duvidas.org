@@ -1,8 +1,8 @@
 #+STARTUP: overview indent
 #+TITLE: Dúvidas da E5 do Projeto de Compilador
 * E5
-** TODO 2020-10-23 D0
-
+** DONE 2020-10-23 D0
+*** Dúvida #1
 Foi mencionado em um dos vídeos de dúvidas da etapa 4 que os literais
 deveriam ser guardados na tabela de símbolos, pois acabariam na área
 de dados do programa. Naquele vídeo, foi dito que esta inserção pode
