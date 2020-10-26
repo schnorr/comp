@@ -142,25 +142,25 @@ Com a instrução =nop=
 #+BEGIN_SRC C
     comp ra, rb => cc1    // a<b
     cbr_LT cc1  -> L1, L2
-L1: loadI true  => r1
+L1: loadI 1     => r1
     jumpI       -> L3
-L2: loadI false => r1
+L2: loadI 0     => r1
     jumpI       -> L3
 L3: nop
 
     comp rc, rd => cc2    // c<d
     cbr_LT cc2  -> L4, L5
-L4: loadI true  => r2
+L4: loadI 1     => r2
     jumpI       -> L6
-L5: loadI false => r2
+L5: loadI 0     => r2
     jumpI       -> L6
 L6: nop
 
     comp re, rf => cc3    // e<f
     cbr_LT cc3  -> L7, L8
-L7: loadI true  => r3
+L7: loadI 1     => r3
     jumpI       -> L9
-L8: loadI false => r3
+L8: loadI 0     => r3
     jumpI       -> L9
 L9: nop
 
@@ -205,23 +205,23 @@ Vejam o código da solução anterior
   #+BEGIN_SRC C
     comp ra, rb => cc1    // a<b
     cbr_LT cc1  -> L1, L2
-L1: loadI true  => r1
+L1: loadI 1     => r1
     jumpI       -> L3
-L2: loadI false => r1
+L2: loadI 0     => r1
     jumpI       -> L3
 
 L3: comp rc, rd => cc2    // c<d
     cbr_LT cc2  -> L4, L5
-L4: loadI true  => r2
+L4: loadI 1     => r2
     jumpI       -> L6
-L5: loadI false => r2
+L5: loadI 0     => r2
     jumpI       -> L6
 
 L6: comp re, rf => cc3    // e<f
     cbr_LT cc3  -> L7, L8
-L7: loadI true  => r3
+L7: loadI 1     => r3
     jumpI       -> L9
-L8: loadI false => r3
+L8: loadI 0     => r3
     jumpI       -> L9
 
 L9: and  r2, r3 => r4
@@ -247,9 +247,9 @@ Eliminar a complexidade da avaliação numérica
       cbr_LT cc2    -> L2, L4
   L2: comp   re, rf => cc3 //e<f
       cbr_LT cc3    -> L3, L4
-  L3: loadI  true   => r5
+  L3: loadI  1      => r5
       jumpI         -> L5
-  L4: loadI  false  => r5
+  L4: loadI  0      => r5
       jumpI         -> L5
   L5: nop
   #+END_SRC
