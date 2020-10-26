@@ -132,7 +132,48 @@ Instruções disponíveis (idênticas ao slide anterior)
   or
   #+END_SRC
 * Solução do exercício
-\scriptsize
+** Esquerda
+:PROPERTIES:
+:BEAMER_COL: 0.49
+:BEAMER_env: column
+:END:
+Com a instrução =nop=
+#+latex: \tiny
+#+BEGIN_SRC C
+    comp ra, rb => cc1    // a<b
+    cbr_LT cc1  -> L1, L2
+L1: loadI true  => r1
+    jumpI       -> L3
+L2: loadI false => r1
+    jumpI       -> L3
+L3: nop
+
+    comp rc, rd => cc2    // c<d
+    cbr_LT cc2  -> L4, L5
+L4: loadI true  => r2
+    jumpI       -> L6
+L5: loadI false => r2
+    jumpI       -> L6
+L6: nop
+
+    comp re, rf => cc3    // e<f
+    cbr_LT cc3  -> L7, L8
+L7: loadI true  => r3
+    jumpI       -> L9
+L8: loadI false => r3
+    jumpI       -> L9
+L9: nop
+
+    and  r2, r3 => r4
+    or   r1, r4 => r5 
+#+END_SRC
+** Direita
+:PROPERTIES:
+:BEAMER_COL: 0.49
+:BEAMER_env: column
+:END:
+Som a instrução =nop= (a instrução abaixo toma seu lugar)
+#+latex: \tiny
 #+BEGIN_SRC C
     comp ra, rb => cc1    // a<b
     cbr_LT cc1  -> L1, L2
