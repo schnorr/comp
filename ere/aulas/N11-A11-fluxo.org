@@ -19,31 +19,62 @@
 #+latex: \mytitleslide
 
 * Controle de Fluxo
+
 Controlar o fluxo de execução
 + Gerar código de controle
 + Utiliza rótulos e desvios
-#+latex: \vfill
-Estudaremos três situações (if, if else, while)
+
+#+latex: \vfill\pause
+
 Gramática (B é uma expressão booleana)
-  | S | \rightarrow | if (B) S_1          |
-  | S | \rightarrow | if (B) S_1 else S_2 |
-  | S | \rightarrow | while (B) S_1       |
+
+#+latex: \bigskip
+#+attr_latex: :center nil
+| S | \rightarrow | if (B) S_1          |
+| S | \rightarrow | if (B) S_1 else S_2 |
+| S | \rightarrow | while (B) S_1       |
+
+#+latex: \bigskip
+
+Estudaremos em detalhes três comandos (if, if else, while)
+- Generalização disso para outros casos (for, foreach)
+
+#+latex: \vfill\pause
+
+Veremos duas implementações possíveis
+- L-atribuído com atribudos herdados para B
+- S-atribuído com _remendos_
+
 * Controle de Fluxo -- if
-| S | \rightarrow | if { B.t=rot(); B.f=S.next;  }                                          |
-|   |             | (B) { $S_1$.next=S.next; }                                            |
-|   |             | S_1 { S.code=B.code $\vert\vert$ gera(B.t:) $\vert\vert$ $S_1$.code  } |
+
+#+latex: \bigskip
+#+attr_latex: :center nil
+| S | \rightarrow | if { B.t=rot(); B.f=S.next;  }                       |
+|   |   | (B) { $S_1$.next=S.next; }                            |
+|   |   | S_1 { S.code=B.code $\vert\vert$ gera(B.t:) $\vert\vert$ $S_1$.code  } |
+
 * Fluxo de Execução -- if else
-| S | \rightarrow | if {  B.t=rot(); B.f=rot();   }                                               |
-|   |   | (B) {  S_1 .next=S.next; }                                                     |
-|   |   | S_1 else { $S_2$.next=S.next; }                                                 |
-|   |   | S_2  {  S.code=B.code $\vert\vert$ gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$  |
+
+#+latex: \bigskip
+#+attr_latex: :center nil
+| S | \rightarrow | if {  B.t=rot(); B.f=rot();   }                                                             |
+|   |   | (B) {  S_1 .next=S.next; }                                                                   |
+|   |   | S_1 else { $S_2$.next=S.next; }                                                               |
+|   |   | S_2  {  S.code=B.code $\vert\vert$ gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$                                    |
 |   |   | gera(goto S.next) $\vert\vert$ gera(B.f:); $\vert\vert$ $S_2$.code                                         } |
+
 * Controle de Fluxo -- while
-| S | \rightarrow | while { B.f=S.next; B.t=rot();  }                                              |
-|   |             | (B) { S.begin=rot(); $S_1$.next=S.begin;  }                                       |
-|   |             | S_1 { S.code=gera(S.begin:) $\vert\vert$ B.code $\vert\vert$                     |
-|   |             |  gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$ gera(goto S.begin)  }    |
+
+#+latex: \bigskip
+#+attr_latex: :center nil
+| S | \rightarrow | while { B.f=S.next; B.t=rot();  }                    |
+|   |   | (B) { S.begin=rot(); $S_1$.next=S.begin;  }           |
+|   |   | S_1 { S.code=gera(S.begin:) $\vert\vert$ B.code $\vert\vert$          |
+|   |   | gera(B.t:) $\vert\vert$ $S_1$.code $\vert\vert$ gera(goto S.begin)  } |
 * Gramática para Exercício
+
+#+latex: \bigskip
+#+attr_latex: :center nil
 | S | \rightarrow | attr { S.code=gera(attr.lexval) $\vert\vert$ gera(goto S.next)  }             |
 | S | \rightarrow | if  { B.t=rot(); B.f=rot();  }                                        |
 |   |   | (B) { $S_1$.next=S.next;  }                                            |
