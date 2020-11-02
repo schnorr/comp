@@ -55,3 +55,47 @@ Para que o literal "5" acabe no data segment.
 Qual das duas está correta? Em outras palavras, devo inserir o literal
 no frame da função onde aparece ou no data segment do programa como um
 todo?
+** 2020-11-02 D1
+*** Dúvida #1
+
+Quanto a etapa5, você poderia montar um exemplo um pouco mais concreto
+de uma saida iloc para um arquivo simples de entrada? e como podemos
+conferir se um programa nosso está executando corretamente no
+simulador com um exemplo de como será a avaliação do trabalho?
+
+*** Dúvida #2
+
+Olá professor, na etapa 4 implementamos os blocos de instruções como
+sendo uma nova tabela. Na etapa 5, temos que definir os endereços das
+variáveis.  Na aula N10 A5, você explica que para escopos anônimos, o
+deslocamento do escopo anterior deve ser atualizado ao se fechar o
+escopo anônimo. Porém, levando em conta nossa implementação, isso
+continua válido? Pois, ao fechar-se o escopo anônimo, a sua tabela
+deixaria de existir. Ao atualizar o deslocamento, estaria se
+considerando que as variáveis do bloco anônimo (já fechado) continuam
+existindo.
+
+*** Dúvida #3
+
+Outra dúvida seria sobre o endereçamento. Devemos começar no endereço
+mais alto (seria 2^64?) como no C, ou no 0?
+
+*** Dúvida #4
+
+Quanto a parte de criação pro programa iloc, quando houver uma chamada
+de uma função, `f()` por exemplo, eu preciso criar novos dados na
+pilha pra cada chamada de função, correto? então, se for uma função
+recursiva, deveriamos criar isso varias vezes. Como que criamos a
+tabela durante a execução, já que não teriamos como saber quantas
+vezes a função seria chamada, ou não precisamos tratar isso e
+"reutilizar" as variaveis definidas?
+
+*** Dúvida #5
+
+Estou com umas duvidas quanto a utilização dos registradores
+reservados (rbss, rfp), de acordo com o que diz em aula, esses valores
+são definidos por padrão, exemplo do rbss que não se altera durante a
+execução. Em nosso programa, não precisamos nós mesmos manter controle
+deles durante a execução? Peço isso especialmente quanto a ideia do
+empilhamento em uma chamada de função, pois não entendi muito bem como
+manter o controle deles em casos assim.
