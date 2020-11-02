@@ -1,0 +1,160 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Compiladores
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames, aspectratio=169, presentation]
+#+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{../org-babel.tex}
+
+#+latex: \newcommand{\mytitle}{IR para Chamada de função}
+#+latex: \mytitleslide
+
+* Sumário
+
+- Contextualização sobre geração de código intermediário
+  - *Chamada de função*
+- Organização de memória
+
+* Contextualização
+
+Vimos Geração de Código Intermediário para
++ Cálculo de endereçamento para arranjos
++ Endereçamento para variáveis locais
++ Expressões aritméticas e booleanas
++ Construções de fluxo de controle
++ Atribuições para variáveis
+
+#+latex: \bigskip
+
+O que falta?
+
+#+latex: \pause
+
++ Implementação da chamadas de funções
++ Gerenciar parâmetros formais e reais (passagem de parâmetro)
++ Qual a primeira instrução a ser executada?
+
+* Suporte à Execução
+
+Conjunto de rotinas chamado *Pacote de Suporte à Execução*
++ Código adicional
+  - Na chamada da função
+  - No retorno da função
++ Espalhado em várias partes do segmento de código
++ Gerado pelo compilador: assume uma pilha, gerenciando-a
+
+#+latex: \bigskip\pause
+
+Envolve uma série de conceitos e técnicas
++ Composição do binário do programa (e carga em memória)
++ ``Alocação dinâmica'' de endereços de memória (na pilha)
++ Acesso a variáveis e dados
++ Chamadas de funções
+
+* Organização da Memória
+
+Composição do binário gerado pelo compilador
++ Variáveis estáticas
++ Código executável (com o Pacote de Suporte à Execução)
+
+#+latex: \pause\vfill
+
+Na execução, o sistema operacional cria um processo
++ *Segmento de Código*: código executável
++ *Segmento de Dados*: variáveis estáticas
++ *Monte*: alocação dinâmica de memória
++ *Pilha*
+  + Registros de Ativação (RA) para chamadas de funções
+  + Alocação dinâmica de memória para variáveis locais
+
+* Alocação estática de memória (código, dados)
+
+#+BEGIN_CENTER
+Responsabilidade do compilador
+#+END_CENTER
+
+#+latex:\vfill
+
+*Segmento de Código*
++ Reserva de memória é realizada durante a compilação
++ Tamanho do código executável é conhecido antes da execução
+
+#+latex:\vfill\pause
+
+*Segmento de Dados*
++ Tipo (e tamanho) dos dados é conhecido em compilação
++ Tamanho de tipos é estável (não muda na execução)
+
+* Alocação dinâmica de memória na _Pilha_
+
+#+BEGIN_CENTER
+Responsabilidade do compilador
+#+END_CENTER
+
+*Pilha*
++ Variáveis locais e suporte a chamada de funções
++ *Pilha de Registros de Ativação (RA)*
++ Tamanho aproximado da pilha:
+  + Tamanho médio dos registros \times Número máximo de ativações
+
+#+latex: \bigskip\pause
+
+Gerenciamento realizado pelo compilador
++ Prepara-se um RA para cada procedimento/função
++ Gera-se código para se criar instâncias (que serão empilhadas)
++ *Sequência de Chamada* e *de Retorno*
+
+* Registro de Ativação
+
+Conteúdo de um Registro de Ativação (RA)
++ Temporários (parte variável do RA)
++ Variáveis Locais
++ Estado da máquina salvo
++ Vínculo Estático (ponteiro para o RA do pai estático)
++ Vínculo Dinâmico (ponteiro para o RA do pai dinâmico)
++ Valor retornado
++ Argumentos
+
+#+latex: \bigskip\pause
+
+Utilização no contexto de funções
+- Na chamada, ``criado'' e ``colocado'' no topo da pilha
+- No retorno, ``removido'' da pilha
+
+* Organização interna do Registro de Ativação
+
+Membros devem ser endereçáveis com deslocamento sobre =rfp=
+
+#+latex: \vfill
+
+Variáveis locais de tamanho estático
++ Fazem parte da parte de tamanho fixa
+Variáveis locais de tamanho dinâmico
++ Alocados na parte de tamanho variável
++ Ponteiro e eescritor na parte de tamanho fixo
+
+* Alocação dinâmica de memória no _Monte_
+
+#+BEGIN_CENTER
+_Não é responsabilidade do compilador_
+#+END_CENTER
+
+*Monte*
++ Áreas alocadas explicitamente pelo programa (=malloc= e =free=)
++ A área cresce no sentido contrário ao da pilha
++ Alocação em geral é caótica (depende do programa)
+
+#+latex: \bigskip\pause
+
+Gerenciamento do monte pode ser
++ Em nível de usuário (no caso da =libc=)
++ Em nível de sistema operacional (chamada de sistema)
