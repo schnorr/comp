@@ -140,7 +140,7 @@ Variáveis locais de tamanho estático
 + Fazem parte da parte de tamanho fixa
 Variáveis locais de tamanho dinâmico
 + Alocados na parte de tamanho variável
-+ Ponteiro e eescritor na parte de tamanho fixo
++ Ponteiro e descritor na parte de tamanho fixo
 
 * Alocação dinâmica de memória no _Monte_
 
