@@ -66,9 +66,9 @@ Escopo Estático *com* procedimentos aninhados
     3. Gera código de acesso considerando uma tupla \\
        \rightarrow Endereçamento é =(diferença_escopo, desloc_fp)=
 
-#+latex: \vfill
+#+latex: % \vfill
 
-\pause *Escopo Dinâmico* (bonus)
+# \pause *Escopo Dinâmico* (bonus)
 
 * Acesso a dados
 
