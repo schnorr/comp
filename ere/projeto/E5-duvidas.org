@@ -111,3 +111,19 @@ int a, b;
 é necessário que o deslocamento da variável "a" seja 0 e o da variável
 "b" 4, ou é aceitável que "b" apresente o deslocamento 0 (pois estamos
 adicionando as variáveis na tabela de símbolos na ordem inversa)?
+** TODO 2020-11-04 D2
+*** Dúvida #1
+
+surgiu uma dúvida enquanto implementava a geração de código para a
+declaraçõ de funções, em especial a função 'main'
+
+No início do programa, implementei aquele trecho de código padrão que
+carrega os valores de rfp, rsp e rbss iniciais, e então um 'jump' para
+o label da função 'main'. A função main, ao encerrar, deve retornar a
+este trecho de código para que se possa encerrar o programa, ou ela
+mesmo deve encerrar? Isto é, devo tratar este trecho inicial como
+fazendo uma 'chamada de função' à main, passando nenhum argumento, e
+executando a instrução HALT no retorno, ou devo inserir
+aritficialmente a instrução HALT no final do código da função main?
+Isto leva a outra pergunta: a função main deve ter um comando 'return'
+no seu fim? ou apenas o comando HALT?
