@@ -55,13 +55,15 @@ Para que o literal "5" acabe no data segment.
 Qual das duas está correta? Em outras palavras, devo inserir o literal
 no frame da função onde aparece ou no data segment do programa como um
 todo?
-** TODO 2020-11-02 D1
+** DONE 2020-11-02 D1
 *** Dúvida #1
 
 Quanto a etapa5, você poderia montar um exemplo um pouco mais concreto
-de uma saida iloc para um arquivo simples de entrada? e como podemos
-conferir se um programa nosso está executando corretamente no
-simulador com um exemplo de como será a avaliação do trabalho?
+de uma saida iloc para um arquivo simples de entrada?
+
+e como podemos conferir se um programa nosso está executando
+corretamente no simulador com um exemplo de como será a avaliação do
+trabalho?
 
 *** Dúvida #2
 
@@ -99,6 +101,7 @@ execução. Em nosso programa, não precisamos nós mesmos manter controle
 deles durante a execução? Peço isso especialmente quanto a ideia do
 empilhamento em uma chamada de função, pois não entendi muito bem como
 manter o controle deles em casos assim.
+
 *** Dúvida #6
 
 Se a entrada começar com a seguinte declaração de variáveis globais:
