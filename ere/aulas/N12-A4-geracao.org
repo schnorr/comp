@@ -18,9 +18,15 @@
 #+latex: \newcommand{\mytitle}{Geração de Código}
 #+latex: \mytitleslide
 
-* Introdução
+* Estrutura de um Compilador em etapas
 
-Última fase do compilador
+Geração de código, a "última" fase do compilador.
+
+#+CAPTION: As etapas do passo de compilação.
+#+ATTR_LATEX: :width 6.5cm
+[[./img/fases_compilacao.png]]
+
+* Geração de código
 
 Recebe como entrada uma representação intermediária
 + Livre de erros sintáticos e semânticos
@@ -43,7 +49,7 @@ Mapear nomes para endereços de memória de execução
 Tabela de símbolos usadas para determinar
 + Tamanhos
 + Posições relativas
-Converter rótulos para endereços
+Converter rótulos para endereços \rightarrow Assembly pode suportar rótulos
 
 Tratamento de registros de ativação (RA) e pilha
 + Parâmetros
@@ -55,28 +61,34 @@ Tratamento de registros de ativação (RA) e pilha
 *Forma do código objeto* a ser gerado \\
   \rightarrow Absoluta, relocável ou /assembly/
 
+#+latex: \vfill
+
 *Seleção das instruções* de máquina
 + Sequência apropriada \rightarrow Código mais curto e rápido
 
+#+latex: \vfill
+
 *Alocação de registradores*
+
+#+latex: \vfill
 
 *Ordem de avaliação* das instruções \\
   \rightarrow Achar o ótimo é um problema insolúvel
 
 * Forma do Código Objeto
 
-*Linguagem absoluta* -- Uso acadêmico
+Linguagem absoluta -- Uso acadêmico
 + Programa é armazenado em uma área de memória fixa
 + Imediatamente executado (/load and go compilers/)
 
-#+latex: \pause
+#+latex: \pause\vfill
 
 Linguagem de máquina relocável
 + Compilação separada de subprogramas ou pacotes
 + Ligados no final da etapa de compilação
 + Flexibilidade
 
-#+latex: \pause
+#+latex: \pause\vfill
 
 Tradução para /assembly/
 + Instruções simbólicas, usando recursos de macro
