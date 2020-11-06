@@ -114,8 +114,8 @@ adicionando as variáveis na tabela de símbolos na ordem inversa)?
 ** TODO 2020-11-04 D2
 *** Dúvida #1
 
-surgiu uma dúvida enquanto implementava a geração de código para a
-declaraçõ de funções, em especial a função 'main'
+Surgiu uma dúvida enquanto implementava a geração de código para a
+declaração de funções, em especial a função 'main'
 
 No início do programa, implementei aquele trecho de código padrão que
 carrega os valores de rfp, rsp e rbss iniciais, e então um 'jump' para
@@ -127,3 +127,36 @@ executando a instrução HALT no retorno, ou devo inserir
 aritficialmente a instrução HALT no final do código da função main?
 Isto leva a outra pergunta: a função main deve ter um comando 'return'
 no seu fim? ou apenas o comando HALT?
+
+*** Dúvida #2
+
+Surgiu uma dúvida sobre a linguagem ILOC: ao usar uma constante em uma
+determinada instrução, ela pode ser um número negativo?  Por exemplo,
+"loadI -1 => r0".
+
+*** Dúvida #3
+
+Novamente tratando dos literais, quando eles são delcarados e
+colocados na tabela de símbolos globais, eles recebem um endereço no
+qual seu valor estará presente, como explicado no primeiro vídeo de
+dúvidas. Porém, não entendi como estes literais receberão o valor que
+de fato representam para que o código possa acessar seu valor;
+Exemplo.:
+
+#+BEGIN_EXAMPLE
+int main(){
+    int x;
+    x = 2;
+}
+#+END_EXAMPLE
+
+Aqui, o literal 2 é declarado na tabela de símbolos global, com
+endereço, por exemplo, 4. A geração de código segue como normal, e na
+atribuição este endereço é acessado corretamente pelo programa. O
+problema é: Este endereço possui o valor 0, já que não foi
+inicializado. Em que ponto do código (Na criação do nodo do literal,
+na declaração na tabela de símbolos, na própria atribuição, etc) devo
+inserir uma instrução ILOC que carrega o valor 2 naquele endereço?
+Quanto ao código ILOC gerado no final da execução, onde este 'store'
+de literais deve aparecer? Na primeira ocorrência do acesso ao vetor?
+ou então antes mesmo de realizar o 'jump' para a função main?
