@@ -111,7 +111,7 @@ int a, b;
 é necessário que o deslocamento da variável "a" seja 0 e o da variável
 "b" 4, ou é aceitável que "b" apresente o deslocamento 0 (pois estamos
 adicionando as variáveis na tabela de símbolos na ordem inversa)?
-** TODO 2020-11-04 D2
+** DONE 2020-11-04 D2
 *** Dúvida #1
 
 Surgiu uma dúvida enquanto implementava a geração de código para a
@@ -160,3 +160,69 @@ inserir uma instrução ILOC que carrega o valor 2 naquele endereço?
 Quanto ao código ILOC gerado no final da execução, onde este 'store'
 de literais deve aparecer? Na primeira ocorrência do acesso ao vetor?
 ou então antes mesmo de realizar o 'jump' para a função main?
+** TODO 2020-11-09 D3 (pós-deadline)
+*** Dúvida #1
+
+No último vídeo de duvidas (especificamente na terceira dúvida) é
+comentado sobre os literais no segmento de dados. Você diz como
+resposta que os literais deveriam ser inseridos na parte
+correspondente do segmento de dados com código explicito de "store"
+dos literais (pelo menos foi o que entendi). Isso é realmente
+necessário nessa etapa? porque eu (ainda) não mexi na tabela de
+símbolos para colocar todos os literais na tabela global, e você
+comentou anteriormente que por estarmos tratando apenas inteiros, eles
+caberiam direto em uma instrução iloc.
+
+Por exemplo, deu-se a entender que para o exemplo do vídeo anterior:
+int main() {
+    int x;
+    x = 2;
+}
+
+o literal 2 deveria ser armazenado na parte de segmento de
+dados. Porém, poderiamos fazer diretamente o load de 2 para um
+registrador, sem precisar carregar o dado do endereço do literal 2.
+
+*** Dúvida #2
+
+
+Estava testando meu programa com a seguinte função Fibonacci
+
+int fib1(int a) {
+    if (a == 0) {
+        return 0;
+    };
+    if (a == 1) {
+        return 1;
+    };
+    return fib(a-1)+fib(a-2);
+}
+
+mas o resultado dela está dando errado devido aos registradores sendo
+usados na recursão das funções. Acontece quando, por exemplo, um
+registrador r5 guardando o valor de fib(a-1), tem seu valor alterado
+na própria recursão quando o valor de a é necessario para chamar a
+recursão.
+
+O problema some caso faça o seguinte:
+
+int fib2(int a) {
+    if (a == 0) {
+        return 0;
+    };
+    if (a == 1) {
+        return 1;
+    };
+    int aux1, aux2;
+    aux1 = fib(a-1);
+    aux2 = fib(a-2);
+    return aux1+aux2;
+}
+
+assim os valores antes são devidamente guardados nas variaveis dentro
+do RA da funcao fib.
+
+Queria saber se nos programas de correção terá casos como em fib1, em
+que tenhamos que ter maior cuidado com as chamadas de função
+recursivamente, ou se será como em fib2, com variaveis para auxiliar o
+processo.
