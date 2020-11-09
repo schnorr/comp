@@ -45,20 +45,20 @@ referência o assembly ~x86_64~ e o compilador ~gcc~ como montador.
 ** Traduzir para assembly o código ILOC
 
 Implementar uma função ~generateAsm()~ que traduz o programa em
-linguagem intermediária obtido na E5 para a linguagem assembly na
-saída padrão.  Esta função deve gerar na saída o segmento de dados
-(com o valor de inicialização das variáveis globais) e o segmento de
-código. Enquanto normalmente o segmento de dados é criado a partir da
-tabela de símbolos do escopo global, variáveis estáticas e constantes
-literais também podem estar presentes em função da implementação do
-grupo. O segmento de código efetivamente deve conter a tradução das
-instruções ILOC a partir da lista de instruções (que contém todo o
-programa) na raiz da AST. Normalmente, uma instrução ILOC é mapeada
-para uma instrução assembly, mas esse número pode variar um função das
-escolhas do grupo. Por exemplo, uma instrução ILOC pode se tornar
-algumas instruções assembly. Esse mapeamento entre instruções do
-código intermediário e do código assembly deve ser projetado e
-implementado pelo grupo.
+linguagem intermediária obtido na etapa anterior para a linguagem
+assembly na saída padrão.  Esta função deve gerar na saída o segmento
+de dados (com o valor de inicialização das variáveis globais) e o
+segmento de código. Enquanto normalmente o segmento de dados é criado
+a partir da tabela de símbolos do escopo global, variáveis estáticas e
+constantes literais também podem estar presentes em função da
+implementação do grupo. O segmento de código efetivamente deve conter
+a tradução das instruções ILOC a partir da lista de instruções (que
+contém todo o programa) na raiz da AST. Normalmente, uma instrução
+ILOC é mapeada para uma instrução assembly, mas esse número pode
+variar um função das escolhas do grupo. Por exemplo, uma instrução
+ILOC pode se tornar algumas instruções assembly. Esse mapeamento entre
+instruções do código intermediário e do código assembly deve ser
+projetado e implementado pelo grupo.
 
 Devem ser traduzidos os elementos que foram previamente implementados
 na etapa anterior, onde o código ILOC foi gerado como código
@@ -89,6 +89,36 @@ implementada na etapa anterior. O grupo deve modificá-la, caso
 necessário, para implementar as funcionalidades necessárias da etapa
 corrente. Não esqueça de liberar a memória corretamente, como uma boa
 prática de programação.
+* Testes automáticos
+
+Os testes automáticos utilizarão o compilador ~gcc~ para verificar se o
+código assembly gerado pode ser transformado em um binário executável
+que efetue as operações do programa fornecido na entrada.  O teste
+utilizará o valor de retorno da função principal ~main~ na
+avaliação. Por exemplo, para o programa ~ex3.z~ com o código:
+
+#+BEGIN_SRC C :tangle ex3.c
+int main() {
+   int a;
+   int b;
+   a = 1;
+   b = 6;
+   while (a < b) {
+      a = a + 1;
+   };
+   return a;
+}
+#+END_SRC
+
+#+latex: \noindent
+O valor de retorno do programa acima deve ser 6:
+
+#+begin_src shell :results output
+./etapa6 < ex3.z > ex3.s
+gcc ex3.s -o ex3
+./ex3
+echo $?
+#+end_src
 
 * Assembly
 
@@ -211,38 +241,6 @@ traduzidos para assembly.
 
 #+latex: \bibliographystyle{plain}
 #+latex: \bibliography{biblio}
-
-* Testes automáticos
-
-Os testes automáticos utilizarão o compilador ~gcc~ para verificar se o
-código assembly gerado pode ser transformado em um binário executável
-que efetue as operações do programa fornecido na entrada.  O teste
-utilizará o valor de retorno da função principal ~main~ na
-avaliação. Por exemplo, para o programa ~ex3.z~ com o código:
-
-#+BEGIN_SRC C :tangle ex3.c
-int main() {
-   int a;
-   int b;
-   a = 1;
-   b = 6;
-   while (a < b) {
-      a = a + 1;
-   };
-   return a;
-}
-#+END_SRC
-
-#+latex: \noindent
-O valor de retorno do programa acima deve ser 6:
-
-#+begin_src shell :results output
-./etapa6 < ex3.z > ex3.s
-gcc ex3.s -o ex3
-./ex3
-echo $?
-#+end_src
-k
 * Bib                                                              :noexport:
 #+BEGIN_SRC bibtex :tangle biblio.bib
 @book{keith,
