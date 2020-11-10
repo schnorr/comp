@@ -160,7 +160,7 @@ inserir uma instrução ILOC que carrega o valor 2 naquele endereço?
 Quanto ao código ILOC gerado no final da execução, onde este 'store'
 de literais deve aparecer? Na primeira ocorrência do acesso ao vetor?
 ou então antes mesmo de realizar o 'jump' para a função main?
-** TODO 2020-11-09 D3 (pós-deadline)
+** DONE 2020-11-09 D3 (pós-deadline)
 *** Dúvida #1
 
 No último vídeo de duvidas (especificamente na terceira dúvida) é
@@ -184,7 +184,6 @@ dados. Porém, poderiamos fazer diretamente o load de 2 para um
 registrador, sem precisar carregar o dado do endereço do literal 2.
 
 *** Dúvida #2
-
 
 Estava testando meu programa com a seguinte função Fibonacci
 
