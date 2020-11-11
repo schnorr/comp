@@ -17,26 +17,34 @@
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \input{./c_style.tex}
 
-#+latex: \newcommand{\mytitle}{Otimização de blocos básicos}
+#+latex: \newcommand{\mytitle}{Otimização Local -- Blocos Básicos}
 #+latex: \mytitleslide
 
 * Otimização de blocos básicos
-Melhora o desempenho realizando otimizações locais dentro dos
-  blocos básicos.
 
-* Construindo um bloco básico
+Melhorar o desempenho realizando otimizações locais
+
+dentro dos blocos básicos
+
+* Melhorar o código de um bloco básico
+
+Passos
+1. Construir o grafo de blocos básicos (DAG Fluxo de Controle)
+2. Melhorar o código de cada bloco básico (um DAG Fluxo de Dados por BB)
+   - Objetivos
+     - Encontrar subexpressões comuns
+     - Eliminar código não usado
+     - Uso de Identidades Algébricas
+
+#+latex: \pause\vfill
+
 Construção de um DAG para cada bloco básico
-- Cada Valor inicial de cada variável será um nó inicial no DAG
-- Cada expressão será um nó no DAG onde seus nós filhos são as
-  expressões ou os nós de valores iniciais das variáveis usadas pela
-  expressão.
-- Alguns nós são marcados como vivos, variáveis que serão utilizadas
-  depois do fim do bloco.
-
-* Otimizações possíveis no bloco básico
-- Encontrar sub-expressões comuns
-- Eliminar código não usado
-- Uso de Identidades Algébricas
+- Cada valor inicial de cada variável será um nó inicial no DAG
+- Cada expressão binária será um nó no DAG, com filhos
+  - Outras expressões ou
+  - Valoresiniciais das variáveis
+- Alguns nós são marcados como vivos
+  - Variáveis que serão utilizadas depois do fim do bloco
 
 * Encontrar Sub-expressões Comuns
 Exemplo:
@@ -73,13 +81,15 @@ d = a - d
 [[./img/step5.pdf]]
 
 * Eliminar código não usado
-Podemos eliminar nós do DAG que calculam variáveis que não serão mais
-utilizadas
+
+Podemos eliminar nós do DAG que calculam
+
+variáveis que não serão mais utilizadas.
 
 - Exemplo: Caso C não seja mais utilizado
 
 #+NAME: img.sub_st
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.8\linewidth
 [[./img/step3.pdf]]
 
 * Uso de Identidades Algébricas
@@ -100,7 +110,7 @@ Utilizar operações mais "baratas"
 | a/2              | a \times 0.5         |
 | a/2^n            | a >> n               |
 
-* Uso de Identidades Algébricas
+* Uso de Identidades Algébricas                                    :noexport:
 Regras associativas podem expor sub-expressões comuns:
 - Exemplo:
 
