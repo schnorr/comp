@@ -18,6 +18,11 @@
 #+latex: \newcommand{\mytitle}{Otimização}
 #+latex: \mytitleslide
 
+* Estrutura de um *Compilador* em fases
+
+#+ATTR_LATEX: :width .45\linewidth :center nil
+[[../img/fases_compilacao.png]]
+
 * Otimização de Código
 
 Aspectos contraditórios
@@ -28,29 +33,11 @@ Código ótimo
 + Problema não decidível \rightarrow Utilizar heurísticas
 + Devemos pensar em *melhorias* ao invés de otimização
 
-* Estrutura de um *Compilador* em fases
-
-#+ATTR_LATEX: :width .6\linewidth
-[[../geral/img/fases_compilacao.png]]
-
-* Otimização de Código
-
-*Otimização do código intermediário*
-+ Eliminar atribuições redundantes
-+ Suprimir subexpressões comuns
-+ Eliminar temporários desnecessários
-+ Trocar instruções de lugar
-
-*Otimização de código objeto*
-+ Troca de instruções de máquina por instruções mais rápidas
-+ Melhor utilização de registradores
-
-* Otimização de Código
-
-Como melhorar?
+* Como melhorar?
 
 #+latex: \small
 
+~z1.c~
 #+begin_src C
 int x[SIZE];
 int main () {
@@ -63,6 +50,7 @@ int main () {
 
 Possível alteração no código de usuário
 
+~z2.c~
 #+begin_src C
 int x[SIZE];
 int main () {
@@ -70,3 +58,15 @@ int main () {
   for (p = (int*)x; p < (int*)x+SIZE;) *p++ = 1;
 }
 #+end_src
+
+* Otimização de Código
+
+*Otimização do código intermediário*
++ Eliminar atribuições redundantes
++ Suprimir subexpressões comuns
++ Eliminar temporários desnecessários
++ Trocar instruções de lugar
+
+*Otimização de código objeto*
++ Troca de instruções de máquina por instruções mais rápidas
++ Melhor utilização de registradores

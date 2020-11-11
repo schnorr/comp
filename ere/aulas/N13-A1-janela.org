@@ -61,6 +61,8 @@ Podemos remover a instrução de armazenamento
 #+latex: \vfill\pause
 
 O que aconteceria se houvesse um rótulo na instrução ST?
+- Não poderias removê-la pois o controle pode saltar direto
+
 * Eliminando código inacessível
 
 Remoção de instruções inacessíveis (código morto)
@@ -102,6 +104,8 @@ Caso
    | t6 = t4     |
    | d = t4 * t4 |
 
+- ~t6~ e ~t5~ não são utilizados
+
 * Otimizações de Fluxo de Controle
 Código intermediário frequentemente tem
 + Desvios para desvios
@@ -113,6 +117,8 @@ Todos podem ser eliminados
 #+latex: \vfill\pause
 
 Qual transformação?
+- Substituir ~goto L1~ por ~goto L2~
+
   |     | goto L1 |
   |     | ...     |
   | L1: | goto L2 |
@@ -142,8 +148,7 @@ Então
 
 Qual a diferença entre as duas versões?
 + Número de instruções é o mesmo
-+ \pause Às vezes saltamos um desvio na versão otimizada
-    + Nunca na primeira versão
++ \pause Podemos saltar um desvio na versão otimizada, nunca na primeira versão
 
 * Simplificação Algébrica
 

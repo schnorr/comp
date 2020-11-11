@@ -81,9 +81,9 @@ Qual é o grafo de fluxo de controle?
 
 * Código TAC do Exemplo 1
 
-| (1)  | _prod = 0_          |
+| (1)  | _prod = 0_            |
 | (2)  | i = 1               |
-| (3)  | _t1 = 4 * i_        |
+| (3)  | _t1 = 4 * i_          |
 | (4)  | t2 = a[t1]          |
 | (5)  | t3 = 4 * i          |
 | (6)  | t4 = b[t3]          |
@@ -93,9 +93,14 @@ Qual é o grafo de fluxo de controle?
 | (10) | t7 = i + 1          |
 | (11) | i = t7              |
 | (12) | if i <= 20 goto (3) |
-| (13) | _halt_              | 
+| (13) | _halt_                |
 
 #+latex: \vfill
+Quais são as instruções líderes? (1), (3) e (13)
+
+Quais são os blocos básicos? (1)-(2), (3)-(12), (13)
+
+Qual é o grafo de fluxo de controle? Vejamos o desenho...
 
 * Exemplo 2 -- quicksort
 
@@ -115,11 +120,16 @@ void quickSort (m, n) {
   quicksort(m,j);
   quicksort(i+1, n);
 }
-
 #+END_SRC
-Vamos nos focar nas linhas 5 a 12
+\rightarrow Vamos nos focar nas linhas 5 a 12
 
 * Exemplo 2 -- quicksort TAC
+
+** Esquerda
+:PROPERTIES:
+:BEAMER_col: 0.6
+:BEAMER_opt: [b]
+:END:
 
 |  1 | i = m - 1           |   | 16 | t7 = 4 \times i   |
 |  2 | j = n               |   | 17 | t8 = 4 \times j   |
@@ -137,7 +147,27 @@ Vamos nos focar nas linhas 5 a 12
 | 14 | t6 = 4 \times i          |   | 29 | t15 = 4 \times n  |
 | 15 | x = a[t6]           |   | 30 | a[t15] = x   |
 
+
+
+
+** Direita
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_opt: [b]
+:END:
+
+Líderes
+- primeira
+- destino
+- após desvio
+
 * Exemplo 2 -- quicksort TAC (líderes)
+
+** Esquerda
+:PROPERTIES:
+:BEAMER_col: 0.6
+:BEAMER_opt: [b]
+:END:
 
 |  1 | _i = m - 1_           |   | 16 | t7 = 4 \times i    |
 |  2 | j = n                 |   | 17 | t8 = 4 \times j    |
@@ -155,8 +185,23 @@ Vamos nos focar nas linhas 5 a 12
 | 14 | _t6 = 4 \times i_     |   | 29 | t15 = 4 \times n   |
 | 15 | x = a[t6]             |   | 30 | a[t15] = x         |
 
+
+** Direita
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_opt: [b]
+:END:
+
 * Exercício: Calcule o grafo de fluxo com blocos básicos
-\small
+
+
+** Esquerda
+:PROPERTIES:
+:BEAMER_col: 0.45
+:BEAMER_opt: [b]
+:END:
+
+#+latex: {\small
   | (1)  | i = 1                |
   | (2)  | j = 1                |
   | (3)  | t1 = 10 \times i     |
@@ -174,3 +219,16 @@ Vamos nos focar nas linhas 5 a 12
   | (15) | a[t6] = 1.0          |
   | (16) | i = i + 1            |
   | (17) | if i <= 10 goto (13) |
+#+latex: }
+
+** Direita
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_opt: [b]
+:END:
+
+Líderes
+- primeira
+- destino
+- após desvio
+
