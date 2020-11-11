@@ -17,12 +17,14 @@
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \input{./c_style.tex}
 
-#+latex: \newcommand{\mytitle}{Otimizações Independentes de Arquitetura Globais}
+#+latex: \newcommand{\mytitle}{Otimização Global -- Grafo de Fluxo de Controle}
 #+latex: \mytitleslide
 
-* Otimizações Independentes de Arquitetura Globais
-Otimizações que dependem de análise da interação entre os blocos
-básicos
+* Otimização Global -- Grafo de Fluxo de Controle
+Otimizações que dependem de análise da
+
+interação entre os blocos básicos.
+
 * Exemplo: Quick Sort 
 #+ATTR_LATEX: :options style=CStyle
 #+begin_src C
@@ -171,100 +173,116 @@ TAC Final:
 
 * Exemplo: Quick Sort
 Blocos Básicos:
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort1.pdf]]
 
 * Exemplo: Quick Sort - Remoção de Expressões Comuns
 - Localmente dentro de cada bloco
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort2.pdf]]
 
 * Exemplo: Quick Sort - Remoção de Expressões Comuns
 Resultado:
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort3.pdf]]
 
 * Exemplo: Quick Sort - Remoção de Expressões Comuns
 - Globalmente, considerado interação entre blocos
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort4.pdf]]
 
 * Exemplo: Quick Sort - Remoção de Expressões Comuns
 Resultado:
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort5.pdf]]
 
 * Exemplo: Quick Sort - Remoção de Expressões Comuns
 Novas oportunidades:
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort6.pdf]]
 
 * Exemplo: Quick Sort - Remoção de Expressões Comuns
 Resultado:
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort7.pdf]]
 
 * Exemplo: Quick Sort - Remoção de Expressões Comuns
 Podemos simplificar esta operação?
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort8.pdf]]
 
 * Exemplo: Quick Sort - Remoção de Expressões Comuns
 Não, pois =(15)= e =(16)= podem alterar =a=
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort9.pdf]]
 
 * Exemplo: Quick Sort - Propagação de Cópias
 Não precisa passar por intermediário
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort10.pdf]]
 
 * Exemplo: Quick Sort - Propagação de Cópias
 Resultado:
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort11.pdf]]
 
 * Exemplo: Quick Sort - Eliminação de código morto
 A variável =x= não é utilizada
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort12.pdf]]
 
 * Exemplo: Quick Sort - Eliminação de código morto
 Resultado:
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort13.pdf]]
 
 * Exemplo: Quick Sort - Variáveis induzidas em loops
 - Variáveis tem alteração padronizada -> reduzir instruções nos loops
 - Os endereços de acesso são incrementados de 4 em 4 não precisamos
   incrementar =i= e =j= toda vez.
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort14.pdf]]
 
 * Exemplo: Quick Sort
 Resultado final:
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort15.pdf]]
 
 * Exemplo: Quick Sort
 Primeira Versão:
+
 #+NAME: img.sub_step4
-#+ATTR_LATEX: :width 0.9\linewidth
+#+ATTR_LATEX: :width 0.7\linewidth :center nil
 [[./img/quick_sort1.pdf]]
 
 * Local Variables                                                  :noexport:
