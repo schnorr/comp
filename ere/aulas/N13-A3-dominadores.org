@@ -44,9 +44,21 @@
            a[n*i + j] = b[j];    
      #+end_src
 * Definição de laço?
-   #+BEGIN_CENTER
-   \includegraphics[width=.37\linewidth]{./grafo-exemplo.pdf}
-   #+END_CENTER
+** Esquerda
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_opt: [b]
+:END:
+
+#+attr_latex: :width .5\linewidth
+[[./grafo-exemplo.pdf]]
+
+** Direita
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_opt: [b]
+:END:
+
 * Dominadores
    + Usados para encontrar laços no grafo de fluxo de controle
    \vfill
@@ -56,9 +68,26 @@
      + $m$ = $n$ (um nó se domina)
    + Árvore de dominadores
 * Calculando a Árvore de Dominadores
-   #+BEGIN_CENTER
-   \includegraphics[width=.37\linewidth]{./grafo-exemplo.pdf}
-   #+END_CENTER
+** Esquerda
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_opt: [t]
+:END:
+
+#+attr_latex: :width .5\linewidth
+[[./grafo-exemplo.pdf]]
+
+** Direita
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_opt: [t]
+:END:
+
+   + Um nó $n$ domina $m$ se
+     + Todos os caminhos na direção de $m$ passam por $n$
+       + A partir de um nó dito inicial do grafo
+     + $m$ = $n$ (um nó se domina)
+
 * Definindo laços
    + Um laço deve ter um \alert{único ponto de entrada} (/header/)
      + O nó correspondente domina todos os nós do laço
@@ -66,12 +95,12 @@
      + Através de um arco de retorno no grafo de fluxo (/back edge/)
    \vfill
    + Algoritmo para encontrar laços
-     + Buscar no grafo de fluxo arestas $a \rightarrow b$ \\ cujo nó
-       destino $b$ \alert{domina} o nó origem $a$
+     + Buscar no grafo de fluxo arestas $a \rightarrow b$ @@latex:\linebreak@@
+       cujo nó destino $b$ \alert{domina} o nó origem $a$
 * Encontrando laços
-   #+BEGIN_CENTER
-   \includegraphics[width=\linewidth]{./encontrando-lacos.pdf}
-   #+END_CENTER
+#+attr_latex: :width .75\linewidth :center nil
+[[./encontrando-lacos.pdf]]
+
 * Movimentação de código
    + \alert{Comando invariante}: podem ser movidos para um bloco
      anterior ao laço porque seu valor não muda durante o laço
@@ -85,19 +114,18 @@
 * Movimentação ilegal de código
    + O bloco B que contém \texttt{s} domina todas as saídas de \texttt{L}
 ** Original                                                          :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.5
-    :END:
-    #+BEGIN_CENTER
-    \includegraphics[width=\linewidth]{./movimentacao-ilegal-1.pdf}
-    #+END_CENTER
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+attr_latex: :width .5\linewidth :center nil
+[[./movimentacao-ilegal-1.pdf]]
+
 ** <2->Modificado                                                    :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.5
-    :END:
-    #+BEGIN_CENTER
-    \includegraphics[width=\linewidth]{./movimentacao-ilegal-1b.pdf}
-    #+END_CENTER
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+attr_latex: :width .5\linewidth :center nil
+[[./movimentacao-ilegal-1b.pdf]]
 * Movimentação ilegal de código
    + Nenhum outro comando no laço atribui um valor a \texttt{x}
 ** Original                                                          :BMCOL:
