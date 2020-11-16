@@ -1,0 +1,14 @@
+#+STARTUP: overview indent
+#+TITLE: Dúvidas da E6 do Projeto de Compilador
+* E6
+** TODO 2020-11-16
+*** Dúvida #1
+
+Somente um esclarecimento em relação à spec da E6:
+
+O objetivo da etapa é a transcrição ILOC p/ Assembly, sem precisar
+lidar com limites práticos de registradores ou implementar a alocação
+por k-coloração neste momento?
+
+Isso viria na etapa 7, junto com outras otimizações da semana 13?
+
