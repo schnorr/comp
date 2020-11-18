@@ -19,3 +19,23 @@ Isso viria na etapa 7, junto com outras otimizações da semana 13?
    facilidade. Devemos tentar diminuir a quantidade de registradores
    usados na nossa etapa anterior ou temos alguma forma mais simples
    de escolher registradores sem que haja "derramamento" deles?
+** TODO 2020-11-18 D1
+*** Dúvida #1
+
+1) Nos códigos assembly que gerei fazendo alguns testes não
+   identifiquei a inicialização dos registradores especiais nem um
+   tipo de jump para o código da main, como fizemos com o ILOC. Esses
+   passos ainda são necessários?
+
+*** Dúvida #2
+
+2) Com ILOC implementamos a pilha crescendo "para cima", mas no
+   assembly a pilha cresce "para baixo". Isso é obrigatório?
+   Precisamos "inverter" a pilha nessa etapa?
+
+*** Dúvida #3
+
+3) Precisamos gerar o assembly a partir do código intermediário que
+   fizemos ou seria possível gerarmos ao mesmo tempo que reconhecemos
+   a entrada, na primeira passada? Pergunto isso pois, vendo algumas
+   instruções no assembly me parece ser mais simples gerar direto.
