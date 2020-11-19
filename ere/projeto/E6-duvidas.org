@@ -39,3 +39,22 @@ Isso viria na etapa 7, junto com outras otimizações da semana 13?
    fizemos ou seria possível gerarmos ao mesmo tempo que reconhecemos
    a entrada, na primeira passada? Pergunto isso pois, vendo algumas
    instruções no assembly me parece ser mais simples gerar direto.
+
+*** Dúvida #4
+
+1. No enunciado da E6 dizes que podemos fazer a chamada de função
+   utilizando os comandos "call" e "ret" (para o retorno). Gostaria de
+   saber se tem como fazer a chamada sem utilizar esses comandos e
+   seguir os passos já construídos na etapa anterior. No enunciado não
+   mencionas nada de um registrador para o PC.
+
+*** Dúvida #5
+
+Eu e outros colegas estavamos procurando pela coleção de instruções e
+nos deparamos em diferentes definições de como o assembly
+funciona. Alguns lugares dizem que em uma instrução, por exemplo, "add
+eax, edx", será feita a soma e depois o valor inserido em eax
+(tutorial que deu o link no enunciado da E6), mas outros lugares
+mostram exemplos em que o resultado da soma do exemplo será armazenado
+em edx (ASM gerado pelo gcc). Só gostaria que o senhor confirmasse
+isso corretamente conosco.
