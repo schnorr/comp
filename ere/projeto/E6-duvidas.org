@@ -27,11 +27,29 @@ Isso viria na etapa 7, junto com outras otimizações da semana 13?
    tipo de jump para o código da main, como fizemos com o ILOC. Esses
    passos ainda são necessários?
 
+Resposta:
+- Somente o jump para a main é necessário, especialmente se existem
+  outras funções que são organizadas anteriormente. Ou seja, no
+  início, temos que ter algo como:
+
+#+BEGIN_EXAMPLE
+section	.text
+   global _start	 ;must be declared for linker (gcc)
+	
+_start:	         ;tell linker entry point
+  ; ....
+#+END_EXAMPLE
+
 *** Dúvida #2
 
 2) Com ILOC implementamos a pilha crescendo "para cima", mas no
    assembly a pilha cresce "para baixo". Isso é obrigatório?
    Precisamos "inverter" a pilha nessa etapa?
+
+Resposta:
+- A solução adotada deve permitir que o GCC transforme o ASM gerado
+  para um binário executável, e este binário executável deve
+  funcionar.
 
 *** Dúvida #3
 
@@ -40,6 +58,9 @@ Isso viria na etapa 7, junto com outras otimizações da semana 13?
    a entrada, na primeira passada? Pergunto isso pois, vendo algumas
    instruções no assembly me parece ser mais simples gerar direto.
 
+Resposta:
+- Não há necessidade de gerar a partir do código intermediário ILOC.
+
 *** Dúvida #4
 
 1. No enunciado da E6 dizes que podemos fazer a chamada de função
@@ -47,6 +68,10 @@ Isso viria na etapa 7, junto com outras otimizações da semana 13?
    saber se tem como fazer a chamada sem utilizar esses comandos e
    seguir os passos já construídos na etapa anterior. No enunciado não
    mencionas nada de um registrador para o PC.
+
+Resposta:
+- Creio que não pois o PC no ASM é gerido pelo HW. Então deve-se fazer
+  uma simplificação no que havia sido feito utilizando ~call~ e ~ret~.
 
 *** Dúvida #5
 
@@ -58,3 +83,17 @@ eax, edx", será feita a soma e depois o valor inserido em eax
 mostram exemplos em que o resultado da soma do exemplo será armazenado
 em edx (ASM gerado pelo gcc). Só gostaria que o senhor confirmasse
 isso corretamente conosco.
+
+Resposta:
+- Deve-se adotar aquela reconhecida pelo compilador GCC.
+
+#+begin_src shell :results output
+gcc --version
+#+end_src
+
+#+RESULTS:
+: gcc (Debian 10.2.0-16) 10.2.0
+: Copyright (C) 2020 Free Software Foundation, Inc.
+: This is free software; see the source for copying conditions.  There is NO
+: warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+: 
