@@ -36,12 +36,46 @@ schnorr@inf.ufrgs.br
 
 A sétima e última etapa do trabalho de implementação de um compilador
 para a Linguagem consiste na implementação de técnicas de otimização
-de código. Tais otimizações devem ser feitas no contexto da
-representação intermediária da *Linguagem ILOC*, descrita em detalhes no
-apêndice A do livro /Engineering a Compiler/ de Keith, mas com o
-essencial descrito na definição da quinta etapa do projeto de
-compiladores.
+de código.
+
+# Tais otimizações devem ser feitas no contexto da representação
+# intermediária da *Linguagem ILOC*, descrita em detalhes no apêndice A
+# do livro /Engineering a Compiler/ de Keith, mas com o essencial
+# descrito na definição da quinta etapa do projeto de compiladores.
 
 * Funcionalidades Necessárias
 
-Por ser definido.
+** Otimização de código
+
+Nesta parte você deve selecionar ao menos uma técnica de otimização de
+código, que pode ser sobre código intermediário ou sobre o código
+assembly e demonstrar seu funcionamento. A escolha da(s) técnica(s) é
+livre. Para atingir a nota máxima nesta etapa, pede-se que você
+consiga mostrar que o código gerado ficou diferente (melhorado, por
+exemplo, mais curto). Os grupos são encorajados a experimentalmente
+demonstrar que isso gerou otimização no tempo de execução do programa.
+
+* Dicas Básicas
+** Entrada e Saída Padrão
+
+Organize a sua solução para que o compilador leia da entrada padrão o
+programa em nossa linguagem e gere o programa em assembly na saída
+padrão. Dessa forma, pode-se realizar o seguinte comando (~etapa7~ é o
+binário do compilador):
+
+#+BEGIN_EXAMPLE
+./etapa7 < entrada > saida.s
+#+END_EXAMPLE
+
+O código assembly otimizado deverá ser capaz de ser reconhecido e
+montado para um programa executável através do seguinte comando (onde
+~programa~ é um programa executável): @@latex:\linebreak@@ ~gcc saida.s
+-o programa~
+
+** Arquivo =main.c=
+
+Utilize a função principal no arquivo ~main.c~ semelhante aquela já
+implementada na etapa anterior. O grupo deve modificá-la, caso
+necessário, para implementar as funcionalidades necessárias da etapa
+corrente. Não esqueça de liberar a memória corretamente, como uma boa
+prática de programação.
