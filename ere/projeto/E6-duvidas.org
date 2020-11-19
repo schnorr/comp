@@ -19,7 +19,7 @@ Isso viria na etapa 7, junto com outras otimizações da semana 13?
    facilidade. Devemos tentar diminuir a quantidade de registradores
    usados na nossa etapa anterior ou temos alguma forma mais simples
    de escolher registradores sem que haja "derramamento" deles?
-** TODO 2020-11-18 D1
+** DONE 2020-11-18 D1
 *** Dúvida #1
 
 1) Nos códigos assembly que gerei fazendo alguns testes não
