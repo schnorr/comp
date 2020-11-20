@@ -19,7 +19,7 @@ Isso viria na etapa 7, junto com outras otimizações da semana 13?
    facilidade. Devemos tentar diminuir a quantidade de registradores
    usados na nossa etapa anterior ou temos alguma forma mais simples
    de escolher registradores sem que haja "derramamento" deles?
-** TODO 2020-11-18 D1
+** DONE 2020-11-18 D1
 *** Dúvida #1
 
 1) Nos códigos assembly que gerei fazendo alguns testes não
@@ -97,3 +97,12 @@ gcc --version
 : This is free software; see the source for copying conditions.  There is NO
 : warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 : 
+** TODO 2020-11-19 D2
+*** Dúvidas #1
+
+Boa tarde professor, queria saber se precisa estar incluído o .comm no
+assembly para a declaração de variáveis globais, porque no iloc elas
+não são chamadas quando são declaradas, mas sim quando são usadas
+
+Resposta: Não há necessidade pois não faremos a linkagem de múltiplos
+códigos objeto.
