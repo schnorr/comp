@@ -64,7 +64,7 @@ A prova será realizada entre
 #+latex: \vfill\bigskip
 
 Durante o período da prova
-- Realização individual, sem consulta
+- Realização individual, com consulta
 - Evitar discutir o assunto das questões com colegas
 - Pode ser feita em papel ou digital (texto e figuras)
 - Identificação do aluno deve estar presente
