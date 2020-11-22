@@ -97,7 +97,7 @@ gcc --version
 : This is free software; see the source for copying conditions.  There is NO
 : warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 : 
-** TODO 2020-11-19 D2
+** DONE 2020-11-19 D2
 *** Dúvidas #1
 
 Boa tarde professor, queria saber se precisa estar incluído o .comm no
@@ -106,3 +106,50 @@ não são chamadas quando são declaradas, mas sim quando são usadas
 
 Resposta: Não há necessidade pois não faremos a linkagem de múltiplos
 códigos objeto.
+** DONE 2020-11-22 D3
+*** Dúvida #1
+
+Seguimos tentando controlar a quantidade de registradores. Na nossa
+implementação atual, por simplicidade e a fim de reduzir o numero de
+temporários utilizados, estamos empilhando-desempilhando o resultado
+de todas as sub-expressões.  Isso está causando uma queda de
+desempenho considerável no simulador ILOC comparado à E5, embora use
+um quarto dos registradores (o que parece muito benéfico nesta etapa).
+Haveria um jeito mais simples de se otimizar os acessos à pilha ao
+mesmo tempo que se use um número limitado de temporários?
+
+Resposta:
+
+Em C:
+#+BEGIN_SRC C
+  int a = 1;
+  int b = 2;
+  int c = 3;
+  c = a + b;
+#+END_SRC
+
+Em ASM:
+#+BEGIN_SRC asm
+        movl    $1, -4(%rbp)
+        movl    $2, -8(%rbp)
+        movl    $3, -12(%rbp)
+        movl    -4(%rbp), %edx
+        movl    -8(%rbp), %eax
+        addl    %edx, %eax
+        movl    %eax, -12(%rbp)
+#+END_SRC
+
+Veja que a instrução addl lê %edx, %eax e escreve a resposta em %eax.
+Na "movl" subsequente, move-se %eax para -12(%rbp) que é a variável c
+do código C. Então temos duas instruções para fazer uma soma, sendo
+que a primeira faz a operação, a segunda salva o resultado no local da
+variável alvo. Uma forma de obter isso é alterar o código da E5 de
+maneira que a resposta de uma operação binária (de adição, por
+exemplo) fique no mesmo temporário utilizado como entrada. Depois, na
+tradução para ASM, verifica-se se é o caso e gera "addl"
+correspondente. A rigor, não haveria a necessidade mais de gerar
+temporários. Vocês poderiam sempre utilizar dois ou três. Notem que na
+E6 não existe mais a obrigação que o código ILOC "funcione" com o
+simulador. Ainda que fosse preferível que funcionasse, vocês podem
+usar deste artifício para "simplificar o ILOC" de maneira que ele dê
+indícios que facilitem a geração para ASM.
