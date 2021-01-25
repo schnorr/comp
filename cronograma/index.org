@@ -130,7 +130,7 @@ suppressMessages(library(lubridate));
 suppressMessages(library(tidyverse));
 suppressMessages(library(xtable));
 
-dates <- tibble(Dia=seq(ymd("2020-08-19"), ymd("2020-12-03"), by="days")) %>%
+dates <- tibble(Dia=seq(ymd("2021-01-25"), ymd("2021-05-29"), by="days")) %>%
     # Define o dia da semana
     mutate(DiaDaSemana = wday(Dia)) %>%
     # Remove dias onde não haverá aula
@@ -138,7 +138,7 @@ dates <- tibble(Dia=seq(ymd("2020-08-19"), ymd("2020-12-03"), by="days")) %>%
 
 dias_disponiveis %>%    
     # Aulas teóricas em quais dias da semana (segunda = 2, terca = 3, ...)
-    filter(DiaDaSemana %in% c(3, 5)) -> dates.teoricas;
+    filter(DiaDaSemana %in% c(2, 4)) -> dates.teoricas;
 #+end_src
 
 #+RESULTS: def_dates
@@ -199,20 +199,20 @@ cronograma.1 %>%
 #+RESULTS:
 #+begin_example
 
-[90m# A tibble: 30 x 8[39m
+# A tibble: 30 x 8
    Setor   Descrição          Dia        DiaDaSemana Encontro     N     O Semana
-   [3m[90m<chr>[39m[23m   [3m[90m<chr>[39m[23m              [3m[90m<date>[39m[23m     [3m[90m<chr>[39m[23m       [3m[90m<chr>[39m[23m    [3m[90m<int>[39m[23m [3m[90m<int>[39m[23m  [3m[90m<int>[39m[23m
-[90m 1[39m [90m"[39m[90m"[39m      Definições, requi… 2020-08-20 Thursday    2020-08…     1     1      1
-[90m 2[39m [90m"[39mLéxic… Introdução, Expre… 2020-08-25 Tuesday     2020-08…     2     1      2
-[90m 3[39m [90m"[39mLéxic… Autômato Finito D… 2020-08-27 Thursday    2020-08…     3     2      2
-[90m 4[39m [90m"[39mSintá… Análise Sintática… 2020-09-01 Tuesday     2020-09…     4     1      3
-[90m 5[39m [90m"[39mSintá… Descendente, com … 2020-09-03 Thursday    2020-09…     5     2      3
-[90m 6[39m [90m"[39mSintá… Parser e tabela L… 2020-09-08 Tuesday     2020-09…     6     3      4
-[90m 7[39m [90m"[39mSintá… Ascendente, Parse… 2020-09-10 Thursday    2020-09…     7     4      4
-[90m 8[39m [90m"[39mSintá… Exercícios LR(0),… 2020-09-15 Tuesday     2020-09…     8     5      5
-[90m 9[39m [90m"[39mSintá… Parser LR(1)       2020-09-17 Thursday    2020-09…     9     6      5
-[90m10[39m [90m"[39mSintá… Parser LALR(1), A… 2020-09-22 Tuesday     2020-09…    10     7      6
-[90m# … with 20 more rows[39m
+   <chr>   <chr>              <date>     <chr>       <chr>    <int> <int>  <int>
+ 1 ""      Definições, requi… 2021-01-25 Monday      2021-01…     1     1      1
+ 2 "Léxic… Introdução, Expre… 2021-01-27 Wednesday   2021-01…     2     1      2
+ 3 "Léxic… Autômato Finito D… 2021-02-01 Monday      2021-02…     3     2      2
+ 4 "Sintá… Análise Sintática… 2021-02-03 Wednesday   2021-02…     4     1      3
+ 5 "Sintá… Descendente, com … 2021-02-08 Monday      2021-02…     5     2      3
+ 6 "Sintá… Parser e tabela L… 2021-02-10 Wednesday   2021-02…     6     3      4
+ 7 "Sintá… Ascendente, Parse… 2021-02-15 Monday      2021-02…     7     4      4
+ 8 "Sintá… Exercícios LR(0),… 2021-02-17 Wednesday   2021-02…     8     5      5
+ 9 "Sintá… Parser LR(1)       2021-02-22 Monday      2021-02…     9     6      5
+10 "Sintá… Parser LALR(1), A… 2021-02-24 Wednesday   2021-02…    10     7      6
+# … with 20 more rows
 #+end_example
 
 **** Associa projetos às semanas
@@ -269,8 +269,8 @@ cronograma.3 %>%
 #+RESULTS:
 : 
 :    N Semana Descrição        Dia
-: 1 15      8        P1 2020-10-08
-: 2 28     15        P2 2020-11-24
+: 1 15      8        P1 2021-03-15
+: 2 28     15        P2 2021-04-28
 
 ** Datas Projeto -> TEX
 
@@ -279,9 +279,9 @@ cronograma.3 %>%
     filter(Projeto != "Kickoff") %>%
     select(N, Semana, Dia, DiaDaSemana, Projeto) %>%
     group_by(Projeto) %>%
-    summarize(Começa.Dia = min(Dia) - days(4),
+    summarize(Começa.Dia = min(Dia) - days(2),
               Termina.Dia = max(Dia), .groups="drop") %>%
-    mutate(Termina.Dia = case_when(Projeto == "E7" ~ Termina.Dia - days(4),
+    mutate(Termina.Dia = case_when(Projeto == "E7" ~ Termina.Dia + days(6),
                                  TRUE ~ Termina.Dia + days(1))) %>%
 #    mutate(Final.Dia.Semana = weekdays(Final.Dia)) %>%
 #    mutate(Start.Dia.Semana = weekdays(Start.Dia)) %>%
@@ -303,13 +303,13 @@ cronograma.3 %>%
 #+RESULTS:
 : 
 :   Projeto     Começa    Termina Duração
-: 1      E1 2020-08-21 2020-09-04      14
-: 2      E2 2020-09-04 2020-09-18      14
-: 3      E3 2020-09-18 2020-10-02      14
-: 4      E4 2020-10-02 2020-10-16      14
-: 5      E5 2020-10-16 2020-11-06      21
-: 6      E6 2020-11-06 2020-11-20      14
-: 7      E7 2020-11-20 2020-11-27       7
+: 1      E1 2021-01-25 2021-02-09      15
+: 2      E2 2021-02-08 2021-02-23      15
+: 3      E3 2021-02-22 2021-03-09      15
+: 4      E4 2021-03-08 2021-03-23      15
+: 5      E5 2021-03-22 2021-04-13      22
+: 6      E6 2021-04-12 2021-04-27      15
+: 7      E7 2021-04-26 2021-05-11      15
 
 ** Cronograma (em PDF)
 
@@ -319,7 +319,7 @@ cronograma.3 %>%
 cronograma.modelo.filename = "data/be/43e1ff-0a91-4c3f-9e17-1fa62e6795ce/layout-cronograma.tex"
 cronograma.modelo = readChar(cronograma.modelo.filename, file.info(cronograma.modelo.filename)$size);
 turma = "A";
-semestre = "ERE 2020/1";
+semestre = "ERE 2020/2";
 cronograma.modelo <- gsub("TURMA", turma, cronograma.modelo);
 cronograma.modelo <- gsub("SEMESTRE", semestre, cronograma.modelo);
 cronograma.modelo <- gsub("TABELA", gsub("\\\\", "\\\\\\\\", cronograma.tex), cronograma.modelo);
@@ -333,7 +333,6 @@ system2("rubber", " --pdf cronograma.tex")
 
 #+RESULTS: modelo_cronograma
 : 
-: compiling cronograma.tex...
 : compiling cronograma.tex...
 
 * Cronograma
@@ -380,9 +379,3 @@ cronograma.output %>%
 | 28 |     15 | P2                                                               | E7      |
 | 29 |     15 |                                                                  | E7      |
 | 30 |     16 | PR                                                               | E7      |
-
-* Cronograma
-
-Aguardando novo calendário acadêmico para 2020/1.
-
-
