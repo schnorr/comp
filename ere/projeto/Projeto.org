@@ -97,8 +97,8 @@ códigos de aluno dos componentes do grupo.
 
 * Regras de desenvolvimento
 
-Existe uma certa flexibilidade na organização do código fonte, mas
-existem regras que devem ser observadas para permitir que testes
+Existe uma flexibilidade na organização do código fonte, mas
+temos regras a serem observadas para permitir que testes
 automáticos possam ser realizados corretamente.
 
 Remova todos os comandos =printf= e afins antes da submissão, pois o
@@ -119,9 +119,9 @@ subjetivamente, com pesos iguais. A *nota objetiva* é definida por
 testes automáticos (quando possível) que verificam as soluções dos
 alunos. A *nota subjetiva* é definida pelo professor, mediante revisão
 do código pelo professor. Esta nota subjetiva compreende a
-originalidade, a qualidade do cógigo, a legibilidade, os comentários
-assim como a organização do código e os recursos apresentados. A nota
-final pode ser diferente para cada membro do grupo.
+originalidade, a qualidade do código, a legibilidade, os comentários
+assim como a organização geral e recursos adicionais. Membros
+do mesmo grupo podem receber notas diferentes.
 
 * Política de Atraso
 
