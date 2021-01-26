@@ -54,7 +54,7 @@ cada etapa é sempre o mesmo.
 | E7    | [[./E7.org][Otimização]]                |   10 |
 
 A nota máxima do projeto de compilador é 70. Esta será utilizada para
-integralizar a nota final da disciplina conforme regramentos do PEA.
+integralizar a nota final da disciplina.
 
 * Procedimento de Entrega
 
@@ -128,10 +128,12 @@ final pode ser diferente para cada membro do grupo.
 Todas as etapas do projeto de compilador tem a mesma política de
 atraso. As soluções de cada etapa devem ser enviadas até as datas de
 entrega especificadas neste local. As soluções recebidas antes da data
-limite serão avaliadas normalmente, até 100%. Qualquer solução
-recebida após a data limite inicialmente estabelecida receberá nota
-zero. Caso a nota de uma etapa entregue e avaliada seja inferior a 6,
-o professor acordará um prazo com os alunos para que eles possam
-recuperá-la em até 80% do valor integral daquela etapa.
-
-
+limite serão avaliadas normalmente, até 100%.  Caso a nota de uma
+etapa entregue no prazo e avaliada seja inferior a 6.0, o professor
+acordará um prazo com os alunos para que eles possam recuperá-la em
+até 80% do valor integral daquela etapa. Caso o grupo não entregue na
+data estipulada, é acordado uma extensão automática com prazo
+adicional de uma semana para fazer uma *entrega em atraso*. Neste caso,
+o peso após a avaliação é de 80%, sem novos prazos adicionais de
+recuperação.  Qualquer solução recebida após uma semana da data limite
+inicialmente estabelecida receberá nota zero.
