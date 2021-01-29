@@ -51,7 +51,8 @@ estratégias pedagógicas alternativas:
 * Conteúdo e Avaliação
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
-- [[./projeto/README.org][Projeto de Compilador]] ([[./projeto/acompanhamento.org][Acompanhamento das Etapas]])
+- [[./projeto/README.org][Projeto de Compilador]]  
+# ([[./projeto/acompanhamento.org][Acompanhamento das Etapas]])
   - Um [[./projeto/docker/README.org][container docker]] para realização do trabalho
 # - [[./avaliacao/][Acompanhamento das Avaliações]]
    
