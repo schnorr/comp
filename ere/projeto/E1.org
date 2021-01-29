@@ -141,8 +141,8 @@ Os caracteres simples especiais empregados pela linguagem são listados
 abaixo separados apenas por espaços, e devem ser retornados com o
 próprio código =ASCII= convertido para inteiro. São eles:
 #+BEGIN_EXAMPLE
- ,   ;   :   (   )   [   ]   {   }   +   -   |
- *   /   <   >   =   !   &   %   #   ^   .   $
+ , ; : ( ) [ ] { } + - |
+ * / < > = ! & % # ^ . $
 #+END_EXAMPLE
 
 ** Operadores Compostos
@@ -151,8 +151,9 @@ A linguagem possui operadores compostos, além dos operadores
 representados por alguns dos caracteres da seção anterior.  Os
 operadores compostos são:
 #+BEGIN_EXAMPLE
-<=    >=    ==     !=    &&    ||    >>     << 
+<=  >=  == != && || >> << 
 #+END_EXAMPLE
+Onde o =>>= é o shift para a esquerda (~TOK_OC_SL~).
 
 ** Identificadores
 
@@ -287,10 +288,10 @@ int main (int argc, char **argv)
     case '=':
     case '!':
     case '&':
-    case '.':
     case '%':
     case '#':
     case '^':
+    case '.':
     case '$': print_nome2 (token); break;
     case TK_PR_INT: print_nome(TK_PR_INT); break;
     case TK_PR_FLOAT: print_nome(TK_PR_FLOAT); break;
