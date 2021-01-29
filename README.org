@@ -48,7 +48,8 @@ estratégias pedagógicas alternativas:
 - [[./plano/index.org][Plano da disciplina]] (permanente)
 - [[./cronograma/index.org][Cronograma Edição 2020/2]] (Turma A, ERE assíncrono total)
 
-* Conteúdo e Avaliação
+* Conteúdo
+#  e Avaliação
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
 # - [[./projeto/README.org][Projeto de Compilador]]
