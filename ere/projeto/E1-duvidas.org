@@ -1,5 +1,213 @@
+#+STARTUP: overview indent
 #+TITLE: Dúvidas da E1 do Projeto de Compilador
-* E1
+* E1 2020/2
+** 2021-02-04 D0
+*** Dúvida #1
+
+Dado esse input:
+
+ #+BEGIN_EXAMPLE
+"invalid
+true
+ #+END_EXAMPLE
+
+ Qual seria o token que deve retornar o erro?
+
+ Por exemplo, nossa primeira solução veria que a primeira linha nao da match
+ com uma string (pois string deve terminar com ") e diria que ["] gerou um erro,
+ mas retornaria [invalid] como um identificador.
+
+ Modificamos o programa para retornar ["invalid] como o erro, mas isso causa
+ alguns problemas, quando a entrada é, por exemplo:
+
+ "string
+ in multiple lines"
+
+ Irá retornar ["string] como erro, e a linha seguinte ele irá reconhecer como
+ identificadores.
+
+ Minha dúvida é, precisamos nos preocupar com o quê exatamente gera o erro,
+ ou apenas que um token de erro seja retornado?
+
+R: Neste caso temos um =TOKEN_ERRO=. Não há necessidade de se preocupar
+com o quê exatamente gera o erro, desde que o erro seja gerado no
+local correto. No primeiro exemplo aí em cima, o erro é detectado
+quando se chega ao final da primeira linha e percebe-se que a string
+não foi terminada. Assumimos que strings não podem ter quebra de linha.
+
+*** Dúvida #2
+
+No desenvolvimento e teste da etapa 1 do trabalho de compiladores
+tivemos uma dúvida referente a detecção de alguns padrões.  Por
+exemplo, se no código aparecesse algo como 
+
+#+BEGIN_EXAMPLE
+"1234my_var1"
+#+END_EXAMPLE
+(sem as aspas duplas) separado por espaços em branco. Nesse caso, o
+correto seria considerar
+#+BEGIN_EXAMPLE
+"1234my_var1"
+#+END_EXAMPLE
+como um erro léxico, ou considerar como 2 tokens válidos:
+#+BEGIN_EXAMPLE
+"1234" 
+#+END_EXAMPLE
+um inteiro e
+#+BEGIN_EXAMPLE
+"my_var1"
+#+END_EXAMPLE
+um identificador?  Caso o correto fosse gerar um erro léxico,
+acreditamos que seria necessário usar expressões regulares com o
+padrão r/s (dependente de contexto) para que considerar apenas os
+tokens que possuam algum caractere delimitador.
+
+R: O correto é considerar como um erro léxico. Não vejo uma absoluta
+necessidade de usar dependências de contexto mas se o grupo achar
+elegante assim o fazer, sintam-se à vontade.
+
+*** Dúvida #3
+
+Oi, professor. O senhor pode disponibilizar um arquivo de texto pra
+testar as regex do trabalho? Ajudaria bastante
+
+R: Recomendo ler a especificação e escrever um arquivo de texto com
+entradas que respeitam o que consta na especificação. Outro arquivo
+texto pode ser criado com entradas que não respeitam a
+especificação. Assim podes testar mais amplamente. Fazer isso faz
+parte da E1, de maneira implícita (e agora explícita).
+
+*** Dúvida #4 (A, B, C, D)
+
+Lendo com mais cuidado, as especificações da etapa 1 do projeto da
+disciplina de Compiladores, acabou me surgindo algumas dúvidas.
+
+A)
+
+Quando se diz que a notação científica é possível e utiliza [...]
+seguido um número positivo ou negativo inteiro, isso significa que
+devemos impedir que o número 0 seja utilizado, já que não é negativo
+nem positivo?
+
+R: Eu não veria necessidade de impedir que o número 0 seja utilizado,
+mas considerando o texto da especificação, podemos levar à risca o que
+foi escrito e assumir que zero não é positivo nem negativo. Portanto,
+sim, zero não pode estar após E e e.
+
+Isso também indica que devemos obrigar a presença do sinal de "+"
+antes do número, caso ele seja positivo, ou o sinal é opcional, ou o
+sinal é proibido?
+
+R: Eu diria que o sinal é opcional no caso de números positivos,
+seguindo inspiração da linguagem C.
+
+B)
+
+Outra dúvida é quanto às expressões-exemplo com aspas duplas no final
+da primeira página. Elas seriam do tipo "string"? Não foi
+especificado.
+
+R: Sim, são tokens =TK_LIT_STRING=. Veja mais detalhes com uma dúvida
+respondida textualmente no fórum.
+
+C)
+
+E quanto a strings/chars, eu devo considerar que elas podem conter
+caracteres além dos alfanuméricos (0-9, A-Z, a-z, _) e dos caracteres
+especiais (seção 3.2)? Como por exemplo, conter os caracteres \", \n,
+\t, \', \0, etc?
+
+R: Não há necessidade de ter e tratar caracteres escapados (antecidos de \).
+
+D)
+
+Uma outra dúvida, é sobre como eu vinculo o meu arquivo scanner.l, ao
+arquivo main.c fornecido, essa explicação se encontra em alguma parte
+do site que possui as especificações do flex?
+
+R: Veja o video N2 A4 FLEX e obtenha inspiração para construir seu Makefile.
+
+*** Dúvida #5
+
+Sobre a etapa 1 do trabalho, onde o senhor comenta "Lançar erros
+lexicos ao encontrar caracteres inválidos na entrada, retornando o
+token de erro.", estou em dúvida sobre quão detalhista devo
+ser. Comentaste que não era boa prática fazer uma regra genérica (com
+.) para capturarmos erros que não foram abordados, porém de que outra
+forma podemos garantir que vamos lançar erro quando o usuário digitar
+algo inválido?
+
+R: Pois é, tens razão. Mas eu recomendaria só colocar o . para
+capturar qualquer coisa _depois_ que todas as ERs para capturar coisas
+válidas forem todas colocadas. Assim evita-se dores de cabeça.
+
+Além disso, dentro de strings, devemos permitir caracteres especiais
+(como \n e \")? Strings e char podem ser vazios?  Um parêntesis aberto
+que não foi fechado constitui um erro léxico?  Quão detalhista
+precisamos ser nos erros?
+
+R: Não há necessidade, mas se o grupo quiser implementar, não há
+problema. Neste momento é relativamente simples de fazer isso, mas
+quando chegarmos na etapa com tabela de símbolos, precisaremos tratar
+os caracteres escapados. Isso provavelmente não fará parte da
+especificação, mas deixo o grupo à vontade se desejar implementar.
+
+*** Dúvida #6
+
+Não consegui entender o objetivo da funcao =get_line_number=
+
+Explicando o que eu entendi: digamos que tenha digitado o caractere de
+ponto e virgula. A função get_line_number deve retornar em qual linha do
+scanner.l está o regex que identifica esse ponto e virgula como um
+token.
+
+Está correto?
+
+R: Incorreto. Na função =main= do programa temos um laço que a cada
+token reconhecido, imprime na saída padrão uma linha informando qual
+foi o token, o lexema do token e a linha onde ele foi encontrado (na
+entrada do compilador). É neste momento que a função =main= do programa
+chama a função =get_line_number=. A função dela é portanto identificar
+em qual linha foi reconhecido o último token retornado.
+
+*** Dúvida #7 (A, B e C)
+
+A)
+
+O que deve ser considerado um erro lexico? Na definição diz " Lançaar
+erros lexicos ao encontrar caracteres invalidos na entrada". Isso
+seria caracteres como €, £, etc, que não fazem parte dos tokens
+especiais? Ou algo mais como:
+
+- strings com mais de uma linha?
+- comentários multi-linha que não são fechados?
+- chars (aspas simples) com mais de um caracter?
+- parenteses/chaves/colchete sem par?
+- float sem número depois do ponto?
+- outros?
+
+R: Sim. Sim. Sim (e também chars sem caractere entre as aspas
+simples). Não. Sim. Outros exemplos: 1/ strings sem aspas duplas no
+fechamento; 2/ toda e qualquer outra entrada que não atenda ao que
+está explicitado na E1.
+
+B)
+
+Também não entendi o que deve mapear para os seguintes tokens: =TK_PR_END=
+e =TK_PR_DEFAULT=.
+
+R: São resquícios do passado, por favor ignore-os.
+
+C)
+
+Além disso, tenho dúvidas semelhantes as sque estão no fórum de
+discussão, e que ainda não foram respondidas.
+
+R: Respondi textualmente lá no Fórum, dá uma olhada.
+
+*** Outras dúvidas no Fórum!
+
+* E1 2020/1
 ** DONE 2020-08-26
 
  1) A descrição do padrão de identificadores é a seguinte:
@@ -209,7 +417,7 @@ Qual das maneiras seria a forma correta de separar esta entrada?
 Para o exemplo 123-123 nosso analisador esta identificando
 ~TK_LIT_INT[123]~ e ~TK_LIT_INT[-123]~. Esse comportamento está correto, ou o
 esperado seriam três tokens: ~TK_LIT_INT[123]~ ~TK_ESPECIAL[-]~ ~TK_LIT_INT[123]~?
-** TODO 2020-08-31
+** DONE 2020-08-31
 *** Pergunta #1
 
 Professor, no vídeo respondeste uma pergunta sobre os caracteres
