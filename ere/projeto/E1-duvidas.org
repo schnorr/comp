@@ -207,7 +207,7 @@ R: Respondi textualmente lá no Fórum, dá uma olhada.
 
 *** Outras dúvidas no Fórum!
 
-** TODO 2021-02-07 D1
+** DONE 2021-02-07 D1
 *** Dúvida #1
 
 O sr. disse que, na aula N2 A4, existe uma explicação quanto a
@@ -257,7 +257,7 @@ Saída
 
 #+BEGIN_EXAMPLE
 1 TOKEN_ERRO [']
-1 TK_IDENTIFICADOR auhsd]
+1 TK_IDENTIFICADOR auhsd
 1 TOKEN_ERRO [']
 #+END_EXAMPLE
 
@@ -310,9 +310,7 @@ int a = 5+5;
 
 Devo considerar como dois inteiros, [5] e [+5]?
 
-R: Fica a critério do grupo decidir se são dois inteiros ou se são
-três tokens (dois literais inteiros separados por um +). Veremos mais
-sobre isso nas próximas etapas.
+R: Sim.
 
 **** c)
 
