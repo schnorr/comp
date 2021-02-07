@@ -1,7 +1,7 @@
 #+STARTUP: overview indent
 #+TITLE: Dúvidas da E1 do Projeto de Compilador
 * E1 2020/2
-** 2021-02-04 D0
+** DONE 2021-02-04 D0
 *** Dúvida #1
 
 Dado esse input:
@@ -206,6 +206,131 @@ discussão, e que ainda não foram respondidas.
 R: Respondi textualmente lá no Fórum, dá uma olhada.
 
 *** Outras dúvidas no Fórum!
+
+** TODO 2021-02-07 D1
+*** Dúvida #1
+
+O sr. disse que, na aula N2 A4, existe uma explicação quanto a
+vinculação do arquivo .l ao arquivo .c (minha dúvida), contudo, eu já
+havia visto aquela aula quando realizei a pergunta, e permanci com a
+dúvida.
+
+O que lá é explicado não se aplica muito bem, pois lá o sr. escreve
+todas as funções dentro do próprio .l (exceto a main, que em um
+momento o sr. escreve-a explicitamente, e em outro momento o
+sr. importa a main do próprio FLEX), mas não mostra um caso em que se
+tenha que vincular o .l a um arquivo externo .c.
+
+E pelo o que o sr. explicou, agora, nesse vídeo de dúvidas, parece que
+para vinculá-los, eu tenho que compilar os dois, e depois fazer um
+linkagem via makefile (ou gcc?). O sr. poderia me explicar como que eu
+faço isso? Desde já agradeço.
+
+R: Vamos fazer uma demonstração.
+
+*** Dúvida #2
+
+Professor, caso eu tenha a linha de código:
+
+char a = 'hello;
+
+O erro retornado deve ser ['hello;], certo?
+
+R: Deve ser identificado o =TOKEN_ERRO=. Como houve a abertura das aspas
+espera-se um literal caractere. Ele não acontece, o erro deve estar
+localizado na aspa.
+
+*** Dúvida #3
+
+No caso abaixo, com uma entrada que combina aspas simples e um
+identificador, está correto o retorno ser assim ou deveria retornar um
+token de erro apenas?  A pergunta vale também para entradas do tipo
+'xxx" ou "xxx".
+
+Entrada
+
+#+BEGIN_EXAMPLE
+'auhsd'
+#+END_EXAMPLE
+
+Saída
+
+#+BEGIN_EXAMPLE
+1 TOKEN_ERRO [']
+1 TK_IDENTIFICADOR auhsd]
+1 TOKEN_ERRO [']
+#+END_EXAMPLE
+
+Caso deva ser retornado apenas um token erro, a solução seria tratar
+individualmente todos os possíveis casos de erro?
+
+R: Acredito que basta retornar =1 TOKEN_ERRO [']=. O que vem depois não
+importa muito. Não há necessidade de se tratar todos os possíveis
+casos de erro, até porque são muitos.
+
+*** Dúvida #4
+
+Professor, uma outra dúvida:
+
+Caso eu tenha no código:
+
+/*
+a
+b
+c
+
+Ou seja, não fechei o comentário de múltiplas linhas, o erro será:
+[/*
+a
+b
+c]
+
+certo? Ou devo apenas considerar [/*] como erro?
+
+R: Comentários multilinhas não terminados são um erro léxico.
+
+*** Dúvida #5
+**** a)
+
+No código:
+
+int a = 12.;
+
+[12.] deve ser um erro? Ou devo considerar como um inteiro e dois
+caracteres especiais ([.] e [;]):
+
+R: A especificação de literais ponto-flutuantes diz que se houver um
+ponto, deverá existir dígitos depois. Eu diria que seria um erro.
+
+**** b)
+
+No código:
+
+int a = 5+5;
+
+Devo considerar como dois inteiros, [5] e [+5]?
+
+R: Fica a critério do grupo decidir se são dois inteiros ou se são
+três tokens (dois literais inteiros separados por um +). Veremos mais
+sobre isso nas próximas etapas.
+
+**** c)
+
+Uma forma simples de resolver alungs desses problemas seria obrigar
+que entre dois tokens tenha um espaço/tab/\n. Isso faria por exemplo
+que a string "10um" seja um erro, e não um inteiro seguido de um
+identificador. Também faria "2." ser um erro, e não um inteiro mais um
+token-ponto. Também impediria o caso do "2.0+2", que poderia ser tanto
+um float mal formado, ou um float seguido de um inteiro, ou um float
+seguido de um token-mais seguido de um inteiro. O único problema, é
+que isso faria que a string "int x = 2;" seja um erro, já que teve um
+espaço entre o 2 e ;. Mas então, poderíamos usar essa solução de
+obrigar espaços entre tokens?
+
+R: Não recomendo obrigar espaços entre tokens, até porque algo como
+2.0+2 (considerando a maioria das ling. de prog.) é algo perfeitamente
+válido. Recomendo usar um compilador C (gcc/clang) para fazer testes e
+ver o que seria "usualmente aceitável" em casos como esse.
 
 * E1 2020/1
 ** DONE 2020-08-26
