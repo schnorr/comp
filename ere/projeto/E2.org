@@ -40,10 +40,10 @@ arquivo =parser.y= (fornecido, mas que deve ser modificado para atender
 a esta especificação) com a declaração dos tokens. A função principal
 deve estar em um arquivo =main.c=, separado do arquivo =scanner.l=
 (léxico, da etapa 1) e do =parser.y= (sintático, por codificar na etapa
-2). A solução desta etapa deve ser composta de dois arquivos:
+2). A solução desta etapa deve ser composta de arquivos tais como
 =scanner.l=, =parser.y=, e outros arquivos fontes que o grupo achar
-pertinente (deve ser compilados usando o =Makefile= que deve não somente
-executar =flex=, também =bison=).  No final desta etapa o analisador
+pertinente (deve ser compilados usando o =Makefile= que deve
+executar =flex= e =bison=).  No final desta etapa o analisador
 sintático gerado pelo bison a partir da gramática deve verificar se a
 sentença fornecida -- o programa de entrada a ser compilado -- faz
 parte da linguagem ou não.
@@ -68,7 +68,9 @@ adicionais que auxiliem o programador que está utilizando o compilador
 a identificar o erro sintático identificado.  Na ocasião de uma
 mensagem de erro, o analisador sintático deve retornar um valor
 diferente de zero. Esses valores -- zero ou diferente de zero -- são
-utilizados durante a avaliação automática.
+utilizados durante a avaliação automática. Não há necessidade de
+implementar recuperação de erros, o compilador deve parar ao
+encontrar o primeiro erro sintático.
 
 ** Remoção de conflitos gramaticais
 
@@ -135,13 +137,14 @@ função.
 *Declaração de Variável*
 #+END_CENTER
 Consiste no tipo da variável precedido opcionalmente pela palavra
-reservada =static=, e o nome da variável. Os tipos podem ser aqueles
-descritos na seção sobre variáveis globais. As declarações locais, ao
-contrário das globais, não permitem vetores e podem permitir o uso da
-palavra reservada =const= antes do tipo (após a palavra reservada =static=
-caso esta aparecer). Uma variável local pode ser opcionalmente
-inicializada com um valor válido caso sua declaração seja seguida do
-operador composto ~<=~ e de um identificador ou literal.
+reservada =static=, seguido de uma lista composta de pelo menos um nome
+de variável (identificador) separadas por vírgula. Os tipos podem ser
+aqueles descritos na seção sobre variáveis globais. As declarações
+locais, ao contrário das globais, não permitem vetores e podem
+permitir o uso da palavra reservada =const= antes do tipo (após a
+palavra reservada =static= caso esta aparecer). Uma variável local pode
+ser opcionalmente inicializada com um valor válido caso sua declaração
+seja seguida do operador composto ~<=~ e de um identificador ou literal.
 
 #+BEGIN_CENTER
 *Comando de Atribuição*
@@ -233,11 +236,10 @@ Expressões lógicas podem ser formadas através dos operadores
 relacionais aplicados a expressões aritméticas, ou de operadores
 lógicos aplicados a expressões lógicas, recursivamente. Outras
 expressões podem ser formadas considerando variáveis lógicas do tipo
-=bool=.  Nesta etapa do trabalho não há distinção alguma entre
-expressões aritméticas, inteiras, ou lógicas.  A descrição sintática
-deve aceitar qualquer operadores e subexpressão de um desses tipos
-como válidos, deixando para a análise semântica das próximas etapas do
-projeto a tarefa de verificar a validade dos operandos e operadores.
+=bool=.  A descrição sintática deve aceitar qualquer operadores e
+subexpressão de um desses tipos como válidos, deixando para a análise
+semântica das próximas etapas do projeto a tarefa de verificar a
+validade dos operandos e operadores.
 
 Os operadores são os seguintes:
 
@@ -265,8 +267,12 @@ Os operadores são os seguintes:
 
 As regras de associatividade e precedência de operadores matemáticos
 são aquelas tradicionais de linguagem de programação e da
-matemática. Além disso, nos casos não cobertos por esta regra geral,
-temos as seguintes regras de associatividade:
+matemática. Recomenda-se que tais regras sejam já incorporadas na
+solução desta etapa, ou através de construções gramaticais ou através
+de comandos do bison específicos para isso (~%left~, ~%right~). A solução
+via construções gramaticais é recomendada. Enfim, nos casos não
+cobertos por esta regra geral, temos as seguintes regras de
+associatividade:
 
 - Associativos à direita
   - =&=, =*= (acesso ao valor do ponteiro), =#=
@@ -335,8 +341,6 @@ void yyerror (char const *s);
 %token TK_OC_OR
 %token TK_OC_SL
 %token TK_OC_SR
-%token TK_OC_FORWARD_PIPE
-%token TK_OC_BASH_PIPE
 %token TK_LIT_INT
 %token TK_LIT_FLOAT
 %token TK_LIT_FALSE
