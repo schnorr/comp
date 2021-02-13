@@ -153,7 +153,7 @@ operadores compostos são:
 #+BEGIN_EXAMPLE
 <=  >=  == != && || >> << 
 #+END_EXAMPLE
-Onde o =>>= é o shift para a esquerda (~TOK_OC_SL~).
+Onde o =>>= é o shift para a esquerda (~TK_OC_SL~).
 
 ** Identificadores
 
