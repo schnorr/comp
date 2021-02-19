@@ -267,7 +267,7 @@ extern int get_line_number (void);
 int main (int argc, char **argv)
 {
   int token = 0;
-  while (token = yylex()) {
+  while ((token = yylex())) {
     switch (token){
     case ',':
     case ';':
