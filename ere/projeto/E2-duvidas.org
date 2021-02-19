@@ -1,6 +1,133 @@
 #+STARTUP: overview indent
 #+TITLE: Dúvidas da E2 do Projeto de Compilador
-* E2
+
+* E2 2020/2
+** TODO 2021-02-16 D0
+*** Pergunta #1
+
+Na definição da etapa 2, o senhor escreveu "O arquivo tokens.h da
+etapa anterior desaparece, e deve ser substituído pelo arquivo
+parser.y". Isto me confundiu um pouco. Eu devo gerar um .h com o
+parser.y e usar este .h gerado no scanner.l, certo? Não devo incluir o
+próprio .y no scanner.l, não é?
+
+Resposta:
+
+O bison gerará um arquivo de cabeçalho, conforme o comentário abaixo
+incluso no arquivo main.c disponibilizado:
+#include "parser.tab.h" //arquivo gerado com bison -d parser.y
+
+E sim, no teu scanner.l tu deverás incluir também esse parser.tab.h de
+maneira que os comandos return possam usar as constantes. Em
+princípio, isto deveria estar minimamente explicado na Parte 1 da
+vídeo-aula do bison. Portanto não, não deves incluir o próprio .y no
+scanner.l. Em geral, na linguagem C, a inclusão com #include deve ser
+somente de arquivos cabeçalho .h. Pelo menos eu sinto que isso é
+aceito como uma boa prática.
+** TODO 2021-02-17 D1
+*** Pergunta #1
+
+1) Na seção 3.5, o senhor menciona que "A descrição sintática deve
+   aceitar qualquer operadores e subexpressão de um desses tipos como
+   validos, deixando para a análise semântica das próximas etapas do
+   projeto a tarefa de verificar a validade dos operandos e
+   operadores.". Isto vale apenas para expressões lógicas, ou para
+   aritméticas também? Devemos permitir todos os operadores nas
+   operações lógicas e somente alguns nas operações aritméticas? Ou
+   devemos separar (se sim, quais operadores são lógicos, quais são
+   aritméticos, e quais podemos usar em ambos)? Ou ainda, devemos
+   permitir todos os operadores em todos os tipos de expressões, sejam
+   elas aritméticas ou lógicas?
+
+R: Vale para lógicas e aritméticas. Não há absoluta necessidade de
+separar tendo em vista que estamos averiguando apenas a sintaxe na E2,
+e não a semântica de qualquer um desses operadores. Portanto sim,
+podes permitir todos os operadores em todos os tipos de expressões,
+sejam elas lógicas ou aritméticas.
+
+*** Pergunta #2
+
+2) Qual o símbolo inicial da gramática? 
+
+R: Pode ser "programa" (o não terminal já listado no arquivo parser.y
+disponibilizado).
+
+*** Pergunta #3
+
+3) Para lidarmos com caracteres especiais como ',' e ';', para os
+   quais não temos tokens, devemos declarar eles como tokens ou usar
+   ',' nas próprias regras do BISON? Por exemplo:
+      exemplo: id ',' id; 
+
+R: Idealmente podes fazer como no teu exemplo para evitar de declarar
+um monte de tokens para o qual o código ascii é o suficiente.
+
+*** Pergunta #4 
+
+4) Como fica a questão do caractere '?', uma vez que este não apareceu
+   na definição da etapa 1, porém está na etapa 2? Não gerará um erro
+   léxico?
+
+R: Por isso algumas leves modificações nas ERs são necessárias. Não é
+só esta, tem também a questão dos números positivos/negativos, mas
+talvez vocês já tenham percebido isso tendo em vista o que falei no
+lançamento da E2.
+
+*** Pergunta #5
+
+5) É permitida, para varáveis locais, uma atribuição do tipo:
+           int a, b, c = 1, 2, 3;
+?
+
+R: Pela especificação não.
+
+*** Pergunta #6
+
+6) Comandos de shift são comandos simples? Acredito que sim, porém me
+   deixou um pouco confuso pois não está na descrição de comandos
+   simples ("Os comandos simples da linguagem podem ser: declaração de
+   variável local, atribuição, construções de fluxo de controle,
+   operações de entrada, de saída, e de retorno, um bloco de comandos,
+   e chamadas de função.").
+
+R: São simples. 
+
+*** Pergunta #7
+
+7) Não há propósito para o THEN nessa linguagem? Não aparece na
+   definição mas está nos tokens, então fiquei na dúvida.
+
+R: Não há propósito. Veja que não foi só este token que foi abandonado
+da E1 para a E2. Em geral, eu tento fazer um super conjunto na E1 para
+dar uma liberdade maior para eu especificar a E2, embora isso por
+vezes não seja perfeito.
+
+** TODO 2021-02-18 D2
+*** Pergunta #1
+
+No vídeo da etapa 2, o sr. aponta verbalmente que o "shift left" é o
+token "<<", contudo, na etapa 1 o sr. definiu verbalmente e
+textualmente que o "shift left" era o token ">>". Devemos seguir a
+nova definição, ou a anterior (textual)?
+
+R: Usar a referência do C/C++.
+https://en.wikipedia.org/wiki/Bitwise_operations_in_C#Shift_operators
+
+*** Pergunta #2
+
+Nas especificações da etapa 2 consta que é possível declarar múltiplas
+variáveis locais a partir da separação por vírgulas, e também aponta
+que é possível inicializar uma variável local. E a dúvida que eu tenho
+é sobre a combinação das duas possibilidades juntas, me confirme se eu
+tiver interpretado errado:
+
+int x, y, z <= 1; -> deve ser reconhecido
+int x, y, z <= 1, 2, 3; -> não deve ser reconhecido 
+
+R: Correto. Pode-se inicializar apenas uma variável local por
+vez. Portanto, entendo que isso seria válido:
+int x <= 1, y <= 2, z <= 3;
+* E2 2020/1
 ** DONE 2020-09-14
 *** Pergunta #1 \times 2
 
