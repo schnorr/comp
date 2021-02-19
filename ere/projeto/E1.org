@@ -191,7 +191,7 @@ entre aspas simples como por exemplo:
 #+BEGIN_SRC text :tangle tokens.h
 /*
 Lista dos tokens, com valores constantes associados.  Este arquivo
-será posterioremente substituído, não acrescente nada.  Os valores das
+será posteriormente substituído, não acrescente nada.  Os valores das
 constantes sao arbitrários, mas não podem ser alterados.  Cada valor
 deve ser distinto e fora da escala ASCII.  Assim, não conflitam entre
 si e com os tokens representados pelo próprio valor ASCII de
@@ -249,7 +249,7 @@ caracteres isolados.
 /*
 Função principal para impressão de tokens.
 
-Este arquivo será posterioremente substituído, não acrescente nada.
+Este arquivo será posteriormente substituído, não acrescente nada.
 */
 #include <stdio.h>
 #include "tokens.h"
