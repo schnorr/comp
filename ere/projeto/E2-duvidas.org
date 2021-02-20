@@ -2,7 +2,7 @@
 #+TITLE: Dúvidas da E2 do Projeto de Compilador
 
 * E2 2020/2
-** TODO 2021-02-16 D0
+** DONE 2021-02-16 D0
 *** Pergunta #1
 
 Na definição da etapa 2, o senhor escreveu "O arquivo tokens.h da
@@ -24,7 +24,8 @@ vídeo-aula do bison. Portanto não, não deves incluir o próprio .y no
 scanner.l. Em geral, na linguagem C, a inclusão com #include deve ser
 somente de arquivos cabeçalho .h. Pelo menos eu sinto que isso é
 aceito como uma boa prática.
-** TODO 2021-02-17 D1
+
+** DONE 2021-02-17 D1
 *** Pergunta #1
 
 1) Na seção 3.5, o senhor menciona que "A descrição sintática deve
@@ -102,7 +103,7 @@ da E1 para a E2. Em geral, eu tento fazer um super conjunto na E1 para
 dar uma liberdade maior para eu especificar a E2, embora isso por
 vezes não seja perfeito.
 
-** TODO 2021-02-18 D2
+** DONE 2021-02-18 D2
 *** Pergunta #1
 
 No vídeo da etapa 2, o sr. aponta verbalmente que o "shift left" é o
