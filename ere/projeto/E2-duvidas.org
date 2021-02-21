@@ -395,6 +395,46 @@ unicamente para aqueles casos não previstos na especificação da
 E2. Mas sempre confirme comigo antes de tomar uma decisão inspirada na
 sintaxe da linguagem C.
 
+*** #2
+
+Os blocos de comando não terminarão em ponto-e-virgula quando são
+empregados em funções, e não terminarão em ponto-e-virgula quando são
+empregados em comandos de controle (apesar do comando de controle em
+si terminar com o ponto-e-virgula por ser um comando
+simples). Portanto, eles só terminarão com ponto-e-vírgula dentro de
+um outro bloco de controle. O bloco de controle também pode ser
+vazio. Consequentemente o seguinte programa é válido em E2:
+
+bool foo(){
+  id << 3;
+  { int num; };
+  { { { }; }; };
+  for(i = 1; : i < 5; : i = i+1;) {output "hello"};
+} 
+
+R: Acredito que a afirmação está correta, mas sinto que o exemplo não
+segue fielmente a interpretação sobre os múltiplos casos de
+ponto-e-vírgula e também não segue a especificação no que diz respeito
+aos elementos internos do comando for. Veja as anotações "AQUI" no
+código comentado abaixo:
+
+#+BEGIN_EXAMPLE
+bool foo(){
+  id << 3;       // comando simples (shift), terminado por ponto-e-vírgula
+  {
+    int num;     // comando simples (declaração), terminado por ponto-e-vírgula
+  };             // comando simples (bloco), terminado por ponto-e-vírgula
+  { { { }; }; }; // comandos simples (blocos aninhados), todos terminados por ponto-e-vírgula
+  for(i = 1; : i < 5; : i = i+1;) {  // AQUI -> não há necessidade de ponto-e-vírgula pois são somente atribuições
+     output "hello" // AQUI -> comando simples (output), deveria ter sido terminado por ponto-e-vírgula
+  };             // comando simples (comando for), terminado por ponto-e-vírgula
+}                // fim de função, sem o ponto-e-vírgula
+#+END_EXAMPLE
+
+
+
+*** 
+
 
 * E2 2020/1
 ** DONE 2020-09-14
