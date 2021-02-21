@@ -218,7 +218,7 @@ No entanto, o bison não produz warnings para essa regra. Porquê?
 
 *** #8
 
-D1:
+#8.1:
 
 Na especificação sobre os comandos simples não cita que o comando
 shift é um comando simples; porém, o mesmo está escrito como comando e
@@ -228,7 +228,7 @@ tem uma seção especifica para ele.
 
 - Além disso, devo fazer alguma validação se o inteiro é positivo ou não?
 
-D2:
+#8.2:
 
 - O literal string e char não são citados como expressões, está correto isso?
 
