@@ -365,6 +365,37 @@ valor 1. Feito isso, recompilar tudo e testar. As mensagens aparecerão
 na saída de erro. Dá uma olhada no link abaixo para maiores detalhes.
 https://www.gnu.org/software/bison/manual/html_node/Enabling-Traces.html
 
+** TODO 2021-02-21 D4
+*** #1
+
+Estou um pouco confuso em relação a um detalhe porque pelo que entendi
+ele conflita com o padrão da linguagem C (que devemos seguir em caso
+de dúvidas). Os blocos de comando tem que acabar com ';'? Qual desses
+dois programas é considerado válido?
+
+PROGRAMA 1:
+int main(){ return 0; };
+
+PROGRAMA 2:
+int main(){ return 0; } 
+
+R: Vejamos a especificação na Seção "3.2 Definição de Funções". Lá
+consta o seguinte: "Cada função é definida por um cabeçalho e um
+corpo, sendo que esta definição não é terminada por ponto-e-vı́rgula."
+onde fica claro que uma função não é terminada por ponto-e-vírgula.
+Veja que isso não quer dizer que um bloco de comandos não deva ser
+terminada por ponto-e-vírgula, pois tal bloco, quando no contexto de
+um comando simples, é um comando simples, e todos os comandos simples
+são terminados por ponto-e-vírgula. Veja que há então uma distinção de
+um bloco de comandos da função do bloco de comandos que é um comando
+simples.  Conclusão: o programa 1 é inválido de acordo com a E2.
+
+Veja que meu comentário sobre "se inspirar na linguagem C" serveria
+unicamente para aqueles casos não previstos na especificação da
+E2. Mas sempre confirme comigo antes de tomar uma decisão inspirada na
+sintaxe da linguagem C.
+
+
 * E2 2020/1
 ** DONE 2020-09-14
 *** Pergunta #1 \times 2
