@@ -128,6 +128,7 @@ int x, y, z <= 1, 2, 3; -> não deve ser reconhecido
 R: Correto. Pode-se inicializar apenas uma variável local por
 vez. Portanto, entendo que isso seria válido:
 int x <= 1, y <= 2, z <= 3;
+
 ** TODO 2021-02-21 D3
 *** #1
 
@@ -135,15 +136,46 @@ eu e minha dupla estamos com uma dúvida a respeito da sintaxe de
 expressão do trabalho. Poderíamos considerar que qualquer literal pode
 ser um operando para uma expressão? Incluindo uma string?
 
+--
+
+R: Na especificação temos a listagem de situações onde os operandos
+são válidos. Lá consta o seguinte texto referente às aritméticas: "As
+expressões aritméticas podem ter como operandos: (a) identificadores,
+opcionalmente seguidos de expressão inteira entre colchetes, para
+acesso a vetores; (b) literais numéricos como inteiro e
+ponto-flutuante; (c) chamada de função." e referente às lógicas:
+"Outras expressões podem ser formadas considerando variáveis lógicas
+do tipo =bool=." embora essa questão de tipos possa ser deixada em
+aberto. Então, a resposta para esta pergunta encontra-se na
+especificação, onde observa-se que não se cita o literal string.
+
 *** #2
 
 Uma expressão é um comando simples?
+
+--
+
+R: Consta na especificação "Os comandos simples da linguagem podem
+ser: declaração de variável local, atribuição, construções de fluxo de
+controle, operações de entrada, de saída, e de retorno, um bloco de
+comandos, e chamadas de função.". Faltou nesta lista os comandos de
+shift (left e right) pois eles estão detalhados na Seção 3.5 mas não
+na listagem acima. Mesmo assim, shift (left e right) são comandos
+simples. Então, voltando à pergunta original, a resposta para esta
+pergunta encontra-se na especificação, onde observa-se que não se fala
+sobre expressões.
 
 *** #3
 
 O programa não está aceitando 1+3, por exemplo, uma expressão válida,
 pois o scanner.l considera o +3 um inteiro. Devemos consertar isso ou
 mantemos a definição consistente com a etapa um?
+
+--
+
+R: Sem dúvidas devem acertar. Inclusive no vídeo de dúvidas "D0 D1 D2"
+eu falei um pouco sobre alguns ajustes necessários no scanner.l para
+que a E2 seja feita com mais tranquilidade.
 
 *** #4
 
@@ -159,9 +191,20 @@ da posição do vetor tem um exemplo que pode ser expressão
 - E agora no E2 não precisa validar se é uma expressão que resulta num
   inteiro positivo?
 
+--
+
+R: Na declaração, o tamanho deve ser um inteiro positivo entre
+colchetes. No acesso, pode ser uma expressão que será avaliada em
+tempo de execução.
+
+R: Não precisa validar que a expressão resultará em um inteiro
+positivo. Nem tem como, né? Veja que a expressão só seria avaliada em
+tempo de execução (imaginando que ela depende de uma entrada ainda
+desconhecida do compilador, o que é normalmente o caso).
+
 *** #5
 
-Estamos com algúmas dúvidas sobre quais expressões devemos aceitar ou
+Estamos com algumas dúvidas sobre quais expressões devemos aceitar ou
 não.
 
 Por exemplo:
@@ -175,6 +218,13 @@ Deveríamos levar em consideração que o lado esquerdo da operação
 retorna um número que é incompatível com o and que espera dois
 booleanos?
 
+--
+
+R: Sim, é uma expressão válida de acordo com a especificação E2.
+
+R: Isso deixaremos para a E4, portanto não há a necessidade de
+averiguar a compatibilidade dos operadores e operandos.
+
 *** #6
 
 não estou conseguindo compilar direito o programa. Ele verifica
@@ -182,8 +232,9 @@ somente a primeira linha e quando vem a segunda linha da Syntax
 error, independente do que vier depois. Esse era pra ser o
 comportamento padrão? ou fiz algum erro em relação a compilação?
 
- MakeFile: (também em anexo)
+MakeFile: (também em anexo)
 
+#+BEGIN_EXAMPLE
 etapa1: lex.yy.c
     gcc main.c lex.yy.c -o etapa1 -lfl
 
@@ -199,6 +250,30 @@ parser.tab.c: parser.y
 
 clean:
     rm lex.yy.c parser.tab.c parser.tab.h etapa2
+#+END_EXAMPLE
+
+-- 
+
+R: Uma análise do Makefile me pareceu correta, pois primeiro se
+executa o bison, depois o flex e por fim a compilação. A única
+alteração que eu faria seria adicionar main.c como dependência para o
+alvo etapa2, tendo em vista que ele compila esse arquivo. Chamo a
+atenção para os comentários do video de avaliação da E1 referente ao
+comando ~rm~.
+
+R: Quanto ao problema enfrentado "Syntax error" na segunda linha, eu
+tenho a impressão que estás executando o binário "./etapa2" sem
+especificar um arquivo de entrada, daí creio que a análise da entrada
+realmente acontece linha à linha, o que pode ser a origem do
+problema. A forma que recomendo que os testes sejam feitos (e
+inclusive a forma que a objetiva será conduzida) é executar o programa
+passando um arquivo na entrada padrão. Existem várias formas de fazer
+isso, vejamos duas:
+#+begin_src shell :results output
+./etapa2 < arquivo_com_meu_programa
+cat arquivo_com_meu_programa | ./etapa2 
+#+end_src
+Diga-me se resolveu o problema.
 
 *** #7
 
@@ -216,19 +291,31 @@ da pilha para varglobal.
 
 No entanto, o bison não produz warnings para essa regra. Porquê?
 
-*** #8
+R: Porque o bison é baseado em um autômato LALR(1) que é bem mais
+esperto que isso. Veremos essa sofisticação da análise ascendente na
+Semana 6, mas o conteúdo da Semana 5 já traz um indício com o SLR(1).
 
-#8.1:
+*** #8
+**** #8.1
 
 Na especificação sobre os comandos simples não cita que o comando
 shift é um comando simples; porém, o mesmo está escrito como comando e
 tem uma seção especifica para ele.
 
 - Devo considerar ele como um comando com ';' no final ou com expressão?
-
 - Além disso, devo fazer alguma validação se o inteiro é positivo ou não?
 
-#8.2:
+R: Os comandos de shift (left e right) são comandos simples. Portanto,
+sim, deves considerar ele como um comando simples seguindo as regras
+de comandos simples especificadas na E2. Esta questão é similar àquela
+da D1.#6, veja no vídeo de dúvidas da E2 identificado por "D0 D1 D2".
+
+R: De acordo com a especificação da E2, temos "Sendo número um literal
+inteiro positivo" portanto a regra gramatical para reconhecer esses
+dois comandos (left e right) já devem incorporar a verificação que o
+número é um literal inteiro positivo.
+
+**** #8.2
 
 - O literal string e char não são citados como expressões, está correto isso?
 
@@ -240,6 +327,23 @@ Ou seja, os seguintes casos não irão funcionar:
 Apenas no caso das inicializações que irá funcionar:
 
     int x <= "Hello";
+
+R: 
+
+*** #9
+
+Como faço para testar quais regras o BISON está usando para
+identificar cada comando durante um teste? É possível gerar, por
+exemplo, um relatório com as regras escolhidas? Ou devo usar alguma
+função no main.c?
+
+R: Sim, é possível. Para tal, resumidamente, deves colocar %debug no
+parser.y (ou executar o bison com a opção de depuração ~-t~, veja a
+manpage do bison que inclusive traz detalhamentos de várias outras
+funcionalidades) e em seguida definir a variável global yydebug com o
+valor 1. Feito isso, recompilar tudo e testar. As mensagens aparecerão
+na saída de erro. Dá uma olhada no link abaixo para maiores detalhes.
+https://www.gnu.org/software/bison/manual/html_node/Enabling-Traces.html
 
 * E2 2020/1
 ** DONE 2020-09-14
