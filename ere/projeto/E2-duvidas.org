@@ -220,7 +220,11 @@ booleanos?
 
 --
 
-R: Sim, é uma expressão válida de acordo com a especificação E2.
+R: Sim, globalmente é uma expressão válida de acordo com a
+especificação E2. Minha única reticência é que na E2 está explícito
+qual é o operador lógico: lá tu podes ler "todos os operadores lógicos
+(&& para o e lógico, || para o ou lógico)" portanto ao invés de and,
+escreva &&.
 
 R: Isso deixaremos para a E4, portanto não há a necessidade de
 averiguar a compatibilidade dos operadores e operandos.
