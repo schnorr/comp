@@ -129,7 +129,7 @@ R: Correto. Pode-se inicializar apenas uma variável local por
 vez. Portanto, entendo que isso seria válido:
 int x <= 1, y <= 2, z <= 3;
 
-** TODO 2021-02-21 D3
+** DONE 2021-02-21 D3
 *** #1
 
 eu e minha dupla estamos com uma dúvida a respeito da sintaxe de
@@ -306,8 +306,10 @@ Na especificação sobre os comandos simples não cita que o comando
 shift é um comando simples; porém, o mesmo está escrito como comando e
 tem uma seção especifica para ele.
 
-- Devo considerar ele como um comando com ';' no final ou com expressão?
-- Além disso, devo fazer alguma validação se o inteiro é positivo ou não?
+- Devo considerar ele como um comando com ';' no final ou com
+  expressão?
+- Além disso, devo fazer alguma validação se o inteiro é positivo ou
+  não?
 
 R: Os comandos de shift (left e right) são comandos simples. Portanto,
 sim, deves considerar ele como um comando simples seguindo as regras
@@ -321,7 +323,8 @@ número é um literal inteiro positivo.
 
 **** #8.2
 
-- O literal string e char não são citados como expressões, está correto isso?
+- O literal string e char não são citados como expressões, está
+  correto isso?
 
 Ou seja, os seguintes casos não irão funcionar:
 
