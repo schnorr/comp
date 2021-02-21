@@ -332,7 +332,20 @@ Apenas no caso das inicializações que irá funcionar:
 
     int x <= "Hello";
 
-R: 
+R: Correto. No caso dos exemplos que "não irão funcionar" acima, eles
+não devem funcionar mesmo pois não temos o comando "print" e no caso
+do comando de atribuição onde o que vem depois da igualdade é uma
+expressão, string e char não são expressões como consta em "As
+expressões aritméticas podem ter como operandos: (a) identificadores,
+opcionalmente seguidos de expressão inteira entre colchetes, para
+acesso a vetores; (b) literais numéricos como inteiro e
+ponto-flutuante; (c) chamada de função." e referente às lógicas:
+"Outras expressões podem ser formadas considerando variáveis lógicas
+do tipo =bool=." embora essa questão de tipos possa ser deixada em
+aberto. No caso do exemplo que "irá funcionar", tudo okay salvo que em
+um programa também semanticamente correto (veremos isso mais para a
+frente na E4), faria mais sentido declarar x como string em nossa
+linguagem.
 
 *** #9
 
