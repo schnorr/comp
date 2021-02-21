@@ -128,6 +128,119 @@ int x, y, z <= 1, 2, 3; -> não deve ser reconhecido
 R: Correto. Pode-se inicializar apenas uma variável local por
 vez. Portanto, entendo que isso seria válido:
 int x <= 1, y <= 2, z <= 3;
+** TODO 2021-02-21 D3
+*** #1
+
+eu e minha dupla estamos com uma dúvida a respeito da sintaxe de
+expressão do trabalho. Poderíamos considerar que qualquer literal pode
+ser um operando para uma expressão? Incluindo uma string?
+
+*** #2
+
+Uma expressão é um comando simples?
+
+*** #3
+
+O programa não está aceitando 1+3, por exemplo, uma expressão válida,
+pois o scanner.l considera o +3 um inteiro. Devemos consertar isso ou
+mantemos a definição consistente com a etapa um?
+
+*** #4
+
+Olá Professor, fiquei em dúvida na seguinte parte da especificação:
+
+"A linguagem inclui também a declaração de vetores, feita pela
+definição de seu tamanho inteiro positivo entre colchetes, colocada a
+direita do nome." Na declaração fala em inteiro positivo e no acesso
+da posição do vetor tem um exemplo que pode ser expressão
+"identificador[expressão] = expressão".
+
+- No caso os dois casos(definição e acesso) podem ser uma expressão?
+- E agora no E2 não precisa validar se é uma expressão que resulta num
+  inteiro positivo?
+
+*** #5
+
+Estamos com algúmas dúvidas sobre quais expressões devemos aceitar ou
+não.
+
+Por exemplo:
+
+a = (( b * 1) + c) and true;
+
+Isso é uma expressão válida mesmo combinando 1 expressão aritmética
+válida: ((b*1) + c) com uma expressão lógica válida: and true ?
+
+Deveríamos levar em consideração que o lado esquerdo da operação
+retorna um número que é incompatível com o and que espera dois
+booleanos?
+
+*** #6
+
+não estou conseguindo compilar direito o programa. Ele verifica
+somente a primeira linha e quando vem a segunda linha da Syntax
+error, independente do que vier depois. Esse era pra ser o
+comportamento padrão? ou fiz algum erro em relação a compilação?
+
+ MakeFile: (também em anexo)
+
+etapa1: lex.yy.c
+    gcc main.c lex.yy.c -o etapa1 -lfl
+
+etapa2: parser.tab.c lex.yy.c
+    gcc -c lex.yy.c parser.tab.c
+    gcc main.c -o etapa2  lex.yy.o parser.tab.o -lfl
+
+lex.yy.c: scanner.l
+    flex scanner.l
+
+parser.tab.c: parser.y
+    bison -d parser.y
+
+clean:
+    rm lex.yy.c parser.tab.c parser.tab.h etapa2
+
+*** #7
+
+Tenho uma dúvida com relação aos conflitos empilha-reduz do trabalho:
+
+Escrevi essa regra para separar variáveis únicas de arrays:
+
+#+BEGIN_EXAMPLE
+varglobal: TK_IDENTIFICADOR | TK_IDENTIFICADOR '[' TK_PR_INT ']';
+#+END_EXAMPLE
+
+E me parece que essa regra é ambígua, pois se temos ~TK_IDENTIFICADOR~ na
+pilha e encontramos um '[' podemos ou empilhar ou reduzir o conteudo
+da pilha para varglobal.
+
+No entanto, o bison não produz warnings para essa regra. Porquê?
+
+*** #8
+
+D1:
+
+Na especificação sobre os comandos simples não cita que o comando
+shift é um comando simples; porém, o mesmo está escrito como comando e
+tem uma seção especifica para ele.
+
+- Devo considerar ele como um comando com ';' no final ou com expressão?
+
+- Além disso, devo fazer alguma validação se o inteiro é positivo ou não?
+
+D2:
+
+- O literal string e char não são citados como expressões, está correto isso?
+
+Ou seja, os seguintes casos não irão funcionar:
+
+    print("Hello");
+    x = "Hello";
+
+Apenas no caso das inicializações que irá funcionar:
+
+    int x <= "Hello";
+
 * E2 2020/1
 ** DONE 2020-09-14
 *** Pergunta #1 \times 2
