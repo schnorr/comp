@@ -198,9 +198,9 @@ colchetes. No acesso, pode ser uma expressão que será avaliada em
 tempo de execução.
 
 R: Não precisa validar que a expressão resultará em um inteiro
-positivo. Nem tem como, né? Veja que a expressão só seria avaliada em
-tempo de execução (imaginando que ela depende de uma entrada ainda
-desconhecida do compilador, o que é normalmente o caso).
+positivo. Veja que a expressão só seria avaliada em tempo de execução
+(imaginando que ela depende de uma entrada ainda desconhecida do
+compilador, o que é normalmente o caso).
 
 *** #5
 
