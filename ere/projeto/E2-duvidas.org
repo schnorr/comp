@@ -379,6 +379,8 @@ int main(){ return 0; };
 PROGRAMA 2:
 int main(){ return 0; } 
 
+--
+
 R: Vejamos a especificação na Seção "3.2 Definição de Funções". Lá
 consta o seguinte: "Cada função é definida por um cabeçalho e um
 corpo, sendo que esta definição não é terminada por ponto-e-vı́rgula."
@@ -412,6 +414,8 @@ bool foo(){
   for(i = 1; : i < 5; : i = i+1;) {output "hello"};
 } 
 
+--
+
 R: Acredito que a afirmação está correta, mas sinto que o exemplo não
 segue fielmente a interpretação sobre os múltiplos casos de
 ponto-e-vírgula e também não segue a especificação no que diz respeito
@@ -431,10 +435,76 @@ bool foo(){
 }                // fim de função, sem o ponto-e-vírgula
 #+END_EXAMPLE
 
+*** #3
 
+Estou confuso com relação à quais expressões devemos aceitar na nossa
+linguagem. Já que nesta etapa não verificamos a análise semântica,
+então qual é a diferença de produções lógicas para produções
+aritmeticas nessa etapa do trabalho? Por exemplo, a linha a seguir:
 
-*** 
+true && 43 + ( identificador || 12)
 
+É válida? pois me parecem ser erros semânticos. Ou a expressão:
+
+identificador + *( !43 && identificador ^ 3 )
+
+É válida? Pois estamos aplicando operadores unários a números, que me
+parece ser um erro semântico também.
+
+Se ambas são válidas, então qual é a necessidade de criar regras
+diferentes para operadores lógicos ou aritméticos?
+
+--
+
+R: Um compilador tem várias fases de análise. O frontend do
+compilador, por exemplo, tem a análise léxica, a análise sintática e a
+análise semântica. Como estamos construindo um compilador de maneira
+incremental, a E2 consiste na análise sintática que cuida apenas de
+averiguar se uma sentença (um programa) está sintaticamente
+correto. Ainda que seja bastante tentador tentar resolver erros
+semânticos através de regras sintáticas, vamos deixar a verificação
+semântica de tipos, etc para a E4. Em conclusão, do ponto de vista
+sintático, não haveria a necessidade absoluta de se criar regras
+gramaticais diferentes para operadores lógicos ou aritméticos.
+
+*** #4
+
+Estou com algumas dúvidas na E2 referente a chamada de funções,
+conforme definido na parte 3.4 da especificação.  Ela define que uma
+chamada de função consiste no nome da função seguido dos argumentos
+separados por vírgula dentro de parênteses, e que estes argumentos
+poderiam ser expressões.
+
+a) Esse "nome" da função seria um identificador, correto? Fiquei em
+dúvida pois ao responder a questão 8 do vídeo E2 D3 Dúvidas, o senhor
+menciona que o caso print("Hello"); não funcionaria por "print" não
+ser um comando da linguagem. No caso de o nome da função não ser um
+identificador, o que ele é?
+
+b) Com relação aos argumentos, eles podem ser expressões, mas eles
+podem ser mais alguma coisa?
+
+--
+
+R: Para a a), sim o nome de uma função deve ser um identificador,
+tanto na definição quanto na chamada da função. E realmente, no vídeo
+E2 D3 de dúvidas eu havia assumido que aquele "print" estava no lugar
+do comando simples "output" da nossa linguagem. Olhando sob a ótica
+que ele possa ser uma função de usuário, ou seja, do próprio
+programador, aquela sintaxe está perfeitamente de acordo com a
+especificação. Repito ela abaixo para registro:
+#+BEGIN_EXAMPLE
+print("Hello");
+#+END_EXAMPLE
+onde print é o nome da função e "Hello" é o seu argumento nesse ponto
+da chamada. Para a b), consta na especificação da E2 a frase "Um
+argumento pode ser uma expressão." então argumentos são somente
+expressão. Veja que uma expressão pode derivar (através das regras
+gramaticais) em várias possibilidades, tais como literais,
+identificadores, operações aritméticas e lógicas unárias e binárias,
+chamada de função, etc. Então ao esperar que argumentos sejam
+expressões, veja que isso é bastante abrangente com o que está na
+especificação da E2.
 
 * E2 2020/1
 ** DONE 2020-09-14
