@@ -1,0 +1,131 @@
+#+STARTUP: overview indent
+#+TITLE: Dúvidas da Semana N3
+
+* N3
+** TODO 2021-02-23 
+*** #1
+**** #1.1
+
+1. O sr. explica que o conjunto sequência seria necessário para
+   implementarmos os não-terminais como funções, por conta da
+   possibilidade da palavra vazia no conjunto primeiro, contudo, não
+   seria possível fazer a seguinte implementação da estratégia
+   decendente?:
+
+   Recapitulando, inicialmente temos uma forma sentencial (composta só
+   do símbolo inicial) e uma palavra de entrada (programa), e aos
+   poucos vamos transformando os símbolos não-terminais mais à
+   esquerda da forma sentencial, escolhendo a produção correta de
+   acordo com a entrada, para evitar retrocesso.
+
+   Então, se o próximo não-terminal que eu for "consumir" for o
+   não-terminal A, com conjunto primeiro de A = {a, b, palavra vazia},
+   isso significaria que existem no máximo três produções partindo de
+   A, respectivamente gerando formas sentenciais alfa, beta e gama
+   (por definição, já que caso contrário não seria possível decidir
+   uma a ponto de sempre evitar retrocesso).
+
+   #+BEGIN_COMMENT LMS
+   Um comentário aqui. Tu escreves "se o próximo não-terminal que eu
+   for "consumir" for o não-terminal A", mas veja que nós não
+   "consumimos" não terminais, só consumimos terminais quando eles
+   aparecerem na entrada e forem o mesmo que está no topo da pilha.
+   #+END_COMMENT
+
+   Nesse caso, se palavra de entrada que eu tenho atualmente, começar
+   com a, eu gero alfa, se começar com b, eu gero beta, e se começar
+   com outra coisa, eu gero gama. Não precisaria se preocupar com o
+   conjunto sequência, já que só existe uma possibilidade.
+
+   Depois de gerar alfa, beta ou gama, tentamos fazer match dos símbos
+   terminais que foram gerados, com o que se tinha na palavra de
+   entrada, e consumimos ambos lados, até o lado da esquerda chegar em
+   um não-terminal (então repetimos o processo), ou até um dos dois
+   lados esvaziar (se ambos esvaziarem, aceitamos, senão recusamos).
+
+   Isso não funcionaria? Não precisa do conjunto sequência.
+
+   #+BEGIN_COMMENT
+   Não funcionaria. Seguindo teu exemplo, o problema encontra-se no
+   "se começar com outra coisa, eu gero gama", mas e se essa outra
+   coisa for a errada, tu estarias seguindo um caminho que te levaria
+   a um retrocesso, algo inválido na análise LL(1), pois não devemos
+   fazer retrocesso. Tu precisas saber de imediato o que vem depois de
+   A, ou seja, o conjunto sequência de A, para determinar se
+   transformar A em vazio é algo válido naquele momento, por isso o
+   "1" de LL(1): devo tomar a decisão certa e inequívoca olhando
+   somente para um token da entrada.
+
+   Isso tudo deve ficar mais claro com o conteúdo da Semana 4, com a
+   explicação sobre a definição formal de gramáticas LL(1). Tem
+   inclusive alguns exemplos parecidos com este que tu trazes. Diga-me
+   caso a dúvida permanecer depois de ver o vídeo N4 A0, por exemplo.
+   #+END_COMMENT
+
+**** #1.2
+
+2. O que acontece se uma produção, geram duas ou mais formas
+   sentenciais iniciadas por não-terminais, cujos conjuntos primeiros
+   não são disjuntos entre si?
+
+   Exemplo: eu tenho A -> Bx | Cy, e o conjunto primeiro de B é {a,
+   b}, e o conjunto primeiro de C é {a, c}.
+
+   Isso não é caso problemático?
+
+   #+BEGIN_COMMENT LMS
+   Certamente é um problema. Sem modificar a gramática, não há uma
+   forma se explorar todas as opções através do mecanismo com retrocesso.
+   #+END_COMMENT
+
+   Como lidar com ele?
+
+   #+BEGIN_COMMENT
+   Reescrever a gramática para remover o problema. Por vezes, a
+   mudança é simples e direta; por vezes, pode ser complexa.
+   #+END_COMMENT
+
+   Imagino que se a entrada começasse com "a", não seria possível
+   distinguir qual produção escolher, e portanto fazer algum
+   pré-processamento na gramática antes, para lidar com isso antes de
+   receber uma entrada.
+
+   #+BEGIN_COMMENT
+   Exato.
+   #+END_COMMENT
+
+**** #1.3
+
+3. É dito em uma das aulas que o conjunto sequência de B, sendo que
+   existe uma produção X -> alfaB, precisa englobar o conjunto de X,
+   já que se uma letra pode ser gerada após X, em uma árvore
+   sintática, então ela também pode ser gerada após B, na mesma
+   árvore.
+
+   Contudo, isso não parece ser sempre verdade.
+
+   Fazer isso pode aumentar o conjunto de B mais do que o
+   necessário. Existem gramáticas onde um símbolo pode aparecer após
+   X, mas nunca após B, por exemplo:
+
+   S -> X
+   X -> alfaB | aXa
+   B -> b | cB
+
+   O símbolo "a" pode aparecer após X, mas nunca após B, portanto
+   adicionar "a" ao conjunto sequência de B é desnecessário, embora
+   não pareça trazer problemas.
+
+   A dúvida aqui seria se eu entendi algo errado.
+
+   #+BEGIN_COMMENT
+   Veja que no exemplo, como o símbolo não terminal B encontra-se no
+   final de X, e depois de um X pode acontecer um "a", a grosso modo,
+   esse "a" estará após B. Veja:
+
+   S => X => a X a => a alfa B a
+
+   O "a" está após "B" em um procesos válido de derivação. Por isso,
+   afirmar que o procedimento "pode aumentar o conjunto de B mais do
+   que o necessário" está incorreto.
+   #+END_COMMENT
