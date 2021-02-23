@@ -506,6 +506,65 @@ chamada de função, etc. Então ao esperar que argumentos sejam
 expressões, veja que isso é bastante abrangente com o que está na
 especificação da E2.
 
+*** #5
+
+Mesmo com as várias dúvidas sanadas nos vídeos, ainda estamos sem
+certeza de que um comando de shift:
+<identificador/vetor> << <inteiro>;
+poderia ou não estar presente em uma expressão:
+myVar = (myInt << 3) + 4;
+Nesse caso, o resultado de um shift poderia ser atribuído a uma variável.
+Algo assim é permitido?
+
+--
+
+R: O shift é apenas comando simples e não deve fazer parte de expressões.
+
+*** #6
+
+Referente às atribuições:
+Uma variável local pode ser inicializada (<=) com um identificador de vetor?
+Por exemplo:
+int a << vetor[3];
+int b << vetor[<expressao>];
+
+--
+
+R: Acho que houve um pequeno equívoco no operador de inicialização que
+é o <= (menor igual) ao invés do << (menor menor). Salvo isso, na
+especificação da E2 sobre a inicialização de variáveis locais, temos
+que "Uma variável local pode ser opcionalmente inicializada com um
+valor válido caso sua declaração seja seguida do operador composto <=
+e de um identificador ou literal". Então sim, pode ser um
+identificador de vetor, com uma expressão para cálculo da posição do
+vetor.
+
+*** #7
+
+Uma variável local pode ser inicializa (<=) com literais de qualquer tipo
+(boolean, int, float, char e string), porém, no comando de atribuição, uma
+variável só pode receber uma expressão. Dado que expressões não podem receber
+literais do tipo string, char e boolean, logo o comando de atribuição não
+permite que uma variável receba um valor de um desses tipos, correto?
+Por exemplo:
+myString = "fizz buzz"; 
+
+R: De fato, é uma limitação da nossa linguagem.
+
+*** #8
+
+eu e minha dupla nos deparamos com mais uma dúvida: nos casos
+específicos de index de array e operador binário shift deve ser aceito
+casos como, por exemplo, "int vetor[+5]" ou "a <<+2"?
+
+R: No caso de vetores, lá consta "seu tamanho inteiro positivo entre
+colchetes" e no exemplo acima de fato +5 é um número inteiro positivo
+e está entre colchetes, então não vejo problemas. No caso do shift, lá
+consta "O número deve ser representado por um literal inteiro." então
+como +2 é um literal inteiro, não vejo problemas. Claro que nesses
+dois casos, na prática, teremos um operador unário seguido de um
+literal inteiro (lembrando da modificação a ser feita no léxico).
+
 * E2 2020/1
 ** DONE 2020-09-14
 *** Pergunta #1 \times 2
