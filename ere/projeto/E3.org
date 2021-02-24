@@ -113,8 +113,9 @@ Devem fazer parte da AST:
    chamada de função tem pelo menos um filho, que é a primeira
    expressão na lista de seus argumentos. Os comandos de shift tem
    pelo menos dois filhos, um identificador (ou identificador com
-   indexação de vetor -- veja abaixo) e um literal inteiro. Os
-   comandos de retorno, break e continue não tem filhos. O comando if
+   indexação de vetor -- veja abaixo) e um literal inteiro. O comando
+   return tem um filho, que é uma expressão. Os
+   comandos de break e continue não tem filhos. O comando if
    com else opcional deve ter pelo menos três filhos, um para a
    expressão, outro para o primeiro comando quando verdade, e o último
    -- opcional -- para o primeiro comando quando falso. O comando for
