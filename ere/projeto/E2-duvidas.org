@@ -365,7 +365,7 @@ valor 1. Feito isso, recompilar tudo e testar. As mensagens aparecerão
 na saída de erro. Dá uma olhada no link abaixo para maiores detalhes.
 https://www.gnu.org/software/bison/manual/html_node/Enabling-Traces.html
 
-** TODO 2021-02-21 D4
+** DONE 2021-02-21 D4
 *** #1
 
 Estou um pouco confuso em relação a um detalhe porque pelo que entendi
