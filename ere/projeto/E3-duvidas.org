@@ -1,6 +1,21 @@
 #+STARTUP: overview indent
 #+TITLE: Dúvidas da E3 do Projeto de Compilador
-* E3
+
+* E3 2020/2
+** 2021-03-03
+*** Pergunta #1
+
+Prezado professor, podemos utilizar c++ no trabalho, ao invés de C?
+Precisaríamos mudar o main.c para main.cpp, mas isto facilitaria para
+a construção da árvore, pois ficaria mais simples utilizar vector, do
+c++, para implementar uma árvore com um número arbitrário de filhos em
+cada nó. Podemos fazer esta alteração?
+
+R: Pode sim (usar C++), mas não vejo a necessidade de mudar de main.c
+para main.cpp.  Implemente as funções em arquivos separados, cpp, que
+são chamadas pelo código em C normal como está no main.c.
+
+* E3 2020/1
 ** DONE 2020-09-23 D0
 *** Pergunta #1
 
