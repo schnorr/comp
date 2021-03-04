@@ -1,8 +1,23 @@
-#+STARTUP: overview indent
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
 #+TITLE: Dúvidas da E3 do Projeto de Compilador
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+#+Language: pt-br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil title:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
 
 * E3 2020/2
-** 2021-03-03
+** TODO 2021-03-03 D0
 *** Pergunta #1
 
 Prezado professor, podemos utilizar c++ no trabalho, ao invés de C?
@@ -14,6 +29,125 @@ cada nó. Podemos fazer esta alteração?
 R: Pode sim (usar C++), mas não vejo a necessidade de mudar de main.c
 para main.cpp.  Implemente as funções em arquivos separados, cpp, que
 são chamadas pelo código em C normal como está no main.c.
+*** Pergunta #2.1
+
+1) Precisamos colocar tipo nos tokens? Por exemplo: %token<valorReal>
+   TK_LIT_FLOAT, ou somente a declaração do valor_lexico é suficiente? Se
+   precisamos, temos como reaproveitar as definições do valor_lexico?
+   Como faríamos isso?
+
+R: Somente a declaração do valor léxico é suficiente, e recomendada de
+acordo com a especificação. Nota que somente assim poderemos ter
+acesso a uma estrutura genérica que poderá ser tratada independente de
+qual é o valor do token por trás. Esse valor do token não será
+perdido, temos descritores dentro da estrutura valor léxico que serão
+responsáveis por diferenciar os tipos de literais, por exemplo.
+
+*** Pergunta #2.2
+
+2) Qual o tipo de dado de cada elemento da arvore? Seria a estrutura
+   que contém número da linha, tipo e valor?
+
+R: Cada nó da árvore deve ser de um tipo estrutura de dados definida
+pelo grupo. Tipicamente, usa-se uma estrutura de árvore genérica
+n-ária com um campo de usuário, onde nesse campo de usuário o grupo
+poderá adicionar informações relativas à AST (tipo do nó, etc).
+
+*** Pergunta #2.3
+
+3) Para construirmos a arvore, pensamos em duas funções:
+
+    - Uma que cria e retorna uma folha e, se a arvore esta vazia,
+      atribui à arvore esta folha
+
+    - Uma que recebe dados e filhos, cria um nodo, insere mais um
+      filho e coloca a arvore nesse filho, depois atribui à arvore
+      este novo nodo
+
+Isto está correto? É assim mesmo para construirmos a árvore?
+
+R: Uma folha é um nó sem filhos, então acho improdutivo ter um nó tipo
+folha e um nó tipo intermediário. Conforme descrito na Sec 2.2, acho
+que é importante ter funções de criação de nós e adição de filhos. A
+construção da árvore em si é feita através das regras do bison. Um
+exemplo, como criar a AST para a regra abaixo:
+
+#+BEGIN_EXAMPLE
+E : E + E {
+     $$ = ast_create(AST_SUM);  // Cria-se um nó da AST
+     ast_add_child($$, $1);     // Adiciona seu primeiro filho
+     ast_add_child($$, $3);     // Adiciona seu segundo filho
+          };
+#+END_EXAMPLE
+
+Perceba o uso de $1 e $3 conforme vimos no video bison parte 2.  No
+exemplo acima, apenas duas funções foram necessárias (~ast_create~ e
+~ast_add_child~). Fica a critério do grupo empregar funções mais
+sofisticadas se preferirem.
+
+*** Pergunta #3
+
+ Para representarmos uma expressão ternária na árvore sintática
+ abstrata, posso considerar apenas a interrogação (?) como pai e os
+ três outros operandos como filhos, ignorando os dois pontos (:)?
+
+R: Pode. Mas veja que na prática, a interrogação e os dois pontos são
+um único operador. Inclusive, chamos a atenção para o que está
+explicitado na Sec 2.4: "No caso do operador ternário, deve ser
+utilizado o nome '?:'.", mas isso apenas na saída. A tua AST pode
+conter o tipo que quiser, como ~AST_TERNARY~ ou algo assim.
+
+*** Pergunta #4
+
+ Estou com dificuldade de entender como funciona o processo de
+ construção da árvore sintática quando há múltiplas linhas de
+ código. Em especial, como fazemos a inserção de folhas e de nodos com
+ filhos? Nodos folhas devem ser inseridas onde? Nodos com filhos devem
+ tornar-se pais do resto da arvore ou seguir como filhos da raiz? Como
+ sabemos qual nodo é pai dos nodos filho?
+
+R: Recomendo fazer um programa completo escrito na nossa linguagem e
+executar o nosso compilador da seguinte forma:
+
+#+BEGIN_EXAMPLE
+./etapa3 < arquivo_com_programa_com_multiplas_linhas
+#+END_EXAMPLE
+
+Para fazer a inserção de nós e filhos, deve-se empregar totalmente os
+marcadores especiais do bison para isso, através da adição de código
+no final de cada regra gramatical, pois é ele que irá decidir a ordem
+que estes códigos serão criados. Por exemplo, para a regra gramatical
+que envolve o reconhecimento sintático da soma binária:
+
+#+BEGIN_EXAMPLE
+E : E + E {
+     $$ = ast_create(AST_SUM);  // Cria-se um nó da AST
+     ast_add_child($$, $1);     // Adiciona seu primeiro filho
+     ast_add_child($$, $3);     // Adiciona seu segundo filho
+          };
+#+END_EXAMPLE
+
+Neste caso acima, temos um nó intermediário de soma que tem dois
+filhos. Nós criamos um novo nó da nossa AST, com o tipo ~AST_SUM~, e o
+atribuímos para $$, que é o marcador especial do bison para se referir
+a cabeça da produção gramatical. Em seguida, adicionamos dois filhos,
+primeiro o filho $1 e depois o filho $3 que são respectivamente os
+dois operandos E do corpo da produção. Veja que esses operandos são
+também do não-terminal E, então podemos sem dúvida assumir que os nós
+da AST deles já foram criados pela execução de código associado às
+outras regras gramaticais (inclusive essa mesma).
+
+*** Pergunta #5
+
+ Para representar a árvore, pensamos numa estrutura onde um nodo
+ indica um próximo irmão e um próximo filho, ou seja, é uma árvore
+ cujos filhos são listas encadeadas. Isto é permitido?
+
+R: Recomendo a leitura da Sec 2.2 da especificação. Em geral, eu não
+recomendo esse tipo de estrutura onde os irmãos estão conectados pois
+ela não é natural no contexto de uma AST. Não teremos relação diretas
+entre irmãos, apenas entre pai e seus filhos. Se algo preciso ser
+feito entre irmãos, é o pai que se ocupará.
 
 * E3 2020/1
 ** DONE 2020-09-23 D0
