@@ -190,6 +190,18 @@ nó que estamos visitando seguido de uma vírgula seguido do endereço de
 memória do filho. Feito essa listagem, basta recursivamente chamar a
 função exporta para cada filho.
 
+*** Pergunta #3
+
+Na especificação da E3 está escrito que "Devem fazer parte da AST:
+[...] Todos os comandos simples da linguagem, salvo o bloco de
+comando" . MInha dúvida é: devemos simplesmente ignorar os blocos de
+comando ao criar a AST?
+
+R: Sim. Os blocos de comando e a declaração de variáveis sem
+inicialização não devem fazer parte da AST. O bloco de comando
+continua sendo importante para estruturar sintaticamente o programa,
+ou seja, deve fazer parte da sintaxe como na E2.
+
 * E3 2020/1
 ** DONE 2020-09-23 D0
 *** Pergunta #1
