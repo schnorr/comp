@@ -149,6 +149,47 @@ ela não é natural no contexto de uma AST. Não teremos relação diretas
 entre irmãos, apenas entre pai e seus filhos. Se algo preciso ser
 feito entre irmãos, é o pai que se ocupará.
 
+** TODO 2021-03-04 D1
+*** Pergunta #1
+
+Ficou claro para mim como devo lidar com $$ nas produções, porém ainda
+fiquei com uma dúvida: como fazemos para associar $$ com a variável
+void* arvore? Além disso, este void eu vou trocar para a minha struct
+de nodo, certo? Ficará node* arvore, certo?​
+
+R: A variável global ~arvore~ está definida no arquivo main.c e é
+declarada como ~void*~, ou seja, ~arvore~ é um ponteiro para qualquer
+coisa. É preferível que sua definição não mude. Para integrar o que
+vocês farão com o comportamento imutável do main basta, no parser.y,
+declarar a variável ~arvore~ como ~extern~, da seguinte forma:
+#+BEGIN_EXAMPLE
+extern void *arvore;
+#+END_EXAMPLE
+E depois, na primeira regra gramatical, ou seja, no primeiro
+não-terminal a partir do qual tudo começa (tipicamente ~programa~),
+deve-se definir o conteúdo da variável ~arvore~. Para evitar problemas
+de compilação, etc, o grupo pode na atribuição forçar um cast. Esse
+cast pode ser revertido na implementação das funções ~exporta~ e ~libera~,
+cujo protótipo também não deve mudar. Como sabemos que é a mesma
+variável que vai e vem, espera-se que não haverão problemas.
+
+*** Pergunta #2
+
+Eu e minha dupla não entendemos muito bem como devemos percorrer a
+árvore para printá-la. O senhor poderia nos explicar melhor, por
+favor?
+
+R: O percorrimento da árvore deve ser de maneira recursiva. Para
+atingir o efeito descrito na Sec 2.4 da especificação, deve-se, ao
+chegar um determinado nó da árvore: 1) imprimir o endereço de memória
+onde está a estrutura de dados (usando o %p como formatador para o
+printf), seguido do seu label (consultem o formato na espec. da E2),
+lembrando que o valor do label depende do tipo do nó; 2) para cada
+filho (se houver), imprimir, para cada filho, o endereço de memória do
+nó que estamos visitando seguido de uma vírgula seguido do endereço de
+memória do filho. Feito essa listagem, basta recursivamente chamar a
+função exporta para cada filho.
+
 * E3 2020/1
 ** DONE 2020-09-23 D0
 *** Pergunta #1
