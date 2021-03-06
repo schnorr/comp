@@ -202,6 +202,164 @@ inicialização não devem fazer parte da AST. O bloco de comando
 continua sendo importante para estruturar sintaticamente o programa,
 ou seja, deve fazer parte da sintaxe como na E2.
 
+*** Pergunta #4.1
+
+estou confuso sobre o conteúdo do %union, mesmo tendo lido a seção 2.1
+do enunciado várias vezes.
+
+1) O enunciado diz que se sugere usar um campo de nome valor_lexico, e
+   que o tipo dele é uma estrutura de dados com 3 campos: número da
+   linha, tipo do token e valor do token. Estou com dificuldade de
+   visualizar essa estrutura. Minha ideia inicial paraa fazer o %union
+   foi essa:
+
+#+BEGIN_EXAMPLE
+%union
+{
+  VALUE *valor_lexico;
+}
+
+enum tokenType {
+  specialChar, compoundOperator, identifier, literal
+};
+
+typedef struct value_struct
+{
+  int n_line;
+  enum tokenType token_type;
+  char* tokenValue;
+} VALUE;
+#+END_EXAMPLE
+
+Teria alguma sugestão para fazer o %union de uma maneira mais simples
+(por exemplo, sem o enum)?
+
+----------
+
+R: Nós vimos que a AST (veja aula N5 A0) tem nós intermediários e nós
+folha, sendo que estas folhas são frequentemente os tokens obtidos na
+entrada. Por essa razão, os tokens que integram as folhas na AST
+(tipicamente identificadores e os literais) devem possuir um valor
+pois eles integrarão parte da AST. Sendo esta a teoria e, por ser algo
+muito frequente a ser implementado, o bison dá um suporte completo
+para essa atividade, através do comando %union. Os campos dessa union
+são os possíveis "valores" que podem estar associados aos tokens e aos
+não-terminais. Em nosso projeto, o comando %union do bison normalmente
+ter dois campos, como abaixo, sendo que o primeiro é o campo que será
+utilizado para associar valor aos tokens, e o segundo é o campo que
+será utilizado para criar a AST:
+#+BEGIN_EXAMPLE
+%union{
+	struct valor_lexico_t* valor_lexico;
+	struct nodo* no;
+}
+#+END_EXAMPLE
+A ~struct valor_lexico_t*~ que, no teu código, é ~VALUE*~, tem sua
+estrutura descrita na Sec 2.1 da espec. da E2. Chamo a atenção para o
+segundo parágrafo do texto da especificação desta Sec 2.1, pois ali
+descreve como o "valor do token" propriamente dito deve ser codificado
+na estrutura. Veja que o ~tokenValue~ (que tu declaraste somente como
+~char*~) deve ser uma ~union~ que comporta diferentes valores (int, float,
+etc).
+
+(segue na resposta da #4.2)
+
+*** Pergunta #4.2
+
+2) No exemplo de %union que tem nos slides da aula N3 A7, existe um
+   campo chamado node* no. Ele precisa estar dentro do union também?
+   Qual a relação entre o nodo e o %union?
+
+----------
+
+R: Então, dando prosseguimento à resposta da #4.1, temos dois campos
+no %union: o primeiro para associar valor aos tokens, e o segundo para
+associar valor aos não-terminais (que permitirão a criação da
+estrutura da AST). No bison, o "tipo" default do valor dos tokens e
+não-terminais é ~int~. Para alterar isso, precisamos efetivamente
+declarar campos no %union e depois fazer o seguinte:
+#+BEGIN_EXAMPLE
+%token<valor_lexico> TK_IDENTIFICADOR
+#+END_EXAMPLE
+para dizer que o "tipo" de um token ~TK_IDENTIFICADOR~ é o campo
+~valor_lexico~ da %union. E, fazer o seguinte:
+#+BEGIN_EXAMPLE
+%type<no> programa deffuncao
+#+END_EXAMPLE
+Para dizer que o "tipo" dos não-terminais programa e deffuncao,
+portanto o valor associado a eles, é o campo ~no~ da %union. Feito isso,
+nas regras gramaticais, tais como essa abaixo, podemos fazer uso dos
+marcadores $$, $1, e $2, sabendo que tais marcadores serão o tipo
+%union declarado. Caso $1 for um identificador podemos utilizar o
+campo ~valor_lexico~. Caso $1 for um não-terminal, saberemos que seu
+valor é o que está no campo ~no~.
+
+(segue na resposta da #4.3)
+
+*** Pergunta #4.3
+
+3) Também não entendi bem como funciona a yylval ao fazer a associação
+   de um valor a um token. Se eu usasse a minha definição de union
+   acima, seria assim a associação para, por exemplo, uma string?
+
+#+BEGIN_EXAMPLE
+{STRING} { yylval.valor_lexico.tokenValue = yytext; return TK_LIT_STRING; }
+#+END_EXAMPLE
+
+Se possível, gostaria de exemplos mais concretos em que yylval utiliza
+valores contidos em %union e do armazenamento de yytext nele.
+
+----
+
+R: Do ponto de vista da gramática (do parser), nada mais precisa ser
+feito além daquilo descrito até a resposta da #4.2. No entanto, do
+ponto de vista do léxico (do scanner), precisamos garantir que quando
+um ~TK_IDENTIFICADOR~ aparecer em uma regra gramatical, se a referirmos
+através de $1, por exemplo, devemos acessar os dados de valor no campo
+~valor_lexico~. Para que isso seja possível, precisamos usar, lá no
+léxico, a variável global yylval. O tipo dessa variável é a union
+declarada no comando %union do bison. Portanto, no teu código do
+scanner, precisamos, imediatamente antes de retornar o token
+reconhecido, alocar dinamicamente a estrutura de dados ~struct
+valor_lexico_t~ (com malloc), inicializá-la corretamente, e atribuir o
+ponteiro para o campo ~valor_lexico~. Essa alocação, inicialização e
+atribuição pode ser feita da seguinte forma (inspirado pelo tipo que
+tu estás usando):
+#+BEGIN_EXAMPLE
+{STRING} {
+   VALUE* valor = malloc(1 * sizeof(VALUE)); // aloca a estrutura
+   //TODO inicializar todos os campos da estrutura apontada por valor
+   yylval.valor_lexico = valor; //atribuir para o yylval
+   return TK_LIT_STRING;
+}
+#+END_EXAMPLE
+Daí, lá na tua gramática, quando tu tiveres uma regra onde aparece um
+~TK_LIT_STRING~, como:
+#+BEGIN_EXAMPLE
+decl_init: tipo TK_IDENTIFICADOR TK_OC_LT TK_LIT_STRING { 
+#+END_EXAMPLE
+Tu sabes que tu poderás recuperar o ponteiro do valor de ~TK_LIT_STRING~
+através $4. Ou seja, $4 será o ~VALUE*~ que tu atribuíste lá no scanner
+quando fizeste ~yylval.valor_lexico = valor~. Nota que nesse mesmo
+exemplo, tu sabes que isso também é válido para ~TK_IDENTIFICADOR~ e
+~TK_OC_LT~. No caso o não terminal ~tipo~ e ~decl_init~ serão do tipo ~no~ da
+tua %union.
+
+*** Pergunta #5
+
+ A ação { $$ = NULL; } é consistente para o caso de produções que
+ devem ser ignoradas?
+
+R: Sim, tipicamente para produções cujo corpo é vazio.
+
+*** Pergunta #6
+
+Na função libera, posso adicionar mais um parâmetro? Queria deixá-la
+assim: void libera (treeNode *root, bool primeiroUso); Isto é
+permitido?
+
+R: Não é permitido.
+
 * E3 2020/1
 ** DONE 2020-09-23 D0
 *** Pergunta #1
