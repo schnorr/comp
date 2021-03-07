@@ -31,10 +31,10 @@ para main.cpp.  Implemente as funções em arquivos separados, cpp, que
 são chamadas pelo código em C normal como está no main.c.
 *** Pergunta #2.1
 
-1) Precisamos colocar tipo nos tokens? Por exemplo: %token<valorReal>
-   TK_LIT_FLOAT, ou somente a declaração do valor_lexico é suficiente? Se
-   precisamos, temos como reaproveitar as definições do valor_lexico?
-   Como faríamos isso?
+1) Precisamos colocar tipo nos tokens? Por exemplo: ~%token<valorReal>~
+   ~TK_LIT_FLOAT~, ou somente a declaração do ~valor_lexico~ é suficiente?
+   Se precisamos, temos como reaproveitar as definições do
+   ~valor_lexico~?  Como faríamos isso?
 
 R: Somente a declaração do valor léxico é suficiente, e recomendada de
 acordo com a especificação. Nota que somente assim poderemos ter
@@ -152,8 +152,8 @@ feito entre irmãos, é o pai que se ocupará.
 ** TODO 2021-03-04 D1
 *** Pergunta #1
 
-Ficou claro para mim como devo lidar com $$ nas produções, porém ainda
-fiquei com uma dúvida: como fazemos para associar $$ com a variável
+Ficou claro para mim como devo lidar com ~$$~ nas produções, porém ainda
+fiquei com uma dúvida: como fazemos para associar ~$$~ com a variável
 void* arvore? Além disso, este void eu vou trocar para a minha struct
 de nodo, certo? Ficará node* arvore, certo?​
 
@@ -289,9 +289,9 @@ para dizer que o "tipo" de um token ~TK_IDENTIFICADOR~ é o campo
 Para dizer que o "tipo" dos não-terminais programa e deffuncao,
 portanto o valor associado a eles, é o campo ~no~ da %union. Feito isso,
 nas regras gramaticais, tais como essa abaixo, podemos fazer uso dos
-marcadores $$, $1, e $2, sabendo que tais marcadores serão o tipo
-%union declarado. Caso $1 for um identificador podemos utilizar o
-campo ~valor_lexico~. Caso $1 for um não-terminal, saberemos que seu
+marcadores ~$$~, ~$1~, e ~$2~, sabendo que tais marcadores serão o tipo
+%union declarado. Caso ~$1~ for um identificador podemos utilizar o
+campo ~valor_lexico~. Caso ~$1~ for um não-terminal, saberemos que seu
 valor é o que está no campo ~no~.
 
 (segue na resposta da #4.3)
@@ -359,6 +359,147 @@ assim: void libera (treeNode *root, bool primeiroUso); Isto é
 permitido?
 
 R: Não é permitido.
+
+*** Pergunta #7
+
+Para representarmos a árvore, ficamos confusos com uma questão:
+devemos listar os endereços dos filhos nas linhas? Ou apenas o
+endereço do nó?
+
+No caso, uma linha válida seria assim:
+0x55f8f45f23a0, 0x55f8f45f29100x55f8f45f23a0, 0x55f8f45f35900x55f8f45f2910 [label="<="];
+
+Ou assim:
+0x55f8f45f2810 [label="<="];
+?
+
+R: Na Sec 2.4 tem um exemplo completo sobre como exportar a
+árvore. Poderias revisar e me dizer se aquilo que está lá escrito já
+resolve a tua dúvida?
+
+** 2021-03-07 D2
+*** Dúvida #1
+
+Eu reli a seção 2.4 mas minha dúvida permanece. Peço desculpas pois
+pode ser que seja falha de interpretação minha, mas queria confirmar
+com o senhor pois parte da correção é automática, então eu e minha
+dupla precisamos ter certeza do formato exato da saída. O senhor
+primeiro dá um exemplo de saída CSV válida onde uma linha pode conter
+múltiplos endereços de memória (onde, em cada linha, há o endereço do
+nó e o endereço dos filhos do nó), mas abaixo o senhor dá um exemplo
+onde cada linha possui apenas um endereço de memória. Fiquei com
+dúvida se, numa linha onde vamos representar um nó que possua filhos,
+o correto seja:
+
+a) Nessa linha imprimir o endereço do nó, seguido pelos endereços dos
+filhos e, por fim, o label do nó
+
+b) Nessa linha imprimir apenas o endereço do nó seguido pelo seu label
+
+c) Nessa linha, imprimir o endereço do nó e o label do nó, seguido
+pelo endereço dos filhos e label dos filhos
+
+----
+
+R: No exemplo fornecido na especificação da E3 (Sec 2.4), a linha deve
+conter apenas dois endereços de memória (pai, filho). Se um pai tiver
+mais de um filho, então haverá uma linha para cada relação pai, filho,
+conforme o exemplo fornecido. Então, nenhuma das alternativas a), b),
+e c) está correta. 
+
+R: Retomando, existem dois tipos de linha:
+
+1/ Linhas que registram a relação entre dois nós da árvore (são
+aquelas linhas que tem dois endereços separados por vírgula)
+
+2/ Linhas que registram o nome do nó da árvore (são aquelas linhas que
+tem o campo label)
+
+Teve uma pergunta sobre isso, e acabo de falar sobre isso no video E3
+D0 D1, mas tu podes olhar diretamente a Pergunta #2 do E3 D1. Então,
+respondendo tua pergunta diretamente, a opção é nenhuma das
+alternativas. A resposta seria:
+
+d) Nessa linha, imprimir o endereço do nó, seguido pelo endereço de um
+dos filhos. Para representar as relações de um pai com todos os seus
+filhos, tu precisarás de uma linha para cada filho, como está na
+especificação. Todas essas linhas são do tipo 1/ (descrito
+acima). Restam as linhas do tipo /2, uma para cada nó da árvore.
+*** Dúvida #2.1
+
+obrigado pelas respostas, elas nos ajudaram a entender melhor o que
+devemos fazer. Mas ainda temos algumas dúvidas:
+
+1) No caso do literal, de que forma devo armazenar o tipo do literal?
+   Posso fazer isso dentro do enum que criei para os tipos do token?
+   Assim:
+
+#+BEGIN_EXAMPLE
+typedef enum {
+  specialChar, compoundOperator, identifier, lit_int, lit_float, lit_bool, lit_char, lit_string  // em vez de ser só "literal", ter uma opção para cada tipo
+} tipoToken;
+#+END_EXAMPLE
+
+-----
+
+R: Esse enum guarda apenas o tipo, não o valor. Um literal inteiro tem
+que ser guardada em uma variável do tipo int, um literal
+ponto-flutuante em um float, um caractere em um char, uma string em um
+char*, um booleano em um int ou bool (se quiseres fazer um
+typedef). Como um literal pode ser só de um tipo a cada vez, recomendo
+colocar todos essas variáveis dentro de uma union, com uma variável
+auxiliar para que tu registres qual é o tipo. A enum tu chamaste de
+"tipoToken", e um tipo de token ou é specialChar, compoundOperator,
+identifier, literal. Isso está no primeiro parágrafo da Sec 2.1.
+Depois, tu teria um outro campo com o valor propriamente dito para
+diferenciar entre os tipos de literais. Isso está no segundo parágrafo
+da Sec 2.1.
+
+*** Dúvida #2.2
+
+2) Sobre exemplo de yylval que colocaste na resposta da minha pergunta
+   3, devo fazer o mesmo para todos os tokens contidos no scanner.l
+   (exceto palavras reservadas)? Por exemplo, no token ';':
+
+#+BEGIN_EXAMPLE
+";" {
+  valor_lexico_t* valor = malloc(1*sizeof(valor_lexico_t));
+  valor->n_linha = get_line_number();
+  valor->type = specialChar;
+  valor->val.s = strdup(yytext);
+  yylval.valor_lexico = valor;
+  return 59;
+}
+#+END_EXAMPLE
+
+-----
+
+R: Não vejo necessidade de criar um valor para cada token reconhecido
+pelo léxico. Um exemplo é esse do ";", pois o "valor" desse
+ponto-e-vírgula não será utilizado para nada. Veja resposta da dúvida
+seguinte. Ah, e um outro comentário. Troque o "return 59" por "return
+yytext[0]". Teu código ficará mais legível.
+
+*** Dúvida #2.3
+
+3) Sobre o nodo da AST: quais são os dados essenciais que devem estar
+   contidos no nodo? Sei que o valor do token (ponteiro do tipo
+   ~valor_lexico_t~) e um ponteiro para os nodos filhos devem fazer
+   parte do struct do nodo, mas preciso armazenar algo mais?
+
+-----
+
+R: Com certeza precisa armazenar algo mais. Além dos ponteiros para os
+filhos do nó e também do valor do token (ponteiro para o
+~valor_lexico_t~, somente quando realmente necessário pois muitos nós
+intermediários não são tokens), precisarás também guardar, pelo menos,
+o tipo do nó da AST. Se é um IF, precisas guardar algo como ~AST_IF~. Se
+é um WHILE, precisas guardar algo como ~AST_WHILE~. Se for um
+identificador, será ~AST_IDENTIFICADOR~. Se for um literal, será um
+~AST_LITERAL~, e assim por diante. Para os nós da AST cujo token tem
+pouca utilidade (construções de fluxo de controle, por exemplo), o
+valor deles pode ser NULL. De maneira ampla, o valor do token só é
+realmente necessário quando temos identificadores e literais.
 
 * E3 2020/1
 ** DONE 2020-09-23 D0
