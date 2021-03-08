@@ -425,6 +425,7 @@ dos filhos. Para representar as relações de um pai com todos os seus
 filhos, tu precisarás de uma linha para cada filho, como está na
 especificação. Todas essas linhas são do tipo 1/ (descrito
 acima). Restam as linhas do tipo /2, uma para cada nó da árvore.
+
 *** Dúvida #2.1
 
 obrigado pelas respostas, elas nos ajudaram a entender melhor o que
@@ -510,7 +511,9 @@ imprimir no label, ao transformar de float para char*?
 
 ---
 
-R:
+R: Usar o formatador "%f" sem especificar a quantidade de casas
+decimais. Para o literal int, usar o "%d"; para tudo que é string,
+"%s", para caractere "%c" e para booleano usar %d.
 
 *** Dúvida #4
 
@@ -521,7 +524,11 @@ está na árvore?
 
 ---
 
-R: 
+R: Os tokens que não farão parte da árvore não precisam ter valor
+léxico, portanto a alocação da estrutura não deverá nem ser
+feita. Para aqueles cuja decisão de colocar ou não a árvore seja feita
+tardiamente (se for o caso), pode-se tomar a decisão de liberá-los no
+ponto onde eles seriam colocados na árvore, mas não o são.
 
 *** Dúvida #5
 
@@ -545,11 +552,23 @@ Pode me esclarecer, por favor? Obrigado!
 
 ----
 
-R:
+R: Não é nenhum desses dois. Veja resposta da D2 #1, acima. Mas em
+suma, existem dois tipos de linha: 1/ uma que representa a relação pai
+e filho, que seria algo como o abaixo, usando as tuas definições
+acima:
+
+"nodo, nodoFilho"
+
+2/ e uma para apresentar o label, assim:
+
+"nodo [label=regramentoNodo]"
+"nodoFilho [label=regramentoNodo]"
 
 *** Dúvida #6.1
 
-obrigado pelas respostas. Desculpe se estou fazendo muitas perguntas, por alguma razão estou com dificuldade de interpretar o enunciado da etapa, mas estou tentando absorver tudo aos poucos.
+obrigado pelas respostas. Desculpe se estou fazendo muitas perguntas,
+por alguma razão estou com dificuldade de interpretar o enunciado da
+etapa, mas estou tentando absorver tudo aos poucos.
 
 1) Queria saber se a minha estrutura de dados está correta, incluindo
    agora o tipo do token e o tipo do literal, e troquei o enum por um
@@ -596,9 +615,55 @@ typedef struct {
 
 ---
 
-R: 
+R: Acho que está no bom caminho! Algumas ressalvas: 1/ como tu farás
+para guardar o valor do identificador (o lexema)? Uma opção,
+resguardado problema de legibilidade, seria usar o campo s do
+TipoLiteral. 2/ A quantidade máxima é de 4 filhos, o que tu farás se
+houver mais (acredito que não aconteça no nosso exemplo, mas veja que
+a árvore se torna limitada). 3/ E para aqueles nós que tem menos que
+quatro filhos, certamente teríamos um desperdício de memória, ainda
+que mínimo. Minha sugestão seria usar realloc para usar apenas aquilo
+que tu realmente precisas de memória no campo "filhos".
 
 *** Dúvida #6.2
+
+2) Surgiu outro problema: estou testando o alocamento de um valor para
+   uma string sem as aspas, e estou obtendo erro de segmentation
+   fault. Estou usando strncpy para remover as aspas, e é ele que está
+   causando o problema. No momento fiz assim:
+
+#+BEGIN_SRC C
+{STRING} {
+  valor_lexico_t* valor = malloc(1*sizeof(valor_lexico_t));
+  valor->n_linha = get_line_number();
+  valor->tipoToken = LITERAL;
+  valor->tipoLit.tipo = LIT_STRING;
+
+  strncpy(valor->tipoLit.val.s, &yytext[1], strlen(yytext)-2);
+  yylval.valor_lexico = valor;
+
+  return TK_LIT_STRING;
+}
+#+END_SRC
+
+Qual seria uma alternativa? Tentei pesquisar, mas não encontrei. 
+
+---
+
+R: É normal, tu estás copiando o conteúdo a partir de yytext[1] para
+um ponteiro para o qual tu não alocaste espaço com malloc (o campo
+s). Como este campo provavelmente tem o valor zero (um ponteiro nulo),
+tu obténs o bom segfault. Sugiro rever as aulas de programação em C
+(na parte de ponteiros), assumindo que no teu percurso tu já viste
+como alocar dinamicamente memória com malloc/etc. O segfault é o
+melhor dos erros, basta compilar com símbolos (por exemplo passando -g
+para o compilador) e depois lançar o depurador gdb. Ele vai te dizer
+exatamente a linha onde aconteceu a falha de segmentação (o acesso
+inválido). Minha sugestão adicional é, tendo o programa funcionando,
+lançar o programa valgrind para averiguar todos os erros de memória
+que estão passando despercebidos.
+
+*** Dúvida #6.3
 
 No e-mail que enviei há pouco, esqueci de mencionar um detalhe na
 pergunta 1 sobre minha estrutura de dados: para armazenar o valor do
@@ -608,7 +673,144 @@ como ele não é um literal, ele não terá tipo no struct TipoLiteral.
 
 ---
 
-R: 
+R: Como podes ter visto na minha resposta anterior em #6.1, esse foi
+meu primeiro questionamento. Tu poderias alternativamente ter um campo
+extra em ~valor_lexico_t~ para guardar o lexema do token
+reconhecido. Esse campo seria definido para todos os tokens (afinal
+todos tem seus lexemas), mas só seria de fato útil para os
+identificadores, tendo em vista que, se uma string literal, é no campo
+s que tu guardarás a string sem as aspas.
+
+*** Dúvida #7.1
+
+1 - Na especificação consta que devemos ignorar bloco de comandos. Não
+entendemos se devemos simplesmente ignorar todos os comandos dentro do
+mesmo ou se só não aparece um "nodo de bloco de comandos" na AST.
+Exemplo : {foo(); bar();}. Pela segunda alternativa o mesmo seria
+equivalente a uma lista de comandos (foo(); bar();) simples.
+
+R: Ignorar o bloco de comandos no contexto da AST, ou seja, deve-se
+apenas fazer com que ele não apareça na AST. Exemplo:
+#+BEGIN_EXAMPLE
+int main() {
+   foo();
+   {
+      bar();
+   };
+   chu();
+}
+#+END_EXAMPLE
+A AST terá foo(); bar(); e chu(); encadeadas dentro de main().
+
+*** Dúvida #7.2
+
+2- A função exporta() deve imprimir primeiramente os relacionamentos
+entre nodos e posteriormente todos labels dos nodos ou eles podem ser
+impressos misturados?
+
+R: Podem ser impressos misturados. O script de avaliação é robusto o
+suficiente para separar os dois tipos de linhas.
+
+*** Dúvida #7.3
+
+3 - Para Operadores como +, -, /, *, !  em que um nodo deve ser
+criado, esse nodo precisa possuir informações sobre seu valor léxico
+como tipo do token, tipo do valor e demais campos, ou basta apenas
+armazenar o caractere como label do nó sem a necessidade de preencher
+o valor léxico?
+
+R: Operadores em geral não precisam ter um valor léxico tendo em vista
+que o próprio tipo do nó da AST já codifica suficientemente a sua
+semântica. Por exemplo, o nó da AST + com dois filhos é uma soma
+binária; o nó da AST + com somente um filho é um + unário.
+
+*** Dúvida #7.4
+
+4 - Literais string e char devem ter todas ocorrências de aspas
+removidas ou apenas as aspas de abertura e fechamento de literal? A
+especificação dá a entender que todas as aspas devem ser removidas,
+mas ao nosso ver faz mais sentido remover só as de abertura e
+fechamento da string/char, já que em C a string "\"" é valida, por
+exemplo.
+
+R: Somente as aspas de abertura e fechamento dos literais string e
+caractere. Veja que alguns grupos implementaram aspas escapadas (e de
+uma maneira geral, caracteres escapados). É neste momento que estes
+caracteres escapados deverão ser tratados se for o caso.
+
+*** Dúvida #7.5                                                    :ATTACH:
+:PROPERTIES:
+:Attachments: graphviz.png
+:ID:       d91fac6a-c963-48a2-bcb8-8dfa50ecc86b
+:END:
+
+5 - Como vamos diferenciar o próximo comando de um (if sem else
+opcional) para um comando de um if com else? No caso de um if sem else
+opcional o seu terceiro filho não existe, porém caso haja um comando
+subsequente ao if, este filho seria o próximo comando. Para
+exemplificar essa situação, segue o link para visualização de uma
+árvore exemplo:
+
+[[./data/d9/1fac6a-c963-48a2-bcb8-8dfa50ecc86b/graphviz.png]]
+
+Essa é a árvore para o seguinte código:
+
+#+BEGIN_EXAMPLE
+int testIOCommand() {
+  if(semElse){
+    output esseIfNaoTemElse;
+  }
+
+  if(comElse){
+    output esseIfTemElse;
+  }
+  else{
+    output oElse;
+  }
+}
+#+END_EXAMPLE
+
+Ao verificar a saída ficamos em dúvida em como interpretaríamos a
+árvore em etapas subsequentes, já que a priori não há como diferenciar
+os dois ifs.
+
+R: Existem várias formas. Por exemplo, podes empregar um tipo
+específico de nó da AST para quando o if não tem else e outro para
+quando o if tem o else. Outra forma é através de um filho especial
+para indicar o próximo. Como escrevi, existem várias formas de
+resolver isso e eu deixo para vocês resolverem da forma que acharem
+mais elegante. Lembro que para a E3 em si, isso não é majoritariamente
+importante tendo em vista que não geramos código ainda. Mas
+certamente, quando a E5 chegar, todos precisaremos se preocupar com
+isso. Reforço que, do ponto de vista do label, o if, seja com ou sem
+else, sempre terá seu label if.
+
+*** Dúvida #7.6                                                    :ATTACH:
+:PROPERTIES:
+:Attachments: caso1.png caso2.png
+:ID:       f8594c49-105e-4341-b0fb-5a6af44a6df4
+:END:
+
+6 - Para listas de inicialização na hora de declarar variáveis, o
+correto é encadear cada inicialização como encadeamos listas de
+comandos? E nesse caso, o próximo comando a essa lista de
+inicialização deve ser filho da primeira inicialização ou da última
+inicialização?
+
+Link para o caso de filho da primeira inicialização: 
+[[./data/f8/594c49-105e-4341-b0fb-5a6af44a6df4/caso1.png]]
+
+Link para o caso de filho da ultima inicialização:
+[[./data/f8/594c49-105e-4341-b0fb-5a6af44a6df4/caso2.png]]
+
+R: Cada inicialização em uma lista de declarações deve ser encadeada
+como se fosse um comando. Se houver uma declaração sem inicialização
+no meio de declarações com inicialização, essa deve ser ignorada (ou
+seja, não deve fazer parte da AST). A ordem deve ser respeitada e
+integrada com os demais comandos daquela função. O próximo comando
+deve ser filho da última inicialização (de maneira que as
+inicializações sejam integradas como se fossem comandos normais
+simples, que de fato são).
 
 * E3 2020/1
 ** DONE 2020-09-23 D0
