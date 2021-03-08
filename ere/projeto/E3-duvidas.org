@@ -17,7 +17,7 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 * E3 2020/2
-** TODO 2021-03-03 D0
+** DONE 2021-03-03 D0
 *** Pergunta #1
 
 Prezado professor, podemos utilizar c++ no trabalho, ao invés de C?
@@ -149,7 +149,7 @@ ela não é natural no contexto de uma AST. Não teremos relação diretas
 entre irmãos, apenas entre pai e seus filhos. Se algo preciso ser
 feito entre irmãos, é o pai que se ocupará.
 
-** TODO 2021-03-04 D1
+** DONE 2021-03-04 D1
 *** Pergunta #1
 
 Ficou claro para mim como devo lidar com ~$$~ nas produções, porém ainda
@@ -377,7 +377,7 @@ R: Na Sec 2.4 tem um exemplo completo sobre como exportar a
 árvore. Poderias revisar e me dizer se aquilo que está lá escrito já
 resolve a tua dúvida?
 
-** 2021-03-07 D2
+** TODO 2021-03-07 D2
 *** Dúvida #1
 
 Eu reli a seção 2.4 mas minha dúvida permanece. Peço desculpas pois
@@ -500,6 +500,115 @@ identificador, será ~AST_IDENTIFICADOR~. Se for um literal, será um
 pouca utilidade (construções de fluxo de controle, por exemplo), o
 valor deles pode ser NULL. De maneira ampla, o valor do token só é
 realmente necessário quando temos identificadores e literais.
+
+*** Dúvida #3
+
+Referente à impressão da árvore, o label deve guardar o valor do
+literal ou nome do identificador, portanto devem ser transformados em
+string. Caso o literal seja um float, quantas casas decimais devemos
+imprimir no label, ao transformar de float para char*?
+
+---
+
+R:
+
+*** Dúvida #4
+
+Tenho uma dúvida sobre desalocar a memória no trabalho. Alguns tokens
+com valor léxico não fazem parte da árvore, por exemplo o ';' deve ser
+ignorado. Como devemos liberar a memória desse valor léxico se ele não
+está na árvore?
+
+---
+
+R: 
+
+*** Dúvida #5
+
+Estou com dúvida de como precisa ser o formato específico de
+exportação da árvore. Eu não entendi se deveria ser:
+
+"nodo [label=regramentoNodo], nodoFilho"
+ou
+"nodo [label=regramentoNodo], nodoFilho [label=regramentoNodo]"
+
+em que "regramentoNodo" seria o resultado depois de se decidir o label
+correto de acordo com o tipo do nodo, e o "nodo" seria a posição de
+memória do nodo conforme padrão %p.
+
+Ou, ainda, se não é nenhum desses dois, como deveria ser?  Fiquei um
+pouco confuso pq está escrito que uma saída CSV válida seria "nodo,
+nodoFilho", mas ao falar dos labels está escrito que precisa ser uma
+linha única.
+
+Pode me esclarecer, por favor? Obrigado! 
+
+----
+
+R:
+
+*** Dúvida #6.1
+
+obrigado pelas respostas. Desculpe se estou fazendo muitas perguntas, por alguma razão estou com dificuldade de interpretar o enunciado da etapa, mas estou tentando absorver tudo aos poucos.
+
+1) Queria saber se a minha estrutura de dados está correta, incluindo
+   agora o tipo do token e o tipo do literal, e troquei o enum por um
+   int.
+
+#+BEGIN_SRC C
+#define LIT_INTEGER 1
+#define LIT_FLOAT 2
+#define LIT_CHAR 3
+#define LIT_STRING 4
+#define LIT_TRUE 5
+#define LIT_FALSE 6
+
+#define SPECIAL_CHAR 8
+#define COMPOUND_OPERATOR 9
+#define IDENTIFIER 10
+#define LITERAL 11
+
+typedef union {
+  int i;
+  float f;
+  int b;  // boolean
+  char c;
+  char* s;
+} Valores;
+
+typedef struct {
+  int tipo;
+  Valores val;
+} TipoLiteral;
+
+typedef struct {
+  int n_linha;
+  int tipoToken;
+  TipoLiteral tipoLit;
+} valor_lexico_t;
+
+typedef struct {
+  valor_lexico_t* valor;
+  struct nodo* filhos[4];
+  int tipoNodo;
+} nodo;
+#+END_SRC
+
+---
+
+R: 
+
+*** Dúvida #6.2
+
+No e-mail que enviei há pouco, esqueci de mencionar um detalhe na
+pergunta 1 sobre minha estrutura de dados: para armazenar o valor do
+identificador, posso usar o char* s contido no union Valores, apesar
+de ele não ser um literal? Ou devo fazer isso em outro lugar? Porque
+como ele não é um literal, ele não terá tipo no struct TipoLiteral.
+
+---
+
+R: 
 
 * E3 2020/1
 ** DONE 2020-09-23 D0
