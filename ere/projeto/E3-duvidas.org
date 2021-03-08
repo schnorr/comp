@@ -399,7 +399,7 @@ b) Nessa linha imprimir apenas o endereço do nó seguido pelo seu label
 c) Nessa linha, imprimir o endereço do nó e o label do nó, seguido
 pelo endereço dos filhos e label dos filhos
 
-----
+---
 
 R: No exemplo fornecido na especificação da E3 (Sec 2.4), a linha deve
 conter apenas dois endereços de memória (pai, filho). Se um pai tiver
@@ -441,7 +441,7 @@ typedef enum {
 } tipoToken;
 #+END_EXAMPLE
 
------
+---
 
 R: Esse enum guarda apenas o tipo, não o valor. Um literal inteiro tem
 que ser guardada em uma variável do tipo int, um literal
@@ -473,7 +473,7 @@ da Sec 2.1.
 }
 #+END_EXAMPLE
 
------
+---
 
 R: Não vejo necessidade de criar um valor para cada token reconhecido
 pelo léxico. Um exemplo é esse do ";", pois o "valor" desse
@@ -488,7 +488,7 @@ yytext[0]". Teu código ficará mais legível.
    ~valor_lexico_t~) e um ponteiro para os nodos filhos devem fazer
    parte do struct do nodo, mas preciso armazenar algo mais?
 
------
+---
 
 R: Com certeza precisa armazenar algo mais. Além dos ponteiros para os
 filhos do nó e também do valor do token (ponteiro para o
@@ -535,9 +535,11 @@ ponto onde eles seriam colocados na árvore, mas não o são.
 Estou com dúvida de como precisa ser o formato específico de
 exportação da árvore. Eu não entendi se deveria ser:
 
+#+BEGIN_EXAMPLE
 "nodo [label=regramentoNodo], nodoFilho"
 ou
 "nodo [label=regramentoNodo], nodoFilho [label=regramentoNodo]"
+#+END_EXAMPLE
 
 em que "regramentoNodo" seria o resultado depois de se decidir o label
 correto de acordo com o tipo do nodo, e o "nodo" seria a posição de
@@ -562,6 +564,7 @@ acima:
 2/ e uma para apresentar o label, assim:
 
 "nodo [label=regramentoNodo]"
+
 "nodoFilho [label=regramentoNodo]"
 
 *** Dúvida #6.1
@@ -751,6 +754,7 @@ subsequente ao if, este filho seria o próximo comando. Para
 exemplificar essa situação, segue o link para visualização de uma
 árvore exemplo:
 
+#+attr_latex: :width .4\linewidth
 [[./data/d9/1fac6a-c963-48a2-bcb8-8dfa50ecc86b/graphviz.png]]
 
 Essa é a árvore para o seguinte código:
@@ -798,9 +802,11 @@ inicialização deve ser filho da primeira inicialização ou da última
 inicialização?
 
 Link para o caso de filho da primeira inicialização: 
+#+attr_latex: :width .4\linewidth
 [[./data/f8/594c49-105e-4341-b0fb-5a6af44a6df4/caso1.png]]
 
 Link para o caso de filho da ultima inicialização:
+#+attr_latex: :width .4\linewidth
 [[./data/f8/594c49-105e-4341-b0fb-5a6af44a6df4/caso2.png]]
 
 R: Cada inicialização em uma lista de declarações deve ser encadeada
