@@ -377,7 +377,7 @@ R: Na Sec 2.4 tem um exemplo completo sobre como exportar a
 árvore. Poderias revisar e me dizer se aquilo que está lá escrito já
 resolve a tua dúvida?
 
-** TODO 2021-03-07 D2
+** DONE 2021-03-07 D2
 *** Dúvida #1
 
 Eu reli a seção 2.4 mas minha dúvida permanece. Peço desculpas pois
@@ -817,6 +817,103 @@ integrada com os demais comandos daquela função. O próximo comando
 deve ser filho da última inicialização (de maneira que as
 inicializações sejam integradas como se fossem comandos normais
 simples, que de fato são).
+
+** TODO 2021-03-08 D3
+*** Dúvida #1
+
+
+Ainda sobre a questão do if else opcional, dado que na correção serão
+aplicados testes automatizados, a nossa escolha em como representar um
+if sem else e um if com else não poderá ocasionar possíveis erros nos
+testes? Por exemplo:
+
+#+BEGIN_EXAMPLE
+if (expressao) {
+   output "Comandos caso verdadeiro";
+}
+output "Um comando qualquer";
+#+END_EXAMPLE
+
+Nesse caso o nó if possuirá 3 filhos: a expressão, o primeiro comando
+em caso verdadeiro e o primeiro comando após o if. Esse exemplo
+poderia ser confundido com a representação de um if com else, o qual
+possuiria também 3 filhos: a expressão, o primeiro comando em caso
+verdadeiro e o primeiro comando em caso falso.
+
+#+BEGIN_EXAMPLE
+if (expressao) {
+   output "Comandos caso verdadeiro";
+} else {
+   output "Um comando qualquer";
+}
+#+END_EXAMPLE
+
+A simples inspeção/visualização da estrutura da árvore gerada para
+esses dois casos poderia notar dois significados distintos. Alguma
+ação deve ser tomada na representação da árvore de comandos if else
+opcional para que uma possível dupla representação como essa fosse
+evitada?
+
+---
+
+R: A avaliação automática é concebida para evitar estes casos (por
+exemplo, os arquivos de teste testam em separado tais casos). Mas
+mesmo que haja um caso como o acima (é uma boa ideia colocá-lo em
+prática para ver o encadeamento de comandos), o script de comparação
+com a árvore AST de referência faz uma busca exaustiva para fazer o
+casamento em cada nível da árvore, garantido que se ele não encontrou
+uma subárvore idêntica, é porque ela realmente não existe. Conclusão,
+fiquem tranquilos. Vocês terão acesso à árvore de referência e aquela
+gerada por vocês e poderão questionar se por acaso alguma situação
+peculiar passou desapercebida.
+
+R: Complementando. Estou procurando aplicar um algoritmo de comparação
+de árvores que permita um degradê de nota ao invés de algo binário
+(acertou/errou) e que ao mesmo tempo faça sentido para nosso caso de
+comparação de ASTs. Existe uma implementação interessante no link
+github abaixo, mas ainda não consegui convergir para algo utilizável
+no processo de avaliação objetiva da E3. Se vocês tiverem sugestões,
+fico agradecido.
+
+https://github.com/timtadh/zhang-shasha
+
+*** Dúvida #2
+
+E também, apenas para ter certeza, a análise da saída do valgrind será
+considerada apenas para aqueles casos em que a entrada representa um
+programa válido, ou seja, programas em que não há erros léxicos. Logo,
+nos casos em que há erros léxicos na entrada a saída do valgrind pode
+conter valores diferentes de zero para blocos e bytes. Correto?
+
+---
+
+R: Correto. Para simplificar, apenas serão testadas entradas lexica e
+sintaticamente corretas. Recomendo mesmo assim refletir de como
+ficaria a implementação de vocês no quesito liberação de memória na
+presença de tais tipos de erros.
+
+*** Dúvida #3
+
+Esquecemos de mencionar no último e-mail, nas regras gerais de entrega
+fala sobre os arquivos estarem no diretório raiz.  Pra melhor
+organizar o código utilizamos um estrutura assim:
+
+./src
+     arquivosAuxiliares.c
+     ...
+main.c
+parser.y
+scanner.l
+Makefile
+
+Visto que os principais arquivos estão na raiz do projeto e que o
+Makefile fornecido compila corretamente na raiz do projeto, podemos
+manter, por motivos de organização, os arquivos auxiliares do projeto
+na pasta ./src presente na raiz?
+
+---
+
+R: Sem problemas com esta organização.
 
 * E3 2020/1
 ** DONE 2020-09-23 D0
