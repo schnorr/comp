@@ -1100,9 +1100,9 @@ especificação. Nenhum a mais é necessário.
 4) Tentamos printar o lexema de um identificador, e, em vez de printar
    somente o identificador, foi printado ele e todo o código que vem
    depois dele no arquivo de teste. Quando detectamos um
-   identificador, estamos printando o lexema usando printf("%s",
-   arvore->valor->lexema). O que poderia estar causando todo o resto
-   do código estar sendo armazenado em arvore->valor->lexema?
+   identificador, estamos printando o lexema usando ~printf("%s",
+   arvore->valor->lexema~). O que poderia estar causando todo o resto
+   do código estar sendo armazenado em ~arvore->valor->lexema~?
 
 ---
 
@@ -1127,6 +1127,37 @@ portanto vocês precisarão fazer um ~free~ de lexema lá no final para o
 
 R: Vejam este vídeo:
 https://moodle.ufrgs.br/mod/page/view.php?id=2415095
+
+*** Dúvida #7
+
+Sobre a ordem em que devemos imprimir os componentes de um
+nodo. Devemos primeiro imprimir o label seguido dos filhos ou podemos
+imprimir os filhos primeiro? Por exemplo:
+
+deve ser assim?
+#+BEGIN_EXAMPLE
+0x556391aca3a0 [label="main"];
+0x556391aca3a0, 0x556391aca910
+0x556391aca3a0, 0x556391acb590
+#+END_EXAMPLE
+
+ou poderia ser assim?
+#+BEGIN_EXAMPLE
+0x556391aca3a0, 0x556391aca910
+0x556391aca3a0, 0x556391acb590
+0x556391aca3a0 [label="main"];
+#+END_EXAMPLE
+
+Fiquei confuso, pois tive a impressão pela resposta sua a uma de
+minhas perguntas que o label deveria vir antes; porém, o script Python
+que o senhor forneceu aparenta apenas aceitar quando o label vem
+depois, dando KeyError caso o label apareça antes.
+
+---
+
+R: O script disponibilizado não será utilizado na avaliação
+automática. O script que será utilizado na avaliação é robusto o
+suficiente para aceitar em qualquer ordem.
 
 * E3 2020/1
 ** DONE 2020-09-23 D0
