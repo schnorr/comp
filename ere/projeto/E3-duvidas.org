@@ -818,7 +818,7 @@ deve ser filho da última inicialização (de maneira que as
 inicializações sejam integradas como se fossem comandos normais
 simples, que de fato são).
 
-** TODO 2021-03-08 D3
+** DONE 2021-03-08 D3
 *** Dúvida #1
 
 
@@ -1238,7 +1238,6 @@ valgrind --version
 
 #+RESULTS:
 : valgrind-3.16.1
-
 
 *** Dúvida #10
 
