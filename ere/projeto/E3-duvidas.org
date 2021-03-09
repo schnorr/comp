@@ -1159,6 +1159,31 @@ R: O script disponibilizado não será utilizado na avaliação
 automática. O script que será utilizado na avaliação é robusto o
 suficiente para aceitar em qualquer ordem.
 
+*** Dúvida #8
+
+Para a árvore gerada com o código a seguir, ficamos com uma dúvida:
+quando há múltiplas inicializações numa linha de declarações locais,
+como fica a árvore? A declaração local inteira é um comando simples?
+Neste caso, a primeira atribuição teria quatro filhos, o
+identificador, o valor de inicialização, a próxima inicialização e o
+próximo comando simples. Isto está correto? Esta árvore representa
+corretamente o código? Segue em anexo a árvore gerada em svg..
+
+#+BEGIN_EXAMPLE
+int main() {
+    int a <=5, b <= 4, f, g, h, j, c <= 9, g <= 123;
+    ghj = 4;
+    return 0;
+}
+#+END_EXAMPLE
+
+---
+
+R: 
+Já respondi essa dúvida no registro E3 D2 #7.6:
+https://moodle.ufrgs.br/mod/page/view.php?id=2415127
+https://moodle.ufrgs.br/mod/resource/view.php?id=2594529
+
 * E3 2020/1
 ** DONE 2020-09-23 D0
 *** Pergunta #1
