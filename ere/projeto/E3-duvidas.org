@@ -1184,6 +1184,90 @@ Já respondi essa dúvida no registro E3 D2 #7.6:
 https://moodle.ufrgs.br/mod/page/view.php?id=2415127
 https://moodle.ufrgs.br/mod/resource/view.php?id=2594529
 
+*** Dúvida #9
+
+ Analisando a saída do valgrind para o nosso programa, ele não está
+ listando os bytes perdidos como mostra na definição do trabalho, mas
+ está informando apenas que "All heap blocks were freed -- no leaks
+ are possible". Esta é a saída completa do valgrind:
+
+#+BEGIN_EXAMPLE
+==4165== Memcheck, a memory error detector
+==4165== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4165== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4165== Command: ./etapa3
+==4165==
+==4165==
+==4165== HEAP SUMMARY:
+==4165==     in use at exit: 0 bytes in 0 blocks
+==4165==   total heap usage: 371 allocs, 371 frees, 99,310 bytes allocated
+==4165==
+==4165== All heap blocks were freed -- no leaks are possible
+==4165==
+==4165== For counts of detected and suppressed errors, rerun with: -v
+==4165== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+#+END_EXAMPLE
+
+Isto indica que está tudo certo, não é? Há um problema por não mostrar
+aquela listagem de bytes perdidos que o senhor colocou na seção B da
+definição?
+
+---
+
+R: A sequência de teste com valgrind é a seguinte, assumindo que em
+$test tem o nome do arquivo do teste.
+
+#+begin_src bash
+	valgrind ./etapa3 < $test 2>&1 | grep -v 0x | grep -A5 LEAK\ SUMMARY > valgrind.txt
+	VGRESULT=$(cat valgrind.txt | cut -d":" -f2| awk '{print $1}' | tr '\n' ' ' | sed "s/,//g")
+	if [[ $VGRESULT = "" ]]; then
+	    VGRESULT="no leaks are possible"
+	    VGCUTIN=0
+	else
+	    VGCUTIN=$(echo $VGRESULT | tr ' ' '+' | bc)
+	fi
+#+end_src
+
+Então é um ótimo sinal quando vocês obtiverem "no leaks are possible".
+
+A versão do valgrind aqui é:
+
+#+begin_src bash
+valgrind --version
+#+end_src
+
+#+RESULTS:
+: valgrind-3.16.1
+
+
+*** Dúvida #10
+
+Tenho algumas dúvidas ainda sim! 
+A seguinte iniciação de variáveis é válida?
+
+#+BEGIN_EXAMPLE
+int a <= 1, b, c <=2; 
+#+END_EXAMPLE
+
+Se sim, o correto seria botar apenas ~a <= 1~ e ~c<=2~ na arvore, certo? 
+
+Além disso, podemos ter um no "ELSE", filho de um "IF" e com o filho
+sendo o primeiro comando do bloco, ou devemos fazer um bloco "IF" sem
+else e um "IF-ELSE"?
+
+---
+
+R: Já respondi a dúvida sobre as inicializações no registro E3 D2 #7.6:
+https://moodle.ufrgs.br/mod/page/view.php?id=2415127
+https://moodle.ufrgs.br/mod/resource/view.php?id=2594529
+
+R: Não existem nós tipo ELSE na nossa especificação. Vejam a
+   especificação no que diz respeito aos nós IF. Copio aqui para
+   ajudar: "O comando if com else opcional deve ter pelo menos três
+   filhos, um para a expressão, outro para o primeiro comando quando
+   verdade, e o último -- opcional -- para o primeiro comando quando
+   falso."
+
 * E3 2020/1
 ** DONE 2020-09-23 D0
 *** Pergunta #1
