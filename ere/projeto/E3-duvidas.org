@@ -1028,6 +1028,106 @@ acordo com o que está na especificação. Sugiro revisar a Sec2.4, no
 parágrafo que começa com "O nome que deve ser utilizado no campo label
 deve seguir o seguinte regramento. Para funções, ...".
 
+*** Dúvida #6.1
+
+1) A nossa função de criar nodo (usada nas ações do parser.y) recebe
+   como parâmetro o tipo do nodo, o valor de tipo ~valor_lexico_t~, e os
+   nodos filhos. Nela, Criamos um novo nodo, e nele colocamos o tipo,
+   o valor (se tiver) e os filhos (se tiver). Está correto isso? O
+   valor deve ser setado dentro dessa função?
+
+---
+
+R: Existem várias formas de fazer, mas essa forma me parece adequada.
+
+*** Dúvida #6.2
+
+2) Nas ações das regras do parser.y, preciso chamar a função de criar
+   nodo para quais regras? Seriam somente as que tem identificadores e
+   literais? Por exemplo, nesse trecho:
+
+#+BEGIN_EXAMPLE
+programa: inicio                           { arvore = (void*)$1; }
+    ;
+
+inicio:
+      inicio declaracoes                   { $$ = createNode(AST_INICIO, 0, $1, $2, 0, 0); }  // AST_INICIO = tipo, 0 = valor (não tem), restante = filhos
+    | %empty                               { $$ = 0; }
+    ;
+
+declaracoes:
+      var_global                           { $$ = $1; }
+    | funcao                               { $$ = $1; }
+    ;
+#+END_EXAMPLE
+
+Preciso criar o nodo na regra "inicio declaracoes"?
+
+---
+
+R: A escolha de quais regras gramaticais devem receber código para a
+criação da AST faz parte do trabalho da E3. Depende da forma da AST
+(está na especificação) e de como está organizada a gramática. Lembro
+que, como vimos nas video-aulas, a AST é uma árvore única para todo o
+programa da entrada, então é bastante importante que as várias
+subárvores sejam todas conectadas em uma grande árvore cuja raiz está
+em ~arvore~ (a dita variável global).
+
+*** Dúvida #6.3
+
+3) Na nossa função exporta, estamos fazendo um switch-case com todos
+   os tipos de nodos que criamos e printando o que for
+   necessário. Porém, para alguns tipos (como o ~AST_INICIO~ mostrado na
+   pergunta 2 acima), não sabemos o que deve ser printado no
+   "[label=", pois nessas regras não existe um lexema que deve ser
+   printado. Devo printar algo, ou esse nodo não deveria existir?
+   Devemos definir tipos de nodos somente para as regras que contém
+   lexemas que devem ser printados?
+
+---
+
+R: A raiz da árvore é a primeira função do programa, os labels dos nós
+~AST_FUNCAO~ são o nome da função, conforme o que está lá na
+especificação. Lembrando que um programa é um encadeamento de
+funções. Portanto, respondendo a pergunta: esse nó ~AST_INICIO~ não deve
+existir. Lembra que a AST é uma simplificação da árvore de derivação?
+Na especificação da E3 a nossa AST é uma super simplificação. Sobre o
+último questionamento: os tipos de nós que devem ser usados estão na
+especificação. Nenhum a mais é necessário.
+
+*** Dúvida #6.4
+
+4) Tentamos printar o lexema de um identificador, e, em vez de printar
+   somente o identificador, foi printado ele e todo o código que vem
+   depois dele no arquivo de teste. Quando detectamos um
+   identificador, estamos printando o lexema usando printf("%s",
+   arvore->valor->lexema). O que poderia estar causando todo o resto
+   do código estar sendo armazenado em arvore->valor->lexema?
+
+---
+
+R: Não tive vistas no código, então estou assumindo que vocês tem um
+campo ~char *lexema~ e fizeram em algum ponto ~lexema = yytext~. Lembrando
+que yytext é um ponteiro unicamente válido imediatamente antes de
+retornar o token lá no léxico. É por causa disso que eu expliquei no
+vídeo de lançamento que deve-se fazer uma cópia do seu conteúdo com a
+função ~strdup~. Mas atenção, ~strdup~ aloca memória dinamicamente,
+portanto vocês precisarão fazer um ~free~ de lexema lá no final para o
+~valgrind~ dizer que está tudo bem.
+
+*** Dúvida #6.5
+
+5) No último PDF e vídeo de dúvidas, o senhor mencionou o uso de -g e
+   gdb para identificar segmentation faults. Poderia dar um exemplo de
+   como seria executar esses comandos pela linha de comando? Pergunto
+   porque não tenho tanta experiência com linha de comando e por nunca
+   ter usado essas ferramentas.
+
+---
+
+R: Vejam este vídeo:
+https://www.youtube.com/watch?v=erRJbgG8jQY
+
 * E3 2020/1
 ** DONE 2020-09-23 D0
 *** Pergunta #1
