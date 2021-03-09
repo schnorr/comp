@@ -898,6 +898,7 @@ Esquecemos de mencionar no último e-mail, nas regras gerais de entrega
 fala sobre os arquivos estarem no diretório raiz.  Pra melhor
 organizar o código utilizamos um estrutura assim:
 
+#+BEGIN_EXAMPLE
 ./src
      arquivosAuxiliares.c
      ...
@@ -905,6 +906,7 @@ main.c
 parser.y
 scanner.l
 Makefile
+#+END_EXAMPLE
 
 Visto que os principais arquivos estão na raiz do projeto e que o
 Makefile fornecido compila corretamente na raiz do projeto, podemos
@@ -914,6 +916,40 @@ na pasta ./src presente na raiz?
 ---
 
 R: Sem problemas com esta organização.
+
+*** Dúvida #4
+
+Tivemos a ideia de colocar a palavra reservada no campo de valor
+léxico de cada nodo da arvore - isso ajudaria muito a diminuir os
+tipos de nodo da arvore, i.e. não precisaria de um nodo INPUT e um
+nodo tipo OUTPUT, seria so colocar "input" e "output" no campo do
+valor. Porém, lendo a especificação, percebemos que o senhor menciona
+que os valores podem ser do tipo "operadores compostos, caracteres
+especiais, literais e identificadores" - não palavras reservadas.
+
+--- 
+
+R: Tem questionamentos sobre esse assunto já respondidos nos vídeos de
+dúvidas, recomendo olhar diretamente os PDFs disponibilizados e
+procurar por ~valor_lexico_t~. Sobre o questionamento de vocês, entendi
+que vocês projetaram o programa de maneira que cada nó da árvore de
+vocês tem um valor léxico. Isso não faz muito sentido pois valores
+léxicos só são realmente necessários para identificadores e literais e
+estes devem ser encapsulados em nós da árvore. Sim, na especificação
+falo também de outros, mas são os identificadores e literais cuja
+importância é mais proeminente.
+
+Pelo que segue no parágrafo de vocês "não precisaria de um nó INPUT e
+um nó tipo OUTPUT" entendo que vocês não estão colocando na árvore um
+nó da AST do tipo ~AST_INPUT~ e ~AST_OUTPUT~. No lugar, colocam apenas o
+valor léxico (por favor, me ajude caso não entendi corretamente o que
+vocês fizeram). Isso não está de acordo com a especificação pois lá
+está escrito que deve haver um nó na AST para input e outro para
+output. Cada um desses tem filhos, conforme a especificação. Se vocês
+trocarem o nó da AST pelo valor léxico em si do comando, como farão
+para adicionar os filhos necessários na AST para cada um desses
+comandos? Então, se interpretei corretamente o que vocês escreveram,
+considero errada a abordagem descrita.
 
 * E3 2020/1
 ** DONE 2020-09-23 D0
