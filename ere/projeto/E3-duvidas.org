@@ -1126,7 +1126,7 @@ portanto vocês precisarão fazer um ~free~ de lexema lá no final para o
 ---
 
 R: Vejam este vídeo:
-https://www.youtube.com/watch?v=erRJbgG8jQY
+https://moodle.ufrgs.br/mod/page/view.php?id=2415095
 
 * E3 2020/1
 ** DONE 2020-09-23 D0
