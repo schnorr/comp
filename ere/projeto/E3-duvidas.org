@@ -951,6 +951,83 @@ para adicionar os filhos necessários na AST para cada um desses
 comandos? Então, se interpretei corretamente o que vocês escreveram,
 considero errada a abordagem descrita.
 
+*** Dúvida #5
+
+Estou com uma dúvida sobre prints de endereços de memória.
+Estou rodando meu exporta() num arquivo teste assim:
+
+#+BEGIN_EXAMPLE
+int xis;
+
+int hello() {
+  ypsilon = "hello";
+  xis = 1.2;
+}
+#+END_EXAMPLE
+
+E estou tendo este resultado:
+
+#+BEGIN_EXAMPLE
+0x7ffeeb0c2790 [label="AST_INICIO"];
+0x7ffeeb0c2790, 0x7fc506c05ec0
+0x7ffeeb0c2790, 0x7fc506c05ec8
+0x7ffeeb0c2760 [label="AST_INICIO"];
+0x7ffeeb0c2760, 0x7fc506c05ba8
+0x7ffeeb0c2730 [label="AST_VAR_GLOBAL_DECL"];
+0x7ffeeb0c2730, 0x7fc506c05b70
+0x7ffeeb0c2700 [label="AST_TYPE_ID"];
+0x7ffeeb0c2700, 0x7fc506c05b40
+0x7ffeeb0c26d0 [label="AST_PR_INT"];
+[1]    19470 segmentation fault  ./etapa3 < test1.txt
+#+END_EXAMPLE
+
+O nodo terminado em 2790 está printando seus dois filhos, terminados
+em 5ec0 e 5ec8, mas quando o primeiro filho do nodo 2790 é printado,
+aparece com o endereço terminado em 2760, ao invés do esperado 5ec0.
+
+Mesmo em um exemplo mais simples, onde fiz apenas 2 nodos(1 pai e 1
+filho) quaisquer para testar, obtive:
+
+#+BEGIN_EXAMPLE
+0x7ffd72800d40 [label="AST_INICIO"];
+0x7ffd72800d40, 0xe142b0
+0x7ffd72800bb0 [label="AST_DECLARACOES"];
+#+END_EXAMPLE
+
+Nesse pequeno exemplo, o nodo filho aparece como aquele terminado em
+42b0, mas quando este vai ser printado com seu label, o endereço se
+torna terminado em 0bb0. No meu entendimento, os parâmetros de função
+na chamada recursiva não deveriam mudar seus endereços de memória
+estando na pilha. Por que está mudando?
+
+Caso precise, meu código do exporta() está em anexo no ast.c. O
+switch-case ainda está incompleto, creio que colocamos mais do que
+precisava, mas isso será visto depois.
+
+---
+
+R: Tu tens na função exporta:
+#+BEGIN_EXAMPLE
+  node* tree = (node*)arvore;
+#+END_EXAMPLE
+
+Portanto tree é um ponteiro. Depois tu imprimes assim:
+
+#+BEGIN_EXAMPLE
+printf("%p [label=\"", &tree);
+#+END_EXAMPLE
+
+Veja que tu estás pegando o endereço da variável local (&tree) ao
+invés do valor guardado nela (tree), que é o valor para onde ela
+aponta, que é o que tu procuras tendo em vista que tu precisas do
+endereço da memória apontada por tree. Sugiro revisar as aulas sobre
+ponteiros.
+
+Aproveitando a mensagem, nenhum dos labels do código enviado está de
+acordo com o que está na especificação. Sugiro revisar a Sec2.4, no
+parágrafo que começa com "O nome que deve ser utilizado no campo label
+deve seguir o seguinte regramento. Para funções, ...".
+
 * E3 2020/1
 ** DONE 2020-09-23 D0
 *** Pergunta #1
