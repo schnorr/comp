@@ -1267,6 +1267,22 @@ R: Não existem nós tipo ELSE na nossa especificação. Vejam a
    verdade, e o último -- opcional -- para o primeiro comando quando
    falso."
 
+*** Dúvida #11
+
+Primeiramente, agradeço pelo esclarecimento das dúvidas anteriores,
+acabei esquecendo de mandar um e-mail em resposta pois estava ocupado
+com o trabalho da disciplina. Acabou surgindo uma última dúvida, e
+espero que não esteja tarde demais para saná-la. Funções podem receber
+strings como argumento? Na etapa 2 diz que a lista de argumento é
+composta por expressões, e se não me engano nessa etapa isso é dito
+também. Como expressões só podem aceitar literais inteiros e float (e
+agora true e false também), não adicionamos strings como argumentos,
+ou mesmo char. Isso está correto?
+
+---
+
+R: 
+
 * E3 2020/1
 ** DONE 2020-09-23 D0
 *** Pergunta #1
