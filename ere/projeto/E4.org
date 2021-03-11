@@ -235,4 +235,7 @@ Estes valores são utilizados na avaliação objetiva.
 
 * Arquivo =main.c=
 
-Utilize o mesmo ~main.c~ da E3. Libere as tabelas alocadas.
+Utilize o mesmo ~main.c~ da E3.
+
+#+latex: \noindent
+Cuide da alocação dinâmica das tabelas.
