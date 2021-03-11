@@ -42,11 +42,11 @@ detalhado a seguir.  Toda a verificação de tipos é feita em tempo de
 compilação.
 
 Todos os nós da Árvore Sintática Abstrata (AST), gerada na E3, terão
-agora um novo campo que indica o seu tipo. O tipo de um determinado nó
-da AST pode, em algumas situações, não ser definido diretamente (para
-os comandos de fluxo de controle, por exemplo). Na maioria dos casos,
-no entanto, seu tipo é definido seguindo as regras de inferência da
-linguagem.
+agora um novo campo que indica o seu tipo (se é inteiro,
+ponto-flutuante, etc). O tipo de um determinado nó da AST pode, em
+algumas situações, não ser definido diretamente (para os comandos de
+fluxo de controle, por exemplo). Na maioria dos casos, no entanto, seu
+tipo é definido seguindo as regras de inferência da linguagem.
 
 * Funcionalidades Necessárias
 ** Implementar uma tabela de símbolos
@@ -111,11 +111,7 @@ char, o compilador deve lançar o erro =ERR_STRING_TO_X= quando a
 variável do tipo string estiver em uma situação onde ela deve ser
 convertida para qualquer outro tipo. De maneira análoga, o erro
 =ERR_CHAR_TO_X= deve ser lançado quando uma variável do tipo char deve
-ser convertida implicitamente. No caso específico de atribuição de
-strings, o tamanho da string destino deve ser compatível com o tamanho
-da string de origem. O uso do operador binário mais ('+') com duas
-strings implica em concatenação das duas strings. Caso o tamanho seja
-incompatível, deve-se lançar o erro ~ERR_STRING_SIZE~.
+ser convertida implicitamente.
 
 ** Argumentos e parâmetros de funções
 
@@ -153,15 +149,13 @@ Nos comandos de shift (esquerda e direta), deve-se lançar o erro
 ~ERR_WRONG_PAR_SHIFT~ caso o parâmetro após o token de shift for um
 número maior que 16.
 
-#+latex: \appendix
-
 ** Mensagens de erro
-
-# ERE
 
 Mensagens de erro significativas devem ser fornecidas. Elas devem
 descrever em linguagem natural o erro semântico, as linhas envolvidas,
 os identificadores e a natureza destes.
+
+#+latex: \appendix
 
 * Sistema de tipos da Linguagem
 
@@ -193,14 +187,15 @@ infere-se =float=. A partir de =bool= e =bool=, infere-se =bool=. A partir de
 =float= e =int=, infere-se =float=. A partir de =bool= e =int=, infere-se =int=.
 A partir de =bool= e =float=, infere-se =float=. A matriz abaixo resume:
 
-*Tamanho.*
-O tamanho dos tipos da linguagem é definido da seguinte forma. Um =char=
-ocupa 1 byte. Um =string= ocupa 1 byte para cada caractere. O tamanho
-máximo de um string é definido na sua inicialização (com o operador de
-inicialização), ou em sua primeira atribuição (com o operador igual),
-e depois não muda mais. Uma string não inicializada ocupa 0 bytes. Um
-=int= ocupa 4 bytes. Um =float= ocupa 8 bytes. Um =bool= ocupa 1 byte. Um
-vetor ocupa o seu tamanho vezes o seu tipo.
+*Tamanho.* O tamanho dos tipos da linguagem é definido da seguinte
+forma. Um =char= ocupa 1 byte. Um =string= ocupa 1 byte para cada
+caractere. O tamanho máximo de um string é definido na sua
+inicialização (com o operador de inicialização). Uma string não
+inicializada ocupa 0 bytes e não pode receber valores cujo tamanho
+excede àquele máximo da inicialização. Caso o tamanho de um string a
+ser atribuído exceder o máximo, deve-se emitir o erro
+~ERR_STRING_MAX~. Um =int= ocupa 4 bytes. Um =float= ocupa 8 bytes. Um =bool=
+ocupa 1 byte. Um vetor ocupa o seu tamanho vezes o seu tipo.
 
 * Códigos de retorno
 
@@ -219,7 +214,7 @@ retornar o valor zero.
 #define ERR_WRONG_TYPE       30
 #define ERR_STRING_TO_X      31
 #define ERR_CHAR_TO_X        32
-#define ERR_STRING_SIZE      33
+#define ERR_STRING_MAX       33
 #define ERR_MISSING_ARGS     40
 #define ERR_EXCESS_ARGS      41
 #define ERR_WRONG_TYPE_ARGS  42
