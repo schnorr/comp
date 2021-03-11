@@ -27,10 +27,10 @@ A revisão será sob demanda e acontecerá da seguinte forma. Os alunos
 são motivados a identificarem as lacunas de compreensão que tiveram ao
 longo desta metade de semestre, através de contra-exemplos ou dúvidas
 na realização dos exercícios propostos. Estas dúvidas podem ser
-enviadas para o professor até às 8hs da quarta-feira, 07/10. Na medida
-que as dúvidas sobre o conteúdo da disciplina forem surgindo, o
-professor fará um ou mais vídeos respondendo as dúvidas e levantando
-reflexões. Estes videos serão disponibilizados no moodle na Semana 8.
+enviadas para o professor até às 8hs da segunda 15/03. Na medida que
+as dúvidas sobre o conteúdo da disciplina forem surgindo, o professor
+registra as respostas no moodle. Esses registros serão
+disponibilizados no moodle na Semana 8.
 #+BEGIN_EXPORT latex
 \end{minipage}
 #+END_EXPORT
@@ -39,7 +39,7 @@ reflexões. Estes videos serão disponibilizados no moodle na Semana 8.
 
 Serão enviadas por intermédio do \\
 sistema de ``Mensagens'' do Moodle
-- Até quinta-feira 08/10 às 9hs
+- Até segunda 15/03 às 12hs
 
 #+latex: \vfill
 
@@ -56,14 +56,14 @@ A URL é única por aluno
 
 * Realização da prova
 
-A prova será realizada entre
-- das 9h00 do dia 08/10
-- até às 23h59 do dia 09/10
+A prova será realizada
+- das 12h00 da segunda 15/03
+- até às 23h59 da quarta 17/03
 
 #+latex: \vfill\bigskip
 
 Durante o período da prova
-- Realização individual, sem consulta
+- Realização individual, com consulta ao material no moodle
 - Evitar discutir o assunto das questões com colegas
 - Pode ser feita em papel ou digital (texto e figuras)
 - Identificação do aluno deve estar presente
@@ -73,8 +73,8 @@ Durante o período da prova
 
 O link está no moodle na "Semana 8"
 - Envio é único e definitivo
-  - Até às 23h59 da sexta-feira dia 09/10
-    - Não deixe para o último minuto
+  - Até às 23h59 da quarta 17/03
+    - *Não deixe para o último minuto*
 
 #+latex: \pause\bigskip
 
