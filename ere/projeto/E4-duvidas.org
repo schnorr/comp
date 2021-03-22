@@ -1,6 +1,64 @@
 #+STARTUP: overview indent
 #+TITLE: Dúvidas da E4 do Projeto de Compilador
-* E4
+
+* E4 2020/2
+** 2021-03-22 D0
+*** Dúvida #1
+
+1) Queria saber se faz sentido uma estrutura de dados para a tabela da
+   seguinte forma. A tabela contém 2 coisas: 1) um struct Simbolo, que
+   é composto da chave (de tipo char*), do conteúdo (struct com os
+   campos ditos no enunciado) e de um ponteiro para o próximo símbolo
+   da tabela/escopo; 2) um ponteiro para a próxima tabela. Essa
+   implementação poderia causar problemas? Teria sugestões?
+
+*** Dúvida #2
+
+2) Dentro do conteúdo de um símbolo, qual seria a melhor forma de
+   armazenar os argumentos da função e seus tipos?
+
+*** Dúvida #3
+
+3) Quando reconheço um identificador (por exemplo) no parser.y, devo
+   percorrer todas as variáveis contidas no escopos global e local
+   para verificar se ela já foi declarada? Senão devo criar um símbolo
+   novo, com chave e conteúdo, para o identificador?
+
+*** Dúvida #4
+
+4) Qual a diferença entre o novo campo de tipo do nodo da AST e o
+   campo de tipo que existe no conteúdo de um símbolo?
+
+*** Dúvida #5
+
+Tenho duas dúvidas sobre a etapa 4. A primeira é: ao implementar a
+tabela de símbolos, podemos usar uma pilha para administrar os
+diferentes escopos. No entanto, ao sairmos de um escopo devemos
+remover o topo da pilha, e portanto a informação sobre as variáveis
+declaradas ali será perdida. Essa informação deve ser salva para as
+próximas etapas, ou ela só serve para detectar os erros implementados
+nessa etapa? Se for para ser salva, onde devemos salvar as diferentes
+tabelas? 
+
+*** Dúvida #6
+
+A segunda dúvida é a respeito dos blocos de comando aninhados. Cada
+variável declarada dentro de um if, while ou for tem seu escopo
+restrito a esse bloco? E devemos permitir a definição de um novo bloco
+sem um comando de fluxo (por exemplo escrever algo como int main(){
+bool exp1 = true; {bool exp1 = false; } } ?
+
+*** Dúvida #7
+
+Tenho uma dúvida referente á detectar novos blocos de comandos na
+etapa 4. Por se tratar de um analisador ascendente, os identificadores
+são adicionados à arvore antes dos blocos de comando serem
+adicionados, portanto não sabemos qual é o escopo do identificador no
+momento que ele é encontrado. Por não sabermos qual é o escopo, como
+vou adicionar o identificador na tabela correta?
+
+*** Dúvida #8
+* E4 2020/1
 ** DONE 2020-10-06 D0
 *** Dúvida #1
 
