@@ -1,5 +1,20 @@
-#+STARTUP: overview indent
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
 #+TITLE: Dúvidas da E4 do Projeto de Compilador
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+#+Language: pt-br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil title:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
 
 * E4 2020/2
 ** 2021-03-22 D0
@@ -207,6 +222,31 @@ fazendo referência ao endereço do ponto de vista do programa do
 compilador. Neste caso, este endereço de memória é irrelevante. Dito
 isso, na E5, calcularemos o endereço de memória onde cada variável
 ficará no programa compilado. Mas não chegamos lá ainda.
+
+** 2021-03-27 D1
+*** Dúvida #1
+
+Na resposta à dúvida 6 da E4, o senhor diz que blocos de comando de
+controle não criam novos escopos. Então, por exemplo, o codigo abaixo
+estaria correto:
+
+if(true){
+    int a < = 5; // declara a
+    // wtv
+}
+a = 6;  // usa a fora do escopo
+
+Isso vai contra a implementação feita na linguagem C, além de não ser
+muito intuitivo... O que acontece se não entrarmos no bloco do if e
+nunca declararmos a variavel, por exemplo? (Imagino que seja algo com
+que nos preocuparemos nas proximas etapas, porém...)
+
+---
+
+R: Realmente, então façamos assim: blocos de fluxo de controle também
+representam novos escopos. Assim, no teu exemplo acima, ao chegar ao
+~a=6;~, o compilador deve informar "variável a não declarada na linha
+X", sendo que X é a linha do comando de atribuição em questão.
 
 * E4 2020/1
 ** DONE 2020-10-06 D0
