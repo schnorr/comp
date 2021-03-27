@@ -12,10 +12,42 @@
    da tabela/escopo; 2) um ponteiro para a próxima tabela. Essa
    implementação poderia causar problemas? Teria sugestões?
 
+---
+
+R: Acho que poderia ter uma struct Tabela, que tem dentro dela uma
+hash de struct Simbolo, sendo que a hash é da chave do simbolo. Sobre
+o "ponteiro para a próxima tabela", eu não acho oportuno. O que temos
+é uma "árvore" de tabelas de símbolo, pois temos uma "árvore" de
+escopos. Veja:
+#+begin_example
+// escopo raiz, global
+int main() {
+    // escopo local, main, filho da raiz
+    {
+       // primeiro escopo aninhado da main, filho da main
+    };
+    {
+       // segundo escopo aninhado da main, filho da main
+    };
+}
+int f() {
+    // escopo local, f, filho da raiz
+}
+#+end_example
+Assim, uma tabela pode ter vários filhos que são os escopos
+subjacentes. Isso não tira o fato de tu teres uma "pilha" de tabela de
+símbolo para implementar as verificações. Essa pilha não exige uma
+eventual conexão (de próximo) entre as tabelas empilhadas além da
+estrutura de árvore supracitada.
+
 *** Dúvida #2
 
 2) Dentro do conteúdo de um símbolo, qual seria a melhor forma de
    armazenar os argumentos da função e seus tipos?
+
+---
+
+R: Temos uma lista de argumentos. Existem várias "melhores forma".
 
 *** Dúvida #3
 
@@ -24,10 +56,37 @@
    para verificar se ela já foi declarada? Senão devo criar um símbolo
    novo, com chave e conteúdo, para o identificador?
 
+---
+
+R: Depende do tipo de reconhecimento do identificador. Se tal
+identificador for em uma declaração, tu estás em modo "declarando
+variável" e portanto tu tens que assumir que uma variável só não pode
+ser declarada se no escopo corrente seu nome já estiver sido usado em
+outra declaração. Se nesse modo tu não encontrares daí sim, tu
+precisas criar algo (uma estrutura por exemplo) para inserir na tabela
+corrente. Agora, se tu estás em modo "procurando uma variável já
+declarada", daí tu começas pelo escopo corrente e vai subindo na
+"árvore" de escopos ou, de maneira mais simples, descendo na pilha de
+escopos. Então reforço: depende do tipo de reconhecimento do
+identificador.
+
 *** Dúvida #4
 
 4) Qual a diferença entre o novo campo de tipo do nodo da AST e o
    campo de tipo que existe no conteúdo de um símbolo?
+
+---
+
+R: O "novo" campo de tipo do nó da AST (além daquele já usado na E3 e
+que significada se o nó da AST é um if, while, etc) é algo para dizer
+o tipo do dado daquele nó do ponto de vista de operações aritméticas.
+Tal tipo de dado pode ser então float, int, etc. Conforme a
+especificação da E4, tal campo de tipo de dado deve ser definido para
+todos os nós da AST, ainda que para muitos nós da AST (por exemplo,
+if, while, for) isso seja talvez visto por alguns como "artificial". O
+campo de tipo que existe no conteúdo de um símbolo registra o tipo de
+dado deste sı́mbolo. Eles (campo do conteúdo, campo da AST) são a mesma
+coisa.
 
 *** Dúvida #5
 
@@ -40,6 +99,18 @@ próximas etapas, ou ela só serve para detectar os erros implementados
 nessa etapa? Se for para ser salva, onde devemos salvar as diferentes
 tabelas? 
 
+---
+
+R: Ao remover da pilha não precisas removê-la para sempre. Dito isso,
+como estamos fazendo a análise em uma única passagem (durante a
+análise sintática), não há uma necessidade absoluta - nesta etapa - de
+manter a árvore de um escopo após o termino deste escopo. Então a
+solução que remover a tabela correspondente a um escopo que se termina
+é aceitável nesta etapa. Para as próximas etapas, existe uma
+possibilidade de se precisar dessas informações, então a estratégia da
+"árvore" de tabela de símbolos é uma solução que se mantém mais no
+longo prazo. Mais detalhes na Dúvida #1.
+
 *** Dúvida #6
 
 A segunda dúvida é a respeito dos blocos de comando aninhados. Cada
@@ -47,6 +118,18 @@ variável declarada dentro de um if, while ou for tem seu escopo
 restrito a esse bloco? E devemos permitir a definição de um novo bloco
 sem um comando de fluxo (por exemplo escrever algo como int main(){
 bool exp1 = true; {bool exp1 = false; } } ?
+
+---
+
+R: Vou começar pela segunda subpergunta ("permitir a definição de um
+novo bloco sem um comando de fluxo"), veja que isso já é aceito desde
+a E2. Não mudamos nada aqui quanto a isso, e tal bloco indica um
+escopo conforme as primeiras frases do Anexo A da especificação
+E4. Agora vamos a primeira subpergunta. Bom, Eu reli as "Regras de
+Escopo" e não há nada ali explicitamente sobre blocos de comandos de
+controle de fluxo servirem de escopo. Então a resposta é não, blocos
+de controle de fluxo não significam novos escopos. Somente o bloco que
+é um comando simples.
 
 *** Dúvida #7
 
@@ -57,7 +140,74 @@ adicionados, portanto não sabemos qual é o escopo do identificador no
 momento que ele é encontrado. Por não sabermos qual é o escopo, como
 vou adicionar o identificador na tabela correta?
 
+---
+
+R: Uma forma é alterar as regras gramaticais de maneira que se tem
+produções vazias no início e no final do escopo. Tais produções vazias
+tem ações, e estas ações fazem o que se tem que fazer naqueles pontos
+das regras gramaticais. Caso o grupo não queira usar produções vazias,
+pode-se usar os marcadores abre e fecha chaves, por exemplo.
+
 *** Dúvida #8
+
+ 1) Na seção 2.1, o senhor fala em natureza (literal, variável,
+    função, etc). Devo definir constantes que representem essas
+    naturezas? Por exemplo, #define VARIAVEL 1010? Além disso, o
+    senhor menciona literais, porém a tabela de símbolos não deve
+    conter apenas identificadores?
+
+---
+
+R: Deixo a critério de grupo encontrar uma forma para se especificar a
+natureza. Uso de constantes é uma opção, mas existem outras como enum
+por exemplo. A tabela de símbolos deve conter identificadores e
+literais, conforme está escrito na primeira frase da Sec 2.1. Oode ser
+de fato questionável no caso de literais tendo em vista que um mesmo
+literal aparecer mais de uma vez no mesmo escopo. Ao tentar incluí-lo
+na tabela de símbolos *na segunda ocorrência*, perceberá que ele já está
+lá. Existem diversos caminhos possíveis válidos, vejamos
+dois. Primeiro, não se faz nada. Segundo, atualiza-se as informações
+(linha, etc) desta última ocorrência.
+
+*** Dúvida #9
+
+ 2) Também na seção 2.1, o senhor fala em deixar os dados do valor do
+    token pelo yylval. Porém, nas declarações, há inúmeros
+    tokens. Como fica isso?
+
+---
+
+R: O item "dados do valor do token pelo yylval (veja E3)" quer dizer
+que as informações (o valor léxico) tem que ser salvo na tabela de
+símbolos. Alguns podem questionar que a informação fica repetida, pois
+temos ali a localização, etc, mas é uma forma de diferenciar a visão
+do léxico da E3 e a visão detalhada agora na E4. Não entendi muito o
+comentário "Porém, nas declarações, há inúmeros tokens.", mas sim,
+existem vários tokens, mas um token identificador específico, vamos
+dizer da variável 'xis', vai estar associado a uma única entrada na
+tabela de símbolos. Então, cada entrada na tabela de símbolos fará
+referência a um único token.
+
+*** Dúvida #10
+
+Devo incluir na tabela de símbolos o valor da variável e seu endereço
+na memória?
+
+
+---
+
+R: Sobre o "valor da variável". Essa pergunta só faz sentido no caso
+de literais. Neste caso, isso estará embutido no "dados do valor do
+token pelo yylval (veja E3)" tendo em vista que na E3 vocês já
+convertem do yytext para o tipo correto (float, int, etc). A pergunta
+não faz sentido no caso de identificadores pois para estes não há como
+o compilador saber seu valor (o compilador não executa o programa,
+apenas compila). Sobre o endereço de memória, entendo que tu estás
+fazendo referência ao endereço do ponto de vista do programa do
+compilador. Neste caso, este endereço de memória é irrelevante. Dito
+isso, na E5, calcularemos o endereço de memória onde cada variável
+ficará no programa compilado. Mas não chegamos lá ainda.
+
 * E4 2020/1
 ** DONE 2020-10-06 D0
 *** Dúvida #1
