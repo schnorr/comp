@@ -256,6 +256,58 @@ Qual o tamanho em bytes de uma função? Como inserimos isso na tabela?
 ---
 
 R: O tamanho fica a critério do grupo. É importante o registro na tabela.
+*** Dúvida #2
+
+1- Qual o tipo de uma ternary expression? É correto considerar que é
+inferido dos tipos das duas expressões que seguem logo após do “?” ?
+Exemplo: ~var_bool ? 1 : 32.0~, nesse caso seria float, já que a partir
+de int e float podemos inferir float.
+
+---
+
+R: Sim, é correto inferir a partir da combinação dos tipos das duas
+expressões que definem os possíveis valores resultantes de toda a
+expressão ternária. Quanto ao exemplo, sim, seria float por que ele
+toma precedência sobre o int conforme especificado na E4.
+
+*** Dúvida #3
+
+2 -Em múltiplos pontos da especificação da etapa 4 é mencionado que
+devemos lançar erros semânticos ao tentar passar uma string para uma
+função, porém na etapa 2 foi especificado que funções só podem ser
+chamadas com expressões, e que estas só permitem bool, int e
+float. Desta forma, a partir da própria gramática não permitimos que
+strings sejam passadas como argumento de função, ou mesmo que façam
+parte de expressões, e assim nunca conseguiríamos lançar erros do tipo
+~ERR_FUNCTION_STRING~ ou ~ERR_STRING_TO_X~. Devemos alterar a gramática para
+permitir strings nas expressões nessa etapa? O mesmo acontece para o
+tipo char também.
+
+---
+
+R: Sim. Existem duas formas: 1) altera a gramática e faz a análise
+semântica para estes casos; 2) altera a gramática com uma produção
+errada para prever tal erro semântico, retornando o código de erro
+correspondente. Eu diria que 2) é mais simples de fazer, mas encorajo
+a fazer o 1) pois estamos na E4 agora e cada especificação pode mudar
+ligeiramente o que antes havia sido estabelecido.
+
+*** Dúvida #4
+
+3 - Quando da declaração de uma função, cria-se um novo escopo, a
+partir do bloco de comandos após o cabeçalho da função. Em uma
+linguagem como C os argumentos da função são declarados como variáveis
+no novo escopo, para que sejam acessíveis naquele escopo. Na
+especificação isso não é mencionado, devemos implementar esse
+comportamento?
+
+--- 
+
+R: Os parâmetros reais fazem parte do escopo da função. Portanto, a
+criação do escopo da função deve acontecer imediatamente antes do
+reconhecimento da sua lista de parâmetros. A função por si só deve ser
+inserida no escopo que a define (caso contrário não poderia ser
+chamada).
 
 * E4 2020/1
 ** DONE 2020-10-06 D0
