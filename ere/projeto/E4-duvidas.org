@@ -248,6 +248,15 @@ representam novos escopos. Assim, no teu exemplo acima, ao chegar ao
 ~a=6;~, o compilador deve informar "variável a não declarada na linha
 X", sendo que X é a linha do comando de atribuição em questão.
 
+** 2021-03-29 D2
+*** Dúvida #1
+
+Qual o tamanho em bytes de uma função? Como inserimos isso na tabela?
+
+---
+
+R: O tamanho fica a critério do grupo. É importante o registro na tabela.
+
 * E4 2020/1
 ** DONE 2020-10-06 D0
 *** Dúvida #1
