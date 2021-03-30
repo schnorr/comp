@@ -309,6 +309,37 @@ reconhecimento da sua lista de parâmetros. A função por si só deve ser
 inserida no escopo que a define (caso contrário não poderia ser
 chamada).
 
+** 2021-03-29 D3
+
+*** Dúvida #1
+
+Fiquei em dúvida quanto ao item 3, de acordo com a nossa sintaxe, as
+declarações de função ocorrem junto com a declaração de varíaveis
+globais, o que dá a entender que as mesmas também são criadas no
+escopo global. A função poderia ser chamada no seu próprio escopo,
+pois por definição um escopo mais aninhado tem acesso aos escopos que
+o englobam, assim, qualquer escopo teria acesso as varíaveis/funções
+do escopo global.
+
+---
+
+R: A existência de funções é então inserida na tabela de símbolos do
+escopo global. Quando a função é recursiva, deve-se encontrar se ela
+já foi declarada. Para averiguar isso, o processo é o mesmo do que na
+situação para qualquer outro identificador: procura-se primeiro no
+escopo local à função (daí não se encontra), e por que não foi
+encontrado, procura-se na tabela que engloba o escopo local (no caso
+será a tabela do escopo global), onde ela será encontrada.
+
+*** Dúvida #2
+
+Outra dúvida, esta apenas para confirmar, os argumentos devem ser
+declarados como varíaveis no escopo da função então?
+
+---
+
+R: Isso foi respondido na dúvida #4 de D2. Portanto sim, confirmo.
+
 * E4 2020/1
 ** DONE 2020-10-06 D0
 *** Dúvida #1
