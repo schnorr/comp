@@ -310,7 +310,6 @@ inserida no escopo que a define (caso contrário não poderia ser
 chamada).
 
 ** 2021-03-29 D3
-
 *** Dúvida #1
 
 Fiquei em dúvida quanto ao item 3, de acordo com a nossa sintaxe, as
@@ -339,6 +338,88 @@ declarados como varíaveis no escopo da função então?
 ---
 
 R: Isso foi respondido na dúvida #4 de D2. Portanto sim, confirmo.
+
+*** Dúvida #3
+
+Surgiu uma pequena dúvida em relação ao item 2. Estamos modificando a
+gramática para permitir strings em expressões, e assim capturar
+aqueles erros. Mas então nos deparamos com algumas situações como !
+"char". Devemos inferir que o resultado dessa expressão ainda é string
+ou um booleano? Seguindo as regras de inferência da especificação,
+para os outros tipos (int, bool, float) adotamos que o tipo em
+operações unárias é mantido, assim !2.0 continua um float, por
+exemplo.
+
+---
+
+R: Não entendi bem qual seria o "item 2". Mas sobre o questionamento,
+acredito que inferir string em algo como !"char" está okay, o mesmo
+válido para semelhantes como int, book, float, char.
+
+*** Dúvida #4
+
+Uma outra dúvida é em casos do tipo "string" * "string". Como não há
+nenhum processo de coerção de string, não me parece haver um erro
+semântico que se enquadre para ser lançado, porém a expressão
+claramente não faz sentido.
+
+---
+
+R: De fato, não há erro semântico em "strign"*"string". Sobre "a
+expressão claramente não faz sentido", acredito que isso dependa da
+semântica que se atribui ao operador binário asterisco. Ele poderia
+significar qualquer outra coisa válida para strings, embora isso nós
+não especificamos na nossa linguagem pois ainda não estamos
+implementando (sintetizando) nada.
+
+*** Dúvida #5
+
+Na duvida #3 o senhor diz que devemos aceitar strings como parte de
+expressões. Devemos aceitar chars também?
+
+---
+
+R: Existem várias dúvidas #3, é bom sempre citar o identificador do
+"tira-dúvidas" completo, tal como "E4 D2 #3", por exemplo. Bom, mas
+quanto a dúvida em si, eu não vejo problemas de expressões aceitarem
+chars também.
+
+*** Dúvida #6
+
+Além disso, no caso de comandos de controle, como IF, FOR (tanto a
+atribuição quanto a expressão) e o WHILE podem receber apensas uma
+string? Se não, devemos lancar um ~ERR_STRING_TO_X~ com X == bool?
+
+---
+
+R: Não entendi bem a questão. Nada muda nos comandos de fluxo de
+controle do ponto de vista gramatical. Esses comandos recebem sempre
+expressões (no caso do for tem também um inicializador e um
+finalizador de laço que são comandos de atribuição, conforme a E2,
+nada mudou aí também). Essas expressões seguem o regramento de
+expressões como qualquer outra expressão.
+
+*** Dúvida #7
+
+Outra duvida (unrelated to #3): se eu tiver um comando RETURN seguido
+de uma string, eu devo lançar um erro ~ERR_FUNCTION_STRING~ ou
+~ERR_WRONG_PAR_RETURN~ (ja que nenhuma função pode ter tipo string)?
+
+---
+
+R: Tem uma frase na E4 que copio aqui "Retorno, argumentos e
+parâmetros de funções não podem ser do tipo string. Quando estes casos
+acontecerem, lançar o erro ~ERR_FUNCTION_STRING~." (Sec 2.5). Isso está
+bem explícito, então eu diria que isso responde a dúvida. No entanto,
+mesmo assim, vem um texto que acho que motivou a dúvida "O comando de
+retorno return deve ser seguido obrigatoriamente por uma expressão
+cujo tipo é compatı́vel com o tipo de retorno da função. Caso não seja
+o caso, o erro ~ERR_WRONG_PAR_RETURN~ deve ser lançado pelo compilador."
+(Sec 2.6). Como os tipos int, float e bool são compatíveis entre si
+pelas regras de coerção, vem justamente a dúvida, quando lançaremos o
+~ERR_WRONG_PAR_RETURN~? Acredito que seja naquelas situações onde o tipo
+de retorno da função seja um char e o comando return retorna um int,
+float, bool.
 
 * E4 2020/1
 ** DONE 2020-10-06 D0
