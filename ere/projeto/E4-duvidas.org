@@ -421,6 +421,57 @@ pelas regras de coerção, vem justamente a dúvida, quando lançaremos o
 de retorno da função seja um char e o comando return retorna um int,
 float, bool.
 
+** 2021-03-30 D4
+*** Dúvida #1
+
+Sobre o trabalho, quando eu faço a inferência de tipos em uma
+expressão de shift, no caso do valor após o token ser menor que 16, a
+construção é válida. Na especificação do E2, o lado esquerdo do shift
+pode ser um identificador e um identificador com vetor. O tipo do nó
+"shift expr" vai ser inferido a partir do lado esquerdo, ou tem que
+ser int? Semânticamente, o único caso em que o valor seria válido essa
+construção é com valores inteiros. Não faz sentido fazer um shift em
+float, string ou char.
+
+---
+
+R: Eu diria que é válida se o número após os operadores ~<<~ ou ~>>~ for
+_menor igual_ a 16. O tipo do dado resultante do nó, que será utilizado
+no nó shift da ast, será comandado pelo identificador (aquele que
+aparece do lado esquerdo). Não consta na especificação E4 um empecilho
+a respeito do tipo de dado desse identificador. Então, mesmo que
+possamos considerar inválido fazer um "shift" em um float, string, ou
+char, isso não é um erro semântico de acordo com a
+especificação. Podemos no futuro (E5 em diante) implementar uma
+sobrecarga neste operador de shift e dar outros significados para ele.
+
+*** Dúvida #2
+
+Caso tenhamos, por exemplo, uma expressão com apenas um operando, não
+deve-se fazer inferência, correto? Por exemplo, se tivermos:
+#+begin_example
+float a = 5;
+#+end_example
+Isto é um erro?
+
+---
+
+R: Esta entrada é inválida sintaticamente de acordo com a E2, pois ela
+está declarando e inicializando uma variável. A sintaxe correta seria
+a seguinte:
+#+begin_example
+float a <= 5;
+#+end_example
+Bom, assumindo agora que a entrada esta sintaticamente correta, vamos
+a pergunta. Veja que temos nessa inicialização temos dois operandos:
+aquele identificador que recebe o valor e o valor a ser utilizado na
+inicialização. Portanto, entendo que sim deve haver inferência. Sendo
+uma expressão de inicialização (um pouco diferente das demais
+expressões aritméticas/lógicas em nossa linguagem), é o identificador
+que influenciará fortemente a inferência pois ele vai receber o
+valor. Nesse sentido, a inferência a ser feita é semelhante àquela de
+um comando de atribuição.
+
 * E4 2020/1
 ** DONE 2020-10-06 D0
 *** Dúvida #1
