@@ -472,6 +472,92 @@ que influenciará fortemente a inferência pois ele vai receber o
 valor. Nesse sentido, a inferência a ser feita é semelhante àquela de
 um comando de atribuição.
 
+*** Dúvida #3
+
+Temos uma dúvida em relação ao erro ~ERR_FUNCTION_STRING~. Esse erro
+deve ser lançado apenas quando, em uma declaração de função, há um
+parâmetro do tipo string ou o retorno é do tipo string, correto?
+Assim, os exemplos a seguir lançariam o erro ~ERR_FUNCTION_STRING~.
+
+#+begin_example
+string main() { return 1; }
+
+int main(string s) {
+  return 1;
+}
+#+end_example
+
+Já o exemplo abaixo lançaria o erro ~ERR_WRONG_PAR_RETURN~.
+#+begin_example
+int main() {
+  return "string";
+}
+#+end_example
+
+E o exemplo abaixo lançaria o erro ~ERR_WRONG_TYPE_ARGS~.
+
+#+begin_example
+int foo(int a, int b) {
+  return a+b;
+}
+int main() {
+  return foo("string", 3); // ERR_WRONG_TYPE_ARGS aqui
+}
+#+end_example
+
+Esse pensamento está de acordo com o comportamento esperado? 
+
+---
+
+R: Este é um questionamento similar ao E4 D3 #7, já respondido.
+Okay para a primeira proposta; não okay para a segunda (ver E4 D3 #7);
+okay para a terceira.
+
+** 2021-03-31
+*** Dúvida #1
+
+ Estamos ainda muito confusos quanto inferência. Fazemos inferência em
+ expressões, atribuições e parâmetros de função? Nesse caso, não
+ teremos mais erros de tipo incorreto, apenas erros de inferencia de
+ string e char. Como fica isto?
+
+*** Dúvida #2
+
+Na especificação da E4 está o seguinte: "O comando input deve ser
+seguido obrigatoriamente por um identificador do tipo int e
+float". Porém o bool pode ser convertido para esses tipos, ele deve
+ser considerado também, ou seja, o exemplo abaixo é válido?
+
+Ex:
+
+{
+  bool x;
+  input x;
+}
+
+*** Dúvida #3
+
+Antes de adicionar os erros semânticos o seguinte código gerava um
+syntax error:
+
+int func(){
+  string v;
+  input v[2]
+}
+
+syntax error, unexpected '[', expecting ';' at line 3
+
+Porém ao colocar a regra de validação de tipo descrita na D1, ou seja,
+verificar se é inteiro ou float, está dando erro semântico, lendo o
+"v" como acesso a uma variável.
+
+semantic error, input must be int or float at line 3
+
+Preciso tratar esse caso? Me parece incorreto o semantic error neste
+caso, mas não encontrei uma maneira de tratar isso, pois o compilador
+espera uma váriavel e só vê o syntax error quando chega no "[".
+
+
 * E4 2020/1
 ** DONE 2020-10-06 D0
 *** Dúvida #1
