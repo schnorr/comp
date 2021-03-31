@@ -513,13 +513,20 @@ R: Este é um questionamento similar ao E4 D3 #7, já respondido.
 Okay para a primeira proposta; não okay para a segunda (ver E4 D3 #7);
 okay para a terceira.
 
-** 2021-03-31
+** 2021-03-31 D5
 *** Dúvida #1
 
- Estamos ainda muito confusos quanto inferência. Fazemos inferência em
- expressões, atribuições e parâmetros de função? Nesse caso, não
- teremos mais erros de tipo incorreto, apenas erros de inferencia de
- string e char. Como fica isto?
+Estamos ainda muito confusos quanto inferência. Fazemos inferência em
+expressões, atribuições e parâmetros de função? Nesse caso, não
+teremos mais erros de tipo incorreto, apenas erros de inferencia de
+string e char. Como fica isto?
+
+---
+
+R: A inferência com tipos compatíveis por coerção trata justamente de
+casos onde uma eventual conversão implícita evita erros
+semânticos. Então, acho perfeitamente normal a inferência "evitar
+erros semânticos".
 
 *** Dúvida #2
 
@@ -556,7 +563,6 @@ semantic error, input must be int or float at line 3
 Preciso tratar esse caso? Me parece incorreto o semantic error neste
 caso, mas não encontrei uma maneira de tratar isso, pois o compilador
 espera uma váriavel e só vê o syntax error quando chega no "[".
-
 
 * E4 2020/1
 ** DONE 2020-10-06 D0
