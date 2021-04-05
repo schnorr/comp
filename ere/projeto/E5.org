@@ -41,7 +41,7 @@ Linguagem consiste na geração de código intermediário a partir da
 intermediária a Linguagem ILOC, descrita em detalhes no apêndice A de
 /Engineering a Compiler/, mas com o essencial no anexo deste documento.
 Testes poderão ser realizados através de um simulador simples escrito
-em Python3 e já disponível também no anexo.
+em Python3 e já disponível em anexo.
 
 * Funcionalidades Necessárias
 ** Arranjos Multidimensionais                                     :noexport:
@@ -86,7 +86,7 @@ temporárias auxiliares.
 
 ** Geração de Código
 
-Os programas devem conter pelo menos a função =main=. Ela deverá ser a
+Os programas a serem compilados devem conter pelo menos a função =main=. Ela deverá ser a
 primeira a ser executada.  Existem pelo menos duas possibilidades de
 implementação válidas. *Em uma passagem*: realizar eventuais alterações
 gramaticais para realizar a geração de código em uma única passagem
@@ -105,7 +105,7 @@ construções da linguagem, considerando que existe apenas o tipo =int=:
 - Cálculo de endereço na declaração de variáveis
   - Endereço de variáveis locais são um deslocamento em relação ao registrador especial =rfp=
   - Endereço de variáveis globais são um deslocamento em relação ao registrador especial =rbss=
-- Expressões aritméticas, com operações binárias e ternária
+- Expressões aritméticas, com operações unárias, binárias e ternária
   - soma, subtração, divisão e multiplicação
 - Expressões booleanas por controle de fluxo com curto-circuito
   - todos os operadores relacionais
@@ -193,7 +193,7 @@ Onde =entrada= contém um programa na linguagem sendo compilada, e
 * Avaliação automática
 
 Os testes automáticos utilizarão sistematicamente o simulador =ilocsim=
-(veja abaixo) para verificar se o código sintetizado pela solução do
+(veja em anexo) para verificar se o código sintetizado pela solução do
 grupo realiza o que o programa na entrada diz que tem que ser
 feito. Vários mecanismos são empregados para isso, mas o principal é o
 estado da memória (valores que estão na pilha e segmento de dados) no
