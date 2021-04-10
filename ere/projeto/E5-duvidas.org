@@ -1,6 +1,53 @@
-#+STARTUP: overview indent
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
 #+TITLE: Dúvidas da E5 do Projeto de Compilador
-* E5
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+#+Language: pt-br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil title:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* E4 2020/2
+** 2021-04-10 D0
+*** Dúvida #1
+
+Na main.c, temos "Não modifique o arquivo.", e queremos seguir esta
+solicitação. Porém, há na main.c dois protótipos de funções: void
+exporta (void *arvore); void libera (void *arvore); Onde devemos
+implementar essas funções, já que não devemos alterar a main e estes
+protótipos estão declarados na main? Além disso, se implementarmos em
+outro lugar, precisaremos adicionar uma linha na main para adicionar
+uma biblioteca, por exemplo, o que alteraria a main. Como procedemos?
+
+---
+
+R: Vamos supor que a implementação destas duas funções estão em outro
+módulo, chamado "outro". Tu terás então um outro.c e outro.h. No
+arquivo de cabeçalho (.h), tu terás então o protótipo das funções,
+idênticos àqueles já colocados no arquivo main.c. No arquivo da
+implementação (.c), tu terás as implementações das duas funções. Na
+hora de compilar, tu vais compilar o arquivo main.c e depois o arquivo
+outro.c. No hora de linkar, tu farás a ligação de main.o com outro.o,
+e como em main.c a implementação das duas funções estará em aberto, o
+linkador fará a linkagem com a implementação das duas funções do
+módulo outro.o. E isso estará resolvido. Veja, portanto, que não há a
+necessidade de alterar a main.c adicionando o include do outro.h tendo
+em vista que o protótipo das duas funções é idêntico (entre o que já
+temos em main.c e o que tu terás em outro.h). Claro, o ideal, seria
+adicionar outro.h, mas se queres seguir a risca o comentário, essa
+estratégia resolve. Dito tudo isso, o tal comentário erá mais para a
+E3, agora na E5, podem se sentir a vontade para alterá-lo.
+
+* E5 2020/1
 ** DONE 2020-10-23 D0
 *** Dúvida #1
 Foi mencionado em um dos vídeos de dúvidas da etapa 4 que os literais
