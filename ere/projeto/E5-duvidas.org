@@ -16,7 +16,7 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-* E4 2020/2
+* E5 2020/2
 ** 2021-04-10 D0
 *** Dúvida #1
 
@@ -46,6 +46,64 @@ temos em main.c e o que tu terás em outro.h). Claro, o ideal, seria
 adicionar outro.h, mas se queres seguir a risca o comentário, essa
 estratégia resolve. Dito tudo isso, o tal comentário erá mais para a
 E3, agora na E5, podem se sentir a vontade para alterá-lo.
+*** Dúvida #2
+
+1 - Nas simplificações dessa etapa, devemos implementar a tradução
+para vetores ou isso também não é necessário?
+
+---
+
+R: Não é necessário.
+
+*** Dúvida #3
+
+2 - Na parte que diz "Os programas a serem compilados devem conter
+pelo menos a função main.  Ela deverá ser a primeira a ser executada"
+as funções que não são main não precisam ser executadas (a menos que
+tenham sido chamadas na main)?
+
+---
+
+R: Exato. As funções que não são main não devem ser executadas a menos
+que tenham sido chamadas na main.
+
+*** Dúvida #4
+
+3 - Nas aulas sobre o ILOC, os registradores são inicializados com
+
+ loadI 1024 => rfp
+ loadI 1024 => rsp
+
+Isso é necessário no projeto? E, caso não seja, podemos inicializar
+esses registradores com outros valores ou isso atrapalhará na
+avaliação?
+
+---
+
+R: Na avaliação, a primeira inicialização dos registradores rfp, rsp e
+rbss é ignorada, pois ao avaliar o simulador é chamado com a seguinte
+linha:
+
+#+begin_src bash
+timeout 3 ${ILOCSIM} \
+        --stack $STACK \
+        --data $DATA \
+        -s \
+        -x < /tmp/saida.iloc > /tmp/saida.sim
+#+end_src
+
+sendo que ILOCSIM é o path para o simulador, STACK e DATA são
+endereços para a pilha e segmento de dados, respectivamente, gerados
+de maneira aleatória, e ~/tmp/saida.iloc~ tem a saída ILOC gerada pelo
+compilador do grupo. De acordo com o ~--help~ do simulador, os
+parâmetros ~-s~ e ~-x~ significam, também respectivamente, que
+estatísticas serão geradas e que um ambiente estrito para os
+registradores rbss, rfp e rsp será adotado, ou seja, a primeira
+definição do valores desses registradores no código ILOC da entrada
+será ignorada. Ou seja, podem (e até devem) definir valores iniciais
+para os testes de vocês, mas lembrem-se que esses valores iniciais
+serão ignorados nos testes automáticos pois serão substituídos por
+endereços aleatórios.
 
 * E5 2020/1
 ** DONE 2020-10-23 D0
