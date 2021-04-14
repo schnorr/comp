@@ -105,6 +105,39 @@ para os testes de vocês, mas lembrem-se que esses valores iniciais
 serão ignorados nos testes automáticos pois serão substituídos por
 endereços aleatórios.
 
+*** Dúvida #5
+
+(continuação da dúvida #4 acima)
+
+---
+
+Fiquei em dúvida com relação a essa parte, pois pensei que tínhamos
+que salvar o número de instruções geradas pelo programa para
+inicializar o rbss com esse valor (para que o segmento de dados se
+inicie logo após o código). Se o segmento de dados é iniciado
+aleatoriamente, então isso não é necessário?
+
+---
+
+R: É necessário mesmo assim, eu avalio de maneira subjetiva esse aspecto.
+
+*** Dúvida #6
+
+(continuação da dúvida #4 acima)
+
+---
+
+E, também já que esses números são iniciados aleatoriamente, não há
+risco do segmento de dados se iniciar no meio dos endereços da pilha,
+ou no meio das instruções?
+
+---
+
+R: Pode deixar comigo que a geração de números aleatórios é controlada
+para evitar esse tipo de problema. No simulador ILOC, o "espaço" de
+memória do código e dos dados (pilha, dados, etc) é separado, ao
+contrário da realidade onde existe apenas um único endereçamento.
+
 * E5 2020/1
 ** DONE 2020-10-23 D0
 *** Dúvida #1
