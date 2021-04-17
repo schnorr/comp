@@ -299,6 +299,27 @@ eventuais erros. Quando a "referência" a implementação habitual é que
 seja uma lista de ponteiros para campos que contém buracos a serem
 remendados.
 
+** 2021-04-17 D2
+*** Dúvida #1
+
+Como o código iLOC será o código da main, essencialmente, ao final do
+processo de análise eu posso passar a main para o topo da AST?
+
+---
+
+R: Se houver no programa duas funções, primeiro a função foo e depois
+a função main, idealmente, deveríamos ter na saída ILOC primeiro o
+código ILOC de foo, depois o código ILOC de main. Sabendo que o
+programa deve começar pela função main, antes do código de foo (e
+depois da inicialização dos registradores principais - rsp, rfp,
+rbss), podemos ter um jump para o início da função main. Creio que há
+um exemplo disso na aula N12 A3 (slide 5/6). Bom, quanto a relação
+disso com a AST, vocês podem fazer da forma que acharem mais oportuna,
+mas veja que alterar a ordem das funções em código objeto (e aqui no
+código intermediário) é algo que normalmente não se faz. Por que um
+compilador mudaria a ordem do código das funções no código final?
+
+
 * E5 2020/1
 ** DONE 2020-10-23 D0
 *** Dúvida #1
