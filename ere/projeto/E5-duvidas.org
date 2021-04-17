@@ -138,6 +138,167 @@ para evitar esse tipo de problema. No simulador ILOC, o "espaço" de
 memória do código e dos dados (pilha, dados, etc) é separado, ao
 contrário da realidade onde existe apenas um único endereçamento.
 
+** 2021-04-16 D1
+*** Dúvida #1
+
+Quando é dito que podemos considerar que existe apenas o tipo int,
+podemos assumir que não haverá nenhum caso de teste que coloque outro
+tipo (como, por exemplo: int[], float, bool ou string) e que espere
+que a gente:
+
+1 - Ignore que o tipo era diferente de int (mesmo sendo string, ou
+int[]), e trate-os todos como int; ou
+
+2 - Retorne uma exceção dizendo que o tipo recebido não é int.
+
+Caso não hajam casos de teste com outros tipos, ou caso hajam, mas
+estes não estejam vínculados a uma das 2 expectativas acima, então não
+haverá problemas em:
+
+1 - Ignorar totalmente os tipos, sem fazer qualquer verificação, e
+tratar todos os identificadores como int (não-vetorial), mesmo sendo
+eles argumentos de função, vetores, variáveis de outros tipos ou mesmo
+retornos de função. Ou seja, fechar totalmente os olhos para os tipos
+(exceto no que se refere às análises semânticas do E4 suponho, ou
+mesmo elas deveríamos excluir?); ou
+
+2 - Fazer extras, como por exemplo, lidar com diferentes tipos, ou
+vetores.
+
+Pergunto isso, pois caso hajam tais casos de testes com outros tipos,
+e haja também uma expectativa vinculada a eles, teríamos que tomar
+cuidado, e talvez não pudéssemos fazer alguma dessas opções listadas
+por último.
+
+Mas o que eu imagino pelo que está escrito, por exemplo aqui "Nada
+precisa ser feito referente aos tipos diferentes de int", é que não
+haverá qualquer caso de teste em que apareça algum tipo diferente de
+int, e portanto a minha suposição de que poderia haver algum, e que
+ele deveria ou retornar erro, ou deveria ser tratado como int, é
+irrelevante. Contudo, pergunto para confirmar.
+
+Ah, e isso se extende analogamente também para os comandos que foram
+ignorados no E5. Se aparecer um "return X;", devemos lançar um erro,
+devemos ignorá-lo, ou tanto faz? E se o return não deverá ser
+implementado, assim como o break, continue, então não haverão jumps
+relacionados a eles, caso apareçam? (essas perguntas são irrelevantes
+caso eles não aparecerão em nenhum caso de teste)
+
+---
+
+R: Sobre a questão dos tipos de dados, reforço que haverá apenas o
+tipo ~int~. Não haverá nenhum outro tipo de dado nos testes automáticos
+da E5, conforme a especificação explicita. Minha sugestão é que não
+sejam lançados erros (sejam eles quais forem) ao encontrar outros
+tipos de dados, afinal a léxica/gramática/semântica se mantém
+inalteradas. A opção por ignorá-los é portanto privilegiada.
+
+R: Sobre a questão dos comandos que foram deixados de fora da E5, é
+bem lembrada a importância do comando ~return~ especificamente, que se
+integra bem às chamadas de função. Neste sentido, minha sugestão seria
+implementar o comando ~return~, ainda que isso não esteja especificado
+na E5. Se o grupo decidir não fazê-lo, afinal não está na
+especificação da E5, minha sugestão é que não sejam lançados erros ao
+encontrá-lo, apenas ignorá-lo. Invariavelmente o comando return será
+implementado na E6.
+
+R: Como o questionamento foi longo, não tenho certeza se respondi
+tudo. Diga-me caso eu tenha deixado algo sem resposta.
+
+*** Dúvida #2
+
+Uma outra dúvida é a respeito dos identificadores static e const. Está
+correto a minha interpretação?:
+
+1 - Uma variável local do tipo static T não deverá ser interpretado
+como uma variável local de tipo T comum, mas sim fará a variável ser
+alocada no segmento de dados, em vez de no registro de ativação;
+
+2 - Uma variável global do tipo static T deverá ser interpretada como
+uma variável global do tipo T comum;
+
+3 - Uma função com tipo de retorno static T deverá ser interpretada
+como uma função com tipo de retorno T (que inclusive é irrelevante, já
+que o return aparentemente não deverá ser implementado);
+
+4 - Um parâmetro de função ou variável local de tipo const T deverá
+ser interpretado como um parâmetro de função ou variável local
+(respectivamente) de tipo T.
+
+---
+
+R: Embora ~static~ e ~const~ constem de fato na especificação sintática da
+E2, não não exploramos esse assunto nas etapas subsequentes. A forma
+de se implementar e verificar esses especificadores já poderiam ter
+sido antecipados na E4 (análise semântica) e com certeza tem um
+impacto evidente agora na E5 (geração de código intermediário). No
+entanto, isso não faz parte da especificação da E5 primando pela
+simplificação.
+
+R: Mesmo assim, informo minha concordância caso o grupo deseje
+implementar esses especificadores (deverão haver mudanças no que foi
+feito na E4). Concordo com 1. Concordo com 2. Concordo com 3, mas veja
+meu comentário sobre o comando ~return~ na resposta ao questionamento
+anterior. Ainda sobre 3, veja que ~static~ de funções em geral é
+implementado para restringir o escopo da função ao módulo. Não temos
+módulos em nossa linguagem pois não almejamos aqui implementar linking
+entre códigos objeto. Concordo com 4, a diferença é que sendo ~const~
+(inspirando-se do C) tais variáveis não poderiam ser alteradas.
+
+*** Dúvida #3
+
+É possível utilizar Python3 para essa parte do trabalho, ou devemos
+seguir com o C/C++? Acredito que essa área de síntese poderia ser
+implementada sem problemas em outra linguagem, utilizando mecanismos
+de subprocess call a partir da main.c.
+
+---
+
+R: Não pode usar Python3. Seguir com C/C++.
+
+*** Dúvida #4
+
+1) Estávamos pensando em uma forma de diferenciar registradores/labels
+   dos ponteiros (rfp, rsp etc.). Inicialmente pensamos em usar uma
+   estrutura de dados para isso (como um enum), mas, como os ponteiros
+   são poucos em número, pensamos em diferenciar eles simplesmente
+   definindo eles com valores negativos, já que registradores e labels
+   não podem ser negativos e em ILOC eles são representados por uma
+   string e não por um número. Isso faz sentido, ou temos que
+   representar os ponteiros de outra maneira?
+
+---
+
+R: Penso que chamar rfp, rsp e demais temporários (todos começando por
+"r") de "ponteiros" não é muito adequado, para evitar confusões com
+ponteiros da linguagem de programação C. Muitos usam simplesmente
+strings para referênciá-los. Outra opção talvez seja usar uma struct
+que tenha um "tipo" (que poderia ser a enum que vocês mencionam) com
+um número, sendo que tal número não fosse usado caso o "tipo" fosse de
+algum registrador especial (como rbss, rfp ou rsp). Enfim, todas essa
+escolhas são do grupo.
+
+*** Dúvida #5
+
+2) Para fazer o remendo, ao gerar o label do rótulo, podemos gerar ele
+   como se fosse um label qualquer (sem ser remendo), ou precisamos
+   marcar ele como sendo um label de rótulo, diferente dos outros
+   labels? No momento implementamos da primeira forma, mas queria
+   saber se isso não poderia causar problemas ao criar outros labels
+   depois.
+
+---
+
+R: No caso de uma implementação da geração de código em uma passagem,
+precisaremos de fato usar remendos. A "referência" a um "buraco" que
+deverá ser remendado pode ser implementada de várias formas. Minha
+sugestão é que, ao gerar um "buraco", vocês coloquem ali algo [uma
+string] algo que certamente não vá funcionar caso o simulador seja
+executado com a entrada, assim vocês podem facilmente detectar
+eventuais erros. Quando a "referência" a implementação habitual é que
+seja uma lista de ponteiros para campos que contém buracos a serem
+remendados.
+
 * E5 2020/1
 ** DONE 2020-10-23 D0
 *** Dúvida #1
