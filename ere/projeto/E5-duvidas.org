@@ -319,6 +319,218 @@ mas veja que alterar a ordem das funções em código objeto (e aqui no
 código intermediário) é algo que normalmente não se faz. Por que um
 compilador mudaria a ordem do código das funções no código final?
 
+*** Dúvida #2
+
+Sobre as chamadas de funções:
+1 - é necessário implementar chamadas recursivas?
+2 - Caso seja necessário implementar chamadas recursivas, nos exemplos
+da aula a função main é diferente das outras pois não inclui a
+recuperação dos valores de rfp e rsp antigos, já que se supõe que é a
+primeira a ser chamada. Se fôssemos implementar uma função main
+recursiva precisaríamos criar uma rotina alternativa que incluisse
+essas instruções?
+
+---
+
+R: 1. Sim; 2. A função main não precisa ter suporte à recursão, apenas
+as demais funções.
+
+*** Dúvida #3
+
+Quando temos numa atribuição o código:
+
+a = 5+5*3;
+
+Precisamos fazer cada operação (soma e multiplicação, nesse caso) em
+código iLOC, ou podemos apenas guardar o valor final (20), na memória?
+
+---
+
+R: Podemos deixar esse tipo de otimização para a E7. Ou seja, na E5,
+podem gerar código mesmo que o compilador pudesse antecipar o
+resultado final.
+
+*** Dúvida #4
+
+No código:
+
+int a;
+int f(){}
+int b;
+int main(){}
+
+Como fazemos para irmos "direto" para a main, porém evitando a função
+f e incrementando o ponteiro para os endereços das variáveis globais a
+e b?
+
+---
+
+R: Cada função pode ter um label marcando seu início, e no preambulo o
+grupo sistematicamente gera um salto incondicional para o label da
+função main. Assim, não importa onde ela esteja, funcionará.
+
+*** Dúvida #5
+
+A primeira dúvida que tenho é se não faria sentido o compilador
+decidir qual das sub-expressões, S1 e S2, avaliar primeiro por outra
+regra diferente de sempre S1 primeiro (nas expressões: "S1 and S2" ou
+"S1 or S2").
+
+Por exemplo, não faria sentido eu avaliar qual código é maior, e
+inferir que se o código de S1 é maior que o de S2, de modo que no
+geral valeria mais a pena avaliar S2 primeiro, visto que se ambos
+tiverem a mesma chance de ser verdadeiro/falso, em média, após
+milhares de execução dessa abordagem, teremos um ganho de desempenho
+frente à estratégia de executar S1 primeiro sempre?
+
+Outra estratégia possível seria atribuir uma chance de ser verdadeiro
+ou falso, para todo nó booleano, da seguinte forma: AND tem P1*P2
+chance de ser verdadeiro, e 1-P1*P2 chance de ser falso; OR tem
+1-P1*P2 chance de ser verdadeiro, e P1*P2 chance de ser falso, NOT tem
+1-P1 chance de ser verdadeiro e P1 chance de ser falso, "false" tem 0
+de chance de verdadeiro [...] Assim por diante, e comparadores
+relacionais ou identificadores booleanos tem chance de 50%/50%. E
+considerar essas chances para determinar por exemplo, que o OR deve
+avaliar primeiro a sub-expressão de maior chance de ser verdadeira (e
+o AND, o contrário).
+
+Outra estratégia seria fazer um híbrido das duas acima.
+
+Bastaria deixar claro que o compilador faz isso, para que o
+programador não espere um curto-circuito sequencial.
+
+Ou existiria algum problema em fazer isso?
+
+---
+
+R: Em geral as linguagens de programação assumem que as coisas são
+avaliadas da esquerda para a direita. Em C, por exemplo, temos a
+implementação de curto-circuito e todos os programadores da linguagem
+C que conhecem bem a linguagem sabem disso, tirando usufruto. Claro, a
+descrição da linguagem poderia ser mais elaborada, considerando tudo
+que propuseste, mas creio que isso em geral existe apenas através de
+operadores especiais, diferentes daqueles padrões da linguagem. Na
+disciplina de MLP, por exemplo, vemos que a linguagem Ada possui
+operador do e lógico com e sem curto-circuito. Ainda que bem mais
+simples do que as ideias acima, seria um caminho a ser tomado: usar
+operadores diferentes para ativar tal tipo de funcionalidade. Mas
+minha visão é que muitas dessas coisas seriam mais a cargo do ambiente
+de execução, e menos do compilador. Veja que avaliar o "tamanho do
+código" passa por definir "tamanho". Um código pode ser longo e
+rápido, um código curto pode ser lento.
+
+*** Dúvida #6
+
+Outra dúvida que tenho é a respeito de implementar a avaliação de
+expressão lógicas por controle de fluxo por sistema S-Atribuído. Não
+daria para fazer sem remendos?
+
+O que eu estava pensando era em sempre armazenar o resultado de uma
+expressão lógica em um registrador (assim como na avaliação numérica).
+
+Assim, se a expressão lógica E, aparecer dentro de um "if (E) {C1}
+{C2}", quando eu avaliasse o nó do if, eu simplesmente concatenaria o
+código de E, com um código intermediário, seguido dos códigos de C1 e
+C2, de tal modo que o código intermediário conteria um jump
+condicional para C1 ou C2, usando como base o conteúdo do registrador
+que armazenou o resultado de E.
+
+Posteriormente, em uma etapa de otimização, seria fácil percorrer o
+código e remover esses registradores que só servem para determinar um
+branch.
+
+Isso foi referente ao uso da expressão E no nó acima dela. Já quanto
+ao uso das sub-expressões de E, em E, por exemplo E1 e E2, em "E1 and
+E2", também creio que seria trivial fazê-los de modo a ter
+curto-circuito.
+
+Uma das formas triviais que pensei seria converter "E1 and E2" para
+"if (E1) {r = E2} else {r = false}", e gerar o código referente (que
+teria curto-circuito por definição). (Essa é a minha versão favorita,
+mas outra opção seria manualmente fazer esse código, com dois branchs,
+um a partir de E1, que pode pular direto para um "loadI 0 => r", que
+pula para um NOP final, ou então para o segundo branch, que seria a
+partir de E2 e pode pular para "loadI 1 => r" ou "loadI 0 => r", ambos
+que pulam para o NOP final.)
+
+Resumindo:
+- Nenhum nó meu que é do tipo booleano (OR, AND, NOT, LE, GT, EQ,
+  ...), vai ter um jump para algo externo e desconhecido, todos eles
+  vão simplesmente armazenar um valor booleano em um registrador do
+  próprio nodo e terminar a execução.
+- Todo nó meu com curto-circuito (IF, AND, OR) utilizará o valor do(s)
+  registrador(es) do(s) nó(s) de sua(s) sub-expressão(ões) booleana(s)
+  para fazer o curto-circuito.
+- Uma etapa de otimização colapsará cada registrador que só é
+  utilizado para receber constantes 0 e 1, e depois fazer um branch
+  condicional, para então fazer branchs diretos.
+
+Só isso, sem sistema L-Atribuído, sem remendos (considerando que essa
+otimização é opcional, pois mesmo sem ela, ainda há curto-circuito).
+
+Há algum erro?
+
+---
+
+R: Acredito que fazer um esquema S-atribuído que implemente curto
+circuito sem remendos seja difícil quando a escolha do salto, o
+destino, aparece apenas depois da decisão lógica. Veja que as
+expressões lógicas normalmente aparecem antes do alvo para os quais
+elas decidem para onde desviar. É o caso do if, do for, do while,
+etc. No exemplo que deste, veja que C1 e C2 só aparecem depois que E
+apareceu. Claro, tu podes não fazer nada nas produções de E, fazendo
+tudo na regra do if, mas isso implica em algo não S-atribuído, por
+definição. Então, em suma, a resposta, acredito que não dê para fazer.
+
+*** Dúvida #7
+
+Pensando em como eu iria implementar um registro de ativação de uma
+função com diversos blocos aninhados não-nomeados de comandos, com
+próprias variáveis locais, no projeto, cheguei em uma solução que
+considero um pouco mais eficiente de a vista em aula.
+
+Por exemplo, considere a seguinte função:
+
+int f()
+{
+   int a = 1;
+   {
+       int b = 2;
+   }
+   int c = 3;
+}
+
+Para esta função, o método visto em aula alocaria um registro de
+ativação com 12 bytes para variáveis locais (considerando que cada
+variável do tipo int tem tamanho 4 bytes), contudo, eu vejo uma forma
+de utilizar só 8 bytes, que seria a seguinte:
+
+Sempre que eu desempilho um bloco de comandos aninhado, eu decremento
+o tamanho de bytes que suas variáveis locais ocupavam, e permito as
+próximas variáveis locais utilizarem o mesmo espaço que aquelas antes
+ocupavam, visto que isso nunca gerará conflito, já que aquelas agora
+não serão mais utilizadas, nunca mais.
+
+Também armazeno qual foi o tamanho máximo de bytes necessários em
+qualquer ponto do código da função, e utilizo isto como o tamanho da
+parte de variáveis locais do registro de ativação da função.
+
+Existe algum erro de análise / não devo fazer deste modo por conta de
+algum sistema de correção automático? 
+
+---
+
+R: Pode implementar assim, não vejo problemas na análise subjetiva. Na
+análise objetiva (correção dita "automática") considera-se o estado
+final da memória, ou seja, os endereços para os quais foram atribuídos
+valores. Neste sentido, pode ter um teste, veja bem, pode, que
+esperaria encontrar o valor 2 em um endereço de memória. Implementando
+a otimização descrita, o valor 2 não seria encontrado pois seria
+sobrescrito por 3 tendo em vista que a variável c iria ocupar o mesmo
+endereço de b. Neste caso, o teste falharia. Dito isso, como escrevi,
+pode, acredito que não tenha um caso desses nos testes que já preparei
+de antemão mas que depois modifico, dentro do possível pedagógico, em
+função do desempenho dos grupos.
 
 * E5 2020/1
 ** DONE 2020-10-23 D0
