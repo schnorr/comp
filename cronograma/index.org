@@ -55,13 +55,13 @@
 | Código     | Controle de Fluxo                                                |
 | Execução   | Introdução, Registro de Ativação                                 |
 | Execução   | Chamada e retorno de Função, Passagem de parâmetros              |
-| Otimização | Introdução, Janela e Grafos de Fluxo                             |
-| Otimização | Grafos de Fluxo e Redução de potência                            |
+| Otimização | Introdução, Janela                                               |
+| Otimização | Grafos de Fluxo                                                  |
+| Otimização | Grafos de Fluxo                                                  |
+| Otimização | Redução de potência                                              |
 |            | Considerações Finais e Fechamento                                |
 |            | Revisão                                                          |
 |            | P2                                                               |
-|            |                                                                  |
-|            | PR                                                               |
 
 ** Projeto (em ORG)
 
@@ -270,7 +270,7 @@ cronograma.3 %>%
 : 
 :    N Semana Descrição        Dia
 : 1 15      8        P1 2021-03-15
-: 2 28     15        P2 2021-04-28
+: 2 30     16        P2 2021-05-05
 
 ** Datas Projeto -> TEX
 
@@ -325,7 +325,8 @@ cronograma.modelo <- gsub("SEMESTRE", semestre, cronograma.modelo);
 cronograma.modelo <- gsub("TABELA", gsub("\\\\", "\\\\\\\\", cronograma.tex), cronograma.modelo);
 #cronograma.modelo <- gsub("DIASPORETAPA", "", cronograma.modelo);
 cronograma.modelo <- gsub("DIASDASPROVAS", gsub("\\\\", "\\\\\\\\", provas.tex), cronograma.modelo);
-cronograma.modelo <- gsub("DIASDASETAPAS", gsub("\\\\", "\\\\\\\\", etapas.tex), cronograma.modelo);
+#cronograma.modelo <- gsub("DIASDASETAPAS", gsub("\\\\", "\\\\\\\\", etapas.tex), cronograma.modelo);
+cronograma.modelo <- gsub("DIASDASETAPAS", "\\\\begin{center}Confira no moodle a data atualizada das etapas.\\\\end{center}", cronograma.modelo);
 write(cronograma.modelo, "cronograma.tex");
 system2("rm", "-f cronograma.pdf")
 system2("rubber", " --pdf cronograma.tex")
@@ -372,10 +373,10 @@ cronograma.output %>%
 | 21 |     11 | Controle de Fluxo                                                | E5      |
 | 22 |     12 | Introdução, Registro de Ativação                                 | E5      |
 | 23 |     12 | Chamada e retorno de Função, Passagem de parâmetros              | E5      |
-| 24 |     13 | Introdução, Janela e Grafos de Fluxo                             | E6      |
-| 25 |     13 | Grafos de Fluxo e Redução de potência                            | E6      |
-| 26 |     14 | Considerações Finais e Fechamento                                | E6      |
-| 27 |     14 | Revisão                                                          | E6      |
-| 28 |     15 | P2                                                               | E7      |
-| 29 |     15 |                                                                  | E7      |
-| 30 |     16 | PR                                                               | E7      |
+| 24 |     13 | Introdução, Janela                                               | E6      |
+| 25 |     13 | Grafos de Fluxo                                                  | E6      |
+| 26 |     14 | Grafos de Fluxo                                                  | E6      |
+| 27 |     14 | Redução de potência                                              | E6      |
+| 28 |     15 | Considerações Finais e Fechamento                                | E7      |
+| 29 |     15 | Revisão                                                          | E7      |
+| 30 |     16 | P2                                                               | E7      |
