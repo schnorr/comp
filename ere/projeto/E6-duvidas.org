@@ -1,6 +1,45 @@
-#+STARTUP: overview indent
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
 #+TITLE: Dúvidas da E6 do Projeto de Compilador
-* E6
+#+Author: Lucas Mello Schnorr
+#+Date: schnorr@inf.ufrgs.br
+#+Language: pt-br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil title:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* E6 2020/2
+** 2021-04-28
+*** Dúvida #1
+
+O sr. deseja que a gente gere o código assembly a partir do código
+ILOC, correto?  Nesse caso, o primeiro problema que vejo seria como
+parseá-lo para recuperar as instruções ILOC nele contidas.  Seria
+recomendável criar um novo compilador do zero, com scanner.l,
+parser.y, etc, que ignora erros léxicos/sintáticos/semânticos, mas
+serve apenas para construir uma AST a partir de uma entra ILOC válida,
+para então termos como construir o código Assembly?  Que outra forma
+poderíamos fazer para parsear o código ILOC?
+
+---
+
+R: Não há uma absoluta necessidade de se traduzir a partir do código
+ILOC. Isso pode realmente ser bastante complicado, pois haveria a
+necessidade de fazer um parser etc, além da complicação de reconstruir
+uma boa parte do conhecimento que já existe no compilador de vocês
+atual (AST, semântica, tabelas, etc). O mais simples ao meu ver é
+reaproveitar todo o conhecimento adquirido na geração de ILOC para
+gerar diretamente código assembly.
+
+* E6 2020/1
 ** DONE 2020-11-16 D0
 *** Dúvida #1
 
