@@ -38,6 +38,26 @@ uma boa parte do conhecimento que já existe no compilador de vocês
 atual (AST, semântica, tabelas, etc). O mais simples ao meu ver é
 reaproveitar todo o conhecimento adquirido na geração de ILOC para
 gerar diretamente código assembly.
+*** Dúvida #2
+
+Observei que nos códigos Assembly, mostra-se o nome das
+variáveis. Entretanto, esta informação não é acessível ao código
+iLOC. O que fazemos? A tradução para Assembly deve ser feita apenas
+olhando o código iLOC? Então, como vemos esses nomes? Ou precisaremos
+de novas passagens pelo código para gerar o Assembly?
+
+---
+
+R: Os nomes no código alto nível (usados na entrada do nosso
+compilador) podem ou não aparecer no assembly (nem no ILOC da E5
+diga-se de passagem) dependendo da necessidade prática. Por exemplo,
+nomes de funções e de variáveis globais no segmento de dados, isso é
+legal ter no assembly pois facilita nossa leitura e qualquer nome no
+escopo global pode ter um referenciamento direto. Já para as variáveis
+locais, bom, o nome não é muito relevante pois as variáveis são
+alocadas na pilha. Vocês precisam usar o conhecimento do cálculo de
+endereçamento de variáveis locais (já feito em E5) e replicar isso no
+assembly.
 
 * E6 2020/1
 ** DONE 2020-11-16 D0
