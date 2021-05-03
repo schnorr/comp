@@ -27,11 +27,10 @@ A revisão será sob demanda e acontecerá da seguinte forma. Os alunos
 são motivados a identificarem as lacunas de compreensão que tiveram ao
 longo desta metade de semestre, através de contra-exemplos ou dúvidas
 na realização dos exercícios propostos. Estas dúvidas podem ser
-enviadas para o professor até às 8hs da segunda-feira, 23/11. Na
-medida que as dúvidas sobre o conteúdo da disciplina forem surgindo, o
-professor fará um ou mais videos respondendo às dúvidas e levantando
-reflexões. Estes videos serão disponibilizados no moodle na Semana 15,
-na tarde da segunda-feira que precede a prova.
+enviadas para o professor até às 8hs da quarta-feira, 05/11. Na medida
+que as dúvidas sobre o conteúdo da disciplina forem surgindo, o
+professor responderá as mensagem colocando as respostas aqui nesta
+entrada.
 #+BEGIN_EXPORT latex
 \end{minipage}
 #+END_EXPORT
@@ -40,7 +39,7 @@ na tarde da segunda-feira que precede a prova.
 
 Serão enviadas por intermédio do \\
 sistema de ``Mensagens'' do Moodle
-- Até terça-feira 24/11 às 9hs
+- Até quarta-feira 05/05 às 9hs
 
 #+latex: \vfill
 
@@ -58,8 +57,8 @@ A URL é única por aluno
 * Realização da prova
 
 A prova será realizada entre
-- das 9h00 do dia 24/11
-- até às 23h59 do dia 25/11
+- das 9h00 do dia 05/05
+- até às 23h59 do dia 07/05
 
 #+latex: \vfill\bigskip
 
@@ -74,7 +73,7 @@ Durante o período da prova
 
 O link está no moodle na "Semana 15"
 - Envio é único e definitivo
-  - Até às 23h59 da sexta-feira dia 25/11
+  - Até às 23h59 da sexta-feira dia 07/05
     - Não deixe para o último minuto
 
 #+latex: \pause\bigskip
@@ -88,7 +87,6 @@ O link está no moodle na "Semana 15"
   - *Número razoável é de até cinco páginas*
 - Resposta de cada questão deve estar bem identificada
 
-#+latex: \pause
 
 
 
