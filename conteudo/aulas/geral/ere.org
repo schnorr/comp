@@ -7,7 +7,7 @@
 #+EXPORT_SELECT_TAGS: export
 
 #+Title: Apresentação da Disciplina
-#+subtitle: ERE 2020/2
+#+subtitle: ERE 2021/1
 #+Author: Prof. Lucas M. Schnorr (UFRGS)
 #+Date: \copyleft
 
@@ -18,17 +18,15 @@
 
 * O professor
 Prof. Lucas M. Schnorr
-+ Prédio 43425, Sala 202
++ +Prédio 43425, Sala 202+
 + [[http://www.inf.ufrgs.br/~schnorr][http://www.inf.ufrgs.br/~schnorr]]
 + schnorr@inf.ufrgs.br
 
 \vfill
 
 Áreas de interesse para pesquisa
-+ High Performance Computing (HPC)
-+ Performance Analysis
-+ Data Visualization
-+ Reproducibility
++ High Performance Computing (HPC) / Performance Analysis
++ Data Science / Visualization & Reproducibility
     
 * Motivação
 + O que faz um compilador?
@@ -118,10 +116,10 @@ while (i <= 10) {
 + Avaliação
   
 #+BEGIN_CENTER
-Consulte no Portal do Aluno da UFRGS (ERE 2020/2).
+Consulte no Portal do Aluno da UFRGS
 #+END_CENTER
 
-Vamos revisar juntos alguns elementos.
+Vamos revisar juntos seus elementos.
 
 * Bibliografia Básica Essencial
 - Aho, Alfred V.; Sethi, Ravi; Ullman, Jeffrey D.. Compiladores,
@@ -201,7 +199,7 @@ Situações frequentes
   - Entra *em recuperação* \rightarrow uma semana para correções (80%)
 - _Ressalvas_
   - Flexibilidades possíveis a critério do professor
-  - Última etapa não tem recuperação por conta do calendário
+  - Recuperação da última etapa condicionada ao calendário
 
 
 * Atividade de Recuperação Final
@@ -214,7 +212,9 @@ deverá atingir uma nota mínima na atividade avaliativa de recuperação
 (Nota Mínina de Recuperação - NMR) determinada pela seguinte
 expressão:
 
+#+begin_center
 NMR = 12 - MF
+#+end_center
 
 com NMR limitado ao valor máximo igual a 10 (dez) e MF sendo a Média
 Final obtida pelo discente e descrita na seção "Critérios de
@@ -227,7 +227,7 @@ contrário, será reprovado (conceito "D").
 #+BEGIN_CENTER
 Sempre consulte o Moodle Institucional da UFRGS
 
-https://moodle.ufrgs.br/course/view.php?id=82075
+https://moodle.ufrgs.br/course/view.php?id=88418
 #+END_CENTER
 
 #+latex: \vfill
