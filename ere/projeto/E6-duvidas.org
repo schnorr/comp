@@ -17,7 +17,7 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 
 * E6 2020/2
-** 2021-04-28
+** 2021-04-28 D0
 *** Dúvida #1
 
 O sr. deseja que a gente gere o código assembly a partir do código
