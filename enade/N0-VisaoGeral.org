@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+startup: beamer overview indent
+#+LANGUAGE: pt-br
+#+TAGS: noexport(n)
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_SELECT_TAGS: export
+
+#+Title: Compiladores
+#+Subtitle: Preparação para o ENADE
+#+Author: Prof. Lucas M. Schnorr (UFRGS)
+#+Date: \copyleft
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [xcolor=dvipsnames, aspectratio=169, presentation]
+#+OPTIONS: title:nil H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \input{./org-babel.tex}
+
+#+latex: \newcommand{\mytitle}{Compiladores -- ENADE (Visão Geral)}
+#+latex: \mytitleslide
+
+* Quem sou eu?
+
+Prof. Lucas M. Schnorr
++ +Prédio 43425, Sala 202+ (pandemia obriga)
++ [[http://www.inf.ufrgs.br/~schnorr][http://www.inf.ufrgs.br/~schnorr]]
++ schnorr@inf.ufrgs.br
++ [[http://twitter.com/lucasschnorr/][@lucasschnorr]] =#COMP_UFRGS= (Twitter)
+
+#+latex: \vfill\pause
+
+Áreas de interesse para pesquisa
+- Computação de alto desempenho (HPC)
+- Análise de desempenho de sistemas computacionais
+- Visualização de dados na área de ciência de dados
+
+#+latex: \pause\vfill
+
+Por que ensina compiladores?
+
+* Metodologia
+
+- Encontros síncronos nas terças-feiras
+  - A partir das 17h até no máximo 19h
+  - Enquanto houver material para discutir
+    - Ordem cronológica reversa
+
+- Abordagens
+  1. Material ENADE
+  2. Dúvidas pontuais dos alunos
+
+#+latex: \pause\vfill
+
+- Dúvidas por intermédio do fórum no moodle ou e-mail
+  - schnorr@inf.ufrgs.br
+
+* Material
+
+- Material focado no ENADE (com ponteiros)
+  - Disponível no moodle correspondente
+
+#+latex: \pause
+
+- Material já preparado para a disciplina disponível em
+  - https://github.com/schnorr/comp/tree/master/conteudo
+  - Algumas aulas gravadas no período pré-pandemia
+    - Vejam a coluna "Videos"
+
+#+latex: \pause\vfill
+
+- Novos videos para o período do ERE
+  - Serão disponibilizados pontualmente
+
+* Visão Geral
+
+Tabela construída pelo professor
+- Avise-me caso faltar alguma questão
+
+#+latex: \pause\vfill
+
+#+attr_latex: :center nil
+|  Ano | Questão | Gabarito   | Assunto                     |
+|------+---------+------------+-----------------------------|
+| [[https://moodle.inf.ufrgs.br/mod/resource/view.php?id=103808][2017]] |      30 | B          | Descendente LL(1)           |
+| [[https://moodle.inf.ufrgs.br/mod/resource/view.php?id=103811][2014]] |      25 | D          | Gramática Livre de Contexto |
+| 2014 |      34 | E          | Sistemas operacionais?      |
+| [[https://moodle.inf.ufrgs.br/mod/resource/view.php?id=103814][2011]] |      12 | B          | Processo de derivação       |
+| 2011 |      23 | C          | Gramática Livre de Contexto |
+| 2011 |      38 | E          | Ascendente LR(0)            |
+| [[https://moodle.inf.ufrgs.br/mod/resource/view.php?id=104636][2008]] |      22 | A          | Geral                       |
+| 2008 |      29 | D          | Gramática Livre de Contexto |
+| 2008 |      33 | C          | Sintática Geral             |
+| 2008 |      39 | Discursiva | Árvore de derivação         |
+| 2008 |      52 | E          | Tratamento de erros         |
+| [[https://moodle.inf.ufrgs.br/mod/resource/view.php?id=104639][2005]] |      80 | B          | Léxica?                     |
