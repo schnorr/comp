@@ -1,0 +1,30 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{textcomp}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{lmodern}
+\graphicspath{{../img/}{./img/}}
+\newcommand{\copyleft}{\includegraphics[width=0.5cm]{cc_cc_30.pdf}\hspace{0.2cm}\includegraphics[width=0.5cm]{cc_by_30.pdf}\hspace{0.2cm}\includegraphics[width=0.5cm]{cc_sa_30.pdf}}
+\newcommand{\infufrgs}{\includegraphics[width=1cm]{inf-ufrgs-bw.pdf}}
+\usepackage{tabularx}
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{titlelike}{fg=black}
+\setbeamercolor{itemize item}{fg=black}
+\setbeamercolor{itemize subitem}{fg=black}
+\setbeamercolor{itemize subsubitem}{fg=black}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=.5cm}
+\setbeamersize{text margin right=.5cm}
+\newcommand{\murl}[2]{{#1://#2}}
+\newcommand{\et}[1]{{\scriptsize\texttt{#1}}}
+\newcommand{\etn}[1]{{\texttt{#1}}}
+\newcommand{\mytitleslide}[1]{%
+  \begin{frame}{\mytitle}
+    Prof. Lucas Mello Schnorr
+    \vfill\copyleft
+  \end{frame}}
