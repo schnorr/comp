@@ -39,7 +39,7 @@ disponibilizados no moodle na Semana 8.
 
 Serão enviadas por intermédio do \\
 sistema de ``Mensagens'' do Moodle
-- Até segunda 15/03 às 12hs
+- Até 21/09 às 9hs
 
 #+latex: \vfill
 
@@ -57,13 +57,13 @@ A URL é única por aluno
 * Realização da prova
 
 A prova será realizada
-- das 12h00 da segunda 15/03
-- até às 23h59 da quarta 17/03
+- das 9h da terça 21/09
+- até às 23h59 da quarta 22/09
 
 #+latex: \vfill\bigskip
 
 Durante o período da prova
-- Realização individual, com consulta ao material no moodle
+- Realização individual, *com consulta ao material no moodle*
 - Evitar discutir o assunto das questões com colegas
 - Pode ser feita em papel ou digital (texto e figuras)
 - Identificação do aluno deve estar presente
@@ -73,7 +73,7 @@ Durante o período da prova
 
 O link está no moodle na "Semana 8"
 - Envio é único e definitivo
-  - Até às 23h59 da quarta 17/03
+  - Até às 23h59 da quarta 22/09
     - *Não deixe para o último minuto*
 
 #+latex: \pause\bigskip
@@ -84,7 +84,7 @@ O link está no moodle na "Semana 8"
   - Tamanho máximo do PDF é de 16MBytes
     - Se necessário, /ghostscript/ (~gs~) é capaz de reduzir tamanho
 - Sem limite de páginas no PDF
-  - *Número razoável é de até cinco páginas*
+  - *Número razoável de páginas*
 - Resposta de cada questão deve estar bem identificada
 
 #+latex: \pause
