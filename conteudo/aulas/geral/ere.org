@@ -226,8 +226,6 @@ contrário, será reprovado (conceito "D").
 
 #+BEGIN_CENTER
 Sempre consulte o Moodle Institucional da UFRGS
-
-https://moodle.ufrgs.br/course/view.php?id=88418
 #+END_CENTER
 
 #+latex: \vfill
