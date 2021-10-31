@@ -437,11 +437,11 @@ previamente (pode-se saltar para um código mais a frente do programa).
 
 #+BEGIN_EXAMPLE
 cmp_LT r1, r2 -> r3        // r3 = true se r1 < r2, senão r3 = false
-cmp_LE r1, r2 -> r3        // r3 = true se r1 <= r2, senão r3 = false
+cmp_LE r1, r2 -> r3        // r3 = true se r1 ≤ r2, senão r3 = false
 cmp_EQ r1, r2 -> r3        // r3 = true se r1 = r2, senão r3 = false
-cmp_GE r1, r2 -> r3        // r3 = true se r1 >= r2, senão r3 = false
+cmp_GE r1, r2 -> r3        // r3 = true se r1 ≥ r2, senão r3 = false
 cmp_GT r1, r2 -> r3        // r3 = true se r1 > r2, senão r3 = false
-cmp_NE r1, r2 -> r3        // r3 = true se r1 != r2, senão r3 = false
+cmp_NE r1, r2 -> r3        // r3 = true se r1 ≠ r2, senão r3 = false
 cbr     r1    -> l2, l3    // PC = endereço(l2) se r1 = true, senão PC = endereço(l3)
 #+END_EXAMPLE
 
