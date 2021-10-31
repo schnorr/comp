@@ -510,11 +510,11 @@ jumpI          ->  l1        // PC = endereço(l1)
 jump           ->  r1        // PC = r1
 cbr    r1      ->  l2, l3    // PC = endereço(l2) se r1 = true, senão PC = endereço(l3)
 cmp_LT r1, r2  ->  r3        // r3 = true se r1 < r2, senão r3 = false
-cmp_LE r1, r2  ->  r3        // r3 = true se r1 \leq r2, senão r3 = false
+cmp_LE r1, r2  ->  r3        // r3 = true se r1 ≤ r2, senão r3 = false
 cmp_EQ r1, r2  ->  r3        // r3 = true se r1 = r2, senão r3 = false
-cmp_GE r1, r2  ->  r3        // r3 = true se r1 \geq r2, senão r3 = false
+cmp_GE r1, r2  ->  r3        // r3 = true se r1 ≥ r2, senão r3 = false
 cmp_GT r1, r2  ->  r3        // r3 = true se r1 > r2, senão r3 = false
-cmp_NE r1, r2  ->  r3        // r3 = true se r1 \ne r2, senão r3 = false
+cmp_NE r1, r2  ->  r3        // r3 = true se r1 ≠ r2, senão r3 = false
 #+END_EXAMPLE
 
 * Anexo - Simulador ILOC (=ilocsim=)
