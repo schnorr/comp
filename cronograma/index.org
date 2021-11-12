@@ -49,7 +49,7 @@
 | Semântica  | Esquemas S e L-Atribuídos                                 |             | Início E4 (Tipos)    |
 | Semântica  | Implementação de Esquemas S e L-Atribuídos                |             |                      |
 |            | Revisão                                                   |             |                      |
-|            | P1 (presencial, G1 e G2)                                  |             |                      |
+|            | P1 (presencial, G1 e G2)                                  | Auditório   |                      |
 | Código     | Declarações, Escopos e Atribuição                         |             | Início E5 (Código)   |
 | Código     | Expressões Lógicas com atalho, Controle de Fluxo          |             |                      |
 | Projeto    | Acompanhamento (Presencial, G1)                           | Laboratório |                      |
@@ -62,7 +62,7 @@
 | Otimização | Introdução, Janela e Grafos de Fluxo                      |             |                      |
 | Otimização | Grafos de Fluxo e Redução de potência                     |             |                      |
 |            | Revisão                                                   |             |                      |
-|            | P2 (Presencial, G1 e G2)                                  |             |                      |
+|            | P2 (Presencial, G1 e G2)                                  | Auditório   |                      |
 | Fechamento | Fechamento e reflexão final (Presencial, G1)              | Teórica     |                      |
 | Fechamento | Fechamento e reflexão final (Presencial, G2)              | Teórica     |                      |
 |            | PR                                                        |             |                      |
