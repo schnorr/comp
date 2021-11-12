@@ -30,41 +30,41 @@
 ** Aulas (em ORG)
 
 #+NAME: listagem_de_encontros
-| Setor      | Descrição                                                 | Local       | Projeto              |
-|------------+-----------------------------------------------------------+-------------+----------------------|
-| Abertura   | Definições, requisitos e posicionamento  (Presencial, G1) | Teórica     | Definições iniciais  |
-| Abertura   | Definições, requisitos e posicionamento  (Presencial, G2) | Teórica     | Definições iniciais  |
-| Léxica     | Introdução, Expressões Regulares, =flex=                    |             | Início E1 (flex)     |
-| Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD       |             |                      |
-| Sintática  | Intro., Gramáticas Livres de Contexto, Transformações     |             |                      |
-| Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)    |             |                      |
-| Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=             |             | Início E2 (bison)    |
-| Sintática  | Ascendente, Parser LR(0)                                  |             |                      |
-| Sintática  | Exercícios LR(0), SLR(1)                                  |             |                      |
-| Sintática  | Parser LR(1)                                              |             |                      |
-| Sintática  | Parser LALR(1), AST e =bison= (ações)                       |             | Início E3 (Árvore)   |
-| Sintática  | Exercícios LR(1), e LALR(1)                               |             |                      |
-| Projeto    | Acompanhamento  (Presencial, G1)                          | Laboratório |                      |
-| Projeto    | Acompanhamento  (Presencial, G2)                          | Laboratório |                      |
-| Semântica  | Esquemas S e L-Atribuídos                                 |             | Início E4 (Tipos)    |
-| Semântica  | Implementação de Esquemas S e L-Atribuídos                |             |                      |
-|            | Revisão                                                   |             |                      |
-|            | P1 (presencial, G1 e G2)                                  | Auditório   |                      |
-| Código     | Declarações, Escopos e Atribuição                         |             | Início E5 (Código)   |
-| Código     | Expressões Lógicas com atalho, Controle de Fluxo          |             |                      |
-| Projeto    | Acompanhamento (Presencial, G1)                           | Laboratório |                      |
-| Projeto    | Acompanhamento (Presencial, G2)                           | Laboratório |                      |
-| Código     | Endereçamento de Arranjos multidimensionais               |             | Início E6 (Assembly) |
-| Código     | Controle de Fluxo                                         |             |                      |
-| Execução   | Introdução, Registro de Ativação                          |             |                      |
-| Execução   | Chamada e retorno de Função, Passagem de parâmetros       |             |                      |
-| Otimização | Introdução, Janela e Grafos de Fluxo                      |             | Início E7 (Otim.)    |
-| Otimização | Grafos de Fluxo e Redução de potência                     |             |                      |
-|            | Revisão                                                   |             |                      |
-|            | P2 (Presencial, G1 e G2)                                  | Auditório   |                      |
-| Fechamento | Fechamento e reflexão final (Presencial, G1)              | Teórica     |                      |
-| Fechamento | Fechamento e reflexão final (Presencial, G2)              | Teórica     |                      |
-|            | PR                                                        |             |                      |
+| Setor      | Descrição                                                 | Local         | Projeto              |
+|------------+-----------------------------------------------------------+---------------+----------------------|
+| Abertura   | Definições, requisitos e posicionamento  (Presencial, G1) | Teórica       | Definições iniciais  |
+| Abertura   | Definições, requisitos e posicionamento  (Presencial, G2) | Teórica       | Definições iniciais  |
+| Léxica     | Introdução, Expressões Regulares, =flex=                    |               | Início E1 (flex)     |
+| Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD       |               |                      |
+| Sintática  | Intro., Gramáticas Livres de Contexto, Transformações     |               |                      |
+| Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)    |               |                      |
+| Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=             |               | Início E2 (bison)    |
+| Sintática  | Ascendente, Parser LR(0)                                  |               |                      |
+| Sintática  | Exercícios LR(0), SLR(1)                                  |               |                      |
+| Sintática  | Parser LR(1)                                              |               |                      |
+| Sintática  | Parser LALR(1), AST e =bison= (ações)                       |               | Início E3 (Árvore)   |
+| Sintática  | Exercícios LR(1), e LALR(1)                               |               |                      |
+| Projeto    | Acompanhamento  (Presencial, G1)                          | Laboratório   |                      |
+| Projeto    | Acompanhamento  (Presencial, G2)                          | Laboratório   |                      |
+| Semântica  | Esquemas S e L-Atribuídos                                 |               | Início E4 (Tipos)    |
+| Semântica  | Implementação de Esquemas S e L-Atribuídos                |               |                      |
+|            | Revisão                                                   |               |                      |
+|            | P1 (presencial, G1 e G2)                                  | 2xLaboratório |                      |
+| Código     | Declarações, Escopos e Atribuição                         |               | Início E5 (Código)   |
+| Código     | Expressões Lógicas com atalho, Controle de Fluxo          |               |                      |
+| Projeto    | Acompanhamento (Presencial, G1)                           | Laboratório   |                      |
+| Projeto    | Acompanhamento (Presencial, G2)                           | Laboratório   |                      |
+| Código     | Endereçamento de Arranjos multidimensionais               |               | Início E6 (Assembly) |
+| Código     | Controle de Fluxo                                         |               |                      |
+| Execução   | Introdução, Registro de Ativação                          |               |                      |
+| Execução   | Chamada e retorno de Função, Passagem de parâmetros       |               |                      |
+| Otimização | Introdução, Janela e Grafos de Fluxo                      |               | Início E7 (Otim.)    |
+| Otimização | Grafos de Fluxo e Redução de potência                     |               |                      |
+|            | Revisão                                                   |               |                      |
+|            | P2 (Presencial, G1 e G2)                                  | 2xLaboratório |                      |
+| Fechamento | Fechamento e reflexão final (Presencial, G1)              | Teórica       |                      |
+| Fechamento | Fechamento e reflexão final (Presencial, G2)              | Teórica       |                      |
+|            | PR                                                        |               |                      |
 
 ** Cronograma (para TEX)
 
