@@ -56,10 +56,9 @@
 | Projeto    | Acompanhamento (Presencial, G2)                           | Laboratório |                      |
 | Código     | Endereçamento de Arranjos multidimensionais               |             | Início E6 (Assembly) |
 | Código     | Controle de Fluxo                                         |             |                      |
-| Código     | Controle de Fluxo                                         |             |                      |
 | Execução   | Introdução, Registro de Ativação                          |             |                      |
-| Execução   | Chamada e retorno de Função, Passagem de parâmetros       |             | Início E7 (Otim.)    |
-| Otimização | Introdução, Janela e Grafos de Fluxo                      |             |                      |
+| Execução   | Chamada e retorno de Função, Passagem de parâmetros       |             |                      |
+| Otimização | Introdução, Janela e Grafos de Fluxo                      |             | Início E7 (Otim.)    |
 | Otimização | Grafos de Fluxo e Redução de potência                     |             |                      |
 |            | Revisão                                                   |             |                      |
 |            | P2 (Presencial, G1 e G2)                                  | Auditório   |                      |
@@ -96,7 +95,7 @@ ymd("2022-03-04")#, # Carnaval
 #ymd("2022-11-15")  # República
 )
 
-dataDaRecuperação <- ymd("2022-07-17");
+dataDaRecuperação <- ymd("2022-05-16");
 
 dates <- tibble(Dia=seq(ymd("2022-01-17"), ymd("2022-05-18"), by="days")) %>%
     # Define o dia da semana
