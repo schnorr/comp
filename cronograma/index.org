@@ -30,44 +30,49 @@
 ** Aulas (em ORG)
 
 #+NAME: listagem_de_encontros
-| Setor      | Descrição                                                        |     Local | Projeto             |
-|------------+------------------------------------------------------------------+-----------+---------------------|
-|            | Definições, requisitos e posicionamento da disciplina            |           | Definições iniciais |
-| Léxica     | Introdução, Expressões Regulares, =flex=                           |           | Início E1 (flex)    |
-| Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD, =flex= (demo) |           |                     |
-| Sintática  | Intro., Gramáticas Livres de Contexto, Transformações            |           |                     |
-| Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)           |           |                     |
-| Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=                    |           | Início E2 (bison)   |
-| Sintática  | Ascendente, Parser LR(0), SLR(1) , =bison= (demo)                  |           |                     |
-| Sintática  | Exercícios LR(0), SLR(1)                                         |           |                     |
-| Sintática  | Parser LR(1), LALR(1)                                            |           |                     |
-| Sintática  | Exercícios LR(1), e LALR(1), AST e =bison= (ações)                 |           |                     |
-|            |                                                                  | 43413-104 | Avaliação E1, E2    |
-| Semântica  | Esquemas S e L-Atribuídos                                        |           | Início E3 (Árvore)  |
-| Semântica  | Implementação de Esquemas S e L-Atribuídos                       |           |                     |
-|            | Revisão                                                          |           | Início E4 (Tipos)   |
-|            | P1                                                               |           |                     |
-| Código     | Declarações, Escopos e Atribuição                                |           |                     |
-|            |                                                                  | 43413-104 | Avaliação E3        |
-| Código     | Expressões Lógicas com atalho, Controle de Fluxo                 |           |                     |
-| Código     | Endereçamento de Arranjos multidimensionais                      |           |                     |
-| Código     | Controle de Fluxo                                                |           | Início E5 (Código)  |
-|            |                                                                  | 43413-103 | Avaliação E4        |
-| Código     | Controle de Fluxo                                                |           |                     |
-| Execução   | Introdução, Registro de Ativação                                 |           |                     |
-| Execução   | Chamada e retorno de Função, Passagem de parâmetros              |           | Início E6 (Chamada) |
-| Otimização | Introdução, Janela e Grafos de Fluxo                             |           |                     |
-|            |                                                                  | 43413-103 | Avaliação E5        |
-| Otimização | Grafos de Fluxo e Redução de potência                            |           |                     |
-|            | Revisão                                                          |           |                     |
-|            | P2                                                               |           |                     |
-|            | PR                                                               |           |                     |
+| Setor      | Descrição                                                 | Local       | Projeto              |
+|------------+-----------------------------------------------------------+-------------+----------------------|
+| Abertura   | Definições, requisitos e posicionamento  (Presencial, G1) | Teórica     | Definições iniciais  |
+| Abertura   | Definições, requisitos e posicionamento  (Presencial, G2) | Teórica     | Definições iniciais  |
+| Léxica     | Introdução, Expressões Regulares, =flex=                    |             | Início E1 (flex)     |
+| Léxica     | Autômato Finito Determinístico, Conv. AFND para AFD       |             |                      |
+| Sintática  | Intro., Gramáticas Livres de Contexto, Transformações     |             |                      |
+| Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)    |             |                      |
+| Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=             |             | Início E2 (bison)    |
+| Sintática  | Ascendente, Parser LR(0)                                  |             |                      |
+| Sintática  | Exercícios LR(0), SLR(1)                                  |             |                      |
+| Sintática  | Parser LR(1)                                              |             |                      |
+| Sintática  | Parser LALR(1), AST e =bison= (ações)                       |             | Início E3 (Árvore)   |
+| Sintática  | Exercícios LR(1), e LALR(1)                               |             |                      |
+| Projeto    | Acompanhamento  (Presencial, G1)                          | Laboratório |                      |
+| Projeto    | Acompanhamento  (Presencial, G2)                          | Laboratório |                      |
+| Semântica  | Esquemas S e L-Atribuídos                                 |             | Início E4 (Tipos)    |
+| Semântica  | Implementação de Esquemas S e L-Atribuídos                |             |                      |
+|            | Revisão                                                   |             |                      |
+|            | P1 (presencial, G1 e G2)                                  |             |                      |
+| Código     | Declarações, Escopos e Atribuição                         |             | Início E5 (Código)   |
+| Código     | Expressões Lógicas com atalho, Controle de Fluxo          |             |                      |
+| Projeto    | Acompanhamento (Presencial, G1)                           | Laboratório |                      |
+| Projeto    | Acompanhamento (Presencial, G2)                           | Laboratório |                      |
+| Código     | Endereçamento de Arranjos multidimensionais               |             | Início E6 (Assembly) |
+| Código     | Controle de Fluxo                                         |             |                      |
+| Código     | Controle de Fluxo                                         |             |                      |
+| Execução   | Introdução, Registro de Ativação                          |             |                      |
+| Execução   | Chamada e retorno de Função, Passagem de parâmetros       |             | Início E7 (Otim.)    |
+| Otimização | Introdução, Janela e Grafos de Fluxo                      |             |                      |
+| Otimização | Grafos de Fluxo e Redução de potência                     |             |                      |
+|            | Revisão                                                   |             |                      |
+|            | P2 (Presencial, G1 e G2)                                  |             |                      |
+| Fechamento | Fechamento e reflexão final (Presencial, G1)              | Teórica     |                      |
+| Fechamento | Fechamento e reflexão final (Presencial, G2)              | Teórica     |                      |
+|            | PR                                                        |             |                      |
 
 ** Cronograma (para TEX)
 
 #+name: cronograma
 #+header: :var aulas=listagem_de_encontros
 #+begin_src R :results output :session :exports both
+options(crayon.enabled=FALSE)
 suppressMessages(library(lubridate));
 suppressMessages(library(tidyverse));
 suppressMessages(library(xtable));
@@ -75,31 +80,25 @@ suppressMessages(library(xtable));
 aulas <- aulas %>% as_tibble();
 
 daysOff <- c(
-ymd("2019-04-19"), # Religioso
-ymd("2019-04-20"), # Não letivo
-ymd("2019-04-21"), # Tiradentes
-ymd("2019-05-01"), # Trabalho
-ymd("2019-05-18"), # Portas Abert
-ymd("2019-06-20"), # Religioso
-ymd("2019-09-07"), # Independência
-ymd("2019-09-20"), # Farroupilha
-ymd("2019-10-12"), # Religioso
-ymd("2019-10-20"), # Não Letivo
-ymd("2019-10-21"), # SEMAC
-ymd("2019-10-22"), # SEMAC
-ymd("2019-10-23"), # SEMAC
-ymd("2019-10-24"), # SEMAC
-ymd("2019-10-25"), # SEMAC
-ymd("2019-10-28"), # Dia do Servidor Público
-ymd("2019-11-02"), # Mortos
-ymd("2019-11-15"), # República
-ymd("2019-11-23"), # Não Letivo
-ymd("2019-11-30")  # Não Letivo
+ymd("2022-02-28"), # Carnaval
+ymd("2022-03-01"), # Carnaval
+ymd("2022-03-02"), # Carnaval
+ymd("2022-03-03"), # Carnaval
+ymd("2022-03-04")#, # Carnaval
+#ymd("2022-04-15"), # Religioso
+#ymd("2022-04-21"), # Tiradentes
+#ymd("2022-05-01"), # Trabalho
+#ymd("2022-06-16"), # Religioso
+#ymd("2022-09-07"), # Independência
+#ymd("2022-09-20"), # Farroupilha
+#ymd("2022-10-12"), # Religioso
+#ymd("2022-11-02"), # Mortos
+#ymd("2022-11-15")  # República
 )
 
-dataDaRecuperação <- ymd("2019-12-09");
+dataDaRecuperação <- ymd("2022-07-17");
 
-dates <- tibble(Dia=seq(ymd("2019-08-12"), ymd("2020-01-11"), by="days")) %>%
+dates <- tibble(Dia=seq(ymd("2022-01-17"), ymd("2022-05-18"), by="days")) %>%
     # Define o dia da semana
     mutate(DiaDaSemana = wday(Dia)) %>%
     # Aulas de Compiladores em quais dias da semana (segunda = 2, terca = 3, ...)
@@ -119,10 +118,12 @@ aulas %>%
     mutate(N = 1:nrow(.)) -> aulas;
 
 aulas %>%
-    select(N, Encontro, Local, Setor, Descrição, Projeto) %>%
+    mutate(S = as.integer(floor((N+1)/2))) %>%
+    select(S, N, Encontro, Local, Setor, Descrição, Projeto) %>%
     as.data.frame() %>%
     xtable(.) %>%
-    print (print.results=FALSE,
+    print (floating = FALSE,
+           print.results=FALSE,
            booktabs = TRUE,
            include.rownames=FALSE) %>%
     as.character -> cronograma;
@@ -130,64 +131,42 @@ aulas %>%
 
 #+RESULTS: cronograma
 
-#+begin_src R :results output :session :exports both
-aulas %>%
-    filter(!is.na(Local))
-#+end_src
-
-#+RESULTS:
-#+begin_example
-
-# A tibble: 30 x 8
-   Setor  Descrição         Local Projeto  Dia        DiaDaSemana Encontro     N
-   <chr>  <chr>             <chr> <chr>    <date>           <dbl> <chr>    <int>
- 1 ""     Definições, requ… ""    Definiç… 2019-08-12           2 2019-08…     1
- 2 Léxica Introdução, Expr… ""    Início … 2019-08-14           4 2019-08…     2
- 3 Léxica Autômato Finito … ""    ""       2019-08-19           2 2019-08…     3
- 4 Sintá… Intro., Gramátic… ""    ""       2019-08-21           4 2019-08…     4
- 5 Sintá… Desc., com Retro… ""    ""       2019-08-26           2 2019-08…     5
- 6 Sintá… Parser e tabela … ""    Início … 2019-08-28           4 2019-08…     6
- 7 Sintá… Ascendente, Pars… ""    ""       2019-09-02           2 2019-09…     7
- 8 Sintá… Exercícios LR(0)… ""    ""       2019-09-04           4 2019-09…     8
- 9 Sintá… Parser LR(1), LA… ""    ""       2019-09-09           2 2019-09…     9
-10 Sintá… Exercícios LR(1)… ""    Início … 2019-09-11           4 2019-09…    10
-# … with 20 more rows
-#+end_example
-
 ** Dias por etapa do projeto (em R)
 
 #+name: dias_por_etapa
 #+header: :var dep=cronograma
-#+begin_src R :results output :session :exports both
+#+begin_src R :results output :session *R* :exports both
 aulas %>%
     select(Projeto, Dia) %>%
     filter(grepl("Início", Projeto)) %>%
     mutate(Projeto = gsub("Início ", "", Projeto)) %>%
     mutate(Projeto = gsub(" \\(.*$", "", Projeto)) %>%
     rename(Início = Dia) %>%
-    left_join(
-        aulas %>%
-        select(Projeto, Dia) %>%
-        filter(grepl("Avaliação", Projeto)) %>%
-        mutate(Projeto = gsub("Avaliação ", "", Projeto)) %>%
-        mutate(Projeto = strsplit(Projeto, ",")) %>%
-        unnest(Projeto) %>%
-        mutate(Projeto = trimws(Projeto)) %>%
-        rename(Fim = Dia) %>%
-        bind_rows(
-            tribble(~Projeto, ~Fim,
-                    "E6", (aulas %>%
-                           filter(Descrição == "P2") %>%
-                           pull(Encontro) %>%
-                           as.Date)))
-    ) %>%
+    mutate(Fim = lead(Início, default=(max(.$Início)+17)) +2) %>%
     mutate(Duração = as.integer(Fim - Início)) %>%
-    mutate(Texto = gsub("Início ", "", paste0(Projeto, " = ", Duração))) -> dias_por_etapa
+    as.data.frame() %>%
+    mutate(Início = as.character(Início)) %>%
+    mutate(Fim = as.character(Fim)) %>%
+    print %>%
+    xtable(.) %>%
+    print (print.results=FALSE,
+           booktabs = TRUE,
+           include.rownames=FALSE) %>%
+    as.character -> dias_por_etapa
 #+end_src
 
 #+RESULTS: dias_por_etapa
 : 
-: Joining, by = "Projeto"
+:   Projeto     Início        Fim Duração
+: 1      E1 2022-01-24 2022-02-09      16
+: 2      E2 2022-02-07 2022-02-23      16
+: 3      E3 2022-02-21 2022-03-16      23
+: 4      E4 2022-03-14 2022-03-30      16
+: 5      E5 2022-03-28 2022-04-13      16
+: 6      E6 2022-04-11 2022-04-27      16
+: 7      E7 2022-04-25 2022-05-14      19
+
+#+RESULTS:
 
 ** Cronograma (em PDF)
 
@@ -198,11 +177,11 @@ aulas %>%
 cronograma.modelo.filename = "data/be/43e1ff-0a91-4c3f-9e17-1fa62e6795ce/layout-cronograma.tex"
 cronograma.modelo = readChar(cronograma.modelo.filename, file.info(cronograma.modelo.filename)$size);
 turma = "A";
-semestre = "2019/2 -- Inverno/Primavera";
+semestre = "2021/2 -- Verão/Outono";
 cronograma.modelo <- gsub("TURMA", turma, cronograma.modelo);
 cronograma.modelo <- gsub("SEMESTRE", semestre, cronograma.modelo);
 cronograma.modelo <- gsub("TABELA", gsub("\\\\", "\\\\\\\\", cronograma), cronograma.modelo);
-cronograma.modelo <- gsub("DIASPORETAPA", paste(dias_por_etapa$Texto, collapse=", "), cronograma.modelo);
+cronograma.modelo <- gsub("DIASPORETAPA", gsub("\\\\", "\\\\\\\\", dias_por_etapa), cronograma.modelo);
 write(cronograma.modelo, "cronograma.tex");
 system2("rm", "-f cronograma.pdf")
 system2("rubber", " --pdf cronograma.tex")
@@ -210,8 +189,8 @@ system2("rubber", " --pdf cronograma.tex")
 
 #+RESULTS: modelo_cronograma
 : 
-: compiling cronograma.tex...
-: compiling cronograma.tex...
+: compiling cronograma.tex
+: executing: pdflatex \nonstopmode \input{cronograma.tex}
 
 * Cronograma
 

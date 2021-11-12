@@ -5,14 +5,18 @@
 \usepackage[
   landscape,
   a4paper,
-  right=1cm,
-  left=1cm,
+  right=0.5cm,
+  left=0.5cm,
   top=0.5cm,
   bottom=0cm
 ]{geometry}
 \usepackage{enumitem}
 \usepackage{multicol}
+\usepackage{xcolor}
 \usepackage{textcomp}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{\textwidth}
+\setlength{\TPVertModule}{\textwidth}
 \usepackage{titlesec}
 \usepackage{filecontents}
 \usepackage{natbib}
@@ -32,18 +36,28 @@
 \usepackage{tikz}
 \usepackage{ctable}
 \usepackage{palatino}
+\usepackage{adjustbox}
 
 \begin{document}
 
 \begin{center}
-  {\LARGE Cronograma da Disciplina de Compiladores SEMESTRE (Turma TURMA)} \\
+  {\Large Cronograma da Disciplina de Compiladores SEMESTRE (Turma TURMA)} \\
   Prof. Lucas Mello Schnorr (schnorr@inf.ufrgs.br) - INF/UFRGS
 \end{center}
 
-TABELA
+\begin{adjustbox}{width=.8\textwidth,left}
+  TABELA
+\end{adjustbox}
+\begin{textblock}{1.75}(0.73,0.55)
+  \fcolorbox{black}{white}{%
+    \begin{minipage}{.16\textwidth}
+      \centering
+      Etapas do projeto ao longo do semestre
+      
+      DIASPORETAPA
+      \end{minipage}
+   }
+\end{textblock}
 
-\begin{center}
-Duração das etapas do projeto (em dias):  DIASPORETAPA
-\end{center}
 
 \end{document}
