@@ -40,30 +40,30 @@
 | Sintática  | Desc., com Retrocesso, Preditivo (Primeiro, Sequência)    |               |                      |
 | Sintática  | Parser e tabela LL(1), Exercício LL(1), =bison=             |               | Início E2 (bison)    |
 | Sintática  | Ascendente, Parser LR(0)                                  |               |                      |
-| Sintática  | Exercícios LR(0), SLR(1)                                  |               |                      |
-| Sintática  | Parser LR(1)                                              |               |                      |
-| Sintática  | Parser LALR(1), AST e =bison= (ações)                       |               | Início E3 (Árvore)   |
-| Sintática  | Exercícios LR(1), e LALR(1)                               |               |                      |
 | Projeto    | Acompanhamento  (Presencial, G1)                          | Laboratório   |                      |
 | Projeto    | Acompanhamento  (Presencial, G2)                          | Laboratório   |                      |
-| Semântica  | Esquemas S e L-Atribuídos                                 |               | Início E4 (Tipos)    |
+| Sintática  | Exercícios LR(0), SLR(1)                                  |               | Início E3 (Árvore)   |
+| Sintática  | Parser LR(1)                                              |               |                      |
+| Sintática  | Parser LALR(1), AST e =bison= (ações)                       |               |                      |
+| Sintática  | Exercícios LR(1), e LALR(1)                               |               |                      |
+| Projeto    | Acompanhamento  (Presencial, G1)                          | Laboratório   | Início E4 (Tipos)    |
+| Projeto    | Acompanhamento  (Presencial, G2)                          | Laboratório   |                      |
+| Semântica  | Esquemas S e L-Atribuídos                                 |               |                      |
 | Semântica  | Implementação de Esquemas S e L-Atribuídos                |               |                      |
-|            | Revisão                                                   |               |                      |
+|            | Revisão                                                   |               | Início E5 (Código)   |
 |            | P1 (presencial, G1 e G2)                                  | 2xLaboratório |                      |
-| Código     | Declarações, Escopos e Atribuição                         |               | Início E5 (Código)   |
+| Código     | Declarações, Escopos e Atribuição                         |               |                      |
 | Código     | Expressões Lógicas com atalho, Controle de Fluxo          |               |                      |
-| Projeto    | Acompanhamento (Presencial, G1)                           | Laboratório   |                      |
+| Projeto    | Acompanhamento (Presencial, G1)                           | Laboratório   | Início E6 (Assembly) |
 | Projeto    | Acompanhamento (Presencial, G2)                           | Laboratório   |                      |
-| Código     | Endereçamento de Arranjos multidimensionais               |               | Início E6 (Assembly) |
+| Código     | Endereçamento de Arranjos multidimensionais               |               |                      |
 | Código     | Controle de Fluxo                                         |               |                      |
-| Execução   | Introdução, Registro de Ativação                          |               |                      |
+| Execução   | Introdução, Registro de Ativação                          |               | Início E7 (Otim.)    |
 | Execução   | Chamada e retorno de Função, Passagem de parâmetros       |               |                      |
-| Otimização | Introdução, Janela e Grafos de Fluxo                      |               | Início E7 (Otim.)    |
+| Otimização | Introdução, Janela e Grafos de Fluxo                      |               |                      |
 | Otimização | Grafos de Fluxo e Redução de potência                     |               |                      |
 |            | Revisão                                                   |               |                      |
 |            | P2 (Presencial, G1 e G2)                                  | 2xLaboratório |                      |
-| Fechamento | Fechamento e reflexão final (Presencial, G1)              | Teórica       |                      |
-| Fechamento | Fechamento e reflexão final (Presencial, G2)              | Teórica       |                      |
 |            | PR                                                        |               |                      |
 
 ** Cronograma (para TEX)
