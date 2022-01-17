@@ -19,7 +19,7 @@
 #+latex: \newcommand{\mytitle}{Compiladores -- ENADE (Visão Geral)}
 #+latex: \mytitleslide
 
-* Quem sou eu?
+* Quem sou eu?                                                     :noexport:
 
 Prof. Lucas M. Schnorr
 + +Prédio 43425, Sala 202+ (pandemia obriga)
