@@ -7,7 +7,7 @@
 #+EXPORT_SELECT_TAGS: export
 
 #+Title: Apresentação da Disciplina
-#+subtitle: ERE 2021/1
+#+subtitle: ERE 2021/2
 #+Author: Prof. Lucas M. Schnorr (UFRGS)
 #+Date: \copyleft
 
@@ -157,7 +157,7 @@ Vamos revisar juntos seus elementos.
 * Critérios de avaliação
 
 A avaliação será feita da seguinte forma:
-- Provas Escritas Assíncronas (P1, P2), peso 1
+- Provas Escritas *Presenciais* (P1, P2), peso 1
 - Projeto do Compilador (T), peso 1
   - Sete etapas, com pesos idênticos entre elas
 
@@ -179,8 +179,7 @@ Conversão
 Detalhamentos
 - FF é inaplicável (Parágrafo 2o, do Artigo 44, da Resolução no 11/2013 do CEPE) 
 - Se estudante deixar de participar, conceito será NI (Não Informado)
-  com a justificativa ``COVID-19'', tratado até o fim de 2021/1, após
-  o fim da pandemia.
+  com a justificativa ``COVID-19'', tratado no retorno à normalidade.
 
 * Atividades de Recuperação Parciais (Trabalho)
 
@@ -200,7 +199,6 @@ Situações frequentes
 - _Ressalvas_
   - Flexibilidades possíveis a critério do professor
   - Recuperação da última etapa condicionada ao calendário
-
 
 * Atividade de Recuperação Final
 
