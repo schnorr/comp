@@ -254,6 +254,6 @@ Vamos revisá-lo juntos.
 :BEAMER_col: 0.8
 :END:
 
-#+attr_latex: :width .75\textwidth
+#+attr_latex: :width \textwidth
 [[../../../cronograma/cronograma.pdf]]
 
