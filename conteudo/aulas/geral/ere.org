@@ -7,7 +7,7 @@
 #+EXPORT_SELECT_TAGS: export
 
 #+Title: Apresentação da Disciplina
-#+subtitle: ERE 2021/2
+#+subtitle: 2022/1
 #+Author: Prof. Lucas M. Schnorr (UFRGS)
 #+Date: \copyleft
 
@@ -18,7 +18,7 @@
 
 * O professor
 Prof. Lucas M. Schnorr
-+ +Prédio 43425, Sala 202+
++ Prédio 43425, Sala 202
 + [[http://www.inf.ufrgs.br/~schnorr][http://www.inf.ufrgs.br/~schnorr]]
 + schnorr@inf.ufrgs.br
 
@@ -28,7 +28,7 @@ Prof. Lucas M. Schnorr
 + High Performance Computing (HPC) / Performance Analysis
 + Data Science / Visualization & Reproducibility
     
-* Motivação
+* O que sabemos antes de começar a disciplina?
 + O que faz um compilador?
 + Por que estudar compiladores?
 + Como é organizado um compilador?
@@ -86,7 +86,7 @@ while (i <= 10) {
 * Aspectos interessantes
 + Quem trabalha com compiladores?
   + Todos os fabricantes de processadores
-  + IBM/Intel/Cray/...
+  + AMD/IBM/Intel/Cray/...
 #+latex: \vfill\pause
 
 + Principais compiladores para a família C/C++
@@ -142,22 +142,52 @@ Vamos revisar juntos seus elementos.
 - https://www.gnu.org/software/flex/manual/
 * Experiências de Aprendizagem
 
-- O conteúdo programático previsto para cada semana será apresentado
-  na forma de *vídeos gravados antecipadamente*, com listas de exercícios ou
-  oriundas do material didático ou propostas pelo professor, a serem
-  realizadas de maneira assíncrona pelos alunos.
-- Projeto de um compilador
-  1. programar um analisador léxico, ou com a ferramenta flex/lex, ou pela implementação de qualquer outro algoritmo;
-  2. programar um analisador sintático, por exemplo com a ferramenta
-     tradicional bison/yacc, ou pela implementação de qualquer outro
-     algoritmo;
-  3. programar ações semânticas para gerar código, simplificado ou não;
-  4. implementar um gerador de código abstrato no formato assembly.
+#+latex: {\scriptsize
+O conteúdo programático previsto para cada semana será apresentado na
+forma de aulas expositivas com exercícios que podem ser realizados
+tanto em aula - na forma de exemplos dirigidos estimulados - quanto
+extraclasse. Ao longo do semestre, aulas em laboratório serão
+utilizadas para acompanhamento do projeto de compilador e revisão do
+material teórico.
+
+#+latex: \smallskip
+
+O conteúdo será avaliado na forma de duas provas presenciais conforme
+cronograma estabelecido no início do semestre pelo professor da turma.
+Uma parte fundamental da disciplina é o projeto e construção de um
+compilador, tomando-se por base os conhecimentos das aulas
+teóricas. Neste sentido, os alunos terão a oportunidade de:
+
+#+latex: \smallskip
+
+(1) programar um analisador léxico, ou com a ferramenta flex, ou pela
+implementação de qualquer outro algoritmo;
+
+(2) programar um analisador sintático, por exemplo com a ferramenta
+tradicional bison, ou pela implementação de qualquer outro algoritmo;
+
+(3) programar ações semânticas para gerar código, simplificado ou não;
+
+(4) implementar um gerador de código abstrato no formato assembly.
+
+#+latex: \smallskip
+
+As atividades referentes ao projeto do compilador serão realizadas em
+sete etapas incrementais, com data limite para conclusão ao longo do
+semestre. Para cada uma delas, o professor retornará a avaliação sobre
+o andamento da atividade com dicas e sugestões para melhorar a
+execução do projeto (testes objetivos). Esse retorno pode ser tanto de
+maneira assíncrona através do AVA Institucional quando de maneira
+presencial nos encontros em laboratório. Haverá pelo menos três
+encontros presenciais em laboratório entre o professor e os grupos com
+o objetivo de acompanhar e discutir a execução do projeto do
+compilador e tirar dúvidas.
+#+latex: }
 
 * Critérios de avaliação
 
 A avaliação será feita da seguinte forma:
-- Provas Escritas *Presenciais* (P1, P2), peso 1
+- Provas Escritas (P1, P2), peso 1
 - Projeto do Compilador (T), peso 1
   - Sete etapas, com pesos idênticos entre elas
 
@@ -173,13 +203,6 @@ Conversão
 | 9.0 > MF >= 7,5 | Conceito B                    |
 | 7,5 > MF >= 6,0 | Conceito C                    |
 | MF < 6,0        | ver Atividades de Recuperação |
-
-#+latex: \pause
-
-Detalhamentos
-- FF é inaplicável (Parágrafo 2o, do Artigo 44, da Resolução no 11/2013 do CEPE) 
-- Se estudante deixar de participar, conceito será NI (Não Informado)
-  com a justificativa ``COVID-19'', tratado no retorno à normalidade.
 
 * Atividades de Recuperação Parciais (Trabalho)
 
@@ -220,10 +243,12 @@ Avaliação". O discente em recuperação que atingir a nota mínima de
 recuperação (NMR >= 6.0), será aprovado com conceito "C", caso
 contrário, será reprovado (conceito "D").
 
-* Ferramenta AVA
+* Ferramenta de apoio
 
 #+BEGIN_CENTER
 Sempre consulte o Moodle Institucional da UFRGS
+
+https://moodle.ufrgs.br/course/view.php?id=102338
 #+END_CENTER
 
 #+latex: \vfill
@@ -233,7 +258,7 @@ Anúncios
 - Via SAV (Sala de Aula Virtual)
   - Confirme que seu e-mail é o correto
 
-* 
+* Cronograma
 ** Texto
 :PROPERTIES:
 :BEAMER_col: 0.2
@@ -249,11 +274,14 @@ Verifique Moodle
 
 Vamos revisá-lo juntos.
 
+#+latex: \bigskip
+
+Não haverá aula entre os dias 16/07 e 31/07.
+
 ** Esquerda
 :PROPERTIES:
 :BEAMER_col: 0.8
 :END:
 
 #+attr_latex: :width \textwidth
-[[../../../cronograma/cronograma.pdf]]
-
+[[/home/schnorr/svn/navajo/2022/cronograma/compiladores/Cronograma_2022-1.pdf]]
