@@ -43,20 +43,9 @@ estratégias pedagógicas alternativas:
 - [[./download/compiladores-projeto-inovacao.pdf][Compilando Interações (Projeto de inovação didática - PAAP/UFRGS 2014)]]
 - [[http://www.lume.ufrgs.br/handle/10183/147664][Aprendizado invertido em compiladores (TCC de Lucas Jones - 2016)]]
 
-* Plano e Cronograma
-
-- [[./plano/index.org][Plano da disciplina]] (permanente)
-- [[./cronograma/index.org][Cronograma Edição 2020/2]] (Turma A, ERE assíncrono total)
-
 * Conteúdo
-#  e Avaliação
 
 - [[./conteudo/][Acesse o conteúdo da disciplina]]
-# - [[./projeto/README.org][Projeto de Compilador]]
-#   - Um [[./projeto/docker/README.org][container docker]] para realização do trabalho
-# ([[./projeto/acompanhamento.org][Acompanhamento das Etapas]])
-
-# - [[./avaliacao/][Acompanhamento das Avaliações]]
    
 * Bibliografia
 + [[https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools][Compilers: Principles, Techniques and Tools. Aho, A.; Sethi, R.; Ullman, J. D.]]
