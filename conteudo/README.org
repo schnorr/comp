@@ -18,8 +18,6 @@ recente de e-macs (25.*), uma versão recente de org-mode (9.*), e o
 programa =pdflatex= para compilação de arquivos TEX diretamente para
 PDF.
 
-Os PDFs já gerados estão [[http://www.inf.ufrgs.br/~schnorr/inf1147/][disponíveis aqui]].
-
 *** Primeira Parte
 
  | Setor       | Descrição                                              | Videos      | Apoio       | Lista | Aho    |
@@ -102,55 +100,6 @@ Os PDFs já gerados estão [[http://www.inf.ufrgs.br/~schnorr/inf1147/][disponí
 
 ** Ferramentas auxiliares
 
+- https://github.com/schnorr/ellerre/
+  - https://ellerre.herokuapp.com/
 - https://godbolt.org/
-
-* Revisão P1 (2019/1)
-
-1. Utilizamos o autômato LR(0) do slide 13 em [[./lr0.org]]
-   - Tentamos construir a tabela LR(0) e mostramos que a gramática não
-     é LR(0) por conflitos empilha-reduz em dois estados
-   - Em seguida, tentamos construir a tabela SLR(1) utilizando a
-     heurística do conjunta sequência e felizmente conseguimos mostrar
-     que a gramática SLR(1)
-   - Para terminar, nós realizamos o passo a passo da Análise LR para
-     reconhecer a entrada válida ~(id+id)*id~ e chegamos a conclusão que
-     20 ações são necessárias até o aceite inclusive.
-2. Utilizamos o exercício do slide 7 em [[./lalr1.org]]
-   - Construímos o autômato LR(1) da gramática e chegamos conclusão
-     que sim, esta gramática é LR(1).
-   - Em seguida, demonstramos como o autômato LALR(1) seria
-     construído, fazendo a união de dois estados do LR(1) em somente
-     um estado LALR(1) pelo fato que a primeira dos itens LR(1) são
-     idênticas. Isso fez com que criássemos um conflito reduz-reduz no
-     seguinte estado LALR(1)
-     #+BEGIN_EXAMPLE
-     E -> .e, c/d
-     F -> .e, d/c
-     #+END_EXAMPLE
-     E isso faz com a gramática não seja LALR(1) pois há dois
-     conflitos:
-     - Conflito reduz-reduz com /lookahead/ ~c~
-     - Conflito reduz-reduz com /lookahead/ ~d~
-
-* Revisão P2
-
-- Introdução à Geração de Código
-  - Taxonomia
-- Geração de código
-  - Como é uma questão de geração de código?
-    - Mapear a geração das instruções sobre uma gramática
-  - Expressões
-  - Expressões lógicas em uma única passagem
-    - Curto-circuito \to remendos
-  - Arranjos multidimencionais
-    - C_A (na declaração, com valores estáticos) e da geração de código
-      do acesso (com valores dinâmicos)
-    - Mapeamento das equações de endereçamento para a gramática
-  - "Imaginar a pilha": compilador gera código que gerencia uma pilha
-    (alterar os valors de RARP e SP) sem que a pilha exista.
-  - Informação mínima no RA para funcionar chamada de função
-    - VD + Endereço de retorno
-  - Função que retorna valor, como esse valor é "trazido" para a
-    função chamadora? Na função chamada, se coloca o valor em um lugar
-    específico na pilha (offset de rarp); em seguida, a função
-    chamadora consulta aquele mesmo lugar (offset de sp).
