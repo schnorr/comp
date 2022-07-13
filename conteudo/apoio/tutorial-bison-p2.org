@@ -1,0 +1,757 @@
+#+TITLE: Tutorial Bison Parte 2
+#+AUTHOR: Lucas M. Schnorr
+#+STARTUP: overview indent
+#+OPTIONS: toc:2          (only include two levels in TOC)
+* Introdução
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+Este tutorial tem por objetivo ilustrar e ensinar o passo a passo de
+como construir uma AST a partir de uma analisador léxico/sintático com
+flex/bison. Utilizaremos ações semânticas a serem adicionadas sobre
+uma gramática já existente que captura expressões aritméticas com soma
+e multiplicação com precedência e associatividade inspiradas da
+matemática.
+
+* Código base
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+** Arquivo =Makefile=
+#+begin_src text :tangle Makefile
+calc: calc.y calc.l
+	bison -d calc.y
+	flex -o calc.lex.c calc.l
+	gcc -Wall -o calc asd.c calc.lex.c calc.tab.c -lfl -lm 
+
+asd: asd.h asd.c
+	gcc -Wall -o asd asd.c asd_main.c
+
+clean:
+	rm -rf calc
+#+end_src
+** Arquivo =calc.l=
+#+begin_src text :tangle calc.l
+%{
+#include "calc.tab.h"
+%}
+
+%option nounput
+%option noinput
+
+white [ \t]+
+digit [0-9]
+integer {digit}+
+exponent [eE][+-]?{integer}
+real {integer}("."{integer})?{exponent}?
+
+%%
+
+{white} { /* Vamos ignorar os espaços em branco */ }
+{real} { return NUMBER; }
+
+"+" return PLUS;
+"*" return TIMES;
+"(" return LEFT;
+")" return RIGHT;
+"\n" return END;
+<<EOF>> return END_OF_FILE;
+
+%%
+#+end_src
+** Arquivo =calc.y=
+#+begin_src text :tangle calc.y
+%{
+#include <math.h>
+#include <stdio.h>
+int yyerror (char const *s);
+extern int yylex (void);
+%}
+
+%token NUMBER
+%token PLUS TIMES
+%token LEFT RIGHT
+%token END
+%token END_OF_FILE
+
+%define parse.error verbose
+%start Input
+
+%%
+
+Input: /* A entrada vazia é válida */;
+Input: Input Line
+
+Line: END
+Line: END_OF_FILE { return EOF; }
+Line: E END { fprintf(stdout, "Expressão aritmética reconhecida com sucesso.\n"); }
+
+E: E PLUS T
+E: T
+
+T: T TIMES F
+T: F
+
+F: LEFT E RIGHT
+F: NUMBER
+
+%%
+
+int yyerror(char const *s) {
+  printf("%s\n", s);
+  return 1;
+}
+
+int main() {
+  int ret;
+  do {
+     ret = yyparse();
+  } while(ret != EOF);
+  printf("Fim.\n");
+  return 0;
+}
+#+end_src
+** Arquivo =asd.h=
+#+begin_src C :tangle asd.h
+#ifndef _ARVORE_H_
+#define _ARVORE_H_
+
+typedef struct asd_tree {
+  char *label;
+  int number_of_children;
+  struct asd_tree **children;
+} asd_tree_t;
+
+/*
+ * Função asd_new, cria um nó sem filhos com o label informado.
+ */
+asd_tree_t *asd_new(const char *label);
+
+/*
+ * Função asd_tree, libera recursivamente o nó e seus filhos.
+ */
+void asd_free(asd_tree_t *tree);
+
+/*
+ * Função asd_add_child, adiciona child como filho de tree.
+ */
+void asd_add_child(asd_tree_t *tree, asd_tree_t *child);
+
+/*
+ * Função asd_print, imprime recursivamente a árvore.
+ */
+void asd_print(asd_tree_t *tree);
+
+/*
+ * Função asd_print_graphviz, idem, em formato DOT
+ */
+void asd_print_graphviz (asd_tree_t *tree);
+#endif //_ARVORE_H_
+#+end_src
+** Arquivo =asd.c=
+#+begin_src C :tangle asd.c
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include "asd.h"
+#define ARQUIVO_SAIDA "saida.dot"
+
+asd_tree_t *asd_new(const char *label)
+{
+  asd_tree_t *ret = NULL;
+  ret = calloc(sizeof(asd_tree_t), 1);
+  if (ret != NULL){
+    ret->label = strdup(label);
+    ret->number_of_children = 0;
+    ret->children = NULL;
+  }
+  return ret;
+}
+
+void asd_free(asd_tree_t *tree)
+{
+  if (tree != NULL){
+    int i;
+    for (i = 0; i < tree->number_of_children; i++){
+      asd_free(tree->children[i]);
+    }
+    free(tree->label);
+    free(tree);
+  }else{
+    printf("Erro: %s recebeu parâmetro tree = %p.\n", __FUNCTION__, tree);
+  }
+}
+
+void asd_add_child(asd_tree_t *tree, asd_tree_t *child)
+{
+  if (tree != NULL && child != NULL){
+    tree->number_of_children++;
+    tree->children = realloc(tree->children, tree->number_of_children);
+    tree->children[tree->number_of_children-1] = child;
+  }else{
+    printf("Erro: %s recebeu parâmetro tree = %p / %p.\n", __FUNCTION__, tree, child);
+  }
+}
+
+static void _asd_print (FILE *foutput, asd_tree_t *tree, int profundidade)
+{
+  int i;
+  if (tree != NULL){
+    fprintf(foutput, "%d%*s: Nó '%s' tem %d filhos:\n", profundidade, profundidade*2, "", tree->label, tree->number_of_children);
+    for (i = 0; i < tree->number_of_children; i++){
+      _asd_print(foutput, tree->children[i], profundidade+1);
+    }
+  }else{
+    printf("Erro: %s recebeu parâmetro tree = %p.\n", __FUNCTION__, tree);
+  }
+}
+
+void asd_print(asd_tree_t *tree)
+{
+  FILE *foutput = stderr;
+  if (tree != NULL){
+    _asd_print(foutput, tree, 0);
+  }else{
+    printf("Erro: %s recebeu parâmetro tree = %p.\n", __FUNCTION__, tree);
+  }
+}
+
+static void _asd_print_graphviz (FILE *foutput, asd_tree_t *tree)
+{
+  int i;
+  if (tree != NULL){
+    fprintf(foutput, "  %ld [ label=\"%s\" ];\n", (long)tree, tree->label);
+    for (i = 0; i < tree->number_of_children; i++){
+      fprintf(foutput, "  %ld -> %ld;\n", (long)tree, (long)tree->children[i]);
+      _asd_print_graphviz(foutput, tree->children[i]);
+    }
+  }else{
+    printf("Erro: %s recebeu parâmetro tree = %p.\n", __FUNCTION__, tree);
+  }
+}
+
+void asd_print_graphviz(asd_tree_t *tree)
+{
+  FILE *foutput = fopen(ARQUIVO_SAIDA, "w+");
+  if(foutput == NULL){
+    printf("Erro: %s não pude abrir o arquivo [%s] para escrita.\n", __FUNCTION__, ARQUIVO_SAIDA);
+  }
+  if (tree != NULL){
+    fprintf(foutput, "digraph grafo {\n");
+    _asd_print_graphviz(foutput, tree);
+    fprintf(foutput, "}\n");
+    fclose(foutput);
+  }else{
+    printf("Erro: %s recebeu parâmetro tree = %p.\n", __FUNCTION__, tree);
+  }
+}
+#+end_src
+** Arquivo =asd_main.c=
+#+begin_src C :tangle asd_main.c
+#include <stddef.h>
+#include "asd.h"
+int main() {
+  asd_tree_t *asd_mult = NULL, *asd_soma = NULL;
+  asd_mult = asd_new("*");
+  asd_add_child(asd_mult, asd_new("3"));
+  asd_add_child(asd_mult, asd_new("4"));
+  
+  asd_soma = asd_new("+");
+  asd_add_child(asd_soma, asd_new("5"));
+  asd_add_child(asd_soma, asd_mult);
+  
+  asd_print(asd_soma);
+  asd_print_graphviz(asd_soma);
+  return 0;
+}
+#+end_src
+* Tutorial
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+** Tarefa #1 (Entender o funcionamento do módulo =asd=)
+
+Vamos entender como usar o módulo =asd=. Olhe o conteúdo dos
+arquivos =asd.c= e =asd.h=.
+
+Em seguida, teste o módulo com o programa =asd=.  
+
+Para tal, execute o abaixo. Imediatamente, convertemos o arquivo =DOT=
+para =PNG= e visualizamos:
+
+#+begin_src bash :results file output graphics :file grafo.png :exports both
+make asd
+./asd; dot saida.dot -Tpng -o grafo.png
+#+end_src
+
+#+RESULTS:
+[[file:grafo.png]]
+
+O programa =xdot= também pode ser utilizado para visualizar
+interativamente a árvore.
+
+#+begin_src bash
+make asd
+./asd & xdot saida.dot
+#+end_src
+
+** Tarefa #2 (Entender o funcionamento do programa =calc=)
+
+Vamos entender a gramática de expressões aritméticas com as operações
+de multiplicação e soma. Procure ver como a precedência foi codificada
+na gramática. Analise os arquivos =calc.l= e =calc.y=.
+
+Faça testes com o programa, de maneira "automatizada":
+
+#+begin_src bash
+make
+echo "5*3+4" | ./calc 
+#+end_src
+
+#+RESULTS:
+| make:     | 'calc'     | is          | up  | to       | date. |
+| Expressão | aritmética | reconhecida | com | sucesso. |       |
+| Fim.      |            |             |     |          |       |
+
+Ou de maneira interativa:
+
+#+begin_src bash
+./calc
+#+end_src
+
+Forneça expressões aritméticas sintaticamente válidas e inválidas.
+
+Para terminar, forneça no teclado o "fim de arquivo" teclando CRTL+D.
+
+** Tarefa #3 (Implementar uma calculadora)
+
+Comece a partir dos arquivos originais.
+
+Vamos agora adicionar *ações semânticas* às nossas regras gramaticais.
+
+Nosso objetivo é fazer uma /calculadora/ que calcule e forneça o
+resultado numérico da expressão arimética (com ponto-flutuante).
+
+Para atingir nosso objetivo, devemos:
+
+1. informar o tipo de todos os símbolos para flex/bison
+2. associar um valor ao token =NUMBER=.
+3. associar um valor calculado à uma expressão arimética.
+4. imprimir na tela o valor resultante (o mais próximo à "raiz" da gramática)
+
+*** Passo 1 (informar o tipo de todos os símbolos)
+
+Como pré-requisito, devemos informar o tipo de todos os símbolos
+(tokens e não-terminais). O tipo de todos os símbolos pode ser
+controlado através de uma definição da opção =api.value.type=.
+Utilizaremos o tipo =double= para guardar os valores numéricos
+calculados em nossa calculadora. Para tal, adicione esta linha no
+cabeçalho do arquivo =.y= (fora da parte em C =%{= =%}= pois é uma opção
+para o bison)
+
+#+begin_src C
+%define api.value.type { double }
+#+end_src
+
+*** Passo 2 (associar um "valor" ao token =NUMBER=)
+
+No arquivo =.l=, adicione o seguinte comando antes de =return NUMBER;= (ou
+seja, no início da ação que retorna o token =NUMBER=. A linha fica
+assim:
+
+#+begin_src C
+{real} { yylval = atof(yytext); return NUMBER; }
+#+end_src
+
+Veja que a associação de um valor ao token =NUMBER= é feita através de
+uma atribuição do valor (do tipo correto, por isso utilizamos =atof=) à
+variável =yylval=. Essa variável global definida e utilizada pelo
+flex/bison permite a associação de um valor. Ao atribuir um valor à
+ela, este valor se torna acessível nas ações que serão colocadas na
+gramática (no arquivo =.y=).
+
+*** Passo 3 (associar um valor calculado à expressão arimética)
+
+Agora que o token =NUMBER= possui um valor associado, podemos utilizá-lo
+na gramática. Para tal, precisamos de um _conhecimento básico inicial_,
+que é o emprego dos marcadores do bison =$$=, =$1=, =$2=, =$3=, etc. Estes
+marcadores podem ser utilizados nas ações semânticas no final das
+produções gramaticas. Como exemplo, vejamos esta produção gramatical:
+
+#+begin_src text
+E: E TIMES T
+#+end_src
+
+Nesta produção, teremos então:
+- =$$= se refere à cabeça da produção, ou seja, ao =E= antes do =:=
+- =$1= se refere ao primeiro símbolo do corpo da produção (não-terminal =E= do corpo)
+- =$2= se refere ao segundo símbolo do corpo da produção (token =TIMES=)
+- =$3= se refere ao terceiro símbolo do corpo da produção (não-terminal =T= do corpo)
+
+Podemos empregar estes marcadores na ação semântica no final da produção:
+
+#+begin_src text
+E: E TIMES T {
+    /* código C misturado com os marcadores */
+    $$ = $1 * $3;
+    printf("O valor da expressão neste ponto é %f\n", $$);
+  }
+#+end_src
+
+Adquirido este _conhecimento básico inicial_, vamos agora implementar as
+ações semânticas de nossa calculadora. Para tal, incremente o arquivo
+=.y= com estas ações:
+
+1. O valor de =F= será o valor de =NUMBER=:
+   #+begin_src text
+   F: NUMBER { $$ = $1; }
+   #+end_src
+2. O valor de =F= será o valor da expressão =E= entre parênteses.
+   Utilizamos =$2= pois =E= (a expressão) é o segundo símbolo do corpo
+   #+begin_src text
+   F: LEFT E RIGHT { $$ = $2; }
+   #+end_src
+3. O valor de =T= será o valor de =F=:
+   #+begin_src text
+   T: F { $$ = $1; }
+   #+end_src
+4. O valor de =T= será o valor do produto de =T= com =F=. Perceba aqui que
+   estamos efetivamente calculando o produto de =$1= (contém o valor de =T=)
+   com =$3= (contém o valor de =F=). Não utilizamos o =$2= que contém o
+   símbolo =TIMES=.
+   #+begin_src text
+   T: T TIMES F { $$ = $1 * $3; }
+   #+end_src
+5. O valor de =E= será o valor de =T=:
+   #+begin_src text
+   E: T { $$ = $1; }
+   #+end_src
+6. O valor de =E= será o valor da soma de =E= com =T=. Perceba aqui que
+   estamos efetivamente calculando a soma de =$1= (contém o valor de =E=)
+   com =$3= (contém o valor de =T=). Não utilizamos o =$2= que contém o
+   símbolo =PLUS=.
+   #+begin_src text
+   E: E PLUS T { $$ = $1 + $3; }
+   #+end_src
+
+*** Passo 4 (imprimir na tela o valor resultante)
+
+As modificações anteriores calculam o valor numérico para o
+não-terminal =E=, que representa fundamentalmente a expressão arimética
+inteira. No entanto, ainda não estamos informando ao usuário esse
+valor que já está sendo calculado.  Vamos modificar o =printf= que
+informa o reconhecimento da expressão. Alteramos esta linha:
+#+begin_src text
+Line: E END { printf("Expressão aritmética reconhecida com sucesso.\n"); }
+#+end_src
+Para algo como:
+#+begin_src text
+Line: E END { printf("Expressão aritmética reconhecida com sucesso. Seu valor é %f.\n", $1); }
+#+end_src
+Veja que utilizamos =$1= pois no corpo desta produção o =E= é o primeiro
+símbolo e representa e seu valor, já calculado pelas demais regras e
+ações, está acessível.
+
+*** Executa os passos                                            :noexport:
+
+#+begin_src bash :exports none
+sed -i '8i %define api.value.type { double }' calc.y
+sed -i 's#\(return NUMBER;\)#yylval = atof(yytext); \1#' calc.l
+sed -i \
+    -e 's#\(F: NUMBER\)#\1 { $$ = $1; }#' \
+    -e 's#\(F: LEFT E RIGHT\)#\1 { $$ = $2; }#' \
+    -e 's#\(T: F\)#\1 { $$ = $1; }#' \
+    -e 's#\(T: T TIMES F\)#\1 { $$ = $1 * $3; }#' \
+    -e 's#\(E: T\)#\1 { $$ = $1; }#' \
+    -e 's#\(E: E PLUS T\)#\1 { $$ = $1 + $3; }#' \
+    calc.y
+sed -i \
+    -e 's#\(fprintf(stdout, "Expressão aritmética reconhecida com sucesso\)#\1. Seu valor é %f#' \
+    -e 's#\(Seu valor é %f.\\n"\)#\1, $1#' \
+    calc.y
+#+end_src
+
+#+RESULTS:
+
+** Tarefa #4 (Gerar e imprimir a AST)
+
+Comece a partir dos arquivos originais.
+
+Vamos agora adicionar *ações semânticas* às nossas regras gramaticais.
+
+Nosso objetivo é implementar ações semânticas que criem a árvore
+sintática abstrata (AST), usando como suporte o módulo =asd= cujo código
+é fornecido.
+
+Para atingir nosso objetivo, devemos repetir os mesmos passos da
+Tarefa #3, mas agora tendo em mente que por "valor" não mais teremos o
+valor numérico, mas sim um nó da árvore. Como usaremos funções do
+módulo =asd= dentro do arquivo =.y= precisamos adicionar a linha abaixo no
+cabeçalho do arquivo =calc.y=. Veja que agora estamos utilizando a
+diretiva =%code requires { ... }= pois a inclusão do arquivo =asd.h= deve
+acontecer tanto no =.h= quanto no =.c= gerado pelo bison:
+#+begin_src C
+%code requires { #include "asd.h" }
+#+end_src
+
+*** Passo 1 (informar o tipo de todos os símbolos)
+
+Vamos informar que o tipo de todos os símbolos será o tipo do nó da
+AST, ou seja, um ponteiro para uma estrutura =asd_tree_t=:
+
+#+begin_src C
+%define api.value.type { asd_tree_t* }
+#+end_src
+
+*** Passo 2 (criar um nó para as folhas da árvore -- =NUMBER=)
+
+Como nosso objetivo é criar uma árvore AST, o token =NUMBER= faz parte
+das folhas da nossa árvore. Precisamos criar um nó para que ele possa
+posteriormente conectado aos demais elementos da árvore (operandos
+aritméticos). Assim, no arquivo =.l=, adicione o seguinte comando antes
+de =return NUMBER;= (ou seja, no início da ação que retorna o token
+=NUMBER=. A linha fica assim:
+
+#+begin_src C
+{real} { yylval = asd_new(yytext); return NUMBER; }
+#+end_src
+
+Veja que a associação de um valor ao token =NUMBER= é feita através de
+uma atribuição do valor (do tipo correto, por isso utilizamos =asd_new=
+que retorna um ponteiro para =asd_tree_t=, o tipo do valor associado ao
+token através da variável global =yylval=. Como dito anteriormente, ao
+atribuir um valor à ela, este valor (no caso o nó da árvore, uma
+folha) se torna acessível nas ações que serão colocadas na gramática
+(no arquivo =.y=).
+
+*** Passo 3 (criar nós intermediários para a árvore)
+
+Agora, vamos trabalhar no arquivo =.y=, adicionando ações semânticas que
+efetivamente montam a árvore. Vamos começar pelas regras gramaticais
+que estão mais próximas das folhas. A mais próxima /ever/ é a produção
+=F: NUMBER= (lembrando que aqui =$1= já é um ponteiro para o nó folha que
+representa =NUMBER=, /YESS/! Veja passo anterior.). Vamos lá!
+
+1. O nó de =F= será o nó folha que já foi criado para =NUMBER=:
+   #+begin_src text
+   F: NUMBER { $$ = $1; }
+   #+end_src
+2. Na AST, não precisamos guardar abre e fecha parenteses. Assim, o nó
+   associado à =F= será o nó que já foi criado na expressão =E= entre
+   parênteses.  Utilizamos =$2= pois =E= (a expressão) é o segundo símbolo
+   do corpo. Temos como abaixo. Veja que uma forma interessante de ver
+   isso é que estamos simplesmente pegando a árvore mais para baixo na
+   gramática =E= e jogando-a para cima, em =F=.
+   #+begin_src text
+   F: LEFT E RIGHT { $$ = $2; }
+   #+end_src
+3. O nó de =T= será o nó intermediário de =F= (que pode ser um nó folha se
+   =F= foi reduzido de =NUMBER=!):
+   #+begin_src text
+   T: F { $$ = $1; }
+   #+end_src
+4. Agora, na produção de multiplicação, devemos criar um nó para
+   representar a operação (seguindo a filosofia da AST que é o mais
+   simples possível). Assim, vamos criar um nó com o label '*', para
+   em seguida adicionar dois filhos (=$1= o nó filho que já foi criado a
+   partir de =T= e =$3= o outro nó filho que foi criado a partir de
+   =F=). Como sabemos que =$$= refere-se à cabeça da produção e que seu
+   tipo de valor é um ponteiro para =asd_tree_t=, podemos diretamente
+   pegar o retorno de =asd_new= e atribuir para =$$=. Temos então:
+   #+begin_src text
+   T: T TIMES F { $$ = asd_new("*"); asd_add_child($$, $1); asd_add_child($$, $3); }
+   #+end_src
+5. O nó de =E= será o nó intermediário de =T= (que também pode ser um nó
+   folha se =T= foi reduzido de =F= que foi reduzido de =NUMBER=!):
+   #+begin_src text
+   E: T { $$ = $1; }
+   #+end_src
+6. Enfim, na produção de soma, devemos criar um nó para representar a
+   operação. Assim, vamos criar um nó com o label '+', para em seguida
+   adicionar dois filhos (=$1= o nó filho que já foi criado a partir de
+   =E= e =$3= o outro nó filho que foi criado a partir de =T=). Como sabemos
+   que =$$= refere-se à cabeça da produção e que seu tipo de valor é um
+   ponteiro para =asd_tree_t=, podemos diretamente pegar o retorno de
+   =asd_new= e atribuir para =$$=. Temos então:
+   #+begin_src text
+   E: E PLUS T { $$ = asd_new("+"); asd_add_child($$, $1); asd_add_child($$, $3); }
+   #+end_src 
+
+*** Passo 4 (gerar o arquivo =DOT= para ver a árvore)
+
+As modificações anteriores fazem com que tenhamos um nó da AST
+associado ao não-terminal =E=, que representa fundamentalmente a AST da
+expressão arimética inteira. Vamos modificar a regra que reconhece uma
+expressão aritmética para que após o reconhecimento, já façamos a
+geração do arquivo =DOT=. Alteramos esta linha:
+#+begin_src text
+Line: E END { printf("Expressão aritmética reconhecida com sucesso.\n"); }
+#+end_src
+Para algo como:
+#+begin_src text
+Line: E END { printf("Expressão aritmética reconhecida com sucesso.\n"); asd_print_graphviz($1); asd_free($1); }
+#+end_src
+Veja que utilizamos =$1= pois no corpo desta produção o =E= é o primeiro
+símbolo e representa e seu valor, e esse valor é um ponteiro para o nó
+da árvore. Como bison implementa um algoritmo ascendente, ao chegar
+aqui, todas as ações de semântica e de reconhecimento de =E= já foram
+executadas.
+
+Veja o arquivo final para qualquer expressão aritmética. Teste com
+expressões complexas válidas. Para testar de maneira "interativa",
+recomenda-se deixar o programa =xdot= executando em /background/ (ele
+atualiza automaticamente a visualização da árvore quando o arquivo
+informado é atualizado) e execute o programa =calc= com
+alegria. Execute:
+
+#+begin_src bash
+echo "digraph grafo { vazio; }" > saida.dot
+xdot saida.dot &
+./calc
+#+end_src
+
+*** Executa os passos                                            :noexport:
+
+#+begin_src bash :exports none
+sed -i '7i %code requires { #include "asd.h" }' calc.y
+sed -i '8i %define api.value.type { asd_tree_t* }' calc.y
+sed -i 's#\(return NUMBER;\)#yylval = asd_new(yytext); \1#' calc.l
+sed -i \
+    -e 's#\(F: NUMBER\)#\1 { $$ = $1; }#' \
+    -e 's#\(F: LEFT E RIGHT\)#\1 { $$ = $2; }#' \
+    -e 's#\(T: F\)#\1 { $$ = $1; }#' \
+    -e 's#\(T: T TIMES F\)#\1 { $$ = asd_new("*"); asd_add_child($$, $1); asd_add_child($$, $3); }#' \
+    -e 's#\(E: T\)#\1 { $$ = $1; }#' \
+    -e 's#\(E: E PLUS T\)#\1 { $$ = asd_new("+"); asd_add_child($$, $1); asd_add_child($$, $3); }#' \
+    calc.y
+sed -i \
+    -e 's#\(fprintf(stdout, "Expressão aritmética reconhecida com sucesso.\\n");\)#\1 asd_print_graphviz($1);#' \
+    calc.y
+#+end_src
+
+#+RESULTS:
+
+** Tarefa #5 (Implementar uma AST com labels que são resultados das expressões aritméticas)
+
+Comece a partir dos arquivos originais.
+
+Vamos agora adicionar *ações semânticas* às nossas regras gramaticais.
+
+Nosso objetivo nesta tarefa consiste em implementar uma AST cujos
+labels dos nós são os resultados das expressões aritméticas. Ao
+visualizar a árvore, veremos na raiz o resultado da expressão. Vamos
+aproveitar esta oportunidade para aprender um conceito novo: os
+símbolos (terminais e não-terminais) podem assumir valores /diferentes/
+e não ao mesmo tempo, contrário portanto ao que vimos nas tarefas #3 e
+#4 onde todos os símbolos eram do mesmo tipo (definidos com a diretiva
+=api.value.type=).
+
+Assim, o passo ``(informar o tipo de todos os símbolos)'' deve ser
+alterado de maneira que o valor dos tokens e símbolos não-terminais
+possa assumir diferentes valores possíveis: 
+1. O valor numérico do token ou da expressão aritmética intermediária/final
+2. O nó da árvore (folha ou intermediário/final)
+
+Para por isso em prática, vamos associar ao token =NUMBER= (no arquivo
+=.l=) um valor numérico que será utilizado na gramática (no arquivo =.y=)
+para criar um nó folha da AST.
+
+Assim, ao invés de utilizar uma dessas diretiva:
+#+begin_src C
+%define api.value.type { double }
+%define api.value.type { asd_tree_t* }
+#+end_src
+
+Deveremos nos apoiar sobre a diretiva =%union= do bison, descrita aqui:
+https://www.gnu.org/software/bison/manual/html_node/Union-Decl.html
+
+Então, no cabeçalho de nosso arquivo =.y=, teremos algo como:
+#+begin_src 
+%union {
+  double valor;
+  asd_tree_t *arvore;
+}
+#+end_src
+
+Assim, um símbolo qualquer (terminal e não-terminal) pode assumir um
+ou o outro valor (natureza =union= da linguagem C). Assim, no arquivo
+=.y=, poderemos declarar o tipo que será empregado para os terminais e
+não-terminais. Para os terminais, usamos a diretiva =%token= (que já faz
+tempo que estamos usando). Para os não-terminais, usamos a diretiva
+=%type=. Assim, podemos ter algo assim para informar que o tipo do
+valor do token =NUMBER= é =double= (pois o campo na =union= se chama =valor=):
+#+begin_src text
+%token<valor> NUMBER
+#+end_src
+
+Para os não-terminais =E=, =T=, e =F=, devemos declarar seu tipo assim pois
+o tipo que adotamos para esses não-terminais é ponteiro para
+=asd_tree_t= que ficou com o nome =arvore= na =union=:
+#+begin_src text
+%type<arvore> E
+%type<arvore> T
+%type<arvore> F
+#+end_src
+
+Isso faz que para associar o valor ao token no arquivo =.l=, deveremos o
+fazer fazendo referência explícita ao campo =valor=, assim:
+#+begin_src C
+{real} { yylval.valor = atof(yytext); return NUMBER; }
+#+end_src
+Poderíamos até acessar =yylval.arvore=, mas daí não poderíamos utilizar
+o campo =valor= pois este ocupa o mesmo espaço que o ponteiro na =union=.
+Já no arquivo =.y=, fazemos referência diretamente aos marcadores =$$=,
+=$1=, etc. Se esses marcadores referem-se à =E=, =T=, e =F=, para os quais
+informamos que usam o campo =arvore=, já estaremos utilizando esse
+campo. Se esses marcadores são =NUMBER=, estamos acessando o campo
+=valor=.
+
+Com isso já temos todos os elementos para concluir essa
+tarefa. Recomenda-se ou 1/ alterar o tipo do nó da AST para ter o
+valor da expressão aritmética (em suplemento ao label); OU 2/ usar o
+próprio label para guardar o valor da expressão aritmética (fazendo
+conversões a cada passo); OU 3/ substituir o tipo do label para um
+valor numérico (=double=) e sempre gerar o label a cada criação de nó.
+Conclua-a e mostre a funcionalidade para o professor, informando a
+opção adotada.
+
+*** Executa os passos                                            :noexport:
+
+#+begin_src bash :exports none
+sed -i 's#char \*#double #' asd.[ch]
+sed -i 's#strdup(\(label\))#label#' asd.c
+sed -i 's#Nó\(.*\)%s#Nó\1%f#' asd.c
+sed -i 's#\\"%s\\"#\\"%f\\"#' asd.c
+sed -i '26d' asd.c
+
+sed -i '7i %code requires { #include "asd.h" }' calc.y
+sed -i '8i %union { double valor; asd_tree_t *arvore; }' calc.y
+sed -i 's#\(%token\) \(NUMBER\)#\1<valor> \2#' calc.y
+sed -i \
+    -e '16i %type<arvore> F' \
+    -e '16i %type<arvore> T' \
+    -e '16i %type<arvore> E' \
+    calc.y    
+sed -i 's#\(return NUMBER;\)#yylval.valor = atof(yytext); \1#' calc.l
+sed -i \
+    -e 's#\(F: NUMBER\)#\1 { $$ = asd_new($1); }#' \
+    -e 's#\(F: LEFT E RIGHT\)#\1 { $$ = $2; }#' \
+    -e 's#\(T: F\)#\1 { $$ = $1; }#' \
+    -e 's#\(T: T TIMES F\)#\1 { $$ = asd_new($1->label * $3->label); asd_add_child($$, $1); asd_add_child($$, $3); }#' \
+    -e 's#\(E: T\)#\1 { $$ = $1; }#' \
+    -e 's#\(E: E PLUS T\)#\1 { $$ = asd_new($1->label + $3->label); asd_add_child($$, $1); asd_add_child($$, $3); }#' \
+    calc.y
+sed -i \
+    -e 's#\(fprintf(stdout, "Expressão aritmética reconhecida com sucesso.\\n");\)#\1 asd_print_graphviz($1); asd_free($1);#' \
+    calc.y
+#+end_src
+
+#+RESULTS:
+
+* Conclusão
+
+Se chegaste a este ponto, muito provavelmente já tens todas as
+condições de executar a E3 com tranquilidade. Parabéns!
+
