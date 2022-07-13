@@ -19,6 +19,8 @@ matemática.
 :UNNUMBERED: t
 :END:
 
+[[./tutorial-bison-p2.tgz][Baixe todos os arquivos de uma vez clicando aqui! ;-) De nada.]]
+
 ** Arquivo =Makefile=
 #+begin_src text :tangle Makefile
 calc: calc.y calc.l
@@ -267,6 +269,20 @@ int main() {
   return 0;
 }
 #+end_src
+** Gera TGZ                                                       :noexport:
+
+#+begin_src shell
+FILEOUTPUT=tutorial-bison-p2.tgz
+rm -f $FILEOUTPUT
+tar cfz $FILEOUTPUT \
+    Makefile \
+    calc.[ly] \
+    asd.[ch] \
+    asd_main.c
+#+end_src
+
+#+RESULTS:
+
 * Tutorial
 :PROPERTIES:
 :UNNUMBERED: t
