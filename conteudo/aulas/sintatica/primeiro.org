@@ -79,9 +79,9 @@ Se X é não-terminal e X \rightarrow Y_{1}Y_{2}...Y_{k} com $k \geq 1$
    - Se, para algum $i$, *a* estiver em Primeiro(Y_i) _e_
    - Se \epsilon estiver em todos os Primeiro(Y_1) ... Primeiro(Y_{i-1})
 2. Acrescente \epsilon em Primeiro(X) \\
-   - Somente se \epsilon está em Primeiro(Y_j) para todo j = 1, 2, ..., k
-3. Se existe uma regra X \rightarrow \epsilon
-   - Acrescente \epsilon em Primeiro(X)
+   - Se \epsilon está em Primeiro(Y_j) para todo j = 1, 2, ..., k
+3. Acrescente \epsilon em Primeiro(X)
+   - Se existe uma regra X \rightarrow \epsilon
 
 * 1: Calcule o conjunto Primeiro de cada não-terminal
 | exp   | \rightarrow | exp soma termo \vert termo   |
