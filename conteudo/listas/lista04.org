@@ -96,8 +96,10 @@ fatoradas à esquerda ou ter sua recursão à esquerda eliminada.
   L \rightarrow L , S | S
 - S \rightarrow a S b S | b S a S | \epsilon
 - Gramática para expressões boleanas
-  - bexpr \rightarrow bexpr or bterm | bterm \\
-    bterm \rightarrow bterm and bfactor | bfactor \\
+  - bexpr \rightarrow bexpr or bterm | bterm
+
+    bterm \rightarrow bterm and bfactor | bfactor
+
     bfactor \rightarrow not bfactor | ( bexpr ) | true | false
 
 * 
