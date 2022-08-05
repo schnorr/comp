@@ -15,11 +15,11 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-* 
+* Questão 01
 
 Como sabemos quando uma gramática não é LL(1)?
 
-* 
+* Questão 02
 
 A gramática seguinte não pode ser utilizada em uma análise
 preditiva descendente. Identifique e corrija o problema,
@@ -32,7 +32,7 @@ R \rightarrow aba | caba | Rbc
 
 Q \rightarrow bbc | bc
 
-* 
+* Questão 03
 
 A gramática seguinte satisfaz a condição LL(1)? Justifique a sua
 resposta. Se ela não satisfazer, reescreva-a como uma gramática
@@ -81,7 +81,7 @@ Agora temos uma gramática com as características
 - Nas últimas duas regras, Pri(X) não intersecta com Seq(Y) pois Pri(X) contém "a" e Seq(Y) contém Seq(X) que contém Seq(B) que contém apenas o "$".
 Portanto agora é LL(1). 
 
-* 
+* Questão 04
 
 Para cada uma das gramáticas seguintes, defina analisadores
 preditivos descendentes através da construção de tabelas preditivas
@@ -103,7 +103,7 @@ fatoradas à esquerda ou ter sua recursão à esquerda eliminada.
 
     bfactor \rightarrow not bfactor | ( bexpr ) | true | false
 
-* 
+* Questão 05
 
 É possível realizar a construção de um analisador preditivo
 descendente para a gramática
@@ -114,7 +114,7 @@ utilizada para descrever as expressões pós-fixadas com o operador =a=?
 Quais são as modificações necessárias na gramática para efetuar tal
 tarefa?
 
-* 
+* Questão 06
 
 Temos a gramática
 
@@ -129,7 +129,7 @@ L \rightarrow L and S | L or S | S
    para a linguagem descrita no exercício anterior, transformando a
    gramática em LL(1) se necessário.
 
-* 
+* Questão 07
 
 Seja L uma linguagem cujas sentenças são formadas de qualquer
 texto. A seguinte sentença faz parte desta linguagem: ``um (grande)
@@ -143,7 +143,7 @@ por fim, construa uma tabela preditiva de análise descendente para a
 mesma. Mostre que a tabela funciona para uma entrada válida e uma
 entrada não válida.
 
-* 
+* Questão 08
 
 Considere a seguinte gramática \\
   \begin{tabular}{rcl}
@@ -158,7 +158,7 @@ Considere a seguinte gramática \\
     \item Mostre as ações do analisador LL(1) correspondente, considerando a entrada {\bf (a,(b,(2)),(c))}
   \end{lista}
 
-* 
+* Questão 09
 
 Considerando a gramática \texttt{g1}. O conjunto dos símbolos
 terminais é \{a, b, c\}, o conjunto dos símbolos não-terminais é
@@ -202,7 +202,7 @@ terminais é \{a, b, c\}, o conjunto dos símbolos não-terminais é
     {\bf acbab} utilizando a tabela construída.
 \end{lista}
 
-* 
+* Questão 10
 
 Construa a tabela preditiva da seguinte gramática (já fatorada à
 esquerda e sem recursão à esquerda): \\
@@ -223,7 +223,7 @@ esquerda e sem recursão à esquerda): \\
        {\bf id + id - id}, mostrando o efeito das suas decisões.
    \end{lista}
 
-* 
+* Questão 11
 
 Construa a tabela preditiva da seguinte gramática e mostre os passos de *ibtibtaeaea* \\
   \begin{tabular}{lcl}
@@ -232,7 +232,7 @@ Construa a tabela preditiva da seguinte gramática e mostre os passos de *ibtibt
    E & $\rightarrow$ & b\\
    \end{tabular}
 
-* 
+* Questão 12
 
 Contrua a tabela preditiva da seguinte gramática \\
 \label{y}
@@ -246,7 +246,7 @@ Contrua a tabela preditiva da seguinte gramática \\
     \item Mostre os passos de análise para {\bf if(b)\{if(b)\{if(b)a\}elsea\}else\{if(b)aelse\{a\}\}}
   \end{lista}
 
-* 
+* Questão 13
 
 Explique o porquê da gramática seguinte não ser ambígua, fazendo
 referência ao exercício \ref{y}. Construa a tabela
