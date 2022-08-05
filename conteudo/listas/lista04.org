@@ -87,20 +87,18 @@ Para cada uma das gramáticas seguintes, defina analisadores
 preditivos descendentes através da construção de tabelas preditivas
 de análise. Algumas dessas gramáticas precisam ser, inicialmente,
 fatoradas à esquerda ou ter sua recursão à esquerda eliminada.
-\begin{lista}
-\item $S \rightarrow 0\ S\ 1\ |\ 0\ 1$
-\item $S \rightarrow +\ S\ S\ |\ *\ S\ S\ |\ a$
-\item $S \rightarrow S\ (\ S\ )\ S\ |\ {\epsilon}$
-\item $S \rightarrow S + S\ |\ SS\ |\ (\ S\ )\ |\ S\ *\ |\ a$
-\item $S \rightarrow (\ L\ )\ |\ a$ e $L \rightarrow L, S\ |\ S$
-\item $S \rightarrow aSbS | bSaS | {\epsilon}$
-\item Gramática para expressões boleanas: \\
-  \begin{tabular}{rcl}
-    bexpr & $\rightarrow$ & bexpr {\bf or} bterm | bterm \\
-    bterm & $\rightarrow$ & bfactor | bfactor \\
-    bfactor & $\rightarrow$ & {\bf not} bfactor | {\bf (} bexpr {\bf )} | {\bf true} | {\bf false}
-  \end{tabular}
-\end{lista}
+
+- S \rightarrow 0 S 1 | 0 1
+- S \rightarrow + S S | * S S | a
+- S \rightarrow S ( S ) S | \epsilon
+- S \rightarrow S + S | S S | ( S ) | S * | a
+- S \rightarrow ( L ) | a \\
+  L \rightarrow L , S | S
+- S \rightarrow a S b S | b S a S | \epsilon
+- Gramática para expressões boleanas
+  - bexpr \rightarrow bexpr or bterm | bterm \\
+    bterm \rightarrow bterm and bfactor | bfactor \\
+    bfactor \rightarrow not bfactor | ( bexpr ) | true | false
 
 * 
 
