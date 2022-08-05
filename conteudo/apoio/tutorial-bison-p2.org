@@ -101,6 +101,7 @@ F: NUMBER
 
 %%
 
+extern void yylex_destroy(void);
 int yyerror(char const *s) {
   printf("%s\n", s);
   return 1;
@@ -112,6 +113,7 @@ int main() {
      ret = yyparse();
   } while(ret != EOF);
   printf("Fim.\n");
+  yylex_destroy();
   return 0;
 }
 #+end_src
