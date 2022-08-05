@@ -647,7 +647,7 @@ sed -i \
     -e 's#\(E: E PLUS T\)#\1 { $$ = asd_new("+"); asd_add_child($$, $1); asd_add_child($$, $3); }#' \
     calc.y
 sed -i \
-    -e 's#\(fprintf(stdout, "Expressão aritmética reconhecida com sucesso.\\n");\)#\1 asd_print_graphviz($1);#' \
+    -e 's#\(fprintf(stdout, "Expressão aritmética reconhecida com sucesso.\\n");\)#\1 asd_print_graphviz($1); asd_free($1);#' \
     calc.y
 #+end_src
 
