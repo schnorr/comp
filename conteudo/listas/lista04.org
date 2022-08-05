@@ -106,24 +106,28 @@ fatoradas à esquerda ou ter sua recursão à esquerda eliminada.
 * 
 
 É possível realizar a construção de um analisador preditivo
-descendente para a gramática $S \rightarrow SS+ |\ SS* |\ a$ utilizada
-para descrever as expressões pós-fixadas com o operador $a$? Quais
-são as modificações necessárias na gramática para efetuar tal tarefa?
+descendente para a gramática
+
+S \rightarrow SS+ | SS* | a
+
+utilizada para descrever as expressões pós-fixadas com o operador =a=?
+Quais são as modificações necessárias na gramática para efetuar tal
+tarefa?
 
 * 
 
-\label{x1} A gramática seguinte satisfaz a condição LL(1)? Justifique a sua
-resposta. Qual tipo de linguagem ela descreve? \\
-  \begin{tabular}{rcl}
-    S & $\rightarrow$ & $(L) | p | q$ \\
-    L & $\rightarrow$ & $L and S | L or S | S$ \\
-  \end{tabular}
+Temos a gramática
 
-* 
+S \rightarrow ( L ) | p | q
 
-Implemente, em pseudo-código, um analisador recursivo
-descendente para a linguagem descrita no exercício~\ref{x1},
-transformando a gramática em LL(1) se necessário.
+L \rightarrow L and S | L or S | S
+
+1. Ela satisfaz a condição LL(1)? Justifique a sua
+   resposta. Qual tipo de linguagem ela descreve?
+
+2. Implemente, em pseudo-código, um analisador recursivo descendente
+   para a linguagem descrita no exercício anterior, transformando a
+   gramática em LL(1) se necessário.
 
 * 
 
