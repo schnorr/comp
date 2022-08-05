@@ -92,7 +92,8 @@ fatoradas à esquerda ou ter sua recursão à esquerda eliminada.
 - S \rightarrow + S S | * S S | a
 - S \rightarrow S ( S ) S | \epsilon
 - S \rightarrow S + S | S S | ( S ) | S * | a
-- S \rightarrow ( L ) | a \\
+- S \rightarrow ( L ) | a
+
   L \rightarrow L , S | S
 - S \rightarrow a S b S | b S a S | \epsilon
 - Gramática para expressões boleanas
