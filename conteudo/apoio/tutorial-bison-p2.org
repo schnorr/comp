@@ -739,10 +739,10 @@ opção adotada.
 
 #+begin_src bash :exports none
 sed -i 's#char \*#double #' asd.[ch]
+sed -i '/free(tree->label);/d' asd.c
 sed -i 's#strdup(\(label\))#label#' asd.c
 sed -i 's#Nó\(.*\)%s#Nó\1%f#' asd.c
 sed -i 's#\\"%s\\"#\\"%f\\"#' asd.c
-sed -i '26d' asd.c
 
 sed -i '7i %code requires { #include "asd.h" }' calc.y
 sed -i '8i %union { double valor; asd_tree_t *arvore; }' calc.y
