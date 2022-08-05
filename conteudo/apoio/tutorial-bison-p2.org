@@ -181,6 +181,7 @@ void asd_free(asd_tree_t *tree)
     for (i = 0; i < tree->number_of_children; i++){
       asd_free(tree->children[i]);
     }
+    free(tree->children);
     free(tree->label);
     free(tree);
   }else{
