@@ -269,6 +269,7 @@ int main() {
   
   asd_print(asd_soma);
   asd_print_graphviz(asd_soma);
+  asd_free(asd_soma);
   return 0;
 }
 #+end_src
