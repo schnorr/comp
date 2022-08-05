@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # -*- mode: org -*-
 
-#+Title: Lista de Exercícios #04 \linebreak Análise Descendente, Gramáticas LL(1) e Tabelas Preditivas
+#+Title: Análise Descendente, Gramáticas LL(1) e Tabelas Preditivas
 #+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
 #+Date: schnorr@inf.ufrgs.br
 
@@ -24,14 +24,15 @@ Como sabemos quando uma gramática não é LL(1)?
 A gramática seguinte não pode ser utilizada em uma análise
 preditiva descendente. Identifique e corrija o problema,
 reescrevendo a gramática. Mostre que a nova gramática, corrigida,
-satisfaz a condição LL(1). \\
-\begin{tabular}{rcl}
-  L & $\rightarrow$ & Ra | Qba \\
-  R & $\rightarrow$ & aba | caba | Rbc \\
-  Q & $\rightarrow$ & bbc | bc \\
-\end{tabular}
+satisfaz a condição LL(1).
 
-p* 
+L \rightarrow Ra | Qba
+
+R \rightarrow aba | caba | Rbc
+
+Q \rightarrow bbc | bc
+
+* 
 
 A gramática seguinte satisfaz a condição LL(1)? Justifique a sua
 resposta. Se ela não satisfazer, reescreva-a como uma gramática
