@@ -158,10 +158,10 @@ A partir de =bool= e =float=, infere-se =float=.
 forma. Um =char= ocupa 1 byte. Um =string= ocupa 1 byte para cada
 caractere. O tamanho máximo de um string é definido na sua
 inicialização (com o operador de inicialização). Uma string não
-inicializada ocupa 0 bytes e não pode receber valores cujo tamanho
-excede àquele máximo da inicialização. Um =int= ocupa 4 bytes. Um =float=
-ocupa 8 bytes. Um =bool= ocupa 1 byte. Um vetor ocupa o seu tamanho
-vezes o seu tipo.
+inicializada ocupa 0 bytes (a verificação se pode ou não pode atribuir
+para uma string será realizado em tempo de execução).  Um =int= ocupa 4
+bytes. Um =float= ocupa 8 bytes. Um =bool= ocupa 1 byte. Um vetor ocupa o
+seu tamanho vezes o seu tipo.
 
 * Códigos de retorno
 
