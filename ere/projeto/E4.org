@@ -59,7 +59,6 @@ identifica o símbolo, e o conteúdo deve ter os campos:
 - natureza (literal, variável, função, etc)
 - tipo (qual o tipo de dado deste símbolo)
 - tamanho (derivado do tipo e se vetor)
-- argumentos e seus tipos (no caso de funções)
 - dados do valor do token pelo =yylval= (veja E3)
 
 #+latex: \noindent
@@ -78,7 +77,7 @@ declarado, deve-se lançar o erro =ERR_DECLARED=. Caso o identificador
 não tenha sido declarado no seu uso, deve-se lançar o erro
 =ERR_UNDECLARED=. Variáveis com o mesmo nome podem co-existir em escopos
 diferentes, efetivamente mascarando as variáveis que estão em escopos
-superiores. As regras de escopo são delineadas no anexo.
+superiores.
 
 ** Uso correto de identificadores
 
@@ -93,66 +92,29 @@ identificador dito vetor seja usado como variável ou função, deve-se
 lançar o erro =ERR_VECTOR=. Enfim, caso o identificador dito função seja
 utilizado como variável ou vetor, deve-se lançar o erro =ERR_FUNCTION=.
 
-** Verificação de tipos e tamanho dos dados
+** Verificação de tipos
 
-# ERE
+*Inferência de tipos na AST*. Uma declaração de variável deve permitir
+ao compilador definir o tipo e a ocupação em memória da variável na
+sua entrada na tabela de símbolos. Com o auxílio desta informação,
+quando necessário, os tipos de dados corretos devem ser inferidos onde
+forem usados, em expressões aritméticas, relacionais, lógicas, ou para
+índices de vetores. Por simplificação, isso nos leva a situação onde
+todos os nós da AST devem ser anotados com um tipo definido de acordo
+com as regras de inferência de tipos. Um nó da AST deve ter portanto
+um novo campo que registra o seu tipo de dado. O processo de
+inferência de tipos está descrito abaixo.
 
-Uma declaração de variável deve permitir ao compilador definir o tipo
-e a ocupação em memória da variável na sua entrada na tabela de
-símbolos. Com o auxílio desta informação, quando necessário, os tipos
-de dados corretos devem ser inferidos onde forem usados, em expressões
-aritméticas, relacionais, lógicas, ou para índices de vetores. Por
-simplificação, isso nos leva a situação onde todos os nós da AST devem
-ser anotados com um tipo definido de acordo com as regras de
-inferência de tipos. Um nó da AST deve ter portanto um novo campo que
-registra o seu tipo de dado. O processo de inferência de tipos está
-descrito abaixo. Como não temos coerção de variáveis do tipo string e
-char, o compilador deve lançar o erro =ERR_STRING_TO_X= quando a
-variável do tipo string estiver em uma situação onde ela deve ser
-convertida para qualquer outro tipo. De maneira análoga, o erro
-=ERR_CHAR_TO_X= deve ser lançado quando uma variável do tipo char deve
-ser convertida implicitamente. Enfim, vetores não podem ser do tipo
-~string~. Caso um vetor tenha sido declarado com o tipo ~string~, o erro
-~ERR_STRING_VECTOR~ deve ser lançado.
-
-** Retorno, argumentos e parâmetros de funções
-
-A lista de argumentos fornecidos em uma chamada de função deve ser
-verificada contra a lista de parâmetros formais na declaração da mesma
-função. Cada chamada de função deve prover um argumento para cada
-parâmetro, e ter o seu tipo compatível. Tais verificações devem ser
-realizadas levando-se em conta as informações registradas na tabela de
-símbolos, registradas no momento da declaração/definição da função. Na
-hora da chamada da função, caso houver um número menor de argumentos
-que o necessário, deve-se lançar o erro =ERR_MISSING_ARGS=. Caso houver
-um número maior de argumentos que o necessário, deve-se lançar o erro
-=ERR_EXCESS_ARGS=. Enfim, quando o número de argumentos é correto, mas
-os tipos dos argumentos são incompatíveis com os tipos registrados na
-tabela de símbolo, deve-se lançar o erro =ERR_WRONG_TYPE_ARGS=. Retorno,
-argumentos e parâmetros de funções não podem ser do tipo
-~string~. Quando estes casos acontecerem, lançar o erro
-~ERR_FUNCTION_STRING~.
-
-** Verificação de tipos em comandos
-
-# ERE
-
-Prevalece o tipo do identificador que recebe um valor em um comando de
-atribuição.  O erro =ERR_WRONG_TYPE= deve ser lançado quando o tipo do
-valor a ser atribuído a um identificador for incompatível com o tipo
-deste identificador. Os demais comandos simples da linguagem devem ser
-verificados semanticamente para obedecer as seguintes regras.  O
-comando ~input~ deve ser seguido obrigatoriamente por um identificador
-do tipo ~int~ e ~float~. Caso contrário, o compilador deve lançar o erro
-~ERR_WRONG_PAR_INPUT~. De maneira análoga, o comando ~output~ deve ser
-seguido por um identificador ou literal do tipo ~int~ e ~float~. Caso
-contrário, deve ser lançado o erro ~ERR_WRONG_PAR_OUTPUT~. O comando de
-retorno =return= deve ser seguido obrigatoriamente por uma expressão
-cujo tipo é compatível com o tipo de retorno da função. Caso não seja
-o caso, o erro =ERR_WRONG_PAR_RETURN= deve ser lançado pelo compilador.
-Nos comandos de shift (esquerda e direta), deve-se lançar o erro
-~ERR_WRONG_PAR_SHIFT~ caso o parâmetro após o token de shift for um
-número maior que 16.
+#+latex: \noindent
+*Lidando com variáveis do tipo string e char*.  Como não temos coerção
+de variáveis do tipo string e char, o compilador deve lançar o erro
+=ERR_STRING_TO_X= quando a variável do tipo string estiver em uma
+situação onde ela deve ser convertida para qualquer outro tipo. De
+maneira análoga, o erro =ERR_CHAR_TO_X= deve ser lançado quando uma
+variável do tipo char deve ser convertida implicitamente para qualquer
+outro tipo. Vetores não podem ser do tipo ~string~. Caso um vetor tenha
+sido declarado com o tipo ~string~, o erro ~ERR_STRING_VECTOR~ deve ser
+lançado.
 
 ** Mensagens de erro
 
@@ -190,17 +152,16 @@ As regras de inferência de tipos da linguagem são as seguintes. A
 partir de =int= e =int=, infere-se =int=. A partir de =float= e =float=,
 infere-se =float=. A partir de =bool= e =bool=, infere-se =bool=. A partir de
 =float= e =int=, infere-se =float=. A partir de =bool= e =int=, infere-se =int=.
-A partir de =bool= e =float=, infere-se =float=. A matriz abaixo resume:
+A partir de =bool= e =float=, infere-se =float=.
 
 *Tamanho.* O tamanho dos tipos da linguagem é definido da seguinte
 forma. Um =char= ocupa 1 byte. Um =string= ocupa 1 byte para cada
 caractere. O tamanho máximo de um string é definido na sua
 inicialização (com o operador de inicialização). Uma string não
 inicializada ocupa 0 bytes e não pode receber valores cujo tamanho
-excede àquele máximo da inicialização. Caso o tamanho de um string a
-ser atribuído exceder o máximo, deve-se emitir o erro
-~ERR_STRING_MAX~. Um =int= ocupa 4 bytes. Um =float= ocupa 8 bytes. Um =bool=
-ocupa 1 byte. Um vetor ocupa o seu tamanho vezes o seu tipo.
+excede àquele máximo da inicialização. Um =int= ocupa 4 bytes. Um =float=
+ocupa 8 bytes. Um =bool= ocupa 1 byte. Um vetor ocupa o seu tamanho
+vezes o seu tipo.
 
 * Códigos de retorno
 
@@ -211,24 +172,14 @@ descreve o erro.  Na ausência de qualquer erro, o programa deve
 retornar o valor zero.
 #+latex: {\tiny
 #+BEGIN_SRC C :tangle errors.h :main no
-#define ERR_UNDECLARED       10
-#define ERR_DECLARED         11
-#define ERR_VARIABLE         20
-#define ERR_VECTOR           21
-#define ERR_FUNCTION         22
-#define ERR_WRONG_TYPE       30
-#define ERR_STRING_TO_X      31
-#define ERR_CHAR_TO_X        32
-#define ERR_STRING_MAX       33
-#define ERR_STRING_VECTOR    34
-#define ERR_MISSING_ARGS     40
-#define ERR_EXCESS_ARGS      41
-#define ERR_WRONG_TYPE_ARGS  42
-#define ERR_FUNCTION_STRING  43
-#define ERR_WRONG_PAR_INPUT  50
-#define ERR_WRONG_PAR_OUTPUT 51
-#define ERR_WRONG_PAR_RETURN 52
-#define ERR_WRONG_PAR_SHIFT  53
+#define ERR_UNDECLARED       10 //2.1
+#define ERR_DECLARED         11 //2.1
+#define ERR_VARIABLE         20 //2.2
+#define ERR_VECTOR           21 //2.2
+#define ERR_FUNCTION         22 //2.2
+#define ERR_STRING_TO_X      31 //2.3
+#define ERR_CHAR_TO_X        32 //2.3
+#define ERR_STRING_VECTOR    33 //2.3
 #+END_SRC
 #+latex: }\noindent
 Estes valores são utilizados na avaliação objetiva.
