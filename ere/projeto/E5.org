@@ -103,18 +103,17 @@ conforme necessário. Nesta etapa, deve-se traduzir as seguintes
 construções da linguagem, considerando que existe apenas o tipo =int=:
 
 - Cálculo de endereço na declaração de variáveis
-  - Endereço de variáveis locais são um deslocamento em relação ao registrador especial =rfp=
-  - Endereço de variáveis globais são um deslocamento em relação ao registrador especial =rbss=
-- Expressões aritméticas, com operações unárias, binárias e ternária
+  - Locais, como um deslocamento à =rfp=
+  - Globais, como um deslocamento à =rbss=
+- Expressões aritméticas, com operações binárias
   - soma, subtração, divisão e multiplicação
-- Expressões booleanas por controle de fluxo com curto-circuito
-  - todos os operadores relacionais
-  - todos os operadores lógicos (adote =&&= para o e lógico, =||= para o ou lógico)
+- Expressões lógicas por controle de fluxo
+  - os operadores relacionais
+  - os operadores lógicos (=&&= e =||=)
 - O comando de atribuição
 - Os seguintes comandos de fluxo de controle
   - if com else opcional
-  - while
-  - for
+  - laço de repetição while e for
 - Chamada de função (com ~jumpI~ para um label)
 
 #+latex: \medskip\noindent
