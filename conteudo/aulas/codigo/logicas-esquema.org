@@ -15,13 +15,59 @@
 #+OPTIONS:   H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \input{../org-babel.tex}
 
+* Esquema de Tradução para Expressões Lógicas (contexto)
+
+Tradução *Numérica*
+- Esquema S-atribuído
+  - Veja tradução de expressões aritméticas
+  - Incorporar instruções =and=, =or=, =not=
+
+#+latex: \pause\vfill
+
+Tradução por *Controle de Fluxo* (curto-circuito)
+- Esquema L-atribuído
+- Esquema S-atribuído com _remendos_
+
+* Lógicas, por controle de fluxo (introdução)
+
+Traduz =a<b= para algo como (exemplo):
+
+#+BEGIN_EXAMPLE
+comp   ra, rb => cc1
+cbr_LT cc1    -> L1, L2
+#+END_EXAMPLE
+
+#+latex: \pause\vfill
+
+Tradução de uma expressão lógica que é um operador relacional
+
+#+latex: \bigskip
+#+attr_latex: :center nil
+| B | \rightarrow | E_1 < E_2 | B.cond=cond();                        |
+|   |   |         | B.code =                              |
+|   |   |         | E_1.code \vert\vert E_2.code \vert\vert                 |
+|   |   |         | "=comp= $E_1$.temp, $E_2$.temp => B.cond" |
+|   |   |         | "=cbr_LT= B.cond -> *????*, *????*"         |
+
+#+latex: \bigskip\pause
+
+Para onde devemos saltar se caso for verdade ou falso?
+- Na expressão lógica, não temos como saber @@latex:\pause@@
+Dois caminhos portanto:
+- Esquema L-atribuído (usamos atributos herdados de B)
+- Esquema S-atribuído com _remendos_ (sintetizamos "buracos")
+
 * Esquema L-Atribuído e funções auxiliares
-Funções auxiliares
+** Funções auxiliares
+
 + gera()
 + rot() -- cria um novo rótulo simbólico
-Atributos herdados para cada expressão booleana B
+
+** Atributos herdados para cada expressão booleana B
+
 + B.t -- contém o rótulo alvo caso a expressão for verdade
 + B.f -- contém o rótulo alvo caso a expressão for falsa
+
 * Gramática para expressões booleanas
 Como deve ficar o esquema de tradução para cada regra?
 #+BEGIN_CENTER
@@ -43,6 +89,7 @@ Como deve ficar o esquema de tradução para cada regra?
 | B | \rightarrow | true { B.code="jumpI B.t";  }                                         |
 | B | \rightarrow | false { B.code="jumpI B.f"; }                                         |
 | B | \rightarrow | E_1 < E_2 { B.cond=cond(); B.code=                                      |
+|   |   | E_1.code \vert\vert E_2.code \vert\vert                                                 |
 |   |   | "comp $E_1$.local < $E_2$.local => B.cond"                              |
 |   |   | "cbrLT B.cond -> B.t, B.f" }                                          |
 #+END_CENTER
@@ -52,8 +99,36 @@ Gerar código baseado no esquema
 #+BEGIN_CENTER
 a < b or c < d and e < f
 #+END_CENTER
+* Lógicas, por controle de fluxo (introdução)
 
-* Remendos
+Traduz =a<b= para algo como (exemplo):
+
+#+BEGIN_EXAMPLE
+comp   ra, rb => cc1
+cbr_LT cc1    -> L1, L2
+#+END_EXAMPLE
+
+#+latex: \vfill
+
+Tradução de uma expressão lógica que é um operador relacional
+
+#+latex: \bigskip
+#+attr_latex: :center nil
+| B | \rightarrow | E_1 < E_2 | B.cond=cond();                        |
+|   |   |         | B.code =                              |
+|   |   |         | E_1.code \vert\vert E_2.code \vert\vert                 |
+|   |   |         | "=comp= $E_1$.temp, $E_2$.temp => B.cond" |
+|   |   |         | "=cbr_LT= B.cond -> *????*, *????*"         |
+
+#+latex: \pause
+
+Para onde devemos saltar se caso for verdade ou falso?
+- Na expressão lógica, não temos como saber
+Dois caminhos portanto:
+- Esquema L-atribuído (usamos atributos herdados de B)
+- Esquema S-atribuído com _remendos_ (sintetizamos "buracos")
+
+* S-atribuído com remendos
 Casamento da instrução de desvio com o rótulo alvo
 + Abordagem até agora: uso de atributos herdados
     + Impossibilita geração em uma passagem
@@ -62,7 +137,7 @@ Casamento da instrução de desvio com o rótulo alvo
 + Passadas listas de desvios como atributos sintetizados
 + Na geração do desvio, rótulos destino ficam "em aberto"
 + Quando o rótulo for gerado, preenche-se adequadamente
-* Remendos em ação
+* S-atribuído com remendos em ação
 Funções auxiliares
 + remendo ()
 + concat (lista1, lista2)
@@ -81,20 +156,21 @@ Atributos sintetizados
 | B | \rightarrow | false       |
 | B | \rightarrow | E_1 relop E_2 |
 #+END_CENTER
-* Remendos
+* S-atribuído com remendos (parte 1)
 | B | \rightarrow | E_1 relop E_2 |
-\scriptsize
+#+latex: \scriptsize
 #+BEGIN_EXAMPLE
 x = remendo()
 y = remendo()
+t = temp();
 B.code = E1.code || E2.code ||
-         "cmp_LT E1.temp, E2.temp => r1" || "cbr r1 -> x, y"
+         "comp E1.temp, E2.temp => t" || "cbr_LT t -> x, y"
 B.tl = lista(x) //cria uma lista com apenas um remendo
 B.fl = lista(y)
 #+END_EXAMPLE
-\normalsize
+#+latex: \normalsize\pause
 | B | \rightarrow | B_1 and B_2 |
-\scriptsize
+#+latex: \scriptsize
 #+BEGIN_EXAMPLE
 x = rot();
 remenda (B1.tl, x);
@@ -102,15 +178,41 @@ B.tl = B2.tl;
 B.fl = concat(B1.fl, B2.fl)
 B.code = B1.code || "x: " || B2.code
 #+END_EXAMPLE
-\normalsize
+#+latex: \normalsize\pause
 | B | \rightarrow | B_1 or B_2 |
-\scriptsize
+#+latex: \scriptsize
 #+BEGIN_EXAMPLE
 x = rot();
 remenda (B1.fl, x);
 B.fl = B2.fl;
 B.tl = concat(B1.tl, B2.tl)
 B.code = B1.code || "x: " || B2.code   
+#+END_EXAMPLE
+* S-atribuído com remendos (parte 2)
+| B | \rightarrow | not B_1 |
+#+latex: \scriptsize
+#+BEGIN_EXAMPLE
+B.tl = B1.fl;
+B.fl = B1.tl;
+B.code = B1.code;
+#+END_EXAMPLE
+#+latex: \normalsize\pause
+| B | \rightarrow | true |
+#+latex: \scriptsize
+#+BEGIN_EXAMPLE
+x = remendo();
+B.code = "jumpI x"
+B.tl = lista(x);
+B.fl = lista(NULL);
+#+END_EXAMPLE
+#+latex: \normalsize\pause
+| B | \rightarrow | false |
+#+latex: \scriptsize
+#+BEGIN_EXAMPLE
+x = remendo();
+B.code = "jumpI x"
+B.tl = lista(NULL);
+B.fl = lista(x);
 #+END_EXAMPLE
 * Ilustrar funcionamento usando remendos
 #+BEGIN_CENTER
