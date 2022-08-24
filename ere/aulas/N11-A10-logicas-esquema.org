@@ -92,6 +92,7 @@ Como deve ficar o esquema de tradução para cada regra?
 | B | \rightarrow | true { B.code="jumpI B.t";  }                                         |
 | B | \rightarrow | false { B.code="jumpI B.f"; }                                         |
 | B | \rightarrow | E_1 < E_2 { B.cond=cond(); B.code=                                      |
+|   |   | E_1.code \vert\vert E_2.code \vert\vert                                                 |
 |   |   | "comp $E_1$.local < $E_2$.local => B.cond"                              |
 |   |   | "cbrLT B.cond -> B.t, B.f" }                                          |
 #+END_CENTER
@@ -116,10 +117,11 @@ Tradução de uma expressão lógica que é um operador relacional
 
 #+latex: \bigskip
 #+attr_latex: :center nil
-| B | \rightarrow | E_1 < E_2 | B.cond=cond();                       |
-|   |   |         | B.code =                             |
+| B | \rightarrow | E_1 < E_2 | B.cond=cond();                        |
+|   |   |         | B.code =                              |
+|   |   |         | E_1.code \vert\vert E_2.code \vert\vert                 |
 |   |   |         | "=comp= $E_1$.temp, $E_2$.temp => B.cond" |
-|   |   |         | "=cbr_LT= B.cond -> *????*, *????*"        |
+|   |   |         | "=cbr_LT= B.cond -> *????*, *????*"         |
 
 #+latex: \pause
 
