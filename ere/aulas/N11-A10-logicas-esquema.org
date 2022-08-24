@@ -46,10 +46,11 @@ Tradução de uma expressão lógica que é um operador relacional
 
 #+latex: \bigskip
 #+attr_latex: :center nil
-| B | \rightarrow | E_1 < E_2 | B.cond=cond();                       |
-|   |   |         | B.code =                             |
+| B | \rightarrow | E_1 < E_2 | B.cond=cond();                        |
+|   |   |         | B.code =                              |
+|   |   |         | E_1.code \vert\vert E_2.code \vert\vert                 |
 |   |   |         | "=comp= $E_1$.temp, $E_2$.temp => B.cond" |
-|   |   |         | "=cbr_LT= B.cond -> *????*, *????*"        |
+|   |   |         | "=cbr_LT= B.cond -> *????*, *????*"         |
 
 #+latex: \bigskip\pause
 
