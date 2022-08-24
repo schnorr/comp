@@ -89,7 +89,7 @@ Como deve ficar o esquema de tradução para cada regra?
 | B | \rightarrow | true { B.code="jumpI B.t";  }                                         |
 | B | \rightarrow | false { B.code="jumpI B.f"; }                                         |
 | B | \rightarrow | E_1 < E_2 { B.cond=cond(); B.code=                                      |
-|   |   | E_1.code \vert\vert E_2.code \vert\vert                                                 |
+|   |   | E_{1}.code \vert\vert E_{2}.code \vert\vert                                            |
 |   |   | "comp $E_1$.local < $E_2$.local => B.cond"                              |
 |   |   | "cbrLT B.cond -> B.t, B.f" }                                          |
 #+END_CENTER
