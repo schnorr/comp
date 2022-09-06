@@ -118,7 +118,7 @@ int main() {
 }
 #+end_src
 ** Arquivo =asd.h=
-#+begin_src C :tangle asd.h
+#+begin_src C :tangle asd.h :main no
 #ifndef _ARVORE_H_
 #define _ARVORE_H_
 
@@ -155,7 +155,7 @@ void asd_print_graphviz (asd_tree_t *tree);
 #endif //_ARVORE_H_
 #+end_src
 ** Arquivo =asd.c=
-#+begin_src C :tangle asd.c
+#+begin_src C :tangle asd.c :main no
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -254,7 +254,7 @@ void asd_print_graphviz(asd_tree_t *tree)
 }
 #+end_src
 ** Arquivo =asd_main.c=
-#+begin_src C :tangle asd_main.c
+#+begin_src C :tangle asd_main.c :main no
 #include <stddef.h>
 #include "asd.h"
 int main() {
