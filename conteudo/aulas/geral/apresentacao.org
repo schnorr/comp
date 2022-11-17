@@ -249,9 +249,7 @@ contrário, será reprovado (conceito "D").
 * Ferramenta de apoio
 
 #+BEGIN_CENTER
-Sempre consulte o Moodle Institucional da UFRGS
-
-https://moodle.ufrgs.br/course/view.php?id=102338
+Sempre consulte o Moodle da UFRGS
 #+END_CENTER
 
 #+latex: \vfill
@@ -262,29 +260,13 @@ Anúncios
   - Confirme que seu e-mail é o correto
 
 * Cronograma
-** Texto
-:PROPERTIES:
-:BEAMER_col: 0.2
-:END:
 
 _Cronograma_
 
 #+latex: \bigskip
 
-Verifique Moodle
+Verifique no Moodle.
 
 #+latex: \bigskip
 
 Vamos revisá-lo juntos.
-
-#+latex: \bigskip
-
-Não haverá aula entre os dias 16/07 e 31/07.
-
-** Esquerda
-:PROPERTIES:
-:BEAMER_col: 0.8
-:END:
-
-#+attr_latex: :width \textwidth
-[[/home/schnorr/svn/navajo/2022/cronograma/compiladores/Cronograma_2022-1.pdf]]
