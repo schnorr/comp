@@ -7,7 +7,7 @@
 #+EXPORT_SELECT_TAGS: export
 
 #+Title: Apresentação da Disciplina
-#+subtitle: 2022/1
+#+subtitle: 2022/2
 #+Author: Prof. Lucas M. Schnorr (UFRGS)
 #+Date: \copyleft
 
