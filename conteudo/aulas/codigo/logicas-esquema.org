@@ -216,6 +216,6 @@ B.fl = lista(x);
 #+END_EXAMPLE
 * Ilustrar funcionamento usando remendos
 #+BEGIN_CENTER
-a < b or c < d and e<f
+a < b or c < d
 #+END_CENTER   
 
