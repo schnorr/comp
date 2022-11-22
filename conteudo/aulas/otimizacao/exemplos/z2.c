@@ -11,4 +11,5 @@ int main ()
   }
   double t2 = gettime();
   printf ("%f\n", t2 - t1);
+  return 0;
 }
