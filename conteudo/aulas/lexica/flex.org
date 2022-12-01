@@ -16,45 +16,44 @@
 #+LATEX_HEADER: \input{../org-babel.tex}
 
 * (F)LEX
+
 + Lex: Ferramenta Unix para gerar analisadores léxicos
 + *Flex*: Versão GNU (Fast Lex) \linebreak
   http://www.gnu.org/software/flex/
 
 #+Latex: \vfill
 
-+ Funcionamento Geral
-  + Especificação LEX (arquivo fonte com extensão .l) \\
-    \rightarrow Declarações, Padrões, Regras para ações
+#+begin_center
+Funcionamento Geral
+#+end_center
 
-  + Compilação flex \\
-    \rightarrow Obtenção de um código em C
+1. Arquivo com a especificação LEX \\
+   Contém declarações, padrões e ações \\
+   (arquivo com extensão .l, =scanner.l=)   
+2. Realizamos a compilação com =flex= \\
+   #+begin_src bash
+   flex scanner.l // gera um arquivo lex.yy.c
+   #+end_src
+3. Compilamos o arquivo =lex.yy.c= junto com nosso programa \\
+   Toda vez que a função =yylex()= é chamada, retorna um /token/
+   #+begin_src C
+   int token = yylex(); // função yylex() implementada pelo flex
+   #+end_src
 
-  + Compilação do programa C \\
-    \rightarrow Obtenção de um analisador léxico na forma de uma função
-    #+BEGIN_EXAMPLE
-    int token = yylex();
-    #+END_EXAMPLE
+* Uso da função =yylex()= em =lex.yy.c=
 
-* Compilação Típica com Flex
-+ Edição da especificação em um arquivo -- *scanner.l*
-
-+ =flex scanner.l=
-  + Código em C no arquivo *lex.yy.c*
-  + Exporta a função =yylex()= que retorna un token
-  + =man flex=
-+ <2-> =gcc lex.yy.c -o analisador -lfl=
-  + Compila e amarra o analisador com a biblioteca *libfl*
-  + A função *main* deve estar implementada em algum lugar
-    #+BEGIN_EXAMPLE
-  int main (int argc, char **argv)
-  {
-    int token;
-    while ((token = yylex())){
-      // do something with token
-
-    }
+A função *main* deve estar implementada em algum lugar
+- Idealmente em outro arquivo =.c=, a ser compilado junto
+#+begin_src C
+int main (int argc, char **argv) {
+  int token = 0;
+  while ((token = yylex())){
+    // faça algo com o token
+    // consulte o lexema com yytext
   }
-  #+END_EXAMPLE
+  return 0;
+}
+#+end_src
 
 * Especificação de Entrada Flex
 + Contém três seções
@@ -63,11 +62,11 @@
   + Código (em C, incluído no fim da saída)
 + Sintaxe
   #+BEGIN_SRC Flex
-  Definições
+  /* Definições */
   %%
-  Regras e Ações
+  /* Regras e Ações */
   %%
-  Funções Opcionais
+  /* Funções Opcionais */
   #+END_SRC
 + Variáveis globais definidas por flex
   + =char *yytext= -- último lexema reconhecido \linebreak
