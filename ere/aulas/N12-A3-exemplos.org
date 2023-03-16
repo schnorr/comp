@@ -296,7 +296,6 @@ memory           read:    4 write:    7
 #+end_example
 
 
-
 * Passagem por valor
 
 #+latex: \tiny
@@ -415,3 +414,18 @@ memory           read:    7 write:    7
 00001044        0
 00001048        0
 #+end_example
+
+* Fazer ZIP
+
+Tangle with C-c C-v t
+Then run
+#+begin_src shell :results output :exports both
+zip exemplos_iloc.zip exemplo*.iloc
+#+end_src
+
+#+RESULTS:
+:   adding: exemplo1.iloc (deflated 33%)
+:   adding: exemplo2.iloc (deflated 37%)
+:   adding: exemplo3.iloc (deflated 45%)
+:   adding: exemplo4.iloc (deflated 56%)
+:   adding: exemplo5.iloc (deflated 61%)
