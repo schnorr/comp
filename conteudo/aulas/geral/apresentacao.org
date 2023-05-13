@@ -7,7 +7,6 @@
 #+EXPORT_SELECT_TAGS: export
 
 #+Title: Apresentação da Disciplina
-#+subtitle: 2022/2
 #+Author: Prof. Lucas M. Schnorr (UFRGS)
 #+Date: \copyleft
 
@@ -18,7 +17,7 @@
 
 * O professor
 Prof. Lucas M. Schnorr
-+ Prédio 43425, Sala 202
++ Prédio 43425, Sala 242
 + [[http://www.inf.ufrgs.br/~schnorr][http://www.inf.ufrgs.br/~schnorr]]
 + schnorr@inf.ufrgs.br
 
