@@ -1,0 +1,87 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: Transformações e Conjuntos Primeiro (First) e Sequência (Follow)
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil date:nil author:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* Questão 01
+\label{fatoracao-recursao}
+Para cada uma das gramáticas a seguir, fatore à esquerda e/ou elimine
+a recursão à esquerda, preparando-as para a construções de
+analisadores recursivos preditivos e depois realize os passos de
+derivações necessários para o reconhecimento das cadeias especificadas
+em cada item (com exceção do último item, onde isto não é necessário).
+\begin{lista}
+\item $S \rightarrow 0\ S\ 1\ |\ 0\ 1$ com as cadeias $000111$ e $01011001$. 
+\item $S \rightarrow +\ S\ S\ |\ *\ S\ S\ |\ a$ com as cadeiras $+*aaa$ e $+aa*aa$.
+\item $S \rightarrow S\ (\ S\ )\ S\ |\ {\epsilon}$ com as cadeias $(()())$ e $((()())()())$.
+\item $S \rightarrow S + S\ |\ SS\ |\ (\ S\ )\ |\ S\ *\ |\ a$ com as cadeias $(a+a)*a$ e $(a*a)a$.
+\item $S \rightarrow (\ L\ )\ |\ a$ e $L \rightarrow L, S\ |\ S$ com a cadeia $((a,a),a,(a))$.
+\item $S \rightarrow aSbS | bSaS | {\epsilon}$ com a cadeia $aabbab$.
+\item A gramática para expressões boleanas: \\
+  \begin{tabular}{rcl}
+    bexpr & $\rightarrow$ & bexpr {\bf or} bterm | bterm \\
+    bterm & $\rightarrow$ & bterm {\bf and} bfactor | bfactor \\
+    bfactor & $\rightarrow$ & {\bf not} bfactor | {\bf (} bexpr {\bf )} | {\bf true} | {\bf false}
+  \end{tabular}
+\end{lista}
+
+* Questão 02
+Calcule os conjuntos Primeiro e Sequência para todas as gramáticas resultantes do exercício~\ref{fatoracao-recursao}.
+
+* Questão 03
+\label{expressoesposfixadas}
+Considerando a gramática livre de contexto definida pelo conjunto de
+produções $P = \{ S \rightarrow S\ S\ +\ |\ S\ S\ *\ |\ a\ \}$ que
+descreve as expressões pós-fixadas com o operando \texttt{a}. É
+possível, modificando esta gramática de alguma maneira, construir um
+analisador preditivo?
+
+* Questão 04
+Calcule os conjuntos Primeiro e Sequência para a gramática apresentada no exercício~\ref{expressoesposfixadas}.
+
+* Questão 05
+Considerando a gramática definida pelo conjunto de produções $P = \{ E
+\rightarrow E + E\ |\ E * E\ |\ -E\ |\ +E\ |\ ( E )\ |\ id\ \}$:
+  \begin{lista}
+  \item Retire a ambiguidade desta gramática, dando preferência para a
+    operação de multiplicação.
+  \item Remove a recursão à esquerda, se houver.
+  \item Fatore totalmente a gramática, se necessário.
+  \item Calcule os conjuntos Primeiro e Sequência da gramática modificada
+    pelos passos anteriores.
+  \end{lista}
+
+* Questão 06
+Calcule os conjuntos Primeiro and Sequência para cada uma das gramáticas seguintes:
+\begin{lista}
+\item $S \rightarrow AB$, $A \rightarrow c|{\epsilon}$, $B \rightarrow cbB|ca$
+\item $S \rightarrow ABc$, $A \rightarrow a | \epsilon$, $B \rightarrow b | \epsilon$
+\item $S \rightarrow Ab$, $A \rightarrow a | B | \epsilon$, $B \rightarrow b | \epsilon$
+\item $S \rightarrow ABBA$, $A \rightarrow a | \epsilon$, $B \rightarrow b | \epsilon$
+\item $S \rightarrow aSe | B$, $B \rightarrow bBe | C$, $C \rightarrow cBe | d$
+\end{lista}
+
+* Questão 07
+Defina os conjuntos Primeiro e Sequência considerando a gramática seguinte: \\
+  \begin{tabular}{rcl}
+    E & $\rightarrow$ & {\bf -}E | {\bf (} E {\bf )} | V L \\
+    L & $\rightarrow$ & {\bf -}E | $\epsilon$ \\
+    V & $\rightarrow$ & {\bf id} S \\
+    S & $\rightarrow$ & {\bf (} E {\bf )} | $\epsilon$
+  \end{tabular}
+
+\end{listanumerada}
+\end{document}
+
