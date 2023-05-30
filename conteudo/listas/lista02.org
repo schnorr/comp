@@ -1,23 +1,31 @@
-\documentclass{compiladores}
-\begin{document}
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
 
-\begin{center}
-{\LARGE Lista de Exercícios \#02}\\
-{\bf Gramáticas Livres de Contexto e Transformações}
-\end{center}
+#+Title: Gramáticas Livres de Contexto e Transformações
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
 
-\begin{listanumerada}
-\item
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil date:nil author:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* Questão 01
 Quais os principais objetivos do tratamento de erros da análise sintática?
 
-\item 
+* Questão 02
 Explique as três principais estratégias de tratamento de erros. Diga
 uma vantagem de cada uma delas.
 
-\item
+* Questão 03
 O que é uma Gramática Livre de Contexto? O que a faz descrever a maioria das linguagens de programação?
 
-\item
+* Questão 04
 \label{execz}
 Considerando a gramática livre de contexto descrita pelo conjunto de
 produções $P = \{ S \rightarrow S\ S\ +\ |\ S\ S\ *\ |\ a\ \}$ e a
@@ -30,7 +38,7 @@ cadeira de entrada $aa + a*$.
 \item Descreva textualmente a linguagem gerada por essa gramática.
 \end{lista}
 
-\item
+* Questão 05
 Repita o exercício~\ref{execz} para cada uma das seguintes gramáticas e cadeias.
 \begin{lista}
 \item $S \rightarrow 0\ S\ 1\ |\ 0\ 1$ com as cadeias $000111$ e $01011001$. 
@@ -41,7 +49,7 @@ Repita o exercício~\ref{execz} para cada uma das seguintes gramáticas e cadeia
 \item $S \rightarrow aSbS | bSaS | {\epsilon}$ com a cadeia $aabbab$.
 \end{lista}
 
-\item
+* Questão 06
 \label{execy}
 Considerando a gramática definida pelo conjunto de produções $P = \{ E
 \rightarrow E - E\ |\ E + E\ |\ E * E\ |\ -E\ |\ +E\ |\ ( E )\ |\ id\ \}$,
@@ -54,15 +62,15 @@ as seguintes entradas:
 \item $(id+id-(id*id+id))+((id*id)-(id*id*id))$
 \end{lista}
 
-\item
+* Questão 07
 Mostre que a gramática do exercício~\ref{execy} é ambígua utilizando
 qualquer entrada válida para a gramática.
 
-\item
+* Questão 08
 Sugira uma gramática alternativa aquela do exercício~\ref{execy} mas
 que não seja ambígua e que aceita exatamente a mesma linguagem gerada.
 
-\item
+* Questão 09
 \label{execx}
 A gramática $G = (N, NT, P, S)$, o conjunto de não-terminais $NT = \{
 S, L, E \}$, o conjunto de terminais $T = \{ begin, end, id, ;, :=,
@@ -71,18 +79,18 @@ begin\ L\ end\ |\ id := E, L \rightarrow L\ ;\ S\ |\ S, E \rightarrow
 E \vee E\ |\ \neg E\ |\ id\ \}$ é ambígua? Suporte a sua resposta com
 argumentos.
 
-\item
+* Questão 10
 Define uma $G'$ não ambígua e equivalente à gramática $G$ do
   exercício \ref{execx}.
 
-\item
+* Questão 11
 Elimine a recursividade à esquerda das produções de $G$ do
   exercício \ref{execx}.
 
-\item
+* Questão 12
 Quais as duas principais estratégias de análise sintática? Diferencie-as conceitualmente e com um exemplo.
 
-\item
+* Questão 13
 A gramática a seguir define expressões regulares sob os símbolos $a$ e
 $b$, usando o operador $+$ no lugar do operador $|$ para a união, a
 fim de evitar o conflito com a barra vertical usada como um
@@ -98,10 +106,10 @@ $rfactor$ & $\rightarrow$ & $rfactor *\ |\ rprimary$ & \hfill & $rprimary$ & $\r
 \item A gramática resultante é adequada para a análise sintática descendente?
 \end{lista}
 
-\item Considerando a gramática $S \rightarrow AB$, $A \rightarrow
+* Questão 14
+Considerando a gramática $S \rightarrow AB$, $A \rightarrow
   c|{\epsilon}$ e $B \rightarrow cbB|ca$, aplique as estratégias
   ascendente e descendente de análise para cada entrada: $ccbca$,
   $ca$, $cbca$, $cca$, $cbcbcbcbca$ e $ccbcbca$.
-\end{listanumerada}
-\end{document}
+
 
