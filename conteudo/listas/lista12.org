@@ -1,15 +1,23 @@
-\documentclass{compiladores}
-\begin{document}
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
 
-\begin{center}
-{\LARGE Lista de Exercícios \#12}\\
-{\bf Geração de TAC, Checagem de Tipos, Expressões Booleanas, Controle de Fluxo}
-\end{center}
+#+Title: Geração de TAC, Checagem de Tipos, Expressões Booleanas, Controle de Fluxo
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
 
-\bigskip
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
 
-\begin{listanumerada}
-\item Determine os endereços relativos para os identificadores seguintes considerando o esquema de tradução abaixo:
+#+OPTIONS: toc:nil date:nil author:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+
+* Questão 01
+Determine os endereços relativos para os identificadores seguintes considerando o esquema de tradução abaixo:
   \begin{lista}
   \item \texttt{float x;}
   \item \texttt{record \{ float x; float y; \} p;}
@@ -28,7 +36,8 @@
     Y  &  $\rightarrow$  &  $\epsilon$ \texttt{ \{ T.tipo = record(top); T.width = offset; top = Env.pop(); offset = Stack.pop(); \}  }\\
   \end{tabular}
 
-\item Utilize o esquema de tradução abaixo para construir diferentes tipos válidos:
+* Questão 02
+Utilize o esquema de tradução abaixo para construir diferentes tipos válidos:
 
  \medskip
 
@@ -40,11 +49,14 @@
     C  &  $\rightarrow$  &  \textbf{[ num ]} $C_1$ \texttt{ \{ array(num.value, $C_1$.type); C.width = num.value * $C_1$.width; \} }\\
   \end{tabular}
 
-\item O que é avaliação em curto-circuito? Quais suas vantagens e desvantagens?
+* Questão 03
+O que é avaliação em curto-circuito? Quais suas vantagens e desvantagens?
 
-\item Qual a diferença entre avaliação numérica e por controle considerando expressões booleanas?
+* Questão 04
+Qual a diferença entre avaliação numérica e por controle considerando expressões booleanas?
 
-\item \label{x} Considerando o esquema de tradução para avaliação numérica de
+* Questão 05
+\label{x} Considerando o esquema de tradução para avaliação numérica de
   expressões booleanas abaixo, gere código intermediário as seguintes
   expressões lógicas:
   \begin{lista}
@@ -74,7 +86,8 @@
     &                 &                   &  \et{ \ \ gera(E.nome = 0); \} }                                    \\
   \end{tabular}
 
-\item Avalie as expressões do exercício~\ref{x} considerando
+* Questão 06
+Avalie as expressões do exercício~\ref{x} considerando
   o esquema para avaliação por fluxo de controle abaixo.
 
   \medskip
@@ -96,6 +109,7 @@
 
 \bigskip
 
+* Questão 07
 Considerando o esquema de tradução abaixo:
 
 \medskip
@@ -162,6 +176,7 @@ Gere o código TAC para os trechos de código seguintes:
 
 \medskip
 
+* Questão 08
 Altere o esquema de tradução para fluxo de controle acima e adicione
 regras de tradução para construções do tipo:
 \begin{listanumerada}
@@ -208,4 +223,3 @@ regras de tradução para construções do tipo:
 
 Traduza para TAC o código acima utilizando o esquema de tradução modificado.
 
-\end{document}
