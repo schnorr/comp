@@ -1,26 +1,37 @@
-\documentclass{compiladores}
-\begin{document}
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
 
+#+Title: Análise Sintática Ascendente e Tabelas LR
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
 
-\begin{center}
-{\LARGE Lista de Exercícios \#05}\\
-{\bf Análise Sintática Ascendente e Tabelas LR}
-\end{center}
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
 
-\begin{listanumerada}
-\item O que é um \emph{Handle}? O que significa o processo de ``Poda do \emph{Handle}''?
+#+OPTIONS: toc:nil date:nil author:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
 
-\item \label{x} Considerando a gramática $S \rightarrow 0 S 1\ |\ 0 1$, indique
+* Questão 01
+O que é um \emph{Handle}? O que significa o processo de ``Poda do \emph{Handle}''?
+
+* Questão 02
+\label{x} Considerando a gramática $S \rightarrow 0 S 1\ |\ 0 1$, indique
   o \emph{handle} em cada uma das seguintes formas sentenciais:
   \begin{lista}
     \item 000111
     \item 00S11
   \end{lista}
 
-\item Considerando a gramática do exercício~\ref{x}, mostre os passos
+* Questão 03
+Considerando a gramática do exercício~\ref{x}, mostre os passos
   da análise de {\bf 000111} utilizando Empilha/Reduz.
 
-\item \label{y} Considerando a gramática $S \rightarrow
+* Questão 04
+\label{y} Considerando a gramática $S \rightarrow
   SS+\ |\ SS*\ |\ a$, indique o \emph{handle} em cada uma das
   seguintes formas sentenciais:
   \begin{lista}
@@ -29,10 +40,12 @@
     \item $aaa*a++$
   \end{lista}
 
-\item Considerando a gramática do exercício~\ref{y}, mostre os passos
+* Questão 05
+Considerando a gramática do exercício~\ref{y}, mostre os passos
   da análise de {\bf aaa*a++} utilizando Empilha/Reduz.
 
-\item Considerando a seguinte gramática: \\
+* Questão 06
+Considerando a seguinte gramática: \\
      \begin{tabular}{rcl}
      {\bf E} & $\rightarrow$ & E A T | T \\
      T & $\rightarrow$ & T B F | F \\
@@ -47,7 +60,8 @@
        \item $id-id+id$
      \end{lista}
 
-\item Considerando as seguintes produções de uma gramática: \\
+* Questão 07
+Considerando as seguintes produções de uma gramática: \\
   \begin{tabularx}{\linewidth}{clclclclclcl}
     (1)& E  & $\rightarrow$ & E + T  & (3)& T & $\rightarrow$ & T $*$ F  & (5)&  F  & $\rightarrow$ & (E) \\
     (2)& E  & $\rightarrow$ & T      & (4)& T & $\rightarrow$ & F      & (6)& F  & $\rightarrow$ & id \\
@@ -79,5 +93,4 @@
   \item $id+id+id$
   \item $id*id*id$
   \end{lista}
-\end{listanumerada}
-\end{document}
+
