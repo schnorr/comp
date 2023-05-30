@@ -1,26 +1,33 @@
-\documentclass{compiladores}
-\begin{document}
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
 
-\begin{center}
-{\LARGE Lista de Exercícios \#01}\\
-{\bf Introdução à Compiladores e Análise Léxica}
-\end{center}
+#+Title: Introdução à Compiladores e Análise Léxica
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
 
-\begin{listanumerada}
-\item
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil date:nil author:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* Questão 01
 Qual a diferença entre compilador e interpretador?
 
-\item
+* Questão 02
 Descreva todas as fases de um compilador. Por que existem duas fases de otimização?
 
-\item
+* Questão 03
 Qual a função do analisador léxico? Descreva o que é um \emph{token}, padrão e lexema.
 
-\item
+* Questão 04
 Qual o método mais eficiente de se detectar padrões na entrada de um analisador léxico?
 
-
-\item
+* Questão 05
 Descreva as {\bf linguagens} denotadas pelas seguintes expressões regulares:
 \begin{lista}
   \item {\bf a(a|b)*a}
@@ -30,7 +37,7 @@ Descreva as {\bf linguagens} denotadas pelas seguintes expressões regulares:
   \item {\bf (aa|bb)*((ab|ba)(aa|bb)*(ab|ba)(aa|bb)*)*}
 \end{lista}
 
-\item
+* Questão 06
 Escreva as {\bf definições regulares} para cada uma das seguintes linguagens:
 \begin{lista}
   \item Todas as cadeias de letra minúsculas que contêm as cinco vogais em ordem
@@ -41,14 +48,14 @@ Escreva as {\bf definições regulares} para cada uma das seguintes linguagens:
   \item Todos os números hexadecimais (começando por \texttt{0x})
 \end{lista}
 
-\item
+* Questão 07
 Faça {\bf diagramas de transição} para reconhecer as linguagens de
 cada ER do exercício 5 e 6.
 
-\item
+* Questão 08
 Faça {\bf autômatos finitos} (deterministas ou não) para cada uma das linguagens do exercício 5.
 
-\item
+* Questão 09
 Crie uma {\bf tabela de transição} para cada um dos seguintes autômatos: \\
 \begin{tabularx}{\textwidth}{XX}
 \centering
@@ -60,12 +67,12 @@ b) \includegraphics[width=.8\linewidth]{afnd-1.pdf}
 c) \includegraphics[width=.8\linewidth]{afnd_exemplo_3-34.pdf}
 \end{tabularx}
 
-\item
+* Questão 10
 Converta os autômatos não deterministas do exercício 9 para
 os determinitas correspondentes.
 
-\item Converta as seguintes expressões regulares para autômatos
-  finitos deterministas
+* Questão 11
+Converta as seguintes expressões regulares para autômatos finitos deterministas
 \begin{lista}
   \item {\bf (a|b)*}
   \item {\bf (a*|b*)*}
@@ -73,12 +80,9 @@ os determinitas correspondentes.
   \item {\bf (a|b)*abb(a|b)*}
 \end{lista}
 
-\item
+* Questão 12
 Transforme os diagramas de transição obtidos no exercício 7 para autômatos finitos determinitas.
 
-\item
+* Questão 13
 Por que um autômato finito determinista é a melhor forma de se implementar um analisador léxico?
-
-\end{listanumerada}
-\end{document}
 
