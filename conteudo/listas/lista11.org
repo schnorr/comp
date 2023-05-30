@@ -1,12 +1,19 @@
-\documentclass{compiladores}
-\begin{document}
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
 
-\begin{center}
-{\LARGE Lista de Exercícios \#11}\\
-{\bf Geração de Código, Endereçamento de Arranjos}
-\end{center}
+#+Title: Geração de Código, Endereçamento de Arranjos
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
 
-\bigskip
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil date:nil author:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
 
 Para esta lista de exercícios, vamos considerar a seguinte gramática
 de declaração e acesso a elementos de arranjos.
@@ -32,11 +39,8 @@ atr & $\rightarrow$      & x = acesso \\
 Defina o esquema de tradução para cálculo da parte constante e da
 parte variável do endereçamento de arranjos.
 
-\bigskip
-
-
-\begin{listanumerada}
-\item \label{x} Calcular a árvore de derivação para cada um dos
+* Questão 01
+\label{x} Calcular a árvore de derivação para cada um dos
   comandos seguintes:
   \begin{lista}
     \item $X = A[i]$
@@ -45,7 +49,8 @@ parte variável do endereçamento de arranjos.
     \item $X = D[i, k, z, q]$
   \end{lista}
 
-\item \label{x1} Gere o código TAC correspondente para cada árvore do
+* Questão 02
+\label{x1} Gere o código TAC correspondente para cada árvore do
   exercício~\ref{x} considerando as declarações seguintes:
   \begin{lstlisting}
     float A[10..-10] //um float ocupa 4 bytes, base=(fp+44)
@@ -54,10 +59,12 @@ parte variável do endereçamento de arranjos.
     char D[10..0][4..9][1..8][-4..7] //um char ocupa 1 byte, base=(bss+10)
   \end{lstlisting}
 
-\item \label{y} Complete o esquema de tradução desta lista com regras
+* Questão 03
+\label{y} Complete o esquema de tradução desta lista com regras
   de geração de TAC para expressões aritméticas.
 
-\item \label{y2} Considerando o esquema de tradução resultante do
+* Questão 04
+\label{y2} Considerando o esquema de tradução resultante do
   exercício~\ref{y} e as declarações do exercício~\ref{x1}, construa a
   árvore de derivação para as seguintes expressões:
   \begin{lista}
@@ -66,14 +73,17 @@ parte variável do endereçamento de arranjos.
     \item $x = B[i*C[k+1],j+A[0]-B[i*i]] + A[j] * C[i,j,k]$
   \end{lista}
 
-\item Gere código TAC para cada uma das expressões do exercício~\ref{y2}.
+* Questão 05
+Gere código TAC para cada uma das expressões do exercício~\ref{y2}.
 
-\item A expressão $x = a[b[i,j],c[k]]$ é aceita pela gramática do
+* Questão 06
+A expressão $x = a[b[i,j],c[k]]$ é aceita pela gramática do
   exercício~\ref{y}? Caso positivo, gere código TAC para ela. Caso
   contrário, altere a gramática para que isto seja possível e gere
   código TAC.
 
-\item \label{z} Um arranjo de inteiros $A[i,j]$ tem índice $i$ de 3 até 20 e
+* Questão 07
+\label{z} Um arranjo de inteiros $A[i,j]$ tem índice $i$ de 3 até 20 e
   índice $j$ de 4 até -10. Os inteiros ocupam 3 bytes. Suponha que o
   arranjo A seja armazenado a partir do endereço 5 e por
   linha. Encontre a localização de:
@@ -83,9 +93,11 @@ parte variável do endereçamento de arranjos.
     \item $A[11,-1]$
   \end{lista}
 
-\item Repita o exercício~\ref{z} considerando que A é armazenado por coluna.
+* Questão 08
+Repita o exercício~\ref{z} considerando que A é armazenado por coluna.
 
-\item \label{w} Um arranjo do tipo ponto flutuante $A[i,j,j]$ possui
+* Questão 09
+\label{w} Um arranjo do tipo ponto flutuante $A[i,j,j]$ possui
   índice $i$ variando de 1 até 4, índice $j$ variando de 0 até 4, e
   índice $k$ variando de 5 até 10. Os tipos reais ocupam 8 bytes
   cada. Suponha que o arranjo $A$ seja armazenado por linha a partir
@@ -98,6 +110,7 @@ parte variável do endereçamento de arranjos.
     \item $A[4,4,10]$
   \end{lista}
 
-\item Repita o exercício~\ref{w} considerando armazenamento por coluna.
+* Questão 10
+Repita o exercício~\ref{w} considerando armazenamento por coluna.
 \end{listanumerada}
 \end{document}
