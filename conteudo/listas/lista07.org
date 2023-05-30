@@ -1,0 +1,92 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+Title: LR(1)
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
+
+#+OPTIONS: toc:nil date:nil author:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+Resolva as eventuais ambiguidades das gramáticas abaixo no momento da
+construção das tabelas LR(1).
+
+Justifique as decisões tomadas para a resolução dessas ambiguidades.
+
+* Questão 01
+\label{x} Construa a tabela LR(1) da gramática abaixo.
+ 
+    \begin{tabular}{rcl}
+     E & $\rightarrow$ & E + T $\vert$ T \\
+     T & $\rightarrow$ & T $*$ F $\vert$ F \\
+     F & $\rightarrow$ & ( E ) $\vert$ id
+     \end{tabular}
+
+* Questão 02
+\label{br} Calcule a tabela LR(1) para a linguagem do barulho de um
+  relógio (BR), representada pela seguinte gramática:
+
+     \begin{tabular}{rcl}
+     $B$ & $\rightarrow$ & $B$ \texttt{tique taque} \\
+     & | & \texttt{tique taque} \\
+     \end{tabular} 
+
+* Questão 03
+\label{g1} Calcule a tabela LR(1) para a seguinte gramática:
+
+  \begin{tabular}{rcl}
+    $S$ & $\rightarrow$ & $Aa$ \\
+    $A$ & $\rightarrow$ & $BC\ |\ BCf$ \\
+    $B$ & $\rightarrow$ & $b$ \\
+    $C$ & $\rightarrow$ & $c$ \\
+  \end{tabular} \\
+
+* Questão 04
+\label{g2} Construa a tabela LR(1) para a seguinte gramática:
+
+  \begin{tabular}{rcl}
+    $I$ & $\rightarrow$ & $A\ |\ B$ \\
+    $A$ & $\rightarrow$ & $( A )\ |\ a$ \\
+    $B$ & $\rightarrow$ & $( B )\ |\ b$ \\
+  \end{tabular} \\
+
+* Questão 05
+\label{g3} Construa a tabela LR(1) para a seguinte gramática:
+
+  \begin{tabular}{rcl}
+    $Lista$ & $\rightarrow$ & $Lista\ Par\ |\ Par$ \\ 
+    $Par$ & $\rightarrow$ & $( Par )\ |\ (\ )$ \\
+  \end{tabular} \\
+
+* Questão 06
+Construa a tabela LR(1) para a seguinte gramática:
+
+     \begin{tabular}{rcl}
+     S & $\rightarrow$ & a \textbf( L \textbf)\ $\vert$\ \textbf{a} \\
+     L & $\rightarrow$ & S \textbf, L \ $\vert$\ S \\
+     \end{tabular} \\
+
+* Questão 07 
+Construa a tabela LR(1) para a seguinte gramática:
+
+  \begin{tabular}{rcl}
+    S & $\rightarrow$ & iSeS \\
+    S & $\rightarrow$ & iS \\
+    S & $\rightarrow$ & a
+  \end{tabular}
+
+* Questão 08
+Construa a tabela LR(1) para a seguinte gramática:
+
+     \begin{tabular}{rcl}
+     S & $\rightarrow$ & AS $\vert$ b \\
+     A & $\rightarrow$ & SA $\vert$ a
+     \end{tabular}
+
