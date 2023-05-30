@@ -1,15 +1,22 @@
-\documentclass{compiladores}
-\begin{document}
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
 
-\begin{center}
-{\LARGE Lista de Exercícios \#09}\\
-{\bf Geração de Código, Representações Intermediárias}
-\end{center}
+#+Title: Geração de Código, Representações Intermediárias
+#+Author: Prof. Lucas Mello Schnorr (INF/UFRGS)
+#+Date: schnorr@inf.ufrgs.br
 
-\bigskip
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt, a4paper]
+#+LATEX_HEADER: \input{org-babel.tex}
 
-\begin{listanumerada}
-\item \label{x} Considerando a gramática abaixo, crie a árvore de
+#+OPTIONS: toc:nil date:nil author:nil
+#+STARTUP: overview indent
+#+TAGS: Lucas(L) noexport(n) deprecated(d)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+* Questão 01
+\label{x} Considerando a gramática abaixo, crie a árvore de
   derivação, a árvore sintática abstrata e o grafo acíclico
   direcionado para as entradas $x=(b*c)+(b*c);$ e $x=a*2+a*2*b;$.
 
@@ -26,16 +33,20 @@
     F  &  $\rightarrow$  &  \textbf{name}    \\
   \end{tabular}
 
-\item \label{x1} Transforme a gramática do exercício~\ref{x} em um esquema de
+* Questão 02
+\label{x1} Transforme a gramática do exercício~\ref{x} em um esquema de
   tradução que cria uma árvore de derivação.
 
-\item Repita o exercício~\ref{x1}, criando uma árvore sintática
+* Questão 03
+Repita o exercício~\ref{x1}, criando uma árvore sintática
   abstrata para qualquer entrada.
 
-\item \label{y} Repita o exercício~\ref{x1}, criando um grafo acíclico
+* Questão 04
+\label{y} Repita o exercício~\ref{x1}, criando um grafo acíclico
   direcionado.
 
-\item \label{t} O esquema de tradução abaixo gera uma árvore sintática
+* Questão 05
+\label{t} O esquema de tradução abaixo gera uma árvore sintática
   abstrata. Mostre seu funcionamento para uma série de entradas
   válidas.
 
@@ -49,12 +60,14 @@
  T  &  $\rightarrow$  &  enum \texttt{ \{ T.ptr = geraFolha(num, num.val); \} }                                         \\
 \end{tabular}
 
-\item O que é um bloco básico? Por que alguns compiladores adotam um
+* Questão 06
+O que é um bloco básico? Por que alguns compiladores adotam um
   conceito de bloco básico diferente do tradicional? Discorra sobre as
   vantagens de cada abordagem e seu impacto nas etapas de otimização,
   por exemplo.
 
-\item Construa o grafo de fluxo de controle para o código abaixo:
+* Questão 07
+Construa o grafo de fluxo de controle para o código abaixo:
   
   \begin{lstlisting}
        stmt0
@@ -64,7 +77,8 @@
        stmt5
   \end{lstlisting}
 
-\item Construa o grafo de dependência de dados para o código abaixo:
+* Questão 08
+Construa o grafo de dependência de dados para o código abaixo:
 
   \begin{lstlisting}
        x = 0
@@ -76,31 +90,37 @@
        print x
     \end{lstlisting}
 
-\item Qual a vantagem e a desvantagem da IR linear de código de um endereço?
+* Questão 09
+Qual a vantagem e a desvantagem da IR linear de código de um endereço?
 
-\item \label{z} Transforme a gramática do exercício~\ref{x} em um esquema de
+* Questão 10
+\label{z} Transforme a gramática do exercício~\ref{x} em um esquema de
   tradução que gere código de um endereço.
 
-\item Traduza uma série de entradas válidas utilizando o esquema de
+* Questão 11
+Traduza uma série de entradas válidas utilizando o esquema de
   tradução do exercício~\ref{z}.
 
-\item \label{y1} Altere o esquema de tradução criado no exercício~\ref{y},
+* Questão 12
+\label{y1} Altere o esquema de tradução criado no exercício~\ref{y},
   gerando código de um endereço. Utilize o grafo acíclico direcionado
   para aproveitar valores eventualmente já calculados.
 
-\item Refaça o exercício~\ref{y1}, gerando código de três endereços.
+* Questão 13
+Refaça o exercício~\ref{y1}, gerando código de três endereços.
 
-\item O que é TAC?
+* Questão 14
+O que é TAC?
 
-\item Crie um esquema de tradução para gerar uma IR pós-fixada a
+* Questão 15
+Crie um esquema de tradução para gerar uma IR pós-fixada a
   partir de uma IR pré-fixada de expressões aritméticas. Apresente uma
   série de entradas válidas mostrando o seu funcionamento com uma
   analisador ascendente e outro analisador descendente. Explique as
   diferenças, caso existam, nos esquemas de tradução para cada um dos
   analisadores.
 
-\item Existem três abordagens para implementar TAC em memória, ou
+* Questão 16
+Existem três abordagens para implementar TAC em memória, ou
   seja, manter o código TAC em memória. Qual delas você acha mais
   apropriada para o projeto de compiladores?
-\end{listanumerada}
-\end{document}
