@@ -56,7 +56,7 @@ As ferramentas mínimas:
 - versões recentes de =flex= e =bison= para realizar o trabalho
 
 Coloque o arquivo =DockerFile= com o conteúdo acima em um diretório
-qualquer. Em seguinda, neste diretório qualquer, execute o seguinte
+qualquer. Em seguida, neste diretório qualquer, execute o seguinte
 comando para criar a imagem docker (ou o equivalente utilizando uma
 interface gráfica):
 
