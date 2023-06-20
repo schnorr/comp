@@ -61,7 +61,7 @@ comando para criar a imagem docker (ou o equivalente utilizando uma
 interface gráfica):
 
 #+begin_src shell :results output
-docker build -t comp .
+docker build . -f DockerFile -t comp
 #+end_src
 
 Depois para "entrar" no container e realizar o trabalho, lance:
