@@ -23,16 +23,16 @@ matemática.
 
 ** Arquivo =Makefile=
 #+begin_src text :tangle Makefile
-calc: calc.y calc.l
+calc: calc.y calc.l asd.c
 	bison -d calc.y
 	flex -o calc.lex.c calc.l
-	gcc -g -Wall -o calc asd.c calc.lex.c calc.tab.c -lfl -lm 
+	gcc -fsanitize=address -g -Werror -o calc asd.c calc.lex.c calc.tab.c -lfl -lm 
 
-asd: asd.h asd.c
-	gcc -g -Wall -o asd asd.c asd_main.c
+asd: asd.h asd.c asd_main.c
+	gcc -fsanitize=address -g -Werror -o asd asd.c asd_main.c
 
 clean:
-	rm -rf calc
+	rm -rf calc asd
 #+end_src
 ** Arquivo =calc.l=
 #+begin_src text :tangle calc.l
