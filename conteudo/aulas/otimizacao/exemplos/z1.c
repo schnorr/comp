@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <sys/time.h>
 #include "size.h"
 int x[SIZE];
 
