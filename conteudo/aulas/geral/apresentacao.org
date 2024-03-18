@@ -27,10 +27,6 @@ Prof. Lucas M. Schnorr
 + High Performance Computing (HPC) / Performance Analysis
 + Data Science / Visualization & Reproducibility
     
-* O que sabemos antes de começar a disciplina?
-+ O que faz um compilador?
-+ Por que estudar compiladores?
-+ Como é organizado um compilador?
 * Como fazer a tradução?
 ** Código Fonte C                                                    :BMCOL:
     :PROPERTIES:
@@ -48,6 +44,9 @@ while (i <= 10) {
   i = i + 1;
 }
 #+END_SRC
+
+#+RESULTS:
+
 ** Código Assembly                                                   :BMCOL:
     :PROPERTIES:
     :BEAMER_envargs: C[t]
@@ -72,31 +71,38 @@ while (i <= 10) {
 #+END_SRC
 
 * Integrando conhecimentos
+
 + Programação (Linguagem C, Scripts)
 + Linguagens Formais (gramáticas, autômatos)
 + Estruturas de Dados (pilhas, grafos, árvores, tabelas)
 + Sistemas Operacionais (memória, formato binário)
 + Organização de Computadores (processador, registros)
 
-#+latex: \vfill\pause
 
-+ É uma disciplina complexa
-  + Forte background teórico/prático
-* Aspectos interessantes
+** Disciplina interessante sob vários aspectos                     :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+  + Compreender a implementação de uma linguagem
+  + Usa técnicas e ferramentas avançadas de desenvolvimento
+  + Técnicas de compiladores são aplicáveis em outras áreas
+
+** Junta                                                   :B_ignoreheading:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
+
+#+latex: \pause
+
+
 + Quem trabalha com compiladores?
-  + Todos os fabricantes de processadores
-  + AMD/IBM/Intel/Cray/...
+  + Fabricantes de processadores (Nvidia/ARM/AMD/IBM/Intel)
+
 #+latex: \vfill\pause
 
 + Principais compiladores para a família C/C++
   + gcc -- http://gcc.gnu.org/
   + LLVM/clang -- http://www.llvm.org/
-  + Intel (icc) \pause
-+ Novas arquiteturas: Celulares, Raspberry Pi, ARM, ... \pause
-+ Disciplina interessante sob vários aspectos
-  + Compreender a implementação de uma linguagem
-  + Usa técnicas e ferramentas avançadas de desenvolvimento
-  + Técnicas de compiladores são aplicáveis em outras áreas
 
 * Objetivos
 + Entender o funcionamento de um compilador
@@ -108,19 +114,8 @@ while (i <= 10) {
 + Projetar e implementar um compilador
   + Adquirir experiência de programação na linguagem C/C++
 
-* Plano, cronograma, bibliografia, projeto
-
-+ Súmula, conteúdo programático, bibliografia e cronograma
-+ Procedimentos didáticos
-+ Avaliação
-  
-#+BEGIN_CENTER
-Consulte no Portal do Aluno da UFRGS
-#+END_CENTER
-
-Vamos revisar juntos seus elementos.
-
-* Bibliografia Básica Essencial
+* Bibliografia
+Básica Essencial
 - Aho, Alfred V.; Sethi, Ravi; Ullman, Jeffrey D.. Compiladores,
   princípios, técnicas e ferramentas. Rio de Janeiro: LTC,
   c1995. ISBN 8521610572.
@@ -128,15 +123,12 @@ Vamos revisar juntos seus elementos.
   aplicações. Rio de Janeiro: Campus, 2001. ISBN 8535208763.
 - Levine, John R.; Mason, Tony; Brown, D.. Lex. USA:
   O'Reilly, 1992. ISBN 9781565920002.
-* Bibliografia Básica
+Básica
 - Keith D. Cooper e Linda Torczon. Engineering a
   Compiler. Elsevier, 2012. ISBN 978-0-12-088478-0.
-* Bibliografia Complementar
+Complementar
 - Kernighan, Brian W.; Ritchie, Dennis M.. The C programming language. Prentice Hall, ISBN 0131103628.
-* Material Público
-- http://dinosaur.compilertools.net/
-- http://dinosaur.compilertools.net/flex/manpage.html
-- http://dinosaur.compilertools.net/bison/
+Material Público
 - https://www.gnu.org/software/bison/manual/
 - https://www.gnu.org/software/flex/manual/
 * Experiências de Aprendizagem
@@ -206,7 +198,7 @@ Conversão
 Presença
 - A presença será aferida (75% de frequência evita FF)
 
-* Atividades de Recuperação Parciais (Trabalho)
+* Atividades de Recuperação Parciais (Projeto)
 
 Cada nota parcial compondo a nota T poderá ser recuperada até o valor
 máximo de 80% do valor original pela entrega de uma nova versão do
@@ -245,18 +237,16 @@ Avaliação". O discente em recuperação que atingir a nota mínima de
 recuperação (NMR >= 6.0), será aprovado com conceito "C", caso
 contrário, será reprovado (conceito "D").
 
-* Ferramenta de apoio
+* Acompanhamento
 
 #+BEGIN_CENTER
-Sempre consulte o Moodle da UFRGS
+Moodle da UFRGS
 #+END_CENTER
 
 #+latex: \vfill
 
 Anúncios
 - No fórum geral do link do moodle acima
-- Via SAV (Sala de Aula Virtual)
-  - Confirme que seu e-mail é o correto
 
 * Cronograma
 
