@@ -77,9 +77,9 @@ Se X é terminal, então Primeiro(X) = { X }
 Se X é não-terminal e X \rightarrow Y_{1}Y_{2}...Y_{k} com $k \geq 1$
 1. Acrescente *a* em Primeiro(X) \\
    - Se *a* estiver em Primeiro(Y_1)
-   - Se, para algum outro $i$, *a* estiver em Primeiro(Y_i) _e_ se o \epsilon
-     estiver em todos os Primeiro(Y_1) ... Primeiro(Y_{i-1}) que o
-     antecedem portanto
+   - Se, para $i > 1$, as seguintes condições forem satisfeitas
+     - *a* estiver em Primeiro(Y_i) _e_
+     - o \epsilon estiver em todos os Primeiro(Y_1) ... Primeiro(Y_{i-1})
 2. Acrescente \epsilon em Primeiro(X) \\
    - Se \epsilon está em Primeiro(Y_j) para todo j = 1, 2, ..., k
 3. Acrescente \epsilon em Primeiro(X)
