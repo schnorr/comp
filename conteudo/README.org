@@ -101,5 +101,4 @@ PDF.
 ** Ferramentas auxiliares
 
 - https://github.com/schnorr/ellerre/
-  - https://ellerre.herokuapp.com/
 - https://godbolt.org/
