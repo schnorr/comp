@@ -1,0 +1,18 @@
+#+STARTUP: overview
+#+STARTUP: indent
+
+Em ordem cronológica reversa.
+
+PR são bem-vindos para popular esta página.
+
+* P1
+** 2024/2
+** 2023/2
+** 2023/1
+** 2022/2
+** 2022/2 bis
+** 2022/1
+** 2021/2
+** 2019/2
+** 2018/2
+** 2017/2

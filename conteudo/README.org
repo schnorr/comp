@@ -102,3 +102,10 @@ PDF.
 
 - https://github.com/schnorr/ellerre/
 - https://godbolt.org/
+
+** Provas antigas para estudo
+
+As [[./provas/README.org][provas antigas para estudo foram disponibilizadas]] pelo
+professor. As soluções (/aka/ gabarito) podem ser encontradas nesta
+repositório, onde as respostas foram registradas de maneira
+colaborativa.
