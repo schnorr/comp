@@ -81,6 +81,28 @@ C => b | c | d | ;' > gramatica.ee
    |   | \epsilon  | \epsilon  |     |    | \epsilon  |
    |---+----+----+-----+----+----|
 
+4. Os passos são os seguintes (o =%= marca final da pilha e entrada)
+
+   | / |   <r> |     <r> | <l>     |
+   |   | Pilha | Entrada | Ação    |
+   |---+-------+---------+---------|
+   |   |   S % |       % | S -> AB |
+   |   |  AB % |       % | A -> C  |
+   |   |  CB % |       % | C -> \epsilon  |
+   |   |   B % |       % | B -> \epsilon  |
+   |   |     % |       % | aceita  |
+
+5. Os passos são os seguintes (idem com o =%=)
+
+   | / |   <r> |     <r> | <l>             |
+   |   | Pilha | Entrada | Ação            |
+   |---+-------+---------+-----------------|
+   |   |   S % |  acda % | S -> AB         |
+   |   |  AB % |  acda % | conflito entre  |
+   |   |       |         | A -> C e A -> a |
+
+*** E3
+
 ** 2022/2
 ** 2022/2 bis
 ** 2022/1
