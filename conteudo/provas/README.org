@@ -25,23 +25,23 @@ PR são bem-vindos para popular esta página.
    echo 'S => A B C ;
 A => a | ;
 B => a | b | ;
-C => b | c | ;' > gramatica.ee
+C => a | c ;' > gramatica.ee
    ./firstfollow < gramatica.ee | grep -A10 'First sets'
    #+end_src
 
    #+RESULTS:
    #+begin_example
    First sets:
-   S -- ε a b c 
+   S -- a b c 
    A -- ε a 
-   C -- ε b c 
+   C -- a c 
    B -- ε a b 
 
    Follow sets:
    S -- $ 
-   A -- $ a b c 
+   A -- a b c 
    C -- $ 
-   B -- $ b c 
+   B -- a c 
    #+end_example
 
 2. Segue a tabela LL(1).
