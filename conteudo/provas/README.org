@@ -173,7 +173,6 @@ L => S - L | S ;' > gramatica.ee
 
 3. A tabela SLR(1), usando a heurística do conjunto sequência na redução
 
-
    | / |   | < |   |   |   | >      |   |
    |   |   | [ | a | ] | - | $      | F |
    |---+---+---+---+---+---+--------+---|
