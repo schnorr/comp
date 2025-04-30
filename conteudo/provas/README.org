@@ -246,7 +246,7 @@ S->Sa
 A->Ac
 #+end_example
 
-O não-terminal A tem 2 produções com o 'd' pois 'd' é parte de Primeiro(A) e Primeiro(d)
+O não-terminal A tem 2 produções com o 'd' pois 'd' é parte de Primeiro(Ac) e Primeiro(d)
 #+begin_example
 A->Ac
 A->d
