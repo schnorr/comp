@@ -300,11 +300,11 @@ B->ε
    |   |     % |       % | aceita   |
 
 *** E3
-   LR(0):
+1. Os três estados do LR(0).
 
    [[./resp_2022_2-E3-LR0.png]]
 
-   LR(1):
+2. Os três estados do LR(1).
 
    [[./resp_2022_2-E3-LR1.png]]
 
@@ -312,11 +312,13 @@ B->ε
 1. Não é LR(0) devido a conflito empilha-reduz no estado 6 (possui um item finalizado e este não está isolado)
 2. É SLR(1), pois 'f' não pertence à Sequência(A) no estado 6.
 3. É LR(1), pois todos os itens finais estão em estados:
-- ou que tem eles isolados (estados 1, 4, 5, 8)
-- ou cujos empilhamentos não estão no token de look-ahead (estado 6)
-- ou possuem tokens de look-ahead diferentes de outros estados finais (estado 7)
+   - ou que tem eles isolados (estados 1, 4, 5, 8)
+   - ou cujos empilhamentos não estão no token de look-ahead (estado 6)
+   - ou possuem tokens de look-ahead diferentes de outros estados finais (estado 7)
 
 *** E5
+
+1. A tabela com o conjunto Pri e Seq dos não-terminais.
 
    |   | Primeiro | Sequência |
    |---+----------+-----------|
@@ -330,6 +332,7 @@ B->ε
    |---+----------+-----------|
    | F | x,ε      | z         |
    |---+----------+-----------|
+
 ** 2022/2 bis
 ** 2022/1
 ** 2021/2
