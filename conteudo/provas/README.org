@@ -270,35 +270,35 @@ B->ε
 
    Tabela LL(1):
 
-   |   | a  | b  | c   | d  | $  |
-   |---+----+----+-----+----+----|
-   | S |    | bAX|     |    |    |
-   |---+----+----+-----+----+----|
-   | X | aX |    |     |    | \epsilon   |
-   |---+----+----+-----+----+----|
-   | A |    |    |     | dB |    |
-   |---+----+----+-----+----+----|
-   | B |  \epsilon  | b  | cB   |   |  \epsilon  |
-   |---+----+----+-----+----+----|
+   |   | a  | b   | c  | d  | $ |
+   |---+----+-----+----+----+---|
+   | S |    | bAX |    |    |   |
+   |---+----+-----+----+----+---|
+   | X | aX |     |    |    | \epsilon |
+   |---+----+-----+----+----+---|
+   | A |    |     |    | dB |   |
+   |---+----+-----+----+----+---|
+   | B | \epsilon  | b   | cB |    | \epsilon |
+   |---+----+-----+----+----+---|
 
    Passos Análise LL(1):
 
-   | / |   <r> |     <r> | <l>     |
-   |   | Pilha | Entrada | Ação    |
-   |---+-------+---------+---------|
-   |   |   S%  |  bdcaa% | S -> bAX |
-   |   |  bAX% |  bdcaa% | casa  |
+   | / |   <r> |     <r> | <l>      |
+   |   | Pilha | Entrada | Ação     |
+   |---+-------+---------+----------|
+   |   |    S% |  bdcaa% | S -> bAX |
+   |   |  bAX% |  bdcaa% | casa     |
    |   |   AX% |   dcaa% | A -> dB  |
-   |   |  dBX% |   dcaa% | casa  |
+   |   |  dBX% |   dcaa% | casa     |
    |   |   BX% |    caa% | B -> cB  |
-   |   |  cBX% |    caa% | casa  |
-   |   |   BX% |     aa% | B -> \epsilon  |
+   |   |  cBX% |    caa% | casa     |
+   |   |   BX% |     aa% | B -> \epsilon   |
    |   |    X% |     aa% | X -> aX  |
-   |   |   aX% |     aa% | casa  |
+   |   |   aX% |     aa% | casa     |
    |   |    X% |      a% | X -> aX  |
-   |   |   aX% |      a% | casa  |
-   |   |    X% |       % | X -> \epsilon  |
-   |   |     % |       % | aceita  |
+   |   |   aX% |      a% | casa     |
+   |   |    X% |       % | X -> \epsilon   |
+   |   |     % |       % | aceita   |
 
 *** E3
    LR(0):
