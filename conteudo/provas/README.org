@@ -143,6 +143,75 @@ L => S - L | S ;' > gramatica.ee
    estado 2. A mesma justificativa pode ser usado no estado 4 ao
    observar o Seq(L).
 
+*** E4
+
+1. A gramática não é LR(0) pois no esado 4 temos um conflito
+   empilha-reduz ao observar um item completo juntamente com um item
+   que implica em empilhamento.
+   
+2. Para responder se a gramática é SLR(1), precisamos do conjunto
+   sequência dos NTs. Vamos empregar [[https://github.com/schnorr/ellerre][ellerre]] para obter a resposta.
+   #+begin_src shell :results output :exports both
+   echo 'F => [ a ] | [ a ] - F ;' > gramatica.ee
+   ./firstfollow < gramatica.ee
+   #+end_src
+
+   #+RESULTS:
+   : Grammar with 2 rules and 5 symbols (1 non-terminals):
+   : F ⇒ [ a ] 
+   : F ⇒ [ a ] - F 
+   : 
+   : First sets:
+   : F -- [ 
+   : 
+   : Follow sets:
+   : F -- $ 
+
+   Observamos que no conjunto Seq(F) temos apenas o $, portanto a
+   gramática é SLR(1) uma vez que o conflito empilha-reduz do estado 4
+   desaparece visto que a redução para F só ocorrerá com =$= na entrada.
+
+3. A tabela SLR(1), usando a heurística do conjunto sequência na redução
+
+
+   | / |   | < |   |   |   | >      |   |
+   |   |   | [ | a | ] | - | $      | F |
+   |---+---+---+---+---+---+--------+---|
+   |   | 0 | 2 |   |   |   |        | 1 |
+   |   | 1 |   |   |   |   | aceita |   |
+   |   | 2 |   | 3 |   |   |        |   |
+   |   | 3 |   |   | 4 |   |        |   |
+   |   | 4 |   |   |   | 5 | R      |   |
+   |   | 5 | 2 |   |   |   |        | 6 |
+   |   | 6 |   |   |   |   | R      |   |
+
+4. A análise LR usando a tabela SLR(1) acima. Novamente o =%= marca o
+   final da pilha e da entrada.
+
+   | / | <l>               |       <r> |                                                               |
+   |   | Pilha             |   Entrada |                                                          Ação |
+   |   | % 0               | [a]-[a] % |                                                             2 |
+   |   | % 0 2             |  a]-[a] % |                                                             3 |
+   |   | % 0 2 3           |   ]-[a] % |                                                             4 |
+   |   | % 0 2 3 4         |    -[a] % |                                                             5 |
+   |   | % 0 2 3 4 5       |     [a] % |                                                             2 |
+   |   | % 0 2 3 4 5 2     |      a] % |                                                             3 |
+   |   | % 0 2 3 4 5 2 3   |       ] % |                                                             4 |
+   |   | % 0 2 3 4 5 2 3 4 |         % |                                                R por F -> [a] |
+   |   | % 0 2 3 4 5       |         % |     desempilha três estados (pois são três símbolos no corpo) |
+   |   | % 0 2 3 4 5       |         % | Como voltamos para o estado 5 e acabamos de reduzir para F, 6 |
+   |   | % 0 2 3 4 5 6     |         % |                                              R por F -> [a]-F |
+   |   | % 0               |         % |    desempilha cinco estado (pois são cinco símbolos no corpo) |
+   |   | % 0               |         % | Como voltamos para o estado 0 e acabamos de reduzir para F, 1 |
+   |   | % 0 1             |         % | aceita                                                        |
+
+
+*** E5
+
+1. A gramática não é LR(1) pois no estado 4 temos um conflito
+   empilha-reduz com =a=, uma vez que temos um item completo indicando
+   redução com =a= ao mesmo que temos que temos uma transição com =a=.
+
 ** 2022/2
 ** 2022/2 bis
 ** 2022/1
