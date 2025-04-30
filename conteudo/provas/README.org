@@ -60,6 +60,27 @@ C => b | c | d | ;' > gramatica.ee
    C -- $ b a 
    #+end_example
 
+2. Analisando a gramática fornecida, podemos concluir que a gramática
+   não é LL(1) pois (a) o conjunto Pri(cCa) tem intersecção com o
+   conjunto Pri(C), com o token =c=; (b) o conjunto Seq(C) tem
+   intersecção com o conjunto Pri(b).
+
+3. A tabela criada
+
+   |   | a  | b  | c   | d  | $  |
+   |---+----+----+-----+----+----|
+   | S | AB | AB | AB  | AB | AB |
+   |---+----+----+-----+----+----|
+   | A | a  | b  | cCa |    |    |
+   |   | C  | C  | C   | C  | C  |
+   |   |    | C  |     |    |    |
+   |---+----+----+-----+----+----|
+   | B | a  | b  |     |    | \epsilon  |
+   |---+----+----+-----+----+----|
+   | C |    | b  | c   | d  |    |
+   |   | \epsilon  | \epsilon  |     |    | \epsilon  |
+   |---+----+----+-----+----+----|
+
 ** 2022/2
 ** 2022/2 bis
 ** 2022/1
