@@ -6,6 +6,156 @@ Em ordem cronológica reversa.
 PR são bem-vindos para popular esta página.
 
 * P1
+** 2025/1
+*** E1
+
+1. A ER reconhecida é esta =((ab)+|b*)b=
+2. Foi construído pois todos os elementos básicos, ou seja, os
+   reconhecedores dos símbolos =a= e =b= (nos diferentes locais) estão bem
+   isolados e organizados por intermédio de produções vazias. A
+   implementação das duas repetições também faz uso de novos estados
+   de início e fim.
+3. Fech-\epsilon(0) = {0, 1, 2, 3, 8, 9, 10, 12, 13, 14, 15};
+4. Fech-\epsilon(Mov(A, b)) = {11, 16, 12, 13, 14, 15, 8, 9, 10, 17};
+ 
+*** E2
+
+1. Podemos empregar [[https://github.com/schnorr/ellerre][ellerre]] para obter a resposta.
+   #+begin_src shell :results output :exports both
+   echo 'S => A B C ;
+A => a | ;
+B => a | b | ;
+C => b | c | ;' > gramatica.ee
+   ./firstfollow < gramatica.ee | grep -A10 'First sets'
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   First sets:
+   S -- ε a b c 
+   A -- ε a 
+   C -- ε b c 
+   B -- ε a b 
+
+   Follow sets:
+   S -- $ 
+   A -- $ a b c 
+   C -- $ 
+   B -- $ b c 
+   #+end_example
+
+2. Segue a tabela LL(1).
+   |---+-----+-----+-----+---|
+   |   | a   | b   | c   | $ |
+   |---+-----+-----+-----+---|
+   | S | ABC | ABC | ABC |   |
+   |---+-----+-----+-----+---|
+   | A | a   |     |     |   |
+   |   | \epsilon   | \epsilon   | \epsilon   | \epsilon |
+   |---+-----+-----+-----+---|
+   | B | a   | b   |     |   |
+   |   |     | \epsilon   | \epsilon   | \epsilon |
+   |---+-----+-----+-----+---|
+   | C | a   |     | c   |   |
+   |---+-----+-----+-----+---|
+
+3. A gramática não é LL(1) pois:
+   - Nas regras A->a|\epsilon, o conjunto Pri(a) intersecta com Seq(A).
+   - Nas regras B->b|\epsilon, o conjunto Pri(b) intersecta com Seq(B).
+
+*** E3
+
+1. Vamos empregar [[https://github.com/schnorr/ellerre][ellerre]] para obter a resposta.
+   #+begin_src shell :results output :exports both
+   echo 'S => a B c ;
+B => b | b D ;
+D => c ;' > gramatica.ee
+   ./lr0 < gramatica.ee > /dev/null
+   ./firstfollow < gramatica.ee
+   dot -Tpng LR0.dot -o resp_2025_1-E3-LR0.png
+   #+end_src
+
+   #+RESULTS:
+
+   [[./resp_2025_1-E3-LR0.png]]
+
+2. A gramática não é LR(0) pois no estado 4 temos um item completo
+   juntamente com empilhamentos (conflito empilha-reduz).
+
+3. A gramática não é SLR(1) pois no estado 4 temos um item completo
+   que indica redução com o token =c= (que faz parte do conjunto
+   sequência do não-terminal =B=) ao mesmo tempo que temos empilhamentos
+   com este mesmo token. O conflito empilha-reduz se mantém.
+   #+begin_src shell :results output :exports both
+   ./firstfollow < gramatica.ee | grep -A10 'Follow sets'
+   #+end_src
+
+   #+RESULTS:
+   : Follow sets:
+   : S -- $ 
+   : B -- c 
+   : D -- c 
+
+*** E4
+
+1. Não é uma gramática LR(0) pois no estado 3 temos um item completo
+   indicando que trata-se de um estado de redução, ao mesmo tempo que
+   temos uma transição que indica empilhamento. Trata-se portanto do
+   conflito empilha-reduz no estado 3.
+2. Calculando o conjunto sequência dos não-terminais com [[https://github.com/schnorr/ellerre][ellerre]] para
+   nos auxiliar na resposta. A redução no estado 3 apenas ocorrerá
+   quando o token na entrada for algum do conjunto sequência de E
+   (não-terminal na cabeça da regra do item completo neste estado),
+   que neste caso é o $. Como a transição a partir de 3 é com o token
+   +, não temos mais conflito empilha-reduz, sendo assim a gramática é
+   SLR(1).
+   #+begin_src shell :results output :exports both
+   echo 'S => E ;
+E => T | T + E ;
+T => id ;' > gramatica.ee
+   ./firstfollow < gramatica.ee | grep -A10 'Follow sets'
+   #+end_src
+
+   #+RESULTS:
+   : Follow sets:
+   : S -- $ 
+   : E -- $ 
+   : T -- $ +
+   
+3. A gramática é LR(1) pois se ela é SLR(1) ela será
+   LR(1). Detalhamento sobre o autômato LR(1), observamos que não
+   existem itens completos onde o lookahead (após a vírgula) é igual
+   ao símbolo empregado na transição a partir do estado do item.
+
+4. Segue a tabela SLR(1).
+
+   | / |   | <  | > |        |   |   |   |
+   |   |   | id | + | $      | S | E | T |
+   |---+---+----+---+--------+---+---+---|
+   |   | 0 | 4  |   |        | 1 | 2 | 3 |
+   |   | 1 |    |   | aceita |   |   |   |
+   |   | 2 | R  |   |        |   |   |   |
+   |   | 3 |    | 5 | R      |   |   |   |
+   |   | 4 |    | R | R      |   |   |   |
+   |   | 5 | 4  |   |        |   | 6 | 3 |
+   |   | 6 |    |   | R      |   |   |   |
+
+5. A análise LR usando a tabela SLR(1) acima. Novamente o =%= marca o
+   final da pilha e da entrada.
+
+   | / | <l>       |       <r> |              |
+   |   | Pilha     |   Entrada | Ação         |
+   |---+-----------+-----------+--------------|
+   |   | % 0       | id + id % | 4            |
+   |   | % 0 4     |    + id % | R (T -> id)  |
+   |   | % 0 3     |    + id % | 5            |
+   |   | % 0 3 5   |      id % | 4            |
+   |   | % 0 3 5 4 |         % | R (T -> id)  |
+   |   | % 0 3 5 3 |         % | R (E -> T)   |
+   |   | % 0 3 5 6 |         % | R (E -> T+E) |
+   |   | % 0 2     |         % | R (S -> E)   |
+   |   | % 0 1     |         % | aceita       |
+
 ** 2024/2
 ** 2023/2
 ** 2023/1
