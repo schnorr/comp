@@ -252,6 +252,12 @@ A->Ac
 A->d
 #+end_example
 
+O não-terminal S tem 2 produções com o 'b' pois 'b' é parte de Primeiro(Sa) e Primeiro(bA)
+#+begin_example
+S->Sa
+S->bA
+#+end_example
+
 2.
 #+begin_example
 A->bAX
