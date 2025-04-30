@@ -22,6 +22,44 @@ PR são bem-vindos para popular esta página.
    podemos entender que a resposta é Fech-\epsilon(Mov(A, a)) = {11, 12, 13,
    14, 8, 9, 10};
 *** E2
+1. Podemos empregar [[https://github.com/schnorr/ellerre][ellerre]] para obter a resposta.
+   #+begin_src shell :results output :exports both
+   echo 'S => A B ;
+A => a | b | c C a | C ;
+B => a | b | ;
+C => b | c | d | ;' > gramatica.ee
+   ./firstfollow < gramatica.ee
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   Grammar with 12 rules and 8 symbols (4 non-terminals):
+   S ⇒ A B 
+   A ⇒ a 
+   A ⇒ b 
+   A ⇒ c C a 
+   A ⇒ C 
+   B ⇒ a 
+   B ⇒ b 
+   B ⇒ ε 
+   C ⇒ b 
+   C ⇒ c 
+   C ⇒ d 
+   C ⇒ ε 
+
+   First sets:
+   S -- ε b d a c 
+   A -- ε b d a c 
+   B -- ε b a 
+   C -- ε b d c 
+
+   Follow sets:
+   S -- $ 
+   A -- $ b a 
+   B -- $ 
+   C -- $ b a 
+   #+end_example
+
 ** 2022/2
 ** 2022/2 bis
 ** 2022/1
