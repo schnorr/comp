@@ -9,6 +9,19 @@ PR são bem-vindos para popular esta página.
 ** 2024/2
 ** 2023/2
 ** 2023/1
+*** E1
+1. Sim, =a*|bc=.
+2. Não foi, sendo a principal razão o fato que o estado 4 une
+   diretamente os reconhecedores de =c= e =d=. Deveríamos ter uma
+   transição vazia entre o atual estado 4 e um novo estado que inicia
+   o reconhecimento do =c=. Podemos também mencionar a ausência da
+   marcação de um estado final, ainda que o estado =14= possa ser
+   considerado como final.
+3. Fech-\epsilon(0) = {0, 1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14} = A;
+4. Considerando que devemos aplicar o Fech-\epsilon após um movimento,
+   podemos entender que a resposta é Fech-\epsilon(Mov(A, a)) = {11, 12, 13,
+   14, 8, 9, 10};
+*** E2
 ** 2022/2
 ** 2022/2 bis
 ** 2022/1
