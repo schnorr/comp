@@ -212,6 +212,119 @@ L => S - L | S ;' > gramatica.ee
    redução com =a= ao mesmo que temos que temos uma transição com =a=.
 
 ** 2022/2
+*** E1
+
+1. Sim, os estados que reconhecem os caracteres 'a', 'b' e 'c' estão devidamente isolados com produções vazias, possuindo um alternância entre 'ab' e 'c' e então um laço de repetição
+
+2. 
+#+RESULTS:
+#+begin_example
+Fech-\epsilon (1) = {1, 2, 3, 7} = |A|
+Mov(A, a) = {4, 5} = |B|
+Mov(A, b) = {}
+Mov(A, c) = {8, 9, >10<, 1, 2, 3, 7} = |C|
+Mov(B, a) = {}
+Mov(B, b) = {6, 9, >10<, 1, 2, 3, 7} = |D|
+Mov(B, c) = {}
+Mov(C, a) = {4, 5} = |B|
+Mov(C, b) = {}
+Mov(C, c) = {8, 9, >10<, 1, 2, 3, 7} = |C|
+Mov(D, a) = {4, 5} = |B|
+Mov(D, b) = {}
+Mov(D, c) = {8, 9, >10<, 1, 2, 3, 7} = |C|
+#+end_example
+
+Gerando o automato:
+
+   [[./resp_2022_2-E1-Automato.png]]
+
+*** E2
+1. 
+Recursão à esquerda:
+#+begin_example
+S->Sa
+A->Ac
+#+end_example
+
+O estado A teria 2 produções com o 'd' pois 'd' é parte de Primeiro(A)
+#+begin_example
+A->Ac
+A->d
+#+end_example
+
+2.
+#+begin_example
+A->bAX
+X->aX
+X->ε
+A->dB
+B->cB
+B->ε
+#+end_example
+
+   Tabela LL(1):
+
+   |   | a  | b  | c   | d  | $  |
+   |---+----+----+-----+----+----|
+   | S |    | bAX|     |    |    |
+   |---+----+----+-----+----+----|
+   | X | aX |    |     |    | \epsilon   |
+   |---+----+----+-----+----+----|
+   | A |    |    |     | dB |    |
+   |---+----+----+-----+----+----|
+   | B |  \epsilon  | b  | cB   |   |  \epsilon  |
+   |---+----+----+-----+----+----|
+
+   Passos Análise LL(1):
+
+   | / |   <r> |     <r> | <l>     |
+   |   | Pilha | Entrada | Ação    |
+   |---+-------+---------+---------|
+   |   |   S%  |  bdcaa% | S -> bAX |
+   |   |  bAX% |  bdcaa% | casa  |
+   |   |   AX% |   dcaa% | A -> dB  |
+   |   |  dBX% |   dcaa% | casa  |
+   |   |   BX% |    caa% | B -> cB  |
+   |   |  cBX% |    caa% | casa  |
+   |   |   BX% |     aa% | B -> \epsilon  |
+   |   |    X% |     aa% | X -> aX  |
+   |   |   aX% |     aa% | casa  |
+   |   |    X% |      a% | X -> aX  |
+   |   |   aX% |      a% | casa  |
+   |   |    X% |       % | X -> \epsilon  |
+   |   |     % |       % | aceita  |
+
+*** E3
+   LR(0):
+
+   [[./resp_2022_2-E3-LR0.png]]
+
+   LR(1):
+
+   [[./resp_2022_2-E3-LR1.png]]
+
+*** E4
+1. Não é LR(0) devido a conflito empilha-reduz no estado 6 (possui um item finalizado e este não está isolado)
+2. Não é SLR(1), pois 'f' pertence à Sequência(C) (por causa da produção A->bCf) e há presença de um empilhamento de 'f' que vai para o estado 8, logo no estado 6 há conflito empilha-reduz
+3. É LR(1), pois todos os itens finais estão em estados:
+- ou que tem eles isolados (estados 1, 4, 5, 8)
+- ou cujos empilhamentos não estão no token de look-ahead (estado 6)
+- ou possuem tokens de look-ahead diferentes de outros estados finais (estado 7)
+
+*** E5
+
+   |   | Primeiro  | Sequência  |
+   |---+----+----|
+   | S | u  | $ |
+   |---+----+----|
+   | B | v,ε | y,x,z  |
+   |---+----+----|
+   | D | x,y,ε  | z  |
+   |---+----+----|
+   | E |  y,ε  | x,z  |
+   |---+----+----|
+   | F |  x,ε  | z  |
+   |---+----+----|
 ** 2022/2 bis
 ** 2022/1
 ** 2021/2
