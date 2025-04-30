@@ -246,7 +246,7 @@ S->Sa
 A->Ac
 #+end_example
 
-O estado A teria 2 produções com o 'd' pois 'd' é parte de Primeiro(A)
+O não-terminal A teria 2 produções com o 'd' pois 'd' é parte de Primeiro(A)
 #+begin_example
 A->Ac
 A->d
