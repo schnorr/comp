@@ -309,7 +309,7 @@ B->ε
    [[./resp_2022_2-E3-LR1.png]]
 
 *** E4
-1. Não é LR(0) devido a conflito empilha-reduz no estado 6 (possui um item finalizado e este não está isolado)
+1. Não é LR(0) devido a conflito empilha-reduz no estado 6 (possui um item completo e este não está isolado)
 2. É SLR(1), pois 'f' não pertence à Sequência(A) no estado 6.
 3. É LR(1), pois todos os itens finais estão em estados:
    - ou que tem eles isolados (estados 1, 4, 5, 8)
