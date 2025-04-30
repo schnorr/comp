@@ -103,6 +103,18 @@ C => b | c | d | ;' > gramatica.ee
 
 *** E3
 
+1. Vamos empregar [[https://github.com/schnorr/ellerre][ellerre]] para obter a resposta.
+   #+begin_src shell :results output :exports both
+   echo 'S => a [ L ] | a ;
+L => S - L | S ;' > gramatica.ee
+   ./lr0 < gramatica.ee > /dev/null
+   dot -Tpng LR0.dot -o resp_2023_1-E3-LR0.png
+   #+end_src
+
+   #+RESULTS:
+
+   [[./resp_2023_1-E3-LR0.png]]
+
 ** 2022/2
 ** 2022/2 bis
 ** 2022/1
