@@ -238,26 +238,26 @@ Mov(D, c) = {8, 9, >10<, 1, 2, 3, 7} = |C|
    [[./resp_2022_2-E1-Automato.png]]
 
 *** E2
-1. 
-Recursão à esquerda:
-#+begin_example
+1. Estas são as razões. 
+   - Recursão à esquerda:
+     #+begin_example
 S->Sa
 A->Ac
 #+end_example
 
-O não-terminal A tem 2 produções com o 'd' pois 'd' é parte de Primeiro(Ac) e Primeiro(d)
-#+begin_example
+   - O não-terminal A tem 2 produções com o 'd' pois 'd' é parte de Primeiro(Ac) e Primeiro(d)
+     #+begin_example
 A->Ac
 A->d
 #+end_example
 
-O não-terminal S tem 2 produções com o 'b' pois 'b' é parte de Primeiro(Sa) e Primeiro(bA)
-#+begin_example
+   - O não-terminal S tem 2 produções com o 'b' pois 'b' é parte de Primeiro(Sa) e Primeiro(bA)
+     #+begin_example
 S->Sa
 S->bA
 #+end_example
 
-2.
+2. Reescrevendo a gramática para ser LL(1)
 #+begin_example
 A->bAX
 X->aX
