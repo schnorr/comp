@@ -268,7 +268,7 @@ B->cB
 B->ε
 #+end_example
 
-   Tabela LL(1):
+3. Tabela LL(1):
 
    |   | a  | b   | c  | d  | $ |
    |---+----+-----+----+----+---|
@@ -281,7 +281,7 @@ B->ε
    | B | \epsilon  |     | cB |    | \epsilon |
    |---+----+-----+----+----+---|
 
-   Passos Análise LL(1):
+4. Passos Análise LL(1):
 
    | / |   <r> |     <r> | <l>      |
    |   | Pilha | Entrada | Ação     |
