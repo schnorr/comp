@@ -217,7 +217,7 @@ L => S - L | S ;' > gramatica.ee
 1. Sim, os estados que reconhecem os caracteres 'a', 'b' e 'c' estão devidamente isolados com produções vazias, possuindo uma alternância entre 'ab' e 'c' e então um laço de repetição
 
 2. 
-#+RESULTS:
+
 #+begin_example
 Fech-ε (1) = {1, 2, 3, 7} = |A|
 Mov(A, a) = {4, 5} = |B|
