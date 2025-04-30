@@ -108,12 +108,40 @@ C => b | c | d | ;' > gramatica.ee
    echo 'S => a [ L ] | a ;
 L => S - L | S ;' > gramatica.ee
    ./lr0 < gramatica.ee > /dev/null
+   ./firstfollow < gramatica.ee
    dot -Tpng LR0.dot -o resp_2023_1-E3-LR0.png
    #+end_src
 
    #+RESULTS:
+   #+begin_example
+   Grammar with 4 rules and 6 symbols (2 non-terminals):
+   S ⇒ a [ L ] 
+   S ⇒ a 
+   L ⇒ S - L 
+   L ⇒ S 
+
+   First sets:
+   S -- a 
+   L -- a 
+
+   Follow sets:
+   S -- $ ] - 
+   L -- ] 
+   #+end_example
+
+   Considere que na resposta poderíamos ter apenas os estados do 0 ao 3.
 
    [[./resp_2023_1-E3-LR0.png]]
+
+2. A gramática não é LR(0) pois nos estados 2 e 4 temos itens
+   completos junto com itens de empilhamento. Em LR(0) isso não é
+   possível pois acaba por causar um conflito empilha-reduz.
+
+3. No caso do estado 2, a heurística de usar o conjunto sequência do
+   símbolo para o qual iremos reduzir resolve o conflito pois Seq(S)
+   contém apenas =a=, e não temos transição com =a= a partir do
+   estado 2. A mesma justificativa pode ser usado no estado 4 ao
+   observar o Seq(L).
 
 ** 2022/2
 ** 2022/2 bis
