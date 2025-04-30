@@ -51,17 +51,17 @@ C => a | c ;' > gramatica.ee
    | S | ABC | ABC | ABC |   |
    |---+-----+-----+-----+---|
    | A | a   |     |     |   |
-   |   | \epsilon   | \epsilon   | \epsilon   | \epsilon |
+   |   | \epsilon   | \epsilon   | \epsilon   |   |
    |---+-----+-----+-----+---|
    | B | a   | b   |     |   |
-   |   |     | \epsilon   | \epsilon   | \epsilon |
+   |   | \epsilon   |     | \epsilon   |   |
    |---+-----+-----+-----+---|
    | C | a   |     | c   |   |
    |---+-----+-----+-----+---|
 
 3. A gramática não é LL(1) pois:
    - Nas regras A->a|\epsilon, o conjunto Pri(a) intersecta com Seq(A).
-   - Nas regras B->b|\epsilon, o conjunto Pri(b) intersecta com Seq(B).
+   - Nas regras B->b|\epsilon, o conjunto Pri(a) intersecta com Seq(B).
 
 *** E3
 
