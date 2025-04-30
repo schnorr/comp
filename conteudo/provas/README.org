@@ -258,7 +258,7 @@ S->bA
 #+end_example
 
 2. Reescrevendo a gramática para ser LL(1)
-#+begin_example
+   #+begin_example
 A->bAX
 X->aX
 X->ε
