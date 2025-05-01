@@ -281,11 +281,10 @@ T => id ;' > gramatica.ee
 
    #+begin_src shell :results output :exports both
    echo 'S => a [ L ] | a ;
-
    L => S L | S ;' > gramatica.ee
    ./lr0 < gramatica.ee > /dev/null
    ./firstfollow < gramatica.ee
-   dot -Tpng LR0.dot -o resp_2024_1-E3-LR0.png
+   dot -Tpng LR0.dot -o resp_2024_2-E3-LR0.png
    #+end_src
 
    #+RESULTS:
@@ -305,7 +304,7 @@ T => id ;' > gramatica.ee
    L -- ] 
    #+end_example
 
-   [[./resp_2024_1-E3-LR0]]
+   [[./resp_2024_2-E3-LR0.png]]
 
 2. Não, pois em LR0 estados de redução precisam estar sozinhos no estado.
  Podemos observar um conflito empilha-reduz no estado 2 e também no estado 4.
