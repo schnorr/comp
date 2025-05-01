@@ -174,16 +174,16 @@ T => id ;' > gramatica.ee
 *** E2
 
 1. Os conjuntos primeiro e sequência para os NT foram:
-   |   | Primeiro         | Sequência  |
-   |---+------------------+------------|
-   | S | n o r t \epsilon | $          |
-   |---+------------------+------------|
-   | X | n o r t \epsilon | n o $      |
-   |---+------------------+------------|
-   | P | n o \epsilon     | $          |
-   |---+------------------+------------|
-   | E | o r t \epsilon   | n o $      |
-   |---+------------------+------------|
+   |   | Primeiro  | Sequência |
+   |---+-----------+-----------|
+   | S | n o r t \epsilon | $         |
+   |---+-----------+-----------|
+   | X | n o r t \epsilon | n o $     |
+   |---+-----------+-----------|
+   | P | n o \epsilon     | $         |
+   |---+-----------+-----------|
+   | E | o r t \epsilon   | n o $     |
+   |---+-----------+-----------|
 
 Conferindo com [[https://github.com/schnorr/ellerre][ellerre]]:
 
