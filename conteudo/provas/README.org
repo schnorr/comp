@@ -224,7 +224,7 @@ Conferindo com [[https://github.com/schnorr/ellerre][ellerre]]:
    P -- $ 
    E -- $ o n
 
-   #+end_example
+   #+end_src
 
 
 2. A tabela criada para esta gramática foi:
