@@ -278,6 +278,8 @@ T => id ;' > gramatica.ee
 *** E3
 
 1. Podemos utilizar [[https://github.com/schnorr/ellerre][ellerre]] para obter o autômato.
+   - Na prova mesmo, a resposta deveria incluir os estados 0 e 1 e
+     mais dois quaisquer.
 
    #+begin_src shell :results output :exports both
    echo 'S => a [ L ] | a ;
