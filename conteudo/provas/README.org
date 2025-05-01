@@ -312,7 +312,12 @@ T => id ;' > gramatica.ee
    estado dito então de redução.  Podemos observar um conflito
    empilha-reduz no estado 2 e também no estado 4.
 
-3. 
+3. Sim, a gramática é SLR(1) pois 1/ o conflito do estado 2 é
+   resolvido visto que Seq(S) - a cabeça da produção do item
+   completo - não contém =[= (o símbolo que indica um movimento a partir
+   daquele estado); 2/ o conflito do estado 4 é resolvido pois
+   Seq(L) - a cabeça da produção do item completo - não contém =a= (o
+   símbolo do único movimento com terminal).
 
 *** E4
 
