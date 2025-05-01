@@ -20,7 +20,16 @@ PR são bem-vindos para popular esta página.
  
 *** E2
 
-1. Podemos empregar [[https://github.com/schnorr/ellerre][ellerre]] para obter a resposta.
+1. A resposta
+
+   |   | Pri   | Seq   |
+   |---+-------+-------|
+   | S | a b c | $     |
+   | A | a \epsilon   | a b c |
+   | B | a b \epsilon | a c   |
+   | C | a c   | $     |
+
+   Podemos empregar [[https://github.com/schnorr/ellerre][ellerre]] para verificar a resposta.
    #+begin_src shell :results output :exports both
    echo 'S => A B C ;
 A => a | ;
