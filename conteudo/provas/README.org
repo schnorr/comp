@@ -263,8 +263,9 @@ T => id ;' > gramatica.ee
    |   |   P % |       % | P -> \epsilon  |
    |   |     % |       % | aceita  |
 
-Mesmo havendo conflitos na nossa linguagem, foi possível reconhecer a entrada
-pois não encontramos nenhum deles no caminho.
+   Mesmo havendo conflitos na nossa linguagem (conforme observamos na
+   tabela), foi possível reconhecer a entrada pois não encontramos
+   nenhum deles no caminho.
 
 5. Análise para entrada acda
 
