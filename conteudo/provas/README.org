@@ -225,21 +225,25 @@ T => id ;' > gramatica.ee
    E -- $ o n 
    #+end_example
 
-2. A tabela criada para esta gramática foi:
+2. A tabela criada para esta gramática foi (com as razões):
+   - As razões não eram necessárias de serem explicitadas na resposta.
 
-   |   | n  | o  | r   | t  | $  |
-   |---+----+----+-----+----+----|
-   | S | XP | XP | XP  | XP | XP |
-   |---+----+----+-----+----+----|
-   | X | n  | o  | rEn |    |    |
-   |   | E  | E  | E   | E  | E  |
-   |   |    | E  |     |    |    |
-   |---+----+----+-----+----+----|
-   | P | n  | o  |     |    | \epsilon  |
-   |---+----+----+-----+----+----|
-   | C |    | o  | r   | t  |    |
-   |   | \epsilon  | \epsilon  |     |    | \epsilon  |
-   |---+----+----+-----+----+----|
+   |---+----+----+-------+----+----+--------------------------|
+   |   | n  | o  | r     | t  | $  | Razão                    |
+   |---+----+----+-------+----+----+--------------------------|
+   | S | XP | XP | XP    | XP |    | Pri(XP)                  |
+   |   |    |    |       |    | XP | Seq(S) pois XP => \epsilon      |
+   |---+----+----+-------+----+----+--------------------------|
+   | X | n  | o  | r E n |    |    | Pri(n), Pri(o), Pri(rEN) |
+   |   |    | E  | E     | E  |    | Pri(E)                   |
+   |   | E  | E  |       |    | E  | Seq(X) pois E => \epsilon       |
+   |---+----+----+-------+----+----+--------------------------|
+   | P | n  | o  |       |    |    | Pri(n), Pri(o)           |
+   |   |    |    |       |    | \epsilon  | Seq(P)                   |
+   |---+----+----+-------+----+----+--------------------------|
+   | E |    | o  | r     | t  |    | Pri(o), Pri(r), Pri(t)   |
+   |   | \epsilon  | \epsilon  |       |    | \epsilon  | Seq(E)                   |
+   |---+----+----+-------+----+----+--------------------------|
 
 3. A gramática não é LL(1), como podemos observar pela tabela que
 tem mais de uma ação em uma célula, temos um conflito. Analisando
