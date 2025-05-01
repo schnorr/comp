@@ -159,7 +159,7 @@ T => id ;' > gramatica.ee
 ** 2024/2
 *** E1
 
-1. A ER é esta =(a*|(bc)*)=, podemos obtê-lá ao caminhar no autômato.
+1. Sim, esta =(a*|(bc)*)=.
 2. Não, pois se fosse construído utilizando os "blocos de construção de thompson" poderíamos observar transições vazias entre tais blocos. Por exemplo, para uma concanetação como ab, teríamos um estado vazio ligando o estado que reconhece `a` e o que reconhece `b`, o que não ocorre entre os estados 4 e 5 neste autômato, por exemplo.
 3. Fech-\epsilon(0) = {0, 1, 2, 3, 6, 7, 14, 8, 9, 10, 12, 13} = A;
 4. Mov(A, a) = {11};
