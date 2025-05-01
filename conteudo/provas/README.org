@@ -246,10 +246,11 @@ T => id ;' > gramatica.ee
    |---+----+----+-------+----+----+--------------------------|
 
 3. A gramática não é LL(1), como podemos observar pela tabela que
-tem mais de uma ação em uma célula, temos um conflito. Analisando
-a linguagem poderíamos concluir também que não é pois está não 
-respeita a regra 2, pois em S -> XP, ambos X e P podem se tornar
-\epsilon.
+   apresenta mais de uma ação em uma dada célula, assim temos um
+   conflito. Observando somente a gramática, especificamente no par de
+   regra =S -> o | E=, poderíamos concluir também que não é pois Pri(E)
+   contém \epsilon, no forçando a analisar Seq(S) e neste conjunto temos o =o=,
+   conflitando com Pri(o).
 
 4. Análise para entrada vazia
 
