@@ -268,6 +268,7 @@ T => id ;' > gramatica.ee
    nenhum deles no caminho.
 
 5. Análise para entrada acda
+   - Nota: esse item desta questão foi anulada (ponto distribuído para todos).
 
    | / |   <r> |     <r> | <l>             |
    |   | Pilha | Entrada | Ação            |
