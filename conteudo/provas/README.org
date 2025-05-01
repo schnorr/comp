@@ -320,8 +320,44 @@ T => id ;' > gramatica.ee
    símbolo do único movimento com terminal).
 
 *** E4
+1. Não, pois temos um conflito empilha-reduz no estado #4.
+2. Sim, pois no estado #4 o "+" não encontra-se no conjunto Seq(F).
+3. Produções identificadas.
+   | (1) | F \to @ a #     |
+   | (2) | F \to @ a # + F |
+
+   Tabela SLR(1).
+   Seq(F) = { $ }
+
+   |   | + | @ | # | a | $    | F |
+   |---+---+---+---+---+------+---|
+   | 0 |   | 2 |   |   |      | 1 |
+   | 1 |   |   |   |   | Ac.  |   |
+   | 2 |   |   |   | 3 |      |   |
+   | 3 |   |   | 4 |   |      |   |
+   | 4 | 5 |   |   |   | R(1) |   |
+   | 5 |   | 2 |   |   |      | 6 |
+   | 6 |   |   |   |   | R(2) |   |
+
+4. Seguem os passos.
+
+   | / | <l>               |      <r> |        |
+   |   | Pilha             |  Entrada | Ação   |
+   |---+-------------------+----------+--------|
+   |   | % 0               | @a#+@a#% | e2     |
+   |   | % 0 2             |  a#+@a#% | e3     |
+   |   | % 0 2 3           |   #+@a#% | e4     |
+   |   | % 0 2 3 4         |    +@a#% | e5     |
+   |   | % 0 2 3 4 5       |     @a#% | e2     |
+   |   | % 0 2 3 4 5 2     |      a#% | e3     |
+   |   | % 0 2 3 4 5 2 3   |       #% | e4     |
+   |   | % 0 2 3 4 5 2 3 4 |        % | R + e6 |
+   |   | % 0 2 3 4 5 6     |        % | R + e1 |
+   |   | % 0 1             |        % | ACEITA |
 
 *** E5
+
+1. Não é LR(1), pois nos estados 2 e 4 temos um conflito empilha-reduz com "a".
 
 ** 2023/2
 ** 2023/1
