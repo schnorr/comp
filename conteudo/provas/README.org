@@ -308,8 +308,9 @@ T => id ;' > gramatica.ee
 
    [[./resp_2024_2-E3-LR0.png]]
 
-2. Não, pois em LR0 estados de redução precisam estar sozinhos no estado.
- Podemos observar um conflito empilha-reduz no estado 2 e também no estado 4.
+2. Não, pois em LR0 os itens completos precisam estar sozinhos no
+   estado dito então de redução.  Podemos observar um conflito
+   empilha-reduz no estado 2 e também no estado 4.
 
 3. 
 
