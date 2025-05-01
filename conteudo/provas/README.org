@@ -157,7 +157,6 @@ T => id ;' > gramatica.ee
    |   | % 0 1     |         % | aceita       |
 
 ** 2024/2
-
 *** E1
 
 1. A ER é esta =(a*|(bc)*)=, podemos obtê-lá ao caminhar no autômato.
@@ -266,9 +265,6 @@ pois não encontramos nenhum deles no caminho.
    |---+-------+---------+-----------------|
    |   |   S % |  acda % | erro, esses tokens nem fazem parte da gramática  |
 
-
-
-
 *** E3
 
 1. Podemos utilizar [[https://github.com/schnorr/ellerre][ellerre]] para obter o automato.
@@ -309,7 +305,6 @@ pois não encontramos nenhum deles no caminho.
 *** E4
 
 *** E5
-
 
 ** 2023/2
 ** 2023/1
