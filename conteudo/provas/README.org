@@ -160,7 +160,11 @@ T => id ;' > gramatica.ee
 *** E1
 
 1. Sim, esta =(a*|(bc)*)=.
-2. Não, pois se fosse construído utilizando os "blocos de construção de thompson" poderíamos observar transições vazias entre tais blocos. Por exemplo, para uma concanetação como ab, teríamos um estado vazio ligando o estado que reconhece `a` e o que reconhece `b`, o que não ocorre entre os estados 4 e 5 neste autômato, por exemplo.
+2. Não, pois se fosse construído utilizando os "blocos de construção
+   de thompson" poderíamos observar transições vazias entre tais
+   blocos. Por exemplo, para uma concatenação como =ab=, teríamos um
+   estado vazio ligando o estado que reconhece =a= e o que reconhece =b=,
+   o que não ocorre entre os estados 4 e 5 neste autômato.
 3. Fech-\epsilon(0) = {0, 1, 2, 3, 6, 7, 14, 8, 9, 10, 12, 13} = A;
 4. Mov(A, a) = {11};
    Fech-\epsilon(Mov(A, b)) = {0, 1, 2, 3, 6, 7, 14, 8, 9, 10, 12, 13,
