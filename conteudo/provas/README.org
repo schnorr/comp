@@ -157,6 +157,164 @@ T => id ;' > gramatica.ee
    |   | % 0 1     |         % | aceita       |
 
 ** 2024/2
+
+*** E1
+
+1. A ER é esta =(a*|(bc)*)=, podemos obtê-lá ao caminhar no autômato.
+2. Não, pois se fosse construído utilizando os "blocos 
+de construção de thompson" poderíamos observar transições vazias
+entre tais blocos. Por exemplo, para uma concanetação como ab, 
+teríamos um estado vazio ligando o estado que reconhece `a` e o 
+que reconhece `b`, o que não ocorre entre os estados 4 e 5 neste
+autômato, por exemplo.
+3. Fech-\epsilon(0) = {0, 1, 2, 3, 6, 7, 14, 8, 9, 10, 12, 13} = A;
+4. Mov(A, a) = {11};
+   Fech-\epsilon(Mov(A, b)) = {0, 1, 2, 3, 6, 7, 14, 8, 9, 10, 12, 13,
+   11};
+
+*** E2
+
+1. Os conjuntos primeiro e sequência para os NT foram:
+   |   | Primeiro         | Sequência  |
+   |---+------------------+------------|
+   | S | n o r t \epsilon | $          |
+   |---+------------------+------------|
+   | X | n o r t \epsilon | n o $      |
+   |---+------------------+------------|
+   | P | n o \epsilon     | $          |
+   |---+------------------+------------|
+   | E | o r t \epsilon   | n o $      |
+   |---+------------------+------------|
+
+Conferindo com [[https://github.com/schnorr/ellerre][ellerre]]:
+
+
+ #+begin_src shell :results output :exports both
+   
+echo 'S => X P ;
+X => n | o | r E n | E ;
+P => n | o | ;
+E => o | r | t | ;' > gramatica.ee
+   ./lr0 < gramatica.ee > /dev/null
+   ./firstfollow < gramatica.ee
+
+ 
+Grammar with 12 rules and 8 symbols (4 non-terminals):
+S ⇒ X P 
+X ⇒ n 
+X ⇒ o 
+X ⇒ r E n 
+X ⇒ E 
+P ⇒ n 
+P ⇒ o 
+P ⇒ ε 
+E ⇒ o 
+E ⇒ r 
+E ⇒ t 
+E ⇒ ε 
+
+First sets:
+S -- ε o t n r 
+X -- ε o t n r 
+P -- ε o n 
+E -- ε o t r 
+
+Follow sets:
+S -- $ 
+X -- $ o n 
+P -- $ 
+E -- $ o n
+
+   #+end_example
+
+
+2. A tabela criada para esta gramática foi:
+
+   |   | n  | o  | r   | t  | $  |
+   |---+----+----+-----+----+----|
+   | S | XP | XP | XP  | XP | XP |
+   |---+----+----+-----+----+----|
+   | X | n  | o  | rEn |    |    |
+   |   | E  | E | E   | E  | E  |
+   |   |    | E  |     |    |    |
+   |---+----+----+-----+----+----|
+   | P | n  | o  |     |    | \epsilon  |
+   |---+----+----+-----+----+----|
+   | C |    | o  | r  | t  |    |
+   |   | \epsilon  | \epsilon  |     |    | \epsilon  |
+   |---+----+----+-----+----+----|
+
+3. A gramática não é LL(1), como podemos observar pela tabela que
+tem mais de uma ação em uma célula, temos um conflito. Analisando
+a linguagem poderíamos concluir também que não é pois está não 
+respeita a regra 2, pois em S -> XP, ambos X e P podem se tornar
+\epsilon.
+
+4. Análise para entrada vazia
+
+   | / |   <r> |     <r> | <l>     |
+   |   | Pilha | Entrada | Ação    |
+   |---+-------+---------+---------|
+   |   |   S % |       % | S -> xp |
+   |   |  XP % |       % | X -> E  |
+   |   |  EP % |       % | E -> \epsilon  |
+   |   |   P % |       % | P -> \epsilon  |
+   |   |     % |       % | aceita  |
+
+Mesmo havendo conflitos na nossa linguagem, foi possível reconhecer a entrada
+pois não encontramos nenhum deles no caminho.
+
+5. Análise para entrada acda
+
+   | / |   <r> |     <r> | <l>             |
+   |   | Pilha | Entrada | Ação            |
+   |---+-------+---------+-----------------|
+   |   |   S % |  acda % | erro, esses tokens nem fazem parte da gramática  |
+
+
+
+
+*** E3
+
+1. Podemos utilizar [[https://github.com/schnorr/ellerre][ellerre]] para obter o automato.
+   #+begin_src shell :results output :exports both
+   echo 'S => a [ L ] | a ;
+
+L => S L | S ;' > gramatica.ee
+   ./lr0 < gramatica.ee > /dev/null
+   ./firstfollow < gramatica.ee
+   dot -Tpng LR0.dot -o resp_2024_1-E3-LR0.png
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   Grammar with 4 rules and 5 symbols (2 non-terminals):
+   S ⇒ a [ L ] 
+   S ⇒ a 
+   L ⇒ S L 
+   L ⇒ S 
+
+   First sets:
+   S -- a 
+   L -- a 
+
+   Follow sets:
+   S -- $ a ] 
+   L -- ] 
+   #+end_example
+
+   [[./resp_2024_1-E3-LR0]]
+
+2. Não, pois em LR0 estados de redução precisam estar sozinhos no estado.
+ Podemos observar um conflito empilha-reduz no estado 2 e também no estado 4.
+
+3. 
+
+*** E4
+
+*** E5
+
+
 ** 2023/2
 ** 2023/1
 *** E1
