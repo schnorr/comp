@@ -161,12 +161,7 @@ T => id ;' > gramatica.ee
 *** E1
 
 1. A ER é esta =(a*|(bc)*)=, podemos obtê-lá ao caminhar no autômato.
-2. Não, pois se fosse construído utilizando os "blocos 
-de construção de thompson" poderíamos observar transições vazias
-entre tais blocos. Por exemplo, para uma concanetação como ab, 
-teríamos um estado vazio ligando o estado que reconhece `a` e o 
-que reconhece `b`, o que não ocorre entre os estados 4 e 5 neste
-autômato, por exemplo.
+2. Não, pois se fosse construído utilizando os "blocos de construção de thompson" poderíamos observar transições vazias entre tais blocos. Por exemplo, para uma concanetação como ab, teríamos um estado vazio ligando o estado que reconhece `a` e o que reconhece `b`, o que não ocorre entre os estados 4 e 5 neste autômato, por exemplo.
 3. Fech-\epsilon(0) = {0, 1, 2, 3, 6, 7, 14, 8, 9, 10, 12, 13} = A;
 4. Mov(A, a) = {11};
    Fech-\epsilon(Mov(A, b)) = {0, 1, 2, 3, 6, 7, 14, 8, 9, 10, 12, 13,
@@ -189,41 +184,41 @@ autômato, por exemplo.
 Conferindo com [[https://github.com/schnorr/ellerre][ellerre]]:
 
 
- #+begin_src shell :results output :exports both
+   #+begin_src shell :results output :exports both
+      
+   echo 'S => X P ;
+   X => n | o | r E n | E ;
+   P => n | o | ;
+   E => o | r | t | ;' > gramatica.ee
+      ./lr0 < gramatica.ee > /dev/null
+      ./firstfollow < gramatica.ee
+
    
-echo 'S => X P ;
-X => n | o | r E n | E ;
-P => n | o | ;
-E => o | r | t | ;' > gramatica.ee
-   ./lr0 < gramatica.ee > /dev/null
-   ./firstfollow < gramatica.ee
+   Grammar with 12 rules and 8 symbols (4 non-terminals):
+   S ⇒ X P 
+   X ⇒ n 
+   X ⇒ o 
+   X ⇒ r E n 
+   X ⇒ E 
+   P ⇒ n 
+   P ⇒ o 
+   P ⇒ ε 
+   E ⇒ o 
+   E ⇒ r 
+   E ⇒ t 
+   E ⇒ ε 
 
- 
-Grammar with 12 rules and 8 symbols (4 non-terminals):
-S ⇒ X P 
-X ⇒ n 
-X ⇒ o 
-X ⇒ r E n 
-X ⇒ E 
-P ⇒ n 
-P ⇒ o 
-P ⇒ ε 
-E ⇒ o 
-E ⇒ r 
-E ⇒ t 
-E ⇒ ε 
+   First sets:
+   S -- ε o t n r 
+   X -- ε o t n r 
+   P -- ε o n 
+   E -- ε o t r 
 
-First sets:
-S -- ε o t n r 
-X -- ε o t n r 
-P -- ε o n 
-E -- ε o t r 
-
-Follow sets:
-S -- $ 
-X -- $ o n 
-P -- $ 
-E -- $ o n
+   Follow sets:
+   S -- $ 
+   X -- $ o n 
+   P -- $ 
+   E -- $ o n
 
    #+end_example
 
@@ -277,10 +272,11 @@ pois não encontramos nenhum deles no caminho.
 *** E3
 
 1. Podemos utilizar [[https://github.com/schnorr/ellerre][ellerre]] para obter o automato.
+
    #+begin_src shell :results output :exports both
    echo 'S => a [ L ] | a ;
 
-L => S L | S ;' > gramatica.ee
+   L => S L | S ;' > gramatica.ee
    ./lr0 < gramatica.ee > /dev/null
    ./firstfollow < gramatica.ee
    dot -Tpng LR0.dot -o resp_2024_1-E3-LR0.png
