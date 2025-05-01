@@ -185,19 +185,19 @@ T => id ;' > gramatica.ee
    | E | o r t \epsilon   | n o $     |
    |---+-----------+-----------|
 
-Conferindo com [[https://github.com/schnorr/ellerre][ellerre]]:
-
+   Conferindo com [[https://github.com/schnorr/ellerre][ellerre]]:
 
    #+begin_src shell :results output :exports both
-      
    echo 'S => X P ;
    X => n | o | r E n | E ;
    P => n | o | ;
    E => o | r | t | ;' > gramatica.ee
       ./lr0 < gramatica.ee > /dev/null
       ./firstfollow < gramatica.ee
+   #+end_src
 
-   
+   #+RESULTS:
+   #+begin_example
    Grammar with 12 rules and 8 symbols (4 non-terminals):
    S ⇒ X P 
    X ⇒ n 
@@ -222,10 +222,8 @@ Conferindo com [[https://github.com/schnorr/ellerre][ellerre]]:
    S -- $ 
    X -- $ o n 
    P -- $ 
-   E -- $ o n
-
-   #+end_src
-
+   E -- $ o n 
+   #+end_example
 
 2. A tabela criada para esta gramática foi:
 
