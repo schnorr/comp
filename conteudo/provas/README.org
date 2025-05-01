@@ -277,7 +277,7 @@ T => id ;' > gramatica.ee
 
 *** E3
 
-1. Podemos utilizar [[https://github.com/schnorr/ellerre][ellerre]] para obter o automato.
+1. Podemos utilizar [[https://github.com/schnorr/ellerre][ellerre]] para obter o autômato.
 
    #+begin_src shell :results output :exports both
    echo 'S => a [ L ] | a ;
