@@ -821,5 +821,57 @@ apenas com atributos sintetizados, não há como escapar de realizar em
 mais de uma passagem, sendo esta talvez uma desvantagem.
 
 *** E3
-*** E4
+**** 1.
 
+|   | t1 | t2 | t3 | t4 | t5 | t6 | t7 | t8 |
+|---+----+----+----+----+----+----+----+----|
+| 1 |    |    |    |    |    |    |    |    |
+| 2 | x  |    |    |    |    |    |    |    |
+| 3 | x  | x  |    |    |    |    |    |    |
+| 4 |    | x  | x  |    |    |    |    |    |
+| 5 |    | x  | x  | x  |    |    |    |    |
+| 6 |    | x  |    | x  | x  |    |    |    |
+| 7 |    | x  |    |    | x  | x  |    |    |
+| 8 |    |    |    |    |    | x  | x  |    |
+|   |    |    |    |    |    |    |    | x  |
+
+**** 2.
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&layers=1&nav=1&title=Untitled%20Diagram.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%224-FpbrLdnt4Q4bZhZV4I%22%3E1ZpLc5swEMc%2FjY%2FuoAevY2Mn7SWdzngmjyMFxTCDkQfLNu6nrwiSQVI8oUmw4GR2La3gr%2F2JlewZWmyqH2W0Te9pQvIZdJJqhpYzCIHjO%2Fyj9pyEB7hh41mXWdL4nNaxyv4S2VV491lCdsLXuBilOcu2qjOmRUFipviisqRHtdkLzRPFsY3WRLmN2rGKo5wYzR6zhKXC67m4%2FeInydapHBp44gE3kWwtIu%2FSKKHHjgvdztCipJQ1V5tqQfJaPlWYuwvfnu%2BsJAXr0yFe0vunwx13rCo0fyR%2FHn49zEWUQ5TvxRMz4dqxkxSBx%2BF6c%2BPmmGaMrLZRXH9z5HPOfSnb5NwC%2FDLabZtJeMkqwoe9EdFJyUh18bbBWQyeR4RuCCtPvInoMHf9potIISSUP7bTgUWLtDMR0heJBFifA7cS8Quh0n8oBk3F4MgUk%2FAIxeY4tCsZMiVD45IscFXFQstJhk3F8LgUA4GeZL5dyVxTMndckkE4rpXMMxXzxqWYnmS8fLArmW9K5o9LMm0lAx60q1hgKhaMSzH9dWk9yYBZlJmKFcn3urzlVkELoqpU0n2R1PIsHW690IKJwhpwGW52LCqlI%2BA2D9Wx4n15eO1aByJVxp461891yG%2BusJaVGOHVOEmj4BqcO9XGc9doO71aslfzgCSR1filWeQi0H0Zk%2FdLWv6Ua8LeK%2BTMrOjMuuuYsy59Jckjlh3U230rFcQIv2nGH6Rd2XyVUx5YDdE8pujVreq1QOeOJy2wDNToYATi2ROdOs22dYPd5RvGWBkGu1qaN%2FHapD8r%2BgkOzFJ7RByAfhQIXCxwAHtygKxyANW8CrRFtS8GwFPjyE33F1MQBBpsV6DA3D1NkIKRM4CtMoBCJavcDzLAy2U1O8NBGABA3cZgcAUIzA3xxCHovBfGg4FrFQMMVQy0Jbw3BqGGExwGA6jShq%2FxLjAPOaaOwfgg8KxC4MC3surTEAC5gn41BRgp44jjhmEpMA%2BuLFPQ7oknUBOhSdREWpEBvI9uDLSfj4AzzM4AABUEcA0QzONI2yBMqSrCU6iKIFYX8rm2jvflAOk%2FPnjDYOCrGMBrVEXmGfOIMOh9XmqrLnKnUBdBVz3m1E85%2B9dF2nEpHuh14Kt1nBdcgYNw1Bx86Lz0ihx4PTnwrXKAtDIDaOt477oo1AIFA4GgbZPB5wojbrb%2FmGqat%2F88Q7f%2FAA%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Clique aqui para ver no draw.io]].
+
+**** 3.
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&layers=1&nav=1&title=Untitled%20Diagram.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%224-FpbrLdnt4Q4bZhZV4I%22%3E7Z1Lcxu5Ecc%2FjY9OTeM9x6ydTS6bSpWr9nGkpZGliiyqaNqW8%2BkzMgcjTQNegtAA3WDtyeZIgigQf6Afv268km8%2BPvxzt7m%2F%2FmV7Ody%2BEt3lwyv59pUQunN6%2FOfxybfDE9mJ7vDkw%2B7m8vDs2YN3N%2F8bDg%2FBP%2F18czl8mp4dHu2329v9zf3y4cX27m642C%2BebXa77dflt11tby8XD%2B43H4bF23h88O5iczsE3%2FbbzeX%2BenpqtHr6wr%2BGmw%2FX%2FleD6Q9f%2Bbjx3z2N%2FOl6c7n9%2BuyR%2FMcr%2BWa33e4P%2F%2Fv48Ga4fZy%2B5cT8%2FIOvzu9sN9ztU37g4u32l9%2B%2F%2FDw%2BePcgX%2F82vP%2F137%2B%2Bnkb5srn9PP3F%2B%2BnRp%2F03PwnjOON8jy9%2B%2Bnp9sx%2Fe3W8uHr%2FydfzMx2fX%2B4%2B34ysY%2F7v5dH%2F4EK5uHobx1%2F40jT7s9sPDD982zJMxrqNh%2B3HY776N3zL9wGvtxOFnpjX0WorpwdenT0TZw6PrZ5%2BFf7aZ1sCHeeynWRr%2FM03UCZMmwkkT3CZN6uWkqU7TTpoKJ00xmzSpgkmTtJOmw0nTzCZN9I6ZPE04aYbZpAUrTSignTQbTpplNmlKdctJg17RTpoLJ80xm7TgICBfaRDaHOGc3V3%2B%2FdF6G1%2Fdbe%2BG5Tzttp%2FvLh8n6G03vrra3u0nuxHGifjp036z8w%2Fc%2BHoc6tmri8%2B7L99%2F9HGg4eFm%2F%2Fuz%2F%2F%2FxOOTf9PTq7cP0G76%2F%2BOZf3I1zMP%2FQ44s%2Fnr94%2BqHvr%2FxPHf7A4dIbmz%2F6HMdJ2H7eXQzHLbbxr%2Fww7I8ZKeG6ePap6y781P2z3XC72d98Wb7d2FKYfsN%2FtjfjH%2FJsg9NYqxINcvhDp597brYGQ3V4KIeGOsxFMNS4gjbfnn3b%2FeM3fPqTN638wPNRNq3Vp%2BV%2BGPNp8c8z%2BwI9SM56gDQ1dERqEIlqULRqcAZtwn2frQaL1qhEG%2FVqauiwYQe6ghpCP6FxNUwnCi89aGI9SLS0OpOpByEMHkqV0YPssfK6voIeQhewdT3wU4MhVYMSgRpyT4dADUKJQmrAUTkxOWNl1RC6qcRq6Fo6HVQTp4OweEs3XaYeIAxOoaFW04MW%2BDfVOB3CCAQjPST70lTng27ifBAWOcACO8Dp54PEQwEyvNbTg8Rv2lXQQ89aD4lqeDoSKuvBJOrB0uqhx6aHyj0fpERDgS2lB%2Bw9CFXBXvKnXUv5XU2ccxNhfHrV9O7Vze3tm%2B3tdvd9IHmpB3epvm8uu%2B1%2Fh2dfceK9NKZUHsCfBGTTLMJpluWm%2BcpdDBcXsWl%2B77TS3UrTHOSoLHHaXYTR5VXz7ng1bwZ3FZ1mc%2BGG91crTXOYP3XE0xzBG7hn6sk32gjdwD1RD5I45SwidAP3RP2csCObtAjdwD1RT7%2FS2MUWmsrTe9P7eKL%2BBwuDKFPv%2FZKXJ%2BpnPKd0nt7U8KTYRRZy8jDLyEJNNSRjK4JUDapbLi3ITkxKsxxJopzOamKQy8CCNOXFIMOwQoNiYC8FSXswIGgFR8aykRXpCikBAStmUQ9RSAmsYUb2Ccl0LVADXMtshkGbeXaC3hZCGXG42dQ4FcKIXuta4KgE2uQ8hlXMWuAWSFlICii%2F4CowvZId0%2FvkL7dgIok2TCRscYDL9xbQSFDKXYClGmQNNbBjepuitvyOy91IwtyWR1dfTG1pNFApZkvVMJLY8bxNEVs%2Bz8bdTMLMFg6FZhNboAsdDBjYcraCGMJkFicxZAVVa4ohlV8UxAAjArZA5p4MmNcCXEdVyn%2BGKnZSpJ6YG63VB1UwXrNUeUoZZmbYtePocTksfTuOCBm4Jn61xqw5jftxaGJoTYXhXnZdTKwJ1hox6ONrkDjDURZwERb1vqYi5B43PCpYa%2BTdJVQYa2DHRwX7GnkjExVB8bgBUsEZSr%2FW2LkvTRFS3tw96r4cLDwy98UaLNfsXiYW8FClepm4HhdR1uhlokLQkpEi2FNS3pU53s6ke0WpCAe4zDw7IW6DYl9ZqALLBRW6skKFrmJN0TLPA6brgZahdYgafEF%2FHyuCVVqov48L2k7U6O%2BjzoKjJcsFpitC0NpMQeOFbJDWKMBDFeLKHWDt1ejwo8NIXOuK4KgHWlLEyUAPuSdEoIdiPX5sULNeo8ePZofUNsVO%2BcA%2Be5sJmx%2Fgsm0m3E5O6FI%2BhMDZrxpdHLzjwkgRLdlMfr%2FkbjOZHhs62X2vTJjNKNT3ypogH1zDZuLH1%2BZEXqmsJm8wcLeajAvaPORGXk3QMaJU5yuLUN46na%2F8hTRMFZEVea2piFTGVtEytha3f87vfWUVGqpY76vAr67S%2B0pHcprcaCrQP%2BpPSXbjTKS%2FSGQnoZ01QIYSOeGiI%2BQeM8IFgkbZ5EstAu4xA1xsjzYuH28iu9sogu1xw1twchA8%2Fks2aRFqjxvdEuxp9EuNXdShKbpFp8L5mhTOtwqJVWRG4UDgkSwaaS1zUlPcw2DY%2BVdN5S11amvhgyVFpYajqcZkNYT5T1FEDUFAuqtQt2XYFTE2lLJMlwIp9hgoAdkZ2UoIIhYrKcEHNZ%2BSlaKCEtgBj00FonUqAkysBY1sG4Ftm3Q14JEAnTArqcFid8JVKG437GDHpoLQPiBy%2FD4SUvwX8KUJQUe3VDXgixzAlhEDNpL8WVFWDJHwFvf4syauSrWR8FZkC2ns7oUwtkPcrd5GAmLt372A446WOClgwwBa%2B1cvBBFxQzzJkSrZNTMvJEsZ52rIt%2BVIUS3vTA1I6nUZyT4zT9SAo94wI7ln7nka%2BoXGLgLRVJrGpPpcltTnQmka36ruxVka6AsxPyhJU6P%2FsGUXfWiq%2BNimFg5Y0sIBVDYAXWbswSzHUeiNrKUDBGLLCiioDQMPDeqAvQoEpQpQOZnNFAHAcpsulJpBhuZElhQVgTu%2Fqsqa%2Bfp0GZBWCKB8Pb5NITdH6YMKZcPQpsJZ4MJIX%2Bsy4CgC0qIAiK2qF2sgaNJaJk0%2FxRzKikBwE0FTFcV%2BV2VuEgXRrEwhaDQOfidr2URLHcgaOmBdNcnfJhJN2ESg0EaeCW7hC3o0GmctUGWpA1XDKGLH8jYFbdnUWkliswhBWzjSmYtsgSlzICBiy1WA2h07jrcpXssH5Y8LgfQyEsxrAe4ol4lria6MEJCbDFVMo0jqkRmsJXC9tvToKFXq0YWpR261wgLztvPFHmSTxr%2FqVTk0ad47IZu0nn%2FZq%2FQf7AyzOmIyoA9jf9xwikCe9CuNXayoKZzCpRY3Hc4OsrwBxhhBoJB%2FcrRI4JEKJQ%2BkCioKK9hFPTtXuaH8gbePjouBtLpJdbgzCDbsk5mKbkk7jNt5mYIOhW3hKuVNfegkEIuhKXfZG0hH5dCTonZa4rXl%2FedT5aBw%2F1zAybm15BBWZNWQQ8T9Y%2B4z%2B9AdmXUZ6RO1psdMUt8UGvGCeJYjLnbz5U2Bf2mIAxnQRZzy5uubwtgHcZc06CJufPMVTtpfocVkYwbfnqVUWI7FYgYP39BNc6Rcj3kgb%2B5LTzdpkfI75oE8BiuNXW6zqUBenxq76GkbdqFAnvB3Jbw0jicK9evCYbwJfynqqEHHLnDRVGVUn9qlqKeN4wkEfuHWQslxC9TBHm%2FSa0kB8QQ1moJDFwYtGpQCdyFMviGZEtQyDu0yhaAFWqFlimVVHOEvLISzqJZdhLJrwsAnSIG0XFapZXLHor08N7VTqLkvjmTbKmfC2RXMVszqnCAEQSoElOXEreZyhQCFKsdxirMGDwzArmq2qUopn3hgbx8hg2NG3E%2F3FNBAooyroFCdeo2b2%2BdOP4zE0JKFNOeHuJtIWi939FwUzOCcRhkQTNmlFnQNE8lXK%2FLUAvuSqTmJx91K0noZBgUcBk12nXs0kCl0MtilWdfrGmpgXUjLHgSbF1WCGkhLaTEKBirzaMAkmMC3KRRyn6GOoRTJTzIDwUxw0SJQcx0QKTljVgjkenxprs%2BS0c1aBDpkBhA4b%2Fg%2BVQIJ6lmLcIfMCALbsVtrgrUDyP%2BYh9RioEnVVMd8j0trhMjsHdN3aCQwKLKy0kHvVFBpISqc9F4ApU56EhYR2waGuNv6XIt2VpR4sL%2F7M4lumiNma%2FOYeGB8GOKCWhCRTvjNY%2BKBZQzExd7zlRFnhYn3qFsg%2FdYccT%2Bax8TxYgZFvpgj%2FgpzLw968o02UvbE3MmjX2mSXca7KUx89giO%2B3iCNJTr%2BqVc5zafJ7t4Cg3UlYECLcrE2AoVvSDZRTyaAsVnzy1BDaS9EZ1E2TnIDHg4VH%2Bhy8BQDkFXNbqEzm3z2hZDA1Ig7Y7oUJvQ3LbRvVwuUf%2F21lYCBmRFDSWwy3c3xYqfogVDqwXEnGb2AYIOkKjKoFA4Cm6rHAt%2FtcSqIwXSnJBDxGn2DUtYCqDK3KvhUBajr9Adbr4jhI8WmuLF5xQEeyMJc0V9tr%2BABpKFHAZUC6uqqIFdmXVbwLjPFHE3k3qz3NJx0UP62YDTG2WoQOeWYtBVzCR2hdZtEeMiGZ6hNZR6i%2FIgOB56gqWERsLX%2Ba0mh6Vp19dgZCW7cuu2WDK%2FxybIgbQhDWbJAKeuclEyAYXUgHxoqGMqRXKVzJDxcSNDjB35hRtzVy3GKV4AtI3T9%2FQHVbhAgYSNCdYneQ9FFSG9IqdcW9xiZD0L6nmOoF7Ng4sgMCBK3uBWRWCv5slFkJgQJe9wqyK0V%2FPoIkhmvcdBRWyu5tnFYDnTdx7VIVK2KrzIY3umb4vrWZOWjGEGqzN0IcI5%2Bwt4%2FPEumpyyUbS3fgpEdWe3xh1PMjRSod64ACiwXgVu0WcBt9Axjyo5a6NIszbgG8y%2BuD8uCNRXv1CD3PHMRVnMGq1%2BdBgsaVAPDaiBNG0DAvHluT1yQUq0SMvw8CBQM5YqXXI1O8ClLfLxBDmQpm1AGLE0PXJz%2BgpQ3UaZRrkg8EUCVc4GdoRLS%2BzjCWLoacUgRGxtvVwMpZrlgkC5kCrdcnUYHyZWQ1v0o0pGXKhtJdwHLrdfLgjUvLNUw1wQqBylSiM4zRpyacBaSoZciK0laZb7em7LXMBdzgv1zAWPw1dtmus9LJ5y4I9AeguXvb0kLcqN5HbNHe0jNFIhJHgUxNLEq9I317BrttAWBOkzuMcFoUnvFwCp41BhRnQJliOV6pwb%2BNN1Wuf6qAPnHKb2PzMDI96LI0timjBncwZAn%2FJ%2BtjdSqLlJn447L6AvWM%2BSGoAyEXCyfaDPwLI1%2F2tL3b3NRMDJ9oE%2BC3h%2Fpu6sacLA2BkAfRZVWNNvzxFusn2gDy%2FnueEC3TxHwMn2gT68PYOjtupsBJzkbgzTr05fJcnHqW4L6PO%2BxHGn2pD2bBvlsRTszDOd7FRbjaSP8xlrOdUaBcZMjbCrbzHBUxD8gT7v9SUIgpZwNRqHXXNLzw1iZX156tp6MCgfLms09bRnAbg2oAZavNWgRgw2VwxWoUWKev2sJgYUcZ2yA4XFcHZ0a90U9QlyoGU2jEXV0WhLT5aDk0hXhRAmg4BcU%2BVsOD%2B%2BlacYaHkNg2ggk3s2YDHMrWFXVwPKhUzBicJqYIe3tgX0mWTAldpWwslel%2B05oN5qAKVcB1S9JKsIgh%2Fh2pa1lEy4EltL1qF9HTWpTT8gcJKkTLdbsB0qwatiLbHmW%2FkDfSaZbyW2l6xbBkizeW8nUKRVFzoeLLohY%2BpxWFgPvAHXrEhrVT0kA66GFnC1qDB%2Fbvx9enBJoJH6UvYScqehisHkwmTcGYBprl9%2BaOTkg79Q%2FbzAtN5zlWzANBfhLJsH00QnuYFpvvj%2BrMC0p%2Bb%2BbMA0FwEtmwfTxOyXsNmeI5xl82BasJzp0R8X4SybB9OC7ZkeTHMR0HJNMI3GqsPmBoP1zM6fbAtl80I57k8eDGgqf1KAWAllE3POpjTK1vcEKFvPrmCyLZTN%2B4kJgiC9nVp0QQVxZkJKAFRB2cZTmgBl61mzztzTsyeogZR0Fl2%2FDsomAPWpKISyic4QoGy%2Bgv98xFA3OXuCHEg551EO66BsT%2B%2BoLMo2nmYEKFt%2FdphzzVTUCWIgRXdEp9dB2QIxlELZRvkSoGz%2Bd%2FJRQ1som0uuCqO2lcxKKNvoc9RB2ca3TICy9exI57ZQNp%2BiYm8tCXwhTCaq8HTne1mUTQBCIqqgbD0%2F1Dkn1EpnLyWjzsT2kujWQdmeGrsXRtkee5cu7aUaKFvPmnTmj7K5ZNLZkZLOAtDdHdkomwB8n0ghlC1wp1%2BIso0vd9vt%2Fvm37zb3179sL4fH7%2Fg%2F%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Clique aqui para ver no draw.io]].
+
+**** 4.
+
+Se caso não for possível colorir com três registradores, isso
+significa que não há como alocar aquele trecho de código unicamente em
+registradores. A estratégia mais simples é fazer /memory spilling/, ou
+seja, escolher alguma variável para ser mantida em memória. Várias
+estratégias podem ser empregadas para escolher aquela que ficará em
+memória (com custo de acesso mais elevado). Por exemplo, podemos
+manter em memória aquela variável menos utilizada.
+
+*** E4
+**** 1.
+
+- B1: [1, 2, 3, 4]
+- B2: [5, 6, 7, 8]
+- B3: [9, 10, 11, 12]
+- B4: [13]
+- B5: [14, 15, 16, 17, 18, 19, 20, 21, 22]
+- B6: [23, 24, 25, 26, 27, 28, 29, 30]
+  
+**** 2.
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&layers=1&nav=1&title=Untitled%20Diagram.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%22NHXW5K4TU4PZrDHNbyys%22%3E7Vltb5swEP41fMyEbQzkY5t2m7RNmpRJ7T5NVnCBjWDkOG%2F99TPx8eKiRiRtCp32ydz5%2FMLje%2B584JDZcvdJsiL5JiKeOdiNdg65cTBGCPu6KTX7SkOnRhPLNDI6t1HM00cOhpV2nUZ8BTqjUkJkKi1s5ULkOV8oS8ekFFvb7EFkkaUoWMytbZSK%2BYJlvGN2l0YqAa1PvabjM0%2FjpFoa%2BfCCS1ZZw8yrhEVi21KRW4fMpBDKPC13M56V8NnAfHymt96Z5LnqM%2BC2SMmPu1%2Fk8U8Ro%2Fv5Jv8SzyYB7E3tqzfmkQYAxFzkurlerOWGl7MgLUixzqOD5GpJSJWIWOQs%2BypEASa%2FuVJ7OEu2VkKrErXMoJfvUnVfDv9AQfrZ6rnZwcwHYV8JuZL71qBS%2FNnua4YdpGrcg8gVbARpwK9XislKER6so5ZksCgBeBZiUK3EWi74EVwrX2Uy5uqIHa4dQXOIiyXXu9fjJM%2BYSjf2Phj4clzbNaetH%2BDATzh8mHfDsjWsdK2P4UqrHKqfsJ7VxaYhpvEcetPxGNsjtkmq%2BLxgB3i2OizYpw9Lcqn47jjKXVRgAAaGQUyZEODitkXQinRJi5u%2BeyEcwyFJFPRn0WlsaHEuOIl0r0gj%2FEY0gqHfRap32Dga9ixPQwG2pzD7glGNE11JyfYts6I0WB1Zx3XtdUJiR%2FKOPbHsCXniwmYDjUPXkJzv49P%2FieIiiaKvh3tDJgrcTRS4ThTUpAbfNIFpwhEmimDoPIFQB5I3JBE%2Bi0X4fdCI9KSR%2FxqJ4tT4PvHteO2508sHbOS9j4g9epehQ0Ze0o28XnNFJyOMsjggQ4dZt4PJKD3%2F3d1VvJ6MIUMyxusyhtSMmZrbSekhhxaKXA3j%2BIiEAn9oIuEhiXRCYXt2qToYlWhPKr1KYXvqfQWFvuWJ1A3bvtStRz1q2U%2FCJ653gesN7dKcNonRA15DbYKgOEFQnaAQWogHGOIBrj56jTEeED8YOB74Xcz9GnMMnwgxYI8BewzYY8AeA%2FYYsCfuCLH2Anfo2EuGjL3%2FdK3Y9xrz0k8uZ8Xe0PJDHNCjkXdimyP0osJSi83vKGPe%2FNYjt38B%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Clique aqui para ver no draw.io]].
+
+**** 3.
+
+- Back edge, B2->B2
+  - Natural Loop: B2
+- Back edge, B3->B3
+  - Natural Loop: B3
+- Back edge, B5->B2
+  - Natural Loop: B2, B3, B4, B5
