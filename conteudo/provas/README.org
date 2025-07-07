@@ -703,6 +703,76 @@ B->ε
 * P2
 ** 2025/1
 *** E1
+**** 1.
+
+Dado que =L.type= representa o tipo esperado para os identificadores de
+L e temos a produção =D->TL=, entende-se que estamos aqui falando de um
+esquema L-atribuído.
+
+#+begin_src C
+D -> T { L.type = T.type; } L { D.env = L.set; }
+
+T -> =int= { T.type = INT; }
+
+L -> { L_1.type = L.type; } L_1 =,= =id= {
+   if (id não pertence L_1.set) {
+      L.set = união(L_1.set, conjunto(id));
+      declara(id, L.type)
+   }else{
+      erro: variável redeclarada
+   }
+}
+
+L -> id { L.set = conjunto(id); }
+#+end_src
+
+Onde a função =conjunto= cria um conjunto com o argumento e a função
+=união= une dois conjuntos. A representação de terminais é feita com o
+delimitador "=".
+
+**** 2.
+
+Dado a discussão em 1., temos a seguinte classificação:
+- sintetizados: T.type, L.set, D.env
+- herdados: L.type
+
+**** 3.
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&layers=1&nav=1&title=Untitled%20Diagram.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%22ZNujsGWPLJhN4EK1gCre%22%3E7VrRbpswFP0aHjdhG5PmtUm3buuqSam2dS%2BTF1zwRDBzTAL9%2BplgAoQ2YVpag8RLZJ%2Fra%2BxzfH0vKBaardL3gsTBZ%2B7R0IK2l1pobkE4ga76zYGsADCGBeAL5hUQqIAFe6QatDWaMI%2BuGwMl56FkcRNc8iiiS9nAiBB82xz2wMPmU2Pi0xawWJKwjX5jngw06mKnMlxT5gflo4E7LSwrUo7WW1kHxOPbGoSuLDQTnMuitUpnNMzJK4kp%2FN49Y92vTNBIdnH48fDpdvnl51eHfVwk8%2FX0eirEG6CnWcus3DL1FAO6y4UMuM8jEl5V6KXgSeTRfFpb9aoxN5zHCgQK%2FE2lzLScJJFcQYFchdpKUya%2F5%2B5vse7d1yzzVM%2B862RlJ5Iiqznl3fu6rXLb9Uq%2FYn%2F5pp7lreSAJ2JJj5Clj64kwqfyyDi0V1eFBeUrqtaj%2FAQNiWSb5jqIPqD%2BflwloWpoFf9BUTgZFT27oo5RRYt5NyRM9JMs6IZquZce26imnzfnJaYeUYOfGPmWRqpt72ayLZwP%2BZPkl9BlWjUtOMut%2B372vOmxZsL7ZfwSh0s4XNjBId0GTNJFTHZ6bVUyaR4wso6L%2B%2F2BpflB1RNsqJA0PX4O2rppB4j01Zw1k862uukvNBTU7vgSO7vQAI6h2zl0UcfQxSZDF3UJ3bvuoSuzmO5j98Pt3ZCiDYCDaEOGww06Y7h1DjenY7gBs8UPHiU9v6Rmqx93lPT8khrNik6XrHjz%2F1nxtOdasTSWwsqCnJ4lZ9w6I0ztpAdMAYQbTEHcZgo9wRR6sTJm%2FITT%2FYIEXV8bgGs06Q3mTdCINhOj2qChaDOoeLswqSno9KI%2BiJJkWHXH4Sc4ODH9De6p4nTWB6qQi09S9aqFB2jXaI99IMrBp8%2FU61ZodouWMWMcL7y6ZIyp0YzhDitjDCstANgMYcc2nRYmfU0LEOOTVL1uWrhoUZX1gajD%2FGmeqGmLqLQPRAGnSRSGL0aU6lZ%2FgNnZan8jQld%2FAQ%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Clique aqui para ver no draw.io]].
+
+**** 4.
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&layers=1&nav=1&title=Untitled%20Diagram.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%22ZNujsGWPLJhN4EK1gCre%22%3E7VrRbpswFP0aHjdhG5PmtUm3buuqSam2dS%2BTF1zwRDBzTAL9%2BplgAoQ2YVpag8RLZJ%2Fra%2BxzfH0vKBaardL3gsTBZ%2B7R0IK2l1pobkE4ga76zYGsADCGBeAL5hUQqIAFe6QatDWaMI%2BuGwMl56FkcRNc8iiiS9nAiBB82xz2wMPmU2Pi0xawWJKwjX5jngw06mKnMlxT5gflo4E7LSwrUo7WW1kHxOPbGoSuLDQTnMuitUpnNMzJK4kp%2FN49Y92vTNBIdnH48fDpdvnl51eHfVwk8%2FX0eirEG6CnWcus3DL1FAO6y4UMuM8jEl5V6KXgSeTRfFpb9aoxN5zHCgQK%2FE2lzLScJJFcQYFchdpKUya%2F5%2B5vse7d1yzzVM%2B862RlJ5Iiqznl3fu6rXLb9Uq%2FYn%2F5pp7lreSAJ2JJj5Clj64kwqfyyDi0V1eFBeUrqtaj%2FAQNiWSb5jqIPqD%2BflwloWpoFf9BUTgZFT27oo5RRYt5NyRM9JMs6IZquZce26imnzfnJaYeUYOfGPmWRqpt72ayLZwP%2BZPkl9BlWjUtOMut%2B372vOmxZsL7ZfwSh0s4XNjBId0GTNJFTHZ6bVUyaR4wso6L%2B%2F2BpflB1RNsqJA0PX4O2rppB4j01Zw1k862uukvNBTU7vgSO7vQAI6h2zl0UcfQxSZDF3UJ3bvuoSuzmO5j98Pt3ZCiDYCDaEOGww06Y7h1DjenY7gBs8UPHiU9v6Rmqx93lPT8khrNik6XrHjz%2F1nxtOdasTSWwsqCnJ4lZ9w6I0ztpAdMAYQbTEHcZgo9wRR6sTJm%2FITT%2FYIEXV8bgGs06Q3mTdCINhOj2qChaDOoeLswqSno9KI%2BiJJkWHXH4Sc4ODH9De6p4nTWB6qQi09S9aqFB2jXaI99IMrBp8%2FU61ZodouWMWMcL7y6ZIyp0YzhDitjDCstANgMYcc2nRYmfU0LEOOTVL1uWrhoUZX1gajD%2FGmeqGmLqLQPRAGnSRSGL0aU6lZ%2FgNnZan8jQld%2FAQ%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Clique aqui para ver no draw.io]].
+
+**** 5.
+
+O esquema construído não é possível de ser usado em uma análise
+ascendente pois possui atributos herdados. A alternativa é reescrever
+o esquema de maneira a sintetizar a lista de variáveis de maneira que
+a declaração propriamente dita ocorra somente no nível do não-terminal
+=D=. Assim, teríamos algo assim:
+
+- =T.type=: tipo das variáveis sendo declaradas
+- =L.set=: conjunto de variáveis a serem declaradas
+- =D.env=: conjunto final de nomes declarados com o tipo
+
+#+begin_src C
+D -> T L { D.env = L.set;
+   Para cada elemento "e" em D.env:
+     if (declarado(e)) {
+        erro: variável redeclarada
+     }else{
+        declara(e, T.type)
+     }
+}
+
+T -> =int= { T.type = INT; }
+
+L -> L_1 =,= =id= { L.set = união(L_1.set, conjunto(id)); }
+
+L -> id { L.set = conjunto(id); }
+#+end_src
+
 *** E2
 *** E3
 *** E4
