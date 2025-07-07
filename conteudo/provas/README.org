@@ -779,6 +779,44 @@ L -> id { L.set = conjunto(id); }
 #+end_src
 
 *** E2
+**** 1.
+
+Temos três atributos herdados:
+- =true=: guarda o rótulo de onde se deve ir para o caso da expressão ser verdadeira
+- =false=: guarda o rótulo de onde se deve ir para o caso da expressão ser falsa
+- =code=: o código gerado
+  
+A função =rot()= gera rótulo e a função =code()= gera código.
+
+O símbolo =|= (barra vertical) representa concatenação.
+
+#+begin_src C
+E -> { E_1.true = E.true; E_1.false = rot(); } E_1
+     or
+     { T.true = E.true; T.false = E.false; } T
+     { E.code = E_1.code | code("%s: nop", E_1.false); | T.code; }
+
+E -> { T.true = E.true; T.false = E.false; } T { E.code = T.code; }
+
+T -> { T_1.true = rot(); T_1.false = T.false; } T_1
+     and
+     { F.true = T.true; F.false = T.false; } F
+     { T.code = T_1.code | code("%s: nop", T_1.true); | F.code; }
+
+T -> { F.true = T.true; F.false = T.false; } F { T.code = F.code; }
+
+F -> =true= { F.code = "jump F.true;"; }
+
+F -> =false= { F.code = "jump F.false;"; }
+#+end_src
+
+**** 2.
+
+O método funciona mais facilmente na análise descendente pois podemos
+usufruir de atributos herdados para implementar o curto circuito, no
+atributo E_{1}.false para o =or= lógico, e no caso do atributo T_{1}.true para
+o =and= lógico.
+
 *** E3
 *** E4
 
