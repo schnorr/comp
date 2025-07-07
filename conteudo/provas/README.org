@@ -742,6 +742,11 @@ Dado a discussão em 1., temos a seguinte classificação:
 
 **** 4.
 
+Considere que na URL abaixo cada atributo possui um número que o
+precede, entre parênteses. A ordem dos números ali indica a ordem de
+avaliação assumindo uma análise descendente (e desconsiderando o fato
+que a gramática possui recursão à esquerda).
+
 [[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&layers=1&nav=1&title=Untitled%20Diagram.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%22ZNujsGWPLJhN4EK1gCre%22%3E7VrRbpswFP0apO1hFbYxaV6bdOu2rpqUaVv3MnnBBSaCmWMS6NfPBBMgtImrpjWReInsc32NfY6v7wXFQpNF9oGTJPjCPBpZ0PYyC00tCEfQlb8FkJcAxrAEfB56JQRqYBbeUwXaCk1Djy5bAwVjkQiTNjhncUznooURztm6PeyORe2nJsSnHWA2J1EX%2FRF6IlCoi53acEVDP6geDdxxaVmQarTayjIgHls3IHRpoQlnTJStRTahUUFeRUzp9%2F4R63ZlnMZCx%2BHX3eeb%2Bdff353w0yydLsdXY87fATXNUuTVlqknGVBdxkXAfBaT6LJGLzhLY48W09qyV4%2B5ZiyRIJDgXypEruQkqWASCsQiUlaaheJn4X6GVe%2B2YZlmauZNJ686seB5w6no3jZttdumV%2FmV%2Bys29ShvFQcs5XO6hyx1dAXhPhV7xqGtujIsKFtQuR7px2lERLhqr4OoA%2Bpvx9USyoZS8QmKwtGg6NEVdYwqWs67IlGqnmRBN5LLvfDClWz6RXNaYfIRDfiBkWc0lm17M5Nt4WLIv7S4hC6yumnBSWHd9vPHTfcNE94u4w%2FfXcLuwnYO6ToIBZ0lZKPXWiaT9gEjy6S83%2B%2FCrDioaoIV5YJm%2B89BVzflAJG6mvN20lnXN%2F25goLGHV9hRxcawCF0tUMXaYYuNhm6SCd0v2mH7hvwVs52JvKEbiP44823U4o5AHZiDhkOOugMQacddI5m0AGzJRAeJD2%2BpGZrIHeQ9PiSGs2Njk5uvNbPjXBvbjzsP9r4LyVjQ3EsLcjpWaLGnfMSyp30gCmAcIspiLtMoQeYQi9W0gwfdfQvS6D7IgFcownwZN4NjWgzMqoNOhVtTirezk1qCrRe3Z9QnqBnlifuUcqT06pBdj%2FQwZHpL3QPFa2TPlCFXHyQqlctQkC3XrvvA1EOPnymXrdaszu0DNljfxGmkz3GRrOHe%2BTs4Twze2D97HFaKQLAdjg7tukUMeprioAYH6TqdVPEeYeqvA9E7eZS80SNO0RlfSAKOG2iMHwxomS3%2FqvMxtb4wxG6%2FA8%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Clique aqui para ver no draw.io]].
 
 **** 5.
