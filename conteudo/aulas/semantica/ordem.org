@@ -82,9 +82,8 @@ Para cada $f$ e cada regra, diga se é S-Atribuída, L-Atribuída, ou nenhuma de
 |   |             |    | \texttt{ A.s = $f_6$(D.s) } |
 
 Considerando esta G, crie o grafo para $float\ id_1,\ id_2,\ id_3$
-  | D | \rightarrow | T L         | \texttt{ L.h = T.tipo }               |
-  | T | \rightarrow | *int*       | \texttt{ T.tipo = inteiro}            |
-  | T | \rightarrow | *float*     | \texttt{ T.tipo = flutuante}          |
-  | L | \rightarrow | $L_1$, *id* | \texttt{ $L_1$.h = L.h }              |
-  |   |             |             | \texttt{ adicionaTipo (id.key, L.h) } |
-  | L | \rightarrow | *id*        | \texttt{ adicionaTipo (id.key, L.h)}  |
+  | D | \rightarrow | T {L.h = T.tipo } L                                      |
+  | T | \rightarrow | *int*  { T.tipo = inteiro }                                |
+  | T | \rightarrow | *float* { T.tipo = flutuante }                             |
+  | L | \rightarrow | { $L_1$.h = L.h } $L_1$, *id* { adicionaTipo (id.key, L.h) } |
+  | L | \rightarrow | *id* {  adicionaTipo (id.key, L.h) }                       |
