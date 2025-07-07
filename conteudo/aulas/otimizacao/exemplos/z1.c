@@ -2,14 +2,6 @@
 #include <sys/time.h>
 #include "size.h"
 int x[SIZE];
-
-double gettime ()
-{
-  struct timeval tr;
-  gettimeofday(&tr, NULL);
-  return (double)tr.tv_sec+(double)tr.tv_usec/1000000;
-}
-
 int main () 
 {
   double t1 = gettime();
