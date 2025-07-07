@@ -848,10 +848,12 @@ mais de uma passagem, sendo esta talvez uma desvantagem.
 Se caso não for possível colorir com três registradores, isso
 significa que não há como alocar aquele trecho de código unicamente em
 registradores. A estratégia mais simples é fazer /memory spilling/, ou
-seja, escolher alguma variável para ser mantida em memória. Várias
+seja, escolher alguma variável para ser mantida em memória.  Várias
 estratégias podem ser empregadas para escolher aquela que ficará em
-memória (com custo de acesso mais elevado). Por exemplo, podemos
-manter em memória aquela variável menos utilizada.
+memória, (com custo de acesso mais elevado). Por exemplo, podemos
+manter em memória aquela variável menos utilizada. Alternativamente,
+por exemplo, podemos manter em registrador aquela variável utilizada
+com mais intensidade, em mais instruções.
 
 *** E4
 **** 1.
