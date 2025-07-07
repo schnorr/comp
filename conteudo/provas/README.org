@@ -808,6 +808,9 @@ T -> { F.true = T.true; F.false = T.false; } F { T.code = F.code; }
 F -> =true= { F.code = "jump F.true;"; }
 
 F -> =false= { F.code = "jump F.false;"; }
+
+F -> =id= < =id= { F.code = code("cmp_LT id_0, id_1 => comp") |
+                        code("cbr comp %s, %s", F.true, F.false) }
 #+end_src
 
 **** 2.
