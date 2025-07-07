@@ -817,11 +817,14 @@ F -> =id= < =id= { F.code = code("cmp_LT id_0, id_1 => comp") |
 
 O método funciona mais facilmente na análise descendente pois podemos
 usufruir de atributos herdados para implementar o curto circuito, no
-atributo E_{1}.false para o =or= lógico, e no caso do atributo T_{1}.true para
+atributo E_{1}.true para o =or= lógico, e no caso do atributo T_{1}.false para
 o =and= lógico. Isso permite a geração de código em uma única passagem.
+
 Para implementar o curto-circuito em um esquema de análise ascendente,
-apenas com atributos sintetizados, não há como escapar de realizar em
-mais de uma passagem, sendo esta talvez uma desvantagem.
+em uma única passagem, é necessário empregar remendos (/back-patching/),
+gerando código incompleto passível de remendos tão logo seja possível
+realizar o remendo. O remendo tipicamente ocorre nas estruturas de
+controle de fluxo.
 
 *** E3
 **** 1.
