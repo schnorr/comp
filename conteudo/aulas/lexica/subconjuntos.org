@@ -111,6 +111,7 @@ Mov(D,b) & \{10,5,6,7,1,2,4\} & E & B & C \\\midrule
 Mov(E,a) & \{3,8,6,7,1,2,4\} & B & \ & \ \\\midrule
 Mov(E,b) & \{5,6,7,1,2,4\} & C & \ & \ \\\bottomrule
 \end{tabularx}
+{\scriptsize Estados destacados indicam os estados oriundos do movimento}
 #+END_EXPORT
 
 * Diagrama: AFD construído do AFND para =(a|b)*abb=
