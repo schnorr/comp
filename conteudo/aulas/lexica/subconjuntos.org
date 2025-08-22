@@ -98,18 +98,18 @@ Estados do AFND & Estado AFD & a & b \\\toprule
 
 #+BEGIN_EXPORT latex
 \begin{tabularx}{\textwidth}{lXccc}\toprule
-Nome & Estados do AFND & Estado AFD & a & b \\\toprule
-Fechamento-$\varepsilon$ & \{0,1,2,4,7\} & A & B & C \\\midrule
-Mov(A,a) & \{3,8,6,7,1,2,4\} & B & B & D \\\midrule
-Mov(A,b) & \{5,6,7,1,2,4\} & C & B & C \\\midrule
-Mov(B,a) & \{3,8,6,7,1,2,4\} & B & \ & \ \\\midrule
-Mov(B,b) & \{9,5,6,7,1,2,4\} & D & B & E \\\midrule
-Mov(C,a) & \{3,8,6,7,1,2,4\} & B & \ & \ \\\midrule
-Mov(C,b) & \{5,6,7,1,2,4\} & C & \ & \ \\\midrule
-Mov(D,a) & \{3,8,6,7,1,2,4\} & B & \ & \ \\\midrule
-Mov(D,b) & \{10,5,6,7,1,2,4\} & E & B & C \\\midrule
-Mov(E,a) & \{3,8,6,7,1,2,4\} & B & \ & \ \\\midrule
-Mov(E,b) & \{5,6,7,1,2,4\} & C & \ & \ \\\bottomrule
+Nome & Estados do AFND & Estado AFD  & a & b \\\toprule
+Fechamento-$\varepsilon$ & \{{\bf 0},1,2,4,7\} & A & B & C \\\midrule
+Mov(A,a) & \{{\bf 3,8},6,7,1,2,4\}   & B & B & D \\\midrule
+Mov(A,b) & \{{\bf 5},6,7,1,2,4\}     & C & B & C \\\midrule
+Mov(B,a) & \{{\bf 3,8},6,7,1,2,4\}   & B & \ & \ \\\midrule
+Mov(B,b) & \{{\bf 9,5},6,7,1,2,4\}   & D & B & E \\\midrule
+Mov(C,a) & \{{\bf 3,8},6,7,1,2,4\}   & B & \ & \ \\\midrule
+Mov(C,b) & \{{\bf 5},6,7,1,2,4\}     & C & \ & \ \\\midrule
+Mov(D,a) & \{{\bf 3,8},6,7,1,2,4\}   & B & \ & \ \\\midrule
+Mov(D,b) & \{{\bf 10,5},6,7,1,2,4\}  & E & B & C \\\midrule
+Mov(E,a) & \{{\bf 3,8},6,7,1,2,4\}   & B & \ & \ \\\midrule
+Mov(E,b) & \{{\bf 5},6,7,1,2,4\}     & C & \ & \ \\\bottomrule
 \end{tabularx}
 {\scriptsize Estados destacados indicam os estados oriundos do movimento}
 #+END_EXPORT
