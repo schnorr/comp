@@ -113,7 +113,7 @@ Mov(E,b) & \{5,6,7,1,2,4\} & C & \ & \ \\\bottomrule
 \end{tabularx}
 #+END_EXPORT
 
-* Resposta: AFD construído do AFND para =(a|b)*abb=
+* Diagrama: AFD construído do AFND para =(a|b)*abb=
 
 [[./img/afd_exemplo_3-36.png]]
 
