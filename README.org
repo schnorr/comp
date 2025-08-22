@@ -53,6 +53,19 @@ estratégias pedagógicas alternativas:
 + [[http://www.inf.ufrgs.br/site/publicacoes/livros-didaticos/livros09/][Implementação de Linguagens de Programação: Compiladores. Price & Toscani.]]
 + [[http://shop.oreilly.com/product/9781565920002.do][Lex & Yacc. Mason & Brown.]]
 + Projeto moderno de compiladores. Grune, Bal e Langendoen.
+* Reconhecimento
+
+Os seguintes discentes ajudaram a construir o material desta disciplina:
+- [[https://github.com/vrcoelho][@vrcoelho]]
+- [[https://github.com/gsneves][@gsneves]]
+- [[https://github.com/llnns][@llnns]]
+- [[https://github.com/mswlandi][@mswlandi]]
+- [[https://github.com/lbassis][@lbassis]]
+- [[https://github.com/otaviojacobi][@otaviojacobi]]
+- [[https://github.com/dhrodrigues29][@dhrodrigues29]]
+- [[https://github.com/HoffKath][@HoffKath]]
+Um enorme agradecimento ao engajamento deles.
+
 * Contato
 
 Se você encontrar algum problema, e também no caso de dúvidas, entre em contato por e-mail:
