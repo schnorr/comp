@@ -111,7 +111,7 @@ A => - a | ;' > gramatica.ee
       Y -> e
       Y -> = - Z
       Z -> a - e
-      Z -> - e
+      Z -> e
       #+end_src
 *** E4
 - Semelhança: todos usam o mesmo algoritmo de análise
