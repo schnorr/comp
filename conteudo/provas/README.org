@@ -115,10 +115,10 @@ A => - a | ;' > gramatica.ee
       #+end_src
    Agora fazendo a tabela LL(1). Consideramos a gramática reescrita.
 
-   |   | a   | e | \=   | - | n  | $ |
+   |   | a   | e | '=   | - | n  | $ |
    |---+-----+---+------+---+----+---|
    | F |     |   |      |   | nY |   |
-   | Y |     | e | \=-Z |   |    |   |
+   | Y |     | e | '=-Z |   |    |   |
    | Z | a-e | e |      |   |    |   |
 
 
