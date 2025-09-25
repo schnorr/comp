@@ -113,7 +113,14 @@ A => - a | ;' > gramatica.ee
       Z -> a - e
       Z -> e
       #+end_src
-   TODO Agora fazendo a tabela:
+   Agora fazendo a tabela LL(1). Consideramos a gramática reescrita.
+
+   |   | a | e | = | - | n |
+   |---+---+---+---+---+---|
+   | F |   |   |   |   |   |
+   | Y |   |   |   |   |   |
+   | Z |   |   |   |   |   |
+
 *** E4
 - Semelhança: todos usam o mesmo algoritmo de análise
 - Diferença: a forma como a redução é identificada
