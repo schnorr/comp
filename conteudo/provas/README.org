@@ -7,6 +7,126 @@ PR são bem-vindos para popular esta página.
 
 * P1
 ** 2025/2
+*** E1
+1. Os passos
+   1. Fech-\epsilon(0) = {0, 1, 2, 3, 5, 6, 7, 8} = A;
+   2. Fech-\epsilon(Mov(A, a)) = {4, 5, 6, 7, 1, 2, 3} = B;
+   3. Fech-\epsilon(Mov(A, b)) = {9, 7} = C;
+   4. Fech-\epsilon(Mov(B, a)) = {4, 5, 6, 7, 1, 2, 3} = B;
+   5. Fech-\epsilon(Mov(B, b)) = {}
+   6. Fech-\epsilon(Mov(C, a)) = {}
+   7. Fech-\epsilon(Mov(C, b)) = {}
+2. O autômato
+   #+begin_src txt :tangle img/2025-2-E1.dot
+   digraph {
+      A [shape=doublecircle];
+      B [shape=doublecircle];
+      C [shape=doublecircle];
+      A -> B [ label = "a" ];
+      A -> C [ label = "b" ];
+      B -> B [ label = "a" ];      
+   }
+   #+end_src
+   #+begin_src shell :results output :exports both
+   dot -Tpng img/2025-2-E1.dot -o img/2025-2-E1.png
+   #+end_src
+
+   #+RESULTS:
+
+   [[./img/2025-2-E1.png]]
+*** E2
+1. Não é, por causa do conflito reduz-reduz do estado #3.
+2. É, pois Seq(A) não tem intersecção com o Seq(B).
+   #+begin_src shell :results output :exports both
+   echo 'S => A c | B d ;
+A => z ;
+B => z ;' > gramatica.ee
+   ./firstfollow < gramatica.ee | grep -A10 'Follow sets'
+   #+end_src
+
+   #+RESULTS:
+   : Follow sets:
+   : S -- $ 
+   : A -- c 
+   : B -- d 
+   
+3. Tabela SLR(1)
+
+   |   | c        | d        | z | $         | S | A | B |
+   |---+----------+----------+---+-----------+---+---+---|
+   | 0 |          |          | 3 |           | 1 | 2 | 4 |
+   | 1 |          |          |   | Ac        |   |   |   |
+   | 2 | 5        |          |   |           |   |   |   |
+   | 3 | R (A->z) | R (B->z) |   |           |   |   |   |
+   | 4 |          | 6        |   |           |   |   |   |
+   | 5 |          |          |   | R (S->Ac) |   |   |   |
+   | 6 |          |          |   | R (S->Bd) |   |   |   |
+
+4. Análise
+
+   | Pilha   | Entrada | Ação  |
+   |---------+---------+-------|
+   | % 0     | zc %    | e3    |
+   | % 0 3   | c %     | R, e2 |
+   | % 0 2   | c %     | e5    |
+   | % 0 2 5 | %       | R, e1 |
+   | % 0 1   | %       | Ac    |
+
+*** E3
+1. Conjuntos PRI e SEQ
+   #+begin_src shell :results output :exports both
+   echo 'F => n = A - e | n e ;
+A => - a | ;' > gramatica.ee
+   ./firstfollow < gramatica.ee | grep -A10 'First sets'
+   #+end_src
+
+   #+RESULTS:
+   : First sets:
+   : F -- n 
+   : A -- ε - 
+   : 
+   : Follow sets:
+   : F -- $ 
+   : A -- -
+
+2. Não é, pois
+   1. Pri(n=A-e) intersecciona com Pri(ne)
+   2. Seq(A) contém Pri(-a)
+3. Reescrevendo
+   1. Fatorar as regras de F
+      #+begin_src text
+      F -> n Y
+      Y -> = A - e | e
+      #+end_src
+   2. Resolver a questão do A
+      #+begin_src text
+      F -> n Y
+      Y -> = - a - e
+      Y -> = - e
+      Y -> e
+      #+end_src
+   3. Fatorar Y
+      #+begin_src text
+      F -> n Y
+      Y -> e
+      Y -> = - Z
+      Z -> a - e
+      Z -> - e
+      #+end_src
+*** E4
+- Semelhança: todos usam o mesmo algoritmo de análise
+- Diferença: a forma como a redução é identificada
+*** E5
+1. Incorreto. O Estado #4 não tem o item LR(1): =A->d.,a=
+2. Tabela LR(1) apenas dos estados pares
+
+   |   | a | b | d | $ | S | A |
+   |---+---+---+---+---+---+---|
+   | 0 |   | 2 |   |   | 1 |   |
+   | 2 |   |   | 4 |   |   | 3 |
+   | 4 | 6 |   |   |   |   |   |
+   | 6 |   |   |   | R |   |   |
+
 ** 2025/1
 *** E1
 
