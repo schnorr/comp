@@ -113,6 +113,7 @@ A => - a | ;' > gramatica.ee
       Z -> a - e
       Z -> e
       #+end_src
+   TODO Agora fazendo a tabela:
 *** E4
 - Semelhança: todos usam o mesmo algoritmo de análise
 - Diferença: a forma como a redução é identificada
