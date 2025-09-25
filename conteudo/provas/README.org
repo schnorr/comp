@@ -115,13 +115,11 @@ A => - a | ;' > gramatica.ee
       #+end_src
    Agora fazendo a tabela LL(1). Consideramos a gramática reescrita.
 
-#+BEGIN_SRC org
-   |   | a   | e | =   | - | n  | $ |
-   |---+-----+---+-----+---+----+---|
-   | F |     |   |     |   | nY |   |
-   | Y |     | e | =-Z |   |    |   |
-   | Z | a-e | e |     |   |    |   |
-#+END_SRC
+   |   | a     | e | =     | - | n   | $ |
+   |---+-------+---+-------+---+-----+---|
+   | F |       |   |       |   | n Y |   |
+   | Y |       | e | = - Z |   |     |   |
+   | Z | a - e | e |       |   |     |   |
 
 *** E4
 - Semelhança: todos usam o mesmo algoritmo de análise
