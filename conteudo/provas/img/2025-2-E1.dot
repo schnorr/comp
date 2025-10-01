@@ -1,0 +1,8 @@
+   digraph {
+      A [shape=doublecircle];
+      B [shape=doublecircle];
+      C [shape=doublecircle];
+      A -> B [ label = "a" ];
+      A -> C [ label = "b" ];
+      B -> B [ label = "a" ];      
+   }
