@@ -1,0 +1,171 @@
+#+TITLE: Um humilde guia para realizar a E3 com flex/bison
+#+AUTHOR: Lucas M. Schnorr
+#+STARTUP: overview indent
+#+OPTIONS: toc:2          (only include two levels in TOC)
+
+* Preliminares
+** Diferenciação entre código que vai para o parser.tab.h e parser.tab.c
+Bison permite redirecionar declarações para o .c e o para o .h
+separadamente. Por default, o que é incluído dentro do bloco =%{= vai
+somente para o .c. Em algumas situações, precisamos que declarações
+sejam colocadas no .h. para fazer isso, deve-se usar =%code
+requires{=. Nestas situações, podemos precisar que algum código vá
+somente para o .c, como seria o caso de declaração de variáveis
+globais. Usamos para tal o =%code {=. Assim, terminamos com algo assim
+no =parser.y=:
+
+#+begin_src C
+%code requires {
+  // Código vai para o topo de parser.tab.h e parser.tab.c.
+}
+%code {
+  // Código vai somente para o topo de parser.tab.c
+}
+#+end_src
+** Terminais e não-terminais podem assumir valores
+Para que possamos associar valores aos terminais e não-terminais,
+devemos declarar os possíveis /tipos/ de valores no comando =%union=. Caso
+saibamos de antemão que somente um /tipo/ será necessário, podemos
+globalmente definir que tanto terminais quanto não-terminais possuam o
+mesmo tipo. Neste caso, empregamos o comando =%define api.value.type {
+double }=, definindo neste exemplo que o valor de todos os terminais e
+não-terminais será do tipo =double=.
+** Escolher o tipo do valor de terminais e não-terminais
+Caso o comando =%union= tenha sido empregado, devemos escolher o /tipo/ de
+valor de cada terminal e não-terminal onde a definição de um valor
+será necessária. Para terminais, manifestamos a escolha no comando
+=%token=, como por exemplo =%token<campo> TK_ID=, onde =campo= é o nome do
+campo já definido na =%union=. No caso do não-terminais, manifestamos a
+escolha com o comando =%type=, como por exemplo =%type<no> n2=, onde =no= é
+o nome do campo já definido na =%union=. Assim, em suma, temos o
+seguinte (no escopo global do =parser.y=):
+#+begin_src C
+%union {
+  int minha; // nome do campo é "minha", seu tipo é "int"
+  double no; // nome do campo é "no", seu tipo é "double"
+}
+%token<minha> TK_ID // declaração do token TK_ID, seu valor será "int"
+%type<no> lista // declaração do tipo "double" para o não-terminal lista
+#+end_src
+** Atribuição de valores para terminais
+A atribuição de valores para terminais se dá por intermédio da
+variável global =yylval=. O tipo desta variável global é o tipo definido
+através do comando =%union= ou através do comando =%define
+api.value.type=. Caso o tipo tenha sido definido pelo comando =%union=,
+este portando campos, devemos necessariamente fazer referência ao
+campo. Por exemplo, para atribuir um valor para o token =TK_ID=, devemos
+no local correspondente no =scanner.l= codificar =yylval.minha = 3;=,
+sendo 3 o /valor/ que desejamos atribuir para aquele token. Caso o tipo
+sido definido sem o comando =%union=, neste caso, basta atribuir para
+=yylval=.
+** Atribuição de valores para não-terminais
+A atribuição de valores para não-terminais se dá no =parser.y=, por
+intermédio de atribuição para =$$= (cabeça da produção). Pode-se
+consultar valores de não-terminais por intermédio dos campos =$1=, =$2=,
+..., =$n= sendo o número representando a posição no corpo da
+produção. Atenção, caso a consulta de valor e atribuição de valor
+sejam de /tipos/ incompatíveis, tal problema só se tornará visível no
+momento da compilação do arquivo =parser.tab.c=. Neste casos, os erros
+são suficientemente informativos para identificar a linha do equívoco
+no arquivo =parser.y=.
+* Guia humilde de realização da E3
+** Declarar o /tipo/ dos terminais relevantes
+Devemos primeiro nos preocupar com a definição do tipo dos terminais e
+não-terminais. No caso dos terminais, deve-se seguir o descrito na
+seção ``Associação de valor ao =token= (=yylval=)''. Tal definição pode
+ser feita, por exemplo, dentro do =%code requires=, uma vez que
+=parser.tab.h= já é incluído no =scanner.l=.
+** Definir o /tipo/ dos terminais relevantes
+Empregar o comando =%token= com a definição do tipo dos terminais
+relevantes, isso sendo realizado onde encontra-se o comando =%token= (no
+=parser.y=).
+** Definição do tipo do valor de terminais e não terminais
+Uma vez que estamos no contexto de construção da AST, podemos induzir
+que os não-terminais precisarão registrar valores que são nós da
+AST. Para tal, devemos ter um campo adequado no comando =%union= que
+representa um nó da AST, portanto com um tipo que remeta a um nó de
+AST (por exemplo, =asd_tree_t=). O nome desse campo deve ser então usado
+para declarar os tipos de todos os não-terminais que serão usados para
+construir a AST. Use =%type= no =parser.y= para cada não-terminal
+empregado na construção da AST.
+** Codificação das ações de construção da AST
+Recomenda-se construir a árvore das folhas para a raiz. Realize a
+implementação passo a passo, confirmando que as sub-árvores estão de
+acordo com a especificação. É possível empregar a função
+=asd_print_graphviz= de subárvores e imediatamente interromper a
+execução do programa com uma chamada =exit=, permitindo a visualização
+de sub-árvores (pode-se usar o =xdot= da saída padrão). Na medida que se
+avança na implementação, se sobe nas regras gramaticais, até chegar na
+raiz. Confirme que a integralidade do descrito em ``Ações /bison/ para
+construção da AST'' foi realizado com sucesso.
+** Verificação do bom uso da memória
+Com a AST construída corretamente, verifique se o uso de memória está
+adequado, seguindo o enunciado em ``Verificação de alocação de
+memória''. Realize testes variados, garantido uma boa cobertura do
+código implementado. Caso exista problema, recomenda-se o emprego do
+argumento =-g= para o compilador, de maneira que os erros reportados
+indiquem a linha do local onde foi realizada a alocação de memória não
+liberada.
+
+Uma característica já conhecida na E3 é que tipicamente o valor léxico
+é alocado no =scanner.l= e o mesmo não é usado integralmente na AST,
+visto que os nós da AST possuem apenas um /label/. Assim, no caso de
+elementos do léxico (literais e identificadores), deve-se liberar a
+memória assim que a informação do valor léxico tiver sido consumida
+para a criação da AST. Isso deve ocorrer em todas as regras
+gramaticais (=parser.y=) que referenciam estes elementos léxicos.
+
+Por exemplo, um erro possível é esse:
+#+begin_src C
+Direct leak of 1008 byte(s) in 63 object(s) allocated from:
+    #0 0x7f835b6f9cd7 in malloc (/gnu/store/qgx6b50cak3p7k9m148fy7jnp637nwj2-gcc-14.2.0-lib/lib/libasan.so.8+0xf9cd7)
+    #1 0x40a6aa in new_valor_lexico /home/schnorr/ensino/private/comp/projeto/e3-solucao/scanner.l:48
+    #2 0x407308 in yylex /home/schnorr/ensino/private/comp/projeto/e3-solucao/scanner.l:31
+    #3 0x403762 in yyparse /home/schnorr/ensino/private/comp/projeto/e3-solucao/parser.tab.c:1390
+    #4 0x402379 in main /home/schnorr/ensino/private/comp/projeto/e3-solucao/main.c:8
+    #5 0x7f835b44bbf6 in __libc_start_call_main (/gnu/store/hw6g2kjayxnqi8rwpnmpraalxi0djkxc-glibc-2.39/lib/libc.so.6+0x29bf6)
+#+end_src
+Neste caso, podemos identificar na linha =yylex= que o valor do =token=
+que gera um /Direct leak/ está na posição =scanner.l:31=. Ao consultar o
+=scanner.l=, vemos que trata-se do =TK_ID=. Assim, deve-se procurar todos
+os locais onde aparecem =TK_ID= na gramática (=parser.y=) e fazer o /free/
+correspondente.
+
+Outra situação pode ocorrer se a origem for um nó alocado mas não
+corretamente "pendurado" na AST. Neste caso teremos um erro deste
+tipo:
+#+begin_src C
+Indirect leak of 2 byte(s) in 1 object(s) allocated from:
+    #0 0x7f93d12f3de0 in strdup (/gnu/store/qgx6b50cak3p7k9m148fy7jnp637nwj2-gcc-14.2.0-lib/lib/libasan.so.8+0xf3de0)
+    #1 0x40aac0 in asd_new /home/schnorr/ensino/private/comp/projeto/e3-solucao/asd.c:11
+    #2 0x406a0c in helper0 /home/schnorr/ensino/private/comp/projeto/e3-solucao/parser.y:247
+    #3 0x4045a1 in yyparse /home/schnorr/ensino/private/comp/projeto/e3-solucao/parser.y:147
+    #4 0x402379 in main /home/schnorr/ensino/private/comp/projeto/e3-solucao/main.c:8
+    #5 0x7f93d104bbf6 in __libc_start_call_main (/gnu/store/hw6g2kjayxnqi8rwpnmpraalxi0djkxc-glibc-2.39/lib/libc.so.6+0x29bf6)
+#+end_src
+Procurando a origem do problema, visto que vários outros erros
+similares são efeitos colaterais, conclue-se que trata-se da seguinte
+produção gramatical:
+#+begin_src C
+argumento: expressao;
+#+end_src
+Aqui, temos a sub-árvore da =expressao= que não está sendo propagada
+para cima. Neste caso, devemos provavelmente definir a ação { $$ = $1;
+} de maneira a propagar a sub-árvore da expressão, que aqui é um
+argumento, para que seja adequadamente pendurado no restante da
+AST. Todas as sub-árvores devem estar corretamente penduradas, assim a
+chamada =asd_free= já presente na =main.c= liberará toda a memória de
+maneira recursiva.
+
+Ou seja, quando o /indirect leak/ está unicamente relacionado ao
+=parser.y=, realize a procura pelo /leak/ de maneira global, considerando
+que todos os erros estão relacionados.
+** Garantir que nenhum conflito empilha/reduz se mantenha
+Como não houveram mudanças na linguagem da E3, espera-se que nenhum
+conflito apareça. Caso apareça, pela adição de ações semânticas, estes
+conflitos devem ser removidos usando as mesmas técnicas empregadas na
+E2. Reforça que não devem aparecer conflitos novos caso a gramática
+não seja alterada, embora por vezes alterações gramaticais
+simplifiquem a construção da AST (por exemplo usar recursão à direita
+ao invés de à esquerda em listas como aquela de comandos).
+
