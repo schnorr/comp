@@ -56,6 +56,7 @@ estratégias pedagógicas alternativas:
 * Reconhecimento
 
 Os seguintes discentes ajudaram a construir o material desta disciplina:
+- [[https://github.com/MateusFauri][@MateusFauri]]
 - [[https://github.com/vrcoelho][@vrcoelho]]
 - [[https://github.com/gsneves][@gsneves]]
 - [[https://github.com/llnns][@llnns]]
