@@ -169,3 +169,5 @@ não seja alterada, embora por vezes alterações gramaticais
 simplifiquem a construção da AST (por exemplo usar recursão à direita
 ao invés de à esquerda em listas como aquela de comandos).
 
+** Dica 
+Caso necessário, ajuste as produções de *lista de funções*, *lista de comandos* e *listas de argumentos* para usar **recursão à direita** em vez de recursão à esquerda. Isso simplifica a construção da AST.
