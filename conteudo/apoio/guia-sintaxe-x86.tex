@@ -1,0 +1,77 @@
+\documentclass{compiladores}
+
+\usepackage{tikz}
+\usepackage{qtree}
+\usetikzlibrary{shadows,trees}
+\usetikzlibrary{positioning,shadows,arrows,trees,shapes,fit}
+\usetikzlibrary{graphs}
+
+\renewcommand{\flecha}{\rightarrow}
+\newcommand{\flech}{$\rightarrow$}
+\newcommand{\vazio}{{\LARGE$\epsilon$}\xspace}
+
+\begin{document}
+
+\begin{center}
+{\LARGE Material de Apoio } \\
+{\bf Sintaxe x86\_64}
+\end{center}
+
+Existem dois tipos de sintaxe de Intel, a sintaxe Intel (parecida com a usada em Arq1 com o MASM) e a em AT\&T (Usada pelo GCC). Segue um exemplo de um \textit{Hello World} em ambas:
+
+Exemplo em AT\&T:
+\begin{lstlisting}
+	.section .rodata
+.ltext: .string "Hello World!\n"
+	.text
+	.globl main
+	.type main, @function
+main:
+	pushq %rbp
+	movq %rsp, %rbp
+	leaq .ltext(%rip), %rdi
+	call puts@PLT
+	xorl %eax, %eax
+	popq %rbp
+	ret
+\end{lstlisting}
+
+Exemplo em Intel:
+\begin{lstlisting}
+.intel_syntax noprefix
+          .section .rodata
+  .ltext: .string "Hello World!\n"
+          .text
+          .globl main
+          .type main, @function
+  main:
+          push rbp
+          mov rbp, rsp
+          lea rdi, [rip + .ltext]
+          call puts@PLT
+          xor eax, eax
+          pop rbp
+          ret
+\end{lstlisting}
+
+Resumindo algumas diferenças entre elas:
+
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+	\hline
+	& Intel & AT\&T\\
+	\hline
+	Posfixo de instrução & Não & Sim \\
+	\hline
+	Registradores prefixados & Não & Sim \\
+	\hline
+	Ordem dos registradores na instrução & Destino primeiro & Destino por último \\
+	\hline
+	Especificação do tamanho do dado & Posfixo instrução & Prefixo dado\\
+	\hline
+\end{tabular}
+\end{centering}
+
+O GCC por padrão utiliza AT\&T, mas podemos mudá-lo para compilar para assembly Intel utilizando \textit{-masm=intel} na compilação. Também podemos utilizar a macro \textit{.intel\_syntax noprefix} dentro de um arquivo de código assembly para fazê-lo reconhecer sintaxe Intel ao invés de AT\&T. Caso queiramos voltar à sintaxe AT\&T, podemos passar \textit{.att\_syntax prefix} a qualquer momento.
+
+\end{document}
