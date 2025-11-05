@@ -65,6 +65,8 @@ Os seguintes discentes ajudaram a construir o material desta disciplina:
 - [[https://github.com/otaviojacobi][@otaviojacobi]]
 - [[https://github.com/dhrodrigues29][@dhrodrigues29]]
 - [[https://github.com/HoffKath][@HoffKath]]
+- [[https://github.com/Irnodari][@Irnodari]]
+
 Um enorme agradecimento ao engajamento deles.
 
 * Contato
