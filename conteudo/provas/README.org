@@ -830,6 +830,181 @@ B->ε
 ** 2018/2
 ** 2017/2
 * P2
+** 2025/2
+*** E1
+**** 1.
+
+| F \to | =func id (= L =)= | { F.env = L.env; valida(F.env); }                    |
+| L \to | P =,= L         | { L.env = concat(lista([P.name = P.type]), L.env); } |
+| L\to  | P             | { L.env = lista([P.name = P.Type]); }                |
+| P \to | T =id=          | { P.type = T.type; P.name = id; }                    |
+| T \to | =int=           | { T.type = int; }                                    |
+
+A função =lista= cria uma lista com um elemento. A função =concat=
+concatena duas listas. A função =valida= garante que todos os parâmetros
+daquela lista tenham nomes únicos dentro daquele mesmo =env= da função.
+
+**** 2.
+
+Todos os atributos são sintetizados pois nenhum é passado como
+argumento neste esquema S-atribuído.
+
+**** 3.
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Q1.3-2025-2.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%22Cvh3gtQ8lMHwipRc6nKe%22%3E7Z3dc9soEMD%2FGs%2B0D%2BlYIPTxmDjJ3c20c51pZ659ulEsYusqC58sJ%2Fb99YctsCyIU8UVghBeErMCfSy%2Fhd0F2SM4WWx%2BK5Pl%2FBNJcT4C43QzgtcjAGDk0b87wbYW%2BHBcC2ZlltYirxF8yf7DTMirrbMUr1oVK0LyKlu2hVNSFHhatWRJWZLHdrV7krevukxmWBJ8mSa5LP0rS6s5kwbIbw78jrPZnF%2FaC%2BL6yCLhtdmjrOZJSh6PRPBmBCclIVX9abGZ4HynPK6Yut3tiaOHOytxUXVpMMeB%2F8fX6NPNBUQ%2FUuD9%2Bfh3csH1vKq2%2FJFLsi5SvGs0HsErUlZzMiNFkn8kZEmFHhX%2Bg6tqyzorWVeEiubVImdH8Sarvu2af0Cs9P3oyPWGnXlf2PJCUZXbb8eF78eFptG%2B1LRKL3edTIsFKXAtuc3ynB2vnw2nUh83OmOiFVmXU%2Fycohh8STnD1TP14KFnqUlgssD0fmm7EudJlT207yNhcM4O9Zruox9YD76kN%2BvzPiT5ml3pVureCm%2Bqdn89zrMKf1km%2B%2Bd%2FpGZMZauqJD%2FwhOSkbJR7TzUriJI8mxW0OKUKxVR%2B9YDLKqP2c8kOLLI03V36qo0Vu1FaGW%2Be7xtZl7yBz9jdctNj5cfGUAMmmh%2BZKB%2BBetc%2BkLR%2Fvy6m9nZALOg%2F1qx%2FKOl%2FRRaJvfr3gGEd4Esd8M5i7SPDtI8k7X%2B0WPuRYdoPJO2%2Ft1f7YAzN0r7nScrW7MbWjd6wI8uafiYZvcOGHE%2Bw20BAor5%2F1uo4mhFOdGi4FU7MT1Q%2FoHSiPV6H5%2FkF4oBpxL1y3pAa3sZ98RZp5g2axturH%2BHUEOeFAnGoL%2BLGAxPnO%2BJ6Ji5QQ5zoC%2FvnEncqoh%2BKODmE%2BSwxaI0THaO2efu6fWg5hBmBib36l8ZX7R0QSh1gcQQPgGnqj9x813G%2BQx3nO0%2BRiyVOeFFPE54El%2BoJL3bI9Y2cGh8LwPh5UroiJwakAHmDIndYje4TOUX4nIOyDuRCNcgJqbLDhPly5HyB3YGRk5elLXbrxfgf6M6NAyCp32q%2FXnIstXeAvDBts18vJua1q9%2Flsbrmp0517a%2FOZMJSOQjPncmgcCLR8Vc9kyGHUleUgOEoCbvH4HhgpyhQgNKr9MN%2FjpKipej%2BUBL862hglOS84Vd7%2FQvj3ItI0r7New7FoFS7%2Bl0KrfMqZdeEBlCT0JAi43MHXHHjKxh4nZLD7JjrkblIDXMIWcKcnMWxeJL3YLvboO7FQSjncO4sVn9kmvpdDqfzvl1FgbewbgXPXY3w4hNsDTWQuhxOZ5QUBd7WoCTvmLJ4YUuMvPVPCqGz5FE3N5wvQf3c5BVtnxDZOXstO9Rs8nK2x2I3HPAsNdd2FGs2%2BVhSv8UvWIPQMPX7LvHR2XdSk88AsddGgn%2FdyIsH0ugEWwMNpL57Y7MzSrFD6VmU5NQYv5KV04JpfrjvXk3s7IeHHW3eV5PFEZfvoPgWa%2BfQWzzRwDvn%2BZL7W7F5KSGu3RV0abSu83fNav%2B2HAhInDt%2FS9n%2BcOD5W06jWW3LYlTtQ9227BJpnW1ZUX4MCUh45%2FriQsrABwPbspwfG4Eg3xnuPdnfaANZ8O%2Ba8AMXqz1Il7RCsNzs%2B2w8rS12Jytnd%2B92C1v0psYe%2Bw8Qer%2BvyM9DP83Y%2F6ML1rIP1XaJaaP9hcf7h68r0ac8rvdUWy67K0XJicaS2NaRTEjGat8M5svpQUeftfSJ38AHdc%2Bj%2FFVOh99bwE96g0B3SIbkPJjDz178xMUh3WlAJG%2BRMwO%2FIlk0%2BE0dfCrgQ7rhk786ygz43NinZH9q1A48eAZLG35PfXeWCfi1xr47B18v8IVC1KsbPvn9PzPgc2Ofkjfw2t%2B9DaBu%2FExN%2BbmxTwF8oA2frxs%2BUzN%2BuHg4sDdCV9PWOIiuHY19RCGR8OK97vwzv5jpNN61Z%2BVJHRc7QHsHFAmA6s7RBKZmqAVAExlQx%2BxAzIq%2F0BGHErPxoMyamtZ2zJrCrBe23dKnfgqwJ2ZpsfnJznrXRPPDp%2FDmfw%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Veja aqui.]]
+
+**** 4.
+
+Assumindo uma análise ascendente.
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Q1.4-2025-2.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%226VFctFbbmLHImPBgCk41%22%3E7V1dc5s4FP01nmkf0gGB%2BHhMnCadnXYmu93pto%2FYyDa7GHkxTuz99SuMsM0libGHCxbmJQkXJMi550pXR0IMjOF8%2FRh7i9k37rNwQDR%2FPTDuB4RQaomfqWGTGSxiZ4ZpHPiZSd8bvgf%2FMWnUpHUV%2BGxZuDDhPEyCRdE45lHExknB5sUxfyleNuFh8a4Lb8pKhu9jLyxb%2Fwr8ZCatFjX3J76wYDrLb61bbnZm7uVXy39lOfN8%2FnJgMj4PjGHMeZL9NV8PWZiClwOTlXt44%2BzuyWIWJVUKhF8%2BP%2FIfK%2B%2F3J%2FuPW%2B%2FmzvltQW9kLcwvwbCvVpqWfBWP2Tt1EXldssnRi%2Fkq8ll6f21g3PE4mfEpj7zwK%2BcLYdSF8W%2BWJBvpd2%2BVcGGaJfNQnmXrIPmZFv9E5dGvgzP3a1nz9mCTH0RJvPl5ePDr8GBfaHu0L%2BXfpnwRhxGPWGZ5CMJQnpfc8%2BIpS97BwNw5VkQE43Mm7iHKxSz0kuC5iLEnuTndXbf3nvhDOvAEZ5K3fbf3ScLWSRHkl1mQsO8Lb%2BvcFxHGwrZMYv4PG%2FKQx3tEJgIOYPLCYBqJw7G4IxP2u2cWJ4GIn1t5Yh74fnrruyIXssd69sKVfKwHaRHF2frg2ctYzg7CzZCx9bKPTUua8kpMebzJA1RDQt9QGP3JKhojOcAF%2BLtY%2BJsK47%2Fkcw8rAEhTDqAKO%2BADFvq0KfQthdH%2FioW%2B0xT6tsLof0RCn2hGQ%2Bg7gw5nsVkhxfJYWfSJBwL%2FPSN0EI8WYETmHVnqcCwDKtoV3ICK84qyf7BU0ZZdu%2F%2FnfMK5XSZcC3SzcOim1UU3p1265bfrJt9aaeBwGKfbgHG0LsZpDTOu08JQK4yzcRgHU1zzXMYdG6hjM05l9eppgCSe0GIrAJ1bWwatq6xeDcgQCf9SM4znAJXlK6zxOyGNwU9r7O%2Bsvr%2FbNej4HZ5TU4e342NTHZ7VU65uyhkolCOG%2Bz5TqlIODkgJ1ZulnH3hlEOizzlUrkq5ZpSyXU94OuVMwN2GKeconNdgpfVQJiBoyrjuKgw%2FXl5fSizRHJDfSEkHoOX1UL7Hg%2F8UHevKkycHpycDM%2BDEPrcnM0BFMPFH7skI6alUlUruhVMJLAoztGaTImK0RCX18uuDpbIXSiWQXzsNU0ll3fBPpPyiufRC5TVvaCsO4dgVD%2F46JbR8AurK%2B26CI2iUhrznNrhwPWuJXdgNbp0aWs%2B5g2a0fs5R2hHOqSyiYXXyulH0roE2OUhUFtFGWPA7TcGfP0s%2F8D7ekCJpOGDeyjh3NkJ3j5AGuSE1ejmwMpWQNJzOUIko3ClgTWzBkTdip3CKhHZ0gapWctw1hnxG6fpDHpLi7Llsu%2BWQ77W2V0I%2BF2FypzguVsirLLZhvV5N7MbgP0Vsu%2FKGFGlRkKsXfW0BX1duSJ0jpMFuSE%2FR0K6cSjjSWHeopLI0lmOCPgOGmIfX%2Biqs2cf8jtP1y%2BFgXs6Ab7FWHnrDihpeOZ%2BTuY%2F5QsyXBHG0VNDsZbTKGyngrF%2FRLeDrc%2FvvkoxvN9t%2FmyrLaHixDEfVpoEWy22tRVMwlpH0MQp8rZ%2BbiwMtwCQNx7LK%2BtiAWGH6XBO%2BhXT%2FwNa%2FK56fuFlu6XwrLrAW62012jh7oNQWT0cfUhFVwKfp8jeh9OP2wrwe8ddU%2Fj64YWb7lGwWTBTa3ljbuim7SPjj8LrXyua2UQwtbxQumVFaMqDZ4i0GM1WWB3v2IeXEFA5V0PpRlTfg6%2BmHlMbBFw3whmQq70DY0w%2BJfnByCE0GNFWWYS%2BDfpE339Nv3EHywb3Q6iOfyuszL4N83Wv7dMcpDjxyoav%2Bfa9VlqMvg36Ftm%2FUBfLZYNSLRr5Kal1Pvutq%2B%2FTiztvEQKOfyvL9ZdCvc21f%2FlJbTj4TjXxqb1p5CeRj0fOOewN6Ny60g%2FRefTYSB7yfj%2Ff5k372o2Y2joq98jAbF3eNoBQQFE2jof0ESc0E9coE7SZnXcBZ%2BB0P18bibD%2Br0nO2Fs7qdjEtxfsQIK00FSMqChZL9gZXD6jsLRfZl00nwTrlWoGyA2JMnDEbj0v8FmdGDjXpq8zUzwJZL4OsF0GG72TqaKl%2FpfmGVjEmSBjDZZ6lXS3qA7mSrt4qyAYWyKC1KK2vrO%2B7fZXU41ZBNpFAJkCmKr0YWh%2FIlWSqVkGmWCBbRSaXVhfWB3IlOaZVkC0kkA34RgTcm7Q%2BkCupDK2CbGOBfGzriPpArjRSbhVkB6u5gF%2B8QcsurEpDu1ZBdrFAhruP4jFZgbGIhoUy%2FPzjGcqaOIx5OsbenXsUoMy%2BcZ%2BlV%2FwP%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Veja aqui.]]
+
+**** 5.
+
+Como a gramática precisa ser fatorada a esquerda, isso implicará na
+inevitável edição das ações semânticas e na necessidade de empregar
+atributos herdados.
+
+*** E2
+**** while
+
+#+begin_example
+S \to while (
+        {
+          B.true = rot();  // novo rótulo
+          B.false = rot(); // novo rótulo
+        }
+          B ) S_2          // S_2 pois é o segundo S (somente para diferenciar portanto)
+        {
+          x = rot();
+          S.code = "x: nop" ||      // marcação do início
+                   B.code ||        // código de B
+                   "B.true: nop" || // marcação de verdade da expressão
+                   S_2.code ||      // código do bloco do while
+                   "goto x" ||      // volta para refazer tudo
+                   "B.false: nop";  // marcação de verdade da expressão (saída do laço)
+        }
+#+end_example
+
+**** do-while
+
+#+begin_example
+S \to do S_2 while (
+       {
+          B.true = rot();   // novo rótulo
+          B.false = rot();  // novo rótulo
+       }
+         B )
+       {
+          S.code = "B.true: nop" ||  // marcação de início
+                   S_2.code ||       // código do bloco do do-while
+                   B.code ||         // código de B
+                   "B.false: nop";   // marcação de fim
+       }
+#+end_example
+
+**** if simples
+
+#+begin_example
+S \to if (
+       {
+          B.true = rot();  // novo rótulo
+          B.false = rot(); // novo rótulo
+       }
+         B ) S_2
+       {
+          S.code = B.code ||         // código de B
+                   "B.true: nop" ||  // marcação de verdade, "entra no if"
+                   S_2.code ||       // código do bloco do if
+                   "B.false: nop";   // marcação de falso, "evita o bloco do if"
+       }
+#+end_example
+
+**** expressão
+
+#+begin_example
+B \to id < num {
+            // assume-se que B herda dois rótulos
+            B.code = "comp id, num => CC;" ||  // compara id com num
+                     "cbr_LT CC => B.true, B.false"; // salta para o verdadeiro ou falso
+             }
+#+end_example
+
+*** E3
+**** 1.
+
+|   | a | b | c | d | e | f | g |
+|---+---+---+---+---+---+---+---|
+| 1 |   |   |   |   |   |   |   |
+| 2 | x |   |   |   |   |   |   |
+| 3 | x | x |   |   |   |   |   |
+| 4 | x | x | x |   |   |   |   |
+| 5 |   | x | x | x |   |   |   |
+| 6 |   | x |   | x | x |   |   |
+| 7 |   |   |   | x |   | x |   |
+
+**** 2.
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Q3.2-2025-2.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%2282Z6MZ8DnAPePe5Vo7h_%22%3E7Vnfb5swEP5r8rgJMJDwuKRNJ22VJkXT1kcPXKAiGBmnIf3rZ2I7YJPfw6zr%2BhJxH%2BfD%2Be67O4eMwGxZ3RFYJPc4QtnIsaJqBG5GjuP4Y%2FZZAxsOAMvmQEzSiEMtYJG%2BIAFaAl2lESoVR4pxRtNCBUOc5yikCgYJwWvV7RFn6lMLGKMOsAhh1kV%2FpBFNBOp7bnPjM0rjRD7a9gN%2BZwmlt%2FgqZQIjvG5B4HYEZgRjyq%2BW1QxlNXmSGL5ufuDubmcE5fScBVM6ffn%2BsCjD%2B2JJ509ROZ9%2F%2BbAnioBKupEksDiMb2ZM10lK0aKAYX1nzTLOsIQuM2bZ7BKWBU%2FCY1oh9tgpD%2FUMs5UIBQWCCEVV63liy3cILxElG%2BaStFiVFK6bFEhIBAFA2FJnvrChEEC8i9xQxC4ESxcwNhmYsV%2BmGPM1xmxTjMkHo6hTa10O8YqE6EiwoMs1C7sQJiY0wTHOYXbboFOCV3lUs3tjMavx%2BYpxIfLwhCjdiPYDVxSrWUJVSn%2FWyz96wnpo3bmpROStsZFGzrhrLarN3araaJZtLbkuXJHn7V65Y%2FSp7mLMzHGOODJPa%2F63zqIjQhIjeqzKrf2KISiDNH1Ws7Iv%2F9ulbCdw03IocJrTshX5Ww00CnMdTWF6g9L9J0f92QXfQaPE3Ve5XpzBwOUcGipn11bJcybGytnpsZzlrv%2FderZO1HNfJXxAJWeX8J%2FlHLznvMecKz3%2BXAE4f6WH6z0ZnOjh%2BqkCDNDDpaAGa%2BKRqSY%2B1pp4YKqJ20Mf%2FNFAlAHPGGXOwJQ9mqLM0ygzpzIwMGWxKcoslbKd3T9lbp%2BTtst1ZzK1%2BFVnrByYdmtcNsPzxMC0Rxf85Dk9%2Fa8ZmJOOOk4rQVbG3qHaksexJnNgMGrncxdoIXgyxapLJqx%2B0OfEdAL1Nmy9NyHQC3%2BVm5Fo8KokCvSzXgCulKg1Pj6TTUvU71Gik74laua10f8gUFd7yevqL3nPFahnnTgBmRbo%2BF2g%2FQhUTtVXqlDgjq9soWOgBnIGVmjwFhSqvLNp5DqsQu3XpVD9x593pUI9T1Oo25dCmdn8K8rdm%2F%2BWwe1v%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Clique aqui.]]
+
+**** 3.
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Q3.3-2025-2.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%2282Z6MZ8DnAPePe5Vo7h_%22%3E7V1be6NGEv01fsx%2B9IXbY%2ByJJ8nu7OzGm2%2BTRyxhS1lZeDEe2%2Fn1QRYtiWok4VZX0YCexiBAmurTXV2nThUX4urh9XOePM6%2BZNN0ccG96euF%2BHTBOWfCK%2F9ZnXmrzoRRuD5zn8%2Bn63Nse%2BJm%2FmdanaxuvH%2BeT9On2oVFli2K%2BWP95CRbLtNJUTuX5Hn2Ur%2FsLlvUv%2FUxuU%2B1EzeTZKGf%2Fe98Wsyqs4Evtx%2F8mM7vZ%2BqrWRCvP3lI1NXVf%2BVplkyzl51T4ocLcZVnWbH%2B6%2BH1Kl2szKcMs77ves%2Bnm1%2BWp8uizQ2XxeWfv%2F5%2B8zT58vhQXP8xfbq%2B%2Fvt3DU%2BpTj0Vb8oI5XNKe5cHly%2BzeZHePCaT1Scv5ZiX52bFw6I8YuWfydPjehDu5q9p%2BbWX60d9SxbP1aOS6kyaF%2BnrzvdVP%2Flzmj2kRf5WXjLbsaoy4ct2CNSp6iFRdahwpj5OqvG%2F3zx4a6Hyj8pIHzBYRGywWySDMVa3GAuxLKa%2BOJ1qU023YfacT9IDD4t1W5ePvakOs7yYZffZMln8sD17mWfPy%2BnKup%2B88mh7zT%2By7LEahz%2FSonirVp%2Fkucjqo5S%2BzovfVrf%2Fza%2BOft%2F55NNr9eT3gzd1sCxtt3PT6nBz1%2Bpge9v7kbpv8px%2Fe%2F%2Bt6wun368WsfJwmS3T9Znr%2Bcr%2B7xdXC2KS36fFoUnuNSMmTxdJMf9WH5Wm8X%2B%2FtfwlydvOBY%2FZfFk87Tz5X6sTOwgLAcIisD6B67k4eH35x%2FoXbJG4%2Ba%2BYgzMmns4TrOkcAONJtOnMLU5ntQj1dz57R%2BazrSm8ByWtp%2FBpYy7OY25xzGtrfFsA8C7WcG1Njo%2Bs4XBXEROs4eo7yRbxKdIivjlW1vOxFnFGve9PiUy2AaB9k3Fik91hmcwDJsNDmSA22T3W7soHJgvQTCZtelrd1ppn2rFv3ccqh8l23OXWeR5xmOziAyHPce9v4jAjDR3HkaCGudGp7sDj0IzZEwyB%2FTmPwSPWg1nd9QEPy%2BFGf20Y7UHWnK0%2FCIB%2BMCrHgWjsFkQF9AvCDKLMDw%2F7ZGyIBhYhGtmGKA5tNAqAApJXQJK39RoK3Tn8LdgADc8AtQNQtbI4ilDuhYYIVYwL4ELJEBoPAaE1zmYLV1qEMqcQqgV%2FzBChwqsjdPNg%2Bwj9Mb39%2BberX%2Fz%2F%2F%2FTrP7%2F%2B5%2Bev33%2F9dzLUxKW0EYw3GoyavqBKXEoIPGsWMyS9G58ldVP3i%2FNGzls2Gi1sxgtt2lKyj6UtwfUnU96H4DS4tKWwoUJotJghbbEfl32ezPaTlo12ik6cvycNuCEJcB5wg4xlo9HiLlZvbTWGorgjdCq4Hmf1DolX7ynS6g2TbwJGqdYmM7XqjipdKW3IdPbPvgFmKyUaxshlBFTZSglzTfZMxiw62bFkKw9F546wRHBb7hsz7dC9wv09NkvEBwFQaq79UMzpCkThRi%2BylK3UXDI2RG3STNw2RB1NBvUBoIDZ9eEjTLOV2g4IG6CGkqQzQPfEfY4CVApLyUqJp%2FdoBqhNbq8zgNboGvxk5aEw2xGAaqGftJSrlIIYoMF%2BPG5xls%2Byh9vnp%2BOR5d18sbjKFln%2Bfp%2B4iybpZFKefyry7H%2Fpzie3kb%2FKJzaEnr9cmISeQg89RT30hK5K%2BPsH%2FbTIsxWHZmrSqZ9GU9lk0ojfiiBoMulnJJPGdZPiZUhYK5LN2KRJGt01ojSYROntXZNJL5FMuimOUzZFY%2BFU3Nz7rLuA9YVoMDStNWt%2BmK8be1yZm5aenwfNKKHJ1XGrIcbox9yIgOxEbCFBDHKsvlDCZchyfeFBQPU%2BXydhRT6e2KzVjrcHCTtoMiv1hQcm4AAydvKYut6eyajTwlgZOwlVuTbqC5s1jdymp%2FV0Y4%2BHzVNuwRG2RMLyLdPaAxmS1R40Q9RqANAZRF3g85QbdgWi0DOYFh%2F4frfFB4Jaf4tVfSBgFhXNVwvqTTQVE4JYf2BTwip6r2HtogJhTQySR8VQJXikBAFG0SQlCII6XsGqQZBAo4THsIvI4oSWDTubfk1oImpTUrVOax5zw0ra85hbozblnk0vLbV5rBIBUpsklQgKUIOjNvFKEeRQWqdBk%2BHVIkhObDIqahOvGEEOpXUapDbxihGkzSSiivDHWY0gHKM2wQ7duBxB87HE5QjSplKxQ4g6wb8Lt%2BS0Au73TAsSpNdtQYK0Sjs1iDHGkyJyDKIwRWRckuAfK8rEhqhhA7UzRPdGgI5C1LgoAWYxqYsSpE2urzuI1ribjrKYKuJ2BaIwCDQtS4BZTOqyBNmqR8AQyhIE9FdodQkKG8OvSxBQRI%2FXuqkV4zaEwgQBiz3QKDm%2FFSU3hLkPeXiBJnHwbRJQfqC7%2FHGlelruDvxTheunjblNRuc85ibbQ%2F%2FUNnNG6b3wg29GCpHfjHQQUL1P74VAEYNXueBTy1qw0nvQZHiVCz61DB8rvRdivBmp2WTU7dmw0nsBxpuRmvt5ttqx9kBz65O1%2FA6ok8hYmtuArOd3YHMPH%2FS%2BErULzW3QyX4u%2BGDbb7j%2FI9HcBtQieizNbUDW9zuwmc0MGl5l0q8JTRSUB6c2fz5tzG2mB89jbtTqrJPCCW1RPqK5hUE5ieY2oA6XqIJyPM1tQB0uUQXleJpb5VAHF5TjaW5DamU3VVCOp7kNuU1Py3Vjj0dzq4J1R1QOcIdurLnVfCyx5ja02U6gQ4g6oRYL3BKGB7aagAcdNwEPrdJOwjZI%2ByRodA2ittqAhx23AQ9tZrpHDlG3%2BixDiBprbsOOG4GHVrm%2BziBa42460tyqiNsRiGpBoKnmNuq4FXiI2rfaJd2dD%2F0VmuY2xG1c7ZDm1idrBh6iasNd0twGZM3AlZsd%2FtyHPDye5jYajTY8lNAFotmUOsuMxbbHcT2qx5PARdRCSyy2PQ6ByfBmLrXQEottjzkwGZoELqLOHGJJ4CJIt%2BGhjDpziCWBiyJgMjQJnNpjWomi4wZj90s90YUELpbNkMFVT8QSQOyIBI55sFMFhQYubrXj64EGLhZ16%2BEFczG3OaMb2s70a0YTaeBi%2F8RJfNqY20x7nsfchEONT32nktEqrq%2FKR0RwMdxZUIjgFKJ6L4KDMSaeCC4ealiOx2TEQw3L8URw8VDDcjwRXGyz1U%2FUIDcfjwhOheuOpB3hFt1YBKf5WGIRXGyzC3mHEHVCvqEiUFdACvd7piK4WHUU7UgExzybzJNaSsYpMXINo4DwNVbBMQ%2B6dWIZHPPYGaS2QCqdBqmxDq5cyJqLg%2BlAapPx6w6kNQanIyVc7JaeWIsETZVwzNNkn9QgbdWeYgh6mAg6LTQtHPNaEWtDEMNFAVX%2BhHmtqLchqIxiBoyKxs0xrxU5N4Tpr1HyeHo45qEKjF2CarkTp%2BKRS185llU1BhJjH01nwhhvY9QeyJkYg9pMvPnNhtLTizHYcQkRaTbLKxk7t%2FUykEMw1klfL8YPN%2BpquCE%2BeANOPnwDqt7LmtjmBP6%2BnNks%2BKsA2ud5TaRsYqzT9l5M7fvOw96duImtZzn9cg5X5yPqJsbhNoNC3rQBVe%2F1TYzD9yegSU%2BqZWUACifNaIihqfrq3mucGIdv58RD2iGH0SuVE%2BOwvRKazIlxbtXtct3e4xE6beJ4R9JK2q7dWOqkO1xirRPjNqXvXeLUiST9JjJ1BakM7gBN9U7l2tlt1y%2FG7fJSo26q5BxOOSCFzTVPAvp4as0Tt9n7a%2FQ4dav7l4ZTc9kTj7rt%2F1VGEMPAaY3c6Uj3tInGncEpDA%2BNlU8i6LYJGOOoSXqnpA8M%2Bi486RMfTZKeMdBcDTHHwkfTCYxxINtFFD%2Bprx7BCgAZe0TxkxhNNzCmvdIcEat8NOsqD%2Bs7A0T1kxiN%2BlnjqH2DPmzlYZ5lxe5GrLTB7Es2TVdX%2FAU%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Clique aqui.]]
+
+**** 4.
+
+Não é possível, pois há pelo menos uma instrução onde temos pelo menos
+três variáveis vivas simultaneamente. Poderíamos escolher a variável =b=
+pois fazendo assim poderíamos usar apenas dois registradores. Esta
+solução, no entanto, não é a ideal pois a variável b possui três usos.
+
+*** E4
+**** 1.
+
+São instruções líderes: 1, 3, 4, 8, 10, 11, 15
+
+Assim, temos os seguintes blocos básicos
+- B0: [1, 2]
+- B1: [3]
+- B2: [4, 5, 6, 7]
+- B3: [8, 9]
+- B4: [10]
+- B5: [11, 12, 13, 14]
+- B6: [15, 16]
+
+**** 2.
+
+- B0 -> B1
+- B1 -> B6
+- B1 -> B2
+- B2 -> B3
+- B2 -> B2
+- B3 -> B5
+- B3 -> B4
+- B4 -> B6
+- B5 -> B1
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Q4.2-2025-2.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%228PEpjN2QNcp3bA_dkZX-%22%3E7VpLc5swEP41HNMB9AAfYztpO9POdOpDm6PGKIYORo4sv%2FrrK5BAgGO7Dq8240skrb5dxK720yLHApPl%2FiMnq%2FArC2hsuXawt8DUcl0EgPybCg5KgEeeEix4FCiRYwSz6DfVQltLN1FA1xWgYCwW0aoqnLMkoXNRkRHO2a4Ke2Zx9akrsqBHgtmcxMfSH1EgQi3FCJqJTzRahPmjHTxSM0uSo%2FWrrEMSsF1JBB4sMOGMCdVb7ic0Tp2XO0bpPZ6YLVbGaSL%2BRuGZTUACH18%2BP9GX7yzcTqcc3unF0uDIDcasFq3Zhs%2FpGVuuxolD7r3U7EwPGRchW7CExA9GOuZskwQ0XaEtRwbzhbGVFDpS%2BIsKcdA7g2wEk6JQLGM9S%2FeR%2BJmqf0B69FSame615WxwyAeJ4IeSUjp8Ks8ZtWyU6%2Bn9R%2FiCijN%2BAEVwZVZQtqTShtTjNCYi2lb9TPT%2BXBQ4E0HZ0UG8IqDu6fiZuFS9vgsjQWcrkgV3J9O46mGlvSXxRmtbLo6l6XEQbWV3kXbvJGIsbd3L1kJj%2BUS5etu10DQHy5cp4bVNygXdlxZ57LSwlFtQJ9LOJOJIi7QRXw812Ti5RutezumplbwBt7zJ%2FACHzBsHvZ%2BIum8KqdtFTP2GMc1U7zknhxJgxaJErEuWv6UCQwOODSo8kPPC4wk8tJvAsXMeXl9NDS876v3M3i0c9fbtDIY7BpziGAAD839RerXPFk6LbAFv%2FJ%2F5AQ%2FJ%2F%2FB0%2FNpKmCw73CI7oCqSkGqwarwsZfpIDmB3lhygxeRAt%2BQY8CB1UWXPoPonZg2P7CZwbF84SGurqeG7OUhRT7wAzceT3RsHQNwZB7gtcgC%2BcYDZi4N9IHnvJ6Lem0LqdRFTbxBeh36VB%2BAF5q3zxpX4SwdBfT01fDfMjntidlAwu69qvFF%2FNZ7fGb%2FDFtnA%2Bw%2F5vRMyaHpz3E6RN7qQrCO7Ed69VObVyMA9V%2Ba9ov360wp3qCBorVoWtMAqXk%2Bsgky9qG%2Fb05Ira4FuYW88gzq7aPd7cic27tQf5A7uzX24u3sq3CJND3xP9Q8VbU1%2FqWilaAP4uiLsWvyla%2FAjnvYbFW1yaH4LV3DzHwXg4Q8%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Clique aqui.]]
+
+**** 3.
+
+1. Os "back edges" são:
+   - B2 -> B2 (Loop 0)
+   - B5 -> B1 (Loop 1)
+2. Os "natural loops" associados a estes:
+   - Loop 0
+     - Os nós dominados por B2: [B2, B3, B4 e B5]
+     - Quais nós podem chegar a B2 sem passar passar por B2: B2
+     - Laço natural contém apenas o B2
+   - Loop 1
+     - Os nós dominados por B1: [B1, B2, B6, B3, B4, B5]
+     - Quais nós podem chegar a B5 sem passar por B1: [B1, B2, B3, B5]
+     - Laço natural contém B1, B2, B3 e B5
+
+**** 4.
+
+[[https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Q4.4-2025-2.drawio&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%228PEpjN2QNcp3bA_dkZX-%22%3E7Vvdk5owEP9rfLwO5APlsepd25l2plMf2ntkJCd00HgYv%2FrXN0AgEE%2BpkoBnfRGy7Ia4m%2F1lk5%2F24Gi%2B%2BxR7y%2BAb9UnUA5a%2F68FxDwDXhvwzEewzgW27KJPM4tAXMimYhH%2BIEFpCug59sqooMkojFi6rwildLMiUVWReHNNtVe2FRtW3Lr0ZORBMpl50KP0Z%2BiwQUgcj%2BeAzCWdB%2FmrbcbMncy%2FXFl9lFXg%2B3ZZE8LEHRzGlLLub70YkSryXOyazezrytBhZTBbsXwxe6Agu0NPrl2fy%2BoMGm%2FE4Rg9isMQ%2FcIPsVohWdB1PyYm%2BgNBj%2B9x7SbcT0aQxC%2BiMLrzoUUqHMV0vfJKM0OItqfOV0iUX2lz4mzC2FzPDWzPKRQGbR%2BIp2YXsV2L%2BAYvWc%2BnJeCd6Thv7vLFg8b5klDSfy8%2BkWdrK7cT88%2BIZYSf8AIvg8rQgdE54H9wuJpHHwk3Vz56Yn7NCT0aQ34ggnhFQcDx%2BMi5Vr2%2BDkJHJ0kuDu%2BV5XPVwZr3xorWw7gEn4l0P%2FXDDb2fJ7QPXGPK%2BPvJrDw%2F5G%2FnoLdDD41yZf5mSvuiTxIzsSoM8dFpQyi0kEmkrE9EVItHJQDRztMkttHs5hycteQPveZP6AXWZNza%2BnYiCi0IKTMR00DCmqenHOPb2JYUlDRdsVer5eyKQMGBbsIIDOS48HdFHVhN1xz6tro5G0ec32feTc7dw1OXTGXa3DNjFMgA7xv%2Bi9NKPFrZGtEB3%2FE%2F94HSJ%2F%2Bh4%2FHQlTJodoMgOlBVJOLs42aWfpkwbyQEtY8kBNSYHvidHhwspwJU5g9UtpqKPrSbqjlWzkCqjUfTNLKS4JVxAcvNktYYByDGGAUAjBjh3DJBzsbMNUv92Itq%2FKKR9EzHtd4LraFDFAVSDvCpunKlftxCo41H0zSC70xKywwLZB1mN57ZX4w2M4TvSiAb9d4jvRsCg6cmxniLPrUlW12qkD%2BrKPAUMwKky7w3rt99WuCMLgrBSskADqvRbQhUs60Vx2p6UXOkViitqDWewsYP2QUvudKQ7xYbcdlpzn2PunMrRCNMdn1NdUdHWlKnQUrRB57wi7Fz9umPwA5wetFC02QONE9p232HhYWI%2BA9BwQjcDKdc8yF8vZ42U8sgcaZ2vMnp%2B7AHuuZM5olPaOu%2F4JmJ6Rbw1bIqIFy3x2D6TuMbnLdmqfh11rY6nFeo6n4X%2FGXetrgPmyGugk58Dd%2FZaOMLtdB24ff5aTRBzBDZo62i4HdJPdZw51g%2Fo5IjAfXdWno6dIYvOHXfXMb2iMyR4JLcNV5j4POYPq9hxpn7tT0BwB8wfaOHAoXXq72B5NMb9wRMAcEMch%2BpQcyQHbGHH0wHLoTrwEpqDN%2BU%2FpLL8l380g49%2FAQ%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E][Clique aqui.]] (observe a árvore à direita)
+
 ** 2025/1
 *** E1
 **** 1.
